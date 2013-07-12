@@ -17,8 +17,11 @@ def clone_tag(repo_url, tag, folder=None):
 
 
 def clone(repo_url, ref=None, folder=None):
+    is_commit = False
     if ref is None:
         ref = 'refs/heads/master'
+    elif not ref.startswith('refs/'):
+        is_commit = True
     logger.debug("clone repo_url={0}, ref={1}".format(repo_url, ref))
     if folder is None:
         folder = tempfile.mkdtemp()
@@ -34,7 +37,10 @@ def clone(repo_url, ref=None, folder=None):
         except:
             pass
 
-    rep['HEAD'] = remote_refs[ref]
+    if is_commit:
+        rep['HEAD'] = rep.commit(ref)
+    else:
+        rep['HEAD'] = remote_refs[ref]
     indexfile = rep.index_path()
     tree = rep["HEAD"].tree
     index.build_index_from_tree(rep.path, indexfile, rep.object_store, tree)
