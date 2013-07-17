@@ -1,4 +1,4 @@
-#/usr/bin/env python
+#!/usr/bin/env python
 import os
 from setuptools import setup
 
@@ -11,7 +11,7 @@ setup(
     version='0.0.1',
     description="-",
     packages=['dockerbrew'],
-    install_requires=['requests'] + test_requirements,
+    install_requires=['dulwich', 'docker'] + test_requirements,
     zip_safe=False,
     classifiers=['Development Status :: 3 - Alpha',
                  'Environment :: Other Environment',

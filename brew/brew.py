@@ -15,7 +15,7 @@ client = docker.Client()
 processed = {}
 
 
-def fetch_buildlist(repository=None, branch=None):
+def build_library(repository=None, branch=None, namespace=None, push=False):
     if repository is None:
         repository = DEFAULT_REPOSITORY
     if branch is None:
@@ -58,15 +58,14 @@ def fetch_buildlist(repository=None, branch=None):
                     else:
                         raise RuntimeError('Incorrect line format, '
                             'please refer to the docs')
-                img = start_build(url, ref, buildfile, tag)
+                img = build_repo(url, ref, buildfile, tag, namespace, push)
                 processed['{0}@{1}'.format(url, ref)] = img
             except Exception as e:
                 logger.exception(e)
         f.close()
 
 
-def start_build(repository, ref, docker_repo, docker_tag=None, namespace=None,
-                push=False):
+def build_repo(repository, ref, docker_repo, docker_tag, namespace, push):
     docker_repo = '{0}/{1}'.format(namespace or 'library', docker_repo)
     img_id = None
     if '{0}@{1}'.format(repository, ref) not in processed.keys():
@@ -75,7 +74,7 @@ def start_build(repository, ref, docker_repo, docker_tag=None, namespace=None,
         if not 'Dockerfile' in os.listdir(dst_folder):
             raise RuntimeError('Dockerfile not found in cloned repository')
         logger.info('Building using dockerfile...')
-        img_id, logs = client.build_context(dst_folder)
+        img_id, logs = client.build(path=dst_folder)
 
     if not img_id:
         img_id = processed['{0}@{1}'.format(repository, ref)]
