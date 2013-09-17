@@ -52,6 +52,10 @@ def clone(repo_url, ref=None, folder=None):
         except:
             pass
 
+    if ref.startswith('refs/tags'):
+        ref = rep.ref(ref)
+        is_commit = True
+
     if is_commit:
         rep['HEAD'] = rep.commit(ref)
     else:

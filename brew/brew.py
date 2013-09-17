@@ -96,7 +96,12 @@ def build_library(repository=None, branch=None, namespace=None, push=False,
                 if prefill:
                     logger.debug('Pulling {0} from official repository (cache '
                         'fill)'.format(buildfile))
-                    client.pull(buildfile)
+                    try:
+                        client.pull('stackbrew/' + buildfile)
+                    except:
+                        # Image is not on official repository, ignore prefill
+                        pass
+
                 img = build_repo(url, ref, buildfile, tag, namespace, push,
                     registry)
                 summary.add_success(buildfile, (linecnt, line), img)
