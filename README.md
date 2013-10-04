@@ -68,11 +68,17 @@ of the latest development. Again, no way to ensure stability.
 	<docker-tag>	<git-url>	T:<git-tag>
 	2.4.0 	git://github.com/dotcloud/docker-redis	T:2.4.0
 	<docker-tag>	<git-url>	B:<git-branch>
-	zfs		git://github.com/dotcloud/docker	B:zfs-support
+	zfs		https://github.com/dotcloud/docker.git	B:zfs-support
 	<docker-tag>	<git-url>	C:<git-commit-id>
-	2.2.0 	https://github.com/dotcloud/docker-redis.git C:a4bf8923ee4ec566d3ddc212
+	2.2.0 	git://github.com/dotcloud/docker-redis C:a4bf8923ee4ec566d3ddc212
 
 The most complete format. `docker-brew` will fetch data from the provided git
 repository from the provided reference (if it's a branch, brew will fetch its
 `HEAD`). Generated image will be tagged as `<docker-tag>`. Recommended whenever
 possible.
+
+# stackbrew
+
+Stackbrew is a web-application that performs continuous building of the docker
+standard library using brew. See `README.md` in the stackbrew subfolder for
+more information.
