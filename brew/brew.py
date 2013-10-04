@@ -1,32 +1,39 @@
-import os
 import logging
+import os
 from shutil import rmtree
 
 import docker
 
 import git
+from summary import Summary
 
-DEFAULT_REPOSITORY = 'git://github.com/dotcloud/docker'
+DEFAULT_REPOSITORY = 'git://github.com/shin-/brew'
 DEFAULT_BRANCH = 'master'
 
-logger = logging.getLogger(__name__)
-logging.basicConfig(format='%(asctime)s %(levelname)s %(message)s',
-                    level='INFO')
 client = docker.Client()
 processed = {}
 processed_folders = []
 
 
 def build_library(repository=None, branch=None, namespace=None, push=False,
-        debug=False, prefill=True, registry=None):
+        debug=False, prefill=True, registry=None, targetlist=None, logger=None):
     dst_folder = None
     summary = Summary()
+    if logger is None:
+        logger = logging.getLogger(__name__)
+        logging.basicConfig(format='%(asctime)s %(levelname)s %(message)s',
+            level='INFO')
+
     if repository is None:
         repository = DEFAULT_REPOSITORY
     if branch is None:
         branch = DEFAULT_BRANCH
     if debug:
         logger.setLevel('DEBUG')
+    if targetlist is not None:
+        targetlist = targetlist.split(',')
+    else:
+        targetlist = []
 
     if not (repository.startswith('https://') or repository.startswith('git://')):
         logger.info('Repository provided assumed to be a local path')
@@ -60,12 +67,12 @@ def build_library(repository=None, branch=None, namespace=None, push=False,
             'contain a library/ folder.'.format(dst_folder))
         return
     for buildfile in dirlist:
-        if buildfile == 'MAINTAINERS':
+        if buildfile == 'MAINTAINERS' or (len(targetlist) > 0 and buildfile not in targetlist):
             continue
         f = open(os.path.join(dst_folder, 'library', buildfile))
         linecnt = 0
         for line in f:
-            linecnt = linecnt + 1
+            linecnt += 1
             logger.debug('{0} ---> {1}'.format(buildfile, line))
             args = line.split()
             try:
@@ -103,7 +110,7 @@ def build_library(repository=None, branch=None, namespace=None, push=False,
                         pass
 
                 img = build_repo(url, ref, buildfile, tag, namespace, push,
-                    registry)
+                    registry, logger)
                 summary.add_success(buildfile, (linecnt, line), img)
                 processed['{0}@{1}'.format(url, ref)] = img
             except Exception as e:
@@ -116,9 +123,11 @@ def build_library(repository=None, branch=None, namespace=None, push=False,
     for d in processed_folders:
         rmtree(d, True)
     summary.print_summary(logger)
+    return summary
 
 
-def build_repo(repository, ref, docker_repo, docker_tag, namespace, push, registry):
+def build_repo(repository, ref, docker_repo, docker_tag, namespace, push,
+    registry, logger):
     docker_repo = '{0}/{1}'.format(namespace or 'library', docker_repo)
     img_id = None
     dst_folder = None
@@ -142,49 +151,22 @@ def build_repo(repository, ref, docker_repo, docker_tag, namespace, push, regist
     if push:
         logger.info('Pushing result to registry {0}'.format(
             registry or "default"))
-        if registry is not None:
-            docker_repo = '{0}/{1}'.format(registry, docker_repo)
-            logger.info('Also tagging {0}'.format(docker_repo))
-            client.tag(img_id, docker_repo, docker_tag)
-        client.push(docker_repo)
+        push_repo(img_id, docker_repo, registry, logger)
     return img_id
 
-
-class Summary(object):
-    def __init__(self):
-        self._summary = {}
-        self._has_exc = False
-
-    def _add_data(self, image, linestr, data):
-        if image not in self._summary:
-            self._summary[image] = { linestr: data }
-        else:
-            self._summary[image][linestr] = data
-
-    def add_exception(self, image, line, exc):
-        lineno, linestr = line
-        self._add_data(image, linestr, { 'line': lineno, 'exc': str(exc) })
-        self._has_exc = True
-
-    def add_success(self, image, line, img_id):
-        lineno, linestr = line
-        self._add_data(image, linestr, { 'line': lineno, 'id': img_id })
-
-    def print_summary(self, logger=None):
-        linesep = ''.center(61, '-') + '\n'
-        s = 'BREW BUILD SUMMARY\n' + linesep
-        success = 'OVERALL SUCCESS: {}\n'.format(not self._has_exc)
-        details = linesep
-        for image, lines in self._summary.iteritems():
-            details = details + '{}\n{}'.format(image, linesep)
-            for linestr, data in lines.iteritems():
-                details = details + '{0:2} | {1} | {2:50}\n'.format(
-                    data['line'],
-                    'KO' if 'exc' in data else 'OK',
-                    data['exc'] if 'exc' in data else data['id']
-                )
-            details = details + linesep
-        if logger:
-            logger.info(s + success + details)
-        else:
-            print s, success, details
+def push_repo(img_id, repo, registry=None, logger):
+    exc = None
+    if registry is not None:
+        repo = '{0}/{1}'.format(registry, repo)
+        logger.info('Also tagging {0}'.format(repo))
+        client.tag(img_id, repo, docker_tag)
+    for i in xrange(4):
+        try:
+            pushlog = client.push(docker_repo)
+            if '"error":"' in pushlog:
+                raise RuntimeError('Error while pushing: {0}'.format(pushlog))
+        except Exception as e:
+            exc = e
+            continue
+        return
+    raise exc

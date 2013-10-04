@@ -22,6 +22,9 @@ def checkout(rep, ref=None):
         ref = 'refs/heads/master'
     elif not ref.startswith('refs/'):
         is_commit = True
+    elif ref.startswith('refs/tags'):
+        ref = rep.ref(ref)
+        is_commit = True
     if is_commit:
         rep['HEAD'] = rep.commit(ref)
     else:
@@ -30,6 +33,7 @@ def checkout(rep, ref=None):
     tree = rep["HEAD"].tree
     index.build_index_from_tree(rep.path, indexfile, rep.object_store, tree)
     return rep.path
+
 
 def clone(repo_url, ref=None, folder=None):
     is_commit = False
