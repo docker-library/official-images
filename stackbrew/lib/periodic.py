@@ -1,4 +1,4 @@
-#import atexit
+import atexit
 import os
 import threading
 
@@ -21,6 +21,9 @@ def init_task(fn, period, lockfile='/opt/stackbrew/brw.lock', logger=None):
 def clear_lockfiles(lockfiles):
     for lock in lockfiles:
         os.remove(lock)
-    lockfiles = []
 
-#atexit.register(clear_lockfiles, lockfiles)
+
+def on_exit(lockfiles):
+    clear_lockfiles(lockfiles)
+
+atexit.register(on_exit, lockfiles)

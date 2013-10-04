@@ -1,4 +1,5 @@
 import sys
+import json
 
 import flask
 
@@ -11,7 +12,10 @@ import periodic
 import utils
 
 app = flask.Flask('stackbrew')
-data = db.DbManager(debug=True)
+config = None
+with open('./config.json') as config_file:
+    config = json.load(config_file)
+data = db.DbManager(debug=config['debug'])
 
 
 @app.route('/')
@@ -39,18 +43,26 @@ def latest_success(repo_name):
     return utils.resp(app, result)
 
 
-@app.route('/build/force', method=['POST'])
+if config['debug']:
+    @app.route('/build/force', methods=['POST'])
+    def force_build():
+        build_task()
+
+
 def build_task():
     summary = brew.build_library(
         'https://github.com/shin-/brew.git', namespace='stackbrew',
-        debug=True, prefill=False, logger=app.logger
+        debug=config['debug'], push=config['push'], prefill=False,
+        logger=app.logger
     )
     data.insert_summary(summary)
 
 
 try:
-    periodic.init_task(build_task, 600, logger=app.logger)
+    periodic.init_task(build_task, config['build_interval'],
+                       logger=app.logger)
     app.logger.info('Periodic build task initiated.')
 except RuntimeError:
     app.logger.info('Periodic build task already locked.')
-app.run(debug=True)
+
+app.run(debug=config['debug'])

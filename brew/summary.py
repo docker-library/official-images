@@ -16,7 +16,8 @@ class Summary(object):
         self._has_exc = False
 
     def _add_data(self, image, linestr, data):
-        parts = linestr.split('\t')
+        linestr = linestr.strip('\n')
+        parts = linestr.split()
         tag = 'latest'
         source = None
         if len(parts) == 1:
@@ -27,7 +28,6 @@ class Summary(object):
         elif len(parts) == 3:
             tag = parts[0]
             source = '{}@{}'.format(parts[1], parts[2])
-        source = source.replace('\n', '')
         data.tag = tag
         data.source = source
         if image not in self._summary:
@@ -35,21 +35,23 @@ class Summary(object):
         else:
             self._summary[image][linestr] = data
 
-    def add_exception(self, image, line, exc):
+    def add_exception(self, image, line, exc, commit=None):
         lineno, linestr = line
         self._add_data(image, linestr, SummaryItem({
             'line': lineno,
             'exc': str(exc),
-            'repository': image
+            'repository': image,
+            'commit': commit
         }))
         self._has_exc = True
 
-    def add_success(self, image, line, img_id):
+    def add_success(self, image, line, img_id, commit=None):
         lineno, linestr = line
         self._add_data(image, linestr, SummaryItem({
             'line': lineno,
             'id': img_id,
-            'repository': image
+            'repository': image,
+            'commit': commit
         }))
 
     def print_summary(self, logger=None):
