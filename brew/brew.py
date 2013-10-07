@@ -117,12 +117,21 @@ def build_library(repository=None, branch=None, namespace=None, push=False,
                 summary.add_exception(buildfile, (linecnt, line), e)
 
         f.close()
-    if dst_folder != repository:
-        rmtree(dst_folder, True)
-    for d in processed_folders:
-        rmtree(d, True)
+    cleanup(dst_folder, dst_folder != repository)
     summary.print_summary(logger)
     return summary
+
+
+def cleanup(libfolder, clean_libfolder=False, clean_repos=True):
+    global processed_folders
+    global processed
+    if clean_libfolder:
+        rmtree(libfolder, True)
+    if clean_repos:
+        for d in processed_folders:
+            rmtree(d, True)
+        processed_folders = []
+        processed = {}
 
 
 def build_repo(repository, ref, docker_repo, docker_tag, namespace, push,
