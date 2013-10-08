@@ -1,6 +1,8 @@
 import logging
 import os
+import random
 from shutil import rmtree
+import string
 
 import docker
 
@@ -163,6 +165,12 @@ def cleanup(libfolder, clean_libfolder=False, clean_repos=True):
         processed = {}
 
 
+def _random_suffix():
+    return ''.join([
+        random.choice(string.ascii_letters + string.digits) for i in xrange(6)
+    ])
+
+
 def build_repo(repository, ref, docker_repo, docker_tag, namespace, push,
                registry, repos_folder, logger):
     ''' Builds one line of a library file.
@@ -182,7 +190,7 @@ def build_repo(repository, ref, docker_repo, docker_tag, namespace, push,
     commit_id = None
     if repos_folder:
         # Repositories are stored in a fixed location and can be reused
-        dst_folder = os.path.join(repos_folder, docker_repo)
+        dst_folder = os.path.join(repos_folder, docker_repo + _random_suffix())
     docker_repo = '{0}/{1}'.format(namespace or 'library', docker_repo)
 
     if '{0}@{1}'.format(repository, ref) not in processed.keys():
