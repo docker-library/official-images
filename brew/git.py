@@ -1,3 +1,4 @@
+import os
 import tempfile
 import logging
 
@@ -50,6 +51,8 @@ def clone(repo_url, ref=None, folder=None, rep=None):
     if not rep:
         if folder is None:
             folder = tempfile.mkdtemp()
+        else:
+            os.mkdir(folder)
         logger.debug("folder = {0}".format(folder))
         rep = Repo.init(folder)
     client, relative_path = get_transport_and_path(repo_url)
