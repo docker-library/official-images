@@ -56,6 +56,6 @@ if __name__ == '__main__':
     args = parser.parse_args()
     summary = brew.build_library(
         args.repository, args.b, args.n, args.push or args.reg is not None,
-        args.debug, args.prefill, args.reg, args.targets, logger
+        args.debug, args.prefill, args.reg, args.targets, None, logger
     )
     sys.exit(summary.exit_code())
