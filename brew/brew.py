@@ -17,7 +17,29 @@ processed_folders = []
 
 def build_library(repository=None, branch=None, namespace=None, push=False,
                   debug=False, prefill=True, registry=None, targetlist=None,
-                  logger=None):
+                  repos_folder=None, logger=None):
+    ''' Entrypoint method build_library.
+        repository:     Repository containing a library/ folder. Can be a
+                        local path or git repository
+        branch:         If repository is a git repository, checkout this branch
+                        (default: DEFAULT_BRANCH)
+        namespace:      Created repositories will use the following namespace.
+                        (default: no namespace)
+        push:           If set to true, push images to the repository
+        debug:          Enables debug logging if set to True
+        prefill:        Retrieve images from public repository before building.
+                        Serves to prefill the builder cache.
+        registry:       URL to the private registry where results should be
+                        pushed. (only if push=True)
+        targetlist:     String indicating which library files are targeted by
+                        this build. Entries should be comma-separated. Default
+                        is all files.
+        repos_folder:   Fixed location where cloned repositories should be
+                        stored. Default is None, meaning folders are temporary
+                        and cleaned up after the build finishes.
+        logger:         Logger instance to use. Default is None, in which case
+                        build_library will create its own logger.
+    '''
     dst_folder = None
     summary = Summary()
     if logger is None:
@@ -34,7 +56,7 @@ def build_library(repository=None, branch=None, namespace=None, push=False,
     if targetlist is not None:
         targetlist = targetlist.split(',')
 
-    if not (repository.startswith('https://') or repository.startswith('git://')):
+    if not repository.startswith(('https://', 'git://')):
         logger.info('Repository provided assumed to be a local path')
         dst_folder = repository
 
@@ -47,8 +69,6 @@ def build_library(repository=None, branch=None, namespace=None, push=False,
                        'socket (use sudo)')
         return
 
-    #FIXME: set destination folder and only pull latest changes instead of
-    # cloning the whole repo everytime
     if not dst_folder:
         logger.info('Cloning docker repo from {0}, branch: {1}'.format(
             repository, branch))
@@ -66,7 +86,9 @@ def build_library(repository=None, branch=None, namespace=None, push=False,
                      'contain a library/ folder.'.format(dst_folder))
         return
     for buildfile in dirlist:
-        if buildfile == 'MAINTAINERS' or (targetlist and buildfile not in targetlist):
+        if buildfile == 'MAINTAINERS':
+            continue
+        if (targetlist and buildfile not in targetlist):
             continue
         f = open(os.path.join(dst_folder, 'library', buildfile))
         linecnt = 0
@@ -109,7 +131,7 @@ def build_library(repository=None, branch=None, namespace=None, push=False,
                         pass
 
                 img, commit = build_repo(url, ref, buildfile, tag, namespace,
-                                         push, registry, logger)
+                                         push, registry, repos_folder, logger)
                 summary.add_success(buildfile, (linecnt, line), img, commit)
                 processed['{0}@{1}'.format(url, ref)] = img
             except Exception as e:
@@ -117,12 +139,19 @@ def build_library(repository=None, branch=None, namespace=None, push=False,
                 summary.add_exception(buildfile, (linecnt, line), e)
 
         f.close()
-    cleanup(dst_folder, dst_folder != repository)
+    cleanup(dst_folder, dst_folder != repository, repos_folder is None)
     summary.print_summary(logger)
     return summary
 
 
 def cleanup(libfolder, clean_libfolder=False, clean_repos=True):
+    ''' Cleanup method called at the end of build_library.
+        libfolder:       Folder containing the library definition.
+        clean_libfolder: If set to True, libfolder will be removed.
+                         Only if libfolder was temporary
+        clean_repos: Remove library repos. Also resets module variables
+                     "processed" and "processed_folders" if set to true.
+    '''
     global processed_folders
     global processed
     if clean_libfolder:
@@ -135,26 +164,47 @@ def cleanup(libfolder, clean_libfolder=False, clean_repos=True):
 
 
 def build_repo(repository, ref, docker_repo, docker_tag, namespace, push,
-               registry, logger):
-    docker_repo = '{0}/{1}'.format(namespace or 'library', docker_repo)
+               registry, repos_folder, logger):
+    ''' Builds one line of a library file.
+        repository:     URL of the git repository that needs to be built
+        ref:            Git reference (or commit ID) that needs to be built
+        docker_repo:    Name of the docker repository where the image will
+                        end up.
+        docker_tag:     Tag for the image in the docker repository.
+        namespace:      Namespace for the docker repository.
+        push:           If the image should be pushed at the end of the build
+        registry:       URL to private registry where image should be pushed
+        repos_folder:   Directory where repositories should be cloned
+        logger:         Logger instance
+    '''
+    dst_folder = None
     img_id = None
     commit_id = None
-    dst_folder = None
+    if repos_folder:
+        # Repositories are stored in a fixed location and can be reused
+        dst_folder = os.path.join(repos_folder, docker_repo)
+    docker_repo = '{0}/{1}'.format(namespace or 'library', docker_repo)
+
     if '{0}@{1}'.format(repository, ref) not in processed.keys():
+        # Not already built
         rep = None
         logger.info('Cloning {0} (ref: {1})'.format(repository, ref))
-        if repository not in processed:
-            rep, dst_folder = git.clone(repository, ref)
+        if repository not in processed:  # Repository not cloned yet
+            rep, dst_folder = git.clone(repository, ref, dst_folder)
             processed[repository] = rep
             processed_folders.append(dst_folder)
         else:
             rep = processed[repository]
-            dst_folder = git.checkout(rep, ref)
+            if ref in rep.refs:
+                # The ref already exists, we just need to checkout
+                dst_folder = git.checkout(rep, ref)
+            else:  # ref is not present, try pulling it from the remote origin
+                rep, dst_folder = git.pull(repository, rep, ref)
         if not 'Dockerfile' in os.listdir(dst_folder):
             raise RuntimeError('Dockerfile not found in cloned repository')
+        commit_id = rep.head()
         logger.info('Building using dockerfile...')
         img_id, logs = client.build(path=dst_folder, quiet=True)
-        commit_id = rep.head()
     else:
         logger.info('This ref has already been built, reusing image ID')
         img_id = processed['{0}@{1}'.format(repository, ref)]
@@ -173,6 +223,13 @@ def build_repo(repository, ref, docker_repo, docker_tag, namespace, push,
 
 
 def push_repo(img_id, repo, registry=None, docker_tag=None, logger=None):
+    ''' Pushes a repository to a registry
+        img_id:     Image ID to push
+        repo:       Repository name where img_id should be tagged
+        registry:   Private registry where image needs to be pushed
+        docker_tag: Tag to be applied to the image in docker repo
+        logger:     Logger instance
+    '''
     exc = None
     if registry is not None:
         repo = '{0}/{1}'.format(registry, repo)

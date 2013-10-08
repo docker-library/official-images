@@ -35,17 +35,23 @@ def checkout(rep, ref=None):
     return rep.path
 
 
-def clone(repo_url, ref=None, folder=None):
+def pull(origin, rep, ref=None):
+    clone(origin, ref, None, rep)
+    return rep, rep.path
+
+
+def clone(repo_url, ref=None, folder=None, rep=None):
     is_commit = False
     if ref is None:
         ref = 'refs/heads/master'
     elif not ref.startswith('refs/'):
         is_commit = True
     logger.debug("clone repo_url={0}, ref={1}".format(repo_url, ref))
-    if folder is None:
-        folder = tempfile.mkdtemp()
-    logger.debug("folder = {0}".format(folder))
-    rep = Repo.init(folder)
+    if not rep:
+        if folder is None:
+            folder = tempfile.mkdtemp()
+        logger.debug("folder = {0}".format(folder))
+        rep = Repo.init(folder)
     client, relative_path = get_transport_and_path(repo_url)
     logger.debug("client={0}".format(client))
 
