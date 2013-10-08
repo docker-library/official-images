@@ -53,7 +53,7 @@ def build_task():
     summary = brew.build_library(
         'https://github.com/shin-/brew.git', namespace='stackbrew',
         debug=config['debug'], push=config['push'], prefill=False,
-        logger=app.logger
+        repos_folder=config['repos_folder'], logger=app.logger
     )
     data.insert_summary(summary)
 
