@@ -15,12 +15,12 @@ app = flask.Flask('stackbrew')
 config = None
 with open('./config.json') as config_file:
     config = json.load(config_file)
-data = db.DbManager(debug=config['debug'])
+data = db.DbManager(config['db_url'], debug=config['debug'])
 
 
 @app.route('/')
 def home():
-    return utils.resp(app, 'Hello World')
+    return utils.resp(app, 'stackbrew')
 
 
 @app.route('/summary')
@@ -51,7 +51,7 @@ if config['debug']:
 
 def build_task():
     summary = brew.build_library(
-        'https://github.com/shin-/brew.git', namespace='stackbrew',
+        config['library_repo'], namespace='stackbrew',
         debug=config['debug'], push=config['push'], prefill=False,
         repos_folder=config['repos_folder'], logger=app.logger
     )
@@ -63,6 +63,6 @@ try:
                        logger=app.logger)
     app.logger.info('Periodic build task initiated.')
 except RuntimeError:
-    app.logger.info('Periodic build task already locked.')
+    app.logger.warning('Periodic build task already locked.')
 
 app.run(debug=config['debug'])
