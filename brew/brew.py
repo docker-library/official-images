@@ -95,6 +95,8 @@ def build_library(repository=None, branch=None, namespace=None, push=False,
         f = open(os.path.join(dst_folder, 'library', buildfile))
         linecnt = 0
         for line in f:
+            if not line or line.strip() == '':
+                continue
             linecnt += 1
             logger.debug('{0} ---> {1}'.format(buildfile, line))
             args = line.split()
