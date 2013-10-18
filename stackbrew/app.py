@@ -4,7 +4,6 @@ import json
 import flask
 
 sys.path.append('./lib')
-sys.path.append('..')
 
 import brew
 import db
@@ -65,4 +64,8 @@ try:
 except RuntimeError:
     app.logger.warning('Periodic build task already locked.')
 
-app.run(debug=config['debug'])
+app.run(
+    host=config.get('host', '127.0.0.1'),
+    port=config.get('port', 5000),
+    debug=config['debug']
+)

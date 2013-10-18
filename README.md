@@ -1,34 +1,8 @@
-# docker-brew
+# Stackbrew
 
-docker-brew is a command-line tool used to build the docker standard library.
-
-## Install instructions
-
-1. Install python if it isn't already available on your OS of choice
-1. Install the easy_install tool (`sudo apt-get install python-setuptools`
-for Debian)
-1. Install the python package manager, `pip` (`easy_install pip`)
-1. Run the following command: `sudo pip install -r requirements.txt`
-1. You should now be able to use the `docker-brew` script as such.
-
-## Basics
-
-	./docker-brew -h
-
-Display usage and help.
-
-	./docker-brew
-
-Default build from the default repo/branch. Images will be created under the
-`library/` namespace. Does not perform a remote push.
-
-	./docker-brew -n mycorp.com -b stable --push git://github.com/mycorp/docker
-
-Will fetch the library definition files in the `stable` branch of the
-`git://github.com/mycorp/docker` repository and create images under the
-`mycorp.com` namespace (e.g. `mycorp.com/ubuntu`). Created images will then
-be pushed to the official docker repository (pending: support for private
-repositories)
+Stackbrew is a web-application that performs continuous building of the docker
+standard library. See `README.md` in the stackbrew subfolder for more 
+information.
 
 ## Library definition files
 
@@ -45,13 +19,13 @@ a single file, all images are expected to be created under a different tag.
 ### Instruction format
 
 Each line represents a build instruction.
-There are different formats that `docker-brew` is able to parse.
+There are different formats that `stackbrew` is able to parse.
 
 	<git-url>
 	git://github.com/dotcloud/hipache
 	https://github.com/dotcloud/docker.git
 
-The simplest format. `docker-brew` will fetch data from the provided git
+The simplest format. `stackbrew` will fetch data from the provided git
 repository from the `HEAD`of its `master` branch. Generated image will be
 tagged as `latest`. Use of this format is discouraged because there is no
 way to ensure stability.
@@ -77,8 +51,21 @@ repository from the provided reference (if it's a branch, brew will fetch its
 `HEAD`). Generated image will be tagged as `<docker-tag>`. Recommended whenever
 possible.
 
-# stackbrew
+## Contributing to the standard library
 
-Stackbrew is a web-application that performs continuous building of the docker
-standard library using brew. See `README.md` in the stackbrew subfolder for
-more information.
+Thank you for your interest in the stackbrew project! We strive to make these instructions as simple and straightforward as possible, but if you find yourself lost, don't hesitate to seek us out on IRC freenode, channel `#docker` or by creating a github issue.
+
+### New repository.
+* Create a new file in the library folder. Its name will be the name of your repository.
+* Add your tag definitions using the provided syntax (see above).
+* Add the following line to the MAINTAINERS file:
+`repo: Your Name (github.name) <you@email.com>`
+* Create a pull request from your git repository to this one. Don't hesitate to add details as to what your repository does.
+
+### New tag in existing repository.
+* Add your tag definition using the <provided syntax>
+* Create a pull request from your git repository to this one. Don't hesitate to add details.
+* In the pull request, mention the repository's maintainer using the `@` symbol.
+
+### Change to an existing tag
+* Propose a pull request to the origin repository. Don't hesitate to @-mention one of the stackbrew maintainers.

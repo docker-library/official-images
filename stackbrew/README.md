@@ -3,6 +3,28 @@
 Stackbrew is a web-application that performs continuous building of the docker
 standard library using docker-brew.
 
+## Install instructions
+
+1. Install python if it isn't already available on your OS of choice
+1. Install the easy_install tool (`sudo apt-get install python-setuptools`
+for Debian/Ubuntu)
+1. Install the python package manager, `pip` (`easy_install pip`)
+1. Run the following command: `sudo pip install -r requirements.txt`
+1. You should now be able to use the `brew-cli` script as such.
+
+### Deploying stackbrew
+
+These additional instructions are necessary for the stackbrew application to
+function.
+
+1. Install sqlite3 (`sudo apt-get install sqlite3` on Debian/Ubuntu)
+1. Create the /opt/stackbrew/repos (`mkdir -p /opt/stackbrew/repos`) folder.
+2. Run the `create_db.py` script (`python create_db.py`)
+3. Edit `config.json` appropriately to your needs.
+4. If you're using the `push` option, you will need to have a valid
+   `.dockercfg` file in your HOME directory.
+5. You can start the application with the command `python app.py`
+
 ## Builds
 
 Builds are performed regularly and pushed to the public index.
@@ -71,3 +93,22 @@ A small JSON API allows users to check the status of past builds.
             "id": 19,
             "repo_name": "ubuntu"
         }
+
+## Stackbrew CLI
+
+    ./brew-cli -h
+
+Display usage and help.
+
+    ./brew-cli
+
+Default build from the default repo/branch. Images will be created under the
+`library/` namespace. Does not perform a remote push.
+
+    ./brew-cli -n mycorp.com -b stable --push git://github.com/mycorp/docker
+
+Will fetch the library definition files in the `stable` branch of the
+`git://github.com/mycorp/docker` repository and create images under the
+`mycorp.com` namespace (e.g. `mycorp.com/ubuntu`). Created images will then
+be pushed to the official docker repository (pending: support for private
+repositories)
