@@ -1,7 +1,7 @@
 # Stackbrew
 
 Stackbrew is a web-application that performs continuous building of the docker
-standard library using docker-brew.
+standard library.
 
 ## Install instructions
 
