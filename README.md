@@ -7,7 +7,7 @@ information.
 ## Library definition files
 
 The library definition files are plain text files found in the `library/`
-subfolder of the docker repository.
+subfolder of the stackbrew repository.
 
 ### File names
 
