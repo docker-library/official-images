@@ -18,38 +18,19 @@ a single file, all images are expected to be created under a different tag.
 
 ### Instruction format
 
-Each line represents a build instruction.
-There are different formats that Stackbrew is able to parse.
+Note: there is no backwards compatibility with the old format. This is part
+of our effort to create strict, unambiguous references to build images upon.
 
-	<git-url>
-	git://github.com/dotcloud/hipache
-	https://github.com/dotcloud/docker.git
+	<docker-tag>:	<git-url>@<git-tag>
+	2.4.0: 	git://github.com/dotcloud/docker-redis@2.4.0
+	<docker-tag>:	<git-url>@<git-commit-id>
+	2.2.0: 	git://github.com/dotcloud/docker-redis@a4bf8923ee4ec566d3ddc212
 
-The simplest format. Stackbrew will fetch data from the provided git
-repository from the `HEAD`of its `master` branch. Generated image will be
-tagged as `latest`. Use of this format is discouraged because there is no
-way to ensure stability.
-
-	<docker-tag> <git-url>
-	bleeding-edge git://github.com/dotcloud/docker
-	unstable https://github.com/dotcloud/docker-redis.git
-
-A more advanced format. Stackbrew will fetch data from the provided git
-repository from the `HEAD`of its `master` branch. Generated image will be
-tagged as `<docker-tag>`. Recommended if we always want to provide a snapshot
-of the latest development. Again, no way to ensure stability.
-
-	<docker-tag>	<git-url>	T:<git-tag>
-	2.4.0 	git://github.com/dotcloud/docker-redis	T:2.4.0
-	<docker-tag>	<git-url>	B:<git-branch>
-	zfs		https://github.com/dotcloud/docker.git	B:zfs-support
-	<docker-tag>	<git-url>	C:<git-commit-id>
-	2.2.0 	git://github.com/dotcloud/docker-redis C:a4bf8923ee4ec566d3ddc212
-
-The most complete format. Stackbrew will fetch data from the provided git
-repository from the provided reference (if it's a branch, Stackbrew will fetch its
-`HEAD`). Generated image will be tagged as `<docker-tag>`. Recommended whenever
-possible.
+Stackbrew will fetch data from the provided git repository from the
+provided reference. Generated image will be tagged as `<docker-tag>`.
+If a git tag is removed and added to another commit,
+**you should not expect the image to be rebuilt.** Create a new tag and submit
+a pull request instead.
 
 ## Contributing to the standard library
 
