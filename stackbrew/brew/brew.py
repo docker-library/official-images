@@ -99,32 +99,8 @@ def build_library(repository=None, branch=None, namespace=None, push=False,
                 continue
             linecnt += 1
             logger.debug('{0} ---> {1}'.format(buildfile, line))
-            args = line.split()
             try:
-                if len(args) > 3:
-                    raise RuntimeError('Incorrect line format, '
-                                       'please refer to the docs')
-
-                url = None
-                ref = 'refs/heads/master'
-                tag = None
-                if len(args) == 1:  # Just a URL, simple mode
-                    url = args[0]
-                elif len(args) == 2 or len(args) == 3:  # docker-tag   url
-                    url = args[1]
-                    tag = args[0]
-
-                if len(args) == 3:  # docker-tag  url     B:branch or T:tag
-                    ref = None
-                    if args[2].startswith('B:'):
-                        ref = 'refs/heads/' + args[2][2:]
-                    elif args[2].startswith('T:'):
-                        ref = 'refs/tags/' + args[2][2:]
-                    elif args[2].startswith('C:'):
-                        ref = args[2][2:]
-                    else:
-                        raise RuntimeError('Incorrect line format, '
-                                           'please refer to the docs')
+                tag, url, ref = parse_line(line)
                 if prefill:
                     logger.debug('Pulling {0} from official repository (cache '
                                  'fill)'.format(buildfile))
@@ -146,6 +122,18 @@ def build_library(repository=None, branch=None, namespace=None, push=False,
     cleanup(dst_folder, dst_folder != repository, repos_folder is None)
     summary.print_summary(logger)
     return summary
+
+
+def parse_line(line):
+    args = line.split(':', 1)
+    if len(args) != 2:
+        raise RuntimeError('Incorrect line format, please refer to the docs')
+
+    try:
+        url, ref = args[1].strip().rsplit('@', 1)
+        return (args[0].strip(), url, ref)
+    except ValueError:
+        raise RuntimeError('Incorrect line format, please refer to the docs')
 
 
 def cleanup(libfolder, clean_libfolder=False, clean_repos=True):
@@ -195,12 +183,26 @@ def build_repo(repository, ref, docker_repo, docker_tag, namespace, push,
         dst_folder = os.path.join(repos_folder, docker_repo + _random_suffix())
     docker_repo = '{0}/{1}'.format(namespace or 'library', docker_repo)
 
-    if '{0}@{1}'.format(repository, ref) not in processed.keys():
+    if '{0}@{1}'.format(repository, ref) in processed.keys() or\
+       '{0}@{1}'.format(repository, 'refs/tags' + ref) in processed.keys():
+        if '{0}@{1}'.format(repository, ref) not in processed.keys():
+            ref = 'refs/tags/' + ref
+        logger.info('This ref has already been built, reusing image ID')
+        img_id = processed['{0}@{1}'.format(repository, ref)]
+        if ref.startswith('refs/'):
+            commit_id = processed[repository].ref(ref)
+        else:
+            commit_id = ref
+    else:
         # Not already built
         rep = None
         logger.info('Cloning {0} (ref: {1})'.format(repository, ref))
         if repository not in processed:  # Repository not cloned yet
-            rep, dst_folder = git.clone(repository, ref, dst_folder)
+            try:
+                rep, dst_folder = git.clone(repository, ref, dst_folder)
+            except Exception:
+                ref = 'refs/tags/' + ref
+                rep, dst_folder = git.clone(repository, ref, dst_folder)
             processed[repository] = rep
             processed_folders.append(dst_folder)
         else:
@@ -208,20 +210,21 @@ def build_repo(repository, ref, docker_repo, docker_tag, namespace, push,
             if ref in rep.refs:
                 # The ref already exists, we just need to checkout
                 dst_folder = git.checkout(rep, ref)
+            elif 'refs/tags/' + ref in rep.refs:
+                ref = 'refs/tags/' + ref
+                dst_folder = git.checkout(rep, ref)
             else:  # ref is not present, try pulling it from the remote origin
-                rep, dst_folder = git.pull(repository, rep, ref)
+                try:
+                    rep, dst_folder = git.pull(repository, rep, ref)
+                except Exception:
+                    ref = 'refs/tags/' + ref
+                    rep, dst_folder = git.pull(repository, rep, ref)
         if not 'Dockerfile' in os.listdir(dst_folder):
             raise RuntimeError('Dockerfile not found in cloned repository')
         commit_id = rep.head()
         logger.info('Building using dockerfile...')
         img_id, logs = client.build(path=dst_folder, quiet=True)
-    else:
-        logger.info('This ref has already been built, reusing image ID')
-        img_id = processed['{0}@{1}'.format(repository, ref)]
-        if ref.startswith('refs/'):
-            commit_id = processed[repository].ref(ref)
-        else:
-            commit_id = ref
+
     logger.info('Committing to {0}:{1}'.format(docker_repo,
                 docker_tag or 'latest'))
     client.tag(img_id, docker_repo, docker_tag)
