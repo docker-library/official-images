@@ -95,12 +95,14 @@ def build_library(repository=None, branch=None, namespace=None, push=False,
         f = open(os.path.join(dst_folder, 'library', buildfile))
         linecnt = 0
         for line in f:
+            linecnt += 1
             if not line or line.strip() == '':
                 continue
-            linecnt += 1
+            elif line.lstrip().startswith('#'):  # # It's a comment!
+                continue
             logger.debug('{0} ---> {1}'.format(buildfile, line))
             try:
-                tag, url, ref = parse_line(line)
+                tag, url, ref = parse_line(line, logger)
                 if prefill:
                     logger.debug('Pulling {0} from official repository (cache '
                                  'fill)'.format(buildfile))
@@ -124,15 +126,17 @@ def build_library(repository=None, branch=None, namespace=None, push=False,
     return summary
 
 
-def parse_line(line):
+def parse_line(line, logger):
     args = line.split(':', 1)
     if len(args) != 2:
+        logger.debug("Invalid line: {0}".format(line))
         raise RuntimeError('Incorrect line format, please refer to the docs')
 
     try:
         url, ref = args[1].strip().rsplit('@', 1)
         return (args[0].strip(), url, ref)
     except ValueError:
+        logger.debug("Invalid line: {0}".format(line))
         raise RuntimeError('Incorrect line format, please refer to the docs')
 
 
