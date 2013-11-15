@@ -4,6 +4,7 @@ import logging
 
 from dulwich import index
 from dulwich.client import get_transport_and_path
+from dulwich.objects import Tag
 from dulwich.repo import Repo
 
 logger = logging.getLogger(__name__)
@@ -42,11 +43,8 @@ def pull(origin, rep, ref=None):
 
 
 def clone(repo_url, ref=None, folder=None, rep=None):
-    is_commit = False
     if ref is None:
         ref = 'refs/heads/master'
-    elif not ref.startswith('refs/'):
-        is_commit = True
     logger.debug("clone repo_url={0}, ref={1}".format(repo_url, ref))
     if not rep:
         if folder is None:
@@ -67,12 +65,11 @@ def clone(repo_url, ref=None, folder=None, rep=None):
 
     if ref.startswith('refs/tags'):
         ref = rep.ref(ref)
-        is_commit = True
 
-    if is_commit:
-        rep['HEAD'] = rep.commit(ref)
+    if isinstance(rep[ref], Tag):
+        rep['HEAD'] = rep[ref].object[1]
     else:
-        rep['HEAD'] = remote_refs[ref]
+        rep['HEAD'] = rep[ref]
     indexfile = rep.index_path()
     tree = rep["HEAD"].tree
     index.build_index_from_tree(rep.path, indexfile, rep.object_store, tree)
