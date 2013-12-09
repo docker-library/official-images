@@ -17,19 +17,9 @@ class Summary(object):
 
     def _add_data(self, image, linestr, data):
         linestr = linestr.strip('\n')
-        parts = linestr.split()
-        tag = 'latest'
-        source = None
-        if len(parts) == 1:
-            source = linestr + '@B:master'
-        elif len(parts) == 2:
-            tag = parts[0]
-            source = parts[1] + '@B:master'
-        elif len(parts) == 3:
-            tag = parts[0]
-            source = '{}@{}'.format(parts[1], parts[2])
-        data.tag = tag
-        data.source = source
+        parts = linestr.split(':', 1)
+        data.tag = parts[0]
+        data.source = parts[1]
         if image not in self._summary:
             self._summary[image] = {linestr: data}
         else:

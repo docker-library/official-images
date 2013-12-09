@@ -12,7 +12,7 @@ from summary import Summary
 DEFAULT_REPOSITORY = 'git://github.com/shin-/brew'
 DEFAULT_BRANCH = 'master'
 
-client = docker.Client()
+client = docker.Client(timeout=10000)
 processed = {}
 processed_folders = []
 
@@ -205,6 +205,8 @@ def build_repo(repository, ref, docker_repo, docker_tag, namespace, push,
             try:
                 rep, dst_folder = git.clone(repository, ref, dst_folder)
             except Exception:
+                if dst_folder:
+                    rmtree(dst_folder)
                 ref = 'refs/tags/' + ref
                 rep, dst_folder = git.clone(repository, ref, dst_folder)
             processed[repository] = rep
@@ -228,6 +230,10 @@ def build_repo(repository, ref, docker_repo, docker_tag, namespace, push,
         commit_id = rep.head()
         logger.info('Building using dockerfile...')
         img_id, logs = client.build(path=dst_folder, quiet=True)
+        if img_id is None:
+            logger.error('Image ID not found. Printing build logs...')
+            logger.debug(logs)
+            raise RuntimeError('Build failed')
 
     logger.info('Committing to {0}:{1}'.format(docker_repo,
                 docker_tag or 'latest'))

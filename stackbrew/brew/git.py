@@ -19,16 +19,12 @@ def clone_tag(repo_url, tag, folder=None):
 
 
 def checkout(rep, ref=None):
-    is_commit = False
     if ref is None:
         ref = 'refs/heads/master'
-    elif not ref.startswith('refs/'):
-        is_commit = True
     elif ref.startswith('refs/tags'):
         ref = rep.ref(ref)
-        is_commit = True
-    if is_commit:
-        rep['HEAD'] = rep.commit(ref)
+    if isinstance(rep[ref], Tag):
+        rep['HEAD'] = rep[ref].object[1]
     else:
         rep['HEAD'] = rep.refs[ref]
     indexfile = rep.index_path()
