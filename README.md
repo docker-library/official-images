@@ -1,7 +1,7 @@
 # Stackbrew
 
 Stackbrew is a web-application that performs continuous building of the docker
-standard library. See `README.md` in the stackbrew subfolder for more 
+standard library. See `README.md` in the stackbrew subfolder for more
 information.
 
 ## Library definition files
@@ -25,12 +25,17 @@ of our effort to create strict, unambiguous references to build images upon.
 	2.4.0: 	git://github.com/dotcloud/docker-redis@2.4.0
 	<docker-tag>:	<git-url>@<git-commit-id>
 	2.2.0: 	git://github.com/dotcloud/docker-redis@a4bf8923ee4ec566d3ddc212
+    <docker-tag>: <git-url>@<git-tag-or-commit-id>  <dockerfile-dir>
+    2.5.1: git://github.com/dotcloud/docker-redis@2.5.1     tools/dockerfiles/2.5.1
 
 Stackbrew will fetch data from the provided git repository from the
 provided reference. Generated image will be tagged as `<docker-tag>`.
 If a git tag is removed and added to another commit,
 **you should not expect the image to be rebuilt.** Create a new tag and submit
 a pull request instead.
+
+Optionally, if `<dockerfile-dir>`, stackbrew will look for the `Dockerfile`
+inside the specified subdirectory instead of at the root.
 
 ## Contributing to the standard library
 

@@ -102,18 +102,19 @@ def build_library(repository=None, branch=None, namespace=None, push=False,
                 continue
             logger.debug('{0} ---> {1}'.format(buildfile, line))
             try:
-                tag, url, ref = parse_line(line, logger)
+                tag, url, ref, dfile = parse_line(line, logger)
                 if prefill:
                     logger.debug('Pulling {0} from official repository (cache '
                                  'fill)'.format(buildfile))
                     try:
-                        client.pull('stackbrew/' + buildfile)
+                        client.pull(buildfile)
                     except:
                         # Image is not on official repository, ignore prefill
                         pass
 
-                img, commit = build_repo(url, ref, buildfile, tag, namespace,
-                                         push, registry, repos_folder, logger)
+                img, commit = build_repo(url, ref, buildfile, dfile, tag,
+                                         namespace, push, registry,
+                                         repos_folder, logger)
                 summary.add_success(buildfile, (linecnt, line), img, commit)
                 processed['{0}@{1}'.format(url, ref)] = img
             except Exception as e:
@@ -127,14 +128,18 @@ def build_library(repository=None, branch=None, namespace=None, push=False,
 
 
 def parse_line(line, logger):
+    df_folder = '.'
     args = line.split(':', 1)
     if len(args) != 2:
         logger.debug("Invalid line: {0}".format(line))
         raise RuntimeError('Incorrect line format, please refer to the docs')
 
     try:
-        url, ref = args[1].strip().rsplit('@', 1)
-        return (args[0].strip(), url, ref)
+        repo = args[1].strip().split()
+        if len(repo) == 2:
+            df_folder = repo[1].strip()
+        url, ref = repo[0].strip().rsplit('@', 1)
+        return (args[0].strip(), url, ref, df_folder)
     except ValueError:
         logger.debug("Invalid line: {0}".format(line))
         raise RuntimeError('Incorrect line format, please refer to the docs')
@@ -165,13 +170,14 @@ def _random_suffix():
     ])
 
 
-def build_repo(repository, ref, docker_repo, docker_tag, namespace, push,
-               registry, repos_folder, logger):
+def build_repo(repository, ref, docker_repo, dockerfile_location,
+               docker_tag, namespace, push, registry, repos_folder, logger):
     ''' Builds one line of a library file.
         repository:     URL of the git repository that needs to be built
         ref:            Git reference (or commit ID) that needs to be built
         docker_repo:    Name of the docker repository where the image will
                         end up.
+        dockerfile_location: Folder containing the Dockerfile
         docker_tag:     Tag for the image in the docker repository.
         namespace:      Namespace for the docker repository.
         push:           If the image should be pushed at the end of the build
@@ -225,11 +231,12 @@ def build_repo(repository, ref, docker_repo, docker_tag, namespace, push,
                 except Exception:
                     ref = 'refs/tags/' + ref
                     rep, dst_folder = git.pull(repository, rep, ref)
-        if not 'Dockerfile' in os.listdir(dst_folder):
+        dockerfile_location = os.path.join(dst_folder, dockerfile_location)
+        if not 'Dockerfile' in os.listdir(dockerfile_location):
             raise RuntimeError('Dockerfile not found in cloned repository')
         commit_id = rep.head()
         logger.info('Building using dockerfile...')
-        img_id, logs = client.build(path=dst_folder, quiet=True)
+        img_id, logs = client.build(path=dockerfile_location, quiet=True)
         if img_id is None:
             logger.error('Image ID not found. Printing build logs...')
             logger.debug(logs)
