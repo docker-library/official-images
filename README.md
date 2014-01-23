@@ -34,8 +34,8 @@ If a git tag is removed and added to another commit,
 **you should not expect the image to be rebuilt.** Create a new tag and submit
 a pull request instead.
 
-Optionally, if `<dockerfile-dir>`, stackbrew will look for the `Dockerfile`
-inside the specified subdirectory instead of at the root.
+Optionally, if `<dockerfile-dir>` is present, stackbrew will look for the
+`Dockerfile` inside the specified subdirectory instead of at the root.
 
 ## Contributing to the standard library
 

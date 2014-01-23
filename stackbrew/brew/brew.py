@@ -1,3 +1,4 @@
+import hashlib
 import logging
 import os
 import random
@@ -116,7 +117,6 @@ def build_library(repository=None, branch=None, namespace=None, push=False,
                                          namespace, push, registry,
                                          repos_folder, logger)
                 summary.add_success(buildfile, (linecnt, line), img, commit)
-                processed['{0}@{1}'.format(url, ref)] = img
             except Exception as e:
                 logger.exception(e)
                 summary.add_exception(buildfile, (linecnt, line), e)
@@ -170,6 +170,13 @@ def _random_suffix():
     ])
 
 
+def get_repo_hash(repo_url, ref, df_location):
+    h = hashlib.md5(repo_url)
+    h.update(ref)
+    h.update(df_location)
+    return h.hexdigest()
+
+
 def build_repo(repository, ref, docker_repo, dockerfile_location,
                docker_tag, namespace, push, registry, repos_folder, logger):
     ''' Builds one line of a library file.
@@ -188,23 +195,23 @@ def build_repo(repository, ref, docker_repo, dockerfile_location,
     dst_folder = None
     img_id = None
     commit_id = None
+    repo_hash = get_repo_hash(repository, ref, dockerfile_location)
     if repos_folder:
         # Repositories are stored in a fixed location and can be reused
         dst_folder = os.path.join(repos_folder, docker_repo + _random_suffix())
     docker_repo = '{0}/{1}'.format(namespace or 'library', docker_repo)
 
-    if '{0}@{1}'.format(repository, ref) in processed.keys() or\
-       '{0}@{1}'.format(repository, 'refs/tags' + ref) in processed.keys():
-        if '{0}@{1}'.format(repository, ref) not in processed.keys():
-            ref = 'refs/tags/' + ref
+    if repo_hash in processed.keys():
+        logger.info('[cache hit] {0}'.format(repo_hash))
         logger.info('This ref has already been built, reusing image ID')
-        img_id = processed['{0}@{1}'.format(repository, ref)]
+        img_id = processed[repo_hash]
         if ref.startswith('refs/'):
             commit_id = processed[repository].ref(ref)
         else:
             commit_id = ref
     else:
         # Not already built
+        logger.info('[cache miss] {0}'.format(repo_hash))
         rep = None
         logger.info('Cloning {0} (ref: {1})'.format(repository, ref))
         if repository not in processed:  # Repository not cloned yet
@@ -245,6 +252,8 @@ def build_repo(repository, ref, docker_repo, dockerfile_location,
     logger.info('Committing to {0}:{1}'.format(docker_repo,
                 docker_tag or 'latest'))
     client.tag(img_id, docker_repo, docker_tag)
+    logger.info("Registering as processed: {0}".format(repo_hash))
+    processed[repo_hash] = img_id
     if push:
         logger.info('Pushing result to registry {0}'.format(
             registry or "default"))
