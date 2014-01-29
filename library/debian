@@ -1,12 +1,29 @@
 # maintainer: Tianon Gravi <admwiggin@gmail.com> (@tianon)
 
-latest: git://github.com/tianon/docker-brew-debian@e1b9de169b8e9c9fccd07a8c11ba1e4dbf832500
-wheezy: git://github.com/tianon/docker-brew-debian@e1b9de169b8e9c9fccd07a8c11ba1e4dbf832500
-7.3: git://github.com/tianon/docker-brew-debian@e1b9de169b8e9c9fccd07a8c11ba1e4dbf832500
+# stable
+latest: git://github.com/tianon/docker-brew-debian@b306b9af3af44fdd33e2b3e2930277c8b5f60cb3
+wheezy: git://github.com/tianon/docker-brew-debian@b306b9af3af44fdd33e2b3e2930277c8b5f60cb3
+7.3: git://github.com/tianon/docker-brew-debian@b306b9af3af44fdd33e2b3e2930277c8b5f60cb3
+#
+stable: git://github.com/tianon/docker-brew-debian@2df5cf53c831143d889c16d2574906282b52cd38
 
-jessie: git://github.com/tianon/docker-brew-debian@6b80be230090cd2373047ee3408a8285f33d88c3
+# testing
+jessie: git://github.com/tianon/docker-brew-debian@d604cabf8285f85fb9e09d01f17c3ea5f65bf604
+#
+testing: git://github.com/tianon/docker-brew-debian@cd0894727a3697c15b64301f21037a5c62f063d2
 
-sid: git://github.com/tianon/docker-brew-debian@ad54ef16a1c44ed0b8874c1a4090019aff609284
+# unstable
+sid: git://github.com/tianon/docker-brew-debian@38e4c51c5cb44b358d1306c776c24a07b6954ed2
+#
+unstable: git://github.com/tianon/docker-brew-debian@47b51c796249fdfcd455e0fb6467bed8811e95ec
 
-squeeze: git://github.com/tianon/docker-brew-debian@e9519637347231a80822fe49e2369739647822b2
-6.0.8: git://github.com/tianon/docker-brew-debian@e9519637347231a80822fe49e2369739647822b2
+# oldstable
+squeeze: git://github.com/tianon/docker-brew-debian@c3aca1de4709d531761c673c5ea623dd2e5e67a0
+6.0.8: git://github.com/tianon/docker-brew-debian@c3aca1de4709d531761c673c5ea623dd2e5e67a0
+#
+oldstable: git://github.com/tianon/docker-brew-debian@7c432310a1ec6eefcc3f0d3ac3ff2d75db0cec17
+
+# experimental
+rc-buggy: git://github.com/tianon/dockerfiles@8548eebce2c11cc5b4de37c75c44b0c03c1fbab2 debian/rc-buggy
+#
+experimental: git://github.com/tianon/dockerfiles@8548eebce2c11cc5b4de37c75c44b0c03c1fbab2 debian/experimental
