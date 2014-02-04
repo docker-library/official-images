@@ -44,14 +44,14 @@ Thank you for your interest in the stackbrew project! We strive to make these in
 ### New repository.
 * Create a new file in the library folder. Its name will be the name of your repository.
 * Add your tag definitions using the provided syntax (see above).
-* Add the following line to the MAINTAINERS file:
-`repo: Your Name <you@email.com> (@github.name)`
+* Add the following line to the top of the file:
+`# maintainer: Your Name <you@email.com> (@github.name)`
 * Create a pull request from your git repository to this one. Don't hesitate to add details as to what your repository does.
 
 ### New tag in existing repository.
-* Add your tag definition using the <provided syntax>
+* Add your tag definition using the instruction format documented above.
 * Create a pull request from your git repository to this one. Don't hesitate to add details.
-* In the pull request, mention the repository's maintainer using the `@` symbol.
+* In the pull request, mention the repository's maintainers using the `@` symbol (found in the relevant MAINTAINERS file).
 
 ### Change to an existing tag
 * Propose a pull request to the origin repository. Don't hesitate to @-mention one of the stackbrew maintainers.
