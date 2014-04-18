@@ -27,10 +27,10 @@ if __name__ == '__main__':
         '--debug', default=False, action='store_true',
         help='Enable debugging output'
     )
-    parser.add_argument(
-        '--noprefill', default=True, action='store_false',
-        dest='prefill', help='Disable cache prefill'
-    )
+#    parser.add_argument(
+#        '--noprefill', default=True, action='store_false',
+#        dest='prefill', help='Disable cache prefill'
+#    )
     parser.add_argument(
         '-n', metavar='NAMESPACE', default='library',
         help='Namespace used for generated repositories. Default is library'
@@ -45,17 +45,25 @@ if __name__ == '__main__':
         nargs='?', help='git repository containing the library definition'
         ' files. Default is ' + brew.DEFAULT_REPOSITORY
     )
-    parser.add_argument(
-        '--reg', default=None, help='Registry address to'
-        ' push build results to. Also sets push to true.'
-    )
+#    parser.add_argument(
+#        '--reg', default=None, help='Registry address to'
+#        ' push build results to. Also sets push to true.'
+#    )
     parser.add_argument(
         '--targets', default=None, help='Comma-separated list'
         ' of images to build.'
     )
     args = parser.parse_args()
-    summary = brew.build_library(
-        args.repository, args.b, args.n, args.push or args.reg is not None,
-        args.debug, args.prefill, args.reg, args.targets, None, logger
-    )
-    sys.exit(summary.exit_code())
+    if args.debug:
+        brew.v2.set_loglevel('DEBUG')
+    sb_library = brew.v2.StackbrewLibrary(args.repository, args.b)
+    builder = brew.v2.LocalBuilder(sb_library, args.n.split(','), args.targets)
+    builder.build_repo_list()
+    builder.build_all()
+    if args.push:
+        builder.push_all()
+
+#    summary = brew.build_library(
+#        args.repository, args.b, args.n, args.push or args.reg is not None,
+#        args.debug, args.prefill, args.reg, args.targets, None, logger
+#    )

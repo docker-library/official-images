@@ -56,6 +56,8 @@ def build_library(repository=None, branch=None, namespace=None, push=False,
         branch = DEFAULT_BRANCH
     if debug:
         logger.setLevel('DEBUG')
+    else:
+        logger.setLevel('INFO')
     if targetlist is not None:
         targetlist = targetlist.split(',')
 

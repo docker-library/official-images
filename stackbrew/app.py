@@ -5,7 +5,7 @@ import flask
 
 sys.path.append('./lib')
 
-import brew
+import brew.v2 as brew
 import db
 import periodic
 import utils
@@ -15,6 +15,8 @@ config = None
 with open('./config.json') as config_file:
     config = json.load(config_file)
 data = db.DbManager(config['db_url'], debug=config['debug'])
+brew.logger = app.logger
+brew.set_loglevel('DEBUG' if config['debug'] else 'INFO')
 
 
 @app.route('/')
@@ -49,12 +51,16 @@ if config['debug']:
 
 
 def build_task():
-    summary = brew.build_library(
-        config['library_repo'], namespace='stackbrew',
-        debug=config['debug'], push=config['push'], prefill=False,
-        repos_folder=config['repos_folder'], logger=app.logger
+    summary = data.new_summary()
+    library = brew.StackbrewLibrary(config['library_repo'])
+    builder = brew.LocalBuilder(
+        library=library, namespaces=config['namespaces'],
+        repo_cache=config['repos_folder']
     )
-    data.insert_summary(summary)
+    builder.build_repo_list()
+    builder.build_all(callback=summary.handle_build_result)
+    if config['push']:
+        builder.push_all()
 
 
 try:
