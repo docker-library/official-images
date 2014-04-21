@@ -214,6 +214,7 @@ class StackbrewBuilder(object):
             dst_folder = os.path.join(
                 self.lib.library, repo.name + _random_suffix()
             )
+            os.mkdir(dst_folder)
         try:
             rep, dst_folder = self._clone_or_checkout(
                 url, ref, dst_folder, rep
