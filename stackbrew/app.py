@@ -15,6 +15,7 @@ config = None
 with open('./config.json') as config_file:
     config = json.load(config_file)
 data = db.DbManager(config['db_url'], debug=config['debug'])
+history = {}
 brew.logger = app.logger
 brew.set_loglevel('DEBUG' if config['debug'] else 'INFO')
 
@@ -58,6 +59,7 @@ def build_task():
         repo_cache=config['repos_folder']
     )
     builder.build_repo_list()
+    builder.history = history
     builder.build_all(callback=summary.handle_build_result)
     if config['push']:
         builder.push_all()

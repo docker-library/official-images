@@ -136,6 +136,7 @@ class StackbrewBuilder(object):
         self.namespaces = namespaces or ['stackbrew']
         self.targetlist = targetlist
         self.repo_cache = repo_cache
+        self.history = {}
 
     def build_repo_list(self):
         self.repos = []
@@ -175,6 +176,8 @@ class StackbrewBuilder(object):
                 e.log(logger)
 
     def build_version(self, repo, version, callback=None):
+        if version in self.history:
+            return self.history[version], None
         url, ref, dfile = version
         try:
             rep, dst_folder = self.clone_version(repo, version)
@@ -188,7 +191,11 @@ class StackbrewBuilder(object):
             if callback:
                 callback(exc, repo, version, None, None)
             raise exc
-        return self.do_build(repo, version, dockerfile_location, callback)
+        img_id, build_result = self.do_build(
+            repo, version, dockerfile_location, callback
+        )
+        self.history[version] = img_id
+        return img_id, build_result
 
     def do_build(self, repo, version, dockerfile_location, callback=None):
         raise NotImplementedError
@@ -212,7 +219,7 @@ class StackbrewBuilder(object):
         rep, dst_folder = repo.get_git_repo(url)
         if not dst_folder and self.repo_cache:
             dst_folder = os.path.join(
-                self.lib.library, repo.name + _random_suffix()
+                self.repo_cache, repo.name + _random_suffix()
             )
             os.mkdir(dst_folder)
         try:
@@ -258,7 +265,7 @@ class LocalBuilder(StackbrewBuilder):
         logger.info(
             'Build start: {0} {1}'.format(repo.name, version)
         )
-        build_result = self.client.build(path=dockerfile_location,
+        build_result = self.client.build(path=dockerfile_location, rm=True,
                                          stream=True, quiet=True)
         img_id = self._parse_result(build_result)
         if not img_id:
