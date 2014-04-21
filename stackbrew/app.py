@@ -49,10 +49,11 @@ if config['debug']:
     @app.route('/build/force', methods=['POST'])
     def force_build():
         build_task()
+        return utils.resp(app, 'OK')
 
 
 def build_task():
-    summary = data.new_summary()
+    summary = data.new_summary(config['repos_folder'])
     library = brew.StackbrewLibrary(config['library_repo'])
     builder = brew.LocalBuilder(
         library=library, namespaces=config['namespaces'],
