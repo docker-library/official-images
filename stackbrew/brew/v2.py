@@ -238,9 +238,15 @@ class StackbrewBuilder(object):
     def get_pushlist(self):
         return self.pushlist
 
-    def push_all(self, callback=None):
+    def push_all(self, continue_on_error=True, callback=None):
         for repo in self.pushlist:
-            self.do_push(repo, callback)
+            try:
+                self.do_push(repo, callback)
+            except StackbrewError as e:
+                if continue_on_error:
+                    e.log()
+                else:
+                    raise e
 
     def do_push(self, repo_name, callback=None):
         raise NotImplementedError
