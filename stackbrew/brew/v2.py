@@ -273,13 +273,13 @@ class LocalBuilder(StackbrewBuilder):
         )
         build_result = self.client.build(path=dockerfile_location, rm=True,
                                          stream=True, quiet=True)
-        img_id = self._parse_result(build_result)
+        img_id, logs = self._parse_result(build_result)
         if not img_id:
             exc = StackbrewError(
                 'Build failed for {0} ({1})'.format(repo.name, version)
             )
             if callback:
-                callback(exc, repo, version, None, build_result)
+                callback(exc, repo, version, None, logs)
             raise exc
         for tag in repo.get_associated_tags(version):
             logger.info(
@@ -289,13 +289,13 @@ class LocalBuilder(StackbrewBuilder):
                 self.client.tag(img_id, '/'.join([namespace, repo.name]), tag)
 
         if callback:
-            callback(None, repo, version, img_id, build_result)
+            callback(None, repo, version, img_id, logs)
         return img_id, build_result
 
     def _parse_result(self, build_result):
         if isinstance(build_result, tuple):
             img_id, logs = build_result
-            return img_id
+            return img_id, logs
         else:
             lines = [line for line in build_result]
             try:
@@ -316,8 +316,8 @@ class LocalBuilder(StackbrewBuilder):
             for line in parsed_lines:
                 match = re.match(self.build_success_re, line)
                 if match:
-                    return match.group(1)
-            return None
+                    return match.group(1), parsed_lines
+            return None, parsed_lines
 
     def do_push(self, repo_name, callback=None):
         exc = None
