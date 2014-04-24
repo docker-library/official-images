@@ -1,26 +1,33 @@
 # maintainer: Tianon Gravi <admwiggin@gmail.com> (@tianon)
 
+# notable changelog: (only up to 4 most recent entries)
+# 2014-05-22 - new, official Ubuntu Core images
+# 2014-04-09 - heartbleed.com RUN patches
+# 2014-01-29 - general update and "apt-get update" for up-to-date archive
+# 2014-01-03 - "lucid"
+
+# see https://wiki.ubuntu.com/Core#Current_Releases
 # see also https://wiki.ubuntu.com/Releases#Current
 
-latest: git://github.com/tianon/docker-brew-ubuntu@bb19e4ec7bd4b00c0d333b80654da80764ea109d
-precise: git://github.com/tianon/docker-brew-ubuntu@bb19e4ec7bd4b00c0d333b80654da80764ea109d
-12.04: git://github.com/tianon/docker-brew-ubuntu@bb19e4ec7bd4b00c0d333b80654da80764ea109d
-# EOL: Apr 2017
+latest: git://github.com/tianon/docker-brew-ubuntu-core@8c85eb1f0adfbcb99ac60402461d465f136ad441 14.04
+trusty: git://github.com/tianon/docker-brew-ubuntu-core@8c85eb1f0adfbcb99ac60402461d465f136ad441 14.04
+14.04: git://github.com/tianon/docker-brew-ubuntu-core@8c85eb1f0adfbcb99ac60402461d465f136ad441 14.04
+# EOL: TBD
 
-lucid: git://github.com/tianon/docker-brew-ubuntu@8c8d60abf5999986e8d6ca55f0703eb1e3cb83ec
-10.04: git://github.com/tianon/docker-brew-ubuntu@8c8d60abf5999986e8d6ca55f0703eb1e3cb83ec
-# EOL: Apr 2015
+precise: git://github.com/tianon/docker-brew-ubuntu-core@8c85eb1f0adfbcb99ac60402461d465f136ad441 12.04.4
+12.04: git://github.com/tianon/docker-brew-ubuntu-core@8c85eb1f0adfbcb99ac60402461d465f136ad441 12.04.4
+# EOL: Apr 2017
 
 # ---
 
-quantal: git://github.com/tianon/docker-brew-ubuntu@a6f44431cb178050bf86db5069740b38900d94f2
-12.10: git://github.com/tianon/docker-brew-ubuntu@a6f44431cb178050bf86db5069740b38900d94f2
+quantal: git://github.com/tianon/docker-brew-ubuntu-core@8c85eb1f0adfbcb99ac60402461d465f136ad441 12.10
+12.10: git://github.com/tianon/docker-brew-ubuntu-core@8c85eb1f0adfbcb99ac60402461d465f136ad441 12.10
 # EOL: Apr 2014
 
-raring: git://github.com/tianon/docker-brew-ubuntu@214633ffb6a5871dd9309ac2352c36da71b62567
-13.04: git://github.com/tianon/docker-brew-ubuntu@214633ffb6a5871dd9309ac2352c36da71b62567
+raring: git://github.com/tianon/docker-brew-ubuntu-core@8c85eb1f0adfbcb99ac60402461d465f136ad441 13.04
+13.04: git://github.com/tianon/docker-brew-ubuntu-core@8c85eb1f0adfbcb99ac60402461d465f136ad441 13.04
 # EOL: Jan 2014
 
-saucy: git://github.com/tianon/docker-brew-ubuntu@4c06b3e8849af10679224a154dd9866a3926720f
-13.10: git://github.com/tianon/docker-brew-ubuntu@4c06b3e8849af10679224a154dd9866a3926720f
+saucy: git://github.com/tianon/docker-brew-ubuntu-core@8c85eb1f0adfbcb99ac60402461d465f136ad441 13.10
+13.10: git://github.com/tianon/docker-brew-ubuntu-core@8c85eb1f0adfbcb99ac60402461d465f136ad441 13.10
 # EOL: Jul 2014
