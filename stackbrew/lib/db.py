@@ -33,7 +33,7 @@ class SummaryV2(object):
     def handle_build_result(self, exc, repo, version, img_id, build_result):
         c = self._engine.connect()
         if exc and self.errorlogs:
-            with open('{2}/{0}.{1}.error.log'.format(repo.name, version[1], self.errorlogs)) as f:
+            with open('{2}/{0}.{1}.error.log'.format(repo.name, version[1], self.errorlogs), 'w') as f:
                 f.write(build_result)
         ins = summary_item.insert().values(
             repo_name=repo.name,
