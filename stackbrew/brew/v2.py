@@ -328,6 +328,7 @@ class LocalBuilder(StackbrewBuilder):
                     raise RuntimeError(
                         'Error while pushing: {0}'.format(pushlog)
                     )
+                logger.info('Succesfully pushed {0}'.format(repo_name))
             except Exception as e:
                 exc = e
                 continue

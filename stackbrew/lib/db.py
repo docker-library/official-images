@@ -41,7 +41,7 @@ class SummaryV2(object):
                 f.write(build_result)
         ins = summary_item.insert().values(
             repo_name=repo.name,
-            exception=str(exc),
+            exception=str(exc) if exc else None,
             commit_id=version[1],
             image_id=img_id,
             source_desc=version[0],
