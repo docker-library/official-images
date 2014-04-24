@@ -244,7 +244,7 @@ class StackbrewBuilder(object):
                 self.do_push(repo, callback)
             except StackbrewError as e:
                 if continue_on_error:
-                    e.log()
+                    e.log(logger)
                 else:
                     raise e
 
