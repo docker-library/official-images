@@ -71,5 +71,7 @@ def clone(repo_url, ref=None, folder=None, rep=None):
     logger.debug("folder = {0}".format(folder))
     rep = Repo(folder, repo_url)
     rep.clone()
+    if ref:
+        checkout(rep, ref)
 
     return rep, folder
