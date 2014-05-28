@@ -55,9 +55,9 @@ if __name__ == '__main__':
     )
     args = parser.parse_args()
     if args.debug:
-        brew.v2.set_loglevel('DEBUG')
-    sb_library = brew.v2.StackbrewLibrary(args.repository, args.b)
-    builder = brew.v2.LocalBuilder(sb_library, args.n.split(','), args.targets)
+        brew.set_loglevel('DEBUG')
+    sb_library = brew.StackbrewLibrary(args.repository, args.b)
+    builder = brew.LocalBuilder(sb_library, args.n.split(','), args.targets)
     builder.build_repo_list()
     builder.build_all()
     if args.push:

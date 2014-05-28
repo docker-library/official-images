@@ -3,12 +3,10 @@ import json
 
 import flask
 
-sys.path.append('./lib')
-
-import brew.v2 as brew
-import db
-import periodic
-import utils
+import brew
+import lib.db as db
+import lib.periodic as periodic
+import lib.utils as utils
 
 app = flask.Flask('stackbrew')
 config = None
