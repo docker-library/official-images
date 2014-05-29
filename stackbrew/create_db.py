@@ -1,8 +1,6 @@
 import sys
 
-sys.path.append('./lib')
-
-import db
+import lib.db as db
 
 data = db.DbManager(debug=True)
 data.generate_tables()

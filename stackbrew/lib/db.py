@@ -24,6 +24,33 @@ summary_item = sql.Table(
 )
 
 
+class SummaryV2(object):
+    def __init__(self, engine, summary_id, errorlogs=None):
+        self.summary_id = summary_id
+        self._engine = engine
+        self.errorlogs = errorlogs
+
+    def handle_build_result(self, exc, repo, version, img_id, build_result):
+        c = self._engine.connect()
+        if exc and self.errorlogs:
+            if isinstance(build_result, list):
+                build_result = '\n'.join(build_result)
+            elif not isinstance(build_result, str):
+                build_result = str(build_result)
+            with open('{2}/{0}.{1}.error.log'.format(repo.name, version[1], self.errorlogs), 'w') as f:
+                f.write(build_result)
+        ins = summary_item.insert().values(
+            repo_name=repo.name,
+            exception=str(exc) if exc else None,
+            commit_id=version[1],
+            image_id=img_id,
+            source_desc=version[0],
+            tag=', '.join(repo.get_associated_tags(version)),
+            summary_id=self.summary_id
+        )
+        c.execute(ins)
+
+
 class DbManager(object):
     def __init__(self, db='/opt/stackbrew/data.db', debug=False):
         self._engine = sql.create_engine('sqlite:///' + db, echo=debug)
@@ -52,6 +79,15 @@ class DbManager(object):
                 )
                 c.execute(ins)
         return summary_id
+
+    def new_summary(self, errorlogs=None):
+        c = self._engine.connect()
+        ins = summary.insert().values(
+            result=True, build_date=str(datetime.datetime.now())
+        )
+        r = c.execute(ins)
+        summary_id = r.inserted_primary_key[0]
+        return SummaryV2(self._engine, summary_id, errorlogs)
 
     def latest_status(self):
         c = self._engine.connect()
