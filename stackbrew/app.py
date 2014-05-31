@@ -60,7 +60,7 @@ def build_task():
     builder.build_repo_list()
     builder.history = history
     builder.build_all(callback=summary.handle_build_result)
-    utils.save_history()
+    utils.save_history(builder.history)
     if config['push']:
         builder.push_all()
 
