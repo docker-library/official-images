@@ -30,7 +30,7 @@ def _execute(command, args, cwd):
 
 
 def clone_branch(repo_url, branch="master", folder=None):
-    return clone(repo_url, 'refs/heads/' + branch, folder)
+    return clone(repo_url, branch, folder)
 
 
 def clone_tag(repo_url, tag, folder=None):
