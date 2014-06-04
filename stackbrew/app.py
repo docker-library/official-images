@@ -55,7 +55,7 @@ def build_task():
     library = brew.StackbrewLibrary(config['library_repo'])
     builder = brew.LocalBuilder(
         library=library, namespaces=config['namespaces'],
-        repo_cache=config['repos_folder']
+        repo_cache=config['repos_folder'], targetlist=config.get('targets')
     )
     builder.build_repo_list()
     builder.history = history
