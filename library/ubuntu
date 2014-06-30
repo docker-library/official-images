@@ -1,10 +1,10 @@
 # maintainer: Tianon Gravi <admwiggin@gmail.com> (@tianon)
 
 # notable changelog: (only up to 4 most recent entries)
+# 2014-06-27 - fix "14.04" tag and add "utopic"/"14.10"
 # 2014-06-24 - new "daily" Core tarballs
 # 2014-04-22 - CVE-2014-0224 RUN patches
 # 2014-04-22 - new, official Ubuntu Core images
-# 2014-04-09 - heartbleed.com RUN patches
 
 # see https://wiki.ubuntu.com/Core#Current_Releases
 # see also https://wiki.ubuntu.com/Releases#Current
@@ -12,9 +12,13 @@
 
 latest: git://github.com/tianon/docker-brew-ubuntu-core@e95176d335ced8a314bd664cffedb51e145e3848 trusty
 trusty: git://github.com/tianon/docker-brew-ubuntu-core@e95176d335ced8a314bd664cffedb51e145e3848 trusty
-trusty: git://github.com/tianon/docker-brew-ubuntu-core@e95176d335ced8a314bd664cffedb51e145e3848 trusty
+14.04: git://github.com/tianon/docker-brew-ubuntu-core@e95176d335ced8a314bd664cffedb51e145e3848 trusty
 # EOL: Apr 2019
 
 precise: git://github.com/tianon/docker-brew-ubuntu-core@e95176d335ced8a314bd664cffedb51e145e3848 precise
 12.04: git://github.com/tianon/docker-brew-ubuntu-core@e95176d335ced8a314bd664cffedb51e145e3848 precise
 # EOL: Apr 2017
+
+utopic: git://github.com/tianon/docker-brew-ubuntu-core@5ababebbfb2c9a7d93f876c324faaee44758a9f0 utopic
+14.10: git://github.com/tianon/docker-brew-ubuntu-core@5ababebbfb2c9a7d93f876c324faaee44758a9f0 utopic
+# EOL: sometime after BOL ;) (not officially released just yet)
