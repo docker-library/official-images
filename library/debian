@@ -1,33 +1,33 @@
 # maintainer: Tianon Gravi <admwiggin@gmail.com> (@tianon)
 
 # notable changelog: (only up to 4 most recent entries)
+# 2014-07-16 - 7.6, CVE-2014-0475, and Acquire::GzipIndexes
 # 2014-07-08 - add "sqeeuze-lts" to "oldstable" and update squeeze for CVE-2014-4617
 # 2014-06-27 - new gnupg CVE, updated packages, and removed /var/lib/apt/lists
 # 2014-05-25 - fix minor cache typo that caused 50%+ increase in image sizes
-# 2014-05-21 - 7.5 and newer apt in jessie to fix "Hash Sum Mismatch" errors
 
 # stable
-latest: git://github.com/tianon/docker-brew-debian@96e2b4067b4660bff0978e5d131bff47619698a7 wheezy
-wheezy: git://github.com/tianon/docker-brew-debian@96e2b4067b4660bff0978e5d131bff47619698a7 wheezy
-7.5: git://github.com/tianon/docker-brew-debian@96e2b4067b4660bff0978e5d131bff47619698a7 wheezy
+latest: git://github.com/tianon/docker-brew-debian@aca7cf30e1700cc203ddbc2eb1934d37c33c63ff wheezy
+wheezy: git://github.com/tianon/docker-brew-debian@aca7cf30e1700cc203ddbc2eb1934d37c33c63ff wheezy
+7.6: git://github.com/tianon/docker-brew-debian@aca7cf30e1700cc203ddbc2eb1934d37c33c63ff wheezy
 #
-stable: git://github.com/tianon/docker-brew-debian@96e2b4067b4660bff0978e5d131bff47619698a7 stable
+stable: git://github.com/tianon/docker-brew-debian@aca7cf30e1700cc203ddbc2eb1934d37c33c63ff stable
 
 # testing
-jessie: git://github.com/tianon/docker-brew-debian@96e2b4067b4660bff0978e5d131bff47619698a7 jessie
+jessie: git://github.com/tianon/docker-brew-debian@aca7cf30e1700cc203ddbc2eb1934d37c33c63ff jessie
 #
-testing: git://github.com/tianon/docker-brew-debian@96e2b4067b4660bff0978e5d131bff47619698a7 testing
+testing: git://github.com/tianon/docker-brew-debian@aca7cf30e1700cc203ddbc2eb1934d37c33c63ff testing
 
 # unstable
-sid: git://github.com/tianon/docker-brew-debian@96e2b4067b4660bff0978e5d131bff47619698a7 sid
+sid: git://github.com/tianon/docker-brew-debian@aca7cf30e1700cc203ddbc2eb1934d37c33c63ff sid
 #
-unstable: git://github.com/tianon/docker-brew-debian@96e2b4067b4660bff0978e5d131bff47619698a7 unstable
+unstable: git://github.com/tianon/docker-brew-debian@aca7cf30e1700cc203ddbc2eb1934d37c33c63ff unstable
 
 # oldstable
-squeeze: git://github.com/tianon/docker-brew-debian@421ad76e424cf82f2265558c87e669d66e881558 squeeze
-6.0.9: git://github.com/tianon/docker-brew-debian@421ad76e424cf82f2265558c87e669d66e881558 squeeze
+squeeze: git://github.com/tianon/docker-brew-debian@aca7cf30e1700cc203ddbc2eb1934d37c33c63ff squeeze
+6.0.9: git://github.com/tianon/docker-brew-debian@aca7cf30e1700cc203ddbc2eb1934d37c33c63ff squeeze
 #
-oldstable: git://github.com/tianon/docker-brew-debian@421ad76e424cf82f2265558c87e669d66e881558 oldstable
+oldstable: git://github.com/tianon/docker-brew-debian@aca7cf30e1700cc203ddbc2eb1934d37c33c63ff oldstable
 
 # experimental
 rc-buggy: git://github.com/tianon/dockerfiles@caa1407e7c59a314ab5ea989bb6c718de0c83f78 debian/rc-buggy
