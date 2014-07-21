@@ -33,7 +33,13 @@ if __name__ == '__main__':
 #    )
     parser.add_argument(
         '-n', metavar='NAMESPACE', default='library',
-        help='Namespace used for generated repositories. Default is library'
+        help='Comma-separated list of namespaces used for generated'
+        ' repositories. Default is library'
+    )
+    parser.add_argument(
+        '--no-namespace', default=False, action='store_true',
+        help='In addition to -n, also tag generated images with no'
+        ' namespace (ie, "library/busybox" as "busybox")'
     )
     parser.add_argument(
         '-b', metavar='BRANCH', default=brew.DEFAULT_BRANCH,
@@ -56,8 +62,11 @@ if __name__ == '__main__':
     args = parser.parse_args()
     if args.debug:
         brew.set_loglevel('DEBUG')
+    namespaces = args.n.split(',')
+    if args.no_namespace:
+        namespaces.append('')
     sb_library = brew.StackbrewLibrary(args.repository, args.b)
-    builder = brew.LocalBuilder(sb_library, args.n.split(','), args.targets)
+    builder = brew.LocalBuilder(sb_library, namespaces, args.targets)
     builder.build_repo_list()
     builder.build_all()
     if args.push:

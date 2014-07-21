@@ -286,7 +286,11 @@ class LocalBuilder(StackbrewBuilder):
                 'Build success: {0} ({1}:{2})'.format(img_id, repo.name, tag)
             )
             for namespace in self.namespaces:
-                self.client.tag(img_id, '/'.join([namespace, repo.name]), tag)
+                if namespace != '':
+                    name = '/'.join([namespace, repo.name])
+                else:
+                    name = repo.name
+                self.client.tag(img_id, name, tag)
 
         if callback:
             callback(None, repo, version, img_id, logs)
