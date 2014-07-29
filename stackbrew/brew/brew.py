@@ -164,7 +164,8 @@ class StackbrewBuilder(object):
         for repo in self.repos:
             self.build_repo(repo, continue_on_error, callback)
             for namespace in self.namespaces:
-                self.pushlist.append('/'.join([namespace, repo.name]))
+                if namespace != '':
+                    self.pushlist.append('/'.join([namespace, repo.name]))
 
     def build_repo(self, repo, continue_on_error=True, callback=None):
         for version in repo.list_versions():
