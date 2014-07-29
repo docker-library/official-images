@@ -265,7 +265,8 @@ class LocalBuilder(StackbrewBuilder):
         super(LocalBuilder, self).__init__(
             library, namespaces, targetlist, repo_cache
         )
-        self.client = docker.Client(version='1.9', timeout=10000)
+        self.client = docker.Client(version='1.9', timeout=10000,
+                                    base_url=os.getenv('DOCKER_HOST'))
         self.build_success_re = r'^Successfully built ([a-f0-9]+)\n$'
 
     def do_build(self, repo, version, dockerfile_location, callback=None):
