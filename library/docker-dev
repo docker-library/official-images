@@ -1,12 +1,16 @@
 # maintainer: Tianon Gravi <admwiggin@gmail.com> (@tianon)
 
-latest: git://github.com/dotcloud/docker@v1.0.1
-v1.0.1: git://github.com/dotcloud/docker@v1.0.1
-v0.12.0: git://github.com/dotcloud/docker@v0.12.0
-v0.11.1: git://github.com/dotcloud/docker@v0.11.1
-v0.10.0: git://github.com/dotcloud/docker@v0.10.0
-v0.9.1: git://github.com/dotcloud/docker@v0.9.1
-v0.8.1: git://github.com/dotcloud/docker@v0.8.1
-v0.7.6: git://github.com/dotcloud/docker@v0.7.6
+latest: git://github.com/docker/docker@v1.1.2
+v1.1.2: git://github.com/docker/docker@v1.1.2
+v1.1:   git://github.com/docker/docker@v1.1.2
 
-# one tag per major version
+v1.0.1: git://github.com/docker/docker@v1.0.1
+v1.0:   git://github.com/docker/docker@v1.0.1
+
+v0.12.0: git://github.com/docker/docker@v0.12.0
+v0.12:   git://github.com/docker/docker@v0.12.0
+
+v0.11.1: git://github.com/docker/docker@v0.11.1
+v0.11:   git://github.com/docker/docker@v0.11.1
+
+# "supported": one tag per major version, four major versions
