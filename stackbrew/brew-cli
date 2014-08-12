@@ -65,8 +65,9 @@ if __name__ == '__main__':
     namespaces = args.n.split(',')
     if args.no_namespace:
         namespaces.append('')
+    targets = args.targets.split(',')
     sb_library = brew.StackbrewLibrary(args.repository, args.b)
-    builder = brew.LocalBuilder(sb_library, namespaces, args.targets)
+    builder = brew.LocalBuilder(sb_library, namespaces, targets)
     builder.build_repo_list()
     builder.build_all()
     if args.push:
