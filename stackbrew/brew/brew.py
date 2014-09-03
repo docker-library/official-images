@@ -79,6 +79,7 @@ class StackbrewLibrary(object):
 class StackbrewRepo(object):
     def __init__(self, name, definition_file):
         self.buildlist = {}
+        self.buildorder = []
         self.git_folders = {}
         self.name = name
         for line in definition_file:
@@ -88,10 +89,12 @@ class StackbrewRepo(object):
                 continue
             logger.debug(line)
             tag, url, ref, dfile = self._parse_line(line)
-            if (url, ref, dfile) in self.buildlist:
-                self.buildlist[(url, ref, dfile)].append(tag)
+            repo = (url, ref, dfile)
+            if repo in self.buildlist:
+                self.buildlist[repo].append(tag)
             else:
-                self.buildlist[(url, ref, dfile)] = [tag]
+                self.buildlist[repo] = [tag]
+                self.buildorder.append(repo)
 
     def _parse_line(self, line):
         df_folder = '.'
@@ -115,7 +118,7 @@ class StackbrewRepo(object):
             )
 
     def list_versions(self):
-        return self.buildlist.keys()
+        return self.buildorder
 
     def get_associated_tags(self, repo):
         return self.buildlist.get(repo, None)
