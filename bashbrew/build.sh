@@ -5,6 +5,7 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
 # TODO config file of some kind
 : ${LIBRARY:="$dir/../library"} # where we get the "library/*" repo manifests
+: ${SRC:="$dir/src"} # where we clone all the repos, go-style
 
 # arg handling: all args are [repo|repo:tag]
 # no argument means build all repos in $LIBRARY
@@ -47,7 +48,18 @@ for repoTag in "${repos[@]}"; do
 		gitUrl="${fullGitUrl%%@*}"
 		gitRef="${fullGitUrl#*@}"
 		
-		repoGitRepo[$repo:$tag]="$gitUrl"
+		gitRepo="${gitUrl#*://}"
+		gitRepo="${gitRepo%/}"
+		gitRepo="${gitRepo%.git}"
+		gitRepo="${gitRepo%/}"
+		gitRepo="$SRC/$gitRepo"
+		
+		if [ ! -d "$gitRepo" ]; then
+			mkdir -p "$(dirname "$gitRepo")"
+			git clone -q "$gitUrl" "$gitRepo"
+		fi
+		
+		repoGitRepo[$repo:$tag]="$gitRepo"
 		repoGitRef[$repo:$tag]="$gitRef"
 		repoGitDir[$repo:$tag]="$gitDir"
 		tags+=( "$repo:$tag" )
