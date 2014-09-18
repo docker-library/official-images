@@ -142,7 +142,8 @@ while [ "$#" -gt 0 ]; do
 	gitRef="${repoGitRef[$repoTag]}"
 	gitDir="${repoGitDir[$repoTag]}"
 	shift
-	if [ -z "$gitRepo" -o -z "$gitRef" ]; then
+	if [ -z "$gitRepo" ]; then
+		echo >&2 'warning: skipping unknown repo:tag:' "$repoTag"
 		continue
 	fi
 	
