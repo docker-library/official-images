@@ -56,7 +56,9 @@ for repoTag in "${repos[@]}"; do
 		
 		if [ ! -d "$gitRepo" ]; then
 			mkdir -p "$(dirname "$gitRepo")"
+			echo "Cloning '$gitUrl' into '$gitRepo' ..."
 			git clone -q "$gitUrl" "$gitRepo"
+			echo 'Cloned successfully!'
 		fi
 		
 		repoGitRepo[$repo:$tag]="$gitRepo"
