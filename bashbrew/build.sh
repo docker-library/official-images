@@ -1,16 +1,16 @@
 #!/bin/bash
 set -e
 
-cd "$(dirname "$(readlink -f "$BASH_SOURCE")")"
+dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
 # TODO config file of some kind
-LIBDIR='../library'
+: ${LIBRARY:="$dir/../library"} # where we get the "library/*" repo manifests
 
 # arg handling: all args are [repo|repo:tag]
-# no argument means build all repos in $LIBDIR
+# no argument means build all repos in $LIBRARY
 repos=( "$@" )
 if [ ${#repos[@]} -eq 0 ]; then
-	repos=( $(cd "$LIBDIR" && echo *) )
+	repos=( $(cd "$LIBRARY" && echo *) )
 fi
 repos=( "${repos[@]%/}" )
 
@@ -30,11 +30,12 @@ for repoTag in "${repos[@]}"; do
 		queue+=( "$repoTag" )
 		continue
 	fi
+	
 	repo="${repoTag%:*}"
 	
 	# parse the repo library file
 	IFS=$'\n'
-	repoTagLines=( $(cat "$LIBDIR/$repo" | grep -vE '^#|^\s*$') )
+	repoTagLines=( $(cat "$LIBRARY/$repo" | grep -vE '^#|^\s*$') )
 	unset IFS
 	
 	tags=()
