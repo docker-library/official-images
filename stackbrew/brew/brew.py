@@ -10,7 +10,7 @@ import docker
 
 import git
 
-DEFAULT_REPOSITORY = 'git://github.com/dotcloud/stackbrew'
+DEFAULT_REPOSITORY = 'git://github.com/docker-library/official-images.git'
 DEFAULT_BRANCH = 'master'
 
 logger = logging.getLogger(__name__)
