@@ -6,6 +6,8 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 # TODO config file of some kind
 : ${LIBRARY:="$dir/../library"} # where we get the "library/*" repo manifests
 : ${SRC:="$dir/src"} # where we clone all the repos, go-style
+: ${LOGS:="$dir/logs"} # where "docker build" logs go
+: ${NAMESPACES:='library stackbrew'} # after we build, also tag each image as "NAMESPACE/repo:tag"
 
 # arg handling: all args are [repo|repo:tag]
 # no argument means build all repos in $LIBRARY
@@ -20,6 +22,15 @@ queue=()
 declare -A repoGitRepo=()
 declare -A repoGitRef=()
 declare -A repoGitDir=()
+
+logDir="$LOGS/build-$(date +'%Y-%m-%d--%H-%M-%S')"
+mkdir -p "$logDir"
+for repo in "${repos[@]}"; do
+	echo "$repo" >> "$logDir/repos.txt"
+done
+
+latestLogDir="$LOGS/latest" # this gets shiny symlinks to the latest buildlog for each repo we've seen since the creation of the LOGS dir
+mkdir -p "$latestLogDir"
 
 # gather all the `repo:tag` combos to build
 for repoTag in "${repos[@]}"; do
@@ -59,6 +70,8 @@ for repoTag in "${repos[@]}"; do
 			echo "Cloning '$gitUrl' into '$gitRepo' ..."
 			git clone -q "$gitUrl" "$gitRepo"
 			echo 'Cloned successfully!'
+		else
+			( cd "$gitRepo" && git fetch -q && git fetch -q --tags )
 		fi
 		
 		repoGitRepo[$repo:$tag]="$gitRepo"
@@ -75,5 +88,41 @@ for repoTag in "${repos[@]}"; do
 	fi
 done
 
-echo "${queue[@]}"
-# TODO clone and build
+set -- "${queue[@]}"
+while [ "$#" -gt 0 ]; do
+	repoTag="$1"
+	gitRepo="${repoGitRepo[$repoTag]}"
+	gitRef="${repoGitRef[$repoTag]}"
+	gitDir="${repoGitDir[$repoTag]}"
+	shift
+	if [ -z "$gitRepo" -o -z "$gitRef" ]; then
+		continue
+	fi
+	
+	echo "Processing $repoTag ..."
+	( cd "$gitRepo" && git clean -dfxq && git checkout -q "$gitRef" && "$dir/git-set-dir-times" )
+	
+	IFS=$'\n'
+	froms=( $(grep '^FROM[[:space:]]' "$gitRepo/$gitDir/Dockerfile" | awk -F '[[:space:]]+' '{ print $2 ~ /:/ ? $2 : $2":latest" }') )
+	unset IFS
+	
+	for from in "${froms[@]}"; do
+		for queuedRepoTag in "$@"; do
+			if [ "$from" = "$queuedRepoTag" ]; then
+				# a "FROM" in this image is being built later in our queue, so let's bail on this image for now and come back later
+				echo "- defer; FROM $from"
+				set -- "$@" "$repoTag"
+				continue 3
+			fi
+		done
+	done
+	
+	thisLog="$logDir/build-$repoTag.log"
+	touch "$thisLog"
+	ln -sf "$thisLog" "$latestLogDir/$(basename "$thisLog")"
+	docker build -t "$repoTag" "$gitRepo/$gitDir" &> "$thisLog"
+	
+	for namespace in $NAMESPACES; do
+		docker tag "$repoTag" "$namespace/$repoTag"
+	done
+done
