@@ -9,13 +9,60 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 : ${LOGS:="$dir/logs"} # where "docker build" logs go
 : ${NAMESPACES:='library stackbrew'} # after we build, also tag each image as "NAMESPACE/repo:tag"
 
+LIBRARY="$(readlink -f "$LIBRARY")"
+SRC="$(readlink -f "$SRC")"
+LOGS="$(readlink -f "$LOGS")"
+
 # arg handling: all args are [repo|repo:tag]
-# no argument means build all repos in $LIBRARY
-repos=( "$@" )
-if [ ${#repos[@]} -eq 0 ]; then
+usage() {
+	cat <<EOUSAGE
+
+usage: $0 [options] [repo[:tag] ...]
+   ie: $0 --all
+       $0 debian ubuntu:12.04
+
+   This script builds the docker images specified using the git repositories
+   specified in the library files.
+
+options:
+  --help, -h, -?     Print this help message
+  --all              Builds all docker repos specified in LIBRARY
+
+variables:
+  # where to find repository manifest files
+  LIBRARY="$LIBRARY"
+
+  # where to store the cloned git repositories
+  SRC="$SRC"
+
+  # where to store the build logs
+  LOGS="$LOGS"
+
+  # which additional namespaces to tag images under
+  # NOTE: all images will be tagged in the empty namespace
+  NAMESPACES="$NAMESPACES"
+
+EOUSAGE
+}
+
+# TODO impove arg hanlding for complex args; ex: --exclude=repo:tag
+if [ "$1" = '--help' -o "$1" = '-h' -o "$1" = '-?' ]; then
+	usage
+	exit 0
+fi
+
+if [ "$1" = '--all' ]; then
 	repos=( $(cd "$LIBRARY" && echo *) )
+else
+	repos=( "$@" )
 fi
 repos=( "${repos[@]%/}" )
+
+if [ "${#repos[@]}" -eq 0 ]; then
+	echo >&2 'error: no repos specified'
+	usage >&2
+	exit 1
+fi
 
 # globals for handling the repo queue and repo info parsed from library
 queue=()
@@ -101,6 +148,7 @@ while [ "$#" -gt 0 ]; do
 	
 	echo "Processing $repoTag ..."
 	( cd "$gitRepo" && git clean -dfxq && git checkout -q "$gitRef" && "$dir/git-set-dir-times" )
+	# TODO git tag
 	
 	IFS=$'\n'
 	froms=( $(grep '^FROM[[:space:]]' "$gitRepo/$gitDir/Dockerfile" | awk -F '[[:space:]]+' '{ print $2 ~ /:/ ? $2 : $2":latest" }') )
