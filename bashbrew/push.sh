@@ -37,17 +37,39 @@ variables:
 EOUSAGE
 }
 
-# TODO impove arg hanlding for complex args; ex: --exclude=repo:tag
-if [ "$1" = '--help' -o "$1" = '-h' -o "$1" = '-?' ]; then
-	usage
-	exit 0
+opts="$(getopt -o 'h?' --long 'all,help' -- "$@" || { usage >&2 && false; })"
+eval set -- "$opts"
+
+buildAll=
+while true; do
+	flag=$1
+	shift
+	case "$flag" in
+		--help|-h|'-?')
+			uasge
+			exit 0
+			;;
+		--all)
+			buildAll=1
+			;;
+		--)
+			shift
+			break
+			;;
+		*)
+			echo >&2 "error: unknown flag: $flag"
+			usage >&2
+			exit 1
+			;;
+	esac
+done
+
+repos=()
+if [ "$buildAll" ]; then
+	repos=( $(cd "$LIBRARY" && echo *) )
 fi
 
-if [ "$1" = '--all' ]; then
-	repos=( $(cd "$LIBRARY" && echo *) )
-else
-	repos=( "$@" )
-fi
+repos+=( "$@" )
 repos=( "${repos[@]%/}" )
 
 if [ "${#repos[@]}" -eq 0 ]; then

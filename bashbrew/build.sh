@@ -27,6 +27,8 @@ usage: $0 [options] [repo[:tag] ...]
 options:
   --help, -h, -?     Print this help message
   --all              Builds all docker repos specified in LIBRARY
+  --no-clone         Don't pull the git repos
+  --no-build         Don't build, just echo what would have built
 
 variables:
   # where to find repository manifest files
@@ -45,17 +47,46 @@ variables:
 EOUSAGE
 }
 
-# TODO impove arg hanlding for complex args; ex: --exclude=repo:tag
-if [ "$1" = '--help' -o "$1" = '-h' -o "$1" = '-?' ]; then
-	usage
-	exit 0
+opts="$(getopt -o 'h?' --long 'all,help,no-build,no-clone' -- "$@" || { usage >&2 && false; })"
+eval set -- "$opts"
+
+doClone=1
+doBuild=1
+buildAll=
+while true; do
+	flag=$1
+	shift
+	case "$flag" in
+		--help|-h|'-?')
+			uasge
+			exit 0
+			;;
+		--all)
+			buildAll=1
+			;;
+		--no-clone)
+			doClone=
+			;;
+		--no-build)
+			doBuild=
+			;;
+		--)
+			break
+			;;
+		*)
+			echo >&2 "error: unknown flag: $flag"
+			usage >&2
+			exit 1
+			;;
+	esac
+done
+
+repos=()
+if [ "$buildAll" ]; then
+	repos=( $(cd "$LIBRARY" && echo *) )
 fi
 
-if [ "$1" = '--all' ]; then
-	repos=( $(cd "$LIBRARY" && echo *) )
-else
-	repos=( "$@" )
-fi
+repos+=( "$@" )
 repos=( "${repos[@]%/}" )
 
 if [ "${#repos[@]}" -eq 0 ]; then
@@ -112,13 +143,20 @@ for repoTag in "${repos[@]}"; do
 		gitRepo="${gitRepo%/}"
 		gitRepo="$SRC/$gitRepo"
 		
-		if [ ! -d "$gitRepo" ]; then
-			mkdir -p "$(dirname "$gitRepo")"
-			echo "Cloning '$gitUrl' into '$gitRepo' ..."
-			git clone -q "$gitUrl" "$gitRepo"
-			echo 'Cloned successfully!'
+		if [ -z "$doClone" ]; then
+			if [ "$doBuild" -a ! -d "$gitRepo" ]; then
+				echo >&2 "error: directory not found: $gitRepo"
+				exit 1
+			fi
 		else
-			( cd "$gitRepo" && git fetch -q && git fetch -q --tags )
+			if [ ! -d "$gitRepo" ]; then
+				mkdir -p "$(dirname "$gitRepo")"
+				echo "Cloning '$gitUrl' into '$gitRepo' ..."
+				git clone -q "$gitUrl" "$gitRepo"
+				echo 'Cloned successfully!'
+			else
+				( cd "$gitRepo" && git fetch -q && git fetch -q --tags )
+			fi
 		fi
 		
 		repoGitRepo[$repo:$tag]="$gitRepo"
@@ -148,30 +186,35 @@ while [ "$#" -gt 0 ]; do
 	fi
 	
 	echo "Processing $repoTag ..."
-	( cd "$gitRepo" && git clean -dfxq && git checkout -q "$gitRef" && "$dir/git-set-dir-times" )
-	# TODO git tag
 	
-	IFS=$'\n'
-	froms=( $(grep '^FROM[[:space:]]' "$gitRepo/$gitDir/Dockerfile" | awk -F '[[:space:]]+' '{ print $2 ~ /:/ ? $2 : $2":latest" }') )
-	unset IFS
-	
-	for from in "${froms[@]}"; do
-		for queuedRepoTag in "$@"; do
-			if [ "$from" = "$queuedRepoTag" ]; then
-				# a "FROM" in this image is being built later in our queue, so let's bail on this image for now and come back later
-				echo "- defer; FROM $from"
-				set -- "$@" "$repoTag"
-				continue 3
-			fi
+	if [ "$doClone" ]; then
+		( cd "$gitRepo" && git clean -dfxq && git checkout -q "$gitRef" && "$dir/git-set-dir-times" )
+		# TODO git tag
+		
+		IFS=$'\n'
+		froms=( $(grep '^FROM[[:space:]]' "$gitRepo/$gitDir/Dockerfile" | awk -F '[[:space:]]+' '{ print $2 ~ /:/ ? $2 : $2":latest" }') )
+		unset IFS
+		
+		for from in "${froms[@]}"; do
+			for queuedRepoTag in "$@"; do
+				if [ "$from" = "$queuedRepoTag" ]; then
+					# a "FROM" in this image is being built later in our queue, so let's bail on this image for now and come back later
+					echo "- defer; FROM $from"
+					set -- "$@" "$repoTag"
+					continue 3
+				fi
+			done
 		done
-	done
+	fi
 	
-	thisLog="$logDir/build-$repoTag.log"
-	touch "$thisLog"
-	ln -sf "$thisLog" "$latestLogDir/$(basename "$thisLog")"
-	docker build -t "$repoTag" "$gitRepo/$gitDir" &> "$thisLog"
-	
-	for namespace in $NAMESPACES; do
-		docker tag "$repoTag" "$namespace/$repoTag"
-	done
+	if [ "$doBuild" ]; then
+		thisLog="$logDir/build-$repoTag.log"
+		touch "$thisLog"
+		ln -sf "$thisLog" "$latestLogDir/$(basename "$thisLog")"
+		docker build -t "$repoTag" "$gitRepo/$gitDir" &> "$thisLog"
+		
+		for namespace in $NAMESPACES; do
+			docker tag "$repoTag" "$namespace/$repoTag"
+		done
+	fi
 done
