@@ -147,7 +147,10 @@ for repoTag in "${repos[@]}"; do
 				git clone -q "$gitUrl" "$gitRepo"
 				echo 'Cloned successfully!'
 			else
-				( cd "$gitRepo" && git fetch -q && git fetch -q --tags )
+				# if we don't have the "ref" specified, "git fetch" in the hopes that we get it
+				if ! ( cd "$gitRepo" && git rev-parse --verify "${gitRef}^{commit}" &> /dev/null ); then
+					( cd "$gitRepo" && git fetch -q && git fetch -q --tags )
+				fi
 			fi
 		fi
 		
