@@ -1,6 +1,9 @@
 #!/bin/bash
 set -e
 
+# so we can have fancy stuff like !(pattern)
+shopt -s extglob
+
 dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
 library="$dir/../library"
@@ -77,7 +80,7 @@ done
 
 repos=()
 if [ "$buildAll" ]; then
-	repos=( $(cd "$library" && echo *) )
+	repos=( "$library"/!(MAINTAINERS) )
 fi
 repos+=( "$@" )
 
@@ -103,10 +106,6 @@ mkdir -p "$latestLogDir"
 
 # gather all the `repo:tag` combos to build
 for repoTag in "${repos[@]}"; do
-	if [ "$repoTag" = 'MAINTAINERS' ]; then
-		continue
-	fi
-	
 	echo "$repoTag" >> "$logDir/repos.txt"
 	
 	if [ "${repoGitRepo[$repoTag]}" ]; then
