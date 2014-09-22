@@ -106,18 +106,29 @@ mkdir -p "$latestLogDir"
 
 # gather all the `repo:tag` combos to build
 for repoTag in "${repos[@]}"; do
-	echo "$repoTag" >> "$logDir/repos.txt"
+	repo="${repoTag%%:*}"
+	tag="${repoTag#*:}"
+	[ "$repo" != "$tag" ] || tag=
+	
+	if [ -f "$repo" ]; then
+		repoFile="$repo"
+		repo="$(basename "$repoFile")"
+		repoTag="${repo}${tag:+:$tag}"
+	else
+		repoFile="$library/$repo"
+	fi
+	
+	repoFile="$(readlink -f "$repoFile")"
+	echo "$repoTag ($repoFile)" >> "$logDir/repos.txt"
 	
 	if [ "${repoGitRepo[$repoTag]}" ]; then
 		queue+=( "$repoTag" )
 		continue
 	fi
 	
-	repo="${repoTag%:*}"
-	
 	# parse the repo library file
 	IFS=$'\n'
-	repoTagLines=( $(cat "$library/$repo" | grep -vE '^#|^\s*$') )
+	repoTagLines=( $(cat "$repoFile" | grep -vE '^#|^\s*$') )
 	unset IFS
 	
 	tags=()
