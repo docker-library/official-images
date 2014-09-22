@@ -3,15 +3,14 @@ set -e
 
 dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
-# TODO config file of some kind
-: ${LIBRARY:="$dir/../library"} # where we get the "library/*" repo manifests
-: ${SRC:="$dir/src"} # where we clone all the repos, go-style
-: ${LOGS:="$dir/logs"} # where "docker build" logs go
-: ${NAMESPACES:='library stackbrew'} # after we build, also tag each image as "NAMESPACE/repo:tag"
+library="$dir/../library"
+src="$dir/src"
+logs="$dir/logs"
+namespaces='library stackbrew'
 
-LIBRARY="$(readlink -f "$LIBRARY")"
-SRC="$(readlink -f "$SRC")"
-LOGS="$(readlink -f "$LOGS")"
+library="$(readlink -f "$library")"
+src="$(readlink -f "$src")"
+logs="$(readlink -f "$logs")"
 
 # arg handling: all args are [repo|repo:tag]
 usage() {
@@ -26,28 +25,23 @@ usage: $0 [options] [repo[:tag] ...]
 
 options:
   --help, -h, -?     Print this help message
-  --all              Builds all docker repos specified in LIBRARY
+  --all              Builds all docker repos specified in library
   --no-clone         Don't pull the git repos
   --no-build         Don't build, just echo what would have built
-
-variables:
-  # where to find repository manifest files
-  LIBRARY="$LIBRARY"
-
-  # where to store the cloned git repositories
-  SRC="$SRC"
-
-  # where to store the build logs
-  LOGS="$LOGS"
-
-  # which additional namespaces to tag images under
-  # NOTE: all images will be tagged in the empty namespace
-  NAMESPACES="$NAMESPACES"
+  --library="$library"
+                     Where to find repository manifest files
+  --src="$src"
+                     Where to store the cloned git repositories
+  --logs="$logs"
+                     Where to store the build logs
+  --namespaces="$namespaces"
+                     Space separated list of namespaces to tag images in after
+                     building
 
 EOUSAGE
 }
 
-opts="$(getopt -o 'h?' --long 'all,help,no-build,no-clone' -- "$@" || { usage >&2 && false; })"
+opts="$(getopt -o 'h?' --long 'all,help,no-build,no-clone,library:,src:,logs:,namespaces:' -- "$@" || { usage >&2 && false; })"
 eval set -- "$opts"
 
 doClone=1
@@ -58,24 +52,24 @@ while true; do
 	shift
 	case "$flag" in
 		--help|-h|'-?')
-			uasge
+			usage
 			exit 0
 			;;
-		--all)
-			buildAll=1
-			;;
-		--no-clone)
-			doClone=
-			;;
-		--no-build)
-			doBuild=
-			;;
+		--all) buildAll=1 ;;
+		--no-clone) doClone= ;;
+		--no-build) doBuild= ;;
+		--library) library="$1" && shift ;;
+		--src) src="$1" && shift ;;
+		--logs) logs="$1" && shift ;;
+		--namespaces) namespaces="$1" && shift ;;
 		--)
 			break
 			;;
 		*)
-			echo >&2 "error: unknown flag: $flag"
-			usage >&2
+			{
+				echo "error: unknown flag: $flag"
+				usage
+			} >&2
 			exit 1
 			;;
 	esac
@@ -83,10 +77,10 @@ done
 
 repos=()
 if [ "$buildAll" ]; then
-	repos=( $(cd "$LIBRARY" && echo *) )
+	repos=( $(cd "$library" && echo *) )
 fi
-
 repos+=( "$@" )
+
 repos=( "${repos[@]%/}" )
 
 if [ "${#repos[@]}" -eq 0 ]; then
@@ -101,13 +95,10 @@ declare -A repoGitRepo=()
 declare -A repoGitRef=()
 declare -A repoGitDir=()
 
-logDir="$LOGS/build-$(date +'%Y-%m-%d--%H-%M-%S')"
+logDir="$logs/build-$(date +'%Y-%m-%d--%H-%M-%S')"
 mkdir -p "$logDir"
-for repo in "${repos[@]}"; do
-	echo "$repo" >> "$logDir/repos.txt"
-done
 
-latestLogDir="$LOGS/latest" # this gets shiny symlinks to the latest buildlog for each repo we've seen since the creation of the LOGS dir
+latestLogDir="$logs/latest" # this gets shiny symlinks to the latest buildlog for each repo we've seen since the creation of the logs dir
 mkdir -p "$latestLogDir"
 
 # gather all the `repo:tag` combos to build
@@ -115,6 +106,8 @@ for repoTag in "${repos[@]}"; do
 	if [ "$repoTag" = 'MAINTAINERS' ]; then
 		continue
 	fi
+	
+	echo "$repoTag" >> "$logDir/repos.txt"
 	
 	if [ "${repoGitRepo[$repoTag]}" ]; then
 		queue+=( "$repoTag" )
@@ -125,7 +118,7 @@ for repoTag in "${repos[@]}"; do
 	
 	# parse the repo library file
 	IFS=$'\n'
-	repoTagLines=( $(cat "$LIBRARY/$repo" | grep -vE '^#|^\s*$') )
+	repoTagLines=( $(cat "$library/$repo" | grep -vE '^#|^\s*$') )
 	unset IFS
 	
 	tags=()
@@ -141,7 +134,7 @@ for repoTag in "${repos[@]}"; do
 		gitRepo="${gitRepo%/}"
 		gitRepo="${gitRepo%.git}"
 		gitRepo="${gitRepo%/}"
-		gitRepo="$SRC/$gitRepo"
+		gitRepo="$src/$gitRepo"
 		
 		if [ -z "$doClone" ]; then
 			if [ "$doBuild" -a ! -d "$gitRepo" ]; then
@@ -213,7 +206,7 @@ while [ "$#" -gt 0 ]; do
 		ln -sf "$thisLog" "$latestLogDir/$(basename "$thisLog")"
 		docker build -t "$repoTag" "$gitRepo/$gitDir" &> "$thisLog"
 		
-		for namespace in $NAMESPACES; do
+		for namespace in $namespaces; do
 			docker tag "$repoTag" "$namespace/$repoTag"
 		done
 	fi
