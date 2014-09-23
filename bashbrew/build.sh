@@ -196,12 +196,16 @@ while [ "$#" -gt 0 ]; do
 	
 	echo "Processing $repoTag ..."
 	
+	thisLog="$logDir/build-$repoTag.log"
+	touch "$thisLog"
+	ln -sf "$thisLog" "$latestLogDir/$(basename "$thisLog")"
+	
 	if ! ( cd "$gitRepo" && git rev-parse --verify "${gitRef}^{commit}" &> /dev/null ); then
 		echo "- skip; invalid ref: $gitRef"
 		continue
 	fi
 	
-	( cd "$gitRepo" && git clean -dfxq && git checkout -q "$gitRef" )
+	( set -x; cd "$gitRepo" && git clean -dfxq && git checkout -q "$gitRef" ) &>> "$thisLog"
 	# TODO git tag
 	
 	IFS=$'\n'
@@ -220,15 +224,12 @@ while [ "$#" -gt 0 ]; do
 	done
 	
 	if [ "$doBuild" ]; then
-		( cd "$gitRepo/$gitDir" && "$dir/git-set-dir-times" )
+		( set -x; cd "$gitRepo/$gitDir" && "$dir/git-set-dir-times" ) &>> "$thisLog"
 		
-		thisLog="$logDir/build-$repoTag.log"
-		touch "$thisLog"
-		ln -sf "$thisLog" "$latestLogDir/$(basename "$thisLog")"
-		docker build -t "$repoTag" "$gitRepo/$gitDir" &> "$thisLog"
+		( set -x; docker build -t "$repoTag" "$gitRepo/$gitDir" ) &>> "$thisLog"
 		
 		for namespace in $namespaces; do
-			docker tag "$repoTag" "$namespace/$repoTag"
+			( set -x; docker tag "$repoTag" "$namespace/$repoTag" ) &>> "$thisLog"
 		done
 	fi
 done
