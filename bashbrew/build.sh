@@ -193,27 +193,32 @@ while [ "$#" -gt 0 ]; do
 	
 	echo "Processing $repoTag ..."
 	
-	if [ "$doClone" ]; then
-		( cd "$gitRepo" && git clean -dfxq && git checkout -q "$gitRef" && "$dir/git-set-dir-times" )
-		# TODO git tag
-		
-		IFS=$'\n'
-		froms=( $(grep '^FROM[[:space:]]' "$gitRepo/$gitDir/Dockerfile" | awk -F '[[:space:]]+' '{ print $2 ~ /:/ ? $2 : $2":latest" }') )
-		unset IFS
-		
-		for from in "${froms[@]}"; do
-			for queuedRepoTag in "$@"; do
-				if [ "$from" = "$queuedRepoTag" ]; then
-					# a "FROM" in this image is being built later in our queue, so let's bail on this image for now and come back later
-					echo "- defer; FROM $from"
-					set -- "$@" "$repoTag"
-					continue 3
-				fi
-			done
-		done
+	if ! ( cd "$gitRepo" && git rev-parse --verify "${gitRef}^{commit}" &> /dev/null ); then
+		echo "- skip; invalid ref: $gitRef"
+		continue
 	fi
 	
+	( cd "$gitRepo" && git clean -dfxq && git checkout -q "$gitRef" )
+	# TODO git tag
+	
+	IFS=$'\n'
+	froms=( $(grep '^FROM[[:space:]]' "$gitRepo/$gitDir/Dockerfile" | awk -F '[[:space:]]+' '{ print $2 ~ /:/ ? $2 : $2":latest" }') )
+	unset IFS
+	
+	for from in "${froms[@]}"; do
+		for queuedRepoTag in "$@"; do
+			if [ "$from" = "$queuedRepoTag" ]; then
+				# a "FROM" in this image is being built later in our queue, so let's bail on this image for now and come back later
+				echo "- defer; FROM $from"
+				set -- "$@" "$repoTag"
+				continue 3
+			fi
+		done
+	done
+	
 	if [ "$doBuild" ]; then
+		( cd "$gitRepo/$gitDir" && "$dir/git-set-dir-times" )
+		
 		thisLog="$logDir/build-$repoTag.log"
 		touch "$thisLog"
 		ln -sf "$thisLog" "$latestLogDir/$(basename "$thisLog")"
