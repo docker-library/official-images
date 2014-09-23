@@ -163,6 +163,9 @@ for repoTag in "${repos[@]}"; do
 					( cd "$gitRepo" && git fetch -q && git fetch -q --tags )
 				fi
 			fi
+			
+			# disable any automatic garbage collection too, just to help make sure we keep our dangling commit objects
+			( cd "$gitRepo" && git config gc.auto 0 )
 		fi
 		
 		repoGitRepo[$repo:$tag]="$gitRepo"
