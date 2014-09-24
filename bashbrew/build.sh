@@ -44,7 +44,7 @@ options:
 EOUSAGE
 }
 
-opts="$(getopt -o 'h?' --long 'all,help,no-build,no-clone,library:,src:,logs:,namespaces:' -- "$@" || { usage >&2 && false; })"
+opts="$(getopt -o 'h?' --long 'all,help,no-clone,no-build,library:,src:,logs:,namespaces:' -- "$@" || { usage >&2 && false; })"
 eval set -- "$opts"
 
 doClone=1
@@ -103,6 +103,8 @@ mkdir -p "$logDir"
 
 latestLogDir="$logs/latest" # this gets shiny symlinks to the latest buildlog for each repo we've seen since the creation of the logs dir
 mkdir -p "$latestLogDir"
+
+didFail=
 
 # gather all the `repo:tag` combos to build
 for repoTag in "${repos[@]}"; do
@@ -190,7 +192,8 @@ while [ "$#" -gt 0 ]; do
 	gitDir="${repoGitDir[$repoTag]}"
 	shift
 	if [ -z "$gitRepo" ]; then
-		echo >&2 'warning: skipping unknown repo:tag:' "$repoTag"
+		echo >&2 'Unknown repo:tag:' "$repoTag"
+		didFail=1
 		continue
 	fi
 	
@@ -202,11 +205,24 @@ while [ "$#" -gt 0 ]; do
 	
 	if ! ( cd "$gitRepo" && git rev-parse --verify "${gitRef}^{commit}" &> /dev/null ); then
 		echo "- skipped; invalid ref: $gitRef"
+		didFail=1
 		continue
 	fi
 	
 	( set -x; cd "$gitRepo" && git clean -dfxq && git checkout -q "$gitRef" ) &>> "$thisLog"
 	# TODO git tag
+	
+	if [ ! -d "$gitRepo/$gitDir" ]; then
+		echo "- skipped; invalid dir: $gitDir"
+		didFail=1
+		continue
+	fi
+	
+	if [ ! -f "$gitRepo/$gitDir/Dockerfile" ]; then
+		echo "- skipped; missing $gitDir/Dockerfile"
+		didFail=1
+		continue
+	fi
 	
 	IFS=$'\n'
 	froms=( $(grep '^FROM[[:space:]]' "$gitRepo/$gitDir/Dockerfile" | awk -F '[[:space:]]+' '{ print $2 ~ /:/ ? $2 : $2":latest" }') )
@@ -228,6 +244,7 @@ while [ "$#" -gt 0 ]; do
 		
 		if ! ( set -x; docker build -t "$repoTag" "$gitRepo/$gitDir" ) &>> "$thisLog"; then
 			echo "- failed; see $thisLog"
+			didFail=1
 			continue
 		fi
 		
@@ -236,3 +253,5 @@ while [ "$#" -gt 0 ]; do
 		done
 	fi
 done
+
+[ -z "$didFail" ]
