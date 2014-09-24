@@ -204,7 +204,7 @@ while [ "$#" -gt 0 ]; do
 	ln -sf "$thisLog" "$latestLogDir/$(basename "$thisLog")"
 	
 	if ! ( cd "$gitRepo" && git rev-parse --verify "${gitRef}^{commit}" &> /dev/null ); then
-		echo "- skipped; invalid ref: $gitRef"
+		echo "- failed; invalid ref: $gitRef"
 		didFail=1
 		continue
 	fi
@@ -213,13 +213,13 @@ while [ "$#" -gt 0 ]; do
 	# TODO git tag
 	
 	if [ ! -d "$gitRepo/$gitDir" ]; then
-		echo "- skipped; invalid dir: $gitDir"
+		echo "- failed; invalid dir: $gitDir"
 		didFail=1
 		continue
 	fi
 	
 	if [ ! -f "$gitRepo/$gitDir/Dockerfile" ]; then
-		echo "- skipped; missing $gitDir/Dockerfile"
+		echo "- failed; missing $gitDir/Dockerfile"
 		didFail=1
 		continue
 	fi
