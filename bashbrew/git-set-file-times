@@ -1,53 +1,12 @@
-#!/usr/bin/perl -w
-use strict;
+#!/bin/bash
+set -e
 
-# https://git.wiki.kernel.org/index.php/ExampleScripts#Setting_the_timestamps_of_the_files_to_the_commit_timestamp_of_the_commit_which_last_touched_them
+IFS=$'\n'
+files=( $(git ls-files) )
+unset IFS
 
-# sets mtime and atime of files to the latest commit time in git
-#
-# This is useful for serving static content (managed by git)
-# from a cluster of identically configured HTTP servers.  HTTP
-# clients and content delivery networks can get consistent
-# Last-Modified headers no matter which HTTP server in the
-# cluster they hit.  This should improve caching behavior.
-#
-# This does not take into account merges, but if you're updating
-# every machine in the cluster from the same commit (A) to the
-# same commit (B), the mtimes will be _consistent_ across all
-# machines if not necessarily accurate.
-#
-# THIS IS NOT INTENDED TO OPTIMIZE BUILD SYSTEMS SUCH AS 'make'
-# YOU HAVE BEEN WARNED!
-
-my %ls = ();
-my $commit_time;
-
-if ($ENV{GIT_DIR}) {
-	chdir($ENV{GIT_DIR}) or die $!;
-}
-
-$/ = "\0";
-open FH, 'git ls-files -z|' or die $!;
-while (<FH>) {
-	chomp;
-	$ls{$_} = $_;
-}
-close FH;
-
-
-$/ = "\n";
-open FH, "git log -m -r --name-only --no-color --pretty=raw -z @ARGV |" or die $!;
-while (<FH>) {
-	chomp;
-	if (/^committer .*? (\d+) (?:[\-\+]\d+)$/) {
-		$commit_time = $1;
-	} elsif (s/\0\0commit [a-f0-9]{40}( \(from [a-f0-9]{40}\))?$// or s/\0$//) {
-		my @files = delete @ls{split(/\0/, $_)};
-		@files = grep { defined $_ } @files;
-		next unless @files;
-		utime $commit_time, $commit_time, @files;
-	}
-	last unless %ls;
-
-}
-close FH;
+for f in "${files[@]}"; do
+	stamp="$(git --no-pager log -1 --format='format:%ci' -- "$f")"
+	touchFormat="$(date --date="$stamp" +'%Y%m%d%H%M.%S')"
+	touch --no-dereference -t "$touchFormat" "$f"
+done
