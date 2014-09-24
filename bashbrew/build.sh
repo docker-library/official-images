@@ -224,7 +224,7 @@ while [ "$#" -gt 0 ]; do
 	done
 	
 	if [ "$doBuild" ]; then
-		( set -x; cd "$gitRepo/$gitDir" && "$dir/git-set-dir-times" ) &>> "$thisLog"
+		( set -x; cd "$gitRepo/$gitDir" && "$dir/git-set-mtimes" ) &>> "$thisLog"
 		
 		( set -x; docker build -t "$repoTag" "$gitRepo/$gitDir" ) &>> "$thisLog"
 		
