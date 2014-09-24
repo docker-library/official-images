@@ -209,7 +209,7 @@ while [ "$#" -gt 0 ]; do
 		continue
 	fi
 	
-	( set -x; cd "$gitRepo" && git clean -dfxq && git checkout -q "$gitRef" ) &>> "$thisLog"
+	( set -x; cd "$gitRepo" && git reset -q HEAD && git checkout -q -- . && git clean -dfxq && git checkout -q "$gitRef" -- ) &>> "$thisLog"
 	# TODO git tag
 	
 	if [ ! -d "$gitRepo/$gitDir" ]; then
