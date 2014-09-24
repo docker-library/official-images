@@ -201,7 +201,7 @@ while [ "$#" -gt 0 ]; do
 	ln -sf "$thisLog" "$latestLogDir/$(basename "$thisLog")"
 	
 	if ! ( cd "$gitRepo" && git rev-parse --verify "${gitRef}^{commit}" &> /dev/null ); then
-		echo "- skip; invalid ref: $gitRef"
+		echo "- skipped; invalid ref: $gitRef"
 		continue
 	fi
 	
@@ -216,7 +216,7 @@ while [ "$#" -gt 0 ]; do
 		for queuedRepoTag in "$@"; do
 			if [ "$from" = "$queuedRepoTag" ]; then
 				# a "FROM" in this image is being built later in our queue, so let's bail on this image for now and come back later
-				echo "- defer; FROM $from"
+				echo "- deferred; FROM $from"
 				set -- "$@" "$repoTag"
 				continue 3
 			fi
@@ -226,7 +226,10 @@ while [ "$#" -gt 0 ]; do
 	if [ "$doBuild" ]; then
 		( set -x; cd "$gitRepo/$gitDir" && "$dir/git-set-mtimes" ) &>> "$thisLog"
 		
-		( set -x; docker build -t "$repoTag" "$gitRepo/$gitDir" ) &>> "$thisLog"
+		if ! ( set -x; docker build -t "$repoTag" "$gitRepo/$gitDir" ) &>> "$thisLog"; then
+			echo "- failed; see $thisLog"
+			continue
+		fi
 		
 		for namespace in $namespaces; do
 			( set -x; docker tag "$repoTag" "$namespace/$repoTag" ) &>> "$thisLog"
