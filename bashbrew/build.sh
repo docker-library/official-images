@@ -154,11 +154,15 @@ for repoTag in "${repos[@]}"; do
 	tags=()
 	for line in "${repoTagLines[@]}"; do
 		tag="$(echo "$line" | awk -F ': +' '{ print $1 }')"
-		fullGitUrl="$(echo "$line" | awk -F ' +' '{ print $2 }')"
-		gitDir="$(echo "$line" | awk -F ' +' '{ print $3 }')"
+		repoDir="$(echo "$line" | awk -F ': +' '{ print $2 }')"
 		
-		gitUrl="${fullGitUrl%%@*}"
-		gitRef="${fullGitUrl#*@}"
+		gitUrl="${repoDir%%@*}"
+		commitDir="${repoDir#*@}"
+		gitRef="${commitDir%% *}"
+		gitDir="${commitDir#* }"
+		if [ "$gitDir" = "$commitDir" ]; then
+			gitDir=''
+		fi
 		
 		gitRepo="${gitUrl#*://}"
 		gitRepo="${gitRepo%/}"
@@ -231,7 +235,7 @@ while [ "$#" -gt 0 ]; do
 	# TODO git tag
 	
 	if [ ! -d "$gitRepo/$gitDir" ]; then
-		echo "- failed; invalid dir: $gitDir"
+		echo "- failed; invalid dir: '$gitDir'"
 		didFail=1
 		continue
 	fi
