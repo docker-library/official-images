@@ -112,16 +112,34 @@ for repoTag in "${repos[@]}"; do
 	tag="${repoTag#*:}"
 	[ "$repo" != "$tag" ] || tag=
 	
-	if [ -f "$repo" ]; then
-		repoFile="$repo"
-		repo="$(basename "$repoFile")"
+	if [ "$repo" = 'http' -o "$repo" = 'https' ] && [[ "$tag" == //* ]]; then
+		# IT'S A URL!
+		repoUrl="$repo:${tag%:*}"
+		repo="$(basename "$repoUrl")"
+		if [ "${tag##*:}" != "$tag" ]; then
+			tag="${tag##*:}"
+		else
+			tag=
+		fi
 		repoTag="${repo}${tag:+:$tag}"
+		
+		echo "$repoTag ($repoUrl)" >> "$logDir/repos.txt"
+		
+		cmd=( curl -sSL --compressed "$repoUrl" )
 	else
-		repoFile="$library/$repo"
+		if [ -f "$repo" ]; then
+			repoFile="$repo"
+			repo="$(basename "$repoFile")"
+			repoTag="${repo}${tag:+:$tag}"
+		else
+			repoFile="$library/$repo"
+		fi
+		
+		repoFile="$(readlink -f "$repoFile")"
+		echo "$repoTag ($repoFile)" >> "$logDir/repos.txt"
+		
+		cmd=( cat "$repoFile" )
 	fi
-	
-	repoFile="$(readlink -f "$repoFile")"
-	echo "$repoTag ($repoFile)" >> "$logDir/repos.txt"
 	
 	if [ "${repoGitRepo[$repoTag]}" ]; then
 		queue+=( "$repoTag" )
@@ -130,7 +148,7 @@ for repoTag in "${repos[@]}"; do
 	
 	# parse the repo library file
 	IFS=$'\n'
-	repoTagLines=( $(cat "$repoFile" | grep -vE '^#|^\s*$') )
+	repoTagLines=( $("${cmd[@]}" | grep -vE '^#|^\s*$') )
 	unset IFS
 	
 	tags=()
