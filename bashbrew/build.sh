@@ -243,7 +243,7 @@ while [ "$#" -gt 0 ]; do
 	fi
 	
 	IFS=$'\n'
-	froms=( $(grep '^FROM[[:space:]]' "$gitRepo/$gitDir/Dockerfile" | awk -F '[[:space:]]+' '{ print $2 ~ /:/ ? $2 : $2":latest" }') )
+	froms=( $(grep -i '^FROM[[:space:]]' "$gitRepo/$gitDir/Dockerfile" | awk '{ print $2 ~ /:/ ? $2 : $2":latest" }') )
 	unset IFS
 	
 	for from in "${froms[@]}"; do
