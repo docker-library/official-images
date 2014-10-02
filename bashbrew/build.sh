@@ -161,7 +161,7 @@ for repoTag in "${repos[@]}"; do
 		gitRef="${commitDir%% *}"
 		gitDir="${commitDir#* }"
 		if [ "$gitDir" = "$commitDir" ]; then
-			gitDir=''
+			gitDir=
 		fi
 		
 		gitRepo="${gitUrl#*://}"
