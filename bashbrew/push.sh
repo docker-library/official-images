@@ -38,7 +38,7 @@ options:
 EOUSAGE
 }
 
-opts="$(getopt -o 'h?' --long 'all,help,no-push,library:,namespaces:' -- "$@" || { usage >&2 && false; })"
+opts="$(getopt -o 'h?' --long 'help,all,no-push,library:,logs:,namespaces:' -- "$@" || { usage >&2 && false; })"
 eval set -- "$opts"
 
 doPush=1
@@ -54,6 +54,7 @@ while true; do
 		--all) buildAll=1 ;;
 		--no-push) doPush= ;;
 		--library) library="$1" && shift ;;
+		--logs) logs="$1" && shift ;;
 		--namespaces) namespaces="$1" && shift ;;
 		--)
 			break

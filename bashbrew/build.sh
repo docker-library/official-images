@@ -44,7 +44,7 @@ options:
 EOUSAGE
 }
 
-opts="$(getopt -o 'h?' --long 'all,help,no-clone,no-build,library:,src:,logs:,namespaces:' -- "$@" || { usage >&2 && false; })"
+opts="$(getopt -o 'h?' --long 'help,all,no-clone,no-build,library:,src:,logs:,namespaces:' -- "$@" || { usage >&2 && false; })"
 eval set -- "$opts"
 
 doClone=1
