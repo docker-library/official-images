@@ -61,8 +61,14 @@ Optionally, if `<dockerfile-dir>` is present, Stackbrew will look for the
 
 * Propose a pull request to the origin repository. Don't hesitate to @-mention one of the repository maintainers (found in the relevant MAINTAINERS file).
 
-## Stackbrew
+## Bashbrew
+
+Bashbrew is a set of bash scripts for cloning, building, tagging, and pushing
+the Docker official images. See [`README.md` in the `bashbrew/`
+subfolder](bashbrew/README.md) for more information.
+
+## Stackbrew (deprecated)
 
 Stackbrew is a web-application that performs continuous building of the
-Docker official images. See `README.md` in the `stackbrew/` subfolder
-for more information.
+Docker official images. See [`README.md` in the `stackbrew/`
+subfolder](stackbrew/README.md) for more information.
