@@ -117,7 +117,9 @@ for repoTag in "${repos[@]}"; do
 	for pushTag in "${pushes[@]}"; do
 		for namespace in $namespaces; do
 			if [ "$doPush" ]; then
-				docker push "$namespace/$pushTag"
+				if ! docker push "$namespace/$pushTag"; then
+					echo >&2 "- $namespace/$pushTag failed to push!"
+				fi
 			else
 				echo "docker push" "$namespace/$pushTag"
 			fi
