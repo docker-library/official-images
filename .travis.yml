@@ -1,3 +1,6 @@
+# just pick a random language so we don't get funky "bundle" ruby stuff
+language: c
+
 # allow for use of Docker-based workers
 sudo: false
 
@@ -9,3 +12,4 @@ cache:
 # --no-build because we has no Docker in Travis :)
 script:
     - ./bashbrew/build.sh --no-build --all
+    - ./bashbrew/push.sh --no-push --all
