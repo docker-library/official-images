@@ -183,8 +183,15 @@ for repoTag in "${repos[@]}"; do
 				echo 'Cloned successfully!'
 			else
 				# if we don't have the "ref" specified, "git fetch" in the hopes that we get it
-				if ! ( cd "$gitRepo" && git rev-parse --verify "${gitRef}^{commit}" &> /dev/null ); then
-					( cd "$gitRepo" && git fetch -q && git fetch -q --tags )
+				if ! (
+					cd "$gitRepo"
+					git rev-parse --verify "${gitRef}^{commit}" &> /dev/null
+				); then
+					(
+						cd "$gitRepo"
+						git fetch -q --all
+						git fetch -q --tags
+					)
 				fi
 			fi
 			
