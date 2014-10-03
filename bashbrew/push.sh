@@ -22,12 +22,12 @@ usage: $0 [options] [repo[:tag] ...]
    ie: $0 --all
        $0 debian ubuntu:12.04
 
-   This script pushes the specified docker images from library that are built
+   This script pushes the specified Docker images from library that are built
    and tagged in the specified namespaces.
 
 options:
   --help, -h, -?     Print this help message
-  --all              Pushes all docker images built for the given namespaces
+  --all              Pushes all Docker images built for the given namespaces
   --no-push          Don't actually push the images to the Docker Hub
   --library="$library"
                      Where to find repository manifest files

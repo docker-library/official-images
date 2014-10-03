@@ -23,18 +23,18 @@ usage: $0 [options] [repo[:tag] ...]
    ie: $0 --all
        $0 debian ubuntu:12.04
 
-   This script builds the docker images specified using the git repositories
+   This script builds the Docker images specified using the Git repositories
    specified in the library files.
 
 options:
   --help, -h, -?     Print this help message
-  --all              Builds all docker repos specified in library
-  --no-clone         Don't pull the git repos
+  --all              Builds all Docker repos specified in library
+  --no-clone         Don't pull the Git repos
   --no-build         Don't build, just echo what would have built
   --library="$library"
                      Where to find repository manifest files
   --src="$src"
-                     Where to store the cloned git repositories
+                     Where to store the cloned Git repositories
   --logs="$logs"
                      Where to store the build logs
   --namespaces="$namespaces"
