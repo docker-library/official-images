@@ -231,23 +231,17 @@ while [ "$#" -gt 0 ]; do
 		continue
 	fi
 	
-	( set -x; cd "$gitRepo" && git reset -q HEAD && git checkout -q -- . && git clean -dfxq && git checkout -q "$gitRef" -- ) &>> "$thisLog"
-	# TODO git tag
+	dockerfilePath="$gitDir/Dockerfile"
+	dockerfilePath="${dockerfilePath#/}" # strip leading "/" (for when gitDir is '') because "git show" doesn't like it
 	
-	if [ ! -d "$gitRepo/$gitDir" ]; then
-		echo "- failed; invalid dir: '$gitDir'"
-		didFail=1
-		continue
-	fi
-	
-	if [ ! -f "$gitRepo/$gitDir/Dockerfile" ]; then
-		echo "- failed; missing $gitDir/Dockerfile"
+	if ! dockerfile="$(cd "$gitRepo" && git show "$gitRef":"$dockerfilePath")"; then
+		echo "- failed; missing '$dockerfilePath' at '$gitRef' ?"
 		didFail=1
 		continue
 	fi
 	
 	IFS=$'\n'
-	froms=( $(grep -i '^FROM[[:space:]]' "$gitRepo/$gitDir/Dockerfile" | awk '{ print $2 ~ /:/ ? $2 : $2":latest" }') )
+	froms=( $(echo "$dockerfile" | awk 'toupper($1) == "FROM" { print $2 ~ /:/ ? $2 : $2":latest" }') )
 	unset IFS
 	
 	for from in "${froms[@]}"; do
@@ -262,9 +256,21 @@ while [ "$#" -gt 0 ]; do
 	done
 	
 	if [ "$doBuild" ]; then
-		( set -x; cd "$gitRepo/$gitDir" && "$dir/git-set-mtimes" ) &>> "$thisLog"
+		(
+			set -x
+			cd "$gitRepo"
+			git reset -q HEAD
+			git checkout -q -- .
+			git clean -dfxq
+			git checkout -q "$gitRef" --
+			cd "$gitRepo/$gitDir"
+			"$dir/git-set-mtimes"
+		) &>> "$thisLog"
 		
-		if ! ( set -x; docker build -t "$repoTag" "$gitRepo/$gitDir" ) &>> "$thisLog"; then
+		if ! (
+			set -x
+			docker build -t "$repoTag" "$gitRepo/$gitDir"
+		) &>> "$thisLog"; then
 			echo "- failed; see $thisLog"
 			didFail=1
 			continue
