@@ -1,10 +1,5 @@
 # maintainer: Satnam Singh <satnam6502@gmail.com> (@satnam6502)
-# The 'latest' is set is version 7.6.3 on Ubuntu 14.904 which is currently
-# the latest GHC version that can be built with apt-get. We should
-# soon add support for version 7.6.8 which could be done by
-# tryung to install the .xz build and configure it, or by trying
-# to build from source. Or we can wait until 7.6.3 has a package
-# ready for deployment via apt-get.
+# The 'latest' is set to GHC version 7.8.3 on Ubuntu 14.04.
 
-latest: git://github.com/satnam6502/ghc-docker@8c6133df4336a39181aceda2051883e85ab97522
-7.6.3: git://github.com/satnam6502/ghc-docker@8c6133df4336a39181aceda2051883e85ab97522
+latest: git://github.com/satnam6502/ghc-docker@5e003c903179a56e20815d884f948ff15b4e7d7e
+7.8.3: git://github.com/satnam6502/ghc-docker@5e003c903179a56e20815d884f948ff15b4e7d7e
