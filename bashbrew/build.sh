@@ -178,15 +178,15 @@ for repoTag in "${repos[@]}"; do
 		else
 			if [ ! -d "$gitRepo" ]; then
 				mkdir -p "$(dirname "$gitRepo")"
-				echo "Cloning '$gitUrl' into '$gitRepo' ..."
+				echo "Cloning $repo ($gitUrl) ..."
 				git clone -q "$gitUrl" "$gitRepo"
-				echo 'Cloned successfully!'
 			else
 				# if we don't have the "ref" specified, "git fetch" in the hopes that we get it
 				if ! (
 					cd "$gitRepo"
 					git rev-parse --verify "${gitRef}^{commit}" &> /dev/null
 				); then
+					echo "Fetching $repo ($gitUrl) ..."
 					(
 						cd "$gitRepo"
 						git fetch -q --all
