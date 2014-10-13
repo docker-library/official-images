@@ -1,5 +1,7 @@
 # Docker Official Images
 
+[![Build Status](https://travis-ci.org/docker-library/official-images.svg?branch=master)](https://travis-ci.org/docker-library/official-images)
+
 ## Contributing to the standard library
 
 Thank you for your interest in the Docker official images project! We

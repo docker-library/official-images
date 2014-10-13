@@ -3,11 +3,6 @@ language: bash
 # allow for use of Docker-based workers
 sudo: false
 
-# cache those huge source repos, if possible (since build.sh handles existing repos intelligently)
-cache:
-    directories:
-        - bashbrew/src
-
 # --no-build because we has no Docker in Travis :)
 script:
     - ./bashbrew/build.sh --no-build --all
