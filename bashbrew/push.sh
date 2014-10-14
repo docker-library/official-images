@@ -9,6 +9,7 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 library="$dir/../library"
 logs="$dir/logs"
 namespaces='library stackbrew'
+docker='docker'
 
 library="$(readlink -f "$library")"
 logs="$(readlink -f "$logs")"
@@ -34,11 +35,13 @@ options:
   --namespaces="$namespaces"
                      Space separated list of namespaces to tag images in after
                      building
+  --docker="$docker"
+                     Use a custom Docker binary.
 
 EOUSAGE
 }
 
-opts="$(getopt -o 'h?' --long 'help,all,no-push,library:,logs:,namespaces:' -- "$@" || { usage >&2 && false; })"
+opts="$(getopt -o 'h?' --long 'help,all,no-push,library:,logs:,namespaces:,docker:' -- "$@" || { usage >&2 && false; })"
 eval set -- "$opts"
 
 doPush=1
@@ -56,6 +59,7 @@ while true; do
 		--library) library="$1" && shift ;;
 		--logs) logs="$1" && shift ;;
 		--namespaces) namespaces="$1" && shift ;;
+		--docker) docker="$1" && shift ;;
 		--)
 			break
 			;;
@@ -118,11 +122,11 @@ for repoTag in "${repos[@]}"; do
 	for pushTag in "${pushes[@]}"; do
 		for namespace in $namespaces; do
 			if [ "$doPush" ]; then
-				if ! docker push "$namespace/$pushTag"; then
+				if ! "$docker" push "$namespace/$pushTag"; then
 					echo >&2 "- $namespace/$pushTag failed to push!"
 				fi
 			else
-				echo "docker push" "$namespace/$pushTag"
+				echo "$docker push" "$namespace/$pushTag"
 			fi
 		done
 	done
