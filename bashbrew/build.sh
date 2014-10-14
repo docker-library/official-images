@@ -10,6 +10,7 @@ library="$dir/../library"
 src="$dir/src"
 logs="$dir/logs"
 namespaces='library stackbrew'
+docker='docker'
 
 library="$(readlink -f "$library")"
 src="$(readlink -f "$src")"
@@ -40,11 +41,13 @@ options:
   --namespaces="$namespaces"
                      Space separated list of namespaces to tag images in after
                      building
+  --docker="$docker"
+                     Use a custom Docker binary.
 
 EOUSAGE
 }
 
-opts="$(getopt -o 'h?' --long 'help,all,no-clone,no-build,library:,src:,logs:,namespaces:' -- "$@" || { usage >&2 && false; })"
+opts="$(getopt -o 'h?' --long 'help,all,no-clone,no-build,library:,src:,logs:,namespaces:,docker:' -- "$@" || { usage >&2 && false; })"
 eval set -- "$opts"
 
 doClone=1
@@ -65,6 +68,7 @@ while true; do
 		--src) src="$1" && shift ;;
 		--logs) logs="$1" && shift ;;
 		--namespaces) namespaces="$1" && shift ;;
+		--docker) docker="$1" && shift ;;
 		--)
 			break
 			;;
@@ -276,7 +280,7 @@ while [ "$#" -gt 0 ]; do
 		
 		if ! (
 			set -x
-			docker build -t "$repoTag" "$gitRepo/$gitDir"
+			"$docker" build -t "$repoTag" "$gitRepo/$gitDir"
 		) &>> "$thisLog"; then
 			echo "- failed; see $thisLog"
 			didFail=1
@@ -284,7 +288,7 @@ while [ "$#" -gt 0 ]; do
 		fi
 		
 		for namespace in $namespaces; do
-			( set -x; docker tag "$repoTag" "$namespace/$repoTag" ) &>> "$thisLog"
+			( set -x; "$docker" tag "$repoTag" "$namespace/$repoTag" ) &>> "$thisLog"
 		done
 	fi
 done
