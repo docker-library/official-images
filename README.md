@@ -10,6 +10,16 @@ possible, but if you find yourself lost, don't hesitate to seek us out
 on Freenode IRC in channel `#docker-library`, or by creating a GitHub
 issue here.
 
+Be sure to familiarize yourself with the [Guidelines for Creating and
+Documenting Official
+Repositories](https://docs.docker.com/docker-hub/official_repos/) and the [Best
+practices for writing
+Dockerfiles](https://docs.docker.com/articles/dockerfile_best-practices/) in the
+Docker documentation.
+
+Also, the documentation for these images is currently stored separately in the
+[docker-library/docs](https://github.com/docker-library/docs) repository.
+
 ## Library definition files
 
 The library definition files are plain text files found in the `library/`
