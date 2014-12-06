@@ -16,42 +16,63 @@ library="$(readlink -f "$library")"
 src="$(readlink -f "$src")"
 logs="$(readlink -f "$logs")"
 
-# arg handling: all args are [repo|repo:tag]
 usage() {
 	cat <<EOUSAGE
 
-usage: $0 [options] [repo[:tag] ...]
-   ie: $0 --all
-       $0 debian ubuntu:12.04
+usage: $0 [build|push] [options] [repo[:tag] ...]
+   ie: $0 build --all
+       $0 push debian ubuntu:12.04
 
-   This script builds the Docker images specified using the Git repositories
-   specified in the library files.
+   This script builds or pushes the Docker images specified using the Git
+   repositories specified in the library files in the namespaces.
 
-options:
+common options:
   --help, -h, -?     Print this help message
   --all              Builds all Docker repos specified in library
-  --no-clone         Don't pull the Git repos
-  --no-build         Don't build, just echo what would have built
   --library="$library"
                      Where to find repository manifest files
-  --src="$src"
-                     Where to store the cloned Git repositories
-  --logs="$logs"
-                     Where to store the build logs
   --namespaces="$namespaces"
                      Space separated list of namespaces to tag images in after
                      building
   --docker="$docker"
                      Use a custom Docker binary.
 
+build options:
+  --no-clone         Don't pull the Git repos
+  --no-build         Don't build, just echo what would have built
+  --src="$src"
+                     Where to store the cloned Git repositories
+  --logs="$logs"
+                     Where to store the build logs
+
+push options:
+  --no-push          Don't actually push the images to the Docker Hub
+
 EOUSAGE
 }
 
-opts="$(getopt -o 'h?' --long 'help,all,no-clone,no-build,library:,src:,logs:,namespaces:,docker:' -- "$@" || { usage >&2 && false; })"
+# which subcommand
+subcommand=$1
+case "$subcommand" in
+	build|push)
+		shift
+		;;
+	*)
+		{
+			echo "error: unknown subcommand: $1"
+			usage
+		} >&2
+		exit 1
+		;;
+esac
+
+# arg handling
+opts="$(getopt -o 'h?' --long 'help,all,no-clone,no-build,no-push,library:,src:,logs:,namespaces:,docker:' -- "$@" || { usage >&2 && false; })"
 eval set -- "$opts"
 
 doClone=1
 doBuild=1
+doPush=1
 buildAll=
 while true; do
 	flag=$1
@@ -64,6 +85,7 @@ while true; do
 		--all) buildAll=1 ;;
 		--no-clone) doClone= ;;
 		--no-build) doBuild= ;;
+		--no-push) doPush= ;;
 		--library) library="$1" && shift ;;
 		--src) src="$1" && shift ;;
 		--logs) logs="$1" && shift ;;
@@ -102,7 +124,7 @@ declare -A repoGitRepo=()
 declare -A repoGitRef=()
 declare -A repoGitDir=()
 
-logDir="$logs/build-$(date +'%Y-%m-%d--%H-%M-%S')"
+logDir="$logs/$subcommand-$(date +'%Y-%m-%d--%H-%M-%S')"
 mkdir -p "$logDir"
 
 latestLogDir="$logs/latest" # this gets shiny symlinks to the latest buildlog for each repo we've seen since the creation of the logs dir
@@ -174,33 +196,35 @@ for repoTag in "${repos[@]}"; do
 		gitRepo="${gitRepo%/}"
 		gitRepo="$src/$gitRepo"
 		
-		if [ -z "$doClone" ]; then
-			if [ "$doBuild" -a ! -d "$gitRepo" ]; then
-				echo >&2 "error: directory not found: $gitRepo"
-				exit 1
-			fi
-		else
-			if [ ! -d "$gitRepo" ]; then
-				mkdir -p "$(dirname "$gitRepo")"
-				echo "Cloning $repo ($gitUrl) ..."
-				git clone -q "$gitUrl" "$gitRepo"
-			else
-				# if we don't have the "ref" specified, "git fetch" in the hopes that we get it
-				if ! (
-					cd "$gitRepo"
-					git rev-parse --verify "${gitRef}^{commit}" &> /dev/null
-				); then
-					echo "Fetching $repo ($gitUrl) ..."
-					(
-						cd "$gitRepo"
-						git fetch -q --all
-						git fetch -q --tags
-					)
+		if [ "$subcommand" == 'build' ]; then
+			if [ -z "$doClone" ]; then
+				if [ "$doBuild" -a ! -d "$gitRepo" ]; then
+					echo >&2 "error: directory not found: $gitRepo"
+					exit 1
 				fi
+			else
+				if [ ! -d "$gitRepo" ]; then
+					mkdir -p "$(dirname "$gitRepo")"
+					echo "Cloning $repo ($gitUrl) ..."
+					git clone -q "$gitUrl" "$gitRepo"
+				else
+					# if we don't have the "ref" specified, "git fetch" in the hopes that we get it
+					if ! (
+						cd "$gitRepo"
+						git rev-parse --verify "${gitRef}^{commit}" &> /dev/null
+					); then
+						echo "Fetching $repo ($gitUrl) ..."
+						(
+							cd "$gitRepo"
+							git fetch -q --all
+							git fetch -q --tags
+						)
+					fi
+				fi
+				
+				# disable any automatic garbage collection too, just to help make sure we keep our dangling commit objects
+				( cd "$gitRepo" && git config gc.auto 0 )
 			fi
-			
-			# disable any automatic garbage collection too, just to help make sure we keep our dangling commit objects
-			( cd "$gitRepo" && git config gc.auto 0 )
 		fi
 		
 		repoGitRepo[$repo:$tag]="$gitRepo"
@@ -232,65 +256,80 @@ while [ "$#" -gt 0 ]; do
 	
 	echo "Processing $repoTag ..."
 	
-	thisLog="$logDir/build-$repoTag.log"
+	thisLog="$logDir/$subcommand-$repoTag.log"
 	touch "$thisLog"
 	ln -sf "$thisLog" "$latestLogDir/$(basename "$thisLog")"
 	
-	if ! ( cd "$gitRepo" && git rev-parse --verify "${gitRef}^{commit}" &> /dev/null ); then
-		echo "- failed; invalid ref: $gitRef"
-		didFail=1
-		continue
-	fi
-	
-	dockerfilePath="$gitDir/Dockerfile"
-	dockerfilePath="${dockerfilePath#/}" # strip leading "/" (for when gitDir is '') because "git show" doesn't like it
-	
-	if ! dockerfile="$(cd "$gitRepo" && git show "$gitRef":"$dockerfilePath")"; then
-		echo "- failed; missing '$dockerfilePath' at '$gitRef' ?"
-		didFail=1
-		continue
-	fi
-	
-	IFS=$'\n'
-	froms=( $(echo "$dockerfile" | awk 'toupper($1) == "FROM" { print $2 ~ /:/ ? $2 : $2":latest" }') )
-	unset IFS
-	
-	for from in "${froms[@]}"; do
-		for queuedRepoTag in "$@"; do
-			if [ "$from" = "$queuedRepoTag" ]; then
-				# a "FROM" in this image is being built later in our queue, so let's bail on this image for now and come back later
-				echo "- deferred; FROM $from"
-				set -- "$@" "$repoTag"
-				continue 3
+	case "$subcommand" in
+		build)
+			if ! ( cd "$gitRepo" && git rev-parse --verify "${gitRef}^{commit}" &> /dev/null ); then
+				echo "- failed; invalid ref: $gitRef"
+				didFail=1
+				continue
 			fi
-		done
-	done
-	
-	if [ "$doBuild" ]; then
-		(
-			set -x
-			cd "$gitRepo"
-			git reset -q HEAD
-			git checkout -q -- .
-			git clean -dfxq
-			git checkout -q "$gitRef" --
-			cd "$gitRepo/$gitDir"
-			"$dir/git-set-mtimes"
-		) &>> "$thisLog"
-		
-		if ! (
-			set -x
-			"$docker" build -t "$repoTag" "$gitRepo/$gitDir"
-		) &>> "$thisLog"; then
-			echo "- failed; see $thisLog"
-			didFail=1
-			continue
-		fi
-		
-		for namespace in $namespaces; do
-			( set -x; "$docker" tag "$repoTag" "$namespace/$repoTag" ) &>> "$thisLog"
-		done
-	fi
+			
+			dockerfilePath="$gitDir/Dockerfile"
+			dockerfilePath="${dockerfilePath#/}" # strip leading "/" (for when gitDir is '') because "git show" doesn't like it
+			
+			if ! dockerfile="$(cd "$gitRepo" && git show "$gitRef":"$dockerfilePath")"; then
+				echo "- failed; missing '$dockerfilePath' at '$gitRef' ?"
+				didFail=1
+				continue
+			fi
+			
+			IFS=$'\n'
+			froms=( $(echo "$dockerfile" | awk 'toupper($1) == "FROM" { print $2 ~ /:/ ? $2 : $2":latest" }') )
+			unset IFS
+			
+			for from in "${froms[@]}"; do
+				for queuedRepoTag in "$@"; do
+					if [ "$from" = "$queuedRepoTag" ]; then
+						# a "FROM" in this image is being built later in our queue, so let's bail on this image for now and come back later
+						echo "- deferred; FROM $from"
+						set -- "$@" "$repoTag"
+						continue 3
+					fi
+				done
+			done
+			
+			if [ "$doBuild" ]; then
+				(
+					set -x
+					cd "$gitRepo"
+					git reset -q HEAD
+					git checkout -q -- .
+					git clean -dfxq
+					git checkout -q "$gitRef" --
+					cd "$gitRepo/$gitDir"
+					"$dir/git-set-mtimes"
+				) &>> "$thisLog"
+				
+				if ! (
+					set -x
+					"$docker" build -t "$repoTag" "$gitRepo/$gitDir"
+				) &>> "$thisLog"; then
+					echo "- failed; see $thisLog"
+					didFail=1
+					continue
+				fi
+				
+				for namespace in $namespaces; do
+					( set -x; "$docker" tag "$repoTag" "$namespace/$repoTag" ) &>> "$thisLog"
+				done
+			fi
+			;;
+		push)
+			for namespace in $namespaces; do
+				if [ "$doPush" ]; then
+					if ! "$docker" push "$namespace/$repoTag"; then
+						echo >&2 "- $namespace/$repoTag failed to push!"
+					fi
+				else
+					echo "$docker push" "$namespace/$repoTag"
+				fi
+			done
+			;;
+	esac
 done
 
 [ -z "$didFail" ]
