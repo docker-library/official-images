@@ -3,7 +3,9 @@ language: bash
 # allow for use of Docker-based workers
 sudo: false
 
+before_script:
+    - env | sort
+
 # --no-build because we has no Docker in Travis :)
 script:
-    - ./bashbrew/build.sh --no-build --all
-    - ./bashbrew/push.sh --no-push --all
+    - ./bashbrew/travis.sh
