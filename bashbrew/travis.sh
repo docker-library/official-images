@@ -17,7 +17,7 @@ HEAD="$(git rev-parse --verify HEAD)"
 git fetch -q "https://github.com/$upstreamRepo.git" "refs/heads/$upstreamBranch"
 UPSTREAM="$(git rev-parse --verify FETCH_HEAD)"
 
-if [ "$(git diff --numstat "$UPSTREAM...$HEAD" -- . | wc -l)" ]; then
+if [ "$(git diff --numstat "$UPSTREAM...$HEAD" -- . | wc -l)" -ne 0 ]; then
 	# changes in bashbrew/ -- keep "--all" so we test the bashbrew script changes appropriately
 	echo >&2 'Changes in bashbrew/ detected!'
 else
