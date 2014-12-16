@@ -27,23 +27,23 @@ usage: $0 [build|push] [options] [repo[:tag] ...]
    repositories specified in the library files in the namespaces.
 
 common options:
-  --help, -h, -?     Print this help message
   --all              Builds all Docker repos specified in library
+  --docker="$docker"
+                     Use a custom Docker binary.
+  --help, -h, -?     Print this help message
   --library="$library"
                      Where to find repository manifest files
+  --logs="$logs"
+                     Where to store the build logs
   --namespaces="$namespaces"
                      Space separated list of namespaces to tag images in after
                      building
-  --docker="$docker"
-                     Use a custom Docker binary.
 
 build options:
-  --no-clone         Don't pull the Git repos
   --no-build         Don't build, just echo what would have built
+  --no-clone         Don't pull the Git repos
   --src="$src"
                      Where to store the cloned Git repositories
-  --logs="$logs"
-                     Where to store the build logs
 
 push options:
   --no-push          Don't actually push the images to the Docker Hub
