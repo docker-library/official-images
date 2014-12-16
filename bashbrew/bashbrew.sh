@@ -322,7 +322,7 @@ while [ "$#" -gt 0 ]; do
 			for namespace in $namespaces; do
 				if [ "$doPush" ]; then
 					echo "Pushing $namespace/$repoTag..."
-					if ! "$docker" push "$namespace/$repoTag" &> "$thisLog"; then
+					if ! "$docker" push "$namespace/$repoTag" &> "$thisLog" < /dev/null; then
 						echo >&2 "- $namespace/$repoTag failed to push; see $thisLog"
 					fi
 				else
