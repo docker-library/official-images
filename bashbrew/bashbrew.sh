@@ -254,14 +254,14 @@ while [ "$#" -gt 0 ]; do
 		continue
 	fi
 	
-	echo "Processing $repoTag ..."
-	
 	thisLog="$logDir/$subcommand-$repoTag.log"
 	touch "$thisLog"
 	ln -sf "$thisLog" "$latestLogDir/$(basename "$thisLog")"
 	
 	case "$subcommand" in
 		build)
+			echo "Processing $repoTag ..."
+			
 			if ! ( cd "$gitRepo" && git rev-parse --verify "${gitRef}^{commit}" &> /dev/null ); then
 				echo "- failed; invalid ref: $gitRef"
 				didFail=1
@@ -321,8 +321,9 @@ while [ "$#" -gt 0 ]; do
 		push)
 			for namespace in $namespaces; do
 				if [ "$doPush" ]; then
-					if ! "$docker" push "$namespace/$repoTag"; then
-						echo >&2 "- $namespace/$repoTag failed to push!"
+					echo "Pushing $namespace/$repoTag..."
+					if ! "$docker" push "$namespace/$repoTag" &> "$thisLog"; then
+						echo >&2 "- $namespace/$repoTag failed to push; see $thisLog"
 					fi
 				else
 					echo "$docker push" "$namespace/$repoTag"

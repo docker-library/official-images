@@ -3,4 +3,4 @@ set -e
 
 dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
-exec "$dir/bashbrew.sh" push "$@"
+exec "$dir/bashbrew.sh" build "$@"
