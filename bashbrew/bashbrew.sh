@@ -23,13 +23,13 @@ usage: $0 [build|push] [options] [repo[:tag] ...]
    ie: $0 build --all
        $0 push debian ubuntu:12.04
 
-   This script builds or pushes the Docker images specified using the Git
-   repositories specified in the library files in the namespaces.
+This script processes the specified Docker images using the corresponding
+repository manifest files.
 
 common options:
-  --all              Builds all Docker repos specified in library
+  --all              Build all repositories specified in library
   --docker="$docker"
-                     Use a custom Docker binary.
+                     Use a custom Docker binary
   --help, -h, -?     Print this help message
   --library="$library"
                      Where to find repository manifest files
@@ -40,19 +40,19 @@ common options:
                      building
 
 build options:
-  --no-build         Don't build, just echo what would have built
-  --no-clone         Don't pull the Git repos
+  --no-build         Don't build, print what would build
+  --no-clone         Don't pull/clone Git repositories
   --src="$src"
-                     Where to store the cloned Git repositories
+                     Where to store cloned Git repositories (GOPATH style)
 
 push options:
-  --no-push          Don't actually push the images to the Docker Hub
+  --no-push          Don't push, print what would push
 
 EOUSAGE
 }
 
 # which subcommand
-subcommand=$1
+subcommand="$1"
 case "$subcommand" in
 	build|push)
 		shift
@@ -67,7 +67,7 @@ case "$subcommand" in
 esac
 
 # arg handling
-opts="$(getopt -o 'h?' --long 'help,all,no-clone,no-build,no-push,library:,src:,logs:,namespaces:,docker:' -- "$@" || { usage >&2 && false; })"
+opts="$(getopt -o 'h?' --long 'all,docker:,help,library:,logs:,namespaces:,no-build,no-clone,no-push,src:' -- "$@" || { usage >&2 && false; })"
 eval set -- "$opts"
 
 doClone=1
@@ -78,22 +78,17 @@ while true; do
 	flag=$1
 	shift
 	case "$flag" in
-		--help|-h|'-?')
-			usage
-			exit 0
-			;;
 		--all) buildAll=1 ;;
-		--no-clone) doClone= ;;
-		--no-build) doBuild= ;;
-		--no-push) doPush= ;;
+		--docker) docker="$1" && shift ;;
+		--help|-h|'-?') usage && exit 0 ;;
 		--library) library="$1" && shift ;;
-		--src) src="$1" && shift ;;
 		--logs) logs="$1" && shift ;;
 		--namespaces) namespaces="$1" && shift ;;
-		--docker) docker="$1" && shift ;;
-		--)
-			break
-			;;
+		--no-build) doBuild= ;;
+		--no-clone) doClone= ;;
+		--no-push) doPush= ;;
+		--src) src="$1" && shift ;;
+		--) break ;;
 		*)
 			{
 				echo "error: unknown flag: $flag"
@@ -113,8 +108,10 @@ repos+=( "$@" )
 repos=( "${repos[@]%/}" )
 
 if [ "${#repos[@]}" -eq 0 ]; then
-	echo >&2 'error: no repos specified'
-	usage >&2
+	{
+		echo 'error: no repos specified'
+		usage
+	} >&2
 	exit 1
 fi
 
