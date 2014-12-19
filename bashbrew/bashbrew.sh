@@ -53,21 +53,6 @@ push options:
 EOUSAGE
 }
 
-# which subcommand
-subcommand="$1"
-case "$subcommand" in
-	build|push)
-		shift
-		;;
-	*)
-		{
-			echo "error: unknown subcommand: $1"
-			usage
-		} >&2
-		exit 1
-		;;
-esac
-
 # arg handling
 opts="$(getopt -o 'h?' --long 'all,docker:,help,library:,logs:,namespaces:,no-build,no-clone,no-push,src:' -- "$@" || { usage >&2 && false; })"
 eval set -- "$opts"
@@ -100,6 +85,21 @@ while true; do
 			;;
 	esac
 done
+
+# which subcommand
+subcommand="$1"
+case "$subcommand" in
+	build|push)
+		shift
+		;;
+	*)
+		{
+			echo "error: unknown subcommand: $1"
+			usage
+		} >&2
+		exit 1
+		;;
+esac
 
 repos=()
 if [ "$buildAll" ]; then
