@@ -16,12 +16,14 @@ library="$(readlink -f "$library")"
 src="$(readlink -f "$src")"
 logs="$(readlink -f "$logs")"
 
+self="$(basename "$0")"
+
 usage() {
 	cat <<EOUSAGE
 
-usage: $0 [build|push] [options] [repo[:tag] ...]
-   ie: $0 build --all
-       $0 push debian ubuntu:12.04
+usage: $self [build|push] [options] [repo[:tag] ...]
+   ie: $self build --all
+       $self push debian ubuntu:12.04
 
 This script processes the specified Docker images using the corresponding
 repository manifest files.
