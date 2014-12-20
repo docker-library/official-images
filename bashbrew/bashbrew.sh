@@ -16,12 +16,14 @@ library="$(readlink -f "$library")"
 src="$(readlink -f "$src")"
 logs="$(readlink -f "$logs")"
 
+self="$(basename "$0")"
+
 usage() {
 	cat <<EOUSAGE
 
-usage: $0 [build|push] [options] [repo[:tag] ...]
-   ie: $0 build --all
-       $0 push debian ubuntu:12.04
+usage: $self [build|push] [options] [repo[:tag] ...]
+   ie: $self build --all
+       $self push debian ubuntu:12.04
 
 This script processes the specified Docker images using the corresponding
 repository manifest files.
@@ -50,21 +52,6 @@ push options:
 
 EOUSAGE
 }
-
-# which subcommand
-subcommand="$1"
-case "$subcommand" in
-	build|push)
-		shift
-		;;
-	*)
-		{
-			echo "error: unknown subcommand: $1"
-			usage
-		} >&2
-		exit 1
-		;;
-esac
 
 # arg handling
 opts="$(getopt -o 'h?' --long 'all,docker:,help,library:,logs:,namespaces:,no-build,no-clone,no-push,src:' -- "$@" || { usage >&2 && false; })"
@@ -98,6 +85,21 @@ while true; do
 			;;
 	esac
 done
+
+# which subcommand
+subcommand="$1"
+case "$subcommand" in
+	build|push)
+		shift
+		;;
+	*)
+		{
+			echo "error: unknown subcommand: $1"
+			usage
+		} >&2
+		exit 1
+		;;
+esac
 
 repos=()
 if [ "$buildAll" ]; then
