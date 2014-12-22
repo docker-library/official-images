@@ -33,5 +33,5 @@ fi
 # TODO that will change eventually!
 
 set -x
-./build.sh --no-build "${repos[@]}"
-./push.sh --no-push "${repos[@]}"
+./bashbrew.sh build --no-build "${repos[@]}"
+./bashbrew.sh push --no-push "${repos[@]}"
