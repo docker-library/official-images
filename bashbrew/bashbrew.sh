@@ -292,7 +292,7 @@ while [ "$#" -gt 0 ]; do
 			done
 			
 			if [ "$doBuild" ]; then
-				(
+				if ! (
 					set -x
 					cd "$gitRepo"
 					git reset -q HEAD
@@ -301,19 +301,30 @@ while [ "$#" -gt 0 ]; do
 					git checkout -q "$gitRef" --
 					cd "$gitRepo/$gitDir"
 					"$dir/git-set-mtimes"
-				) &>> "$thisLog"
+				) &>> "$thisLog"; then
+					echo "- failed 'git checkout'; see $thisLog"
+					didFail=1
+					continue
+				fi
 				
 				if ! (
 					set -x
 					"$docker" build -t "$repoTag" "$gitRepo/$gitDir"
 				) &>> "$thisLog"; then
-					echo "- failed; see $thisLog"
+					echo "- failed 'docker build'; see $thisLog"
 					didFail=1
 					continue
 				fi
 				
 				for namespace in $namespaces; do
-					( set -x; "$docker" tag "$repoTag" "$namespace/$repoTag" ) &>> "$thisLog"
+					if ! (
+						set -x
+						"$docker" tag "$repoTag" "$namespace/$repoTag"
+					) &>> "$thisLog"; then
+						echo "- failed 'docker tag'; see $thisLog"
+						didFail=1
+						continue
+					fi
 				done
 			fi
 			;;
