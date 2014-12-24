@@ -319,7 +319,7 @@ while [ "$#" -gt 0 ]; do
 				for namespace in $namespaces; do
 					if ! (
 						set -x
-						"$docker" tag "$repoTag" "$namespace/$repoTag"
+						"$docker" tag -f "$repoTag" "$namespace/$repoTag"
 					) &>> "$thisLog"; then
 						echo "- failed 'docker tag'; see $thisLog"
 						didFail=1
