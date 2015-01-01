@@ -179,6 +179,13 @@ for repoTag in "${repos[@]}"; do
 	tags=()
 	for line in "${repoTagLines[@]}"; do
 		tag="$(echo "$line" | awk -F ': +' '{ print $1 }')"
+		for parsedRepoTag in "${tags[@]}"; do
+			if [ "$repo:$tag" = "$parsedRepoTag" ]; then
+				echo >&2 "error: tag '$tag' is duplicated in '${cmd[@]}'"
+				exit 1
+			fi
+		done
+		
 		repoDir="$(echo "$line" | awk -F ': +' '{ print $2 }')"
 		
 		gitUrl="${repoDir%%@*}"
