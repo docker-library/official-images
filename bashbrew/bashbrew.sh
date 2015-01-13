@@ -365,7 +365,7 @@ while [ "$#" -gt 0 ]; do
 				fi
 				if [ "$doPush" ]; then
 					echo "Pushing $namespace/$repoTag..."
-					if ! "$docker" push "$namespace/$repoTag" &> "$thisLog" < /dev/null; then
+					if ! "$docker" push "$namespace/$repoTag" &>> "$thisLog" < /dev/null; then
 						echo >&2 "- $namespace/$repoTag failed to push; see $thisLog"
 					fi
 				else
