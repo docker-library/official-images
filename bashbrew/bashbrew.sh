@@ -9,7 +9,7 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 library="$dir/../library"
 src="$dir/src"
 logs="$dir/logs"
-namespaces='library stackbrew'
+namespaces='_ library stackbrew'
 docker='docker'
 
 library="$(readlink -f "$library")"
@@ -21,9 +21,10 @@ self="$(basename "$0")"
 usage() {
 	cat <<EOUSAGE
 
-usage: $self [build|push] [options] [repo[:tag] ...]
+usage: $self [build|push|list] [options] [repo[:tag] ...]
    ie: $self build --all
        $self push debian ubuntu:12.04
+       $self list --namespaces='_' debian:7 hello-world
 
 This script processes the specified Docker images using the corresponding
 repository manifest files.
@@ -38,8 +39,16 @@ common options:
   --logs="$logs"
                      Where to store the build logs
   --namespaces="$namespaces"
-                     Space separated list of namespaces to tag images in after
-                     building
+                     Space separated list of image namespaces to act upon
+                     
+                     Note that "_" is a special case here for the unprefixed
+                     namespace (ie, "debian" vs "library/debian"), and as such
+                     will be implicitly ignored by the "push" subcommand
+                     
+                     Also note that "build" will always tag to the unprefixed
+                     namespace because it it necessary to do so for dependent
+                     images to use FROM correctly (think "onbuild" variants that
+                     are "FROM base-image:some-version")
 
 build options:
   --no-build         Don't build, print what would build
@@ -89,7 +98,7 @@ done
 # which subcommand
 subcommand="$1"
 case "$subcommand" in
-	build|push)
+	build|push|list)
 		shift
 		;;
 	*)
@@ -324,6 +333,10 @@ while [ "$#" -gt 0 ]; do
 				fi
 				
 				for namespace in $namespaces; do
+					if [ "$namespace" = '_' ]; then
+						# images FROM other images is explicitly supported
+						continue
+					fi
 					if ! (
 						set -x
 						"$docker" tag -f "$repoTag" "$namespace/$repoTag"
@@ -335,8 +348,21 @@ while [ "$#" -gt 0 ]; do
 				done
 			fi
 			;;
+		list)
+			for namespace in $namespaces; do
+				if [ "$namespace" = '_' ]; then
+					echo "$repoTag"
+				else
+					echo "$namespace/$repoTag"
+				fi
+			done
+			;;
 		push)
 			for namespace in $namespaces; do
+				if [ "$namespace" = '_' ]; then
+					# can't "docker push debian"; skip this namespace
+					continue
+				fi
 				if [ "$doPush" ]; then
 					echo "Pushing $namespace/$repoTag..."
 					if ! "$docker" push "$namespace/$repoTag" &> "$thisLog" < /dev/null; then
