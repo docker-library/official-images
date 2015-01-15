@@ -44,18 +44,39 @@ done
 
 # load config lists
 # contains:
-#   imageIncludeTests
+#   globalTests
+#   testAlias
+#   imageTests
 #   globalExcludeTests
-#   globalIncludeTests
 . "$dir"/.config.sh
 
-for image in "$@"; do
-	noNamespace="${image##*/}"
+for dockerImage in "$@"; do
+	echo "testing $dockerImage"
+	
+	noNamespace="${dockerImage##*/}"
 	repo="${noNamespace%:*}"
 	tagVar="${noNamespace#*:}"
 	#version="${tagVar%-*}"
 	variant="${tagVar##*-}"
 	
-	# TODO tests
-	echo 'full:'$image 'repo:'$repo 'variant:'$variant
+	testRepo=$repo
+	[ -z "${testAlias[$repo]}" ] || testRepo="${testAlias[$repo]}"
+	
+	tests=( "${globalTests[@]}" ${imageTests[$testRepo]} ${imageTests[$testRepo:$variant]} )
+	
+	failures=0
+	currentTest=1
+	totalTest="${#tests[@]}"
+	for t in "${tests[@]}"; do
+		echo -ne "\t'$t' [$currentTest/$totalTest]..."
+		(( currentTest+=1 ))
+		
+		if [ ! -z "${globalExcludeTests[${testRepo}_$t]}" -o ! -z "${globalExcludeTests[${testRepo}:${variant}_$t]}" ]; then
+			echo 'skipping'
+			continue
+		fi
+		
+		# run test against dockerImage here
+		echo 'passed'
+	done
 done

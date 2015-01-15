@@ -1,18 +1,24 @@
 #!/bin/bash
 set -e
 
-declare -A imageIncludeTests=()
-imageIncludeTests[python]=''
-imageIncludeTests[python]+='python'
-imageIncludeTests[python]+=' other-python'
-imageIncludeTests[python-onbuild]+=''
-imageIncludeTests[python-onbuild]+='py-onbuild'
-imageIncludeTests[python:3]+=''
-imageIncludeTests[python:3]+='py-3'
+globalTests=(
+	utc
+)
 
-declare -A globalExcludeTests=()
-globalExcludeTests[utc_hello-world]=1
+declare -A testAlias=(
+	[pypy]='python'
+)
 
-declare -A globalIncludeTests=()
-globalIncludeTests[utc]=''
-globalIncludeTests[many]='debian ... ubuntu'
+declare -A imageTests=(
+	[python]='
+		python
+	'
+# example onbuild
+#	[python:onbuild]='
+#		py-onbuild
+#	'
+)
+
+declare -A globalExcludeTests=(
+	[hello-world_utc]=1
+)
