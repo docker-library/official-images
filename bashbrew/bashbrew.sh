@@ -9,7 +9,7 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 library="$dir/../library"
 src="$dir/src"
 logs="$dir/logs"
-namespaces='_ library stackbrew'
+namespaces=${BASHBREW_NAMESPACES-_ library stackbrew}
 docker='docker'
 
 library="$(readlink -f "$library")"
@@ -43,10 +43,13 @@ common options:
                      
                      Note that "_" is a special case here for the unprefixed
                      namespace (ie, "debian" vs "library/debian"), and as such
-                     will be implicitly ignored by the "push" subcommand
-                     
+                     will be implicitly ignored by the "push" subcommand. You
+                     may also override namespaces via an environment variable,
+                     \$BASHBREW_NAMESPACES, which of course must contain at
+                     least "_".
+
                      Also note that "build" will always tag to the unprefixed
-                     namespace because it it necessary to do so for dependent
+                     namespace because it is necessary to do so for dependent
                      images to use FROM correctly (think "onbuild" variants that
                      are "FROM base-image:some-version")
 
