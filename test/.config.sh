@@ -7,11 +7,15 @@ globalTests=(
 
 declare -A testAlias=(
 	[pypy]='python'
+	[jruby]='ruby'
 )
 
 declare -A imageTests=(
 	[python]='
 		python
+	'
+	[ruby]='
+		ruby
 	'
 # example onbuild
 #	[python:onbuild]='
