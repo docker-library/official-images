@@ -1,6 +1,28 @@
 # maintainer: The CentOS Project <cloud-ops@centos.org> (@CentOS)
-# Build date 20140926_1219
-latest: git://github.com/CentOS/sig-cloud-instance-images@b28be06c817337e83103afa179965ac47dcc5e7c docker
-centos7: git://github.com/CentOS/sig-cloud-instance-images@b28be06c817337e83103afa179965ac47dcc5e7c docker
-centos6: git://github.com/CentOS/sig-cloud-instance-images@d22f4c466eeba45c1593b5d13d8636ff23bdf062 docker
-centos5: git://github.com/CentOS/sig-cloud-instance-images@f8d27d6f2581846042f303cf5a318f42588d515d docker
+# Build date 20150102_1408
+
+# CentOS 7 rolling builds
+latest: git://github.com/CentOS/sig-cloud-instance-images@c7bfde2d0e3ed621ecfbf02aae7b50d4c912b0f1 docker
+centos7: git://github.com/CentOS/sig-cloud-instance-images@c7bfde2d0e3ed621ecfbf02aae7b50d4c912b0f1 docker
+7: git://github.com/CentOS/sig-cloud-instance-images@c7bfde2d0e3ed621ecfbf02aae7b50d4c912b0f1 docker
+
+# CentOS 6 rolling builds
+centos6: git://github.com/CentOS/sig-cloud-instance-images@684a5ab43827c8316810e5d2abe6ce60e2d68e6e docker
+6: git://github.com/CentOS/sig-cloud-instance-images@684a5ab43827c8316810e5d2abe6ce60e2d68e6e docker
+
+# CentOS 5 rolling builds
+centos5: git://github.com/CentOS/sig-cloud-instance-images@b0178df16b85ccebaa1bcdbb0aa447f67a2df632 docker
+5: git://github.com/CentOS/sig-cloud-instance-images@b0178df16b85ccebaa1bcdbb0aa447f67a2df632 docker
+
+## Minor tagged builds
+#7.0.1406
+centos7.0.1406: git://github.com/CentOS/sig-cloud-instance-images@30aa31e885e3378203d40e50cfd146b160b589dc docker
+7.0.1406: git://github.com/CentOS/sig-cloud-instance-images@30aa31e885e3378203d40e50cfd146b160b589dc docker
+
+# 6.6
+centos6.6: git://github.com/CentOS/sig-cloud-instance-images@72a13cc9b85c6c500531d5f1e1dd86b8308a1cda docker
+6.6: git://github.com/CentOS/sig-cloud-instance-images@72a13cc9b85c6c500531d5f1e1dd86b8308a1cda docker
+
+# 5.11
+centos5.11: git://github.com/CentOS/sig-cloud-instance-images@e0f32850b2893baaa25efa9d98585f4c92aa83fb docker
+5.11: git://github.com/CentOS/sig-cloud-instance-images@e0f32850b2893baaa25efa9d98585f4c92aa83fb docker

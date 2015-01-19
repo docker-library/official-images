@@ -1,31 +1,55 @@
+# maintainer: Nicolas De Loof <nicolas.deloof@gmail.com> (@ndeloof)
 # maintainer: Michael Neale <mneale@cloudbees.com> (@michaelneale)
-# maintainer: Nicolas De Loof <ndeloof@cloudbees.com> (@ndeloof)
 
-# "latest" is latest _stable_, i.e. latest LTS release
-latest: git://github.com/cloudbees/jenkins-ci.org-docker@f744bdb73fbfc701a52105460511284a470bcfb8
-1.565.3: git://github.com/cloudbees/jenkins-ci.org-docker@f744bdb73fbfc701a52105460511284a470bcfb8
-
-# weekly releases
-weekly: git://github.com/cloudbees/jenkins-ci.org-docker@f4fff43208976e7c1b01e422512522d48338267a
-1.585: git://github.com/cloudbees/jenkins-ci.org-docker@f4fff43208976e7c1b01e422512522d48338267a
-1.584: git://github.com/cloudbees/jenkins-ci.org-docker@1d0405229b5f25ff52b5930a56488470ce386efc
-1.583: git://github.com/cloudbees/jenkins-ci.org-docker@f969422940ce4b2cd0bbbdcf31ea96fa2485e86c
-1.582: git://github.com/cloudbees/jenkins-ci.org-docker@f342846daeba66dbc45e72ecf667f518c293748c
-1.581: git://github.com/cloudbees/jenkins-ci.org-docker@f8177e96558128263f45da84b1beaa469f7bfc21
-1.580: git://github.com/cloudbees/jenkins-ci.org-docker@55f2b10a012a1a313ebec27af0caa0798ec12c31
-1.579: git://github.com/cloudbees/jenkins-ci.org-docker@56c328d7de415529a232b47f4afa4a86c2a0cda2
-1.578: git://github.com/cloudbees/jenkins-ci.org-docker@86f205928fc5ab5dd90c7baec959695d058bc010
-1.577: git://github.com/cloudbees/jenkins-ci.org-docker@055e3fff7a74b991e7bf3e3216a9837aa6940cc9
-1.576: git://github.com/cloudbees/jenkins-ci.org-docker@9fab53eaeb23a8e38397e2e5277d85308c4eebb2
-1.575: git://github.com/cloudbees/jenkins-ci.org-docker@f9874a62b3e407f70fdb6b1e4abfbc19524167e8
-1.574: git://github.com/cloudbees/jenkins-ci.org-docker@6593de9b616bb76bc0e5db4d8a2bf6621d70cbb5
-1.573: git://github.com/cloudbees/jenkins-ci.org-docker@fa91e79b782a0a90506522f9436217ed57ee69c2
-1.572: git://github.com/cloudbees/jenkins-ci.org-docker@3ca321364b65f8235155f29e55285310a92d4349
-1.571: git://github.com/cloudbees/jenkins-ci.org-docker@200404a9ba52b92aea51147753bcd12d6ecf307c
-1.570: git://github.com/cloudbees/jenkins-ci.org-docker@8c3ca50ca8cdbaede4e1bb63d5933664f0786681
-1.569: git://github.com/cloudbees/jenkins-ci.org-docker@f9f43966ce0cf1191cb1ac4daaf235f780d0614b
-1.568: git://github.com/cloudbees/jenkins-ci.org-docker@99088cfac0d9d1e0b93f4dfa46d573c24f985550
-1.567: git://github.com/cloudbees/jenkins-ci.org-docker@f76347f922c3d4c5c8406a27c7f25e8dd2a9f34d
-1.566: git://github.com/cloudbees/jenkins-ci.org-docker@a8b41cd62974f2ca869b0b1cf33d6e616335a769
-1.565: git://github.com/cloudbees/jenkins-ci.org-docker@8a208c0f226f7b057acaf43cc7c8d1f4021a4f84
-
+1.554.1: git://github.com/cloudbees/jenkins-ci.org-docker@f313389f8ab728d7b4207da36804ea54415c830b 1.554.1
+1.554.2: git://github.com/cloudbees/jenkins-ci.org-docker@f313389f8ab728d7b4207da36804ea54415c830b 1.554.2
+1.554.3: git://github.com/cloudbees/jenkins-ci.org-docker@40c3e3f46939b9f9dcf8d46e62fa7daa80485588 1.554.3
+1.555: git://github.com/cloudbees/jenkins-ci.org-docker@40c3e3f46939b9f9dcf8d46e62fa7daa80485588 1.555
+1.556: git://github.com/cloudbees/jenkins-ci.org-docker@40c3e3f46939b9f9dcf8d46e62fa7daa80485588 1.556
+1.557: git://github.com/cloudbees/jenkins-ci.org-docker@40c3e3f46939b9f9dcf8d46e62fa7daa80485588 1.557
+1.558: git://github.com/cloudbees/jenkins-ci.org-docker@40c3e3f46939b9f9dcf8d46e62fa7daa80485588 1.558
+1.559: git://github.com/cloudbees/jenkins-ci.org-docker@40c3e3f46939b9f9dcf8d46e62fa7daa80485588 1.559
+1.560: git://github.com/cloudbees/jenkins-ci.org-docker@40c3e3f46939b9f9dcf8d46e62fa7daa80485588 1.560
+1.561: git://github.com/cloudbees/jenkins-ci.org-docker@40c3e3f46939b9f9dcf8d46e62fa7daa80485588 1.561
+1.562: git://github.com/cloudbees/jenkins-ci.org-docker@40c3e3f46939b9f9dcf8d46e62fa7daa80485588 1.562
+1.563: git://github.com/cloudbees/jenkins-ci.org-docker@40c3e3f46939b9f9dcf8d46e62fa7daa80485588 1.563
+1.564: git://github.com/cloudbees/jenkins-ci.org-docker@40c3e3f46939b9f9dcf8d46e62fa7daa80485588 1.564
+1.565.1: git://github.com/cloudbees/jenkins-ci.org-docker@f313389f8ab728d7b4207da36804ea54415c830b 1.565.1
+1.565.2: git://github.com/cloudbees/jenkins-ci.org-docker@f313389f8ab728d7b4207da36804ea54415c830b 1.565.2
+1.565.3: git://github.com/cloudbees/jenkins-ci.org-docker@40c3e3f46939b9f9dcf8d46e62fa7daa80485588 1.565.3
+1.565: git://github.com/cloudbees/jenkins-ci.org-docker@40c3e3f46939b9f9dcf8d46e62fa7daa80485588 1.565
+1.566: git://github.com/cloudbees/jenkins-ci.org-docker@40c3e3f46939b9f9dcf8d46e62fa7daa80485588 1.566
+1.567: git://github.com/cloudbees/jenkins-ci.org-docker@40c3e3f46939b9f9dcf8d46e62fa7daa80485588 1.567
+1.568: git://github.com/cloudbees/jenkins-ci.org-docker@40c3e3f46939b9f9dcf8d46e62fa7daa80485588 1.568
+1.569: git://github.com/cloudbees/jenkins-ci.org-docker@40c3e3f46939b9f9dcf8d46e62fa7daa80485588 1.569
+1.570: git://github.com/cloudbees/jenkins-ci.org-docker@40c3e3f46939b9f9dcf8d46e62fa7daa80485588 1.570
+1.571: git://github.com/cloudbees/jenkins-ci.org-docker@40c3e3f46939b9f9dcf8d46e62fa7daa80485588 1.571
+1.572: git://github.com/cloudbees/jenkins-ci.org-docker@40c3e3f46939b9f9dcf8d46e62fa7daa80485588 1.572
+1.573: git://github.com/cloudbees/jenkins-ci.org-docker@40c3e3f46939b9f9dcf8d46e62fa7daa80485588 1.573
+1.574: git://github.com/cloudbees/jenkins-ci.org-docker@40c3e3f46939b9f9dcf8d46e62fa7daa80485588 1.574
+1.575: git://github.com/cloudbees/jenkins-ci.org-docker@40c3e3f46939b9f9dcf8d46e62fa7daa80485588 1.575
+1.576: git://github.com/cloudbees/jenkins-ci.org-docker@40c3e3f46939b9f9dcf8d46e62fa7daa80485588 1.576
+1.577: git://github.com/cloudbees/jenkins-ci.org-docker@40c3e3f46939b9f9dcf8d46e62fa7daa80485588 1.577
+1.578: git://github.com/cloudbees/jenkins-ci.org-docker@40c3e3f46939b9f9dcf8d46e62fa7daa80485588 1.578
+1.579: git://github.com/cloudbees/jenkins-ci.org-docker@40c3e3f46939b9f9dcf8d46e62fa7daa80485588 1.579
+1.580.1: git://github.com/cloudbees/jenkins-ci.org-docker@40c3e3f46939b9f9dcf8d46e62fa7daa80485588 1.580.1
+1.580.2: git://github.com/cloudbees/jenkins-ci.org-docker@c39540d22e2a9c20e691cbdc4c9c54aee77be357 1.580.2
+latest: git://github.com/cloudbees/jenkins-ci.org-docker@c39540d22e2a9c20e691cbdc4c9c54aee77be357 1.580.2
+1.580: git://github.com/cloudbees/jenkins-ci.org-docker@40c3e3f46939b9f9dcf8d46e62fa7daa80485588 1.580
+1.581: git://github.com/cloudbees/jenkins-ci.org-docker@40c3e3f46939b9f9dcf8d46e62fa7daa80485588 1.581
+1.582: git://github.com/cloudbees/jenkins-ci.org-docker@40c3e3f46939b9f9dcf8d46e62fa7daa80485588 1.582
+1.583: git://github.com/cloudbees/jenkins-ci.org-docker@40c3e3f46939b9f9dcf8d46e62fa7daa80485588 1.583
+1.584: git://github.com/cloudbees/jenkins-ci.org-docker@40c3e3f46939b9f9dcf8d46e62fa7daa80485588 1.584
+1.585: git://github.com/cloudbees/jenkins-ci.org-docker@40c3e3f46939b9f9dcf8d46e62fa7daa80485588 1.585
+1.586: git://github.com/cloudbees/jenkins-ci.org-docker@40c3e3f46939b9f9dcf8d46e62fa7daa80485588 1.586
+1.587: git://github.com/cloudbees/jenkins-ci.org-docker@40c3e3f46939b9f9dcf8d46e62fa7daa80485588 1.587
+1.588: git://github.com/cloudbees/jenkins-ci.org-docker@40c3e3f46939b9f9dcf8d46e62fa7daa80485588 1.588
+1.589: git://github.com/cloudbees/jenkins-ci.org-docker@40c3e3f46939b9f9dcf8d46e62fa7daa80485588 1.589
+1.590: git://github.com/cloudbees/jenkins-ci.org-docker@40c3e3f46939b9f9dcf8d46e62fa7daa80485588 1.590
+1.591: git://github.com/cloudbees/jenkins-ci.org-docker@40c3e3f46939b9f9dcf8d46e62fa7daa80485588 1.591
+1.592: git://github.com/cloudbees/jenkins-ci.org-docker@40c3e3f46939b9f9dcf8d46e62fa7daa80485588 1.592
+1.593: git://github.com/cloudbees/jenkins-ci.org-docker@c39540d22e2a9c20e691cbdc4c9c54aee77be357 1.593
+1.594: git://github.com/cloudbees/jenkins-ci.org-docker@c39540d22e2a9c20e691cbdc4c9c54aee77be357 1.594
+1.595: git://github.com/cloudbees/jenkins-ci.org-docker@c39540d22e2a9c20e691cbdc4c9c54aee77be357 1.595
+1.596: git://github.com/cloudbees/jenkins-ci.org-docker@c39540d22e2a9c20e691cbdc4c9c54aee77be357 1.596
+weekly: git://github.com/cloudbees/jenkins-ci.org-docker@c39540d22e2a9c20e691cbdc4c9c54aee77be357 1.596

@@ -1,6 +1,15 @@
 # maintainer: InfoSiftr <github@infosiftr.com> (@infosiftr)
 
-jessie: git://github.com/docker-library/docker-buildpack-deps@a201b127ddf29f47738a9fd04b2f004eb41b009f jessie
-latest: git://github.com/docker-library/docker-buildpack-deps@a201b127ddf29f47738a9fd04b2f004eb41b009f jessie
+jessie-micro: git://github.com/docker-library/docker-buildpack-deps@fc4bb937881466a88e408f660ce4d8ad18c11bad jessie/micro
+micro: git://github.com/docker-library/docker-buildpack-deps@fc4bb937881466a88e408f660ce4d8ad18c11bad jessie/micro
 
-wheezy: git://github.com/docker-library/docker-buildpack-deps@a201b127ddf29f47738a9fd04b2f004eb41b009f wheezy
+jessie: git://github.com/docker-library/docker-buildpack-deps@fc4bb937881466a88e408f660ce4d8ad18c11bad jessie
+latest: git://github.com/docker-library/docker-buildpack-deps@fc4bb937881466a88e408f660ce4d8ad18c11bad jessie
+
+sid-micro: git://github.com/docker-library/docker-buildpack-deps@85e5b77764d78210e55facade71577ae5fc91136 sid/micro
+
+sid: git://github.com/docker-library/docker-buildpack-deps@85e5b77764d78210e55facade71577ae5fc91136 sid
+
+wheezy-micro: git://github.com/docker-library/docker-buildpack-deps@fc4bb937881466a88e408f660ce4d8ad18c11bad wheezy/micro
+
+wheezy: git://github.com/docker-library/docker-buildpack-deps@fc4bb937881466a88e408f660ce4d8ad18c11bad wheezy

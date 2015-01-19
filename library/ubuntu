@@ -1,17 +1,30 @@
 # maintainer: Tianon Gravi <admwiggin@gmail.com> (@tianon)
 
-# see https://wiki.ubuntu.com/Core#Current_Releases
+# see https://partner-images.canonical.com/core/
 # see also https://wiki.ubuntu.com/Releases#Current
-# see also http://cdimage.ubuntu.com/ubuntu-core/
 
-12.04.5: git://github.com/tianon/docker-brew-ubuntu-core@85471971670295a9bad93402e18c52e4f3e1502e precise
-12.04: git://github.com/tianon/docker-brew-ubuntu-core@85471971670295a9bad93402e18c52e4f3e1502e precise
-precise: git://github.com/tianon/docker-brew-ubuntu-core@85471971670295a9bad93402e18c52e4f3e1502e precise
+# commits: (master..dist)
+#  - 5faea96 Update tarballs
+#    - `ubuntu:precise`: 20150115
+#    - `ubuntu:trusty`: 20150115
+#    - `ubuntu:utopic`: 20150115
+#    - `ubuntu:vivid`: 20150116
 
-14.04.1: git://github.com/tianon/docker-brew-ubuntu-core@85471971670295a9bad93402e18c52e4f3e1502e trusty
-14.04: git://github.com/tianon/docker-brew-ubuntu-core@85471971670295a9bad93402e18c52e4f3e1502e trusty
-trusty: git://github.com/tianon/docker-brew-ubuntu-core@85471971670295a9bad93402e18c52e4f3e1502e trusty
-latest: git://github.com/tianon/docker-brew-ubuntu-core@85471971670295a9bad93402e18c52e4f3e1502e trusty
+# 20150115
+12.04.5: git://github.com/tianon/docker-brew-ubuntu-core@5faea963599714ceb09e6f4f78155a3fc64389b7 precise
+12.04: git://github.com/tianon/docker-brew-ubuntu-core@5faea963599714ceb09e6f4f78155a3fc64389b7 precise
+precise: git://github.com/tianon/docker-brew-ubuntu-core@5faea963599714ceb09e6f4f78155a3fc64389b7 precise
 
-14.10: git://github.com/tianon/docker-brew-ubuntu-core@85471971670295a9bad93402e18c52e4f3e1502e utopic
-utopic: git://github.com/tianon/docker-brew-ubuntu-core@85471971670295a9bad93402e18c52e4f3e1502e utopic
+# 20150115
+14.04.1: git://github.com/tianon/docker-brew-ubuntu-core@5faea963599714ceb09e6f4f78155a3fc64389b7 trusty
+14.04: git://github.com/tianon/docker-brew-ubuntu-core@5faea963599714ceb09e6f4f78155a3fc64389b7 trusty
+trusty: git://github.com/tianon/docker-brew-ubuntu-core@5faea963599714ceb09e6f4f78155a3fc64389b7 trusty
+latest: git://github.com/tianon/docker-brew-ubuntu-core@5faea963599714ceb09e6f4f78155a3fc64389b7 trusty
+
+# 20150115
+14.10: git://github.com/tianon/docker-brew-ubuntu-core@5faea963599714ceb09e6f4f78155a3fc64389b7 utopic
+utopic: git://github.com/tianon/docker-brew-ubuntu-core@5faea963599714ceb09e6f4f78155a3fc64389b7 utopic
+
+# 20150116
+15.04: git://github.com/tianon/docker-brew-ubuntu-core@5faea963599714ceb09e6f4f78155a3fc64389b7 vivid
+vivid: git://github.com/tianon/docker-brew-ubuntu-core@5faea963599714ceb09e6f4f78155a3fc64389b7 vivid
