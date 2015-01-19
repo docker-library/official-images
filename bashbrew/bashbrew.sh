@@ -9,7 +9,7 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 library="$dir/../library"
 src="$dir/src"
 logs="$dir/logs"
-namespaces='_ library stackbrew'
+namespaces='_'
 docker='docker'
 
 library="$(readlink -f "$library")"
@@ -46,7 +46,7 @@ common options:
                      will be implicitly ignored by the "push" subcommand
                      
                      Also note that "build" will always tag to the unprefixed
-                     namespace because it it necessary to do so for dependent
+                     namespace because it is necessary to do so for dependent
                      images to use FROM correctly (think "onbuild" variants that
                      are "FROM base-image:some-version")
 
