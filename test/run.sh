@@ -79,14 +79,14 @@ for dockerImage in "$@"; do
 		
 		# run test against dockerImage here
 		# find the scipt for the test
-		scripts=( "$(find "$dir/tests/" -maxdepth 1 -type f -name "$t"[.]*)" )
-		if [ "${#scripts[@]}" -gt 1 ]; then
-			# TODO warn that there is more than one script
-			echo -n 'too many duplicate scripts...'
+		script=( "$dir/tests/$t".* )
+		if [ "${#script[@]}" -gt 1 ]; then
+			echo >&2 "error: $t matches multiple files: ${script[*]}"
+			continue
 		fi
-		if [ -x "$scripts" ]; then
+		if [ -x "$script" -a ! -d "$script" ]; then
 			# TODO dryRun logic
-			if output="$("$scripts" $dockerImage)"; then
+			if output="$("$script" $dockerImage)"; then
 				echo 'passed'
 			else
 				# TODO somethin with output (maybe also catch stderr)
@@ -95,7 +95,7 @@ for dockerImage in "$@"; do
 		else
 			# TODO warn scipt is not executable
 			echo "skipping"
-			echo >&2 'error: not executable'
+			echo >&2 "error: $script not executable or is a directory"
 			continue
 		fi
 	done
