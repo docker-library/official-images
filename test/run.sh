@@ -66,11 +66,11 @@ for dockerImage in "$@"; do
 	tests=( "${globalTests[@]}" ${imageTests[$testRepo]} ${imageTests[$testRepo:$variant]} )
 	
 	failures=0
-	currentTest=1
+	currentTest=0
 	totalTest="${#tests[@]}"
 	for t in "${tests[@]}"; do
-		echo -ne "\t'$t' [$currentTest/$totalTest]..."
 		(( currentTest+=1 ))
+		echo -ne "\t'$t' [$currentTest/$totalTest]..."
 		
 		if [ ! -z "${globalExcludeTests[${testRepo}_$t]}" -o ! -z "${globalExcludeTests[${testRepo}:${variant}_$t]}" ]; then
 			echo 'skipping'
@@ -79,11 +79,7 @@ for dockerImage in "$@"; do
 		
 		# run test against dockerImage here
 		# find the script for the test
-		scriptDir=( "$dir/tests/$t" )
-		if [ "${#scriptDir[@]}" -gt 1 ]; then
-			echo >&2 "error: $t matches multiple files: ${scriptDir[*]}"
-			continue
-		fi
+		scriptDir="$dir/tests/$t"
 		if [ -d "$scriptDir" ]; then
 			script="$scriptDir/run.sh"
 			if [ -x "$script" -a ! -d "$script" ]; then
