@@ -6,7 +6,7 @@ dir="$(readlink -f "$(dirname "$BASH_SOURCE")")"
 inContainerPath="/tmp/bash"
 cmd=( "$inContainerPath/container.sh" )
 
-if ! ret="$(docker run --rm -v "$dir":"$inContainerPath":ro "$1" "${cmd[@]}")"; then
+if ! ret="$(docker run --rm -v "$dir":"$inContainerPath":ro --entrypoint bash "$1" "${cmd[@]}")"; then
 	echo >&2 "error: '"$(basename "$dir")"' failed! got $ret"
 	exit 1
 fi
