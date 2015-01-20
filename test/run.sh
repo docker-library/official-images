@@ -78,24 +78,31 @@ for dockerImage in "$@"; do
 		fi
 		
 		# run test against dockerImage here
-		# find the scipt for the test
-		script=( "$dir/tests/$t".* )
-		if [ "${#script[@]}" -gt 1 ]; then
-			echo >&2 "error: $t matches multiple files: ${script[*]}"
+		# find the script for the test
+		scriptDir=( "$dir/tests/$t" )
+		if [ "${#scriptDir[@]}" -gt 1 ]; then
+			echo >&2 "error: $t matches multiple files: ${scriptDir[*]}"
 			continue
 		fi
-		if [ -x "$script" -a ! -d "$script" ]; then
-			# TODO dryRun logic
-			if output="$("$script" $dockerImage)"; then
-				echo 'passed'
+		if [ -d "$scriptDir" ]; then
+			script="$scriptDir/run.sh"
+			if [ -x "$script" -a ! -d "$script" ]; then
+				# TODO dryRun logic
+				if output="$("$script" $dockerImage)"; then
+					echo 'passed'
+				else
+					# TODO somethin with output (maybe also catch stderr)
+					echo 'failed'
+				fi
 			else
-				# TODO somethin with output (maybe also catch stderr)
-				echo 'failed'
+				# TODO warn scipt is not executable
+				echo "skipping"
+				echo >&2 "error: $script missing, not executable or is a directory"
+				continue
 			fi
 		else
-			# TODO warn scipt is not executable
 			echo "skipping"
-			echo >&2 "error: $script not executable or is a directory"
+			echo >&2 "error: $scriptDir is not a directory"
 			continue
 		fi
 	done

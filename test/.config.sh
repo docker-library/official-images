@@ -12,10 +12,13 @@ declare -A testAlias=(
 
 declare -A imageTests=(
 	[python]='
-		python
+		python-hy
+		python-pip-requests-ssl
+		python-sqlite3
+		python-zlib
 	'
 	[ruby]='
-		ruby
+		ruby-standard-libs
 	'
 # example onbuild
 #	[python:onbuild]='
