@@ -1,15 +1,22 @@
 # maintainer: InfoSiftr <github@infosiftr.com> (@infosiftr)
 
-jessie-micro: git://github.com/docker-library/docker-buildpack-deps@fc4bb937881466a88e408f660ce4d8ad18c11bad jessie/micro
-micro: git://github.com/docker-library/docker-buildpack-deps@fc4bb937881466a88e408f660ce4d8ad18c11bad jessie/micro
+jessie-curl: git://github.com/docker-library/docker-buildpack-deps@a0a59c61102e8b079d568db69368fb89421f75f2 jessie/curl
+curl: git://github.com/docker-library/docker-buildpack-deps@a0a59c61102e8b079d568db69368fb89421f75f2 jessie/curl
 
-jessie: git://github.com/docker-library/docker-buildpack-deps@fc4bb937881466a88e408f660ce4d8ad18c11bad jessie
-latest: git://github.com/docker-library/docker-buildpack-deps@fc4bb937881466a88e408f660ce4d8ad18c11bad jessie
+jessie-scm: git://github.com/docker-library/docker-buildpack-deps@a0a59c61102e8b079d568db69368fb89421f75f2 jessie/scm
+scm: git://github.com/docker-library/docker-buildpack-deps@a0a59c61102e8b079d568db69368fb89421f75f2 jessie/scm
 
-sid-micro: git://github.com/docker-library/docker-buildpack-deps@85e5b77764d78210e55facade71577ae5fc91136 sid/micro
+jessie: git://github.com/docker-library/docker-buildpack-deps@a0a59c61102e8b079d568db69368fb89421f75f2 jessie
+latest: git://github.com/docker-library/docker-buildpack-deps@a0a59c61102e8b079d568db69368fb89421f75f2 jessie
 
-sid: git://github.com/docker-library/docker-buildpack-deps@85e5b77764d78210e55facade71577ae5fc91136 sid
+sid-curl: git://github.com/docker-library/docker-buildpack-deps@a0a59c61102e8b079d568db69368fb89421f75f2 sid/curl
 
-wheezy-micro: git://github.com/docker-library/docker-buildpack-deps@fc4bb937881466a88e408f660ce4d8ad18c11bad wheezy/micro
+sid-scm: git://github.com/docker-library/docker-buildpack-deps@a0a59c61102e8b079d568db69368fb89421f75f2 sid/scm
 
-wheezy: git://github.com/docker-library/docker-buildpack-deps@fc4bb937881466a88e408f660ce4d8ad18c11bad wheezy
+sid: git://github.com/docker-library/docker-buildpack-deps@a0a59c61102e8b079d568db69368fb89421f75f2 sid
+
+wheezy-curl: git://github.com/docker-library/docker-buildpack-deps@a0a59c61102e8b079d568db69368fb89421f75f2 wheezy/curl
+
+wheezy-scm: git://github.com/docker-library/docker-buildpack-deps@a0a59c61102e8b079d568db69368fb89421f75f2 wheezy/scm
+
+wheezy: git://github.com/docker-library/docker-buildpack-deps@a0a59c61102e8b079d568db69368fb89421f75f2 wheezy
