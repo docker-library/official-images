@@ -48,7 +48,7 @@ done
 #   testAlias
 #   imageTests
 #   globalExcludeTests
-. "$dir"/.config.sh
+. "$dir/config.sh"
 
 for dockerImage in "$@"; do
 	echo "testing $dockerImage"
