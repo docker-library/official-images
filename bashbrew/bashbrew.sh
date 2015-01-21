@@ -1,6 +1,9 @@
 #!/bin/bash
 set -e
 
+# make sure we can GTFO
+trap 'echo >&2 Ctrl+C captured, exiting; exit 1' SIGINT
+
 # so we can have fancy stuff like !(pattern)
 shopt -s extglob
 
