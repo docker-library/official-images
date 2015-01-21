@@ -91,7 +91,8 @@ stdlib = [
 	'uri',
 	'weakref',
 	'webrick',
-	'xmlrpc',
+	'xmlrpc/client',
+	'xmlrpc/server',
 	'yaml',
 	'zlib'
 ]
