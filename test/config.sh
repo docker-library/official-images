@@ -18,8 +18,9 @@ declare -A imageTests=(
 		python-zlib
 	'
 	[ruby]='
-		ruby-gems
 		ruby-standard-libs
+		ruby-gems
+		ruby-bundler
 	'
 # example onbuild
 #	[python:onbuild]='
