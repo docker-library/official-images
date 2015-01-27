@@ -30,4 +30,6 @@ declare -A imageTests=(
 
 declare -A globalExcludeTests=(
 	[hello-world_utc]=1
+	[ruby:slim_ruby-gems]=1
+	[ruby:slim_ruby-bundler]=1
 )

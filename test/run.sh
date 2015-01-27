@@ -65,6 +65,10 @@ for dockerImage in "$@"; do
 	# TODO use the argTests as the definitive list of available tests
 	tests=( "${globalTests[@]}" ${imageTests[$testRepo]} ${imageTests[$testRepo:$variant]} )
 	
+	if [ "$testRepo" != "$repo" ]; then
+		tests+=( ${imageTests[$repo]} ${imageTests[$repo:$variant]} )
+	fi
+	
 	failures=0
 	currentTest=0
 	totalTest="${#tests[@]}"
@@ -72,7 +76,7 @@ for dockerImage in "$@"; do
 		(( currentTest+=1 ))
 		echo -ne "\t'$t' [$currentTest/$totalTest]..."
 		
-		if [ ! -z "${globalExcludeTests[${testRepo}_$t]}" -o ! -z "${globalExcludeTests[${testRepo}:${variant}_$t]}" ]; then
+		if [ ! -z "${globalExcludeTests[${testRepo}_$t]}" -o ! -z "${globalExcludeTests[${testRepo}:${variant}_$t]}" -o ! -z "${globalExcludeTests[${repo}_$t]}" -o ! -z "${globalExcludeTests[${repo}:${variant}_$t]}" ]; then
 			echo 'skipping'
 			continue
 		fi
