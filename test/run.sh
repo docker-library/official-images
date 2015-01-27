@@ -94,9 +94,13 @@ for dockerImage in "$@"; do
 			if [ -x "$script" -a ! -d "$script" ]; then
 				# TODO dryRun logic
 				if output="$("$script" $dockerImage)"; then
-					echo 'passed'
+					if [ -f "$scriptDir/expected-std-out.txt" ] && ! d="$(echo "$output" | diff -u "$scriptDir/expected-std-out.txt" - 2>/dev/null)"; then
+						echo 'failed; unexpected output:'
+						echo "$d"
+					else
+						echo 'passed'
+					fi
 				else
-					# TODO somethin with output (maybe also catch stderr)
 					echo 'failed'
 				fi
 			else
