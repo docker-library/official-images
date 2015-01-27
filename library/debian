@@ -1,31 +1,33 @@
 # maintainer: Tianon Gravi <admwiggin@gmail.com> (@tianon)
 
 # commits: (master..dist)
-#  - e4d0c60 2015-01-16 debootstraps
+#  - 51897b4 2015-01-16 debootstraps (squeeze, oldstable)
+#  
+#  - b6b91ab 2015-01-27 debootstraps (CVE-2015-0235)
 
-8.0: git://github.com/tianon/docker-brew-debian@e4d0c608272bb00e25576fadda837d6d0380c13e jessie
-8: git://github.com/tianon/docker-brew-debian@e4d0c608272bb00e25576fadda837d6d0380c13e jessie
-jessie: git://github.com/tianon/docker-brew-debian@e4d0c608272bb00e25576fadda837d6d0380c13e jessie
+8.0: git://github.com/tianon/docker-brew-debian@b6b91ab925802aff7b832127c278aba23d88d3d1 jessie
+8: git://github.com/tianon/docker-brew-debian@b6b91ab925802aff7b832127c278aba23d88d3d1 jessie
+jessie: git://github.com/tianon/docker-brew-debian@b6b91ab925802aff7b832127c278aba23d88d3d1 jessie
 
-oldstable: git://github.com/tianon/docker-brew-debian@e4d0c608272bb00e25576fadda837d6d0380c13e oldstable
+oldstable: git://github.com/tianon/docker-brew-debian@51897b40f6e7941d9a3c15826f2e1b78a44c4cab oldstable
 
-sid: git://github.com/tianon/docker-brew-debian@e4d0c608272bb00e25576fadda837d6d0380c13e sid
+sid: git://github.com/tianon/docker-brew-debian@b6b91ab925802aff7b832127c278aba23d88d3d1 sid
 
-6.0.10: git://github.com/tianon/docker-brew-debian@e4d0c608272bb00e25576fadda837d6d0380c13e squeeze
-6.0: git://github.com/tianon/docker-brew-debian@e4d0c608272bb00e25576fadda837d6d0380c13e squeeze
-6: git://github.com/tianon/docker-brew-debian@e4d0c608272bb00e25576fadda837d6d0380c13e squeeze
-squeeze: git://github.com/tianon/docker-brew-debian@e4d0c608272bb00e25576fadda837d6d0380c13e squeeze
+6.0.10: git://github.com/tianon/docker-brew-debian@51897b40f6e7941d9a3c15826f2e1b78a44c4cab squeeze
+6.0: git://github.com/tianon/docker-brew-debian@51897b40f6e7941d9a3c15826f2e1b78a44c4cab squeeze
+6: git://github.com/tianon/docker-brew-debian@51897b40f6e7941d9a3c15826f2e1b78a44c4cab squeeze
+squeeze: git://github.com/tianon/docker-brew-debian@51897b40f6e7941d9a3c15826f2e1b78a44c4cab squeeze
 
-stable: git://github.com/tianon/docker-brew-debian@e4d0c608272bb00e25576fadda837d6d0380c13e stable
+stable: git://github.com/tianon/docker-brew-debian@b6b91ab925802aff7b832127c278aba23d88d3d1 stable
 
-testing: git://github.com/tianon/docker-brew-debian@e4d0c608272bb00e25576fadda837d6d0380c13e testing
+testing: git://github.com/tianon/docker-brew-debian@b6b91ab925802aff7b832127c278aba23d88d3d1 testing
 
-unstable: git://github.com/tianon/docker-brew-debian@e4d0c608272bb00e25576fadda837d6d0380c13e unstable
+unstable: git://github.com/tianon/docker-brew-debian@b6b91ab925802aff7b832127c278aba23d88d3d1 unstable
 
-7.8: git://github.com/tianon/docker-brew-debian@e4d0c608272bb00e25576fadda837d6d0380c13e wheezy
-7: git://github.com/tianon/docker-brew-debian@e4d0c608272bb00e25576fadda837d6d0380c13e wheezy
-wheezy: git://github.com/tianon/docker-brew-debian@e4d0c608272bb00e25576fadda837d6d0380c13e wheezy
-latest: git://github.com/tianon/docker-brew-debian@e4d0c608272bb00e25576fadda837d6d0380c13e wheezy
+7.8: git://github.com/tianon/docker-brew-debian@b6b91ab925802aff7b832127c278aba23d88d3d1 wheezy
+7: git://github.com/tianon/docker-brew-debian@b6b91ab925802aff7b832127c278aba23d88d3d1 wheezy
+wheezy: git://github.com/tianon/docker-brew-debian@b6b91ab925802aff7b832127c278aba23d88d3d1 wheezy
+latest: git://github.com/tianon/docker-brew-debian@b6b91ab925802aff7b832127c278aba23d88d3d1 wheezy
 
-rc-buggy: git://github.com/tianon/dockerfiles@ec9497f2742ff8def990c10d214194de145b9319 debian/rc-buggy
-experimental: git://github.com/tianon/dockerfiles@ec9497f2742ff8def990c10d214194de145b9319 debian/experimental
+rc-buggy: git://github.com/tianon/dockerfiles@90d86ad63c4a06b7d04d14ad830381b876183b3c debian/rc-buggy
+experimental: git://github.com/tianon/dockerfiles@90d86ad63c4a06b7d04d14ad830381b876183b3c debian/experimental
