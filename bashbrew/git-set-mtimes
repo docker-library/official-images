@@ -2,7 +2,7 @@
 set -e
 
 IFS=$'\n'
-files=( $({ git ls-files | xargs dirname | sort -u && git ls-files; } | sort -r) )
+files=( $({ git ls-files | xargs -n1 dirname | sort -u && git ls-files; } | sort -r) )
 unset IFS
 
 for f in "${files[@]}"; do
