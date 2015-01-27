@@ -53,6 +53,11 @@ done
 for dockerImage in "$@"; do
 	echo "testing $dockerImage"
 	
+	if ! docker inspect "$dockerImage" &> /dev/null; then
+		echo $'\timage does not exist!'
+		continue
+	fi
+	
 	noNamespace="${dockerImage##*/}"
 	repo="${noNamespace%:*}"
 	tagVar="${noNamespace#*:}"
