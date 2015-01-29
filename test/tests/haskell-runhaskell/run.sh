@@ -1,0 +1,1 @@
+../run-haskell-in-container.sh
