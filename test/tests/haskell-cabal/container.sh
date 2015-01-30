@@ -2,4 +2,4 @@
 
 set -e
 
-cabal install base
+cabal update
