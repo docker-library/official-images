@@ -1,1 +1,1 @@
-run-bash-in-container.sh
+../run-bash-in-container.sh
