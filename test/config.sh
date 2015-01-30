@@ -17,6 +17,11 @@ declare -A imageTests=(
 		python-sqlite3
 		python-zlib
 	'
+	[haskell]='
+		haskell-cabal
+		haskell-ghci
+		haskell-runhaskell
+	'
 	[ruby]='
 		ruby-standard-libs
 		ruby-gems
