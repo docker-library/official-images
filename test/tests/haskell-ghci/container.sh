@@ -1,5 +1,4 @@
 #!/bin/bash
-
 set -e
 
-echo "" | ghci
+echo 'putStrLn "Hello, World"' | ghci
