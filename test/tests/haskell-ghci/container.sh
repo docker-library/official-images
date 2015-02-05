@@ -1,4 +1,5 @@
 #!/bin/bash
 set -e
 
-echo 'putStrLn "Hello, World"' | ghci
+# Test that the REPL exists and 'works'.
+echo | ghci
