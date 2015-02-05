@@ -1,0 +1,1 @@
+main = putStrLn "Hello, World"
