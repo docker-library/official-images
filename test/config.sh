@@ -34,7 +34,11 @@ declare -A imageTests=(
 )
 
 declare -A globalExcludeTests=(
+	# single-binary images
 	[hello-world_utc]=1
-	[ruby:slim_ruby-gems]=1
+	[swarm_utc]=1
+
+	# no "native" dependencies
 	[ruby:slim_ruby-bundler]=1
+	[ruby:slim_ruby-gems]=1
 )
