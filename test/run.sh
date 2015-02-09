@@ -22,7 +22,7 @@ EOUSAGE
 opts="$(getopt -o 'ht:?' --long 'dry-run,help,test:' -- "$@" || { usage >&2 && false; })"
 eval set -- "$opts"
 
-argTests=()
+declare -A argTests=()
 dryRun=
 while true; do
 	flag=$1
@@ -30,7 +30,7 @@ while true; do
 	case "$flag" in
 		--dry-run) dryRun=1 ;;
 		--help|-h|'-?') usage && exit 0 ;;
-		--test|-t) argTests+=( "$1" ) && shift ;;
+		--test|-t) argTests["$1"]=1 && shift ;;
 		--) break ;;
 		*)
 			{
@@ -67,12 +67,25 @@ for dockerImage in "$@"; do
 	testRepo=$repo
 	[ -z "${testAlias[$repo]}" ] || testRepo="${testAlias[$repo]}"
 	
-	# TODO use the argTests as the definitive list of available tests
-	tests=( "${globalTests[@]}" ${imageTests[$testRepo]} ${imageTests[$testRepo:$variant]} )
-	
+	testCandidates=( "${globalTests[@]}" ${imageTests[$testRepo]} ${imageTests[$testRepo:$variant]} )
 	if [ "$testRepo" != "$repo" ]; then
-		tests+=( ${imageTests[$repo]} ${imageTests[$repo:$variant]} )
+		testCandidates+=( ${imageTests[$repo]} ${imageTests[$repo:$variant]} )
 	fi
+	
+	tests=()
+	for t in "${testCandidates[@]}"; do
+		if [ ${#argTests[@]} -gt 0 -a -z "${argTests[$t]}" ]; then
+			# skipping due to -t
+			continue
+		fi
+		
+		if [ ! -z "${globalExcludeTests[${testRepo}_$t]}" -o ! -z "${globalExcludeTests[${testRepo}:${variant}_$t]}" -o ! -z "${globalExcludeTests[${repo}_$t]}" -o ! -z "${globalExcludeTests[${repo}:${variant}_$t]}" ]; then
+			# skipping due to exclude
+			continue
+		fi
+		
+		tests+=( "$t" )
+	done
 	
 	failures=0
 	currentTest=0
@@ -80,11 +93,6 @@ for dockerImage in "$@"; do
 	for t in "${tests[@]}"; do
 		(( currentTest+=1 ))
 		echo -ne "\t'$t' [$currentTest/$totalTest]..."
-		
-		if [ ! -z "${globalExcludeTests[${testRepo}_$t]}" -o ! -z "${globalExcludeTests[${testRepo}:${variant}_$t]}" -o ! -z "${globalExcludeTests[${repo}_$t]}" -o ! -z "${globalExcludeTests[${repo}:${variant}_$t]}" ]; then
-			echo 'skipping'
-			continue
-		fi
 		
 		# run test against dockerImage here
 		# find the script for the test
