@@ -1,12 +1,10 @@
 #!/bin/bash
 set -e
 
-dir="$(readlink -f "$(dirname "$BASH_SOURCE")")"
+testDir="$(readlink -f "$(dirname "$BASH_SOURCE")")"
+runDir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
-inContainerPath="/tmp/python"
-cmd=( "$inContainerPath/container.py" )
-
-docker run --rm -v "$dir":"$inContainerPath":ro -w "$inContainerPath" --entrypoint sh "$1" -ec '
+source "$runDir/run-in-container.sh" "$testDir" "$1" sh -ec '
 	for c in python3 python pypy3 pypy; do
 		if command -v "$c" > /dev/null; then
 			exec "$c" "$@"
@@ -14,4 +12,4 @@ docker run --rm -v "$dir":"$inContainerPath":ro -w "$inContainerPath" --entrypoi
 	done
 	echo >&2 "error: unable to determine how to run python"
 	exit 1
-' -- "${cmd[@]}"
+' -- ./container.py

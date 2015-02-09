@@ -3,6 +3,7 @@ set -e
 
 globalTests=(
 	utc
+	shellshock
 )
 
 declare -A testAlias=(
