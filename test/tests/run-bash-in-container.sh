@@ -1,9 +1,7 @@
 #!/bin/bash
 set -e
 
-dir="$(readlink -f "$(dirname "$BASH_SOURCE")")"
+testDir="$(readlink -f "$(dirname "$BASH_SOURCE")")"
+runDir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
-inContainerPath="/tmp/bash"
-cmd=( "$inContainerPath/container.sh" )
-
-docker run --rm -v "$dir":"$inContainerPath":ro -w "$inContainerPath" --entrypoint bash "$1" "${cmd[@]}"
+source "$runDir/run-in-container.sh" "$testDir" "$1" bash ./container.sh
