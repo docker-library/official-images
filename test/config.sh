@@ -3,7 +3,7 @@ set -e
 
 globalTests=(
 	utc
-	shellshock
+	cve-2014--shellshock
 )
 
 declare -A testAlias=(
