@@ -19,47 +19,47 @@ logs="$(readlink -f "$logs")"
 self="$(basename "$0")"
 
 usage() {
-	cat <<EOUSAGE
-
-usage: $self [build|push|list] [options] [repo[:tag] ...]
-   ie: $self build --all
-       $self push debian ubuntu:12.04
-       $self list --namespaces='_' debian:7 hello-world
-
-This script processes the specified Docker images using the corresponding
-repository manifest files.
-
-common options:
-  --all              Build all repositories specified in library
-  --docker="$docker"
-                     Use a custom Docker binary
-  --help, -h, -?     Print this help message
-  --library="$library"
-                     Where to find repository manifest files
-  --logs="$logs"
-                     Where to store the build logs
-  --namespaces="$namespaces"
-                     Space separated list of image namespaces to act upon
-                     
-                     Note that "_" is a special case here for the unprefixed
-                     namespace (ie, "debian" vs "library/debian"), and as such
-                     will be implicitly ignored by the "push" subcommand
-                     
-                     Also note that "build" will always tag to the unprefixed
-                     namespace because it is necessary to do so for dependent
-                     images to use FROM correctly (think "onbuild" variants that
-                     are "FROM base-image:some-version")
-
-build options:
-  --no-build         Don't build, print what would build
-  --no-clone         Don't pull/clone Git repositories
-  --src="$src"
-                     Where to store cloned Git repositories (GOPATH style)
-
-push options:
-  --no-push          Don't push, print what would push
-
-EOUSAGE
+	cat <<-EOUSAGE
+		
+		usage: $self [build|push|list] [options] [repo[:tag] ...]
+		   ie: $self build --all
+		       $self push debian ubuntu:12.04
+		       $self list --namespaces='_' debian:7 hello-world
+		
+		This script processes the specified Docker images using the corresponding
+		repository manifest files.
+		
+		common options:
+		  --all              Build all repositories specified in library
+		  --docker="$docker"
+		                     Use a custom Docker binary
+		  --help, -h, -?     Print this help message
+		  --library="$library"
+		                     Where to find repository manifest files
+		  --logs="$logs"
+		                     Where to store the build logs
+		  --namespaces="$namespaces"
+		                     Space separated list of image namespaces to act upon
+		                     
+		                     Note that "_" is a special case here for the unprefixed
+		                     namespace (ie, "debian" vs "library/debian"), and as such
+		                     will be implicitly ignored by the "push" subcommand
+		                     
+		                     Also note that "build" will always tag to the unprefixed
+		                     namespace because it is necessary to do so for dependent
+		                     images to use FROM correctly (think "onbuild" variants that
+		                     are "FROM base-image:some-version")
+		
+		build options:
+		  --no-build         Don't build, print what would build
+		  --no-clone         Don't pull/clone Git repositories
+		  --src="$src"
+		                     Where to store cloned Git repositories (GOPATH style)
+		
+		push options:
+		  --no-push          Don't push, print what would push
+		
+	EOUSAGE
 }
 
 # arg handling
@@ -71,7 +71,7 @@ doBuild=1
 doPush=1
 buildAll=
 while true; do
-	flag=$1
+	flag="$1"
 	shift
 	case "$flag" in
 		--all) buildAll=1 ;;
@@ -97,10 +97,9 @@ done
 
 # which subcommand
 subcommand="$1"
+shift || { usage >&2 && exit 1; }
 case "$subcommand" in
-	build|push|list)
-		shift
-		;;
+	build|push|list) ;;
 	*)
 		{
 			echo "error: unknown subcommand: $1"
