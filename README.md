@@ -35,23 +35,25 @@ Optionally, if `<dockerfile-dir>` is present, Bashbrew will look for the `Docker
 
 ### Creating a new repository
 
--	Create a new file in the library folder. Its name will be the name of your repository.
--	Add your tag definitions using the provided syntax (see above).
--	Add the following line to the top of the file:
+-	Create a new file in the `library/` folder. Its name will be the name of your repository on the Hub.
+-	Add your tag definitions using the appropriate syntax (see above).
+-	Add a line similar to the following to the top of the file:
 
 		# maintainer: Your Name <your@email.com> (@github.name)
 
--	Create a pull request from your git repository to this one. Please be sure to add details as to what your repository does.
+-	Create a pull request adding the file from your forked repository to this one. Please be sure to add details as to what your repository does.
 
-### New tag in existing repository that you're the maintainer of
+### Adding a new tag in an existing repository (that you're the maintainer of)
 
 -	Add your tag definition using the instruction format documented above.
--	Create a pull request from your git repository to this one. Please be sure to add details about what's new, if possible.
--	In the pull request, mention the repository's maintainers using the `@` symbol (found in the relevant MAINTAINERS file).
+-	Create a pull request from your Git repository to this one. Please be sure to add details about what's new, if possible.
+-	In the pull request comments, feel free to prod the repository's maintainers (found in the relevant `MAINTAINERS` file) using GitHub's @-mentions.
 
-### Change to an existing tag
+### Change to a tag in an existing repository (that you're the maintainer of)
 
--	Propose a pull request to the origin repository. Don't hesitate to @-mention one of the repository maintainers (found in the relevant `MAINTAINERS` file).
+-	Update the relevant tag definition using the instruction format documented above.
+-	Create a pull request from your Git repository to this one. Please be sure to add details about what's changed, if possible.
+-	In the pull request comments, feel free to prod the repository's maintainers (found in the relevant `MAINTAINERS` file) using GitHub's @-mentions.
 
 ## Bashbrew
 
