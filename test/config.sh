@@ -9,6 +9,9 @@ globalTests=(
 declare -A testAlias=(
 	[pypy]='python'
 	[jruby]='ruby'
+
+	[mariadb]='mysql'
+	[percona]='mysql'
 )
 
 declare -A imageTests=(
@@ -27,6 +30,9 @@ declare -A imageTests=(
 		ruby-standard-libs
 		ruby-gems
 		ruby-bundler
+	'
+	[mysql]='
+		mysql-basics
 	'
 # example onbuild
 #	[python:onbuild]='
