@@ -4,11 +4,22 @@
 
 ## Contributing to the standard library
 
-Thank you for your interest in the Docker official images project! We strive to make these instructions as simple and straightforward as possible, but if you find yourself lost, don't hesitate to seek us out on Freenode IRC in channel `#docker-library`, or by creating a GitHub issue here.
+Thank you for your interest in the Docker official images project! We strive to make these instructions as simple and straightforward as possible, but if you find yourself lost, don't hesitate to seek us out on Freenode IRC in channel `#docker-library` or by creating a GitHub issue here.
 
-Be sure to familiarize yourself with the [Guidelines for Creating and Documenting Official Repositories](https://docs.docker.com/docker-hub/official_repos/) and the [Best practices for writing Dockerfiles](https://docs.docker.com/articles/dockerfile_best-practices/) in the Docker documentation.
+Be sure to familiarize yourself with the [Guidelines for Creating and Documenting Official Repositories](https://docs.docker.com/docker-hub/official_repos/) and the [Best practices for writing Dockerfiles](https://docs.docker.com/articles/dockerfile_best-practices/) in the Docker documentation. These will be the foundation of the review process performed by the official images maintainers. If you'd like the review process to go more smoothly, please ensure that your `Dockerfile`s adhere to all the points mentioned there before submitting a pull request.
 
-Also, the Hub descriptions for these images are currently stored separately in the [docker-library/docs](https://github.com/docker-library/docs) repository.
+Also, the Hub descriptions for these images are currently stored separately in the [`docker-library/docs` repository](https://github.com/docker-library/docs), whose [`README.md` file](https://github.com/docker-library/docs/blob/master/README.md) explains more about how it's structured and how to contribute to it. Please be prepared to submit a PR there as well, pending acceptance of your image here.
+
+The main types of problems we look for when reviewing are:
+
+1.	issues with build repeatability (rebuilding the same `Dockerfile` resulting in the same version of the image being packaged, even if the second build happens several versions later, such that an inadvertent rebuild of a `Dockerfile` tagged as `0.1.0` doesn't end up containing `0.2.3`, for example)
+2.	things that cause technical issues based on our experience and familiarity (unnecessary `COPY` falls in here)
+3.	things that cause maintenance issues (like hard-coding version numbers in more than one place instead of using `ENV`, for example, which inevitably leads to overlooking necessary changes during an image update)
+4.	things that cause usability or consistency issues
+
+### Commitment
+
+Proposing a new official image should not be undertaken lightly. We expect and require a commitment to maintain (including and especially timely updates as appropriate) your image.
 
 ## Library definition files
 
