@@ -270,7 +270,8 @@ while [ "$#" -gt 0 ]; do
 	
 	thisLog="$logDir/$subcommand-$repoTag.log"
 	touch "$thisLog"
-	ln -sf "$thisLog" "$latestLogDir/$(basename "$thisLog")"
+	thisLogSymlink="$latestLogDir/$(basename "$thisLog")"
+	ln -sf "$thisLog" "$thisLogSymlink"
 	
 	case "$subcommand" in
 		build)
@@ -373,6 +374,10 @@ while [ "$#" -gt 0 ]; do
 			done
 			;;
 	esac
+	
+	if [ ! -s "$thisLog" ]; then
+		rm "$thisLog" "$thisLogSymlink"
+	fi
 done
 
 [ -z "$didFail" ]
