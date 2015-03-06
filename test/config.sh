@@ -34,6 +34,9 @@ declare -A imageTests=(
 	[mysql]='
 		mysql-basics
 	'
+	[php]='
+		php-ext-install
+	'
 # example onbuild
 #	[python:onbuild]='
 #		py-onbuild
