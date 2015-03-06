@@ -26,6 +26,9 @@ declare -A imageTests=(
 		haskell-ghci
 		haskell-runhaskell
 	'
+	[hylang]='
+		hylang-sh
+	'
 	[ruby]='
 		ruby-standard-libs
 		ruby-gems

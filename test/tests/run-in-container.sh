@@ -6,11 +6,17 @@ set -e
 
 testDir="$1"
 shift
-inContainerPath="/tmp/test-dir"
 
 image="$1"
 shift
 entrypoint="$1"
 shift
 
-exec docker run --rm -v "$testDir":"$inContainerPath":ro -w "$inContainerPath" --entrypoint "$entrypoint" "$image" "$@"
+# do some fancy footwork so that if testDir is /a/b/c, we mount /a/b and use c as the working directory (so relative symlinks work one level up)
+testDir="$(readlink -f "$testDir")"
+hostMount="$(dirname "$testDir")"
+containerMount="/tmp/test-dir"
+workdir="$containerMount/$(basename "$testDir")"
+# TODO should we be doing something fancy with $BASH_SOURCE instead so we can be arbitrarily deep and mount the top level always?
+
+exec docker run --rm -v "$hostMount":"$containerMount":ro -w "$workdir" --entrypoint "$entrypoint" "$image" "$@"
