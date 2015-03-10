@@ -7,20 +7,14 @@ globalTests=(
 )
 
 declare -A testAlias=(
-	[pypy]='python'
 	[jruby]='ruby'
+	[pypy]='python'
 
 	[mariadb]='mysql'
 	[percona]='mysql'
 )
 
 declare -A imageTests=(
-	[python]='
-		python-hy
-		python-pip-requests-ssl
-		python-sqlite3
-		python-zlib
-	'
 	[haskell]='
 		haskell-cabal
 		haskell-ghci
@@ -29,16 +23,22 @@ declare -A imageTests=(
 	[hylang]='
 		hylang-sh
 	'
-	[ruby]='
-		ruby-standard-libs
-		ruby-gems
-		ruby-bundler
-	'
 	[mysql]='
 		mysql-basics
 	'
 	[php]='
 		php-ext-install
+	'
+	[python]='
+		python-hy
+		python-pip-requests-ssl
+		python-sqlite3
+		python-zlib
+	'
+	[ruby]='
+		ruby-standard-libs
+		ruby-gems
+		ruby-bundler
 	'
 # example onbuild
 #	[python:onbuild]='
