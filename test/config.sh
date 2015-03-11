@@ -7,6 +7,7 @@ globalTests=(
 )
 
 declare -A testAlias=(
+	[iojs]='node'
 	[jruby]='ruby'
 	[pypy]='python'
 
@@ -15,6 +16,24 @@ declare -A testAlias=(
 )
 
 declare -A imageTests=(
+	[aerospike]='
+	'
+	[busybox]='
+	'
+	[celery]='
+	'
+	[clojure]='
+	'
+	[crate]='
+	'
+	[django]='
+	'
+	[elasticsearch]='
+	'
+	[gcc]='
+	'
+	[golang]='
+	'
 	[haskell]='
 		haskell-cabal
 		haskell-ghci
@@ -23,11 +42,29 @@ declare -A imageTests=(
 	[hylang]='
 		hylang-sh
 	'
+	[java]='
+	'
+	[julia]='
+	'
+	[memcached]='
+	'
+	[mongo]='
+	'
+	[mono]='
+	'
 	[mysql]='
 		mysql-basics
 	'
+	[node]='
+	'
+	[percona]='
+	'
+	[perl]='
+	'
 	[php]='
 		php-ext-install
+	'
+	[postgres]='
 	'
 	[python]='
 		python-hy
@@ -35,10 +72,24 @@ declare -A imageTests=(
 		python-sqlite3
 		python-zlib
 	'
+	[rabbitmq]='
+	'
+	[r-base]='
+	'
+	[rails]='
+	'
+	[redis]='
+	'
+	[rethinkdb]='
+	'
 	[ruby]='
 		ruby-standard-libs
 		ruby-gems
 		ruby-bundler
+	'
+	[tomcat]='
+	'
+	[wordpress]='
 	'
 # example onbuild
 #	[python:onbuild]='
