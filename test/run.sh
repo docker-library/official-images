@@ -8,12 +8,12 @@ self="$(basename "$0")"
 usage() {
 	cat <<EOUSAGE
 
-usage: $self [-t test ...] [imageTag ...]
+usage: $self [-t test ...] image:tag [...]
    ie: $self debian:wheezy
-       $self -t utc python:3-onbuild
-       $self -t utc python:3-onbuild -t py-onbuild
+       $self -t utc python:3
+       $self -t utc python:3 -t python-hy
 
-This script processes the specified docker images to test their running
+This script processes the specified Docker images to test their running
 environments.
 EOUSAGE
 }
@@ -41,6 +41,11 @@ while true; do
 			;;
 	esac
 done
+
+if [ $# -eq 0 ]; then
+	usage >&2
+	exit 1
+fi
 
 # load config lists
 # contains:
