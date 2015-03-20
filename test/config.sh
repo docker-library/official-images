@@ -7,19 +7,32 @@ globalTests=(
 )
 
 declare -A testAlias=(
-	[pypy]='python'
+	[iojs]='node'
 	[jruby]='ruby'
+	[pypy]='python'
 
 	[mariadb]='mysql'
 	[percona]='mysql'
 )
 
 declare -A imageTests=(
-	[python]='
-		python-hy
-		python-pip-requests-ssl
-		python-sqlite3
-		python-zlib
+	[aerospike]='
+	'
+	[busybox]='
+	'
+	[celery]='
+	'
+	[clojure]='
+	'
+	[crate]='
+	'
+	[django]='
+	'
+	[elasticsearch]='
+	'
+	[gcc]='
+	'
+	[golang]='
 	'
 	[haskell]='
 		haskell-cabal
@@ -29,16 +42,54 @@ declare -A imageTests=(
 	[hylang]='
 		hylang-sh
 	'
+	[java]='
+	'
+	[julia]='
+	'
+	[memcached]='
+	'
+	[mongo]='
+	'
+	[mono]='
+	'
+	[mysql]='
+		mysql-basics
+	'
+	[node]='
+	'
+	[percona]='
+	'
+	[perl]='
+	'
+	[php]='
+		php-ext-install
+	'
+	[postgres]='
+	'
+	[python]='
+		python-hy
+		python-pip-requests-ssl
+		python-sqlite3
+		python-zlib
+	'
+	[rabbitmq]='
+	'
+	[r-base]='
+	'
+	[rails]='
+	'
+	[redis]='
+	'
+	[rethinkdb]='
+	'
 	[ruby]='
 		ruby-standard-libs
 		ruby-gems
 		ruby-bundler
 	'
-	[mysql]='
-		mysql-basics
+	[tomcat]='
 	'
-	[php]='
-		php-ext-install
+	[wordpress]='
 	'
 # example onbuild
 #	[python:onbuild]='
