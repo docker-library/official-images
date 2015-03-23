@@ -10,6 +10,7 @@ export MYSQL_DATABASE='my cool mysql database'
 
 cname="mysql-container-$RANDOM-$RANDOM"
 cid="$(docker run -d -e MYSQL_ROOT_PASSWORD -e MYSQL_USER -e MYSQL_PASSWORD -e MYSQL_DATABASE --name "$cname" "$image")"
+trap "docker rm -f $cid > /dev/null" EXIT
 
 mysql() {
 	docker run --rm -i --link "$cname":mysql --entrypoint mysql -e MYSQL_PWD="$MYSQL_PASSWORD" "$image" -hmysql -u"$MYSQL_USER" --silent "$@" "$MYSQL_DATABASE"
@@ -36,5 +37,3 @@ echo 'DELETE FROM test WHERE a = 1' | mysql
 [ "$(echo 'SELECT COUNT(*) FROM test' | mysql)" = 1 ]
 [ "$(echo 'SELECT c FROM test' | mysql)" = "goodbye!" ]
 echo 'DROP TABLE test' | mysql
-
-docker rm -f "$cid" > /dev/null # TODO somehow make sure this goes away if the tests fail, too
