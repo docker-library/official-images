@@ -36,6 +36,7 @@ fi
 # TODO that will change eventually!
 
 set -x
+./bashbrew.sh list --uniq "${repos[@]}"
 ./bashbrew.sh list "${repos[@]}"
 ./bashbrew.sh build --no-build "${repos[@]}"
 ./bashbrew.sh push --no-push "${repos[@]}"
