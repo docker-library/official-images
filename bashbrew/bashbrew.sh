@@ -49,6 +49,10 @@ usage() {
 		                     namespace because it is necessary to do so for dependent
 		                     images to use FROM correctly (think "onbuild" variants that
 		                     are "FROM base-image:some-version")
+		  --uniq
+		                     Only process the first tag of identical images
+		                     This is not recommended for build or push
+		                     i.e. process python:2.7, but not python:2
 		
 		build options:
 		  --no-build         Don't build, print what would build
@@ -63,13 +67,14 @@ usage() {
 }
 
 # arg handling
-opts="$(getopt -o 'h?' --long 'all,docker:,help,library:,logs:,namespaces:,no-build,no-clone,no-push,src:' -- "$@" || { usage >&2 && false; })"
+opts="$(getopt -o 'h?' --long 'all,docker:,help,library:,logs:,namespaces:,no-build,no-clone,no-push,src:,uniq' -- "$@" || { usage >&2 && false; })"
 eval set -- "$opts"
 
 doClone=1
 doBuild=1
 doPush=1
 buildAll=
+onlyUniq=
 while true; do
 	flag="$1"
 	shift
@@ -84,6 +89,7 @@ while true; do
 		--no-clone) doClone= ;;
 		--no-push) doPush= ;;
 		--src) src="$1" && shift ;;
+		--uniq) onlyUniq=1 ;;
 		--) break ;;
 		*)
 			{
@@ -130,6 +136,7 @@ queue=()
 declare -A repoGitRepo=()
 declare -A repoGitRef=()
 declare -A repoGitDir=()
+declare -A repoUniq=()
 
 logDir="$logs/$subcommand-$(date +'%Y-%m-%d--%H-%M-%S')"
 mkdir -p "$logDir"
@@ -175,7 +182,15 @@ for repoTag in "${repos[@]}"; do
 	fi
 	
 	if [ "${repoGitRepo[$repoTag]}" ]; then
-		queue+=( "$repoTag" )
+		if [ "$onlyUniq" ]; then
+			uniqLine="${repoGitRepo[$repoTag]}@${repoGitRef[$repoTag]} ${repoGitDir[$repoTag]}"
+			if [ -z "${repoUniq[$uniqLine]}" ]; then
+				queue+=( "$repoTag" )
+				repoUniq[$uniqLine]=$repoTag
+			fi
+		else
+			queue+=( "$repoTag" )
+		fi
 		continue
 	fi
 	
@@ -247,11 +262,21 @@ for repoTag in "${repos[@]}"; do
 		tags+=( "$repo:$tag" )
 	done
 	
-	if [ "$repo" = "$repoTag" ]; then
+	if [ "$repo" != "$repoTag" ]; then
+		tags=( "$repoTag" )
+	fi
+	
+	if [ "$onlyUniq" ]; then
+		for rt in "${tags[@]}"; do
+			uniqLine="${repoGitRepo[$rt]}@${repoGitRef[$rt]} ${repoGitDir[$rt]}"
+			if [ -z "${repoUniq[$uniqLine]}" ]; then
+				queue+=( "$rt" )
+				repoUniq[$uniqLine]=$rt
+			fi
+		done
+	else
 		# add all tags we just parsed
 		queue+=( "${tags[@]}" )
-	else
-		queue+=( "$repoTag" )
 	fi
 done
 
