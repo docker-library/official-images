@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e
+set -eo pipefail
 
 dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
@@ -21,16 +21,28 @@ cname="php-fpm-container-$RANDOM-$RANDOM"
 cid="$(docker run -d -v "$dir/index.php":/var/www/html/index.php:ro --name "$cname" "$image")"
 trap "docker rm -f $cid > /dev/null" EXIT
 
-cgi-fcgi() {
+fcgi-request() {
+	local method="$1"
+
+	local url="$2"
+	local queryString=
+	if [[ "$url" == *\?* ]]; then
+		queryString="${url#*\?}"
+		url="${url%%\?*}"
+	fi
+
 	docker run --rm -i --link "$cname":fpm \
-		-e REQUEST_METHOD=GET \
-		-e SCRIPT_NAME=/index.php \
-		-e SCRIPT_FILENAME=/var/www/html/index.php \
-		-e QUERY_STRING="$1" \
+		-e REQUEST_METHOD="$method" \
+		-e SCRIPT_NAME="$url" \
+		-e SCRIPT_FILENAME=/var/www/html/"${url#/}" \
+		-e QUERY_STRING="$queryString" \
 		"$client_image" \
 		-bind -connect fpm:9000
 }
 
+# Check that we can request /index.php with no params
+[ -n "$(fcgi-request GET "/index.php")" ]
+
 # Check that our index.php echoes the value of the "hello" param
 hello="world-$RANDOM-$RANDOM"
-[ "$(cgi-fcgi hello="$hello" | tail -1)" = "$hello" ]
+[ "$(fcgi-request GET "/index.php?hello=$hello" | tail -1)" = "$hello" ]
