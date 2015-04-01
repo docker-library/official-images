@@ -7,7 +7,7 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 image="$1"
 
 # Build a client image with cgi-fcgi for testing
-client_image="php-fpm-client-$RANDOM-$RANDOM"
+client_image="librarytest/php-fpm-hello-web:fcgi"
 docker build -q -t "$client_image" - > /dev/null <<EOF
 FROM debian:jessie
 
