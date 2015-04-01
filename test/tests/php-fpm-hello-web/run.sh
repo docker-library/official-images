@@ -7,8 +7,8 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 image="$1"
 
 # Build a client image with cgi-fcgi for testing
-client_image="librarytest/php-fpm-hello-web:fcgi"
-docker build -q -t "$client_image" - > /dev/null <<EOF
+clientImage='librarytest/php-fpm-hello-web:fcgi'
+docker build -q -t "$clientImage" - > /dev/null <<'EOF'
 FROM debian:jessie
 
 RUN set -x; apt-get update && apt-get install -y libfcgi0ldbl && rm -rf /var/lib/apt/lists/*
@@ -31,12 +31,12 @@ fcgi-request() {
 		url="${url%%\?*}"
 	fi
 
-	docker run --rm -i --link "$cname":fpm \
+	docker run --rm -i --link "$cid":fpm \
 		-e REQUEST_METHOD="$method" \
 		-e SCRIPT_NAME="$url" \
 		-e SCRIPT_FILENAME=/var/www/html/"${url#/}" \
 		-e QUERY_STRING="$queryString" \
-		"$client_image" \
+		"$clientImage" \
 		-bind -connect fpm:9000
 }
 
