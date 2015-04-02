@@ -64,6 +64,9 @@ declare -A imageTests=(
 	[php]='
 		php-ext-install
 	'
+	[php:fpm]='
+		php-fpm-hello-web
+	'
 	[postgres]='
 	'
 	[python]='
