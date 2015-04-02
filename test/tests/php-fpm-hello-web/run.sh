@@ -8,18 +8,21 @@ image="$1"
 
 # Build a client image with cgi-fcgi for testing
 clientImage='librarytest/php-fpm-hello-web:fcgi'
-docker build -q -t "$clientImage" - > /dev/null <<'EOF'
+docker build -t "$clientImage" - > /dev/null <<'EOF'
 FROM debian:jessie
 
-RUN set -x; apt-get update && apt-get install -y libfcgi0ldbl && rm -rf /var/lib/apt/lists/*
+RUN set -x && apt-get update && apt-get install -y libfcgi0ldbl && rm -rf /var/lib/apt/lists/*
 
 ENTRYPOINT ["cgi-fcgi"]
 EOF
 
 # Create an instance of the container-under-test
-cname="php-fpm-container-$RANDOM-$RANDOM"
-cid="$(docker run -d -v "$dir/index.php":/var/www/html/index.php:ro --name "$cname" "$image")"
+cid="$(docker run -d -v "$dir/index.php":/var/www/html/index.php:ro "$image")"
 trap "docker rm -f $cid > /dev/null" EXIT
+
+# RACY TESTS ARE RACY
+sleep 1
+# TODO find a cleaner solution to this, similar to what we do in mysql-basics
 
 fcgi-request() {
 	local method="$1"
