@@ -1,4 +1,4 @@
 #!/bin/bash
 set -e
 
-docker images -q 'librarytest/*' | xargs docker rmi -f
+docker images 'librarytest/*' | awk 'NR>1 { print $1":"$2 }' | xargs -r docker rmi
