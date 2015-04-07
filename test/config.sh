@@ -71,9 +71,9 @@ declare -A imageTests=(
 	'
 	[python]='
 		python-hy
+		python-imports
 		python-pip-requests-ssl
 		python-sqlite3
-		python-zlib
 	'
 	[rabbitmq]='
 	'
