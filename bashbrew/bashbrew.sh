@@ -195,7 +195,7 @@ for repoTag in "${repos[@]}"; do
 	fi
 	
 	# parse the repo library file
-	IFS=$'\n'
+	IFS=$'\r\n'
 	repoTagLines=( $("${cmd[@]}" | grep -vE '^#|^\s*$') )
 	unset IFS
 	
