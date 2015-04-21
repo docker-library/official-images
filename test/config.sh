@@ -11,6 +11,9 @@ declare -A testAlias=(
 	[jruby]='ruby'
 	[pypy]='python'
 
+	[ubuntu]='debian'
+	[ubuntu-debootstrap]='debian'
+
 	[mariadb]='mysql'
 	[percona]='mysql'
 )
@@ -25,6 +28,9 @@ declare -A imageTests=(
 	[clojure]='
 	'
 	[crate]='
+	'
+	[debian]='
+		debian-apt-get
 	'
 	[django]='
 	'
