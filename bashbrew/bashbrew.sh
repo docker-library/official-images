@@ -286,7 +286,7 @@ done
 
 # usage: gitCheckout "$gitRepo" "$gitRef" "$gitDir"
 gitCheckout() {
-	[ "$1" -a "$2" -a "$3" ] || return 1
+	[ "$1" -a "$2" ] || return 1 # "$3" is allowed to be the empty string
 	(
 		set -x
 		cd "$1"
