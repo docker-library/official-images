@@ -194,9 +194,14 @@ for repoTag in "${repos[@]}"; do
 		continue
 	fi
 	
-	# parse the repo library file
+	if ! manifest="$("${cmd[@]}")"; then
+		echo >&2 "error: failed to fetch $repoTag (${cmd[*]})"
+		exit 1
+	fi
+	
+	# parse the repo manifest file
 	IFS=$'\n'
-	repoTagLines=( $("${cmd[@]}" | grep -vE '^#|^\s*$') )
+	repoTagLines=( $(echo "$manifest" | grep -vE '^#|^\s*$') )
 	unset IFS
 	
 	tags=()
@@ -225,7 +230,7 @@ for repoTag in "${repos[@]}"; do
 		gitRepo="${gitRepo%/}"
 		gitRepo="$src/$gitRepo"
 		
-		if [ "$subcommand" == 'build' ]; then
+		if [ "$subcommand" = 'build' ]; then
 			if [ -z "$doClone" ]; then
 				if [ "$doBuild" -a ! -d "$gitRepo" ]; then
 					echo >&2 "error: directory not found: $gitRepo"
@@ -238,16 +243,9 @@ for repoTag in "${repos[@]}"; do
 					git clone -q "$gitUrl" "$gitRepo"
 				else
 					# if we don't have the "ref" specified, "git fetch" in the hopes that we get it
-					if ! (
-						cd "$gitRepo"
-						git rev-parse --verify "${gitRef}^{commit}" &> /dev/null
-					); then
+					if ! ( cd "$gitRepo" && git rev-parse --verify "${gitRef}^{commit}" &> /dev/null ); then
 						echo "Fetching $repo ($gitUrl) ..."
-						(
-							cd "$gitRepo"
-							git fetch -q --all
-							git fetch -q --tags
-						)
+						( cd "$gitRepo" && git fetch -q --all && git fetch -q --tags )
 					fi
 				fi
 				
@@ -279,6 +277,22 @@ for repoTag in "${repos[@]}"; do
 		queue+=( "${tags[@]}" )
 	fi
 done
+
+# usage: gitCheckout "$gitRepo" "$gitRef" "$gitDir"
+gitCheckout() {
+	[ "$1" -a "$2" -a "$3" ] || return 1
+	(
+		set -x
+		cd "$1"
+		git reset -q HEAD
+		git checkout -q -- .
+		git clean -dfxq
+		git checkout -q "$2" --
+		cd "$1/$3"
+		"$dir/git-set-mtimes"
+	)
+	return 0
+}
 
 set -- "${queue[@]}"
 while [ "$#" -gt 0 ]; do
@@ -333,25 +347,13 @@ while [ "$#" -gt 0 ]; do
 			done
 			
 			if [ "$doBuild" ]; then
-				if ! (
-					set -x
-					cd "$gitRepo"
-					git reset -q HEAD
-					git checkout -q -- .
-					git clean -dfxq
-					git checkout -q "$gitRef" --
-					cd "$gitRepo/$gitDir"
-					"$dir/git-set-mtimes"
-				) &>> "$thisLog"; then
+				if ! gitCheckout "$gitRepo" "$gitRef" "$gitDir" &>> "$thisLog"; then
 					echo "- failed 'git checkout'; see $thisLog"
 					didFail=1
 					continue
 				fi
 				
-				if ! (
-					set -x
-					"$docker" build -t "$repoTag" "$gitRepo/$gitDir"
-				) &>> "$thisLog"; then
+				if ! ( set -x && "$docker" build -t "$repoTag" "$gitRepo/$gitDir" ) &>> "$thisLog"; then
 					echo "- failed 'docker build'; see $thisLog"
 					didFail=1
 					continue
@@ -362,10 +364,7 @@ while [ "$#" -gt 0 ]; do
 						# images FROM other images is explicitly supported
 						continue
 					fi
-					if ! (
-						set -x
-						"$docker" tag -f "$repoTag" "$namespace/$repoTag"
-					) &>> "$thisLog"; then
+					if ! ( set -x && "$docker" tag -f "$repoTag" "$namespace/$repoTag" ) &>> "$thisLog"; then
 						echo "- failed 'docker tag'; see $thisLog"
 						didFail=1
 						continue
