@@ -11,6 +11,7 @@ src="$dir/src"
 logs="$dir/logs"
 namespaces='_'
 docker='docker'
+retries='4'
 
 library="$(readlink -f "$library")"
 src="$(readlink -f "$src")"
@@ -33,6 +34,10 @@ usage() {
 		  --all              Build all repositories specified in library
 		  --docker="$docker"
 		                     Use a custom Docker binary
+		  --retries="$retries"
+		                     How many times to try again if the build/push fails before
+		                     considering it a lost cause (always attempts a minimum of
+		                     one time, but maximum of one plus this number)
 		  --help, -h, -?     Print this help message
 		  --library="$library"
 		                     Where to find repository manifest files
@@ -67,7 +72,7 @@ usage() {
 }
 
 # arg handling
-opts="$(getopt -o 'h?' --long 'all,docker:,help,library:,logs:,namespaces:,no-build,no-clone,no-push,src:,uniq' -- "$@" || { usage >&2 && false; })"
+opts="$(getopt -o 'h?' --long 'all,docker:,help,library:,logs:,namespaces:,no-build,no-clone,no-push,retries:,src:,uniq' -- "$@" || { usage >&2 && false; })"
 eval set -- "$opts"
 
 doClone=1
@@ -88,6 +93,7 @@ while true; do
 		--no-build) doBuild= ;;
 		--no-clone) doClone= ;;
 		--no-push) doPush= ;;
+		--retries) retries="$1" && (( retries++ )) && shift ;;
 		--src) src="$1" && shift ;;
 		--uniq) onlyUniq=1 ;;
 		--) break ;;
@@ -353,11 +359,15 @@ while [ "$#" -gt 0 ]; do
 					continue
 				fi
 				
-				if ! ( set -x && "$docker" build -t "$repoTag" "$gitRepo/$gitDir" ) &>> "$thisLog"; then
-					echo "- failed 'docker build'; see $thisLog"
-					didFail=1
-					continue
-				fi
+				tries="$retries"
+				while ! ( set -x && "$docker" build -t "$repoTag" "$gitRepo/$gitDir" ) &>> "$thisLog"; do
+					(( tries-- )) || true
+					if [ $tries -le 0 ]; then
+						echo >&2 "- failed 'docker build'; see $thisLog"
+						didFail=1
+						continue 2
+					fi
+				done
 				
 				for namespace in $namespaces; do
 					if [ "$namespace" = '_' ]; then
@@ -389,9 +399,14 @@ while [ "$#" -gt 0 ]; do
 				fi
 				if [ "$doPush" ]; then
 					echo "Pushing $namespace/$repoTag..."
-					if ! "$docker" push "$namespace/$repoTag" &>> "$thisLog" < /dev/null; then
-						echo >&2 "- $namespace/$repoTag failed to push; see $thisLog"
-					fi
+					tries="$retries"
+					while ! ( set -x && "$docker" push "$namespace/$repoTag" < /dev/null ) &>> "$thisLog"; do
+						(( tries-- )) || true
+						if [ $tries -le 0 ]; then
+							echo >&2 "- $namespace/$repoTag failed to push; see $thisLog"
+							continue 2
+						fi
+					done
 				else
 					echo "$docker push" "$namespace/$repoTag"
 				fi
