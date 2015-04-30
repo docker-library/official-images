@@ -8,7 +8,7 @@ stdlib = [
 	'coverage',
 	'csv',
 	'date',
-	'dbm',
+#	'dbm', # TODO figure out a way to make this one load conditionally based on whether we're _not_ on jruby (since jruby doesn't have dbm)
 	'delegate',
 	'digest',
 	'drb',
