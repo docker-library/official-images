@@ -6,24 +6,152 @@
 
 Thank you for your interest in the Docker official images project! We strive to make these instructions as simple and straightforward as possible, but if you find yourself lost, don't hesitate to seek us out on Freenode IRC in channel `#docker-library` or by creating a GitHub issue here.
 
-Be sure to familiarize yourself with the [Guidelines for Creating and Documenting Official Repositories](https://docs.docker.com/docker-hub/official_repos/) and the [Best practices for writing Dockerfiles](https://docs.docker.com/articles/dockerfile_best-practices/) in the Docker documentation. These will be the foundation of the review process performed by the official images maintainers. If you'd like the review process to go more smoothly, please ensure that your `Dockerfile`s adhere to all the points mentioned there before submitting a pull request.
+Be sure to familiarize yourself with [Official Repositories on Docker Hub](https://docs.docker.com/docker-hub/official_repos/) and the [Best practices for writing Dockerfiles](https://docs.docker.com/articles/dockerfile_best-practices/) in the Docker documentation. These will be the foundation of the review process performed by the official images maintainers. If you'd like the review process to go more smoothly, please ensure that your `Dockerfile`s adhere to all the points mentioned there, as well as [below](README.md#review-guidelines), before submitting a pull request.
 
 Also, the Hub descriptions for these images are currently stored separately in the [`docker-library/docs` repository](https://github.com/docker-library/docs), whose [`README.md` file](https://github.com/docker-library/docs/blob/master/README.md) explains more about how it's structured and how to contribute to it. Please be prepared to submit a PR there as well, pending acceptance of your image here.
 
-The main types of problems we look for when reviewing are:
+### Review Guidelines
 
-1.	issues with build repeatability (rebuilding the same `Dockerfile` resulting in the same version of the image being packaged, even if the second build happens several versions later, such that an inadvertent rebuild of a `Dockerfile` tagged as `0.1.0` doesn't end up containing `0.2.3`, for example)
-2.	things that cause technical issues based on our experience and familiarity (unnecessary `COPY` falls in here)
-3.	things that cause maintenance issues (like hard-coding version numbers in more than one place instead of using `ENV`, for example, which inevitably leads to overlooking necessary changes during an image update)
-4.	things that cause usability or consistency issues
+Because the official images are intended to be learning tools for those new to Docker as well as the base images for advanced users to build their production releases, we review each proposed `Dockerfile` to ensure that it meets a minimum standard for quality and maintainability. While some of that standard is hard to define (due to subjectivity), as much as possible is defined here, while also adhering to the "Best Practices" where appropriate.
+
+#### Maintainership
+
+Version bumps and security fixes should be attended to in a timely manner.
+
+If you do not represent upstream and upstream becomes interested in maintaining the image, steps should be taken to ensure a smooth transition of image maintainership over to upstream.
+
+For upstreams interested in taking over maintainership of an existing repository, the first step is to get involved in the existing repository. Making comments on issues, proposing changes, and making yourself known within the "image community" (even if that "community" is just the current maintainer) are all important places to start to ensure that the transition is unsurprising to existing contributors and users.
+
+To make sure the review process isn't stalled during the transition, please ensure that the entire Git history of the original repository is kept in the new upstream-maintained repository. This is most easily accomplished by forking the new from the existing repository, but can also be accomplished by fetching the commits directly from the original and pushing them into the new repo (ie, `git fetch https://github.com/jsmith/example.git master`, `git rebase FETCH_HEAD`, `git push -f`).
+
+#### Repeatability
+
+Rebuilding the same `Dockerfile` should result in the same version of the image being packaged, even if the second build happens several versions later, or the build should fail outright, such that an inadvertent rebuild of a `Dockerfile` tagged as `0.1.0` doesn't end up containing `0.2.3`. For example, if using `apt` to install the main program for the image, be sure to pin it to a specific version (ex: `... apt-get install -y my-package=0.1.0 ...`). For dependent packages installed by `apt` there is not usually a need to pin them to a version.
+
+#### Consistency
+
+All official images should provide a consistent interface. A beginning user should be able to `docker run official-image bash` without needing to learn about `--entrypoint`. It is also nice for advanced users to take advantage of entrypoint, so that they can `docker run official-image --arg1 --arg2` without having to specify the binary to execute.
+
+1.	If the startup process does not need arguments, just use `CMD`:
+
+	```Dockerfile
+	CMD ["irb"]
+	```
+
+2.	If there is initialization that needs to be done on start, like creating the initial database, use an `ENTRYPOINT` along with `CMD`:
+
+	```Dockerfile
+	ENTRYPOINT ["/docker-entrypoint.sh"]
+	CMD ["postgres"]
+	```
+
+	1.	Ensure that `docker run official-image bash` works too. The easiest way is to check for the expected command and if it is something else, just `exec "$@` (run whatever was passed, properly keeping the arguments escaped).
+
+		```bash
+		#!/bin/bash
+		set -e
+
+		# this if will check if the first argument is a flag
+		# but only works if all arguments require a hyphenated flag
+		# -v; -SL; -f arg; etc will work, but not arg1 arg2
+		if [ "${1:0:1}" = '-' ]; then
+		    set -- mongod "$@"
+		fi
+
+		# check for the expected command
+		if [ "$1" = 'mongod' ]; then
+		    # init db stuff....
+		    # use gosu to drop to a non-root user
+		    exec gosu mongod "$@"
+		fi
+
+		# else default to run whatever the user wanted like "bash"
+		exec "$@"
+		```
+
+3.	If the image only contains the main executable and its linked libraries (ie no shell) then it is fine to use the executable as the `ENTRYPOINT`, since that is the only thing that can run:
+
+	```Dockerfile
+	ENTRYPOINT ["swarm"]
+	CMD ["--help"]
+	```
+
+	The most common indicator of whether this is appropriate is that the image `Dockerfile` starts with [`scratch`](https://registry.hub.docker.com/_/scratch/) (`FROM scratch`).
+
+#### Clarity
+
+Try to make the `Dockerfile` easy to understand/read. It may be tempting, for the sake of brevity, to put complicated initialization details into a standalone script and merely add a `RUN` command in the `Dockerfile`. However, this causes the resulting `Dockerfile` to be overly opaque, and such `Dockerfile`s are unlikely to pass review. Instead, it it recommended to put all the commands for initialization into the `Dockerfile` as appropriate `RUN` or `ENV` command combinations. To find good examples, look at the current official images.
+
+#### Cacheability
+
+This is one place that experience ends up trumping documentation for the path to enlightenment, but the following tips might help:
+
+-	Avoid `COPY`/`ADD` whenever possible, but when necessary, be as specific as possible (ie, `COPY one-file.sh /somewhere/` instead of `COPY . /somewhere`).
+
+	The reason for this is that the cache for `COPY` instructions considers file `mtime` changes to be a cache bust, which can make the cache behavior of `COPY` unpredictable sometimes, especially when `.git` is part of what needs to be `COPY`ed (for example).
+
+-	Ensure that lines which are less likely to change come before lines that are more likely to change (with the caveat that each line should generate an image that still runs successfully without assumptions of later lines).
+
+	For example, the line that contains the software version number (`ENV MYSOFTWARE_VERSION 4.2`) should come after a line that sets up the APT repository `.list` file (`RUN echo 'deb http://example.com/mysoftware/debian some-suite main' > /etc/apt/sources.list.d/mysoftware.list`).
+
+#### Security
+
+The `Dockerfile` should be written to help mitigate man-in-the-middle attacks during build: using https where possible; importing PGP keys with the full fingerprint in the Dockerfile to check package signing; embedding checksums directly in the `Dockerfile` if PGP signing is not provided. When importing PGP keys, we recommend using the [high-availability server pool](https://sks-keyservers.net/overview-of-pools.php#pool_ha) from sks-keyservers (`ha.pool.sks-keyservers.net`). Here are a few good and bad examples:
+
+-	**Bad**: *download the file over http with no verification.*
+
+	```Dockerfile
+	RUN curl -fSL "http://julialang.s3.amazonaws.com/bin/linux/x64/${JULIA_VERSION%[.-]*}/julia-${JULIA_VERSION}-linux-x86_64.tar.gz" | tar ... \
+	    # install
+	```
+
+-	**Good**: *download the file over https, but still no verification.*
+
+	```Dockerfile
+	RUN curl -fSL "https://julialang.s3.amazonaws.com/bin/linux/x64/${JULIA_VERSION%[.-]*}/julia-${JULIA_VERSION}-linux-x86_64.tar.gz" | tar ... \
+	    # install
+	```
+
+-	**Better**: *embed the checksum into the Dockerfile. It would be better to use https here too, if it is available.*
+
+	```Dockerfile
+	ENV RUBY_DOWNLOAD_SHA256 5ffc0f317e429e6b29d4a98ac521c3ce65481bfd22a8cf845fa02a7b113d9b44
+	RUN curl -fSL -o ruby.tar.gz "http://cache.ruby-lang.org/pub/ruby/$RUBY_MAJOR/ruby-$RUBY_VERSION.tar.gz" \
+	    && echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.gz" | sha256sum -c - \
+	    # install
+	```
+
+-	**Best**: *full key fingerprint imported to apt-key which will check signatures when packages are downloaded and installed.*
+
+	```Dockerfile
+	RUN apt-key adv --keyserver ha.pool.sks-keyservers.net --recv-keys 492EAFE8CD016A07919F1D2B9ECBEC467F0CEB10
+	RUN echo "deb http://repo.mongodb.org/apt/debian wheezy/mongodb-org/$MONGO_MAJOR main" > /etc/apt/sources.list.d/mongodb-org.list
+	RUN apt-get update \
+	    && apt-get install -y mongodb-org=$MONGO_VERSION \
+	    && rm -rf /var/lib/apt/lists/* \
+	    # ...
+	```
+
+	(As a side note, `rm -rf /var/lib/apt/lists/*` is *roughly* the opposite of `apt-get update` -- it ensures that the layer doesn't include the extra ~8MB of APT package list data, and enforces [appropriate `apt-get update` usage](https://docs.docker.com/articles/dockerfile_best-practices/#run).)
+
+-	**Alternate Best**: *full key fingerprint import, download over https, verify gpg signature of download.*
+
+	```Dockerfile
+	# gpg: key F73C700D: public key "Larry Hastings <larry@hastings.org>" imported
+	RUN gpg --keyserver ha.pool.sks-keyservers.net --recv-keys 97FC712E4C024BBEA48A61ED3A5CA953F73C700D
+	RUN curl -fSL "https://www.python.org/ftp/python/$PYTHON_VERSION/Python-$PYTHON_VERSION.tar.xz" -o python.tar.xz \
+	    && curl -fSL "https://www.python.org/ftp/python/$PYTHON_VERSION/Python-$PYTHON_VERSION.tar.xz.asc" -o python.tar.xz.asc \
+	    && gpg --verify python.tar.xz.asc \
+	    # install
+	```
 
 ### Commitment
 
-Proposing a new official image should not be undertaken lightly. We expect and require a commitment to maintain (including and especially timely updates as appropriate) your image.
+Proposing a new official image should not be undertaken lightly. We expect and require a commitment to maintain your image (including and especially timely updates as appropriate, as noted above).
 
 ## Library definition files
 
-The library definition files are plain text files found in the [`library/` directory of the `official-images` repository](https://github.com/docker-library/official-images/tree/master/library).
+The library definition files are plain text files found in the [`library/` directory of the `official-images` repository](https://github.com/docker-library/official-images/tree/master/library). Each library file controls the current "supported" set of image tags that appear on the Docker Hub description. Tags that are removed from a library file do not get removed from the Docker Hub, so that old versions can continue to be available for use, but are not maintained by upstream or the maintainer of the official image. Tags in the library file are only built through an update to that library file or as a result of its base image being updated (ie, an image `FROM debian:jessie` would be rebuilt when `debian:jessie` is built). Only what is in the library file will be rebuilt when a base has updates.
 
 It is highly recommended that you browse some of the existing `library/` file contents (and history to get a feel for how they change over time) before creating a new one to become familiar with the prevailing conventions and further help streamline the review process (so that we can focus on content instead of esoteric formatting or tag usage/naming).
 
