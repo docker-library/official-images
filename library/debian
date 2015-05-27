@@ -2,6 +2,8 @@
 # maintainer: Paul Tagliamonte <paultag@debian.org> (@paultag)
 
 # commits: (master..dist)
+#  - 83fe81c Add backports
+#  
 #  - f86bb68 2015-05-19 debootstraps
 
 8.0: git://github.com/tianon/docker-brew-debian@f86bb68c8e84829c7babb0db18bef1327103676c jessie
@@ -9,7 +11,11 @@
 jessie: git://github.com/tianon/docker-brew-debian@f86bb68c8e84829c7babb0db18bef1327103676c jessie
 latest: git://github.com/tianon/docker-brew-debian@f86bb68c8e84829c7babb0db18bef1327103676c jessie
 
+jessie-backports: git://github.com/tianon/docker-brew-debian@83fe81c4f6e0c7d2c035e65a56fe812bbd838284 jessie/backports
+
 oldstable: git://github.com/tianon/docker-brew-debian@f86bb68c8e84829c7babb0db18bef1327103676c oldstable
+
+oldstable-backports: git://github.com/tianon/docker-brew-debian@83fe81c4f6e0c7d2c035e65a56fe812bbd838284 oldstable/backports
 
 sid: git://github.com/tianon/docker-brew-debian@f86bb68c8e84829c7babb0db18bef1327103676c sid
 
@@ -19,6 +25,8 @@ sid: git://github.com/tianon/docker-brew-debian@f86bb68c8e84829c7babb0db18bef132
 squeeze: git://github.com/tianon/docker-brew-debian@f86bb68c8e84829c7babb0db18bef1327103676c squeeze
 
 stable: git://github.com/tianon/docker-brew-debian@f86bb68c8e84829c7babb0db18bef1327103676c stable
+
+stable-backports: git://github.com/tianon/docker-brew-debian@83fe81c4f6e0c7d2c035e65a56fe812bbd838284 stable/backports
 
 stretch: git://github.com/tianon/docker-brew-debian@f86bb68c8e84829c7babb0db18bef1327103676c stretch
 
@@ -30,5 +38,7 @@ unstable: git://github.com/tianon/docker-brew-debian@f86bb68c8e84829c7babb0db18b
 7: git://github.com/tianon/docker-brew-debian@f86bb68c8e84829c7babb0db18bef1327103676c wheezy
 wheezy: git://github.com/tianon/docker-brew-debian@f86bb68c8e84829c7babb0db18bef1327103676c wheezy
 
-rc-buggy: git://github.com/tianon/dockerfiles@1a24085d66f91cd9842101fea0e2fabc52535eb0 debian/rc-buggy
-experimental: git://github.com/tianon/dockerfiles@1a24085d66f91cd9842101fea0e2fabc52535eb0 debian/experimental
+wheezy-backports: git://github.com/tianon/docker-brew-debian@83fe81c4f6e0c7d2c035e65a56fe812bbd838284 wheezy/backports
+
+rc-buggy: git://github.com/tianon/dockerfiles@6787efd1b8d8b1c56e14bd54d8ca94ccdba003f7 debian/rc-buggy
+experimental: git://github.com/tianon/dockerfiles@6787efd1b8d8b1c56e14bd54d8ca94ccdba003f7 debian/experimental
