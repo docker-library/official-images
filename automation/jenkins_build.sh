@@ -39,7 +39,7 @@ if [ -z "$TAGS" ]; then
 	./bashbrew.sh push $LIBRARY --library=../library --namespaces=resin
 else
 	for tag in $TAGS; do
-		if [ ! -z "$pushOnly" ]; then
+		if [ -z "$pushOnly" ]; then
 			# Build specified images only
 			./bashbrew.sh build $LIBRARY:$tag --library=../library --namespaces=resin
 		fi
