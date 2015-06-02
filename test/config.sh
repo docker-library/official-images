@@ -56,6 +56,7 @@ declare -A imageTests=(
 	[memcached]='
 	'
 	[mongo]='
+		mongo-basics
 	'
 	[mono]='
 	'
