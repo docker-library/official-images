@@ -45,7 +45,7 @@ All official images should provide a consistent interface. A beginning user shou
 	CMD ["postgres"]
 	```
 
-	1.	Ensure that `docker run official-image bash` works too. The easiest way is to check for the expected command and if it is something else, just `exec "$@` (run whatever was passed, properly keeping the arguments escaped).
+	1.	Ensure that `docker run official-image bash` works too. The easiest way is to check for the expected command and if it is something else, just `exec "$@"` (run whatever was passed, properly keeping the arguments escaped).
 
 		```bash
 		#!/bin/bash
