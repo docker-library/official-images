@@ -8,7 +8,7 @@ cp Gemfile "$dir"
 
 # make sure that running "bundle" twice doesn't change Gemfile.lock the second time
 cd "$dir"
-bundle
+BUNDLE_FROZEN=0 bundle install
 cp Gemfile.lock{,.orig}
-bundle
+BUNDLE_FROZEN=1 bundle install
 diff -u Gemfile.lock{.orig,} >&2
