@@ -4,7 +4,7 @@ set -e
 globalTests=(
 	utc
 	cve-2014--shellshock
-	no-root-password
+	no-hard-coded-passwords
 )
 
 declare -A testAlias=(
@@ -113,8 +113,8 @@ declare -A globalExcludeTests=(
 	[hello-world_utc]=1
 	[swarm_utc]=1
 	
-	[hello-world_no-root-password]=1
-	[swarm_no-root-password]=1
+	[hello-world_no-hard-coded-passwords]=1
+	[swarm_no-hard-coded-passwords]=1
 
 	# no "native" dependencies
 	[ruby:slim_ruby-bundler]=1
