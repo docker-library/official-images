@@ -27,7 +27,7 @@ ret=0
 for user in "${!passwds[@]}"; do
 	pass="${passwds[$user]}"
 
-	if [ -z "$pass" -o "$pass" = '*' ]; then
+	if [ -z "$pass" -o '*' = "$pass" ]; then
 		# '*' and '' mean no password
 		continue
 	fi
