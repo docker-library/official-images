@@ -3,30 +3,104 @@ set -e
 
 globalTests=(
 	utc
-	shellshock
+	cve-2014--shellshock
+	no-hard-coded-passwords
 )
 
 declare -A testAlias=(
-	[pypy]='python'
+	[iojs]='node'
 	[jruby]='ruby'
+	[pypy]='python'
+
+	[ubuntu]='debian'
+	[ubuntu-debootstrap]='debian'
+
+	[mariadb]='mysql'
+	[percona]='mysql'
 )
 
 declare -A imageTests=(
-	[python]='
-		python-hy
-		python-pip-requests-ssl
-		python-sqlite3
-		python-zlib
+	[aerospike]='
+	'
+	[busybox]='
+	'
+	[celery]='
+	'
+	[clojure]='
+	'
+	[crate]='
+	'
+	[debian]='
+		debian-apt-get
+	'
+	[django]='
+	'
+	[elasticsearch]='
+	'
+	[gcc]='
+	'
+	[golang]='
 	'
 	[haskell]='
 		haskell-cabal
 		haskell-ghci
 		haskell-runhaskell
 	'
+	[hylang]='
+		hylang-sh
+	'
+	[java]='
+	'
+	[julia]='
+	'
+	[memcached]='
+	'
+	[mongo]='
+		mongo-basics
+	'
+	[mono]='
+	'
+	[mysql]='
+		mysql-basics
+	'
+	[node]='
+	'
+	[percona]='
+	'
+	[perl]='
+	'
+	[php]='
+		php-ext-install
+	'
+	[php:fpm]='
+		php-fpm-hello-web
+	'
+	[postgres]='
+	'
+	[python]='
+		python-hy
+		python-imports
+		python-pip-requests-ssl
+		python-sqlite3
+	'
+	[rabbitmq]='
+	'
+	[r-base]='
+	'
+	[rails]='
+	'
+	[redis]='
+	'
+	[rethinkdb]='
+	'
 	[ruby]='
 		ruby-standard-libs
 		ruby-gems
 		ruby-bundler
+	'
+	[tomcat]='
+	'
+	[wordpress]='
 	'
 # example onbuild
 #	[python:onbuild]='
@@ -38,6 +112,9 @@ declare -A globalExcludeTests=(
 	# single-binary images
 	[hello-world_utc]=1
 	[swarm_utc]=1
+	
+	[hello-world_no-hard-coded-passwords]=1
+	[swarm_no-hard-coded-passwords]=1
 
 	# no "native" dependencies
 	[ruby:slim_ruby-bundler]=1

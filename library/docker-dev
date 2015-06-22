@@ -1,8 +1,10 @@
-# maintainer: Tianon Gravi <admwiggin@gmail.com> (@tianon)
+# maintainer: Tianon Gravi <tianon@dockerproject.org> (@tianon)
 
-1.4.1: git://github.com/docker/docker@v1.4.1
-1.4: git://github.com/docker/docker@v1.4.1
-1: git://github.com/docker/docker@v1.4.1
-latest: git://github.com/docker/docker@v1.4.1
+1.7.0: git://github.com/docker/docker@0baf60984522744eed290348f33f396c046b2f3a
+1.7: git://github.com/docker/docker@0baf60984522744eed290348f33f396c046b2f3a
+1: git://github.com/docker/docker@0baf60984522744eed290348f33f396c046b2f3a
+
+# "latest" intentionally missing, since "docker-dev:latest" implies (IMO) the "latest development image", which these builds never will be
+# if that is what you are after, see "dockercore/docker" (https://registry.hub.docker.com/u/dockercore/docker/)
 
 # "supported": one tag per major, only upstream-supported majors (which is currently only "latest")

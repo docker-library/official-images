@@ -53,8 +53,7 @@ stdlib = [
 	'pp',
 	'prettyprint',
 	'prime',
-# prints all sorts of info to stderr, not easy to test right now
-#	'profile',
+	#'profile', # prints all sorts of info to stderr, not easy to test right now
 	'profiler',
 	'pstore',
 	'psych',
@@ -94,12 +93,31 @@ stdlib = [
 	'xmlrpc/client',
 	'xmlrpc/server',
 	'yaml',
-	'zlib'
+	'zlib',
 ]
 
-stdlib.each do |lib|
-	#puts "Testing #{lib}"
-	require lib
+if defined? RUBY_ENGINE && RUBY_ENGINE == 'jruby'
+	# these libraries don't work or don't exist on JRuby ATM
+	stdlib.delete('dbm')
+	stdlib.delete('gdbm')
+	stdlib.delete('mkmf')
+	stdlib.delete('objspace')
+	stdlib.delete('sdbm')
 end
 
-puts 'ok'
+result = 'ok'
+stdlib.each do |lib|
+	#puts "Testing #{lib}"
+	begin
+		require lib
+	rescue Exception => e
+		result = 'failure'
+		STDERR.puts "\n\nrequire '#{lib}' failed: #{e.message}\n"
+		STDERR.puts e.backtrace.join("\n")
+		STDERR.puts "\n"
+	end
+end
+
+exit(1) unless result == 'ok'
+
+puts result

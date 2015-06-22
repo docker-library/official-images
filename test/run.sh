@@ -8,12 +8,12 @@ self="$(basename "$0")"
 usage() {
 	cat <<EOUSAGE
 
-usage: $self [-t test ...] [imageTag ...]
+usage: $self [-t test ...] image:tag [...]
    ie: $self debian:wheezy
-       $self -t utc python:3-onbuild
-       $self -t utc python:3-onbuild -t py-onbuild
+       $self -t utc python:3
+       $self -t utc python:3 -t python-hy
 
-This script processes the specified docker images to test their running
+This script processes the specified Docker images to test their running
 environments.
 EOUSAGE
 }
@@ -42,6 +42,11 @@ while true; do
 	esac
 done
 
+if [ $# -eq 0 ]; then
+	usage >&2
+	exit 1
+fi
+
 # load config lists
 # contains:
 #   globalTests
@@ -50,11 +55,13 @@ done
 #   globalExcludeTests
 . "$dir/config.sh"
 
+didFail=
 for dockerImage in "$@"; do
 	echo "testing $dockerImage"
 	
 	if ! docker inspect "$dockerImage" &> /dev/null; then
 		echo $'\timage does not exist!'
+		didFail=1
 		continue
 	fi
 	
@@ -87,7 +94,6 @@ for dockerImage in "$@"; do
 		tests+=( "$t" )
 	done
 	
-	failures=0
 	currentTest=0
 	totalTest="${#tests[@]}"
 	for t in "${tests[@]}"; do
@@ -105,22 +111,29 @@ for dockerImage in "$@"; do
 					if [ -f "$scriptDir/expected-std-out.txt" ] && ! d="$(echo "$output" | diff -u "$scriptDir/expected-std-out.txt" - 2>/dev/null)"; then
 						echo 'failed; unexpected output:'
 						echo "$d"
+						didFail=1
 					else
 						echo 'passed'
 					fi
 				else
 					echo 'failed'
+					didFail=1
 				fi
 			else
-				# TODO warn scipt is not executable
 				echo "skipping"
 				echo >&2 "error: $script missing, not executable or is a directory"
+				didFail=1
 				continue
 			fi
 		else
 			echo "skipping"
 			echo >&2 "error: $scriptDir is not a directory"
+			didFail=1
 			continue
 		fi
 	done
 done
+
+if [ "$didFail" ]; then
+	exit 1
+fi

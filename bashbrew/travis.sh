@@ -17,7 +17,10 @@ HEAD="$(git rev-parse --verify HEAD)"
 git fetch -q "https://github.com/$upstreamRepo.git" "refs/heads/$upstreamBranch"
 UPSTREAM="$(git rev-parse --verify FETCH_HEAD)"
 
-if [ "$(git diff --numstat "$UPSTREAM...$HEAD" -- . | wc -l)" -ne 0 ]; then
+if [ "$TRAVIS_BRANCH" = 'master' -a "$TRAVIS_PULL_REQUEST" = 'false' ]; then
+	# if we're testing master itself, RUN ALL THE THINGS
+	echo >&2 'Testing master -- BUILD ALL THE THINGS!'
+elif [ "$(git diff --numstat "$UPSTREAM...$HEAD" -- . | wc -l)" -ne 0 ]; then
 	# changes in bashbrew/ -- keep "--all" so we test the bashbrew script changes appropriately
 	echo >&2 'Changes in bashbrew/ detected!'
 else
@@ -33,6 +36,8 @@ fi
 # TODO that will change eventually!
 
 set -x
-./bashbrew.sh list --namespaces='_' "${repos[@]}"
+./bashbrew.sh list --uniq "${repos[@]}"
+./bashbrew.sh list "${repos[@]}"
 ./bashbrew.sh build --no-build "${repos[@]}"
 ./bashbrew.sh push --no-push "${repos[@]}"
+# TODO ./bashbrew.sh list "${repos[@]}" | xargs ../test/run.sh
