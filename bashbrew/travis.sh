@@ -38,6 +38,7 @@ fi
 set -x
 ./bashbrew.sh list --uniq "${repos[@]}"
 ./bashbrew.sh list "${repos[@]}"
-./bashbrew.sh build --no-build "${repos[@]}"
+./bashbrew.sh build --no-build "${repos[@]}" || true
+du -hs src
 ./bashbrew.sh push --no-push "${repos[@]}"
 # TODO ./bashbrew.sh list "${repos[@]}" | xargs ../test/run.sh
