@@ -76,6 +76,7 @@ declare -A imageTests=(
 		php-fpm-hello-web
 	'
 	[postgres]='
+		postgres-basics
 	'
 	[python]='
 		python-hy
