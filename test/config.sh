@@ -77,6 +77,7 @@ declare -A imageTests=(
 	'
 	[postgres]='
 		postgres-basics
+		postgres-initdb
 	'
 	[python]='
 		python-hy
