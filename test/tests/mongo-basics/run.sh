@@ -19,7 +19,7 @@ tries=10
 while ! mongo_eval 'quit(db.stats().ok ? 0 : 1);' &> /dev/null; do
 	(( tries-- ))
 	if [ $tries -le 0 ]; then
-		echo >&2 'mongod failed to accept connetions in a reasonable amount of time!'
+		echo >&2 'mongod failed to accept connections in a reasonable amount of time!'
 		mongo --eval 'db.stats();' # to hopefully get a useful error message
 		false
 	fi

@@ -20,7 +20,7 @@ tries=10
 while ! echo 'SELECT 1' | mysql &> /dev/null; do
 	(( tries-- ))
 	if [ $tries -le 0 ]; then
-		echo >&2 'mysqld failed to accept connetions in a reasonable amount of time!'
+		echo >&2 'mysqld failed to accept connections in a reasonable amount of time!'
 		echo 'SELECT 1' | mysql # to hopefully get a useful error message
 		false
 	fi

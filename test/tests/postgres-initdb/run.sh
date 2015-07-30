@@ -37,7 +37,7 @@ tries=10
 while ! echo 'SELECT 1' | psql &> /dev/null; do
 	(( tries-- ))
 	if [ $tries -le 0 ]; then
-		echo >&2 'postgres failed to accept connetions in a reasonable amount of time!'
+		echo >&2 'postgres failed to accept connections in a reasonable amount of time!'
 		echo 'SELECT 1' | psql # to hopefully get a useful error message
 		false
 	fi
