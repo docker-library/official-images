@@ -62,6 +62,7 @@ declare -A imageTests=(
 	'
 	[mysql]='
 		mysql-basics
+		mysql-initdb
 	'
 	[node]='
 	'
