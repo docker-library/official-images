@@ -22,7 +22,14 @@ If you do not represent upstream and upstream becomes interested in maintaining 
 
 For upstreams interested in taking over maintainership of an existing repository, the first step is to get involved in the existing repository. Making comments on issues, proposing changes, and making yourself known within the "image community" (even if that "community" is just the current maintainer) are all important places to start to ensure that the transition is unsurprising to existing contributors and users.
 
-To make sure the review process isn't stalled during the transition, please ensure that the entire Git history of the original repository is kept in the new upstream-maintained repository. This is most easily accomplished by forking the new from the existing repository, but can also be accomplished by fetching the commits directly from the original and pushing them into the new repo (ie, `git fetch https://github.com/jsmith/example.git master`, `git rebase FETCH_HEAD`, `git push -f`).
+When taking over an existing repository, please ensure that the entire Git history of the original repository is kept in the new upstream-maintained repository to make sure the review process isn't stalled during the transition. This is most easily accomplished by forking the new from the existing repository, but can also be accomplished by fetching the commits directly from the original and pushing them into the new repo (ie, `git fetch https://github.com/jsmith/example.git master`, `git rebase FETCH_HEAD`, `git push -f`). On github, an alternative is to move ownership of the git repository. This can be accomplished without giving either group admin access to the other owner's repository:
+
+-	create temporary intermediary organization
+	-	[docker-library-transitioner](https://github.com/docker-library-transitioner) is available for this purpose if you would like our help
+-	give old and new owners admin access to intermediary organization
+-	old owner transfers repo ownership to intermediary organization
+-	new owner transfers repo ownership to its new home
+	-	recommend that old owner does not fork new repo back into the old organization to ensure that github redirects will just work
 
 #### Repeatability
 
@@ -81,6 +88,28 @@ All official images should provide a consistent interface. A beginning user shou
 #### Clarity
 
 Try to make the `Dockerfile` easy to understand/read. It may be tempting, for the sake of brevity, to put complicated initialization details into a standalone script and merely add a `RUN` command in the `Dockerfile`. However, this causes the resulting `Dockerfile` to be overly opaque, and such `Dockerfile`s are unlikely to pass review. Instead, it it recommended to put all the commands for initialization into the `Dockerfile` as appropriate `RUN` or `ENV` command combinations. To find good examples, look at the current official images.
+
+Some examples at the time of writing:
+
+-	[php](https://github.com/docker-library/php/blob/b4aeb948e2e240c732d78890ff03285b16e8edda/5.6/Dockerfile)
+-	[python](https://github.com/docker-library/python/blob/3e5826ad0c6e29f07f6dc7ff8f30b4c54385d1bb/3.4/Dockerfile)
+-	[ruby:2.2](https://github.com/docker-library/ruby/blob/e34b201a0f0b49818fc8373f6a9148e13d546bdf/2.2/Dockerfile)
+
+#### init
+
+Following the Docker guidelines it is highly recommended that the resulting image be just one concern per container; predominantly this means just one process per container, so there is no need for a full init system. There are two situations where an init-like process would be helpful for the container. The first being signal handling. If the process launched does not handle `SIGTERM` by exiting, it will not be killed since it is PID 1 in the container (see "NOTE" at the end of the [Foreground section](https://docs.docker.com/reference/run/#foreground) in the docker docs). The second situation would be zombie reaping. If the process spawns child processes and does not properly reap them it will lead to a full process table, which can prevent the whole system from spawning any new processes. For both of these concerns we recommend [tini](https://github.com/krallin/tini). It is incredibly small, has minimal external dependencies, fills each of these roles, and does only the necessary parts of reaping and signal forwarding.
+
+Here is a snippet of a Dockerfile to add in tini (be sure to use it in `CMD` or `ENTRYPOINT` as appropriate):
+
+```dockerfile
+# grab tini for signal processing and zombie killing
+RUN set -x \
+	&& curl -fSL "https://github.com/krallin/tini/releases/download/v0.5.0/tini" -o /usr/local/bin/tini \
+	&& chmod +x /usr/local/bin/tini \
+	&& tini -h
+```
+
+**NOTE**: if [docker/docker#11529](https://github.com/docker/docker/issues/11529) gets solved, then `tini` would no longer be needed for reaping zombies.
 
 #### Cacheability
 
