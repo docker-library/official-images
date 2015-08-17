@@ -62,6 +62,7 @@ declare -A imageTests=(
 	'
 	[mysql]='
 		mysql-basics
+		mysql-initdb
 	'
 	[node]='
 	'
@@ -76,6 +77,8 @@ declare -A imageTests=(
 		php-fpm-hello-web
 	'
 	[postgres]='
+		postgres-basics
+		postgres-initdb
 	'
 	[python]='
 		python-hy
@@ -112,9 +115,11 @@ declare -A globalExcludeTests=(
 	# single-binary images
 	[hello-world_utc]=1
 	[swarm_utc]=1
+	[nats_utc]=1
 	
 	[hello-world_no-hard-coded-passwords]=1
 	[swarm_no-hard-coded-passwords]=1
+	[nats_no-hard-coded-passwords]=1
 
 	# no "native" dependencies
 	[ruby:slim_ruby-bundler]=1
