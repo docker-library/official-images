@@ -5,7 +5,7 @@ image="$1"
 
 cname="mongo-container-$RANDOM-$RANDOM"
 cid="$(docker run -d --name "$cname" "$image")"
-trap "docker rm -f $cid > /dev/null" EXIT
+trap "docker rm -vf $cid > /dev/null" EXIT
 
 mongo() {
 	docker run --rm -i --link "$cname":mongo --entrypoint mongo "$image" --host mongo "$@"
