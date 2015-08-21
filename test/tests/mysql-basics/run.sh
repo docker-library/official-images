@@ -18,7 +18,7 @@ cid="$(
 		--name "$cname" \
 		"$image"
 )"
-trap "docker rm -f $cid > /dev/null" EXIT
+trap "docker rm -vf $cid > /dev/null" EXIT
 
 mysql() {
 	docker run --rm -i \

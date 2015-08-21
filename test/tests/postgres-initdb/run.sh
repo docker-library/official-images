@@ -18,7 +18,7 @@ cid="$(
 		-v "$testDir/initdb.sql:/docker-entrypoint-initdb.d/test.sql":ro \
 		"$image"
 )"
-trap "docker rm -f $cid > /dev/null" EXIT
+trap "docker rm -vf $cid > /dev/null" EXIT
 
 psql() {
 	docker run --rm -i \

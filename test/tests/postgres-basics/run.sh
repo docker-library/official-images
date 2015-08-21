@@ -9,7 +9,7 @@ export POSTGRES_DB='my cool postgres database'
 
 cname="postgres-container-$RANDOM-$RANDOM"
 cid="$(docker run -d -e POSTGRES_USER -e POSTGRES_PASSWORD -e POSTGRES_DB --name "$cname" "$image")"
-trap "docker rm -f $cid > /dev/null" EXIT
+trap "docker rm -vf $cid > /dev/null" EXIT
 
 psql() {
 	docker run --rm -i \

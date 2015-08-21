@@ -18,7 +18,7 @@ EOF
 
 # Create an instance of the container-under-test
 cid="$(docker run -d -v "$dir/index.php":/var/www/html/index.php:ro "$image")"
-trap "docker rm -f $cid > /dev/null" EXIT
+trap "docker rm -vf $cid > /dev/null" EXIT
 
 # RACY TESTS ARE RACY
 sleep 1
