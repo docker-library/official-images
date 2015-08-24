@@ -33,6 +33,9 @@ declare -A imageTests=(
 	[debian]='
 		debian-apt-get
 	'
+	[docker:dind]='
+		docker-dind
+	'
 	[django]='
 	'
 	[elasticsearch]='
