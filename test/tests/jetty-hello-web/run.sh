@@ -6,11 +6,8 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
 image="$1"
 
-# Pull a client image with curl for testing
-clientImage='buildpack-deps:jessie-curl'
-if ! docker inspect --type=image "$clientImage" &> /dev/null; then
-	docker pull "$clientImage"
-fi
+# Use the image being tested as our client image since it should already have curl
+clientImage="$image"
 
 # Create an instance of the container-under-test
 cid="$(docker run -d -v "$dir/index.jsp":/var/lib/jetty/webapps/ROOT/index.jsp:ro "$image")"
