@@ -22,8 +22,8 @@ _request() {
 
 	local url="${2#/}"
 
-	docker run --rm -i --link "$cid":jetty \
-		"$clientImage" -fsSL -X"$method" "http://jetty:8080/$url"
+	docker run --rm -i --link "$cid":jetty "$clientImage" \
+		curl -fsSL -X"$method" "http://jetty:8080/$url"
 }
 
 # Check that we can request /index.jsp with no params
