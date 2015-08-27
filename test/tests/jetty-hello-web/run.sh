@@ -7,7 +7,7 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 image="$1"
 
 # Pull a client image with curl for testing
-clientImage='appropriate/curl'
+clientImage='buildpack-deps:jessie-curl'
 docker pull "$clientImage"
 
 # Create an instance of the container-under-test
