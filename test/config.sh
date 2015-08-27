@@ -54,6 +54,9 @@ declare -A imageTests=(
 	'
 	[java]='
 	'
+	[jetty]='
+		jetty-hello-web
+	'
 	[julia]='
 	'
 	[memcached]='
