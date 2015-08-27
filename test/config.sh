@@ -5,6 +5,7 @@ globalTests=(
 	utc
 	cve-2014--shellshock
 	no-hard-coded-passwords
+	override-cmd
 )
 
 declare -A testAlias=(
@@ -122,10 +123,14 @@ declare -A globalExcludeTests=(
 	[hello-world_utc]=1
 	[swarm_utc]=1
 	[nats_utc]=1
-	
+
 	[hello-world_no-hard-coded-passwords]=1
 	[swarm_no-hard-coded-passwords]=1
 	[nats_no-hard-coded-passwords]=1
+
+	[hello-world_override-cmd]=1
+	[swarm_no-override-cmd]=1
+	[nats_no-override-cmd]=1
 
 	# no "native" dependencies
 	[ruby:slim_ruby-bundler]=1
