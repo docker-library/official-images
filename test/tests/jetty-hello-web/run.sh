@@ -13,18 +13,31 @@ clientImage="$image"
 cid="$(docker run -d -v "$dir/index.jsp":/var/lib/jetty/webapps/ROOT/index.jsp:ro "$image")"
 trap "docker rm -vf $cid > /dev/null" EXIT
 
-# RACY TESTS ARE RACY
-sleep 1
-# TODO find a cleaner solution to this, similar to what we do in mysql-basics
-
 _request() {
 	local method="$1"
+	shift
 
-	local url="${2#/}"
+	local url="${1#/}"
+	shift
 
-	docker run --rm -i --link "$cid":jetty "$clientImage" \
-		curl -fsSL -X"$method" "http://jetty:8080/$url"
+	docker run --rm --link "$cid":jetty "$clientImage" \
+		curl -fs -X"$method" "$@" "http://jetty:8080/$url"
 }
+
+# Make sure that Jetty is listening on port 8080
+attempts=40
+tried="$attempts"
+duration=0.25
+while [ "$tried" -ge 0 -a "$(_request GET / --output /dev/null || echo $?)" = 7 ]; do
+	(( tried-- ))
+
+	if [ "$tried" -le 0 ]; then
+		echo >&2 "Unable to connect to Jetty. Aborting."
+		exit 1
+	fi
+
+	sleep "$duration"
+done
 
 # Check that we can request /index.jsp with no params
 [ "$(_request GET "/" | tail -1)" = "null" ]
