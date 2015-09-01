@@ -44,6 +44,7 @@ while ! echo 'SELECT 1' | psql &> /dev/null; do
 		echo 'SELECT 1' | psql # to hopefully get a useful error message
 		false
 	fi
+	echo >&2 -n .
 	sleep "${POSTGRES_TEST_SLEEP}"
 done
 
