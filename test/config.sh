@@ -1,14 +1,14 @@
 #!/bin/bash
 set -e
 
-globalTests=(
+globalTests+=(
 	utc
 	cve-2014--shellshock
 	no-hard-coded-passwords
 	override-cmd
 )
 
-declare -A testAlias=(
+testAlias+=(
 	[iojs]='node'
 	[jruby]='ruby'
 	[pypy]='python'
@@ -20,7 +20,7 @@ declare -A testAlias=(
 	[percona]='mysql'
 )
 
-declare -A imageTests=(
+imageTests+=(
 	[aerospike]='
 	'
 	[busybox]='
@@ -118,7 +118,7 @@ declare -A imageTests=(
 #	'
 )
 
-declare -A globalExcludeTests=(
+globalExcludeTests+=(
 	# single-binary images
 	[hello-world_utc]=1
 	[swarm_utc]=1

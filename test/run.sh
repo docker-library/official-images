@@ -19,10 +19,11 @@ EOUSAGE
 }
 
 # arg handling
-opts="$(getopt -o 'ht:?' --long 'dry-run,help,test:' -- "$@" || { usage >&2 && false; })"
+opts="$(getopt -o 'ht:c:?' --long 'dry-run,help,test:,config:' -- "$@" || { usage >&2 && false; })"
 eval set -- "$opts"
 
 declare -A argTests=()
+declare -a additionalConfigs=()
 dryRun=
 while true; do
 	flag=$1
@@ -31,6 +32,7 @@ while true; do
 		--dry-run) dryRun=1 ;;
 		--help|-h|'-?') usage && exit 0 ;;
 		--test|-t) argTests["$1"]=1 && shift ;;
+		--config|-c) additionalConfigs+=("$1") && shift ;;
 		--) break ;;
 		*)
 			{
@@ -47,13 +49,19 @@ if [ $# -eq 0 ]; then
 	exit 1
 fi
 
-# load config lists
-# contains:
-#   globalTests
-#   testAlias
-#   imageTests
-#   globalExcludeTests
+# declare configuration variables
+declare -a globalTests=()
+declare -A testAlias=()
+declare -A imageTests=()
+declare -A globalExcludeTests=()
+
+# load default config
 . "$dir/config.sh"
+
+# load additional user-specified configs
+for conf in "${additionalConfigs[@]}"; do
+	. "$conf"
+done
 
 didFail=
 for dockerImage in "$@"; do
