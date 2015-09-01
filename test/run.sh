@@ -32,7 +32,7 @@ while true; do
 		--dry-run) dryRun=1 ;;
 		--help|-h|'-?') usage && exit 0 ;;
 		--test|-t) argTests["$1"]=1 && shift ;;
-		--config|-c) additionalConfigs+=("$1") && shift ;;
+		--config|-c) additionalConfigs+=("$(readlink -f "$1")") && shift ;;
 		--) break ;;
 		*)
 			{
@@ -55,7 +55,7 @@ declare -A testAlias=()
 declare -A imageTests=()
 declare -A globalExcludeTests=()
 
-# load default config
+# load the default config
 . "$dir/config.sh"
 
 # load additional user-specified configs
