@@ -33,7 +33,10 @@ psql() {
 		"$@"
 }
 
-tries=10
+: ${POSTGRES_TEST_TRIES:=10}
+: ${POSTGRES_TEST_SLEEP:=2}
+
+tries="$POSTGRES_TEST_TRIES"
 while ! echo 'SELECT 1' | psql &> /dev/null; do
 	(( tries-- ))
 	if [ $tries -le 0 ]; then
@@ -41,7 +44,8 @@ while ! echo 'SELECT 1' | psql &> /dev/null; do
 		echo 'SELECT 1' | psql # to hopefully get a useful error message
 		false
 	fi
-	sleep 2
+	echo >&2 -n .
+	sleep "${POSTGRES_TEST_SLEEP}"
 done
 
 [ "$(echo 'SELECT COUNT(*) FROM test' | psql)" = 1 ]
