@@ -42,6 +42,7 @@ while ! echo 'SELECT 1' | mysql &> /dev/null; do
 		echo 'SELECT 1' | mysql # to hopefully get a useful error message
 		false
 	fi
+	echo >&2 -n .
 	sleep 2
 done
 

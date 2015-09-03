@@ -23,6 +23,7 @@ while ! mongo_eval 'quit(db.stats().ok ? 0 : 1);' &> /dev/null; do
 		mongo --eval 'db.stats();' # to hopefully get a useful error message
 		false
 	fi
+	echo >&2 -n .
 	sleep 2
 done
 

@@ -36,6 +36,8 @@ while [ "$tried" -ge 0 -a "$(_request GET / --output /dev/null || echo $?)" = 7 
 		exit 1
 	fi
 
+	echo >&2 -n .
+
 	sleep "$duration"
 done
 
