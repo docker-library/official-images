@@ -20,6 +20,7 @@ while ! mongo_eval 'quit(db.stats().ok ? 0 : 1);' &> /dev/null; do
 	(( tries-- ))
 	if [ $tries -le 0 ]; then
 		echo >&2 'mongod failed to accept connections in a reasonable amount of time!'
+		( set -x && docker logs "$cid" ) >&2 || true
 		mongo --eval 'db.stats();' # to hopefully get a useful error message
 		false
 	fi
