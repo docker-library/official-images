@@ -18,6 +18,43 @@ environments.
 EOUSAGE
 }
 
+retry() {
+	[ -z "$image" -o -z "$cid" ] && { echo >&2 'The retry function requires $image and $cid to be set'; false; }
+
+	opts="$(getopt -o 't:s:' --long 'tries:,sleep:' -- "$@")"
+	eval set -- "$opts"
+	while true; do
+		flag=$1
+		shift
+		case "$flag" in
+			--tries|-t) tries="$1" && shift ;;
+			--sleep|-s) sleep="$1" && shift ;;
+			--) break;;
+		esac
+	done
+
+	if [ $# -eq 0 ]; then
+		echo >&2 'The retry function requires a command to run'
+		false
+	fi
+
+	: ${tries:=10}
+	: ${sleep:=2}
+
+	while ! eval "$@" &> /dev/null; do
+		(( tries-- ))
+		if [ $tries -le 0 ]; then
+			echo >&2 "$image failed to accept connections in a reasonable amount of time!"
+			( set -x && docker logs "$cid" ) >&2 || true
+			eval "$@" # to hopefully get a useful error message
+			false
+		fi
+		echo >&2 -n .
+		sleep "$sleep"
+	done
+}
+export -f retry
+
 # arg handling
 opts="$(getopt -o 'ht:?' --long 'dry-run,help,test:' -- "$@" || { usage >&2 && false; })"
 eval set -- "$opts"
