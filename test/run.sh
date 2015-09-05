@@ -105,9 +105,8 @@ for dockerImage in "$@"; do
 		continue
 	fi
 	
-	noNamespace="${dockerImage##*/}"
-	repo="${noNamespace%:*}"
-	tagVar="${noNamespace#*:}"
+	repo="${dockerImage%:*}"
+	tagVar="${dockerImage#*:}"
 	#version="${tagVar%-*}"
 	variant="${tagVar##*-}"
 	
