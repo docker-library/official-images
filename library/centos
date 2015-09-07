@@ -1,14 +1,14 @@
 # maintainer: The CentOS Project <cloud-ops@centos.org> (@CentOS)
-# Build date 20150616
+# Build date 20150904
 
 # CentOS 7 rolling builds
-latest: git://github.com/CentOS/sig-cloud-instance-images@0a6a7fa816e834b29222fce2df0b858ab1b97a87 docker
-centos7: git://github.com/CentOS/sig-cloud-instance-images@0a6a7fa816e834b29222fce2df0b858ab1b97a87 docker
-7: git://github.com/CentOS/sig-cloud-instance-images@0a6a7fa816e834b29222fce2df0b858ab1b97a87 docker
+latest: git://github.com/CentOS/sig-cloud-instance-images@281559d6864e84fe365ef4007d4db27c197b50fb docker
+centos7: git://github.com/CentOS/sig-cloud-instance-images@281559d6864e84fe365ef4007d4db27c197b50fb docker
+7: git://github.com/CentOS/sig-cloud-instance-images@281559d6864e84fe365ef4007d4db27c197b50fb docker
 
 # CentOS 6 rolling builds
-centos6: git://github.com/CentOS/sig-cloud-instance-images@311d80f2e558eba3a6ea88c387714ae2e4175702 docker
-6: git://github.com/CentOS/sig-cloud-instance-images@311d80f2e558eba3a6ea88c387714ae2e4175702 docker
+centos6: git://github.com/CentOS/sig-cloud-instance-images@20732d1bb34a9aba45c1c6f41576ed6bf3d8c619 docker
+6: git://github.com/CentOS/sig-cloud-instance-images@20732d1bb34a9aba45c1c6f41576ed6bf3d8c619 docker
 
 # CentOS 5 rolling builds
 centos5: git://github.com/CentOS/sig-cloud-instance-images@c8d1a81b0516bca0f20434be8d0fac4f7d58a04a docker
@@ -22,6 +22,10 @@ centos7.1.1503: git://github.com/CentOS/sig-cloud-instance-images@bc561dfdd671d6
 #7.0.1406
 centos7.0.1406: git://github.com/CentOS/sig-cloud-instance-images@f1d1e0bd83baef08e257da50e6fb446e4dd1b90c docker
 7.0.1406: git://github.com/CentOS/sig-cloud-instance-images@f1d1e0bd83baef08e257da50e6fb446e4dd1b90c docker
+
+# 6.7
+centos6.7: git://github.com/CentOS/sig-cloud-instance-images@d0b72df83f49da844f88aabebe3826372f675370 docker
+6.7: git://github.com/CentOS/sig-cloud-instance-images@d0b72df83f49da844f88aabebe3826372f675370 docker
 
 # 6.6
 centos6.6: git://github.com/CentOS/sig-cloud-instance-images@8911843d9a6cc71aadd81e491f94618aded94f30 docker
