@@ -68,7 +68,7 @@ for conf in "${configs[@]}"; do
 	# Determine the full path to any newly-declared tests
 	confDir="$(dirname "$conf")"
 
-	for testName in ${globalTests[@]}; do
+	for testName in ${globalTests[@]} ${imageTests[@]}; do
 		[ "${testPaths[$testName]}" ] && continue
 
 		if [ -d "$confDir/tests/$testName" ]; then
@@ -78,20 +78,6 @@ for conf in "${configs[@]}"; do
 			# Test directory found in the main tests/ directory
 			testPaths[$testName]="$dir/tests/$testName"
 		fi
-	done
-
-	for image in ${!imageTests[@]}; do
-		for testName in ${imageTests[$image]}; do
-			[ "${testPaths[$testName]}" ] && continue
-
-			if [ -d "$confDir/tests/$testName" ]; then
-				# Test directory found relative to the conf file
-				testPaths[$testName]="$confDir/tests/$testName"
-			elif [ -d "$dir/tests/$testName" ]; then
-				# Test directory found in the main tests/ directory
-				testPaths[$testName]="$dir/tests/$testName"
-			fi
-		done
 	done
 done
 
