@@ -42,6 +42,9 @@ imageTests+=(
 	[elasticsearch]='
 		elasticsearch-basics
 	'
+	[erlang]='
+		erlang-hello-world
+	'
 	[gcc]='
 		gcc-c-hello-world
 		gcc-cpp-hello-world
