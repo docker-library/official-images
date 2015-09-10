@@ -152,7 +152,7 @@ for dockerImage in "$@"; do
 			fi
 		else
 			echo "skipping"
-			echo >&2 "error: $scriptDir is not a directory"
+			echo >&2 "error: unable to locate test '$t'"
 			didFail=1
 			continue
 		fi
