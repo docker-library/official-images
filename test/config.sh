@@ -79,6 +79,7 @@ declare -A imageTests=(
 	'
 	[php]='
 		php-ext-install
+		php-hello-world
 	'
 	[php:fpm]='
 		php-fpm-hello-web
