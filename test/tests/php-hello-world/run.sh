@@ -1,7 +1,7 @@
 #!/bin/bash
 
-IMAGE="$1"
-DIR_TEST="$(dirname "$(readlink -f "$BASH_SOURCE")")"
-DIR_CONTAINER="/var/www/html/hello-world"
+image="$1"
+dirTest="$(dirname "$(readlink -f "$BASH_SOURCE")")"
+dirContainer='/var/www/html/hello-world'
 
-docker run -it --rm -v $DIR_TEST:$DIR_CONTAINER -w $DIR_CONTAINER $IMAGE php index.php
+docker run -it --rm -v "$dirTest":"$dirContainer" -w "$dirContainer" "$image" php index.php
