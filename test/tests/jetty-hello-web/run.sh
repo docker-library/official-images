@@ -33,8 +33,11 @@ while [ "$tried" -ge 0 -a "$(_request GET / --output /dev/null || echo $?)" = 7 
 
 	if [ "$tried" -le 0 ]; then
 		echo >&2 "Unable to connect to Jetty. Aborting."
-		exit 1
+		( set -x && docker logs "$cid" ) >&2 || true
+		false
 	fi
+
+	echo >&2 -n .
 
 	sleep "$duration"
 done

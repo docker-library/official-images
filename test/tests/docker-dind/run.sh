@@ -29,6 +29,7 @@ while ! docker_ version &> /dev/null; do
 		docker_ version # to hopefully get a useful error message
 		false
 	fi
+	echo >&2 -n .
 	sleep 2
 done
 
