@@ -241,7 +241,3 @@ Optionally, if `<dockerfile-dir>` is present, Bashbrew will look for the `Docker
 ## Bashbrew
 
 Bashbrew is a set of bash scripts for cloning, building, tagging, and pushing the Docker official images. See [`README.md` in the `bashbrew/` subfolder](bashbrew/README.md) for more information.
-
-## Stackbrew (deprecated)
-
-Stackbrew is a web-application that performs continuous building of the Docker official images. See [`README.md` in the `stackbrew/` subfolder](stackbrew/README.md) for more information.
