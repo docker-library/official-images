@@ -1,5 +1,7 @@
 #!/bin/bash
 
+[ "$DEBUG" ] && set -x
+
 set -eo pipefail
 
 dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
@@ -25,7 +27,7 @@ _request() {
 }
 
 # Make sure that Jetty is listening on port 8080
-retry --tries 40 --sleep 0.25 '[ "$(_request GET / --output /dev/null || echo $?)" = 7 ]'
+. "$dir/../../retry.sh" --tries 40 --sleep 0.25 '[ "$(_request GET / --output /dev/null || echo $?)" = 7 ]'
 
 # Check that we can request /index.jsp with no params
 [ "$(_request GET "/" | tail -1)" = "null" ]

@@ -24,7 +24,7 @@ psql() {
 		"$@"
 }
 
-retry --tries "$POSTGRES_TEST_TRIES" --sleep "$POSTGRES_TEST_SLEEP" "echo 'SELECT 1' | psql"
+. "$dir/../../retry.sh" --tries "$POSTGRES_TEST_TRIES" --sleep "$POSTGRES_TEST_SLEEP" "echo 'SELECT 1' | psql"
 
 echo 'CREATE TABLE test (a INT, b INT, c VARCHAR(255))' | psql
 [ "$(echo 'SELECT COUNT(*) FROM test' | psql)" = 0 ]

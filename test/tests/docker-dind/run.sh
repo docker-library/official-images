@@ -20,7 +20,7 @@ docker_() {
 		"$@"
 }
 
-retry 'docker_ version'
+. "$dir/../../retry.sh" 'docker_ version'
 
 docker_ pull busybox
 

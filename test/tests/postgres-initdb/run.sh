@@ -33,7 +33,7 @@ psql() {
 		"$@"
 }
 
-retry --tries "$POSTGRES_TEST_TRIES" --sleep "$POSTGRES_TEST_SLEEP" "echo 'SELECT 1' | psql"
+. "$dir/../../retry.sh" --tries "$POSTGRES_TEST_TRIES" --sleep "$POSTGRES_TEST_SLEEP" "echo 'SELECT 1' | psql"
 
 [ "$(echo 'SELECT COUNT(*) FROM test' | psql)" = 1 ]
 [ "$(echo 'SELECT c FROM test' | psql)" = 'goodbye!' ]
