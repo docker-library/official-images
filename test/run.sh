@@ -19,10 +19,11 @@ EOUSAGE
 }
 
 # arg handling
-opts="$(getopt -o 'ht:?' --long 'dry-run,help,test:' -- "$@" || { usage >&2 && false; })"
+opts="$(getopt -o 'ht:c:?' --long 'dry-run,help,test:,config:' -- "$@" || { usage >&2 && false; })"
 eval set -- "$opts"
 
 declare -A argTests=()
+declare -a configs=()
 dryRun=
 while true; do
 	flag=$1
@@ -31,6 +32,7 @@ while true; do
 		--dry-run) dryRun=1 ;;
 		--help|-h|'-?') usage && exit 0 ;;
 		--test|-t) argTests["$1"]=1 && shift ;;
+		--config|-c) configs+=("$(readlink -f "$1")") && shift ;;
 		--) break ;;
 		*)
 			{
@@ -47,13 +49,37 @@ if [ $# -eq 0 ]; then
 	exit 1
 fi
 
-# load config lists
-# contains:
-#   globalTests
-#   testAlias
-#   imageTests
-#   globalExcludeTests
-. "$dir/config.sh"
+# declare configuration variables
+declare -a globalTests=()
+declare -A testAlias=()
+declare -A imageTests=()
+declare -A globalExcludeTests=()
+
+# if there are no user-specified configs, use the default config
+if [ ${#configs} -eq 0 ]; then
+	configs+=("$dir/config.sh")
+fi
+
+# load the configs
+declare -A testPaths=()
+for conf in "${configs[@]}"; do
+	. "$conf"
+
+	# Determine the full path to any newly-declared tests
+	confDir="$(dirname "$conf")"
+
+	for testName in ${globalTests[@]} ${imageTests[@]}; do
+		[ "${testPaths[$testName]}" ] && continue
+
+		if [ -d "$confDir/tests/$testName" ]; then
+			# Test directory found relative to the conf file
+			testPaths[$testName]="$confDir/tests/$testName"
+		elif [ -d "$dir/tests/$testName" ]; then
+			# Test directory found in the main tests/ directory
+			testPaths[$testName]="$dir/tests/$testName"
+		fi
+	done
+done
 
 didFail=
 for dockerImage in "$@"; do
@@ -65,9 +91,8 @@ for dockerImage in "$@"; do
 		continue
 	fi
 	
-	noNamespace="${dockerImage##*/}"
-	repo="${noNamespace%:*}"
-	tagVar="${noNamespace#*:}"
+	repo="${dockerImage%:*}"
+	tagVar="${dockerImage#*:}"
 	#version="${tagVar%-*}"
 	variant="${tagVar##*-}"
 	
@@ -102,7 +127,7 @@ for dockerImage in "$@"; do
 		
 		# run test against dockerImage here
 		# find the script for the test
-		scriptDir="$dir/tests/$t"
+		scriptDir="${testPaths[$t]}"
 		if [ -d "$scriptDir" ]; then
 			script="$scriptDir/run.sh"
 			if [ -x "$script" -a ! -d "$script" ]; then
@@ -127,7 +152,7 @@ for dockerImage in "$@"; do
 			fi
 		else
 			echo "skipping"
-			echo >&2 "error: $scriptDir is not a directory"
+			echo >&2 "error: unable to locate test '$t'"
 			didFail=1
 			continue
 		fi

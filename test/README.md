@@ -151,7 +151,7 @@ When testing an image, the list of tests to apply are calculated by doing `globa
 This list of tests applies to every image minus combinations listed in `globalExcludeTests` (such as `hello-world` not getting the `utc` test, since it has no `date` binary in order for the test to work).
 
 ```bash
-globalTests=(
+globalTests+=(
 	utc
 	cve-2014--shellshock
 )
@@ -162,7 +162,7 @@ globalTests=(
 This array defines image aliases -- for example, the `pypy` image should inherit all the standard `python` image tests, since it's a functionally equivalent implementation of Python. As noted in `globalTests`, any image+test combinations that shouldn't or can't be tested as a result of this aliasing can be excluded via `globalExcludeTests`.
 
 ```bash
-declare -A testAlias=(
+testAlias+=(
 	[pypy]='python'
 	[jruby]='ruby'
 
@@ -176,7 +176,7 @@ declare -A testAlias=(
 This array defines the list of explicit tests for each image. For example, the `mysql` image (and aliased derivatives via `testAlias`) has a test which verifies that basic functionality works, such as starting up the image and connecting to it from a separate container.
 
 ```bash
-declare -A imageTests=(
+imageTests+=(
 	[python]='
 		python-hy
 		python-pip-requests-ssl
@@ -192,9 +192,27 @@ declare -A imageTests=(
 Defines image+test combinations which shouldn't ever run (usually because they won't work, like trying to run `date` in the `hello-world` image for the `utc` test, which has only one binary).
 
 ```bash
-declare -A globalExcludeTests=(
+globalExcludeTests+=(
 	# single-binary images
 	[hello-world_utc]=1
 	[swarm_utc]=1
 )
+```
+
+### Alternate config files
+
+If you would like to run the Official Image tests against your own images, you can use the `-c/--config` flag to specify one or more alternate config files. These config files should configure the same environment variables used by the default `config.sh` (see above).
+
+```bash
+imageTests+=(
+	[myorg/myimage]='
+		my-custom-test
+	'
+)
+```
+
+**Note**: If you do use your own config file, the `config.sh` included here will no longer be loaded by default. If you want to load it in addition to your own config file (for example, to run the `globalTests` against your own image), use an additional `--config` flag.
+
+```console
+$ /path/to/official-images/test/run.sh --config /path/to/official-images/test/config.sh --config ./my-config.sh myimage
 ```
