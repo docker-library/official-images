@@ -106,9 +106,9 @@ imageTests+=(
 	'
 	[ruby]='
 		ruby-standard-libs
-        ruby-gems
-        ruby-bundler
-        ruby-hello-world
+		ruby-gems
+		ruby-bundler
+		ruby-hello-world
 	'
 	[tomcat]='
 	'
@@ -138,3 +138,4 @@ globalExcludeTests+=(
 	[ruby:slim_ruby-bundler]=1
 	[ruby:slim_ruby-gems]=1
 )
+
