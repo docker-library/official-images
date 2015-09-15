@@ -106,8 +106,9 @@ imageTests+=(
 	'
 	[ruby]='
 		ruby-standard-libs
-		ruby-gems
-		ruby-bundler
+        ruby-gems
+        ruby-bundler
+        ruby-hello-world
 	'
 	[tomcat]='
 	'
