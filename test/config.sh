@@ -131,8 +131,8 @@ globalExcludeTests+=(
 	[nats_no-hard-coded-passwords]=1
 
 	[hello-world_override-cmd]=1
-	[swarm_no-override-cmd]=1
-	[nats_no-override-cmd]=1
+	[swarm_override-cmd]=1
+	[nats_override-cmd]=1
 
 	# no "native" dependencies
 	[ruby:slim_ruby-bundler]=1
