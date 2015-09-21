@@ -1,8 +1,12 @@
+# maintainer: InfoSiftr <github@infosiftr.com> (@infosiftr)
 # maintainer: Jérôme Petazzoni <jerome@docker.com> (@jpetazzo)
 
-buildroot-2013.08.1: git://github.com/jpetazzo/docker-busybox@220a689ce359914af3e08a698d1d74ec7aa0a444
-buildroot-2014.02: git://github.com/jpetazzo/docker-busybox@91641afe424df5e838bac254d43e09f051ab8c3e
-latest: git://github.com/jpetazzo/docker-busybox@91641afe424df5e838bac254d43e09f051ab8c3e
-ubuntu-12.04: git://github.com/jpetazzo/docker-busybox@4f6cb64c3b3255c58021dc75100da0088796a108
-ubuntu-14.04: git://github.com/jpetazzo/docker-busybox@ca435164f45c40d761fad9ef9b5a76a6ba0d5f1a
+1.21.0-ubuntu: git://github.com/docker-library/busybox@4979e9bb245d8e28d37f9cf21c01b828d3830da5 ubuntu
+1.21-ubuntu: git://github.com/docker-library/busybox@4979e9bb245d8e28d37f9cf21c01b828d3830da5 ubuntu
+1-ubuntu: git://github.com/docker-library/busybox@4979e9bb245d8e28d37f9cf21c01b828d3830da5 ubuntu
+ubuntu: git://github.com/docker-library/busybox@4979e9bb245d8e28d37f9cf21c01b828d3830da5 ubuntu
 
+1.23.2: git://github.com/docker-library/busybox@4979e9bb245d8e28d37f9cf21c01b828d3830da5 upstream
+1.23: git://github.com/docker-library/busybox@4979e9bb245d8e28d37f9cf21c01b828d3830da5 upstream
+1: git://github.com/docker-library/busybox@4979e9bb245d8e28d37f9cf21c01b828d3830da5 upstream
+latest: git://github.com/docker-library/busybox@4979e9bb245d8e28d37f9cf21c01b828d3830da5 upstream
