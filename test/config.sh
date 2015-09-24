@@ -76,6 +76,7 @@ imageTests+=(
 	[percona]='
 	'
 	[perl]='
+	        perl-hello-world
 	'
 	[php]='
 		php-ext-install
