@@ -52,6 +52,7 @@ imageTests+=(
 	'
 	[hylang]='
 		hylang-sh
+		hylang-hello-world
 	'
 	[java]='
 	'
