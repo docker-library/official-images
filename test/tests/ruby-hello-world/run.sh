@@ -5,4 +5,4 @@ image="$1"
 dirTest="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 dirContainer='/usr/src/ruby'
 
-docker run -it --rm -v "$dirTest":"$dirContainer" -w "$dirContainer" "$image" ruby hello-world.rb
+docker run --rm -v "$dirTest":"$dirContainer":ro -w "$dirContainer" "$image" ruby hello-world.rb
