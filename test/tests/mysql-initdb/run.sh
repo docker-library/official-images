@@ -1,8 +1,9 @@
 #!/bin/bash
-set -e
+set -eo pipefail
+
+dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
 image="$1"
-testDir="$(readlink -f "$(dirname "$BASH_SOURCE")")"
 
 export MYSQL_ROOT_PASSWORD='this is an example test password'
 export MYSQL_USER='0123456789012345' # "ERROR: 1470  String 'my cool mysql user' is too long for user name (should be no longer than 16)"
@@ -17,7 +18,7 @@ cid="$(
 		-e MYSQL_PASSWORD \
 		-e MYSQL_DATABASE \
 		--name "$cname" \
-		-v "$testDir/initdb.sql:/docker-entrypoint-initdb.d/test.sql":ro \
+		-v "$dir/initdb.sql:/docker-entrypoint-initdb.d/test.sql":ro \
 		"$image"
 )"
 trap "docker rm -vf $cid > /dev/null" EXIT
