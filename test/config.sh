@@ -74,6 +74,7 @@ imageTests+=(
 		mysql-initdb
 	'
 	[node]='
+	        node-hello-world
 	'
 	[percona]='
 	'
