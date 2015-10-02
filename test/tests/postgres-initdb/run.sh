@@ -33,21 +33,7 @@ psql() {
 		"$@"
 }
 
-: ${POSTGRES_TEST_TRIES:=10}
-: ${POSTGRES_TEST_SLEEP:=2}
-
-tries="$POSTGRES_TEST_TRIES"
-while ! echo 'SELECT 1' | psql &> /dev/null; do
-	(( tries-- ))
-	if [ $tries -le 0 ]; then
-		echo >&2 'postgres failed to accept connections in a reasonable amount of time!'
-		( set -x && docker logs "$cid" ) >&2 || true
-		echo 'SELECT 1' | psql # to hopefully get a useful error message
-		false
-	fi
-	echo >&2 -n .
-	sleep "${POSTGRES_TEST_SLEEP}"
-done
+. "$dir/../../retry.sh" --tries "$POSTGRES_TEST_TRIES" --sleep "$POSTGRES_TEST_SLEEP" "echo 'SELECT 1' | psql"
 
 [ "$(echo 'SELECT COUNT(*) FROM test' | psql)" = 1 ]
 [ "$(echo 'SELECT c FROM test' | psql)" = 'goodbye!' ]

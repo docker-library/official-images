@@ -1,5 +1,7 @@
 #!/bin/bash
 
+[ "$DEBUG" ] && set -x
+
 set -eo pipefail
 
 dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
@@ -25,22 +27,7 @@ _request() {
 }
 
 # Make sure that Jetty is listening on port 8080
-attempts=40
-tried="$attempts"
-duration=0.25
-while [ "$tried" -ge 0 -a "$(_request GET / --output /dev/null || echo $?)" = 7 ]; do
-	(( tried-- ))
-
-	if [ "$tried" -le 0 ]; then
-		echo >&2 "Unable to connect to Jetty. Aborting."
-		( set -x && docker logs "$cid" ) >&2 || true
-		false
-	fi
-
-	echo >&2 -n .
-
-	sleep "$duration"
-done
+. "$dir/../../retry.sh" --tries 40 --sleep 0.25 '[ "$(_request GET / --output /dev/null || echo $?)" = 7 ]'
 
 # Check that we can request /index.jsp with no params
 [ "$(_request GET "/" | tail -1)" = "null" ]

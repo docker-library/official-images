@@ -35,18 +35,7 @@ mysql() {
 		"$MYSQL_DATABASE"
 }
 
-tries=20
-while ! echo 'SELECT 1' | mysql &> /dev/null; do
-	(( tries-- ))
-	if [ $tries -le 0 ]; then
-		echo >&2 'mysqld failed to accept connections in a reasonable amount of time!'
-		( set -x && docker logs "$cid" ) >&2 || true
-		echo 'SELECT 1' | mysql # to hopefully get a useful error message
-		false
-	fi
-	echo >&2 -n .
-	sleep 2
-done
+. "$dir/../../retry.sh" --tries 20 "echo 'SELECT 1' | mysql"
 
 [ "$(echo 'SELECT COUNT(*) FROM test' | mysql)" = 1 ]
 [ "$(echo 'SELECT c FROM test' | mysql)" = 'goodbye!' ]
