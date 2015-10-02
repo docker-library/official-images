@@ -60,6 +60,7 @@ imageTests+=(
 		jetty-hello-web
 	'
 	[julia]='
+	        julia-hello-world
 	'
 	[memcached]='
 	'
