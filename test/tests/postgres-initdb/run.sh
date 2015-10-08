@@ -1,8 +1,9 @@
 #!/bin/bash
-set -e
+set -eo pipefail
+
+dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
 image="$1"
-testDir="$(readlink -f "$(dirname "$BASH_SOURCE")")"
 
 export POSTGRES_USER='my cool postgres user'
 export POSTGRES_PASSWORD='my cool postgres password'
@@ -15,7 +16,7 @@ cid="$(
 		-e POSTGRES_PASSWORD \
 		-e POSTGRES_DB \
 		--name "$cname" \
-		-v "$testDir/initdb.sql:/docker-entrypoint-initdb.d/test.sql":ro \
+		-v "$dir/initdb.sql:/docker-entrypoint-initdb.d/test.sql":ro \
 		"$image"
 )"
 trap "docker rm -vf $cid > /dev/null" EXIT

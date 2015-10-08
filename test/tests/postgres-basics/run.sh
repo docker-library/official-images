@@ -1,5 +1,7 @@
 #!/bin/bash
-set -e
+set -eo pipefail
+
+dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
 image="$1"
 
