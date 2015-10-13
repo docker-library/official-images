@@ -45,6 +45,7 @@ imageTests+=(
         	gcc-c-hello-world
 	'
 	[golang]='
+	        golang-hello-world
 	'
 	[haskell]='
 		haskell-cabal
