@@ -42,6 +42,7 @@ imageTests+=(
 	[elasticsearch]='
 	'
 	[gcc]='
+        	gcc-c-hello-world
 	'
 	[golang]='
 	'
