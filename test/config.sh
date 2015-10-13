@@ -42,10 +42,10 @@ imageTests+=(
 	[elasticsearch]='
 	'
 	[gcc]='
-        	gcc-c-hello-world
+		gcc-c-hello-world
 	'
 	[golang]='
-	        golang-hello-world
+		golang-hello-world
 	'
 	[haskell]='
 		haskell-cabal
@@ -62,7 +62,7 @@ imageTests+=(
 		jetty-hello-web
 	'
 	[julia]='
-	        julia-hello-world
+		julia-hello-world
 	'
 	[memcached]='
 	'
@@ -76,12 +76,12 @@ imageTests+=(
 		mysql-initdb
 	'
 	[node]='
-	        node-hello-world
+		node-hello-world
 	'
 	[percona]='
 	'
 	[perl]='
-	        perl-hello-world
+		perl-hello-world
 	'
 	[php]='
 		php-ext-install
