@@ -6,16 +6,12 @@ trap 'echo >&2 Ctrl+C captured, exiting; exit 1' SIGINT
 
 dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
-library="$dir/../library"
+library="$(dirname "$dir")/library"
 src="$dir/src"
 logs="$dir/logs"
 namespaces='_'
 docker='docker'
 retries='4'
-
-library="$(readlink -f "$library")"
-src="$(readlink -f "$src")"
-logs="$(readlink -f "$logs")"
 
 self="$(basename "$0")"
 
@@ -106,6 +102,15 @@ while true; do
 			;;
 	esac
 done
+
+if [ ! -d "$library" ]; then
+	echo >&2 "error: library directory '$library' does not exist"
+	exit 1
+fi
+library="$(readlink -f "$library")"
+mkdir -p "$src" "$logs"
+src="$(readlink -f "$src")"
+logs="$(readlink -f "$logs")"
 
 # which subcommand
 subcommand="$1"
