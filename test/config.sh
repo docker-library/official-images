@@ -46,6 +46,8 @@ declare -A imageTests=(
 		haskell-ghci
 		haskell-runhaskell
 	'
+	[hhvm]='
+	'
 	[hylang]='
 		hylang-sh
 	'
