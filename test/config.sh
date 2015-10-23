@@ -43,6 +43,7 @@ imageTests+=(
 	'
 	[gcc]='
 		gcc-c-hello-world
+	        gcc-cpp-hello-world
 	'
 	[golang]='
 		golang-hello-world
