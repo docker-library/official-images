@@ -40,6 +40,7 @@ imageTests+=(
 	[django]='
 	'
 	[elasticsearch]='
+		elasticsearch-basics
 	'
 	[gcc]='
 		gcc-c-hello-world
