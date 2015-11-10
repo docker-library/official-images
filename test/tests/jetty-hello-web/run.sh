@@ -12,7 +12,12 @@ image="$1"
 clientImage="$image"
 
 # Create an instance of the container-under-test
-cid="$(docker run -d -v "$dir/index.jsp":/var/lib/jetty/webapps/ROOT/index.jsp:ro "$image")"
+serverImage="$("$dir/../image-name.sh" librarytest/jetty-hello-web "$image")"
+"$dir/../docker-build.sh" "$dir" -t "$serverImage" <<EOD
+FROM $image
+COPY dir/index.jsp /var/lib/jetty/webapps/ROOT/
+EOD
+cid="$(docker run -d "$serverImage")"
 trap "docker rm -vf $cid > /dev/null" EXIT
 
 _request() {
