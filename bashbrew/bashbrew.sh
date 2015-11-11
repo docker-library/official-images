@@ -186,6 +186,12 @@ for repoTag in "${repos[@]}"; do
 			repoFile="$library/$repo"
 		fi
 		
+		if [ ! -f "$repoFile" ]; then
+			echo >&2 "error: '$repoFile' does not exist!"
+			didFail=1
+			continue
+		fi
+		
 		repoFile="$(readlink -f "$repoFile")"
 		echo "$repoTag ($repoFile)" >> "$logDir/repos.txt"
 		
