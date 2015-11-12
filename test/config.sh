@@ -25,6 +25,9 @@ imageTests+=(
 	'
 	[busybox]='
 	'
+	[cassandra]='
+		cassandra-basics
+	'
 	[celery]='
 	'
 	[clojure]='
