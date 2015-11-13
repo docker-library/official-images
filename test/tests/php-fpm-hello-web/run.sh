@@ -17,7 +17,7 @@ ENTRYPOINT ["cgi-fcgi"]
 EOF
 
 serverImage="$("$dir/../image-name.sh" librarytest/php-fpm-hello-web "$image")"
-"$dir/../docker-build.sh" "$dir" -t "$serverImage" <<EOD
+"$dir/../docker-build.sh" "$dir" "$serverImage" <<EOD
 FROM $image
 COPY dir/index.php /var/www/html/
 EOD

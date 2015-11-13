@@ -6,7 +6,7 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 image="$1"
 
 serverImage="$("$dir/../image-name.sh" librarytest/postgres-initdb "$image")"
-"$dir/../docker-build.sh" "$dir" -t "$serverImage" <<EOD
+"$dir/../docker-build.sh" "$dir" "$serverImage" <<EOD
 FROM $image
 COPY dir/initdb.sql /docker-entrypoint-initdb.d/
 EOD
