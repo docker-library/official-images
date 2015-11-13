@@ -13,7 +13,7 @@ clientImage="$image"
 
 # Create an instance of the container-under-test
 serverImage="$("$dir/../image-name.sh" librarytest/jetty-hello-web "$image")"
-"$dir/../docker-build.sh" "$dir" -t "$serverImage" <<EOD
+"$dir/../docker-build.sh" "$dir" "$serverImage" <<EOD
 FROM $image
 COPY dir/index.jsp /var/lib/jetty/webapps/ROOT/
 EOD

@@ -22,7 +22,7 @@ workdir="$containerMount/$testBase"
 # TODO should we be doing something fancy with $BASH_SOURCE instead so we can be arbitrarily deep and mount the top level always?
 
 newImage="$("$thisDir/image-name.sh" librarytest/run-in-container "$image--$testBase")"
-"$thisDir/docker-build.sh" "$hostMount" -t "$newImage" <<EOD
+"$thisDir/docker-build.sh" "$hostMount" "$newImage" <<EOD
 FROM $image
 COPY dir $containerMount
 WORKDIR $workdir
