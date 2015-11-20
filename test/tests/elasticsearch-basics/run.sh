@@ -26,10 +26,36 @@ _request() {
 		curl -fs -X"$method" "$@" "http://es:9200/$url"
 }
 
+_trimmed() {
+	_request "$@" | sed -r 's/^[[:space:]]+|[[:space:]]+$//g'
+}
+
 # Make sure our container is listening
 . "$dir/../../retry.sh" '[ "$(_request GET / --output /dev/null || echo $?)" != 7 ]'
 
 # Perform simple health check
-[ "$(_request GET / | awk -F '[:",[:space:]]+' '$2 == "tagline" { $1 = $2 = ""; print }')" = '  You Know for Search ' ]
+[ "$(_trimmed GET '/_cat/health?h=status')" = 'green' ]
+# should be green because it's empty and fresh
 
-# TODO perform some simple operations and make sure things are actually working
+[ "$(_trimmed GET '/_cat/indices/test1?h=docs.count')" = '' ]
+[ "$(_trimmed GET '/_cat/indices/test2?h=docs.count')" = '' ]
+
+doc='{"a":"b","c":{"d":"e"}}'
+_request POST '/test1/test/1' --data "$doc" -o /dev/null
+[ "$(_trimmed GET '/_cat/indices/test1?h=docs.count')" = 1 ]
+[ "$(_trimmed GET '/_cat/indices/test2?h=docs.count')" = '' ]
+
+_request POST '/test2/test/1' --data "$doc" -o /dev/null
+[ "$(_trimmed GET '/_cat/indices/test1?h=docs.count')" = 1 ]
+[ "$(_trimmed GET '/_cat/indices/test2?h=docs.count')" = 1 ]
+
+[ "$(_trimmed GET '/test1/test/1/_source')" = "$doc" ]
+[ "$(_trimmed GET '/test2/test/1/_source')" = "$doc" ]
+
+_request DELETE '/test1/test/1' -o /dev/null
+[ "$(_trimmed GET '/_cat/indices/test1?h=docs.count')" = 0 ]
+[ "$(_trimmed GET '/_cat/indices/test2?h=docs.count')" = 1 ]
+
+_request DELETE '/test2/test/1' -o /dev/null
+[ "$(_trimmed GET '/_cat/indices/test1?h=docs.count')" = 0 ]
+[ "$(_trimmed GET '/_cat/indices/test2?h=docs.count')" = 0 ]
