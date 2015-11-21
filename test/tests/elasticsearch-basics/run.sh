@@ -41,21 +41,21 @@ _trimmed() {
 [ "$(_trimmed GET '/_cat/indices/test2?h=docs.count')" = '' ]
 
 doc='{"a":"b","c":{"d":"e"}}'
-_request POST '/test1/test/1' --data "$doc" -o /dev/null
+_request POST '/test1/test/1?refresh=true' --data "$doc" -o /dev/null
 [ "$(_trimmed GET '/_cat/indices/test1?h=docs.count')" = 1 ]
 [ "$(_trimmed GET '/_cat/indices/test2?h=docs.count')" = '' ]
 
-_request POST '/test2/test/1' --data "$doc" -o /dev/null
+_request POST '/test2/test/1?refresh=true' --data "$doc" -o /dev/null
 [ "$(_trimmed GET '/_cat/indices/test1?h=docs.count')" = 1 ]
 [ "$(_trimmed GET '/_cat/indices/test2?h=docs.count')" = 1 ]
 
 [ "$(_trimmed GET '/test1/test/1/_source')" = "$doc" ]
 [ "$(_trimmed GET '/test2/test/1/_source')" = "$doc" ]
 
-_request DELETE '/test1/test/1' -o /dev/null
+_request DELETE '/test1/test/1?refresh=true' -o /dev/null
 [ "$(_trimmed GET '/_cat/indices/test1?h=docs.count')" = 0 ]
 [ "$(_trimmed GET '/_cat/indices/test2?h=docs.count')" = 1 ]
 
-_request DELETE '/test2/test/1' -o /dev/null
+_request DELETE '/test2/test/1?refresh=true' -o /dev/null
 [ "$(_trimmed GET '/_cat/indices/test1?h=docs.count')" = 0 ]
 [ "$(_trimmed GET '/_cat/indices/test2?h=docs.count')" = 0 ]
