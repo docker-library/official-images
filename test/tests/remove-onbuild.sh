@@ -50,4 +50,5 @@ dd if=/dev/zero of="$tmp/$newId/layer.tar" bs=1k count=1 &> /dev/null # empty ta
 cat > "$tmp/repositories" <<EOF
 {"$outImage":{"$outTag":"$newId"}}
 EOF
+docker rmi -f "$out" &> /dev/null || true # avoid "already exists, renaming the old one" from "docker load"
 tar -cC "$tmp" . | docker load
