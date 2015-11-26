@@ -6,7 +6,10 @@ This script processes the specified Docker images using the corresponding
 repository manifest files.
 
 push options:
-  -p          Don't build, only push image(s) to registry
+  -p			Don't build, only push image(s) to registry
+
+version options:
+  -n			Don't create datestamped image(s)
 EOUSAGE
 }
 
@@ -25,21 +28,25 @@ is_success() {
 exitCode=0
 failedList=()
 pushOnly=
+args=
 
 # Args handling
-while getopts ":p" opt; do
-  case $opt in
-    p)
-      	pushOnly=1
-      	;;
-    \?)
-		{
-			echo "Invalid option: -$OPTARG"
-			usage
-		}>&2
-		exit 1
-      	;;
-  esac
+while getopts ":p:n:u"  opt; do
+	case $opt in
+		p)
+			pushOnly=1
+			;;
+		n)
+			args+=' --no-datestamp'
+			;;
+		\?)
+			{
+				echo "Invalid option: -$OPTARG"
+				usage
+			}>&2
+			exit 1
+      		;;
+	esac
 done
 
 # Jenkins build steps
@@ -47,21 +54,21 @@ cd bashbrew/
 if [ -z "$TAGS" ]; then
 	if [ -z "$pushOnly" ]; then
 		# Build all images
-		./bashbrew.sh build $LIBRARY --library=../library --namespaces=resin
+		./bashbrew.sh build $LIBRARY --library=../library --namespaces=resin $args
 		is_success $?
 	fi
 	# Push all images
-	./bashbrew.sh push $LIBRARY --library=../library --namespaces=resin
+	./bashbrew.sh push $LIBRARY --library=../library --namespaces=resin $args
 	is_success $?
 else
 	for tag in $TAGS; do
 		if [ -z "$pushOnly" ]; then
 			# Build specified images only
-			./bashbrew.sh build $LIBRARY:$tag --library=../library --namespaces=resin
+			./bashbrew.sh build $LIBRARY:$tag --library=../library --namespaces=resin $args
 			is_success $? $tag
 		fi
 		# Push specified images
-		./bashbrew.sh push $LIBRARY:$tag --library=../library --namespaces=resin
+		./bashbrew.sh push $LIBRARY:$tag --library=../library --namespaces=resin $args
 		is_success $? $tag
 	done
 fi

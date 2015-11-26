@@ -62,16 +62,20 @@ build options:
 push options:
   --no-push          Don't push, print what would push
 
+version options:
+  --no-datestamp     Don't create datestamped image
 EOUSAGE
 }
 
 # arg handling
-opts="$(getopt -o 'h?' --long 'all,docker:,help,library:,logs:,namespaces:,no-build,no-clone,no-push,src:' -- "$@" || { usage >&2 && false; })"
+opts="$(getopt -o 'h?' --long 'all,docker:,help,library:,logs:,namespaces:,no-build,no-clone,no-push,src:,no-datestamp' -- "$@" || { usage >&2 && false; })"
 eval set -- "$opts"
 
 doClone=1
 doBuild=1
 doPush=1
+doDatestamp=1
+dateStamp=$(date +'%Y%m%d' -u)
 buildAll=
 while true; do
 	flag=$1
@@ -87,6 +91,7 @@ while true; do
 		--no-clone) doClone= ;;
 		--no-push) doPush= ;;
 		--src) src="$1" && shift ;;
+		--no-datestamp) doDatestamp= ;;
 		--) break ;;
 		*)
 			{
@@ -348,6 +353,19 @@ while [ "$#" -gt 0 ]; do
 						didFail=1
 						continue
 					fi
+
+					tag="${repoTag#*:}"
+					# don't need a datestamp for latest tag.
+					if [ "$doDatestamp" ] && [ "$tag" != "latest" ]; then
+						if ! (
+							set -x
+							"$docker" tag -f "$repoTag" "$namespace/$repoTag-$dateStamp"
+						) &>> "$thisLog"; then
+							echo "- failed 'docker tag'; see $thisLog"
+							didFail=1
+							continue
+						fi
+					fi
 				done
 			fi
 			;;
@@ -366,13 +384,25 @@ while [ "$#" -gt 0 ]; do
 					# can't "docker push debian"; skip this namespace
 					continue
 				fi
+
+				tag="${repoTag#*:}"
+
 				if [ "$doPush" ]; then
 					echo "Pushing $namespace/$repoTag..."
 					if ! "$docker" push "$namespace/$repoTag" &>> "$thisLog" < /dev/null; then
 						echo >&2 "- $namespace/$repoTag failed to push; see $thisLog"
 					fi
+					if [ "$doDatestamp" ] && [ "$tag" != "latest" ]; then
+						echo "Pushing $namespace/$repoTag-$dateStamp..."
+						if ! "$docker" push "$namespace/$repoTag-$dateStamp" &>> "$thisLog" < /dev/null; then
+							echo >&2 "- $namespace/$repoTag-$dateStamp failed to push; see $thisLog"
+						fi
+					fi
 				else
 					echo "$docker push" "$namespace/$repoTag"
+					if [ "$doDatestamp" ] && [ "$tag" != "latest" ]; then
+						echo "$docker push" "$namespace/$repoTag-$dateStamp"
+					fi
 				fi
 			done
 			;;
