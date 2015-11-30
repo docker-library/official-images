@@ -31,7 +31,7 @@ pushOnly=
 args=
 
 # Args handling
-while getopts ":p:n:u"  opt; do
+while getopts ":pn"  opt; do
 	case $opt in
 		p)
 			pushOnly=1
