@@ -161,7 +161,7 @@ The `Dockerfile` should be written to help mitigate man-in-the-middle attacks du
 	    # ...
 	```
 
-	(As a side note, `rm -rf /var/lib/apt/lists/*` is *roughly* the opposite of `apt-get update` -- it ensures that the layer doesn't include the extra ~8MB of APT package list data, and enforces [appropriate `apt-get update` usage](https://docs.docker.com/articles/dockerfile_best-practices/#run).)
+	(As a side note, `rm -rf /var/lib/apt/lists/*` is *roughly* the opposite of `apt-get update` -- it ensures that the layer doesn't include the extra ~8MB of APT package list data, and enforces [appropriate `apt-get update` usage](https://docs.docker.com/engine/articles/dockerfile_best-practices/#apt-get).)
 
 -	**Alternate Best**: *full key fingerprint import, download over https, verify gpg signature of download.*
 
