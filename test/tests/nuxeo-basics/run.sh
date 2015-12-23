@@ -15,7 +15,7 @@ trap "docker rm -vf $cid > /dev/null" EXIT
 get() {
 	docker run --rm -i \
 		--link "$cname":nuxeo \
-		"$image" curl -s \
+		"$image" curl -fs \
 		-H "Content-Type:application/json" \
 		-u Administrator:Administrator \
 		http://nuxeo:8080/nuxeo/api/v1/$1 
