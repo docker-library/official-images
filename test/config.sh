@@ -115,6 +115,7 @@ imageTests+=(
 	[rails]='
 	'
 	[redis]='
+		redis-basics
 	'
 	[rethinkdb]='
 	'
