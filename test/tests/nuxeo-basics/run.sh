@@ -15,23 +15,33 @@ trap "docker rm -vf $cid > /dev/null" EXIT
 get() {
 	docker run --rm -i \
 		--link "$cname":nuxeo \
-		"$image" curl -fs \
-		-H "Content-Type:application/json" \
-		-u Administrator:Administrator \
-		http://nuxeo:8080/nuxeo/api/v1/$1 
+		--entrypoint curl \
+		"$image" \
+		-fs \
+			-H "Content-Type:application/json" \
+			-u Administrator:Administrator \
+			"http://nuxeo:8080/nuxeo/api/v1/$1"
 }
 
-. "./../../retry.sh" --tries "$NUXEO_TEST_TRIES" \
-	--sleep "$NUXEO_TEST_SLEEP" \
-	"get default-domain/workspaces"
+python3() {
+	docker run --rm -i \
+		--entrypoint python3 \
+		"$image" \
+		"$@"
+}
 
-PATH1="default-domain/workspaces"
+PATH1='default-domain/workspaces'
+
+. "$dir/../../retry.sh" \
+	--tries "$NUXEO_TEST_TRIES" \
+	--sleep "$NUXEO_TEST_SLEEP" \
+	"get 'path/$PATH1'"
 
 # First get a document by its path to get its id
-DUID=$(get path/$PATH1 | python -c 'import json,sys;obj=json.load(sys.stdin);print obj["uid"];')
+DUID="$(get "path/$PATH1" | python3 -c 'import json, sys; obj = json.load(sys.stdin); print(obj["uid"]);')"
 
 # Then get the same document by its id
-PATH2=$(get id/$DUID | python -c 'import json,sys;obj=json.load(sys.stdin);print obj["path"];')
+PATH2="$(get "id/$DUID" | python3 -c 'import json, sys; obj = json.load(sys.stdin); print(obj["path"]);')"
 
 # Compare both path
-[ "/$PATH1" == "$PATH2" ]
+[ "/$PATH1" = "$PATH2" ]
