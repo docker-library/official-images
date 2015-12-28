@@ -8,6 +8,14 @@ globalTests+=(
 	override-cmd
 )
 
+# for "explicit" images, only run tests that are explicitly specified for that image/variant
+explicitTests+=(
+	[:onbuild]=1
+)
+imageTests[:onbuild]+='
+	override-cmd
+'
+
 testAlias+=(
 	[iojs]='node'
 	[jruby]='ruby'
@@ -157,4 +165,3 @@ globalExcludeTests+=(
 	[ruby:slim_ruby-bundler]=1
 	[ruby:slim_ruby-gems]=1
 )
-
