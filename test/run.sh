@@ -54,6 +54,7 @@ declare -a globalTests=()
 declare -A testAlias=()
 declare -A imageTests=()
 declare -A globalExcludeTests=()
+declare -A explicitTests=()
 
 # if there are no user-specified configs, use the default config
 if [ ${#configs} -eq 0 ]; then
@@ -99,9 +100,39 @@ for dockerImage in "$@"; do
 	testRepo=$repo
 	[ -z "${testAlias[$repo]}" ] || testRepo="${testAlias[$repo]}"
 	
-	testCandidates=( "${globalTests[@]}" ${imageTests[$testRepo]} ${imageTests[$testRepo:$variant]} )
+	explicitVariant=
+	if [ \
+		"${explicitTests[:$variant]}" \
+		-o "${explicitTests[$repo:$variant]}" \
+		-o "${explicitTests[$testRepo:$variant]}" \
+	]; then
+		explicitVariant=1
+	fi
+	
+	testCandidates=()
+	if [ -z "$explicitVariant" ]; then
+		testCandidates+=( "${globalTests[@]}" )
+	fi
+	testCandidates+=(
+		${imageTests[:$variant]}
+	)
+	if [ -z "$explicitVariant" ]; then
+		testCandidates+=(
+			${imageTests[$testRepo]}
+		)
+	fi
+	testCandidates+=(
+		${imageTests[$testRepo:$variant]}
+	)
 	if [ "$testRepo" != "$repo" ]; then
-		testCandidates+=( ${imageTests[$repo]} ${imageTests[$repo:$variant]} )
+		if [ -z "$explicitVariant" ]; then
+			testCandidates+=(
+				${imageTests[$repo]}
+			)
+		fi
+		testCandidates+=(
+			${imageTests[$repo:$variant]}
+		)
 	fi
 	
 	tests=()
@@ -111,7 +142,14 @@ for dockerImage in "$@"; do
 			continue
 		fi
 		
-		if [ ! -z "${globalExcludeTests[${testRepo}_$t]}" -o ! -z "${globalExcludeTests[${testRepo}:${variant}_$t]}" -o ! -z "${globalExcludeTests[${repo}_$t]}" -o ! -z "${globalExcludeTests[${repo}:${variant}_$t]}" ]; then
+		if [ \
+			! -z "${globalExcludeTests[${testRepo}_$t]}" \
+			-o ! -z "${globalExcludeTests[${testRepo}:${variant}_$t]}" \
+			-o ! -z "${globalExcludeTests[:${variant}_$t]}" \
+			-o ! -z "${globalExcludeTests[${repo}_$t]}" \
+			-o ! -z "${globalExcludeTests[${repo}:${variant}_$t]}" \
+			-o ! -z "${globalExcludeTests[:${variant}_$t]}" \
+		]; then
 			# skipping due to exclude
 			continue
 		fi
