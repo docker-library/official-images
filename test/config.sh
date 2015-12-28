@@ -86,10 +86,10 @@ imageTests+=(
 	[node]='
 		node-hello-world
 	'
-        [nuxeo]='
-                nuxeo-conf
-                nuxeo-basics
-        '
+	[nuxeo]='
+		nuxeo-conf
+		nuxeo-basics
+	'
 	[percona]='
 	'
 	[perl]='
