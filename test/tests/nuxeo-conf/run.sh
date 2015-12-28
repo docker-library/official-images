@@ -1,7 +1,6 @@
 #!/bin/bash
 set -eo pipefail
 
-
 image="$1"
 
 export NUXEO_DEV_MODE='true'
@@ -11,5 +10,4 @@ docker run --rm -i \
 	-e NUXEO_DEV_MODE \
 	-e NUXEO_AUTOMATION_TRACE \
 	"$image" \
-	./bin/nuxeoctl showconf | grep org.nuxeo 
-
+	nuxeoctl showconf | grep ^org.nuxeo | sort
