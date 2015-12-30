@@ -2,6 +2,18 @@
 
 [![Build Status](https://travis-ci.org/docker-library/official-images.svg?branch=master)](https://travis-ci.org/docker-library/official-images)
 
+## Architectures other than amd64?
+
+Work is in-progress in the Docker Engine and Registry to properly support multiple architectures (see [docker/docker#15866](https://github.com/docker/docker/issues/15866)). While this work is ongoing, **temporary**, experimental builds of the official images for the following architectures are happening somewhat incrementally (with a strong bias towards images necessary for Docker's own CI to help hasten proper multiarch support upstream) via CI.
+
+-	ARMv5 (`armel`): https://hub.docker.com/u/armel/
+-	ARMv7 (`armhf`): https://hub.docker.com/u/armhf/
+-	ARMv8 (`arm64`): *not uploaded anywhere yet*
+-	POWER8 (`ppc64le`): https://hub.docker.com/u/ppc64le/
+-	System z (`s390x`): https://hub.docker.com/u/s390x/
+
+If you are curious about how these images are built or have issues with them, please direct all comments to [issues on the `tianon/jenkins-groovy` repo](https://github.com/tianon/jenkins-groovy/issues) for now.
+
 ## Contributing to the standard library
 
 Thank you for your interest in the Docker official images project! We strive to make these instructions as simple and straightforward as possible, but if you find yourself lost, don't hesitate to seek us out on Freenode IRC in channel `#docker-library` or by creating a GitHub issue here.
