@@ -3,17 +3,16 @@ set -e
 
 # list taken from https://rubygems.org/stats
 for gem in \
-	thor \
 	rake \
-	rails \
 	rack \
+	json \
 	activesupport \
+	thor \
+	rails \
 	activerecord \
 	actionpack \
-	json \
 	actionmailer \
-	activeresource
-	do
-
+	activeresource \
+; do
 	gem install "$gem"
 done
