@@ -29,4 +29,18 @@ WORKDIR $workdir
 ENTRYPOINT ["$entrypoint"]
 EOD
 
-exec docker run --rm "$newImage" "$@"
+args=( --rm )
+
+# there is strong potential for nokogiri+overlayfs failure
+# see https://github.com/docker-library/ruby/issues/55
+gemHome="$(docker inspect -f '{{range .Config.Env}}{{println .}}{{end}}' "$newImage" | awk -F '=' '$1 == "GEM_HOME" { print $2; exit }')"
+if [ "$gemHome" ]; then
+	# must be a Ruby image
+	driver="$(docker info | awk -F ': ' '$1 == "Storage Driver" { print $2; exit }')"
+	if [ "$driver" = 'overlay' ]; then
+		# let's add a volume (_not_ a bind mount) on GEM_HOME to work around nokogiri+overlayfs issues
+		args+=( -v "$gemHome/gems" )
+	fi
+fi
+
+exec docker run "${args[@]}" "$newImage" "$@"
