@@ -8,7 +8,7 @@ Work is in-progress in the Docker Engine and Registry to properly support multip
 
 -	ARMv5 (`armel`): https://hub.docker.com/u/armel/
 -	ARMv7 (`armhf`): https://hub.docker.com/u/armhf/
--	ARMv8 (`arm64`): *not uploaded anywhere yet*
+-	ARMv8 (`arm64`): https://hub.docker.com/u/aarch64/
 -	POWER8 (`ppc64le`): https://hub.docker.com/u/ppc64le/
 -	System z (`s390x`): https://hub.docker.com/u/s390x/
 
