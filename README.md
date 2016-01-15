@@ -11,6 +11,7 @@ Work is in-progress in the Docker Engine and Registry to properly support multip
 -	ARMv8 (`arm64`): https://hub.docker.com/u/aarch64/
 -	POWER8 (`ppc64le`): https://hub.docker.com/u/ppc64le/
 -	System z (`s390x`): https://hub.docker.com/u/s390x/
+-	x86/i686 (`i386`): https://hub.docker.com/u/i386/
 
 If you are curious about how these images are built or have issues with them, please direct all comments to [issues on the `tianon/jenkins-groovy` repo](https://github.com/tianon/jenkins-groovy/issues) for now.
 
