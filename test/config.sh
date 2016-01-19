@@ -162,6 +162,8 @@ globalExcludeTests+=(
 	[nats_override-cmd]=1
 
 	# no "native" dependencies
+	[ruby:alpine_ruby-bundler]=1
+	[ruby:alpine_ruby-gems]=1
 	[ruby:slim_ruby-bundler]=1
 	[ruby:slim_ruby-gems]=1
 )
