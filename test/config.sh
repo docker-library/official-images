@@ -107,6 +107,9 @@ imageTests+=(
 		php-ext-install
 		php-hello-world
 	'
+	[php:apache]='
+		php-apache-hello-web
+	'
 	[php:fpm]='
 		php-fpm-hello-web
 	'
