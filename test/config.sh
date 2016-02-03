@@ -135,10 +135,11 @@ imageTests+=(
 	[rethinkdb]='
 	'
 	[ruby]='
+		ruby-hello-world
 		ruby-standard-libs
 		ruby-gems
 		ruby-bundler
-		ruby-hello-world
+		ruby-nonroot
 	'
 	[tomcat]='
 	'
