@@ -39,7 +39,7 @@ if [ "$gemHome" ]; then
 	driver="$(docker info | awk -F ': ' '$1 == "Storage Driver" { print $2; exit }')"
 	if [ "$driver" = 'overlay' ]; then
 		# let's add a volume (_not_ a bind mount) on GEM_HOME to work around nokogiri+overlayfs issues
-		args+=( -v "$gemHome/gems" )
+		args+=( -v "$gemHome" )
 	fi
 fi
 
