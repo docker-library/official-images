@@ -114,7 +114,7 @@ Following the Docker guidelines it is highly recommended that the resulting imag
 
 Here is a snippet of a Dockerfile to add in tini (be sure to use it in `CMD` or `ENTRYPOINT` as appropriate):
 
-```dockerfile
+```Dockerfile
 # grab tini for signal processing and zombie killing
 ENV TINI_VERSION v0.9.0
 RUN set -x \
@@ -122,7 +122,7 @@ RUN set -x \
 	&& curl -fSL "https://github.com/krallin/tini/releases/download/$TINI_VERSION/tini.asc" -o /usr/local/bin/tini.asc \
 	&& export GNUPGHOME="$(mktemp -d)" \
 	&& gpg --keyserver ha.pool.sks-keyservers.net --recv-keys 6380DC428747F6C393FEACA59A84159D7001A4E5 \
-	&& gpg --verify /usr/local/bin/tini.asc \
+	&& gpg --batch --verify /usr/local/bin/tini.asc /usr/local/bin/tini \
 	&& rm -r "$GNUPGHOME" /usr/local/bin/tini.asc \
 	&& chmod +x /usr/local/bin/tini \
 	&& tini -h
@@ -182,14 +182,16 @@ The `Dockerfile` should be written to help mitigate man-in-the-middle attacks du
 
 	(As a side note, `rm -rf /var/lib/apt/lists/*` is *roughly* the opposite of `apt-get update` -- it ensures that the layer doesn't include the extra ~8MB of APT package list data, and enforces [appropriate `apt-get update` usage](https://docs.docker.com/engine/articles/dockerfile_best-practices/#apt-get).)
 
--	**Alternate Best**: *full key fingerprint import, download over https, verify gpg signature of download.*
+-	**Alternate Best**: *full key fingerprint import, download over https, verify PGP signature of download.*
 
 	```Dockerfile
 	# gpg: key F73C700D: public key "Larry Hastings <larry@hastings.org>" imported
-	RUN gpg --keyserver ha.pool.sks-keyservers.net --recv-keys 97FC712E4C024BBEA48A61ED3A5CA953F73C700D
 	RUN curl -fSL "https://www.python.org/ftp/python/$PYTHON_VERSION/Python-$PYTHON_VERSION.tar.xz" -o python.tar.xz \
 	    && curl -fSL "https://www.python.org/ftp/python/$PYTHON_VERSION/Python-$PYTHON_VERSION.tar.xz.asc" -o python.tar.xz.asc \
-	    && gpg --verify python.tar.xz.asc \
+	    && export GNUPGHOME="$(mktemp -d)" \
+	    && gpg --keyserver ha.pool.sks-keyservers.net --recv-keys 97FC712E4C024BBEA48A61ED3A5CA953F73C700D \
+	    && gpg --batch --verify python.tar.xz.asc python.tar.xz \
+	    && rm -r "$GNUPGHOME" python.tar.xz.asc \
 	    # install
 	```
 
