@@ -90,6 +90,7 @@ imageTests+=(
 	[mysql]='
 		mysql-basics
 		mysql-initdb
+		mysql-log-bin
 	'
 	[node]='
 		node-hello-world
