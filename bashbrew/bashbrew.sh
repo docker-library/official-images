@@ -392,16 +392,15 @@ while [ "$#" -gt 0 ]; do
 					if ! "$docker" push "$namespace/$repoTag" &>> "$thisLog" < /dev/null; then
 						echo >&2 "- $namespace/$repoTag failed to push; see $thisLog"
 					else
-						"$docker" rmi -f "$namespace/$repoTag"
-					fi
-					if [ "$doDatestamp" ] && [ "$tag" != "latest" ]; then
-						echo "Pushing $namespace/$repoTag-$dateStamp..."
-						if ! "$docker" push "$namespace/$repoTag-$dateStamp" &>> "$thisLog" < /dev/null; then
-							echo >&2 "- $namespace/$repoTag-$dateStamp failed to push; see $thisLog"
-						else
-							"$docker" rmi -f "$namespace/$repoTag"
+						if [ "$doDatestamp" ] && [ "$tag" != "latest" ]; then
+							echo "Pushing $namespace/$repoTag-$dateStamp..."
+							if ! "$docker" push "$namespace/$repoTag-$dateStamp" &>> "$thisLog" < /dev/null; then
+								echo >&2 "- $namespace/$repoTag-$dateStamp failed to push; see $thisLog"
+							else
+								"$docker" rmi -f "$namespace/$repoTag-$dateStamp"
+								"$docker" rmi -f "$namespace/$repoTag"
+							fi
 						fi
-						"$docker" rmi -f "$namespace/$repoTag-$dateStamp"
 					fi
 				else
 					echo "$docker push" "$namespace/$repoTag"
