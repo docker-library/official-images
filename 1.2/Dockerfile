@@ -7,7 +7,7 @@ ENV ELIXIR_VERSION=v1.2.3 \
 
 RUN set -xe \
 	&& ELIXIR_DOWNLOAD_URL="https://github.com/elixir-lang/elixir/releases/download/${ELIXIR_VERSION#*@}/Precompiled.zip" \
-	&& ELIXIR_DOWNLOAD_SHA1="5e089c2d1f67db96249cea534a1e334640ebca82" \
+	&& ELIXIR_DOWNLOAD_SHA256="948483f0b14630851b9cee3332fdb3467943ed4881672ac41dc562e77cd3c785" \
 	&& buildDeps=' \
 		ca-certificates \
 		curl \
@@ -16,7 +16,7 @@ RUN set -xe \
 	&& apt-get update \
 	&& apt-get install -y --no-install-recommends $buildDeps \
 	&& curl -fSL -o elixir-precompiled.zip $ELIXIR_DOWNLOAD_URL \
-	&& echo "$ELIXIR_DOWNLOAD_SHA1 elixir-precompiled.zip" | sha1sum -c - \
+	&& echo "$ELIXIR_DOWNLOAD_SHA256 elixir-precompiled.zip" | sha256sum -c - \
 	&& unzip -d /usr/local elixir-precompiled.zip \
 	&& rm elixir-precompiled.zip \
 	&& apt-get purge -y --auto-remove $buildDeps \
