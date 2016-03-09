@@ -53,6 +53,9 @@ imageTests+=(
 	[elasticsearch]='
 		elasticsearch-basics
 	'
+	[elixir]='
+		elixir-hello-world
+	'
 	[erlang]='
 		erlang-hello-world
 	'
