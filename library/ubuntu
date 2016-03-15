@@ -5,31 +5,31 @@
 # see also https://wiki.ubuntu.com/Releases#Current
 
 # commits: (master..dist)
-#  - d9c519a Update tarballs
-#    - `ubuntu:precise`: 20160303
-#    - `ubuntu:trusty`: 20160302
+#  - 30d456f Update tarballs
+#    - `ubuntu:precise`: 20160311
+#    - `ubuntu:trusty`: 20160315
 #    - `ubuntu:wily`: 20160302
-#    - `ubuntu:xenial`: 20160303.1
+#    - `ubuntu:xenial`: 20160314.4
 
-# 20160303
-12.04.5: git://github.com/tianon/docker-brew-ubuntu-core@d9c519ae8a2b1cde77e94328d4f1ec0fd85ccd17 precise
-12.04: git://github.com/tianon/docker-brew-ubuntu-core@d9c519ae8a2b1cde77e94328d4f1ec0fd85ccd17 precise
-precise-20160303: git://github.com/tianon/docker-brew-ubuntu-core@d9c519ae8a2b1cde77e94328d4f1ec0fd85ccd17 precise
-precise: git://github.com/tianon/docker-brew-ubuntu-core@d9c519ae8a2b1cde77e94328d4f1ec0fd85ccd17 precise
+# 20160311
+12.04.5: git://github.com/tianon/docker-brew-ubuntu-core@30d456fb9b0b00f204f30a4ef84217bf59620b17 precise
+12.04: git://github.com/tianon/docker-brew-ubuntu-core@30d456fb9b0b00f204f30a4ef84217bf59620b17 precise
+precise-20160311: git://github.com/tianon/docker-brew-ubuntu-core@30d456fb9b0b00f204f30a4ef84217bf59620b17 precise
+precise: git://github.com/tianon/docker-brew-ubuntu-core@30d456fb9b0b00f204f30a4ef84217bf59620b17 precise
+
+# 20160315
+14.04.4: git://github.com/tianon/docker-brew-ubuntu-core@30d456fb9b0b00f204f30a4ef84217bf59620b17 trusty
+14.04: git://github.com/tianon/docker-brew-ubuntu-core@30d456fb9b0b00f204f30a4ef84217bf59620b17 trusty
+trusty-20160315: git://github.com/tianon/docker-brew-ubuntu-core@30d456fb9b0b00f204f30a4ef84217bf59620b17 trusty
+trusty: git://github.com/tianon/docker-brew-ubuntu-core@30d456fb9b0b00f204f30a4ef84217bf59620b17 trusty
+latest: git://github.com/tianon/docker-brew-ubuntu-core@30d456fb9b0b00f204f30a4ef84217bf59620b17 trusty
 
 # 20160302
-14.04.4: git://github.com/tianon/docker-brew-ubuntu-core@d9c519ae8a2b1cde77e94328d4f1ec0fd85ccd17 trusty
-14.04: git://github.com/tianon/docker-brew-ubuntu-core@d9c519ae8a2b1cde77e94328d4f1ec0fd85ccd17 trusty
-trusty-20160302: git://github.com/tianon/docker-brew-ubuntu-core@d9c519ae8a2b1cde77e94328d4f1ec0fd85ccd17 trusty
-trusty: git://github.com/tianon/docker-brew-ubuntu-core@d9c519ae8a2b1cde77e94328d4f1ec0fd85ccd17 trusty
-latest: git://github.com/tianon/docker-brew-ubuntu-core@d9c519ae8a2b1cde77e94328d4f1ec0fd85ccd17 trusty
+15.10: git://github.com/tianon/docker-brew-ubuntu-core@30d456fb9b0b00f204f30a4ef84217bf59620b17 wily
+wily-20160302: git://github.com/tianon/docker-brew-ubuntu-core@30d456fb9b0b00f204f30a4ef84217bf59620b17 wily
+wily: git://github.com/tianon/docker-brew-ubuntu-core@30d456fb9b0b00f204f30a4ef84217bf59620b17 wily
 
-# 20160302
-15.10: git://github.com/tianon/docker-brew-ubuntu-core@d9c519ae8a2b1cde77e94328d4f1ec0fd85ccd17 wily
-wily-20160302: git://github.com/tianon/docker-brew-ubuntu-core@d9c519ae8a2b1cde77e94328d4f1ec0fd85ccd17 wily
-wily: git://github.com/tianon/docker-brew-ubuntu-core@d9c519ae8a2b1cde77e94328d4f1ec0fd85ccd17 wily
-
-# 20160303.1
-16.04: git://github.com/tianon/docker-brew-ubuntu-core@d9c519ae8a2b1cde77e94328d4f1ec0fd85ccd17 xenial
-xenial-20160303.1: git://github.com/tianon/docker-brew-ubuntu-core@d9c519ae8a2b1cde77e94328d4f1ec0fd85ccd17 xenial
-xenial: git://github.com/tianon/docker-brew-ubuntu-core@d9c519ae8a2b1cde77e94328d4f1ec0fd85ccd17 xenial
+# 20160314.4
+16.04: git://github.com/tianon/docker-brew-ubuntu-core@30d456fb9b0b00f204f30a4ef84217bf59620b17 xenial
+xenial-20160314.4: git://github.com/tianon/docker-brew-ubuntu-core@30d456fb9b0b00f204f30a4ef84217bf59620b17 xenial
+xenial: git://github.com/tianon/docker-brew-ubuntu-core@30d456fb9b0b00f204f30a4ef84217bf59620b17 xenial
