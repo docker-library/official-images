@@ -66,6 +66,9 @@ imageTests+=(
 	[golang]='
 		golang-hello-world
 	'
+	[haproxy]='
+		haproxy-basics
+	'
 	[haskell]='
 		haskell-cabal
 		haskell-ghci
