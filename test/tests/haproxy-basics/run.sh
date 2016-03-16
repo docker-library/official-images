@@ -26,6 +26,12 @@ _request() {
 	local url="${1#/}"
 	shift
 
+	if [ "$(docker inspect -f '{{.State.Running}}' "$cid" 2>/dev/null)" != 'true' ]; then
+		echo >&2 "$image stopped unexpectedly!"
+		( set -x && docker logs "$cid" ) >&2 || true
+		false
+	fi
+
 	docker run --rm --link "$cid":haproxy "$clientImage" \
 		curl -fs -X"$method" --header 'Host: www.google.com' "$@" "http://haproxy/$url"
 }
