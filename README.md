@@ -144,6 +144,8 @@ This is one place that experience ends up trumping documentation for the path to
 
 #### Security
 
+##### Image Build
+
 The `Dockerfile` should be written to help mitigate man-in-the-middle attacks during build: using https where possible; importing PGP keys with the full fingerprint in the Dockerfile to check package signing; embedding checksums directly in the `Dockerfile` if PGP signing is not provided. When importing PGP keys, we recommend using the [high-availability server pool](https://sks-keyservers.net/overview-of-pools.php#pool_ha) from sks-keyservers (`ha.pool.sks-keyservers.net`). Here are a few good and bad examples:
 
 -	**Bad**: *download the file over http with no verification.*
@@ -194,6 +196,12 @@ The `Dockerfile` should be written to help mitigate man-in-the-middle attacks du
 	    && rm -r "$GNUPGHOME" python.tar.xz.asc \
 	    # install
 	```
+
+##### Runtime Configuration
+
+By default, Docker containers are executed with reduced privileges: whitelisted Linux capabilities, Control Groups, and a default Seccomp profile (1.10+ w/ host support).  Software running in a container may require additional privileges in order to function correctly, and there are a number of command line options to customize container execution. See [`docker run` Reference](https://docs.docker.com/engine/reference/run/) and [Seccomp for Docker](https://docs.docker.com/engine/security/seccomp/) for reference.
+
+Official Repositories that require additional privileges should specify the minimal set of command line options for the software to function, and may still be rejected if this introduces significant portability or security issues.  In general, `--privileged` is not allowed, but a combination of `--cap-add` and `--device` options may be acceptable.  Additionally, `--volume` can be tricky as there are many host filesystem locations that introduce portability/security issues (i.e. X11 socket).
 
 ### Commitment
 
