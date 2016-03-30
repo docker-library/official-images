@@ -1,9 +1,18 @@
 #!/bin/bash
 set -e
 
-dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
+# Workaround to make the script work on OSX where readlink doesn't support -f option
+readlink_f() {
+  TARGET_FILE=$1
 
-self="$(basename "$0")"
+  while [ "$TARGET_FILE" != "" ]; do
+      cd $(dirname $TARGET_FILE)
+      FILENAME="$(basename $TARGET_FILE)"
+      TARGET_FILE="$(readlink $FILENAME)"
+  done
+
+  echo "$(pwd -P)"/$FILENAME
+}
 
 usage() {
 	cat <<EOUSAGE
@@ -17,6 +26,10 @@ This script processes the specified Docker images to test their running
 environments.
 EOUSAGE
 }
+
+dir="$(dirname "$(readlink_f "$BASH_SOURCE")")"
+
+self="$(basename "$0")"
 
 # arg handling
 opts="$(getopt -o 'ht:c:?' --long 'dry-run,help,test:,config:' -- "$@" || { usage >&2 && false; })"
