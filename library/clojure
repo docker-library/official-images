@@ -1,8 +1,10 @@
 # maintainer: Paul Lam <paul@quantisan.com> (@Quantisan)
+# maintainer: Wes Morgan <wesmorgan@icloud.com> (@cap10morgan)
 
-latest: git://github.com/Quantisan/docker-clojure@b21db2ba56eef392c7dfab6cd85168153f17e2cc
-onbuild: git://github.com/Quantisan/docker-clojure@b21db2ba56eef392c7dfab6cd85168153f17e2cc onbuild
+latest: git://github.com/Quantisan/docker-clojure@fcff9e14ad57fb43de7464220774269ba7124ab5
+onbuild: git://github.com/Quantisan/docker-clojure@fcff9e14ad57fb43de7464220774269ba7124ab5 onbuild
+alpine: git://github.com/Quantisan/docker-clojure@fcff9e14ad57fb43de7464220774269ba7124ab5 alpine
 
-lein-2.5.3: git://github.com/Quantisan/docker-clojure@b21db2ba56eef392c7dfab6cd85168153f17e2cc
-lein-2.5.3-onbuild: git://github.com/Quantisan/docker-clojure@b21db2ba56eef392c7dfab6cd85168153f17e2cc onbuild
-
+lein-2.6.1: git://github.com/Quantisan/docker-clojure@fcff9e14ad57fb43de7464220774269ba7124ab5
+lein-2.6.1-onbuild: git://github.com/Quantisan/docker-clojure@fcff9e14ad57fb43de7464220774269ba7124ab5 onbuild
+lein-2.6.1-alpine: git://github.com/Quantisan/docker-clojure@fcff9e14ad57fb43de7464220774269ba7124ab5 alpine
