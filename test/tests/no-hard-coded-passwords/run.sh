@@ -2,10 +2,10 @@
 set -e
 
 IFS=$'\n'
-userPasswds=( $(docker run --rm --user 0:0 --entrypoint awk "$1" -F ':' '{ print $1 ":" $2 }' /etc/passwd) )
+userPasswds=( $(docker run --rm --user 0:0 --entrypoint cut "$1" -d: -f1-2 /etc/passwd) )
 userShadows=()
 if echo "${userPasswds[*]}" | grep -qE ':x$'; then
-	userShadows=( $(docker run --rm --user 0:0 --entrypoint awk "$1" -F ':' '{ print $1 ":" $2 }' /etc/shadow || true) )
+	userShadows=( $(docker run --rm --user 0:0 --entrypoint cut "$1" -d: -f1-2 /etc/shadow || true) )
 fi
 unset IFS
 

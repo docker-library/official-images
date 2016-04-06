@@ -11,6 +11,7 @@ Work is in-progress in the Docker Engine and Registry to properly support multip
 -	ARMv8 (`arm64`): https://hub.docker.com/u/aarch64/
 -	POWER8 (`ppc64le`): https://hub.docker.com/u/ppc64le/
 -	System z (`s390x`): https://hub.docker.com/u/s390x/
+-	x86/i686 (`i386`): https://hub.docker.com/u/i386/
 
 If you are curious about how these images are built or have issues with them, please direct all comments to [issues on the `tianon/jenkins-groovy` repo](https://github.com/tianon/jenkins-groovy/issues) for now.
 
@@ -113,10 +114,16 @@ Following the Docker guidelines it is highly recommended that the resulting imag
 
 Here is a snippet of a Dockerfile to add in tini (be sure to use it in `CMD` or `ENTRYPOINT` as appropriate):
 
-```dockerfile
+```Dockerfile
 # grab tini for signal processing and zombie killing
+ENV TINI_VERSION v0.9.0
 RUN set -x \
-	&& curl -fSL "https://github.com/krallin/tini/releases/download/v0.5.0/tini" -o /usr/local/bin/tini \
+	&& curl -fSL "https://github.com/krallin/tini/releases/download/$TINI_VERSION/tini" -o /usr/local/bin/tini \
+	&& curl -fSL "https://github.com/krallin/tini/releases/download/$TINI_VERSION/tini.asc" -o /usr/local/bin/tini.asc \
+	&& export GNUPGHOME="$(mktemp -d)" \
+	&& gpg --keyserver ha.pool.sks-keyservers.net --recv-keys 6380DC428747F6C393FEACA59A84159D7001A4E5 \
+	&& gpg --batch --verify /usr/local/bin/tini.asc /usr/local/bin/tini \
+	&& rm -r "$GNUPGHOME" /usr/local/bin/tini.asc \
 	&& chmod +x /usr/local/bin/tini \
 	&& tini -h
 ```
@@ -136,6 +143,8 @@ This is one place that experience ends up trumping documentation for the path to
 	For example, the line that contains the software version number (`ENV MYSOFTWARE_VERSION 4.2`) should come after a line that sets up the APT repository `.list` file (`RUN echo 'deb http://example.com/mysoftware/debian some-suite main' > /etc/apt/sources.list.d/mysoftware.list`).
 
 #### Security
+
+##### Image Build
 
 The `Dockerfile` should be written to help mitigate man-in-the-middle attacks during build: using https where possible; importing PGP keys with the full fingerprint in the Dockerfile to check package signing; embedding checksums directly in the `Dockerfile` if PGP signing is not provided. When importing PGP keys, we recommend using the [high-availability server pool](https://sks-keyservers.net/overview-of-pools.php#pool_ha) from sks-keyservers (`ha.pool.sks-keyservers.net`). Here are a few good and bad examples:
 
@@ -175,16 +184,24 @@ The `Dockerfile` should be written to help mitigate man-in-the-middle attacks du
 
 	(As a side note, `rm -rf /var/lib/apt/lists/*` is *roughly* the opposite of `apt-get update` -- it ensures that the layer doesn't include the extra ~8MB of APT package list data, and enforces [appropriate `apt-get update` usage](https://docs.docker.com/engine/articles/dockerfile_best-practices/#apt-get).)
 
--	**Alternate Best**: *full key fingerprint import, download over https, verify gpg signature of download.*
+-	**Alternate Best**: *full key fingerprint import, download over https, verify PGP signature of download.*
 
 	```Dockerfile
 	# gpg: key F73C700D: public key "Larry Hastings <larry@hastings.org>" imported
-	RUN gpg --keyserver ha.pool.sks-keyservers.net --recv-keys 97FC712E4C024BBEA48A61ED3A5CA953F73C700D
 	RUN curl -fSL "https://www.python.org/ftp/python/$PYTHON_VERSION/Python-$PYTHON_VERSION.tar.xz" -o python.tar.xz \
 	    && curl -fSL "https://www.python.org/ftp/python/$PYTHON_VERSION/Python-$PYTHON_VERSION.tar.xz.asc" -o python.tar.xz.asc \
-	    && gpg --verify python.tar.xz.asc \
+	    && export GNUPGHOME="$(mktemp -d)" \
+	    && gpg --keyserver ha.pool.sks-keyservers.net --recv-keys 97FC712E4C024BBEA48A61ED3A5CA953F73C700D \
+	    && gpg --batch --verify python.tar.xz.asc python.tar.xz \
+	    && rm -r "$GNUPGHOME" python.tar.xz.asc \
 	    # install
 	```
+
+##### Runtime Configuration
+
+By default, Docker containers are executed with reduced privileges: whitelisted Linux capabilities, Control Groups, and a default Seccomp profile (1.10+ w/ host support).  Software running in a container may require additional privileges in order to function correctly, and there are a number of command line options to customize container execution. See [`docker run` Reference](https://docs.docker.com/engine/reference/run/) and [Seccomp for Docker](https://docs.docker.com/engine/security/seccomp/) for reference.
+
+Official Repositories that require additional privileges should specify the minimal set of command line options for the software to function, and may still be rejected if this introduces significant portability or security issues.  In general, `--privileged` is not allowed, but a combination of `--cap-add` and `--device` options may be acceptable.  Additionally, `--volume` can be tricky as there are many host filesystem locations that introduce portability/security issues (i.e. X11 socket).
 
 ### Commitment
 

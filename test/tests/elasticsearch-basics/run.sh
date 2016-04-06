@@ -22,40 +22,57 @@ _request() {
 	local url="${1#/}"
 	shift
 
-	docker run --rm --link "$cid":es "$clientImage" \
-		curl -fs -X"$method" "$@" "http://es:9200/$url"
+	# https://github.com/docker/docker/issues/14203#issuecomment-129865960 (DOCKER_FIX)
+	docker run --rm --link "$cid":es \
+		-e DOCKER_FIX='                                        ' \
+		"$clientImage" curl -fs -X"$method" "$@" "http://es:9200/$url"
 }
 
 _trimmed() {
 	_request "$@" | sed -r 's/^[[:space:]]+|[[:space:]]+$//g'
 }
 
+_req-comp() {
+	local method="$1"; shift
+	local url="$1"; shift
+	local expected="$1"; shift
+	response="$(_trimmed "$method" "$url")"
+	[ "$response" = "$expected" ]
+}
+
+_req-exit() {
+	local method="$1"; shift
+	local url="$1"; shift
+	local expectedRet="$1"; shift
+	[ "$(_request "$method" "$url" --output /dev/null || echo "$?")" = "$expectedRet" ]
+}
+
 # Make sure our container is listening
-. "$dir/../../retry.sh" '[ "$(_request GET / --output /dev/null || echo $?)" != 7 ]'
+. "$dir/../../retry.sh" '! _req-exit GET / 7' # "Failed to connect to host."
 
 # Perform simple health check
-[ "$(_trimmed GET '/_cat/health?h=status')" = 'green' ]
+_req-comp GET '/_cat/health?h=status' 'green'
 # should be green because it's empty and fresh
 
-[ "$(_trimmed GET '/_cat/indices/test1?h=docs.count')" = '' ]
-[ "$(_trimmed GET '/_cat/indices/test2?h=docs.count')" = '' ]
+_req-exit GET '/_cat/indices/test1?h=docs.count' 22 # "HTTP page not retrieved. 4xx"
+_req-exit GET '/_cat/indices/test2?h=docs.count' 22 # "HTTP page not retrieved. 4xx"
 
 doc='{"a":"b","c":{"d":"e"}}'
 _request POST '/test1/test/1?refresh=true' --data "$doc" -o /dev/null
-[ "$(_trimmed GET '/_cat/indices/test1?h=docs.count')" = 1 ]
-[ "$(_trimmed GET '/_cat/indices/test2?h=docs.count')" = '' ]
+_req-comp GET '/_cat/indices/test1?h=docs.count' 1
+_req-exit GET '/_cat/indices/test2?h=docs.count' 22 # "HTTP page not retrieved. 4xx"
 
 _request POST '/test2/test/1?refresh=true' --data "$doc" -o /dev/null
-[ "$(_trimmed GET '/_cat/indices/test1?h=docs.count')" = 1 ]
-[ "$(_trimmed GET '/_cat/indices/test2?h=docs.count')" = 1 ]
+_req-comp GET '/_cat/indices/test1?h=docs.count' 1
+_req-comp GET '/_cat/indices/test2?h=docs.count' 1
 
-[ "$(_trimmed GET '/test1/test/1/_source')" = "$doc" ]
-[ "$(_trimmed GET '/test2/test/1/_source')" = "$doc" ]
+_req-comp GET '/test1/test/1/_source' "$doc"
+_req-comp GET '/test2/test/1/_source' "$doc"
 
 _request DELETE '/test1/test/1?refresh=true' -o /dev/null
-[ "$(_trimmed GET '/_cat/indices/test1?h=docs.count')" = 0 ]
-[ "$(_trimmed GET '/_cat/indices/test2?h=docs.count')" = 1 ]
+_req-comp GET '/_cat/indices/test1?h=docs.count' 0
+_req-comp GET '/_cat/indices/test2?h=docs.count' 1
 
 _request DELETE '/test2/test/1?refresh=true' -o /dev/null
-[ "$(_trimmed GET '/_cat/indices/test1?h=docs.count')" = 0 ]
-[ "$(_trimmed GET '/_cat/indices/test2?h=docs.count')" = 0 ]
+_req-comp GET '/_cat/indices/test1?h=docs.count' 0
+_req-comp GET '/_cat/indices/test2?h=docs.count' 0

@@ -1,1 +1,1 @@
-<?php echo $_REQUEST['hello'] ?>
+<?php echo isset($_REQUEST['hello']) ? $_REQUEST['hello'] : 'Hello!';

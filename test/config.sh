@@ -53,6 +53,9 @@ imageTests+=(
 	[elasticsearch]='
 		elasticsearch-basics
 	'
+	[elixir]='
+		elixir-hello-world
+	'
 	[erlang]='
 		erlang-hello-world
 	'
@@ -62,6 +65,9 @@ imageTests+=(
 	'
 	[golang]='
 		golang-hello-world
+	'
+	[haproxy]='
+		haproxy-basics
 	'
 	[haskell]='
 		haskell-cabal
@@ -90,6 +96,7 @@ imageTests+=(
 	[mysql]='
 		mysql-basics
 		mysql-initdb
+		mysql-log-bin
 	'
 	[node]='
 		node-hello-world
@@ -106,6 +113,9 @@ imageTests+=(
 	[php]='
 		php-ext-install
 		php-hello-world
+	'
+	[php:apache]='
+		php-apache-hello-web
 	'
 	[php:fpm]='
 		php-fpm-hello-web
@@ -132,10 +142,11 @@ imageTests+=(
 	[rethinkdb]='
 	'
 	[ruby]='
+		ruby-hello-world
 		ruby-standard-libs
 		ruby-gems
 		ruby-bundler
-		ruby-hello-world
+		ruby-nonroot
 	'
 	[tomcat]='
 	'
@@ -162,6 +173,8 @@ globalExcludeTests+=(
 	[nats_override-cmd]=1
 
 	# no "native" dependencies
+	[ruby:alpine_ruby-bundler]=1
+	[ruby:alpine_ruby-gems]=1
 	[ruby:slim_ruby-bundler]=1
 	[ruby:slim_ruby-gems]=1
 )
