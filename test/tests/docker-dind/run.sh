@@ -24,14 +24,25 @@ docker_() {
 
 . "$dir/../../retry.sh" 'docker_ version'
 
+[ "$(docker_ images -q | wc -l)" = '0' ]
 docker_ pull busybox
+[ "$(docker_ images -q | wc -l)" = '1' ]
+
+[ "$(docker_ ps -aq | wc -l)" = '0' ]
 
 docker_ run --rm busybox true
+docker_ run --rm busybox true
+docker_ run --rm busybox true
 
-docker_ create -i --name test busybox cat
-[ "$(docker_ inspect -f '{{.State.Running}}' test)" = 'false' ]
-docker_ start test
-[ "$(docker_ inspect -f '{{.State.Running}}' test)" = 'true' ]
-docker_ stop test
-[ "$(docker_ inspect -f '{{.State.Running}}' test)" = 'false' ]
-docker_ rm test
+[ "$(docker_ ps -aq | wc -l)" = '0' ]
+docker_ create -i --name test1 busybox cat
+[ "$(docker_ ps -aq | wc -l)" = '1' ]
+
+[ "$(docker_ inspect -f '{{.State.Running}}' test1)" = 'false' ]
+docker_ start test1
+[ "$(docker_ inspect -f '{{.State.Running}}' test1)" = 'true' ]
+docker_ stop test1
+[ "$(docker_ inspect -f '{{.State.Running}}' test1)" = 'false' ]
+docker_ rm test1
+
+[ "$(docker_ ps -aq | wc -l)" = '0' ]
