@@ -48,6 +48,8 @@ When taking over an existing repository, please ensure that the entire Git histo
 
 Rebuilding the same `Dockerfile` should result in the same version of the image being packaged, even if the second build happens several versions later, or the build should fail outright, such that an inadvertent rebuild of a `Dockerfile` tagged as `0.1.0` doesn't end up containing `0.2.3`. For example, if using `apt` to install the main program for the image, be sure to pin it to a specific version (ex: `... apt-get install -y my-package=0.1.0 ...`). For dependent packages installed by `apt` there is not usually a need to pin them to a version.
 
+No official images can be derived from, or depend on, non-official images.
+
 #### Consistency
 
 All official images should provide a consistent interface. A beginning user should be able to `docker run official-image bash` without needing to learn about `--entrypoint`. It is also nice for advanced users to take advantage of entrypoint, so that they can `docker run official-image --arg1 --arg2` without having to specify the binary to execute.
@@ -144,6 +146,8 @@ This is one place that experience ends up trumping documentation for the path to
 
 #### Security
 
+##### Image Build
+
 The `Dockerfile` should be written to help mitigate man-in-the-middle attacks during build: using https where possible; importing PGP keys with the full fingerprint in the Dockerfile to check package signing; embedding checksums directly in the `Dockerfile` if PGP signing is not provided. When importing PGP keys, we recommend using the [high-availability server pool](https://sks-keyservers.net/overview-of-pools.php#pool_ha) from sks-keyservers (`ha.pool.sks-keyservers.net`). Here are a few good and bad examples:
 
 -	**Bad**: *download the file over http with no verification.*
@@ -195,6 +199,12 @@ The `Dockerfile` should be written to help mitigate man-in-the-middle attacks du
 	    # install
 	```
 
+##### Runtime Configuration
+
+By default, Docker containers are executed with reduced privileges: whitelisted Linux capabilities, Control Groups, and a default Seccomp profile (1.10+ w/ host support).  Software running in a container may require additional privileges in order to function correctly, and there are a number of command line options to customize container execution. See [`docker run` Reference](https://docs.docker.com/engine/reference/run/) and [Seccomp for Docker](https://docs.docker.com/engine/security/seccomp/) for reference.
+
+Official Repositories that require additional privileges should specify the minimal set of command line options for the software to function, and may still be rejected if this introduces significant portability or security issues.  In general, `--privileged` is not allowed, but a combination of `--cap-add` and `--device` options may be acceptable.  Additionally, `--volume` can be tricky as there are many host filesystem locations that introduce portability/security issues (i.e. X11 socket).
+
 ### Commitment
 
 Proposing a new official image should not be undertaken lightly. We expect and require a commitment to maintain your image (including and especially timely updates as appropriate, as noted above).
@@ -202,6 +212,8 @@ Proposing a new official image should not be undertaken lightly. We expect and r
 ## Library definition files
 
 The library definition files are plain text files found in the [`library/` directory of the `official-images` repository](https://github.com/docker-library/official-images/tree/master/library). Each library file controls the current "supported" set of image tags that appear on the Docker Hub description. Tags that are removed from a library file do not get removed from the Docker Hub, so that old versions can continue to be available for use, but are not maintained by upstream or the maintainer of the official image. Tags in the library file are only built through an update to that library file or as a result of its base image being updated (ie, an image `FROM debian:jessie` would be rebuilt when `debian:jessie` is built). Only what is in the library file will be rebuilt when a base has updates.
+
+Given this policy, it is worth clarifying a few cases: backfilled versions, release candidates, and continuous integration builds. When a new repository is proposed, it is common to include some older unsupported versions in the initial pull request with the agreement to remove them right after acceptance. Don't confuse this with a comprehensive historical archive which is not the intention. Another common case where the term "supported" is stretched a bit is with release candidates. A release candidate is really just a naming convention for what are expected to be shorter-lived releases, so they are totally acceptable and encouraged. Unlike a release candidate, continuous integration builds which have a fully automated release cycle based on code commits or a regular schedule are not appropriate.
 
 It is highly recommended that you browse some of the existing `library/` file contents (and history to get a feel for how they change over time) before creating a new one to become familiar with the prevailing conventions and further help streamline the review process (so that we can focus on content instead of esoteric formatting or tag usage/naming).
 

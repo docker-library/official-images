@@ -53,6 +53,9 @@ imageTests+=(
 	[elasticsearch]='
 		elasticsearch-basics
 	'
+	[elixir]='
+		elixir-hello-world
+	'
 	[erlang]='
 		erlang-hello-world
 	'
@@ -62,6 +65,9 @@ imageTests+=(
 	'
 	[golang]='
 		golang-hello-world
+	'
+	[haproxy]='
+		haproxy-basics
 	'
 	[haskell]='
 		haskell-cabal
@@ -90,6 +96,7 @@ imageTests+=(
 	[mysql]='
 		mysql-basics
 		mysql-initdb
+		mysql-log-bin
 	'
 	[node]='
 		node-hello-world
@@ -154,16 +161,19 @@ imageTests+=(
 globalExcludeTests+=(
 	# single-binary images
 	[hello-world_utc]=1
-	[swarm_utc]=1
 	[nats_utc]=1
+	[swarm_utc]=1
+	[traefik_utc]=1
 
 	[hello-world_no-hard-coded-passwords]=1
-	[swarm_no-hard-coded-passwords]=1
 	[nats_no-hard-coded-passwords]=1
+	[swarm_no-hard-coded-passwords]=1
+	[traefik_no-hard-coded-passwords]=1
 
 	[hello-world_override-cmd]=1
-	[swarm_override-cmd]=1
 	[nats_override-cmd]=1
+	[swarm_override-cmd]=1
+	[traefik_override-cmd]=1
 
 	# no "native" dependencies
 	[ruby:alpine_ruby-bundler]=1
