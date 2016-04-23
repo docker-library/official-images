@@ -149,6 +149,7 @@ imageTests+=(
 		ruby-nonroot
 	'
 	[tomcat]='
+		tomcat-hello-world
 	'
 	[wordpress]='
 	'
