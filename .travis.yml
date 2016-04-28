@@ -1,4 +1,5 @@
 language: bash
+services: docker
 
 # allow for use of Docker-based workers
 sudo: false
@@ -6,6 +7,5 @@ sudo: false
 before_script:
     - env | sort
 
-# --no-build because we has no Docker in Travis :)
 script:
     - ./bashbrew/travis.sh
