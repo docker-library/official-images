@@ -1,5 +1,5 @@
 
-FROM erlang:18
+FROM erlang:18-slim
 
 # elixir expects utf8.
 ENV ELIXIR_VERSION=v1.2.5 \
@@ -10,6 +10,8 @@ RUN set -xe \
 	&& ELIXIR_DOWNLOAD_SHA256="998776f97d775a71ebf7784feb2f99121f24c5917ccc9794dfd8e7cea5879081" \
 	&& ELIXIR_DOWNLOAD_SHA256="4ab860707040e2dde4024cc8c0f74f1adc48aaae8d48293bf2b98fda3921a99c" \
 	&& buildDeps=' \
+		ca-certificates \
+		curl \
 		unzip \
 	' \
 	&& apt-get update \

@@ -1,20 +1,13 @@
 
-FROM erlang:18-slim
+FROM erlang:18
 
 # elixir expects utf8.
-ENV ELIXIR_VERSION="1.3.0-dev@ea8056e" \
+ENV ELIXIR_VERSION="1.3.0-dev@574c6db" \
 	LANG=C.UTF-8
 
 RUN set -xe \
 	&& ELIXIR_DOWNLOAD_URL="https://github.com/elixir-lang/elixir/archive/${ELIXIR_VERSION#*@}.tar.gz" \
-	&& ELIXIR_DOWNLOAD_SHA256="b42a865324d795b1891f92273c4a0d11ee1266be3293b8534e3abb6d720cf18b" \
-	&& buildDeps=' \
-		ca-certificates \
-		curl \
-		make \
-	' \
-	&& apt-get update \
-	&& apt-get install -y --no-install-recommends $buildDeps \
+	&& ELIXIR_DOWNLOAD_SHA256="61173f2f545fdd9319661a31dd7be089243d09d7efd5682242170e939010c247" \
 	&& curl -fSL -o elixir-src.tar.gz $ELIXIR_DOWNLOAD_URL \
 	&& echo "$ELIXIR_DOWNLOAD_SHA256 elixir-src.tar.gz" | sha256sum -c - \
 	&& mkdir -p /usr/src/elixir-src \
@@ -23,7 +16,6 @@ RUN set -xe \
 	&& cd /usr/src/elixir-src \
 	&& make -j$(nproc) \
 	&& make install \
-	&& apt-get purge -y --auto-remove $buildDeps \
-	&& rm -rf /usr/src/elixir-src /var/lib/apt/lists/*
+	&& rm -rf /usr/src/elixir-src
 
 CMD ["iex"]
