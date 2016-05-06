@@ -1,26 +1,40 @@
-# maintainer: Tianon Gravi <admwiggin@gmail.com> (@tianon)
+# maintainer: Tianon Gravi <tianon@debian.org> (@tianon)
+# maintainer: Paul Tagliamonte <paultag@debian.org> (@paultag)
 
-jessie: git://github.com/tianon/docker-brew-debian@b775062605b785a384417bd0e1ffd676f38ddcf5 jessie
+# commits: (master..dist-stable)
+#  - ed37bd9 2016-05-03 debootstraps (openssl CVEs)
 
-oldstable: git://github.com/tianon/docker-brew-debian@b775062605b785a384417bd0e1ffd676f38ddcf5 oldstable
+# commits: (master..dist-unstable)
+#  - e119819 2016-04-04 debootstraps
 
-sid: git://github.com/tianon/docker-brew-debian@b775062605b785a384417bd0e1ffd676f38ddcf5 sid
+8.4: git://github.com/tianon/docker-brew-debian@ed37bd96cb42face3ef38cf13dfb91cad59d0629 jessie
+8: git://github.com/tianon/docker-brew-debian@ed37bd96cb42face3ef38cf13dfb91cad59d0629 jessie
+jessie: git://github.com/tianon/docker-brew-debian@ed37bd96cb42face3ef38cf13dfb91cad59d0629 jessie
+latest: git://github.com/tianon/docker-brew-debian@ed37bd96cb42face3ef38cf13dfb91cad59d0629 jessie
 
-6.0.10: git://github.com/tianon/docker-brew-debian@b775062605b785a384417bd0e1ffd676f38ddcf5 squeeze
-6.0: git://github.com/tianon/docker-brew-debian@b775062605b785a384417bd0e1ffd676f38ddcf5 squeeze
-6: git://github.com/tianon/docker-brew-debian@b775062605b785a384417bd0e1ffd676f38ddcf5 squeeze
-squeeze: git://github.com/tianon/docker-brew-debian@b775062605b785a384417bd0e1ffd676f38ddcf5 squeeze
+jessie-backports: git://github.com/tianon/docker-brew-debian@ed37bd96cb42face3ef38cf13dfb91cad59d0629 jessie/backports
 
-stable: git://github.com/tianon/docker-brew-debian@b775062605b785a384417bd0e1ffd676f38ddcf5 stable
+oldstable: git://github.com/tianon/docker-brew-debian@ed37bd96cb42face3ef38cf13dfb91cad59d0629 oldstable
 
-testing: git://github.com/tianon/docker-brew-debian@b775062605b785a384417bd0e1ffd676f38ddcf5 testing
+oldstable-backports: git://github.com/tianon/docker-brew-debian@ed37bd96cb42face3ef38cf13dfb91cad59d0629 oldstable/backports
 
-unstable: git://github.com/tianon/docker-brew-debian@b775062605b785a384417bd0e1ffd676f38ddcf5 unstable
+sid: git://github.com/tianon/docker-brew-debian@e119819585a29ce6d8ebcf9ac269dea6ada36c9e sid
 
-7.6: git://github.com/tianon/docker-brew-debian@b775062605b785a384417bd0e1ffd676f38ddcf5 wheezy
-7: git://github.com/tianon/docker-brew-debian@b775062605b785a384417bd0e1ffd676f38ddcf5 wheezy
-wheezy: git://github.com/tianon/docker-brew-debian@b775062605b785a384417bd0e1ffd676f38ddcf5 wheezy
-latest: git://github.com/tianon/docker-brew-debian@b775062605b785a384417bd0e1ffd676f38ddcf5 wheezy
+stable: git://github.com/tianon/docker-brew-debian@ed37bd96cb42face3ef38cf13dfb91cad59d0629 stable
 
-rc-buggy: git://github.com/tianon/dockerfiles@42566bdbce41e66d09898ac01eac5eb0b49b4bd0 debian/rc-buggy
-experimental: git://github.com/tianon/dockerfiles@42566bdbce41e66d09898ac01eac5eb0b49b4bd0 debian/experimental
+stable-backports: git://github.com/tianon/docker-brew-debian@ed37bd96cb42face3ef38cf13dfb91cad59d0629 stable/backports
+
+stretch: git://github.com/tianon/docker-brew-debian@e119819585a29ce6d8ebcf9ac269dea6ada36c9e stretch
+
+testing: git://github.com/tianon/docker-brew-debian@e119819585a29ce6d8ebcf9ac269dea6ada36c9e testing
+
+unstable: git://github.com/tianon/docker-brew-debian@e119819585a29ce6d8ebcf9ac269dea6ada36c9e unstable
+
+7.10: git://github.com/tianon/docker-brew-debian@ed37bd96cb42face3ef38cf13dfb91cad59d0629 wheezy
+7: git://github.com/tianon/docker-brew-debian@ed37bd96cb42face3ef38cf13dfb91cad59d0629 wheezy
+wheezy: git://github.com/tianon/docker-brew-debian@ed37bd96cb42face3ef38cf13dfb91cad59d0629 wheezy
+
+wheezy-backports: git://github.com/tianon/docker-brew-debian@ed37bd96cb42face3ef38cf13dfb91cad59d0629 wheezy/backports
+
+rc-buggy: git://github.com/tianon/dockerfiles@22a998f815d55217afa0075411b810b8889ceac1 debian/rc-buggy
+experimental: git://github.com/tianon/dockerfiles@22a998f815d55217afa0075411b810b8889ceac1 debian/experimental

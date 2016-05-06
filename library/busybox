@@ -1,8 +1,21 @@
+# maintainer: InfoSiftr <github@infosiftr.com> (@infosiftr)
 # maintainer: Jérôme Petazzoni <jerome@docker.com> (@jpetazzo)
 
-buildroot-2013.08.1: git://github.com/jpetazzo/docker-busybox@220a689ce359914af3e08a698d1d74ec7aa0a444
-buildroot-2014.02: git://github.com/jpetazzo/docker-busybox@91641afe424df5e838bac254d43e09f051ab8c3e
-latest: git://github.com/jpetazzo/docker-busybox@91641afe424df5e838bac254d43e09f051ab8c3e
-ubuntu-12.04: git://github.com/jpetazzo/docker-busybox@4f6cb64c3b3255c58021dc75100da0088796a108
-ubuntu-14.04: git://github.com/jpetazzo/docker-busybox@ca435164f45c40d761fad9ef9b5a76a6ba0d5f1a
+1.24.2-glibc: git://github.com/docker-library/busybox@de53df881f8a7cad77fe9e2042ee0a8d38402ce3 glibc
+1.24-glibc: git://github.com/docker-library/busybox@de53df881f8a7cad77fe9e2042ee0a8d38402ce3 glibc
+1-glibc: git://github.com/docker-library/busybox@de53df881f8a7cad77fe9e2042ee0a8d38402ce3 glibc
+glibc: git://github.com/docker-library/busybox@de53df881f8a7cad77fe9e2042ee0a8d38402ce3 glibc
 
+1.24.2-musl: git://github.com/docker-library/busybox@de53df881f8a7cad77fe9e2042ee0a8d38402ce3 musl
+1.24-musl: git://github.com/docker-library/busybox@de53df881f8a7cad77fe9e2042ee0a8d38402ce3 musl
+1-musl: git://github.com/docker-library/busybox@de53df881f8a7cad77fe9e2042ee0a8d38402ce3 musl
+musl: git://github.com/docker-library/busybox@de53df881f8a7cad77fe9e2042ee0a8d38402ce3 musl
+
+1.24.2-uclibc: git://github.com/docker-library/busybox@de53df881f8a7cad77fe9e2042ee0a8d38402ce3 uclibc
+1.24.2: git://github.com/docker-library/busybox@de53df881f8a7cad77fe9e2042ee0a8d38402ce3 uclibc
+1.24-uclibc: git://github.com/docker-library/busybox@de53df881f8a7cad77fe9e2042ee0a8d38402ce3 uclibc
+1.24: git://github.com/docker-library/busybox@de53df881f8a7cad77fe9e2042ee0a8d38402ce3 uclibc
+1-uclibc: git://github.com/docker-library/busybox@de53df881f8a7cad77fe9e2042ee0a8d38402ce3 uclibc
+1: git://github.com/docker-library/busybox@de53df881f8a7cad77fe9e2042ee0a8d38402ce3 uclibc
+uclibc: git://github.com/docker-library/busybox@de53df881f8a7cad77fe9e2042ee0a8d38402ce3 uclibc
+latest: git://github.com/docker-library/busybox@de53df881f8a7cad77fe9e2042ee0a8d38402ce3 uclibc

@@ -1,6 +1,20 @@
-# maintainer: InfoSiftr <github@infosiftr.com> (@infosiftr)
+# maintainer: NGINX Docker Maintainers <docker-maint@nginx.com> (@nginxinc)
 
-latest: git://github.com/docker-library/nginx@d2c7eee53b81ae70f4eb9e3348575b35df136c95
-1: git://github.com/docker-library/nginx@d2c7eee53b81ae70f4eb9e3348575b35df136c95
-1.7: git://github.com/docker-library/nginx@d2c7eee53b81ae70f4eb9e3348575b35df136c95
-1.7.1: git://github.com/docker-library/nginx@d2c7eee53b81ae70f4eb9e3348575b35df136c95
+latest: git://github.com/nginxinc/docker-nginx@41aa13f7d2c24407e483c40fb1e8b33e73462ff1 mainline/jessie
+1: git://github.com/nginxinc/docker-nginx@41aa13f7d2c24407e483c40fb1e8b33e73462ff1 mainline/jessie
+1.9: git://github.com/nginxinc/docker-nginx@41aa13f7d2c24407e483c40fb1e8b33e73462ff1 mainline/jessie
+1.9.15: git://github.com/nginxinc/docker-nginx@41aa13f7d2c24407e483c40fb1e8b33e73462ff1 mainline/jessie
+
+stable: git://github.com/nginxinc/docker-nginx@41aa13f7d2c24407e483c40fb1e8b33e73462ff1 stable/jessie
+1.10: git://github.com/nginxinc/docker-nginx@41aa13f7d2c24407e483c40fb1e8b33e73462ff1 stable/jessie
+1.10.0: git://github.com/nginxinc/docker-nginx@41aa13f7d2c24407e483c40fb1e8b33e73462ff1 stable/jessie
+
+mainline-alpine: git://github.com/nginxinc/docker-nginx@41aa13f7d2c24407e483c40fb1e8b33e73462ff1 mainline/alpine
+alpine: git://github.com/nginxinc/docker-nginx@41aa13f7d2c24407e483c40fb1e8b33e73462ff1 mainline/alpine
+1-alpine: git://github.com/nginxinc/docker-nginx@41aa13f7d2c24407e483c40fb1e8b33e73462ff1 mainline/alpine
+1.9-alpine: git://github.com/nginxinc/docker-nginx@41aa13f7d2c24407e483c40fb1e8b33e73462ff1 mainline/alpine
+1.9.15-alpine: git://github.com/nginxinc/docker-nginx@41aa13f7d2c24407e483c40fb1e8b33e73462ff1 mainline/alpine
+
+stable-alpine: git://github.com/nginxinc/docker-nginx@41aa13f7d2c24407e483c40fb1e8b33e73462ff1 stable/alpine
+1.10-alpine: git://github.com/nginxinc/docker-nginx@41aa13f7d2c24407e483c40fb1e8b33e73462ff1 stable/alpine
+1.10.0-alpine: git://github.com/nginxinc/docker-nginx@41aa13f7d2c24407e483c40fb1e8b33e73462ff1 stable/alpine

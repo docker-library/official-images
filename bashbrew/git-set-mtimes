@@ -1,0 +1,16 @@
+#!/bin/bash
+set -e
+
+IFS=$'\n'
+files=( $({ git ls-files | xargs -n1 dirname | sort -u && git ls-files; } | sort -r) )
+unset IFS
+
+for f in "${files[@]}"; do
+	if [ ! -e "$f" ]; then
+		# don't try touching files that don't exist
+		continue
+	fi
+	stamp="$(git --no-pager log -1 --format='format:%ai' -- "$f")"
+	touchFormat="$(date --date="$stamp" +'%Y%m%d%H%M.%S')"
+	touch --no-dereference -t "$touchFormat" "$f"
+done

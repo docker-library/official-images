@@ -1,38 +1,34 @@
 # maintainer: InfoSiftr <github@infosiftr.com> (@infosiftr)
 # maintainer: Johan Euphrosine <proppy@google.com> (@proppy)
 
-1.2: git://github.com/docker-library/golang@887b0816c9480f83eb715350a32b6a3b4d331b1b 1.2
+1.5.4: git://github.com/docker-library/golang@d7e2a8d90a9b8f5dfd5bcd428e0c33b68c40cc19 1.5
+1.5: git://github.com/docker-library/golang@d7e2a8d90a9b8f5dfd5bcd428e0c33b68c40cc19 1.5
 
-1.2-onbuild: git://github.com/docker-library/golang@40bd84e4bcc278281595174a60e7b4451d972dee 1.2/onbuild
+1.5.4-onbuild: git://github.com/docker-library/golang@f1f65c0ab0097a5e3d079d5a74e2468e8d47563d 1.5/onbuild
+1.5-onbuild: git://github.com/docker-library/golang@f1f65c0ab0097a5e3d079d5a74e2468e8d47563d 1.5/onbuild
 
-1.2-cross: git://github.com/docker-library/golang@40bd84e4bcc278281595174a60e7b4451d972dee 1.2/cross
+1.5.4-wheezy: git://github.com/docker-library/golang@d7e2a8d90a9b8f5dfd5bcd428e0c33b68c40cc19 1.5/wheezy
+1.5-wheezy: git://github.com/docker-library/golang@d7e2a8d90a9b8f5dfd5bcd428e0c33b68c40cc19 1.5/wheezy
 
-1.2.1: git://github.com/docker-library/golang@887b0816c9480f83eb715350a32b6a3b4d331b1b 1.2.1
+1.5.4-alpine: git://github.com/docker-library/golang@d7e2a8d90a9b8f5dfd5bcd428e0c33b68c40cc19 1.5/alpine
+1.5-alpine: git://github.com/docker-library/golang@d7e2a8d90a9b8f5dfd5bcd428e0c33b68c40cc19 1.5/alpine
 
-1.2.1-onbuild: git://github.com/docker-library/golang@40bd84e4bcc278281595174a60e7b4451d972dee 1.2.1/onbuild
+1.6.2: git://github.com/docker-library/golang@0ce80411b9f41e9c3a21fc0a1bffba6ae761825a 1.6
+1.6: git://github.com/docker-library/golang@0ce80411b9f41e9c3a21fc0a1bffba6ae761825a 1.6
+1: git://github.com/docker-library/golang@0ce80411b9f41e9c3a21fc0a1bffba6ae761825a 1.6
+latest: git://github.com/docker-library/golang@0ce80411b9f41e9c3a21fc0a1bffba6ae761825a 1.6
 
-1.2.1-cross: git://github.com/docker-library/golang@40bd84e4bcc278281595174a60e7b4451d972dee 1.2.1/cross
+1.6.2-onbuild: git://github.com/docker-library/golang@ce284e14cdee73fbaa8fb680011a812f272eae2e 1.6/onbuild
+1.6-onbuild: git://github.com/docker-library/golang@ce284e14cdee73fbaa8fb680011a812f272eae2e 1.6/onbuild
+1-onbuild: git://github.com/docker-library/golang@ce284e14cdee73fbaa8fb680011a812f272eae2e 1.6/onbuild
+onbuild: git://github.com/docker-library/golang@ce284e14cdee73fbaa8fb680011a812f272eae2e 1.6/onbuild
 
-1.2.2: git://github.com/docker-library/golang@887b0816c9480f83eb715350a32b6a3b4d331b1b 1.2.2
+1.6.2-wheezy: git://github.com/docker-library/golang@0ce80411b9f41e9c3a21fc0a1bffba6ae761825a 1.6/wheezy
+1.6-wheezy: git://github.com/docker-library/golang@0ce80411b9f41e9c3a21fc0a1bffba6ae761825a 1.6/wheezy
+1-wheezy: git://github.com/docker-library/golang@0ce80411b9f41e9c3a21fc0a1bffba6ae761825a 1.6/wheezy
+wheezy: git://github.com/docker-library/golang@0ce80411b9f41e9c3a21fc0a1bffba6ae761825a 1.6/wheezy
 
-1.2.2-onbuild: git://github.com/docker-library/golang@40bd84e4bcc278281595174a60e7b4451d972dee 1.2.2/onbuild
-
-1.2.2-cross: git://github.com/docker-library/golang@40bd84e4bcc278281595174a60e7b4451d972dee 1.2.2/cross
-
-1.3: git://github.com/docker-library/golang@887b0816c9480f83eb715350a32b6a3b4d331b1b 1.3
-
-1.3-onbuild: git://github.com/docker-library/golang@40bd84e4bcc278281595174a60e7b4451d972dee 1.3/onbuild
-
-1.3-cross: git://github.com/docker-library/golang@40bd84e4bcc278281595174a60e7b4451d972dee 1.3/cross
-
-1.3.1: git://github.com/docker-library/golang@887b0816c9480f83eb715350a32b6a3b4d331b1b 1.3.1
-1: git://github.com/docker-library/golang@887b0816c9480f83eb715350a32b6a3b4d331b1b 1.3.1
-latest: git://github.com/docker-library/golang@887b0816c9480f83eb715350a32b6a3b4d331b1b 1.3.1
-
-1.3.1-onbuild: git://github.com/docker-library/golang@40bd84e4bcc278281595174a60e7b4451d972dee 1.3.1/onbuild
-1-onbuild: git://github.com/docker-library/golang@40bd84e4bcc278281595174a60e7b4451d972dee 1.3.1/onbuild
-onbuild: git://github.com/docker-library/golang@40bd84e4bcc278281595174a60e7b4451d972dee 1.3.1/onbuild
-
-1.3.1-cross: git://github.com/docker-library/golang@40bd84e4bcc278281595174a60e7b4451d972dee 1.3.1/cross
-1-cross: git://github.com/docker-library/golang@40bd84e4bcc278281595174a60e7b4451d972dee 1.3.1/cross
-cross: git://github.com/docker-library/golang@40bd84e4bcc278281595174a60e7b4451d972dee 1.3.1/cross
+1.6.2-alpine: git://github.com/docker-library/golang@0ce80411b9f41e9c3a21fc0a1bffba6ae761825a 1.6/alpine
+1.6-alpine: git://github.com/docker-library/golang@0ce80411b9f41e9c3a21fc0a1bffba6ae761825a 1.6/alpine
+1-alpine: git://github.com/docker-library/golang@0ce80411b9f41e9c3a21fc0a1bffba6ae761825a 1.6/alpine
+alpine: git://github.com/docker-library/golang@0ce80411b9f41e9c3a21fc0a1bffba6ae761825a 1.6/alpine

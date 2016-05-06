@@ -1,6 +1,41 @@
 # maintainer: The CentOS Project <cloud-ops@centos.org> (@CentOS)
-# Build date 20140902_1805
-latest: git://github.com/CentOS/sig-cloud-instance-images@f7732ef53029d6adfbadb7069c6666528e5c6d0e docker
-centos7: git://github.com/CentOS/sig-cloud-instance-images@f7732ef53029d6adfbadb7069c6666528e5c6d0e docker
-centos6: git://github.com/CentOS/sig-cloud-instance-images@e1ea1c01abea5f402c650caf12049a711373b27a docker
-centos5: git://github.com/CentOS/sig-cloud-instance-images@7d888ae1b0d55a893129a1039d946e42c3573afa docker
+# Build date 20160401
+
+# CentOS 7 rolling builds
+latest: git://github.com/CentOS/sig-cloud-instance-images@f0b1738ab545dccaae07a57eab0fc7356a96d404 docker
+centos7: git://github.com/CentOS/sig-cloud-instance-images@f0b1738ab545dccaae07a57eab0fc7356a96d404 docker
+7: git://github.com/CentOS/sig-cloud-instance-images@f0b1738ab545dccaae07a57eab0fc7356a96d404 docker
+
+# CentOS 6 rolling builds
+centos6: git://github.com/CentOS/sig-cloud-instance-images@298ec183aa5886d8184256a1fc94b7618411f426 docker
+6: git://github.com/CentOS/sig-cloud-instance-images@298ec183aa5886d8184256a1fc94b7618411f426 docker
+
+# CentOS 5 rolling builds
+centos5: git://github.com/CentOS/sig-cloud-instance-images@4bf8330498e1c10cf365aff31d2a8a5c3254c2cf docker
+5: git://github.com/CentOS/sig-cloud-instance-images@4bf8330498e1c10cf365aff31d2a8a5c3254c2cf docker
+
+## Minor tagged builds
+#
+#7.2.1511
+centos7.2.1511: git://github.com/CentOS/sig-cloud-instance-images@a3c59bd4e98a7f9c063d993955c8ec19c5b1ceff docker
+7.2.1511: git://github.com/CentOS/sig-cloud-instance-images@a3c59bd4e98a7f9c063d993955c8ec19c5b1ceff docker
+
+#7.1.1503
+centos7.1.1503: git://github.com/CentOS/sig-cloud-instance-images@bc561dfdd671d612dbb9f92e7e17dd8009befc44 docker
+7.1.1503: git://github.com/CentOS/sig-cloud-instance-images@bc561dfdd671d612dbb9f92e7e17dd8009befc44 docker
+
+#7.0.1406
+centos7.0.1406: git://github.com/CentOS/sig-cloud-instance-images@f1d1e0bd83baef08e257da50e6fb446e4dd1b90c docker
+7.0.1406: git://github.com/CentOS/sig-cloud-instance-images@f1d1e0bd83baef08e257da50e6fb446e4dd1b90c docker
+
+# 6.7
+centos6.7: git://github.com/CentOS/sig-cloud-instance-images@d0b72df83f49da844f88aabebe3826372f675370 docker
+6.7: git://github.com/CentOS/sig-cloud-instance-images@d0b72df83f49da844f88aabebe3826372f675370 docker
+
+# 6.6
+centos6.6: git://github.com/CentOS/sig-cloud-instance-images@8911843d9a6cc71aadd81e491f94618aded94f30 docker
+6.6: git://github.com/CentOS/sig-cloud-instance-images@8911843d9a6cc71aadd81e491f94618aded94f30 docker
+
+# 5.11
+centos5.11: git://github.com/CentOS/sig-cloud-instance-images@2d0554464ae19f4fd70d1b540c8968dbe872797b docker
+5.11: git://github.com/CentOS/sig-cloud-instance-images@2d0554464ae19f4fd70d1b540c8968dbe872797b docker
