@@ -138,6 +138,7 @@ imageTests+=(
 	'
 	[redis]='
 		redis-basics
+		redis-basics-config
 		redis-basics-persistent
 	'
 	[rethinkdb]='
