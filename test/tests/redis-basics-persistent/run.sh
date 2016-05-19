@@ -5,14 +5,10 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
 image="$1"
 
-newImage="$("$dir/../image-name.sh" librarytest/ruby-nonroot "$image")"
+newImage="$("$dir/../image-name.sh" librarytest/redis-basics-persistent "$image")"
 "$dir/../docker-build.sh" "$dir" "$newImage" <<EOD
 FROM $image
-USER nobody
-RUN mkdir /tmp/fake-home
-ENV HOME /tmp/fake-home
+CMD ["--appendonly", "yes"]
 EOD
-
-docker run --rm "$newImage" gem install advanced_math
 
 exec "$dir/real-run.sh" "$newImage"

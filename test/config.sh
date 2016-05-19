@@ -138,6 +138,8 @@ imageTests+=(
 	'
 	[redis]='
 		redis-basics
+		redis-basics-config
+		redis-basics-persistent
 	'
 	[rethinkdb]='
 	'
@@ -149,6 +151,7 @@ imageTests+=(
 		ruby-nonroot
 	'
 	[tomcat]='
+		tomcat-hello-world
 	'
 	[wordpress]='
 	'
