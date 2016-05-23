@@ -2,39 +2,39 @@
 # maintainer: Paul Tagliamonte <paultag@debian.org> (@paultag)
 
 # commits: (master..dist-stable)
-#  - ed37bd9 2016-05-03 debootstraps (openssl CVEs)
+#  - 3505731 2016-05-23 debootstraps (esp. DSA-3580-1)
 
 # commits: (master..dist-unstable)
-#  - e119819 2016-04-04 debootstraps
+#  - a667650 2016-05-23 debootstraps (esp. DSA-3580-1)
 
-8.4: git://github.com/tianon/docker-brew-debian@ed37bd96cb42face3ef38cf13dfb91cad59d0629 jessie
-8: git://github.com/tianon/docker-brew-debian@ed37bd96cb42face3ef38cf13dfb91cad59d0629 jessie
-jessie: git://github.com/tianon/docker-brew-debian@ed37bd96cb42face3ef38cf13dfb91cad59d0629 jessie
-latest: git://github.com/tianon/docker-brew-debian@ed37bd96cb42face3ef38cf13dfb91cad59d0629 jessie
+8.4: git://github.com/tianon/docker-brew-debian@35057319055fbeda72447ee824e5677c33db7bf9 jessie
+8: git://github.com/tianon/docker-brew-debian@35057319055fbeda72447ee824e5677c33db7bf9 jessie
+jessie: git://github.com/tianon/docker-brew-debian@35057319055fbeda72447ee824e5677c33db7bf9 jessie
+latest: git://github.com/tianon/docker-brew-debian@35057319055fbeda72447ee824e5677c33db7bf9 jessie
 
-jessie-backports: git://github.com/tianon/docker-brew-debian@ed37bd96cb42face3ef38cf13dfb91cad59d0629 jessie/backports
+jessie-backports: git://github.com/tianon/docker-brew-debian@35057319055fbeda72447ee824e5677c33db7bf9 jessie/backports
 
-oldstable: git://github.com/tianon/docker-brew-debian@ed37bd96cb42face3ef38cf13dfb91cad59d0629 oldstable
+oldstable: git://github.com/tianon/docker-brew-debian@35057319055fbeda72447ee824e5677c33db7bf9 oldstable
 
-oldstable-backports: git://github.com/tianon/docker-brew-debian@ed37bd96cb42face3ef38cf13dfb91cad59d0629 oldstable/backports
+oldstable-backports: git://github.com/tianon/docker-brew-debian@35057319055fbeda72447ee824e5677c33db7bf9 oldstable/backports
 
-sid: git://github.com/tianon/docker-brew-debian@e119819585a29ce6d8ebcf9ac269dea6ada36c9e sid
+sid: git://github.com/tianon/docker-brew-debian@a667650676c4f2748d6d12f14d06609c13f22de3 sid
 
-stable: git://github.com/tianon/docker-brew-debian@ed37bd96cb42face3ef38cf13dfb91cad59d0629 stable
+stable: git://github.com/tianon/docker-brew-debian@35057319055fbeda72447ee824e5677c33db7bf9 stable
 
-stable-backports: git://github.com/tianon/docker-brew-debian@ed37bd96cb42face3ef38cf13dfb91cad59d0629 stable/backports
+stable-backports: git://github.com/tianon/docker-brew-debian@35057319055fbeda72447ee824e5677c33db7bf9 stable/backports
 
-stretch: git://github.com/tianon/docker-brew-debian@e119819585a29ce6d8ebcf9ac269dea6ada36c9e stretch
+stretch: git://github.com/tianon/docker-brew-debian@a667650676c4f2748d6d12f14d06609c13f22de3 stretch
 
-testing: git://github.com/tianon/docker-brew-debian@e119819585a29ce6d8ebcf9ac269dea6ada36c9e testing
+testing: git://github.com/tianon/docker-brew-debian@a667650676c4f2748d6d12f14d06609c13f22de3 testing
 
-unstable: git://github.com/tianon/docker-brew-debian@e119819585a29ce6d8ebcf9ac269dea6ada36c9e unstable
+unstable: git://github.com/tianon/docker-brew-debian@a667650676c4f2748d6d12f14d06609c13f22de3 unstable
 
-7.10: git://github.com/tianon/docker-brew-debian@ed37bd96cb42face3ef38cf13dfb91cad59d0629 wheezy
-7: git://github.com/tianon/docker-brew-debian@ed37bd96cb42face3ef38cf13dfb91cad59d0629 wheezy
-wheezy: git://github.com/tianon/docker-brew-debian@ed37bd96cb42face3ef38cf13dfb91cad59d0629 wheezy
+7.10: git://github.com/tianon/docker-brew-debian@35057319055fbeda72447ee824e5677c33db7bf9 wheezy
+7: git://github.com/tianon/docker-brew-debian@35057319055fbeda72447ee824e5677c33db7bf9 wheezy
+wheezy: git://github.com/tianon/docker-brew-debian@35057319055fbeda72447ee824e5677c33db7bf9 wheezy
 
-wheezy-backports: git://github.com/tianon/docker-brew-debian@ed37bd96cb42face3ef38cf13dfb91cad59d0629 wheezy/backports
+wheezy-backports: git://github.com/tianon/docker-brew-debian@35057319055fbeda72447ee824e5677c33db7bf9 wheezy/backports
 
 rc-buggy: git://github.com/tianon/dockerfiles@22a998f815d55217afa0075411b810b8889ceac1 debian/rc-buggy
 experimental: git://github.com/tianon/dockerfiles@22a998f815d55217afa0075411b810b8889ceac1 debian/experimental
