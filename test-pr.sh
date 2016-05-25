@@ -20,18 +20,24 @@ shift || { usage >&2 && exit 1; }
 
 if [ -z "$BASHBREW_SECOND_STAGE" ]; then
 	docker build --pull -t bashbrew "$dir" > /dev/null
+
 	if [ "$pull" = '0' ]; then
 		name="bashbrew-test-local-$RANDOM"
 	else
 		name="bashbrew-test-pr-$pull"
 	fi
+
 	exec docker run \
 		-it --rm \
 		--name "$name" \
 		-e BASHBREW_SECOND_STAGE=1 \
 		-v /var/run/docker.sock:/var/run/docker.sock \
+		-e BASHBREW_VERBOSE \
 		-w /usr/src/pr \
 		bashbrew /usr/src/official-images/test-pr.sh "$pull" "$@"
+
+	# TODO somehow reconcile remote hosts so we can re-use our cache from invocation to invocation :(
+	# -v "${BASHBREW_CACHE:-${XDG_CACHE_HOME:-$HOME/.cache}/bashbrew}":/bashbrew-cache
 fi
 
 if [ -d .git ]; then
@@ -80,15 +86,19 @@ join() {
 	[ $# -gt 0 ] && printf "${sep}%s" "$@"
 }
 
+#IFS=$'\n'
+#files=( $(bashbrew list --build-order "${files[@]}") )
+#unset IFS
+
 echo 'Build test of' '#'"$pull"';' "$commit" '(`'"$(join '`, `' "${files[@]}")"'`):'
 failed=
 for img in "${files[@]}"; do
 	echo
 	echo '```console'
 	echo '$ bashbrew build "'"$img"'"'
-	if ./bashbrew/bashbrew.sh build "$img"; then
+	if bashbrew build --pull-missing "$img"; then
 		echo '$ bashbrew list --uniq "$url" | xargs test/run.sh'
-		if ! ./bashbrew/bashbrew.sh list --uniq "$img" | xargs ./test/run.sh; then
+		if ! bashbrew list --uniq "$img" | xargs ./test/run.sh; then
 			failed=1
 		fi
 	else

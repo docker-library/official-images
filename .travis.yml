@@ -1,11 +1,27 @@
-language: bash
+language: go
+go: 1.6.2
 
 # allow for use of Docker-based workers
 sudo: false
 
+install:
+    - |
+        GB_VERSION=$(awk '$1 == "ENV" && $2 == "GB_VERSION" { print $3; exit }' Dockerfile)
+        firstGo="${GOPATH%%:*}"
+        mkdir -p "$firstGo/src/github.com/constabulary"
+        (
+            cd "$firstGo/src/github.com/constabulary"
+            wget -qO- "https://github.com/constabulary/gb/archive/v${GB_VERSION}.tar.gz" \
+                | tar -xz
+            mv gb-* gb
+            cd gb
+            go install -v ./...
+        )
+
 before_script:
     - env | sort
+    - ( cd bashbrew/go && gb build )
+    - export PATH="$PWD/bashbrew/go/bin:$PATH"
 
-# --no-build because we has no Docker in Travis :)
 script:
     - ./bashbrew/travis.sh
