@@ -225,23 +225,23 @@ The filename of a definition file will determine the name of the image repositor
 
 	<docker-tag>: <git-url>@<git-commit-id>
 	
-	4.1.1: git://github.com/docker-library/wordpress@bbef6075afa043cbfe791b8de185105065c02c01
-	4.1: git://github.com/docker-library/wordpress@bbef6075afa043cbfe791b8de185105065c02c01
-	4: git://github.com/docker-library/wordpress@bbef6075afa043cbfe791b8de185105065c02c01
-	latest: git://github.com/docker-library/wordpress@bbef6075afa043cbfe791b8de185105065c02c01
+	4.1.1: https://github.com/docker-library/wordpress@bbef6075afa043cbfe791b8de185105065c02c01
+	4.1: https://github.com/docker-library/wordpress@bbef6075afa043cbfe791b8de185105065c02c01
+	4: https://github.com/docker-library/wordpress@bbef6075afa043cbfe791b8de185105065c02c01
+	latest: https://github.com/docker-library/wordpress@bbef6075afa043cbfe791b8de185105065c02c01
 	
 	
 	<docker-tag>: <git-url>@<git-commit-id> <dockerfile-dir>
 	
-	2.6.17: git://github.com/docker-library/redis@062335e0a8d20cab2041f25dfff2fbaf58544471 2.6
-	2.6: git://github.com/docker-library/redis@062335e0a8d20cab2041f25dfff2fbaf58544471 2.6
+	2.6.17: https://github.com/docker-library/redis@062335e0a8d20cab2041f25dfff2fbaf58544471 2.6
+	2.6: https://github.com/docker-library/redis@062335e0a8d20cab2041f25dfff2fbaf58544471 2.6
 	
-	2.8.19: git://github.com/docker-library/redis@062335e0a8d20cab2041f25dfff2fbaf58544471 2.8
-	2.8: git://github.com/docker-library/redis@062335e0a8d20cab2041f25dfff2fbaf58544471 2.8
-	2: git://github.com/docker-library/redis@062335e0a8d20cab2041f25dfff2fbaf58544471 2.8
-	latest: git://github.com/docker-library/redis@062335e0a8d20cab2041f25dfff2fbaf58544471 2.8
+	2.8.19: https://github.com/docker-library/redis@062335e0a8d20cab2041f25dfff2fbaf58544471 2.8
+	2.8: https://github.com/docker-library/redis@062335e0a8d20cab2041f25dfff2fbaf58544471 2.8
+	2: https://github.com/docker-library/redis@062335e0a8d20cab2041f25dfff2fbaf58544471 2.8
+	latest: https://github.com/docker-library/redis@062335e0a8d20cab2041f25dfff2fbaf58544471 2.8
 	
-	experimental: git://github.com/tianon/dockerfiles@90d86ad63c4a06b7d04d14ad830381b876183b3c debian/experimental
+	experimental: https://github.com/tianon/dockerfiles@90d86ad63c4a06b7d04d14ad830381b876183b3c debian/experimental
 
 Bashbrew will fetch code out of the Git repository at the commit specified here. The generated image will be tagged as `<manifest-filename>:<docker-tag>`.
 
