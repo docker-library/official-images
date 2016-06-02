@@ -322,12 +322,18 @@ func main() {
 				commonFlags["all"],
 				cli.StringFlag{
 					Name:  "format, f",
-					Usage: `change the format of the output (see Go's "text/template" package; https://golang.org/pkg/text/template/)`,
+					Usage: "change the `FORMAT` of the output",
 					Value: DefaultCatFormat,
+				},
+				cli.StringFlag{
+					Name:  "format-file, F",
+					Usage: "use the contents of `FILE` for \"--format\"",
 				},
 			},
 			Before: subcommandBeforeFactory("cat"),
 			Action: cmdCat,
+
+			Description: `see Go's "text/template" package (https://golang.org/pkg/text/template/) for details on the syntax expected in "--format"`,
 
 			Category: "plumbing",
 		},
