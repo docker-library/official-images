@@ -42,7 +42,7 @@ func cmdBuild(c *cli.Context) error {
 				return cli.NewMultiError(fmt.Errorf(`failed fetching/scraping FROM for %q (tags %q)`, r.RepoName, entry.TagsString()), err)
 			}
 
-			if pullMissing {
+			if pullMissing && from != "scratch" {
 				_, err := dockerInspect("{{.Id}}", from)
 				if err != nil {
 					fmt.Printf("Pulling %s (%s)\n", from, r.RepoName)
