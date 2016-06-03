@@ -201,9 +201,9 @@ The `Dockerfile` should be written to help mitigate man-in-the-middle attacks du
 
 ##### Runtime Configuration
 
-By default, Docker containers are executed with reduced privileges: whitelisted Linux capabilities, Control Groups, and a default Seccomp profile (1.10+ w/ host support).  Software running in a container may require additional privileges in order to function correctly, and there are a number of command line options to customize container execution. See [`docker run` Reference](https://docs.docker.com/engine/reference/run/) and [Seccomp for Docker](https://docs.docker.com/engine/security/seccomp/) for reference.
+By default, Docker containers are executed with reduced privileges: whitelisted Linux capabilities, Control Groups, and a default Seccomp profile (1.10+ w/ host support). Software running in a container may require additional privileges in order to function correctly, and there are a number of command line options to customize container execution. See [`docker run` Reference](https://docs.docker.com/engine/reference/run/) and [Seccomp for Docker](https://docs.docker.com/engine/security/seccomp/) for reference.
 
-Official Repositories that require additional privileges should specify the minimal set of command line options for the software to function, and may still be rejected if this introduces significant portability or security issues.  In general, `--privileged` is not allowed, but a combination of `--cap-add` and `--device` options may be acceptable.  Additionally, `--volume` can be tricky as there are many host filesystem locations that introduce portability/security issues (i.e. X11 socket).
+Official Repositories that require additional privileges should specify the minimal set of command line options for the software to function, and may still be rejected if this introduces significant portability or security issues. In general, `--privileged` is not allowed, but a combination of `--cap-add` and `--device` options may be acceptable. Additionally, `--volume` can be tricky as there are many host filesystem locations that introduce portability/security issues (i.e. X11 socket).
 
 ### Commitment
 
@@ -223,7 +223,44 @@ The filename of a definition file will determine the name of the image repositor
 
 ### Instruction format
 
-	<docker-tag>: <git-url>@<git-commit-id>
+The manifest file format is officially based on [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt), and as such should be familiar to folks who are already familiar with the "headers" of many popular internet protocols/formats such as HTTP or email.
+
+	Maintainers: John Smith <jsmith@example.com> (@example-jsmith),
+	             Anne Smith <asmith@example.com> (@example-asmith)
+	
+	Tags: 4.1.1, 4.1, 4, latest
+	GitRepo: https://github.com/docker-library/wordpress.git
+	GitCommit: bbef6075afa043cbfe791b8de185105065c02c01
+	
+	Tags: 2.6.17, 2.6
+	GitRepo: https://github.com/docker-library/redis.git
+	GitCommit: 062335e0a8d20cab2041f25dfff2fbaf58544471
+	Directory: 2.6
+	
+	Tags: 13.2, harlequin
+	GitRepo: https://github.com/openSUSE/docker-containers-build.git
+	GitFetch: refs/heads/openSUSE-13.1
+	GitCommit: 0d21bc58cd26da2a0a59588affc506b977d6a846
+	Directory: docker
+	Constraints: !aufs
+
+Bashbrew will fetch code out of the Git repository (`GitRepo`) at the commit specified (`GitCommit`). If the commit referenced is not available by fetching `master` of the associated `GitRepo`, it becomes necessary to supply a value for `GitFetch` in order to tell Bashbrew what ref to fetch in order to get the commit necessary.
+
+The built image will be tagged as `<manifest-filename>:<tag>` (ie, `library/golang` with a `Tags` value of `1.6, 1, latest` will create tags of `golang:1.6`, `golang:1`, and `golang:latest`).
+
+Optionally, if `Directory` is present, Bashbrew will look for the `Dockerfile` inside the specified subdirectory instead of at the root (and `Directory` will be used as the ["context" for the build](https://docs.docker.com/reference/builder/) instead of the top-level of the repository).
+
+#### Deprecated format
+
+This is the older, now-deprecated format for library manifest files. Its usage is discouraged (although it is still supported).
+
+	# maintainer: Your Name <your@email.com> (@github.name)
+	
+	# maintainer: John Smith <jsmith@example.com> (@example-jsmith)
+	# maintainer: Anne Smith <asmith@example.com> (@example-asmith)
+	
+	
+	<Tag>: <GitRepo>@<GitCommit>
 	
 	4.1.1: git://github.com/docker-library/wordpress@bbef6075afa043cbfe791b8de185105065c02c01
 	4.1: git://github.com/docker-library/wordpress@bbef6075afa043cbfe791b8de185105065c02c01
@@ -231,7 +268,7 @@ The filename of a definition file will determine the name of the image repositor
 	latest: git://github.com/docker-library/wordpress@bbef6075afa043cbfe791b8de185105065c02c01
 	
 	
-	<docker-tag>: <git-url>@<git-commit-id> <dockerfile-dir>
+	<Tag>: <GitRepo>@<GitCommit> <Directory>
 	
 	2.6.17: git://github.com/docker-library/redis@062335e0a8d20cab2041f25dfff2fbaf58544471 2.6
 	2.6: git://github.com/docker-library/redis@062335e0a8d20cab2041f25dfff2fbaf58544471 2.6
@@ -243,34 +280,24 @@ The filename of a definition file will determine the name of the image repositor
 	
 	experimental: git://github.com/tianon/dockerfiles@90d86ad63c4a06b7d04d14ad830381b876183b3c debian/experimental
 
-Bashbrew will fetch code out of the Git repository at the commit specified here. The generated image will be tagged as `<manifest-filename>:<docker-tag>`.
-
-Using Git tags instead of explicit Git commit references is supported, but heavily discouraged. For example, if a Git tag is changed on the referenced repository to point to another commit, **the image will not be rebuilt**. Instead, either create a new tag (or reference an exact commit) and submit a pull request.
-
-Optionally, if `<dockerfile-dir>` is present, Bashbrew will look for the `Dockerfile` inside the specified subdirectory instead of at the root (and `<dockerfile-dir>` will be used as the ["context" for the build](https://docs.docker.com/reference/builder/)).
+Using Git tags instead of explicit Git commit references is supported for the deprecated format only, but is heavily discouraged. For example, if a Git tag is changed on the referenced repository to point to another commit, **the image will not be rebuilt**. Instead, either create a new tag (or reference an exact commit) and submit a pull request.
 
 ### Creating a new repository
 
 -	Create a new file in the `library/` folder. Its name will be the name of your repository on the Hub.
 -	Add your tag definitions using the appropriate syntax (see above).
--	Add a line similar to the following to the top of the file:
-
-		# maintainer: Your Name <your@email.com> (@github.name)
-
 -	Create a pull request adding the file from your forked repository to this one. Please be sure to add details as to what your repository does.
 
 ### Adding a new tag in an existing repository (that you're the maintainer of)
 
 -	Add your tag definition using the instruction format documented above.
 -	Create a pull request from your Git repository to this one. Please be sure to add details about what's new, if possible.
--	In the pull request comments, feel free to prod the repository's maintainers (found in the relevant `MAINTAINERS` file) using GitHub's @-mentions.
 
 ### Change to a tag in an existing repository (that you're the maintainer of)
 
 -	Update the relevant tag definition using the instruction format documented above.
 -	Create a pull request from your Git repository to this one. Please be sure to add details about what's changed, if possible.
--	In the pull request comments, feel free to prod the repository's maintainers (found in the relevant `MAINTAINERS` file) using GitHub's @-mentions.
 
 ## Bashbrew
 
-Bashbrew is a set of bash scripts for cloning, building, tagging, and pushing the Docker official images. See [`README.md` in the `bashbrew/` subfolder](bashbrew/README.md) for more information.
+Bashbrew (`bashbrew`) is a tool for cloning, building, tagging, and pushing the Docker official images. See [`README.md` in the `bashbrew/` subfolder](bashbrew/README.md) for more information.
