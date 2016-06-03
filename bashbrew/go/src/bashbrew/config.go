@@ -19,7 +19,7 @@ type FlagsConfigEntry struct {
 
 	Library    string
 	Cache      string
-	Verbose    string
+	Debug      string
 	Unique     string
 	Namespace  string
 	BuildOrder string
@@ -38,8 +38,8 @@ func (dst *FlagsConfigEntry) Apply(src FlagsConfigEntry) {
 	if src.Cache != "" {
 		dst.Cache = src.Cache
 	}
-	if src.Verbose != "" {
-		dst.Verbose = src.Verbose
+	if src.Debug != "" {
+		dst.Debug = src.Debug
 	}
 	if src.Unique != "" {
 		dst.Unique = src.Unique
@@ -63,7 +63,7 @@ func (config FlagsConfigEntry) Vars() map[string]map[string]interface{} {
 		"global": {
 			"library": config.Library,
 			"cache":   config.Cache,
-			"verbose": config.Verbose,
+			"debug":   config.Debug,
 
 			"constraint":            config.Constraints,
 			"exclusive-constraints": config.ExclusiveConstraints,

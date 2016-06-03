@@ -8,7 +8,6 @@ import (
 	"strings"
 
 	"github.com/codegangsta/cli"
-
 	"pault.ag/go/topsort"
 )
 
@@ -22,8 +21,8 @@ var (
 	constraints          []string
 	exclusiveConstraints bool
 
-	verboseFlag = false
-	noSortFlag  = false
+	debugFlag  = false
+	noSortFlag = false
 )
 
 func initDefaultConfigPath() string {
@@ -133,9 +132,9 @@ func main() {
 	cli.HelpFlag.Name = "help, h, ?" // add "-?" to HelpFlag
 	app.Flags = []cli.Flag{
 		cli.BoolFlag{
-			Name:   "verbose, v",
-			EnvVar: "BASHBREW_VERBOSE",
-			Usage:  `enable more output (esp. "docker build" output)`,
+			Name:   "debug",
+			EnvVar: "BASHBREW_DEBUG",
+			Usage:  `enable more output (esp. all "docker build" output instead of only output on failure)`,
 		},
 		cli.BoolFlag{
 			Name:  "no-sort",
@@ -194,7 +193,7 @@ func main() {
 				return err
 			}
 
-			verboseFlag = c.GlobalBool("verbose")
+			debugFlag = c.GlobalBool("debug")
 			noSortFlag = c.GlobalBool("no-sort")
 
 			constraints = c.GlobalStringSlice("constraint")

@@ -21,12 +21,13 @@ COMMANDS:
      from      print FROM for repo:tag
 
 GLOBAL OPTIONS:
-   --verbose, -v            enable more output (esp. "docker build" output) [$BASHBREW_VERBOSE]
+   --debug                  enable more output (esp. all "docker build" output instead of only output on failure) [$BASHBREW_DEBUG]
    --no-sort                do not apply any sorting, even via --build-order
    --constraint value       build constraints (see Constraints in Manifest2822Entry)
    --exclusive-constraints  skip entries which do not have Constraints
-   --library value          where the bodies are buried (default: "/home/jsmith/docker/official-images/library") [$BASHBREW_LIBRARY]
-   --cache value            where the git wizardry is stashed (default: "/home/jsmith/.cache/bashbrew") [$BASHBREW_CACHE]
+   --config value           where default "flags" configuration can be overridden more persistently (default: "/home/tianon/.config/bashbrew") [$BASHBREW_CONFIG]
+   --library value          where the bodies are buried (default: "/home/tianon/docker/official-images/library") [$BASHBREW_LIBRARY]
+   --cache value            where the git wizardry is stashed (default: "/home/tianon/.cache/bashbrew") [$BASHBREW_CACHE]
    --help, -h, -?           show help
 
 ```
@@ -75,7 +76,7 @@ Commands: list
 ApplyConstraints: true
 
 Commands: tag
-Verbose: true
+Debug: true
 ```
 
-In this example, `bashbrew tag` will get both `Namespace` and `Verbose` applied.
+In this example, `bashbrew tag` will get both `Namespace` and `Debug` applied.

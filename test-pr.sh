@@ -32,7 +32,7 @@ if [ -z "$BASHBREW_SECOND_STAGE" ]; then
 		--name "$name" \
 		-e BASHBREW_SECOND_STAGE=1 \
 		-v /var/run/docker.sock:/var/run/docker.sock \
-		-e BASHBREW_VERBOSE \
+		-e BASHBREW_DEBUG \
 		-w /usr/src/pr \
 		bashbrew /usr/src/official-images/test-pr.sh "$pull" "$@"
 

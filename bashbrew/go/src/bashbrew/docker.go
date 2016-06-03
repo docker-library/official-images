@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"bytes"
 	"crypto/sha256"
 	"encoding/hex"
 	"fmt"
@@ -11,6 +12,7 @@ import (
 	"path"
 	"strings"
 
+	"github.com/codegangsta/cli"
 	"github.com/docker-library/go-dockerlibrary/manifest"
 )
 
@@ -128,16 +130,25 @@ func dockerBuild(tag string, context io.Reader) error {
 	args = append(args, "-")
 	cmd := exec.Command("docker", args...)
 	cmd.Stdin = context
-	if verboseFlag {
+	if debugFlag {
 		cmd.Stdout = os.Stdout
 		cmd.Stderr = os.Stderr
 		fmt.Printf("$ docker %q\n", args)
+		return cmd.Run()
+	} else {
+		buf := &bytes.Buffer{}
+		cmd.Stdout = buf
+		cmd.Stderr = buf
+		err := cmd.Run()
+		if err != nil {
+			err = cli.NewMultiError(err, fmt.Errorf(`docker build %q output:%s`, args, "\n"+buf.String()))
+		}
+		return err
 	}
-	return cmd.Run()
 }
 
 func dockerTag(tag1 string, tag2 string) error {
-	if verboseFlag {
+	if debugFlag {
 		fmt.Printf("$ docker tag %q %q\n", tag1, tag2)
 	}
 	_, err := exec.Command("docker", "tag", "-f", tag1, tag2).Output()
@@ -150,7 +161,7 @@ func dockerTag(tag1 string, tag2 string) error {
 }
 
 func dockerPush(tag string) error {
-	if verboseFlag {
+	if debugFlag {
 		fmt.Printf("$ docker push %q\n", tag)
 	}
 	_, err := exec.Command("docker", "push", tag).Output()
@@ -163,7 +174,7 @@ func dockerPush(tag string) error {
 }
 
 func dockerPull(tag string) error {
-	if verboseFlag {
+	if debugFlag {
 		fmt.Printf("$ docker pull %q\n", tag)
 	}
 	_, err := exec.Command("docker", "pull", tag).Output()

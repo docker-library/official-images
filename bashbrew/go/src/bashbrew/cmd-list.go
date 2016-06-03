@@ -4,7 +4,6 @@ import (
 	"fmt"
 
 	"github.com/codegangsta/cli"
-
 	"github.com/docker-library/go-dockerlibrary/manifest"
 )
 
