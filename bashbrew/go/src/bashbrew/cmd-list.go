@@ -24,11 +24,23 @@ func cmdList(c *cli.Context) error {
 	uniq := c.Bool("uniq")
 	namespace := ""
 	applyConstraints := c.Bool("apply-constraints")
+	onlyRepos := c.Bool("repos")
 
 	for _, repo := range repos {
 		r, err := fetch(repo)
 		if err != nil {
 			return cli.NewMultiError(fmt.Errorf(`failed fetching repo %q`, repo), err)
+		}
+
+		if onlyRepos {
+			if r.TagEntry == nil {
+				fmt.Printf("%s\n", r.RepoName)
+			} else {
+				for _, tag := range r.Tags(namespace, uniq, *r.TagEntry) {
+					fmt.Printf("%s\n", tag)
+				}
+			}
+			continue
 		}
 
 		var entries []manifest.Manifest2822Entry

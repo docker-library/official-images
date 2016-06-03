@@ -252,6 +252,10 @@ func main() {
 					Name:  "apply-constraints",
 					Usage: "apply Constraints as if repos were building",
 				},
+				cli.BoolFlag{
+					Name:  "repos",
+					Usage: `list only repos, not repo:tag (unless "repo:tag" is explicitly specified)`,
+				},
 			},
 			Before: subcommandBeforeFactory("list"),
 			Action: cmdList,
