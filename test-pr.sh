@@ -58,7 +58,7 @@ else
 	git config user.name 'nobody'
 	git config user.email 'nobody@nowhere.noplace'
 	git fetch -q origin "pull/$pull/head:pr-$pull"
-	git merge -q --no-edit "pr-$pull"
+	git merge -q --no-edit "pr-$pull" > /dev/null
 
 	commit="$(git log -1 --format=format:%h "pr-$pull")"
 fi
