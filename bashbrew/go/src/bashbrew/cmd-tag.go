@@ -10,7 +10,7 @@ import (
 func cmdTag(c *cli.Context) error {
 	repos, err := repos(c.Bool("all"), c.Args()...)
 	if err != nil {
-		return err
+		return cli.NewMultiError(fmt.Errorf(`failed gathering repo list`), err)
 	}
 
 	uniq := c.Bool("uniq")
@@ -23,7 +23,7 @@ func cmdTag(c *cli.Context) error {
 	for _, repo := range repos {
 		r, err := fetch(repo)
 		if err != nil {
-			return err
+			return cli.NewMultiError(fmt.Errorf(`failed fetching repo %q`, repo), err)
 		}
 
 		for _, entry := range r.Entries() {
@@ -32,7 +32,7 @@ func cmdTag(c *cli.Context) error {
 				fmt.Printf("Tagging %s\n", namespacedTag)
 				err = dockerTag(tag, namespacedTag)
 				if err != nil {
-					return err
+					return cli.NewMultiError(fmt.Errorf(`failed tagging %q as %q`, tag, namespacedTag), err)
 				}
 			}
 		}

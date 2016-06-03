@@ -11,14 +11,14 @@ import (
 func cmdList(c *cli.Context) error {
 	repos, err := repos(c.Bool("all"), c.Args()...)
 	if err != nil {
-		return err
+		return cli.NewMultiError(fmt.Errorf(`failed gathering repo list`), err)
 	}
 
 	buildOrder := c.Bool("build-order")
 	if buildOrder {
 		repos, err = sortRepos(repos)
 		if err != nil {
-			return err
+			return cli.NewMultiError(fmt.Errorf(`failed sorting repo list`), err)
 		}
 	}
 
@@ -29,14 +29,14 @@ func cmdList(c *cli.Context) error {
 	for _, repo := range repos {
 		r, err := fetch(repo)
 		if err != nil {
-			return err
+			return cli.NewMultiError(fmt.Errorf(`failed fetching repo %q`, repo), err)
 		}
 
 		var entries []manifest.Manifest2822Entry
 		if buildOrder {
 			entries, err = r.SortedEntries()
 			if err != nil {
-				return err
+				return cli.NewMultiError(fmt.Errorf(`failed sorting entries list for %q`, repo), err)
 			}
 		} else {
 			entries = r.Entries()

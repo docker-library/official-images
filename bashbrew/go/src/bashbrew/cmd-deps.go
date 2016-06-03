@@ -18,7 +18,7 @@ func cmdParents(c *cli.Context) error {
 func cmdFamily(parents bool, c *cli.Context) error {
 	depsRepos, err := repos(c.Bool("all"), c.Args()...)
 	if err != nil {
-		return err
+		return cli.NewMultiError(fmt.Errorf(`failed gathering repo list`), err)
 	}
 
 	uniq := c.Bool("uniq")
@@ -26,7 +26,7 @@ func cmdFamily(parents bool, c *cli.Context) error {
 
 	allRepos, err := repos(true)
 	if err != nil {
-		return err
+		return cli.NewMultiError(fmt.Errorf(`failed gathering ALL repos list`), err)
 	}
 
 	// create network (all repos)
@@ -36,8 +36,9 @@ func cmdFamily(parents bool, c *cli.Context) error {
 	for _, repo := range allRepos {
 		r, err := fetch(repo)
 		if err != nil {
-			return err
+			return cli.NewMultiError(fmt.Errorf(`failed fetching repo %q`, repo), err)
 		}
+
 		for _, entry := range r.Entries() {
 			for _, tag := range r.Tags("", false, entry) {
 				network.AddNode(tag, entry)
@@ -49,12 +50,12 @@ func cmdFamily(parents bool, c *cli.Context) error {
 	for _, repo := range allRepos {
 		r, err := fetch(repo)
 		if err != nil {
-			return err
+			return cli.NewMultiError(fmt.Errorf(`failed fetching repo %q`, repo), err)
 		}
 		for _, entry := range r.Entries() {
 			from, err := r.DockerFrom(&entry)
 			if err != nil {
-				return err
+				return cli.NewMultiError(fmt.Errorf(`failed fetching/scraping FROM for %q (tags %q)`, r.RepoName, entry.TagsString()), err)
 			}
 			for _, tag := range r.Tags("", false, entry) {
 				network.AddEdge(from, tag)
@@ -67,7 +68,7 @@ func cmdFamily(parents bool, c *cli.Context) error {
 	for _, repo := range depsRepos {
 		r, err := fetch(repo)
 		if err != nil {
-			return err
+			return cli.NewMultiError(fmt.Errorf(`failed fetching repo %q`, repo), err)
 		}
 
 		for _, entry := range r.Entries() {
