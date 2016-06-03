@@ -45,7 +45,7 @@ func cmdBuild(c *cli.Context) error {
 			if pullMissing && from != "scratch" {
 				_, err := dockerInspect("{{.Id}}", from)
 				if err != nil {
-					fmt.Printf("Pulling %s (%s)\n", from, r.RepoName)
+					fmt.Printf("Pulling %s (%s)\n", from, r.Identifier())
 					dockerPull(from)
 				}
 			}
@@ -60,7 +60,7 @@ func cmdBuild(c *cli.Context) error {
 			// check whether we've already built this artifact
 			_, err = dockerInspect("{{.Id}}", cacheTag)
 			if err != nil {
-				fmt.Printf("Building %s (%s)\n", cacheTag, r.RepoName)
+				fmt.Printf("Building %s (%s)\n", cacheTag, r.Identifier())
 
 				commit, err := r.fetchGitRepo(&entry)
 				if err != nil {

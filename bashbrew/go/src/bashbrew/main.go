@@ -83,6 +83,7 @@ func sortRepos(repos []string) ([]string, error) {
 			return nil, err
 		}
 		rs = append(rs, r)
+		network.AddNode(r.Identifier(), repo)
 		network.AddNode(r.RepoName, repo)
 	}
 
@@ -101,6 +102,7 @@ func sortRepos(repos []string) ([]string, error) {
 				continue
 			}
 			// TODO somehow reconcile/avoid "a:a -> b:b, b:b -> a:c" (which will exhibit here as cyclic)
+			network.AddEdgeIfExists(from, r.Identifier())
 			network.AddEdgeIfExists(from, r.RepoName)
 		}
 	}
@@ -111,8 +113,14 @@ func sortRepos(repos []string) ([]string, error) {
 	}
 
 	ret := []string{}
+	seen := map[string]bool{}
 	for _, node := range nodes {
-		ret = append(ret, node.Value.(string))
+		repo := node.Value.(string)
+		if seen[repo] {
+			continue
+		}
+		seen[repo] = true
+		ret = append(ret, repo)
 	}
 
 	return ret, nil

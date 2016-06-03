@@ -24,6 +24,13 @@ type Repo struct {
 	TagEntry *manifest.Manifest2822Entry
 }
 
+func (r Repo) Identifier() string {
+	if r.TagName != "" {
+		return r.RepoName + ":" + r.TagName
+	}
+	return r.RepoName
+}
+
 func (r Repo) SkipConstraints(entry manifest.Manifest2822Entry) bool {
 	repoTag := r.RepoName + ":" + entry.Tags[0]
 
