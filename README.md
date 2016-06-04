@@ -16,15 +16,12 @@ elixir      1.3   5c67fece33fb   7 minutes ago       290.3 MB
 ```
 
 ```console
-➸ docker run -it --rm elixir:1.3
-Erlang/OTP 18 [erts-7.2.1] [source] [64-bit] [smp:8:8] [async-threads:10] [hipe] [kernel-poll:false]
+➸ docker run -it --rm elixir:v1.3.0-rc.0
+Erlang/OTP 19 [erts-8.0] [source] [64-bit] [smp:8:8] [async-threads:10] [hipe] [kernel-poll:false]
 
-Interactive Elixir (1.3.0-dev) - press Ctrl+C to exit (type h() ENTER for help)
+Interactive Elixir (1.3.0-rc.0) - press Ctrl+C to exit (type h() ENTER for help)
 iex(1)> System.version
-"1.3.0-dev"
-iex(2)> System.get_env "ELIXIR_VERSION"
-"1.3.0-dev@dcef08d"
-iex(3)> :os.getenv "ELIXIR_VERSION"
-'1.3.0-dev@dcef08d'
-iex(4)>
+"1.3.0-rc.0"
+iex(2)> OptionParser.parse(["--verbose", "-v", "-v"], switches: [verbose: :count], aliases: [v: :verbose])
+{[verbose: 3], [], []}
 ```

@@ -2,13 +2,12 @@
 FROM erlang:18
 
 # elixir expects utf8.
-ENV ELIXIR_VERSION=v1.2.5 \
+ENV ELIXIR_VERSION=v1.2.6 \
 	LANG=C.UTF-8
 
 RUN set -xe \
 	&& ELIXIR_DOWNLOAD_URL="https://github.com/elixir-lang/elixir/releases/download/${ELIXIR_VERSION#*@}/Precompiled.zip" \
-	&& ELIXIR_DOWNLOAD_SHA256="998776f97d775a71ebf7784feb2f99121f24c5917ccc9794dfd8e7cea5879081" \
-	&& ELIXIR_DOWNLOAD_SHA256="4ab860707040e2dde4024cc8c0f74f1adc48aaae8d48293bf2b98fda3921a99c" \
+	&& ELIXIR_DOWNLOAD_SHA256="bb4324eb7c9568fa30f0f2ed3c1b86ebbd5251f7c820f1beb0e5eed5fb8a9729" \
 	&& buildDeps=' \
 		unzip \
 	' \
