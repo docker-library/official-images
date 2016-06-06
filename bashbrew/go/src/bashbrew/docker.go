@@ -141,7 +141,7 @@ func dockerBuild(tag string, context io.Reader) error {
 		cmd.Stderr = buf
 		err := cmd.Run()
 		if err != nil {
-			err = cli.NewMultiError(err, fmt.Errorf(`docker build %q output:%s`, args, "\n"+buf.String()))
+			err = cli.NewMultiError(err, fmt.Errorf(`docker %q output:%s`, args, "\n"+buf.String()))
 		}
 		return err
 	}
@@ -151,10 +151,10 @@ func dockerTag(tag1 string, tag2 string) error {
 	if debugFlag {
 		fmt.Printf("$ docker tag %q %q\n", tag1, tag2)
 	}
-	_, err := exec.Command("docker", "tag", "-f", tag1, tag2).Output()
+	_, err := exec.Command("docker", "tag", tag1, tag2).Output()
 	if err != nil {
 		if ee, ok := err.(*exec.ExitError); ok {
-			return fmt.Errorf("%v\ncommand: docker tag -f %q %q\n%s", ee, tag1, tag2, string(ee.Stderr))
+			return fmt.Errorf("%v\ncommand: docker tag %q %q\n%s", ee, tag1, tag2, string(ee.Stderr))
 		}
 	}
 	return err
