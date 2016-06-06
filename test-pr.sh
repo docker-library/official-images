@@ -21,23 +21,51 @@ shift || { usage >&2 && exit 1; }
 if [ -z "$BASHBREW_SECOND_STAGE" ]; then
 	docker build --pull -t bashbrew "$dir" > /dev/null
 
+	args=(
+		-it --rm
+	)
+
 	if [ "$pull" = '0' ]; then
-		name="bashbrew-test-local-$RANDOM"
+		args+=( --name "bashbrew-test-local-$RANDOM" )
 	else
-		name="bashbrew-test-pr-$pull"
+		args+=( --name "bashbrew-test-pr-$pull" )
 	fi
 
-	exec docker run \
-		-it --rm \
-		--name "$name" \
-		-e BASHBREW_SECOND_STAGE=1 \
-		-v /var/run/docker.sock:/var/run/docker.sock \
-		-e BASHBREW_DEBUG \
-		-w /usr/src/pr \
-		bashbrew /usr/src/official-images/test-pr.sh "$pull" "$@"
+	args+=(
+		-v /var/run/docker.sock:/var/run/docker.sock
+		--group-add 0
+	)
+	if getent group docker &> /dev/null; then
+		args+=( --group-add "$(getent group docker | cut -d: -f3)" )
+	fi
 
-	# TODO somehow reconcile remote hosts so we can re-use our cache from invocation to invocation :(
-	# -v "${BASHBREW_CACHE:-${XDG_CACHE_HOME:-$HOME/.cache}/bashbrew}":/bashbrew-cache
+	# if we don't have DOCKER_HOST set, let's bind-mount cache for speed!
+	if [ -z "$DOCKER_HOST" ]; then
+		export BASHBREW_CACHE="${BASHBREW_CACHE:-${XDG_CACHE_HOME:-$HOME/.cache}/bashbrew}" # resolve path to current "host-side" cache directory
+		mkdir -p "$BASHBREW_CACHE" # ensure it's created by our user, not root
+		export BASHBREW_CACHE="$(cd "$BASHBREW_CACHE" && pwd -P)" # readlink -f
+		args+=(
+			-v "$BASHBREW_CACHE":/bashbrew-cache
+			-e BASHBREW_CACHE=/bashbrew-cache
+			# make sure our user in the container can read it
+			--group-add "$(stat -c '%g' "$BASHBREW_CACHE")"
+		)
+	fi
+
+	args+=(
+		--user "$(id -u)":"$(id -g)"
+		$(id -G | xargs -n1 echo --group-add)
+		-v /etc/passwd:/etc/passwd:ro
+		-v /etc/group:/etc/group:ro
+
+		-e BASHBREW_DEBUG
+		-e BASHBREW_SECOND_STAGE=1
+		-w /usr/src/pr
+	)
+
+	cmd=( /usr/src/official-images/test-pr.sh "$pull" "$@" )
+
+	exec docker run "${args[@]}" bashbrew "${cmd[@]}"
 fi
 
 if [ -d .git ]; then
@@ -86,27 +114,41 @@ join() {
 	[ $# -gt 0 ] && printf "${sep}%s" "$@"
 }
 
-#IFS=$'\n'
-#files=( $(bashbrew list --build-order "${files[@]}") )
-#unset IFS
+IFS=$'\n'
+files=( $(bashbrew list --repos --uniq --build-order "${files[@]}") )
+unset IFS
 
 echo 'Build test of' '#'"$pull"';' "$commit" '(`'"$(join '`, `' "${files[@]}")"'`):'
-failed=
+failedBuild=()
+failedTests=()
 for img in "${files[@]}"; do
+	IFS=$'\n'
+	uniqImgs=( $(bashbrew list --uniq "$img") )
+	unset IFS
+
 	echo
 	echo '```console'
-	echo '$ bashbrew build "'"$img"'"'
-	if bashbrew build --pull-missing "$img"; then
-		echo '$ bashbrew list --uniq "$url" | xargs test/run.sh'
-		if ! bashbrew list --uniq "$img" | xargs ./test/run.sh; then
-			failed=1
+	for uniqImg in "${uniqImgs[@]}"; do
+		echo
+		echo '$ bashbrew build' "$uniqImg"
+		if bashbrew build --pull-missing "$uniqImg"; then
+			echo
+			echo '$ test/run.sh' "$uniqImg"
+			if ! ./test/run.sh "$uniqImg"; then
+				failedTests+=( "$uniqImg" )
+			fi
+		else
+			failedBuild+=( "$uniqImg" )
 		fi
-	else
-		failed=1
-	fi
+		echo
+	done
 	echo '```'
 done
-if [ "$failed" ]; then
+if [ "${#failedBuild[@]}" -gt 0 ]; then
 	echo
-	echo 'There is at least one failure in the above build log.'
+	echo 'The following images failed to build:' "${failedBuild[@]}"
+fi
+if [ "${#failedTests[@]}" -gt 0 ]; then
+	echo
+	echo 'The following images failed at least one test:' "${failedTests[@]}"
 fi

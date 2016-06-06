@@ -141,7 +141,7 @@ func dockerBuild(tag string, context io.Reader) error {
 		cmd.Stderr = buf
 		err := cmd.Run()
 		if err != nil {
-			err = cli.NewMultiError(err, fmt.Errorf(`docker build %q output:%s`, args, "\n"+buf.String()))
+			err = cli.NewMultiError(err, fmt.Errorf(`docker %q output:%s`, args, "\n"+buf.String()))
 		}
 		return err
 	}

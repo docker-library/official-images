@@ -1,12 +1,13 @@
-FROM docker:1.9-git
+FROM docker:1.10-git
 
 # add "edge" since Alpine 3.3 only has Go 1.5 and we need 1.6+
 RUN sed -ri -e 'p; s!^!@edge !; s!v[0-9.]+!edge!' /etc/apk/repositories
 
-RUN apk add --update \
+RUN apk add --no-cache \
+# bash for running scripts
 		bash \
-		go@edge \
-	&& rm -rf /var/cache/apk/*
+# go for compiling bashbrew
+		go@edge
 
 ENV GOPATH /go
 ENV PATH $GOPATH/bin:$PATH

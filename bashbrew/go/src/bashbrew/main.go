@@ -11,6 +11,9 @@ import (
 	"pault.ag/go/topsort"
 )
 
+// TODO somewhere, ensure that the Docker engine we're talking to is API version 1.22+ (Docker 1.10+)
+//   docker version --format '{{.Server.APIVersion}}'
+
 var (
 	configPath  string
 	flagsConfig *FlagsConfig

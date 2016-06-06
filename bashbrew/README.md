@@ -34,11 +34,15 @@ GLOBAL OPTIONS:
 
 ## Building
 
+Go version 1.6 or above is required for compilation of Bashbrew.
+
 Bashbrew itself is built using `gb` ([github.com/constabulary/gb](https://github.com/constabulary/gb)).
 
 Once in the `go` subdirectory, `gb build` should produce `go/bin/bashbrew`, ready for use.
 
 ## Usage
+
+Docker version 1.10 or above is required for use of Bashbrew.
 
 In general, `bashbrew build some-repo` or `bashbrew build ./some-file` should be sufficient for using the tool at a surface level, especially for testing. For more complex usage, please see the built-in help (`bashbrew --help`, `bashbrew build --help`, etc).
 
