@@ -77,6 +77,8 @@ func cmdBuild(c *cli.Context) error {
 				if err != nil {
 					return cli.NewMultiError(fmt.Errorf(`failed building %q (tags %q)`, r.RepoName, entry.TagsString()), err)
 				}
+			} else {
+				fmt.Printf("Using %s (%s)\n", cacheTag, r.Identifier())
 			}
 
 			for _, tag := range r.Tags(namespace, uniq, entry) {
