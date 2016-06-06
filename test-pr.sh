@@ -1,6 +1,12 @@
 #!/bin/bash
 set -eo pipefail
 
+# make sure we can GTFO
+trap 'echo >&2 Ctrl+C captured, exiting; exit 1' SIGINT
+
+# start with an error if Docker isn't working...
+docker version > /dev/null
+
 dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
 usage() {
@@ -19,11 +25,11 @@ pull="$1"
 shift || { usage >&2 && exit 1; }
 
 if [ -z "$BASHBREW_SECOND_STAGE" ]; then
-	docker build --pull -t bashbrew "$dir" > /dev/null
+	dockerImage='bashbrew'
 
-	args=(
-		-it --rm
-	)
+	docker build --pull -t "$dockerImage" "$dir" > /dev/null
+
+	args=()
 
 	if [ "$pull" = '0' ]; then
 		args+=( --name "bashbrew-test-local-$RANDOM" )
@@ -34,6 +40,9 @@ if [ -z "$BASHBREW_SECOND_STAGE" ]; then
 	args+=(
 		-v /var/run/docker.sock:/var/run/docker.sock
 		--group-add 0
+
+		-v /etc/passwd:/etc/passwd:ro
+		-v /etc/group:/etc/group:ro
 	)
 	if getent group docker &> /dev/null; then
 		args+=( --group-add "$(getent group docker | cut -d: -f3)" )
@@ -51,25 +60,29 @@ if [ -z "$BASHBREW_SECOND_STAGE" ]; then
 			--group-add "$(stat -c '%g' "$BASHBREW_CACHE")"
 		)
 	else
-		args+=(
-			--tmpfs /bashbrew-cache
-			-e BASHBREW_CACHE=/bashbrew-cache
-		)
+		dockerGid="$(
+			docker run -i --rm "${args[@]}" "$dockerImage" sh -e <<-'EOSH'
+				exec 2>/dev/null
+				stat -c '%g' /var/run/docker.sock \
+					|| getent group docker | cut -d: -f3
+			EOSH
+		)" || true
+		if [ "$dockerGid" ]; then
+			args+=( --group-add "$dockerGid" )
+		fi
 	fi
 
 	args+=(
 		--user "$(id -u)":"$(id -g)"
 		$(id -G | xargs -n1 echo --group-add)
-		-v /etc/passwd:/etc/passwd:ro
-		-v /etc/group:/etc/group:ro
 
 		-e BASHBREW_DEBUG
 		-e BASHBREW_SECOND_STAGE=1
 	)
 
-	cmd=( /usr/src/official-images/test-pr.sh "$pull" "$@" )
+	cmd=( ./test-pr.sh "$pull" "$@" )
 
-	exec docker run "${args[@]}" bashbrew "${cmd[@]}"
+	exec docker run -it --rm "${args[@]}" "$dockerImage" "${cmd[@]}"
 fi
 
 if [ -d .git ]; then

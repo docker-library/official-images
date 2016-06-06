@@ -26,8 +26,16 @@ ENV DIR /usr/src/official-images
 ENV PATH $DIR/bashbrew/go/bin:$PATH
 
 ENV BASHBREW_LIBRARY $DIR/library
+ENV BASHBREW_CACHE /bashbrew-cache
+
+# make sure our default cache dir exists and is writable by anyone (similar to /tmp)
+RUN mkdir -p "$BASHBREW_CACHE" \
+	&& chmod 1777 "$BASHBREW_CACHE"
+# (this allows us to decide at runtime the exact uid/gid we'd like to run as)
 
 WORKDIR $DIR
 COPY . $DIR
 
 RUN cd bashbrew/go && gb build
+
+VOLUME $BASHBREW_CACHE
