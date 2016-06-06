@@ -26,11 +26,8 @@ ENV DIR /usr/src/official-images
 ENV PATH $DIR/bashbrew/go/bin:$PATH
 
 ENV BASHBREW_LIBRARY $DIR/library
-ENV BASHBREW_CACHE /bashbrew-cache
 
 WORKDIR $DIR
 COPY . $DIR
 
 RUN cd bashbrew/go && gb build
-
-VOLUME $BASHBREW_CACHE

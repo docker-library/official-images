@@ -50,6 +50,11 @@ if [ -z "$BASHBREW_SECOND_STAGE" ]; then
 			# make sure our user in the container can read it
 			--group-add "$(stat -c '%g' "$BASHBREW_CACHE")"
 		)
+	else
+		args+=(
+			--tmpfs /bashbrew-cache
+			-e BASHBREW_CACHE=/bashbrew-cache
+		)
 	fi
 
 	args+=(
@@ -60,7 +65,6 @@ if [ -z "$BASHBREW_SECOND_STAGE" ]; then
 
 		-e BASHBREW_DEBUG
 		-e BASHBREW_SECOND_STAGE=1
-		-w /usr/src/pr
 	)
 
 	cmd=( /usr/src/official-images/test-pr.sh "$pull" "$@" )
@@ -75,9 +79,12 @@ if [ -d .git ]; then
 fi
 
 if [ "$pull" = '0' ]; then
-	cd "$(dirname "$(readlink -f "$BASH_SOURCE")")"
 	commit='FAKE'
 else
+	dir="$(mktemp -d)"
+	trap "rm -rf '$dir'" EXIT
+	cd "$dir"
+
 	# TODO we only have "git version 2.4.1" which doesn't support "clone -q" :(
 	git init -q .
 	git remote add origin https://github.com/docker-library/official-images.git
