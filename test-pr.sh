@@ -98,8 +98,6 @@ else
 	trap "rm -rf '$dir'" EXIT
 	cd "$dir"
 
-	export BASHBREW_LIBRARY="$dir/library"
-
 	# TODO we only have "git version 2.4.1" which doesn't support "clone -q" :(
 	git init -q .
 	git remote add origin https://github.com/docker-library/official-images.git
@@ -112,6 +110,8 @@ else
 
 	commit="$(git log -1 --format=format:%h "pr-$pull")"
 fi
+
+export BASHBREW_LIBRARY="$PWD/library"
 
 if [ "$#" -eq 0 ]; then
 	IFS=$'\n'
