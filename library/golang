@@ -1,46 +1,55 @@
-# maintainer: InfoSiftr <github@infosiftr.com> (@infosiftr)
-# maintainer: Johan Euphrosine <proppy@google.com> (@proppy)
+# this file is generated via https://github.com/docker-library/golang/blob/47dccaff3d745cddb490c291253bd3889e39c4bd/generate-stackbrew-library.sh
 
-1.5.4: git://github.com/docker-library/golang@d7e2a8d90a9b8f5dfd5bcd428e0c33b68c40cc19 1.5
-1.5: git://github.com/docker-library/golang@d7e2a8d90a9b8f5dfd5bcd428e0c33b68c40cc19 1.5
+Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
+             Joseph Ferguson <yosifkit@gmail.com> (@yosifkit),
+             Johan Euphrosine <proppy@google.com> (@proppy)
+GitRepo: https://github.com/docker-library/golang.git
 
-1.5.4-onbuild: git://github.com/docker-library/golang@f1f65c0ab0097a5e3d079d5a74e2468e8d47563d 1.5/onbuild
-1.5-onbuild: git://github.com/docker-library/golang@f1f65c0ab0097a5e3d079d5a74e2468e8d47563d 1.5/onbuild
 
-1.5.4-wheezy: git://github.com/docker-library/golang@d7e2a8d90a9b8f5dfd5bcd428e0c33b68c40cc19 1.5/wheezy
-1.5-wheezy: git://github.com/docker-library/golang@d7e2a8d90a9b8f5dfd5bcd428e0c33b68c40cc19 1.5/wheezy
+Tags: 1.5.4, 1.5
+GitCommit: d7e2a8d90a9b8f5dfd5bcd428e0c33b68c40cc19
+Directory: 1.5
 
-1.5.4-alpine: git://github.com/docker-library/golang@d7e2a8d90a9b8f5dfd5bcd428e0c33b68c40cc19 1.5/alpine
-1.5-alpine: git://github.com/docker-library/golang@d7e2a8d90a9b8f5dfd5bcd428e0c33b68c40cc19 1.5/alpine
+Tags: 1.5.4-onbuild, 1.5-onbuild
+GitCommit: f1f65c0ab0097a5e3d079d5a74e2468e8d47563d
+Directory: 1.5/onbuild
 
-1.6.2: git://github.com/docker-library/golang@0ce80411b9f41e9c3a21fc0a1bffba6ae761825a 1.6
-1.6: git://github.com/docker-library/golang@0ce80411b9f41e9c3a21fc0a1bffba6ae761825a 1.6
-1: git://github.com/docker-library/golang@0ce80411b9f41e9c3a21fc0a1bffba6ae761825a 1.6
-latest: git://github.com/docker-library/golang@0ce80411b9f41e9c3a21fc0a1bffba6ae761825a 1.6
+Tags: 1.5.4-wheezy, 1.5-wheezy
+GitCommit: d7e2a8d90a9b8f5dfd5bcd428e0c33b68c40cc19
+Directory: 1.5/wheezy
 
-1.6.2-onbuild: git://github.com/docker-library/golang@ce284e14cdee73fbaa8fb680011a812f272eae2e 1.6/onbuild
-1.6-onbuild: git://github.com/docker-library/golang@ce284e14cdee73fbaa8fb680011a812f272eae2e 1.6/onbuild
-1-onbuild: git://github.com/docker-library/golang@ce284e14cdee73fbaa8fb680011a812f272eae2e 1.6/onbuild
-onbuild: git://github.com/docker-library/golang@ce284e14cdee73fbaa8fb680011a812f272eae2e 1.6/onbuild
+Tags: 1.5.4-alpine, 1.5-alpine
+GitCommit: f3768925fd0ebeb966c30bc64206b0e6020de66e
+Directory: 1.5/alpine
 
-1.6.2-wheezy: git://github.com/docker-library/golang@0ce80411b9f41e9c3a21fc0a1bffba6ae761825a 1.6/wheezy
-1.6-wheezy: git://github.com/docker-library/golang@0ce80411b9f41e9c3a21fc0a1bffba6ae761825a 1.6/wheezy
-1-wheezy: git://github.com/docker-library/golang@0ce80411b9f41e9c3a21fc0a1bffba6ae761825a 1.6/wheezy
-wheezy: git://github.com/docker-library/golang@0ce80411b9f41e9c3a21fc0a1bffba6ae761825a 1.6/wheezy
+Tags: 1.6.2, 1.6, 1, latest
+GitCommit: 0ce80411b9f41e9c3a21fc0a1bffba6ae761825a
+Directory: 1.6
 
-1.6.2-alpine: git://github.com/docker-library/golang@0ce80411b9f41e9c3a21fc0a1bffba6ae761825a 1.6/alpine
-1.6-alpine: git://github.com/docker-library/golang@0ce80411b9f41e9c3a21fc0a1bffba6ae761825a 1.6/alpine
-1-alpine: git://github.com/docker-library/golang@0ce80411b9f41e9c3a21fc0a1bffba6ae761825a 1.6/alpine
-alpine: git://github.com/docker-library/golang@0ce80411b9f41e9c3a21fc0a1bffba6ae761825a 1.6/alpine
+Tags: 1.6.2-onbuild, 1.6-onbuild, 1-onbuild, onbuild
+GitCommit: ce284e14cdee73fbaa8fb680011a812f272eae2e
+Directory: 1.6/onbuild
 
-1.7beta1: git://github.com/docker-library/golang@2372c8cafe9cc958bade33ad0b8b54de8869c21f 1.7
-1.7: git://github.com/docker-library/golang@2372c8cafe9cc958bade33ad0b8b54de8869c21f 1.7
+Tags: 1.6.2-wheezy, 1.6-wheezy, 1-wheezy, wheezy
+GitCommit: 0ce80411b9f41e9c3a21fc0a1bffba6ae761825a
+Directory: 1.6/wheezy
 
-1.7beta1-onbuild: git://github.com/docker-library/golang@2372c8cafe9cc958bade33ad0b8b54de8869c21f 1.7/onbuild
-1.7-onbuild: git://github.com/docker-library/golang@2372c8cafe9cc958bade33ad0b8b54de8869c21f 1.7/onbuild
+Tags: 1.6.2-alpine, 1.6-alpine, 1-alpine, alpine
+GitCommit: f3768925fd0ebeb966c30bc64206b0e6020de66e
+Directory: 1.6/alpine
 
-1.7beta1-wheezy: git://github.com/docker-library/golang@2372c8cafe9cc958bade33ad0b8b54de8869c21f 1.7/wheezy
-1.7-wheezy: git://github.com/docker-library/golang@2372c8cafe9cc958bade33ad0b8b54de8869c21f 1.7/wheezy
+Tags: 1.7beta1, 1.7
+GitCommit: 2372c8cafe9cc958bade33ad0b8b54de8869c21f
+Directory: 1.7
 
-1.7beta1-alpine: git://github.com/docker-library/golang@ca728c5e13b90088d0b48aaf4108bbe31838d8d1 1.7/alpine
-1.7-alpine: git://github.com/docker-library/golang@ca728c5e13b90088d0b48aaf4108bbe31838d8d1 1.7/alpine
+Tags: 1.7beta1-onbuild, 1.7-onbuild
+GitCommit: 2372c8cafe9cc958bade33ad0b8b54de8869c21f
+Directory: 1.7/onbuild
+
+Tags: 1.7beta1-wheezy, 1.7-wheezy
+GitCommit: 2372c8cafe9cc958bade33ad0b8b54de8869c21f
+Directory: 1.7/wheezy
+
+Tags: 1.7beta1-alpine, 1.7-alpine
+GitCommit: f3768925fd0ebeb966c30bc64206b0e6020de66e
+Directory: 1.7/alpine
