@@ -26,6 +26,10 @@ func cmdPush(c *cli.Context) error {
 		}
 
 		for _, entry := range r.Entries() {
+			if r.SkipConstraints(entry) {
+				continue
+			}
+
 			for _, tag := range r.Tags(namespace, uniq, entry) {
 				fmt.Printf("Pushing %s\n", tag)
 				err = dockerPush(tag)
