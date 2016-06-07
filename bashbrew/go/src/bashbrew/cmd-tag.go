@@ -27,6 +27,10 @@ func cmdTag(c *cli.Context) error {
 		}
 
 		for _, entry := range r.Entries() {
+			if r.SkipConstraints(entry) {
+				continue
+			}
+
 			for _, tag := range r.Tags("", uniq, entry) {
 				namespacedTag := path.Join(namespace, tag)
 				fmt.Printf("Tagging %s\n", namespacedTag)
