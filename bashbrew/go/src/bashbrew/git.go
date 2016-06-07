@@ -125,6 +125,11 @@ func (r Repo) fetchGitRepo(entry *manifest.Manifest2822Entry) (string, error) {
 		// we create a temporary remote dir so that we can clean it up completely afterwards
 	}
 
+	if strings.HasPrefix(entry.GitRepo, "git://github.com/") {
+		fmt.Fprintf(os.Stderr, "warning: insecure protocol git:// detected: %s\n", entry.GitRepo)
+		entry.GitRepo = strings.Replace(entry.GitRepo, "git://", "https://", 1)
+	}
+
 	_, err = git("fetch", "--quiet", "--no-tags", entry.GitRepo, fetchString)
 	if err != nil {
 		return "", err
