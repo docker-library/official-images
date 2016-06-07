@@ -19,7 +19,13 @@ func cmdBuild(c *cli.Context) error {
 
 	uniq := c.Bool("uniq")
 	namespace := c.String("namespace")
-	pullMissing := c.Bool("pull-missing")
+	pull := c.String("pull")
+	switch pull {
+	case "always", "missing", "never":
+		// legit
+	default:
+		return fmt.Errorf(`invalid value for --pull: %q`, pull)
+	}
 
 	for _, repo := range repos {
 		r, err := fetch(repo)
@@ -42,9 +48,18 @@ func cmdBuild(c *cli.Context) error {
 				return cli.NewMultiError(fmt.Errorf(`failed fetching/scraping FROM for %q (tags %q)`, r.RepoName, entry.TagsString()), err)
 			}
 
-			if pullMissing && from != "scratch" {
-				_, err := dockerInspect("{{.Id}}", from)
-				if err != nil {
+			if from != "scratch" && pull != "never" {
+				doPull := false
+				switch pull {
+				case "always":
+					doPull = true
+				case "missing":
+					_, err := dockerInspect("{{.Id}}", from)
+					doPull = (err != nil)
+				default:
+					return fmt.Errorf(`unexpected value for --pull: %s`, pull)
+				}
+				if doPull {
 					fmt.Printf("Pulling %s (%s)\n", from, r.Identifier())
 					dockerPull(from)
 				}

@@ -270,10 +270,10 @@ func main() {
 				commonFlags["all"],
 				commonFlags["uniq"],
 				commonFlags["namespace"],
-				cli.BoolFlag{
-					// TODO consider switching this to be a StringFlag with values of "always", "missing", "never" (default never)
-					Name:  "pull-missing",
-					Usage: "pull missing FROM tags while building",
+				cli.StringFlag{
+					Name:  "pull",
+					Value: "missing",
+					Usage: `pull FROM before building (always, missing, never)`,
 				},
 			},
 			Before: subcommandBeforeFactory("build"),
