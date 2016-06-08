@@ -153,7 +153,7 @@ for img in "${files[@]}"; do
 	for uniqImg in "${uniqImgs[@]}"; do
 		echo
 		echo '$ bashbrew build' "$uniqImg"
-		if bashbrew build --pull-missing "$uniqImg"; then
+		if bashbrew build --pull=missing "$uniqImg"; then
 			echo
 			echo '$ test/run.sh' "$uniqImg"
 			if ! ./test/run.sh "$uniqImg"; then
