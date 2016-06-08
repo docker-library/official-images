@@ -17,7 +17,7 @@ import (
 //   the file "library/repo"
 // (repoName, tagName, man, err)
 func Fetch(library, repo string) (string, string, *Manifest2822, error) {
-	repoName := path.Base(repo)
+	repoName := filepath.Base(repo)
 	tagName := ""
 	if tagIndex := strings.IndexRune(repoName, ':'); tagIndex > 0 {
 		tagName = repoName[tagIndex+1:]
