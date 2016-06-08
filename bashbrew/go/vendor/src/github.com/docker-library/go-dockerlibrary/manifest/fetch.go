@@ -25,7 +25,7 @@ func Fetch(library, repo string) (string, string, *Manifest2822, error) {
 	}
 
 	u, err := url.Parse(repo)
-	if err == nil && u.IsAbs() {
+	if err == nil && u.IsAbs() && (u.Scheme == "http" || u.Scheme == "https") {
 		// must be remote URL!
 		resp, err := http.Get(repo)
 		if err != nil {
