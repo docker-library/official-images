@@ -1,91 +1,53 @@
-# maintainer: InfoSiftr <github@infosiftr.com> (@infosiftr)
+# this file is generated via https://github.com/docker-library/openjdk/blob/290aeeea3effd363031e81475bb66e90cb99c05f/generate-stackbrew-library.sh
 
-6b38-jdk: git://github.com/docker-library/openjdk@89851f0abc3a83cfad5248102f379d6a0bd3951a 6-jdk
-6b38: git://github.com/docker-library/openjdk@89851f0abc3a83cfad5248102f379d6a0bd3951a 6-jdk
-6-jdk: git://github.com/docker-library/openjdk@89851f0abc3a83cfad5248102f379d6a0bd3951a 6-jdk
-6: git://github.com/docker-library/openjdk@89851f0abc3a83cfad5248102f379d6a0bd3951a 6-jdk
-openjdk-6b38-jdk: git://github.com/docker-library/openjdk@89851f0abc3a83cfad5248102f379d6a0bd3951a 6-jdk
-openjdk-6b38: git://github.com/docker-library/openjdk@89851f0abc3a83cfad5248102f379d6a0bd3951a 6-jdk
-openjdk-6-jdk: git://github.com/docker-library/openjdk@89851f0abc3a83cfad5248102f379d6a0bd3951a 6-jdk
-openjdk-6: git://github.com/docker-library/openjdk@89851f0abc3a83cfad5248102f379d6a0bd3951a 6-jdk
+Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
+             Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
+GitRepo: https://github.com/docker-library/openjdk.git
 
-6b38-jre: git://github.com/docker-library/openjdk@89851f0abc3a83cfad5248102f379d6a0bd3951a 6-jre
-6-jre: git://github.com/docker-library/openjdk@89851f0abc3a83cfad5248102f379d6a0bd3951a 6-jre
-openjdk-6b38-jre: git://github.com/docker-library/openjdk@89851f0abc3a83cfad5248102f379d6a0bd3951a 6-jre
-openjdk-6-jre: git://github.com/docker-library/openjdk@89851f0abc3a83cfad5248102f379d6a0bd3951a 6-jre
+Tags: 6b38-jdk, 6b38, 6-jdk, 6, openjdk-6b38-jdk, openjdk-6b38, openjdk-6-jdk, openjdk-6
+GitCommit: 89851f0abc3a83cfad5248102f379d6a0bd3951a
+Directory: 6-jdk
 
-7u101-jdk: git://github.com/docker-library/openjdk@a3f06bcbc86d16912a309cf4538a00caf9a6100c 7-jdk
-7u101: git://github.com/docker-library/openjdk@a3f06bcbc86d16912a309cf4538a00caf9a6100c 7-jdk
-7-jdk: git://github.com/docker-library/openjdk@a3f06bcbc86d16912a309cf4538a00caf9a6100c 7-jdk
-7: git://github.com/docker-library/openjdk@a3f06bcbc86d16912a309cf4538a00caf9a6100c 7-jdk
-openjdk-7u101-jdk: git://github.com/docker-library/openjdk@a3f06bcbc86d16912a309cf4538a00caf9a6100c 7-jdk
-openjdk-7u101: git://github.com/docker-library/openjdk@a3f06bcbc86d16912a309cf4538a00caf9a6100c 7-jdk
-openjdk-7-jdk: git://github.com/docker-library/openjdk@a3f06bcbc86d16912a309cf4538a00caf9a6100c 7-jdk
-openjdk-7: git://github.com/docker-library/openjdk@a3f06bcbc86d16912a309cf4538a00caf9a6100c 7-jdk
+Tags: 6b38-jre, 6-jre, openjdk-6b38-jre, openjdk-6-jre
+GitCommit: 89851f0abc3a83cfad5248102f379d6a0bd3951a
+Directory: 6-jre
 
-7u91-jdk-alpine: git://github.com/docker-library/openjdk@f60edc7cfe9fa4d4473ef027c6fb2d5e1f6c17f9 7-jdk/alpine
-7u91-alpine: git://github.com/docker-library/openjdk@f60edc7cfe9fa4d4473ef027c6fb2d5e1f6c17f9 7-jdk/alpine
-7-jdk-alpine: git://github.com/docker-library/openjdk@f60edc7cfe9fa4d4473ef027c6fb2d5e1f6c17f9 7-jdk/alpine
-7-alpine: git://github.com/docker-library/openjdk@f60edc7cfe9fa4d4473ef027c6fb2d5e1f6c17f9 7-jdk/alpine
-openjdk-7u91-jdk-alpine: git://github.com/docker-library/openjdk@f60edc7cfe9fa4d4473ef027c6fb2d5e1f6c17f9 7-jdk/alpine
-openjdk-7u91-alpine: git://github.com/docker-library/openjdk@f60edc7cfe9fa4d4473ef027c6fb2d5e1f6c17f9 7-jdk/alpine
-openjdk-7-jdk-alpine: git://github.com/docker-library/openjdk@f60edc7cfe9fa4d4473ef027c6fb2d5e1f6c17f9 7-jdk/alpine
-openjdk-7-alpine: git://github.com/docker-library/openjdk@f60edc7cfe9fa4d4473ef027c6fb2d5e1f6c17f9 7-jdk/alpine
+Tags: 7u101-jdk, 7u101, 7-jdk, 7, openjdk-7u101-jdk, openjdk-7u101, openjdk-7-jdk, openjdk-7
+GitCommit: a3f06bcbc86d16912a309cf4538a00caf9a6100c
+Directory: 7-jdk
 
-7u101-jre: git://github.com/docker-library/openjdk@a3f06bcbc86d16912a309cf4538a00caf9a6100c 7-jre
-7-jre: git://github.com/docker-library/openjdk@a3f06bcbc86d16912a309cf4538a00caf9a6100c 7-jre
-openjdk-7u101-jre: git://github.com/docker-library/openjdk@a3f06bcbc86d16912a309cf4538a00caf9a6100c 7-jre
-openjdk-7-jre: git://github.com/docker-library/openjdk@a3f06bcbc86d16912a309cf4538a00caf9a6100c 7-jre
+Tags: 7u91-jdk-alpine, 7u91-alpine, 7-jdk-alpine, 7-alpine, openjdk-7u91-jdk-alpine, openjdk-7u91-alpine, openjdk-7-jdk-alpine, openjdk-7-alpine
+GitCommit: f60edc7cfe9fa4d4473ef027c6fb2d5e1f6c17f9
+Directory: 7-jdk/alpine
 
-7u91-jre-alpine: git://github.com/docker-library/openjdk@f60edc7cfe9fa4d4473ef027c6fb2d5e1f6c17f9 7-jre/alpine
-7-jre-alpine: git://github.com/docker-library/openjdk@f60edc7cfe9fa4d4473ef027c6fb2d5e1f6c17f9 7-jre/alpine
-openjdk-7u91-jre-alpine: git://github.com/docker-library/openjdk@f60edc7cfe9fa4d4473ef027c6fb2d5e1f6c17f9 7-jre/alpine
-openjdk-7-jre-alpine: git://github.com/docker-library/openjdk@f60edc7cfe9fa4d4473ef027c6fb2d5e1f6c17f9 7-jre/alpine
+Tags: 7u101-jre, 7-jre, openjdk-7u101-jre, openjdk-7-jre
+GitCommit: a3f06bcbc86d16912a309cf4538a00caf9a6100c
+Directory: 7-jre
 
-8u91-jdk: git://github.com/docker-library/openjdk@a0a4970a343a3c021dad760f2281d20f61931e3c 8-jdk
-8u91: git://github.com/docker-library/openjdk@a0a4970a343a3c021dad760f2281d20f61931e3c 8-jdk
-8-jdk: git://github.com/docker-library/openjdk@a0a4970a343a3c021dad760f2281d20f61931e3c 8-jdk
-8: git://github.com/docker-library/openjdk@a0a4970a343a3c021dad760f2281d20f61931e3c 8-jdk
-jdk: git://github.com/docker-library/openjdk@a0a4970a343a3c021dad760f2281d20f61931e3c 8-jdk
-latest: git://github.com/docker-library/openjdk@a0a4970a343a3c021dad760f2281d20f61931e3c 8-jdk
-openjdk-8u91-jdk: git://github.com/docker-library/openjdk@a0a4970a343a3c021dad760f2281d20f61931e3c 8-jdk
-openjdk-8u91: git://github.com/docker-library/openjdk@a0a4970a343a3c021dad760f2281d20f61931e3c 8-jdk
-openjdk-8-jdk: git://github.com/docker-library/openjdk@a0a4970a343a3c021dad760f2281d20f61931e3c 8-jdk
-openjdk-8: git://github.com/docker-library/openjdk@a0a4970a343a3c021dad760f2281d20f61931e3c 8-jdk
+Tags: 7u91-jre-alpine, 7-jre-alpine, openjdk-7u91-jre-alpine, openjdk-7-jre-alpine
+GitCommit: f60edc7cfe9fa4d4473ef027c6fb2d5e1f6c17f9
+Directory: 7-jre/alpine
 
-8u92-jdk-alpine: git://github.com/docker-library/openjdk@c6c90f5e09a5dc1a1ccd662de8210342f94c673e 8-jdk/alpine
-8u92-alpine: git://github.com/docker-library/openjdk@c6c90f5e09a5dc1a1ccd662de8210342f94c673e 8-jdk/alpine
-8-jdk-alpine: git://github.com/docker-library/openjdk@c6c90f5e09a5dc1a1ccd662de8210342f94c673e 8-jdk/alpine
-8-alpine: git://github.com/docker-library/openjdk@c6c90f5e09a5dc1a1ccd662de8210342f94c673e 8-jdk/alpine
-jdk-alpine: git://github.com/docker-library/openjdk@c6c90f5e09a5dc1a1ccd662de8210342f94c673e 8-jdk/alpine
-alpine: git://github.com/docker-library/openjdk@c6c90f5e09a5dc1a1ccd662de8210342f94c673e 8-jdk/alpine
-openjdk-8u92-jdk-alpine: git://github.com/docker-library/openjdk@c6c90f5e09a5dc1a1ccd662de8210342f94c673e 8-jdk/alpine
-openjdk-8u92-alpine: git://github.com/docker-library/openjdk@c6c90f5e09a5dc1a1ccd662de8210342f94c673e 8-jdk/alpine
-openjdk-8-jdk-alpine: git://github.com/docker-library/openjdk@c6c90f5e09a5dc1a1ccd662de8210342f94c673e 8-jdk/alpine
-openjdk-8-alpine: git://github.com/docker-library/openjdk@c6c90f5e09a5dc1a1ccd662de8210342f94c673e 8-jdk/alpine
+Tags: 8u91-jdk, 8u91, 8-jdk, 8, jdk, latest, openjdk-8u91-jdk, openjdk-8u91, openjdk-8-jdk, openjdk-8
+GitCommit: a0a4970a343a3c021dad760f2281d20f61931e3c
+Directory: 8-jdk
 
-8u91-jre: git://github.com/docker-library/openjdk@a0a4970a343a3c021dad760f2281d20f61931e3c 8-jre
-8-jre: git://github.com/docker-library/openjdk@a0a4970a343a3c021dad760f2281d20f61931e3c 8-jre
-jre: git://github.com/docker-library/openjdk@a0a4970a343a3c021dad760f2281d20f61931e3c 8-jre
-openjdk-8u91-jre: git://github.com/docker-library/openjdk@a0a4970a343a3c021dad760f2281d20f61931e3c 8-jre
-openjdk-8-jre: git://github.com/docker-library/openjdk@a0a4970a343a3c021dad760f2281d20f61931e3c 8-jre
+Tags: 8u92-jdk-alpine, 8u92-alpine, 8-jdk-alpine, 8-alpine, jdk-alpine, alpine, openjdk-8u92-jdk-alpine, openjdk-8u92-alpine, openjdk-8-jdk-alpine, openjdk-8-alpine
+GitCommit: c6c90f5e09a5dc1a1ccd662de8210342f94c673e
+Directory: 8-jdk/alpine
 
-8u92-jre-alpine: git://github.com/docker-library/openjdk@c6c90f5e09a5dc1a1ccd662de8210342f94c673e 8-jre/alpine
-8-jre-alpine: git://github.com/docker-library/openjdk@c6c90f5e09a5dc1a1ccd662de8210342f94c673e 8-jre/alpine
-jre-alpine: git://github.com/docker-library/openjdk@c6c90f5e09a5dc1a1ccd662de8210342f94c673e 8-jre/alpine
-openjdk-8u92-jre-alpine: git://github.com/docker-library/openjdk@c6c90f5e09a5dc1a1ccd662de8210342f94c673e 8-jre/alpine
-openjdk-8-jre-alpine: git://github.com/docker-library/openjdk@c6c90f5e09a5dc1a1ccd662de8210342f94c673e 8-jre/alpine
+Tags: 8u91-jre, 8-jre, jre, openjdk-8u91-jre, openjdk-8-jre
+GitCommit: a0a4970a343a3c021dad760f2281d20f61931e3c
+Directory: 8-jre
 
-9-b116-jdk: git://github.com/docker-library/openjdk@4427d56d00bbd05b6c7e0f5ce7a3a7a01b6d4177 9-jdk
-9-b116: git://github.com/docker-library/openjdk@4427d56d00bbd05b6c7e0f5ce7a3a7a01b6d4177 9-jdk
-9-jdk: git://github.com/docker-library/openjdk@4427d56d00bbd05b6c7e0f5ce7a3a7a01b6d4177 9-jdk
-9: git://github.com/docker-library/openjdk@4427d56d00bbd05b6c7e0f5ce7a3a7a01b6d4177 9-jdk
-openjdk-9-b116-jdk: git://github.com/docker-library/openjdk@4427d56d00bbd05b6c7e0f5ce7a3a7a01b6d4177 9-jdk
-openjdk-9-b116: git://github.com/docker-library/openjdk@4427d56d00bbd05b6c7e0f5ce7a3a7a01b6d4177 9-jdk
-openjdk-9-jdk: git://github.com/docker-library/openjdk@4427d56d00bbd05b6c7e0f5ce7a3a7a01b6d4177 9-jdk
-openjdk-9: git://github.com/docker-library/openjdk@4427d56d00bbd05b6c7e0f5ce7a3a7a01b6d4177 9-jdk
+Tags: 8u92-jre-alpine, 8-jre-alpine, jre-alpine, openjdk-8u92-jre-alpine, openjdk-8-jre-alpine
+GitCommit: c6c90f5e09a5dc1a1ccd662de8210342f94c673e
+Directory: 8-jre/alpine
 
-9-b116-jre: git://github.com/docker-library/openjdk@4427d56d00bbd05b6c7e0f5ce7a3a7a01b6d4177 9-jre
-9-jre: git://github.com/docker-library/openjdk@4427d56d00bbd05b6c7e0f5ce7a3a7a01b6d4177 9-jre
-openjdk-9-b116-jre: git://github.com/docker-library/openjdk@4427d56d00bbd05b6c7e0f5ce7a3a7a01b6d4177 9-jre
-openjdk-9-jre: git://github.com/docker-library/openjdk@4427d56d00bbd05b6c7e0f5ce7a3a7a01b6d4177 9-jre
+Tags: 9-b116-jdk, 9-b116, 9-jdk, 9, openjdk-9-b116-jdk, openjdk-9-b116, openjdk-9-jdk, openjdk-9
+GitCommit: 4427d56d00bbd05b6c7e0f5ce7a3a7a01b6d4177
+Directory: 9-jdk
+
+Tags: 9-b116-jre, 9-jre, openjdk-9-b116-jre, openjdk-9-jre
+GitCommit: 4427d56d00bbd05b6c7e0f5ce7a3a7a01b6d4177
+Directory: 9-jre
