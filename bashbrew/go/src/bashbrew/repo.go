@@ -37,28 +37,42 @@ func (r Repo) SkipConstraints(entry manifest.Manifest2822Entry) bool {
 	if len(entry.Constraints) == 0 {
 		if exclusiveConstraints {
 			fmt.Fprintf(os.Stderr, "skipping %q (due to exclusive constraints)\n", repoTag)
-			return true
 		}
-		return false
+		return exclusiveConstraints
 	}
 
-	for _, constraint := range constraints {
-		for _, eConstraint := range entry.Constraints {
-			not := false
-			if eConstraint[0] == '!' {
-				not = true
-				eConstraint = eConstraint[1:]
-			}
-			if constraint == eConstraint {
-				if not {
-					fmt.Fprintf(os.Stderr, "skipping %q (due to constraint %q)\n", repoTag, constraint)
+	unsatisfactory := []string{}
+
+NextConstraint:
+	for _, eConstraint := range entry.Constraints {
+		wanted := true
+		if eConstraint[0] == '!' {
+			wanted = false
+			eConstraint = eConstraint[1:]
+		}
+
+		for _, gConstraint := range constraints {
+			if gConstraint == eConstraint {
+				// if we did not want "aufs" ("!aufs") but found it, UNSATISFACTORY
+				if !wanted {
+					unsatisfactory = append(unsatisfactory, eConstraint)
 				}
-				return not
+				continue NextConstraint
 			}
+		}
+
+		// if we want "aufs" but did not find it, UNSATISFACTORY
+		if wanted {
+			unsatisfactory = append(unsatisfactory, eConstraint)
 		}
 	}
 
-	return true
+	if len(unsatisfactory) > 0 {
+		fmt.Fprintf(os.Stderr, "skipping %q (due to unsatisfactory constraints %q)\n", repoTag, unsatisfactory)
+		return true
+	}
+
+	return false
 }
 
 func (r Repo) Entries() []manifest.Manifest2822Entry {
