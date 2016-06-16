@@ -86,6 +86,9 @@ imageTests+=(
 	[julia]='
 		julia-hello-world
 	'
+	[logstash]='
+		logstash-basics
+	'
 	[memcached]='
 	'
 	[mongo]='
