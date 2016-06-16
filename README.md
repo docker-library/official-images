@@ -27,6 +27,8 @@ Also, the Hub descriptions for these images are currently stored separately in t
 
 Because the official images are intended to be learning tools for those new to Docker as well as the base images for advanced users to build their production releases, we review each proposed `Dockerfile` to ensure that it meets a minimum standard for quality and maintainability. While some of that standard is hard to define (due to subjectivity), as much as possible is defined here, while also adhering to the "Best Practices" where appropriate.
 
+A checklist which may be used by the maintainers during review can be found in [`NEW-IMAGE-CHECKLIST.md`](NEW-IMAGE-CHECKLIST.md).
+
 #### Maintainership
 
 Version bumps and security fixes should be attended to in a timely manner.
