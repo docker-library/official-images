@@ -8,3 +8,4 @@
 - [ ] 2+ dockerization review?
 - [ ] existing official images have been considered as a base? (ie, if `foobar` needs Node.js, has `FROM node:...` instead of grabbing `node` via other means been considered?)
 - [ ] if `FROM scratch`, tarballs only exist in a single commit within the associated history?
+- [ ] passes current tests? any simple new tests that might be appropriate to add? (https://github.com/docker-library/official-images/tree/master/test)
