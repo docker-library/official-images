@@ -301,6 +301,17 @@ func main() {
 			Before: subcommandBeforeFactory("push"),
 			Action: cmdPush,
 		},
+		{
+			Name:  "pull",
+			Usage: `pull namespace/repo:tag (see also "tag")`,
+			Flags: []cli.Flag{
+				commonFlags["all"],
+				commonFlags["uniq"],
+				commonFlags["namespace"],
+			},
+			Before: subcommandBeforeFactory("pull"),
+			Action: cmdPull,
+		},
 
 		{
 			Name: "children",
