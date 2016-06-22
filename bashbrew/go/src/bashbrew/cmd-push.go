@@ -16,7 +16,7 @@ func cmdPush(c *cli.Context) error {
 	namespace := c.String("namespace")
 
 	if namespace == "" {
-		return fmt.Errorf(`"--namespace" is a required flag for "tag"`)
+		return fmt.Errorf(`"--namespace" is a required flag for "push"`)
 	}
 
 	for _, repo := range repos {
