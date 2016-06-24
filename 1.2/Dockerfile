@@ -2,7 +2,7 @@
 FROM erlang:18
 
 # elixir expects utf8.
-ENV ELIXIR_VERSION=v1.2.6 \
+ENV ELIXIR_VERSION="v1.2.6" \
 	LANG=C.UTF-8
 
 RUN set -xe \
