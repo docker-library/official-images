@@ -92,6 +92,7 @@ func cmdBuild(c *cli.Context) error {
 				if err != nil {
 					return cli.NewMultiError(fmt.Errorf(`failed building %q (tags %q)`, r.RepoName, entry.TagsString()), err)
 				}
+				archive.Close() // be sure this happens sooner rather than later (defer might take a while, and we want to reap zombies more aggressively)
 			} else {
 				fmt.Printf("Using %s (%s)\n", cacheTag, r.Identifier())
 			}

@@ -35,10 +35,10 @@ func (r Repo) DockerFrom(entry *manifest.Manifest2822Entry) (string, error) {
 	}
 
 	dockerfile, err := gitShow(commit, dockerfileFile)
-	defer dockerfile.Close()
 	if err != nil {
 		return "", err
 	}
+	defer dockerfile.Close()
 
 	from, err := dockerfileFrom(dockerfile)
 	if err != nil {
