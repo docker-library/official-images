@@ -11,6 +11,7 @@ import (
 	"strings"
 
 	"github.com/docker-library/go-dockerlibrary/manifest"
+	"github.com/docker-library/go-dockerlibrary/pkg/execpipe"
 )
 
 func gitCache() string {
@@ -52,17 +53,7 @@ func getGitCommit(commit string) (string, error) {
 }
 
 func gitStream(args ...string) (io.ReadCloser, error) {
-	cmd := gitCommand(args...)
-	out, err := cmd.StdoutPipe()
-	if err != nil {
-		return nil, err
-	}
-	if err := cmd.Start(); err != nil {
-		out.Close()
-		return nil, err
-	}
-	go cmd.Wait() // make sure we get cleaned up, eventually
-	return out, nil
+	return execpipe.Run(gitCommand(args...))
 }
 
 func gitArchive(commit string, dir string) (io.ReadCloser, error) {
