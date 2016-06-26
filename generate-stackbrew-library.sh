@@ -68,7 +68,7 @@ for version in "${versions[@]}"; do
 		Directory: $version
 	EOE
 
-	for variant in slim onbuild; do
+	for variant in slim; do
 		[ -f "$version/$variant/Dockerfile" ] || continue
 
 		commit="$(dirCommit "$version/$variant")"
