@@ -86,7 +86,7 @@ func cmdBuild(c *cli.Context) error {
 				}
 				defer archive.Close()
 
-				err = dockerBuild(cacheTag, archive)
+				err = dockerBuild(cacheTag, entry.BuildArgs, archive)
 				if err != nil {
 					return cli.NewMultiError(fmt.Errorf(`failed building %q (tags %q)`, r.RepoName, entry.TagsString()), err)
 				}

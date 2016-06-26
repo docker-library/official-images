@@ -32,6 +32,7 @@ type Manifest2822Entry struct {
 	GitCommit   string
 	Directory   string
 	Constraints []string `delim:"," strip:"\n\r\t "`
+	BuildArgs   []string `delim:"," strip:"\n\r\t "`
 }
 
 var DefaultManifestEntry = Manifest2822Entry{
@@ -44,6 +45,7 @@ func (entry Manifest2822Entry) Clone() Manifest2822Entry {
 	entry.Maintainers = append([]string{}, entry.Maintainers...)
 	entry.Tags = append([]string{}, entry.Tags...)
 	entry.Constraints = append([]string{}, entry.Constraints...)
+	entry.BuildArgs = append([]string{}, entry.BuildArgs...)
 	return entry
 }
 
@@ -61,9 +63,13 @@ func (entry Manifest2822Entry) ConstraintsString() string {
 	return strings.Join(entry.Constraints, StringSeparator2822)
 }
 
+func (entry Manifest2822Entry) BuildArgsString() string {
+	return strings.Join(entry.BuildArgs, StringSeparator2822)
+}
+
 // if this method returns "true", then a.Tags and b.Tags can safely be combined (for the purposes of building)
 func (a Manifest2822Entry) SameBuildArtifacts(b Manifest2822Entry) bool {
-	return a.GitRepo == b.GitRepo && a.GitFetch == b.GitFetch && a.GitCommit == b.GitCommit && a.Directory == b.Directory && a.ConstraintsString() == b.ConstraintsString()
+	return a.GitRepo == b.GitRepo && a.GitFetch == b.GitFetch && a.GitCommit == b.GitCommit && a.Directory == b.Directory && a.ConstraintsString() == b.ConstraintsString() && a.BuildArgsString() == b.BuildArgsString()
 }
 
 // returns a new Entry with any of the values that are equal to the values in "defaults" cleared
@@ -88,6 +94,9 @@ func (entry Manifest2822Entry) ClearDefaults(defaults Manifest2822Entry) Manifes
 	}
 	if entry.ConstraintsString() == defaults.ConstraintsString() {
 		entry.Constraints = nil
+	}
+	if entry.BuildArgsString() == defaults.BuildArgsString() {
+		entry.BuildArgs = nil
 	}
 	return entry
 }
@@ -114,6 +123,9 @@ func (entry Manifest2822Entry) String() string {
 	}
 	if str := entry.ConstraintsString(); str != "" {
 		ret = append(ret, "Constraints: "+str)
+	}
+	if str := entry.BuildArgsString(); str != "" {
+		ret = append(ret, "BuildArgs: "+str)
 	}
 	return strings.Join(ret, "\n")
 }
