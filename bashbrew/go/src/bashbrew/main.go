@@ -237,6 +237,10 @@ func main() {
 			Name:  "namespace",
 			Usage: "a repo namespace to act upon/in",
 		},
+		"build-arg": cli.StringSliceFlag{
+			Name:  "build-arg",
+			Usage: "set build-time variables",
+		},
 	}
 
 	app.Commands = []cli.Command{
@@ -270,6 +274,7 @@ func main() {
 				commonFlags["all"],
 				commonFlags["uniq"],
 				commonFlags["namespace"],
+				commonFlags["build-arg"],
 				cli.StringFlag{
 					Name:  "pull",
 					Value: "missing",
