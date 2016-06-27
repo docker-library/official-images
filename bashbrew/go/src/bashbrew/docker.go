@@ -45,6 +45,10 @@ func (r Repo) DockerFrom(entry *manifest.Manifest2822Entry) (string, error) {
 		return "", err
 	}
 
+	if err := dockerfile.Close(); err != nil {
+		return "", err
+	}
+
 	// make sure to add ":latest" if it's implied
 	from = latestizeRepoTag(from)
 
