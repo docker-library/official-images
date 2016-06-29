@@ -19,6 +19,7 @@ func cmdBuild(c *cli.Context) error {
 
 	uniq := c.Bool("uniq")
 	namespace := c.String("namespace")
+	build_args := c.StringSlice("build-args")
 	pull := c.String("pull")
 	switch pull {
 	case "always", "missing", "never":
@@ -88,7 +89,7 @@ func cmdBuild(c *cli.Context) error {
 				}
 				defer archive.Close()
 
-				err = dockerBuild(cacheTag, archive)
+				err = dockerBuild(cacheTag, build_args, archive)
 				if err != nil {
 					return cli.NewMultiError(fmt.Errorf(`failed building %q (tags %q)`, r.RepoName, entry.TagsString()), err)
 				}
