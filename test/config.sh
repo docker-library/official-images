@@ -26,6 +26,9 @@ testAlias+=(
 
 	[mariadb]='mysql'
 	[percona]='mysql'
+
+	[hola-mundo]='hello-world'
+	[hello-seattle]='hello-world'
 )
 
 imageTests+=(
