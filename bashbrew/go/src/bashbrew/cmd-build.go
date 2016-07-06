@@ -65,12 +65,10 @@ func cmdBuild(c *cli.Context) error {
 				}
 			}
 
-			cacheHash, err := r.dockerCacheHash(&entry)
+			cacheTag, err := r.DockerCacheName(&entry)
 			if err != nil {
 				return cli.NewMultiError(fmt.Errorf(`failed calculating "cache hash" for %q (tags %q)`, r.RepoName, entry.TagsString()), err)
 			}
-
-			cacheTag := "bashbrew/cache:" + cacheHash
 
 			// check whether we've already built this artifact
 			_, err = dockerInspect("{{.Id}}", cacheTag)
