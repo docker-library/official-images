@@ -82,6 +82,14 @@ func dockerfileFrom(dockerfile io.Reader) (string, error) {
 	return "", nil
 }
 
+func (r Repo) DockerCacheName(entry *manifest.Manifest2822Entry) (string, error) {
+	cacheHash, err := r.dockerCacheHash(entry)
+	if err != nil {
+		return "", err
+	}
+	return "bashbrew/cache:" + cacheHash, err
+}
+
 func (r Repo) dockerCacheHash(entry *manifest.Manifest2822Entry) (string, error) {
 	uniqueBits, err := r.dockerBuildUniqueBits(entry)
 	if err != nil {
