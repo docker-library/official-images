@@ -15,22 +15,19 @@ cid="$(docker run -d "$serverImage")"
 trap "docker rm -vf $cid > /dev/null" EXIT
 
 _request() {
-	local method="$1"
-	shift
-
 	local url="${1#/}"
 	shift
 
 	docker run --rm --link "$cid":tomcat "$clientImage" \
-		curl -fs -X"$method" "$@" "http://tomcat:8080/$url"
+		wget -q -O - "$@" "http://tomcat:8080/$url"
 }
 
 # Make sure that Tomcat is listening
-. "$dir/../../retry.sh" '[ "$(_request GET / --output /dev/null || echo $?)" != 7 ]'
+. "$dir/../../retry.sh" '_request / &> /dev/null'
 
 # Check that we can request /
-[ -n "$(_request GET '/')" ]
+[ -n "$(_request '/')" ]
 
 # Check that the example "Hello World" servlet works
-helloWorld="$(_request GET '/examples/servlets/servlet/HelloWorldExample')"
+helloWorld="$(_request '/examples/servlets/servlet/HelloWorldExample')"
 [[ "$helloWorld" == *'Hello World!'* ]]
