@@ -62,6 +62,9 @@ imageTests+=(
 	[erlang]='
 		erlang-hello-world
 	'
+	[fsharp]='
+		fsharp-hello-world
+	'
 	[gcc]='
 		gcc-c-hello-world
 		gcc-cpp-hello-world
