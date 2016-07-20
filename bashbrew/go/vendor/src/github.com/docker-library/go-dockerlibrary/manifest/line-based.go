@@ -46,22 +46,29 @@ func ParseLineBased(readerIn io.Reader) (*Manifest2822, error) {
 	manifest := &Manifest2822{
 		Global: DefaultManifestEntry.Clone(),
 	}
-	manifest.Global.Maintainers = []string{`TODO parse old-style "maintainer:" comment lines?`}
 	manifest.Global.GitFetch = DefaultLineBasedFetch
 
 	for {
 		line, err := reader.ReadString('\n')
 
 		line = strings.TrimSpace(line)
-		if len(line) > 0 && line[0] != '#' {
-			entry, parseErr := ParseLineBasedLine(line, manifest.Global)
-			if parseErr != nil {
-				return nil, parseErr
-			}
+		if len(line) > 0 {
+			if line[0] == '#' {
+				maintainerLine := strings.TrimPrefix(line, "# maintainer: ")
+				if line != maintainerLine {
+					// if the prefix was removed, it must be a maintainer line!
+					manifest.Global.Maintainers = append(manifest.Global.Maintainers, maintainerLine)
+				}
+			} else {
+				entry, parseErr := ParseLineBasedLine(line, manifest.Global)
+				if parseErr != nil {
+					return nil, parseErr
+				}
 
-			err = manifest.AddEntry(*entry)
-			if err != nil {
-				return nil, err
+				err = manifest.AddEntry(*entry)
+				if err != nil {
+					return nil, err
+				}
 			}
 		}
 
