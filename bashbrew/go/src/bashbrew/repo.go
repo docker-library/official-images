@@ -31,6 +31,10 @@ func (r Repo) Identifier() string {
 	return r.RepoName
 }
 
+func (r Repo) EntryIdentifier(entry manifest.Manifest2822Entry) string {
+	return r.RepoName + ":" + entry.Tags[0]
+}
+
 func (r Repo) SkipConstraints(entry manifest.Manifest2822Entry) bool {
 	repoTag := r.RepoName + ":" + entry.Tags[0]
 

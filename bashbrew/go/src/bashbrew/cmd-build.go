@@ -60,7 +60,7 @@ func cmdBuild(c *cli.Context) error {
 					return fmt.Errorf(`unexpected value for --pull: %s`, pull)
 				}
 				if doPull {
-					fmt.Printf("Pulling %s (%s)\n", from, r.Identifier())
+					fmt.Printf("Pulling %s (%s)\n", from, r.EntryIdentifier(entry))
 					dockerPull(from)
 				}
 			}
@@ -73,7 +73,7 @@ func cmdBuild(c *cli.Context) error {
 			// check whether we've already built this artifact
 			_, err = dockerInspect("{{.Id}}", cacheTag)
 			if err != nil {
-				fmt.Printf("Building %s (%s)\n", cacheTag, r.Identifier())
+				fmt.Printf("Building %s (%s)\n", cacheTag, r.EntryIdentifier(entry))
 
 				commit, err := r.fetchGitRepo(&entry)
 				if err != nil {
@@ -92,7 +92,7 @@ func cmdBuild(c *cli.Context) error {
 				}
 				archive.Close() // be sure this happens sooner rather than later (defer might take a while, and we want to reap zombies more aggressively)
 			} else {
-				fmt.Printf("Using %s (%s)\n", cacheTag, r.Identifier())
+				fmt.Printf("Using %s (%s)\n", cacheTag, r.EntryIdentifier(entry))
 			}
 
 			for _, tag := range r.Tags(namespace, uniq, entry) {
