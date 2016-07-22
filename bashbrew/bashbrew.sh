@@ -403,6 +403,7 @@ while [ "$#" -gt 0 ]; do
 							else
 								"$docker" rmi -f "$namespace/$repoTag-$dateStamp"
 								"$docker" rmi -f "$namespace/$repoTag"
+								"$docker" rmi -f "$repoTag"
 							fi
 						fi
 					fi
@@ -413,6 +414,7 @@ while [ "$#" -gt 0 ]; do
 						"$docker" rmi -f "$namespace/$repoTag-$dateStamp"
 					fi
 					"$docker" rmi -f "$namespace/$repoTag"
+					"$docker" rmi -f "$repoTag"
 				fi
 			done
 			;;
