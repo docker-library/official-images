@@ -1,6 +1,13 @@
 #!/bin/bash
 set -eo pipefail
 
+# TODO something clever with this pattern to get the exact list of _tags_ which have changed, not just repos:
+#format='{{ range .Entries }}{{ join " " (join ":" $.RepoName (.Tags | first)) .GitRepo .GitFetch .GitCommit .Directory }}{{ "\n" }}{{ end }}'
+#comm -13 \
+#	<(bashbrew cat -f "$format" https://github.com/docker-library/official-images/raw/master/library/docker | sort) \
+#	<(bashbrew cat -f "$format" https://raw.githubusercontent.com/infosiftr/stackbrew/d92ffa4b5f8a558c22c5d0a7e0f33bff8fae990b/library/docker | sort) \
+#	| cut -d' ' -f1
+
 # make sure we can GTFO
 trap 'echo >&2 Ctrl+C captured, exiting; exit 1' SIGINT
 
