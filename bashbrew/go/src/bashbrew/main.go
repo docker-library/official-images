@@ -26,6 +26,14 @@ var (
 
 	debugFlag  = false
 	noSortFlag = false
+
+	// separated so that FlagsConfig.ApplyTo can access them
+	flagEnvVars = map[string]string{
+		"debug":   "BASHBREW_DEBUG",
+		"config":  "BASHBREW_CONFIG",
+		"library": "BASHBREW_LIBRARY",
+		"cache":   "BASHBREW_CACHE",
+	}
 )
 
 func initDefaultConfigPath() string {
@@ -144,7 +152,7 @@ func main() {
 	app.Flags = []cli.Flag{
 		cli.BoolFlag{
 			Name:   "debug",
-			EnvVar: "BASHBREW_DEBUG",
+			EnvVar: flagEnvVars["debug"],
 			Usage:  `enable more output (esp. all "docker build" output instead of only output on failure)`,
 		},
 		cli.BoolFlag{
@@ -164,19 +172,19 @@ func main() {
 		cli.StringFlag{
 			Name:   "config",
 			Value:  initDefaultConfigPath(),
-			EnvVar: "BASHBREW_CONFIG",
+			EnvVar: flagEnvVars["config"],
 			Usage:  `where default "flags" configuration can be overridden more persistently`,
 		},
 		cli.StringFlag{
 			Name:   "library",
 			Value:  filepath.Join(os.Getenv("HOME"), "docker", "official-images", "library"),
-			EnvVar: "BASHBREW_LIBRARY",
+			EnvVar: flagEnvVars["library"],
 			Usage:  "where the bodies are buried",
 		},
 		cli.StringFlag{
 			Name:   "cache",
 			Value:  initDefaultCachePath(),
-			EnvVar: "BASHBREW_CACHE",
+			EnvVar: flagEnvVars["cache"],
 			Usage:  "where the git wizardry is stashed",
 		},
 	}

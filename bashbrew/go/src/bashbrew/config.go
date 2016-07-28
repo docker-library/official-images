@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"io"
 	"os"
+	"strings"
 
 	"github.com/codegangsta/cli"
 	"github.com/docker-library/go-dockerlibrary/pkg/stripper"
@@ -98,7 +99,7 @@ func (config FlagsConfig) ApplyTo(cmd string, c *cli.Context) error {
 		vars["global"] = nil
 	}
 	for key, val := range vars["global"] {
-		if !c.GlobalIsSet(key) {
+		if !c.GlobalIsSet(key) && !isEnvVarSet(flagEnvVars[key]) {
 			switch val.(type) {
 			case string:
 				strVal := val.(string)
@@ -120,7 +121,7 @@ func (config FlagsConfig) ApplyTo(cmd string, c *cli.Context) error {
 		}
 	}
 	for key, val := range vars["local"] {
-		if !c.IsSet(key) {
+		if !c.IsSet(key) && !isEnvVarSet(flagEnvVars[key]) {
 			switch val.(type) {
 			case string:
 				strVal := val.(string)
@@ -142,6 +143,23 @@ func (config FlagsConfig) ApplyTo(cmd string, c *cli.Context) error {
 		}
 	}
 	return nil
+}
+
+// https://github.com/urfave/cli/blob/73aa67b7a20db7514b1c086866469c49bc93a569/altsrc/flag.go#L237-L251
+func isEnvVarSet(envVars string) bool {
+	for _, envVar := range strings.Split(envVars, ",") {
+		envVar = strings.TrimSpace(envVar)
+		if envVal := os.Getenv(envVar); envVal != "" {
+			// TODO: Can't use this for bools as
+			// set means that it was true or false based on
+			// Bool flag type, should work for other types
+			if len(envVal) > 0 {
+				return true
+			}
+		}
+	}
+
+	return false
 }
 
 func (ce FlagsConfigEntry) String() string {
