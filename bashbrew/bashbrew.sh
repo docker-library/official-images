@@ -21,6 +21,47 @@ logs="$(readlink -f "$logs")"
 
 self="$(basename "$0")"
 
+push_image() {
+	for namespace in $namespaces; do
+		if [ "$namespace" = '_' ]; then
+			# can't "docker push debian"; skip this namespace
+			continue
+		fi
+
+		tag="${repoTag#*:}"
+
+		if [ "$doPush" ]; then
+			echo "Pushing $namespace/$repoTag..."
+			if ! "$docker" push "$namespace/$repoTag" &>> "$thisLog" < /dev/null; then
+				echo >&2 "- $namespace/$repoTag failed to push; see $thisLog"
+				didFail=1
+				continue
+			else
+				if [ "$doDatestamp" ] && [ "$tag" != "latest" ]; then
+					echo "Pushing $namespace/$repoTag-$dateStamp..."
+					if ! "$docker" push "$namespace/$repoTag-$dateStamp" &>> "$thisLog" < /dev/null; then
+						echo >&2 "- $namespace/$repoTag-$dateStamp failed to push; see $thisLog"
+						didFail=1
+						continue
+					else
+						"$docker" rmi -f "$namespace/$repoTag-$dateStamp"
+						"$docker" rmi -f "$namespace/$repoTag"
+						"$docker" rmi -f "$repoTag"
+					fi
+				fi
+			fi
+		else
+			echo "$docker push" "$namespace/$repoTag"
+			if [ "$doDatestamp" ] && [ "$tag" != "latest" ]; then
+				echo "$docker push" "$namespace/$repoTag-$dateStamp"
+				"$docker" rmi -f "$namespace/$repoTag-$dateStamp"
+			fi
+			"$docker" rmi -f "$namespace/$repoTag"
+			"$docker" rmi -f "$repoTag"
+		fi
+	done
+}
+
 usage() {
 	cat <<EOUSAGE
 
@@ -367,6 +408,7 @@ while [ "$#" -gt 0 ]; do
 						fi
 					fi
 				done
+				push_image
 			fi
 			;;
 		list)
@@ -379,44 +421,7 @@ while [ "$#" -gt 0 ]; do
 			done
 			;;
 		push)
-			for namespace in $namespaces; do
-				if [ "$namespace" = '_' ]; then
-					# can't "docker push debian"; skip this namespace
-					continue
-				fi
-
-				tag="${repoTag#*:}"
-
-				if [ "$doPush" ]; then
-					echo "Pushing $namespace/$repoTag..."
-					if ! "$docker" push "$namespace/$repoTag" &>> "$thisLog" < /dev/null; then
-						echo >&2 "- $namespace/$repoTag failed to push; see $thisLog"
-						didFail=1
-						continue
-					else
-						if [ "$doDatestamp" ] && [ "$tag" != "latest" ]; then
-							echo "Pushing $namespace/$repoTag-$dateStamp..."
-							if ! "$docker" push "$namespace/$repoTag-$dateStamp" &>> "$thisLog" < /dev/null; then
-								echo >&2 "- $namespace/$repoTag-$dateStamp failed to push; see $thisLog"
-								didFail=1
-								continue
-							else
-								"$docker" rmi -f "$namespace/$repoTag-$dateStamp"
-								"$docker" rmi -f "$namespace/$repoTag"
-								"$docker" rmi -f "$repoTag"
-							fi
-						fi
-					fi
-				else
-					echo "$docker push" "$namespace/$repoTag"
-					if [ "$doDatestamp" ] && [ "$tag" != "latest" ]; then
-						echo "$docker push" "$namespace/$repoTag-$dateStamp"
-						"$docker" rmi -f "$namespace/$repoTag-$dateStamp"
-					fi
-					"$docker" rmi -f "$namespace/$repoTag"
-					"$docker" rmi -f "$repoTag"
-				fi
-			done
+			push_image
 			;;
 	esac
 done
