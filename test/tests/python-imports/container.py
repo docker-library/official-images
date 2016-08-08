@@ -1,4 +1,5 @@
 import curses
+import dbm
 import readline
 
 import bz2
