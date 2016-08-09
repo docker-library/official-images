@@ -227,11 +227,18 @@ The filename of a definition file will determine the name of the image repositor
 
 The manifest file format is officially based on [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt), and as such should be familiar to folks who are already familiar with the "headers" of many popular internet protocols/formats such as HTTP or email.
 
+The primary additions are inspired by the way Debian commonly uses 2822 -- namely, lines starting with `#` are ignored and "paragraphs" (or "entries") are separated by a blank line.
+
+The first entry is the "global" metadata for the image. The only required field in the global entry is `Maintainers`, whose value is comma-separated in the format of `Name <email> (@github)` or `Name (@github)`. Any field specified in the global entry will be the default for the rest of the entries/paragraphs and can be overridden in an individual paragraph.
+
+	# this is a comment and will be ignored
 	Maintainers: John Smith <jsmith@example.com> (@example-jsmith),
 	             Anne Smith <asmith@example.com> (@example-asmith)
+	GitRepo: https://github.com/docker-library/wordpress.git
+	
+	# this is also a comment, and will also be ignored
 	
 	Tags: 4.1.1, 4.1, 4, latest
-	GitRepo: https://github.com/docker-library/wordpress.git
 	GitCommit: bbef6075afa043cbfe791b8de185105065c02c01
 	
 	Tags: 2.6.17, 2.6
@@ -245,6 +252,7 @@ The manifest file format is officially based on [RFC 2822](https://www.ietf.org/
 	GitCommit: 0d21bc58cd26da2a0a59588affc506b977d6a846
 	Directory: docker
 	Constraints: !aufs
+	Maintainers: Bob Smith (@example-bsmith)
 
 Bashbrew will fetch code out of the Git repository (`GitRepo`) at the commit specified (`GitCommit`). If the commit referenced is not available by fetching `master` of the associated `GitRepo`, it becomes necessary to supply a value for `GitFetch` in order to tell Bashbrew what ref to fetch in order to get the commit necessary.
 
