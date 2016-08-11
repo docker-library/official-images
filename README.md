@@ -223,6 +223,14 @@ It is highly recommended that you browse some of the existing `library/` file co
 
 The filename of a definition file will determine the name of the image repository it creates on the Docker Hub. For example, the `library/ubuntu` file will create tags in the `ubuntu` repository.
 
+### Tags and aliases
+
+The tags of a repository should reflect upstream's versions or variations. For example, Ubuntu 14.04 is also known as Ubuntu Trusty Tahr, but often as simply Ubuntu Trusty (especially in usage), so `ubuntu:14.04` (version number) and `ubuntu:trusty` (version name) are appropriate aliases for the same image contents. In Docker, the `latest` tag is a special case, but it's a bit of a misnomer; `latest` really is the "default" tag. When one does `docker run xyz`, Docker interprets that to mean `docker run xyz:latest`. Given that background, no other tag ever contains the string `latest`, since it's not something users are expected or encouraged to actually type out (ie, `xyz:latest` should really be used as simply `xyz`). Put another way, having an alias for the "highest 2.2-series release of XYZ" should be `xyz:2.2`, not `xyz:2.2-latest`. Similarly, if there is an Alpine variant of `xyz:latest`, it should be aliased as `xyz:alpine`, not `xyz:alpine-latest` or `xyz:latest-alpine`.
+
+It is strongly encouraged that version number tags be given aliases which make it easy for the user to stay on the "most recent" release of a particular series. For example, given currently supported XYZ Software versions of 2.3.7 and 2.2.4, suggested aliases would be `Tags: 2.3.7, 2.3, 2, latest` and `Tags: 2.2.4, 2.2`, respectively. In this example, the user can use `xyz:2.2` to easily use the most recent patch release of the 2.2 series, or `xyz:2` if less granularity is needed (Python is a good example of where that's most obviously useful -- `python:2` and `python:3` are very different, and can be thought of as the `latest` tag for each of the major release tracks of Python).
+
+As described above, `latest` is really "default", so the image that it is an alias for should reflect which version or variation of the software users should use if they do not know or do not care which version they use. Using Ubuntu as an example, `ubuntu:latest` points to the most recent LTS release, given that it is what the majority of users should be using if they know they want Ubuntu but do not know or care which version (especially considering it will be the most "stable" and well-supported release at any given time).
+
 ### Instruction format
 
 The manifest file format is officially based on [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt), and as such should be familiar to folks who are already familiar with the "headers" of many popular internet protocols/formats such as HTTP or email.
