@@ -187,6 +187,10 @@ globalExcludeTests+=(
 	[swarm_override-cmd]=1
 	[traefik_override-cmd]=1
 
+	# clearlinux has no /etc/password
+	# https://github.com/docker-library/official-images/pull/1721#issuecomment-234128477
+	[clearlinux_no-hard-coded-passwords]=1
+
 	# no "native" dependencies
 	[ruby:alpine_ruby-bundler]=1
 	[ruby:alpine_ruby-gems]=1
