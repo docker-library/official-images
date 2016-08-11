@@ -1,5 +1,6 @@
 #!/bin/bash
 set -eo pipefail
+shopt -s dotglob
 
 # make sure we can GTFO
 trap 'echo >&2 Ctrl+C captured, exiting; exit 1' SIGINT
