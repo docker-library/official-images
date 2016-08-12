@@ -1,4 +1,4 @@
-# this file is generated via https://github.com/docker-library/golang/blob/842f6e59d263db5fc85fb177c173c61a6306fe78/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/golang/blob/be255991e4ba03b3755797d8de4d7304d6edb38a/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit),
@@ -21,6 +21,11 @@ Tags: 1.5.4-alpine, 1.5-alpine
 GitCommit: 5a84ebfbf3c55674dd6f36c66828c2e7461f2f0b
 Directory: 1.5/alpine
 
+Tags: 1.5.4-windowsservercore, 1.5-windowsservercore
+GitCommit: 83760719bbaadb8d778aa48d53bf2e9d9bd55741
+Directory: 1.5/windows/windowsservercore
+Constraints: windowsservercore
+
 Tags: 1.6.3, 1.6, 1, latest
 GitCommit: 9f666dc2f4f51df564613f787d28b3a2353243e0
 Directory: 1.6
@@ -37,6 +42,11 @@ Tags: 1.6.3-alpine, 1.6-alpine, 1-alpine, alpine
 GitCommit: 9f666dc2f4f51df564613f787d28b3a2353243e0
 Directory: 1.6/alpine
 
+Tags: 1.6.3-windowsservercore, 1.6-windowsservercore, 1-windowsservercore, windowsservercore
+GitCommit: 83760719bbaadb8d778aa48d53bf2e9d9bd55741
+Directory: 1.6/windows/windowsservercore
+Constraints: windowsservercore
+
 Tags: 1.7rc6, 1.7
 GitCommit: 14bd36d716dfedf39bce5a2ac0b06f09f1049985
 Directory: 1.7
@@ -52,3 +62,8 @@ Directory: 1.7/wheezy
 Tags: 1.7rc6-alpine, 1.7-alpine
 GitCommit: 14bd36d716dfedf39bce5a2ac0b06f09f1049985
 Directory: 1.7/alpine
+
+Tags: 1.7rc6-windowsservercore, 1.7-windowsservercore
+GitCommit: 83760719bbaadb8d778aa48d53bf2e9d9bd55741
+Directory: 1.7/windows/windowsservercore
+Constraints: windowsservercore
