@@ -1,20 +1,20 @@
-# maintainer: NGINX Docker Maintainers <docker-maint@nginx.com> (@nginxinc)
+# this file is generated via https://github.com/nginxinc/docker-nginx/blob/933bd40ea71c32072826194272bb77bd35e9a04c/generate-stackbrew-library.sh
 
-latest: git://github.com/nginxinc/docker-nginx@11fc019b2be3ad51ba5d097b1857a099c4056213 mainline/jessie
-1: git://github.com/nginxinc/docker-nginx@11fc019b2be3ad51ba5d097b1857a099c4056213 mainline/jessie
-1.11: git://github.com/nginxinc/docker-nginx@11fc019b2be3ad51ba5d097b1857a099c4056213 mainline/jessie
-1.11.1: git://github.com/nginxinc/docker-nginx@11fc019b2be3ad51ba5d097b1857a099c4056213 mainline/jessie
+Maintainers: NGINX Docker Maintainers <docker-maint@nginx.com> (@nginxinc)
+GitRepo: https://github.com/nginxinc/docker-nginx.git
 
-stable: git://github.com/nginxinc/docker-nginx@11fc019b2be3ad51ba5d097b1857a099c4056213 stable/jessie
-1.10: git://github.com/nginxinc/docker-nginx@11fc019b2be3ad51ba5d097b1857a099c4056213 stable/jessie
-1.10.1: git://github.com/nginxinc/docker-nginx@11fc019b2be3ad51ba5d097b1857a099c4056213 stable/jessie
+Tags: 1.11.3, mainline, 1, 1.11, latest
+GitCommit: 1f7e3c6473c2c6211c305d85cdfcfd733fe1b348
+Directory: mainline/jessie
 
-mainline-alpine: git://github.com/nginxinc/docker-nginx@11fc019b2be3ad51ba5d097b1857a099c4056213 mainline/alpine
-alpine: git://github.com/nginxinc/docker-nginx@11fc019b2be3ad51ba5d097b1857a099c4056213 mainline/alpine
-1-alpine: git://github.com/nginxinc/docker-nginx@11fc019b2be3ad51ba5d097b1857a099c4056213 mainline/alpine
-1.11-alpine: git://github.com/nginxinc/docker-nginx@11fc019b2be3ad51ba5d097b1857a099c4056213 mainline/alpine
-1.11.1-alpine: git://github.com/nginxinc/docker-nginx@11fc019b2be3ad51ba5d097b1857a099c4056213 mainline/alpine
+Tags: 1.11.3-alpine, mainline-alpine, 1-alpine, 1.11-alpine, alpine
+GitCommit: e117bd83e9befe5582bc1da8f72248398fffa16c
+Directory: mainline/alpine
 
-stable-alpine: git://github.com/nginxinc/docker-nginx@11fc019b2be3ad51ba5d097b1857a099c4056213 stable/alpine
-1.10-alpine: git://github.com/nginxinc/docker-nginx@11fc019b2be3ad51ba5d097b1857a099c4056213 stable/alpine
-1.10.1-alpine: git://github.com/nginxinc/docker-nginx@11fc019b2be3ad51ba5d097b1857a099c4056213 stable/alpine
+Tags: 1.10.1, stable, 1.10
+GitCommit: 11fc019b2be3ad51ba5d097b1857a099c4056213
+Directory: stable/jessie
+
+Tags: 1.10.1-alpine, stable-alpine, 1.10-alpine
+GitCommit: e117bd83e9befe5582bc1da8f72248398fffa16c
+Directory: stable/alpine
