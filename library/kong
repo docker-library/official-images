@@ -1,4 +1,7 @@
-# maintainer: Mashape Docker Maintainers <support@mashape.com> (@mashape)
+Maintainers: Mashape Docker Maintainers <support@mashape.com> (@mashape)
+GitRepo: https://github.com/Mashape/docker-kong.git
+# needs "Constraints" to match "centos" (which this image is "FROM")
+Constraints: !aufs
 
-0.9.0: git://github.com/Mashape/docker-kong@2260a724f914c2155f6b70bf5aa80732ebdf6497
-latest: git://github.com/Mashape/docker-kong@2260a724f914c2155f6b70bf5aa80732ebdf6497
+Tags: 0.9.0, latest
+GitCommit: 2260a724f914c2155f6b70bf5aa80732ebdf6497
