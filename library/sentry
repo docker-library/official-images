@@ -1,17 +1,20 @@
-# maintainer: Matt Robenolt <matt@getsentry.com> (@mattrobenolt)
+# this file is generated via https://github.com/getsentry/docker-sentry/blob/22e75e5254b5707b77a747cd4e90bc4327f2ce9b/generate-stackbrew-library.sh
 
-8.3.3: git://github.com/getsentry/docker-sentry@2dc5abbda0e68da3519637941f796f56e886ca88 8.3
-8.3: git://github.com/getsentry/docker-sentry@2dc5abbda0e68da3519637941f796f56e886ca88 8.3
+Maintainers: Matt Robenolt <matt@getsentry.com> (@mattrobenolt)
+GitRepo: https://github.com/getsentry/docker-sentry.git
 
-8.3.3-onbuild: git://github.com/getsentry/docker-sentry@c05ef824c01a4f2b010c2acd24031b4d22f88944 8.3/onbuild
-8.3-onbuild: git://github.com/getsentry/docker-sentry@c05ef824c01a4f2b010c2acd24031b4d22f88944 8.3/onbuild
+Tags: 8.6.0, 8.6
+GitCommit: 2bef8f6386c891f9b8ce1d6940f0aff81c25d475
+Directory: 8.6
 
-8.4.0: git://github.com/getsentry/docker-sentry@80218c227b188fad17575040421d600303c5f7bf 8.4
-8.4: git://github.com/getsentry/docker-sentry@80218c227b188fad17575040421d600303c5f7bf 8.4
-8: git://github.com/getsentry/docker-sentry@80218c227b188fad17575040421d600303c5f7bf 8.4
-latest: git://github.com/getsentry/docker-sentry@80218c227b188fad17575040421d600303c5f7bf 8.4
+Tags: 8.6.0-onbuild, 8.6-onbuild
+GitCommit: 09d2b56ded2f669f40d5295bfe36529bbafb914d
+Directory: 8.6/onbuild
 
-8.4.0-onbuild: git://github.com/getsentry/docker-sentry@80218c227b188fad17575040421d600303c5f7bf 8.4/onbuild
-8.4-onbuild: git://github.com/getsentry/docker-sentry@80218c227b188fad17575040421d600303c5f7bf 8.4/onbuild
-8-onbuild: git://github.com/getsentry/docker-sentry@80218c227b188fad17575040421d600303c5f7bf 8.4/onbuild
-onbuild: git://github.com/getsentry/docker-sentry@80218c227b188fad17575040421d600303c5f7bf 8.4/onbuild
+Tags: 8.7.0, 8.7, 8, latest
+GitCommit: 2bef8f6386c891f9b8ce1d6940f0aff81c25d475
+Directory: 8.7
+
+Tags: 8.7.0-onbuild, 8.7-onbuild, 8-onbuild, onbuild
+GitCommit: 22e75e5254b5707b77a747cd4e90bc4327f2ce9b
+Directory: 8.7/onbuild

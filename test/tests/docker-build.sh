@@ -34,6 +34,6 @@ if [ "$onbuilds" -gt 0 ]; then
 	mv "$tmp/Dockerfile.new" "$tmp/Dockerfile"
 fi
 
-cp -aL "$dir" "$tmp/dir"
+cp -RL "$dir" "$tmp/dir"
 
 docker build -t "$imageTag" "$tmp" > /dev/null

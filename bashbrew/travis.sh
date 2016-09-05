@@ -4,6 +4,7 @@ set -e
 cd "$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
 repos=( --all )
+extraCommands=
 
 upstreamRepo='docker-library/official-images'
 upstreamBranch='master'
@@ -23,8 +24,10 @@ if [ "$TRAVIS_BRANCH" = 'master' -a "$TRAVIS_PULL_REQUEST" = 'false' ]; then
 elif [ "$(git diff --numstat "$UPSTREAM...$HEAD" -- . | wc -l)" -ne 0 ]; then
 	# changes in bashbrew/ -- keep "--all" so we test the bashbrew script changes appropriately
 	echo >&2 'Changes in bashbrew/ detected!'
+	extraCommands=1
 else
 	repos=( $(git diff --numstat "$UPSTREAM...$HEAD" -- ../library | awk -F '/' '{ print $2 }') )
+	extraCommands=1
 fi
 
 if [ "${#repos[@]}" -eq 0 ]; then
@@ -32,12 +35,22 @@ if [ "${#repos[@]}" -eq 0 ]; then
 	exit
 fi
 
-# --no-build because we has no Docker in Travis :)
-# TODO that will change eventually!
+export BASHBREW_LIBRARY="$(dirname "$PWD")/library"
 
-set -x
-./bashbrew.sh list --uniq "${repos[@]}"
-./bashbrew.sh list "${repos[@]}"
-./bashbrew.sh build --no-build "${repos[@]}"
-./bashbrew.sh push --no-push "${repos[@]}"
-# TODO ./bashbrew.sh list "${repos[@]}" | xargs ../test/run.sh
+cmds=(
+	'list'
+	'list --uniq'
+	'cat'
+)
+if [ "$extraCommands" ]; then
+	cmds+=(
+		'list --build-order'
+		'from'
+	)
+fi
+
+export PS4=$'\n\n$ '
+for cmd in "${cmds[@]}"; do
+	( set -x && bashbrew $cmd "${repos[@]}" )
+done
+echo; echo

@@ -1,34 +1,29 @@
-# maintainer: InfoSiftr <github@infosiftr.com> (@infosiftr)
+# this file is generated via https://github.com/docker-library/pypy/blob/089d2c270aeab809000d301b409d200914eb5aa9/generate-stackbrew-library.sh
 
-2-5.1.1: git://github.com/docker-library/pypy@d0f1f8cf3dd4a4feefa0f6d101e40583429f647f 2
-2-5.1: git://github.com/docker-library/pypy@d0f1f8cf3dd4a4feefa0f6d101e40583429f647f 2
-2-5: git://github.com/docker-library/pypy@d0f1f8cf3dd4a4feefa0f6d101e40583429f647f 2
-2: git://github.com/docker-library/pypy@d0f1f8cf3dd4a4feefa0f6d101e40583429f647f 2
+Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
+             Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
+GitRepo: https://github.com/docker-library/pypy.git
 
-2-5.1.1-onbuild: git://github.com/docker-library/pypy@b48e8489ab794a2bacfd396c2f8e1a5b06d6ae48 2/onbuild
-2-5.1-onbuild: git://github.com/docker-library/pypy@b48e8489ab794a2bacfd396c2f8e1a5b06d6ae48 2/onbuild
-2-5-onbuild: git://github.com/docker-library/pypy@b48e8489ab794a2bacfd396c2f8e1a5b06d6ae48 2/onbuild
-2-onbuild: git://github.com/docker-library/pypy@b48e8489ab794a2bacfd396c2f8e1a5b06d6ae48 2/onbuild
+Tags: 2-5.4.0, 2-5.4, 2-5, 2
+GitCommit: 8f0599b2696145385f3183dee5b1cabb0baa268c
+Directory: 2
 
-2-5.1.1-slim: git://github.com/docker-library/pypy@d0f1f8cf3dd4a4feefa0f6d101e40583429f647f 2/slim
-2-5.1-slim: git://github.com/docker-library/pypy@d0f1f8cf3dd4a4feefa0f6d101e40583429f647f 2/slim
-2-5-slim: git://github.com/docker-library/pypy@d0f1f8cf3dd4a4feefa0f6d101e40583429f647f 2/slim
-2-slim: git://github.com/docker-library/pypy@d0f1f8cf3dd4a4feefa0f6d101e40583429f647f 2/slim
+Tags: 2-5.4.0-slim, 2-5.4-slim, 2-5-slim, 2-slim
+GitCommit: 8f0599b2696145385f3183dee5b1cabb0baa268c
+Directory: 2/slim
 
-3-2.4.0: git://github.com/docker-library/pypy@d0f1f8cf3dd4a4feefa0f6d101e40583429f647f 3
-3-2.4: git://github.com/docker-library/pypy@d0f1f8cf3dd4a4feefa0f6d101e40583429f647f 3
-3-2: git://github.com/docker-library/pypy@d0f1f8cf3dd4a4feefa0f6d101e40583429f647f 3
-3: git://github.com/docker-library/pypy@d0f1f8cf3dd4a4feefa0f6d101e40583429f647f 3
-latest: git://github.com/docker-library/pypy@d0f1f8cf3dd4a4feefa0f6d101e40583429f647f 3
+Tags: 2-5.4.0-onbuild, 2-5.4-onbuild, 2-5-onbuild, 2-onbuild
+GitCommit: b48e8489ab794a2bacfd396c2f8e1a5b06d6ae48
+Directory: 2/onbuild
 
-3-2.4.0-onbuild: git://github.com/docker-library/pypy@b48e8489ab794a2bacfd396c2f8e1a5b06d6ae48 3/onbuild
-3-2.4-onbuild: git://github.com/docker-library/pypy@b48e8489ab794a2bacfd396c2f8e1a5b06d6ae48 3/onbuild
-3-2-onbuild: git://github.com/docker-library/pypy@b48e8489ab794a2bacfd396c2f8e1a5b06d6ae48 3/onbuild
-3-onbuild: git://github.com/docker-library/pypy@b48e8489ab794a2bacfd396c2f8e1a5b06d6ae48 3/onbuild
-onbuild: git://github.com/docker-library/pypy@b48e8489ab794a2bacfd396c2f8e1a5b06d6ae48 3/onbuild
+Tags: 3-5.2.0-alpha1, 3-5.2.0, 3-5.2, 3-5, 3, latest
+GitCommit: cdf5a7cd566bc418aff8eb383b431abb3ea88e50
+Directory: 3
 
-3-2.4.0-slim: git://github.com/docker-library/pypy@d0f1f8cf3dd4a4feefa0f6d101e40583429f647f 3/slim
-3-2.4-slim: git://github.com/docker-library/pypy@d0f1f8cf3dd4a4feefa0f6d101e40583429f647f 3/slim
-3-2-slim: git://github.com/docker-library/pypy@d0f1f8cf3dd4a4feefa0f6d101e40583429f647f 3/slim
-3-slim: git://github.com/docker-library/pypy@d0f1f8cf3dd4a4feefa0f6d101e40583429f647f 3/slim
-slim: git://github.com/docker-library/pypy@d0f1f8cf3dd4a4feefa0f6d101e40583429f647f 3/slim
+Tags: 3-5.2.0-alpha1-slim, 3-5.2.0-slim, 3-5.2-slim, 3-5-slim, 3-slim, slim
+GitCommit: cdf5a7cd566bc418aff8eb383b431abb3ea88e50
+Directory: 3/slim
+
+Tags: 3-5.2.0-alpha1-onbuild, 3-5.2.0-onbuild, 3-5.2-onbuild, 3-5-onbuild, 3-onbuild, onbuild
+GitCommit: b48e8489ab794a2bacfd396c2f8e1a5b06d6ae48
+Directory: 3/onbuild

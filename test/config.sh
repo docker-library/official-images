@@ -26,6 +26,9 @@ testAlias+=(
 
 	[mariadb]='mysql'
 	[percona]='mysql'
+
+	[hola-mundo]='hello-world'
+	[hello-seattle]='hello-world'
 )
 
 imageTests+=(
@@ -59,9 +62,13 @@ imageTests+=(
 	[erlang]='
 		erlang-hello-world
 	'
+	[fsharp]='
+		fsharp-hello-world
+	'
 	[gcc]='
 		gcc-c-hello-world
 		gcc-cpp-hello-world
+		golang-hello-world
 	'
 	[golang]='
 		golang-hello-world
@@ -85,6 +92,9 @@ imageTests+=(
 	'
 	[julia]='
 		julia-hello-world
+	'
+	[logstash]='
+		logstash-basics
 	'
 	[memcached]='
 	'
@@ -177,6 +187,10 @@ globalExcludeTests+=(
 	[nats_override-cmd]=1
 	[swarm_override-cmd]=1
 	[traefik_override-cmd]=1
+
+	# clearlinux has no /etc/password
+	# https://github.com/docker-library/official-images/pull/1721#issuecomment-234128477
+	[clearlinux_no-hard-coded-passwords]=1
 
 	# no "native" dependencies
 	[ruby:alpine_ruby-bundler]=1

@@ -1,71 +1,112 @@
-# maintainer: InfoSiftr <github@infosiftr.com> (@infosiftr)
+# this file is generated via https://github.com/docker-library/python/blob/1ad743decae71db424840812eb8dd49557aed9d0/generate-stackbrew-library.sh
 
-2.7.11: git://github.com/docker-library/python@9383f7d4d2f96068e8957651aa3588fee8b48f71 2.7
-2.7: git://github.com/docker-library/python@9383f7d4d2f96068e8957651aa3588fee8b48f71 2.7
-2: git://github.com/docker-library/python@9383f7d4d2f96068e8957651aa3588fee8b48f71 2.7
+Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
+             Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
+GitRepo: https://github.com/docker-library/python.git
 
-2.7.11-onbuild: git://github.com/docker-library/python@7663560df7547e69d13b1b548675502f4e0917d1 2.7/onbuild
-2.7-onbuild: git://github.com/docker-library/python@7663560df7547e69d13b1b548675502f4e0917d1 2.7/onbuild
-2-onbuild: git://github.com/docker-library/python@7663560df7547e69d13b1b548675502f4e0917d1 2.7/onbuild
+Tags: 2.7.12, 2.7, 2
+GitCommit: 855b85c8309e925814dfa97d61310080dcd08db6
+Directory: 2.7
 
-2.7.11-slim: git://github.com/docker-library/python@9383f7d4d2f96068e8957651aa3588fee8b48f71 2.7/slim
-2.7-slim: git://github.com/docker-library/python@9383f7d4d2f96068e8957651aa3588fee8b48f71 2.7/slim
-2-slim: git://github.com/docker-library/python@9383f7d4d2f96068e8957651aa3588fee8b48f71 2.7/slim
+Tags: 2.7.12-slim, 2.7-slim, 2-slim
+GitCommit: 855b85c8309e925814dfa97d61310080dcd08db6
+Directory: 2.7/slim
 
-2.7.11-alpine: git://github.com/docker-library/python@9383f7d4d2f96068e8957651aa3588fee8b48f71 2.7/alpine
-2.7-alpine: git://github.com/docker-library/python@9383f7d4d2f96068e8957651aa3588fee8b48f71 2.7/alpine
-2-alpine: git://github.com/docker-library/python@9383f7d4d2f96068e8957651aa3588fee8b48f71 2.7/alpine
+Tags: 2.7.12-alpine, 2.7-alpine, 2-alpine
+GitCommit: 855b85c8309e925814dfa97d61310080dcd08db6
+Directory: 2.7/alpine
 
-2.7.11-wheezy: git://github.com/docker-library/python@9383f7d4d2f96068e8957651aa3588fee8b48f71 2.7/wheezy
-2.7-wheezy: git://github.com/docker-library/python@9383f7d4d2f96068e8957651aa3588fee8b48f71 2.7/wheezy
-2-wheezy: git://github.com/docker-library/python@9383f7d4d2f96068e8957651aa3588fee8b48f71 2.7/wheezy
+Tags: 2.7.12-wheezy, 2.7-wheezy, 2-wheezy
+GitCommit: 855b85c8309e925814dfa97d61310080dcd08db6
+Directory: 2.7/wheezy
 
-3.3.6: git://github.com/docker-library/python@9383f7d4d2f96068e8957651aa3588fee8b48f71 3.3
-3.3: git://github.com/docker-library/python@9383f7d4d2f96068e8957651aa3588fee8b48f71 3.3
+Tags: 2.7.12-onbuild, 2.7-onbuild, 2-onbuild
+GitCommit: 7663560df7547e69d13b1b548675502f4e0917d1
+Directory: 2.7/onbuild
 
-3.3.6-onbuild: git://github.com/docker-library/python@7663560df7547e69d13b1b548675502f4e0917d1 3.3/onbuild
-3.3-onbuild: git://github.com/docker-library/python@7663560df7547e69d13b1b548675502f4e0917d1 3.3/onbuild
+Tags: 2.7.12-windowsservercore, 2.7-windowsservercore, 2-windowsservercore
+GitCommit: 1ad743decae71db424840812eb8dd49557aed9d0
+Directory: 2.7/windows/windowsservercore
+Constraints: windowsservercore
 
-3.3.6-slim: git://github.com/docker-library/python@9383f7d4d2f96068e8957651aa3588fee8b48f71 3.3/slim
-3.3-slim: git://github.com/docker-library/python@9383f7d4d2f96068e8957651aa3588fee8b48f71 3.3/slim
+Tags: 3.3.6, 3.3
+GitCommit: 855b85c8309e925814dfa97d61310080dcd08db6
+Directory: 3.3
 
-3.3.6-alpine: git://github.com/docker-library/python@9383f7d4d2f96068e8957651aa3588fee8b48f71 3.3/alpine
-3.3-alpine: git://github.com/docker-library/python@9383f7d4d2f96068e8957651aa3588fee8b48f71 3.3/alpine
+Tags: 3.3.6-slim, 3.3-slim
+GitCommit: 855b85c8309e925814dfa97d61310080dcd08db6
+Directory: 3.3/slim
 
-3.3.6-wheezy: git://github.com/docker-library/python@9383f7d4d2f96068e8957651aa3588fee8b48f71 3.3/wheezy
-3.3-wheezy: git://github.com/docker-library/python@9383f7d4d2f96068e8957651aa3588fee8b48f71 3.3/wheezy
+Tags: 3.3.6-alpine, 3.3-alpine
+GitCommit: 855b85c8309e925814dfa97d61310080dcd08db6
+Directory: 3.3/alpine
 
-3.4.4: git://github.com/docker-library/python@9383f7d4d2f96068e8957651aa3588fee8b48f71 3.4
-3.4: git://github.com/docker-library/python@9383f7d4d2f96068e8957651aa3588fee8b48f71 3.4
+Tags: 3.3.6-wheezy, 3.3-wheezy
+GitCommit: 855b85c8309e925814dfa97d61310080dcd08db6
+Directory: 3.3/wheezy
 
-3.4.4-onbuild: git://github.com/docker-library/python@7663560df7547e69d13b1b548675502f4e0917d1 3.4/onbuild
-3.4-onbuild: git://github.com/docker-library/python@7663560df7547e69d13b1b548675502f4e0917d1 3.4/onbuild
+Tags: 3.3.6-onbuild, 3.3-onbuild
+GitCommit: 9a9021f2134d953165b31d98cacb95aa34076f90
+Directory: 3.3/onbuild
 
-3.4.4-slim: git://github.com/docker-library/python@9383f7d4d2f96068e8957651aa3588fee8b48f71 3.4/slim
-3.4-slim: git://github.com/docker-library/python@9383f7d4d2f96068e8957651aa3588fee8b48f71 3.4/slim
+Tags: 3.4.5, 3.4
+GitCommit: 855b85c8309e925814dfa97d61310080dcd08db6
+Directory: 3.4
 
-3.4.4-alpine: git://github.com/docker-library/python@9383f7d4d2f96068e8957651aa3588fee8b48f71 3.4/alpine
-3.4-alpine: git://github.com/docker-library/python@9383f7d4d2f96068e8957651aa3588fee8b48f71 3.4/alpine
+Tags: 3.4.5-slim, 3.4-slim
+GitCommit: 855b85c8309e925814dfa97d61310080dcd08db6
+Directory: 3.4/slim
 
-3.4.4-wheezy: git://github.com/docker-library/python@9383f7d4d2f96068e8957651aa3588fee8b48f71 3.4/wheezy
-3.4-wheezy: git://github.com/docker-library/python@9383f7d4d2f96068e8957651aa3588fee8b48f71 3.4/wheezy
+Tags: 3.4.5-alpine, 3.4-alpine
+GitCommit: 855b85c8309e925814dfa97d61310080dcd08db6
+Directory: 3.4/alpine
 
-3.5.1: git://github.com/docker-library/python@9383f7d4d2f96068e8957651aa3588fee8b48f71 3.5
-3.5: git://github.com/docker-library/python@9383f7d4d2f96068e8957651aa3588fee8b48f71 3.5
-3: git://github.com/docker-library/python@9383f7d4d2f96068e8957651aa3588fee8b48f71 3.5
-latest: git://github.com/docker-library/python@9383f7d4d2f96068e8957651aa3588fee8b48f71 3.5
+Tags: 3.4.5-wheezy, 3.4-wheezy
+GitCommit: 855b85c8309e925814dfa97d61310080dcd08db6
+Directory: 3.4/wheezy
 
-3.5.1-onbuild: git://github.com/docker-library/python@0fa3202789648132971160f686f5a37595108f44 3.5/onbuild
-3.5-onbuild: git://github.com/docker-library/python@0fa3202789648132971160f686f5a37595108f44 3.5/onbuild
-3-onbuild: git://github.com/docker-library/python@0fa3202789648132971160f686f5a37595108f44 3.5/onbuild
-onbuild: git://github.com/docker-library/python@0fa3202789648132971160f686f5a37595108f44 3.5/onbuild
+Tags: 3.4.5-onbuild, 3.4-onbuild
+GitCommit: 9a9021f2134d953165b31d98cacb95aa34076f90
+Directory: 3.4/onbuild
 
-3.5.1-slim: git://github.com/docker-library/python@9383f7d4d2f96068e8957651aa3588fee8b48f71 3.5/slim
-3.5-slim: git://github.com/docker-library/python@9383f7d4d2f96068e8957651aa3588fee8b48f71 3.5/slim
-3-slim: git://github.com/docker-library/python@9383f7d4d2f96068e8957651aa3588fee8b48f71 3.5/slim
-slim: git://github.com/docker-library/python@9383f7d4d2f96068e8957651aa3588fee8b48f71 3.5/slim
+Tags: 3.5.2, 3.5, 3, latest
+GitCommit: 855b85c8309e925814dfa97d61310080dcd08db6
+Directory: 3.5
 
-3.5.1-alpine: git://github.com/docker-library/python@9383f7d4d2f96068e8957651aa3588fee8b48f71 3.5/alpine
-3.5-alpine: git://github.com/docker-library/python@9383f7d4d2f96068e8957651aa3588fee8b48f71 3.5/alpine
-3-alpine: git://github.com/docker-library/python@9383f7d4d2f96068e8957651aa3588fee8b48f71 3.5/alpine
-alpine: git://github.com/docker-library/python@9383f7d4d2f96068e8957651aa3588fee8b48f71 3.5/alpine
+Tags: 3.5.2-slim, 3.5-slim, 3-slim, slim
+GitCommit: 855b85c8309e925814dfa97d61310080dcd08db6
+Directory: 3.5/slim
+
+Tags: 3.5.2-alpine, 3.5-alpine, 3-alpine, alpine
+GitCommit: 855b85c8309e925814dfa97d61310080dcd08db6
+Directory: 3.5/alpine
+
+Tags: 3.5.2-onbuild, 3.5-onbuild, 3-onbuild, onbuild
+GitCommit: 9a9021f2134d953165b31d98cacb95aa34076f90
+Directory: 3.5/onbuild
+
+Tags: 3.5.2-windowsservercore, 3.5-windowsservercore, 3-windowsservercore, windowsservercore
+GitCommit: 855b85c8309e925814dfa97d61310080dcd08db6
+Directory: 3.5/windows/windowsservercore
+Constraints: windowsservercore
+
+Tags: 3.6.0a4, 3.6
+GitCommit: 855b85c8309e925814dfa97d61310080dcd08db6
+Directory: 3.6
+
+Tags: 3.6.0a4-slim, 3.6-slim
+GitCommit: 855b85c8309e925814dfa97d61310080dcd08db6
+Directory: 3.6/slim
+
+Tags: 3.6.0a4-alpine, 3.6-alpine
+GitCommit: 855b85c8309e925814dfa97d61310080dcd08db6
+Directory: 3.6/alpine
+
+Tags: 3.6.0a4-onbuild, 3.6-onbuild
+GitCommit: 635ea5d58b53d165f7bedae90f8933c720a58150
+Directory: 3.6/onbuild
+
+Tags: 3.6.0a4-windowsservercore, 3.6-windowsservercore
+GitCommit: 855b85c8309e925814dfa97d61310080dcd08db6
+Directory: 3.6/windows/windowsservercore
+Constraints: windowsservercore
