@@ -44,9 +44,9 @@ push_image() {
 						didFail=1
 						continue
 					else
-						"$docker" rmi -f "$namespace/$repoTag-$dateStamp"
-						"$docker" rmi -f "$namespace/$repoTag"
-						"$docker" rmi -f "$repoTag"
+						"$docker" rmi -f "$namespace/$repoTag-$dateStamp" || true
+						"$docker" rmi -f "$namespace/$repoTag" || true
+						"$docker" rmi -f "$repoTag" || true
 					fi
 				fi
 			fi
@@ -54,10 +54,10 @@ push_image() {
 			echo "$docker push" "$namespace/$repoTag"
 			if [ "$doDatestamp" ] && [ "$tag" != "latest" ]; then
 				echo "$docker push" "$namespace/$repoTag-$dateStamp"
-				"$docker" rmi -f "$namespace/$repoTag-$dateStamp"
+				"$docker" rmi -f "$namespace/$repoTag-$dateStamp" || true
 			fi
-			"$docker" rmi -f "$namespace/$repoTag"
-			"$docker" rmi -f "$repoTag"
+			"$docker" rmi -f "$namespace/$repoTag" || true
+			"$docker" rmi -f "$repoTag" || true
 		fi
 	done
 }
