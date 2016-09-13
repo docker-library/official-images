@@ -89,7 +89,12 @@ if [ -z "$BASHBREW_SECOND_STAGE" ]; then
 
 	cmd=( ./test-pr.sh "$pull" "$@" )
 
-	exec docker run -it --rm "${args[@]}" "$dockerImage" "${cmd[@]}"
+	if [ -t 1 ]; then
+		# only add "-t" if we have a TTY
+		args+=( -t )
+	fi
+
+	exec docker run -i --rm "${args[@]}" "$dockerImage" "${cmd[@]}"
 fi
 
 if [ -d .git ]; then
