@@ -136,8 +136,6 @@ RUN set -x \
 	&& tini -h
 ```
 
-**NOTE**: if [docker/docker#11529](https://github.com/docker/docker/issues/11529) gets solved, then `tini` would no longer be needed for reaping zombies.
-
 #### Cacheability
 
 This is one place that experience ends up trumping documentation for the path to enlightenment, but the following tips might help:
