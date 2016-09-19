@@ -130,6 +130,11 @@ imageTests+=(
 	[php:fpm]='
 		php-fpm-hello-web
 	'
+	[plone]='
+		plone-basics
+		plone-addons
+		plone-zeoclient
+	'
 	[postgres]='
 		postgres-basics
 		postgres-initdb
