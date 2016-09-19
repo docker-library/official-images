@@ -1,31 +1,41 @@
 # maintainer: Brian Goff <cpuguy83@gmail.com> (@cpuguy83)
 
-latest: git://github.com/cpuguy83/docker-jruby@2448a2d7288d8dd3aa455b6c90c29fc414c5c418 9000/jre
-9: git://github.com/cpuguy83/docker-jruby@2448a2d7288d8dd3aa455b6c90c29fc414c5c418 9000/jre
-9.0: git://github.com/cpuguy83/docker-jruby@2448a2d7288d8dd3aa455b6c90c29fc414c5c418 9000/jre
-9.0-jre: git://github.com/cpuguy83/docker-jruby@2448a2d7288d8dd3aa455b6c90c29fc414c5c418 9000/jre
-9.0.5: git://github.com/cpuguy83/docker-jruby@2448a2d7288d8dd3aa455b6c90c29fc414c5c418 9000/jre
-9.0.5-jre: git://github.com/cpuguy83/docker-jruby@2448a2d7288d8dd3aa455b6c90c29fc414c5c418 9000/jre
-9.0.5.0: git://github.com/cpuguy83/docker-jruby@2448a2d7288d8dd3aa455b6c90c29fc414c5c418 9000/jre
-9.0.5.0-jre: git://github.com/cpuguy83/docker-jruby@2448a2d7288d8dd3aa455b6c90c29fc414c5c418 9000/jre
+latest: git://github.com/cpuguy83/docker-jruby@d6339011a5cba59f036874de9ca68f7763b192ff 9000/jre
+9: git://github.com/cpuguy83/docker-jruby@d6339011a5cba59f036874de9ca68f7763b192ff 9000/jre
+9-alpine: git://github.com/cpuguy83/docker-jruby@d6339011a5cba59f036874de9ca68f7763b192ff 9000/alpine-jre
+9.1: git://github.com/cpuguy83/docker-jruby@d6339011a5cba59f036874de9ca68f7763b192ff 9000/jre
+9.1-alpine: git://github.com/cpuguy83/docker-jruby@d6339011a5cba59f036874de9ca68f7763b192ff 9000/alpine-jre
+9.1-jre: git://github.com/cpuguy83/docker-jruby@d6339011a5cba59f036874de9ca68f7763b192ff 9000/jre
+9.1-jre-alpine: git://github.com/cpuguy83/docker-jruby@d6339011a5cba59f036874de9ca68f7763b192ff 9000/alpine-jre
+9.1.5: git://github.com/cpuguy83/docker-jruby@d6339011a5cba59f036874de9ca68f7763b192ff 9000/jre
+9.1.5-alpine: git://github.com/cpuguy83/docker-jruby@d6339011a5cba59f036874de9ca68f7763b192ff 9000/alpine-jre
+9.1.5-jre: git://github.com/cpuguy83/docker-jruby@d6339011a5cba59f036874de9ca68f7763b192ff 9000/jre
+9.1.5-jre-alpine: git://github.com/cpuguy83/docker-jruby@d6339011a5cba59f036874de9ca68f7763b192ff 9000/alpine-jre
+9.1.5.0: git://github.com/cpuguy83/docker-jruby@d6339011a5cba59f036874de9ca68f7763b192ff 9000/jre
+9.1.5.0-alpine: git://github.com/cpuguy83/docker-jruby@d6339011a5cba59f036874de9ca68f7763b192ff 9000/alpine-jre
+9.1.5.0-jre: git://github.com/cpuguy83/docker-jruby@d6339011a5cba59f036874de9ca68f7763b192ff 9000/jre
+9.1.5.0-jre-alpine: git://github.com/cpuguy83/docker-jruby@d6339011a5cba59f036874de9ca68f7763b192ff 9000/alpine-jre
 
-9.0-jdk: git://github.com/cpuguy83/docker-jruby@2448a2d7288d8dd3aa455b6c90c29fc414c5c418 9000/jdk
-9.0.5-jdk: git://github.com/cpuguy83/docker-jruby@2448a2d7288d8dd3aa455b6c90c29fc414c5c418 9000/jdk
-9.0.5.0-jdk: git://github.com/cpuguy83/docker-jruby@2448a2d7288d8dd3aa455b6c90c29fc414c5c418 9000/jdk
+9.1-jdk: git://github.com/cpuguy83/docker-jruby@d6339011a5cba59f036874de9ca68f7763b192ff 9000/jdk
+9.1-jdk-alpine: git://github.com/cpuguy83/docker-jruby@d6339011a5cba59f036874de9ca68f7763b192ff 9000/alpine-jdk
+9.1.5-jdk: git://github.com/cpuguy83/docker-jruby@d6339011a5cba59f036874de9ca68f7763b192ff 9000/jdk
+9.1.5-jdk-alpine: git://github.com/cpuguy83/docker-jruby@d6339011a5cba59f036874de9ca68f7763b192ff 9000/alpine-jdk
+9.1.5.0-jdk: git://github.com/cpuguy83/docker-jruby@d6339011a5cba59f036874de9ca68f7763b192ff 9000/jdk
+9.1.5.0-jdk-alpine: git://github.com/cpuguy83/docker-jruby@d6339011a5cba59f036874de9ca68f7763b192ff 9000/alpine-jdk
 
-9-onbuild: git://github.com/cpuguy83/docker-jruby@2448a2d7288d8dd3aa455b6c90c29fc414c5c418 9000/onbuild
-9.0-onbuild: git://github.com/cpuguy83/docker-jruby@2448a2d7288d8dd3aa455b6c90c29fc414c5c418 9000/onbuild
-9.0.5-onbuild: git://github.com/cpuguy83/docker-jruby@2448a2d7288d8dd3aa455b6c90c29fc414c5c418 9000/onbuild
-9.0.5.0-onbuild: git://github.com/cpuguy83/docker-jruby@2448a2d7288d8dd3aa455b6c90c29fc414c5c418 9000/onbuild
+9-onbuild: git://github.com/cpuguy83/docker-jruby@d6339011a5cba59f036874de9ca68f7763b192ff 9000/onbuild
+9.1-onbuild: git://github.com/cpuguy83/docker-jruby@d6339011a5cba59f036874de9ca68f7763b192ff 9000/onbuild
+9.1.5-onbuild: git://github.com/cpuguy83/docker-jruby@d6339011a5cba59f036874de9ca68f7763b192ff 9000/onbuild
+9.1.5.0-onbuild: git://github.com/cpuguy83/docker-jruby@d6339011a5cba59f036874de9ca68f7763b192ff 9000/onbuild
 
-1.7: git://github.com/cpuguy83/docker-jruby@2448a2d7288d8dd3aa455b6c90c29fc414c5c418 1.7/jre
-1.7.24: git://github.com/cpuguy83/docker-jruby@2448a2d7288d8dd3aa455b6c90c29fc414c5c418 1.7/jre
+1.7: git://github.com/cpuguy83/docker-jruby@ad0479fa0d278f5eb311e01417c079a97305eeb3 1.7/jre
+1.7.25: git://github.com/cpuguy83/docker-jruby@ad0479fa0d278f5eb311e01417c079a97305eeb3 1.7/jre
 
-1.7-jre: git://github.com/cpuguy83/docker-jruby@2448a2d7288d8dd3aa455b6c90c29fc414c5c418 1.7/jre
-1.7.24-jre: git://github.com/cpuguy83/docker-jruby@2448a2d7288d8dd3aa455b6c90c29fc414c5c418 1.7/jre
+1.7-jre: git://github.com/cpuguy83/docker-jruby@ad0479fa0d278f5eb311e01417c079a97305eeb3 1.7/jre
+1.7.25-jre: git://github.com/cpuguy83/docker-jruby@ad0479fa0d278f5eb311e01417c079a97305eeb3 1.7/jre
 
-1.7-jdk: git://github.com/cpuguy83/docker-jruby@2448a2d7288d8dd3aa455b6c90c29fc414c5c418 1.7/jdk
-1.7.24-jdk: git://github.com/cpuguy83/docker-jruby@2448a2d7288d8dd3aa455b6c90c29fc414c5c418 1.7/jdk
+1.7-jdk: git://github.com/cpuguy83/docker-jruby@ad0479fa0d278f5eb311e01417c079a97305eeb3 1.7/jdk
+1.7.25-jdk: git://github.com/cpuguy83/docker-jruby@ad0479fa0d278f5eb311e01417c079a97305eeb3 1.7/jdk
 
-1.7-onbuild: git://github.com/cpuguy83/docker-jruby@2448a2d7288d8dd3aa455b6c90c29fc414c5c418 1.7/onbuild
-1.7.24-onbuild: git://github.com/cpuguy83/docker-jruby@2448a2d7288d8dd3aa455b6c90c29fc414c5c418 1.7/onbuild
+1.7-onbuild: git://github.com/cpuguy83/docker-jruby@ad0479fa0d278f5eb311e01417c079a97305eeb3 1.7/onbuild
+1.7.25-onbuild: git://github.com/cpuguy83/docker-jruby@ad0479fa0d278f5eb311e01417c079a97305eeb3 1.7/onbuild

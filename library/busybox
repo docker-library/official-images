@@ -1,21 +1,19 @@
-# maintainer: InfoSiftr <github@infosiftr.com> (@infosiftr)
-# maintainer: Jérôme Petazzoni <jerome@docker.com> (@jpetazzo)
+# this file is generated via https://github.com/docker-library/busybox/blob/10cc8a01c51f3eca3f3cc0c5850440b2adff5317/generate-stackbrew-library.sh
 
-1.24.1-glibc: git://github.com/docker-library/busybox@81c593a39bec858e92bfa2c239aa57e7b988ba37 glibc
-1.24-glibc: git://github.com/docker-library/busybox@81c593a39bec858e92bfa2c239aa57e7b988ba37 glibc
-1-glibc: git://github.com/docker-library/busybox@81c593a39bec858e92bfa2c239aa57e7b988ba37 glibc
-glibc: git://github.com/docker-library/busybox@81c593a39bec858e92bfa2c239aa57e7b988ba37 glibc
+Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
+             Joseph Ferguson <yosifkit@gmail.com> (@yosifkit),
+             Jérôme Petazzoni <jerome@docker.com> (@jpetazzo)
+GitRepo: https://github.com/docker-library/busybox.git
+GitFetch: refs/heads/dist
 
-1.24.1-musl: git://github.com/docker-library/busybox@81c593a39bec858e92bfa2c239aa57e7b988ba37 musl
-1.24-musl: git://github.com/docker-library/busybox@81c593a39bec858e92bfa2c239aa57e7b988ba37 musl
-1-musl: git://github.com/docker-library/busybox@81c593a39bec858e92bfa2c239aa57e7b988ba37 musl
-musl: git://github.com/docker-library/busybox@81c593a39bec858e92bfa2c239aa57e7b988ba37 musl
+Tags: 1.25.0-glibc, 1.25-glibc, 1-glibc, glibc
+GitCommit: a0558a9006ce0dd6f6ec5d56cfd3f32ebeeb815f
+Directory: glibc
 
-1.24.1-uclibc: git://github.com/docker-library/busybox@81c593a39bec858e92bfa2c239aa57e7b988ba37 uclibc
-1.24.1: git://github.com/docker-library/busybox@81c593a39bec858e92bfa2c239aa57e7b988ba37 uclibc
-1.24-uclibc: git://github.com/docker-library/busybox@81c593a39bec858e92bfa2c239aa57e7b988ba37 uclibc
-1.24: git://github.com/docker-library/busybox@81c593a39bec858e92bfa2c239aa57e7b988ba37 uclibc
-1-uclibc: git://github.com/docker-library/busybox@81c593a39bec858e92bfa2c239aa57e7b988ba37 uclibc
-1: git://github.com/docker-library/busybox@81c593a39bec858e92bfa2c239aa57e7b988ba37 uclibc
-uclibc: git://github.com/docker-library/busybox@81c593a39bec858e92bfa2c239aa57e7b988ba37 uclibc
-latest: git://github.com/docker-library/busybox@81c593a39bec858e92bfa2c239aa57e7b988ba37 uclibc
+Tags: 1.25.0-musl, 1.25-musl, 1-musl, musl
+GitCommit: a0558a9006ce0dd6f6ec5d56cfd3f32ebeeb815f
+Directory: musl
+
+Tags: 1.25.0-uclibc, 1.25-uclibc, 1-uclibc, uclibc, 1.25.0, 1.25, 1, latest
+GitCommit: a0558a9006ce0dd6f6ec5d56cfd3f32ebeeb815f
+Directory: uclibc

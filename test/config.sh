@@ -26,6 +26,9 @@ testAlias+=(
 
 	[mariadb]='mysql'
 	[percona]='mysql'
+
+	[hola-mundo]='hello-world'
+	[hello-seattle]='hello-world'
 )
 
 imageTests+=(
@@ -53,15 +56,25 @@ imageTests+=(
 	[elasticsearch]='
 		elasticsearch-basics
 	'
+	[elixir]='
+		elixir-hello-world
+	'
 	[erlang]='
 		erlang-hello-world
+	'
+	[fsharp]='
+		fsharp-hello-world
 	'
 	[gcc]='
 		gcc-c-hello-world
 		gcc-cpp-hello-world
+		golang-hello-world
 	'
 	[golang]='
 		golang-hello-world
+	'
+	[haproxy]='
+		haproxy-basics
 	'
 	[haskell]='
 		haskell-cabal
@@ -80,6 +93,9 @@ imageTests+=(
 	[julia]='
 		julia-hello-world
 	'
+	[logstash]='
+		logstash-basics
+	'
 	[memcached]='
 	'
 	[mongo]='
@@ -90,6 +106,7 @@ imageTests+=(
 	[mysql]='
 		mysql-basics
 		mysql-initdb
+		mysql-log-bin
 	'
 	[node]='
 		node-hello-world
@@ -131,6 +148,8 @@ imageTests+=(
 	'
 	[redis]='
 		redis-basics
+		redis-basics-config
+		redis-basics-persistent
 	'
 	[rethinkdb]='
 	'
@@ -142,6 +161,7 @@ imageTests+=(
 		ruby-nonroot
 	'
 	[tomcat]='
+		tomcat-hello-world
 	'
 	[wordpress]='
 	'
@@ -154,16 +174,23 @@ imageTests+=(
 globalExcludeTests+=(
 	# single-binary images
 	[hello-world_utc]=1
-	[swarm_utc]=1
 	[nats_utc]=1
+	[swarm_utc]=1
+	[traefik_utc]=1
 
 	[hello-world_no-hard-coded-passwords]=1
-	[swarm_no-hard-coded-passwords]=1
 	[nats_no-hard-coded-passwords]=1
+	[swarm_no-hard-coded-passwords]=1
+	[traefik_no-hard-coded-passwords]=1
 
 	[hello-world_override-cmd]=1
-	[swarm_override-cmd]=1
 	[nats_override-cmd]=1
+	[swarm_override-cmd]=1
+	[traefik_override-cmd]=1
+
+	# clearlinux has no /etc/password
+	# https://github.com/docker-library/official-images/pull/1721#issuecomment-234128477
+	[clearlinux_no-hard-coded-passwords]=1
 
 	# no "native" dependencies
 	[ruby:alpine_ruby-bundler]=1

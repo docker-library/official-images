@@ -1,35 +1,43 @@
-# maintainer: Tianon Gravi <tianon@debian.org> (@tianon)
-# proxy for upstream's official builds
-# see https://partner-images.canonical.com/core/
+# Maintained by Tianon as proxy for upstream's offical builds.
 
+Maintainers: Tianon Gravi <tianon@debian.org> (@tianon)
+GitRepo: https://github.com/tianon/docker-brew-ubuntu-core.git
+GitFetch: refs/heads/dist
+
+# see https://partner-images.canonical.com/core/
 # see also https://wiki.ubuntu.com/Releases#Current
 
 # commits: (master..dist)
-#  - e406914 Update tarballs
-#    - `ubuntu:precise`: 20160108
-#    - `ubuntu:trusty`: 20160119
-#    - `ubuntu:wily`: 20160121
-#    - `ubuntu:xenial`: 20160125
+#  - aec74cf Update tarballs
+#    - `ubuntu:precise`: 20160819
+#    - `ubuntu:trusty`: 20160819
+#    - `ubuntu:xenial`: 20160818
+#    - `ubuntu:yakkety`: 20160826
+#  
+#  - 24efd22 Add "mkdir" for "/run/systemd"
+#  
+#  - 26f3fbb Merge pull request #64 from dustinkirkland/master
+#    Ensure that running 'systemd-detect-virt' shows 'docker'
+#  - 4a51505 fix breakage, prepend RUN
+#  
+#  - 1f79fdb Ensure that running 'systemd-detect-virt' shows 'docker' In the Ubuntu docker image, let's set /run/systemd/container to 'docker' to ensure that users are able to detect their underlying environment accurately.
 
-# 20160108
-12.04.5: git://github.com/tianon/docker-brew-ubuntu-core@e406914e5f648003dfe8329b512c30c9ad0d2f9c precise
-12.04: git://github.com/tianon/docker-brew-ubuntu-core@e406914e5f648003dfe8329b512c30c9ad0d2f9c precise
-precise-20160108: git://github.com/tianon/docker-brew-ubuntu-core@e406914e5f648003dfe8329b512c30c9ad0d2f9c precise
-precise: git://github.com/tianon/docker-brew-ubuntu-core@e406914e5f648003dfe8329b512c30c9ad0d2f9c precise
+# 20160819
+Tags: 12.04.5, 12.04, precise-20160819, precise
+GitCommit: aec74cf404240664b289d28948d9284a4afd1181
+Directory: precise
 
-# 20160119
-14.04.3: git://github.com/tianon/docker-brew-ubuntu-core@e406914e5f648003dfe8329b512c30c9ad0d2f9c trusty
-14.04: git://github.com/tianon/docker-brew-ubuntu-core@e406914e5f648003dfe8329b512c30c9ad0d2f9c trusty
-trusty-20160119: git://github.com/tianon/docker-brew-ubuntu-core@e406914e5f648003dfe8329b512c30c9ad0d2f9c trusty
-trusty: git://github.com/tianon/docker-brew-ubuntu-core@e406914e5f648003dfe8329b512c30c9ad0d2f9c trusty
-latest: git://github.com/tianon/docker-brew-ubuntu-core@e406914e5f648003dfe8329b512c30c9ad0d2f9c trusty
+# 20160819
+Tags: 14.04.5, 14.04, trusty-20160819, trusty
+GitCommit: aec74cf404240664b289d28948d9284a4afd1181
+Directory: trusty
 
-# 20160121
-15.10: git://github.com/tianon/docker-brew-ubuntu-core@e406914e5f648003dfe8329b512c30c9ad0d2f9c wily
-wily-20160121: git://github.com/tianon/docker-brew-ubuntu-core@e406914e5f648003dfe8329b512c30c9ad0d2f9c wily
-wily: git://github.com/tianon/docker-brew-ubuntu-core@e406914e5f648003dfe8329b512c30c9ad0d2f9c wily
+# 20160818
+Tags: 16.04, xenial-20160818, xenial, latest
+GitCommit: aec74cf404240664b289d28948d9284a4afd1181
+Directory: xenial
 
-# 20160125
-16.04: git://github.com/tianon/docker-brew-ubuntu-core@e406914e5f648003dfe8329b512c30c9ad0d2f9c xenial
-xenial-20160125: git://github.com/tianon/docker-brew-ubuntu-core@e406914e5f648003dfe8329b512c30c9ad0d2f9c xenial
-xenial: git://github.com/tianon/docker-brew-ubuntu-core@e406914e5f648003dfe8329b512c30c9ad0d2f9c xenial
+# 20160826
+Tags: 16.10, yakkety-20160826, yakkety, devel
+GitCommit: aec74cf404240664b289d28948d9284a4afd1181
+Directory: yakkety

@@ -97,6 +97,12 @@ for dockerImage in "$@"; do
 	#version="${tagVar%-*}"
 	variant="${tagVar##*-}"
 	
+	if [[ "$tagVar" == *onbuild* ]]; then
+		# "maven:onbuild-alpine" is still onbuild
+		# ONCE ONBUILD, ALWAYS ONBUILD
+		variant='onbuild'
+	fi
+	
 	testRepo=$repo
 	[ -z "${testAlias[$repo]}" ] || testRepo="${testAlias[$repo]}"
 	

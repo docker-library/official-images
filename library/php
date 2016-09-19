@@ -1,58 +1,89 @@
-# maintainer: InfoSiftr <github@infosiftr.com> (@infosiftr)
+# this file is generated via https://github.com/docker-library/php/blob/6f3edbc07daf333581eb43d1c7a9149351a1f63b/generate-stackbrew-library.sh
 
-5.5.32-cli: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 5.5
-5.5-cli: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 5.5
-5.5.32: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 5.5
-5.5: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 5.5
+Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
+             Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
+GitRepo: https://github.com/docker-library/php.git
 
-5.5.32-apache: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 5.5/apache
-5.5-apache: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 5.5/apache
+Tags: 7.1.0RC2-cli, 7.1-cli, 7.1.0RC2, 7.1
+GitCommit: d04f88956847d801bdd37f89dee747a7445a77a0
+Directory: 7.1
 
-5.5.32-fpm: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 5.5/fpm
-5.5-fpm: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 5.5/fpm
+Tags: 7.1.0RC2-alpine, 7.1-alpine
+GitCommit: d04f88956847d801bdd37f89dee747a7445a77a0
+Directory: 7.1/alpine
 
-5.5.32-zts: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 5.5/zts
-5.5-zts: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 5.5/zts
+Tags: 7.1.0RC2-apache, 7.1-apache
+GitCommit: d04f88956847d801bdd37f89dee747a7445a77a0
+Directory: 7.1/apache
 
-5.6.18-cli: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 5.6
-5.6-cli: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 5.6
-5-cli: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 5.6
-5.6.18: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 5.6
-5.6: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 5.6
-5: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 5.6
+Tags: 7.1.0RC2-fpm, 7.1-fpm
+GitCommit: d04f88956847d801bdd37f89dee747a7445a77a0
+Directory: 7.1/fpm
 
-5.6.18-apache: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 5.6/apache
-5.6-apache: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 5.6/apache
-5-apache: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 5.6/apache
+Tags: 7.1.0RC2-fpm-alpine, 7.1-fpm-alpine
+GitCommit: 3493e29c9bd8dda055dbb9dc0d81065d3d76456d
+Directory: 7.1/fpm/alpine
 
-5.6.18-fpm: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 5.6/fpm
-5.6-fpm: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 5.6/fpm
-5-fpm: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 5.6/fpm
+Tags: 7.1.0RC2-zts, 7.1-zts
+GitCommit: d04f88956847d801bdd37f89dee747a7445a77a0
+Directory: 7.1/zts
 
-5.6.18-zts: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 5.6/zts
-5.6-zts: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 5.6/zts
-5-zts: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 5.6/zts
+Tags: 7.1.0RC2-zts-alpine, 7.1-zts-alpine
+GitCommit: 3493e29c9bd8dda055dbb9dc0d81065d3d76456d
+Directory: 7.1/zts/alpine
 
-7.0.3-cli: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 7.0
-7.0-cli: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 7.0
-7-cli: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 7.0
-cli: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 7.0
-7.0.3: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 7.0
-7.0: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 7.0
-7: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 7.0
-latest: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 7.0
+Tags: 7.0.11-cli, 7.0-cli, 7-cli, cli, 7.0.11, 7.0, 7, latest
+GitCommit: 6924505927f75e74098cc55e53e4f66bf71e0068
+Directory: 7.0
 
-7.0.3-apache: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 7.0/apache
-7.0-apache: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 7.0/apache
-7-apache: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 7.0/apache
-apache: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 7.0/apache
+Tags: 7.0.11-alpine, 7.0-alpine, 7-alpine, alpine
+GitCommit: 6924505927f75e74098cc55e53e4f66bf71e0068
+Directory: 7.0/alpine
 
-7.0.3-fpm: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 7.0/fpm
-7.0-fpm: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 7.0/fpm
-7-fpm: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 7.0/fpm
-fpm: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 7.0/fpm
+Tags: 7.0.11-apache, 7.0-apache, 7-apache, apache
+GitCommit: 6924505927f75e74098cc55e53e4f66bf71e0068
+Directory: 7.0/apache
 
-7.0.3-zts: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 7.0/zts
-7.0-zts: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 7.0/zts
-7-zts: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 7.0/zts
-zts: git://github.com/docker-library/php@7bd5c38db974ee629a815896add1ec568a1cc88c 7.0/zts
+Tags: 7.0.11-fpm, 7.0-fpm, 7-fpm, fpm
+GitCommit: 6924505927f75e74098cc55e53e4f66bf71e0068
+Directory: 7.0/fpm
+
+Tags: 7.0.11-fpm-alpine, 7.0-fpm-alpine, 7-fpm-alpine, fpm-alpine
+GitCommit: 6924505927f75e74098cc55e53e4f66bf71e0068
+Directory: 7.0/fpm/alpine
+
+Tags: 7.0.11-zts, 7.0-zts, 7-zts, zts
+GitCommit: 6924505927f75e74098cc55e53e4f66bf71e0068
+Directory: 7.0/zts
+
+Tags: 7.0.11-zts-alpine, 7.0-zts-alpine, 7-zts-alpine, zts-alpine
+GitCommit: 6924505927f75e74098cc55e53e4f66bf71e0068
+Directory: 7.0/zts/alpine
+
+Tags: 5.6.26-cli, 5.6-cli, 5-cli, 5.6.26, 5.6, 5
+GitCommit: 1c56325a69718a3e3cf76179e75d070b7e23da62
+Directory: 5.6
+
+Tags: 5.6.26-alpine, 5.6-alpine, 5-alpine
+GitCommit: 1c56325a69718a3e3cf76179e75d070b7e23da62
+Directory: 5.6/alpine
+
+Tags: 5.6.26-apache, 5.6-apache, 5-apache
+GitCommit: 1c56325a69718a3e3cf76179e75d070b7e23da62
+Directory: 5.6/apache
+
+Tags: 5.6.26-fpm, 5.6-fpm, 5-fpm
+GitCommit: 1c56325a69718a3e3cf76179e75d070b7e23da62
+Directory: 5.6/fpm
+
+Tags: 5.6.26-fpm-alpine, 5.6-fpm-alpine, 5-fpm-alpine
+GitCommit: 1c56325a69718a3e3cf76179e75d070b7e23da62
+Directory: 5.6/fpm/alpine
+
+Tags: 5.6.26-zts, 5.6-zts, 5-zts
+GitCommit: 1c56325a69718a3e3cf76179e75d070b7e23da62
+Directory: 5.6/zts
+
+Tags: 5.6.26-zts-alpine, 5.6-zts-alpine, 5-zts-alpine
+GitCommit: 1c56325a69718a3e3cf76179e75d070b7e23da62
+Directory: 5.6/zts/alpine

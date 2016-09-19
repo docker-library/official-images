@@ -1,22 +1,36 @@
-# maintainer: InfoSiftr <github@infosiftr.com> (@infosiftr)
+# this file is generated via https://github.com/docker-library/mongo/blob/89549b2b779421c057b04858477012b7aa17f498/generate-stackbrew-library.sh
 
-2.2.7: git://github.com/docker-library/mongo@7da0e6d6520607c99d40cf71a2e4b0a2da0beca9 2.2
-2.2: git://github.com/docker-library/mongo@7da0e6d6520607c99d40cf71a2e4b0a2da0beca9 2.2
+Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
+             Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
+GitRepo: https://github.com/docker-library/mongo.git
 
-2.4.14: git://github.com/docker-library/mongo@7da0e6d6520607c99d40cf71a2e4b0a2da0beca9 2.4
-2.4: git://github.com/docker-library/mongo@7da0e6d6520607c99d40cf71a2e4b0a2da0beca9 2.4
+Tags: 2.6.12, 2.6, 2
+GitCommit: fc91d681fa5808c30c3118ce7fe3f993beccc82d
+Directory: 2.6
 
-2.6.11: git://github.com/docker-library/mongo@7da0e6d6520607c99d40cf71a2e4b0a2da0beca9 2.6
-2.6: git://github.com/docker-library/mongo@7da0e6d6520607c99d40cf71a2e4b0a2da0beca9 2.6
-2: git://github.com/docker-library/mongo@7da0e6d6520607c99d40cf71a2e4b0a2da0beca9 2.6
+Tags: 3.0.12, 3.0
+GitCommit: 4b1d085ccab5728a9b9e4b65c5ed19820420809e
+Directory: 3.0
 
-3.0.9: git://github.com/docker-library/mongo@7da0e6d6520607c99d40cf71a2e4b0a2da0beca9 3.0
-3.0: git://github.com/docker-library/mongo@7da0e6d6520607c99d40cf71a2e4b0a2da0beca9 3.0
+Tags: 3.0.12-windowsservercore, 3.0-windowsservercore
+GitCommit: 89549b2b779421c057b04858477012b7aa17f498
+Directory: 3.0/windows/windowsservercore
+Constraints: windowsservercore
 
-3.1.9: git://github.com/docker-library/mongo@7da0e6d6520607c99d40cf71a2e4b0a2da0beca9 3.1
-3.1: git://github.com/docker-library/mongo@7da0e6d6520607c99d40cf71a2e4b0a2da0beca9 3.1
+Tags: 3.2.9, 3.2, 3, latest
+GitCommit: 4d7bd01562edefad38a240c40a4b162a1cd7b9c2
+Directory: 3.2
 
-3.2.1: git://github.com/docker-library/mongo@7da0e6d6520607c99d40cf71a2e4b0a2da0beca9 3.2
-3.2: git://github.com/docker-library/mongo@7da0e6d6520607c99d40cf71a2e4b0a2da0beca9 3.2
-3: git://github.com/docker-library/mongo@7da0e6d6520607c99d40cf71a2e4b0a2da0beca9 3.2
-latest: git://github.com/docker-library/mongo@7da0e6d6520607c99d40cf71a2e4b0a2da0beca9 3.2
+Tags: 3.2.9-windowsservercore, 3.2-windowsservercore, 3-windowsservercore, windowsservercore
+GitCommit: 89549b2b779421c057b04858477012b7aa17f498
+Directory: 3.2/windows/windowsservercore
+Constraints: windowsservercore
+
+Tags: 3.3.12, 3.3
+GitCommit: 174bd96682dc3613df9b670658ac81c9dd17ba74
+Directory: 3.3
+
+Tags: 3.3.12-windowsservercore, 3.3-windowsservercore
+GitCommit: 174bd96682dc3613df9b670658ac81c9dd17ba74
+Directory: 3.3/windows/windowsservercore
+Constraints: windowsservercore

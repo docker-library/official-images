@@ -1,42 +1,83 @@
-# maintainer: Tianon Gravi <tianon@debian.org> (@tianon)
-# maintainer: Paul Tagliamonte <paultag@debian.org> (@paultag)
+Maintainers: Tianon Gravi <tianon@debian.org> (@tianon),
+             Paul Tagliamonte <paultag@debian.org> (@paultag)
+GitRepo: https://github.com/tianon/docker-brew-debian.git
 
-# commits: (master..dist)
-#  - 0a2d20c 2016-01-25 debootstraps
+# commits: (master..dist-stable)
+#  - 589b967 2016-08-30 debootstraps
 
-8.3: git://github.com/tianon/docker-brew-debian@0a2d20ca8e26f7bf6a5cc3ce2727eb6cc1894ef9 jessie
-8: git://github.com/tianon/docker-brew-debian@0a2d20ca8e26f7bf6a5cc3ce2727eb6cc1894ef9 jessie
-jessie: git://github.com/tianon/docker-brew-debian@0a2d20ca8e26f7bf6a5cc3ce2727eb6cc1894ef9 jessie
-latest: git://github.com/tianon/docker-brew-debian@0a2d20ca8e26f7bf6a5cc3ce2727eb6cc1894ef9 jessie
+# commits: (master..dist-unstable)
+#  - 0262f96 2016-08-30 debootstraps
 
-jessie-backports: git://github.com/tianon/docker-brew-debian@0a2d20ca8e26f7bf6a5cc3ce2727eb6cc1894ef9 jessie/backports
+Tags: 8.5, 8, jessie, latest
+GitFetch: refs/heads/dist-stable
+GitCommit: 589b967ff4364528ebd686b002a6ee00f00f4657
+Directory: jessie
 
-oldstable: git://github.com/tianon/docker-brew-debian@0a2d20ca8e26f7bf6a5cc3ce2727eb6cc1894ef9 oldstable
+Tags: jessie-backports
+GitFetch: refs/heads/dist-stable
+GitCommit: 589b967ff4364528ebd686b002a6ee00f00f4657
+Directory: jessie/backports
 
-oldstable-backports: git://github.com/tianon/docker-brew-debian@0a2d20ca8e26f7bf6a5cc3ce2727eb6cc1894ef9 oldstable/backports
+Tags: oldstable
+GitFetch: refs/heads/dist-stable
+GitCommit: 589b967ff4364528ebd686b002a6ee00f00f4657
+Directory: oldstable
 
-sid: git://github.com/tianon/docker-brew-debian@0a2d20ca8e26f7bf6a5cc3ce2727eb6cc1894ef9 sid
+Tags: oldstable-backports
+GitFetch: refs/heads/dist-stable
+GitCommit: 589b967ff4364528ebd686b002a6ee00f00f4657
+Directory: oldstable/backports
 
-6.0.10: git://github.com/tianon/docker-brew-debian@0a2d20ca8e26f7bf6a5cc3ce2727eb6cc1894ef9 squeeze
-6.0: git://github.com/tianon/docker-brew-debian@0a2d20ca8e26f7bf6a5cc3ce2727eb6cc1894ef9 squeeze
-6: git://github.com/tianon/docker-brew-debian@0a2d20ca8e26f7bf6a5cc3ce2727eb6cc1894ef9 squeeze
-squeeze: git://github.com/tianon/docker-brew-debian@0a2d20ca8e26f7bf6a5cc3ce2727eb6cc1894ef9 squeeze
+Tags: sid
+GitFetch: refs/heads/dist-unstable
+GitCommit: 0262f960f1f11cea2b3b73c4e04f52cb4219f8ea
+Directory: sid
 
-stable: git://github.com/tianon/docker-brew-debian@0a2d20ca8e26f7bf6a5cc3ce2727eb6cc1894ef9 stable
+Tags: stable
+GitFetch: refs/heads/dist-stable
+GitCommit: 589b967ff4364528ebd686b002a6ee00f00f4657
+Directory: stable
 
-stable-backports: git://github.com/tianon/docker-brew-debian@0a2d20ca8e26f7bf6a5cc3ce2727eb6cc1894ef9 stable/backports
+Tags: stable-backports
+GitFetch: refs/heads/dist-stable
+GitCommit: 589b967ff4364528ebd686b002a6ee00f00f4657
+Directory: stable/backports
 
-stretch: git://github.com/tianon/docker-brew-debian@0a2d20ca8e26f7bf6a5cc3ce2727eb6cc1894ef9 stretch
+Tags: stretch
+GitFetch: refs/heads/dist-unstable
+GitCommit: 0262f960f1f11cea2b3b73c4e04f52cb4219f8ea
+Directory: stretch
 
-testing: git://github.com/tianon/docker-brew-debian@0a2d20ca8e26f7bf6a5cc3ce2727eb6cc1894ef9 testing
+Tags: testing
+GitFetch: refs/heads/dist-unstable
+GitCommit: 0262f960f1f11cea2b3b73c4e04f52cb4219f8ea
+Directory: testing
 
-unstable: git://github.com/tianon/docker-brew-debian@0a2d20ca8e26f7bf6a5cc3ce2727eb6cc1894ef9 unstable
+Tags: unstable
+GitFetch: refs/heads/dist-unstable
+GitCommit: 0262f960f1f11cea2b3b73c4e04f52cb4219f8ea
+Directory: unstable
 
-7.9: git://github.com/tianon/docker-brew-debian@0a2d20ca8e26f7bf6a5cc3ce2727eb6cc1894ef9 wheezy
-7: git://github.com/tianon/docker-brew-debian@0a2d20ca8e26f7bf6a5cc3ce2727eb6cc1894ef9 wheezy
-wheezy: git://github.com/tianon/docker-brew-debian@0a2d20ca8e26f7bf6a5cc3ce2727eb6cc1894ef9 wheezy
+Tags: 7.11, 7, wheezy
+GitFetch: refs/heads/dist-stable
+GitCommit: 589b967ff4364528ebd686b002a6ee00f00f4657
+Directory: wheezy
 
-wheezy-backports: git://github.com/tianon/docker-brew-debian@0a2d20ca8e26f7bf6a5cc3ce2727eb6cc1894ef9 wheezy/backports
+Tags: wheezy-backports
+GitFetch: refs/heads/dist-stable
+GitCommit: 589b967ff4364528ebd686b002a6ee00f00f4657
+Directory: wheezy/backports
 
-rc-buggy: git://github.com/tianon/dockerfiles@22a998f815d55217afa0075411b810b8889ceac1 debian/rc-buggy
-experimental: git://github.com/tianon/dockerfiles@22a998f815d55217afa0075411b810b8889ceac1 debian/experimental
+# sid + rc-buggy
+Tags: rc-buggy
+GitRepo: https://github.com/tianon/dockerfiles.git
+GitFetch: refs/heads/master
+GitCommit: 22a998f815d55217afa0075411b810b8889ceac1
+Directory: debian/rc-buggy
+
+# unstable + experimental
+Tags: experimental
+GitRepo: https://github.com/tianon/dockerfiles.git
+GitFetch: refs/heads/master
+GitCommit: 22a998f815d55217afa0075411b810b8889ceac1
+Directory: debian/experimental
