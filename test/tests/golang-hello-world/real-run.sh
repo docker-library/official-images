@@ -1,0 +1,1 @@
+../run-go-in-container.sh
