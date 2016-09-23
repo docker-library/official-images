@@ -4,11 +4,8 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
-	"sort"
-	"strings"
 
 	"github.com/codegangsta/cli"
-	"pault.ag/go/topsort"
 )
 
 // TODO somewhere, ensure that the Docker engine we're talking to is API version 1.22+ (Docker 1.10+)
@@ -26,6 +23,14 @@ var (
 
 	debugFlag  = false
 	noSortFlag = false
+
+	// separated so that FlagsConfig.ApplyTo can access them
+	flagEnvVars = map[string]string{
+		"debug":   "BASHBREW_DEBUG",
+		"config":  "BASHBREW_CONFIG",
+		"library": "BASHBREW_LIBRARY",
+		"cache":   "BASHBREW_CACHE",
+	}
 )
 
 func initDefaultConfigPath() string {
@@ -44,91 +49,6 @@ func initDefaultCachePath() string {
 	return filepath.Join(xdgCache, "bashbrew")
 }
 
-func repos(all bool, args ...string) ([]string, error) {
-	ret := []string{}
-
-	if all {
-		dir, err := os.Open(defaultLibrary)
-		if err != nil {
-			return nil, err
-		}
-		names, err := dir.Readdirnames(-1)
-		dir.Close()
-		if err != nil {
-			return nil, err
-		}
-		sort.Strings(names)
-		for _, name := range names {
-			ret = append(ret, filepath.Join(defaultLibrary, name))
-		}
-	}
-
-	ret = append(ret, args...)
-
-	if len(ret) < 1 {
-		return nil, fmt.Errorf(`need at least one repo (either explicitly or via "--all")`)
-	}
-
-	return ret, nil
-}
-
-func sortRepos(repos []string) ([]string, error) {
-	if noSortFlag || len(repos) <= 1 {
-		return repos, nil
-	}
-
-	network := topsort.NewNetwork()
-
-	rs := []*Repo{}
-	for _, repo := range repos {
-		r, err := fetch(repo)
-		if err != nil {
-			return nil, err
-		}
-		rs = append(rs, r)
-		network.AddNode(r.Identifier(), repo)
-		network.AddNode(r.RepoName, repo)
-	}
-
-	for _, r := range rs {
-		for _, entry := range r.Entries() {
-			from, err := r.DockerFrom(&entry)
-			if err != nil {
-				return nil, err
-			}
-			if i := strings.IndexRune(from, ':'); i >= 0 {
-				// we want "repo -> repo" relations, no tags
-				from = from[:i]
-			}
-			if from == r.RepoName {
-				// "a:a -> a:b" is OK (ignore that here -- see Repo.SortedEntries for that)
-				continue
-			}
-			// TODO somehow reconcile/avoid "a:a -> b:b, b:b -> a:c" (which will exhibit here as cyclic)
-			network.AddEdgeIfExists(from, r.Identifier())
-			network.AddEdgeIfExists(from, r.RepoName)
-		}
-	}
-
-	nodes, err := network.Sort()
-	if err != nil {
-		return nil, err
-	}
-
-	ret := []string{}
-	seen := map[string]bool{}
-	for _, node := range nodes {
-		repo := node.Value.(string)
-		if seen[repo] {
-			continue
-		}
-		seen[repo] = true
-		ret = append(ret, repo)
-	}
-
-	return ret, nil
-}
-
 func main() {
 	app := cli.NewApp()
 	app.Name = "bashbrew"
@@ -144,7 +64,7 @@ func main() {
 	app.Flags = []cli.Flag{
 		cli.BoolFlag{
 			Name:   "debug",
-			EnvVar: "BASHBREW_DEBUG",
+			EnvVar: flagEnvVars["debug"],
 			Usage:  `enable more output (esp. all "docker build" output instead of only output on failure)`,
 		},
 		cli.BoolFlag{
@@ -164,19 +84,19 @@ func main() {
 		cli.StringFlag{
 			Name:   "config",
 			Value:  initDefaultConfigPath(),
-			EnvVar: "BASHBREW_CONFIG",
+			EnvVar: flagEnvVars["config"],
 			Usage:  `where default "flags" configuration can be overridden more persistently`,
 		},
 		cli.StringFlag{
 			Name:   "library",
 			Value:  filepath.Join(os.Getenv("HOME"), "docker", "official-images", "library"),
-			EnvVar: "BASHBREW_LIBRARY",
+			EnvVar: flagEnvVars["library"],
 			Usage:  "where the bodies are buried",
 		},
 		cli.StringFlag{
 			Name:   "cache",
 			Value:  initDefaultCachePath(),
-			EnvVar: "BASHBREW_CACHE",
+			EnvVar: flagEnvVars["cache"],
 			Usage:  "where the git wizardry is stashed",
 		},
 	}
