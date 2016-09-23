@@ -3,69 +3,72 @@ Maintainers: Tianon Gravi <tianon@debian.org> (@tianon),
 GitRepo: https://github.com/tianon/docker-brew-debian.git
 
 # commits: (master..dist-stable)
-#  - 261f8d1 2016-09-19 debootstraps
+#  - 88ae210 2016-09-23 debootstraps
 
 # commits: (master..dist-unstable)
-#  - 5262a06 2016-09-19 debootstraps
+#  - ee8b1cb 2016-09-23 debootstraps
+
+# commits: (master..dist-oldstable)
+#  - a687a61 2016-09-19 debootstraps
 
 Tags: 8.6, 8, jessie, latest
 GitFetch: refs/heads/dist-stable
-GitCommit: 261f8d1fd3b61f1f790c1f47b006ca150064189b
+GitCommit: 88ae21052affd8a14553bb969f9d41c464032122
 Directory: jessie
 
 Tags: jessie-backports
 GitFetch: refs/heads/dist-stable
-GitCommit: 261f8d1fd3b61f1f790c1f47b006ca150064189b
+GitCommit: 88ae21052affd8a14553bb969f9d41c464032122
 Directory: jessie/backports
 
 Tags: oldstable
-GitFetch: refs/heads/dist-stable
-GitCommit: 261f8d1fd3b61f1f790c1f47b006ca150064189b
+GitFetch: refs/heads/dist-oldstable
+GitCommit: a687a618203e1c0891b42d684ac72a85e1f0bfa6
 Directory: oldstable
 
 Tags: oldstable-backports
-GitFetch: refs/heads/dist-stable
-GitCommit: 261f8d1fd3b61f1f790c1f47b006ca150064189b
+GitFetch: refs/heads/dist-oldstable
+GitCommit: a687a618203e1c0891b42d684ac72a85e1f0bfa6
 Directory: oldstable/backports
 
 Tags: sid
 GitFetch: refs/heads/dist-unstable
-GitCommit: 5262a068af848af6e4084a1853999f4df1d68a2a
+GitCommit: ee8b1cb93b20e3b9afc264126f1fe9b5518735c5
 Directory: sid
 
 Tags: stable
 GitFetch: refs/heads/dist-stable
-GitCommit: 261f8d1fd3b61f1f790c1f47b006ca150064189b
+GitCommit: 88ae21052affd8a14553bb969f9d41c464032122
 Directory: stable
 
 Tags: stable-backports
 GitFetch: refs/heads/dist-stable
-GitCommit: 261f8d1fd3b61f1f790c1f47b006ca150064189b
+GitCommit: 88ae21052affd8a14553bb969f9d41c464032122
 Directory: stable/backports
 
 Tags: stretch
 GitFetch: refs/heads/dist-unstable
-GitCommit: 5262a068af848af6e4084a1853999f4df1d68a2a
+GitCommit: ee8b1cb93b20e3b9afc264126f1fe9b5518735c5
 Directory: stretch
 
 Tags: testing
 GitFetch: refs/heads/dist-unstable
-GitCommit: 5262a068af848af6e4084a1853999f4df1d68a2a
+GitCommit: ee8b1cb93b20e3b9afc264126f1fe9b5518735c5
 Directory: testing
 
 Tags: unstable
 GitFetch: refs/heads/dist-unstable
-GitCommit: 5262a068af848af6e4084a1853999f4df1d68a2a
+GitCommit: ee8b1cb93b20e3b9afc264126f1fe9b5518735c5
 Directory: unstable
 
 Tags: 7.11, 7, wheezy
-GitFetch: refs/heads/dist-stable
-GitCommit: 261f8d1fd3b61f1f790c1f47b006ca150064189b
+GitFetch: refs/heads/dist-oldstable
+GitCommit: a687a618203e1c0891b42d684ac72a85e1f0bfa6
 Directory: wheezy
 
 Tags: wheezy-backports
-GitFetch: refs/heads/dist-stable
-GitCommit: 261f8d1fd3b61f1f790c1f47b006ca150064189b
+GitFetch: refs/heads/dist-oldstable
+GitCommit: a687a618203e1c0891b42d684ac72a85e1f0bfa6
 Directory: wheezy/backports
 
 # sid + rc-buggy
