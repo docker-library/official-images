@@ -31,11 +31,11 @@ tempDir="$(mktemp -d)"
 trap "rm -rf '$tempDir'" EXIT
 cd "$tempDir"
 
-git clone --quiet --depth 1 \
+git clone --quiet \
 	https://github.com/docker-library/official-images.git \
 	oi
 
-git -C oi fetch --quiet --depth 1 \
+git -C oi fetch --quiet \
 	origin "pull/$pull/merge":pull
 
 images=( "$@" )
