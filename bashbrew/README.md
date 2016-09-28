@@ -1,5 +1,7 @@
 # Bashbrew (`bashbrew`)
 
+[![Jenkins Build Status](https://doi-janky.infosiftr.net/job/bashbrew/badge/icon)](https://doi-janky.infosiftr.net/job/bashbrew/)
+
 ```console
 $ bashbrew --help
 NAME:
