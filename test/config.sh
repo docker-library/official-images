@@ -146,6 +146,10 @@ imageTests+=(
 	'
 	[rails]='
 	'
+	[rapidoid]='
+		rapidoid-hello-world
+		rapidoid-load-balancer
+	'
 	[redis]='
 		redis-basics
 		redis-basics-config
