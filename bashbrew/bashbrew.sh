@@ -374,6 +374,7 @@ while [ "$#" -gt 0 ]; do
 				
 				if ! (
 					set -x
+					"$docker" pull "$namespace/$repoTag"
 					"$docker" build --pull -t "$repoTag" "$gitRepo/$gitDir"
 				) &>> "$thisLog"; then
 					echo "- failed 'docker build'; see $thisLog"
