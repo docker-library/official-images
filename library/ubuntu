@@ -8,36 +8,28 @@ GitFetch: refs/heads/dist
 # see also https://wiki.ubuntu.com/Releases#Current
 
 # commits: (master..dist)
-#  - 50cfe3f Update tarballs
+#  - 188bcce Update tarballs
 #    - `ubuntu:precise`: 20160923.1
-#    - `ubuntu:trusty`: 20160923.1
-#    - `ubuntu:xenial`: 20160923.1
-#    - `ubuntu:yakkety`: 20160923.1
-#  
-#  - 24efd22 Add "mkdir" for "/run/systemd"
-#  
-#  - 26f3fbb Merge pull request #64 from dustinkirkland/master
-#    Ensure that running 'systemd-detect-virt' shows 'docker'
-#  - 4a51505 fix breakage, prepend RUN
-#  
-#  - 1f79fdb Ensure that running 'systemd-detect-virt' shows 'docker' In the Ubuntu docker image, let's set /run/systemd/container to 'docker' to ensure that users are able to detect their underlying environment accurately.
+#    - `ubuntu:trusty`: 20161006
+#    - `ubuntu:xenial`: 20161010
+#    - `ubuntu:yakkety`: 20161013
 
 # 20160923.1
 Tags: 12.04.5, 12.04, precise-20160923.1, precise
-GitCommit: 50cfe3fd07327a05e449574f0ece07a6e0bb0c76
+GitCommit: 188bcceb999c0c465b3053efefd4e1a03d3fc47e
 Directory: precise
 
-# 20160923.1
-Tags: 14.04.5, 14.04, trusty-20160923.1, trusty
-GitCommit: 50cfe3fd07327a05e449574f0ece07a6e0bb0c76
+# 20161006
+Tags: 14.04.5, 14.04, trusty-20161006, trusty
+GitCommit: 188bcceb999c0c465b3053efefd4e1a03d3fc47e
 Directory: trusty
 
-# 20160923.1
-Tags: 16.04, xenial-20160923.1, xenial, latest
-GitCommit: 50cfe3fd07327a05e449574f0ece07a6e0bb0c76
+# 20161010
+Tags: 16.04, xenial-20161010, xenial, latest
+GitCommit: 188bcceb999c0c465b3053efefd4e1a03d3fc47e
 Directory: xenial
 
-# 20160923.1
-Tags: 16.10, yakkety-20160923.1, yakkety, devel
-GitCommit: 50cfe3fd07327a05e449574f0ece07a6e0bb0c76
+# 20161013
+Tags: 16.10, yakkety-20161013, yakkety, devel
+GitCommit: 188bcceb999c0c465b3053efefd4e1a03d3fc47e
 Directory: yakkety
