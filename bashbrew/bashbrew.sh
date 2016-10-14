@@ -43,10 +43,6 @@ push_image() {
 						echo >&2 "- $namespace/$repoTag-$dateStamp failed to push; see $thisLog"
 						didFail=1
 						continue
-					else
-						"$docker" rmi -f "$namespace/$repoTag-$dateStamp" || true
-						"$docker" rmi -f "$namespace/$repoTag" || true
-						"$docker" rmi -f "$repoTag" || true
 					fi
 				fi
 			fi
@@ -54,11 +50,36 @@ push_image() {
 			echo "$docker push" "$namespace/$repoTag"
 			if [ "$doDatestamp" ] && [ "$tag" != "latest" ]; then
 				echo "$docker push" "$namespace/$repoTag-$dateStamp"
-				"$docker" rmi -f "$namespace/$repoTag-$dateStamp" || true
 			fi
-			"$docker" rmi -f "$namespace/$repoTag" || true
-			"$docker" rmi -f "$repoTag" || true
 		fi
+	done
+}
+
+remove_image() {
+	retries=0
+	while [ "$retries" -lt 3 ]; do
+		let retries=retries+1
+
+		if "$docker" rmi -f "$1" ;then
+			break	
+		fi
+	done
+}
+
+clean_image() {
+	for namespace in $namespaces; do
+		if [ "$namespace" = '_' ]; then
+			# skip this namespace
+			continue
+		fi
+
+		tag="${repoTag#*:}"
+
+		if [ "$doDatestamp" ] && [ "$tag" != "latest" ]; then
+			remove_image "$namespace/$repoTag-$dateStamp"
+		fi
+		remove_image "$namespace/$repoTag"
+		remove_image "$repoTag"
 	done
 }
 
@@ -374,6 +395,7 @@ while [ "$#" -gt 0 ]; do
 				
 				if ! (
 					set -x
+					"$docker" pull "$namespace/$repoTag"
 					"$docker" build --pull -t "$repoTag" "$gitRepo/$gitDir"
 				) &>> "$thisLog"; then
 					echo "- failed 'docker build'; see $thisLog"
@@ -409,6 +431,7 @@ while [ "$#" -gt 0 ]; do
 					fi
 				done
 				push_image
+				clean_image
 			fi
 			;;
 		list)
@@ -422,6 +445,7 @@ while [ "$#" -gt 0 ]; do
 			;;
 		push)
 			push_image
+			clean_image
 			;;
 	esac
 done
