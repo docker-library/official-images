@@ -3,72 +3,112 @@ Maintainers: Tianon Gravi <tianon@debian.org> (@tianon),
 GitRepo: https://github.com/tianon/docker-brew-debian.git
 
 # commits: (master..dist-stable)
-#  - 5f84ff7 2016-10-20 debootstraps
+#  - 2c836bc 2016-11-04 debootstraps
 
 # commits: (master..dist-unstable)
-#  - 42df304 2016-10-17 debootstraps
+#  - 9b1dd4b 2016-11-04 debootstraps
 
 # commits: (master..dist-oldstable)
-#  - dc2ade4 2016-10-20 debootstraps
+#  - 1626bb6 2016-11-04 debootstraps
 
 Tags: 8.6, 8, jessie, latest
 GitFetch: refs/heads/dist-stable
-GitCommit: 5f84ff77365de2ee50655978edad2ba5004c1321
+GitCommit: 2c836bc53feb12f70a07dacaa6256d4d66624f38
 Directory: jessie
+
+Tags: jessie-slim
+GitFetch: refs/heads/dist-stable
+GitCommit: 2c836bc53feb12f70a07dacaa6256d4d66624f38
+Directory: jessie/slim
 
 Tags: jessie-backports
 GitFetch: refs/heads/dist-stable
-GitCommit: 5f84ff77365de2ee50655978edad2ba5004c1321
+GitCommit: 2c836bc53feb12f70a07dacaa6256d4d66624f38
 Directory: jessie/backports
 
 Tags: oldstable
 GitFetch: refs/heads/dist-oldstable
-GitCommit: dc2ade4473b0bc2c1664c2e2636a9c494709333b
+GitCommit: 1626bb6698f1cab6e7529a4238717270699a8246
 Directory: oldstable
+
+Tags: oldstable-slim
+GitFetch: refs/heads/dist-oldstable
+GitCommit: 1626bb6698f1cab6e7529a4238717270699a8246
+Directory: oldstable/slim
 
 Tags: oldstable-backports
 GitFetch: refs/heads/dist-oldstable
-GitCommit: dc2ade4473b0bc2c1664c2e2636a9c494709333b
+GitCommit: 1626bb6698f1cab6e7529a4238717270699a8246
 Directory: oldstable/backports
 
 Tags: sid
 GitFetch: refs/heads/dist-unstable
-GitCommit: 42df3048e98cdd2f849abab65a29719ae6189923
+GitCommit: 9b1dd4b1594b8df02f7caa739e84b187edaab404
 Directory: sid
+
+Tags: sid-slim
+GitFetch: refs/heads/dist-unstable
+GitCommit: 9b1dd4b1594b8df02f7caa739e84b187edaab404
+Directory: sid/slim
 
 Tags: stable
 GitFetch: refs/heads/dist-stable
-GitCommit: 5f84ff77365de2ee50655978edad2ba5004c1321
+GitCommit: 2c836bc53feb12f70a07dacaa6256d4d66624f38
 Directory: stable
+
+Tags: stable-slim
+GitFetch: refs/heads/dist-stable
+GitCommit: 2c836bc53feb12f70a07dacaa6256d4d66624f38
+Directory: stable/slim
 
 Tags: stable-backports
 GitFetch: refs/heads/dist-stable
-GitCommit: 5f84ff77365de2ee50655978edad2ba5004c1321
+GitCommit: 2c836bc53feb12f70a07dacaa6256d4d66624f38
 Directory: stable/backports
 
 Tags: stretch
 GitFetch: refs/heads/dist-unstable
-GitCommit: 42df3048e98cdd2f849abab65a29719ae6189923
+GitCommit: 9b1dd4b1594b8df02f7caa739e84b187edaab404
 Directory: stretch
+
+Tags: stretch-slim
+GitFetch: refs/heads/dist-unstable
+GitCommit: 9b1dd4b1594b8df02f7caa739e84b187edaab404
+Directory: stretch/slim
 
 Tags: testing
 GitFetch: refs/heads/dist-unstable
-GitCommit: 42df3048e98cdd2f849abab65a29719ae6189923
+GitCommit: 9b1dd4b1594b8df02f7caa739e84b187edaab404
 Directory: testing
+
+Tags: testing-slim
+GitFetch: refs/heads/dist-unstable
+GitCommit: 9b1dd4b1594b8df02f7caa739e84b187edaab404
+Directory: testing/slim
 
 Tags: unstable
 GitFetch: refs/heads/dist-unstable
-GitCommit: 42df3048e98cdd2f849abab65a29719ae6189923
+GitCommit: 9b1dd4b1594b8df02f7caa739e84b187edaab404
 Directory: unstable
+
+Tags: unstable-slim
+GitFetch: refs/heads/dist-unstable
+GitCommit: 9b1dd4b1594b8df02f7caa739e84b187edaab404
+Directory: unstable/slim
 
 Tags: 7.11, 7, wheezy
 GitFetch: refs/heads/dist-oldstable
-GitCommit: dc2ade4473b0bc2c1664c2e2636a9c494709333b
+GitCommit: 1626bb6698f1cab6e7529a4238717270699a8246
 Directory: wheezy
+
+Tags: wheezy-slim
+GitFetch: refs/heads/dist-oldstable
+GitCommit: 1626bb6698f1cab6e7529a4238717270699a8246
+Directory: wheezy/slim
 
 Tags: wheezy-backports
 GitFetch: refs/heads/dist-oldstable
-GitCommit: dc2ade4473b0bc2c1664c2e2636a9c494709333b
+GitCommit: 1626bb6698f1cab6e7529a4238717270699a8246
 Directory: wheezy/backports
 
 # sid + rc-buggy
