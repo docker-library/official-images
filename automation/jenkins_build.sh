@@ -80,7 +80,7 @@ if [ $exitCode -eq 1 ]; then
 	echo Failed images: ${failedList[@]}
 	# we need to clean up all untagged images when builds fail.
 	# First remove all stopped containers.
-	docker rm -v $(docker ps --filter status=exited -q)
+	docker rm -v $(docker ps --filter status=exited --filter "ancestor=$LIBRARY" -q)
 	# Then clean up untagged images.
 	docker rmi $(docker images --filter dangling=true -q)
 	exit 1
