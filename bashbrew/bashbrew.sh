@@ -412,7 +412,7 @@ while [ "$#" -gt 0 ]; do
 					fi
 					if ! (
 						set -x
-						"$docker" tag -f "$repoTag" "$namespace/$repoTag"
+						"$docker" tag "$repoTag" "$namespace/$repoTag"
 					) &>> "$thisLog"; then
 						echo "- failed 'docker tag'; see $thisLog"
 						didFail=1
@@ -425,7 +425,7 @@ while [ "$#" -gt 0 ]; do
 					if [ "$doDatestamp" ] && [ "$tag" != "latest" ]; then
 						if ! (
 							set -x
-							"$docker" tag -f "$repoTag" "$namespace/$repoTag-$dateStamp"
+							"$docker" tag "$repoTag" "$namespace/$repoTag-$dateStamp"
 						) &>> "$thisLog"; then
 							echo "- failed 'docker tag'; see $thisLog"
 							didFail=1
