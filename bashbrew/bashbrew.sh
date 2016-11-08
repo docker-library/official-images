@@ -57,9 +57,10 @@ push_image() {
 
 remove_image() {
 	retries=0
+	echo "Removing $1"
 	while [ "$retries" -lt 3 ]; do
 		let retries=retries+1
-
+		echo "Retrying remove $1"
 		if "$docker" rmi -f "$1" ;then
 			break	
 		fi
@@ -395,11 +396,12 @@ while [ "$#" -gt 0 ]; do
 				
 				if ! (
 					set -x
-					"$docker" pull "$namespace/$repoTag"
+					"$docker" pull "resin/$repoTag"
 					"$docker" build --pull -t "$repoTag" "$gitRepo/$gitDir"
 				) &>> "$thisLog"; then
 					echo "- failed 'docker build'; see $thisLog"
 					didFail=1
+					clean_image
 					continue
 				fi
 				
@@ -414,6 +416,7 @@ while [ "$#" -gt 0 ]; do
 					) &>> "$thisLog"; then
 						echo "- failed 'docker tag'; see $thisLog"
 						didFail=1
+						clean_image
 						continue
 					fi
 
@@ -426,6 +429,7 @@ while [ "$#" -gt 0 ]; do
 						) &>> "$thisLog"; then
 							echo "- failed 'docker tag'; see $thisLog"
 							didFail=1
+							clean_image
 							continue
 						fi
 					fi
