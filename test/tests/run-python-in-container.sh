@@ -5,7 +5,7 @@ testDir="$(readlink -f "$(dirname "$BASH_SOURCE")")"
 runDir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
 source "$runDir/run-in-container.sh" "$testDir" "$1" sh -ec '
-	for c in python3 python pypy3 pypy; do
+	for c in pypy3 pypy python3 python; do
 		if command -v "$c" > /dev/null; then
 			exec "$c" "$@"
 		fi

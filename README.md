@@ -2,6 +2,10 @@
 
 [![Build Status](https://travis-ci.org/docker-library/official-images.svg?branch=master)](https://travis-ci.org/docker-library/official-images)
 
+## What are "Official Images"?
+
+See [Docker's documentation](https://docs.docker.com/docker-hub/official_repos/) for a good high-level overview of the program.
+
 ## Architectures other than amd64?
 
 Work is in-progress in the Docker Engine and Registry to properly support multiple architectures (see [docker/docker#15866](https://github.com/docker/docker/issues/15866)). While this work is ongoing, **temporary**, experimental builds of the official images for the following architectures are happening somewhat incrementally (with a strong bias towards images necessary for Docker's own CI to help hasten proper multiarch support upstream) via CI.
@@ -135,8 +139,6 @@ RUN set -x \
 	&& chmod +x /usr/local/bin/tini \
 	&& tini -h
 ```
-
-**NOTE**: if [docker/docker#11529](https://github.com/docker/docker/issues/11529) gets solved, then `tini` would no longer be needed for reaping zombies.
 
 #### Cacheability
 
