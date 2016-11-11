@@ -21,6 +21,44 @@ logs="$(readlink -f "$logs")"
 
 self="$(basename "$0")"
 
+check_image_type() {
+	local repo="$1"
+	if [[ $repo == *"buildpack-deps" ]]; then
+		echo '-buildpack-deps'
+	fi
+	if [[ $repo == *"golang" ]]; then
+		echo '-golang'
+	fi
+	if [[ $repo == *"python" ]]; then
+		echo '-python'
+	fi
+	if [[ $repo == *"node" ]]; then
+		echo '-node'
+	fi
+	if [[ $repo == *"openjdk" ]]; then
+		echo '-openjdk'
+	fi
+}
+
+get_image_type() {
+	local repo=$1
+	if [[ $repo == *"alpine"* ]]; then
+		imageType='alpine'
+		imageType+=$(check_image_type $repo)
+	else
+		if [[ $ARCH == *"fedora"* ]]; then
+			imageType='fedora'
+			imageType+=$(check_image_type $repo)
+		else
+			imageType=$(check_image_type $repo)
+			if [ -z "$imageType" ]; then
+				imageType='debian'
+			fi
+			imageType="${imageType#*-}"
+		fi
+	fi
+}
+
 push_image() {
 	for namespace in $namespaces; do
 		if [ "$namespace" = '_' ]; then
@@ -45,6 +83,27 @@ push_image() {
 						continue
 					fi
 				fi
+			fi
+			if [ "$aliases" ]; then
+				for alias in $aliases; do
+					"$docker" tag "$namespace/$repoTag" "$namespace/$alias-$imageType:$tag"
+					echo "Pushing alias: $namespace/$alias-$imageType:$tag..."
+					if ! "$docker" push "$namespace/$alias-$imageType:$tag" &>> "$thisLog" < /dev/null; then
+						echo >&2 "- $namespace/$alias-$imageType:$tag failed to push; see $thisLog"
+						didFail=1
+						continue
+					else
+						if [ "$doDatestamp" ] && [ "$tag" != "latest" ]; then
+							"$docker" tag "$namespace/$repoTag-$dateStamp" "$namespace/$alias-$imageType:$tag-$dateStamp"
+							echo "Pushing alias: $namespace/$alias-$imageType:$tag-$dateStamp..."
+							if ! "$docker" push "$namespace/$alias-$imageType:$tag-$dateStamp" &>> "$thisLog" < /dev/null; then
+								echo >&2 "- $namespace/$alias-$imageType:$tag-$dateStamp failed to push; see $thisLog"
+								didFail=1
+								continue
+							fi
+						fi
+					fi
+				done
 			fi
 		else
 			echo "$docker push" "$namespace/$repoTag"
@@ -76,11 +135,19 @@ clean_image() {
 
 		tag="${repoTag#*:}"
 
+		if [ "$aliases" ]; then
+			for alias in $aliases; do
+				remove_image "$namespace/$alias-$imageType:$tag"
+				remove_image "$namespace/$alias-$imageType:$tag-$dateStamp"
+			done
+		fi
+
 		if [ "$doDatestamp" ] && [ "$tag" != "latest" ]; then
 			remove_image "$namespace/$repoTag-$dateStamp"
 		fi
 		remove_image "$namespace/$repoTag"
 		remove_image "$repoTag"
+
 	done
 }
 
@@ -115,6 +182,8 @@ common options:
                      namespace because it is necessary to do so for dependent
                      images to use FROM correctly (think "onbuild" variants that
                      are "FROM base-image:some-version")
+  --aliases="$aliases"
+                     Specify aliases for Docker images.
 
 build options:
   --no-build         Don't build, print what would build
@@ -131,7 +200,7 @@ EOUSAGE
 }
 
 # arg handling
-opts="$(getopt -o 'h?' --long 'all,docker:,help,library:,logs:,namespaces:,no-build,no-clone,no-push,src:,no-datestamp' -- "$@" || { usage >&2 && false; })"
+opts="$(getopt -o 'h?' --long 'all,docker:,help,library:,logs:,namespaces:,no-build,no-clone,no-push,src:,no-datestamp,aliases:' -- "$@" || { usage >&2 && false; })"
 eval set -- "$opts"
 
 doClone=1
@@ -150,6 +219,7 @@ while true; do
 		--library) library="$1" && shift ;;
 		--logs) logs="$1" && shift ;;
 		--namespaces) namespaces="$1" && shift ;;
+		--aliases) aliases="$1" && shift ;;
 		--no-build) doBuild= ;;
 		--no-clone) doClone= ;;
 		--no-push) doPush= ;;
@@ -214,6 +284,7 @@ didFail=
 # gather all the `repo:tag` combos to build
 for repoTag in "${repos[@]}"; do
 	repo="${repoTag%%:*}"
+	get_image_type $repo
 	tag="${repoTag#*:}"
 	[ "$repo" != "$tag" ] || tag=
 	

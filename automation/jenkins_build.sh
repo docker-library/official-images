@@ -31,13 +31,17 @@ pushOnly=
 args=
 
 # Args handling
-while getopts ":pn"  opt; do
+while getopts ":pna"  opt; do
 	case $opt in
 		p)
 			pushOnly=1
 			;;
 		n)
 			args+=' --no-datestamp'
+			;;
+		a)
+			shift
+			args+=" --aliases=$1" && shift
 			;;
 		\?)
 			{
