@@ -13,8 +13,12 @@ cname="silverpeas-container-$RANDOM-$RANDOM"
 cid="$(docker run -d -e DB_SERVERTYPE="H2" -e DB_SERVER=":file:" -e DB_PASSWORD="sa" --name "$cname" "$image")"
 trap "docker rm -vf $cid > /dev/null" EXIT
 
-# the maximum time for Silverpeas to be configured and to be started (if no errors)
-sleep 120s
+check_running() {
+  docker run --rm --link "$cid":silverpeas "$image" wget silverpeas:8000/silverpeas &>/dev/null
+  return $?
+}
+
+. "$dir/../../retry.sh" --tries 20 --sleep 5 'check_running'
 
 silverpeas_status="$(docker exec "$cname" /opt/silverpeas/bin/silverpeas status)"
 
