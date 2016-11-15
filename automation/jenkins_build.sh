@@ -28,6 +28,7 @@ is_success() {
 exitCode=0
 failedList=()
 pushOnly=
+aliases=
 args=
 
 # Args handling
@@ -41,7 +42,7 @@ while getopts ":pna"  opt; do
 			;;
 		a)
 			shift
-			args+=" --aliases=$1" && shift
+			aliases=$1 && shift
 			;;
 		\?)
 			{
@@ -52,6 +53,13 @@ while getopts ":pna"  opt; do
       		;;
 	esac
 done
+
+# parse aliases
+if [ ! -z "$aliases" ]; then
+	for alias in $aliases; do
+		args+=" --alias=$alias"
+	done
+fi
 
 # Jenkins build steps
 cd bashbrew/

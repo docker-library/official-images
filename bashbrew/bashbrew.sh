@@ -182,8 +182,8 @@ common options:
                      namespace because it is necessary to do so for dependent
                      images to use FROM correctly (think "onbuild" variants that
                      are "FROM base-image:some-version")
-  --aliases="$aliases"
-                     Specify aliases for Docker images.
+  --alias="$alias"
+                     Specify alias for Docker images.
 
 build options:
   --no-build         Don't build, print what would build
@@ -200,7 +200,7 @@ EOUSAGE
 }
 
 # arg handling
-opts="$(getopt -o 'h?' --long 'all,docker:,help,library:,logs:,namespaces:,no-build,no-clone,no-push,src:,no-datestamp,aliases:' -- "$@" || { usage >&2 && false; })"
+opts="$(getopt -o 'h?' --long 'all,docker:,help,library:,logs:,namespaces:,no-build,no-clone,no-push,src:,no-datestamp,alias:' -- "$@" || { usage >&2 && false; })"
 eval set -- "$opts"
 
 doClone=1
@@ -219,7 +219,7 @@ while true; do
 		--library) library="$1" && shift ;;
 		--logs) logs="$1" && shift ;;
 		--namespaces) namespaces="$1" && shift ;;
-		--aliases) aliases="$1" && shift ;;
+		--alias) aliases+=" $1" && shift ;;
 		--no-build) doBuild= ;;
 		--no-clone) doClone= ;;
 		--no-push) doPush= ;;
