@@ -14,6 +14,7 @@ func cmdFrom(c *cli.Context) error {
 
 	uniq := c.Bool("uniq")
 	namespace := ""
+	applyConstraints := c.Bool("apply-constraints")
 
 	for _, repo := range repos {
 		r, err := fetch(repo)
@@ -22,6 +23,10 @@ func cmdFrom(c *cli.Context) error {
 		}
 
 		for _, entry := range r.Entries() {
+			if applyConstraints && r.SkipConstraints(entry) {
+				continue
+			}
+
 			from, err := r.DockerFrom(&entry)
 			if err != nil {
 				return cli.NewMultiError(fmt.Errorf(`failed fetching/scraping FROM for %q (tags %q)`, r.RepoName, entry.TagsString()), err)

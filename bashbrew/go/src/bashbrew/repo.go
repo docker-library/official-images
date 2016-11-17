@@ -74,12 +74,17 @@ func (r Repo) EntryRepo(entry *manifest.Manifest2822Entry) *Repo {
 	}
 }
 
+var haveOutputSkippedMessage = map[string]bool{}
+
 func (r Repo) SkipConstraints(entry manifest.Manifest2822Entry) bool {
 	repoTag := r.RepoName + ":" + entry.Tags[0]
 
 	if len(entry.Constraints) == 0 {
 		if exclusiveConstraints {
-			fmt.Fprintf(os.Stderr, "skipping %q (due to exclusive constraints)\n", repoTag)
+			if !haveOutputSkippedMessage[repoTag] {
+				fmt.Fprintf(os.Stderr, "skipping %q (due to exclusive constraints)\n", repoTag)
+				haveOutputSkippedMessage[repoTag] = true
+			}
 		}
 		return exclusiveConstraints
 	}
@@ -111,7 +116,10 @@ NextConstraint:
 	}
 
 	if len(unsatisfactory) > 0 {
-		fmt.Fprintf(os.Stderr, "skipping %q (due to unsatisfactory constraints %q)\n", repoTag, unsatisfactory)
+		if !haveOutputSkippedMessage[repoTag] {
+			fmt.Fprintf(os.Stderr, "skipping %q (due to unsatisfactory constraints %q)\n", repoTag, unsatisfactory)
+			haveOutputSkippedMessage[repoTag] = true
+		}
 		return true
 	}
 

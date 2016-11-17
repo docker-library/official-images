@@ -157,6 +157,10 @@ func main() {
 			Name:  "namespace",
 			Usage: "a repo namespace to act upon/in",
 		},
+		"apply-constraints": cli.BoolFlag{
+			Name:  "apply-constraints",
+			Usage: "apply Constraints as if repos were building",
+		},
 	}
 
 	app.Commands = []cli.Command{
@@ -167,13 +171,10 @@ func main() {
 			Flags: []cli.Flag{
 				commonFlags["all"],
 				commonFlags["uniq"],
+				commonFlags["apply-constraints"],
 				cli.BoolFlag{
 					Name:  "build-order",
 					Usage: "sort by the order repos would need to build (topsort)",
-				},
-				cli.BoolFlag{
-					Name:  "apply-constraints",
-					Usage: "apply Constraints as if repos were building",
 				},
 				cli.BoolFlag{
 					Name:  "repos",
@@ -230,7 +231,9 @@ func main() {
 				"progeny",
 			},
 			Usage:  `print the repos built FROM a given repo or repo:tag`,
-			Flags:  []cli.Flag{},
+			Flags:  []cli.Flag{
+				commonFlags["apply-constraints"],
+			},
 			Before: subcommandBeforeFactory("children"),
 			Action: cmdOffspring,
 
@@ -243,7 +246,9 @@ func main() {
 				"progenitors",
 			},
 			Usage:  `print the repos this repo or repo:tag is FROM`,
-			Flags:  []cli.Flag{},
+			Flags:  []cli.Flag{
+				commonFlags["apply-constraints"],
+			},
 			Before: subcommandBeforeFactory("parents"),
 			Action: cmdParents,
 
@@ -277,6 +282,7 @@ func main() {
 			Flags: []cli.Flag{
 				commonFlags["all"],
 				commonFlags["uniq"],
+				commonFlags["apply-constraints"],
 			},
 			Before: subcommandBeforeFactory("from"),
 			Action: cmdFrom,

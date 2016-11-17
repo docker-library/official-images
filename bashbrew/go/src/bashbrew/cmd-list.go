@@ -13,18 +13,18 @@ func cmdList(c *cli.Context) error {
 		return cli.NewMultiError(fmt.Errorf(`failed gathering repo list`), err)
 	}
 
-	buildOrder := c.Bool("build-order")
-	if buildOrder {
-		repos, err = sortRepos(repos)
-		if err != nil {
-			return cli.NewMultiError(fmt.Errorf(`failed sorting repo list`), err)
-		}
-	}
-
 	uniq := c.Bool("uniq")
 	namespace := ""
 	applyConstraints := c.Bool("apply-constraints")
 	onlyRepos := c.Bool("repos")
+
+	buildOrder := c.Bool("build-order")
+	if buildOrder {
+		repos, err = sortRepos(repos, applyConstraints)
+		if err != nil {
+			return cli.NewMultiError(fmt.Errorf(`failed sorting repo list`), err)
+		}
+	}
 
 	for _, repo := range repos {
 		r, err := fetch(repo)
@@ -45,7 +45,7 @@ func cmdList(c *cli.Context) error {
 
 		var entries []manifest.Manifest2822Entry
 		if buildOrder {
-			entries, err = r.SortedEntries()
+			entries, err = r.SortedEntries(applyConstraints)
 			if err != nil {
 				return cli.NewMultiError(fmt.Errorf(`failed sorting entries list for %q`, repo), err)
 			}
