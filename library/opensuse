@@ -5,14 +5,18 @@ GitRepo: https://github.com/openSUSE/docker-containers-build.git
 Directory: docker
 Constraints: !aufs
 
-Tags: 42.1, leap, latest
+Tags: 42.2, leap, latest
+GitFetch: refs/heads/openSUSE-42.2
+GitCommit: 3f275e3c8845c01f483e436a0d95b5446db86dee
+
+Tags: 42.1
 GitFetch: refs/heads/openSUSE-42.1
-GitCommit: c8abb4323ef1744bfb9e5d4f127d9076083f0a6e
+GitCommit: 3de061c4be34a178bf68eef00e7eef41ab362f9b
 
 Tags: 13.2, harlequin
 GitFetch: refs/heads/openSUSE-13.2
-GitCommit: 308dda3268f8512795c32cf0e738d5e668f2d3a1
+GitCommit: 8defdc2e57a277d7f02da85ea609fe86db0ea802
 
 Tags: tumbleweed
 GitFetch: refs/heads/openSUSE-Tumbleweed
-GitCommit: bae7df3edc72a78a408df43d1f7bb34adfcf005b
+GitCommit: abc646c77ec709195ee597db9c41ee14dd48bb75
