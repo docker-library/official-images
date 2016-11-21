@@ -12,7 +12,8 @@ image="$1"
 clientImage="$image"
 
 # Create an instance of the container-under-test
-cid="$(docker run -d "$image")"
+# (explicitly setting a low memory limit since the image defaults to 2GB)
+cid="$(docker run -d -e ES_JAVA_OPTS='-Xms32m -Xmx32m' "$image")"
 trap "docker rm -vf $cid > /dev/null" EXIT
 
 _request() {
