@@ -46,7 +46,7 @@ get_image_type() {
 		imageType='alpine'
 		imageType+=$(check_image_type $repo)
 	else
-		if [[ $ARCH == *"fedora"* ]]; then
+		if [[ $repo == *"fedora"* ]]; then
 			imageType='fedora'
 			imageType+=$(check_image_type $repo)
 		else
