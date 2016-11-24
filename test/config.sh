@@ -45,6 +45,9 @@ imageTests+=(
 	'
 	[crate]='
 	'
+	[composer]='
+		composer
+	'
 	[debian]='
 		debian-apt-get
 	'
