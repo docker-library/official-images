@@ -171,7 +171,11 @@ imageTests+=(
 	[tomcat]='
 		tomcat-hello-world
 	'
-	[wordpress]='
+	[wordpress:apache]='
+		wordpress-apache-run
+	'
+	[wordpress:fpm]='
+		wordpress-fpm-run
 	'
 # example onbuild
 #	[python:onbuild]='
