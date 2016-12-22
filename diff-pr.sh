@@ -1,5 +1,6 @@
 #!/bin/bash
 set -eo pipefail
+shopt -s dotglob
 
 # make sure we can GTFO
 trap 'echo >&2 Ctrl+C captured, exiting; exit 1' SIGINT
@@ -30,11 +31,11 @@ tempDir="$(mktemp -d)"
 trap "rm -rf '$tempDir'" EXIT
 cd "$tempDir"
 
-git clone --quiet --depth 1 \
+git clone --quiet \
 	https://github.com/docker-library/official-images.git \
 	oi
 
-git -C oi fetch --quiet --depth 1 \
+git -C oi fetch --quiet \
 	origin "pull/$pull/merge":pull
 
 images=( "$@" )

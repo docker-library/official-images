@@ -8,11 +8,12 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
 image="$1"
 
-# Use the image being tested as our client image since it should already have curl
-clientImage="$image"
+# our image may not have "curl" (Alpine variants, for example)
+clientImage='buildpack-deps:jessie-curl'
 
 # Create an instance of the container-under-test
-cid="$(docker run -d "$image")"
+# (explicitly setting a low memory limit since the image defaults to 2GB)
+cid="$(docker run -d -e ES_JAVA_OPTS='-Xms32m -Xmx32m' "$image")"
 trap "docker rm -vf $cid > /dev/null" EXIT
 
 _request() {

@@ -40,6 +40,10 @@ func cmdFamily(parents bool, c *cli.Context) error {
 		}
 
 		for _, entry := range r.Entries() {
+			if applyConstraints && r.SkipConstraints(entry) {
+				continue
+			}
+
 			for _, tag := range r.Tags("", false, entry) {
 				network.AddNode(tag, entry)
 			}
@@ -53,6 +57,10 @@ func cmdFamily(parents bool, c *cli.Context) error {
 			return cli.NewMultiError(fmt.Errorf(`failed fetching repo %q`, repo), err)
 		}
 		for _, entry := range r.Entries() {
+			if applyConstraints && r.SkipConstraints(entry) {
+				continue
+			}
+
 			from, err := r.DockerFrom(&entry)
 			if err != nil {
 				return cli.NewMultiError(fmt.Errorf(`failed fetching/scraping FROM for %q (tags %q)`, r.RepoName, entry.TagsString()), err)

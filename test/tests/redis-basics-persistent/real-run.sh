@@ -1,1 +1,0 @@
-../redis-basics/run.sh

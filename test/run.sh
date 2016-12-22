@@ -19,12 +19,13 @@ EOUSAGE
 }
 
 # arg handling
-opts="$(getopt -o 'ht:c:?' --long 'dry-run,help,test:,config:' -- "$@" || { usage >&2 && false; })"
+opts="$(getopt -o 'ht:c:?' --long 'dry-run,help,test:,config:,keep-namespace' -- "$@" || { usage >&2 && false; })"
 eval set -- "$opts"
 
 declare -A argTests=()
 declare -a configs=()
 dryRun=
+keepNamespace=
 while true; do
 	flag=$1
 	shift
@@ -33,6 +34,7 @@ while true; do
 		--help|-h|'-?') usage && exit 0 ;;
 		--test|-t) argTests["$1"]=1 && shift ;;
 		--config|-c) configs+=("$(readlink -f "$1")") && shift ;;
+		--keep-namespace) keepNamespace=1 ;;
 		--) break ;;
 		*)
 			{
@@ -97,7 +99,22 @@ for dockerImage in "$@"; do
 	#version="${tagVar%-*}"
 	variant="${tagVar##*-}"
 	
-	testRepo=$repo
+	case "$tagVar" in
+		*onbuild*)
+			# "maven:onbuild-alpine" is still onbuild
+			# ONCE ONBUILD, ALWAYS ONBUILD
+			variant='onbuild'
+			;;
+		*fpm-alpine)
+			# lolPHP
+			variant='fpm'
+			;;
+	esac
+	
+	testRepo="$repo"
+	if [ -z "$keepNamespace" ]; then
+		testRepo="${testRepo##*/}"
+	fi
 	[ -z "${testAlias[$repo]}" ] || testRepo="${testAlias[$repo]}"
 	
 	explicitVariant=
