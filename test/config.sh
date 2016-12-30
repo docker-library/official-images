@@ -84,6 +84,9 @@ imageTests+=(
 		haskell-ghci
 		haskell-runhaskell
 	'
+	[haxe]='
+		haxe-hello-world
+	'
 	[hylang]='
 		hylang-sh
 		hylang-hello-world
