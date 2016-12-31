@@ -168,6 +168,9 @@ imageTests+=(
 		ruby-bundler
 		ruby-nonroot
 	'
+	[swift]='
+		swift-hello-world
+	'
 	[tomcat]='
 		tomcat-hello-world
 	'
