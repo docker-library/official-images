@@ -6,7 +6,7 @@ ENV ELIXIR_VERSION="v1.4.0" \
 
 RUN set -xe \
 	&& ELIXIR_DOWNLOAD_URL="https://github.com/elixir-lang/elixir/releases/download/${ELIXIR_VERSION}/Precompiled.zip" \
-	&& ELIXIR_DOWNLOAD_SHA256="418aed8fddca8476814c3221aa55eb8031bdfa05306c69d9b95c3deb35818c48"\
+	&& ELIXIR_DOWNLOAD_SHA256="60d077bc242e65f4f430beb43c968b5632dfb07ec89a7d689da254ffdc791b98"\
 	&& buildDeps=' \
 		unzip \
 	' \
