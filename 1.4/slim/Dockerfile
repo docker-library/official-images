@@ -2,12 +2,12 @@
 FROM erlang:19-slim
 
 # elixir expects utf8.
-ENV ELIXIR_VERSION="v1.4.0-rc.1" \
+ENV ELIXIR_VERSION="v1.4.0" \
 	LANG=C.UTF-8
 
 RUN set -xe \
 	&& ELIXIR_DOWNLOAD_URL="https://github.com/elixir-lang/elixir/releases/download/${ELIXIR_VERSION}/Precompiled.zip" \
-	&& ELIXIR_DOWNLOAD_SHA256="92d0866e25d0283436936e153e87ee9af167869e24a222ff5b28611f8ab0318d"\
+	&& ELIXIR_DOWNLOAD_SHA256="418aed8fddca8476814c3221aa55eb8031bdfa05306c69d9b95c3deb35818c48"\
 	&& buildDeps=' \
 		ca-certificates \
 		curl \
