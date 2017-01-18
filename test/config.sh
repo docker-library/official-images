@@ -53,6 +53,7 @@ imageTests+=(
 	'
 	[docker:dind]='
 		docker-dind
+		docker-registry-push-pull
 	'
 	[django]='
 	'
@@ -158,6 +159,9 @@ imageTests+=(
 		redis-basics
 		redis-basics-config
 		redis-basics-persistent
+	'
+	[registry]='
+		docker-registry-push-pull
 	'
 	[rethinkdb]='
 	'
