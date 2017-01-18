@@ -1,4 +1,4 @@
-# this file is generated via https://github.com/docker-library/redis/blob/5169c4beff205f6523b16aaa17d8297f5ebcf9f9/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/redis/blob/6fd47f9cb134a4bf492a1038ef48257f6c93a101/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
@@ -16,6 +16,16 @@ Tags: 3.0.7-alpine, 3.0-alpine
 GitCommit: 9db6cc1645465f134d03584dbbbd962ce822479a
 Directory: 3.0/alpine
 
+Tags: 3.0.7-windowsservercore, 3.0-windowsservercore
+GitCommit: ad72d7a7f3c05a9b658ec64894d4193c89bba01b
+Directory: 3.0/windows/windowsservercore
+Constraints: windowsservercore
+
+Tags: 3.0.7-nanoserver, 3.0-nanoserver
+GitCommit: ad72d7a7f3c05a9b658ec64894d4193c89bba01b
+Directory: 3.0/windows/nanoserver
+Constraints: nanoserver
+
 Tags: 3.2.6, 3.2, 3, latest
 GitCommit: 2e14b84ea86939438834a453090966a9bd4367fb
 Directory: 3.2
@@ -27,3 +37,13 @@ Directory: 3.2/32bit
 Tags: 3.2.6-alpine, 3.2-alpine, 3-alpine, alpine
 GitCommit: 9db6cc1645465f134d03584dbbbd962ce822479a
 Directory: 3.2/alpine
+
+Tags: 3.2.6-windowsservercore, 3.2-windowsservercore, 3-windowsservercore, windowsservercore
+GitCommit: 709e6a8df205f73afcc6f6257cab104175de1f5f
+Directory: 3.2/windows/windowsservercore
+Constraints: windowsservercore
+
+Tags: 3.2.6-nanoserver, 3.2-nanoserver, 3-nanoserver, nanoserver
+GitCommit: 2daf4fd7d858c8f2ad9694c4f460b8c6a7f782aa
+Directory: 3.2/windows/nanoserver
+Constraints: nanoserver
