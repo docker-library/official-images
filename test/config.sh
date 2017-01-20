@@ -53,6 +53,7 @@ imageTests+=(
 	'
 	[docker:dind]='
 		docker-dind
+		docker-registry-push-pull
 	'
 	[django]='
 	'
@@ -159,6 +160,9 @@ imageTests+=(
 		redis-basics-config
 		redis-basics-persistent
 	'
+	[registry]='
+		docker-registry-push-pull
+	'
 	[rethinkdb]='
 	'
 	[ruby]='
@@ -168,9 +172,12 @@ imageTests+=(
 		ruby-bundler
 		ruby-nonroot
 	'
+	[silverpeas]='
+		silverpeas-basics
+	'
 	[swift]='
 		swift-hello-world
-	'
+  '
 	[tomcat]='
 		tomcat-hello-world
 	'
