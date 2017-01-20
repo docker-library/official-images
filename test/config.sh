@@ -172,6 +172,9 @@ imageTests+=(
 		ruby-bundler
 		ruby-nonroot
 	'
+	[silverpeas]='
+		silverpeas-basics
+	'
 	[tomcat]='
 		tomcat-hello-world
 	'
