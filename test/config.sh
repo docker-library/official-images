@@ -175,6 +175,9 @@ imageTests+=(
 	[silverpeas]='
 		silverpeas-basics
 	'
+	[swift]='
+		swift-hello-world
+  '
 	[tomcat]='
 		tomcat-hello-world
 	'
