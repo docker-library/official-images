@@ -9,5 +9,5 @@ if ! python -c 'import sys; exit((sys.version_info[0] == 3 and sys.version_info[
 	exit
 fi
 
-pip install -q hy
+pip install -q 'hy==0.11.*'
 hy ./container.hy
