@@ -267,7 +267,7 @@ func (p *ParagraphReader) Next() (*Paragraph, error) {
 func (p *ParagraphReader) decodeClearsig(keyring *openpgp.EntityList) error {
 	// One *massive* downside here is that the OpenPGP module in Go operates
 	// on byte arrays in memory, and *not* on Readers and Writers. This is a
-	// huge PITA because it does't need to be that way, and this forces
+	// huge PITA because it doesn't need to be that way, and this forces
 	// clearsigned documents into memory. Which fucking sucks. But here
 	// we are. It's likely worth a bug or two on this.
 
