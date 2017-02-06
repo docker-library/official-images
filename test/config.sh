@@ -167,6 +167,9 @@ imageTests+=(
 		redis-basics-config
 		redis-basics-persistent
 	'
+	[redmine]='
+		redmine-basics
+	'
 	[registry]='
 		docker-registry-push-pull
 	'
