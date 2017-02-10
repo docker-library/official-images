@@ -230,8 +230,8 @@ func main() {
 				"descendants",
 				"progeny",
 			},
-			Usage:  `print the repos built FROM a given repo or repo:tag`,
-			Flags:  []cli.Flag{
+			Usage: `print the repos built FROM a given repo or repo:tag`,
+			Flags: []cli.Flag{
 				commonFlags["apply-constraints"],
 			},
 			Before: subcommandBeforeFactory("children"),
@@ -245,8 +245,8 @@ func main() {
 				"ancestors",
 				"progenitors",
 			},
-			Usage:  `print the repos this repo or repo:tag is FROM`,
-			Flags:  []cli.Flag{
+			Usage: `print the repos this repo or repo:tag is FROM`,
+			Flags: []cli.Flag{
 				commonFlags["apply-constraints"],
 			},
 			Before: subcommandBeforeFactory("parents"),
