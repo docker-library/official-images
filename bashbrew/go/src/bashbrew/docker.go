@@ -24,7 +24,7 @@ func (r Repo) DockerFrom(entry *manifest.Manifest2822Entry) (string, error) {
 		return "", err
 	}
 
-	dockerfileFile := path.Join(entry.Directory, "Dockerfile")
+	dockerfileFile := path.Join(entry.ArchDirectory(arch), "Dockerfile")
 
 	cacheKey := strings.Join([]string{
 		commit,
@@ -130,9 +130,9 @@ func (r Repo) dockerBuildUniqueBits(entry *manifest.Manifest2822Entry) ([]string
 		dockerFromIdCache[from] = fromId
 	}
 	return []string{
-		entry.GitRepo,
-		entry.GitCommit,
-		entry.Directory,
+		entry.ArchGitRepo(arch),
+		entry.ArchGitCommit(arch),
+		entry.ArchDirectory(arch),
 		fromId,
 	}, nil
 }
