@@ -107,6 +107,7 @@ imageTests+=(
 		logstash-basics
 	'
 	[memcached]='
+		memcached-basics
 	'
 	[mongo]='
 		mongo-basics
