@@ -34,12 +34,12 @@ _request() {
 
 # Make sure all Rapidoid servers are listening on port 80
 for cid in $app1id $app2id $proxyid; do
-    . "$dir/../../retry.sh" --tries 40 --sleep 0.25 '[ "$(_request '$cid' GET /_ping --output /dev/null || echo $?)" != 7 ]'
+    . "$dir/../../retry.sh" --tries 40 --sleep 0.25 '[ "$(_request '$cid' GET /rapidoid/ping --output /dev/null || echo $?)" != 7 ]'
 done
 
 # Make sure that the round-robin load balancing works properly
 for n in `seq 1 5`; do
     for i in 1 2; do
-        [[ "$(_request $cid GET "/_status")" == *"\"app$i\""* ]]
+        [[ "$(_request $cid GET "/rapidoid/status")" == *"\"app$i\""* ]]
     done
 done
