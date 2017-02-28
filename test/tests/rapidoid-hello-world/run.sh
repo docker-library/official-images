@@ -16,8 +16,8 @@ serverImage="$("$dir/../image-name.sh" librarytest/rapidoid-hello-web "$image")"
 
 "$dir/../docker-build.sh" "$dir" "$serverImage" <<EOD
 FROM $image
-RUN mkdir -p /app/public
-COPY dir/index.html /app/public/
+RUN mkdir -p /app/static
+COPY dir/index.html /app/static/
 EOD
 
 cid="$(docker run -d "$serverImage" app.services=ping)"
@@ -43,4 +43,4 @@ _request() {
 [ "$(_request GET "/index.html")" = "Hello world!" ]
 
 # Make sure that Rapidoid's built-in Ping service works correctly
-[ "$(_request GET "/_ping")" = "OK" ]
+[ "$(_request GET "/rapidoid/ping")" = "OK" ]
