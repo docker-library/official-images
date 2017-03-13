@@ -60,6 +60,7 @@ func cmdBuild(c *cli.Context) error {
 					return fmt.Errorf(`unexpected value for --pull: %s`, pull)
 				}
 				if doPull {
+					// TODO detect if "from" is something we've built (ie, "python:3-onbuild" is "FROM python:3" but we don't want to pull "python:3" if we "bashbrew build python")
 					fmt.Printf("Pulling %s (%s)\n", from, r.EntryIdentifier(entry))
 					dockerPull(from)
 				}
