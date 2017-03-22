@@ -8,8 +8,8 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
 image="$1"
 
-# Use the image being tested as our client image since it should already have curl
-clientImage="$image"
+# our image may not have "curl" (Alpine variants, for example)
+clientImage='buildpack-deps:jessie-curl'
 
 # input via HTTP (default port 0.0.0.0:8080)
 # output via stdout, newline-delimited nothing-but-the-message
@@ -64,7 +64,7 @@ _req-msg() {
 }
 
 # Make sure our container is listening
-. "$dir/../../retry.sh" '! _req-exit 7' # "Failed to connect to host."
+. "$dir/../../retry.sh" --tries 20 '! _req-exit 7' # "Failed to connect to host."
 
 for msg in \
 	'hi' \

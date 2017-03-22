@@ -45,11 +45,15 @@ imageTests+=(
 	'
 	[crate]='
 	'
+	[composer]='
+		composer
+	'
 	[debian]='
 		debian-apt-get
 	'
 	[docker:dind]='
 		docker-dind
+		docker-registry-push-pull
 	'
 	[django]='
 	'
@@ -70,6 +74,9 @@ imageTests+=(
 		gcc-cpp-hello-world
 		golang-hello-world
 	'
+	[ghost]='
+		ghost-basics
+	'
 	[golang]='
 		golang-hello-world
 	'
@@ -80,6 +87,9 @@ imageTests+=(
 		haskell-cabal
 		haskell-ghci
 		haskell-runhaskell
+	'
+	[haxe]='
+		haxe-hello-world
 	'
 	[hylang]='
 		hylang-sh
@@ -97,6 +107,7 @@ imageTests+=(
 		logstash-basics
 	'
 	[memcached]='
+		memcached-basics
 	'
 	[mongo]='
 		mongo-basics
@@ -130,6 +141,11 @@ imageTests+=(
 	[php:fpm]='
 		php-fpm-hello-web
 	'
+	[plone]='
+		plone-basics
+		plone-addons
+		plone-zeoclient
+	'
 	[postgres]='
 		postgres-basics
 		postgres-initdb
@@ -146,10 +162,20 @@ imageTests+=(
 	'
 	[rails]='
 	'
+	[rapidoid]='
+		rapidoid-hello-world
+		rapidoid-load-balancer
+	'
 	[redis]='
 		redis-basics
 		redis-basics-config
 		redis-basics-persistent
+	'
+	[redmine]='
+		redmine-basics
+	'
+	[registry]='
+		docker-registry-push-pull
 	'
 	[rethinkdb]='
 	'
@@ -160,10 +186,20 @@ imageTests+=(
 		ruby-bundler
 		ruby-nonroot
 	'
+	[silverpeas]='
+		silverpeas-basics
+	'
+	[swift]='
+		swift-hello-world
+  '
 	[tomcat]='
 		tomcat-hello-world
 	'
-	[wordpress]='
+	[wordpress:apache]='
+		wordpress-apache-run
+	'
+	[wordpress:fpm]='
+		wordpress-fpm-run
 	'
 # example onbuild
 #	[python:onbuild]='
@@ -175,18 +211,15 @@ globalExcludeTests+=(
 	# single-binary images
 	[hello-world_utc]=1
 	[nats_utc]=1
+	[nats-streaming_utc]=1
 	[swarm_utc]=1
 	[traefik_utc]=1
 
 	[hello-world_no-hard-coded-passwords]=1
 	[nats_no-hard-coded-passwords]=1
+	[nats-streaming_no-hard-coded-passwords]=1
 	[swarm_no-hard-coded-passwords]=1
 	[traefik_no-hard-coded-passwords]=1
-
-	[hello-world_override-cmd]=1
-	[nats_override-cmd]=1
-	[swarm_override-cmd]=1
-	[traefik_override-cmd]=1
 
 	# clearlinux has no /etc/password
 	# https://github.com/docker-library/official-images/pull/1721#issuecomment-234128477

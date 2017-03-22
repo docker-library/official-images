@@ -8,6 +8,7 @@ import (
 	"os/exec"
 	"path"
 	"path/filepath"
+	"regexp"
 	"strings"
 
 	"github.com/docker-library/go-dockerlibrary/manifest"
@@ -70,6 +71,33 @@ func gitShow(commit string, file string) (io.ReadCloser, error) {
 	return gitStream("show", commit+":"+path.Clean(file))
 }
 
+// for gitNormalizeForTagUsage()
+// see http://stackoverflow.com/a/26382358/433558
+var (
+	gitBadTagChars = regexp.MustCompile(`(?:` + strings.Join([]string{
+		`[^0-9a-zA-Z/._-]+`,
+
+		// They can include slash `/` for hierarchical (directory) grouping, but no slash-separated component can begin with a dot `.` or end with the sequence `.lock`.
+		`/[.]+`,
+		`[.]lock(?:/|$)`,
+
+		// They cannot have two consecutive dots `..` anywhere.
+		`[.][.]+`,
+
+		// They cannot end with a dot `.`
+		// They cannot begin or end with a slash `/`
+		`[/.]+$`,
+		`^[/.]+`,
+	}, `|`) + `)`)
+
+	gitMultipleSlashes = regexp.MustCompile(`(?://+)`)
+)
+
+// strip/replace "bad" characters from text for use as a Git tag
+func gitNormalizeForTagUsage(text string) string {
+	return gitMultipleSlashes.ReplaceAllString(gitBadTagChars.ReplaceAllString(text, "-"), "/")
+}
+
 var gitRepoCache = map[string]string{}
 
 func (r Repo) fetchGitRepo(entry *manifest.Manifest2822Entry) (string, error) {
@@ -98,7 +126,17 @@ func (r Repo) fetchGitRepo(entry *manifest.Manifest2822Entry) (string, error) {
 	}
 
 	fetchString := entry.GitFetch + ":"
-	if entry.GitFetch == manifest.DefaultLineBasedFetch {
+	if entry.GitCommit == "FETCH_HEAD" {
+		// fetch remote tag references to a local tag ref so that we can cache them and not re-fetch every time
+		localRef := "refs/tags/" + gitNormalizeForTagUsage(cacheKey)
+		commit, err := getGitCommit(localRef)
+		if err == nil {
+			gitRepoCache[cacheKey] = commit
+			entry.GitCommit = commit
+			return commit, nil
+		}
+		fetchString += localRef
+	} else if entry.GitFetch == manifest.DefaultLineBasedFetch {
 		// backwards compat (see manifest/line-based.go in go-dockerlibrary)
 		refBase := "refs/remotes"
 		refBaseDir := filepath.Join(gitCache(), refBase)

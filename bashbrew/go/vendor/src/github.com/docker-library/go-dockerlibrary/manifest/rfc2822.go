@@ -26,11 +26,14 @@ type Manifest2822Entry struct {
 	control.Paragraph
 
 	Maintainers []string `delim:"," strip:"\n\r\t "`
-	Tags        []string `delim:"," strip:"\n\r\t "`
-	GitRepo     string
-	GitFetch    string
-	GitCommit   string
-	Directory   string
+
+	Tags []string `delim:"," strip:"\n\r\t "`
+
+	GitRepo   string
+	GitFetch  string
+	GitCommit string
+	Directory string
+
 	Constraints []string `delim:"," strip:"\n\r\t "`
 }
 
@@ -152,10 +155,25 @@ func (manifest Manifest2822) GetTag(tag string) *Manifest2822Entry {
 }
 
 func (manifest *Manifest2822) AddEntry(entry Manifest2822Entry) error {
+	if len(entry.Tags) < 1 {
+		return fmt.Errorf("missing Tags")
+	}
+	if entry.GitRepo == "" || entry.GitFetch == "" || entry.GitCommit == "" {
+		return fmt.Errorf("Tags %q missing one of GitRepo, GitFetch, or GitCommit", entry.TagsString())
+	}
+	if invalidMaintainers := entry.InvalidMaintainers(); len(invalidMaintainers) > 0 {
+		return fmt.Errorf("Tags %q has invalid Maintainers: %q (expected format %q)", strings.Join(invalidMaintainers, ", "), MaintainersFormat)
+	}
+
+	seenTag := map[string]bool{}
 	for _, tag := range entry.Tags {
-		if manifest.GetTag(tag) != nil {
-			return fmt.Errorf("Tags %q includes duplicate tag: %s", entry.TagsString(), tag)
+		if otherEntry := manifest.GetTag(tag); otherEntry != nil {
+			return fmt.Errorf("Tags %q includes duplicate tag: %q (duplicated in %q)", entry.TagsString(), tag, otherEntry.TagsString())
 		}
+		if seenTag[tag] {
+			return fmt.Errorf("Tags %q includes duplicate tag: %q", entry.TagsString(), tag)
+		}
+		seenTag[tag] = true
 	}
 
 	for i, existingEntry := range manifest.Entries {
@@ -246,12 +264,6 @@ func Parse2822(readerIn io.Reader) (*Manifest2822, error) {
 			return nil, err
 		}
 
-		if len(entry.Tags) < 1 {
-			return nil, fmt.Errorf("missing Tags")
-		}
-		if entry.GitRepo == "" || entry.GitFetch == "" || entry.GitCommit == "" {
-			return nil, fmt.Errorf("Tags %q missing one of GitRepo, GitFetch, or GitCommit", entry.TagsString())
-		}
 		if !GitFetchRegex.MatchString(entry.GitFetch) {
 			return nil, fmt.Errorf(`Tags %q has invalid GitFetch (must be "refs/heads/..." or "refs/tags/..."): %q`, entry.TagsString(), entry.GitFetch)
 		}

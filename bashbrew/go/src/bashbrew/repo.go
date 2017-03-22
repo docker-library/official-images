@@ -4,11 +4,40 @@ import (
 	"fmt"
 	"os"
 	"path"
+	"path/filepath"
+	"sort"
 	"strings"
 
 	"github.com/docker-library/go-dockerlibrary/manifest"
-	"pault.ag/go/topsort"
 )
+
+func repos(all bool, args ...string) ([]string, error) {
+	ret := []string{}
+
+	if all {
+		dir, err := os.Open(defaultLibrary)
+		if err != nil {
+			return nil, err
+		}
+		names, err := dir.Readdirnames(-1)
+		dir.Close()
+		if err != nil {
+			return nil, err
+		}
+		sort.Strings(names)
+		for _, name := range names {
+			ret = append(ret, filepath.Join(defaultLibrary, name))
+		}
+	}
+
+	ret = append(ret, args...)
+
+	if len(ret) < 1 {
+		return nil, fmt.Errorf(`need at least one repo (either explicitly or via "--all")`)
+	}
+
+	return ret, nil
+}
 
 func latestizeRepoTag(repoTag string) string {
 	if repoTag != "scratch" && strings.IndexRune(repoTag, ':') < 0 {
@@ -25,8 +54,8 @@ type Repo struct {
 }
 
 func (r Repo) Identifier() string {
-	if r.TagName != "" {
-		return r.RepoName + ":" + r.TagName
+	if r.TagEntry != nil {
+		return r.EntryIdentifier(*r.TagEntry)
 	}
 	return r.RepoName
 }
@@ -35,12 +64,27 @@ func (r Repo) EntryIdentifier(entry manifest.Manifest2822Entry) string {
 	return r.RepoName + ":" + entry.Tags[0]
 }
 
+// create a new "Repo" object representing a single "Manifest2822Entry" object
+func (r Repo) EntryRepo(entry *manifest.Manifest2822Entry) *Repo {
+	return &Repo{
+		RepoName: r.RepoName,
+		TagName:  entry.Tags[0],
+		Manifest: r.Manifest,
+		TagEntry: entry,
+	}
+}
+
+var haveOutputSkippedMessage = map[string]bool{}
+
 func (r Repo) SkipConstraints(entry manifest.Manifest2822Entry) bool {
 	repoTag := r.RepoName + ":" + entry.Tags[0]
 
 	if len(entry.Constraints) == 0 {
 		if exclusiveConstraints {
-			fmt.Fprintf(os.Stderr, "skipping %q (due to exclusive constraints)\n", repoTag)
+			if !haveOutputSkippedMessage[repoTag] {
+				fmt.Fprintf(os.Stderr, "skipping %q (due to exclusive constraints)\n", repoTag)
+				haveOutputSkippedMessage[repoTag] = true
+			}
 		}
 		return exclusiveConstraints
 	}
@@ -72,7 +116,10 @@ NextConstraint:
 	}
 
 	if len(unsatisfactory) > 0 {
-		fmt.Fprintf(os.Stderr, "skipping %q (due to unsatisfactory constraints %q)\n", repoTag, unsatisfactory)
+		if !haveOutputSkippedMessage[repoTag] {
+			fmt.Fprintf(os.Stderr, "skipping %q (due to unsatisfactory constraints %q)\n", repoTag, unsatisfactory)
+			haveOutputSkippedMessage[repoTag] = true
+		}
 		return true
 	}
 
@@ -85,51 +132,6 @@ func (r Repo) Entries() []manifest.Manifest2822Entry {
 	} else {
 		return []manifest.Manifest2822Entry{*r.Manifest.GetTag(r.TagName)}
 	}
-}
-
-func (r Repo) SortedEntries() ([]manifest.Manifest2822Entry, error) {
-	entries := r.Entries()
-
-	if noSortFlag || len(entries) <= 1 {
-		return entries, nil
-	}
-
-	network := topsort.NewNetwork()
-
-	for i, entry := range entries {
-		for _, tag := range r.Tags("", false, entry) {
-			network.AddNode(tag, &entries[i])
-		}
-	}
-
-	for _, entry := range entries {
-		from, err := r.DockerFrom(&entry)
-		if err != nil {
-			return nil, err
-		}
-		for _, tag := range r.Tags("", false, entry) {
-			network.AddEdgeIfExists(from, tag)
-		}
-	}
-
-	nodes, err := network.Sort()
-	if err != nil {
-		return nil, err
-	}
-
-	seen := map[*manifest.Manifest2822Entry]bool{}
-	ret := []manifest.Manifest2822Entry{}
-	for _, node := range nodes {
-		entry := node.Value.(*manifest.Manifest2822Entry)
-		if seen[entry] {
-			// TODO somehow reconcile "a:a -> b:b, b:b -> a:c"
-			continue
-		}
-		ret = append(ret, *entry)
-		seen[entry] = true
-	}
-
-	return ret, nil
 }
 
 func (r Repo) Tags(namespace string, uniq bool, entry manifest.Manifest2822Entry) []string {
