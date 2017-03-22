@@ -12,7 +12,7 @@ func cmdBuild(c *cli.Context) error {
 		return cli.NewMultiError(fmt.Errorf(`failed gathering repo list`), err)
 	}
 
-	repos, err = sortRepos(repos)
+	repos, err = sortRepos(repos, true)
 	if err != nil {
 		return cli.NewMultiError(fmt.Errorf(`failed sorting repo list`, err))
 	}
@@ -33,7 +33,7 @@ func cmdBuild(c *cli.Context) error {
 			return cli.NewMultiError(fmt.Errorf(`failed fetching repo %q`, repo), err)
 		}
 
-		entries, err := r.SortedEntries()
+		entries, err := r.SortedEntries(true)
 		if err != nil {
 			return cli.NewMultiError(fmt.Errorf(`failed sorting entries list for %q`, repo), err)
 		}
@@ -60,6 +60,7 @@ func cmdBuild(c *cli.Context) error {
 					return fmt.Errorf(`unexpected value for --pull: %s`, pull)
 				}
 				if doPull {
+					// TODO detect if "from" is something we've built (ie, "python:3-onbuild" is "FROM python:3" but we don't want to pull "python:3" if we "bashbrew build python")
 					fmt.Printf("Pulling %s (%s)\n", from, r.EntryIdentifier(entry))
 					dockerPull(from)
 				}

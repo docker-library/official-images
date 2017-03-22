@@ -24,6 +24,10 @@ trap "rm -rf '$tmp'" EXIT
 cat > "$tmp/Dockerfile"
 
 from="$(awk -F '[ \t]+' 'toupper($1) == "FROM" { print $2; exit }' "$tmp/Dockerfile")"
+if ! docker inspect "$from" &> /dev/null; then
+	docker pull "$from" > /dev/null
+fi
+
 onbuilds="$(docker inspect -f '{{len .Config.OnBuild}}' "$from")"
 if [ "$onbuilds" -gt 0 ]; then
 	# crap, the image we want to build has some ONBUILD instructions

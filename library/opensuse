@@ -1,18 +1,22 @@
 Maintainers: Flavio Castelli <fcastelli@suse.com> (@flavio),
-             Aleksa Sarai <asarai@suse.de> (@cyphar),
-             Christian Brauner <cbrauner@suse.de> (@brauner)
+             Aleksa Sarai <asarai@suse.com> (@cyphar),
+             Jordi Massaguer Pla <jmassaguerpla@suse.com> (@jordimassaguerpla)
 GitRepo: https://github.com/openSUSE/docker-containers-build.git
 Directory: docker
 Constraints: !aufs
 
-Tags: 42.1, leap, latest
+Tags: 42.2, leap, latest
+GitFetch: refs/heads/openSUSE-42.2
+GitCommit: bae99d3adc6eb7ce723648ead93c64516b8813a3
+
+Tags: 42.1
 GitFetch: refs/heads/openSUSE-42.1
-GitCommit: 5c63b0a9d2c8b13b81855751168066666d77adb1
+GitCommit: b979c73ab7c69db3e92cbda2cb3d11511d55c78f
 
 Tags: 13.2, harlequin
 GitFetch: refs/heads/openSUSE-13.2
-GitCommit: 2479d8d0f90bce3c2e33dd2fc311d6599c336fdf
+GitCommit: 1fe6144ea730537817480079ff4cbbdcc5de8cce
 
 Tags: tumbleweed
 GitFetch: refs/heads/openSUSE-Tumbleweed
-GitCommit: 046d77c122ee04485df87870f31713f87a30c1e2
+GitCommit: 3f8db75979745c8295a9931424c2d89c6a5c6946

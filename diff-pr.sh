@@ -31,11 +31,11 @@ tempDir="$(mktemp -d)"
 trap "rm -rf '$tempDir'" EXIT
 cd "$tempDir"
 
-git clone --quiet --depth 1 \
+git clone --quiet \
 	https://github.com/docker-library/official-images.git \
 	oi
 
-git -C oi fetch --quiet --depth 1 \
+git -C oi fetch --quiet \
 	origin "pull/$pull/merge":pull
 
 images=( "$@" )
@@ -136,6 +136,7 @@ copy-tar() {
 mkdir temp
 git -C temp init --quiet
 
+bashbrew list "${images[@]}" | sort -V > temp/_bashbrew-list || :
 for image in "${images[@]}"; do
 	if script="$(bashbrew cat -f "$template" "$image")"; then
 		mkdir tar
@@ -150,6 +151,7 @@ git -C temp commit --quiet --allow-empty -m 'initial' || :
 git -C oi checkout --quiet pull
 
 git -C temp rm --quiet -rf . || :
+bashbrew list "${images[@]}" | sort -V > temp/_bashbrew-list || :
 script="$(bashbrew cat -f "$template" "${images[@]}")"
 mkdir tar
 ( eval "$script" | tar -xiC tar )
