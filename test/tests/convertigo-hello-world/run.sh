@@ -19,7 +19,7 @@ _request() {
 	shift
 
 	docker run --rm --link "$cid":convertigo "$clientImage" \
-		wget -q -O - "$@" "http://convertigo:28080/$url"
+		curl -s "$@" "http://convertigo:28080/$url"
 }
 
 # Make sure that Tomcat is listening
