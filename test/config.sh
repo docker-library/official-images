@@ -45,8 +45,11 @@ imageTests+=(
 	'
 	[crate]='
 	'
-	[composer]='
-		composer
+    [composer]='
+        composer
+    '
+	[convertigo]='
+		convertigo-hello-world
 	'
 	[debian]='
 		debian-apt-get
