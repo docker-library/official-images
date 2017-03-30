@@ -18,8 +18,8 @@ EOF
 
 # need set_mempolicy syscall to be able to do numactl for mongodb
 # if "set_mempolicy" is not in the always allowed list, add it
-extraSeccomp="$(echo "$seccomp" | docker run -i --rm $jqImage --tab '
-.syscalls[] |= if (
+extraSeccomp="$(echo "$seccomp" | docker run -i --rm "$jqImage" --tab '
+	.syscalls[] |= if (
 		.action == "SCMP_ACT_ALLOW"
 		and .args == []
 		and .comment == ""
@@ -42,7 +42,7 @@ cid="$(docker run -d --security-opt seccomp=<(echo "$extraSeccomp") --name "$cna
 trap "docker rm -vf $cid > /dev/null" EXIT
 
 mongo() {
-	docker run --rm -i --security-opt seccomp=<(echo "$extraSeccomp") --link "$cname":mongo --entrypoint mongo "$image" --host mongo "$@"
+	docker run --rm -i --security-opt seccomp=<(echo "$extraSeccomp") --link "$cname":mongo "$image" mongo --host mongo "$@"
 }
 
 mongo_eval() {
