@@ -3,46 +3,61 @@ set -e
 
 image="$1"
 
-# get docker default seccomp profile
-seccomp="$(wget -q -O - 'https://raw.githubusercontent.com/docker/docker/v17.03.1-ce/profiles/seccomp/default.json')"
+haveSeccomp=
+if docker info --format '{{ join .SecurityOptions "\n" }}' 2>/dev/null | grep -q seccomp; then
+	haveSeccomp=1
 
-# make container with jq since it is not guaranteed on the host
-jqImage='librarytest/mongo-basics-jq:alpine'
-docker build -t "$jqImage" - > /dev/null <<'EOF'
-FROM alpine:3.5
+	# get docker default seccomp profile
+	seccomp="$(wget -q -O - 'https://raw.githubusercontent.com/docker/docker/v17.03.1-ce/profiles/seccomp/default.json')"
 
-RUN apk add --no-cache jq
+	# make container with jq since it is not guaranteed on the host
+	jqImage='librarytest/mongo-basics-jq:alpine'
+	docker build -t "$jqImage" - > /dev/null <<-'EOF'
+		FROM alpine:3.5
 
-ENTRYPOINT ["jq"]
-EOF
+		RUN apk add --no-cache jq
 
-# need set_mempolicy syscall to be able to do numactl for mongodb
-# if "set_mempolicy" is not in the always allowed list, add it
-extraSeccomp="$(echo "$seccomp" | docker run -i --rm "$jqImage" --tab '
-	.syscalls[] |= if (
-		.action == "SCMP_ACT_ALLOW"
-		and .args == []
-		and .comment == ""
-		and .includes == {}
-		and .excludes == {}
-	) then (
-		if ( .names | index("set_mempolicy") ) > 0 then
+		ENTRYPOINT ["jq"]
+	EOF
+
+	# need set_mempolicy syscall to be able to do numactl for mongodb
+	# if "set_mempolicy" is not in the always allowed list, add it
+	extraSeccomp="$(echo "$seccomp" | docker run -i --rm "$jqImage" --tab '
+		.syscalls[] |= if (
+			.action == "SCMP_ACT_ALLOW"
+			and .args == []
+			and .comment == ""
+			and .includes == {}
+			and .excludes == {}
+		) then (
+			if ( .names | index("set_mempolicy") ) > 0 then
+				.
+			else (
+				.names |= . + ["set_mempolicy"]
+			) end
+		)
+		else
 			.
-		else (
-			.names |= . + ["set_mempolicy"]
-		) end
-	)
+		end
+	')"
+else
+	echo >&2 'warning: the current Docker daemon does not appear to support seccomp'
+fi
+
+docker_run_seccomp() {
+	if [ "$haveSeccomp" ]; then
+		docker run --security-opt seccomp=<(echo "$extraSeccomp") "$@"
 	else
-		.
-	end
-')"
+		docker run "$@"
+	fi
+}
 
 cname="mongo-container-$RANDOM-$RANDOM"
-cid="$(docker run -d --security-opt seccomp=<(echo "$extraSeccomp") --name "$cname" "$image")"
+cid="$(docker_run_seccomp -d --name "$cname" "$image")"
 trap "docker rm -vf $cid > /dev/null" EXIT
 
 mongo() {
-	docker run --rm -i --security-opt seccomp=<(echo "$extraSeccomp") --link "$cname":mongo "$image" mongo --host mongo "$@"
+	docker_run_seccomp --rm -i --link "$cname":mongo "$image" mongo --host mongo "$@"
 }
 
 mongo_eval() {
