@@ -1,4 +1,4 @@
-FROM docker:1.10-git
+FROM docker:stable-git
 
 RUN apk add --no-cache \
 # bash for running scripts
