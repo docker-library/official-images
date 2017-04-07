@@ -1,4 +1,4 @@
-# this file is generated via https://github.com/docker-library/wordpress/blob/637afb53dc03b4af19149a0880e796346f97c137/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/wordpress/blob/e6af22dc6f8553e62acc0c29d6e4e86b2287daf7/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
@@ -39,3 +39,17 @@ Directory: php7.1/fpm
 Tags: 4.7.3-php7.1-fpm-alpine, 4.7-php7.1-fpm-alpine, 4-php7.1-fpm-alpine, php7.1-fpm-alpine
 GitCommit: 3a1ca61731e6070764d5b7235e3b6617798b8af8
 Directory: php7.1/fpm-alpine
+
+# Now, wp-cli variants (which do _not_ include WordPress, so no WordPress version number -- only wp-cli version)
+
+Tags: cli-1.1.0, cli-1.1, cli-1, cli, cli-1.1.0-php5.6, cli-1.1-php5.6, cli-1-php5.6, cli-php5.6
+GitCommit: 0bd17ea187310d703d84feb5f412955d038e12fe
+Directory: php5.6/cli
+
+Tags: cli-1.1.0-php7.0, cli-1.1-php7.0, cli-1-php7.0, cli-php7.0
+GitCommit: 0bd17ea187310d703d84feb5f412955d038e12fe
+Directory: php7.0/cli
+
+Tags: cli-1.1.0-php7.1, cli-1.1-php7.1, cli-1-php7.1, cli-php7.1
+GitCommit: 0bd17ea187310d703d84feb5f412955d038e12fe
+Directory: php7.1/cli
