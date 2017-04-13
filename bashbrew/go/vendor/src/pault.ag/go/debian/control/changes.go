@@ -24,6 +24,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"path"
 	"path/filepath"
 	"strconv"
 	"strings"
@@ -121,6 +122,21 @@ func ParseChangesFile(path string) (ret *Changes, err error) {
 func ParseChanges(reader *bufio.Reader, path string) (*Changes, error) {
 	ret := &Changes{Filename: path}
 	return ret, Unmarshal(ret, reader)
+}
+
+// Return a list of FileListChangesFileHash entries from the `changes.Files`
+// entry, with the exception that each `Filename` will be joined to the root
+// directory of the Changes file.
+func (changes *Changes) AbsFiles() []FileListChangesFileHash {
+	ret := []FileListChangesFileHash{}
+
+	baseDir := filepath.Dir(changes.Filename)
+	for _, hash := range changes.Files {
+		hash.Filename = path.Join(baseDir, hash.Filename)
+		ret = append(ret, hash)
+	}
+
+	return ret
 }
 
 // Return a DSC struct for the DSC listed in the .changes file. This requires

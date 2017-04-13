@@ -33,6 +33,12 @@ for repoTag; do
 	repoTags[$repo]+=" $repoTag"
 done
 
+# fill "$@" back up with the corrected build order (especially for the "Children:" output)
+set --
+for repo in "${repos[@]}"; do
+	set -- "$@" ${repoTags[$repo]}
+done
+
 children="$("$(dirname "$BASH_SOURCE")/children.sh" "$@")"
 
 echo

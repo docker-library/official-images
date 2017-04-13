@@ -48,11 +48,15 @@ imageTests+=(
 	[composer]='
 		composer
 	'
+	[convertigo]='
+		convertigo-hello-world
+	'
 	[debian]='
 		debian-apt-get
 	'
 	[docker:dind]='
 		docker-dind
+		docker-registry-push-pull
 	'
 	[django]='
 	'
@@ -73,6 +77,9 @@ imageTests+=(
 		gcc-cpp-hello-world
 		golang-hello-world
 	'
+	[ghost]='
+		ghost-basics
+	'
 	[golang]='
 		golang-hello-world
 	'
@@ -83,6 +90,9 @@ imageTests+=(
 		haskell-cabal
 		haskell-ghci
 		haskell-runhaskell
+	'
+	[haxe]='
+		haxe-hello-world
 	'
 	[hylang]='
 		hylang-sh
@@ -100,6 +110,7 @@ imageTests+=(
 		logstash-basics
 	'
 	[memcached]='
+		memcached-basics
 	'
 	[mongo]='
 		mongo-basics
@@ -154,10 +165,20 @@ imageTests+=(
 	'
 	[rails]='
 	'
+	[rapidoid]='
+		rapidoid-hello-world
+		rapidoid-load-balancer
+	'
 	[redis]='
 		redis-basics
 		redis-basics-config
 		redis-basics-persistent
+	'
+	[redmine]='
+		redmine-basics
+	'
+	[registry]='
+		docker-registry-push-pull
 	'
 	[rethinkdb]='
 	'
@@ -168,6 +189,12 @@ imageTests+=(
 		ruby-bundler
 		ruby-nonroot
 	'
+	[silverpeas]='
+		silverpeas-basics
+	'
+	[swift]='
+		swift-hello-world
+  '
 	[tomcat]='
 		tomcat-hello-world
 	'

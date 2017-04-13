@@ -156,7 +156,7 @@ echo 'Build test of' '#'"$pull"';' "$commit" '(`'"$(join '`, `' "${files[@]}")"'
 declare -A failedBuild=() failedTests=()
 for img in "${files[@]}"; do
 	IFS=$'\n'
-	uniqImgs=( $(bashbrew list --uniq "$img") )
+	uniqImgs=( $(bashbrew list --uniq --build-order "$img") )
 	unset IFS
 
 	echo

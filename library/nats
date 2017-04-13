@@ -1,8 +1,15 @@
 Maintainers: Derek Collison <derek@apcera.com> (@derekcollison),
              Ivan Kozlovic <ivan.kozlovic@apcera.com> (@kozlovic),
              Waldemar Salinas <wally@apcera.com> (@wallyqs)
+GitRepo: https://github.com/nats-io/nats-docker.git
+GitCommit: 24da6ab2af9e849f6a96e32ed2efcb7c0799ab13
 
 Tags: 0.9.6, latest
-GitRepo: https://github.com/nats-io/nats-docker.git
-GitCommit: b2c678c7bcc6bc8d68fb33cb1f169f4b66db308d 
 
+Tags: 0.9.6-nanoserver, nanoserver
+Directory: windows/nanoserver
+Constraints: nanoserver
+
+Tags: 0.9.6-windowsservercore, windowsservercore
+Directory: windows/windowsservercore
+Constraints: windowsservercore

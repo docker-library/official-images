@@ -1,12 +1,22 @@
-# maintainer: Paul Lam <paul@quantisan.com> (@Quantisan)
-# maintainer: Wes Morgan <wesmorgan@icloud.com> (@cap10morgan)
+Maintainers: Paul Lam <paul@quantisan.com> (@Quantisan),
+             Wes Morgan <wesmorgan@icloud.com> (@cap10morgan)
+GitRepo: https://github.com/Quantisan/docker-clojure.git
+GitCommit: f0fd68d6a197b4d1852aefab698b35ce1ea9881e
 
-latest: git://github.com/Quantisan/docker-clojure@c77c13529de02183433da15e8227eba63cc96724
-onbuild: git://github.com/Quantisan/docker-clojure@c77c13529de02183433da15e8227eba63cc96724 onbuild
-alpine: git://github.com/Quantisan/docker-clojure@2a0ab08313a24effa5d7b93b1ced8204763e6628 alpine
-alpine-onbuild: git://github.com/Quantisan/docker-clojure@2a0ab08313a24effa5d7b93b1ced8204763e6628 alpine-onbuild
+Tags: lein-2.7.1, lein, latest
+Directory: debian/lein
 
-lein-2.7.1: git://github.com/Quantisan/docker-clojure@c77c13529de02183433da15e8227eba63cc96724
-lein-2.7.1-onbuild: git://github.com/Quantisan/docker-clojure@c77c13529de02183433da15e8227eba63cc96724 onbuild
-lein-2.7.1-alpine: git://github.com/Quantisan/docker-clojure@2a0ab08313a24effa5d7b93b1ced8204763e6628 alpine
-lein-2.7.1-alpine-onbuild: git://github.com/Quantisan/docker-clojure@2a0ab08313a24effa5d7b93b1ced8204763e6628 alpine-onbuild
+Tags: lein-2.7.1-onbuild, lein-onbuild, onbuild
+Directory: debian/lein/onbuild
+
+Tags: lein-2.7.1-alpine, lein-alpine, alpine
+Directory: alpine/lein
+
+Tags: lein-2.7.1-alpine-onbuild, lein-alpine-onbuild, alpine-onbuild
+Directory: alpine/lein/onbuild
+
+Tags: boot-2.7.1, boot
+Directory: debian/boot
+
+Tags: boot-2.7.1-alpine, boot-alpine
+Directory: alpine/boot

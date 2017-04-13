@@ -18,6 +18,35 @@ allFiles=
 listTarballContents=1
 findCopies='20%'
 
+uninterestingTarballContent=(
+	# "config_diff_2017_01_07.log"
+	'var/log/YaST2/'
+
+	# "ks-script-mqmz_080.log"
+	# "ks-script-ycfq606i.log"
+	'var/log/anaconda/'
+
+	# "2016-12-20/"
+	'var/lib/yum/history/'
+	'var/lib/dnf/history/'
+
+	# "a/f8c032d2be757e1a70f00336b55c434219fee230-acl-2.2.51-12.el7-x86_64/var_uuid"
+	'var/lib/yum/yumdb/'
+	'var/lib/dnf/yumdb/'
+
+	# "b42ff584.0"
+	'etc/pki/tls/rootcerts/'
+)
+
+# prints "$2$1$3$1...$N"
+join() {
+	local sep="$1"; shift
+	local out; printf -v out "${sep//%/%%}%s" "$@"
+	echo "${out#$sep}"
+}
+
+uninterestingTarballGrep="^([.]?/)?($(join '|' "${uninterestingTarballContent[@]}"))"
+
 if [ "$#" -eq 0 ]; then
 	usage >&2
 	exit 1
@@ -124,7 +153,10 @@ copy-tar() {
 				if [ "$listTarballContents" ]; then
 					case "$g" in
 						*.tar.*|*.tgz)
-							tar -tf "$dst/$dDirName/$g" | sort > "$dst/$dDirName/$g  'tar -t'"
+							tar -tf "$dst/$dDirName/$g" \
+								| grep -vE "$uninterestingTarballGrep" \
+								| sort \
+								> "$dst/$dDirName/$g  'tar -t'"
 							;;
 					esac
 				fi
@@ -136,6 +168,7 @@ copy-tar() {
 mkdir temp
 git -C temp init --quiet
 
+bashbrew list "${images[@]}" | sort -V > temp/_bashbrew-list || :
 for image in "${images[@]}"; do
 	if script="$(bashbrew cat -f "$template" "$image")"; then
 		mkdir tar
@@ -150,6 +183,7 @@ git -C temp commit --quiet --allow-empty -m 'initial' || :
 git -C oi checkout --quiet pull
 
 git -C temp rm --quiet -rf . || :
+bashbrew list "${images[@]}" | sort -V > temp/_bashbrew-list || :
 script="$(bashbrew cat -f "$template" "${images[@]}")"
 mkdir tar
 ( eval "$script" | tar -xiC tar )

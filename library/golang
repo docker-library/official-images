@@ -1,84 +1,62 @@
-# this file is generated via https://github.com/docker-library/golang/blob/389d5dcc78e78b700b5485d4608b9f094b2e485b/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/golang/blob/445ba23ad32bf53dba66ce6309cab168c9307ce2/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit),
              Johan Euphrosine <proppy@google.com> (@proppy)
 GitRepo: https://github.com/docker-library/golang.git
 
-Tags: 1.6.4, 1.6
-GitCommit: fddc8c18282871b554cb0d74780767690bdda3ec
-Directory: 1.6
-
-Tags: 1.6.4-onbuild, 1.6-onbuild
-GitCommit: ce284e14cdee73fbaa8fb680011a812f272eae2e
-Directory: 1.6/onbuild
-
-Tags: 1.6.4-wheezy, 1.6-wheezy
-GitCommit: fddc8c18282871b554cb0d74780767690bdda3ec
-Directory: 1.6/wheezy
-
-Tags: 1.6.4-alpine, 1.6-alpine
-GitCommit: fd163e2eb23f4c01f8e5721029c768a5ba48bad1
-Directory: 1.6/alpine
-
-Tags: 1.6.4-windowsservercore, 1.6-windowsservercore
-GitCommit: 9ef22bd9eac98c3ed12a48c953922e2bab8485ef
-Directory: 1.6/windows/windowsservercore
-Constraints: windowsservercore
-
-Tags: 1.6.4-nanoserver, 1.6-nanoserver
-GitCommit: fddc8c18282871b554cb0d74780767690bdda3ec
-Directory: 1.6/windows/nanoserver
-Constraints: nanoserver
-
-Tags: 1.7.4, 1.7, 1, latest
-GitCommit: 18ee81a2ec649dd7b3d5126b24eef86bc9c86d80
+Tags: 1.7.5, 1.7
+GitCommit: 349270dbc128e396888cb2423ffc85d2c3039a27
 Directory: 1.7
 
-Tags: 1.7.4-onbuild, 1.7-onbuild, 1-onbuild, onbuild
+Tags: 1.7.5-onbuild, 1.7-onbuild
 GitCommit: 2372c8cafe9cc958bade33ad0b8b54de8869c21f
 Directory: 1.7/onbuild
 
-Tags: 1.7.4-wheezy, 1.7-wheezy, 1-wheezy, wheezy
-GitCommit: 18ee81a2ec649dd7b3d5126b24eef86bc9c86d80
+Tags: 1.7.5-wheezy, 1.7-wheezy
+GitCommit: 349270dbc128e396888cb2423ffc85d2c3039a27
 Directory: 1.7/wheezy
 
-Tags: 1.7.4-alpine, 1.7-alpine, 1-alpine, alpine
-GitCommit: fd163e2eb23f4c01f8e5721029c768a5ba48bad1
+Tags: 1.7.5-alpine, 1.7-alpine
+GitCommit: 349270dbc128e396888cb2423ffc85d2c3039a27
 Directory: 1.7/alpine
 
-Tags: 1.7.4-windowsservercore, 1.7-windowsservercore, 1-windowsservercore, windowsservercore
-GitCommit: 9ef22bd9eac98c3ed12a48c953922e2bab8485ef
+Tags: 1.7.5-alpine3.5, 1.7-alpine3.5
+GitCommit: 349270dbc128e396888cb2423ffc85d2c3039a27
+Directory: 1.7/alpine3.5
+
+Tags: 1.7.5-windowsservercore, 1.7-windowsservercore
+GitCommit: 3bccc597c14b6274d7855d968f881ac6407b0a61
 Directory: 1.7/windows/windowsservercore
 Constraints: windowsservercore
 
-Tags: 1.7.4-nanoserver, 1.7-nanoserver, 1-nanoserver, nanoserver
-GitCommit: 18ee81a2ec649dd7b3d5126b24eef86bc9c86d80
+Tags: 1.7.5-nanoserver, 1.7-nanoserver
+GitCommit: 349270dbc128e396888cb2423ffc85d2c3039a27
 Directory: 1.7/windows/nanoserver
 Constraints: nanoserver
 
-Tags: 1.8beta2, 1.8
-GitCommit: f98d9b6d5d34efa8ba52426358d00d950f9daaec
+Tags: 1.8.1, 1.8, 1, latest
+GitCommit: 7e9aedf483dc0a035747f37af37ed260f2a6cf57
 Directory: 1.8
 
-Tags: 1.8beta2-onbuild, 1.8-onbuild
-GitCommit: 7319cccdf0c2b8cbcb4ea214f310e8d15fe5c1dd
+Tags: 1.8.1-onbuild, 1.8-onbuild, 1-onbuild, onbuild
+GitCommit: 132cd70768e3bc269902e4c7b579203f66dc9f64
 Directory: 1.8/onbuild
 
-Tags: 1.8beta2-wheezy, 1.8-wheezy
-GitCommit: f98d9b6d5d34efa8ba52426358d00d950f9daaec
-Directory: 1.8/wheezy
+Tags: 1.8.1-stretch, 1.8-stretch, 1-stretch, stretch
+GitCommit: 7e9aedf483dc0a035747f37af37ed260f2a6cf57
+Directory: 1.8/stretch
 
-Tags: 1.8beta2-alpine, 1.8-alpine
-GitCommit: f98d9b6d5d34efa8ba52426358d00d950f9daaec
+Tags: 1.8.1-alpine, 1.8-alpine, 1-alpine, alpine
+GitCommit: 7e9aedf483dc0a035747f37af37ed260f2a6cf57
 Directory: 1.8/alpine
 
-Tags: 1.8beta2-windowsservercore, 1.8-windowsservercore
-GitCommit: f98d9b6d5d34efa8ba52426358d00d950f9daaec
+Tags: 1.8.1-windowsservercore, 1.8-windowsservercore, 1-windowsservercore, windowsservercore
+GitCommit: 7e9aedf483dc0a035747f37af37ed260f2a6cf57
 Directory: 1.8/windows/windowsservercore
 Constraints: windowsservercore
 
-Tags: 1.8beta2-nanoserver, 1.8-nanoserver
-GitCommit: f98d9b6d5d34efa8ba52426358d00d950f9daaec
+Tags: 1.8.1-nanoserver, 1.8-nanoserver, 1-nanoserver, nanoserver
+GitCommit: 7e9aedf483dc0a035747f37af37ed260f2a6cf57
 Directory: 1.8/windows/nanoserver
 Constraints: nanoserver
