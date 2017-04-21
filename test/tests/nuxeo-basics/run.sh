@@ -23,9 +23,9 @@ get() {
 			"http://nuxeo:8080/nuxeo/api/v1/$1"
 }
 
-python3() {
+python() {
 	docker run --rm -i \
-		--entrypoint python3 \
+		--entrypoint python \
 		"$image" \
 		"$@"
 }
@@ -38,10 +38,10 @@ PATH1='default-domain/workspaces'
 	"get 'path/$PATH1'"
 
 # First get a document by its path to get its id
-DUID="$(get "path/$PATH1" | python3 -c 'import json, sys; obj = json.load(sys.stdin); print(obj["uid"]);')"
+DUID="$(get "path/$PATH1" | python -c 'import json, sys; obj = json.load(sys.stdin); print(obj["uid"]);')"
 
 # Then get the same document by its id
-PATH2="$(get "id/$DUID" | python3 -c 'import json, sys; obj = json.load(sys.stdin); print(obj["path"]);')"
+PATH2="$(get "id/$DUID" | python -c 'import json, sys; obj = json.load(sys.stdin); print(obj["path"]);')"
 
 # Compare both path
 [ "/$PATH1" = "$PATH2" ]
