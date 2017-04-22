@@ -14,6 +14,8 @@ clientImage="$image"
 # Create an instance of the container-under-test
 cid="$(
 	docker run -d \
+		-e MAX_HEAP_SIZE='128m' \
+		-e HEAP_NEWSIZE='32m' \
 		-e JVM_OPTS='
 			-Dcom.sun.management.jmxremote.port=7199
 			-Dcom.sun.management.jmxremote.ssl=false
