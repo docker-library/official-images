@@ -1,0 +1,44 @@
+FROM golang:1.8-alpine
+
+RUN apk add --no-cache \
+		file \
+		libressl
+
+WORKDIR /usr/src/bashbrew
+ENV GOPATH /usr/src/bashbrew:/usr/src/bashbrew/vendor
+ENV CGO_ENABLED 0
+
+# https://github.com/estesp/manifest-tool/releases
+ENV MANIFEST_TOOL_VERSION 0.4.0
+
+COPY go .
+
+RUN set -ex; \
+	mkdir bin; \
+	for osArch in \
+		darwin/amd64 \
+		linux/amd64 \
+		linux/arm64 \
+		linux/ppc64le \
+		linux/s390x \
+		windows/amd64 \
+	; do \
+		os="${osArch%%/*}"; \
+		arch="${osArch#$os/}"; \
+# TODO GOARM
+		\
+		[ "$os" = 'windows' ] && ext='.exe' || ext=''; \
+		\
+		GOOS="$os" GOARCH="$arch" \
+			go build \
+				-a -v \
+				-ldflags '-s -w' \
+				-tags netgo -installsuffix netgo \
+				-o "bin/bashbrew-$os-$arch$ext" \
+				./src/bashbrew; \
+		\
+# TODO verify GPG signatures for manifest-tool releases
+		wget -O "bin/manifest-tool-$os-$arch$ext" "https://github.com/estesp/manifest-tool/releases/download/v${MANIFEST_TOOL_VERSION}/manifest-tool-$os-$arch$ext"; \
+	done; \
+	ls -l bin; \
+	file bin/*
