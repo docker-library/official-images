@@ -8,28 +8,34 @@ GitFetch: refs/heads/dist
 # see also https://wiki.ubuntu.com/Releases#Current
 
 # commits: (master..dist)
-#  - 8ec739c Update tarballs
+#  - fb06b03 Update tarballs
+#    - `ubuntu:artful`: 20170511.1
 #    - `ubuntu:trusty`: 20170330
-#    - `ubuntu:xenial`: 20170417.1
+#    - `ubuntu:xenial`: 20170510
 #    - `ubuntu:yakkety`: 20170327
 #    - `ubuntu:zesty`: 20170411
 
+# 20170511.1
+Tags: 17.10, artful-20170511.1, artful, devel
+GitCommit: fb06b03251856d9a3c143332398512b3895e33b6
+Directory: artful
+
 # 20170330
 Tags: 14.04.5, 14.04, trusty-20170330, trusty
-GitCommit: 8ec739cf49ac7fb7517d9ba97b04216dc8d8459b
+GitCommit: fb06b03251856d9a3c143332398512b3895e33b6
 Directory: trusty
 
-# 20170417.1
-Tags: 16.04, xenial-20170417.1, xenial, latest
-GitCommit: 8ec739cf49ac7fb7517d9ba97b04216dc8d8459b
+# 20170510
+Tags: 16.04, xenial-20170510, xenial, latest
+GitCommit: fb06b03251856d9a3c143332398512b3895e33b6
 Directory: xenial
 
 # 20170327
 Tags: 16.10, yakkety-20170327, yakkety
-GitCommit: 8ec739cf49ac7fb7517d9ba97b04216dc8d8459b
+GitCommit: fb06b03251856d9a3c143332398512b3895e33b6
 Directory: yakkety
 
 # 20170411
 Tags: 17.04, zesty-20170411, zesty, rolling
-GitCommit: 8ec739cf49ac7fb7517d9ba97b04216dc8d8459b
+GitCommit: fb06b03251856d9a3c143332398512b3895e33b6
 Directory: zesty
