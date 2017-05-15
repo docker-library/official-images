@@ -8,16 +8,19 @@ See [Docker's documentation](https://docs.docker.com/docker-hub/official_repos/)
 
 ## Architectures other than amd64?
 
-Work is in-progress in the Docker Engine and Registry to properly support multiple architectures (see [docker/docker#15866](https://github.com/docker/docker/issues/15866)). While this work is ongoing, **temporary**, experimental builds of the official images for the following architectures are happening somewhat incrementally (with a strong bias towards images necessary for Docker's own CI to help hasten proper multiarch support upstream) via CI.
+Some images have been ported for other architectures, and many of these are officially supported. These are the supported architectures:
 
--	ARMv5 (`armel`): https://hub.docker.com/u/armel/
--	ARMv7 (`armhf`): https://hub.docker.com/u/armhf/
--	ARMv8 (`arm64`): https://hub.docker.com/u/aarch64/
+-	IBM z Systems (`s390x`): https://hub.docker.com/u/s390x/
 -	POWER8 (`ppc64le`): https://hub.docker.com/u/ppc64le/
--	System z (`s390x`): https://hub.docker.com/u/s390x/
 -	x86/i686 (`i386`): https://hub.docker.com/u/i386/
+-	ARMv8 (`arm64v8`): https://hub.docker.com/u/arm64v8/
+-	ARMv7 (`arm32v7`): https://hub.docker.com/u/arm32v7/
+-	ARMv6 (`arm32v6`): https://hub.docker.com/u/arm32v6/ (Raspberry Pi 1, Raspberry Pi Zero)
+-	ARMv5 (`arm32v5`): https://hub.docker.com/u/arm32v5/
 
-If you are curious about how these images are built or have issues with them, please direct all comments to [issues on the `tianon/jenkins-groovy` repo](https://github.com/tianon/jenkins-groovy/issues) for now.
+Check each image description for individual image support status (for example, https://hub.docker.com/r/s390x/golang/ is officially supported).
+
+If you're curious about how these are built, head over to https://doi-janky.infosiftr.net/job/multiarch/ to see the build scaffolding for these other architectures.
 
 ## Contributing to the standard library
 
