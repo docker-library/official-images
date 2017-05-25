@@ -2,6 +2,32 @@
 
 [![Build Status](https://travis-ci.org/docker-library/official-images.svg?branch=master)](https://travis-ci.org/docker-library/official-images)
 
+## Table of Contents
+
+- [What are "Official Images"?](#what-are-official-images)
+- [Architectures other than amd64?](#architectures-other-than-amd64)
+- [Contributing to the standard library](#contributing-to-the-standard-library)
+  - [Review Guidelines](#review-guidelines)
+    - [Maintainership](#maintainership)
+    - [Repeatability](#repeatability)
+    - [Consistency](#consistency)
+    - [Clarity](#clarity)
+    - [init](#init)
+    - [Cacheability](#cacheability)
+    - [Security](#security)
+      - [Image Build](#image-build)
+      - [Runtime Configuration](#runtime-configuration)
+  - [Commitment](#commitment)
+- [Library definition files](#library-definition-files)
+  - [Filenames](#filenames)
+  - [Tags and aliases](#tags-and-aliases)
+  - [Instruction format](#instruction-format)
+    - [Deprecated format](#deprecated-format)
+  - [Creating a new repository](#creating-a-new-repository)
+  - [Adding a new tag in an existing repository (that you're the maintainer of)](#adding-a-new-tag-in-an-existing-repository-that-youre-the-maintainer-of)
+  - [Change to a tag in an existing repository (that you're the maintainer of)](#change-to-a-tag-in-an-existing-repository-that-youre-the-maintainer-of)
+- [Bashbrew](#bashbrew)
+
 ## What are "Official Images"?
 
 See [Docker's documentation](https://docs.docker.com/docker-hub/official_repos/) for a good high-level overview of the program.
