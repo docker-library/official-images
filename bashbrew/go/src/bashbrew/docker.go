@@ -137,8 +137,11 @@ func (r Repo) dockerBuildUniqueBits(entry *manifest.Manifest2822Entry) ([]string
 	}, nil
 }
 
-func dockerBuild(tag string, context io.Reader) error {
+func dockerBuild(tag string, build_args []string, context io.Reader) error {
 	args := []string{"build", "-t", tag, "--rm", "--force-rm"}
+	for _, arg := range build_args {
+		args = append(args, "--build-arg", os.ExpandEnv(arg))
+	}
 	args = append(args, "-")
 	cmd := exec.Command("docker", args...)
 	cmd.Stdin = context
