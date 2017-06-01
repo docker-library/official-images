@@ -4,7 +4,9 @@ RUN apk add --no-cache \
 # bash for running scripts
 		bash \
 # go for compiling bashbrew
-		go libc-dev
+		go libc-dev \
+# ssl for downloading files
+		libressl
 
 ENV GOPATH /go
 ENV PATH $GOPATH/bin:$PATH
