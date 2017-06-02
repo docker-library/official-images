@@ -6,6 +6,8 @@ import (
 	"path/filepath"
 
 	"github.com/codegangsta/cli"
+
+	"github.com/docker-library/go-dockerlibrary/manifest"
 )
 
 // TODO somewhere, ensure that the Docker engine we're talking to is API version 1.22+ (Docker 1.10+)
@@ -18,6 +20,7 @@ var (
 	defaultLibrary string
 	defaultCache   string
 
+	arch                 string
 	constraints          []string
 	exclusiveConstraints bool
 
@@ -27,6 +30,7 @@ var (
 	// separated so that FlagsConfig.ApplyTo can access them
 	flagEnvVars = map[string]string{
 		"debug":   "BASHBREW_DEBUG",
+		"arch":    "BASHBREW_ARCH",
 		"config":  "BASHBREW_CONFIG",
 		"library": "BASHBREW_LIBRARY",
 		"cache":   "BASHBREW_CACHE",
@@ -72,6 +76,12 @@ func main() {
 			Usage: "do not apply any sorting, even via --build-order",
 		},
 
+		cli.StringFlag{
+			Name:   "arch",
+			Value:  manifest.DefaultArchitecture,
+			EnvVar: flagEnvVars["arch"],
+			Usage:  "the current platform architecture",
+		},
 		cli.StringSliceFlag{
 			Name:  "constraint",
 			Usage: "build constraints (see Constraints in Manifest2822Entry)",
@@ -127,6 +137,7 @@ func main() {
 			debugFlag = c.GlobalBool("debug")
 			noSortFlag = c.GlobalBool("no-sort")
 
+			arch = c.GlobalString("arch")
 			constraints = c.GlobalStringSlice("constraint")
 			exclusiveConstraints = c.GlobalBool("exclusive-constraints")
 
@@ -222,7 +233,18 @@ func main() {
 			Before: subcommandBeforeFactory("push"),
 			Action: cmdPush,
 		},
+		{
+			Name:  "put-shared",
+			Usage: `updated shared tags in the registry`,
+			Flags: []cli.Flag{
+				commonFlags["all"],
+				commonFlags["namespace"],
+			},
+			Before: subcommandBeforeFactory("put-shared"),
+			Action: cmdPutShared,
+		},
 
+		// TODO --depth flag for children and parents
 		{
 			Name: "children",
 			Aliases: []string{
