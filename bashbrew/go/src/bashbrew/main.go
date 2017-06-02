@@ -172,6 +172,11 @@ func main() {
 			Name:  "apply-constraints",
 			Usage: "apply Constraints as if repos were building",
 		},
+		"depth": cli.IntFlag{
+			Name:  "depth",
+			Value: 0,
+			Usage: "maximum number of levels to traverse (0 for unlimited)",
+		},
 	}
 
 	app.Commands = []cli.Command{
@@ -244,7 +249,6 @@ func main() {
 			Action: cmdPutShared,
 		},
 
-		// TODO --depth flag for children and parents
 		{
 			Name: "children",
 			Aliases: []string{
@@ -255,6 +259,7 @@ func main() {
 			Usage: `print the repos built FROM a given repo or repo:tag`,
 			Flags: []cli.Flag{
 				commonFlags["apply-constraints"],
+				commonFlags["depth"],
 			},
 			Before: subcommandBeforeFactory("children"),
 			Action: cmdOffspring,
@@ -270,6 +275,7 @@ func main() {
 			Usage: `print the repos this repo or repo:tag is FROM`,
 			Flags: []cli.Flag{
 				commonFlags["apply-constraints"],
+				commonFlags["depth"],
 			},
 			Before: subcommandBeforeFactory("parents"),
 			Action: cmdParents,
