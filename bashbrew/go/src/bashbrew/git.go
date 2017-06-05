@@ -20,6 +20,9 @@ func gitCache() string {
 }
 
 func gitCommand(args ...string) *exec.Cmd {
+	if debugFlag {
+		fmt.Printf("$ git %q\n", args)
+	}
 	cmd := exec.Command("git", args...)
 	cmd.Dir = gitCache()
 	return cmd

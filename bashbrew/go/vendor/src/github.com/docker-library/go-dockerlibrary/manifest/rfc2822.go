@@ -37,7 +37,12 @@ type Manifest2822Entry struct {
 	GitFetch  string
 	GitCommit string
 	Directory string
-	// architecture-specific versions of the above fields are in Paragraph.Values as ARCH-Field, ala s390x-Directory
+
+	// architecture-specific versions of the above fields
+	ArchValues map[string]string
+	// "ARCH-FIELD: VALUE"
+	// ala, "s390x-GitCommit: deadbeef"
+	// (sourced from Paragraph.Values via .SeedArchValues())
 
 	Constraints []string `delim:"," strip:"\n\r\t "`
 }
@@ -53,6 +58,14 @@ var (
 	}
 )
 
+func deepCopyStringsMap(a map[string]string) map[string]string {
+	b := map[string]string{}
+	for k, v := range a {
+		b[k] = v
+	}
+	return b
+}
+
 func (entry Manifest2822Entry) Clone() Manifest2822Entry {
 	// SLICES! grr
 	entry.Maintainers = append([]string{}, entry.Maintainers...)
@@ -60,7 +73,17 @@ func (entry Manifest2822Entry) Clone() Manifest2822Entry {
 	entry.SharedTags = append([]string{}, entry.SharedTags...)
 	entry.Architectures = append([]string{}, entry.Architectures...)
 	entry.Constraints = append([]string{}, entry.Constraints...)
+	// and MAPS, oh my
+	entry.ArchValues = deepCopyStringsMap(entry.ArchValues)
 	return entry
+}
+
+func (entry *Manifest2822Entry) SeedArchValues() {
+	for field, val := range entry.Paragraph.Values {
+		if strings.HasSuffix(field, "-GitRepo") || strings.HasSuffix(field, "-GitFetch") || strings.HasSuffix(field, "-GitCommit") || strings.HasSuffix(field, "-Directory") {
+			entry.ArchValues[field] = val
+		}
+	}
 }
 
 const StringSeparator2822 = ", "
@@ -89,7 +112,7 @@ func (entry Manifest2822Entry) ConstraintsString() string {
 func (a Manifest2822Entry) SameBuildArtifacts(b Manifest2822Entry) bool {
 	// check xxxarch-GitRepo, etc. fields for sameness first
 	for _, key := range append(a.archFields(), b.archFields()...) {
-		if a.Paragraph.Values[key] != b.Paragraph.Values[key] {
+		if a.ArchValues[key] != b.ArchValues[key] {
 			return false
 		}
 	}
@@ -97,18 +120,15 @@ func (a Manifest2822Entry) SameBuildArtifacts(b Manifest2822Entry) bool {
 	return a.ArchitecturesString() == b.ArchitecturesString() && a.GitRepo == b.GitRepo && a.GitFetch == b.GitFetch && a.GitCommit == b.GitCommit && a.Directory == b.Directory && a.ConstraintsString() == b.ConstraintsString()
 }
 
-func isArchField(field string) bool {
-	return strings.HasSuffix(field, "-GitRepo") || strings.HasSuffix(field, "-GitFetch") || strings.HasSuffix(field, "-GitCommit") || strings.HasSuffix(field, "-Directory")
-}
-
 // returns a list of architecture-specific fields in an Entry
 func (entry Manifest2822Entry) archFields() []string {
 	ret := []string{}
-	for key, val := range entry.Paragraph.Values {
-		if isArchField(key) && val != "" {
+	for key, val := range entry.ArchValues {
+		if val != "" {
 			ret = append(ret, key)
 		}
 	}
+	sort.Strings(ret)
 	return ret
 }
 
@@ -140,8 +160,8 @@ func (entry Manifest2822Entry) ClearDefaults(defaults Manifest2822Entry) Manifes
 		entry.Directory = ""
 	}
 	for _, key := range defaults.archFields() {
-		if defaults.Paragraph.Values[key] == entry.Paragraph.Values[key] {
-			delete(entry.Paragraph.Values, key)
+		if defaults.ArchValues[key] == entry.ArchValues[key] {
+			delete(entry.ArchValues, key)
 		}
 	}
 	if entry.ConstraintsString() == defaults.ConstraintsString() {
@@ -176,10 +196,8 @@ func (entry Manifest2822Entry) String() string {
 	if str := entry.Directory; str != "" {
 		ret = append(ret, "Directory: "+str)
 	}
-	archFields := entry.archFields()
-	sort.Strings(archFields) // consistent ordering
-	for _, key := range archFields {
-		ret = append(ret, key+": "+entry.Paragraph.Values[key])
+	for _, key := range entry.archFields() {
+		ret = append(ret, key+": "+entry.ArchValues[key])
 	}
 	if str := entry.ConstraintsString(); str != "" {
 		ret = append(ret, "Constraints: "+str)
@@ -203,42 +221,42 @@ func (manifest Manifest2822) String() string {
 }
 
 func (entry *Manifest2822Entry) SetGitRepo(arch string, repo string) {
-	if entry.Paragraph.Values == nil {
-		entry.Paragraph.Values = map[string]string{}
+	if entry.ArchValues == nil {
+		entry.ArchValues = map[string]string{}
 	}
-	entry.Paragraph.Values[arch+"-GitRepo"] = repo
+	entry.ArchValues[arch+"-GitRepo"] = repo
 }
 
 func (entry Manifest2822Entry) ArchGitRepo(arch string) string {
-	if val, ok := entry.Paragraph.Values[arch+"-GitRepo"]; ok && val != "" {
+	if val, ok := entry.ArchValues[arch+"-GitRepo"]; ok && val != "" {
 		return val
 	}
 	return entry.GitRepo
 }
 
 func (entry Manifest2822Entry) ArchGitFetch(arch string) string {
-	if val, ok := entry.Paragraph.Values[arch+"-GitFetch"]; ok && val != "" {
+	if val, ok := entry.ArchValues[arch+"-GitFetch"]; ok && val != "" {
 		return val
 	}
 	return entry.GitFetch
 }
 
 func (entry *Manifest2822Entry) SetGitCommit(arch string, commit string) {
-	if entry.Paragraph.Values == nil {
-		entry.Paragraph.Values = map[string]string{}
+	if entry.ArchValues == nil {
+		entry.ArchValues = map[string]string{}
 	}
-	entry.Paragraph.Values[arch+"-GitCommit"] = commit
+	entry.ArchValues[arch+"-GitCommit"] = commit
 }
 
 func (entry Manifest2822Entry) ArchGitCommit(arch string) string {
-	if val, ok := entry.Paragraph.Values[arch+"-GitCommit"]; ok && val != "" {
+	if val, ok := entry.ArchValues[arch+"-GitCommit"]; ok && val != "" {
 		return val
 	}
 	return entry.GitCommit
 }
 
 func (entry Manifest2822Entry) ArchDirectory(arch string) string {
-	if val, ok := entry.Paragraph.Values[arch+"-Directory"]; ok && val != "" {
+	if val, ok := entry.ArchValues[arch+"-Directory"]; ok && val != "" {
 		return val
 	}
 	return entry.Directory
@@ -453,6 +471,9 @@ func (decoder *decoderWrapper) Decode(entry *Manifest2822Entry) error {
 		if len(entry.Architectures) == 0 {
 			entry.Architectures = arches
 		}
+
+		// pull out any new architecture-specific values from Paragraph.Values
+		entry.SeedArchValues()
 
 		return nil
 	}
