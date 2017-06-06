@@ -34,6 +34,7 @@ var (
 		"config":  "BASHBREW_CONFIG",
 		"library": "BASHBREW_LIBRARY",
 		"cache":   "BASHBREW_CACHE",
+		"pull":    "BASHBREW_PULL",
 	}
 )
 
@@ -208,9 +209,10 @@ func main() {
 				commonFlags["uniq"],
 				commonFlags["namespace"],
 				cli.StringFlag{
-					Name:  "pull",
-					Value: "missing",
-					Usage: `pull FROM before building (always, missing, never)`,
+					Name:   "pull",
+					Value:  "missing",
+					EnvVar: flagEnvVars["pull"],
+					Usage:  `pull FROM before building (always, missing, never)`,
 				},
 			},
 			Before: subcommandBeforeFactory("build"),
