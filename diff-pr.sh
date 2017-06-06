@@ -74,6 +74,7 @@ fi
 
 export BASHBREW_CACHE="${BASHBREW_CACHE:-${XDG_CACHE_HOME:-$HOME/.cache}/bashbrew}"
 export BASHBREW_LIBRARY="$PWD/oi/library"
+export BASHBREW_ARCH='amd64' # TODO something smarter with arches
 
 # TODO something less hacky than "git archive" hackery, like a "bashbrew archive" or "bashbrew context" or something
 template='
@@ -87,9 +88,10 @@ template='
 	{{- .Tags | last -}}
 	{{- "/" -}}
 	{{- " " -}}
-	{{- .GitCommit -}}
+	{{- .ArchGitCommit "'"$BASHBREW_ARCH"'" -}}
 	{{- ":" -}}
-	{{- (eq .Directory ".") | ternary "" .Directory -}}
+	{{- $dir := .ArchDirectory "'"$BASHBREW_ARCH"'" -}}
+	{{- (eq $dir ".") | ternary "" $dir -}}
 	{{- "\n" -}}
 {{- end -}}
 '
