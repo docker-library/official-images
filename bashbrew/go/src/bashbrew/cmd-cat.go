@@ -42,6 +42,9 @@ func cmdCat(c *cli.Context) error {
 		"i": func() int {
 			return i
 		},
+		"arch": func() string {
+			return arch
+		},
 	}).Parse(format)
 	if err != nil {
 		return cli.NewMultiError(tmplMultiErr, err)
