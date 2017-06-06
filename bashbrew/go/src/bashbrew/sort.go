@@ -97,6 +97,9 @@ func sortRepoObjects(rs []*Repo, applyConstraints bool) ([]*Repo, error) {
 			if applyConstraints && r.SkipConstraints(entry) {
 				continue
 			}
+			if !entry.HasArchitecture(arch) {
+				continue
+			}
 
 			from, err := r.DockerFrom(&entry)
 			if err != nil {

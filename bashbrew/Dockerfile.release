@@ -16,29 +16,48 @@ COPY go .
 RUN set -ex; \
 	mkdir bin; \
 	for osArch in \
-		darwin/amd64 \
-		linux/amd64 \
-		linux/arm64 \
-		linux/ppc64le \
-		linux/s390x \
-		windows/amd64 \
+		amd64 \
+		arm32v5 \
+		arm32v6 \
+		arm32v7 \
+		arm64v8 \
+		darwin-amd64 \
+		i386 \
+		ppc64le \
+		s390x \
+		windows-amd64 \
 	; do \
-		os="${osArch%%/*}"; \
-		arch="${osArch#$os/}"; \
-# TODO GOARM
+		os="${osArch%%-*}"; \
+		[ "$os" != "$osArch" ] || os='linux'; \
+		export GOOS="$os"; \
+		arch="${osArch#${os}-}"; \
+		unset GOARM GO386; \
+		case "$arch" in \
+			arm32v*) export GOARCH='arm' GOARM="${arch#arm32v}" ;; \
+# no GOARM for arm64 (yet?) -- https://github.com/golang/go/blob/1e72bf62183ea21b9affffd4450d44d994393899/src/cmd/internal/objabi/util.go#L40
+			arm64v*) export GOARCH='arm64' ;; \
+			i386)    export GOARCH='386' ;; \
+			*)       export GOARCH="$arch" ;; \
+		esac; \
 		\
 		[ "$os" = 'windows' ] && ext='.exe' || ext=''; \
 		\
-		GOOS="$os" GOARCH="$arch" \
-			go build \
-				-a -v \
-				-ldflags '-s -w' \
-				-tags netgo -installsuffix netgo \
-				-o "bin/bashbrew-$os-$arch$ext" \
-				./src/bashbrew; \
+		go build \
+			-a -v \
+			-ldflags '-s -w' \
+# see https://github.com/golang/go/issues/9737#issuecomment-276817652 (and following comments) -- installsuffix is necessary (for now) to keep ARM
+# can remove "$osArch" from "installsuffix" in Go 1.10+ (https://github.com/golang/go/commit/1b53f15ebb00dd158af674df410c7941abb2b933)
+			-tags netgo -installsuffix "netgo-$osArch" \
+			-o "bin/bashbrew-$osArch$ext" \
+			./src/bashbrew; \
 		\
+		case "$GOARCH" in \
+# manifest-tool and GOARM aren't friends yet
+# ... and estesp is probably a big fat "lololol" on supporting i386 :D
+			arm|386) continue ;; \
+		esac; \
 # TODO verify GPG signatures for manifest-tool releases
-		wget -O "bin/manifest-tool-$os-$arch$ext" "https://github.com/estesp/manifest-tool/releases/download/v${MANIFEST_TOOL_VERSION}/manifest-tool-$os-$arch$ext"; \
+		wget -O "bin/manifest-tool-$osArch$ext" "https://github.com/estesp/manifest-tool/releases/download/v${MANIFEST_TOOL_VERSION}/manifest-tool-$GOOS-$GOARCH$ext"; \
 	done; \
 	ls -l bin; \
 	file bin/*

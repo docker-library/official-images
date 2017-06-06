@@ -20,6 +20,9 @@ func gitCache() string {
 }
 
 func gitCommand(args ...string) *exec.Cmd {
+	if debugFlag {
+		fmt.Printf("$ git %q\n", args)
+	}
 	cmd := exec.Command("git", args...)
 	cmd.Dir = gitCache()
 	return cmd
@@ -102,12 +105,12 @@ var gitRepoCache = map[string]string{}
 
 func (r Repo) fetchGitRepo(entry *manifest.Manifest2822Entry) (string, error) {
 	cacheKey := strings.Join([]string{
-		entry.GitRepo,
-		entry.GitFetch,
-		entry.GitCommit,
+		entry.ArchGitRepo(arch),
+		entry.ArchGitFetch(arch),
+		entry.ArchGitCommit(arch),
 	}, "\n")
 	if commit, ok := gitRepoCache[cacheKey]; ok {
-		entry.GitCommit = commit
+		entry.SetGitCommit(arch, commit)
 		return commit, nil
 	}
 
@@ -116,27 +119,27 @@ func (r Repo) fetchGitRepo(entry *manifest.Manifest2822Entry) (string, error) {
 		return "", err
 	}
 
-	if manifest.GitCommitRegex.MatchString(entry.GitCommit) {
-		commit, err := getGitCommit(entry.GitCommit)
+	if manifest.GitCommitRegex.MatchString(entry.ArchGitCommit(arch)) {
+		commit, err := getGitCommit(entry.ArchGitCommit(arch))
 		if err == nil {
 			gitRepoCache[cacheKey] = commit
-			entry.GitCommit = commit
+			entry.SetGitCommit(arch, commit)
 			return commit, nil
 		}
 	}
 
-	fetchString := entry.GitFetch + ":"
-	if entry.GitCommit == "FETCH_HEAD" {
+	fetchString := entry.ArchGitFetch(arch) + ":"
+	if entry.ArchGitCommit(arch) == "FETCH_HEAD" {
 		// fetch remote tag references to a local tag ref so that we can cache them and not re-fetch every time
 		localRef := "refs/tags/" + gitNormalizeForTagUsage(cacheKey)
 		commit, err := getGitCommit(localRef)
 		if err == nil {
 			gitRepoCache[cacheKey] = commit
-			entry.GitCommit = commit
+			entry.SetGitCommit(arch, commit)
 			return commit, nil
 		}
 		fetchString += localRef
-	} else if entry.GitFetch == manifest.DefaultLineBasedFetch {
+	} else if entry.ArchGitFetch(arch) == manifest.DefaultLineBasedFetch {
 		// backwards compat (see manifest/line-based.go in go-dockerlibrary)
 		refBase := "refs/remotes"
 		refBaseDir := filepath.Join(gitCache(), refBase)
@@ -154,17 +157,17 @@ func (r Repo) fetchGitRepo(entry *manifest.Manifest2822Entry) (string, error) {
 		// we create a temporary remote dir so that we can clean it up completely afterwards
 	}
 
-	if strings.HasPrefix(entry.GitRepo, "git://github.com/") {
-		fmt.Fprintf(os.Stderr, "warning: insecure protocol git:// detected: %s\n", entry.GitRepo)
-		entry.GitRepo = strings.Replace(entry.GitRepo, "git://", "https://", 1)
+	if strings.HasPrefix(entry.ArchGitRepo(arch), "git://github.com/") {
+		fmt.Fprintf(os.Stderr, "warning: insecure protocol git:// detected: %s\n", entry.ArchGitRepo(arch))
+		entry.SetGitRepo(arch, strings.Replace(entry.ArchGitRepo(arch), "git://", "https://", 1))
 	}
 
-	_, err = git("fetch", "--quiet", "--no-tags", entry.GitRepo, fetchString)
+	_, err = git("fetch", "--quiet", "--no-tags", entry.ArchGitRepo(arch), fetchString)
 	if err != nil {
 		return "", err
 	}
 
-	commit, err := getGitCommit(entry.GitCommit)
+	commit, err := getGitCommit(entry.ArchGitCommit(arch))
 	if err != nil {
 		return "", err
 	}
@@ -175,6 +178,6 @@ func (r Repo) fetchGitRepo(entry *manifest.Manifest2822Entry) (string, error) {
 	}
 
 	gitRepoCache[cacheKey] = commit
-	entry.GitCommit = commit
+	entry.SetGitCommit(arch, commit)
 	return commit, nil
 }

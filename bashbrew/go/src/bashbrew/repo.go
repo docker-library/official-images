@@ -79,6 +79,15 @@ var haveOutputSkippedMessage = map[string]bool{}
 func (r Repo) SkipConstraints(entry manifest.Manifest2822Entry) bool {
 	repoTag := r.RepoName + ":" + entry.Tags[0]
 
+	// TODO decide if "arch" and "constraints" should be handled separately (but probably not)
+	if !entry.HasArchitecture(arch) {
+		if !haveOutputSkippedMessage[repoTag] {
+			fmt.Fprintf(os.Stderr, "skipping %q (due to architecture %q; only %q supported)\n", repoTag, arch, entry.ArchitecturesString())
+			haveOutputSkippedMessage[repoTag] = true
+		}
+		return true
+	}
+
 	if len(entry.Constraints) == 0 {
 		if exclusiveConstraints {
 			if !haveOutputSkippedMessage[repoTag] {

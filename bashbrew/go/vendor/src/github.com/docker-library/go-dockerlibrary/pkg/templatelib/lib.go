@@ -67,12 +67,15 @@ func stringsModifierActionFactory(a func(string, string) string) func([]string, 
 	}
 }
 
-// TODO write some tests for these
-
 var FuncMap = template.FuncMap{
+	// {{- $isGitHub := hasPrefix "https://github.com/" $url -}}
+	// {{- $isHtml := hasSuffix ".html" $url -}}
 	"hasPrefix": swapStringsFuncBoolArgsOrder(strings.HasPrefix),
 	"hasSuffix": swapStringsFuncBoolArgsOrder(strings.HasSuffix),
 
+	// {{- $hugeIfTrue := .SomeValue | ternary "HUGE" "not so huge" -}}
+	// if .SomeValue is truthy, $hugeIfTrue will be "HUGE"
+	// (otherwise, "not so huge")
 	"ternary": func(truthy interface{}, falsey interface{}, val interface{}) interface{} {
 		if t, ok := template.IsTrue(val); !ok {
 			panic(fmt.Sprintf(`template.IsTrue(%+v) says things are NOT OK`, val))
@@ -83,14 +86,26 @@ var FuncMap = template.FuncMap{
 		}
 	},
 
+	// First Tag: {{- .Tags | first -}}
+	// Last Tag:  {{- .Tags | last -}}
 	"first": thingsActionFactory("first", true, func(args []interface{}, arg interface{}) interface{} { return arg }),
 	"last":  thingsActionFactory("last", false, func(args []interface{}, arg interface{}) interface{} { return arg }),
 
+	// JSON data dump: {{ json . }}
+	// (especially nice for taking data and piping it to "jq")
+	// (ie "some-tool inspect --format '{{ json . }}' some-things | jq .")
 	"json": func(v interface{}) (string, error) {
 		j, err := json.Marshal(v)
 		return string(j), err
 	},
-	"join":         stringsActionFactory("join", true, strings.Join),
+
+	// Everybody: {{- join ", " .Names -}}
+	// Concat: {{- join "/" "https://github.com" "jsmith" "some-repo" -}}
+	"join": stringsActionFactory("join", true, strings.Join),
+
+	// {{- $mungedUrl := $url | replace "git://" "https://" | trimSuffixes ".git" -}}
+	// turns: git://github.com/jsmith/some-repo.git
+	// into: https://github.com/jsmith/some-repo
 	"trimPrefixes": stringsActionFactory("trimPrefixes", false, stringsModifierActionFactory(strings.TrimPrefix)),
 	"trimSuffixes": stringsActionFactory("trimSuffixes", false, stringsModifierActionFactory(strings.TrimSuffix)),
 	"replace": stringsActionFactory("replace", false, func(strs []string, str string) string {

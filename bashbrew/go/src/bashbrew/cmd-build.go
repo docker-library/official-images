@@ -81,7 +81,7 @@ func cmdBuild(c *cli.Context) error {
 					return cli.NewMultiError(fmt.Errorf(`failed fetching git repo for %q (tags %q)`, r.RepoName, entry.TagsString()), err)
 				}
 
-				archive, err := gitArchive(commit, entry.Directory)
+				archive, err := gitArchive(commit, entry.ArchDirectory(arch))
 				if err != nil {
 					return cli.NewMultiError(fmt.Errorf(`failed generating git archive for %q (tags %q)`, r.RepoName, entry.TagsString()), err)
 				}
