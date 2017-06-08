@@ -2,6 +2,7 @@ FROM golang:1.8-alpine
 
 RUN apk add --no-cache \
 		file \
+		gnupg \
 		libressl
 
 WORKDIR /usr/src/bashbrew
@@ -9,11 +10,17 @@ ENV GOPATH /usr/src/bashbrew:/usr/src/bashbrew/vendor
 ENV CGO_ENABLED 0
 
 # https://github.com/estesp/manifest-tool/releases
-ENV MANIFEST_TOOL_VERSION 0.4.0
+ENV MANIFEST_TOOL_VERSION 0.5.0
+# gpg: key 0F386284C03A1162: public key "Philip Estes <estesp@gmail.com>" imported
+ENV MANIFEST_TOOL_GPG_KEY 27F3EA268A97867EAF0BD05C0F386284C03A1162
 
 COPY go .
 
 RUN set -ex; \
+	\
+	export GNUPGHOME="$(mktemp -d)"; \
+	gpg --keyserver ha.pool.sks-keyservers.net --recv-keys "$MANIFEST_TOOL_GPG_KEY"; \
+	\
 	mkdir bin; \
 	for osArch in \
 		amd64 \
@@ -56,8 +63,12 @@ RUN set -ex; \
 # ... and estesp is probably a big fat "lololol" on supporting i386 :D
 			arm|386) continue ;; \
 		esac; \
-# TODO verify GPG signatures for manifest-tool releases
 		wget -O "bin/manifest-tool-$osArch$ext" "https://github.com/estesp/manifest-tool/releases/download/v${MANIFEST_TOOL_VERSION}/manifest-tool-$GOOS-$GOARCH$ext"; \
+		wget -O "bin/manifest-tool-$osArch$ext.asc" "https://github.com/estesp/manifest-tool/releases/download/v${MANIFEST_TOOL_VERSION}/manifest-tool-$GOOS-$GOARCH$ext.asc"; \
+		gpg --batch --verify "bin/manifest-tool-$osArch$ext.asc" "bin/manifest-tool-$osArch$ext"; \
 	done; \
+	\
+	rm -rf "$GNUPGHOME"; \
+	\
 	ls -l bin; \
 	file bin/*
