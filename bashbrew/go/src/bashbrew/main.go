@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"strings"
 
 	"github.com/codegangsta/cli"
 
@@ -24,6 +25,8 @@ var (
 	constraints          []string
 	exclusiveConstraints bool
 
+	archNamespaces map[string]string
+
 	debugFlag  = false
 	noSortFlag = false
 
@@ -35,6 +38,9 @@ var (
 		"library": "BASHBREW_LIBRARY",
 		"cache":   "BASHBREW_CACHE",
 		"pull":    "BASHBREW_PULL",
+
+		"constraint":     "BASHBREW_CONSTRAINTS",
+		"arch-namespace": "BASHBREW_ARCH_NAMESPACES",
 	}
 )
 
@@ -84,12 +90,19 @@ func main() {
 			Usage:  "the current platform architecture",
 		},
 		cli.StringSliceFlag{
-			Name:  "constraint",
-			Usage: "build constraints (see Constraints in Manifest2822Entry)",
+			Name:   "constraint",
+			EnvVar: flagEnvVars["constraint"],
+			Usage:  "build constraints (see Constraints in Manifest2822Entry)",
 		},
 		cli.BoolFlag{
 			Name:  "exclusive-constraints",
 			Usage: "skip entries which do not have Constraints",
+		},
+
+		cli.StringSliceFlag{
+			Name:   "arch-namespace",
+			EnvVar: flagEnvVars["arch-namespace"],
+			Usage:  `architecture to push namespace mappings for creating indexes/manifest lists ("arch=namespace" ala "s390x=tianons390x")`,
 		},
 
 		cli.StringFlag{
@@ -141,6 +154,13 @@ func main() {
 			arch = c.GlobalString("arch")
 			constraints = c.GlobalStringSlice("constraint")
 			exclusiveConstraints = c.GlobalBool("exclusive-constraints")
+
+			archNamespaces = map[string]string{}
+			for _, archMapping := range c.GlobalStringSlice("arch-namespace") {
+				splitArchMapping := strings.SplitN(archMapping, "=", 2)
+				splitArch, splitNamespace := strings.TrimSpace(splitArchMapping[0]), strings.TrimSpace(splitArchMapping[1])
+				archNamespaces[splitArch] = splitNamespace
+			}
 
 			defaultLibrary, err = filepath.Abs(c.GlobalString("library"))
 			if err != nil {

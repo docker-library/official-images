@@ -18,8 +18,6 @@ type FlagsConfigEntry struct {
 
 	Commands []string `delim:"," strip:"\n\r\t "`
 
-	// TODO arch namespace mappings (for intermediate pushing before put-shared, and for put-shared to pull from to join together in one big happy family)
-
 	Library    string
 	Cache      string
 	Debug      string
@@ -32,6 +30,9 @@ type FlagsConfigEntry struct {
 	Constraints          []string `delim:"," strip:"\n\r\t "`
 	ExclusiveConstraints string
 	ApplyConstraints     string
+
+	// a list of "arch=namespace" mappings for pushing indexes (manifest lists)
+	ArchNamespaces []string `delim:"," strip:"\n\r\t "`
 }
 
 type FlagsConfig map[string]FlagsConfigEntry
@@ -70,6 +71,9 @@ func (dst *FlagsConfigEntry) Apply(src FlagsConfigEntry) {
 	if src.ApplyConstraints != "" {
 		dst.ApplyConstraints = src.ApplyConstraints
 	}
+	if len(src.ArchNamespaces) > 0 {
+		dst.ArchNamespaces = src.ArchNamespaces[:]
+	}
 }
 
 func (config FlagsConfigEntry) Vars() map[string]map[string]interface{} {
@@ -82,6 +86,8 @@ func (config FlagsConfigEntry) Vars() map[string]map[string]interface{} {
 			"arch":                  config.Arch,
 			"constraint":            config.Constraints,
 			"exclusive-constraints": config.ExclusiveConstraints,
+
+			"arch-namespace": config.ArchNamespaces,
 		},
 
 		"local": {

@@ -139,6 +139,7 @@ func (r Repo) Entries() []manifest.Manifest2822Entry {
 	if r.TagName == "" {
 		return r.Manifest.Entries
 	} else {
+		// TODO what if r.TagName isn't a single entry, but is a SharedTag ?
 		return []manifest.Manifest2822Entry{*r.Manifest.GetTag(r.TagName)}
 	}
 }
