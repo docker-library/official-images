@@ -8,6 +8,7 @@ import (
 	"sort"
 	"strings"
 
+	"github.com/docker-library/go-dockerlibrary/architecture"
 	"github.com/docker-library/go-dockerlibrary/pkg/stripper"
 
 	"pault.ag/go/debian/control"
@@ -364,10 +365,14 @@ func (manifest *Manifest2822) AddEntry(entry Manifest2822Entry) error {
 		return fmt.Errorf("Tags %q missing one of GitRepo, GitFetch, or GitCommit", entry.TagsString())
 	}
 	if invalidMaintainers := entry.InvalidMaintainers(); len(invalidMaintainers) > 0 {
-		return fmt.Errorf("Tags %q has invalid Maintainers: %q (expected format %q)", strings.Join(invalidMaintainers, ", "), MaintainersFormat)
+		return fmt.Errorf("Tags %q has invalid Maintainers: %q (expected format %q)", entry.TagsString(), strings.Join(invalidMaintainers, ", "), MaintainersFormat)
 	}
 
 	entry.DeduplicateSharedTags()
+
+	if invalidArchitectures := entry.InvalidArchitectures(); len(invalidArchitectures) > 0 {
+		return fmt.Errorf("Tags %q has invalid Architectures: %q", entry.TagsString(), strings.Join(invalidArchitectures, ", "))
+	}
 
 	seenTag := map[string]bool{}
 	for _, tag := range entry.Tags {
@@ -428,6 +433,16 @@ func (entry Manifest2822Entry) InvalidMaintainers() []string {
 	return invalid
 }
 
+func (entry Manifest2822Entry) InvalidArchitectures() []string {
+	invalid := []string{}
+	for _, arch := range entry.Architectures {
+		if _, ok := architecture.SupportedArches[arch]; !ok {
+			invalid = append(invalid, arch)
+		}
+	}
+	return invalid
+}
+
 // DeduplicateSharedTags will remove duplicate values from entry.SharedTags, preserving order.
 func (entry *Manifest2822Entry) DeduplicateSharedTags() {
 	aggregate := []string{}
@@ -440,6 +455,21 @@ func (entry *Manifest2822Entry) DeduplicateSharedTags() {
 		aggregate = append(aggregate, tag)
 	}
 	entry.SharedTags = aggregate
+}
+
+// DeduplicateArchitectures will remove duplicate values from entry.Architectures and sort the result.
+func (entry *Manifest2822Entry) DeduplicateArchitectures() {
+	aggregate := []string{}
+	seen := map[string]bool{}
+	for _, arch := range entry.Architectures {
+		if seen[arch] {
+			continue
+		}
+		seen[arch] = true
+		aggregate = append(aggregate, arch)
+	}
+	sort.Strings(aggregate)
+	entry.Architectures = aggregate
 }
 
 type decoderWrapper struct {
@@ -471,6 +501,7 @@ func (decoder *decoderWrapper) Decode(entry *Manifest2822Entry) error {
 		if len(entry.Architectures) == 0 {
 			entry.Architectures = arches
 		}
+		entry.DeduplicateArchitectures()
 
 		// pull out any new architecture-specific values from Paragraph.Values
 		entry.SeedArchValues()
@@ -503,6 +534,9 @@ func Parse2822(readerIn io.Reader) (*Manifest2822, error) {
 	}
 	if len(manifest.Global.Tags) > 0 {
 		return nil, fmt.Errorf("global Tags not permitted")
+	}
+	if invalidArchitectures := manifest.Global.InvalidArchitectures(); len(invalidArchitectures) > 0 {
+		return nil, fmt.Errorf("invalid global Architectures: %q", strings.Join(invalidArchitectures, ", "))
 	}
 
 	for {
