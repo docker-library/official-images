@@ -22,6 +22,8 @@ Check each image description for individual image support status (for example, h
 
 If you're curious about how these are built, head over to https://doi-janky.infosiftr.net/job/multiarch/ to see the build scaffolding for these other architectures.
 
+See the [multi-arch section](#multiple-architectures) below for recommendations in adding more architectures to an official image.
+
 ## Contributing to the standard library
 
 Thank you for your interest in the Docker official images project! We strive to make these instructions as simple and straightforward as possible, but if you find yourself lost, don't hesitate to seek us out on Freenode IRC in channel `#docker-library` or by creating a GitHub issue here.
@@ -214,7 +216,57 @@ The `Dockerfile` should be written to help mitigate man-in-the-middle attacks du
 
 By default, Docker containers are executed with reduced privileges: whitelisted Linux capabilities, Control Groups, and a default Seccomp profile (1.10+ w/ host support). Software running in a container may require additional privileges in order to function correctly, and there are a number of command line options to customize container execution. See [`docker run` Reference](https://docs.docker.com/engine/reference/run/) and [Seccomp for Docker](https://docs.docker.com/engine/security/seccomp/) for reference.
 
-Official Repositories that require additional privileges should specify the minimal set of command line options for the software to function, and may still be rejected if this introduces significant portability or security issues. In general, `--privileged` is not allowed, but a combination of `--cap-add` and `--device` options may be acceptable. Additionally, `--volume` can be tricky as there are many host filesystem locations that introduce portability/security issues (i.e. X11 socket).
+Official Repositories that require additional privileges should specify the minimal set of command line options for the software to function, and may still be rejected if this introduces significant portability or security issues. In general, `--privileged` is not allowed, but a combination of `--cap-add` and `--device` options may be acceptable. Additionally, `--volume` can be tricky as there are many host filesystem locations that introduce portability/security issues (e.g. X11 socket).
+
+#### Multiple Architectures
+
+Each repo can specify multiple architectures for any and all tags. If no architecture is specified, images are built in Linux on amd64 (aka x86_64). To specify more or different architectures, use the `Architectures` field (comma-delimited list, whitespace is trimmed). Valid architectures are found in [`oci-platform.go`](https://github.com/docker-library/official-images/blob/a7ad3081aa5f51584653073424217e461b72670a/bashbrew/go/vendor/src/github.com/docker-library/go-dockerlibrary/architecture/oci-platform.go#L14-L25):
+
+-	Architectures supported for running Docker (see [download.docker.com](https://download.docker.com/linux/))
+	-	`amd64`
+	-	`arm32v7`
+	-	`s390x`
+	-	`windows-amd64`
+-	Other architectures built by official images
+	-	`arm32v6`
+	-	`arm64v8`
+	-	`i386`
+	-	`ppc64le`
+
+We strongly recommend that most images create a single Dockerfile per entry in the library file that can be used for multiple architectures. This means that each supported architecture will have the same FROM line (e.g. `FROM debian:jessie`). While official images are in the process of completing [image indexes](https://github.com/opencontainers/image-spec/blob/v1.0.0-rc6/image-index.md) to make this work naturally, the servers that build for non-amd64 architectures will pull the correct architecture-specific base and `docker tag` the base image to make the `FROM` work correctly.
+
+For images that are `FROM scratch` like `debian` it will be necessary to have a different Dockerfile and build context in order to `ADD` architecture specific binaries. Since these images use the same `Tags`, they need to be in the same entry. Use the architecture specific fields for `GitRepo`, `GitFetch`, `GitCommit`, and `Directory`, which are the architecture concatenated with hyphen (`-`) and the field (e.g. `arm32v7-GitCommit`). Any architecture that does not have an architecture-specific field will use the default field (e.g. no `arm32v7-Directory` means `Directory` will be used for `arm32v7`). See the `debian` or `ubuntu` files in the library for examples. The following is an example for `hello-world`:
+
+```
+Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
+             Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
+GitRepo: https://github.com/docker-library/hello-world.git
+GitCommit: 7d0ee592e4ed60e2da9d59331e16ecdcadc1ed87
+
+Tags: latest
+Architectures: amd64, arm32v5, arm32v7, arm64v8, ppc64le, s390x
+# all the same commit; easy for us to generate this way since they could be different
+amd64-GitCommit: 7d0ee592e4ed60e2da9d59331e16ecdcadc1ed87
+amd64-Directory: amd64/hello-world
+arm32v5-GitCommit: 7d0ee592e4ed60e2da9d59331e16ecdcadc1ed87
+arm32v5-Directory: arm32v5/hello-world
+arm32v7-GitCommit: 7d0ee592e4ed60e2da9d59331e16ecdcadc1ed87
+arm32v7-Directory: arm32v7/hello-world
+arm64v8-GitCommit: 7d0ee592e4ed60e2da9d59331e16ecdcadc1ed87
+arm64v8-Directory: arm64v8/hello-world
+ppc64le-GitCommit: 7d0ee592e4ed60e2da9d59331e16ecdcadc1ed87
+ppc64le-Directory: ppc64le/hello-world
+s390x-GitCommit: 7d0ee592e4ed60e2da9d59331e16ecdcadc1ed87
+s390x-Directory: s390x/hello-world
+
+Tags: nanoserver
+Architectures: windows-amd64
+# if there is only one architecture, you can use the unprefixed fields
+Directory: amd64/hello-world/nanoserver
+# or use the prefixed versions
+windows-amd64-GitCommit: 7d0ee592e4ed60e2da9d59331e16ecdcadc1ed87
+Constraints: nanoserver
+```
 
 ### Commitment
 
@@ -244,9 +296,9 @@ As described above, `latest` is really "default", so the image that it is an ali
 
 The manifest file format is officially based on [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt), and as such should be familiar to folks who are already familiar with the "headers" of many popular internet protocols/formats such as HTTP or email.
 
-The primary additions are inspired by the way Debian commonly uses 2822 -- namely, lines starting with `#` are ignored and "paragraphs" (or "entries") are separated by a blank line.
+The primary additions are inspired by the way Debian commonly uses 2822 -- namely, lines starting with `#` are ignored and "entries" are separated by a blank line.
 
-The first entry is the "global" metadata for the image. The only required field in the global entry is `Maintainers`, whose value is comma-separated in the format of `Name <email> (@github)` or `Name (@github)`. Any field specified in the global entry will be the default for the rest of the entries/paragraphs and can be overridden in an individual paragraph.
+The first entry is the "global" metadata for the image. The only required field in the global entry is `Maintainers`, whose value is comma-separated in the format of `Name <email> (@github)` or `Name (@github)`. Any field specified in the global entry will be the default for the rest of the entries and can be overridden in an individual entry.
 
 	# this is a comment and will be ignored
 	Maintainers: John Smith <jsmith@example.com> (@example-jsmith),
