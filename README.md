@@ -329,38 +329,6 @@ The built image will be tagged as `<manifest-filename>:<tag>` (ie, `library/gola
 
 Optionally, if `Directory` is present, Bashbrew will look for the `Dockerfile` inside the specified subdirectory instead of at the root (and `Directory` will be used as the ["context" for the build](https://docs.docker.com/reference/builder/) instead of the top-level of the repository).
 
-#### Deprecated format
-
-This is the older, now-deprecated format for library manifest files. Its usage is discouraged (although it is still supported).
-
-	# maintainer: Your Name <your@email.com> (@github.name)
-	
-	# maintainer: John Smith <jsmith@example.com> (@example-jsmith)
-	# maintainer: Anne Smith <asmith@example.com> (@example-asmith)
-	
-	
-	<Tag>: <GitRepo>@<GitCommit>
-	
-	4.1.1: git://github.com/docker-library/wordpress@bbef6075afa043cbfe791b8de185105065c02c01
-	4.1: git://github.com/docker-library/wordpress@bbef6075afa043cbfe791b8de185105065c02c01
-	4: git://github.com/docker-library/wordpress@bbef6075afa043cbfe791b8de185105065c02c01
-	latest: git://github.com/docker-library/wordpress@bbef6075afa043cbfe791b8de185105065c02c01
-	
-	
-	<Tag>: <GitRepo>@<GitCommit> <Directory>
-	
-	2.6.17: git://github.com/docker-library/redis@062335e0a8d20cab2041f25dfff2fbaf58544471 2.6
-	2.6: git://github.com/docker-library/redis@062335e0a8d20cab2041f25dfff2fbaf58544471 2.6
-	
-	2.8.19: git://github.com/docker-library/redis@062335e0a8d20cab2041f25dfff2fbaf58544471 2.8
-	2.8: git://github.com/docker-library/redis@062335e0a8d20cab2041f25dfff2fbaf58544471 2.8
-	2: git://github.com/docker-library/redis@062335e0a8d20cab2041f25dfff2fbaf58544471 2.8
-	latest: git://github.com/docker-library/redis@062335e0a8d20cab2041f25dfff2fbaf58544471 2.8
-	
-	experimental: git://github.com/tianon/dockerfiles@90d86ad63c4a06b7d04d14ad830381b876183b3c debian/experimental
-
-Using Git tags instead of explicit Git commit references is supported for the deprecated format only, but is heavily discouraged. For example, if a Git tag is changed on the referenced repository to point to another commit, **the image will not be rebuilt**. Instead, either create a new tag (or reference an exact commit) and submit a pull request.
-
 ### Creating a new repository
 
 -	Create a new file in the `library/` folder. Its name will be the name of your repository on the Hub.
