@@ -268,6 +268,8 @@ windows-amd64-GitCommit: 7d0ee592e4ed60e2da9d59331e16ecdcadc1ed87
 Constraints: nanoserver
 ```
 
+See the [instruction format section](#instruction-format) for more information on the format of the library file.
+
 ### Commitment
 
 Proposing a new official image should not be undertaken lightly. We expect and require a commitment to maintain your image (including and especially timely updates as appropriate, as noted above).
@@ -328,6 +330,8 @@ Bashbrew will fetch code out of the Git repository (`GitRepo`) at the commit spe
 The built image will be tagged as `<manifest-filename>:<tag>` (ie, `library/golang` with a `Tags` value of `1.6, 1, latest` will create tags of `golang:1.6`, `golang:1`, and `golang:latest`).
 
 Optionally, if `Directory` is present, Bashbrew will look for the `Dockerfile` inside the specified subdirectory instead of at the root (and `Directory` will be used as the ["context" for the build](https://docs.docker.com/reference/builder/) instead of the top-level of the repository).
+
+See the [multi-arch section](#multiple-architectures) for details on how to specify a different `GitRepo`, `GitFetch`, `GitCommit`, or `Directory` for a specific architecture.
 
 ### Creating a new repository
 
