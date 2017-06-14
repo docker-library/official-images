@@ -129,7 +129,7 @@ Some examples at the time of writing:
 
 Following the Docker guidelines it is highly recommended that the resulting image be just one concern per container; predominantly this means just one process per container, so there is no need for a full init system. There are two situations where an init-like process would be helpful for the container. The first being signal handling. If the process launched does not handle `SIGTERM` by exiting, it will not be killed since it is PID 1 in the container (see "NOTE" at the end of the [Foreground section](https://docs.docker.com/engine/reference/run/#foreground) in the docker docs). The second situation would be zombie reaping. If the process spawns child processes and does not properly reap them it will lead to a full process table, which can prevent the whole system from spawning any new processes. For both of these concerns we recommend [tini](https://github.com/krallin/tini). It is incredibly small, has minimal external dependencies, fills each of these roles, and does only the necessary parts of reaping and signal forwarding.
 
-Here is a snippet of a Dockerfile to add in tini (be sure to use it in `CMD` or `ENTRYPOINT` as appropriate):
+Here is a snippet of a `Dockerfile` to add in tini (be sure to use it in `CMD` or `ENTRYPOINT` as appropriate):
 
 ```Dockerfile
 # grab tini for signal processing and zombie killing
@@ -161,7 +161,7 @@ This is one place that experience ends up trumping documentation for the path to
 
 ##### Image Build
 
-The `Dockerfile` should be written to help mitigate man-in-the-middle attacks during build: using https where possible; importing PGP keys with the full fingerprint in the Dockerfile to check package signing; embedding checksums directly in the `Dockerfile` if PGP signing is not provided. When importing PGP keys, we recommend using the [high-availability server pool](https://sks-keyservers.net/overview-of-pools.php#pool_ha) from sks-keyservers (`ha.pool.sks-keyservers.net`). Here are a few good and bad examples:
+The `Dockerfile` should be written to help mitigate man-in-the-middle attacks during build: using https where possible; importing PGP keys with the full fingerprint in the `Dockerfile` to check package signing; embedding checksums directly in the `Dockerfile` if PGP signing is not provided. When importing PGP keys, we recommend using the [high-availability server pool](https://sks-keyservers.net/overview-of-pools.php#pool_ha) from sks-keyservers (`ha.pool.sks-keyservers.net`). Here are a few good and bad examples:
 
 -	**Bad**: *download the file over http with no verification.*
 
@@ -177,7 +177,7 @@ The `Dockerfile` should be written to help mitigate man-in-the-middle attacks du
 	    # install
 	```
 
--	**Better**: *embed the checksum into the Dockerfile. It would be better to use https here too, if it is available.*
+-	**Better**: *embed the checksum into the `Dockerfile`. It would be better to use https here too, if it is available.*
 
 	```Dockerfile
 	ENV RUBY_DOWNLOAD_SHA256 5ffc0f317e429e6b29d4a98ac521c3ce65481bfd22a8cf845fa02a7b113d9b44
@@ -233,9 +233,9 @@ Each repo can specify multiple architectures for any and all tags. If no archite
 	-	`i386`
 	-	`ppc64le`
 
-We strongly recommend that most images create a single Dockerfile per entry in the library file that can be used for multiple architectures. This means that each supported architecture will have the same FROM line (e.g. `FROM debian:jessie`). While official images are in the process of completing [image indexes](https://github.com/opencontainers/image-spec/blob/v1.0.0-rc6/image-index.md) to make this work naturally, the servers that build for non-amd64 architectures will pull the correct architecture-specific base and `docker tag` the base image to make the `FROM` work correctly.
+We strongly recommend that most images create a single `Dockerfile` per entry in the library file that can be used for multiple architectures. This means that each supported architecture will have the same `FROM` line (e.g. `FROM debian:jessie`). While official images are in the process of completing [image indexes](https://github.com/opencontainers/image-spec/blob/v1.0.0-rc6/image-index.md) to make this work naturally, the servers that build for non-amd64 architectures will pull the correct architecture-specific base and `docker tag` the base image to make the `FROM` work correctly. See [`golang`](https://github.com/docker-library/official-images/blob/master/library/golang), [`docker`](https://github.com/docker-library/official-images/blob/master/library/docker), [`haproxy`](https://github.com/docker-library/official-images/blob/master/library/haproxy), and [`php`](https://github.com/docker-library/official-images/blob/master/library/php) for examples of library files using one `Dockerfile` per entry and see their respective git repos for example `Dockerfile`s.
 
-For images that are `FROM scratch` like `debian` it will be necessary to have a different Dockerfile and build context in order to `ADD` architecture specific binaries. Since these images use the same `Tags`, they need to be in the same entry. Use the architecture specific fields for `GitRepo`, `GitFetch`, `GitCommit`, and `Directory`, which are the architecture concatenated with hyphen (`-`) and the field (e.g. `arm32v7-GitCommit`). Any architecture that does not have an architecture-specific field will use the default field (e.g. no `arm32v7-Directory` means `Directory` will be used for `arm32v7`). See the `debian` or `ubuntu` files in the library for examples. The following is an example for `hello-world`:
+For images that are `FROM scratch` like `debian` it will be necessary to have a different `Dockerfile` and build context in order to `ADD` architecture specific binaries. Since these images use the same `Tags`, they need to be in the same entry. Use the architecture specific fields for `GitRepo`, `GitFetch`, `GitCommit`, and `Directory`, which are the architecture concatenated with hyphen (`-`) and the field (e.g. `arm32v7-GitCommit`). Any architecture that does not have an architecture-specific field will use the default field (e.g. no `arm32v7-Directory` means `Directory` will be used for `arm32v7`). See the [`debian`](https://github.com/docker-library/official-images/blob/master/library/debian) or [`ubuntu`](https://github.com/docker-library/official-images/blob/master/library/ubuntu) files in the library for examples. The following is an example for [`hello-world`](https://github.com/docker-library/official-images/blob/master/library/hello-world):
 
 ```
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
