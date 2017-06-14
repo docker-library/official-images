@@ -19,7 +19,7 @@ GitFetch: refs/heads/master
 GitRepo: https://github.com/docker-library/golang.git
 SharedTags: latest
 arm64v8-GitRepo: https://github.com/docker-library/golang.git
-Architectures: amd64
+Architectures: amd64, amd64
 
 
  # hi
@@ -57,7 +57,7 @@ ppc64le-Directory: 1.5/ppc64le
 SharedTags: raspbian
 GitCommit: deadbeefdeadbeefdeadbeefdeadbeefdeadbeef
 Tags: raspbian-s390x
-Architectures: s390x
+Architectures: s390x, i386
 
 
 `)))
@@ -115,7 +115,7 @@ i: g@h j
 	//
 	// Tags: raspbian-s390x
 	// SharedTags: raspbian
-	// Architectures: s390x
+	// Architectures: i386, s390x
 	// GitCommit: deadbeefdeadbeefdeadbeefdeadbeefdeadbeef
 	//
 	// Shared Tag Groups:

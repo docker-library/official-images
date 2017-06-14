@@ -22,14 +22,13 @@ func entriesToManifestToolYaml(r Repo, entries ...*manifest.Manifest2822Entry) (
 
 			var ociArch architecture.OCIPlatform
 			if ociArch, ok = architecture.SupportedArches[arch]; !ok {
-				// skip unsupported arches
-				// TODO turn this into explicit validation checks at "parse" time instead (so that unsupported arches result in concrete user-facing errors long before this block of code)
-				continue
+				// this should never happen -- the parser validates Architectures
+				panic("somehow, an unsupported architecture slipped past the parser validation: " + arch)
 			}
 
 			var archNamespace string
 			if archNamespace, ok = archNamespaces[arch]; !ok || archNamespace == "" {
-				fmt.Fprintf(os.Stderr, "warning: no arch-namespace specified for %q; skipping %q\n", arch, r.EntryIdentifier(*entry))
+				fmt.Fprintf(os.Stderr, "warning: no arch-namespace specified for %q; skipping (%q)\n", arch, r.EntryIdentifier(*entry))
 				continue
 			}
 
