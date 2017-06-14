@@ -11,11 +11,11 @@ set -- $("$BASHBREW" list --uniq --repos --build-order --apply-constraints "$@")
 # \o/ https://github.com/docker-library/official-images/commit/9e57342714f99074ec205eea668c8b73aada36ec
 comm -13 \
 		<("$BASHBREW" list "$@" | sort -u) \
-		<("$BASHBREW" children "$@" | sort -u) \
+		<("$BASHBREW" children --apply-constraints "$@" | sort -u) \
 	| xargs --no-run-if-empty "$BASHBREW" list --build-order --apply-constraints --uniq
 exit 0
 
-children=( $("$BASHBREW" children "$@") )
+children=( $("$BASHBREW" children --apply-constraints "$@") )
 
 [ "${#children[@]}" -gt 0 ] || exit 0
 
