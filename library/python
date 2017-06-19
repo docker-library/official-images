@@ -1,4 +1,4 @@
-# this file is generated via https://github.com/docker-library/python/blob/8baafd1c6ba34b41b63968cbe386fb45e42fa37f/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/python/blob/73d283d3dccd196f758466f29a715e6ab9b533a7/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
@@ -145,4 +145,35 @@ Tags: 3.6.1-windowsservercore, 3.6-windowsservercore, 3-windowsservercore, windo
 Architectures: windows-amd64
 GitCommit: db2d58d73043c85ceecc8e675372b4dc6a77d136
 Directory: 3.6/windows/windowsservercore
+Constraints: windowsservercore
+
+Tags: 3.6.2rc1, 3.6-rc, rc
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 73d283d3dccd196f758466f29a715e6ab9b533a7
+Directory: 3.6-rc
+
+Tags: 3.6.2rc1-slim, 3.6-rc-slim, rc-slim
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 73d283d3dccd196f758466f29a715e6ab9b533a7
+Directory: 3.6-rc/slim
+
+Tags: 3.6.2rc1-alpine, 3.6-rc-alpine, rc-alpine
+Architectures: amd64
+GitCommit: 73d283d3dccd196f758466f29a715e6ab9b533a7
+Directory: 3.6-rc/alpine
+
+Tags: 3.6.2rc1-alpine3.6, 3.6-rc-alpine3.6, rc-alpine3.6
+Architectures: amd64
+GitCommit: 73d283d3dccd196f758466f29a715e6ab9b533a7
+Directory: 3.6-rc/alpine3.6
+
+Tags: 3.6.2rc1-onbuild, 3.6-rc-onbuild, rc-onbuild
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 73d283d3dccd196f758466f29a715e6ab9b533a7
+Directory: 3.6-rc/onbuild
+
+Tags: 3.6.2rc1-windowsservercore, 3.6-rc-windowsservercore, rc-windowsservercore
+Architectures: windows-amd64
+GitCommit: 73d283d3dccd196f758466f29a715e6ab9b533a7
+Directory: 3.6-rc/windows/windowsservercore
 Constraints: windowsservercore
