@@ -45,7 +45,7 @@ cmds=(
 if [ "$extraCommands" ]; then
 	cmds+=(
 		'list --build-order'
-		'from'
+		'from --apply-constraints'
 	)
 fi
 

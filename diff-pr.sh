@@ -74,24 +74,40 @@ fi
 
 export BASHBREW_CACHE="${BASHBREW_CACHE:-${XDG_CACHE_HOME:-$HOME/.cache}/bashbrew}"
 export BASHBREW_LIBRARY="$PWD/oi/library"
+export BASHBREW_ARCH='amd64' # TODO something smarter with arches
+
+# "bashbrew cat" template for duplicating something like "bashbrew list --uniq" but with architectures too
+archesListTemplate='
+	{{- range $e := $.Entries -}}
+		{{- range .Architectures -}}
+			{{- $.RepoName -}}:{{- $e.Tags | last -}}
+			{{- " @ " -}}
+			{{- . -}}
+			{{- "\n" -}}
+		{{- end -}}
+	{{- end -}}
+'
 
 # TODO something less hacky than "git archive" hackery, like a "bashbrew archive" or "bashbrew context" or something
 template='
-{{- range $.Entries -}}
-	{{- $from := $.DockerFrom . -}}
-	git -C "$BASHBREW_CACHE/git" archive --format=tar
-	{{- " " -}}
-	{{- "--prefix=" -}}
-	{{- $.RepoName -}}
-	_
-	{{- .Tags | last -}}
-	{{- "/" -}}
-	{{- " " -}}
-	{{- .GitCommit -}}
-	{{- ":" -}}
-	{{- (eq .Directory ".") | ternary "" .Directory -}}
-	{{- "\n" -}}
-{{- end -}}
+	{{- range $.Entries -}}
+		{{- if .HasArchitecture arch -}}
+			{{- $from := $.DockerFrom . -}}
+			git -C "$BASHBREW_CACHE/git" archive --format=tar
+			{{- " " -}}
+			{{- "--prefix=" -}}
+			{{- $.RepoName -}}
+			_
+			{{- .Tags | last -}}
+			{{- "/" -}}
+			{{- " " -}}
+			{{- .ArchGitCommit arch -}}
+			{{- ":" -}}
+			{{- $dir := .ArchDirectory arch -}}
+			{{- (eq $dir ".") | ternary "" $dir -}}
+			{{- "\n" -}}
+		{{- end -}}
+	{{- end -}}
 '
 
 copy-tar() {
@@ -169,6 +185,7 @@ mkdir temp
 git -C temp init --quiet
 
 bashbrew list "${images[@]}" | sort -V > temp/_bashbrew-list || :
+bashbrew cat --format "$archesListTemplate" "${images[@]}" | sort -V > temp/_bashbrew-arches || :
 for image in "${images[@]}"; do
 	if script="$(bashbrew cat -f "$template" "$image")"; then
 		mkdir tar
@@ -184,6 +201,7 @@ git -C oi checkout --quiet pull
 
 git -C temp rm --quiet -rf . || :
 bashbrew list "${images[@]}" | sort -V > temp/_bashbrew-list || :
+bashbrew cat --format "$archesListTemplate" "${images[@]}" | sort -V > temp/_bashbrew-arches || :
 script="$(bashbrew cat -f "$template" "${images[@]}")"
 mkdir tar
 ( eval "$script" | tar -xiC tar )

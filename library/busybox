@@ -1,19 +1,50 @@
-# this file is generated via https://github.com/docker-library/busybox/blob/f2820c690e25e86f7a6e63c4befcaa38fd155542/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/busybox/blob/13f14c6b73f4baf975b725fd12952d3c7272c410/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit),
              Jérôme Petazzoni <jerome@docker.com> (@jpetazzo)
 GitRepo: https://github.com/docker-library/busybox.git
-GitFetch: refs/heads/dist
+GitCommit: 13f14c6b73f4baf975b725fd12952d3c7272c410
+# https://github.com/docker-library/busybox/tree/dist-amd64
+amd64-GitFetch: refs/heads/dist-amd64
+amd64-GitCommit: bf085cb0632a2a7fb0a7722c88afc04fab5e871f
+# https://github.com/docker-library/busybox/tree/dist-arm32v6
+arm32v6-GitFetch: refs/heads/dist-arm32v6
+arm32v6-GitCommit: b9291ee9abc522d076ac67678b154cf5c84bc149
+# https://github.com/docker-library/busybox/tree/dist-arm32v7
+arm32v7-GitFetch: refs/heads/dist-arm32v7
+arm32v7-GitCommit: 56073c8807db2a80f345fed2e0164ef4db6f17fd
+# https://github.com/docker-library/busybox/tree/dist-arm64v8
+arm64v8-GitFetch: refs/heads/dist-arm64v8
+arm64v8-GitCommit: 456e9021be627cad59a28f45d2f1e0d6b43c320d
+# https://github.com/docker-library/busybox/tree/dist-i386
+i386-GitFetch: refs/heads/dist-i386
+i386-GitCommit: 32b1217a59c165feb98083bcb730433ae2a68e82
+# https://github.com/docker-library/busybox/tree/dist-ppc64le
+ppc64le-GitFetch: refs/heads/dist-ppc64le
+ppc64le-GitCommit: 55e485a458b3ce337a3e6df71ed05b2af44fa487
+# https://github.com/docker-library/busybox/tree/dist-s390x
+s390x-GitFetch: refs/heads/dist-s390x
+s390x-GitCommit: e4fe2dcdd3a50eb316a803413349d0c075dfea8c
+
+Tags: 1.26.2-uclibc, 1.26-uclibc, 1-uclibc, uclibc
+Architectures: amd64, arm64v8, i386
+Directory: uclibc
 
 Tags: 1.26.2-glibc, 1.26-glibc, 1-glibc, glibc
-GitCommit: de3cbcb2cd371e55119e460c03bf73b8abbbd064
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: glibc
 
 Tags: 1.26.2-musl, 1.26-musl, 1-musl, musl
-GitCommit: de3cbcb2cd371e55119e460c03bf73b8abbbd064
+Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
 Directory: musl
 
-Tags: 1.26.2-uclibc, 1.26-uclibc, 1-uclibc, uclibc, 1.26.2, 1.26, 1, latest
-GitCommit: de3cbcb2cd371e55119e460c03bf73b8abbbd064
-Directory: uclibc
+Tags: 1.26.2, 1.26, 1, latest
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+amd64-Directory: uclibc
+arm32v6-Directory: musl
+arm32v7-Directory: glibc
+arm64v8-Directory: uclibc
+i386-Directory: uclibc
+ppc64le-Directory: glibc
+s390x-Directory: glibc
