@@ -19,7 +19,11 @@ import (
 var dockerFromCache = map[string]string{}
 
 func (r Repo) DockerFrom(entry *manifest.Manifest2822Entry) (string, error) {
-	commit, err := r.fetchGitRepo(entry)
+	return r.ArchDockerFrom(arch, entry)
+}
+
+func (r Repo) ArchDockerFrom(arch string, entry *manifest.Manifest2822Entry) (string, error) {
+	commit, err := r.fetchGitRepo(arch, entry)
 	if err != nil {
 		return "", err
 	}
@@ -56,6 +60,7 @@ func (r Repo) DockerFrom(entry *manifest.Manifest2822Entry) (string, error) {
 	return from, nil
 }
 
+// TODO determine multi-stage-builds impact here (once official images are willing/able to support them; post-17.06 at the earliest)
 func dockerfileFrom(dockerfile io.Reader) (string, error) {
 	scanner := bufio.NewScanner(dockerfile)
 	for scanner.Scan() {

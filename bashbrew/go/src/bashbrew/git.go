@@ -103,7 +103,7 @@ func gitNormalizeForTagUsage(text string) string {
 
 var gitRepoCache = map[string]string{}
 
-func (r Repo) fetchGitRepo(entry *manifest.Manifest2822Entry) (string, error) {
+func (r Repo) fetchGitRepo(arch string, entry *manifest.Manifest2822Entry) (string, error) {
 	cacheKey := strings.Join([]string{
 		entry.ArchGitRepo(arch),
 		entry.ArchGitFetch(arch),
