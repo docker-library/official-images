@@ -3,7 +3,7 @@ set -e
 
 python=
 for c in pypy3 pypy python3 python; do
-	if command -v "$c" > /dev/null; then
+	if PATH=/usr/local/bin command -v "$c" > /dev/null; then
 		python="$c"
 		break
 	fi
