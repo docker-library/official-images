@@ -87,6 +87,22 @@ archesListTemplate='
 		{{- end -}}
 	{{- end -}}
 '
+# ... and SharedTags
+sharedTagsListTemplate='
+	{{- range $group := .Manifest.GetSharedTagGroups -}}
+		{{- range $tag := $group.SharedTags -}}
+			{{- join ":" $.RepoName $tag -}}
+			{{- " -- " -}}
+			{{- range $i, $e := $group.Entries -}}
+				{{- if gt $i 0 -}}
+					{{- ", " -}}
+				{{- end -}}
+				{{- join ":" $.RepoName ($e.Tags | last) -}}
+			{{- end -}}
+			{{- "\n" -}}
+		{{- end -}}
+	{{- end -}}
+'
 
 # TODO something less hacky than "git archive" hackery, like a "bashbrew archive" or "bashbrew context" or something
 template='
@@ -186,6 +202,7 @@ git -C temp init --quiet
 
 bashbrew list "${images[@]}" | sort -V > temp/_bashbrew-list || :
 bashbrew cat --format "$archesListTemplate" "${images[@]}" | sort -V > temp/_bashbrew-arches || :
+bashbrew cat --format "$sharedTagsListTemplate" "${images[@]}" | grep -vE '^$' | sort -V > temp/_bashbrew-shared-tags || :
 for image in "${images[@]}"; do
 	if script="$(bashbrew cat -f "$template" "$image")"; then
 		mkdir tar
@@ -202,6 +219,7 @@ git -C oi checkout --quiet pull
 git -C temp rm --quiet -rf . || :
 bashbrew list "${images[@]}" | sort -V > temp/_bashbrew-list || :
 bashbrew cat --format "$archesListTemplate" "${images[@]}" | sort -V > temp/_bashbrew-arches || :
+bashbrew cat --format "$sharedTagsListTemplate" "${images[@]}" | grep -vE '^$' | sort -V > temp/_bashbrew-shared-tags || :
 script="$(bashbrew cat -f "$template" "${images[@]}")"
 mkdir tar
 ( eval "$script" | tar -xiC tar )
