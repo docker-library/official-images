@@ -8,15 +8,18 @@ See [Docker's documentation](https://docs.docker.com/docker-hub/official_repos/)
 
 ## Architectures other than amd64?
 
-Some images have been ported for other architectures, and many of these are officially supported. These are the supported architectures:
+Some images have been ported for other architectures, and many of these are officially supported (to various degrees).
 
--	IBM z Systems (`s390x`): https://hub.docker.com/u/s390x/
--	POWER8 (`ppc64le`): https://hub.docker.com/u/ppc64le/
--	x86/i686 (`i386`): https://hub.docker.com/u/i386/
--	ARMv8 (`arm64v8`): https://hub.docker.com/u/arm64v8/
--	ARMv7 (`arm32v7`): https://hub.docker.com/u/arm32v7/
--	ARMv6 (`arm32v6`): https://hub.docker.com/u/arm32v6/ (Raspberry Pi 1, Raspberry Pi Zero)
--	ARMv5 (`arm32v5`): https://hub.docker.com/u/arm32v5/
+-	Architectures officially supported by Docker, Inc. for running Docker: (see [download.docker.com](https://download.docker.com/linux/))
+	-	IBM z Systems (`s390x`): https://hub.docker.com/u/s390x/
+	-	ARMv7 32-bit (`arm32v7`): https://hub.docker.com/u/arm32v7/
+	-	Linux and Windows x86-64 (`amd64`): https://hub.docker.com/u/amd64/
+-	Other architectures built by official images: (but *not* officially supported by Docker, Inc.)
+	-	IBM POWER8 (`ppc64le`): https://hub.docker.com/u/ppc64le/
+	-	x86/i686 (`i386`): https://hub.docker.com/u/i386/
+	-	ARMv8 64-bit (`arm64v8`): https://hub.docker.com/u/arm64v8/
+	-	ARMv6 32-bit (`arm32v6`): https://hub.docker.com/u/arm32v6/ (Raspberry Pi 1, Raspberry Pi Zero)
+	-	ARMv5 32-bit (`arm32v5`): https://hub.docker.com/u/arm32v5/
 
 Check each image description for individual image support status (for example, https://hub.docker.com/r/s390x/golang/ is officially supported).
 
@@ -220,18 +223,16 @@ Official Repositories that require additional privileges should specify the mini
 
 #### Multiple Architectures
 
-Each repo can specify multiple architectures for any and all tags. If no architecture is specified, images are built in Linux on amd64 (aka x86_64). To specify more or different architectures, use the `Architectures` field (comma-delimited list, whitespace is trimmed). Valid architectures are found in [`oci-platform.go`](https://github.com/docker-library/official-images/blob/a7ad3081aa5f51584653073424217e461b72670a/bashbrew/go/vendor/src/github.com/docker-library/go-dockerlibrary/architecture/oci-platform.go#L14-L25):
+Each repo can specify multiple architectures for any and all tags. If no architecture is specified, images are built in Linux on `amd64` (aka x86-64). To specify more or different architectures, use the `Architectures` field (comma-delimited list, whitespace is trimmed). Valid architectures are found in [`oci-platform.go`](https://github.com/docker-library/official-images/blob/a7ad3081aa5f51584653073424217e461b72670a/bashbrew/go/vendor/src/github.com/docker-library/go-dockerlibrary/architecture/oci-platform.go#L14-L25):
 
--	Architectures supported for running Docker (see [download.docker.com](https://download.docker.com/linux/))
-	-	`amd64`
-	-	`arm32v7`
-	-	`s390x`
-	-	`windows-amd64`
--	Other architectures built by official images
-	-	`arm32v6`
-	-	`arm64v8`
-	-	`i386`
-	-	`ppc64le`
+-	`amd64`
+-	`arm32v6`
+-	`arm32v7`
+-	`arm64v8`
+-	`i386`
+-	`ppc64le`
+-	`s390x`
+-	`windows-amd64`
 
 We strongly recommend that most images create a single `Dockerfile` per entry in the library file that can be used for multiple architectures. This means that each supported architecture will have the same `FROM` line (e.g. `FROM debian:jessie`). While official images are in the process of completing [image indexes](https://github.com/opencontainers/image-spec/blob/v1.0.0-rc6/image-index.md) to make this work naturally, the servers that build for non-amd64 architectures will pull the correct architecture-specific base and `docker tag` the base image to make the `FROM` work correctly. See [`golang`](https://github.com/docker-library/official-images/blob/master/library/golang), [`docker`](https://github.com/docker-library/official-images/blob/master/library/docker), [`haproxy`](https://github.com/docker-library/official-images/blob/master/library/haproxy), and [`php`](https://github.com/docker-library/official-images/blob/master/library/php) for examples of library files using one `Dockerfile` per entry and see their respective git repos for example `Dockerfile`s.
 
