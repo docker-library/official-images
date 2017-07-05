@@ -47,6 +47,17 @@ func entriesToManifestToolYaml(r Repo, entries ...*manifest.Manifest2822Entry) (
 	return "manifests:\n" + yaml, nil
 }
 
+func tagsToManifestToolYaml(repo string, tags ...string) string {
+	yaml := fmt.Sprintf("image: %s:%s\n", repo, tags[0])
+	if len(tags) > 1 {
+		yaml += "tags:\n"
+		for _, tag := range tags[1:] {
+			yaml += fmt.Sprintf("  - %s\n", tag)
+		}
+	}
+	return yaml
+}
+
 func cmdPutShared(c *cli.Context) error {
 	repos, err := repos(c.Bool("all"), c.Args()...)
 	if err != nil {
@@ -65,6 +76,8 @@ func cmdPutShared(c *cli.Context) error {
 			return cli.NewMultiError(fmt.Errorf(`failed fetching repo %q`, repo), err)
 		}
 
+		targetRepo := path.Join(namespace, r.RepoName)
+
 		// handle all multi-architecture tags first (regardless of whether they have SharedTags)
 		for _, entry := range r.Entries() {
 			// "image:" will be added later so we don't have to regenerate the entire "manifests" section every time
@@ -73,12 +86,11 @@ func cmdPutShared(c *cli.Context) error {
 				return err
 			}
 
-			for _, tag := range r.Tags(namespace, false, entry) {
-				tagYaml := fmt.Sprintf("image: %s\n%s", tag, yaml)
-				fmt.Printf("Putting %s\n", tag)
-				if err := manifestToolPushFromSpec(tagYaml); err != nil {
-					return fmt.Errorf("failed pushing %q (%q)", tag, entry.TagsString())
-				}
+			entryIdentifier := fmt.Sprintf("%s:%s", targetRepo, entry.Tags[0])
+			fmt.Printf("Putting %s\n", entryIdentifier)
+			tagYaml := tagsToManifestToolYaml(targetRepo, entry.Tags...) + yaml
+			if err := manifestToolPushFromSpec(tagYaml); err != nil {
+				return fmt.Errorf("failed pushing %q (%q)", entryIdentifier, entry.TagsString())
 			}
 		}
 
@@ -92,21 +104,17 @@ func cmdPutShared(c *cli.Context) error {
 			continue
 		}
 
-		targetRepo := path.Join(namespace, r.RepoName)
 		for _, group := range sharedTagGroups {
 			yaml, err := entriesToManifestToolYaml(*r, group.Entries...)
 			if err != nil {
 				return err
 			}
 
-			for _, tag := range group.SharedTags {
-				tag = targetRepo + ":" + tag
-
-				tagYaml := fmt.Sprintf("image: %s\n%s", tag, yaml)
-				fmt.Printf("Putting shared %s\n", tag)
-				if err := manifestToolPushFromSpec(tagYaml); err != nil {
-					return fmt.Errorf("failed pushing %s", tag)
-				}
+			groupIdentifier := fmt.Sprintf("%s:%s", targetRepo, group.SharedTags[0])
+			fmt.Printf("Putting shared %s\n", groupIdentifier)
+			tagYaml := tagsToManifestToolYaml(targetRepo, group.SharedTags...) + yaml
+			if err := manifestToolPushFromSpec(tagYaml); err != nil {
+				return fmt.Errorf("failed pushing %s", groupIdentifier)
 			}
 		}
 	}
