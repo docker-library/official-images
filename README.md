@@ -13,7 +13,8 @@ Some images have been ported for other architectures, and many of these are offi
 -	Architectures officially supported by Docker, Inc. for running Docker: (see [download.docker.com](https://download.docker.com/linux/))
 	-	IBM z Systems (`s390x`): https://hub.docker.com/u/s390x/
 	-	ARMv7 32-bit (`arm32v7`): https://hub.docker.com/u/arm32v7/
-	-	Linux and Windows x86-64 (`amd64`): https://hub.docker.com/u/amd64/
+	-	Windows x86-64 (`windows-amd64`): https://hub.docker.com/u/winamd64/
+	-	Linux x86-64 (`amd64`): https://hub.docker.com/u/amd64/
 -	Other architectures built by official images: (but *not* officially supported by Docker, Inc.)
 	-	IBM POWER8 (`ppc64le`): https://hub.docker.com/u/ppc64le/
 	-	x86/i686 (`i386`): https://hub.docker.com/u/i386/
