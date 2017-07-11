@@ -2,25 +2,25 @@ language: bash
 services: docker
 
 env:
-  - VERSION=1.5 VARIANT=
-  - VERSION=1.4 VARIANT=
-  - VERSION=1.4 VARIANT=slim
-  - VERSION=1.3 VARIANT=
-  - VERSION=1.3 VARIANT=slim
+  - DIR=master
+  - DIR=1.5
+  - DIR=1.4
+  - DIR=1.4 VARIANT=slim
+  - DIR=1.3
+  - DIR=1.3 VARIANT=slim
 
 install:
-  - git clone https://github.com/docker-library/official-images.git ~/official-images
+  - curl -fsSL https://github.com/docker-library/official-images/archive/master.tar.gz | {
+      mkdir -vp ./official-images/;
+      tar -C ./official-images/ --strip-components=1 -zxvv official-images-master/test/; }
 
 before_script:
-  - env | sort
-  - cd "$VERSION"
-  - image="$(awk '$1 == "FROM" { print $2; exit }' onbuild/Dockerfile)${VARIANT:+-$VARIANT}"
+  - eval $(awk '/ELIXIR_VERSION=/ { sub(/@/, "-", $2); print $2; exit }' ${DIR}/${VARIANT}/Dockerfile)
+  - image="elixir:${ELIXIR_VERSION#v}${VARIANT:+-$VARIANT}"
 
 script:
-  - docker build --pull -t "$image" "${VARIANT:-.}"
-  - ~/official-images/test/run.sh "$image"
-# the "onbuild" variant has to happen with the base variant because it's FROM it
-  - true && [ "$VARIANT" ] || docker build -t "${image}-onbuild" onbuild
+  - docker build --pull -t "$image" "${DIR}/${VARIANT}"
+  - ./official-images/test/run.sh "$image"
 
 after_script:
   - docker images
