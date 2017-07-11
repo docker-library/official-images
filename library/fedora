@@ -4,8 +4,13 @@ GitRepo: https://github.com/fedora-cloud/docker-brew-fedora.git
 Constraints: !aufs
 
 Tags: latest, 26
+Architectures: amd64, arm32v7, arm64v8, ppc64le
 GitFetch: refs/heads/26
-GitCommit: 69595d6a555ba347423caa5ed1f1b687367ff29c
+GitCommit: c726745cc3626a741f3e28551118bcf7193a37b7
+amd64-Directory: x86_64/
+arm32v7-Directory: armhfp/
+arm64v8-Directory: aarch64/
+ppc64le-Directory: ppc64le/
 
 Tags: 25
 GitFetch: refs/heads/25
