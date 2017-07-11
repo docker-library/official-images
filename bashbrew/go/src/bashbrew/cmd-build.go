@@ -76,7 +76,7 @@ func cmdBuild(c *cli.Context) error {
 			if err != nil {
 				fmt.Printf("Building %s (%s)\n", cacheTag, r.EntryIdentifier(entry))
 
-				commit, err := r.fetchGitRepo(&entry)
+				commit, err := r.fetchGitRepo(arch, &entry)
 				if err != nil {
 					return cli.NewMultiError(fmt.Errorf(`failed fetching git repo for %q (tags %q)`, r.RepoName, entry.TagsString()), err)
 				}
