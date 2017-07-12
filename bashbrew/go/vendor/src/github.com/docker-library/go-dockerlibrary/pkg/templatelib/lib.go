@@ -3,6 +3,7 @@ package templatelib
 import (
 	"encoding/json"
 	"fmt"
+	"os"
 	"reflect"
 	"strings"
 	"text/template"
@@ -110,5 +111,28 @@ var FuncMap = template.FuncMap{
 	"trimSuffixes": stringsActionFactory("trimSuffixes", false, stringsModifierActionFactory(strings.TrimSuffix)),
 	"replace": stringsActionFactory("replace", false, func(strs []string, str string) string {
 		return strings.NewReplacer(strs...).Replace(str)
+	}),
+
+	// {{- getenv "PATH" -}}
+	// {{- getenv "HOME" "no HOME set" -}}
+	// {{- getenv "HOME" "is set" "is NOT set (or is empty)" -}}
+	"getenv": thingsActionFactory("getenv", true, func(args []interface{}, arg interface{}) interface{} {
+		var (
+			val                  = os.Getenv(arg.(string))
+			setVal   interface{} = val
+			unsetVal interface{} = ""
+		)
+		if len(args) == 2 {
+			setVal, unsetVal = args[0], args[1]
+		} else if len(args) == 1 {
+			unsetVal = args[0]
+		} else if len(args) != 0 {
+			panic(fmt.Sprintf(`expected between 1 and 3 arguments to "getenv", got %d`, len(args)+1))
+		}
+		if val != "" {
+			return setVal
+		} else {
+			return unsetVal
+		}
 	}),
 }
