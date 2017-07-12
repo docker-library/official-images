@@ -191,3 +191,31 @@ func Example_trimReplaceGitToGo() {
 	// github.com/jsmith/some-repo
 	// github.com/jsmith/some-repo
 }
+
+func Example_getenv() {
+	tmpl, err := template.New("getenv").Funcs(templatelib.FuncMap).Parse(`
+		The FOO environment variable {{ getenv "FOO" "is set" "is not set" }}. {{- "\n" -}}
+		BAR: {{ getenv "BAR" "not set" }} {{- "\n" -}}
+		BAZ: {{ getenv "BAZ" "not set" }} {{- "\n" -}}
+		{{- $env := getenv "FOOBARBAZ" -}}
+		{{- if eq $env "" -}}
+			FOOBARBAZ {{- "\n" -}}
+		{{- end -}}
+	`)
+
+	os.Setenv("FOO", "")
+	os.Unsetenv("BAR")
+	os.Setenv("BAZ", "foobar")
+	os.Unsetenv("FOOBARBAZ")
+
+	err = tmpl.Execute(os.Stdout, nil)
+	if err != nil {
+		panic(err)
+	}
+
+	// Output:
+	// The FOO environment variable is not set.
+	// BAR: not set
+	// BAZ: foobar
+	// FOOBARBAZ
+}
