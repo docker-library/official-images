@@ -68,10 +68,22 @@ Directory: 8-jre/alpine
 
 Tags: 9-b177-jdk, 9-b177, 9-jdk, 9
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: a5b8541f6a42366424c0f1fd0de027a1e1720114
+GitCommit: ba6f55a8a023c30b212e08dd5ea89951a96992ae
 Directory: 9-jdk
+
+Tags: 9-b154-jdk-windowsservercore, 9-b154-windowsservercore, 9-jdk-windowsservercore, 9-windowsservercore
+Architectures: windows-amd64
+GitCommit: ba6f55a8a023c30b212e08dd5ea89951a96992ae
+Directory: 9-jdk/windows/windowsservercore
+Constraints: windowsservercore
+
+Tags: 9-b154-jdk-nanoserver, 9-b154-nanoserver, 9-jdk-nanoserver, 9-nanoserver
+Architectures: windows-amd64
+GitCommit: ba6f55a8a023c30b212e08dd5ea89951a96992ae
+Directory: 9-jdk/windows/nanoserver
+Constraints: nanoserver
 
 Tags: 9-b177-jre, 9-jre
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: a5b8541f6a42366424c0f1fd0de027a1e1720114
+GitCommit: ba6f55a8a023c30b212e08dd5ea89951a96992ae
 Directory: 9-jre
