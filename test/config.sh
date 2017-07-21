@@ -98,8 +98,6 @@ imageTests+=(
 		hylang-sh
 		hylang-hello-world
 	'
-	[java]='
-	'
 	[jetty]='
 		jetty-hello-web
 	'
@@ -128,6 +126,9 @@ imageTests+=(
 	[nuxeo]='
 		nuxeo-conf
 		nuxeo-basics
+	'
+	[openjdk]='
+		java-hello-world
 	'
 	[percona]='
 	'
@@ -194,7 +195,7 @@ imageTests+=(
 	'
 	[swift]='
 		swift-hello-world
-  '
+	'
 	[tomcat]='
 		tomcat-hello-world
 	'
