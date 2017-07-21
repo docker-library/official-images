@@ -107,22 +107,21 @@ sharedTagsListTemplate='
 # TODO something less hacky than "git archive" hackery, like a "bashbrew archive" or "bashbrew context" or something
 template='
 	{{- range $.Entries -}}
-		{{- if .HasArchitecture arch -}}
-			{{- $from := $.DockerFrom . -}}
-			git -C "$BASHBREW_CACHE/git" archive --format=tar
-			{{- " " -}}
-			{{- "--prefix=" -}}
-			{{- $.RepoName -}}
-			_
-			{{- .Tags | last -}}
-			{{- "/" -}}
-			{{- " " -}}
-			{{- .ArchGitCommit arch -}}
-			{{- ":" -}}
-			{{- $dir := .ArchDirectory arch -}}
-			{{- (eq $dir ".") | ternary "" $dir -}}
-			{{- "\n" -}}
-		{{- end -}}
+		{{- $arch := .Architectures | first -}}
+		{{- $from := $.ArchDockerFrom $arch . -}}
+		git -C "$BASHBREW_CACHE/git" archive --format=tar
+		{{- " " -}}
+		{{- "--prefix=" -}}
+		{{- $.RepoName -}}
+		_
+		{{- .Tags | last -}}
+		{{- "/" -}}
+		{{- " " -}}
+		{{- .ArchGitCommit $arch -}}
+		{{- ":" -}}
+		{{- $dir := .ArchDirectory $arch -}}
+		{{- (eq $dir ".") | ternary "" $dir -}}
+		{{- "\n" -}}
 	{{- end -}}
 '
 
