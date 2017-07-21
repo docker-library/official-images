@@ -9,7 +9,7 @@ image="$1"
 jdk="${image/jre/jdk}"
 
 volume="$(docker volume create)"
-trap "docker volume rm '$volume' >/dev/null 2>&1" EXIT
+trap "docker volume rm '$volume' &> /dev/null" EXIT
 
 # jdk image to build java class
 "$runDir/run-in-container.sh" \
@@ -17,7 +17,7 @@ trap "docker volume rm '$volume' >/dev/null 2>&1" EXIT
 	-- \
 	"$testDir" \
 	"$jdk" \
-	sh -c 'javac -d /container/ ./container.java'
+	javac -d /container/ ./container.java
 
 # jre image to run class
 "$runDir/run-in-container.sh" \
@@ -25,4 +25,4 @@ trap "docker volume rm '$volume' >/dev/null 2>&1" EXIT
 	-- \
 	"$testDir" \
 	"$image" \
-	sh -c 'exec java -cp /container/ container'
+	java -cp /container/ container
