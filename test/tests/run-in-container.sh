@@ -1,8 +1,29 @@
 #!/bin/bash
-set -e
+set -eo pipefail
 
 # NOT INTENDED TO BE USED AS A TEST "run.sh" DIRECTLY
 # SEE OTHER "run-*-in-container.sh" SCRIPTS FOR USAGE
+
+# arguments to docker
+args=()
+opts="$(getopt -o '+' --long 'docker-arg:' -- "$@")"
+eval set -- "$opts"
+
+while true; do
+	flag="$1"
+	shift
+	case "$flag" in
+		--docker-arg) args+=( "$1" ) && shift ;;
+		--) break ;;
+		*)
+			{
+				echo "error: unknown flag: $flag"
+				#usage
+			} >&2
+			exit 1
+			;;
+	esac
+done
 
 testDir="$1"
 shift
@@ -29,7 +50,7 @@ WORKDIR $workdir
 ENTRYPOINT ["$entrypoint"]
 EOD
 
-args=( --rm )
+args+=( --rm )
 
 # there is strong potential for nokogiri+overlayfs failure
 # see https://github.com/docker-library/ruby/issues/55

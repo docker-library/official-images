@@ -11,10 +11,10 @@ image="$1"
 # Use a client image with curl for testing
 clientImage='buildpack-deps:jessie-curl'
 
-app1id="$(docker run -d "$image" on.port=80 id=app1 app.services=ping,status)"
-app2id="$(docker run -d "$image" on.port=80 id=app2 app.services=ping,status)"
+app1id="$(docker run -d "$image" rapidoid.port=80 id=app1 app.services=ping,status)"
+app2id="$(docker run -d "$image" rapidoid.port=80 id=app2 app.services=ping,status)"
 
-proxyid="$(docker run -d --link "$app1id":app1 --link "$app2id":app2 "$image" on.port=80 '/ -> http://app1, http://app2' app.services=ping)"
+proxyid="$(docker run -d --link "$app1id":app1 --link "$app2id":app2 "$image" rapidoid.port=80 '/ -> http://app1, http://app2' app.services=ping)"
 
 trap "docker rm -vf $proxyid $app1id $app2id > /dev/null" EXIT
 
