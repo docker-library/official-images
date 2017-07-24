@@ -1,113 +1,140 @@
-# this file is generated via https://github.com/docker-library/buildpack-deps/blob/974c358f7d1b545fbfe388dec9d149aea1b8116f/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/buildpack-deps/blob/7bbf2f06c74e0a8ca54c97f5a0f0b729b39011df/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/buildpack-deps.git
 
-Tags: jessie-curl, curl
-GitCommit: a0a59c61102e8b079d568db69368fb89421f75f2
+Tags: artful-curl
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 36018aca7e9637c9c04ff623625e59de12d7f161
+Directory: artful/curl
+
+Tags: artful-scm
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 36018aca7e9637c9c04ff623625e59de12d7f161
+Directory: artful/scm
+
+Tags: artful
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 36018aca7e9637c9c04ff623625e59de12d7f161
+Directory: artful
+
+Tags: buster-curl
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 72021102be2a05177d2c01e466495ba1c9d0b4f5
+Directory: buster/curl
+
+Tags: buster-scm
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 1449b1e7ba5a389167893e6edb6245ca94cd4fd6
+Directory: buster/scm
+
+Tags: buster
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 1449b1e7ba5a389167893e6edb6245ca94cd4fd6
+Directory: buster
+
+Tags: jessie-curl
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 9f60e19008458220114f1a0b6cd3710f1015d402
 Directory: jessie/curl
 
-Tags: jessie-scm, scm
+Tags: jessie-scm
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: 1845b3f918f69b4c97912b0d4d68a5658458e84f
 Directory: jessie/scm
 
-Tags: jessie, latest
+Tags: jessie
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: 587934fb063d770d0611e94b57c9dd7a38edf928
 Directory: jessie
 
-Tags: precise-curl
-GitCommit: af914a5bde2a749884177393c8140384048dc5f9
-Directory: precise/curl
-
-Tags: precise-scm
-GitCommit: 1845b3f918f69b4c97912b0d4d68a5658458e84f
-Directory: precise/scm
-
-Tags: precise
-GitCommit: 587934fb063d770d0611e94b57c9dd7a38edf928
-Directory: precise
-
 Tags: sid-curl
-GitCommit: a0a59c61102e8b079d568db69368fb89421f75f2
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 9f60e19008458220114f1a0b6cd3710f1015d402
 Directory: sid/curl
 
 Tags: sid-scm
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: 1845b3f918f69b4c97912b0d4d68a5658458e84f
 Directory: sid/scm
 
 Tags: sid
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: 587934fb063d770d0611e94b57c9dd7a38edf928
 Directory: sid
 
-Tags: stretch-curl
-GitCommit: c7478e564dd5dc063cdb0231764379a6916fe525
+Tags: stretch-curl, curl
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 9f60e19008458220114f1a0b6cd3710f1015d402
 Directory: stretch/curl
 
-Tags: stretch-scm
+Tags: stretch-scm, scm
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: 1845b3f918f69b4c97912b0d4d68a5658458e84f
 Directory: stretch/scm
 
-Tags: stretch
+Tags: stretch, latest
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: 587934fb063d770d0611e94b57c9dd7a38edf928
 Directory: stretch
 
 Tags: trusty-curl
-GitCommit: af914a5bde2a749884177393c8140384048dc5f9
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le
+GitCommit: 9f60e19008458220114f1a0b6cd3710f1015d402
 Directory: trusty/curl
 
 Tags: trusty-scm
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le
 GitCommit: 1845b3f918f69b4c97912b0d4d68a5658458e84f
 Directory: trusty/scm
 
 Tags: trusty
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le
 GitCommit: 587934fb063d770d0611e94b57c9dd7a38edf928
 Directory: trusty
 
 Tags: wheezy-curl
-GitCommit: a0a59c61102e8b079d568db69368fb89421f75f2
+Architectures: amd64, arm32v5, arm32v7, i386
+GitCommit: 9f60e19008458220114f1a0b6cd3710f1015d402
 Directory: wheezy/curl
 
 Tags: wheezy-scm
+Architectures: amd64, arm32v5, arm32v7, i386
 GitCommit: 1845b3f918f69b4c97912b0d4d68a5658458e84f
 Directory: wheezy/scm
 
 Tags: wheezy
+Architectures: amd64, arm32v5, arm32v7, i386
 GitCommit: 587934fb063d770d0611e94b57c9dd7a38edf928
 Directory: wheezy
 
 Tags: xenial-curl
-GitCommit: 2da658b9a1b91fa61d63ffad2ea52685cac6c702
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 9f60e19008458220114f1a0b6cd3710f1015d402
 Directory: xenial/curl
 
 Tags: xenial-scm
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: 2da658b9a1b91fa61d63ffad2ea52685cac6c702
 Directory: xenial/scm
 
 Tags: xenial
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: 587934fb063d770d0611e94b57c9dd7a38edf928
 Directory: xenial
 
-Tags: yakkety-curl
-GitCommit: a94a81caf4d56853baade2cdd794dbe0c93396b2
-Directory: yakkety/curl
-
-Tags: yakkety-scm
-GitCommit: a94a81caf4d56853baade2cdd794dbe0c93396b2
-Directory: yakkety/scm
-
-Tags: yakkety
-GitCommit: 587934fb063d770d0611e94b57c9dd7a38edf928
-Directory: yakkety
-
 Tags: zesty-curl
-GitCommit: 9aa327dcc582d5384affbc5a19672e3077489e97
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 9f60e19008458220114f1a0b6cd3710f1015d402
 Directory: zesty/curl
 
 Tags: zesty-scm
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: 9aa327dcc582d5384affbc5a19672e3077489e97
 Directory: zesty/scm
 
 Tags: zesty
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: 587934fb063d770d0611e94b57c9dd7a38edf928
 Directory: zesty

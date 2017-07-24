@@ -1,62 +1,107 @@
-# this file is generated via https://github.com/docker-library/golang/blob/445ba23ad32bf53dba66ce6309cab168c9307ce2/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/golang/blob/b9d0e57cdfb6a25d76988801555e549d5bf7c562/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit),
              Johan Euphrosine <proppy@google.com> (@proppy)
 GitRepo: https://github.com/docker-library/golang.git
 
-Tags: 1.7.5, 1.7
-GitCommit: 349270dbc128e396888cb2423ffc85d2c3039a27
-Directory: 1.7
+Tags: 1.9beta2-stretch, 1.9-rc-stretch, 1.9-stretch, rc-stretch, 1.9beta2, 1.9-rc, 1.9, rc
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 2a15dfff04accfd31c2a45b3bb7423aa86aa2d60
+Directory: 1.9-rc/stretch
 
-Tags: 1.7.5-onbuild, 1.7-onbuild
-GitCommit: 2372c8cafe9cc958bade33ad0b8b54de8869c21f
-Directory: 1.7/onbuild
+Tags: 1.9beta2-alpine3.6, 1.9-rc-alpine3.6, 1.9-alpine3.6, rc-alpine3.6, 1.9beta2-alpine, 1.9-rc-alpine, 1.9-alpine, rc-alpine
+Architectures: amd64
+GitCommit: 2a15dfff04accfd31c2a45b3bb7423aa86aa2d60
+Directory: 1.9-rc/alpine3.6
 
-Tags: 1.7.5-wheezy, 1.7-wheezy
-GitCommit: 349270dbc128e396888cb2423ffc85d2c3039a27
-Directory: 1.7/wheezy
-
-Tags: 1.7.5-alpine, 1.7-alpine
-GitCommit: 349270dbc128e396888cb2423ffc85d2c3039a27
-Directory: 1.7/alpine
-
-Tags: 1.7.5-alpine3.5, 1.7-alpine3.5
-GitCommit: 349270dbc128e396888cb2423ffc85d2c3039a27
-Directory: 1.7/alpine3.5
-
-Tags: 1.7.5-windowsservercore, 1.7-windowsservercore
-GitCommit: 3bccc597c14b6274d7855d968f881ac6407b0a61
-Directory: 1.7/windows/windowsservercore
+Tags: 1.9beta2-windowsservercore, 1.9-rc-windowsservercore, 1.9-windowsservercore, rc-windowsservercore
+Architectures: windows-amd64
+GitCommit: cc59d934fca2e3a7dd8ebcd0eee82f34589f3bd3
+Directory: 1.9-rc/windows/windowsservercore
 Constraints: windowsservercore
 
-Tags: 1.7.5-nanoserver, 1.7-nanoserver
-GitCommit: 349270dbc128e396888cb2423ffc85d2c3039a27
-Directory: 1.7/windows/nanoserver
+Tags: 1.9beta2-nanoserver, 1.9-rc-nanoserver, 1.9-nanoserver, rc-nanoserver
+Architectures: windows-amd64
+GitCommit: cc59d934fca2e3a7dd8ebcd0eee82f34589f3bd3
+Directory: 1.9-rc/windows/nanoserver
 Constraints: nanoserver
 
-Tags: 1.8.1, 1.8, 1, latest
-GitCommit: 7e9aedf483dc0a035747f37af37ed260f2a6cf57
-Directory: 1.8
+Tags: 1.8.3-stretch, 1.8-stretch, 1-stretch, stretch
+Architectures: amd64, arm32v7, i386, ppc64le, s390x
+GitCommit: 97b2ff201ec59b9a037197d132c64eb937370c64
+Directory: 1.8/stretch
 
-Tags: 1.8.1-onbuild, 1.8-onbuild, 1-onbuild, onbuild
+Tags: 1.8.3-jessie, 1.8-jessie, 1-jessie, jessie, 1.8.3, 1.8, 1, latest
+Architectures: amd64, arm32v7, i386, ppc64le, s390x
+GitCommit: 2a15dfff04accfd31c2a45b3bb7423aa86aa2d60
+Directory: 1.8/jessie
+
+Tags: 1.8.3-alpine3.6, 1.8-alpine3.6, 1-alpine3.6, alpine3.6
+Architectures: amd64
+GitCommit: 495a742832974d434c6e3356e19c93b0e82543c8
+Directory: 1.8/alpine3.6
+
+Tags: 1.8.3-alpine3.5, 1.8-alpine3.5, 1-alpine3.5, alpine3.5, 1.8.3-alpine, 1.8-alpine, 1-alpine, alpine
+Architectures: amd64
+GitCommit: 2a15dfff04accfd31c2a45b3bb7423aa86aa2d60
+Directory: 1.8/alpine3.5
+
+Tags: 1.8.3-onbuild, 1.8-onbuild, 1-onbuild, onbuild
+Architectures: amd64, arm32v7, i386, ppc64le, s390x
 GitCommit: 132cd70768e3bc269902e4c7b579203f66dc9f64
 Directory: 1.8/onbuild
 
-Tags: 1.8.1-stretch, 1.8-stretch, 1-stretch, stretch
-GitCommit: 7e9aedf483dc0a035747f37af37ed260f2a6cf57
-Directory: 1.8/stretch
-
-Tags: 1.8.1-alpine, 1.8-alpine, 1-alpine, alpine
-GitCommit: 7e9aedf483dc0a035747f37af37ed260f2a6cf57
-Directory: 1.8/alpine
-
-Tags: 1.8.1-windowsservercore, 1.8-windowsservercore, 1-windowsservercore, windowsservercore
-GitCommit: 7e9aedf483dc0a035747f37af37ed260f2a6cf57
+Tags: 1.8.3-windowsservercore, 1.8-windowsservercore, 1-windowsservercore, windowsservercore
+Architectures: windows-amd64
+GitCommit: 64b88dc3e9d83e71eafc000fed1f0d5e289b3e65
 Directory: 1.8/windows/windowsservercore
 Constraints: windowsservercore
 
-Tags: 1.8.1-nanoserver, 1.8-nanoserver, 1-nanoserver, nanoserver
-GitCommit: 7e9aedf483dc0a035747f37af37ed260f2a6cf57
+Tags: 1.8.3-nanoserver, 1.8-nanoserver, 1-nanoserver, nanoserver
+Architectures: windows-amd64
+GitCommit: 64b88dc3e9d83e71eafc000fed1f0d5e289b3e65
 Directory: 1.8/windows/nanoserver
+Constraints: nanoserver
+
+Tags: 1.7.6-jessie, 1.7-jessie, 1.7.6, 1.7
+Architectures: amd64, arm32v7, i386, ppc64le, s390x
+GitCommit: 2a15dfff04accfd31c2a45b3bb7423aa86aa2d60
+Directory: 1.7/jessie
+
+Tags: 1.7.6-wheezy, 1.7-wheezy
+Architectures: amd64, arm32v7, i386
+GitCommit: 97b2ff201ec59b9a037197d132c64eb937370c64
+Directory: 1.7/wheezy
+
+Tags: 1.7.6-alpine3.6, 1.7-alpine3.6
+Architectures: amd64
+GitCommit: 495a742832974d434c6e3356e19c93b0e82543c8
+Directory: 1.7/alpine3.6
+
+Tags: 1.7.6-alpine3.5, 1.7-alpine3.5
+Architectures: amd64
+GitCommit: 9e519a8844c25e38fe67547e8f681ada486e473b
+Directory: 1.7/alpine3.5
+
+Tags: 1.7.6-alpine3.4, 1.7-alpine3.4, 1.7.6-alpine, 1.7-alpine
+Architectures: amd64
+GitCommit: 2a15dfff04accfd31c2a45b3bb7423aa86aa2d60
+Directory: 1.7/alpine3.4
+
+Tags: 1.7.6-onbuild, 1.7-onbuild
+Architectures: amd64, arm32v7, i386, ppc64le, s390x
+GitCommit: 2372c8cafe9cc958bade33ad0b8b54de8869c21f
+Directory: 1.7/onbuild
+
+Tags: 1.7.6-windowsservercore, 1.7-windowsservercore
+Architectures: windows-amd64
+GitCommit: 9e519a8844c25e38fe67547e8f681ada486e473b
+Directory: 1.7/windows/windowsservercore
+Constraints: windowsservercore
+
+Tags: 1.7.6-nanoserver, 1.7-nanoserver
+Architectures: windows-amd64
+GitCommit: 9e519a8844c25e38fe67547e8f681ada486e473b
+Directory: 1.7/windows/nanoserver
 Constraints: nanoserver

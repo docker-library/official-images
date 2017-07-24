@@ -23,8 +23,8 @@ fi
 # normalize "$@" to be the "--uniq" versions (and deduplicate)
 # also grab the list of associated repos in explicit build order (so we can build/push grouped by repo)
 IFS=$'\n'
-set -- $("$BASHBREW" list --uniq --repos "$@" | sort -u | xargs "$BASHBREW" list --uniq --repos --build-order)
-repos=( $(echo "$*" | cut -d: -f1 | xargs "$BASHBREW" list --repos --build-order) )
+set -- $("$BASHBREW" list --uniq --repos "$@" | sort -u | xargs "$BASHBREW" list --uniq --repos --build-order --apply-constraints)
+repos=( $(echo "$*" | cut -d: -f1 | xargs "$BASHBREW" list --repos --build-order --apply-constraints) )
 unset IFS
 
 declare -A repoTags=()

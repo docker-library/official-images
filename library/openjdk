@@ -1,63 +1,129 @@
-# this file is generated via https://github.com/docker-library/openjdk/blob/a080def2a36003e85485d07b3f047bd3c91508c2/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/openjdk/blob/b4f29ba829765552239bd18f272fcdaf09eca259/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/openjdk.git
 
 Tags: 6b38-jdk, 6b38, 6-jdk, 6
-GitCommit: 89851f0abc3a83cfad5248102f379d6a0bd3951a
+Architectures: amd64, arm32v5, arm32v7, i386
+GitCommit: b4f29ba829765552239bd18f272fcdaf09eca259
 Directory: 6-jdk
 
+Tags: 6b38-jdk-slim, 6b38-slim, 6-jdk-slim, 6-slim
+Architectures: amd64, arm32v5, arm32v7, i386
+GitCommit: b4f29ba829765552239bd18f272fcdaf09eca259
+Directory: 6-jdk/slim
+
 Tags: 6b38-jre, 6-jre
-GitCommit: 89851f0abc3a83cfad5248102f379d6a0bd3951a
+Architectures: amd64, arm32v5, arm32v7, i386
+GitCommit: b4f29ba829765552239bd18f272fcdaf09eca259
 Directory: 6-jre
 
-Tags: 7u121-jdk, 7u121, 7-jdk, 7
-GitCommit: e3386b5a2b4004da498e145cf840561d50acd7fb
+Tags: 6b38-jre-slim, 6-jre-slim
+Architectures: amd64, arm32v5, arm32v7, i386
+GitCommit: b4f29ba829765552239bd18f272fcdaf09eca259
+Directory: 6-jre/slim
+
+Tags: 7u131-jdk, 7u131, 7-jdk, 7
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: b4f29ba829765552239bd18f272fcdaf09eca259
 Directory: 7-jdk
 
-Tags: 7u121-jdk-alpine, 7u121-alpine, 7-jdk-alpine, 7-alpine
-GitCommit: 0476812eabd178c77534f3c03bd0a2673822d7b9
+Tags: 7u131-jdk-slim, 7u131-slim, 7-jdk-slim, 7-slim
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: b4f29ba829765552239bd18f272fcdaf09eca259
+Directory: 7-jdk/slim
+
+Tags: 7u131-jdk-alpine, 7u131-alpine, 7-jdk-alpine, 7-alpine
+Architectures: amd64
+GitCommit: b4f29ba829765552239bd18f272fcdaf09eca259
 Directory: 7-jdk/alpine
 
-Tags: 7u121-jre, 7-jre
-GitCommit: e3386b5a2b4004da498e145cf840561d50acd7fb
+Tags: 7u131-jre, 7-jre
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: b4f29ba829765552239bd18f272fcdaf09eca259
 Directory: 7-jre
 
-Tags: 7u121-jre-alpine, 7-jre-alpine
-GitCommit: 0476812eabd178c77534f3c03bd0a2673822d7b9
+Tags: 7u131-jre-slim, 7-jre-slim
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: b4f29ba829765552239bd18f272fcdaf09eca259
+Directory: 7-jre/slim
+
+Tags: 7u131-jre-alpine, 7-jre-alpine
+Architectures: amd64
+GitCommit: b4f29ba829765552239bd18f272fcdaf09eca259
 Directory: 7-jre/alpine
 
-Tags: 8u121-jdk, 8u121, 8-jdk, 8, jdk, latest
-GitCommit: 445f8b8d18d7c61e2ae7fda76d8883b5d51ae0a5
+Tags: 8u131-jdk, 8u131, 8-jdk, 8, jdk, latest
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: b4f29ba829765552239bd18f272fcdaf09eca259
 Directory: 8-jdk
 
-Tags: 8u121-jdk-alpine, 8u121-alpine, 8-jdk-alpine, 8-alpine, jdk-alpine, alpine
-GitCommit: 4e39684901490c13eaef7892c44e39043d7c4bed
+Tags: 8u131-jdk-slim, 8u131-slim, 8-jdk-slim, 8-slim, jdk-slim, slim
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: b4f29ba829765552239bd18f272fcdaf09eca259
+Directory: 8-jdk/slim
+
+Tags: 8u131-jdk-alpine, 8u131-alpine, 8-jdk-alpine, 8-alpine, jdk-alpine, alpine
+Architectures: amd64
+GitCommit: b4f29ba829765552239bd18f272fcdaf09eca259
 Directory: 8-jdk/alpine
 
-Tags: 8u121-jdk-windowsservercore, 8u121-windowsservercore, 8-jdk-windowsservercore, 8-windowsservercore, jdk-windowsservercore, windowsservercore
-GitCommit: 4815a7dc43f0fb212c40f357624fb4ec943992bf
+Tags: 8u141-jdk-windowsservercore, 8u141-windowsservercore, 8-jdk-windowsservercore, 8-windowsservercore, jdk-windowsservercore, windowsservercore
+Architectures: windows-amd64
+GitCommit: 5fb0ba0b6f08e6647a1ba4fbdf8263895b1cf61f
 Directory: 8-jdk/windows/windowsservercore
 Constraints: windowsservercore
 
-Tags: 8u121-jdk-nanoserver, 8u121-nanoserver, 8-jdk-nanoserver, 8-nanoserver, jdk-nanoserver, nanoserver
-GitCommit: 4815a7dc43f0fb212c40f357624fb4ec943992bf
+Tags: 8u141-jdk-nanoserver, 8u141-nanoserver, 8-jdk-nanoserver, 8-nanoserver, jdk-nanoserver, nanoserver
+Architectures: windows-amd64
+GitCommit: 5fb0ba0b6f08e6647a1ba4fbdf8263895b1cf61f
 Directory: 8-jdk/windows/nanoserver
 Constraints: nanoserver
 
-Tags: 8u121-jre, 8-jre, jre
-GitCommit: 445f8b8d18d7c61e2ae7fda76d8883b5d51ae0a5
+Tags: 8u131-jre, 8-jre, jre
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: b4f29ba829765552239bd18f272fcdaf09eca259
 Directory: 8-jre
 
-Tags: 8u121-jre-alpine, 8-jre-alpine, jre-alpine
-GitCommit: 4e39684901490c13eaef7892c44e39043d7c4bed
+Tags: 8u131-jre-slim, 8-jre-slim, jre-slim
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: b4f29ba829765552239bd18f272fcdaf09eca259
+Directory: 8-jre/slim
+
+Tags: 8u131-jre-alpine, 8-jre-alpine, jre-alpine
+Architectures: amd64
+GitCommit: b4f29ba829765552239bd18f272fcdaf09eca259
 Directory: 8-jre/alpine
 
-Tags: 9-b161-jdk, 9-b161, 9-jdk, 9
-GitCommit: 50c491c7c2378182866d89e857eb1f0c77985507
+Tags: 9-b177-jdk, 9-b177, 9-jdk, 9
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: b4f29ba829765552239bd18f272fcdaf09eca259
 Directory: 9-jdk
 
-Tags: 9-b161-jre, 9-jre
-GitCommit: 50c491c7c2378182866d89e857eb1f0c77985507
+Tags: 9-b177-jdk-slim, 9-b177-slim, 9-jdk-slim, 9-slim
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: b4f29ba829765552239bd18f272fcdaf09eca259
+Directory: 9-jdk/slim
+
+Tags: 9-b154-jdk-windowsservercore, 9-b154-windowsservercore, 9-jdk-windowsservercore, 9-windowsservercore
+Architectures: windows-amd64
+GitCommit: ba6f55a8a023c30b212e08dd5ea89951a96992ae
+Directory: 9-jdk/windows/windowsservercore
+Constraints: windowsservercore
+
+Tags: 9-b154-jdk-nanoserver, 9-b154-nanoserver, 9-jdk-nanoserver, 9-nanoserver
+Architectures: windows-amd64
+GitCommit: ba6f55a8a023c30b212e08dd5ea89951a96992ae
+Directory: 9-jdk/windows/nanoserver
+Constraints: nanoserver
+
+Tags: 9-b177-jre, 9-jre
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: b4f29ba829765552239bd18f272fcdaf09eca259
 Directory: 9-jre
+
+Tags: 9-b177-jre-slim, 9-jre-slim
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: b4f29ba829765552239bd18f272fcdaf09eca259
+Directory: 9-jre/slim

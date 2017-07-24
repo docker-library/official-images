@@ -1,112 +1,158 @@
-# this file is generated via https://github.com/docker-library/python/blob/c5b36c38823ca6a1301ad39cbf3ece75d77c5600/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/python/blob/870b3c63fc69d877ce967c64c672ea686e6fe6bb/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/python.git
 
-Tags: 2.7.13, 2.7, 2
-GitCommit: a248f4583c5f788e1af02016f762cdc323ee5765
-Directory: 2.7
+Tags: 3.6.2-stretch, 3.6-stretch, 3-stretch, stretch
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: c9954b06c8b178d7888bc1626bed5a14e43a9203
+Directory: 3.6/stretch
 
-Tags: 2.7.13-slim, 2.7-slim, 2-slim
-GitCommit: a248f4583c5f788e1af02016f762cdc323ee5765
-Directory: 2.7/slim
+Tags: 3.6.2-jessie, 3.6-jessie, 3-jessie, jessie, 3.6.2, 3.6, 3, latest
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: d3c5f47b788adb96e69477dadfb0baca1d97f764
+Directory: 3.6/jessie
 
-Tags: 2.7.13-alpine, 2.7-alpine, 2-alpine
-GitCommit: ad4706ad7d23ef13472d2ee340aa43f3b9573e3d
-Directory: 2.7/alpine
+Tags: 3.6.2-slim, 3.6-slim, 3-slim, slim
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: d3c5f47b788adb96e69477dadfb0baca1d97f764
+Directory: 3.6/jessie/slim
 
-Tags: 2.7.13-wheezy, 2.7-wheezy, 2-wheezy
-GitCommit: a248f4583c5f788e1af02016f762cdc323ee5765
-Directory: 2.7/wheezy
+Tags: 3.6.2-onbuild, 3.6-onbuild, 3-onbuild, onbuild
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: d3c5f47b788adb96e69477dadfb0baca1d97f764
+Directory: 3.6/jessie/onbuild
 
-Tags: 2.7.13-onbuild, 2.7-onbuild, 2-onbuild
-GitCommit: 7663560df7547e69d13b1b548675502f4e0917d1
-Directory: 2.7/onbuild
+Tags: 3.6.2-alpine3.6, 3.6-alpine3.6, 3-alpine3.6, alpine3.6
+Architectures: amd64
+GitCommit: 5d86c858d58f84b8dd1274ac61ac1c9c9ebc7739
+Directory: 3.6/alpine3.6
 
-Tags: 2.7.13-windowsservercore, 2.7-windowsservercore, 2-windowsservercore
-GitCommit: a248f4583c5f788e1af02016f762cdc323ee5765
-Directory: 2.7/windows/windowsservercore
+Tags: 3.6.2-alpine3.4, 3.6-alpine3.4, 3-alpine3.4, alpine3.4, 3.6.2-alpine, 3.6-alpine, 3-alpine, alpine
+Architectures: amd64
+GitCommit: d3c5f47b788adb96e69477dadfb0baca1d97f764
+Directory: 3.6/alpine3.4
+
+Tags: 3.6.2-windowsservercore, 3.6-windowsservercore, 3-windowsservercore, windowsservercore
+Architectures: windows-amd64
+GitCommit: 761d766baa0ff33754436c0a1fd9aedc68cf7947
+Directory: 3.6/windows/windowsservercore
 Constraints: windowsservercore
 
-Tags: 3.3.6, 3.3
-GitCommit: 693a75332e8ae5ad3bfae6e8399c4d7cc3cb6181
-Directory: 3.3
-
-Tags: 3.3.6-slim, 3.3-slim
-GitCommit: 693a75332e8ae5ad3bfae6e8399c4d7cc3cb6181
-Directory: 3.3/slim
-
-Tags: 3.3.6-alpine, 3.3-alpine
-GitCommit: ad4706ad7d23ef13472d2ee340aa43f3b9573e3d
-Directory: 3.3/alpine
-
-Tags: 3.3.6-wheezy, 3.3-wheezy
-GitCommit: 693a75332e8ae5ad3bfae6e8399c4d7cc3cb6181
-Directory: 3.3/wheezy
-
-Tags: 3.3.6-onbuild, 3.3-onbuild
-GitCommit: 9a9021f2134d953165b31d98cacb95aa34076f90
-Directory: 3.3/onbuild
-
-Tags: 3.4.6, 3.4
-GitCommit: 1f7a601534dcc6377dcdef10bd3387f5c669c569
-Directory: 3.4
-
-Tags: 3.4.6-slim, 3.4-slim
-GitCommit: 1f7a601534dcc6377dcdef10bd3387f5c669c569
-Directory: 3.4/slim
-
-Tags: 3.4.6-alpine, 3.4-alpine
-GitCommit: 1f7a601534dcc6377dcdef10bd3387f5c669c569
-Directory: 3.4/alpine
-
-Tags: 3.4.6-wheezy, 3.4-wheezy
-GitCommit: 1f7a601534dcc6377dcdef10bd3387f5c669c569
-Directory: 3.4/wheezy
-
-Tags: 3.4.6-onbuild, 3.4-onbuild
-GitCommit: 9a9021f2134d953165b31d98cacb95aa34076f90
-Directory: 3.4/onbuild
-
-Tags: 3.5.3, 3.5
-GitCommit: 9f67896dbaf1b86f2446b0ab981aa20f4d336132
-Directory: 3.5
+Tags: 3.5.3-jessie, 3.5-jessie, 3.5.3, 3.5
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: d3c5f47b788adb96e69477dadfb0baca1d97f764
+Directory: 3.5/jessie
 
 Tags: 3.5.3-slim, 3.5-slim
-GitCommit: 9f67896dbaf1b86f2446b0ab981aa20f4d336132
-Directory: 3.5/slim
-
-Tags: 3.5.3-alpine, 3.5-alpine
-GitCommit: 9f67896dbaf1b86f2446b0ab981aa20f4d336132
-Directory: 3.5/alpine
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: d3c5f47b788adb96e69477dadfb0baca1d97f764
+Directory: 3.5/jessie/slim
 
 Tags: 3.5.3-onbuild, 3.5-onbuild
-GitCommit: 9a9021f2134d953165b31d98cacb95aa34076f90
-Directory: 3.5/onbuild
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: d3c5f47b788adb96e69477dadfb0baca1d97f764
+Directory: 3.5/jessie/onbuild
+
+Tags: 3.5.3-alpine3.4, 3.5-alpine3.4, 3.5.3-alpine, 3.5-alpine
+Architectures: amd64
+GitCommit: d3c5f47b788adb96e69477dadfb0baca1d97f764
+Directory: 3.5/alpine3.4
 
 Tags: 3.5.3-windowsservercore, 3.5-windowsservercore
-GitCommit: 9f67896dbaf1b86f2446b0ab981aa20f4d336132
+Architectures: windows-amd64
+GitCommit: db2d58d73043c85ceecc8e675372b4dc6a77d136
 Directory: 3.5/windows/windowsservercore
 Constraints: windowsservercore
 
-Tags: 3.6.1, 3.6, 3, latest
-GitCommit: 32e920eb13714a9aeff2e016fb467901222d17b5
-Directory: 3.6
+Tags: 3.4.6-jessie, 3.4-jessie, 3.4.6, 3.4
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: d3c5f47b788adb96e69477dadfb0baca1d97f764
+Directory: 3.4/jessie
 
-Tags: 3.6.1-slim, 3.6-slim, 3-slim, slim
-GitCommit: 32e920eb13714a9aeff2e016fb467901222d17b5
-Directory: 3.6/slim
+Tags: 3.4.6-slim, 3.4-slim
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: d3c5f47b788adb96e69477dadfb0baca1d97f764
+Directory: 3.4/jessie/slim
 
-Tags: 3.6.1-alpine, 3.6-alpine, 3-alpine, alpine
-GitCommit: 32e920eb13714a9aeff2e016fb467901222d17b5
-Directory: 3.6/alpine
+Tags: 3.4.6-onbuild, 3.4-onbuild
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: d3c5f47b788adb96e69477dadfb0baca1d97f764
+Directory: 3.4/jessie/onbuild
 
-Tags: 3.6.1-onbuild, 3.6-onbuild, 3-onbuild, onbuild
-GitCommit: 7eca63adca38729424a9bab957f006f5caad870f
-Directory: 3.6/onbuild
+Tags: 3.4.6-wheezy, 3.4-wheezy
+Architectures: amd64, arm32v5, arm32v7, i386
+GitCommit: 5d86c858d58f84b8dd1274ac61ac1c9c9ebc7739
+Directory: 3.4/wheezy
 
-Tags: 3.6.1-windowsservercore, 3.6-windowsservercore, 3-windowsservercore, windowsservercore
-GitCommit: 32e920eb13714a9aeff2e016fb467901222d17b5
-Directory: 3.6/windows/windowsservercore
+Tags: 3.4.6-alpine3.4, 3.4-alpine3.4, 3.4.6-alpine, 3.4-alpine
+Architectures: amd64
+GitCommit: d3c5f47b788adb96e69477dadfb0baca1d97f764
+Directory: 3.4/alpine3.4
+
+Tags: 3.3.6-jessie, 3.3-jessie, 3.3.6, 3.3
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: d3c5f47b788adb96e69477dadfb0baca1d97f764
+Directory: 3.3/jessie
+
+Tags: 3.3.6-slim, 3.3-slim
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: d3c5f47b788adb96e69477dadfb0baca1d97f764
+Directory: 3.3/jessie/slim
+
+Tags: 3.3.6-onbuild, 3.3-onbuild
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: d3c5f47b788adb96e69477dadfb0baca1d97f764
+Directory: 3.3/jessie/onbuild
+
+Tags: 3.3.6-wheezy, 3.3-wheezy
+Architectures: amd64, arm32v5, arm32v7, i386
+GitCommit: 5d86c858d58f84b8dd1274ac61ac1c9c9ebc7739
+Directory: 3.3/wheezy
+
+Tags: 3.3.6-alpine3.4, 3.3-alpine3.4, 3.3.6-alpine, 3.3-alpine
+Architectures: amd64
+GitCommit: d3c5f47b788adb96e69477dadfb0baca1d97f764
+Directory: 3.3/alpine3.4
+
+Tags: 2.7.13-stretch, 2.7-stretch, 2-stretch
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: c9954b06c8b178d7888bc1626bed5a14e43a9203
+Directory: 2.7/stretch
+
+Tags: 2.7.13-jessie, 2.7-jessie, 2-jessie, 2.7.13, 2.7, 2
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: d3c5f47b788adb96e69477dadfb0baca1d97f764
+Directory: 2.7/jessie
+
+Tags: 2.7.13-slim, 2.7-slim, 2-slim
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: d3c5f47b788adb96e69477dadfb0baca1d97f764
+Directory: 2.7/jessie/slim
+
+Tags: 2.7.13-onbuild, 2.7-onbuild, 2-onbuild
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: d3c5f47b788adb96e69477dadfb0baca1d97f764
+Directory: 2.7/jessie/onbuild
+
+Tags: 2.7.13-wheezy, 2.7-wheezy, 2-wheezy
+Architectures: amd64, arm32v5, arm32v7, i386
+GitCommit: 5d86c858d58f84b8dd1274ac61ac1c9c9ebc7739
+Directory: 2.7/wheezy
+
+Tags: 2.7.13-alpine3.6, 2.7-alpine3.6, 2-alpine3.6
+Architectures: amd64
+GitCommit: 5d86c858d58f84b8dd1274ac61ac1c9c9ebc7739
+Directory: 2.7/alpine3.6
+
+Tags: 2.7.13-alpine3.4, 2.7-alpine3.4, 2-alpine3.4, 2.7.13-alpine, 2.7-alpine, 2-alpine
+Architectures: amd64
+GitCommit: d3c5f47b788adb96e69477dadfb0baca1d97f764
+Directory: 2.7/alpine3.4
+
+Tags: 2.7.13-windowsservercore, 2.7-windowsservercore, 2-windowsservercore
+Architectures: windows-amd64
+GitCommit: db2d58d73043c85ceecc8e675372b4dc6a77d136
+Directory: 2.7/windows/windowsservercore
 Constraints: windowsservercore
