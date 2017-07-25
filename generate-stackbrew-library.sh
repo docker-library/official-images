@@ -1,9 +1,9 @@
 #!/bin/bash
 set -eu
 
-declare -a -r versions=( 1.3 1.2 )
+declare -a -r versions=( 1.5 1.4 1.3 1.2 )
 declare -A -r aliases=(
-	[1.3]='latest'
+	[1.5]='latest'
 )
 
 # get the most recent commit which modified any of "$@"
@@ -78,7 +78,7 @@ for version in "${versions[@]}"; do
 		Directory: $version
 	EOE
 
-	for variant in slim; do
+	for variant in slim alpine; do
 		[ -f "$version/$variant/Dockerfile" ] || continue
 
 		commit="$(dirCommit "$version/$variant")"
