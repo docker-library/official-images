@@ -22,7 +22,7 @@ _request() {
 	docker run --rm --link "$cid":ghost "$clientImage" \
 		curl -fs -X"$method" "$@" "http://ghost:2368/$url"
 }
-
+sleep 60
 # Make sure that Ghost is listening and ready
 . "$dir/../../retry.sh" '-t' '30' '_request GET / --output /dev/null'
 
