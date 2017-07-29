@@ -24,7 +24,7 @@ _request() {
 }
 
 # Make sure that Ghost is listening and ready
-. "$dir/../../retry.sh" '_request GET / --output /dev/null'
+. "$dir/../../retry.sh -t 30 " '_request GET / --output /dev/null'
 
 # Check that /ghost/ redirects to setup (the image is unconfigured by default)
 _request GET '/ghost/' -I | grep -q '^Location: .*setup'
