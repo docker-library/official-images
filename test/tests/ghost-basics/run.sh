@@ -16,15 +16,21 @@ _request() {
 	local method="$1"
 	shift
 
-	local url="${1#/}"
+	local url="${1}"
 	shift
 
 	docker run --rm --link "$cid":ghost "$clientImage" \
 		curl -fs -X"$method" "$@" "http://ghost:2368/$url"
 }
-sleep 60
+
 # Make sure that Ghost is listening and ready
-. "$dir/../../retry.sh" '-t' '30' '_request GET / --output /dev/null'
+. "$dir/../../retry.sh" '_request GET / --output /dev/null'
 
 # Check that /ghost/ redirects to setup (the image is unconfigured by default)
-_request GET '/ghost/' -I | grep -q '^Location: .*setup'
+if [[ $serverImage == ghost:1* ]]
+then
+	_request GET '/ghost/api/v0.1/authentication/setup/' | grep -q 'status":false'
+else
+	_request GET '/ghost/#/' -I | grep -q '^Location: .*setup'
+fi
+
