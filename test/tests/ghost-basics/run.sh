@@ -27,10 +27,9 @@ _request() {
 . "$dir/../../retry.sh" '_request GET / --output /dev/null'
 
 # Check that /ghost/ redirects to setup (the image is unconfigured by default)
-if [[ $serverImage == ghost:1* ]]
-then
-	_request GET '/ghost/api/v0.1/authentication/setup/' | grep -q 'status":false'
-else
-	_request GET '/ghost/#/' -I | grep -q '^Location: .*setup'
-fi
+ghostVersion="$(docker inspect --format '{{range .Config.Env}}{{ . }}{{"\n"}}{{end}}' "$serverImage" | awk -F= '$1 == "GHOST_VERSION" { print $2 }')"
+case "$ghostVersion" in
+	0.*) _request GET '/ghost/' -I | grep -q '^Location: .*setup' ;;
+	*)   _request GET '/ghost/api/v0.1/authentication/setup/' | grep -q 'status":false' ;;
+esac
 
