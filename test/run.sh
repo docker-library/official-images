@@ -109,6 +109,10 @@ for dockerImage in "$@"; do
 			# lolPHP
 			variant='fpm'
 			;;
+		*alpine*)
+			# "alpine3.4", "alpine3.6", "nginx:alpine-perl", etc are still "alpine" variants
+			variant='alpine'
+			;;
 	esac
 	
 	testRepo="$repo"
