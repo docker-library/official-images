@@ -190,6 +190,9 @@ imageTests+=(
 		ruby-bundler
 		ruby-nonroot
 	'
+	[rust]='
+		rust-hello-world
+	'
 	[silverpeas]='
 		silverpeas-basics
 	'
