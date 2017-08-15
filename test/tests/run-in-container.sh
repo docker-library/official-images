@@ -57,7 +57,7 @@ args+=( --rm )
 gemHome="$(docker inspect -f '{{range .Config.Env}}{{println .}}{{end}}' "$newImage" | awk -F '=' '$1 == "GEM_HOME" { print $2; exit }')"
 if [ "$gemHome" ]; then
 	# must be a Ruby image
-	driver="$(docker info | awk -F ': ' '$1 == "Storage Driver" { print $2; exit }')"
+	driver="$(docker info | awk -F ': ' '$1 == "Storage Driver" { print $2 }')"
 	if [ "$driver" = 'overlay' ]; then
 		# let's add a volume (_not_ a bind mount) on GEM_HOME to work around nokogiri+overlayfs issues
 		args+=( -v "$gemHome" )
