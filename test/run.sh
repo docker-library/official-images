@@ -113,6 +113,10 @@ for dockerImage in "$@"; do
 			# "alpine3.4", "alpine3.6", "nginx:alpine-perl", etc are still "alpine" variants
 			variant='alpine'
 			;;
+		slim-*|*-slim-*)
+			# "slim-jessie" is still "slim"
+			variant='slim'
+			;;
 	esac
 	
 	testRepo="$repo"

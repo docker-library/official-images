@@ -10,4 +10,4 @@ docker run --rm -i \
 	-e NUXEO_DEV_MODE \
 	-e NUXEO_AUTOMATION_TRACE \
 	"$image" \
-	nuxeoctl showconf | grep ^org.nuxeo | sort
+	nuxeoctl showconf | grep "^org.nuxeo.[automation|dev]" | sort
