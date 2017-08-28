@@ -1,20 +1,11 @@
 # maintainer: Joyent Image Team <image-team@joyent.com> (@joyent)
 # maintainer: Trong Nghia Nguyen - resin.io <james@resin.io>
 
+0.10.22-wheezy: git://github.com/resin-io-library/base-images@29117bf5dca3c0476bb20019d6855cb1f2598902 node/armv7hf/debian/0.10/wheezy
+0.10-wheezy: git://github.com/resin-io-library/base-images@29117bf5dca3c0476bb20019d6855cb1f2598902 node/armv7hf/debian/0.10/wheezy
 
-0.10.46-slim: git://github.com/resin-io-library/docker-node@c08f22c6d626092d67e9846973f8160f8b7d3057 armv7hf/debian/0.10/slim
-0.10-slim: git://github.com/resin-io-library/docker-node@c08f22c6d626092d67e9846973f8160f8b7d3057 armv7hf/debian/0.10/slim
+0.10.22: git://github.com/resin-io-library/base-images@29117bf5dca3c0476bb20019d6855cb1f2598902 node/armv7hf/debian/default
 
+0.10.22-onbuild: git://github.com/resin-io-library/base-images@29117bf5dca3c0476bb20019d6855cb1f2598902 node/armv7hf/debian/default/onbuild
 
-4.4.7-slim: git://github.com/resin-io-library/docker-node@c08f22c6d626092d67e9846973f8160f8b7d3057 armv7hf/debian/4.4/slim
-4.4-slim: git://github.com/resin-io-library/docker-node@c08f22c6d626092d67e9846973f8160f8b7d3057 armv7hf/debian/4.4/slim
-
-
-5.12.0-slim: git://github.com/resin-io-library/docker-node@c08f22c6d626092d67e9846973f8160f8b7d3057 armv7hf/debian/5.12/slim
-5.12-slim: git://github.com/resin-io-library/docker-node@c08f22c6d626092d67e9846973f8160f8b7d3057 armv7hf/debian/5.12/slim
-
-
-6.5.0-slim: git://github.com/resin-io-library/docker-node@0b282def4f6ad8e0b17a69195beb462fb48db63b armv7hf/debian/6.5/slim
-6.5-slim: git://github.com/resin-io-library/docker-node@0b282def4f6ad8e0b17a69195beb462fb48db63b armv7hf/debian/6.5/slim
-6-slim: git://github.com/resin-io-library/docker-node@0b282def4f6ad8e0b17a69195beb462fb48db63b armv7hf/debian/6.5/slim
-slim: git://github.com/resin-io-library/docker-node@0b282def4f6ad8e0b17a69195beb462fb48db63b armv7hf/debian/6.5/slim
+0.10.22-slim: git://github.com/resin-io-library/base-images@29117bf5dca3c0476bb20019d6855cb1f2598902 node/armv7hf/debian/default/slim

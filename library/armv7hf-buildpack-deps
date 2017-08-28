@@ -1,23 +1,16 @@
-# maintainer: InfoSiftr <github@infosiftr.com> (@infosiftr)
 # maintainer: Trong Nghia Nguyen - resin.io <james@resin.io>
 
-jessie-curl: git://github.com/resin-io-library/buildpack-deps@8fbe6864378a6b04678ab6efed76f22b13bfdf0f armv7hf/jessie/curl
-curl: git://github.com/resin-io-library/buildpack-deps@8fbe6864378a6b04678ab6efed76f22b13bfdf0f armv7hf/jessie/curl
+jessie-curl: git://github.com/resin-io-library/base-images@29117bf5dca3c0476bb20019d6855cb1f2598902 buildpack-deps/armv7hf/debian/jessie/curl
+curl: git://github.com/resin-io-library/base-images@29117bf5dca3c0476bb20019d6855cb1f2598902 buildpack-deps/armv7hf/debian/jessie/curl
 
-jessie-scm: git://github.com/resin-io-library/buildpack-deps@8fbe6864378a6b04678ab6efed76f22b13bfdf0f armv7hf/jessie/scm
-scm: git://github.com/resin-io-library/buildpack-deps@8fbe6864378a6b04678ab6efed76f22b13bfdf0f armv7hf/jessie/scm
+jessie-scm: git://github.com/resin-io-library/base-images@29117bf5dca3c0476bb20019d6855cb1f2598902 buildpack-deps/armv7hf/debian/jessie/scm
+scm: git://github.com/resin-io-library/base-images@29117bf5dca3c0476bb20019d6855cb1f2598902 buildpack-deps/armv7hf/debian/jessie/scm
 
-jessie: git://github.com/resin-io-library/buildpack-deps@8fbe6864378a6b04678ab6efed76f22b13bfdf0f armv7hf/jessie
-latest: git://github.com/resin-io-library/buildpack-deps@8fbe6864378a6b04678ab6efed76f22b13bfdf0f armv7hf/jessie
+jessie: git://github.com/resin-io-library/base-images@29117bf5dca3c0476bb20019d6855cb1f2598902 buildpack-deps/armv7hf/debian/jessie
+latest: git://github.com/resin-io-library/base-images@29117bf5dca3c0476bb20019d6855cb1f2598902 buildpack-deps/armv7hf/debian/jessie
 
-sid-curl: git://github.com/resin-io-library/buildpack-deps@8fbe6864378a6b04678ab6efed76f22b13bfdf0f armv7hf/sid/curl
+wheezy-curl: git://github.com/resin-io-library/base-images@29117bf5dca3c0476bb20019d6855cb1f2598902 buildpack-deps/armv7hf/debian/wheezy/curl
 
-sid-scm: git://github.com/resin-io-library/buildpack-deps@8fbe6864378a6b04678ab6efed76f22b13bfdf0f armv7hf/sid/scm
+wheezy-scm: git://github.com/resin-io-library/base-images@29117bf5dca3c0476bb20019d6855cb1f2598902 buildpack-deps/armv7hf/debian/wheezy/scm
 
-sid: git://github.com/resin-io-library/buildpack-deps@8fbe6864378a6b04678ab6efed76f22b13bfdf0f armv7hf/sid
-
-wheezy-curl: git://github.com/resin-io-library/buildpack-deps@8fbe6864378a6b04678ab6efed76f22b13bfdf0f armv7hf/wheezy/curl
-
-wheezy-scm: git://github.com/resin-io-library/buildpack-deps@8fbe6864378a6b04678ab6efed76f22b13bfdf0f armv7hf/wheezy/scm
-
-wheezy: git://github.com/resin-io-library/buildpack-deps@8fbe6864378a6b04678ab6efed76f22b13bfdf0f armv7hf/wheezy
+wheezy: git://github.com/resin-io-library/base-images@29117bf5dca3c0476bb20019d6855cb1f2598902 buildpack-deps/armv7hf/debian/wheezy
