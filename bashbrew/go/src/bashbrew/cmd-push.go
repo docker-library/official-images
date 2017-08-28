@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"time"
 
 	"github.com/codegangsta/cli"
 )
@@ -31,10 +32,16 @@ func cmdPush(c *cli.Context) error {
 			}
 
 			for _, tag := range r.Tags(namespace, uniq, entry) {
-				fmt.Printf("Pushing %s\n", tag)
-				err = dockerPush(tag)
-				if err != nil {
-					return cli.NewMultiError(fmt.Errorf(`failed pushing %q`, tag), err)
+				created := dockerCreated(tag)
+				lastUpdated := fetchDockerHubTagMeta(tag).lastUpdatedTime()
+				if created.After(lastUpdated) {
+					fmt.Printf("Pushing %s\n", tag)
+					err = dockerPush(tag)
+					if err != nil {
+						return cli.NewMultiError(fmt.Errorf(`failed pushing %q`, tag), err)
+					}
+				} else {
+					fmt.Printf("Skipping %s (created %s, last updated %s)\n", tag, created.Local().Format(time.RFC3339), lastUpdated.Local().Format(time.RFC3339))
 				}
 			}
 		}
