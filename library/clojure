@@ -1,5 +1,6 @@
 Maintainers: Paul Lam <paul@quantisan.com> (@Quantisan),
              Wes Morgan <wesmorgan@icloud.com> (@cap10morgan)
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 GitRepo: https://github.com/Quantisan/docker-clojure.git
 GitCommit: 54d3dcd9756fb53c489eb9cb8debd80a1a5f6430
 
@@ -10,13 +11,16 @@ Tags: lein-2.7.1-onbuild, lein-onbuild, onbuild
 Directory: debian/lein/onbuild
 
 Tags: lein-2.7.1-alpine, lein-alpine, alpine
+Architectures: amd64
 Directory: alpine/lein
 
 Tags: lein-2.7.1-alpine-onbuild, lein-alpine-onbuild, alpine-onbuild
+Architectures: amd64
 Directory: alpine/lein/onbuild
 
 Tags: boot-2.7.2, boot
 Directory: debian/boot
 
 Tags: boot-2.7.2-alpine, boot-alpine
+Architectures: amd64
 Directory: alpine/boot
