@@ -14,7 +14,7 @@ func cmdBuild(c *cli.Context) error {
 
 	repos, err = sortRepos(repos, true)
 	if err != nil {
-		return cli.NewMultiError(fmt.Errorf(`failed sorting repo list`, err))
+		return cli.NewMultiError(fmt.Errorf(`failed sorting repo list`), err)
 	}
 
 	uniq := c.Bool("uniq")
