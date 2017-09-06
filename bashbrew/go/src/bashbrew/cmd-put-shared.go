@@ -90,9 +90,10 @@ func cmdPutShared(c *cli.Context) error {
 		// turn them into SharedTagGroup objects so all manifest-tool invocations can be handled by a single process/loop
 		sharedTagGroups := []manifest.SharedTagGroup{}
 		for _, entry := range r.Entries() {
+			entryCopy := entry
 			sharedTagGroups = append(sharedTagGroups, manifest.SharedTagGroup{
 				SharedTags: entry.Tags,
-				Entries:    []*manifest.Manifest2822Entry{&entry},
+				Entries:    []*manifest.Manifest2822Entry{&entryCopy},
 			})
 		}
 
