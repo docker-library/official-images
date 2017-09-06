@@ -1,20 +1,45 @@
-# maintainer: Dinakar Guniguntala <dinakar.g@in.ibm.com> (@dinogun)
+# ibmjava official images
 
-8-jre: git://github.com/ibmruntimes/ci.docker@9b62a599bd4bcdba1983c71880dff055ef5a488b ibmjava/8/jre/x86_64/ubuntu
-jre: git://github.com/ibmruntimes/ci.docker@9b62a599bd4bcdba1983c71880dff055ef5a488b ibmjava/8/jre/x86_64/ubuntu
-8: git://github.com/ibmruntimes/ci.docker@9b62a599bd4bcdba1983c71880dff055ef5a488b ibmjava/8/jre/x86_64/ubuntu
-latest: git://github.com/ibmruntimes/ci.docker@9b62a599bd4bcdba1983c71880dff055ef5a488b ibmjava/8/jre/x86_64/ubuntu
-8-jre-alpine: git://github.com/ibmruntimes/ci.docker@9b62a599bd4bcdba1983c71880dff055ef5a488b ibmjava/8/jre/x86_64/alpine
-jre-alpine: git://github.com/ibmruntimes/ci.docker@9b62a599bd4bcdba1983c71880dff055ef5a488b ibmjava/8/jre/x86_64/alpine
-8-sfj: git://github.com/ibmruntimes/ci.docker@9b62a599bd4bcdba1983c71880dff055ef5a488b ibmjava/8/sfj/x86_64/ubuntu
-sfj: git://github.com/ibmruntimes/ci.docker@9b62a599bd4bcdba1983c71880dff055ef5a488b ibmjava/8/sfj/x86_64/ubuntu
-8-sfj-alpine: git://github.com/ibmruntimes/ci.docker@9b62a599bd4bcdba1983c71880dff055ef5a488b ibmjava/8/sfj/x86_64/alpine
-sfj-alpine: git://github.com/ibmruntimes/ci.docker@9b62a599bd4bcdba1983c71880dff055ef5a488b ibmjava/8/sfj/x86_64/alpine
-8-sdk: git://github.com/ibmruntimes/ci.docker@9b62a599bd4bcdba1983c71880dff055ef5a488b ibmjava/8/sdk/x86_64/ubuntu
-sdk: git://github.com/ibmruntimes/ci.docker@9b62a599bd4bcdba1983c71880dff055ef5a488b ibmjava/8/sdk/x86_64/ubuntu
-8-sdk-alpine: git://github.com/ibmruntimes/ci.docker@9b62a599bd4bcdba1983c71880dff055ef5a488b ibmjava/8/sdk/x86_64/alpine
-sdk-alpine: git://github.com/ibmruntimes/ci.docker@9b62a599bd4bcdba1983c71880dff055ef5a488b ibmjava/8/sdk/x86_64/alpine
-9-ea2-sdk: git://github.com/ibmruntimes/ci.docker@e02f7b4f675d11cf0684053503626da8e2275c65 ibmjava/9/sdk/x86_64/ubuntu
-9-sdk: git://github.com/ibmruntimes/ci.docker@e02f7b4f675d11cf0684053503626da8e2275c65 ibmjava/9/sdk/x86_64/ubuntu
-9: git://github.com/ibmruntimes/ci.docker@e02f7b4f675d11cf0684053503626da8e2275c65 ibmjava/9/sdk/x86_64/ubuntu
-9-sdk-alpine: git://github.com/ibmruntimes/ci.docker@e02f7b4f675d11cf0684053503626da8e2275c65 ibmjava/9/sdk/x86_64/alpine
+Maintainers: Dinakar Guniguntala <dinakar.g@in.ibm.com> (@dinogun)
+GitRepo: https://github.com/ibmruntimes/ci.docker.git
+
+Tags: 8-jre, jre, 8, latest
+Architectures: amd64, i386, ppc64le, s390x
+GitCommit: 62f01d55a843b678ab382c314b1f30248785effa
+Directory: ibmjava/8/jre/ubuntu
+
+Tags: 8-jre-alpine, jre-alpine
+Architectures: amd64
+GitCommit: 62f01d55a843b678ab382c314b1f30248785effa
+Directory: ibmjava/8/jre/alpine
+
+Tags: 8-sfj, sfj
+Architectures: amd64, i386, ppc64le, s390x
+GitCommit: 62f01d55a843b678ab382c314b1f30248785effa
+Directory: ibmjava/8/sfj/ubuntu
+
+Tags: 8-sfj-alpine, sfj-alpine
+Architectures: amd64
+GitCommit: 62f01d55a843b678ab382c314b1f30248785effa
+Directory: ibmjava/8/sfj/alpine
+
+Tags: 8-sdk, sdk
+Architectures: amd64, i386, ppc64le, s390x
+GitCommit: 62f01d55a843b678ab382c314b1f30248785effa
+Directory: ibmjava/8/sdk/ubuntu
+
+Tags: 8-sdk-alpine, sdk-alpine
+Architectures: amd64
+GitCommit: 62f01d55a843b678ab382c314b1f30248785effa
+Directory: ibmjava/8/sdk/alpine
+
+Tags: 9-sdk
+Architectures: amd64, i386, ppc64le, s390x
+GitCommit: 62f01d55a843b678ab382c314b1f30248785effa
+Directory: ibmjava/9/sdk/ubuntu
+
+Tags: 9-sdk-alpine
+Architectures: amd64
+GitCommit: 62f01d55a843b678ab382c314b1f30248785effa
+Directory: ibmjava/9/sdk/alpine
+
