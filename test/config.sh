@@ -233,7 +233,7 @@ globalExcludeTests+=(
 	# https://github.com/docker-library/official-images/pull/1721#issuecomment-234128477
 	[clearlinux_no-hard-coded-passwords]=1
 
-	# alpine/slim openjdk images are non-headless and so can't do font stuff
+	# alpine/slim openjdk images are headless and so can't do font stuff
 	[openjdk:alpine_java-uimanager-font]=1
 	[openjdk:slim_java-uimanager-font]=1
 
