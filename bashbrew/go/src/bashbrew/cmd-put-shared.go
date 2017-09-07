@@ -73,6 +73,7 @@ func cmdPutShared(c *cli.Context) error {
 	}
 
 	namespace := c.String("namespace")
+	dryRun := c.Bool("dry-run")
 
 	if namespace == "" {
 		return fmt.Errorf(`"--namespace" is a required flag for "put-shared"`)
@@ -121,7 +122,7 @@ func cmdPutShared(c *cli.Context) error {
 				if mostRecentPush.After(tagUpdated) {
 					tagsToPush = append(tagsToPush, tag)
 				} else {
-					fmt.Printf("Skipping %s (created %s, last updated %s)\n", image, mostRecentPush.Local().Format(time.RFC3339), tagUpdated.Local().Format(time.RFC3339))
+					fmt.Fprintf(os.Stderr, "skipping %s (created %s, last updated %s)\n", image, mostRecentPush.Local().Format(time.RFC3339), tagUpdated.Local().Format(time.RFC3339))
 				}
 			}
 
@@ -131,9 +132,11 @@ func cmdPutShared(c *cli.Context) error {
 
 			groupIdentifier := fmt.Sprintf("%s:%s", targetRepo, tagsToPush[0])
 			fmt.Printf("Putting %s\n", groupIdentifier)
-			tagYaml := tagsToManifestToolYaml(targetRepo, tagsToPush...) + yaml
-			if err := manifestToolPushFromSpec(tagYaml); err != nil {
-				return fmt.Errorf("failed pushing %s", groupIdentifier)
+			if !dryRun {
+				tagYaml := tagsToManifestToolYaml(targetRepo, tagsToPush...) + yaml
+				if err := manifestToolPushFromSpec(tagYaml); err != nil {
+					return fmt.Errorf("failed pushing %s", groupIdentifier)
+				}
 			}
 		}
 	}
