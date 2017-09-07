@@ -129,6 +129,7 @@ imageTests+=(
 	'
 	[openjdk]='
 		java-hello-world
+		java-uimanager-font
 	'
 	[percona]='
 	'
@@ -231,6 +232,10 @@ globalExcludeTests+=(
 	# clearlinux has no /etc/password
 	# https://github.com/docker-library/official-images/pull/1721#issuecomment-234128477
 	[clearlinux_no-hard-coded-passwords]=1
+
+	# alpine/slim openjdk images are non-headless and so can't do font stuff
+	[openjdk:alpine_java-uimanager-font]=1
+	[openjdk:slim_java-uimanager-font]=1
 
 	# no "native" dependencies
 	[ruby:alpine_ruby-bundler]=1
