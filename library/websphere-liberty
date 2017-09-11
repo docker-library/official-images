@@ -1,11 +1,24 @@
-# maintainer: David Currie <david_currie@uk.ibm.com> (@davidcurrie)
-# maintainer: Jamie Coleman <jlcoleman@uk.ibm.com> (@jamiecoleman92)
-# maintainer: Duane Appleby <applebyd@uk.ibm.com> (@dibbles)
+Maintainers: David Currie <david_currie@uk.ibm.com> (@davidcurrie),
+             Jamie Coleman <jlcoleman@uk.ibm.com> (@jamiecoleman92),
+             Duane Appleby <applebyd@uk.ibm.com> (@dibbles)
+GitRepo: https://github.com/WASdev/ci.docker.git
+GitCommit: c3bf4f7f5db1d833498ea0fc057084d25dd72d92
+Architectures: amd64, i386, ppc64le, s390x
 
-kernel: git://github.com/WASdev/ci.docker@8008b344085e4e49d7d702fdb0db1fa5363c0899 ga/developer/kernel
-microProfile: git://github.com/WASdev/ci.docker@8008b344085e4e49d7d702fdb0db1fa5363c0899 ga/developer/microProfile
-webProfile6: git://github.com/WASdev/ci.docker@8008b344085e4e49d7d702fdb0db1fa5363c0899 ga/developer/webProfile6
-webProfile7: git://github.com/WASdev/ci.docker@8008b344085e4e49d7d702fdb0db1fa5363c0899 ga/developer/webProfile7
-javaee7: git://github.com/WASdev/ci.docker@8008b344085e4e49d7d702fdb0db1fa5363c0899 ga/developer/javaee7
-latest: git://github.com/WASdev/ci.docker@8008b344085e4e49d7d702fdb0db1fa5363c0899 ga/developer/javaee7
-beta: git://github.com/WASdev/ci.docker@c3bf4f7f5db1d833498ea0fc057084d25dd72d92 beta
+Tags: kernel
+Directory: ga/developer/kernel
+
+Tags: microProfile
+Directory: ga/developer/microProfile
+
+Tags: webProfile6
+Directory: ga/developer/webProfile6
+
+Tags: webProfile7
+Directory: ga/developer/webProfile7
+
+Tags: javaee7, latest
+Directory: ga/developer/javaee7
+
+Tags: beta
+Directory: beta
