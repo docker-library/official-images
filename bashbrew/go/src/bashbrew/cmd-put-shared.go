@@ -12,25 +12,29 @@ import (
 	"github.com/docker-library/go-dockerlibrary/manifest"
 )
 
-func entriesToManifestToolYaml(r Repo, entries ...*manifest.Manifest2822Entry) (string, time.Time, error) {
+func entriesToManifestToolYaml(singleArch bool, r Repo, entries ...*manifest.Manifest2822Entry) (string, time.Time, error) {
 	yaml := ""
 	mru := time.Time{}
 	entryIdentifiers := []string{}
 	for _, entry := range entries {
 		entryIdentifiers = append(entryIdentifiers, r.EntryIdentifier(*entry))
 
-		for _, arch := range entry.Architectures {
+		for _, entryArch := range entry.Architectures {
+			if singleArch && entryArch != arch {
+				continue
+			}
+
 			var ok bool
 
 			var ociArch architecture.OCIPlatform
-			if ociArch, ok = architecture.SupportedArches[arch]; !ok {
+			if ociArch, ok = architecture.SupportedArches[entryArch]; !ok {
 				// this should never happen -- the parser validates Architectures
-				panic("somehow, an unsupported architecture slipped past the parser validation: " + arch)
+				panic("somehow, an unsupported architecture slipped past the parser validation: " + entryArch)
 			}
 
 			var archNamespace string
-			if archNamespace, ok = archNamespaces[arch]; !ok || archNamespace == "" {
-				fmt.Fprintf(os.Stderr, "warning: no arch-namespace specified for %q; skipping (%q)\n", arch, r.EntryIdentifier(*entry))
+			if archNamespace, ok = archNamespaces[entryArch]; !ok || archNamespace == "" {
+				fmt.Fprintf(os.Stderr, "warning: no arch-namespace specified for %q; skipping (%q)\n", entryArch, r.EntryIdentifier(*entry))
 				continue
 			}
 
@@ -47,9 +51,6 @@ func entriesToManifestToolYaml(r Repo, entries ...*manifest.Manifest2822Entry) (
 				yaml += fmt.Sprintf("      variant: %s\n", ociArch.Variant)
 			}
 		}
-	}
-	if yaml == "" {
-		return "", time.Time{}, fmt.Errorf("failed gathering images for creating %q", entryIdentifiers)
 	}
 
 	return "manifests:\n" + yaml, mru, nil
@@ -74,6 +75,7 @@ func cmdPutShared(c *cli.Context) error {
 
 	namespace := c.String("namespace")
 	dryRun := c.Bool("dry-run")
+	singleArch := c.Bool("single-arch")
 
 	if namespace == "" {
 		return fmt.Errorf(`"--namespace" is a required flag for "put-shared"`)
@@ -87,15 +89,18 @@ func cmdPutShared(c *cli.Context) error {
 
 		targetRepo := path.Join(namespace, r.RepoName)
 
-		// handle all multi-architecture tags first (regardless of whether they have SharedTags)
-		// turn them into SharedTagGroup objects so all manifest-tool invocations can be handled by a single process/loop
 		sharedTagGroups := []manifest.SharedTagGroup{}
-		for _, entry := range r.Entries() {
-			entryCopy := entry
-			sharedTagGroups = append(sharedTagGroups, manifest.SharedTagGroup{
-				SharedTags: entry.Tags,
-				Entries:    []*manifest.Manifest2822Entry{&entryCopy},
-			})
+
+		if !singleArch {
+			// handle all multi-architecture tags first (regardless of whether they have SharedTags)
+			// turn them into SharedTagGroup objects so all manifest-tool invocations can be handled by a single process/loop
+			for _, entry := range r.Entries() {
+				entryCopy := entry
+				sharedTagGroups = append(sharedTagGroups, manifest.SharedTagGroup{
+					SharedTags: entry.Tags,
+					Entries:    []*manifest.Manifest2822Entry{&entryCopy},
+				})
+			}
 		}
 
 		// TODO do something smarter with r.TagName (ie, the user has done something crazy like "bashbrew put-shared single-repo:single-tag")
@@ -110,7 +115,7 @@ func cmdPutShared(c *cli.Context) error {
 		}
 
 		for _, group := range sharedTagGroups {
-			yaml, mostRecentPush, err := entriesToManifestToolYaml(*r, group.Entries...)
+			yaml, mostRecentPush, err := entriesToManifestToolYaml(singleArch, *r, group.Entries...)
 			if err != nil {
 				return err
 			}
@@ -121,7 +126,7 @@ func cmdPutShared(c *cli.Context) error {
 				hubMeta := fetchDockerHubTagMeta(image)
 				tagUpdated := hubMeta.lastUpdatedTime()
 				if mostRecentPush.After(tagUpdated) ||
-					(len(hubMeta.Images) <= 1 &&
+					(!singleArch && len(hubMeta.Images) <= 1 &&
 						(len(group.Entries) > 1 || len(group.Entries[0].Architectures) > 1)) {
 					tagsToPush = append(tagsToPush, tag)
 				} else {

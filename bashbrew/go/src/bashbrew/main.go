@@ -269,11 +269,15 @@ func main() {
 		},
 		{
 			Name:  "put-shared",
-			Usage: `updated shared tags in the registry`,
+			Usage: `update shared tags in the registry (and multi-architecture tags)`,
 			Flags: []cli.Flag{
 				commonFlags["all"],
 				commonFlags["namespace"],
 				commonFlags["dry-run"],
+				cli.BoolFlag{
+					Name:  "single-arch",
+					Usage: `only act on the current architecture (for pushing "amd64/hello-world:latest", for example)`,
+				},
 			},
 			Before: subcommandBeforeFactory("put-shared"),
 			Action: cmdPutShared,
