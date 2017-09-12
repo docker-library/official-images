@@ -10,6 +10,9 @@ import (
 )
 
 type dockerHubTagMeta struct {
+	// we don't care what's in these -- we just need to be able to count them
+	Images []interface{} `json:"images"`
+
 	LastUpdated string `json:"last_updated"`
 }
 

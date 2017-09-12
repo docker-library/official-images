@@ -118,8 +118,11 @@ func cmdPutShared(c *cli.Context) error {
 			tagsToPush := []string{}
 			for _, tag := range group.SharedTags {
 				image := fmt.Sprintf("%s:%s", targetRepo, tag)
-				tagUpdated := fetchDockerHubTagMeta(image).lastUpdatedTime()
-				if mostRecentPush.After(tagUpdated) {
+				hubMeta := fetchDockerHubTagMeta(image)
+				tagUpdated := hubMeta.lastUpdatedTime()
+				if mostRecentPush.After(tagUpdated) ||
+					(len(hubMeta.Images) <= 1 &&
+						(len(group.Entries) > 1 || len(group.Entries[0].Architectures) > 1)) {
 					tagsToPush = append(tagsToPush, tag)
 				} else {
 					fmt.Fprintf(os.Stderr, "skipping %s (created %s, last updated %s)\n", image, mostRecentPush.Local().Format(time.RFC3339), tagUpdated.Local().Format(time.RFC3339))
