@@ -22,9 +22,9 @@ Some images have been ported for other architectures, and many of these are offi
 	-	ARMv6 32-bit (`arm32v6`): https://hub.docker.com/u/arm32v6/ (Raspberry Pi 1, Raspberry Pi Zero)
 	-	ARMv5 32-bit (`arm32v5`): https://hub.docker.com/u/arm32v5/
 
-Check each image description for individual image support status (for example, https://hub.docker.com/r/s390x/golang/ is officially supported).
+As of 2017-09-12, these other architectures are included under the non-prefixed images via ["manifest lists"](https://docs.docker.com/registry/spec/manifest-v2-2/#manifest-list) (also known as ["indexes" in the OCI image specification](https://github.com/opencontainers/image-spec/blob/v1.0.0/image-index.md)), such that, for example, `docker run hello-world` should run as-is on all supported platforms.
 
-If you're curious about how these are built, head over to https://doi-janky.infosiftr.net/job/multiarch/ to see the build scaffolding for these other architectures.
+If you're curious about how these are built, head over to https://doi-janky.infosiftr.net/job/multiarch/ to see the build scaffolding.
 
 See the [multi-arch section](#multiple-architectures) below for recommendations in adding more architectures to an official image.
 
