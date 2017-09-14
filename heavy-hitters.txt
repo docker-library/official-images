@@ -1,0 +1,18 @@
+# repositories which we've been asked to leave at least 15 minutes in between pushes of
+# (so as to be kind to the automated build queues)
+
+ubuntu
+debian
+java
+python
+perl
+php
+buildpack-deps
+alpine
+centos
+
+# to get a one-liner "grep" to take a list and pare it down to just heavy hitters, use something like:
+#   echo "grep -E '^($(grep -vE '^$|^#' heavy-hitters.txt | paste -sd '|'))(:|\$)'"
+# output will be something like:
+#   grep -E '^(foo|bar|baz|...)(:|$)'
+# (swap "-E" to "-vE" to exclude instead of include)
