@@ -36,6 +36,9 @@ uninterestingTarballContent=(
 
 	# "b42ff584.0"
 	'etc/pki/tls/rootcerts/'
+
+	# "09/401f736622f2c9258d14388ebd47900bbab126"
+	'usr/lib/.build-id/'
 )
 
 # prints "$2$1$3$1...$N"
