@@ -1,21 +1,50 @@
-# this file is generated via https://github.com/docker-library/drupal/blob/7f849190fd64db8d6b55c05bd52773e50c5f8326/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/drupal/blob/4cabbdd883753a3b20d826cf5fed5e741291827b/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/drupal.git
 
-Tags: 8.2.2-apache, 8.2-apache, 8-apache, apache, 8.2.2, 8.2, 8, latest
-GitCommit: 9cd16801643ce9a8373bd74c74ff1a1565842795
-Directory: 8.2/apache
+Tags: 8.4.0-rc1-apache, 8.4-rc-apache, rc-apache, 8.4.0-rc1, 8.4-rc, rc
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: c561323f3add389efbb3826593f3a45fede5d14b
+Directory: 8.4-rc/apache
 
-Tags: 8.2.2-fpm, 8.2-fpm, 8-fpm, fpm
-GitCommit: 9cd16801643ce9a8373bd74c74ff1a1565842795
-Directory: 8.2/fpm
+Tags: 8.4.0-rc1-fpm, 8.4-rc-fpm, rc-fpm
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: c561323f3add389efbb3826593f3a45fede5d14b
+Directory: 8.4-rc/fpm
 
-Tags: 7.51-apache, 7-apache, 7.51, 7
-GitCommit: 814261d4b2d82854c50746c3e480dd514d5aa1d0
+Tags: 8.4.0-rc1-fpm-alpine, 8.4-rc-fpm-alpine, rc-fpm-alpine
+Architectures: amd64
+GitCommit: c561323f3add389efbb3826593f3a45fede5d14b
+Directory: 8.4-rc/fpm-alpine
+
+Tags: 8.3.7-apache, 8.3-apache, 8-apache, apache, 8.3.7, 8.3, 8, latest
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 6eb80c71ff39e076633362adf0dc67dd252f1753
+Directory: 8.3/apache
+
+Tags: 8.3.7-fpm, 8.3-fpm, 8-fpm, fpm
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 6eb80c71ff39e076633362adf0dc67dd252f1753
+Directory: 8.3/fpm
+
+Tags: 8.3.7-fpm-alpine, 8.3-fpm-alpine, 8-fpm-alpine, fpm-alpine
+Architectures: amd64
+GitCommit: 6eb80c71ff39e076633362adf0dc67dd252f1753
+Directory: 8.3/fpm-alpine
+
+Tags: 7.56-apache, 7-apache, 7.56, 7
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: a8e09f524b89b61534f376e45b885d433d867c88
 Directory: 7/apache
 
-Tags: 7.51-fpm, 7-fpm
-GitCommit: 814261d4b2d82854c50746c3e480dd514d5aa1d0
+Tags: 7.56-fpm, 7-fpm
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: a8e09f524b89b61534f376e45b885d433d867c88
 Directory: 7/fpm
+
+Tags: 7.56-fpm-alpine, 7-fpm-alpine
+Architectures: amd64
+GitCommit: a8e09f524b89b61534f376e45b885d433d867c88
+Directory: 7/fpm-alpine

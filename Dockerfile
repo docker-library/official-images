@@ -1,23 +1,15 @@
-FROM docker:1.10-git
+FROM docker:stable-git
 
 RUN apk add --no-cache \
 # bash for running scripts
 		bash \
 # go for compiling bashbrew
-		go
+		go libc-dev \
+# ssl for downloading files
+		libressl
 
 ENV GOPATH /go
 ENV PATH $GOPATH/bin:$PATH
-
-ENV GB_VERSION 0.4.1
-RUN set -x \
-	&& mkdir -p /go/src/github.com/constabulary \
-	&& cd /go/src/github.com/constabulary \
-	&& wget -qO- "https://github.com/constabulary/gb/archive/v${GB_VERSION}.tar.gz" \
-		| tar -xz \
-	&& mv gb-* gb \
-	&& cd gb \
-	&& go install -v ./...
 
 ENV DIR /usr/src/official-images
 ENV PATH $DIR/bashbrew/go/bin:$PATH
@@ -33,7 +25,11 @@ RUN mkdir -p "$BASHBREW_CACHE" \
 WORKDIR $DIR
 COPY . $DIR
 
-RUN cd bashbrew/go && gb build
+RUN set -ex; \
+	cd bashbrew/go; \
+	export GOPATH="$PWD:$PWD/vendor"; \
+	cd src; \
+	go install -v ./...
 
 VOLUME $BASHBREW_CACHE
 

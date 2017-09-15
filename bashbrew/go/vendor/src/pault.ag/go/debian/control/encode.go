@@ -55,7 +55,7 @@ func ConvertToParagraph(incoming interface{}) (*Paragraph, error) {
 	return convertToParagraph(data.Elem())
 }
 
-// Top-level conversaion dispatch {{{
+// Top-level conversion dispatch {{{
 
 func convertToParagraph(data reflect.Value) (*Paragraph, error) {
 	order := []string{}

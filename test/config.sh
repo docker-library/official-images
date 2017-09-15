@@ -45,11 +45,18 @@ imageTests+=(
 	'
 	[crate]='
 	'
+	[composer]='
+		composer
+	'
+	[convertigo]='
+		convertigo-hello-world
+	'
 	[debian]='
 		debian-apt-get
 	'
 	[docker:dind]='
 		docker-dind
+		docker-registry-push-pull
 	'
 	[django]='
 	'
@@ -70,6 +77,9 @@ imageTests+=(
 		gcc-cpp-hello-world
 		golang-hello-world
 	'
+	[ghost]='
+		ghost-basics
+	'
 	[golang]='
 		golang-hello-world
 	'
@@ -81,11 +91,12 @@ imageTests+=(
 		haskell-ghci
 		haskell-runhaskell
 	'
+	[haxe]='
+		haxe-hello-world
+	'
 	[hylang]='
 		hylang-sh
 		hylang-hello-world
-	'
-	[java]='
 	'
 	[jetty]='
 		jetty-hello-web
@@ -97,6 +108,7 @@ imageTests+=(
 		logstash-basics
 	'
 	[memcached]='
+		memcached-basics
 	'
 	[mongo]='
 		mongo-basics
@@ -114,6 +126,10 @@ imageTests+=(
 	[nuxeo]='
 		nuxeo-conf
 		nuxeo-basics
+	'
+	[openjdk]='
+		java-hello-world
+		java-uimanager-font
 	'
 	[percona]='
 	'
@@ -151,10 +167,20 @@ imageTests+=(
 	'
 	[rails]='
 	'
+	[rapidoid]='
+		rapidoid-hello-world
+		rapidoid-load-balancer
+	'
 	[redis]='
 		redis-basics
 		redis-basics-config
 		redis-basics-persistent
+	'
+	[redmine]='
+		redmine-basics
+	'
+	[registry]='
+		docker-registry-push-pull
 	'
 	[rethinkdb]='
 	'
@@ -165,10 +191,23 @@ imageTests+=(
 		ruby-bundler
 		ruby-nonroot
 	'
+	[rust]='
+		rust-hello-world
+	'
+	[silverpeas]='
+		silverpeas-basics
+	'
+	[swift]='
+		swift-hello-world
+	'
 	[tomcat]='
 		tomcat-hello-world
 	'
-	[wordpress]='
+	[wordpress:apache]='
+		wordpress-apache-run
+	'
+	[wordpress:fpm]='
+		wordpress-fpm-run
 	'
 # example onbuild
 #	[python:onbuild]='
@@ -190,15 +229,13 @@ globalExcludeTests+=(
 	[swarm_no-hard-coded-passwords]=1
 	[traefik_no-hard-coded-passwords]=1
 
-	[hello-world_override-cmd]=1
-	[nats_override-cmd]=1
-	[nats-streaming_override-cmd]=1
-	[swarm_override-cmd]=1
-	[traefik_override-cmd]=1
-
 	# clearlinux has no /etc/password
 	# https://github.com/docker-library/official-images/pull/1721#issuecomment-234128477
 	[clearlinux_no-hard-coded-passwords]=1
+
+	# alpine/slim openjdk images are headless and so can't do font stuff
+	[openjdk:alpine_java-uimanager-font]=1
+	[openjdk:slim_java-uimanager-font]=1
 
 	# no "native" dependencies
 	[ruby:alpine_ruby-bundler]=1

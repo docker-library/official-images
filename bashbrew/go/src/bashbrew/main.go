@@ -4,8 +4,11 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"strings"
 
 	"github.com/codegangsta/cli"
+
+	"github.com/docker-library/go-dockerlibrary/manifest"
 )
 
 // TODO somewhere, ensure that the Docker engine we're talking to is API version 1.22+ (Docker 1.10+)
@@ -18,8 +21,11 @@ var (
 	defaultLibrary string
 	defaultCache   string
 
+	arch                 string
 	constraints          []string
 	exclusiveConstraints bool
+
+	archNamespaces map[string]string
 
 	debugFlag  = false
 	noSortFlag = false
@@ -27,9 +33,14 @@ var (
 	// separated so that FlagsConfig.ApplyTo can access them
 	flagEnvVars = map[string]string{
 		"debug":   "BASHBREW_DEBUG",
+		"arch":    "BASHBREW_ARCH",
 		"config":  "BASHBREW_CONFIG",
 		"library": "BASHBREW_LIBRARY",
 		"cache":   "BASHBREW_CACHE",
+		"pull":    "BASHBREW_PULL",
+
+		"constraint":     "BASHBREW_CONSTRAINTS",
+		"arch-namespace": "BASHBREW_ARCH_NAMESPACES",
 	}
 )
 
@@ -72,13 +83,26 @@ func main() {
 			Usage: "do not apply any sorting, even via --build-order",
 		},
 
+		cli.StringFlag{
+			Name:   "arch",
+			Value:  manifest.DefaultArchitecture,
+			EnvVar: flagEnvVars["arch"],
+			Usage:  "the current platform architecture",
+		},
 		cli.StringSliceFlag{
-			Name:  "constraint",
-			Usage: "build constraints (see Constraints in Manifest2822Entry)",
+			Name:   "constraint",
+			EnvVar: flagEnvVars["constraint"],
+			Usage:  "build constraints (see Constraints in Manifest2822Entry)",
 		},
 		cli.BoolFlag{
 			Name:  "exclusive-constraints",
 			Usage: "skip entries which do not have Constraints",
+		},
+
+		cli.StringSliceFlag{
+			Name:   "arch-namespace",
+			EnvVar: flagEnvVars["arch-namespace"],
+			Usage:  `architecture to push namespace mappings for creating indexes/manifest lists ("arch=namespace" ala "s390x=tianons390x")`,
 		},
 
 		cli.StringFlag{
@@ -127,8 +151,16 @@ func main() {
 			debugFlag = c.GlobalBool("debug")
 			noSortFlag = c.GlobalBool("no-sort")
 
+			arch = c.GlobalString("arch")
 			constraints = c.GlobalStringSlice("constraint")
 			exclusiveConstraints = c.GlobalBool("exclusive-constraints")
+
+			archNamespaces = map[string]string{}
+			for _, archMapping := range c.GlobalStringSlice("arch-namespace") {
+				splitArchMapping := strings.SplitN(archMapping, "=", 2)
+				splitArch, splitNamespace := strings.TrimSpace(splitArchMapping[0]), strings.TrimSpace(splitArchMapping[1])
+				archNamespaces[splitArch] = splitNamespace
+			}
 
 			defaultLibrary, err = filepath.Abs(c.GlobalString("library"))
 			if err != nil {
@@ -157,6 +189,19 @@ func main() {
 			Name:  "namespace",
 			Usage: "a repo namespace to act upon/in",
 		},
+		"apply-constraints": cli.BoolFlag{
+			Name:  "apply-constraints",
+			Usage: "apply Constraints as if repos were building",
+		},
+		"depth": cli.IntFlag{
+			Name:  "depth",
+			Value: 0,
+			Usage: "maximum number of levels to traverse (0 for unlimited)",
+		},
+		"dry-run": cli.BoolFlag{
+			Name:  "dry-run",
+			Usage: "do everything except the final action (for testing whether actions will be performed)",
+		},
 	}
 
 	app.Commands = []cli.Command{
@@ -167,13 +212,10 @@ func main() {
 			Flags: []cli.Flag{
 				commonFlags["all"],
 				commonFlags["uniq"],
+				commonFlags["apply-constraints"],
 				cli.BoolFlag{
 					Name:  "build-order",
 					Usage: "sort by the order repos would need to build (topsort)",
-				},
-				cli.BoolFlag{
-					Name:  "apply-constraints",
-					Usage: "apply Constraints as if repos were building",
 				},
 				cli.BoolFlag{
 					Name:  "repos",
@@ -191,10 +233,12 @@ func main() {
 				commonFlags["uniq"],
 				commonFlags["namespace"],
 				cli.StringFlag{
-					Name:  "pull",
-					Value: "missing",
-					Usage: `pull FROM before building (always, missing, never)`,
+					Name:   "pull",
+					Value:  "missing",
+					EnvVar: flagEnvVars["pull"],
+					Usage:  `pull FROM before building (always, missing, never)`,
 				},
+				commonFlags["dry-run"],
 			},
 			Before: subcommandBeforeFactory("build"),
 			Action: cmdBuild,
@@ -206,6 +250,7 @@ func main() {
 				commonFlags["all"],
 				commonFlags["uniq"],
 				commonFlags["namespace"],
+				commonFlags["dry-run"],
 			},
 			Before: subcommandBeforeFactory("tag"),
 			Action: cmdTag,
@@ -217,9 +262,25 @@ func main() {
 				commonFlags["all"],
 				commonFlags["uniq"],
 				commonFlags["namespace"],
+				commonFlags["dry-run"],
 			},
 			Before: subcommandBeforeFactory("push"),
 			Action: cmdPush,
+		},
+		{
+			Name:  "put-shared",
+			Usage: `update shared tags in the registry (and multi-architecture tags)`,
+			Flags: []cli.Flag{
+				commonFlags["all"],
+				commonFlags["namespace"],
+				commonFlags["dry-run"],
+				cli.BoolFlag{
+					Name:  "single-arch",
+					Usage: `only act on the current architecture (for pushing "amd64/hello-world:latest", for example)`,
+				},
+			},
+			Before: subcommandBeforeFactory("put-shared"),
+			Action: cmdPutShared,
 		},
 
 		{
@@ -229,8 +290,11 @@ func main() {
 				"descendants",
 				"progeny",
 			},
-			Usage:  `print the repos built FROM a given repo or repo:tag`,
-			Flags:  []cli.Flag{},
+			Usage: `print the repos built FROM a given repo or repo:tag`,
+			Flags: []cli.Flag{
+				commonFlags["apply-constraints"],
+				commonFlags["depth"],
+			},
 			Before: subcommandBeforeFactory("children"),
 			Action: cmdOffspring,
 
@@ -242,8 +306,11 @@ func main() {
 				"ancestors",
 				"progenitors",
 			},
-			Usage:  `print the repos this repo or repo:tag is FROM`,
-			Flags:  []cli.Flag{},
+			Usage: `print the repos this repo or repo:tag is FROM`,
+			Flags: []cli.Flag{
+				commonFlags["apply-constraints"],
+				commonFlags["depth"],
+			},
 			Before: subcommandBeforeFactory("parents"),
 			Action: cmdParents,
 
@@ -277,6 +344,7 @@ func main() {
 			Flags: []cli.Flag{
 				commonFlags["all"],
 				commonFlags["uniq"],
+				commonFlags["apply-constraints"],
 			},
 			Before: subcommandBeforeFactory("from"),
 			Action: cmdFrom,

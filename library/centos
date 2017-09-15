@@ -5,15 +5,22 @@ Constraints: !aufs
 
 Tags: latest, centos7, 7
 GitFetch: refs/heads/CentOS-7
-GitCommit: 155416b523b3353f97015f1942bab8152992a689
+GitCommit: 16dab97b0ce72b1db7a2f9b02c76e452cb0a63cb
+arm64v8-GitFetch: refs/heads/CentOS-7-aarch64
+arm64v8-GitCommit: d8521aa559c767d815e9bb05f7d05ea8ab781930
+Architectures: amd64, arm64v8
 
 Tags: centos6, 6
 GitFetch: refs/heads/CentOS-6
-GitCommit: 83a75fbb40f80935d91b876115704f6e12334575
+GitCommit: 4921b2bfbe7477feb2d6d35c8ce82c08153ab606
 
-Tags: centos5, 5
-GitFetch: refs/heads/CentOS-5
-GitCommit: 4bf8330498e1c10cf365aff31d2a8a5c3254c2cf
+Tags: centos7.4.1708, 7.4.1708
+GitFetch: refs/heads/CentOS-7.4.1708
+GitCommit: 66add29c188e42d4d855f4d4acdb2b73d547edb6
+
+Tags: centos7.3.1611, 7.3.1611
+GitFetch: refs/heads/CentOS-7.3.1611
+GitCommit: 5bbaef9f60ab9e3eeb61acec631c2d91f8714fff
 
 Tags: centos7.2.1511, 7.2.1511
 GitFetch: refs/heads/CentOS-7.2.1511
@@ -27,6 +34,10 @@ Tags: centos7.0.1406, 7.0.1406
 GitFetch: refs/heads/CentOS-7.0.1406
 GitCommit: f1d1e0bd83baef08e257da50e6fb446e4dd1b90c
 
+Tags: centos6.9, 6.9
+GitFetch: refs/heads/CentOS-6.9
+GitCommit: 4f329fe087b0152df26344cecee9ba30b03b1a7b
+
 Tags: centos6.8, 6.8
 GitFetch: refs/heads/CentOS-6.8
 GitCommit: f32666d2af356ed6835942ed753a4970e18bca94
@@ -38,7 +49,3 @@ GitCommit: d0b72df83f49da844f88aabebe3826372f675370
 Tags: centos6.6, 6.6
 GitFetch: refs/heads/CentOS-6.6
 GitCommit: 8911843d9a6cc71aadd81e491f94618aded94f30
-
-Tags: centos5.11, 5.11
-GitFetch: refs/heads/CentOS-5.11
-GitCommit: 2d0554464ae19f4fd70d1b540c8968dbe872797b

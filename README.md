@@ -8,16 +8,25 @@ See [Docker's documentation](https://docs.docker.com/docker-hub/official_repos/)
 
 ## Architectures other than amd64?
 
-Work is in-progress in the Docker Engine and Registry to properly support multiple architectures (see [docker/docker#15866](https://github.com/docker/docker/issues/15866)). While this work is ongoing, **temporary**, experimental builds of the official images for the following architectures are happening somewhat incrementally (with a strong bias towards images necessary for Docker's own CI to help hasten proper multiarch support upstream) via CI.
+Some images have been ported for other architectures, and many of these are officially supported (to various degrees).
 
--	ARMv5 (`armel`): https://hub.docker.com/u/armel/
--	ARMv7 (`armhf`): https://hub.docker.com/u/armhf/
--	ARMv8 (`arm64`): https://hub.docker.com/u/aarch64/
--	POWER8 (`ppc64le`): https://hub.docker.com/u/ppc64le/
--	System z (`s390x`): https://hub.docker.com/u/s390x/
--	x86/i686 (`i386`): https://hub.docker.com/u/i386/
+-	Architectures officially supported by Docker, Inc. for running Docker: (see [download.docker.com](https://download.docker.com/linux/))
+	-	IBM z Systems (`s390x`): https://hub.docker.com/u/s390x/
+	-	ARMv7 32-bit (`arm32v7`): https://hub.docker.com/u/arm32v7/
+	-	Windows x86-64 (`windows-amd64`): https://hub.docker.com/u/winamd64/
+	-	Linux x86-64 (`amd64`): https://hub.docker.com/u/amd64/
+-	Other architectures built by official images: (but *not* officially supported by Docker, Inc.)
+	-	IBM POWER8 (`ppc64le`): https://hub.docker.com/u/ppc64le/
+	-	x86/i686 (`i386`): https://hub.docker.com/u/i386/
+	-	ARMv8 64-bit (`arm64v8`): https://hub.docker.com/u/arm64v8/
+	-	ARMv6 32-bit (`arm32v6`): https://hub.docker.com/u/arm32v6/ (Raspberry Pi 1, Raspberry Pi Zero)
+	-	ARMv5 32-bit (`arm32v5`): https://hub.docker.com/u/arm32v5/
 
-If you are curious about how these images are built or have issues with them, please direct all comments to [issues on the `tianon/jenkins-groovy` repo](https://github.com/tianon/jenkins-groovy/issues) for now.
+As of 2017-09-12, these other architectures are included under the non-prefixed images via ["manifest lists"](https://docs.docker.com/registry/spec/manifest-v2-2/#manifest-list) (also known as ["indexes" in the OCI image specification](https://github.com/opencontainers/image-spec/blob/v1.0.0/image-index.md)), such that, for example, `docker run hello-world` should run as-is on all supported platforms.
+
+If you're curious about how these are built, head over to https://doi-janky.infosiftr.net/job/multiarch/ to see the build scaffolding.
+
+See the [multi-arch section](#multiple-architectures) below for recommendations in adding more architectures to an official image.
 
 ## Contributing to the standard library
 
@@ -112,7 +121,7 @@ All official images should provide a consistent interface. A beginning user shou
 
 #### Clarity
 
-Try to make the `Dockerfile` easy to understand/read. It may be tempting, for the sake of brevity, to put complicated initialization details into a standalone script and merely add a `RUN` command in the `Dockerfile`. However, this causes the resulting `Dockerfile` to be overly opaque, and such `Dockerfile`s are unlikely to pass review. Instead, it it recommended to put all the commands for initialization into the `Dockerfile` as appropriate `RUN` or `ENV` command combinations. To find good examples, look at the current official images.
+Try to make the `Dockerfile` easy to understand/read. It may be tempting, for the sake of brevity, to put complicated initialization details into a standalone script and merely add a `RUN` command in the `Dockerfile`. However, this causes the resulting `Dockerfile` to be overly opaque, and such `Dockerfile`s are unlikely to pass review. Instead, it is recommended to put all the commands for initialization into the `Dockerfile` as appropriate `RUN` or `ENV` command combinations. To find good examples, look at the current official images.
 
 Some examples at the time of writing:
 
@@ -122,9 +131,9 @@ Some examples at the time of writing:
 
 #### init
 
-Following the Docker guidelines it is highly recommended that the resulting image be just one concern per container; predominantly this means just one process per container, so there is no need for a full init system. There are two situations where an init-like process would be helpful for the container. The first being signal handling. If the process launched does not handle `SIGTERM` by exiting, it will not be killed since it is PID 1 in the container (see "NOTE" at the end of the [Foreground section](https://docs.docker.com/reference/run/#foreground) in the docker docs). The second situation would be zombie reaping. If the process spawns child processes and does not properly reap them it will lead to a full process table, which can prevent the whole system from spawning any new processes. For both of these concerns we recommend [tini](https://github.com/krallin/tini). It is incredibly small, has minimal external dependencies, fills each of these roles, and does only the necessary parts of reaping and signal forwarding.
+Following the Docker guidelines it is highly recommended that the resulting image be just one concern per container; predominantly this means just one process per container, so there is no need for a full init system. There are two situations where an init-like process would be helpful for the container. The first being signal handling. If the process launched does not handle `SIGTERM` by exiting, it will not be killed since it is PID 1 in the container (see "NOTE" at the end of the [Foreground section](https://docs.docker.com/engine/reference/run/#foreground) in the docker docs). The second situation would be zombie reaping. If the process spawns child processes and does not properly reap them it will lead to a full process table, which can prevent the whole system from spawning any new processes. For both of these concerns we recommend [tini](https://github.com/krallin/tini). It is incredibly small, has minimal external dependencies, fills each of these roles, and does only the necessary parts of reaping and signal forwarding.
 
-Here is a snippet of a Dockerfile to add in tini (be sure to use it in `CMD` or `ENTRYPOINT` as appropriate):
+Here is a snippet of a `Dockerfile` to add in tini (be sure to use it in `CMD` or `ENTRYPOINT` as appropriate):
 
 ```Dockerfile
 # grab tini for signal processing and zombie killing
@@ -156,7 +165,7 @@ This is one place that experience ends up trumping documentation for the path to
 
 ##### Image Build
 
-The `Dockerfile` should be written to help mitigate man-in-the-middle attacks during build: using https where possible; importing PGP keys with the full fingerprint in the Dockerfile to check package signing; embedding checksums directly in the `Dockerfile` if PGP signing is not provided. When importing PGP keys, we recommend using the [high-availability server pool](https://sks-keyservers.net/overview-of-pools.php#pool_ha) from sks-keyservers (`ha.pool.sks-keyservers.net`). Here are a few good and bad examples:
+The `Dockerfile` should be written to help mitigate man-in-the-middle attacks during build: using https where possible; importing PGP keys with the full fingerprint in the `Dockerfile` to check package signing; embedding checksums directly in the `Dockerfile` if PGP signing is not provided. When importing PGP keys, we recommend using the [high-availability server pool](https://sks-keyservers.net/overview-of-pools.php#pool_ha) from sks-keyservers (`ha.pool.sks-keyservers.net`). Here are a few good and bad examples:
 
 -	**Bad**: *download the file over http with no verification.*
 
@@ -172,7 +181,7 @@ The `Dockerfile` should be written to help mitigate man-in-the-middle attacks du
 	    # install
 	```
 
--	**Better**: *embed the checksum into the Dockerfile. It would be better to use https here too, if it is available.*
+-	**Better**: *embed the checksum into the `Dockerfile`. It would be better to use https here too, if it is available.*
 
 	```Dockerfile
 	ENV RUBY_DOWNLOAD_SHA256 5ffc0f317e429e6b29d4a98ac521c3ce65481bfd22a8cf845fa02a7b113d9b44
@@ -211,7 +220,57 @@ The `Dockerfile` should be written to help mitigate man-in-the-middle attacks du
 
 By default, Docker containers are executed with reduced privileges: whitelisted Linux capabilities, Control Groups, and a default Seccomp profile (1.10+ w/ host support). Software running in a container may require additional privileges in order to function correctly, and there are a number of command line options to customize container execution. See [`docker run` Reference](https://docs.docker.com/engine/reference/run/) and [Seccomp for Docker](https://docs.docker.com/engine/security/seccomp/) for reference.
 
-Official Repositories that require additional privileges should specify the minimal set of command line options for the software to function, and may still be rejected if this introduces significant portability or security issues. In general, `--privileged` is not allowed, but a combination of `--cap-add` and `--device` options may be acceptable. Additionally, `--volume` can be tricky as there are many host filesystem locations that introduce portability/security issues (i.e. X11 socket).
+Official Repositories that require additional privileges should specify the minimal set of command line options for the software to function, and may still be rejected if this introduces significant portability or security issues. In general, `--privileged` is not allowed, but a combination of `--cap-add` and `--device` options may be acceptable. Additionally, `--volume` can be tricky as there are many host filesystem locations that introduce portability/security issues (e.g. X11 socket).
+
+#### Multiple Architectures
+
+Each repo can specify multiple architectures for any and all tags. If no architecture is specified, images are built in Linux on `amd64` (aka x86-64). To specify more or different architectures, use the `Architectures` field (comma-delimited list, whitespace is trimmed). Valid architectures are found in [`oci-platform.go`](https://github.com/docker-library/official-images/blob/a7ad3081aa5f51584653073424217e461b72670a/bashbrew/go/vendor/src/github.com/docker-library/go-dockerlibrary/architecture/oci-platform.go#L14-L25):
+
+-	`amd64`
+-	`arm32v6`
+-	`arm32v7`
+-	`arm64v8`
+-	`i386`
+-	`ppc64le`
+-	`s390x`
+-	`windows-amd64`
+
+We strongly recommend that most images create a single `Dockerfile` per entry in the library file that can be used for multiple architectures. This means that each supported architecture will have the same `FROM` line (e.g. `FROM debian:jessie`). While official images are in the process of completing [image indexes](https://github.com/opencontainers/image-spec/blob/v1.0.0-rc6/image-index.md) to make this work naturally, the servers that build for non-amd64 architectures will pull the correct architecture-specific base and `docker tag` the base image to make the `FROM` work correctly. See [`golang`](https://github.com/docker-library/official-images/blob/master/library/golang), [`docker`](https://github.com/docker-library/official-images/blob/master/library/docker), [`haproxy`](https://github.com/docker-library/official-images/blob/master/library/haproxy), and [`php`](https://github.com/docker-library/official-images/blob/master/library/php) for examples of library files using one `Dockerfile` per entry and see their respective git repos for example `Dockerfile`s.
+
+For images that are `FROM scratch` like `debian` it will be necessary to have a different `Dockerfile` and build context in order to `ADD` architecture specific binaries. Since these images use the same `Tags`, they need to be in the same entry. Use the architecture specific fields for `GitRepo`, `GitFetch`, `GitCommit`, and `Directory`, which are the architecture concatenated with hyphen (`-`) and the field (e.g. `arm32v7-GitCommit`). Any architecture that does not have an architecture-specific field will use the default field (e.g. no `arm32v7-Directory` means `Directory` will be used for `arm32v7`). See the [`debian`](https://github.com/docker-library/official-images/blob/master/library/debian) or [`ubuntu`](https://github.com/docker-library/official-images/blob/master/library/ubuntu) files in the library for examples. The following is an example for [`hello-world`](https://github.com/docker-library/official-images/blob/master/library/hello-world):
+
+```
+Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
+             Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
+GitRepo: https://github.com/docker-library/hello-world.git
+GitCommit: 7d0ee592e4ed60e2da9d59331e16ecdcadc1ed87
+
+Tags: latest
+Architectures: amd64, arm32v5, arm32v7, arm64v8, ppc64le, s390x
+# all the same commit; easy for us to generate this way since they could be different
+amd64-GitCommit: 7d0ee592e4ed60e2da9d59331e16ecdcadc1ed87
+amd64-Directory: amd64/hello-world
+arm32v5-GitCommit: 7d0ee592e4ed60e2da9d59331e16ecdcadc1ed87
+arm32v5-Directory: arm32v5/hello-world
+arm32v7-GitCommit: 7d0ee592e4ed60e2da9d59331e16ecdcadc1ed87
+arm32v7-Directory: arm32v7/hello-world
+arm64v8-GitCommit: 7d0ee592e4ed60e2da9d59331e16ecdcadc1ed87
+arm64v8-Directory: arm64v8/hello-world
+ppc64le-GitCommit: 7d0ee592e4ed60e2da9d59331e16ecdcadc1ed87
+ppc64le-Directory: ppc64le/hello-world
+s390x-GitCommit: 7d0ee592e4ed60e2da9d59331e16ecdcadc1ed87
+s390x-Directory: s390x/hello-world
+
+Tags: nanoserver
+Architectures: windows-amd64
+# if there is only one architecture, you can use the unprefixed fields
+Directory: amd64/hello-world/nanoserver
+# or use the prefixed versions
+windows-amd64-GitCommit: 7d0ee592e4ed60e2da9d59331e16ecdcadc1ed87
+Constraints: nanoserver
+```
+
+See the [instruction format section](#instruction-format) for more information on the format of the library file.
 
 ### Commitment
 
@@ -241,9 +300,9 @@ As described above, `latest` is really "default", so the image that it is an ali
 
 The manifest file format is officially based on [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt), and as such should be familiar to folks who are already familiar with the "headers" of many popular internet protocols/formats such as HTTP or email.
 
-The primary additions are inspired by the way Debian commonly uses 2822 -- namely, lines starting with `#` are ignored and "paragraphs" (or "entries") are separated by a blank line.
+The primary additions are inspired by the way Debian commonly uses 2822 -- namely, lines starting with `#` are ignored and "entries" are separated by a blank line.
 
-The first entry is the "global" metadata for the image. The only required field in the global entry is `Maintainers`, whose value is comma-separated in the format of `Name <email> (@github)` or `Name (@github)`. Any field specified in the global entry will be the default for the rest of the entries/paragraphs and can be overridden in an individual paragraph.
+The first entry is the "global" metadata for the image. The only required field in the global entry is `Maintainers`, whose value is comma-separated in the format of `Name <email> (@github)` or `Name (@github)`. Any field specified in the global entry will be the default for the rest of the entries and can be overridden in an individual entry.
 
 	# this is a comment and will be ignored
 	Maintainers: John Smith <jsmith@example.com> (@example-jsmith),
@@ -274,37 +333,7 @@ The built image will be tagged as `<manifest-filename>:<tag>` (ie, `library/gola
 
 Optionally, if `Directory` is present, Bashbrew will look for the `Dockerfile` inside the specified subdirectory instead of at the root (and `Directory` will be used as the ["context" for the build](https://docs.docker.com/reference/builder/) instead of the top-level of the repository).
 
-#### Deprecated format
-
-This is the older, now-deprecated format for library manifest files. Its usage is discouraged (although it is still supported).
-
-	# maintainer: Your Name <your@email.com> (@github.name)
-	
-	# maintainer: John Smith <jsmith@example.com> (@example-jsmith)
-	# maintainer: Anne Smith <asmith@example.com> (@example-asmith)
-	
-	
-	<Tag>: <GitRepo>@<GitCommit>
-	
-	4.1.1: git://github.com/docker-library/wordpress@bbef6075afa043cbfe791b8de185105065c02c01
-	4.1: git://github.com/docker-library/wordpress@bbef6075afa043cbfe791b8de185105065c02c01
-	4: git://github.com/docker-library/wordpress@bbef6075afa043cbfe791b8de185105065c02c01
-	latest: git://github.com/docker-library/wordpress@bbef6075afa043cbfe791b8de185105065c02c01
-	
-	
-	<Tag>: <GitRepo>@<GitCommit> <Directory>
-	
-	2.6.17: git://github.com/docker-library/redis@062335e0a8d20cab2041f25dfff2fbaf58544471 2.6
-	2.6: git://github.com/docker-library/redis@062335e0a8d20cab2041f25dfff2fbaf58544471 2.6
-	
-	2.8.19: git://github.com/docker-library/redis@062335e0a8d20cab2041f25dfff2fbaf58544471 2.8
-	2.8: git://github.com/docker-library/redis@062335e0a8d20cab2041f25dfff2fbaf58544471 2.8
-	2: git://github.com/docker-library/redis@062335e0a8d20cab2041f25dfff2fbaf58544471 2.8
-	latest: git://github.com/docker-library/redis@062335e0a8d20cab2041f25dfff2fbaf58544471 2.8
-	
-	experimental: git://github.com/tianon/dockerfiles@90d86ad63c4a06b7d04d14ad830381b876183b3c debian/experimental
-
-Using Git tags instead of explicit Git commit references is supported for the deprecated format only, but is heavily discouraged. For example, if a Git tag is changed on the referenced repository to point to another commit, **the image will not be rebuilt**. Instead, either create a new tag (or reference an exact commit) and submit a pull request.
+See the [multi-arch section](#multiple-architectures) for details on how to specify a different `GitRepo`, `GitFetch`, `GitCommit`, or `Directory` for a specific architecture.
 
 ### Creating a new repository
 

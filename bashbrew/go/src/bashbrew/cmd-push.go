@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+	"os"
+	"time"
 
 	"github.com/codegangsta/cli"
 )
@@ -14,6 +16,7 @@ func cmdPush(c *cli.Context) error {
 
 	uniq := c.Bool("uniq")
 	namespace := c.String("namespace")
+	dryRun := c.Bool("dry-run")
 
 	if namespace == "" {
 		return fmt.Errorf(`"--namespace" is a required flag for "push"`)
@@ -31,10 +34,18 @@ func cmdPush(c *cli.Context) error {
 			}
 
 			for _, tag := range r.Tags(namespace, uniq, entry) {
-				fmt.Printf("Pushing %s\n", tag)
-				err = dockerPush(tag)
-				if err != nil {
-					return cli.NewMultiError(fmt.Errorf(`failed pushing %q`, tag), err)
+				created := dockerCreated(tag)
+				lastUpdated := fetchDockerHubTagMeta(tag).lastUpdatedTime()
+				if created.After(lastUpdated) {
+					fmt.Printf("Pushing %s\n", tag)
+					if !dryRun {
+						err = dockerPush(tag)
+						if err != nil {
+							return cli.NewMultiError(fmt.Errorf(`failed pushing %q`, tag), err)
+						}
+					}
+				} else {
+					fmt.Fprintf(os.Stderr, "skipping %s (created %s, last updated %s)\n", tag, created.Local().Format(time.RFC3339), lastUpdated.Local().Format(time.RFC3339))
 				}
 			}
 		}

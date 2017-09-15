@@ -99,11 +99,25 @@ for dockerImage in "$@"; do
 	#version="${tagVar%-*}"
 	variant="${tagVar##*-}"
 	
-	if [[ "$tagVar" == *onbuild* ]]; then
-		# "maven:onbuild-alpine" is still onbuild
-		# ONCE ONBUILD, ALWAYS ONBUILD
-		variant='onbuild'
-	fi
+	case "$tagVar" in
+		*onbuild*)
+			# "maven:onbuild-alpine" is still onbuild
+			# ONCE ONBUILD, ALWAYS ONBUILD
+			variant='onbuild'
+			;;
+		*fpm-alpine)
+			# lolPHP
+			variant='fpm'
+			;;
+		*alpine*)
+			# "alpine3.4", "alpine3.6", "nginx:alpine-perl", etc are still "alpine" variants
+			variant='alpine'
+			;;
+		slim-*|*-slim-*)
+			# "slim-jessie" is still "slim"
+			variant='slim'
+			;;
+	esac
 	
 	testRepo="$repo"
 	if [ -z "$keepNamespace" ]; then

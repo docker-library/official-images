@@ -1,0 +1,88 @@
+FROM golang:1.8-alpine
+
+RUN apk add --no-cache \
+		file \
+		gnupg \
+		libressl
+
+WORKDIR /usr/src/bashbrew
+ENV GOPATH /usr/src/bashbrew:/usr/src/bashbrew/vendor
+ENV CGO_ENABLED 0
+
+ENV BASHBREW_ARCHES \
+		amd64 \
+		arm32v5 \
+		arm32v6 \
+		arm32v7 \
+		arm64v8 \
+		darwin-amd64 \
+		i386 \
+		ppc64le \
+		s390x \
+		windows-amd64
+
+COPY .bashbrew-arch-to-goenv.sh /usr/local/bin/
+
+# https://github.com/estesp/manifest-tool/releases
+ENV MANIFEST_TOOL_VERSION 0.6.0
+# gpg: key 0F386284C03A1162: public key "Philip Estes <estesp@gmail.com>" imported
+#ENV MANIFEST_TOOL_GPG_KEY 27F3EA268A97867EAF0BD05C0F386284C03A1162
+# TODO consume Phil's releases again (once he fixes https://github.com/estesp/manifest-tool/issues/47 properly)
+
+COPY manifest-tool.patch ./
+
+RUN set -euxo pipefail; \
+	\
+	mkdir -p bin; \
+	\
+	mkdir -p manifest-tool/src/github.com/estesp/manifest-tool; \
+	wget -qO- "https://github.com/estesp/manifest-tool/archive/v${MANIFEST_TOOL_VERSION}.tar.gz" \
+		| tar -xz --strip-components=1 -C manifest-tool/src/github.com/estesp/manifest-tool; \
+	( cd manifest-tool/src/github.com/estesp/manifest-tool && patch -p1 ) < manifest-tool.patch; \
+	for bashbrewArch in $BASHBREW_ARCHES; do \
+		( \
+			goEnv="$(.bashbrew-arch-to-goenv.sh "$bashbrewArch")"; eval "$goEnv"; \
+			[ "$GOOS" = 'windows' ] && ext='.exe' || ext=; \
+			GOPATH="$PWD/manifest-tool" \
+				go build \
+					-a -v \
+					-ldflags '-s -w' \
+# see https://github.com/golang/go/issues/9737#issuecomment-276817652 (and following comments) -- installsuffix is necessary (for now) to keep ARM
+# can remove "$bashbrewArch" from "installsuffix" in Go 1.10+ (https://github.com/golang/go/commit/1b53f15ebb00dd158af674df410c7941abb2b933)
+					-tags netgo -installsuffix "netgo-$bashbrewArch" \
+					-o "$PWD/bin/manifest-tool-$bashbrewArch$ext" \
+					github.com/estesp/manifest-tool \
+			; \
+			ls -lAFh "bin/manifest-tool-$bashbrewArch$ext"; \
+			file "bin/manifest-tool-$bashbrewArch$ext"; \
+		) \
+	done; \
+	\
+	ls -l bin; \
+	file bin/*
+
+COPY go .
+
+RUN set -euxo pipefail; \
+	\
+	mkdir -p bin; \
+	\
+	for bashbrewArch in $BASHBREW_ARCHES; do \
+		( \
+			goEnv="$(.bashbrew-arch-to-goenv.sh "$bashbrewArch")"; eval "$goEnv"; \
+			[ "$GOOS" = 'windows' ] && ext='.exe' || ext=; \
+			\
+			go build \
+				-a -v \
+				-ldflags '-s -w' \
+	# see https://github.com/golang/go/issues/9737#issuecomment-276817652 (and following comments) -- installsuffix is necessary (for now) to keep ARM
+	# can remove "$bashbrewArch" from "installsuffix" in Go 1.10+ (https://github.com/golang/go/commit/1b53f15ebb00dd158af674df410c7941abb2b933)
+				-tags netgo -installsuffix "netgo-$bashbrewArch" \
+				-o "bin/bashbrew-$bashbrewArch$ext" \
+				./src/bashbrew \
+			; \
+		) \
+	done; \
+	\
+	ls -l bin; \
+	file bin/*

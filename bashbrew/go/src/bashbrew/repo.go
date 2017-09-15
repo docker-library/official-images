@@ -74,12 +74,26 @@ func (r Repo) EntryRepo(entry *manifest.Manifest2822Entry) *Repo {
 	}
 }
 
+var haveOutputSkippedMessage = map[string]bool{}
+
 func (r Repo) SkipConstraints(entry manifest.Manifest2822Entry) bool {
 	repoTag := r.RepoName + ":" + entry.Tags[0]
 
+	// TODO decide if "arch" and "constraints" should be handled separately (but probably not)
+	if !entry.HasArchitecture(arch) {
+		if !haveOutputSkippedMessage[repoTag] {
+			fmt.Fprintf(os.Stderr, "skipping %q (due to architecture %q; only %q supported)\n", repoTag, arch, entry.ArchitecturesString())
+			haveOutputSkippedMessage[repoTag] = true
+		}
+		return true
+	}
+
 	if len(entry.Constraints) == 0 {
 		if exclusiveConstraints {
-			fmt.Fprintf(os.Stderr, "skipping %q (due to exclusive constraints)\n", repoTag)
+			if !haveOutputSkippedMessage[repoTag] {
+				fmt.Fprintf(os.Stderr, "skipping %q (due to exclusive constraints)\n", repoTag)
+				haveOutputSkippedMessage[repoTag] = true
+			}
 		}
 		return exclusiveConstraints
 	}
@@ -111,7 +125,10 @@ NextConstraint:
 	}
 
 	if len(unsatisfactory) > 0 {
-		fmt.Fprintf(os.Stderr, "skipping %q (due to unsatisfactory constraints %q)\n", repoTag, unsatisfactory)
+		if !haveOutputSkippedMessage[repoTag] {
+			fmt.Fprintf(os.Stderr, "skipping %q (due to unsatisfactory constraints %q)\n", repoTag, unsatisfactory)
+			haveOutputSkippedMessage[repoTag] = true
+		}
 		return true
 	}
 
@@ -122,6 +139,7 @@ func (r Repo) Entries() []manifest.Manifest2822Entry {
 	if r.TagName == "" {
 		return r.Manifest.Entries
 	} else {
+		// TODO what if r.TagName isn't a single entry, but is a SharedTag ?
 		return []manifest.Manifest2822Entry{*r.Manifest.GetTag(r.TagName)}
 	}
 }

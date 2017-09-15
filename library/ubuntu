@@ -1,35 +1,46 @@
-# Maintained by Tianon as proxy for upstream's offical builds.
-
-Maintainers: Tianon Gravi <tianon@debian.org> (@tianon)
-GitRepo: https://github.com/tianon/docker-brew-ubuntu-core.git
-GitFetch: refs/heads/dist
+# Maintained by Tianon as proxy for upstream's official builds.
 
 # see https://partner-images.canonical.com/core/
 # see also https://wiki.ubuntu.com/Releases#Current
 
-# commits: (master..dist)
-#  - 188bcce Update tarballs
-#    - `ubuntu:precise`: 20160923.1
-#    - `ubuntu:trusty`: 20161006
-#    - `ubuntu:xenial`: 20161010
-#    - `ubuntu:yakkety`: 20161013
+Maintainers: Tianon Gravi <tianon@debian.org> (@tianon)
+GitRepo: https://github.com/tianon/docker-brew-ubuntu-core.git
+GitCommit: ea95f62628559b4dc13b179cce87f96b83d44238
+# https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-amd64
+amd64-GitFetch: refs/heads/dist-amd64
+amd64-GitCommit: fa1bfe443b3431269b71b27244a3c2bab9c2a019
+# https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-arm32v7
+arm32v7-GitFetch: refs/heads/dist-arm32v7
+arm32v7-GitCommit: 8578c84a82d602ac9c8a99f3ee464ccde754059e
+# https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-arm64v8
+arm64v8-GitFetch: refs/heads/dist-arm64v8
+arm64v8-GitCommit: b2473b1da52cd87ca809035c6b5b06b258360b33
+# https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-i386
+i386-GitFetch: refs/heads/dist-i386
+i386-GitCommit: 194b1d3d8bd9409080327e7038c72705b1050fb8
+# https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-ppc64le
+ppc64le-GitFetch: refs/heads/dist-ppc64le
+ppc64le-GitCommit: a61d3ae54bf42f180c78bc7c1269d1ed9a72ec4b
+# https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-s390x
+s390x-GitFetch: refs/heads/dist-s390x
+s390x-GitCommit: 3ca5f0257c68cb3d884b9e295a6cdaf9ad71dc1e
 
-# 20160923.1
-Tags: 12.04.5, 12.04, precise-20160923.1, precise
-GitCommit: 188bcceb999c0c465b3053efefd4e1a03d3fc47e
-Directory: precise
+# 20170826 (artful)
+Tags: 17.10, artful-20170826, artful, devel
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+Directory: artful
 
-# 20161006
-Tags: 14.04.5, 14.04, trusty-20161006, trusty
-GitCommit: 188bcceb999c0c465b3053efefd4e1a03d3fc47e
+# 20170817 (trusty)
+Tags: 14.04, trusty-20170817, trusty
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le
 Directory: trusty
 
-# 20161010
-Tags: 16.04, xenial-20161010, xenial, latest
-GitCommit: 188bcceb999c0c465b3053efefd4e1a03d3fc47e
+# 20170802 (xenial)
+Tags: 16.04, xenial-20170802, xenial, latest
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: xenial
 
-# 20161013
-Tags: 16.10, yakkety-20161013, yakkety, devel
-GitCommit: 188bcceb999c0c465b3053efefd4e1a03d3fc47e
-Directory: yakkety
+# 20170913 (zesty)
+Tags: 17.04, zesty-20170913, zesty, rolling
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+Directory: zesty

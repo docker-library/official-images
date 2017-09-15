@@ -1,58 +1,65 @@
-# this file is generated via https://github.com/docker-library/golang/blob/389d5dcc78e78b700b5485d4608b9f094b2e485b/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/golang/blob/e0ac3d629dc06dcf25ba6724f7126a79723a74af/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit),
              Johan Euphrosine <proppy@google.com> (@proppy)
 GitRepo: https://github.com/docker-library/golang.git
 
-Tags: 1.6.3, 1.6
-GitCommit: 85df9970e9548f38248d36f6f4341e2aea128515
-Directory: 1.6
+Tags: 1.9.0-stretch, 1.9-stretch, 1-stretch, stretch, 1.9.0, 1.9, 1, latest
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 94e49ca93c5bbf172e462cea8872c77f9bc08c10
+Directory: 1.9/stretch
 
-Tags: 1.6.3-onbuild, 1.6-onbuild
-GitCommit: ce284e14cdee73fbaa8fb680011a812f272eae2e
-Directory: 1.6/onbuild
+Tags: 1.9.0-alpine3.6, 1.9-alpine3.6, 1-alpine3.6, alpine3.6, 1.9.0-alpine, 1.9-alpine, 1-alpine, alpine
+Architectures: amd64
+GitCommit: 94e49ca93c5bbf172e462cea8872c77f9bc08c10
+Directory: 1.9/alpine3.6
 
-Tags: 1.6.3-wheezy, 1.6-wheezy
-GitCommit: 85df9970e9548f38248d36f6f4341e2aea128515
-Directory: 1.6/wheezy
-
-Tags: 1.6.3-alpine, 1.6-alpine
-GitCommit: 9f666dc2f4f51df564613f787d28b3a2353243e0
-Directory: 1.6/alpine
-
-Tags: 1.6.3-windowsservercore, 1.6-windowsservercore
-GitCommit: cba64e4f78b2ef64b2938caaa33d699cbca4f9a4
-Directory: 1.6/windows/windowsservercore
+Tags: 1.9.0-windowsservercore, 1.9-windowsservercore, 1-windowsservercore, windowsservercore
+Architectures: windows-amd64
+GitCommit: f34c645c8402bd8f6b70f530545ad7845dfefbcc
+Directory: 1.9/windows/windowsservercore
 Constraints: windowsservercore
 
-Tags: 1.6.3-nanoserver, 1.6-nanoserver
-GitCommit: cba64e4f78b2ef64b2938caaa33d699cbca4f9a4
-Directory: 1.6/windows/nanoserver
+Tags: 1.9.0-nanoserver, 1.9-nanoserver, 1-nanoserver, nanoserver
+Architectures: windows-amd64
+GitCommit: f34c645c8402bd8f6b70f530545ad7845dfefbcc
+Directory: 1.9/windows/nanoserver
 Constraints: nanoserver
 
-Tags: 1.7.3, 1.7, 1, latest
-GitCommit: 4fd5df86eea53623b1009b3621b40a97f9f359e5
-Directory: 1.7
+Tags: 1.8.3-stretch, 1.8-stretch
+Architectures: amd64, arm32v7, i386, ppc64le, s390x
+GitCommit: 94e49ca93c5bbf172e462cea8872c77f9bc08c10
+Directory: 1.8/stretch
 
-Tags: 1.7.3-onbuild, 1.7-onbuild, 1-onbuild, onbuild
-GitCommit: 2372c8cafe9cc958bade33ad0b8b54de8869c21f
-Directory: 1.7/onbuild
+Tags: 1.8.3-jessie, 1.8-jessie, 1.8.3, 1.8
+Architectures: amd64, arm32v7, i386, ppc64le, s390x
+GitCommit: 94e49ca93c5bbf172e462cea8872c77f9bc08c10
+Directory: 1.8/jessie
 
-Tags: 1.7.3-wheezy, 1.7-wheezy, 1-wheezy, wheezy
-GitCommit: 4fd5df86eea53623b1009b3621b40a97f9f359e5
-Directory: 1.7/wheezy
+Tags: 1.8.3-alpine3.6, 1.8-alpine3.6
+Architectures: amd64
+GitCommit: 94e49ca93c5bbf172e462cea8872c77f9bc08c10
+Directory: 1.8/alpine3.6
 
-Tags: 1.7.3-alpine, 1.7-alpine, 1-alpine, alpine
-GitCommit: 4fd5df86eea53623b1009b3621b40a97f9f359e5
-Directory: 1.7/alpine
+Tags: 1.8.3-alpine3.5, 1.8-alpine3.5, 1.8.3-alpine, 1.8-alpine
+Architectures: amd64
+GitCommit: 94e49ca93c5bbf172e462cea8872c77f9bc08c10
+Directory: 1.8/alpine3.5
 
-Tags: 1.7.3-windowsservercore, 1.7-windowsservercore, 1-windowsservercore, windowsservercore
-GitCommit: 4fd5df86eea53623b1009b3621b40a97f9f359e5
-Directory: 1.7/windows/windowsservercore
+Tags: 1.8.3-onbuild, 1.8-onbuild
+Architectures: amd64, arm32v7, i386, ppc64le, s390x
+GitCommit: 132cd70768e3bc269902e4c7b579203f66dc9f64
+Directory: 1.8/onbuild
+
+Tags: 1.8.3-windowsservercore, 1.8-windowsservercore
+Architectures: windows-amd64
+GitCommit: 64b88dc3e9d83e71eafc000fed1f0d5e289b3e65
+Directory: 1.8/windows/windowsservercore
 Constraints: windowsservercore
 
-Tags: 1.7.3-nanoserver, 1.7-nanoserver, 1-nanoserver, nanoserver
-GitCommit: 4fd5df86eea53623b1009b3621b40a97f9f359e5
-Directory: 1.7/windows/nanoserver
+Tags: 1.8.3-nanoserver, 1.8-nanoserver
+Architectures: windows-amd64
+GitCommit: 64b88dc3e9d83e71eafc000fed1f0d5e289b3e65
+Directory: 1.8/windows/nanoserver
 Constraints: nanoserver

@@ -1,126 +1,152 @@
+# tarballs built by debuerreotype
+# see https://github.com/debuerreotype/debuerreotype
+
 Maintainers: Tianon Gravi <tianon@debian.org> (@tianon),
              Paul Tagliamonte <paultag@debian.org> (@paultag)
-GitRepo: https://github.com/tianon/docker-brew-debian.git
+GitRepo: https://github.com/debuerreotype/docker-debian-artifacts.git
+GitCommit: fa5e408fa2e9a74c025f21cbfa2449ea349afd26
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-amd64
+amd64-GitFetch: refs/heads/dist-amd64
+amd64-GitCommit: 97dc072ae1e6c66c1ccc71ead334ce5d5fc201f0
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm32v5
+arm32v5-GitFetch: refs/heads/dist-arm32v5
+arm32v5-GitCommit: 38d2cf181e221d0a6f711141f12f8c736c6b3a42
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm32v7
+arm32v7-GitFetch: refs/heads/dist-arm32v7
+arm32v7-GitCommit: f2d531efa61c7a75a8d913716941d60177721359
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm64v8
+arm64v8-GitFetch: refs/heads/dist-arm64v8
+arm64v8-GitCommit: b8bcc93c8255874ce3235a4fa325af3b17036cb8
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-i386
+i386-GitFetch: refs/heads/dist-i386
+i386-GitCommit: e2e165b29d40fc2fa39ecbe78839ff0142caa4ec
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-ppc64le
+ppc64le-GitFetch: refs/heads/dist-ppc64le
+ppc64le-GitCommit: 4b4b334892988ce15172094b740911b81de851e9
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-s390x
+s390x-GitFetch: refs/heads/dist-s390x
+s390x-GitCommit: 4f46f250ac27924935c2a5db431cbef2f00714dd
 
-# commits: (master..dist-stable)
-#  - 2c836bc 2016-11-04 debootstraps
+# buster -- Debian x.y Testing distribution - Not Released
+Tags: buster, buster-20170907
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+Directory: buster
 
-# commits: (master..dist-unstable)
-#  - 9b1dd4b 2016-11-04 debootstraps
+Tags: buster-slim
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+Directory: buster/slim
 
-# commits: (master..dist-oldstable)
-#  - 1626bb6 2016-11-04 debootstraps
+# experimental -- Experimental packages - not released; use at your own risk.
+Tags: experimental, experimental-20170907
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+Directory: experimental
 
-Tags: 8.6, 8, jessie, latest
-GitFetch: refs/heads/dist-stable
-GitCommit: 2c836bc53feb12f70a07dacaa6256d4d66624f38
+# jessie -- Debian 8.9 Released 22 July 2017
+Tags: jessie, jessie-20170907, 8.9, 8
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: jessie
 
-Tags: jessie-slim
-GitFetch: refs/heads/dist-stable
-GitCommit: 2c836bc53feb12f70a07dacaa6256d4d66624f38
-Directory: jessie/slim
-
 Tags: jessie-backports
-GitFetch: refs/heads/dist-stable
-GitCommit: 2c836bc53feb12f70a07dacaa6256d4d66624f38
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: jessie/backports
 
-Tags: oldstable
-GitFetch: refs/heads/dist-oldstable
-GitCommit: 1626bb6698f1cab6e7529a4238717270699a8246
+Tags: jessie-slim
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+Directory: jessie/slim
+
+# oldoldstable -- Debian 7.11 Released 04 June 2016
+Tags: oldoldstable, oldoldstable-20170907
+Architectures: amd64, arm32v5, arm32v7, i386
+Directory: oldoldstable
+
+Tags: oldoldstable-backports
+Architectures: amd64, arm32v5, arm32v7, i386
+Directory: oldoldstable/backports
+
+Tags: oldoldstable-slim
+Architectures: amd64, arm32v5, arm32v7, i386
+Directory: oldoldstable/slim
+
+# oldstable -- Debian 8.9 Released 22 July 2017
+Tags: oldstable, oldstable-20170907
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: oldstable
 
-Tags: oldstable-slim
-GitFetch: refs/heads/dist-oldstable
-GitCommit: 1626bb6698f1cab6e7529a4238717270699a8246
-Directory: oldstable/slim
-
 Tags: oldstable-backports
-GitFetch: refs/heads/dist-oldstable
-GitCommit: 1626bb6698f1cab6e7529a4238717270699a8246
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: oldstable/backports
 
-Tags: sid
-GitFetch: refs/heads/dist-unstable
-GitCommit: 9b1dd4b1594b8df02f7caa739e84b187edaab404
+Tags: oldstable-slim
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+Directory: oldstable/slim
+
+# rc-buggy -- Experimental packages - not released; use at your own risk.
+Tags: rc-buggy, rc-buggy-20170907
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+Directory: rc-buggy
+
+# sid -- Debian x.y Unstable - Not Released
+Tags: sid, sid-20170907
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: sid
 
 Tags: sid-slim
-GitFetch: refs/heads/dist-unstable
-GitCommit: 9b1dd4b1594b8df02f7caa739e84b187edaab404
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: sid/slim
 
-Tags: stable
-GitFetch: refs/heads/dist-stable
-GitCommit: 2c836bc53feb12f70a07dacaa6256d4d66624f38
+# stable -- Debian 9.1 Released 22 July 2017
+Tags: stable, stable-20170907
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: stable
 
-Tags: stable-slim
-GitFetch: refs/heads/dist-stable
-GitCommit: 2c836bc53feb12f70a07dacaa6256d4d66624f38
-Directory: stable/slim
-
 Tags: stable-backports
-GitFetch: refs/heads/dist-stable
-GitCommit: 2c836bc53feb12f70a07dacaa6256d4d66624f38
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: stable/backports
 
-Tags: stretch
-GitFetch: refs/heads/dist-unstable
-GitCommit: 9b1dd4b1594b8df02f7caa739e84b187edaab404
+Tags: stable-slim
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+Directory: stable/slim
+
+# stretch -- Debian 9.1 Released 22 July 2017
+Tags: stretch, stretch-20170907, 9.1, 9, latest
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: stretch
 
+Tags: stretch-backports
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+Directory: stretch/backports
+
 Tags: stretch-slim
-GitFetch: refs/heads/dist-unstable
-GitCommit: 9b1dd4b1594b8df02f7caa739e84b187edaab404
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: stretch/slim
 
-Tags: testing
-GitFetch: refs/heads/dist-unstable
-GitCommit: 9b1dd4b1594b8df02f7caa739e84b187edaab404
+# testing -- Debian x.y Testing distribution - Not Released
+Tags: testing, testing-20170907
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: testing
 
 Tags: testing-slim
-GitFetch: refs/heads/dist-unstable
-GitCommit: 9b1dd4b1594b8df02f7caa739e84b187edaab404
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: testing/slim
 
-Tags: unstable
-GitFetch: refs/heads/dist-unstable
-GitCommit: 9b1dd4b1594b8df02f7caa739e84b187edaab404
+# unstable -- Debian x.y Unstable - Not Released
+Tags: unstable, unstable-20170907
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: unstable
 
 Tags: unstable-slim
-GitFetch: refs/heads/dist-unstable
-GitCommit: 9b1dd4b1594b8df02f7caa739e84b187edaab404
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: unstable/slim
 
-Tags: 7.11, 7, wheezy
-GitFetch: refs/heads/dist-oldstable
-GitCommit: 1626bb6698f1cab6e7529a4238717270699a8246
+# wheezy -- Debian 7.11 Released 04 June 2016
+Tags: wheezy, wheezy-20170907, 7.11, 7
+Architectures: amd64, arm32v5, arm32v7, i386
 Directory: wheezy
 
-Tags: wheezy-slim
-GitFetch: refs/heads/dist-oldstable
-GitCommit: 1626bb6698f1cab6e7529a4238717270699a8246
-Directory: wheezy/slim
-
 Tags: wheezy-backports
-GitFetch: refs/heads/dist-oldstable
-GitCommit: 1626bb6698f1cab6e7529a4238717270699a8246
+Architectures: amd64, arm32v5, arm32v7, i386
 Directory: wheezy/backports
 
-# sid + rc-buggy
-Tags: rc-buggy
-GitRepo: https://github.com/tianon/dockerfiles.git
-GitFetch: refs/heads/master
-GitCommit: 22a998f815d55217afa0075411b810b8889ceac1
-Directory: debian/rc-buggy
-
-# unstable + experimental
-Tags: experimental
-GitRepo: https://github.com/tianon/dockerfiles.git
-GitFetch: refs/heads/master
-GitCommit: 22a998f815d55217afa0075411b810b8889ceac1
-Directory: debian/experimental
+Tags: wheezy-slim
+Architectures: amd64, arm32v5, arm32v7, i386
+Directory: wheezy/slim

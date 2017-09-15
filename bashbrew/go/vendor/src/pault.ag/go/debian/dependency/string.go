@@ -31,7 +31,7 @@ func (a Arch) MarshalControl() (string, error) {
 func (a Arch) String() string {
 	/* ABI-OS-CPU -- gnu-linux-amd64 */
 	els := []string{}
-	if a.ABI != "any" && a.ABI != "all" && a.ABI != "gnu" {
+	if a.ABI != "any" && a.ABI != "all" && a.ABI != "gnu" && a.ABI != "" {
 		els = append(els, a.ABI)
 	}
 

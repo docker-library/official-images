@@ -153,36 +153,52 @@ files=( $(bashbrew list --repos --uniq --build-order "${files[@]}") )
 unset IFS
 
 echo 'Build test of' '#'"$pull"';' "$commit" '(`'"$(join '`, `' "${files[@]}")"'`):'
-failedBuild=()
-failedTests=()
+declare -A failedBuild=() failedTests=()
 for img in "${files[@]}"; do
 	IFS=$'\n'
-	uniqImgs=( $(bashbrew list --uniq "$img") )
+	uniqImgs=( $(bashbrew list --uniq --build-order "$img") )
 	unset IFS
 
 	echo
 	echo '```console'
 	for uniqImg in "${uniqImgs[@]}"; do
+		imgRepo="${uniqImg%%:*}"
 		echo
 		echo '$ bashbrew build' "$uniqImg"
 		if bashbrew build --pull=missing "$uniqImg"; then
 			echo
 			echo '$ test/run.sh' "$uniqImg"
 			if ! ./test/run.sh "$uniqImg"; then
-				failedTests+=( "$uniqImg" )
+				failedTests[$imgRepo]+=" $uniqImg"
 			fi
 		else
-			failedBuild+=( "$uniqImg" )
+			failedBuild[$imgRepo]+=" $uniqImg"
 		fi
 		echo
 	done
 	echo '```'
 done
+echo
 if [ "${#failedBuild[@]}" -gt 0 ]; then
+	echo 'The following images failed to build:'
 	echo
-	echo 'The following images failed to build:' "${failedBuild[@]}"
+	for repo in "${!failedBuild[@]}"; do
+		echo '- `'"$repo"'`:'
+		for img in ${failedBuild[$repo]}; do
+			echo '  - `'"$img"'`'
+		done
+	done
+	echo
 fi
 if [ "${#failedTests[@]}" -gt 0 ]; then
 	echo
-	echo 'The following images failed at least one test:' "${failedTests[@]}"
+	echo 'The following images failed at least one test:'
+	echo
+	for repo in "${!failedTests[@]}"; do
+		echo '- `'"$repo"'`:'
+		for img in ${failedTests[$repo]}; do
+			echo '  - `'"$img"'`'
+		done
+	done
+	echo
 fi

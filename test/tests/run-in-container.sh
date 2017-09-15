@@ -1,8 +1,29 @@
 #!/bin/bash
-set -e
+set -eo pipefail
 
 # NOT INTENDED TO BE USED AS A TEST "run.sh" DIRECTLY
 # SEE OTHER "run-*-in-container.sh" SCRIPTS FOR USAGE
+
+# arguments to docker
+args=()
+opts="$(getopt -o '+' --long 'docker-arg:' -- "$@")"
+eval set -- "$opts"
+
+while true; do
+	flag="$1"
+	shift
+	case "$flag" in
+		--docker-arg) args+=( "$1" ) && shift ;;
+		--) break ;;
+		*)
+			{
+				echo "error: unknown flag: $flag"
+				#usage
+			} >&2
+			exit 1
+			;;
+	esac
+done
 
 testDir="$1"
 shift
@@ -29,14 +50,14 @@ WORKDIR $workdir
 ENTRYPOINT ["$entrypoint"]
 EOD
 
-args=( --rm )
+args+=( --rm )
 
 # there is strong potential for nokogiri+overlayfs failure
 # see https://github.com/docker-library/ruby/issues/55
 gemHome="$(docker inspect -f '{{range .Config.Env}}{{println .}}{{end}}' "$newImage" | awk -F '=' '$1 == "GEM_HOME" { print $2; exit }')"
 if [ "$gemHome" ]; then
 	# must be a Ruby image
-	driver="$(docker info | awk -F ': ' '$1 == "Storage Driver" { print $2; exit }')"
+	driver="$(docker info | awk -F ': ' '$1 == "Storage Driver" { print $2 }')"
 	if [ "$driver" = 'overlay' ]; then
 		# let's add a volume (_not_ a bind mount) on GEM_HOME to work around nokogiri+overlayfs issues
 		args+=( -v "$gemHome" )

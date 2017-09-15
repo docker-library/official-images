@@ -15,6 +15,11 @@ func cmdParents(c *cli.Context) error {
 	return cmdFamily(true, c)
 }
 
+type topsortDepthNodes struct {
+	depth int
+	nodes []*topsort.Node
+}
+
 func cmdFamily(parents bool, c *cli.Context) error {
 	depsRepos, err := repos(c.Bool("all"), c.Args()...)
 	if err != nil {
@@ -23,6 +28,7 @@ func cmdFamily(parents bool, c *cli.Context) error {
 
 	uniq := c.Bool("uniq")
 	applyConstraints := c.Bool("apply-constraints")
+	depth := c.Int("depth")
 
 	allRepos, err := repos(true)
 	if err != nil {
@@ -40,6 +46,10 @@ func cmdFamily(parents bool, c *cli.Context) error {
 		}
 
 		for _, entry := range r.Entries() {
+			if applyConstraints && r.SkipConstraints(entry) {
+				continue
+			}
+
 			for _, tag := range r.Tags("", false, entry) {
 				network.AddNode(tag, entry)
 			}
@@ -53,6 +63,10 @@ func cmdFamily(parents bool, c *cli.Context) error {
 			return cli.NewMultiError(fmt.Errorf(`failed fetching repo %q`, repo), err)
 		}
 		for _, entry := range r.Entries() {
+			if applyConstraints && r.SkipConstraints(entry) {
+				continue
+			}
+
 			from, err := r.DockerFrom(&entry)
 			if err != nil {
 				return cli.NewMultiError(fmt.Errorf(`failed fetching/scraping FROM for %q (tags %q)`, r.RepoName, entry.TagsString()), err)
@@ -77,24 +91,41 @@ func cmdFamily(parents bool, c *cli.Context) error {
 			}
 
 			for _, tag := range r.Tags("", uniq, entry) {
-				nodes := []*topsort.Node{}
+				nodes := []topsortDepthNodes{}
 				if parents {
-					nodes = append(nodes, network.Get(tag).InboundEdges...)
+					nodes = append(nodes, topsortDepthNodes{
+						depth: 1,
+						nodes: network.Get(tag).InboundEdges,
+					})
 				} else {
-					nodes = append(nodes, network.Get(tag).OutboundEdges...)
+					nodes = append(nodes, topsortDepthNodes{
+						depth: 1,
+						nodes: network.Get(tag).OutboundEdges,
+					})
 				}
 				for len(nodes) > 0 {
-					node := nodes[0]
+					depthNodes := nodes[0]
 					nodes = nodes[1:]
-					if seen[node] {
+					if depth > 0 && depthNodes.depth > depth {
 						continue
 					}
-					seen[node] = true
-					fmt.Printf("%s\n", node.Name)
-					if parents {
-						nodes = append(nodes, node.InboundEdges...)
-					} else {
-						nodes = append(nodes, node.OutboundEdges...)
+					for _, node := range depthNodes.nodes {
+						if seen[node] {
+							continue
+						}
+						seen[node] = true
+						fmt.Printf("%s\n", node.Name)
+						if parents {
+							nodes = append(nodes, topsortDepthNodes{
+								depth: depthNodes.depth + 1,
+								nodes: node.InboundEdges,
+							})
+						} else {
+							nodes = append(nodes, topsortDepthNodes{
+								depth: depthNodes.depth + 1,
+								nodes: node.OutboundEdges,
+							})
+						}
 					}
 				}
 			}

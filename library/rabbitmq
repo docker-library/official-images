@@ -1,12 +1,25 @@
-# this file is generated via https://github.com/docker-library/rabbitmq/blob/6d3777cae4ac310b4801b954413692ee4d853927/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/rabbitmq/blob/b3f8989253d8c92e8462015eecd90f39d932c051/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/rabbitmq.git
 
-Tags: 3.6.5, 3.6, 3, latest
-GitCommit: 29121864d4892b2481706df023a53e31fececd02
+Tags: 3.6.12, 3.6, 3, latest
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: b2eba70a1a31e11bfc644e626a34edf9920fbbcb
+Directory: 3.6/debian
 
-Tags: 3.6.5-management, 3.6-management, 3-management, management
-GitCommit: dc712681dcaeadb0371be66be5e96563be364e5d
-Directory: management
+Tags: 3.6.12-management, 3.6-management, 3-management, management
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 79277042564875d55e4b05a60c65b6eb46651a94
+Directory: 3.6/debian/management
+
+Tags: 3.6.12-alpine, 3.6-alpine, 3-alpine, alpine
+Architectures: amd64
+GitCommit: ba7ea670b5c084417d1f03cb07012314ba51c57a
+Directory: 3.6/alpine
+
+Tags: 3.6.12-management-alpine, 3.6-management-alpine, 3-management-alpine, management-alpine
+Architectures: amd64
+GitCommit: 79277042564875d55e4b05a60c65b6eb46651a94
+Directory: 3.6/alpine/management

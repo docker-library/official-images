@@ -1,95 +1,25 @@
-# maintainer: Jo Shields <jo.shields@xamarin.com> (@directhex)
+# this file is generated via https://github.com/mono/docker/blob/master/generate-stackbrew-library.sh
 
-3.10.0: git://github.com/mono/docker@915b71717dae5448dd2cceeeca084a0690aed8d0 3.10.0
-3.10: git://github.com/mono/docker@915b71717dae5448dd2cceeeca084a0690aed8d0 3.10.0
+Maintainers: Jo Shields <jo.shields@xamarin.com> (@directhex),
+             Alexander Köplinger <alkpli@microsoft.com> (@akoeplinger)
+GitRepo: https://github.com/mono/docker.git
 
-3.10.0-onbuild: git://github.com/mono/docker@66226b17125b72685c2022e4fecaee2716b0fb3a 3.10.0/onbuild
-3.10-onbuild: git://github.com/mono/docker@66226b17125b72685c2022e4fecaee2716b0fb3a 3.10.0/onbuild
+Tags: 5.2.0.215, 5.2.0, 5.2, 5, latest
+Architectures: amd64, i386, arm32v7, arm64v8
+GitCommit: c895836e0e8cb7ee0d8124f360d2febcf376019d
+Directory: 5.2.0.215
 
-3.12.1: git://github.com/mono/docker@810b0cd85839b4b62706935a804fee63d2eb3285 3.12.1
-3.12.0: git://github.com/mono/docker@810b0cd85839b4b62706935a804fee63d2eb3285 3.12.1
-3.12: git://github.com/mono/docker@810b0cd85839b4b62706935a804fee63d2eb3285 3.12.1
-3: git://github.com/mono/docker@810b0cd85839b4b62706935a804fee63d2eb3285 3.12.1
+Tags: 5.2.0.215-slim, 5.2.0-slim, 5.2-slim, 5-slim, slim
+Architectures: amd64, i386, arm32v7, arm64v8
+GitCommit: c895836e0e8cb7ee0d8124f360d2febcf376019d
+Directory: 5.2.0.215/slim
 
-3.12.1-onbuild: git://github.com/mono/docker@39c80bc024a4797c119c895fda70024fbc14d5b9 3.12.1/onbuild
-3.12.0-onbuild: git://github.com/mono/docker@39c80bc024a4797c119c895fda70024fbc14d5b9 3.12.1/onbuild
-3.12-onbuild: git://github.com/mono/docker@39c80bc024a4797c119c895fda70024fbc14d5b9 3.12.1/onbuild
-3-onbuild: git://github.com/mono/docker@39c80bc024a4797c119c895fda70024fbc14d5b9 3.12.1/onbuild
+Tags: 5.0.1.1, 5.0.1, 5.0
+Architectures: amd64, i386, arm32v7, arm64v8
+GitCommit: 39b989ea0ef3e787fb75410521217cb7cb7df05e
+Directory: 5.0.1.1
 
-3.8.0: git://github.com/mono/docker@915b71717dae5448dd2cceeeca084a0690aed8d0 3.8.0
-3.8: git://github.com/mono/docker@915b71717dae5448dd2cceeeca084a0690aed8d0 3.8.0
-
-3.8.0-onbuild: git://github.com/mono/docker@66226b17125b72685c2022e4fecaee2716b0fb3a 3.8.0/onbuild
-3.8-onbuild: git://github.com/mono/docker@66226b17125b72685c2022e4fecaee2716b0fb3a 3.8.0/onbuild
-
-4.0.5.1: git://github.com/mono/docker@810b0cd85839b4b62706935a804fee63d2eb3285 4.0.5.1
-4.0.5: git://github.com/mono/docker@810b0cd85839b4b62706935a804fee63d2eb3285 4.0.5.1
-4.0: git://github.com/mono/docker@810b0cd85839b4b62706935a804fee63d2eb3285 4.0.5.1
-
-4.0.5.1-onbuild: git://github.com/mono/docker@39c80bc024a4797c119c895fda70024fbc14d5b9 4.0.5.1/onbuild
-4.0.5-onbuild: git://github.com/mono/docker@39c80bc024a4797c119c895fda70024fbc14d5b9 4.0.5.1/onbuild
-4.0-onbuild: git://github.com/mono/docker@39c80bc024a4797c119c895fda70024fbc14d5b9 4.0.5.1/onbuild
-
-4.2.1.102: git://github.com/mono/docker@39c80bc024a4797c119c895fda70024fbc14d5b9 4.2.1.102
-4.2.1: git://github.com/mono/docker@39c80bc024a4797c119c895fda70024fbc14d5b9 4.2.1.102
-
-4.2.1.102-onbuild: git://github.com/mono/docker@39c80bc024a4797c119c895fda70024fbc14d5b9 4.2.1.102/onbuild
-4.2.1-onbuild: git://github.com/mono/docker@39c80bc024a4797c119c895fda70024fbc14d5b9 4.2.1.102/onbuild
-
-4.2.2.30: git://github.com/mono/docker@d1aafcdae56ae9ceaf013294d3c74c4183a80281 4.2.2.30
-4.2.2: git://github.com/mono/docker@d1aafcdae56ae9ceaf013294d3c74c4183a80281 4.2.2.30
-
-4.2.2.30-onbuild: git://github.com/mono/docker@d1aafcdae56ae9ceaf013294d3c74c4183a80281 4.2.2.30/onbuild
-4.2.2-onbuild: git://github.com/mono/docker@d1aafcdae56ae9ceaf013294d3c74c4183a80281 4.2.2.30/onbuild
-
-4.2.3.4: git://github.com/mono/docker@38858eb4bcdfc45e448ce8aae8b38148578f0f94 4.2.3.4
-4.2.3: git://github.com/mono/docker@38858eb4bcdfc45e448ce8aae8b38148578f0f94 4.2.3.4
-
-4.2.3.4-onbuild: git://github.com/mono/docker@38858eb4bcdfc45e448ce8aae8b38148578f0f94 4.2.3.4/onbuild
-4.2.3-onbuild: git://github.com/mono/docker@38858eb4bcdfc45e448ce8aae8b38148578f0f94 4.2.3.4/onbuild
-
-4.2.4.4: git://github.com/mono/docker@763e13adbe21d4f82aae1caa066a035bd8c6d888 4.2.4.4
-4.2.4: git://github.com/mono/docker@763e13adbe21d4f82aae1caa066a035bd8c6d888 4.2.4.4
-4.2: git://github.com/mono/docker@763e13adbe21d4f82aae1caa066a035bd8c6d888 4.2.4.4
-
-4.2.4.4-onbuild: git://github.com/mono/docker@763e13adbe21d4f82aae1caa066a035bd8c6d888 4.2.4.4/onbuild
-4.2.4-onbuild: git://github.com/mono/docker@763e13adbe21d4f82aae1caa066a035bd8c6d888 4.2.4.4/onbuild
-4.2-onbuild: git://github.com/mono/docker@763e13adbe21d4f82aae1caa066a035bd8c6d888 4.2.4.4/onbuild
-
-4.4.0.182: git://github.com/mono/docker@4e1d4cc196b612bcbd8466906815bfaef1f1413e 4.4.0.182
-4.4.0: git://github.com/mono/docker@4e1d4cc196b612bcbd8466906815bfaef1f1413e 4.4.0.182
-
-4.4.0.182-onbuild: git://github.com/mono/docker@09ae976880cd497a7dc9e8c89e8f26a8fcbd3879 4.4.0.182/onbuild
-4.4.0-onbuild: git://github.com/mono/docker@09ae976880cd497a7dc9e8c89e8f26a8fcbd3879 4.4.0.182/onbuild
-
-4.4.1.0: git://github.com/mono/docker@4e1d4cc196b612bcbd8466906815bfaef1f1413e 4.4.1.0
-4.4.1: git://github.com/mono/docker@4e1d4cc196b612bcbd8466906815bfaef1f1413e 4.4.1.0
-
-4.4.1.0-onbuild: git://github.com/mono/docker@dc93f0bbd9eeed6d8e0c89604f12991834a2d871 4.4.1.0/onbuild
-4.4.1-onbuild: git://github.com/mono/docker@dc93f0bbd9eeed6d8e0c89604f12991834a2d871 4.4.1.0/onbuild
-
-4.4.2.11: git://github.com/mono/docker@b2efdab5e0ef9ef0b91930956a7f5049ec0e4146 4.4.2.11
-4.4.2: git://github.com/mono/docker@b2efdab5e0ef9ef0b91930956a7f5049ec0e4146 4.4.2.11
-4.4: git://github.com/mono/docker@b2efdab5e0ef9ef0b91930956a7f5049ec0e4146 4.4.2.11
-
-4.4.2.11-onbuild: git://github.com/mono/docker@b2efdab5e0ef9ef0b91930956a7f5049ec0e4146 4.4.2.11/onbuild
-4.4.2-onbuild: git://github.com/mono/docker@b2efdab5e0ef9ef0b91930956a7f5049ec0e4146 4.4.2.11/onbuild
-4.4-onbuild: git://github.com/mono/docker@b2efdab5e0ef9ef0b91930956a7f5049ec0e4146 4.4.2.11/onbuild
-
-4.6.0.245: git://github.com/mono/docker@9fdd0e79b4eb3e7e7e818fbd58bd324d4c5ab7e1 4.6.0.245
-4.6.0: git://github.com/mono/docker@9fdd0e79b4eb3e7e7e818fbd58bd324d4c5ab7e1 4.6.0.245
-
-4.6.0.245-onbuild: git://github.com/mono/docker@9fdd0e79b4eb3e7e7e818fbd58bd324d4c5ab7e1 4.6.0.245/onbuild
-4.6.0-onbuild: git://github.com/mono/docker@9fdd0e79b4eb3e7e7e818fbd58bd324d4c5ab7e1 4.6.0.245/onbuild
-
-4.6.1.3: git://github.com/mono/docker@f0f1e0b9f693bd7c58d9623d402c8dc69234bbe1 4.6.1.3
-4.6.1: git://github.com/mono/docker@f0f1e0b9f693bd7c58d9623d402c8dc69234bbe1 4.6.1.3
-4.6: git://github.com/mono/docker@f0f1e0b9f693bd7c58d9623d402c8dc69234bbe1 4.6.1.3
-4: git://github.com/mono/docker@f0f1e0b9f693bd7c58d9623d402c8dc69234bbe1 4.6.1.3
-latest: git://github.com/mono/docker@f0f1e0b9f693bd7c58d9623d402c8dc69234bbe1 4.6.1.3
-
-4.6.1.3-onbuild: git://github.com/mono/docker@f0f1e0b9f693bd7c58d9623d402c8dc69234bbe1 4.6.1.3/onbuild
-4.6.1-onbuild: git://github.com/mono/docker@f0f1e0b9f693bd7c58d9623d402c8dc69234bbe1 4.6.1.3/onbuild
-4.6-onbuild: git://github.com/mono/docker@f0f1e0b9f693bd7c58d9623d402c8dc69234bbe1 4.6.1.3/onbuild
-4-onbuild: git://github.com/mono/docker@f0f1e0b9f693bd7c58d9623d402c8dc69234bbe1 4.6.1.3/onbuild
-onbuild: git://github.com/mono/docker@f0f1e0b9f693bd7c58d9623d402c8dc69234bbe1 4.6.1.3/onbuild
+Tags: 4.8.0.524, 4.8.0, 4.8, 4
+Architectures: amd64, i386, arm32v7
+GitCommit: 0d987d93235630e05a14983c7f87500ab33c90da
+Directory: 4.8.0.524

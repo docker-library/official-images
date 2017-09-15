@@ -5,7 +5,7 @@ import (
 	"pault.ag/go/topsort"
 )
 
-func sortRepos(repos []string) ([]string, error) {
+func sortRepos(repos []string, applyConstraints bool) ([]string, error) {
 	rs := []*Repo{}
 	rsMap := map[*Repo]string{}
 	for _, repo := range repos {
@@ -26,7 +26,7 @@ func sortRepos(repos []string) ([]string, error) {
 		return repos, nil
 	}
 
-	rs, err := sortRepoObjects(rs)
+	rs, err := sortRepoObjects(rs, applyConstraints)
 	if err != nil {
 		return nil, err
 	}
@@ -38,7 +38,7 @@ func sortRepos(repos []string) ([]string, error) {
 	return ret, nil
 }
 
-func (r Repo) SortedEntries() ([]manifest.Manifest2822Entry, error) {
+func (r Repo) SortedEntries(applyConstraints bool) ([]manifest.Manifest2822Entry, error) {
 	entries := r.Entries()
 
 	// short circuit if we don't have to go further
@@ -52,7 +52,7 @@ func (r Repo) SortedEntries() ([]manifest.Manifest2822Entry, error) {
 		rs = append(rs, r.EntryRepo(&entries[i]))
 	}
 
-	rs, err := sortRepoObjects(rs)
+	rs, err := sortRepoObjects(rs, applyConstraints)
 	if err != nil {
 		return nil, err
 	}
@@ -64,7 +64,7 @@ func (r Repo) SortedEntries() ([]manifest.Manifest2822Entry, error) {
 	return ret, nil
 }
 
-func sortRepoObjects(rs []*Repo) ([]*Repo, error) {
+func sortRepoObjects(rs []*Repo, applyConstraints bool) ([]*Repo, error) {
 	// short circuit if we don't have to go further
 	if noSortFlag || len(rs) <= 1 {
 		return rs, nil
@@ -94,6 +94,13 @@ func sortRepoObjects(rs []*Repo) ([]*Repo, error) {
 
 	for _, r := range rs {
 		for _, entry := range r.Entries() {
+			if applyConstraints && r.SkipConstraints(entry) {
+				continue
+			}
+			if !entry.HasArchitecture(arch) {
+				continue
+			}
+
 			from, err := r.DockerFrom(&entry)
 			if err != nil {
 				return nil, err

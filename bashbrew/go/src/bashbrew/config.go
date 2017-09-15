@@ -26,9 +26,13 @@ type FlagsConfigEntry struct {
 	BuildOrder string
 	Pull       string
 
+	Arch                 string
 	Constraints          []string `delim:"," strip:"\n\r\t "`
 	ExclusiveConstraints string
 	ApplyConstraints     string
+
+	// a list of "arch=namespace" mappings for pushing indexes (manifest lists)
+	ArchNamespaces []string `delim:"," strip:"\n\r\t "`
 }
 
 type FlagsConfig map[string]FlagsConfigEntry
@@ -55,6 +59,9 @@ func (dst *FlagsConfigEntry) Apply(src FlagsConfigEntry) {
 	if src.Pull != "" {
 		dst.Pull = src.Pull
 	}
+	if src.Arch != "" {
+		dst.Arch = src.Arch
+	}
 	if len(src.Constraints) > 0 {
 		dst.Constraints = src.Constraints[:]
 	}
@@ -63,6 +70,9 @@ func (dst *FlagsConfigEntry) Apply(src FlagsConfigEntry) {
 	}
 	if src.ApplyConstraints != "" {
 		dst.ApplyConstraints = src.ApplyConstraints
+	}
+	if len(src.ArchNamespaces) > 0 {
+		dst.ArchNamespaces = src.ArchNamespaces[:]
 	}
 }
 
@@ -73,8 +83,11 @@ func (config FlagsConfigEntry) Vars() map[string]map[string]interface{} {
 			"cache":   config.Cache,
 			"debug":   config.Debug,
 
+			"arch":                  config.Arch,
 			"constraint":            config.Constraints,
 			"exclusive-constraints": config.ExclusiveConstraints,
+
+			"arch-namespace": config.ArchNamespaces,
 		},
 
 		"local": {
