@@ -1,23 +1,26 @@
-# this file is generated via https://github.com/docker-library/mongo/blob/624e95231d63042af46de4a35b9955fb6cc9aac0/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/mongo/blob/92d9bb881b350e87ec8419ce2632361847591be5/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/mongo.git
 
-Tags: 3.0.15, 3.0
-# see http://repo.mongodb.org/apt/debian/dists/jessie/mongodb-org/3.0/main/
+Tags: 3.0.15-wheezy, 3.0-wheezy
+SharedTags: 3.0.15, 3.0
+# see http://repo.mongodb.org/apt/debian/dists/wheezy/mongodb-org/3.0/main/
 # (i386 is empty, as is ppc64el)
 Architectures: amd64
 GitCommit: 00a8519463e776e797c227681a595986d8f9dbe1
 Directory: 3.0
 
 Tags: 3.0.15-windowsservercore, 3.0-windowsservercore
+SharedTags: 3.0.15, 3.0
 Architectures: windows-amd64
 GitCommit: 40d62a73bbd4e20d90ec859a8af483f70b1e5fd4
 Directory: 3.0/windows/windowsservercore
 Constraints: windowsservercore
 
-Tags: 3.2.16, 3.2
+Tags: 3.2.16-jessie, 3.2-jessie
+SharedTags: 3.2.16, 3.2
 # see http://repo.mongodb.org/apt/debian/dists/jessie/mongodb-org/3.2/main/
 # (i386 is empty, as is ppc64el)
 Architectures: amd64
@@ -25,12 +28,14 @@ GitCommit: 61aabfb537a1fbcae44f02ab515df54395b68400
 Directory: 3.2
 
 Tags: 3.2.16-windowsservercore, 3.2-windowsservercore
+SharedTags: 3.2.16, 3.2
 Architectures: windows-amd64
 GitCommit: 61aabfb537a1fbcae44f02ab515df54395b68400
 Directory: 3.2/windows/windowsservercore
 Constraints: windowsservercore
 
-Tags: 3.4.9, 3.4, 3, latest
+Tags: 3.4.9-jessie, 3.4-jessie, 3-jessie, jessie
+SharedTags: 3.4.9, 3.4, 3, latest
 # see http://repo.mongodb.org/apt/debian/dists/jessie/mongodb-org/3.4/main/
 # (i386 is empty, as is ppc64el)
 Architectures: amd64
@@ -38,12 +43,14 @@ GitCommit: 18081c4daf5ecf72beee4a77343e961e6cf38ecd
 Directory: 3.4
 
 Tags: 3.4.9-windowsservercore, 3.4-windowsservercore, 3-windowsservercore, windowsservercore
+SharedTags: 3.4.9, 3.4, 3, latest
 Architectures: windows-amd64
 GitCommit: 18081c4daf5ecf72beee4a77343e961e6cf38ecd
 Directory: 3.4/windows/windowsservercore
 Constraints: windowsservercore
 
-Tags: 3.5.13, 3.5, unstable
+Tags: 3.5.13-jessie, 3.5-jessie, unstable-jessie
+SharedTags: 3.5.13, 3.5, unstable
 # see http://repo.mongodb.org/apt/debian/dists/jessie/mongodb-org/3.5/main/
 # (i386 is empty, as is ppc64el)
 Architectures: amd64
@@ -51,6 +58,7 @@ GitCommit: 532f0dce1488540fb486d58407aff00301203e47
 Directory: 3.5
 
 Tags: 3.5.13-windowsservercore, 3.5-windowsservercore, unstable-windowsservercore
+SharedTags: 3.5.13, 3.5, unstable
 Architectures: windows-amd64
 GitCommit: 532f0dce1488540fb486d58407aff00301203e47
 Directory: 3.5/windows/windowsservercore
