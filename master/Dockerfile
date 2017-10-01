@@ -1,12 +1,12 @@
-FROM erlang:20.0
+FROM erlang:20
 
 # elixir expects utf8.
-ENV ELIXIR_VERSION="v1.6.0-dev@0125cd0" \
+ENV ELIXIR_VERSION="v1.6.0-dev@fba7e5c" \
 	LANG=C.UTF-8
 
 RUN set -xe \
 	&& ELIXIR_DOWNLOAD_URL="https://github.com/elixir-lang/elixir/archive/${ELIXIR_VERSION#*@}.tar.gz" \
-	&& ELIXIR_DOWNLOAD_SHA256="acc02aabd5eb733405739cfe666b0d0dc0b74ff08c4de6f8368a0f09383dc47b" \
+	&& ELIXIR_DOWNLOAD_SHA256="f3dc374bd837ee1099621d1330ae569224678dd4036e27b7b0f51bfeec761453" \
 	&& curl -fSL -o elixir-src.tar.gz $ELIXIR_DOWNLOAD_URL \
 	&& echo "$ELIXIR_DOWNLOAD_SHA256 elixir-src.tar.gz" | sha256sum -c - \
 	&& mkdir -p /usr/src/elixir-src \

@@ -8,8 +8,6 @@ env:
   - DIR=1.5 VARIENT=alpine
   - DIR=1.4
   - DIR=1.4 VARIANT=slim
-  - DIR=1.3
-  - DIR=1.3 VARIANT=slim
 
 install:
   - curl -fsSL https://github.com/docker-library/official-images/archive/master.tar.gz | {
