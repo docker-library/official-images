@@ -45,6 +45,9 @@ func cmdCat(c *cli.Context) error {
 		"arch": func() string {
 			return arch
 		},
+		"archNamespace": func(arch string) string {
+			return archNamespaces[arch]
+		},
 	}).Parse(format)
 	if err != nil {
 		return cli.NewMultiError(tmplMultiErr, err)
