@@ -1,22 +1,86 @@
-# maintainer: Nate Koenig <nkoenig@osrfoundation.org> (@nkoenig)
+Maintainers: Tully Foote <tfoote+buildfarm@osrfoundation.org> (@tfoote)
+GitRepo: https://github.com/osrf/docker_images.git
 
-gzserver4:      git://github.com/osrf/docker_images@113c7241bac8ca94c238b1a5bf5ce71ee2a7f219 gazebo/gazebo4/gzserver4
-libgazebo4:     git://github.com/osrf/docker_images@113c7241bac8ca94c238b1a5bf5ce71ee2a7f219 gazebo/gazebo4/libgazebo4
-# Docker EOL: 2016-01-25
+################################################################################
+# Release: 4
 
-gzserver5:      git://github.com/osrf/docker_images@113c7241bac8ca94c238b1a5bf5ce71ee2a7f219 gazebo/gazebo5/gzserver5
-libgazebo5:     git://github.com/osrf/docker_images@113c7241bac8ca94c238b1a5bf5ce71ee2a7f219 gazebo/gazebo5/libgazebo5
-# Docker EOL: 2017-01-25
+########################################
+# Distro: ubuntu:trusty
 
-gzserver6:      git://github.com/osrf/docker_images@113c7241bac8ca94c238b1a5bf5ce71ee2a7f219 gazebo/gazebo6/gzserver6
-libgazebo6:     git://github.com/osrf/docker_images@113c7241bac8ca94c238b1a5bf5ce71ee2a7f219 gazebo/gazebo6/libgazebo6
-# Docker EOL: 2017-01-25
+Tags: gzserver4
+Architectures: amd64
+GitCommit: 1154349c9f81a11ce50d73fd2e07020f4eb7c0b9
+Directory: gazebo/4/ubuntu/trusty/gzserver4
 
-gzserver7:      git://github.com/osrf/docker_images@113c7241bac8ca94c238b1a5bf5ce71ee2a7f219 gazebo/gazebo7/gzserver7
-libgazebo7:     git://github.com/osrf/docker_images@113c7241bac8ca94c238b1a5bf5ce71ee2a7f219 gazebo/gazebo7/libgazebo7
-# Docker EOL: 2021-01-25
+Tags: libgazebo4
+Architectures: amd64
+GitCommit: 1154349c9f81a11ce50d73fd2e07020f4eb7c0b9
+Directory: gazebo/4/ubuntu/trusty/libgazebo4
 
-gzserver8:      git://github.com/osrf/docker_images@113c7241bac8ca94c238b1a5bf5ce71ee2a7f219 gazebo/gazebo8/gzserver8
-libgazebo8:     git://github.com/osrf/docker_images@113c7241bac8ca94c238b1a5bf5ce71ee2a7f219 gazebo/gazebo8/libgazebo8
-latest:         git://github.com/osrf/docker_images@113c7241bac8ca94c238b1a5bf5ce71ee2a7f219 gazebo/gazebo8/libgazebo8
-# Docker EOL: 2019-01-25
+
+################################################################################
+# Release: 5
+
+########################################
+# Distro: ubuntu:trusty
+
+Tags: gzserver5
+Architectures: amd64
+GitCommit: 1154349c9f81a11ce50d73fd2e07020f4eb7c0b9
+Directory: gazebo/5/ubuntu/trusty/gzserver5
+
+Tags: libgazebo5
+Architectures: amd64
+GitCommit: 1154349c9f81a11ce50d73fd2e07020f4eb7c0b9
+Directory: gazebo/5/ubuntu/trusty/libgazebo5
+
+
+################################################################################
+# Release: 6
+
+########################################
+# Distro: ubuntu:trusty
+
+Tags: gzserver6
+Architectures: amd64
+GitCommit: 1154349c9f81a11ce50d73fd2e07020f4eb7c0b9
+Directory: gazebo/6/ubuntu/trusty/gzserver6
+
+Tags: libgazebo6
+Architectures: amd64
+GitCommit: 1154349c9f81a11ce50d73fd2e07020f4eb7c0b9
+Directory: gazebo/6/ubuntu/trusty/libgazebo6
+
+
+################################################################################
+# Release: 7
+
+########################################
+# Distro: ubuntu:xenial
+
+Tags: gzserver7
+Architectures: amd64
+GitCommit: 72c476d68274d62762ffdd553bf57d8ae6a92d07
+Directory: gazebo/7/ubuntu/xenial/gzserver7
+
+Tags: libgazebo7
+Architectures: amd64
+GitCommit: 72c476d68274d62762ffdd553bf57d8ae6a92d07
+Directory: gazebo/7/ubuntu/xenial/libgazebo7
+
+
+################################################################################
+# Release: 8
+
+########################################
+# Distro: ubuntu:xenial
+
+Tags: gzserver8
+Architectures: amd64
+GitCommit: 1154349c9f81a11ce50d73fd2e07020f4eb7c0b9
+Directory: gazebo/8/ubuntu/xenial/gzserver8
+
+Tags: libgazebo8, latest
+Architectures: amd64
+GitCommit: 1154349c9f81a11ce50d73fd2e07020f4eb7c0b9
+Directory: gazebo/8/ubuntu/xenial/libgazebo8
