@@ -162,6 +162,7 @@ imageTests+=(
 		python-sqlite3
 	'
 	[rabbitmq]='
+		rabbitmq-basics
 	'
 	[r-base]='
 	'
