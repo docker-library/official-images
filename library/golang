@@ -1,11 +1,12 @@
-# this file is generated via https://github.com/docker-library/golang/blob/e0ac3d629dc06dcf25ba6724f7126a79723a74af/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/golang/blob/9898665371e4d61803313ff59c838a66a4a39b29/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit),
              Johan Euphrosine <proppy@google.com> (@proppy)
 GitRepo: https://github.com/docker-library/golang.git
 
-Tags: 1.9.1-stretch, 1.9-stretch, 1-stretch, stretch, 1.9.1, 1.9, 1, latest
+Tags: 1.9.1-stretch, 1.9-stretch, 1-stretch, stretch
+SharedTags: 1.9.1, 1.9, 1, latest
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: 221ee92559f2963c1fe55646d3516f5b8f4c91a4
 Directory: 1.9/stretch
@@ -16,6 +17,7 @@ GitCommit: 221ee92559f2963c1fe55646d3516f5b8f4c91a4
 Directory: 1.9/alpine3.6
 
 Tags: 1.9.1-windowsservercore, 1.9-windowsservercore, 1-windowsservercore, windowsservercore
+SharedTags: 1.9.1, 1.9, 1, latest
 Architectures: windows-amd64
 GitCommit: 221ee92559f2963c1fe55646d3516f5b8f4c91a4
 Directory: 1.9/windows/windowsservercore
@@ -32,7 +34,8 @@ Architectures: amd64, arm32v7, i386, ppc64le, s390x
 GitCommit: 1116b4262228428be20d7e9413ad277c716adb16
 Directory: 1.8/stretch
 
-Tags: 1.8.4-jessie, 1.8-jessie, 1.8.4, 1.8
+Tags: 1.8.4-jessie, 1.8-jessie
+SharedTags: 1.8.4, 1.8
 Architectures: amd64, arm32v7, i386, ppc64le, s390x
 GitCommit: 1116b4262228428be20d7e9413ad277c716adb16
 Directory: 1.8/jessie
@@ -53,6 +56,7 @@ GitCommit: 132cd70768e3bc269902e4c7b579203f66dc9f64
 Directory: 1.8/onbuild
 
 Tags: 1.8.4-windowsservercore, 1.8-windowsservercore
+SharedTags: 1.8.4, 1.8
 Architectures: windows-amd64
 GitCommit: 1116b4262228428be20d7e9413ad277c716adb16
 Directory: 1.8/windows/windowsservercore
