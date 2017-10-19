@@ -5,28 +5,28 @@
 
 Maintainers: Tianon Gravi <tianon@debian.org> (@tianon)
 GitRepo: https://github.com/tianon/docker-brew-ubuntu-core.git
-GitCommit: ea95f62628559b4dc13b179cce87f96b83d44238
+GitCommit: 6b4df4acf24368acf03da2cce49b9b9e110aeb30
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-amd64
 amd64-GitFetch: refs/heads/dist-amd64
-amd64-GitCommit: 7ade3cbc476f7accb45fa9520fea36ef7fbae8ab
+amd64-GitCommit: 5fce3945d95630c2fc03c21ef8665d92bd824642
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-arm32v7
 arm32v7-GitFetch: refs/heads/dist-arm32v7
-arm32v7-GitCommit: ff75bd168679c22db9a49b0efb51ac4e959aec95
+arm32v7-GitCommit: 19a278e8b2f6e62c61bad15154f234326a41d59c
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-arm64v8
 arm64v8-GitFetch: refs/heads/dist-arm64v8
-arm64v8-GitCommit: 6bbcf68476390359351c3a7b7879fc61e3683392
+arm64v8-GitCommit: 3ab01943270a8c32ec0004ddc8b74133bc78af20
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-i386
 i386-GitFetch: refs/heads/dist-i386
-i386-GitCommit: 73e8076ad2a70b5aef9a45a9015b7cd189d8c14f
+i386-GitCommit: 37336ff1dcc89ea1876b2437b4aab6836a5b362e
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-ppc64le
 ppc64le-GitFetch: refs/heads/dist-ppc64le
-ppc64le-GitCommit: 110d9a2c0d3918d3f1de787b8e9260fec3834b30
+ppc64le-GitCommit: f3abe18c48ea05f88bf570c3bfdabb470b2e18ec
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-s390x
 s390x-GitFetch: refs/heads/dist-s390x
-s390x-GitCommit: 96f9becb5e89d6092744605c165c38d0916df62c
+s390x-GitCommit: 35da86d2a2b4f18073b60ea727a0014626e5c714
 
-# 20171006 (artful)
-Tags: 17.10, artful-20171006, artful, devel
+# 20171019 (artful)
+Tags: 17.10, artful-20171019, artful, rolling, devel
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: artful
 
@@ -41,6 +41,6 @@ Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: xenial
 
 # 20170915 (zesty)
-Tags: 17.04, zesty-20170915, zesty, rolling
+Tags: 17.04, zesty-20170915, zesty
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: zesty
