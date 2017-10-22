@@ -96,7 +96,7 @@ stdlib = [
 	'zlib',
 ]
 
-if defined? RUBY_ENGINE && RUBY_ENGINE == 'jruby'
+if defined?(RUBY_ENGINE) && RUBY_ENGINE == 'jruby'
 	# these libraries don't work or don't exist on JRuby ATM
 	stdlib.delete('dbm')
 	stdlib.delete('gdbm')
