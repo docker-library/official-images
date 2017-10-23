@@ -96,13 +96,18 @@ stdlib = [
 	'zlib',
 ]
 
-if defined? RUBY_ENGINE && RUBY_ENGINE == 'jruby'
+if defined?(RUBY_ENGINE) && RUBY_ENGINE == 'jruby'
 	# these libraries don't work or don't exist on JRuby ATM
 	stdlib.delete('dbm')
 	stdlib.delete('gdbm')
 	stdlib.delete('mkmf')
 	stdlib.delete('objspace')
 	stdlib.delete('sdbm')
+else
+	require 'rubygems/version'
+	if Gem::Version.create(RUBY_VERSION) >= Gem::Version.create('2.5')
+		stdlib.delete('mathn')
+	end
 end
 
 result = 'ok'
