@@ -1,27 +1,42 @@
-# this file is generated via https://github.com/docker-library/ruby/blob/35eccb65d277077e9589df5b6d1ac7253eefe4e3/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/ruby/blob/6bd09a6694ddd921b06cc21d829b6affefa96307/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/ruby.git
 
+Tags: 2.5.0-preview1-stretch, 2.5-rc-stretch, rc-stretch, 2.5.0-preview1, 2.5-rc, rc
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 6959194971f4f84e9bef2976ae6b8a469fa58dae
+Directory: 2.5-rc/stretch
+
+Tags: 2.5.0-preview1-slim-stretch, 2.5-rc-slim-stretch, rc-slim-stretch, 2.5.0-preview1-slim, 2.5-rc-slim, rc-slim
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 6959194971f4f84e9bef2976ae6b8a469fa58dae
+Directory: 2.5-rc/stretch/slim
+
+Tags: 2.5.0-preview1-alpine3.6, 2.5-rc-alpine3.6, rc-alpine3.6, 2.5.0-preview1-alpine, 2.5-rc-alpine, rc-alpine
+Architectures: amd64
+GitCommit: 6959194971f4f84e9bef2976ae6b8a469fa58dae
+Directory: 2.5-rc/alpine3.6
+
 Tags: 2.4.2-stretch, 2.4-stretch, 2-stretch, stretch
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 9390129c08cc19668fc482edfd7d7c5a890a80eb
+GitCommit: 6959194971f4f84e9bef2976ae6b8a469fa58dae
 Directory: 2.4/stretch
 
 Tags: 2.4.2-slim-stretch, 2.4-slim-stretch, 2-slim-stretch, slim-stretch
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 9390129c08cc19668fc482edfd7d7c5a890a80eb
+GitCommit: 6959194971f4f84e9bef2976ae6b8a469fa58dae
 Directory: 2.4/stretch/slim
 
 Tags: 2.4.2-jessie, 2.4-jessie, 2-jessie, jessie, 2.4.2, 2.4, 2, latest
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 9390129c08cc19668fc482edfd7d7c5a890a80eb
+GitCommit: 6959194971f4f84e9bef2976ae6b8a469fa58dae
 Directory: 2.4/jessie
 
 Tags: 2.4.2-slim-jessie, 2.4-slim-jessie, 2-slim-jessie, slim-jessie, 2.4.2-slim, 2.4-slim, 2-slim, slim
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 9390129c08cc19668fc482edfd7d7c5a890a80eb
+GitCommit: 6959194971f4f84e9bef2976ae6b8a469fa58dae
 Directory: 2.4/jessie/slim
 
 Tags: 2.4.2-onbuild, 2.4-onbuild, 2-onbuild, onbuild
@@ -31,22 +46,22 @@ Directory: 2.4/jessie/onbuild
 
 Tags: 2.4.2-alpine3.6, 2.4-alpine3.6, 2-alpine3.6, alpine3.6
 Architectures: amd64
-GitCommit: 9390129c08cc19668fc482edfd7d7c5a890a80eb
+GitCommit: 6959194971f4f84e9bef2976ae6b8a469fa58dae
 Directory: 2.4/alpine3.6
 
 Tags: 2.4.2-alpine3.4, 2.4-alpine3.4, 2-alpine3.4, alpine3.4, 2.4.2-alpine, 2.4-alpine, 2-alpine, alpine
 Architectures: amd64
-GitCommit: 9390129c08cc19668fc482edfd7d7c5a890a80eb
+GitCommit: 6959194971f4f84e9bef2976ae6b8a469fa58dae
 Directory: 2.4/alpine3.4
 
 Tags: 2.3.5-jessie, 2.3-jessie, 2.3.5, 2.3
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 104e3aeadd3c2ea1597be3cd407551faab802ecb
+GitCommit: 6959194971f4f84e9bef2976ae6b8a469fa58dae
 Directory: 2.3/jessie
 
 Tags: 2.3.5-slim-jessie, 2.3-slim-jessie, 2.3.5-slim, 2.3-slim
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 104e3aeadd3c2ea1597be3cd407551faab802ecb
+GitCommit: 6959194971f4f84e9bef2976ae6b8a469fa58dae
 Directory: 2.3/jessie/slim
 
 Tags: 2.3.5-onbuild, 2.3-onbuild
@@ -56,17 +71,17 @@ Directory: 2.3/jessie/onbuild
 
 Tags: 2.3.5-alpine3.4, 2.3-alpine3.4, 2.3.5-alpine, 2.3-alpine
 Architectures: amd64
-GitCommit: 104e3aeadd3c2ea1597be3cd407551faab802ecb
+GitCommit: 6959194971f4f84e9bef2976ae6b8a469fa58dae
 Directory: 2.3/alpine3.4
 
 Tags: 2.2.8-jessie, 2.2-jessie, 2.2.8, 2.2
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 59abfdf2c6aaeab159aeb46c762c178e76900c0f
+GitCommit: 6959194971f4f84e9bef2976ae6b8a469fa58dae
 Directory: 2.2/jessie
 
 Tags: 2.2.8-slim-jessie, 2.2-slim-jessie, 2.2.8-slim, 2.2-slim
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 59abfdf2c6aaeab159aeb46c762c178e76900c0f
+GitCommit: 6959194971f4f84e9bef2976ae6b8a469fa58dae
 Directory: 2.2/jessie/slim
 
 Tags: 2.2.8-onbuild, 2.2-onbuild
@@ -76,5 +91,5 @@ Directory: 2.2/jessie/onbuild
 
 Tags: 2.2.8-alpine3.4, 2.2-alpine3.4, 2.2.8-alpine, 2.2-alpine
 Architectures: amd64
-GitCommit: 59abfdf2c6aaeab159aeb46c762c178e76900c0f
+GitCommit: 6959194971f4f84e9bef2976ae6b8a469fa58dae
 Directory: 2.2/alpine3.4
