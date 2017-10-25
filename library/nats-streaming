@@ -1,6 +1,25 @@
 Maintainers: Ivan Kozlovic <ivan.kozlovic@apcera.com> (@kozlovic)
-
-Tags: 0.5.0, latest
 GitRepo: https://github.com/nats-io/nats-streaming-docker.git
-GitCommit: 3301b7b0e11bfd128eb4ba572fc1fdbfaab8d3e3
+GitCommit: 2f9abaf0830c64e40d22e3a8d4da47b96c666aef
 
+Tags: 0.5.0-linux, linux
+SharedTags: 0.5.0, latest
+amd64-GitCommit: 2f9abaf0830c64e40d22e3a8d4da47b96c666aef
+amd64-Directory: amd64
+arm32v7-GitCommit: 2f9abaf0830c64e40d22e3a8d4da47b96c666aef
+arm32v7-Directory: arm32v7
+arm64v8-GitCommit: 2f9abaf0830c64e40d22e3a8d4da47b96c666aef
+arm64v8-Directory: arm64v8
+
+Tags: 0.5.0-nanoserver, nanoserver
+SharedTags: 0.5.0, latest
+Architectures: windows-amd64
+windows-amd64-GitCommit: 2f9abaf0830c64e40d22e3a8d4da47b96c666aef
+windows-amd64-Directory: windows/nanoserver
+Constraints: nanoserver
+
+Tags: 0.5.0-windowsservercore, windowsservercore
+Architectures: windows-amd64
+windows-amd64-GitCommit: 2f9abaf0830c64e40d22e3a8d4da47b96c666aef
+windows-amd64-Directory: windows/windowsservercore
+Constraints: windowsservercore
