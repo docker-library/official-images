@@ -1,55 +1,57 @@
-# maintainer: Yaroslav Halchenko <debian@onerussian.com> (@yarikoptic)
+Maintainers: Yaroslav Halchenko <debian@onerussian.com> (@yarikoptic)
+GitRepo: https://github.com/neurodebian/dockerfiles.git
+GitCommit: 16393dd2b676c6128a4b9742cb51b9ce9ab7d436
 
-trusty: git://github.com/neurodebian/dockerfiles@ff9c3b42146d774585d860000e580ba7367d8101 dockerfiles/trusty
-nd14.04: git://github.com/neurodebian/dockerfiles@ff9c3b42146d774585d860000e580ba7367d8101 dockerfiles/trusty
+Tags: trusty, nd14.04
+Directory: dockerfiles/trusty
 
-trusty-non-free: git://github.com/neurodebian/dockerfiles@ff9c3b42146d774585d860000e580ba7367d8101 dockerfiles/trusty-non-free
-nd14.04-non-free: git://github.com/neurodebian/dockerfiles@ff9c3b42146d774585d860000e580ba7367d8101 dockerfiles/trusty-non-free
+Tags: trusty-non-free, nd14.04-non-free
+Directory: dockerfiles/trusty-non-free
 
-xenial: git://github.com/neurodebian/dockerfiles@ff9c3b42146d774585d860000e580ba7367d8101 dockerfiles/xenial
-nd16.04: git://github.com/neurodebian/dockerfiles@ff9c3b42146d774585d860000e580ba7367d8101 dockerfiles/xenial
+Tags: xenial, nd16.04
+Directory: dockerfiles/xenial
 
-xenial-non-free: git://github.com/neurodebian/dockerfiles@ff9c3b42146d774585d860000e580ba7367d8101 dockerfiles/xenial-non-free
-nd16.04-non-free: git://github.com/neurodebian/dockerfiles@ff9c3b42146d774585d860000e580ba7367d8101 dockerfiles/xenial-non-free
+Tags: xenial-non-free, nd16.04-non-free
+Directory: dockerfiles/xenial-non-free
 
-zesty: git://github.com/neurodebian/dockerfiles@ff9c3b42146d774585d860000e580ba7367d8101 dockerfiles/zesty
-nd17.04: git://github.com/neurodebian/dockerfiles@ff9c3b42146d774585d860000e580ba7367d8101 dockerfiles/zesty
+Tags: zesty, nd17.04
+Directory: dockerfiles/zesty
 
-zesty-non-free: git://github.com/neurodebian/dockerfiles@ff9c3b42146d774585d860000e580ba7367d8101 dockerfiles/zesty-non-free
-nd17.04-non-free: git://github.com/neurodebian/dockerfiles@ff9c3b42146d774585d860000e580ba7367d8101 dockerfiles/zesty-non-free
+Tags: zesty-non-free, nd17.04-non-free
+Directory: dockerfiles/zesty-non-free
 
-artful: git://github.com/neurodebian/dockerfiles@ff9c3b42146d774585d860000e580ba7367d8101 dockerfiles/artful
-nd17.10: git://github.com/neurodebian/dockerfiles@ff9c3b42146d774585d860000e580ba7367d8101 dockerfiles/artful
+Tags: artful, nd17.10
+Directory: dockerfiles/artful
 
-artful-non-free: git://github.com/neurodebian/dockerfiles@ff9c3b42146d774585d860000e580ba7367d8101 dockerfiles/artful-non-free
-nd17.10-non-free: git://github.com/neurodebian/dockerfiles@ff9c3b42146d774585d860000e580ba7367d8101 dockerfiles/artful-non-free
+Tags: artful-non-free, nd17.10-non-free
+Directory: dockerfiles/artful-non-free
 
-wheezy: git://github.com/neurodebian/dockerfiles@ff9c3b42146d774585d860000e580ba7367d8101 dockerfiles/wheezy
-nd70: git://github.com/neurodebian/dockerfiles@ff9c3b42146d774585d860000e580ba7367d8101 dockerfiles/wheezy
+Tags: wheezy, nd70
+Directory: dockerfiles/wheezy
 
-wheezy-non-free: git://github.com/neurodebian/dockerfiles@ff9c3b42146d774585d860000e580ba7367d8101 dockerfiles/wheezy-non-free
-nd70-non-free: git://github.com/neurodebian/dockerfiles@ff9c3b42146d774585d860000e580ba7367d8101 dockerfiles/wheezy-non-free
+Tags: wheezy-non-free, nd70-non-free
+Directory: dockerfiles/wheezy-non-free
 
-jessie: git://github.com/neurodebian/dockerfiles@ff9c3b42146d774585d860000e580ba7367d8101 dockerfiles/jessie
-nd80: git://github.com/neurodebian/dockerfiles@ff9c3b42146d774585d860000e580ba7367d8101 dockerfiles/jessie
+Tags: jessie, nd80
+Directory: dockerfiles/jessie
 
-jessie-non-free: git://github.com/neurodebian/dockerfiles@ff9c3b42146d774585d860000e580ba7367d8101 dockerfiles/jessie-non-free
-nd80-non-free: git://github.com/neurodebian/dockerfiles@ff9c3b42146d774585d860000e580ba7367d8101 dockerfiles/jessie-non-free
+Tags: jessie-non-free, nd80-non-free
+Directory: dockerfiles/jessie-non-free
 
-stretch: git://github.com/neurodebian/dockerfiles@ff9c3b42146d774585d860000e580ba7367d8101 dockerfiles/stretch
-nd90: git://github.com/neurodebian/dockerfiles@ff9c3b42146d774585d860000e580ba7367d8101 dockerfiles/stretch
+Tags: stretch, nd90, latest
+Directory: dockerfiles/stretch
 
-stretch-non-free: git://github.com/neurodebian/dockerfiles@ff9c3b42146d774585d860000e580ba7367d8101 dockerfiles/stretch-non-free
-nd90-non-free: git://github.com/neurodebian/dockerfiles@ff9c3b42146d774585d860000e580ba7367d8101 dockerfiles/stretch-non-free
+Tags: stretch-non-free, nd90-non-free, non-free
+Directory: dockerfiles/stretch-non-free
 
-buster: git://github.com/neurodebian/dockerfiles@ff9c3b42146d774585d860000e580ba7367d8101 dockerfiles/buster
-nd100: git://github.com/neurodebian/dockerfiles@ff9c3b42146d774585d860000e580ba7367d8101 dockerfiles/buster
+Tags: buster, nd100
+Directory: dockerfiles/buster
 
-buster-non-free: git://github.com/neurodebian/dockerfiles@ff9c3b42146d774585d860000e580ba7367d8101 dockerfiles/buster-non-free
-nd100-non-free: git://github.com/neurodebian/dockerfiles@ff9c3b42146d774585d860000e580ba7367d8101 dockerfiles/buster-non-free
+Tags: buster-non-free, nd100-non-free
+Directory: dockerfiles/buster-non-free
 
-sid: git://github.com/neurodebian/dockerfiles@ff9c3b42146d774585d860000e580ba7367d8101 dockerfiles/sid
-nd: git://github.com/neurodebian/dockerfiles@ff9c3b42146d774585d860000e580ba7367d8101 dockerfiles/sid
+Tags: sid, nd
+Directory: dockerfiles/sid
 
-sid-non-free: git://github.com/neurodebian/dockerfiles@ff9c3b42146d774585d860000e580ba7367d8101 dockerfiles/sid-non-free
-nd-non-free: git://github.com/neurodebian/dockerfiles@ff9c3b42146d774585d860000e580ba7367d8101 dockerfiles/sid-non-free
+Tags: sid-non-free, nd-non-free
+Directory: dockerfiles/sid-non-free
