@@ -87,6 +87,10 @@ if [ -z "$BASHBREW_SECOND_STAGE" ]; then
 		-e BASHBREW_SECOND_STAGE=1
 	)
 
+	for e in "${!BASHBREW_*}"; do
+		args+=( -e "$e" )
+	done
+
 	cmd=( ./test-pr.sh "$pull" "$@" )
 
 	if [ -t 1 ]; then
