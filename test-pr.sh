@@ -86,7 +86,7 @@ if [ -z "$BASHBREW_SECOND_STAGE" ]; then
 		-e BASHBREW_SECOND_STAGE=1
 	)
 
-	for e in "${!BASHBREW_*}"; do
+	for e in "${!BASHBREW_@}"; do
 		case "$e" in
 			BASHBREW_SECOND_STAGE|BASHBREW_CACHE|BASHBREW_LIBRARY) ;;
 			*)
