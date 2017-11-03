@@ -210,6 +210,10 @@ imageTests+=(
 	[wordpress:fpm]='
 		wordpress-fpm-run
 	'
+
+	[zookeeper]='
+		zookeeper-basics
+	'
 # example onbuild
 #	[python:onbuild]='
 #		py-onbuild
