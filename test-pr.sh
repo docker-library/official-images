@@ -160,7 +160,7 @@ IFS=$'\n'
 files=( $(bashbrew list --repos --uniq --build-order "${files[@]}") )
 unset IFS
 
-echo 'Build test of' '#'"$pull"';' "$commit" '(`'"$(join '`, `' "${files[@]}")"'`):'
+echo 'Build test of' '#'"$pull"';' "$commit"';' '`'"${BASHBREW_ARCH:-amd64}"'`' '(`'"$(join '`, `' "${files[@]}")"'`):'
 declare -A failedBuild=() failedTests=()
 for img in "${files[@]}"; do
 	IFS=$'\n'
