@@ -210,7 +210,6 @@ imageTests+=(
 	[wordpress:fpm]='
 		wordpress-fpm-run
 	'
-
 	[zookeeper]='
 		zookeeper-basics
 	'
