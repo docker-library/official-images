@@ -22,5 +22,5 @@ if ! "$python" -c 'import sys; exit((sys.version_info[0] == 3 and sys.version_in
 	exit
 fi
 
-pip install -q 'hy==0.12.1'
+pip install -q 'hy==0.13.0'
 hy ./container.hy
