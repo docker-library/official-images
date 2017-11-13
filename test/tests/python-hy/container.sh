@@ -22,6 +22,5 @@ if ! "$python" -c 'import sys; exit((sys.version_info[0] == 3 and sys.version_in
 	exit
 fi
 
-# astor 0.6 removed "codegen" (renamed to "code_gen"), which breaks hy 0.12.1
-pip install -q 'hy==0.12.1' 'astor==0.5'
+pip install -q 'hy==0.12.1'
 hy ./container.hy
