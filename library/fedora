@@ -3,16 +3,25 @@ Maintainers: Adam Miller <maxamillion@fedoraproject.org> (@maxamillion),
 GitRepo: https://github.com/fedora-cloud/docker-brew-fedora.git
 Constraints: !aufs
 
-Tags: latest, 26
+Tags: latest, 27
 Architectures: amd64, arm32v7, arm64v8, ppc64le
-GitFetch: refs/heads/26
-GitCommit: 065231a8dbc04882df54afdd749be16931aecd5a
+GitFetch: refs/heads/27
+GitCommit: f429bf1590cc45d9912c5a7f75e85ceba8057798
 amd64-Directory: x86_64/
 arm32v7-Directory: armhfp/
 arm64v8-Directory: aarch64/
 ppc64le-Directory: ppc64le/
 
-Tags: 26-modular
+Tags: 26
+Architectures: amd64, arm32v7, arm64v8, ppc64le
+GitFetch: refs/heads/26
+GitCommit: 5433f211a72f52b360751a63e3155d8fd12ab828
+amd64-Directory: x86_64/
+arm32v7-Directory: armhfp/
+arm64v8-Directory: aarch64/
+ppc64le-Directory: ppc64le/
+
+Tags: modular, 26-modular
 Architectures: amd64
 GitFetch: refs/heads/26-modular
 GitCommit: d5dd6eb44f0651788edb6f81a5537c09b07022c4
@@ -28,7 +37,7 @@ arm32v7-Directory: armhfp/
 Tags: rawhide
 Architectures: amd64, arm32v7, arm64v8, ppc64le
 GitFetch: refs/heads/rawhide
-GitCommit: 3a5e26b6df79c1c649d231cd745d9360ee308041
+GitCommit: 47465fa682b33cea69102229b7e895151a408b8f
 amd64-Directory: x86_64/
 arm32v7-Directory: armhfp/
 arm64v8-Directory: aarch64/

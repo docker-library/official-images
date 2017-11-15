@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"path"
 	"time"
 
 	"github.com/codegangsta/cli"
@@ -28,12 +29,19 @@ func cmdPush(c *cli.Context) error {
 			return cli.NewMultiError(fmt.Errorf(`failed fetching repo %q`, repo), err)
 		}
 
+		tagRepo := path.Join(namespace, r.RepoName)
 		for _, entry := range r.Entries() {
 			if r.SkipConstraints(entry) {
 				continue
 			}
 
-			for _, tag := range r.Tags(namespace, uniq, entry) {
+			// we can't use "r.Tags()" here because it will include SharedTags, which we never want to push directly (see "cmd-put-shared.go")
+			for i, tag := range entry.Tags {
+				if uniq && i > 0 {
+					break
+				}
+				tag = tagRepo + ":" + tag
+
 				created := dockerCreated(tag)
 				lastUpdated := fetchDockerHubTagMeta(tag).lastUpdatedTime()
 				if created.After(lastUpdated) {

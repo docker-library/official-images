@@ -202,7 +202,7 @@ copy-tar() {
 mkdir temp
 git -C temp init --quiet
 
-bashbrew list "${images[@]}" | sort -V > temp/_bashbrew-list || :
+bashbrew list "${images[@]}" | sort -uV > temp/_bashbrew-list || :
 bashbrew cat --format "$archesListTemplate" "${images[@]}" | sort -V > temp/_bashbrew-arches || :
 bashbrew cat --format "$sharedTagsListTemplate" "${images[@]}" | grep -vE '^$' | sort -V > temp/_bashbrew-shared-tags || :
 for image in "${images[@]}"; do
@@ -219,7 +219,7 @@ git -C temp commit --quiet --allow-empty -m 'initial' || :
 git -C oi checkout --quiet pull
 
 git -C temp rm --quiet -rf . || :
-bashbrew list "${images[@]}" | sort -V > temp/_bashbrew-list || :
+bashbrew list "${images[@]}" | sort -uV > temp/_bashbrew-list || :
 bashbrew cat --format "$archesListTemplate" "${images[@]}" | sort -V > temp/_bashbrew-arches || :
 bashbrew cat --format "$sharedTagsListTemplate" "${images[@]}" | grep -vE '^$' | sort -V > temp/_bashbrew-shared-tags || :
 script="$(bashbrew cat -f "$template" "${images[@]}")"

@@ -1,65 +1,68 @@
-# this file is generated via https://github.com/docker-library/docker/blob/a6b52c73daa8283cd861f41f55e53426008708ac/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/docker/blob/bca413739d33629db28b0ef6f51a7468451b8654/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <tianon@dockerproject.org> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/docker.git
 
-Tags: 17.10.0-ce-rc1, 17.10-rc, rc
-Architectures: amd64
-GitCommit: 8ada62f762b30d09fd54664710c0ef3b64038f07
-Directory: 17.10-rc
+Tags: 17.11.0-ce-rc3, 17.11-rc, rc, test
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: 4e1f14f433ef9b800a19fe1907a54b09d8f42a15
+Directory: 17.11-rc
 
-Tags: 17.10.0-ce-rc1-dind, 17.10-rc-dind, rc-dind
-Architectures: amd64
-GitCommit: 8ada62f762b30d09fd54664710c0ef3b64038f07
-Directory: 17.10-rc/dind
+Tags: 17.11.0-ce-rc3-dind, 17.11-rc-dind, rc-dind, test-dind
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: 6e7677bec19c214ef5445c0d2b96c56e42098ca1
+Directory: 17.11-rc/dind
 
-Tags: 17.10.0-ce-rc1-git, 17.10-rc-git, rc-git
-Architectures: amd64
-GitCommit: 8ada62f762b30d09fd54664710c0ef3b64038f07
-Directory: 17.10-rc/git
+Tags: 17.11.0-ce-rc3-git, 17.11-rc-git, rc-git, test-git
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: 6e7677bec19c214ef5445c0d2b96c56e42098ca1
+Directory: 17.11-rc/git
 
-Tags: 17.09.0-ce, 17.09.0, 17.09, 17, stable, test, edge, latest
-Architectures: amd64
-GitCommit: a6b52c73daa8283cd861f41f55e53426008708ac
+Tags: 17.11.0-ce-rc3-windowsservercore, 17.11-rc-windowsservercore, rc-windowsservercore, test-windowsservercore
+Architectures: windows-amd64
+GitCommit: 4e1f14f433ef9b800a19fe1907a54b09d8f42a15
+Directory: 17.11-rc/windows/windowsservercore
+Constraints: windowsservercore
+
+Tags: 17.10.0-ce, 17.10.0, 17.10, 17, edge, latest
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: af5b6cd45b8d1aeb534589d99f92b5a4dc886f5d
+Directory: 17.10
+
+Tags: 17.10.0-ce-dind, 17.10.0-dind, 17.10-dind, 17-dind, edge-dind, dind
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: 00de5231b507c989ce900df2ef3f1abf4ce7e19c
+Directory: 17.10/dind
+
+Tags: 17.10.0-ce-git, 17.10.0-git, 17.10-git, 17-git, edge-git, git
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: 62a456489acfe7443d426cd502ccf22130d1ccf9
+Directory: 17.10/git
+
+Tags: 17.10.0-ce-windowsservercore, 17.10.0-windowsservercore, 17.10-windowsservercore, 17-windowsservercore, edge-windowsservercore, windowsservercore
+Architectures: windows-amd64
+GitCommit: 62a456489acfe7443d426cd502ccf22130d1ccf9
+Directory: 17.10/windows/windowsservercore
+Constraints: windowsservercore
+
+Tags: 17.09.0-ce, 17.09.0, 17.09, stable
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: af5b6cd45b8d1aeb534589d99f92b5a4dc886f5d
 Directory: 17.09
 
-Tags: 17.09.0-ce-dind, 17.09.0-dind, 17.09-dind, 17-dind, stable-dind, test-dind, edge-dind, dind
-Architectures: amd64
-GitCommit: a6b52c73daa8283cd861f41f55e53426008708ac
+Tags: 17.09.0-ce-dind, 17.09.0-dind, 17.09-dind, stable-dind
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: 00de5231b507c989ce900df2ef3f1abf4ce7e19c
 Directory: 17.09/dind
 
-Tags: 17.09.0-ce-git, 17.09.0-git, 17.09-git, 17-git, stable-git, test-git, edge-git, git
-Architectures: amd64
+Tags: 17.09.0-ce-git, 17.09.0-git, 17.09-git, stable-git
+Architectures: amd64, arm64v8, ppc64le, s390x
 GitCommit: a6b52c73daa8283cd861f41f55e53426008708ac
 Directory: 17.09/git
 
-Tags: 17.07.0-ce, 17.07.0, 17.07
-Architectures: amd64
-GitCommit: a8f8fa1b57349cc22c80e7d6cbbdb512ffee2bd2
-Directory: 17.07
-
-Tags: 17.07.0-ce-dind, 17.07.0-dind, 17.07-dind
-Architectures: amd64
-GitCommit: a8f8fa1b57349cc22c80e7d6cbbdb512ffee2bd2
-Directory: 17.07/dind
-
-Tags: 17.07.0-ce-git, 17.07.0-git, 17.07-git
-Architectures: amd64
-GitCommit: a8f8fa1b57349cc22c80e7d6cbbdb512ffee2bd2
-Directory: 17.07/git
-
-Tags: 17.06.2-ce, 17.06.2, 17.06
-Architectures: amd64
-GitCommit: 168a6d227d021c6d38c3986b7c668702ec172fa7
-Directory: 17.06
-
-Tags: 17.06.2-ce-dind, 17.06.2-dind, 17.06-dind
-Architectures: amd64
-GitCommit: 168a6d227d021c6d38c3986b7c668702ec172fa7
-Directory: 17.06/dind
-
-Tags: 17.06.2-ce-git, 17.06.2-git, 17.06-git
-Architectures: amd64
-GitCommit: 168a6d227d021c6d38c3986b7c668702ec172fa7
-Directory: 17.06/git
+Tags: 17.09.0-ce-windowsservercore, 17.09.0-windowsservercore, 17.09-windowsservercore, stable-windowsservercore
+Architectures: windows-amd64
+GitCommit: 2f6926c4fb37274b90fae3ba6c3320619a8d0289
+Directory: 17.09/windows/windowsservercore
+Constraints: windowsservercore

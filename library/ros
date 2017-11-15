@@ -1,5 +1,3 @@
-# this file is generated via https://github.com/osrf/docker_images/blob/3e8b29c44f02c85b71a156be51c94902d4092929/ros/create_dockerlibrary.py
-
 Maintainers: Tully Foote <tfoote+buildfarm@osrfoundation.org> (@tfoote)
 GitRepo: https://github.com/osrf/docker_images.git
 
@@ -10,22 +8,22 @@ GitRepo: https://github.com/osrf/docker_images.git
 # Distro: ubuntu:trusty
 
 Tags: indigo-ros-core, indigo-ros-core-trusty
-Architectures: amd64
+Architectures: amd64, arm32v7
 GitCommit: 5399f380af0a7735405a4b6a07c6c40b867563bd
 Directory: ros/indigo/ubuntu/trusty/ros-core
 
 Tags: indigo-ros-base, indigo-ros-base-trusty, indigo
-Architectures: amd64
+Architectures: amd64, arm32v7
 GitCommit: 5399f380af0a7735405a4b6a07c6c40b867563bd
 Directory: ros/indigo/ubuntu/trusty/ros-base
 
 Tags: indigo-robot, indigo-robot-trusty
-Architectures: amd64
+Architectures: amd64, arm32v7
 GitCommit: 5399f380af0a7735405a4b6a07c6c40b867563bd
 Directory: ros/indigo/ubuntu/trusty/robot
 
 Tags: indigo-perception, indigo-perception-trusty
-Architectures: amd64
+Architectures: amd64, arm32v7
 GitCommit: 5399f380af0a7735405a4b6a07c6c40b867563bd
 Directory: ros/indigo/ubuntu/trusty/perception
 
@@ -37,22 +35,22 @@ Directory: ros/indigo/ubuntu/trusty/perception
 # Distro: ubuntu:trusty
 
 Tags: jade-ros-core, jade-ros-core-trusty
-Architectures: amd64
+Architectures: amd64, arm32v7
 GitCommit: dbda2abfbee89ebab4b33bdb1cfaec6dc36a3822
 Directory: ros/jade/ubuntu/trusty/ros-core
 
 Tags: jade-ros-base, jade-ros-base-trusty, jade
-Architectures: amd64
+Architectures: amd64, arm32v7
 GitCommit: dbda2abfbee89ebab4b33bdb1cfaec6dc36a3822
 Directory: ros/jade/ubuntu/trusty/ros-base
 
 Tags: jade-robot, jade-robot-trusty
-Architectures: amd64
+Architectures: amd64, arm32v7
 GitCommit: dbda2abfbee89ebab4b33bdb1cfaec6dc36a3822
 Directory: ros/jade/ubuntu/trusty/robot
 
 Tags: jade-perception, jade-perception-trusty
-Architectures: amd64
+Architectures: amd64, arm32v7
 GitCommit: dbda2abfbee89ebab4b33bdb1cfaec6dc36a3822
 Directory: ros/jade/ubuntu/trusty/perception
 
@@ -132,6 +130,29 @@ Tags: lunar-perception, lunar-perception-xenial
 Architectures: amd64, arm32v7, arm64v8
 GitCommit: 5399f380af0a7735405a4b6a07c6c40b867563bd
 Directory: ros/lunar/ubuntu/xenial/perception
+
+########################################
+# Distro: ubuntu:zesty
+
+Tags: lunar-ros-core-zesty
+Architectures: amd64
+GitCommit: 4cfa1c7fd7e4f6ec638d1615f12133edbc100731
+Directory: ros/lunar/ubuntu/zesty/ros-core
+
+Tags: lunar-ros-base-zesty
+Architectures: amd64
+GitCommit: 4cfa1c7fd7e4f6ec638d1615f12133edbc100731
+Directory: ros/lunar/ubuntu/zesty/ros-base
+
+Tags: lunar-robot-zesty
+Architectures: amd64
+GitCommit: 4cfa1c7fd7e4f6ec638d1615f12133edbc100731
+Directory: ros/lunar/ubuntu/zesty/robot
+
+Tags: lunar-perception-zesty
+Architectures: amd64
+GitCommit: 4cfa1c7fd7e4f6ec638d1615f12133edbc100731
+Directory: ros/lunar/ubuntu/zesty/perception
 
 ########################################
 # Distro: debian:stretch
