@@ -1,4 +1,4 @@
-# this file is generated via https://github.com/docker-library/golang/blob/9898665371e4d61803313ff59c838a66a4a39b29/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/golang/blob/4ae3bfb2fefaeef55f8e5875fdd3ccadbe3bde34/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit),
@@ -16,18 +16,26 @@ Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
 GitCommit: bb5a9205c84b1af7daea647e144f2517497cc7ef
 Directory: 1.9/alpine3.6
 
-Tags: 1.9.2-windowsservercore, 1.9-windowsservercore, 1-windowsservercore, windowsservercore
-SharedTags: 1.9.2, 1.9, 1, latest
+Tags: 1.9.2-windowsservercore-ltsc2016, 1.9-windowsservercore-ltsc2016, 1-windowsservercore-ltsc2016, windowsservercore-ltsc2016
+SharedTags: windowsservercore, 1.9.2, 1.9, 1, latest
 Architectures: windows-amd64
-GitCommit: cffcff7fce7f6b6b5c82fc8f7b3331a10590a661
-Directory: 1.9/windows/windowsservercore
-Constraints: windowsservercore
+GitCommit: 4ae3bfb2fefaeef55f8e5875fdd3ccadbe3bde34
+Directory: 1.9/windows/windowsservercore-ltsc2016
+Constraints: windowsservercore-ltsc2016
 
-Tags: 1.9.2-nanoserver, 1.9-nanoserver, 1-nanoserver, nanoserver
+Tags: 1.9.2-windowsservercore-1709, 1.9-windowsservercore-1709, 1-windowsservercore-1709, windowsservercore-1709
+SharedTags: windowsservercore, 1.9.2, 1.9, 1, latest
 Architectures: windows-amd64
-GitCommit: cffcff7fce7f6b6b5c82fc8f7b3331a10590a661
-Directory: 1.9/windows/nanoserver
-Constraints: nanoserver
+GitCommit: 4ae3bfb2fefaeef55f8e5875fdd3ccadbe3bde34
+Directory: 1.9/windows/windowsservercore-1709
+Constraints: windowsservercore-1709
+
+Tags: 1.9.2-nanoserver-sac2016, 1.9-nanoserver-sac2016, 1-nanoserver-sac2016, nanoserver-sac2016
+SharedTags: nanoserver
+Architectures: windows-amd64
+GitCommit: 4ae3bfb2fefaeef55f8e5875fdd3ccadbe3bde34
+Directory: 1.9/windows/nanoserver-sac2016
+Constraints: nanoserver-sac2016
 
 Tags: 1.8.5-stretch, 1.8-stretch
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
@@ -55,15 +63,23 @@ Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: 132cd70768e3bc269902e4c7b579203f66dc9f64
 Directory: 1.8/onbuild
 
-Tags: 1.8.5-windowsservercore, 1.8-windowsservercore
-SharedTags: 1.8.5, 1.8
+Tags: 1.8.5-windowsservercore-ltsc2016, 1.8-windowsservercore-ltsc2016
+SharedTags: windowsservercore, 1.8.5, 1.8
 Architectures: windows-amd64
-GitCommit: cffcff7fce7f6b6b5c82fc8f7b3331a10590a661
-Directory: 1.8/windows/windowsservercore
-Constraints: windowsservercore
+GitCommit: 4ae3bfb2fefaeef55f8e5875fdd3ccadbe3bde34
+Directory: 1.8/windows/windowsservercore-ltsc2016
+Constraints: windowsservercore-ltsc2016
 
-Tags: 1.8.5-nanoserver, 1.8-nanoserver
+Tags: 1.8.5-windowsservercore-1709, 1.8-windowsservercore-1709
+SharedTags: windowsservercore, 1.8.5, 1.8
 Architectures: windows-amd64
-GitCommit: cffcff7fce7f6b6b5c82fc8f7b3331a10590a661
-Directory: 1.8/windows/nanoserver
-Constraints: nanoserver
+GitCommit: 4ae3bfb2fefaeef55f8e5875fdd3ccadbe3bde34
+Directory: 1.8/windows/windowsservercore-1709
+Constraints: windowsservercore-1709
+
+Tags: 1.8.5-nanoserver-sac2016, 1.8-nanoserver-sac2016
+SharedTags: nanoserver
+Architectures: windows-amd64
+GitCommit: 4ae3bfb2fefaeef55f8e5875fdd3ccadbe3bde34
+Directory: 1.8/windows/nanoserver-sac2016
+Constraints: nanoserver-sac2016
