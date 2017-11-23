@@ -1,4 +1,4 @@
-# this file is generated via https://github.com/docker-library/mongo/blob/92d9bb881b350e87ec8419ce2632361847591be5/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/mongo/blob/daeeeccd0edd110e6341ba3ee2d699caf885fbce/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
@@ -12,12 +12,19 @@ Architectures: amd64
 GitCommit: 00a8519463e776e797c227681a595986d8f9dbe1
 Directory: 3.0
 
-Tags: 3.0.15-windowsservercore, 3.0-windowsservercore
-SharedTags: 3.0.15, 3.0
+Tags: 3.0.15-windowsservercore-ltsc2016, 3.0-windowsservercore-ltsc2016
+SharedTags: windowsservercore, 3.0.15, 3.0
 Architectures: windows-amd64
-GitCommit: 40d62a73bbd4e20d90ec859a8af483f70b1e5fd4
-Directory: 3.0/windows/windowsservercore
-Constraints: windowsservercore
+GitCommit: daeeeccd0edd110e6341ba3ee2d699caf885fbce
+Directory: 3.0/windows/windowsservercore-ltsc2016
+Constraints: windowsservercore-ltsc2016
+
+Tags: 3.0.15-windowsservercore-1709, 3.0-windowsservercore-1709
+SharedTags: windowsservercore, 3.0.15, 3.0
+Architectures: windows-amd64
+GitCommit: daeeeccd0edd110e6341ba3ee2d699caf885fbce
+Directory: 3.0/windows/windowsservercore-1709
+Constraints: windowsservercore-1709
 
 Tags: 3.2.17-jessie, 3.2-jessie
 SharedTags: 3.2.17, 3.2
@@ -27,12 +34,19 @@ Architectures: amd64
 GitCommit: 3eb1f6df20e04ea8f03ce8ba5893e21bb63073f5
 Directory: 3.2
 
-Tags: 3.2.17-windowsservercore, 3.2-windowsservercore
-SharedTags: 3.2.17, 3.2
+Tags: 3.2.17-windowsservercore-ltsc2016, 3.2-windowsservercore-ltsc2016
+SharedTags: windowsservercore, 3.2.17, 3.2
 Architectures: windows-amd64
-GitCommit: 7b2fe2cd853161fdb6d28d318e9e7968e51d0ee3
-Directory: 3.2/windows/windowsservercore
-Constraints: windowsservercore
+GitCommit: daeeeccd0edd110e6341ba3ee2d699caf885fbce
+Directory: 3.2/windows/windowsservercore-ltsc2016
+Constraints: windowsservercore-ltsc2016
+
+Tags: 3.2.17-windowsservercore-1709, 3.2-windowsservercore-1709
+SharedTags: windowsservercore, 3.2.17, 3.2
+Architectures: windows-amd64
+GitCommit: daeeeccd0edd110e6341ba3ee2d699caf885fbce
+Directory: 3.2/windows/windowsservercore-1709
+Constraints: windowsservercore-1709
 
 Tags: 3.4.10-jessie, 3.4-jessie, 3-jessie, jessie
 SharedTags: 3.4.10, 3.4, 3, latest
@@ -42,12 +56,19 @@ Architectures: amd64
 GitCommit: c501968a9c330a773a2bc2c9b67dcd4ebbb58651
 Directory: 3.4
 
-Tags: 3.4.10-windowsservercore, 3.4-windowsservercore, 3-windowsservercore, windowsservercore
-SharedTags: 3.4.10, 3.4, 3, latest
+Tags: 3.4.10-windowsservercore-ltsc2016, 3.4-windowsservercore-ltsc2016, 3-windowsservercore-ltsc2016, windowsservercore-ltsc2016
+SharedTags: windowsservercore, 3.4.10, 3.4, 3, latest
 Architectures: windows-amd64
-GitCommit: c501968a9c330a773a2bc2c9b67dcd4ebbb58651
-Directory: 3.4/windows/windowsservercore
-Constraints: windowsservercore
+GitCommit: daeeeccd0edd110e6341ba3ee2d699caf885fbce
+Directory: 3.4/windows/windowsservercore-ltsc2016
+Constraints: windowsservercore-ltsc2016
+
+Tags: 3.4.10-windowsservercore-1709, 3.4-windowsservercore-1709, 3-windowsservercore-1709, windowsservercore-1709
+SharedTags: windowsservercore, 3.4.10, 3.4, 3, latest
+Architectures: windows-amd64
+GitCommit: daeeeccd0edd110e6341ba3ee2d699caf885fbce
+Directory: 3.4/windows/windowsservercore-1709
+Constraints: windowsservercore-1709
 
 Tags: 3.5.13-jessie, 3.5-jessie, unstable-jessie
 SharedTags: 3.5.13, 3.5, unstable
@@ -57,9 +78,16 @@ Architectures: amd64
 GitCommit: 532f0dce1488540fb486d58407aff00301203e47
 Directory: 3.5
 
-Tags: 3.5.13-windowsservercore, 3.5-windowsservercore, unstable-windowsservercore
-SharedTags: 3.5.13, 3.5, unstable
+Tags: 3.5.13-windowsservercore-ltsc2016, 3.5-windowsservercore-ltsc2016, unstable-windowsservercore-ltsc2016
+SharedTags: windowsservercore, 3.5.13, 3.5, unstable
 Architectures: windows-amd64
-GitCommit: 532f0dce1488540fb486d58407aff00301203e47
-Directory: 3.5/windows/windowsservercore
-Constraints: windowsservercore
+GitCommit: daeeeccd0edd110e6341ba3ee2d699caf885fbce
+Directory: 3.5/windows/windowsservercore-ltsc2016
+Constraints: windowsservercore-ltsc2016
+
+Tags: 3.5.13-windowsservercore-1709, 3.5-windowsservercore-1709, unstable-windowsservercore-1709
+SharedTags: windowsservercore, 3.5.13, 3.5, unstable
+Architectures: windows-amd64
+GitCommit: daeeeccd0edd110e6341ba3ee2d699caf885fbce
+Directory: 3.5/windows/windowsservercore-1709
+Constraints: windowsservercore-1709
