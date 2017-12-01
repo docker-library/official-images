@@ -3,76 +3,98 @@
 Maintainers: Glider Labs <team@gliderlabs.com> (@gliderlabs)
 GitRepo: https://github.com/gliderlabs/docker-alpine.git
 GitFetch: refs/heads/release
-GitCommit: f2e9aa97b32b3f537dca61da066711d3b017ab3a
+GitCommit: 109f757ad851c6c934c26090166a5f095517a200
 
-Tags: 3.6, latest
-Architectures: arm64v8, arm32v6, ppc64le, s390x, amd64, i386
+Tags: 3.6
+Architectures: arm64v8, arm32v6, ppc64le, s390x, i386, amd64
 arm64v8-GitFetch: refs/heads/rootfs/library-3.6/aarch64
-arm64v8-GitCommit: 23170e382bf9f6e6a10a5618101f1a434586ba52
+arm64v8-GitCommit: 67cd303088de88050647247fc3b7eee4fa6c45f0
 arm64v8-Directory: versions/library-3.6/aarch64
 arm32v6-GitFetch: refs/heads/rootfs/library-3.6/armhf
-arm32v6-GitCommit: 57548db3751630dc3548454a873f500cecb156eb
+arm32v6-GitCommit: f3b51a1e951a50a6be49210f6eab18a18228bd1e
 arm32v6-Directory: versions/library-3.6/armhf
 ppc64le-GitFetch: refs/heads/rootfs/library-3.6/ppc64le
-ppc64le-GitCommit: 34b61e92daf792d06592aa88fb78e353af757434
+ppc64le-GitCommit: a76a752b8fe4cf4e6e3bc91be49f520f2fe2ff09
 ppc64le-Directory: versions/library-3.6/ppc64le
 s390x-GitFetch: refs/heads/rootfs/library-3.6/s390x
-s390x-GitCommit: f2596f5e54c2eee1b37dc42b83422a9a4a09e16d
+s390x-GitCommit: ca8445d093781bd60914d042e019cc344bb405d6
 s390x-Directory: versions/library-3.6/s390x
-amd64-GitFetch: refs/heads/rootfs/library-3.6/x86_64
-amd64-GitCommit: 0450fe826ccdedf63dd70da1ad953f1aaf932225
-amd64-Directory: versions/library-3.6/x86_64
 i386-GitFetch: refs/heads/rootfs/library-3.6/x86
-i386-GitCommit: ec586c792873b3f09fd0c50f6ace0b61aad60eb2
+i386-GitCommit: 009559ca242e82c24248fbfe2347ccf208d7fed0
 i386-Directory: versions/library-3.6/x86
+amd64-GitFetch: refs/heads/rootfs/library-3.6/x86_64
+amd64-GitCommit: 43d9d69ad998e89d6737abf47b40a2be11d0ad54
+amd64-Directory: versions/library-3.6/x86_64
+
+Tags: 3.7, latest
+Architectures: arm64v8, arm32v6, ppc64le, s390x, i386, amd64
+arm64v8-GitFetch: refs/heads/rootfs/library-3.7/aarch64
+arm64v8-GitCommit: 994cafc104b35a59f653fdd0e0d7e40b3d379cbb
+arm64v8-Directory: versions/library-3.7/aarch64
+arm32v6-GitFetch: refs/heads/rootfs/library-3.7/armhf
+arm32v6-GitCommit: ba989fd9cb6a1fe661509ae4caffe929eebf6afb
+arm32v6-Directory: versions/library-3.7/armhf
+ppc64le-GitFetch: refs/heads/rootfs/library-3.7/ppc64le
+ppc64le-GitCommit: 810123d58d40f294d1c81f510ea62ad0d4a7d4af
+ppc64le-Directory: versions/library-3.7/ppc64le
+s390x-GitFetch: refs/heads/rootfs/library-3.7/s390x
+s390x-GitCommit: 557ca2b10c9881b5ea32b9203b253fdf92f0b699
+s390x-Directory: versions/library-3.7/s390x
+i386-GitFetch: refs/heads/rootfs/library-3.7/x86
+i386-GitCommit: da96ae93d314a6c1cf7935d7dddc02817c6c6451
+i386-Directory: versions/library-3.7/x86
+amd64-GitFetch: refs/heads/rootfs/library-3.7/x86_64
+amd64-GitCommit: 87816df28b1385c99cb57a9d245d3a28a899213a
+amd64-Directory: versions/library-3.7/x86_64
 
 Tags: edge
-Architectures: arm64v8, arm32v6, ppc64le, s390x, amd64, i386
+Architectures: arm64v8, arm32v6, ppc64le, s390x, i386, amd64
 arm64v8-GitFetch: refs/heads/rootfs/library-edge/aarch64
-arm64v8-GitCommit: 1903a85da34bcd78249ce2b2204f0f7fe22c9489
+arm64v8-GitCommit: ce346cab485f52f056e72ddbc0b82127cd3672e4
 arm64v8-Directory: versions/library-edge/aarch64
 arm32v6-GitFetch: refs/heads/rootfs/library-edge/armhf
-arm32v6-GitCommit: afa0aaacb6cc77e0be9696dc8c026fe1fcbfa44d
+arm32v6-GitCommit: ec02c3de3d5e8b234cb59b96d03be254a1fe0b08
 arm32v6-Directory: versions/library-edge/armhf
 ppc64le-GitFetch: refs/heads/rootfs/library-edge/ppc64le
-ppc64le-GitCommit: 474a968a0ccbba9e3b20ffb0338337af8b9348b2
+ppc64le-GitCommit: 2b5190bee31f2d7df6e8667f920d95122cfe1f02
 ppc64le-Directory: versions/library-edge/ppc64le
 s390x-GitFetch: refs/heads/rootfs/library-edge/s390x
-s390x-GitCommit: b9345dae00ffa7a7061f9b7c4cb64a7ee7a90a3c
+s390x-GitCommit: e289de92d36e9050b07386c438641a5e71e8a665
 s390x-Directory: versions/library-edge/s390x
-amd64-GitFetch: refs/heads/rootfs/library-edge/x86_64
-amd64-GitCommit: 1aa169fe8d573c0b6d8fe0d446f61be0700c8008
-amd64-Directory: versions/library-edge/x86_64
 i386-GitFetch: refs/heads/rootfs/library-edge/x86
-i386-GitCommit: d17079a97138109d5ef48206f8fa276090d3e49d
+i386-GitCommit: 77dbb5353a3ed00bdb0713ec05d8e088868fa1f2
 i386-Directory: versions/library-edge/x86
+amd64-GitFetch: refs/heads/rootfs/library-edge/x86_64
+amd64-GitCommit: 1b57aae29e41272ef8f3b0b0b342df951c419d3b
+amd64-Directory: versions/library-edge/x86_64
 
 Tags: 3.1
 Architectures: amd64
 amd64-GitFetch: refs/heads/rootfs/library-3.1
-amd64-GitCommit: 956c360824ed3629d8e132e1c13299be73120f88
+amd64-GitCommit: 3d39369dd6f6b26824e0595cd7906cec3c3202f8
 amd64-Directory: versions/library-3.1
 
 Tags: 3.2
 Architectures: amd64
 amd64-GitFetch: refs/heads/rootfs/library-3.2
-amd64-GitCommit: 8708779d075ac943b5d57b60cf17a6d2dacfbf1b
+amd64-GitCommit: 673bd394ded668e06f3f9e818404d5de1e261a57
 amd64-Directory: versions/library-3.2
 
 Tags: 3.3
 Architectures: amd64
 amd64-GitFetch: refs/heads/rootfs/library-3.3
-amd64-GitCommit: b8e69ac308464f18e5fc8fb2da827f7e97c890ff
+amd64-GitCommit: 4957827c6150016df99394d835860f86a3adf216
 amd64-Directory: versions/library-3.3
 
 Tags: 3.4
 Architectures: amd64
 amd64-GitFetch: refs/heads/rootfs/library-3.4
-amd64-GitCommit: c32ca6c6c399fe7d2ba857635ea15d0b08ac6dc5
+amd64-GitCommit: 640af6126d4a4eca7c8b1fcb5c88cf81e8c5685c
 amd64-Directory: versions/library-3.4
 
 Tags: 3.5
 Architectures: amd64
 amd64-GitFetch: refs/heads/rootfs/library-3.5
-amd64-GitCommit: 849c93d4bd1c5490dfd146f24291a40aa430d0ed
+amd64-GitCommit: 3dd1ba6807195cdf414b83e9d13e178425da35d3
 amd64-Directory: versions/library-3.5
+
