@@ -132,6 +132,9 @@ imageTests+=(
 		java-hello-world
 		java-uimanager-font
 	'
+	[open-liberty]='
+		open-liberty-hello-world
+	'
 	[percona]='
 	'
 	[perl]='
