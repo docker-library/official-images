@@ -162,6 +162,7 @@ imageTests+=(
 		python-sqlite3
 	'
 	[rabbitmq]='
+		rabbitmq-basics
 	'
 	[r-base]='
 	'
@@ -208,6 +209,9 @@ imageTests+=(
 	'
 	[wordpress:fpm]='
 		wordpress-fpm-run
+	'
+	[zookeeper]='
+		zookeeper-basics
 	'
 # example onbuild
 #	[python:onbuild]='

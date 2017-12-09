@@ -3,8 +3,8 @@ set -e
 
 python=
 for c in pypy3 pypy python3 python; do
-	if PATH=/usr/local/bin command -v "$c" > /dev/null; then
-		python="$c"
+	if [ -x "/usr/local/bin/$c" ]; then
+		python="/usr/local/bin/$c"
 		break
 	fi
 done
@@ -22,5 +22,5 @@ if ! "$python" -c 'import sys; exit((sys.version_info[0] == 3 and sys.version_in
 	exit
 fi
 
-pip install -q 'hy==0.12.1'
+pip install -q 'hy==0.13.0'
 hy ./container.hy

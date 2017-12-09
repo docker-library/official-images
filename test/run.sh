@@ -105,7 +105,7 @@ for dockerImage in "$@"; do
 			# ONCE ONBUILD, ALWAYS ONBUILD
 			variant='onbuild'
 			;;
-		*fpm-alpine)
+		*fpm-*)
 			# lolPHP
 			variant='fpm'
 			;;

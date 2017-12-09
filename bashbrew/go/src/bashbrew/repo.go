@@ -147,7 +147,9 @@ func (r Repo) Entries() []manifest.Manifest2822Entry {
 func (r Repo) Tags(namespace string, uniq bool, entry manifest.Manifest2822Entry) []string {
 	tagRepo := path.Join(namespace, r.RepoName)
 	ret := []string{}
-	for i, tag := range entry.Tags {
+	tags := append([]string{}, entry.Tags...)
+	tags = append(tags, entry.SharedTags...)
+	for i, tag := range tags {
 		if uniq && i > 0 {
 			break
 		}
