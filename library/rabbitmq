@@ -1,25 +1,45 @@
-# this file is generated via https://github.com/docker-library/rabbitmq/blob/b3f8989253d8c92e8462015eecd90f39d932c051/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/rabbitmq/blob/0283b756f739400cb3b25d0ad97fcbbad05a109e/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/rabbitmq.git
 
-Tags: 3.6.14, 3.6, 3, latest
+Tags: 3.7.0, 3.7, 3, latest
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 28001b529f28ed0d8e8297f8b603a4cc93a846a3
+GitCommit: 946a6d268ceb27e21b6658442e0f39e2e1af7649
+Directory: 3.7/debian
+
+Tags: 3.7.0-management, 3.7-management, 3-management, management
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: b8baad22e34295f17fb09e6bcc5ed322e511628f
+Directory: 3.7/debian/management
+
+Tags: 3.7.0-alpine, 3.7-alpine, 3-alpine, alpine
+Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
+GitCommit: 946a6d268ceb27e21b6658442e0f39e2e1af7649
+Directory: 3.7/alpine
+
+Tags: 3.7.0-management-alpine, 3.7-management-alpine, 3-management-alpine, management-alpine
+Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
+GitCommit: b8baad22e34295f17fb09e6bcc5ed322e511628f
+Directory: 3.7/alpine/management
+
+Tags: 3.6.14, 3.6
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: b8baad22e34295f17fb09e6bcc5ed322e511628f
 Directory: 3.6/debian
 
-Tags: 3.6.14-management, 3.6-management, 3-management, management
+Tags: 3.6.14-management, 3.6-management
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: b9eda3e4665c24db70a9a290fddf33bc5c567b10
 Directory: 3.6/debian/management
 
-Tags: 3.6.14-alpine, 3.6-alpine, 3-alpine, alpine
+Tags: 3.6.14-alpine, 3.6-alpine
 Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
 GitCommit: 2558d958a0ab9c38f58ad616e387063b33bb229c
 Directory: 3.6/alpine
 
-Tags: 3.6.14-management-alpine, 3.6-management-alpine, 3-management-alpine, management-alpine
+Tags: 3.6.14-management-alpine, 3.6-management-alpine
 Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
 GitCommit: b9eda3e4665c24db70a9a290fddf33bc5c567b10
 Directory: 3.6/alpine/management
