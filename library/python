@@ -1,31 +1,38 @@
-# this file is generated via https://github.com/docker-library/python/blob/7891fcc63609dfd43ae2e8de13a40e838b5e7608/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/python/blob/ce648832b041293fa3542af884ac5a44a67354d3/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/python.git
 
-Tags: 3.7.0a2-stretch, 3.7-rc-stretch, rc-stretch
-SharedTags: 3.7.0a2, 3.7-rc, rc
+Tags: 3.7.0a3-stretch, 3.7-rc-stretch, rc-stretch
+SharedTags: 3.7.0a3, 3.7-rc, rc
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 3f12f511910098f45951111aa5642fd935133afc
+GitCommit: ba34cdcf7860a9fb6a272f8e1b13b753b11d912b
 Directory: 3.7-rc/stretch
 
-Tags: 3.7.0a2-slim-stretch, 3.7-rc-slim-stretch, rc-slim-stretch, 3.7.0a2-slim, 3.7-rc-slim, rc-slim
+Tags: 3.7.0a3-slim-stretch, 3.7-rc-slim-stretch, rc-slim-stretch, 3.7.0a3-slim, 3.7-rc-slim, rc-slim
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: a4ce69de053337ec22d7f322cd997398eeba2350
+GitCommit: ba34cdcf7860a9fb6a272f8e1b13b753b11d912b
 Directory: 3.7-rc/stretch/slim
 
-Tags: 3.7.0a2-alpine3.6, 3.7-rc-alpine3.6, rc-alpine3.6, 3.7.0a2-alpine, 3.7-rc-alpine, rc-alpine
+Tags: 3.7.0a3-alpine3.6, 3.7-rc-alpine3.6, rc-alpine3.6, 3.7.0a3-alpine, 3.7-rc-alpine, rc-alpine
 Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: 3f12f511910098f45951111aa5642fd935133afc
+GitCommit: ba34cdcf7860a9fb6a272f8e1b13b753b11d912b
 Directory: 3.7-rc/alpine3.6
 
-Tags: 3.7.0a2-windowsservercore, 3.7-rc-windowsservercore, rc-windowsservercore
-SharedTags: 3.7.0a2, 3.7-rc, rc
+Tags: 3.7.0a3-windowsservercore-ltsc2016, 3.7-rc-windowsservercore-ltsc2016, rc-windowsservercore-ltsc2016
+SharedTags: windowsservercore, 3.7.0a3, 3.7-rc, rc
 Architectures: windows-amd64
-GitCommit: 3f12f511910098f45951111aa5642fd935133afc
-Directory: 3.7-rc/windows/windowsservercore
-Constraints: windowsservercore
+GitCommit: ba34cdcf7860a9fb6a272f8e1b13b753b11d912b
+Directory: 3.7-rc/windows/windowsservercore-ltsc2016
+Constraints: windowsservercore-ltsc2016
+
+Tags: 3.7.0a3-windowsservercore-1709, 3.7-rc-windowsservercore-1709, rc-windowsservercore-1709
+SharedTags: windowsservercore, 3.7.0a3, 3.7-rc, rc
+Architectures: windows-amd64
+GitCommit: ba34cdcf7860a9fb6a272f8e1b13b753b11d912b
+Directory: 3.7-rc/windows/windowsservercore-1709
+Constraints: windowsservercore-1709
 
 Tags: 3.6.3-stretch, 3.6-stretch, 3-stretch, stretch
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
@@ -63,12 +70,19 @@ Architectures: amd64
 GitCommit: 1d59eb2dd813c64891bf554a8ea01754aba25816
 Directory: 3.6/alpine3.4
 
-Tags: 3.6.3-windowsservercore, 3.6-windowsservercore, 3-windowsservercore, windowsservercore
-SharedTags: 3.6.3, 3.6, 3, latest
+Tags: 3.6.3-windowsservercore-ltsc2016, 3.6-windowsservercore-ltsc2016, 3-windowsservercore-ltsc2016, windowsservercore-ltsc2016
+SharedTags: windowsservercore, 3.6.3, 3.6, 3, latest
 Architectures: windows-amd64
-GitCommit: e01eb54f3c70555cf661dd756d529c85fd2cc04f
-Directory: 3.6/windows/windowsservercore
-Constraints: windowsservercore
+GitCommit: ce648832b041293fa3542af884ac5a44a67354d3
+Directory: 3.6/windows/windowsservercore-ltsc2016
+Constraints: windowsservercore-ltsc2016
+
+Tags: 3.6.3-windowsservercore-1709, 3.6-windowsservercore-1709, 3-windowsservercore-1709, windowsservercore-1709
+SharedTags: windowsservercore, 3.6.3, 3.6, 3, latest
+Architectures: windows-amd64
+GitCommit: ce648832b041293fa3542af884ac5a44a67354d3
+Directory: 3.6/windows/windowsservercore-1709
+Constraints: windowsservercore-1709
 
 Tags: 3.5.4-jessie, 3.5-jessie
 SharedTags: 3.5.4, 3.5
@@ -91,12 +105,19 @@ Architectures: amd64
 GitCommit: 1d59eb2dd813c64891bf554a8ea01754aba25816
 Directory: 3.5/alpine3.4
 
-Tags: 3.5.4-windowsservercore, 3.5-windowsservercore
-SharedTags: 3.5.4, 3.5
+Tags: 3.5.4-windowsservercore-ltsc2016, 3.5-windowsservercore-ltsc2016
+SharedTags: windowsservercore, 3.5.4, 3.5
 Architectures: windows-amd64
-GitCommit: 9524a26b67ebc8ea48ceaaf6750f5f6caf89478e
-Directory: 3.5/windows/windowsservercore
-Constraints: windowsservercore
+GitCommit: ce648832b041293fa3542af884ac5a44a67354d3
+Directory: 3.5/windows/windowsservercore-ltsc2016
+Constraints: windowsservercore-ltsc2016
+
+Tags: 3.5.4-windowsservercore-1709, 3.5-windowsservercore-1709
+SharedTags: windowsservercore, 3.5.4, 3.5
+Architectures: windows-amd64
+GitCommit: ce648832b041293fa3542af884ac5a44a67354d3
+Directory: 3.5/windows/windowsservercore-1709
+Constraints: windowsservercore-1709
 
 Tags: 3.4.7-jessie, 3.4-jessie
 SharedTags: 3.4.7, 3.4
@@ -165,9 +186,16 @@ Architectures: amd64
 GitCommit: 1d59eb2dd813c64891bf554a8ea01754aba25816
 Directory: 2.7/alpine3.4
 
-Tags: 2.7.14-windowsservercore, 2.7-windowsservercore, 2-windowsservercore
-SharedTags: 2.7.14, 2.7, 2
+Tags: 2.7.14-windowsservercore-ltsc2016, 2.7-windowsservercore-ltsc2016, 2-windowsservercore-ltsc2016
+SharedTags: windowsservercore, 2.7.14, 2.7, 2
 Architectures: windows-amd64
-GitCommit: 9524a26b67ebc8ea48ceaaf6750f5f6caf89478e
-Directory: 2.7/windows/windowsservercore
-Constraints: windowsservercore
+GitCommit: ce648832b041293fa3542af884ac5a44a67354d3
+Directory: 2.7/windows/windowsservercore-ltsc2016
+Constraints: windowsservercore-ltsc2016
+
+Tags: 2.7.14-windowsservercore-1709, 2.7-windowsservercore-1709, 2-windowsservercore-1709
+SharedTags: windowsservercore, 2.7.14, 2.7, 2
+Architectures: windows-amd64
+GitCommit: ce648832b041293fa3542af884ac5a44a67354d3
+Directory: 2.7/windows/windowsservercore-1709
+Constraints: windowsservercore-1709
