@@ -160,6 +160,7 @@ imageTests+=(
 		python-imports
 		python-pip-requests-ssl
 		python-sqlite3
+		python-stack-size
 	'
 	[rabbitmq]='
 		rabbitmq-basics
