@@ -53,11 +53,32 @@ docker_run_seccomp() {
 }
 
 cname="mongo-container-$RANDOM-$RANDOM"
-cid="$(docker_run_seccomp -d --name "$cname" "$image")"
+mongodRunArgs=( -d --name "$cname" )
+mongoArgs=( --host mongo )
+
+testDir="$(readlink -f "$(dirname "$BASH_SOURCE")")"
+testName="$(basename "$testDir")" # "mongo-basics" or "mongo-auth-basics"
+case "$testName" in
+	*auth*)
+		rootUser="root-$RANDOM"
+		rootPass="root-$RANDOM-$RANDOM-password"
+		mongodRunArgs+=(
+			-e MONGO_INITDB_ROOT_USERNAME="$rootUser"
+			-e MONGO_INITDB_ROOT_PASSWORD="$rootPass"
+		)
+		mongoArgs+=(
+			--username="$rootUser"
+			--password="$rootPass"
+			--authenticationDatabase='admin'
+		)
+		;;
+esac
+
+cid="$(docker_run_seccomp "${mongodRunArgs[@]}" "$image")"
 trap "docker rm -vf $cid > /dev/null" EXIT
 
 mongo() {
-	docker_run_seccomp --rm -i --link "$cname":mongo "$image" mongo --host mongo "$@"
+	docker_run_seccomp --rm -i --link "$cname":mongo "$image" mongo "${mongoArgs[@]}" "$@"
 }
 
 mongo_eval() {
