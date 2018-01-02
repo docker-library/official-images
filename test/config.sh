@@ -200,6 +200,9 @@ imageTests+=(
 	[silverpeas]='
 		silverpeas-basics
 	'
+	[swipl]='
+		swipl-modules
+	'
 	[swift]='
 		swift-hello-world
 	'
