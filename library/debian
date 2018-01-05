@@ -4,7 +4,7 @@
 Maintainers: Tianon Gravi <tianon@debian.org> (@tianon),
              Paul Tagliamonte <paultag@debian.org> (@paultag)
 GitRepo: https://github.com/debuerreotype/docker-debian-artifacts.git
-GitCommit: fa5e408fa2e9a74c025f21cbfa2449ea349afd26
+GitCommit: c793937632f8bcc6712a14535c37b870c2f63374
 # https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-amd64
 amd64-GitFetch: refs/heads/dist-amd64
 amd64-GitCommit: 6af0f6159c515601731d92972a245199337e3ca6
@@ -50,7 +50,7 @@ Tags: jessie-backports
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: jessie/backports
 
-Tags: jessie-slim
+Tags: jessie-slim, 8.10-slim, 8-slim
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: jessie/slim
 
@@ -116,7 +116,7 @@ Tags: stretch-backports
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: stretch/backports
 
-Tags: stretch-slim
+Tags: stretch-slim, 9.3-slim, 9-slim
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: stretch/slim
 
@@ -147,6 +147,6 @@ Tags: wheezy-backports
 Architectures: amd64, arm32v5, arm32v7, i386
 Directory: wheezy/backports
 
-Tags: wheezy-slim
+Tags: wheezy-slim, 7.11-slim, 7-slim
 Architectures: amd64, arm32v5, arm32v7, i386
 Directory: wheezy/slim
