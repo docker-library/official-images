@@ -5,42 +5,47 @@
 
 Maintainers: Tianon Gravi <tianon@debian.org> (@tianon)
 GitRepo: https://github.com/tianon/docker-brew-ubuntu-core.git
-GitCommit: ea95f62628559b4dc13b179cce87f96b83d44238
+GitCommit: 8fb367ef337cb86b345df9d3fc6e6c38bc3ff3b8
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-amd64
 amd64-GitFetch: refs/heads/dist-amd64
-amd64-GitCommit: a2573609340194bf33712c1fa2dc4de8f9b70ca2
+amd64-GitCommit: 1637ff264a1654f77807ce53522eff7f6a57b773
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-arm32v7
 arm32v7-GitFetch: refs/heads/dist-arm32v7
-arm32v7-GitCommit: 668bfcfef7840077f28fdc4236c3466ccae7a4c8
+arm32v7-GitCommit: c8e1153f5ea2149da8d67f11294d8673bcd76f67
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-arm64v8
 arm64v8-GitFetch: refs/heads/dist-arm64v8
-arm64v8-GitCommit: 7e2416954d3750a43296932c2bed5e39a829c84e
+arm64v8-GitCommit: de93ea1abdd7b937352a77c1ef5e473d0526846e
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-i386
 i386-GitFetch: refs/heads/dist-i386
-i386-GitCommit: 217599b015eff90d4ce562aa163475b9be871314
+i386-GitCommit: f6f41d1b5f6b668e9347fd2be9d0c059ec27511d
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-ppc64le
 ppc64le-GitFetch: refs/heads/dist-ppc64le
-ppc64le-GitCommit: d88bc32a6292a87fe33b1ba03d9ab0e294406a54
+ppc64le-GitCommit: 045cf9bec3c128d20876c7e40476b4d30c86e534
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-s390x
 s390x-GitFetch: refs/heads/dist-s390x
-s390x-GitCommit: 2b7883836fbfc9188f3786b3e6834808e3c1be8b
+s390x-GitCommit: d75e9167609c793b858ddaf9983938137a7a8778
 
-# 20170728 (artful)
-Tags: 17.10, artful-20170728, artful, devel
+# 20171116 (artful)
+Tags: 17.10, artful-20171116, artful, rolling
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: artful
 
-# 20170728 (trusty)
-Tags: 14.04, trusty-20170728, trusty
+# 20171214 (bionic)
+Tags: 18.04, bionic-20171214, bionic, devel
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+Directory: bionic
+
+# 20171207 (trusty)
+Tags: 14.04, trusty-20171207, trusty
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le
 Directory: trusty
 
-# 20170802 (xenial)
-Tags: 16.04, xenial-20170802, xenial, latest
+# 20171201 (xenial)
+Tags: 16.04, xenial-20171201, xenial, latest
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: xenial
 
-# 20170703 (zesty)
-Tags: 17.04, zesty-20170703, zesty, rolling
+# 20171122 (zesty)
+Tags: 17.04, zesty-20171122, zesty
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: zesty

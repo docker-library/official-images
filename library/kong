@@ -1,13 +1,29 @@
-Maintainers: Mashape Docker Maintainers <support@mashape.com> (@mashape)
-GitRepo: https://github.com/Mashape/docker-kong.git
+Maintainers: Mashape Docker Maintainers <support@konghq.com> (@thekonginc)
+GitRepo: https://github.com/Kong/docker-kong.git
 # needs "Constraints" to match "centos" (which this image is "FROM")
+
+Tags: 0.12.0rc2-alpine
+GitCommit: 9f2d6a104dbf8b38cb8188429c17daef72f24196
+Directory: alpine
+
+Tags: 0.12.0rc2
+GitCommit: 9f2d6a104dbf8b38cb8188429c17daef72f24196
+Directory: centos
+
+Tags: 0.11-alpine, 0.11.2-alpine
+GitCommit: 2ed0fad88ed81623ea4afb2111033a9d87f3c03c
+Directory: alpine
+
+Tags: 0.11, 0.11.2, latest
+GitCommit: 2ed0fad88ed81623ea4afb2111033a9d87f3c03c
 Constraints: !aufs
+Directory: centos
 
-Tags: 0.11.0rc2
-GitCommit: 642b76fbe3ce7cadafd1cb8616151b178f20e7e0
-
-Tags: 0.10, 0.10.3, latest
-GitCommit: a209825a9a74f9921c71c13ecb6e39a1b8e18aef
+Tags: 0.10, 0.10.4
+GitCommit: 206d0a077068e191454c260ee772d2e5bbb4d050
+Constraints: !aufs
+Directory: legacy
 
 Tags: 0.9, 0.9.9
 GitCommit: b512fa58a9c5a085b21bc5ffb90299cbc4e48eba
+Constraints: !aufs

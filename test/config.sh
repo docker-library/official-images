@@ -112,6 +112,7 @@ imageTests+=(
 	'
 	[mongo]='
 		mongo-basics
+		mongo-auth-basics
 	'
 	[mono]='
 	'
@@ -129,6 +130,7 @@ imageTests+=(
 	'
 	[openjdk]='
 		java-hello-world
+		java-uimanager-font
 	'
 	[percona]='
 	'
@@ -159,8 +161,10 @@ imageTests+=(
 		python-imports
 		python-pip-requests-ssl
 		python-sqlite3
+		python-stack-size
 	'
 	[rabbitmq]='
+		rabbitmq-basics
 	'
 	[r-base]='
 	'
@@ -196,6 +200,9 @@ imageTests+=(
 	[silverpeas]='
 		silverpeas-basics
 	'
+	[swipl]='
+		swipl-modules
+	'
 	[swift]='
 		swift-hello-world
 	'
@@ -207,6 +214,9 @@ imageTests+=(
 	'
 	[wordpress:fpm]='
 		wordpress-fpm-run
+	'
+	[zookeeper]='
+		zookeeper-basics
 	'
 # example onbuild
 #	[python:onbuild]='
@@ -231,6 +241,10 @@ globalExcludeTests+=(
 	# clearlinux has no /etc/password
 	# https://github.com/docker-library/official-images/pull/1721#issuecomment-234128477
 	[clearlinux_no-hard-coded-passwords]=1
+
+	# alpine/slim openjdk images are headless and so can't do font stuff
+	[openjdk:alpine_java-uimanager-font]=1
+	[openjdk:slim_java-uimanager-font]=1
 
 	# no "native" dependencies
 	[ruby:alpine_ruby-bundler]=1

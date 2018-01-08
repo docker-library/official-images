@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 	"path"
+	"time"
 
 	"github.com/codegangsta/cli"
 
@@ -11,28 +12,39 @@ import (
 	"github.com/docker-library/go-dockerlibrary/manifest"
 )
 
-func entriesToManifestToolYaml(r Repo, entries ...*manifest.Manifest2822Entry) (string, error) {
+func entriesToManifestToolYaml(singleArch bool, r Repo, entries ...*manifest.Manifest2822Entry) (string, time.Time, error) {
 	yaml := ""
+	mru := time.Time{}
 	entryIdentifiers := []string{}
 	for _, entry := range entries {
 		entryIdentifiers = append(entryIdentifiers, r.EntryIdentifier(*entry))
 
-		for _, arch := range entry.Architectures {
-			var ok bool
-
-			var ociArch architecture.OCIPlatform
-			if ociArch, ok = architecture.SupportedArches[arch]; !ok {
-				// this should never happen -- the parser validates Architectures
-				panic("somehow, an unsupported architecture slipped past the parser validation: " + arch)
-			}
-
-			var archNamespace string
-			if archNamespace, ok = archNamespaces[arch]; !ok || archNamespace == "" {
-				fmt.Fprintf(os.Stderr, "warning: no arch-namespace specified for %q; skipping (%q)\n", arch, r.EntryIdentifier(*entry))
+		for _, entryArch := range entry.Architectures {
+			if singleArch && entryArch != arch {
 				continue
 			}
 
-			yaml += fmt.Sprintf("  - image: %s/%s:%s\n    platform:\n", archNamespace, r.RepoName, entry.Tags[0])
+			var ok bool
+
+			var ociArch architecture.OCIPlatform
+			if ociArch, ok = architecture.SupportedArches[entryArch]; !ok {
+				// this should never happen -- the parser validates Architectures
+				panic("somehow, an unsupported architecture slipped past the parser validation: " + entryArch)
+			}
+
+			var archNamespace string
+			if archNamespace, ok = archNamespaces[entryArch]; !ok || archNamespace == "" {
+				fmt.Fprintf(os.Stderr, "warning: no arch-namespace specified for %q; skipping (%q)\n", entryArch, r.EntryIdentifier(*entry))
+				continue
+			}
+
+			archImage := fmt.Sprintf("%s/%s:%s", archNamespace, r.RepoName, entry.Tags[0])
+			archImageMeta := fetchDockerHubTagMeta(archImage)
+			if archU := archImageMeta.lastUpdatedTime(); archU.After(mru) {
+				mru = archU
+			}
+
+			yaml += fmt.Sprintf("  - image: %s\n    platform:\n", archImage)
 			yaml += fmt.Sprintf("      os: %s\n", ociArch.OS)
 			yaml += fmt.Sprintf("      architecture: %s\n", ociArch.Architecture)
 			if ociArch.Variant != "" {
@@ -40,11 +52,8 @@ func entriesToManifestToolYaml(r Repo, entries ...*manifest.Manifest2822Entry) (
 			}
 		}
 	}
-	if yaml == "" {
-		return "", fmt.Errorf("failed gathering images for creating %q", entryIdentifiers)
-	}
 
-	return "manifests:\n" + yaml, nil
+	return "manifests:\n" + yaml, mru, nil
 }
 
 func tagsToManifestToolYaml(repo string, tags ...string) string {
@@ -65,6 +74,8 @@ func cmdPutShared(c *cli.Context) error {
 	}
 
 	namespace := c.String("namespace")
+	dryRun := c.Bool("dry-run")
+	singleArch := c.Bool("single-arch")
 
 	if namespace == "" {
 		return fmt.Errorf(`"--namespace" is a required flag for "put-shared"`)
@@ -78,43 +89,62 @@ func cmdPutShared(c *cli.Context) error {
 
 		targetRepo := path.Join(namespace, r.RepoName)
 
-		// handle all multi-architecture tags first (regardless of whether they have SharedTags)
-		for _, entry := range r.Entries() {
-			// "image:" will be added later so we don't have to regenerate the entire "manifests" section every time
-			yaml, err := entriesToManifestToolYaml(*r, &entry)
-			if err != nil {
-				return err
-			}
+		sharedTagGroups := []manifest.SharedTagGroup{}
 
-			entryIdentifier := fmt.Sprintf("%s:%s", targetRepo, entry.Tags[0])
-			fmt.Printf("Putting %s\n", entryIdentifier)
-			tagYaml := tagsToManifestToolYaml(targetRepo, entry.Tags...) + yaml
-			if err := manifestToolPushFromSpec(tagYaml); err != nil {
-				return fmt.Errorf("failed pushing %q (%q)", entryIdentifier, entry.TagsString())
+		if !singleArch {
+			// handle all multi-architecture tags first (regardless of whether they have SharedTags)
+			// turn them into SharedTagGroup objects so all manifest-tool invocations can be handled by a single process/loop
+			for _, entry := range r.Entries() {
+				entryCopy := entry
+				sharedTagGroups = append(sharedTagGroups, manifest.SharedTagGroup{
+					SharedTags: entry.Tags,
+					Entries:    []*manifest.Manifest2822Entry{&entryCopy},
+				})
 			}
 		}
 
-		// TODO do something better with r.TagName (ie, the user has done something crazy like "bashbrew put-shared single-repo:single-tag")
-		sharedTagGroups := r.Manifest.GetSharedTagGroups()
-		if len(sharedTagGroups) == 0 {
-			continue
-		}
-		if r.TagName != "" {
+		// TODO do something smarter with r.TagName (ie, the user has done something crazy like "bashbrew put-shared single-repo:single-tag")
+		if r.TagName == "" {
+			sharedTagGroups = append(sharedTagGroups, r.Manifest.GetSharedTagGroups()...)
+		} else {
 			fmt.Fprintf(os.Stderr, "warning: a single tag was requested -- skipping SharedTags\n")
+		}
+
+		if len(sharedTagGroups) == 0 {
 			continue
 		}
 
 		for _, group := range sharedTagGroups {
-			yaml, err := entriesToManifestToolYaml(*r, group.Entries...)
+			yaml, mostRecentPush, err := entriesToManifestToolYaml(singleArch, *r, group.Entries...)
 			if err != nil {
 				return err
 			}
 
-			groupIdentifier := fmt.Sprintf("%s:%s", targetRepo, group.SharedTags[0])
-			fmt.Printf("Putting shared %s\n", groupIdentifier)
-			tagYaml := tagsToManifestToolYaml(targetRepo, group.SharedTags...) + yaml
-			if err := manifestToolPushFromSpec(tagYaml); err != nil {
-				return fmt.Errorf("failed pushing %s", groupIdentifier)
+			tagsToPush := []string{}
+			for _, tag := range group.SharedTags {
+				image := fmt.Sprintf("%s:%s", targetRepo, tag)
+				hubMeta := fetchDockerHubTagMeta(image)
+				tagUpdated := hubMeta.lastUpdatedTime()
+				if mostRecentPush.After(tagUpdated) ||
+					(!singleArch && len(hubMeta.Images) <= 1 &&
+						(len(group.Entries) > 1 || len(group.Entries[0].Architectures) > 1)) {
+					tagsToPush = append(tagsToPush, tag)
+				} else {
+					fmt.Fprintf(os.Stderr, "skipping %s (created %s, last updated %s)\n", image, mostRecentPush.Local().Format(time.RFC3339), tagUpdated.Local().Format(time.RFC3339))
+				}
+			}
+
+			if len(tagsToPush) == 0 {
+				continue
+			}
+
+			groupIdentifier := fmt.Sprintf("%s:%s", targetRepo, tagsToPush[0])
+			fmt.Printf("Putting %s\n", groupIdentifier)
+			if !dryRun {
+				tagYaml := tagsToManifestToolYaml(targetRepo, tagsToPush...) + yaml
+				if err := manifestToolPushFromSpec(tagYaml); err != nil {
+					return fmt.Errorf("failed pushing %s", groupIdentifier)
+				}
 			}
 		}
 	}

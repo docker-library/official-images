@@ -198,6 +198,10 @@ func main() {
 			Value: 0,
 			Usage: "maximum number of levels to traverse (0 for unlimited)",
 		},
+		"dry-run": cli.BoolFlag{
+			Name:  "dry-run",
+			Usage: "do everything except the final action (for testing whether actions will be performed)",
+		},
 	}
 
 	app.Commands = []cli.Command{
@@ -234,6 +238,7 @@ func main() {
 					EnvVar: flagEnvVars["pull"],
 					Usage:  `pull FROM before building (always, missing, never)`,
 				},
+				commonFlags["dry-run"],
 			},
 			Before: subcommandBeforeFactory("build"),
 			Action: cmdBuild,
@@ -245,6 +250,7 @@ func main() {
 				commonFlags["all"],
 				commonFlags["uniq"],
 				commonFlags["namespace"],
+				commonFlags["dry-run"],
 			},
 			Before: subcommandBeforeFactory("tag"),
 			Action: cmdTag,
@@ -256,16 +262,22 @@ func main() {
 				commonFlags["all"],
 				commonFlags["uniq"],
 				commonFlags["namespace"],
+				commonFlags["dry-run"],
 			},
 			Before: subcommandBeforeFactory("push"),
 			Action: cmdPush,
 		},
 		{
 			Name:  "put-shared",
-			Usage: `updated shared tags in the registry`,
+			Usage: `update shared tags in the registry (and multi-architecture tags)`,
 			Flags: []cli.Flag{
 				commonFlags["all"],
 				commonFlags["namespace"],
+				commonFlags["dry-run"],
+				cli.BoolFlag{
+					Name:  "single-arch",
+					Usage: `only act on the current architecture (for pushing "amd64/hello-world:latest", for example)`,
+				},
 			},
 			Before: subcommandBeforeFactory("put-shared"),
 			Action: cmdPutShared,

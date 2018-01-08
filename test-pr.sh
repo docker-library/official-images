@@ -83,9 +83,17 @@ if [ -z "$BASHBREW_SECOND_STAGE" ]; then
 		--user "$(id -u)":"$(id -g)"
 		$(id -G | xargs -n1 echo --group-add)
 
-		-e BASHBREW_DEBUG
 		-e BASHBREW_SECOND_STAGE=1
 	)
+
+	for e in "${!BASHBREW_@}"; do
+		case "$e" in
+			BASHBREW_SECOND_STAGE|BASHBREW_CACHE|BASHBREW_LIBRARY) ;;
+			*)
+				args+=( -e "$e" )
+				;;
+		esac
+	done
 
 	cmd=( ./test-pr.sh "$pull" "$@" )
 
@@ -152,7 +160,7 @@ IFS=$'\n'
 files=( $(bashbrew list --repos --uniq --build-order "${files[@]}") )
 unset IFS
 
-echo 'Build test of' '#'"$pull"';' "$commit" '(`'"$(join '`, `' "${files[@]}")"'`):'
+echo 'Build test of' '#'"$pull"';' "$commit"';' '`'"${BASHBREW_ARCH:-amd64}"'`' '(`'"$(join '`, `' "${files[@]}")"'`):'
 declare -A failedBuild=() failedTests=()
 for img in "${files[@]}"; do
 	IFS=$'\n'

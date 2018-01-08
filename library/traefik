@@ -1,12 +1,26 @@
-Maintainers: Emile Vauge <emile@vauge.com> (@emilevauge),
-             Vincent Demeester <vincent@sbr.pm> (@vdemeester),
-             Ludovic Fernandez <ludovic@containo.us> (@ldez)
+Maintainers: Emile Vauge <emile@vauge.com> (@emilevauge), Vincent Demeester <vincent@sbr.pm> (@vdemeester), Ludovic Fernandez <ludovic@containo.us> (@ldez)
 GitRepo: https://github.com/containous/traefik-library-image.git
 
-Tags: v1.3.5, 1.3.5, v1.3, 1.3, raclette, latest
-GitCommit: 03da849385c1b10d2f9d8ca6b0de36626212f01d
+Tags: v1.5.0-rc4, 1.5.0-rc4, v1.5, 1.5, cancoillotte
+Architectures: amd64, arm64v8, arm32v6
+GitCommit: c32b156f3f11eb905416caf3d0c93a47e0c42743
+amd64-Directory: scratch/amd64
+arm32v6-Directory: scratch/arm
+arm64v8-Directory: scratch/arm64
 
-Tags: v1.3.5-alpine, 1.3.5-alpine, v1.3-alpine, 1.3-alpine, raclette-alpine
-GitCommit: 03da849385c1b10d2f9d8ca6b0de36626212f01d
+Tags: v1.5.0-rc4-alpine, 1.5.0-rc4-alpine, v1.5-alpine, 1.5-alpine, cancoillotte-alpine
+Architectures: amd64, arm64v8, arm32v6
+GitCommit: c32b156f3f11eb905416caf3d0c93a47e0c42743
 Directory: alpine
 
+Tags: v1.4.6, 1.4.6, v1.4, 1.4, roquefort, latest
+Architectures: amd64, arm32v6, arm64v8
+GitCommit: 11fb07f3be330bece4875ced219372c6bda16868
+amd64-Directory: scratch/amd64
+arm32v6-Directory: scratch/arm
+arm64v8-Directory: scratch/arm64
+
+Tags: v1.4.6-alpine, 1.4.6-alpine, v1.4-alpine, 1.4-alpine, roquefort-alpine, alpine
+Architectures: amd64, arm32v6, arm64v8
+GitCommit: 11fb07f3be330bece4875ced219372c6bda16868
+Directory: alpine
