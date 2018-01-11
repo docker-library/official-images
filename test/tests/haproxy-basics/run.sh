@@ -8,7 +8,7 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
 image="$1"
 
-clientImage='buildpack-deps:jessie-curl'
+clientImage='buildpack-deps:stretch-curl'
 
 # Create an instance of the container-under-test
 serverImage="$("$dir/../image-name.sh" librarytest/haproxy-basics "$image")"
@@ -33,7 +33,7 @@ _request() {
 	fi
 
 	docker run --rm --link "$cid":haproxy "$clientImage" \
-		curl -fs -X"$method" --header 'Host: www.google.com' "$@" "http://haproxy/$url"
+		curl -fsSL -X"$method" --resolve www.google.com:80:$(docker inspect -f '{{.NetworkSettings.IPAddress}}' $cid) "$@" "http://www.google.com/$url"
 }
 
 . "$dir/../../retry.sh" '[ "$(_request GET / --output /dev/null || echo $?)" != 7 ]'
