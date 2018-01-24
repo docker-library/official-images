@@ -145,7 +145,7 @@ func cmdPutShared(c *cli.Context) error {
 			if !dryRun {
 				tagYaml := tagsToManifestToolYaml(targetRepo, tagsToPush...) + yaml
 				if err := manifestToolPushFromSpec(tagYaml); err != nil {
-					fmt.Fprintf(os.Stderr, "warning: failed putting %s, skipping (collecting errors)", groupIdentifier)
+					fmt.Fprintf(os.Stderr, "warning: failed putting %s, skipping (collecting errors)\n", groupIdentifier)
 					failed = append(failed, fmt.Sprintf("- %s: %v", groupIdentifier, err))
 					continue
 				}
