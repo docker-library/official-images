@@ -71,26 +71,32 @@ for version in "${versions[@]}"; do
 	done
 	versionAliases+=( $version ${aliases[$version]:-} )
 
-	echo
-	cat <<-EOE
-		Tags: $(join ', ' "${versionAliases[@]}")
-		GitCommit: $commit
-		Directory: $version
-	EOE
+	for variant in '' slim alpine; do
+		dir="$version${variant:+/$variant}"
+		[ -f "$dir/Dockerfile" ] || continue
 
-	for variant in slim alpine; do
-		[ -f "$version/$variant/Dockerfile" ] || continue
+		commit="$(dirCommit "$dir")"
 
-		commit="$(dirCommit "$version/$variant")"
+		variantAliases=( "${versionAliases[@]}" )
+		if [ -n "$variant" ]; then
+			variantAliases=( "${variantAliases[@]/%/-$variant}" )
+			variantAliases=( "${variantAliases[@]//latest-/}" )
+		fi
 
-		variantAliases=( "${versionAliases[@]/%/-$variant}" )
-		variantAliases=( "${variantAliases[@]//latest-/}" )
+		variantArches=( amd64 arm32v7 arm64v8 i386 s390x ppc64le )
+		case "$variant" in
+			alpine) variantArches=( ${variantArches[@]/arm32v7} )
+		esac
+		case "$version" in
+			1.[432]) variantArches=( ${variantArches[@]/ppc64le} )
+		esac
 
 		echo
 		cat <<-EOE
 			Tags: $(join ', ' "${variantAliases[@]}")
+			Architectures: $(join ', ' "${variantArches[@]}")
 			GitCommit: $commit
-			Directory: $version/$variant
+			Directory: $dir
 		EOE
 	done
 done
