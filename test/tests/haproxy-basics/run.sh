@@ -23,6 +23,9 @@ _request() {
 	local method="$1"
 	shift
 
+	local proto="$1"
+	shift
+
 	local url="${1#/}"
 	shift
 
@@ -33,10 +36,11 @@ _request() {
 	fi
 
 	docker run --rm --link "$cid":haproxy "$clientImage" \
-		curl -fsSL -X"$method" --resolve www.google.com:80:$(docker inspect -f '{{.NetworkSettings.IPAddress}}' $cid) "$@" "http://www.google.com/$url"
+		curl -fsSL -X"$method" --connect-to '::haproxy:' "$@" "$proto://example.com/$url"
 }
 
 . "$dir/../../retry.sh" '[ "$(_request GET / --output /dev/null || echo $?)" != 7 ]'
 
-# Check that we can request / (which is proxying google.com)
-[[ "$(_request GET '/')" == *Google* ]]
+# Check that we can request / (which is proxying example.com)
+_request GET http '/' | grep -q '<h1>Example Domain</h1>'
+_request GET https '/' | grep -q '<h1>Example Domain</h1>'
