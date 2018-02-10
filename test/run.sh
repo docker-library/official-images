@@ -9,7 +9,7 @@ usage() {
 	cat <<EOUSAGE
 
 usage: $self [-t test ...] image:tag [...]
-   ie: $self debian:wheezy
+   ie: $self debian:stretch
        $self -t utc python:3
        $self -t utc python:3 -t python-hy
 

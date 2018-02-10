@@ -9,7 +9,7 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 image="$1"
 
 # our image may not have "curl" (Alpine variants, for example)
-clientImage='buildpack-deps:jessie-curl'
+clientImage='buildpack-deps:stretch-curl'
 
 # Create an instance of the container-under-test
 # (explicitly setting a low memory limit since the image defaults to 2GB)

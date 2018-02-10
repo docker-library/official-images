@@ -9,7 +9,7 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 image="$1"
 
 # our image may not have "curl" (Alpine variants, for example)
-clientImage='buildpack-deps:jessie-curl'
+clientImage='buildpack-deps:stretch-curl'
 
 # input via HTTP (default port 0.0.0.0:8080)
 # output via stdout, newline-delimited nothing-but-the-message

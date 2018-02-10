@@ -9,7 +9,7 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 image="$1"
 
 # Use a client image with curl for testing
-clientImage='buildpack-deps:jessie-curl'
+clientImage='buildpack-deps:stretch-curl'
 
 app1id="$(docker run -d "$image" rapidoid.port=80 id=app1 app.services=ping,status)"
 app2id="$(docker run -d "$image" rapidoid.port=80 id=app2 app.services=ping,status)"
