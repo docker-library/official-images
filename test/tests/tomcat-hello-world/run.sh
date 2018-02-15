@@ -5,8 +5,8 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
 image="$1"
 
-# since we have curl in the tomcat image, we'll use that
-clientImage="$1"
+# since the "slim" tomcat variants don't have wget, we'll use buildpack-deps
+clientImage='buildpack-deps:stretch-curl'
 
 serverImage="$1"
 

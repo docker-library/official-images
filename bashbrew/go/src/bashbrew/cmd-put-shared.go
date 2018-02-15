@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 	"path"
+	"strings"
 	"time"
 
 	"github.com/codegangsta/cli"
@@ -114,6 +115,7 @@ func cmdPutShared(c *cli.Context) error {
 			continue
 		}
 
+		failed := []string{}
 		for _, group := range sharedTagGroups {
 			yaml, mostRecentPush, err := entriesToManifestToolYaml(singleArch, *r, group.Entries...)
 			if err != nil {
@@ -143,9 +145,14 @@ func cmdPutShared(c *cli.Context) error {
 			if !dryRun {
 				tagYaml := tagsToManifestToolYaml(targetRepo, tagsToPush...) + yaml
 				if err := manifestToolPushFromSpec(tagYaml); err != nil {
-					return fmt.Errorf("failed pushing %s", groupIdentifier)
+					fmt.Fprintf(os.Stderr, "warning: failed putting %s, skipping (collecting errors)\n", groupIdentifier)
+					failed = append(failed, fmt.Sprintf("- %s: %v", groupIdentifier, err))
+					continue
 				}
 			}
+		}
+		if len(failed) > 0 {
+			return fmt.Errorf("failed putting groups:\n%s", strings.Join(failed, "\n"))
 		}
 	}
 
