@@ -1,0 +1,28 @@
+Maintainers: Derek Collison <derek@nats.io> (@derekcollison),
+             Ivan Kozlovic <ivan@nats.io> (@kozlovic),
+             Colin Sullivan <colin@nats.io> (@ColinSullivan1)
+GitRepo: https://github.com/nats-io/prometheus-nats-exporter.git
+GitCommit: ccafb4a66545b9249f9ec6efea9b61e34639ad4d
+
+Tags: 1.0.4-linux, linux
+SharedTags: 1.0.4, latest
+Architectures: amd64, arm32v7, arm64v8
+amd64-GitCommit: ccafb4a66545b9249f9ec6efea9b61e34639ad4d
+amd64-Directory: docker/linux/amd64
+arm32v7-GitCommit: ccafb4a66545b9249f9ec6efea9b61e34639ad4d
+arm32v7-Directory: docker/linux/arm32v7
+arm64v8-GitCommit: ccafb4a66545b9249f9ec6efea9b61e34639ad4d
+arm64v8-Directory: docker/linux/arm64v8
+
+Tags: 1.0.4-nanoserver, nanoserver
+SharedTags: 1.0.4, latest
+Architectures: windows-amd64
+windows-amd64-GitCommit: ccafb4a66545b9249f9ec6efea9b61e34639ad4d
+windows-amd64-Directory: docker/windows/amd64/nanoserver
+Constraints: nanoserver
+
+Tags: 1.0.4-windowsservercore, windowsservercore
+Architectures: windows-amd64
+windows-amd64-GitCommit: ccafb4a66545b9249f9ec6efea9b61e34639ad4d
+windows-amd64-Directory: docker/windows/amd64/windowsservercore
+Constraints: windowsservercore
