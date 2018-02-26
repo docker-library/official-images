@@ -6,11 +6,13 @@ Constraints: !aufs
 Tags: latest, centos7, 7
 GitFetch: refs/heads/CentOS-7
 GitCommit: 79db851f4016c283fb3d30f924031f5a866d51a1
+arm32v7-GitFetch: refs/heads/centos-7armhfp
+arm32v7-GitCommit: bfbdaaeb937bb685e21fc0fee913ec32e798c960
 arm64v8-GitFetch: refs/heads/CentOS-7-aarch64
 arm64v8-GitCommit: 1271c996f5fbf19677bdd15d2d3a72d62e600e4b
 ppc64le-GitFetch: refs/heads/CentOS-7-ppc64le
 ppc64le-GitCommit: 9df3f31b1b3d71409a947fa4dd0bc2c5aeb47f1d
-Architectures: amd64, arm64v8, ppc64le
+Architectures: amd64, arm64v8, arm32v7, ppc64le
 
 Tags: centos6, 6
 GitFetch: refs/heads/CentOS-6
