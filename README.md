@@ -71,7 +71,7 @@ No official images can be derived from, or depend on, non-official images with t
 
 #### Consistency
 
-All official images should provide a consistent interface. A beginning user should be able to `docker run official-image sh` without needing to learn about `--entrypoint`. It is also nice for advanced users to take advantage of entrypoint, so that they can `docker run official-image --arg1 --arg2` without having to specify the binary to execute.
+All official images should provide a consistent interface. A beginning user should be able to `docker run official-image bash` (or `sh`) without needing to learn about `--entrypoint`. It is also nice for advanced users to take advantage of entrypoint, so that they can `docker run official-image --arg1 --arg2` without having to specify the binary to execute.
 
 1.	If the startup process does not need arguments, just use `CMD`:
 
@@ -86,7 +86,7 @@ All official images should provide a consistent interface. A beginning user shou
 	CMD ["postgres"]
 	```
 
-	1.	Ensure that `docker run official-image sh` works too. The easiest way is to check for the expected command and if it is something else, just `exec "$@"` (run whatever was passed, properly keeping the arguments escaped).
+	1.	Ensure that `docker run official-image bash` (or `sh`) works too. The easiest way is to check for the expected command and if it is something else, just `exec "$@"` (run whatever was passed, properly keeping the arguments escaped).
 
 		```sh
 		#!/bin/sh
@@ -95,18 +95,18 @@ All official images should provide a consistent interface. A beginning user shou
 		# this if will check if the first argument is a flag
 		# but only works if all arguments require a hyphenated flag
 		# -v; -SL; -f arg; etc will work, but not arg1 arg2
-		if [ "${1:0:1}" = '-' ]; then
+		if [ "$#" -eq 0 ] || [ "${1#-}" != "$1" ]; then
 		    set -- mongod "$@"
 		fi
 
 		# check for the expected command
 		if [ "$1" = 'mongod' ]; then
 		    # init db stuff....
-		    # use gosu to drop to a non-root user
+		    # use gosu (or su-exec) to drop to a non-root user
 		    exec gosu mongod "$@"
 		fi
 
-		# else default to run whatever the user wanted like "sh"
+		# else default to run whatever the user wanted like "bash" or "sh"
 		exec "$@"
 		```
 
