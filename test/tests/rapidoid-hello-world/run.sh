@@ -9,7 +9,7 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 image="$1"
 
 # Use a client image with curl for testing
-clientImage='buildpack-deps:jessie-curl'
+clientImage='buildpack-deps:stretch-curl'
 
 # Create an instance of the container-under-test
 serverImage="$("$dir/../image-name.sh" librarytest/rapidoid-hello-web "$image")"
