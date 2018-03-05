@@ -82,14 +82,14 @@ If you do not represent upstream and upstream becomes interested in maintaining 
 
 For upstreams interested in taking over maintainership of an existing repository, the first step is to get involved in the existing repository. Making comments on issues, proposing changes, and making yourself known within the "image community" (even if that "community" is just the current maintainer) are all important places to start to ensure that the transition is unsurprising to existing contributors and users.
 
-When taking over an existing repository, please ensure that the entire Git history of the original repository is kept in the new upstream-maintained repository to make sure the review process isn't stalled during the transition. This is most easily accomplished by forking the new from the existing repository, but can also be accomplished by fetching the commits directly from the original and pushing them into the new repo (ie, `git fetch https://github.com/jsmith/example.git master`, `git rebase FETCH_HEAD`, `git push -f`). On github, an alternative is to move ownership of the git repository. This can be accomplished without giving either group admin access to the other owner's repository:
+When taking over an existing repository, please ensure that the entire Git history of the original repository is kept in the new upstream-maintained repository to make sure the review process isn't stalled during the transition. This is most easily accomplished by forking the new from the existing repository, but can also be accomplished by fetching the commits directly from the original and pushing them into the new repo (ie, `git fetch https://github.com/jsmith/example.git master`, `git rebase FETCH_HEAD`, `git push -f`). On GitHub, an alternative is to move ownership of the git repository. This can be accomplished without giving either group admin access to the other owner's repository:
 
 -	create temporary intermediary organization
 	-	[docker-library-transitioner](https://github.com/docker-library-transitioner) is available for this purpose if you would like our help
 -	give old and new owners admin access to intermediary organization
 -	old owner transfers repo ownership to intermediary organization
 -	new owner transfers repo ownership to its new home
-	-	recommend that old owner does not fork new repo back into the old organization to ensure that github redirects will just work
+	-	recommend that old owner does not fork new repo back into the old organization to ensure that GitHub redirects will just work
 
 #### Repeatability
 
