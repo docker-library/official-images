@@ -263,6 +263,10 @@ func main() {
 				commonFlags["uniq"],
 				commonFlags["namespace"],
 				commonFlags["dry-run"],
+				cli.BoolFlag{
+					Name:  "force",
+					Usage: `always push even if hub image is newer (very SLOW); not useful on dry-run`,
+				},
 			},
 			Before: subcommandBeforeFactory("push"),
 			Action: cmdPush,
