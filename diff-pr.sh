@@ -77,7 +77,9 @@ fi
 
 export BASHBREW_CACHE="${BASHBREW_CACHE:-${XDG_CACHE_HOME:-$HOME/.cache}/bashbrew}"
 export BASHBREW_LIBRARY="$PWD/oi/library"
-export BASHBREW_ARCH='amd64' # TODO something smarter with arches
+
+: "${BASHBREW_ARCH:=amd64}" # TODO something smarter with arches
+export BASHBREW_ARCH
 
 # "bashbrew cat" template for duplicating something like "bashbrew list --uniq" but with architectures too
 archesListTemplate='
@@ -110,7 +112,7 @@ sharedTagsListTemplate='
 # TODO something less hacky than "git archive" hackery, like a "bashbrew archive" or "bashbrew context" or something
 template='
 	{{- range $.Entries -}}
-		{{- $arch := .Architectures | first -}}
+		{{- $arch := .HasArchitecture arch | ternary arch (.Architectures | first) -}}
 		{{- $from := $.ArchDockerFrom $arch . -}}
 		git -C "$BASHBREW_CACHE/git" archive --format=tar
 		{{- " " -}}

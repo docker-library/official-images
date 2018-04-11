@@ -37,6 +37,16 @@ fi
 
 export BASHBREW_LIBRARY="$(dirname "$PWD")/library"
 
+if badTags="$(bashbrew list "${repos[@]}" | grep -E ':.+latest.*|:.*latest.+')" && [ -n "$badTags" ]; then
+	echo >&2
+	echo >&2 "Incorrectly formatted 'latest' tags detected:"
+	echo >&2 ' ' $badTags
+	echo >&2
+	echo >&2 'Read https://github.com/docker-library/official-images#tags-and-aliases for more details.'
+	echo >&2
+	exit 1
+fi
+
 cmds=(
 	'list'
 	'list --uniq'
