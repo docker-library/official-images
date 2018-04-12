@@ -72,7 +72,7 @@ git -C oi fetch --quiet \
 
 images=( "$@" )
 if [ "${#images[@]}" -eq 0 ]; then
-	images=( $(git -C oi/library diff --name-only master...pull -- . | xargs -n1 basename) )
+	images=( $(git -C oi/library diff --name-status master...pull -- . | awk -F ' ' '{ if ($1 != "D") print $2 }' | xargs basename) )
 fi
 
 export BASHBREW_CACHE="${BASHBREW_CACHE:-${XDG_CACHE_HOME:-$HOME/.cache}/bashbrew}"

@@ -26,7 +26,7 @@ elif [ "$(git diff --numstat "$UPSTREAM...$HEAD" -- . | wc -l)" -ne 0 ]; then
 	echo >&2 'Changes in bashbrew/ detected!'
 	extraCommands=1
 else
-	repos=( $(git diff --numstat "$UPSTREAM...$HEAD" -- ../library | awk -F '/' '{ print $2 }') )
+	repos=( $(git diff --name-status "$UPSTREAM...$HEAD" -- ../library | awk -F ' ' '{ if ($1 != "D") print $2 }') )
 	extraCommands=1
 fi
 

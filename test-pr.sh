@@ -135,8 +135,9 @@ export BASHBREW_LIBRARY="$PWD/library"
 
 if [ "$#" -eq 0 ]; then
 	IFS=$'\n'
-	files=( $(git diff --name-only origin/master...HEAD -- library | xargs -n1 basename) )
-	unset IFS
+	files=( $(git diff --name-status origin/master...HEAD -- library | awk -F ' ' '{ if ($1 != "D") print $2 }' | xargs basename) )
+	echo $files;
+        unset IFS
 
 	# TODO narrow this down into groups of the exact tags for each image that changed >:)
 else
