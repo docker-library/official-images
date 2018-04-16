@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
+	"github.com/aristanetworks/go-dockerlibrary/manifest"
 	"github.com/codegangsta/cli"
-	"github.com/docker-library/go-dockerlibrary/manifest"
 )
 
 func cmdList(c *cli.Context) error {

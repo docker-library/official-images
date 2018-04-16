@@ -12,8 +12,8 @@ import (
 	"path"
 	"strings"
 
+	"github.com/aristanetworks/go-dockerlibrary/manifest"
 	"github.com/codegangsta/cli"
-	"github.com/docker-library/go-dockerlibrary/manifest"
 )
 
 var dockerFromCache = map[string]string{}

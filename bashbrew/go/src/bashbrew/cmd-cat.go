@@ -7,8 +7,8 @@ import (
 	"strings"
 	"text/template"
 
+	"github.com/aristanetworks/go-dockerlibrary/pkg/templatelib"
 	"github.com/codegangsta/cli"
-	"github.com/docker-library/go-dockerlibrary/pkg/templatelib"
 )
 
 var DefaultCatFormat = `

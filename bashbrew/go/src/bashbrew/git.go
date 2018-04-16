@@ -11,8 +11,8 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/docker-library/go-dockerlibrary/manifest"
-	"github.com/docker-library/go-dockerlibrary/pkg/execpipe"
+	"github.com/aristanetworks/go-dockerlibrary/manifest"
+	"github.com/aristanetworks/go-dockerlibrary/pkg/execpipe"
 )
 
 func gitCache() string {

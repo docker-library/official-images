@@ -2,13 +2,13 @@ package manifest_test
 
 import (
 	"bufio"
-	"fmt"
 	"strings"
+	"testing"
 
 	"github.com/docker-library/go-dockerlibrary/manifest"
 )
 
-func Example() {
+func TestExample(t *testing.T) {
 	man, err := manifest.Parse(bufio.NewReader(strings.NewReader(`# RFC 2822
 
 	# I LOVE CAKE
@@ -60,20 +60,30 @@ Tags: raspbian-s390x
 Architectures: s390x, i386
 
 
+Tags: 1.5-withfile
+SharedTags: 1.5-debian
+GitCommit: d7e2a8d90a9b8f5dfd5bcd428e0c33b68c40cc19
+File: Dockerfile-15
+
+Tags: 1.5-withdirandfile
+SharedTags: 1.5-debian
+GitCommit: d7e2a8d90a9b8f5dfd5bcd428e0c33b68c40cc19
+Directory: 1.5
+File: Dockerfile-debian
 `)))
 	if err != nil {
-		panic(err)
+		t.Fatal(err)
 	}
-	fmt.Printf("-------------\n2822:\n%s\n", man)
+	t.Logf("-------------\n2822:\n%s\n", man)
 
-	fmt.Printf("\nShared Tag Groups:\n")
+	t.Logf("\nShared Tag Groups:\n")
 	for _, group := range man.GetSharedTagGroups() {
-		fmt.Printf("\n  - %s\n", strings.Join(group.SharedTags, ", "))
+		t.Logf("\n  - %s\n", strings.Join(group.SharedTags, ", "))
 		for _, entry := range group.Entries {
-			fmt.Printf("    - %s\n", entry.TagsString())
+			t.Logf("    - %s\n", entry.TagsString())
 		}
 	}
-	fmt.Printf("\n")
+	t.Logf("\n")
 
 	man, err = manifest.Parse(bufio.NewReader(strings.NewReader(`
 # maintainer: InfoSiftr <github@infosiftr.com> (@infosiftr)
@@ -90,7 +100,7 @@ i: g@h j
 	if err != nil {
 		panic(err)
 	}
-	fmt.Printf("-------------\nline-based:\n%v\n", man)
+	t.Logf("-------------\nline-based:\n%v\n", man)
 
 	// Output:
 	// -------------
@@ -151,15 +161,15 @@ i: g@h j
 	// Directory: j
 }
 
-func ExampleFetch_local() {
+func TestExampleFetch_local(t *testing.T) {
 	repoName, tagName, man, err := manifest.Fetch("testdata", "bash:4.4")
 	if err != nil {
 		panic(err)
 	}
 
-	fmt.Printf("%s:%s\n\n", repoName, tagName)
+	t.Logf("%s:%s\n\n", repoName, tagName)
 
-	fmt.Println(man.GetTag(tagName).ClearDefaults(manifest.DefaultManifestEntry).String())
+	t.Log(man.GetTag(tagName).ClearDefaults(manifest.DefaultManifestEntry).String())
 
 	// Output:
 	// bash:4.4
@@ -171,15 +181,15 @@ func ExampleFetch_local() {
 	// Directory: 4.4
 }
 
-func ExampleFetch_remote() {
+func TestExampleFetch_remote(t *testing.T) {
 	repoName, tagName, man, err := manifest.Fetch("/home/jsmith/docker/official-images/library", "https://github.com/docker-library/official-images/raw/1a3c4cd6d5cd53bd538a6f56a69f94c5b35325a7/library/bash:4.4")
 	if err != nil {
 		panic(err)
 	}
 
-	fmt.Printf("%s:%s\n\n", repoName, tagName)
+	t.Logf("%s:%s\n\n", repoName, tagName)
 
-	fmt.Println(man.GetTag(tagName).ClearDefaults(manifest.DefaultManifestEntry).String())
+	t.Log(man.GetTag(tagName).ClearDefaults(manifest.DefaultManifestEntry).String())
 
 	// Output:
 	// bash:4.4

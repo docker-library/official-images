@@ -8,8 +8,8 @@ import (
 	"os"
 	"strings"
 
+	"github.com/aristanetworks/go-dockerlibrary/pkg/stripper"
 	"github.com/codegangsta/cli"
-	"github.com/docker-library/go-dockerlibrary/pkg/stripper"
 	"pault.ag/go/debian/control"
 )
 

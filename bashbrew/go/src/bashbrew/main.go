@@ -8,7 +8,7 @@ import (
 
 	"github.com/codegangsta/cli"
 
-	"github.com/docker-library/go-dockerlibrary/manifest"
+	"github.com/aristanetworks/go-dockerlibrary/manifest"
 )
 
 // TODO somewhere, ensure that the Docker engine we're talking to is API version 1.22+ (Docker 1.10+)
