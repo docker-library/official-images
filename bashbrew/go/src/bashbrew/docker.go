@@ -28,7 +28,7 @@ func (r Repo) ArchDockerFrom(arch string, entry *manifest.Manifest2822Entry) (st
 		return "", err
 	}
 
-	dockerfileFile := path.Join(entry.ArchDirectory(arch), "Dockerfile")
+	dockerfileFile := path.Join(entry.ArchDirectory(arch), entry.ArchFile(arch))
 
 	cacheKey := strings.Join([]string{
 		commit,
@@ -138,12 +138,13 @@ func (r Repo) dockerBuildUniqueBits(entry *manifest.Manifest2822Entry) ([]string
 		entry.ArchGitRepo(arch),
 		entry.ArchGitCommit(arch),
 		entry.ArchDirectory(arch),
+		entry.ArchFile(arch),
 		fromId,
 	}, nil
 }
 
-func dockerBuild(tag string, context io.Reader) error {
-	args := []string{"build", "-t", tag, "--rm", "--force-rm"}
+func dockerBuild(tag string, context io.Reader, file string) error {
+	args := []string{"build", "-t", tag, "--rm", "--force-rm", "-f", file}
 	args = append(args, "-")
 	cmd := exec.Command("docker", args...)
 	cmd.Stdin = context
