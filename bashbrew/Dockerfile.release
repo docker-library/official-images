@@ -51,7 +51,8 @@ RUN set -euxo pipefail; \
 		) \
 	done; \
 	\
-	rm -rf "$GNUPGHOME"; \
+	gpgconf --kill all; \
+	rm -r "$GNUPGHOME"; \
 	\
 	ls -lAFh bin/manifest-tool-*; \
 	file bin/manifest-tool-*

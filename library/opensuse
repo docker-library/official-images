@@ -12,24 +12,25 @@ Constraints: !aufs
 Tags: 42.2
 Architectures: amd64
 GitFetch: refs/heads/openSUSE-Leap-42.2
-GitCommit: bc0b54b2fb7348797feed1e462fabb4ccfb91e2e
+GitCommit: fd39ce9631c3b6a110b6c1e8e5756a20d0863a77
 amd64-Directory: x86_64/
 
 # This is the multiarch section specific for openSUSE-Leap-42.3
 Tags: 42.3,latest,leap
 Architectures: amd64, arm64v8, ppc64le
 GitFetch: refs/heads/openSUSE-Leap-42.3
-GitCommit: 1bab895f6d556a12f450590eed385bac17965599
+GitCommit: 6252e7bc2a411b3c5cfd5ed3b74e5839f7f7615b
 amd64-Directory: x86_64/
 arm64v8-Directory: aarch64/
 ppc64le-Directory: ppc64le/
 
 # This is the multiarch section specific for openSUSE-Tumbleweed
 Tags: tumbleweed
-Architectures: amd64, arm64v8, ppc64le
+Architectures: amd64, arm64v8, ppc64le, s390x
 GitFetch: refs/heads/openSUSE-Tumbleweed
-GitCommit: 9f38c533d3dc71f57106364d5e4055fdbf268649
+GitCommit: 63f8c38ea523302fa8918fa0265f949075516a03
 amd64-Directory: x86_64/
 arm64v8-Directory: aarch64/
 ppc64le-Directory: ppc64le/
+s390x-Directory: s390x/
 

@@ -6,7 +6,7 @@ Constraints: !aufs
 Tags: latest, 27
 Architectures: amd64, arm32v7, arm64v8, ppc64le
 GitFetch: refs/heads/27
-GitCommit: f429bf1590cc45d9912c5a7f75e85ceba8057798
+GitCommit: 425644cb22f4f31db65671bb3df75de4ee5b9742
 amd64-Directory: x86_64/
 arm32v7-Directory: armhfp/
 arm64v8-Directory: aarch64/
@@ -15,30 +15,26 @@ ppc64le-Directory: ppc64le/
 Tags: 26
 Architectures: amd64, arm32v7, arm64v8, ppc64le
 GitFetch: refs/heads/26
-GitCommit: 5433f211a72f52b360751a63e3155d8fd12ab828
+GitCommit: 035aa2a3970e4e10a9a6ae0b79322b882bfe50d3
 amd64-Directory: x86_64/
 arm32v7-Directory: armhfp/
 arm64v8-Directory: aarch64/
 ppc64le-Directory: ppc64le/
-
-Tags: modular, 26-modular
-Architectures: amd64
-GitFetch: refs/heads/26-modular
-GitCommit: d5dd6eb44f0651788edb6f81a5537c09b07022c4
-amd64-Directory: x86_64/
-
-Tags: 25
-Architectures: amd64, arm32v7
-GitFetch: refs/heads/25
-GitCommit: 2dc7762f57aac299ea93a58eb386bf1a9b31356f
-amd64-Directory: x86_64/
-arm32v7-Directory: armhfp/
 
 Tags: rawhide
 Architectures: amd64, arm32v7, arm64v8, ppc64le
 GitFetch: refs/heads/rawhide
-GitCommit: 47465fa682b33cea69102229b7e895151a408b8f
+GitCommit: a3db183bc886c67e9e326b39c59b7ceda5c64aa4
 amd64-Directory: x86_64/
 arm32v7-Directory: armhfp/
 arm64v8-Directory: aarch64/
 ppc64le-Directory: ppc64le/
+
+Tags: branched, 28
+Architectures: amd64, arm32v7, arm64v8, s390x
+GitFetch: refs/heads/28
+GitCommit: dee23ddc2f0c8bdfe8be0c37dd93ffec00cfa969
+amd64-Directory: x86_64/
+arm32v7-Directory: armhfp/
+arm64v8-Directory: aarch64/
+s390x-Directory: s390x/
