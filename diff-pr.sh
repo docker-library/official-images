@@ -191,6 +191,7 @@ copy-tar() {
 						*.tar.*|*.tgz)
 							tar -tf "$dst/$dDirName/$g" \
 								| grep -vE "$uninterestingTarballGrep" \
+								| sed -e 's!^./!!' \
 								| sort \
 								> "$dst/$dDirName/$g  'tar -t'"
 							;;
