@@ -1,8 +1,9 @@
 Maintainers: Paul Lam <paul@quantisan.com> (@Quantisan),
-             Wes Morgan <wesmorgan@icloud.com> (@cap10morgan)
+             Wes Morgan <wesmorgan@icloud.com> (@cap10morgan),
+             Kirill Chernyshov <delaguardo@gmail.com> (@DeLaGuardo)
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 GitRepo: https://github.com/Quantisan/docker-clojure.git
-GitCommit: 9a5646fb242d98e8867bcbb558cf61a9bbf51f6e
+GitCommit: 1befe11d6cf54581247c002c6f9793d12c2f337f
 
 Tags: lein-2.8.1, lein, latest
 Directory: debian/lein
@@ -24,3 +25,10 @@ Directory: debian/boot
 Tags: boot-2.7.2-alpine, boot-alpine
 Architectures: amd64
 Directory: alpine/boot
+
+Tags: tools-deps-1.9.0.375, tools-deps
+Directory: debian/tools-deps
+
+Tags: tools-deps-1.9.0.375-alpine, tools-deps-alpine
+Architectures: amd64
+Directory: alpine/tools-deps

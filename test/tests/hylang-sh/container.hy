@@ -2,8 +2,8 @@
   (+ 2 2)
   (print))
 
-(import [pip])
-(pip.main ["install" "-q" "sh"])
+(import [subprocess] [sys])
+(subprocess.check_call [sys.executable "-m" "pip" "install" "-q" "sh"])
 
 (import [sh [echo]])
 (->
