@@ -4,35 +4,28 @@ GitCommit: 01a15ec99c7470a3391c691509db1759b41eaf66
 GitFetch: refs/heads/master
 # https://github.com/oracle/container-images/tree/dist-amd64
 amd64-GitFetch: refs/heads/dist-amd64
-amd64-GitCommit: c095a9c65fab651863d61c30f00c3f5a289956b5
+amd64-GitCommit: 558ce97a69cb5d0a4ca7a4705ccd838bfc3c1c19
 # https://github.com/oracle/container-images/tree/dist-arm64v8
 arm64v8-GitFetch: refs/heads/dist-arm64v8
 arm64v8-GitCommit: 7bcb63b328d3d3722333a25b20c9098fb77dcace
 Constraints: !aufs
 
+Tags: 7, latest
+Architectures: amd64, arm64v8
+amd64-Directory: 7.5
+arm64v8-Directory: 7.4
+
 Tags: 7-slim
 Architectures: amd64, arm64v8
 Directory: 7-slim
 
-Tags: latest, 7, 7.4
+Tags: 7.5
+Architectures: amd64
+Directory: 7.5
+
+Tags: 7.4
 Architectures: amd64, arm64v8
 Directory: 7.4
-
-Tags: 7.3
-Architectures: amd64
-Directory: 7.3
-
-Tags: 7.2
-Architectures: amd64
-Directory: 7.2
-
-Tags: 7.1
-Architectures: amd64
-Directory: 7.1
-
-Tags: 7.0
-Architectures: amd64
-Directory: 7.0
 
 Tags: 6-slim
 Architectures: amd64
@@ -41,15 +34,3 @@ Directory: 6-slim
 Tags: 6, 6.9
 Architectures: amd64
 Directory: 6.9
-
-Tags: 6.8
-Architectures: amd64
-Directory: 6.8
-
-Tags: 6.7
-Architectures: amd64
-Directory: 6.7
-
-Tags: 6.6
-Architectures: amd64
-Directory: 6.6
