@@ -143,8 +143,9 @@ func (r Repo) dockerBuildUniqueBits(entry *manifest.Manifest2822Entry) ([]string
 	}, nil
 }
 
-func dockerBuild(tag string, context io.Reader, file string) error {
-	args := []string{"build", "-t", tag, "--rm", "--force-rm", "-f", file}
+func dockerBuild(tag string, context io.Reader, file, commit string) error {
+	args := []string{"build", "-t", tag, "--rm", "--force-rm", "-f", file, "--build-arg",
+		fmt.Sprintf("DOCKER_BUILD_COMMIT=%s", commit)}
 	args = append(args, "-")
 	cmd := exec.Command("docker", args...)
 	cmd.Stdin = context
