@@ -1,23 +1,29 @@
-Maintainers: Jonathan A. Sternberg <jonathan@influxdb.com> (@jsternberg)
+Maintainers: Jonathan A. Sternberg <jonathan@influxdata.com> (@jsternberg)
+GitRepo: git://github.com/influxdata/influxdata-docker
+GitCommit: ec041ae6fc6a4d77b4ad5446ebcd492a09267f21
 
-Tags: 1.3, 1.3.8
+Tags: 1.4, 1.4.3
 Architectures: amd64, arm32v7, arm64v8
-GitRepo: git://github.com/influxdata/influxdata-docker
-GitCommit: d3e439064a3cdaf7b3aa0a234df5a732727d4eb1
-Directory: influxdb/1.3
-
-Tags: 1.3-alpine, 1.3.8-alpine
-GitRepo: git://github.com/influxdata/influxdata-docker
-GitCommit: d3e439064a3cdaf7b3aa0a234df5a732727d4eb1
-Directory: influxdb/1.3/alpine
-
-Tags: 1.4, 1.4.2, latest
-Architectures: amd64, arm32v7, arm64v8
-GitRepo: git://github.com/influxdata/influxdata-docker
-GitCommit: cd2681315705459a3bfc1bf52b5dd0f92ee78b86
 Directory: influxdb/1.4
 
-Tags: 1.4-alpine, 1.4.2-alpine, alpine
-GitRepo: git://github.com/influxdata/influxdata-docker
-GitCommit: cd2681315705459a3bfc1bf52b5dd0f92ee78b86
+Tags: 1.4-alpine, 1.4.3-alpine
 Directory: influxdb/1.4/alpine
+
+Tags: 1.5, 1.5.3, latest
+Architectures: amd64, arm32v7, arm64v8
+Directory: influxdb/1.5
+
+Tags: 1.5-alpine, 1.5.3-alpine, alpine
+Directory: influxdb/1.5/alpine
+
+Tags: 1.5-data, 1.5.3-data, data
+Directory: influxdb/1.5/data
+
+Tags: 1.5-data-alpine, 1.5.3-data-alpine, data-alpine
+Directory: influxdb/1.5/data/alpine
+
+Tags: 1.5-meta, 1.5.3-meta, meta
+Directory: influxdb/1.5/meta
+
+Tags: 1.5-meta-alpine, 1.5.3-meta-alpine, meta-alpine
+Directory: influxdb/1.5/meta/alpine

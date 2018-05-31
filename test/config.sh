@@ -112,6 +112,7 @@ imageTests+=(
 	'
 	[mongo]='
 		mongo-basics
+		mongo-auth-basics
 	'
 	[mono]='
 	'
@@ -130,6 +131,9 @@ imageTests+=(
 	[openjdk]='
 		java-hello-world
 		java-uimanager-font
+	'
+	[open-liberty]='
+		open-liberty-hello-world
 	'
 	[percona]='
 	'
@@ -160,6 +164,7 @@ imageTests+=(
 		python-imports
 		python-pip-requests-ssl
 		python-sqlite3
+		python-stack-size
 	'
 	[rabbitmq]='
 		rabbitmq-basics
@@ -198,6 +203,9 @@ imageTests+=(
 	[silverpeas]='
 		silverpeas-basics
 	'
+	[swipl]='
+		swipl-modules
+	'
 	[swift]='
 		swift-hello-world
 	'
@@ -209,6 +217,9 @@ imageTests+=(
 	'
 	[wordpress:fpm]='
 		wordpress-fpm-run
+	'
+	[znc]='
+		znc-basics
 	'
 	[zookeeper]='
 		zookeeper-basics

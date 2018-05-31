@@ -8,7 +8,7 @@ image="$1"
 # Build a client image with cgi-fcgi for testing
 clientImage='librarytest/php-fpm-hello-web:fcgi-client'
 docker build -t "$clientImage" - > /dev/null <<'EOF'
-FROM debian:jessie
+FROM debian:stretch-slim
 
 RUN set -x && apt-get update && apt-get install -y libfcgi0ldbl && rm -rf /var/lib/apt/lists/*
 

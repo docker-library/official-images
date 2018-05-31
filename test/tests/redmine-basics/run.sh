@@ -6,7 +6,7 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 serverImage="$1"
 
 # Use a client image with curl for testing
-clientImage='buildpack-deps:jessie-curl'
+clientImage='buildpack-deps:stretch-curl'
 
 # Create an instance of the container-under-test
 cid="$(docker run -d "$serverImage")"

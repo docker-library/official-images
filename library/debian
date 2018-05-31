@@ -4,31 +4,31 @@
 Maintainers: Tianon Gravi <tianon@debian.org> (@tianon),
              Paul Tagliamonte <paultag@debian.org> (@paultag)
 GitRepo: https://github.com/debuerreotype/docker-debian-artifacts.git
-GitCommit: fa5e408fa2e9a74c025f21cbfa2449ea349afd26
+GitCommit: c793937632f8bcc6712a14535c37b870c2f63374
 # https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-amd64
 amd64-GitFetch: refs/heads/dist-amd64
-amd64-GitCommit: de09dd55b6328b37b89a33e76b698f9dbe611fab
+amd64-GitCommit: b024a792c752a5c6ccc422152ab0fd7197ae8860
 # https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm32v5
 arm32v5-GitFetch: refs/heads/dist-arm32v5
-arm32v5-GitCommit: 820ba75e469d4ed07aa22c925493d5e4d15bbe54
+arm32v5-GitCommit: 19dfff4171f10b80c5bac4fa2f7a57d87000f3f0
 # https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm32v7
 arm32v7-GitFetch: refs/heads/dist-arm32v7
-arm32v7-GitCommit: 4c387af2dc9896af594ce9d7c2f1bb975488fc8b
+arm32v7-GitCommit: e0ddf19f4060289511d90cc21dbf5eb8729a7234
 # https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm64v8
 arm64v8-GitFetch: refs/heads/dist-arm64v8
-arm64v8-GitCommit: bb7f74788fe24edc9f2b85133d601810a141b6f9
+arm64v8-GitCommit: 774c95e9240f7aaf13df9e38e487d2ddc63c85bf
 # https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-i386
 i386-GitFetch: refs/heads/dist-i386
-i386-GitCommit: 2d0c94d8151b53bf8263ae268417f99bd7426721
+i386-GitCommit: 5bcad9981a4524936db68f4d5f5d6e0bd98a241a
 # https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-ppc64le
 ppc64le-GitFetch: refs/heads/dist-ppc64le
-ppc64le-GitCommit: 5400c04d7b28e30b3d265c79c5f91e17ac59367b
+ppc64le-GitCommit: 8cdb589bb388b97321c15abe066411568c600321
 # https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-s390x
 s390x-GitFetch: refs/heads/dist-s390x
-s390x-GitCommit: 517507bd5c71cff0c609942acd82bbb3f9de687f
+s390x-GitCommit: e3f6b24e26eaf27927234ef10fba83c7f9884d78
 
 # buster -- Debian x.y Testing distribution - Not Released
-Tags: buster, buster-20171009
+Tags: buster, buster-20180426
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: buster
 
@@ -37,12 +37,12 @@ Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: buster/slim
 
 # experimental -- Experimental packages - not released; use at your own risk.
-Tags: experimental, experimental-20171009
+Tags: experimental, experimental-20180426
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: experimental
 
-# jessie -- Debian 8.9 Released 22 July 2017
-Tags: jessie, jessie-20171009, 8.9, 8
+# jessie -- Debian 8.10 Released 09 December 2017
+Tags: jessie, jessie-20180426, 8.10, 8
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: jessie
 
@@ -50,12 +50,12 @@ Tags: jessie-backports
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: jessie/backports
 
-Tags: jessie-slim
+Tags: jessie-slim, 8.10-slim, 8-slim
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: jessie/slim
 
 # oldoldstable -- Debian 7.11 Released 04 June 2016
-Tags: oldoldstable, oldoldstable-20171009
+Tags: oldoldstable, oldoldstable-20180426
 Architectures: amd64, arm32v5, arm32v7, i386
 Directory: oldoldstable
 
@@ -67,8 +67,8 @@ Tags: oldoldstable-slim
 Architectures: amd64, arm32v5, arm32v7, i386
 Directory: oldoldstable/slim
 
-# oldstable -- Debian 8.9 Released 22 July 2017
-Tags: oldstable, oldstable-20171009
+# oldstable -- Debian 8.10 Released 09 December 2017
+Tags: oldstable, oldstable-20180426
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: oldstable
 
@@ -81,12 +81,12 @@ Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: oldstable/slim
 
 # rc-buggy -- Experimental packages - not released; use at your own risk.
-Tags: rc-buggy, rc-buggy-20171009
+Tags: rc-buggy, rc-buggy-20180426
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: rc-buggy
 
 # sid -- Debian x.y Unstable - Not Released
-Tags: sid, sid-20171009
+Tags: sid, sid-20180426
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: sid
 
@@ -94,8 +94,8 @@ Tags: sid-slim
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: sid/slim
 
-# stable -- Debian 9.2 Released 07 October 2017
-Tags: stable, stable-20171009
+# stable -- Debian 9.4 Released 10 March 2018
+Tags: stable, stable-20180426
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: stable
 
@@ -107,8 +107,8 @@ Tags: stable-slim
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: stable/slim
 
-# stretch -- Debian 9.2 Released 07 October 2017
-Tags: stretch, stretch-20171009, 9.2, 9, latest
+# stretch -- Debian 9.4 Released 10 March 2018
+Tags: stretch, stretch-20180426, 9.4, 9, latest
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: stretch
 
@@ -116,12 +116,12 @@ Tags: stretch-backports
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: stretch/backports
 
-Tags: stretch-slim
+Tags: stretch-slim, 9.4-slim, 9-slim
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: stretch/slim
 
 # testing -- Debian x.y Testing distribution - Not Released
-Tags: testing, testing-20171009
+Tags: testing, testing-20180426
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: testing
 
@@ -130,7 +130,7 @@ Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: testing/slim
 
 # unstable -- Debian x.y Unstable - Not Released
-Tags: unstable, unstable-20171009
+Tags: unstable, unstable-20180426
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: unstable
 
@@ -139,7 +139,7 @@ Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: unstable/slim
 
 # wheezy -- Debian 7.11 Released 04 June 2016
-Tags: wheezy, wheezy-20171009, 7.11, 7
+Tags: wheezy, wheezy-20180426, 7.11, 7
 Architectures: amd64, arm32v5, arm32v7, i386
 Directory: wheezy
 
@@ -147,6 +147,6 @@ Tags: wheezy-backports
 Architectures: amd64, arm32v5, arm32v7, i386
 Directory: wheezy/backports
 
-Tags: wheezy-slim
+Tags: wheezy-slim, 7.11-slim, 7-slim
 Architectures: amd64, arm32v5, arm32v7, i386
 Directory: wheezy/slim
