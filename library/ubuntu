@@ -3,42 +3,47 @@
 
 Maintainers: Tianon Gravi <tianon@debian.org> (@tianon), Michael Hudson-Doyle <michael.hudson@ubuntu.com> (@mwhudson)
 GitRepo: https://github.com/tianon/docker-brew-ubuntu-core.git
-GitCommit: aeb64bb126ca5d9fd2a43bc2c35d17bb5a83b770
+GitCommit: 3742b406ffb023f272beabd7409507b9cec78079
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-amd64
 amd64-GitFetch: refs/heads/dist-amd64
-amd64-GitCommit: 404d80486fada09bff68a210b7eddf78f3235156
+amd64-GitCommit: 58cc180042b7ebec2b683576faa00c04d5d011e2
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-arm32v7
 arm32v7-GitFetch: refs/heads/dist-arm32v7
-arm32v7-GitCommit: 11b52bb36f16081b94053ee7023205e141571855
+arm32v7-GitCommit: 4ca46f737903cdf3cba27a1c051f641a411ec485
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-arm64v8
 arm64v8-GitFetch: refs/heads/dist-arm64v8
-arm64v8-GitCommit: d72734b65ab947485c44fafa40e14f013aa7b4c3
+arm64v8-GitCommit: b0faa072a5f7bb0a5873eaed5de830f2e4931c38
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-i386
 i386-GitFetch: refs/heads/dist-i386
-i386-GitCommit: 3dc2e5ae46ceedbf16110e61dfc2597d65c1e514
+i386-GitCommit: 3592ac685dae1922327c9fee41c98296312847ee
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-ppc64le
 ppc64le-GitFetch: refs/heads/dist-ppc64le
-ppc64le-GitCommit: a0e44d7c6d2c0980925a2513d3a4b38164e96d65
+ppc64le-GitCommit: 266b7373b9f8e81c1b67d016d8afe4d19d71ca04
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-s390x
 s390x-GitFetch: refs/heads/dist-s390x
-s390x-GitCommit: e246e471fe2492afae04f1f1ddfb0e8b395319ce
+s390x-GitCommit: f63d0629745365a22cc5cb19f0505aa77a98927d
 
-# 20180417 (artful)
-Tags: 17.10, artful-20180417, artful
+# 20180524 (artful)
+Tags: 17.10, artful-20180524, artful
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: artful
 
-# 20180426 (bionic)
-Tags: 18.04, bionic-20180426, bionic, latest, rolling, devel
+# 20180526 (bionic)
+Tags: 18.04, bionic-20180526, bionic, latest, rolling
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: bionic
 
-# 20180420 (trusty)
-Tags: 14.04, trusty-20180420, trusty
+# 20180605 (cosmic)
+Tags: 18.10, cosmic-20180605, cosmic, devel
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+Directory: cosmic
+
+# 20180531 (trusty)
+Tags: 14.04, trusty-20180531, trusty
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le
 Directory: trusty
 
-# 20180417 (xenial)
-Tags: 16.04, xenial-20180417, xenial
+# 20180525 (xenial)
+Tags: 16.04, xenial-20180525, xenial
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: xenial
