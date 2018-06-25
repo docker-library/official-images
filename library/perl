@@ -1,13 +1,19 @@
 Maintainers: Peter Martini <PeterCMartini@GMail.com> (@PeterMartini),
              Zak B. Elep <zakame@cpan.org> (@zakame)
 GitRepo: https://github.com/perl/docker-perl.git
-GitCommit: 1c201e950ebe90f35c449f69df6ca7151cb0068d
+GitCommit: c3e4a229b3423f7db683fb53882473689d9f6112
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 
-Tags: latest, 5, 5.26, 5.26.2
+Tags: latest, 5, 5.28, 5.28.0
+Directory: 5.028.000-64bit
+
+Tags: threaded, 5-threaded, 5.28-threaded, 5.28.0-threaded
+Directory: 5.028.000-64bit,threaded
+
+Tags: 5.26, 5.26.2
 Directory: 5.026.002-64bit
 
-Tags: threaded, 5-threaded, 5.26-threaded, 5.26.2-threaded
+Tags: 5.26-threaded, 5.26.2-threaded
 Directory: 5.026.002-64bit,threaded
 
 Tags: 5.24, 5.24.4
@@ -15,9 +21,3 @@ Directory: 5.024.004-64bit
 
 Tags: 5.24-threaded, 5.24.4-threaded
 Directory: 5.024.004-64bit,threaded
-
-Tags: 5.22, 5.22.4
-Directory: 5.022.004-64bit
-
-Tags: 5.22-threaded, 5.22.4-threaded
-Directory: 5.022.004-64bit,threaded
