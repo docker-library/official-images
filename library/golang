@@ -5,6 +5,38 @@ Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Johan Euphrosine <proppy@google.com> (@proppy)
 GitRepo: https://github.com/docker-library/golang.git
 
+Tags: 1.11beta1-stretch, 1.11-rc-stretch, rc-stretch
+SharedTags: 1.11beta1, 1.11-rc, rc
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 8fdde0724a5cbc43c05cd6817ab1161450a46dcc
+Directory: 1.11-rc/stretch
+
+Tags: 1.11beta1-alpine3.7, 1.11-rc-alpine3.7, rc-alpine3.7, 1.11beta1-alpine, 1.11-rc-alpine, rc-alpine
+Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
+GitCommit: 8fdde0724a5cbc43c05cd6817ab1161450a46dcc
+Directory: 1.11-rc/alpine3.7
+
+Tags: 1.11beta1-windowsservercore-ltsc2016, 1.11-rc-windowsservercore-ltsc2016, rc-windowsservercore-ltsc2016
+SharedTags: 1.11beta1-windowsservercore, 1.11-rc-windowsservercore, rc-windowsservercore, 1.11beta1, 1.11-rc, rc
+Architectures: windows-amd64
+GitCommit: 8fdde0724a5cbc43c05cd6817ab1161450a46dcc
+Directory: 1.11-rc/windows/windowsservercore-ltsc2016
+Constraints: windowsservercore-ltsc2016
+
+Tags: 1.11beta1-windowsservercore-1709, 1.11-rc-windowsservercore-1709, rc-windowsservercore-1709
+SharedTags: 1.11beta1-windowsservercore, 1.11-rc-windowsservercore, rc-windowsservercore, 1.11beta1, 1.11-rc, rc
+Architectures: windows-amd64
+GitCommit: 8fdde0724a5cbc43c05cd6817ab1161450a46dcc
+Directory: 1.11-rc/windows/windowsservercore-1709
+Constraints: windowsservercore-1709
+
+Tags: 1.11beta1-nanoserver-sac2016, 1.11-rc-nanoserver-sac2016, rc-nanoserver-sac2016
+SharedTags: 1.11beta1-nanoserver, 1.11-rc-nanoserver, rc-nanoserver
+Architectures: windows-amd64
+GitCommit: 8fdde0724a5cbc43c05cd6817ab1161450a46dcc
+Directory: 1.11-rc/windows/nanoserver-sac2016
+Constraints: nanoserver-sac2016
+
 Tags: 1.10.3-stretch, 1.10-stretch, 1-stretch, stretch
 SharedTags: 1.10.3, 1.10, 1, latest
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
