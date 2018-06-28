@@ -13,7 +13,8 @@ import (
 	"github.com/aristanetworks/go-dockerlibrary/manifest"
 )
 
-func entriesToManifestToolYaml(singleArch bool, r Repo, entries ...*manifest.Manifest2822Entry) (string, time.Time, error) {
+func entriesToManifestToolYaml(registry string, singleArch bool, r Repo,
+	entries ...*manifest.Manifest2822Entry) (string, time.Time, error) {
 	yaml := ""
 	mru := time.Time{}
 	entryIdentifiers := []string{}
@@ -40,7 +41,7 @@ func entriesToManifestToolYaml(singleArch bool, r Repo, entries ...*manifest.Man
 			}
 
 			archImage := fmt.Sprintf("%s/%s:%s", archNamespace, r.RepoName, entry.Tags[0])
-			archImageMeta := fetchDockerHubTagMeta(archImage)
+			archImageMeta := fetchTagMeta(registry, archImage)
 			if archU := archImageMeta.lastUpdatedTime(); archU.After(mru) {
 				mru = archU
 			}
@@ -77,6 +78,7 @@ func cmdPutShared(c *cli.Context) error {
 	namespace := c.String("namespace")
 	dryRun := c.Bool("dry-run")
 	singleArch := c.Bool("single-arch")
+	registry := c.GlobalString("registry")
 
 	if namespace == "" {
 		return fmt.Errorf(`"--namespace" is a required flag for "put-shared"`)
@@ -117,7 +119,8 @@ func cmdPutShared(c *cli.Context) error {
 
 		failed := []string{}
 		for _, group := range sharedTagGroups {
-			yaml, mostRecentPush, err := entriesToManifestToolYaml(singleArch, *r, group.Entries...)
+			yaml, mostRecentPush, err := entriesToManifestToolYaml(registry, singleArch, *r,
+				group.Entries...)
 			if err != nil {
 				return err
 			}
@@ -125,10 +128,10 @@ func cmdPutShared(c *cli.Context) error {
 			tagsToPush := []string{}
 			for _, tag := range group.SharedTags {
 				image := fmt.Sprintf("%s:%s", targetRepo, tag)
-				hubMeta := fetchDockerHubTagMeta(image)
+				hubMeta := fetchTagMeta(registry, image)
 				tagUpdated := hubMeta.lastUpdatedTime()
 				if mostRecentPush.After(tagUpdated) ||
-					(!singleArch && len(hubMeta.Images) <= 1 &&
+					(!singleArch && hubMeta.imageCount() <= 1 &&
 						(len(group.Entries) > 1 || len(group.Entries[0].Architectures) > 1)) {
 					tagsToPush = append(tagsToPush, tag)
 				} else {

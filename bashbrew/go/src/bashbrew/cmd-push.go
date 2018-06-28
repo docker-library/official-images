@@ -18,6 +18,7 @@ func cmdPush(c *cli.Context) error {
 	uniq := c.Bool("uniq")
 	namespace := c.String("namespace")
 	dryRun := c.Bool("dry-run")
+	registry := c.GlobalString("registry")
 
 	if namespace == "" {
 		return fmt.Errorf(`"--namespace" is a required flag for "push"`)
@@ -43,7 +44,8 @@ func cmdPush(c *cli.Context) error {
 				tag = tagRepo + ":" + tag
 
 				created := dockerCreated(tag)
-				lastUpdated := fetchDockerHubTagMeta(tag).lastUpdatedTime()
+				meta := fetchTagMeta(registry, tag)
+				lastUpdated := meta.lastUpdatedTime()
 				if created.After(lastUpdated) {
 					fmt.Printf("Pushing %s\n", tag)
 					if !dryRun {
