@@ -2,16 +2,16 @@ Maintainers: Kong Docker Maintainers <support@konghq.com> (@thekonginc)
 GitRepo: https://github.com/Kong/docker-kong.git
 # needs "Constraints" to match "centos" (which this image is "FROM")
 
-Tags: 0.14.0rc2-alpine, 0.14.0rc2
-GitCommit: 315c3d23380c426e885aab8aab4ea8752b621f41
+Tags: 0.14.0-alpine, 0.14.0, latest
+GitCommit: b628d7a4dcaade4eea5d61ba8c8d83f38ef07eee
 Directory: alpine
 
-Tags: 0.14.0rc2-centos
-GitCommit: 315c3d23380c426e885aab8aab4ea8752b621f41
+Tags: 0.14.0-centos
+GitCommit: b628d7a4dcaade4eea5d61ba8c8d83f38ef07eee
 Constraints: !aufs
 Directory: centos
 
-Tags: 0.13.1-alpine, 0.13.1, 0.13, latest
+Tags: 0.13.1-alpine, 0.13.1, 0.13
 GitCommit: 6e2035c5739482f0616021a7eda04ec6809d9f3e
 Directory: alpine
 
