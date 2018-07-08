@@ -1,4 +1,4 @@
-# this file is generated via https://github.com/docker-library/mongo/blob/de4376792e103d35e9b16a023c4046d17cf15f22/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/mongo/blob/274966255b326b17a4a351867ece4eaa0eefef28/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
@@ -20,26 +20,18 @@ Architectures: amd64
 GitCommit: f77d645e749bdda0740a35c00213baae8859edf2
 Directory: 3.4
 
-Tags: 3.6.5-jessie, 3.6-jessie, 3-jessie, jessie
-SharedTags: 3.6.5, 3.6, 3, latest
+Tags: 3.6.5-jessie, 3.6-jessie, 3-jessie
+SharedTags: 3.6.5, 3.6, 3
 # see http://repo.mongodb.org/apt/debian/dists/jessie/mongodb-org/3.6/main/
 # (i386, ppc64el, s390x are empty)
 Architectures: amd64
 GitCommit: 4e9a69f44326f034efa79ded2275ec856673bee1
 Directory: 3.6
 
-Tags: 3.7.9-xenial, 3.7-xenial, unstable-xenial
-SharedTags: 3.7.9, 3.7, unstable
-# see http://repo.mongodb.org/apt/ubuntu/dists/xenial/mongodb-org/3.7/multiverse/
+Tags: 4.0.0-xenial, 4.0-xenial, 4-xenial, xenial
+SharedTags: 4.0.0, 4.0, 4, latest
+# see http://repo.mongodb.org/apt/ubuntu/dists/xenial/mongodb-org/4.0/multiverse/
 # (i386, ppc64el, s390x are empty)
 Architectures: amd64, arm64v8
-GitCommit: de4376792e103d35e9b16a023c4046d17cf15f22
-Directory: 3.7
-
-Tags: 4.0.0-rc6-xenial, 4.0-rc-xenial, rc-xenial
-SharedTags: 4.0.0-rc6, 4.0-rc, rc
-# see http://repo.mongodb.org/apt/ubuntu/dists/xenial/mongodb-org/testing/multiverse/
-# (i386, ppc64el, s390x are empty)
-Architectures: amd64, arm64v8
-GitCommit: 11ded25561b1657f25d903f3374593257343b825
-Directory: 4.0-rc
+GitCommit: 274966255b326b17a4a351867ece4eaa0eefef28
+Directory: 4.0

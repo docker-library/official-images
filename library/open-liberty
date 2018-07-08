@@ -1,6 +1,6 @@
 Maintainers: Alasdair Nottingham <alasdair.nottingham@gmail.com> (@NottyCode)
 GitRepo: https://github.com/OpenLiberty/ci.docker.git
-GitCommit: 1ceace84721e043f475d92c7698cade0fb36973d
+GitCommit: d6601268c8ad5dd8cab3e9428a5bb4d029ffe4fd
 Architectures: amd64, i386, ppc64le, s390x
 
 Tags: kernel, kernel-java8-ibm
@@ -17,11 +17,25 @@ Tags: webProfile7-java8-ibmsfj
 Directory: release/webProfile7/java8/ibmsfj
 Architectures: amd64
 
-Tags: javaee7, javaee7-java8-ibm, latest
+Tags: javaee7, javaee7-java8-ibm
 Directory: release/javaee7/java8/ibmjava
 
 Tags: javaee7-java8-ibmsfj
 Directory: release/javaee7/java8/ibmsfj
+Architectures: amd64
+
+Tags: webProfile8, webProfile8-java8-ibm
+Directory: release/webProfile8/java8/ibmjava
+
+Tags: webProfile8-java8-ibmsfj
+Directory: release/webProfile8/java8/ibmsfj
+Architectures: amd64
+
+Tags: javaee8, javaee8-java8-ibm, latest
+Directory: release/javaee8/java8/ibmjava
+
+Tags: javaee8-java8-ibmsfj
+Directory: release/javaee8/java8/ibmsfj
 Architectures: amd64
 
 Tags: microProfile1, microProfile1-java8-ibm
