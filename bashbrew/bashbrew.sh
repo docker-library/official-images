@@ -42,21 +42,27 @@ check_image_type() {
 
 get_image_type() {
 	local repo=$1
-	if [[ $repo == *"alpine"* ]]; then
+	case "$repo" in
+	*"alpine"*)
 		imageType='alpine'
 		imageType+=$(check_image_type $repo)
-	else
-		if [[ $repo == *"fedora"* ]]; then
-			imageType='fedora'
-			imageType+=$(check_image_type $repo)
-		else
-			imageType=$(check_image_type $repo)
-			if [ -z "$imageType" ]; then
-				imageType='debian'
-			fi
-			imageType="${imageType#*-}"
+	;;
+	*"fedora"*)
+		imageType='fedora'
+		imageType+=$(check_image_type $repo)
+	;;
+	*"ubuntu"*)
+		imageType='ubuntu'
+		imageType+=$(check_image_type $repo)
+	;;
+	*)
+		imageType=$(check_image_type $repo)
+		if [ -z "$imageType" ]; then
+			imageType='debian'
 		fi
-	fi
+		imageType="${imageType#*-}"
+	;;
+	esac
 }
 
 push_image() {
