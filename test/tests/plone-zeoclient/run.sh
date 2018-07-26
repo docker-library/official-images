@@ -10,11 +10,11 @@ PLONE_TEST_TRIES=5
 
 # Start ZEO server
 zname="zeo-container-$RANDOM-$RANDOM"
-zid="$(docker run -d --name "$zname" "$image" zeoserver)"
+zid="$(docker run -d --name "$zname" "$image" zeo)"
 
 # Start Plone as ZEO Client
 pname="plone-container-$RANDOM-$RANDOM"
-pid="$(docker run -d --name "$pname" --link=$zname:zeo -e ZEO_ADDRESS=zeo:8100 "$image")"
+pid="$(docker run -d --name "$pname" --link=$zname:zeo -e ZEO_ADDRESS=zeo:8080 "$image")"
 
 # Tear down
 trap "docker rm -vf $pid $zid > /dev/null" EXIT

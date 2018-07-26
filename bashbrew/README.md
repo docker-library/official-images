@@ -42,6 +42,8 @@ Bashbrew itself is built using `gb` ([github.com/constabulary/gb](https://github
 
 Once in the `go` subdirectory, `gb build` should produce `go/bin/bashbrew`, ready for use.
 
+Pre-built binaries are available to [download from Jenkins (for a large variety of supported architectures)](https://doi-janky.infosiftr.net/job/bashbrew/lastSuccessfulBuild/artifact/bin/).
+
 ## Usage
 
 Docker version 1.10 or above is required for use of Bashbrew.

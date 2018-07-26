@@ -18,6 +18,7 @@ func cmdPush(c *cli.Context) error {
 	uniq := c.Bool("uniq")
 	namespace := c.String("namespace")
 	dryRun := c.Bool("dry-run")
+	force := c.Bool("force")
 	registry := c.GlobalString("registry")
 
 	if namespace == "" {
@@ -43,19 +44,21 @@ func cmdPush(c *cli.Context) error {
 				}
 				tag = tagRepo + ":" + tag
 
-				created := dockerCreated(tag)
-				meta := fetchTagMeta(registry, tag)
-				lastUpdated := meta.lastUpdatedTime()
-				if created.After(lastUpdated) {
-					fmt.Printf("Pushing %s\n", tag)
-					if !dryRun {
-						err = dockerPush(tag)
-						if err != nil {
-							return cli.NewMultiError(fmt.Errorf(`failed pushing %q`, tag), err)
-						}
+				if !force {
+					created := dockerCreated(tag)
+			  	meta := fetchTagMeta(registry, tag)
+			  	lastUpdated := meta.lastUpdatedTime()
+					if !created.After(lastUpdated) {
+						fmt.Fprintf(os.Stderr, "skipping %s (created %s, last updated %s)\n", tag, created.Local().Format(time.RFC3339), lastUpdated.Local().Format(time.RFC3339))
+						continue
 					}
-				} else {
-					fmt.Fprintf(os.Stderr, "skipping %s (created %s, last updated %s)\n", tag, created.Local().Format(time.RFC3339), lastUpdated.Local().Format(time.RFC3339))
+				}
+				fmt.Printf("Pushing %s\n", tag)
+				if !dryRun {
+					err = dockerPush(tag)
+					if err != nil {
+						return cli.NewMultiError(fmt.Errorf(`failed pushing %q`, tag), err)
+					}
 				}
 			}
 		}

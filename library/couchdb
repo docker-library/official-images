@@ -1,14 +1,23 @@
-# maintainer: Joan Touzet <wohali@apache.org> (@wohali)
+# see https://couchdb.apache.org/
+# also the announce@couchdb.apache.org mailing list
 
-latest: git://github.com/apache/couchdb-docker@1a7c4254c158a194ff195da6ebfed910d24a95b7 2.1.1
-2.1.1: git://github.com/apache/couchdb-docker@1a7c4254c158a194ff195da6ebfed910d24a95b7 2.1.1
-2.1: git://github.com/apache/couchdb-docker@1a7c4254c158a194ff195da6ebfed910d24a95b7 2.1.1
-2: git://github.com/apache/couchdb-docker@1a7c4254c158a194ff195da6ebfed910d24a95b7 2.1.1
+Maintainers: Joan Touzet <wohali@apache.org> (@wohali)
+GitRepo: https://github.com/apache/couchdb-docker
+GitCommit: ca9b039d036d1482fd1e5ce67176f05cf959beed
 
-1.7.1: git://github.com/apache/couchdb-docker@029760550b8af66f49bf439ddbabfbd040e9727c 1.7.1
-1.7: git://github.com/apache/couchdb-docker@029760550b8af66f49bf439ddbabfbd040e9727c 1.7.1
-1: git://github.com/apache/couchdb-docker@029760550b8af66f49bf439ddbabfbd040e9727c 1.7.1
+Tags: latest, 2.1.2, 2.1, 2
+Architectures: amd64
+Directory: 2.1.2
 
-1.7.1-couchperuser: git://github.com/apache/couchdb-docker@029760550b8af66f49bf439ddbabfbd040e9727c 1.7.1-couchperuser
-1.7-couchperuser: git://github.com/apache/couchdb-docker@029760550b8af66f49bf439ddbabfbd040e9727c 1.7.1-couchperuser
-1-couchperuser: git://github.com/apache/couchdb-docker@029760550b8af66f49bf439ddbabfbd040e9727c 1.7.1-couchperuser
+Tags: 1.7.2, 1.7, 1
+Architectures: amd64
+Directory: 1.7.2
+
+Tags: 1.7.2-couchperuser, 1.7-couchperuser, 1-couchperuser
+Architectures: amd64
+Directory: 1.7.2-couchperuser
+
+# dev, dev-cluster versions must not be published officially per
+# ASF release policy, see:
+# http://www.apache.org/dev/release-distribution.html#unreleased
+# The middle two bullet points are the issue.

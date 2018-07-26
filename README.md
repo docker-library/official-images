@@ -55,6 +55,7 @@ Also, the Hub descriptions for these images are currently stored separately in t
 			7.	[Security](#security)
 				1.	[Image Build](#image-build)
 				2.	[Runtime Configuration](#runtime-configuration)
+				3.	[Security Releases](#security-releases)
 			8.	[Multiple Architectures](#multiple-architectures)
 		3.	[Commitment](#commitment)
 	4.	[Library definition files](#library-definition-files)
@@ -253,6 +254,15 @@ The `Dockerfile` should be written to help mitigate man-in-the-middle attacks du
 By default, Docker containers are executed with reduced privileges: whitelisted Linux capabilities, Control Groups, and a default Seccomp profile (1.10+ w/ host support). Software running in a container may require additional privileges in order to function correctly, and there are a number of command line options to customize container execution. See [`docker run` Reference](https://docs.docker.com/engine/reference/run/) and [Seccomp for Docker](https://docs.docker.com/engine/security/seccomp/) for reference.
 
 Official Repositories that require additional privileges should specify the minimal set of command line options for the software to function, and may still be rejected if this introduces significant portability or security issues. In general, `--privileged` is not allowed, but a combination of `--cap-add` and `--device` options may be acceptable. Additionally, `--volume` can be tricky as there are many host filesystem locations that introduce portability/security issues (e.g. X11 socket).
+
+##### Security Releases
+
+For image updates which constitute a security fix, there are a few things we recommend to help ensure your update is merged, built, and released as quickly as possible:
+
+1.	[Contact us](MAINTAINERS) a few days in advance to give us a heads up and a timing estimate (so we can schedule time for the incoming update appropriately).
+2.	Include `[security]` in the title of your pull request (for example, `[security] Update FooBar to 1.2.5, 1.3.7, 2.0.1`).
+3.	Keep the pull request free of changes that are unrelated to the security fix -- we'll still be doing review of the update, but it will be expedited so this will help us help you.
+4.	Be active and responsive to comments on the pull request after it's opened (as usual, but even more so if the timing of the release is of importance).
 
 #### Multiple Architectures
 
