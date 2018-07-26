@@ -14,7 +14,7 @@ import (
 )
 
 func entriesToManifestToolYaml(registry string, singleArch bool, r Repo,
-  entries ...*manifest.Manifest2822Entry) (string, time.Time, int, error) {
+	entries ...*manifest.Manifest2822Entry) (string, time.Time, int, error) {
 	yaml := ""
 	mru := time.Time{}
 	expectedNumber := 0
@@ -48,11 +48,11 @@ func entriesToManifestToolYaml(registry string, singleArch bool, r Repo,
 			}
 
 			// count up how many images we expect to push successfully in this manifest list
-			expectedNumber += len(archImageMeta.Images)
+			expectedNumber += archImageMeta.imageCount()
 			// for non-manifest-list tags, this will be 1 and for failed lookups it'll be 0
 			// (and if one of _these_ tags is a manifest list, we've goofed somewhere)
-			if len(archImageMeta.Images) != 1 {
-				fmt.Fprintf(os.Stderr, "warning: expected 1 image for %q; got %d\n", archImage, len(archImageMeta.Images))
+			if archImageMeta.imageCount() != 1 {
+				fmt.Fprintf(os.Stderr, "warning: expected 1 image for %q; got %d\n", archImage, archImageMeta.imageCount())
 			}
 
 			yaml += fmt.Sprintf("  - image: %s\n    platform:\n", archImage)
@@ -130,7 +130,7 @@ func cmdPutShared(c *cli.Context) error {
 		failed := []string{}
 		for _, group := range sharedTagGroups {
 			yaml, mostRecentPush, expectedNumber, err := entriesToManifestToolYaml(registry, singleArch, *r,
-        group.Entries...)
+				group.Entries...)
 			if err != nil {
 				return err
 			}
@@ -147,14 +147,14 @@ func cmdPutShared(c *cli.Context) error {
 			for _, tag := range group.SharedTags {
 				image := fmt.Sprintf("%s:%s", targetRepo, tag)
 				if !force {
-				  hubMeta := fetchTagMeta(registry, image)
-				  tagUpdated := hubMeta.lastUpdatedTime()
+					hubMeta := fetchTagMeta(registry, image)
+					tagUpdated := hubMeta.lastUpdatedTime()
 					doPush := false
 					if mostRecentPush.After(tagUpdated) {
 						// if one of the images that make up the manifest list has been updated since the manifest list was last pushed, we probably need to push
 						doPush = true
 					}
-          if !singleArch && len(hubMeta.imageCount()) != expectedNumber {
+					if !singleArch && hubMeta.imageCount() != expectedNumber {
 						// if we're supposed to push more (or less) images than the current manifest list contains, we probably need to push
 						// this _should_ already be accounting for tags that haven't been pushed yet (see notes above in "entriesToManifestToolYaml" where this is calculated)
 						doPush = true
