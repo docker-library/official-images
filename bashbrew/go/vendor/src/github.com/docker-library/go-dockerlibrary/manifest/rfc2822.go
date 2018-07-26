@@ -8,8 +8,8 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/aristanetworks/go-dockerlibrary/architecture"
-	"github.com/aristanetworks/go-dockerlibrary/pkg/stripper"
+	"github.com/docker-library/go-dockerlibrary/architecture"
+	"github.com/docker-library/go-dockerlibrary/pkg/stripper"
 
 	"pault.ag/go/debian/control"
 )

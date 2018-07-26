@@ -2,13 +2,13 @@ package manifest_test
 
 import (
 	"bufio"
+	"fmt"
 	"strings"
-	"testing"
 
 	"github.com/docker-library/go-dockerlibrary/manifest"
 )
 
-func TestExample(t *testing.T) {
+func Example() {
 	man, err := manifest.Parse(bufio.NewReader(strings.NewReader(`# RFC 2822
 
 	# I LOVE CAKE
@@ -54,36 +54,34 @@ s390x-GitCommit: b6c460e7cd79b595267870a98013ec3078b490df
 i386-GitFetch: refs/heads/i386
 ppc64le-Directory: 1.5/ppc64le
 
+Tags: 1.5-alpine
+GitCommit: d7e2a8d90a9b8f5dfd5bcd428e0c33b68c40cc19
+Directory: 1.5
+File: Dockerfile.alpine
+s390x-File: Dockerfile.alpine.s390x.bad-boy
+
 SharedTags: raspbian
 GitCommit: deadbeefdeadbeefdeadbeefdeadbeefdeadbeef
 Tags: raspbian-s390x
 Architectures: s390x, i386
+File: Dockerfile-raspbian
+s390x-File: Dockerfile
 
 
-Tags: 1.5-withfile
-SharedTags: 1.5-debian
-GitCommit: d7e2a8d90a9b8f5dfd5bcd428e0c33b68c40cc19
-File: Dockerfile-15
-
-Tags: 1.5-withdirandfile
-SharedTags: 1.5-debian
-GitCommit: d7e2a8d90a9b8f5dfd5bcd428e0c33b68c40cc19
-Directory: 1.5
-File: Dockerfile-debian
 `)))
 	if err != nil {
-		t.Fatal(err)
+		panic(err)
 	}
-	t.Logf("-------------\n2822:\n%s\n", man)
+	fmt.Printf("-------------\n2822:\n%s\n", man)
 
-	t.Logf("\nShared Tag Groups:\n")
+	fmt.Printf("\nShared Tag Groups:\n")
 	for _, group := range man.GetSharedTagGroups() {
-		t.Logf("\n  - %s\n", strings.Join(group.SharedTags, ", "))
+		fmt.Printf("\n  - %s\n", strings.Join(group.SharedTags, ", "))
 		for _, entry := range group.Entries {
-			t.Logf("    - %s\n", entry.TagsString())
+			fmt.Printf("    - %s\n", entry.TagsString())
 		}
 	}
-	t.Logf("\n")
+	fmt.Printf("\n")
 
 	man, err = manifest.Parse(bufio.NewReader(strings.NewReader(`
 # maintainer: InfoSiftr <github@infosiftr.com> (@infosiftr)
@@ -100,7 +98,7 @@ i: g@h j
 	if err != nil {
 		panic(err)
 	}
-	t.Logf("-------------\nline-based:\n%v\n", man)
+	fmt.Printf("-------------\nline-based:\n%v\n", man)
 
 	// Output:
 	// -------------
@@ -123,15 +121,24 @@ i: g@h j
 	// ppc64le-Directory: 1.5/ppc64le
 	// s390x-GitCommit: b6c460e7cd79b595267870a98013ec3078b490df
 	//
+	// Tags: 1.5-alpine
+	// GitCommit: d7e2a8d90a9b8f5dfd5bcd428e0c33b68c40cc19
+	// Directory: 1.5
+	// File: Dockerfile.alpine
+	// s390x-File: Dockerfile.alpine.s390x.bad-boy
+	//
 	// Tags: raspbian-s390x
 	// SharedTags: raspbian
 	// Architectures: i386, s390x
 	// GitCommit: deadbeefdeadbeefdeadbeefdeadbeefdeadbeef
+	// File: Dockerfile-raspbian
+	// s390x-File: Dockerfile
 	//
 	// Shared Tag Groups:
 	//
 	//   - latest
 	//     - 1.6.1, 1.6, 1
+	//     - 1.5-alpine
 	//
 	//   - 1.5.3-debian, 1.5-debian
 	//     - 1.5.3, 1.5
@@ -161,15 +168,15 @@ i: g@h j
 	// Directory: j
 }
 
-func TestExampleFetch_local(t *testing.T) {
+func ExampleFetch_local() {
 	repoName, tagName, man, err := manifest.Fetch("testdata", "bash:4.4")
 	if err != nil {
 		panic(err)
 	}
 
-	t.Logf("%s:%s\n\n", repoName, tagName)
+	fmt.Printf("%s:%s\n\n", repoName, tagName)
 
-	t.Log(man.GetTag(tagName).ClearDefaults(manifest.DefaultManifestEntry).String())
+	fmt.Println(man.GetTag(tagName).ClearDefaults(manifest.DefaultManifestEntry).String())
 
 	// Output:
 	// bash:4.4
@@ -181,15 +188,15 @@ func TestExampleFetch_local(t *testing.T) {
 	// Directory: 4.4
 }
 
-func TestExampleFetch_remote(t *testing.T) {
+func ExampleFetch_remote() {
 	repoName, tagName, man, err := manifest.Fetch("/home/jsmith/docker/official-images/library", "https://github.com/docker-library/official-images/raw/1a3c4cd6d5cd53bd538a6f56a69f94c5b35325a7/library/bash:4.4")
 	if err != nil {
 		panic(err)
 	}
 
-	t.Logf("%s:%s\n\n", repoName, tagName)
+	fmt.Printf("%s:%s\n\n", repoName, tagName)
 
-	t.Log(man.GetTag(tagName).ClearDefaults(manifest.DefaultManifestEntry).String())
+	fmt.Println(man.GetTag(tagName).ClearDefaults(manifest.DefaultManifestEntry).String())
 
 	// Output:
 	// bash:4.4

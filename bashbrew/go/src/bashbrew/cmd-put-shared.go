@@ -9,8 +9,8 @@ import (
 
 	"github.com/codegangsta/cli"
 
-	"github.com/aristanetworks/go-dockerlibrary/architecture"
-	"github.com/aristanetworks/go-dockerlibrary/manifest"
+	"github.com/docker-library/go-dockerlibrary/architecture"
+	"github.com/docker-library/go-dockerlibrary/manifest"
 )
 
 func entriesToManifestToolYaml(registry string, singleArch bool, r Repo,
