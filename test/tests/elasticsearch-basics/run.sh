@@ -13,7 +13,7 @@ clientImage='buildpack-deps:stretch-curl'
 
 # Create an instance of the container-under-test
 # (explicitly setting a low memory limit since the image defaults to 2GB)
-cid="$(docker run -d -e ES_JAVA_OPTS='-Xms32m -Xmx32m' "$image")"
+cid="$(docker run -d -e ES_JAVA_OPTS='-Xms64m -Xmx64m' "$image")"
 trap "docker rm -vf $cid > /dev/null" EXIT
 
 _request() {
@@ -59,11 +59,11 @@ _req-exit GET '/_cat/indices/test1?h=docs.count' 22 # "HTTP page not retrieved. 
 _req-exit GET '/_cat/indices/test2?h=docs.count' 22 # "HTTP page not retrieved. 4xx"
 
 doc='{"a":"b","c":{"d":"e"}}'
-_request POST '/test1/test/1?refresh=true' --data "$doc" -o /dev/null
+_request POST '/test1/test/1?refresh=true' --data "$doc" --header 'Content-Type: application/json' -o /dev/null
 _req-comp GET '/_cat/indices/test1?h=docs.count' 1
 _req-exit GET '/_cat/indices/test2?h=docs.count' 22 # "HTTP page not retrieved. 4xx"
 
-_request POST '/test2/test/1?refresh=true' --data "$doc" -o /dev/null
+_request POST '/test2/test/1?refresh=true' --data "$doc" --header 'Content-Type: application/json' -o /dev/null
 _req-comp GET '/_cat/indices/test1?h=docs.count' 1
 _req-comp GET '/_cat/indices/test2?h=docs.count' 1
 
