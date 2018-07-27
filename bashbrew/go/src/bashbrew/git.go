@@ -169,7 +169,21 @@ func (r Repo) fetchGitRepo(arch string, entry *manifest.Manifest2822Entry) (stri
 
 	commit, err := getGitCommit(entry.ArchGitCommit(arch))
 	if err != nil {
-		return "", err
+		// Check if we're trying to build a Gerrit review
+		gerritRefspec := os.Getenv("GERRIT_REFSPEC")
+		if gerritRefspec == "" {
+			return "", err
+		}
+		if strings.HasSuffix(fetchString, ":") {
+			fetchString = fetchString[:len(fetchString)-1]
+		}
+		if _, err = git("fetch", "-f", "--quiet", "--no-tags", entry.ArchGitRepo(arch),
+			gerritRefspec+":"+fetchString); err != nil {
+			return "", err
+		}
+		if commit, err = getGitCommit(entry.ArchGitCommit(arch)); err != nil {
+			return "", err
+		}
 	}
 
 	_, err = git("tag", "--force", r.RepoName+"/"+entry.Tags[0], commit)

@@ -19,6 +19,7 @@ func cmdPush(c *cli.Context) error {
 	namespace := c.String("namespace")
 	dryRun := c.Bool("dry-run")
 	force := c.Bool("force")
+	registry := c.GlobalString("registry")
 
 	if namespace == "" {
 		return fmt.Errorf(`"--namespace" is a required flag for "push"`)
@@ -45,7 +46,8 @@ func cmdPush(c *cli.Context) error {
 
 				if !force {
 					created := dockerCreated(tag)
-					lastUpdated := fetchDockerHubTagMeta(tag).lastUpdatedTime()
+					meta := fetchTagMeta(registry, tag)
+					lastUpdated := meta.lastUpdatedTime()
 					if !created.After(lastUpdated) {
 						fmt.Fprintf(os.Stderr, "skipping %s (created %s, last updated %s)\n", tag, created.Local().Format(time.RFC3339), lastUpdated.Local().Format(time.RFC3339))
 						continue

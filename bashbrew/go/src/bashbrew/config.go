@@ -19,6 +19,7 @@ type FlagsConfigEntry struct {
 	Commands []string `delim:"," strip:"\n\r\t "`
 
 	Library    string
+	Registry   string
 	Cache      string
 	Debug      string
 	Unique     string
@@ -40,6 +41,9 @@ type FlagsConfig map[string]FlagsConfigEntry
 func (dst *FlagsConfigEntry) Apply(src FlagsConfigEntry) {
 	if src.Library != "" {
 		dst.Library = src.Library
+	}
+	if src.Registry != "" {
+		dst.Registry = src.Registry
 	}
 	if src.Cache != "" {
 		dst.Cache = src.Cache
@@ -79,9 +83,10 @@ func (dst *FlagsConfigEntry) Apply(src FlagsConfigEntry) {
 func (config FlagsConfigEntry) Vars() map[string]map[string]interface{} {
 	return map[string]map[string]interface{}{
 		"global": {
-			"library": config.Library,
-			"cache":   config.Cache,
-			"debug":   config.Debug,
+			"library":  config.Library,
+			"registry": config.Registry,
+			"cache":    config.Cache,
+			"debug":    config.Debug,
 
 			"arch":                  config.Arch,
 			"constraint":            config.Constraints,

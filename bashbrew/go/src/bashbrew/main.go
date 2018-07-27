@@ -32,16 +32,21 @@ var (
 
 	// separated so that FlagsConfig.ApplyTo can access them
 	flagEnvVars = map[string]string{
-		"debug":   "BASHBREW_DEBUG",
-		"arch":    "BASHBREW_ARCH",
-		"config":  "BASHBREW_CONFIG",
-		"library": "BASHBREW_LIBRARY",
-		"cache":   "BASHBREW_CACHE",
-		"pull":    "BASHBREW_PULL",
+		"debug":    "BASHBREW_DEBUG",
+		"arch":     "BASHBREW_ARCH",
+		"config":   "BASHBREW_CONFIG",
+		"library":  "BASHBREW_LIBRARY",
+		"registry": "BASHBREW_REGISTRY",
+		"cache":    "BASHBREW_CACHE",
+		"pull":     "BASHBREW_PULL",
 
 		"constraint":     "BASHBREW_CONSTRAINTS",
 		"arch-namespace": "BASHBREW_ARCH_NAMESPACES",
 	}
+)
+
+const (
+	dockerHub = "https://hub.docker.com"
 )
 
 func initDefaultConfigPath() string {
@@ -116,6 +121,12 @@ func main() {
 			Value:  filepath.Join(os.Getenv("HOME"), "docker", "official-images", "library"),
 			EnvVar: flagEnvVars["library"],
 			Usage:  "where the bodies are buried",
+		},
+		cli.StringFlag{
+			Name:   "registry",
+			Value:  dockerHub,
+			EnvVar: flagEnvVars["registry"],
+			Usage:  "the registry to use to fetch current state",
 		},
 		cli.StringFlag{
 			Name:   "cache",
