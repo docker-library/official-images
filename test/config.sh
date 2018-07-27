@@ -103,6 +103,7 @@ imageTests+=(
 	'
 	[julia]='
 		julia-hello-world
+		julia-downloads
 	'
 	[logstash]='
 		logstash-basics
