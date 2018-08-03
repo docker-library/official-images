@@ -232,4 +232,4 @@ copy-tar tar temp
 rm -rf tar
 git -C temp add .
 
-git -C temp diff --minimal --find-copies="$findCopies" --find-copies-harder --irreversible-delete --staged
+git -C temp diff --minimal --ignore-all-space --find-copies="$findCopies" --find-copies-harder --irreversible-delete --staged
