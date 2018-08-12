@@ -1,23 +1,41 @@
 Maintainers: Peter Martini <PeterCMartini@GMail.com> (@PeterMartini),
              Zak B. Elep <zakame@cpan.org> (@zakame)
 GitRepo: https://github.com/perl/docker-perl.git
-GitCommit: c3e4a229b3423f7db683fb53882473689d9f6112
+GitCommit: 892e2b4fbb58c48ee802cd13b34017300c630f18
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 
 Tags: latest, 5, 5.28, 5.28.0
-Directory: 5.028.000-64bit
+Directory: 5.028.000-main
+
+Tags: slim, 5-slim, 5.28-slim, 5.28.0-slim
+Directory: 5.028.000-slim
 
 Tags: threaded, 5-threaded, 5.28-threaded, 5.28.0-threaded
-Directory: 5.028.000-64bit,threaded
+Directory: 5.028.000-main,threaded
+
+Tags: slim-threaded, 5-slim-threaded, 5.28-slim-threaded, 5.28.0-slim-threaded
+Directory: 5.028.000-slim,threaded
 
 Tags: 5.26, 5.26.2
-Directory: 5.026.002-64bit
+Directory: 5.026.002-main
+
+Tags: 5.26-slim, 5.26.2-slim
+Directory: 5.026.002-slim
 
 Tags: 5.26-threaded, 5.26.2-threaded
-Directory: 5.026.002-64bit,threaded
+Directory: 5.026.002-main,threaded
+
+Tags: 5.26-slim-threaded, 5.26.2-slim-threaded
+Directory: 5.026.002-slim,threaded
 
 Tags: 5.24, 5.24.4
-Directory: 5.024.004-64bit
+Directory: 5.024.004-main
+
+Tags: 5.24-slim, 5.24.4-slim
+Directory: 5.024.004-slim
 
 Tags: 5.24-threaded, 5.24.4-threaded
-Directory: 5.024.004-64bit,threaded
+Directory: 5.024.004-main,threaded
+
+Tags: 5.24-slim-threaded, 5.24.4-slim-threaded
+Directory: 5.024.004-slim,threaded
