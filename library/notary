@@ -1,8 +1,10 @@
 # maintainer: David Lawrence <david.lawrence@docker.com> (@endophage)
 
-server: git://github.com/docker/notary-official-images@v0.5.0 notary-server
+server: git://github.com/docker/notary-official-images@v0.6.1 notary-server
+signer: git://github.com/docker/notary-official-images@v0.6.1 notary-signer
+server-0.6.1: git://github.com/docker/notary-official-images@v0.6.1 notary-server
+signer-0.6.1: git://github.com/docker/notary-official-images@v0.6.1 notary-signer
 server-0.5.0: git://github.com/docker/notary-official-images@v0.5.0 notary-server
-signer: git://github.com/docker/notary-official-images@v0.5.0 notary-signer
 signer-0.5.0: git://github.com/docker/notary-official-images@v0.5.0 notary-signer
 server-0.4.2: git://github.com/docker/notary-official-images@v0.4.2 notary-server
 signer-0.4.2: git://github.com/docker/notary-official-images@v0.4.2 notary-signer
