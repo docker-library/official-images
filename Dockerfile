@@ -6,7 +6,9 @@ RUN apk add --no-cache \
 # go for compiling bashbrew
 		go libc-dev \
 # ssl for downloading files
-		libressl
+		libressl \
+# coreutils for real "tac" so it isn't busybox-buggy (where it seems to fail if the pipe is closed prematurely, which defeats the whole purpose of the "tac|tac" idiom)
+		coreutils
 
 ENV GOPATH /go
 ENV PATH $GOPATH/bin:$PATH

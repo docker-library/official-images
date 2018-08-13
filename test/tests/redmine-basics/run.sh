@@ -1,5 +1,5 @@
-#!/bin/bash
-set -eo pipefail
+#!/usr/bin/env bash
+set -Eeuo pipefail
 
 dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
@@ -28,7 +28,7 @@ _request() {
 . "$dir/../../retry.sh" --tries 40 '_request GET / --output /dev/null'
 
 # Check that / include the text "Redmine" somewhere
-_request GET '/' | grep -q Redmine
+_request GET '/' |tac|tac| grep -q Redmine
 
 # Check that /account/register include the text "Password" somewhere
-_request GET '/account/register' | grep -q Password
+_request GET '/account/register' |tac|tac| grep -q Password
