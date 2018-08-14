@@ -63,7 +63,7 @@ func cmdCat(c *cli.Context) error {
 		buf := &bytes.Buffer{}
 		err = tmpl.ExecuteTemplate(buf, templateName, r)
 		if err != nil {
-			return cli.NewMultiError(fmt.Errorf(`failed executing template`), err)
+			return cli.NewMultiError(fmt.Errorf(`failed executing template for repo %q`, repo), err)
 		}
 		out := buf.String()
 		fmt.Print(out)
