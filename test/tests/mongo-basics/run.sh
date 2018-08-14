@@ -4,7 +4,7 @@ set -e
 image="$1"
 
 haveSeccomp=
-if docker info --format '{{ join .SecurityOptions "\n" }}' 2>/dev/null | grep -q seccomp; then
+if docker info --format '{{ join .SecurityOptions "\n" }}' 2>/dev/null |tac|tac| grep -q seccomp; then
 	haveSeccomp=1
 
 	# get docker default seccomp profile
