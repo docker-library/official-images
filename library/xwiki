@@ -1,18 +1,24 @@
+#MySQL is not officially supported for arm64v8.
+#Ongoing issue for the same is: https://github.com/docker-library/mysql/issues/318
 Maintainers: XWiki Core Dev Team <committers@xwiki.org> (@xwiki)
 GitRepo: https://github.com/xwiki-contrib/docker-xwiki.git
 
 Tags: 9, 9.11, 9.11.7, 9-mysql-tomcat, mysql-tomcat, lts-mysql-tomcat, lts-mysql, lts
+Architectures: amd64
 GitCommit: 566d012574da31554854d03895b0a214579e2ed7
 Directory: 9/mysql-tomcat
 
 Tags: 9-postgres-tomcat, 9.11-postgres-tomcat, 9.11.7-postgres-tomcat, postgres-tomcat, lts-postgres-tomcat, lts-postgres
+Architectures: amd64, arm64v8
 GitCommit: 566d012574da31554854d03895b0a214579e2ed7
 Directory: 9/postgres-tomcat
 
 Tags: 10, 10.6, 10-mysql-tomcat, 10.6-mysql-tomcat, stable-mysql-tomcat, stable-mysql, stable, latest
+Architectures: amd64
 GitCommit: 10db7b61cf75b81922f87e2351cc619cf0caa5e5
 Directory: 10/mysql-tomcat
 
 Tags: 10-postgres-tomcat, 10.6-postgres-tomcat, stable-postgres-tomcat, stable-postgres
+Architectures: amd64, arm64v8
 GitCommit: 10db7b61cf75b81922f87e2351cc619cf0caa5e5
 Directory: 10/postgres-tomcat
