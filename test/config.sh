@@ -144,6 +144,7 @@ imageTests+=(
 	[php]='
 		php-ext-install
 		php-hello-world
+		php-argon2
 	'
 	[php:apache]='
 		php-apache-hello-web
