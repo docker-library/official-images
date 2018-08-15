@@ -1,20 +1,110 @@
 # maintainer: Joyent Image Team <image-team@joyent.com> (@joyent)
 # maintainer: Trong Nghia Nguyen - resin.io <james@resin.io>
 
+10.4.1: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/10.4
+10.4: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/10.4
 
-0.10.44-slim: git://github.com/resin-io-library/docker-node@4a40a3f3635e619a7dee4c9bda8de2072d70967e rpi/alpine/0.10/slim
-0.10-slim: git://github.com/resin-io-library/docker-node@4a40a3f3635e619a7dee4c9bda8de2072d70967e rpi/alpine/0.10/slim
+10.4.1-onbuild: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/10.4/onbuild
+10.4-onbuild: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/10.4/onbuild
 
+10.4.1-slim: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/10.4/slim
+10.4-slim: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/10.4/slim
 
-4.4.2-slim: git://github.com/resin-io-library/docker-node@4a40a3f3635e619a7dee4c9bda8de2072d70967e rpi/alpine/4.4/slim
-4.4-slim: git://github.com/resin-io-library/docker-node@4a40a3f3635e619a7dee4c9bda8de2072d70967e rpi/alpine/4.4/slim
+10.4.1-edge: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/10.4/edge
+10.4-edge: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/10.4/edge
 
+4.9.1: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/4.9
+4.9: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/4.9
+4: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/4.9
 
-5.10.0-slim: git://github.com/resin-io-library/docker-node@4a40a3f3635e619a7dee4c9bda8de2072d70967e rpi/alpine/5.10/slim
-5.10-slim: git://github.com/resin-io-library/docker-node@4a40a3f3635e619a7dee4c9bda8de2072d70967e rpi/alpine/5.10/slim
+4.9.1-onbuild: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/4.9/onbuild
+4.9-onbuild: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/4.9/onbuild
+4-onbuild: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/4.9/onbuild
 
+4.9.1-slim: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/4.9/slim
+4.9-slim: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/4.9/slim
+4-slim: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/4.9/slim
 
-6.2.0-slim: git://github.com/resin-io-library/docker-node@4a40a3f3635e619a7dee4c9bda8de2072d70967e rpi/alpine/6.2/slim
-6.2-slim: git://github.com/resin-io-library/docker-node@4a40a3f3635e619a7dee4c9bda8de2072d70967e rpi/alpine/6.2/slim
-6-slim: git://github.com/resin-io-library/docker-node@4a40a3f3635e619a7dee4c9bda8de2072d70967e rpi/alpine/6.2/slim
-slim: git://github.com/resin-io-library/docker-node@4a40a3f3635e619a7dee4c9bda8de2072d70967e rpi/alpine/6.2/slim
+4.9.1-edge: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/4.9/edge
+4.9-edge: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/4.9/edge
+4-edge: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/4.9/edge
+
+5.12.0: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/5.12
+5.12: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/5.12
+5: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/5.12
+
+5.12.0-onbuild: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/5.12/onbuild
+5.12-onbuild: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/5.12/onbuild
+5-onbuild: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/5.12/onbuild
+
+5.12.0-slim: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/5.12/slim
+5.12-slim: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/5.12/slim
+5-slim: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/5.12/slim
+
+5.12.0-edge: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/5.12/edge
+5.12-edge: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/5.12/edge
+5-edge: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/5.12/edge
+
+6.14.3: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/6.14
+6.14: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/6.14
+6: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/6.14
+
+6.14.3-onbuild: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/6.14/onbuild
+6.14-onbuild: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/6.14/onbuild
+6-onbuild: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/6.14/onbuild
+
+6.14.3-slim: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/6.14/slim
+6.14-slim: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/6.14/slim
+6-slim: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/6.14/slim
+
+6.14.3-edge: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/6.14/edge
+6.14-edge: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/6.14/edge
+6-edge: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/6.14/edge
+
+7.10.1: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/7.10
+7.10: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/7.10
+7: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/7.10
+
+7.10.1-onbuild: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/7.10/onbuild
+7.10-onbuild: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/7.10/onbuild
+7-onbuild: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/7.10/onbuild
+
+7.10.1-slim: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/7.10/slim
+7.10-slim: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/7.10/slim
+7-slim: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/7.10/slim
+
+7.10.1-edge: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/7.10/edge
+7.10-edge: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/7.10/edge
+7-edge: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/7.10/edge
+
+8.11.3: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/8.11
+8.11: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/8.11
+8: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/8.11
+
+8.11.3-onbuild: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/8.11/onbuild
+8.11-onbuild: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/8.11/onbuild
+8-onbuild: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/8.11/onbuild
+
+8.11.3-slim: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/8.11/slim
+8.11-slim: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/8.11/slim
+8-slim: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/8.11/slim
+
+8.11.3-edge: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/8.11/edge
+8.11-edge: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/8.11/edge
+8-edge: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/8.11/edge
+
+9.11.2: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/9.11
+9.11: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/9.11
+9: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/9.11
+
+9.11.2-onbuild: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/9.11/onbuild
+9.11-onbuild: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/9.11/onbuild
+9-onbuild: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/9.11/onbuild
+
+9.11.2-slim: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/9.11/slim
+9.11-slim: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/9.11/slim
+9-slim: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/9.11/slim
+
+9.11.2-edge: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/9.11/edge
+9.11-edge: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/9.11/edge
+9-edge: git://github.com/resin-io-library/base-images@b4a8b364ae89b480debc02c4c9dd7a9f9b55273a node/rpi/alpine/9.11/edge
