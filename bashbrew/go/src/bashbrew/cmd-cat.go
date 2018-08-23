@@ -8,6 +8,7 @@ import (
 	"text/template"
 
 	"github.com/codegangsta/cli"
+	"github.com/docker-library/go-dockerlibrary/manifest"
 	"github.com/docker-library/go-dockerlibrary/pkg/templatelib"
 )
 
@@ -47,6 +48,33 @@ func cmdCat(c *cli.Context) error {
 		},
 		"archNamespace": func(arch string) string {
 			return archNamespaces[arch]
+		},
+		"archFilter": func(arch string, entriesArg ...interface{}) []manifest.Manifest2822Entry {
+			if len(entriesArg) < 1 {
+				panic(`"archFilter" requires at least one argument`)
+			}
+			entries := []manifest.Manifest2822Entry{}
+			for _, entryArg := range entriesArg {
+				switch v := entryArg.(type) {
+				case []*manifest.Manifest2822Entry:
+					for _, e := range v {
+						entries = append(entries, *e)
+					}
+				case []manifest.Manifest2822Entry:
+					entries = append(entries, v...)
+				case manifest.Manifest2822Entry:
+					entries = append(entries, v)
+				default:
+					panic(fmt.Sprintf(`"archFilter" encountered unknown type: %T`, v, v))
+				}
+			}
+			filtered := []manifest.Manifest2822Entry{}
+			for _, entry := range entries {
+				if entry.HasArchitecture(arch) {
+					filtered = append(filtered, entry)
+				}
+			}
+			return filtered
 		},
 	}).Parse(format)
 	if err != nil {
