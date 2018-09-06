@@ -4,47 +4,47 @@ Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/mongo.git
 
-Tags: 3.2.20-jessie, 3.2-jessie
-SharedTags: 3.2.20, 3.2
+Tags: 3.2.21-jessie, 3.2-jessie
+SharedTags: 3.2.21, 3.2
 # see http://repo.mongodb.org/apt/debian/dists/jessie/mongodb-org/3.2/main/
 # (i386, ppc64el, s390x are empty)
 Architectures: amd64
-GitCommit: eefc62ded2695ecf5e14193be7bc9640f79e1bd1
+GitCommit: 00c36756db79ec88574eb7543832c8fb298fb4fc
 Directory: 3.2
 
-Tags: 3.2.20-windowsservercore-ltsc2016, 3.2-windowsservercore-ltsc2016
-SharedTags: 3.2.20-windowsservercore, 3.2-windowsservercore, 3.2.20, 3.2
+Tags: 3.2.21-windowsservercore-ltsc2016, 3.2-windowsservercore-ltsc2016
+SharedTags: 3.2.21-windowsservercore, 3.2-windowsservercore, 3.2.21, 3.2
 Architectures: windows-amd64
-GitCommit: 380200038360980631e362f964857d48489f99a2
+GitCommit: 00c36756db79ec88574eb7543832c8fb298fb4fc
 Directory: 3.2/windows/windowsservercore-ltsc2016
 Constraints: windowsservercore-ltsc2016
 
-Tags: 3.2.20-windowsservercore-1709, 3.2-windowsservercore-1709
-SharedTags: 3.2.20-windowsservercore, 3.2-windowsservercore, 3.2.20, 3.2
+Tags: 3.2.21-windowsservercore-1709, 3.2-windowsservercore-1709
+SharedTags: 3.2.21-windowsservercore, 3.2-windowsservercore, 3.2.21, 3.2
 Architectures: windows-amd64
-GitCommit: 380200038360980631e362f964857d48489f99a2
+GitCommit: 00c36756db79ec88574eb7543832c8fb298fb4fc
 Directory: 3.2/windows/windowsservercore-1709
 Constraints: windowsservercore-1709
 
-Tags: 3.4.16-jessie, 3.4-jessie
-SharedTags: 3.4.16, 3.4
+Tags: 3.4.17-jessie, 3.4-jessie
+SharedTags: 3.4.17, 3.4
 # see http://repo.mongodb.org/apt/debian/dists/jessie/mongodb-org/3.4/main/
 # (i386, ppc64el, s390x are empty)
 Architectures: amd64
-GitCommit: eefc62ded2695ecf5e14193be7bc9640f79e1bd1
+GitCommit: 3b897b8fcac8482bb6a3e5b6617371ec2e84da07
 Directory: 3.4
 
-Tags: 3.4.16-windowsservercore-ltsc2016, 3.4-windowsservercore-ltsc2016
-SharedTags: 3.4.16-windowsservercore, 3.4-windowsservercore, 3.4.16, 3.4
+Tags: 3.4.17-windowsservercore-ltsc2016, 3.4-windowsservercore-ltsc2016
+SharedTags: 3.4.17-windowsservercore, 3.4-windowsservercore, 3.4.17, 3.4
 Architectures: windows-amd64
-GitCommit: 380200038360980631e362f964857d48489f99a2
+GitCommit: 3b897b8fcac8482bb6a3e5b6617371ec2e84da07
 Directory: 3.4/windows/windowsservercore-ltsc2016
 Constraints: windowsservercore-ltsc2016
 
-Tags: 3.4.16-windowsservercore-1709, 3.4-windowsservercore-1709
-SharedTags: 3.4.16-windowsservercore, 3.4-windowsservercore, 3.4.16, 3.4
+Tags: 3.4.17-windowsservercore-1709, 3.4-windowsservercore-1709
+SharedTags: 3.4.17-windowsservercore, 3.4-windowsservercore, 3.4.17, 3.4
 Architectures: windows-amd64
-GitCommit: 380200038360980631e362f964857d48489f99a2
+GitCommit: 3b897b8fcac8482bb6a3e5b6617371ec2e84da07
 Directory: 3.4/windows/windowsservercore-1709
 Constraints: windowsservercore-1709
 
@@ -53,7 +53,7 @@ SharedTags: 3.6.7, 3.6, 3
 # see http://repo.mongodb.org/apt/debian/dists/jessie/mongodb-org/3.6/main/
 # (i386, ppc64el, s390x are empty)
 Architectures: amd64
-GitCommit: c47466bb5eaecfa3b6fcf54a492b2e1c57182af7
+GitCommit: 36a011c5f198ad05c47310284795ad029d8340ba
 Directory: 3.6
 
 Tags: 3.6.7-windowsservercore-ltsc2016, 3.6-windowsservercore-ltsc2016, 3-windowsservercore-ltsc2016
@@ -70,32 +70,32 @@ GitCommit: c47466bb5eaecfa3b6fcf54a492b2e1c57182af7
 Directory: 3.6/windows/windowsservercore-1709
 Constraints: windowsservercore-1709
 
-Tags: 4.0.1-xenial, 4.0-xenial, 4-xenial, xenial
-SharedTags: 4.0.1, 4.0, 4, latest
+Tags: 4.0.2-xenial, 4.0-xenial, 4-xenial, xenial
+SharedTags: 4.0.2, 4.0, 4, latest
 # see http://repo.mongodb.org/apt/ubuntu/dists/xenial/mongodb-org/4.0/multiverse/
 # (i386, ppc64el, s390x are empty)
 Architectures: amd64, arm64v8
-GitCommit: b2c38e6b34458edc9c7dbd15a669c7b3992e43d1
+GitCommit: 36a011c5f198ad05c47310284795ad029d8340ba
 Directory: 4.0
 
-Tags: 4.0.1-windowsservercore-ltsc2016, 4.0-windowsservercore-ltsc2016, 4-windowsservercore-ltsc2016, windowsservercore-ltsc2016
-SharedTags: 4.0.1-windowsservercore, 4.0-windowsservercore, 4-windowsservercore, windowsservercore, 4.0.1, 4.0, 4, latest
+Tags: 4.0.2-windowsservercore-ltsc2016, 4.0-windowsservercore-ltsc2016, 4-windowsservercore-ltsc2016, windowsservercore-ltsc2016
+SharedTags: 4.0.2-windowsservercore, 4.0-windowsservercore, 4-windowsservercore, windowsservercore, 4.0.2, 4.0, 4, latest
 Architectures: windows-amd64
-GitCommit: 87b691c1e7d585d5b6f3ca00b6006d33ff74dabb
+GitCommit: f4e1d147084c6c7479782f68c8e392ec8b5da19a
 Directory: 4.0/windows/windowsservercore-ltsc2016
 Constraints: windowsservercore-ltsc2016
 
-Tags: 4.0.1-windowsservercore-1709, 4.0-windowsservercore-1709, 4-windowsservercore-1709, windowsservercore-1709
-SharedTags: 4.0.1-windowsservercore, 4.0-windowsservercore, 4-windowsservercore, windowsservercore, 4.0.1, 4.0, 4, latest
+Tags: 4.0.2-windowsservercore-1709, 4.0-windowsservercore-1709, 4-windowsservercore-1709, windowsservercore-1709
+SharedTags: 4.0.2-windowsservercore, 4.0-windowsservercore, 4-windowsservercore, windowsservercore, 4.0.2, 4.0, 4, latest
 Architectures: windows-amd64
-GitCommit: 87b691c1e7d585d5b6f3ca00b6006d33ff74dabb
+GitCommit: f4e1d147084c6c7479782f68c8e392ec8b5da19a
 Directory: 4.0/windows/windowsservercore-1709
 Constraints: windowsservercore-1709
 
-Tags: 4.0.1-windowsservercore-1803, 4.0-windowsservercore-1803, 4-windowsservercore-1803, windowsservercore-1803
-SharedTags: 4.0.1-windowsservercore, 4.0-windowsservercore, 4-windowsservercore, windowsservercore, 4.0.1, 4.0, 4, latest
+Tags: 4.0.2-windowsservercore-1803, 4.0-windowsservercore-1803, 4-windowsservercore-1803, windowsservercore-1803
+SharedTags: 4.0.2-windowsservercore, 4.0-windowsservercore, 4-windowsservercore, windowsservercore, 4.0.2, 4.0, 4, latest
 Architectures: windows-amd64
-GitCommit: 87b691c1e7d585d5b6f3ca00b6006d33ff74dabb
+GitCommit: f4e1d147084c6c7479782f68c8e392ec8b5da19a
 Directory: 4.0/windows/windowsservercore-1803
 Constraints: windowsservercore-1803
 
@@ -104,7 +104,7 @@ SharedTags: 4.1.2, 4.1, unstable
 # see http://repo.mongodb.org/apt/ubuntu/dists/xenial/mongodb-org/4.1/multiverse/
 # (i386, ppc64el, s390x are empty)
 Architectures: amd64, arm64v8
-GitCommit: b2c38e6b34458edc9c7dbd15a669c7b3992e43d1
+GitCommit: 36a011c5f198ad05c47310284795ad029d8340ba
 Directory: 4.1
 
 Tags: 4.1.2-windowsservercore-ltsc2016, 4.1-windowsservercore-ltsc2016, unstable-windowsservercore-ltsc2016
