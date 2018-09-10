@@ -1,15 +1,34 @@
-# maintainer: Luigi Dell'Aquila <l.dellaquila@orientdb.com> (@luigidellaquila)
+Maintainers: Luigi Dell'Aquila <l.dellaquila@orientdb.com> (@luigidellaquila)
+GitRepo: https://github.com/orientechnologies/orientdb-docker.git
 
-2.0.18: git://github.com/orientechnologies/orientdb-docker@8a9633c19fa9c53a5446b9b62997ff389813e785 2.0
+Tags: 3.0.6, latest
+Architectures: amd64, arm64v8, ppc64le
+GitCommit: bc7e1c48bedbd259df885dd922a13f79dfef0107
+amd64-Directory: 3.0/x86_64/alpine
+arm64v8-Directory: 3.0/arm64v8/alpine
+ppc64le-Directory: 3.0/ppc64le/ubuntu
 
-2.1.25: git://github.com/orientechnologies/orientdb-docker@8a9633c19fa9c53a5446b9b62997ff389813e785 2.1
+Tags: 3.0.6-tp3
+Architectures: amd64
+GitCommit: bc7e1c48bedbd259df885dd922a13f79dfef0107
+Directory: 3.0-tp3/x86_64/alpine
 
-2.2.36: git://github.com/orientechnologies/orientdb-docker@4b41b901f6d5e8950c391d9e6d8f45551919b968 2.2/x86_64/alpine
+Tags: 2.2.36-spatial
+Architectures: amd64
+GitCommit: 4b41b901f6d5e8950c391d9e6d8f45551919b968
+Directory: 2.2-spatial/x86_64/alpine
 
-2.2.36-spatial: git://github.com/orientechnologies/orientdb-docker@4b41b901f6d5e8950c391d9e6d8f45551919b968 2.2-spatial/x86_64/alpine
+Tags: 2.2.36
+Architectures: amd64
+GitCommit: 4b41b901f6d5e8950c391d9e6d8f45551919b968
+Directory: 2.2/x86_64/alpine
 
-3.0.6: git://github.com/orientechnologies/orientdb-docker@bc7e1c48bedbd259df885dd922a13f79dfef0107 3.0/x86_64/alpine
+Tags: 2.1.25
+Architectures: amd64
+GitCommit: 8a9633c19fa9c53a5446b9b62997ff389813e785
+Directory: 2.1
 
-3.0.6-tp3: git://github.com/orientechnologies/orientdb-docker@bc7e1c48bedbd259df885dd922a13f79dfef0107 3.0-tp3/x86_64/alpine
-
-latest: git://github.com/orientechnologies/orientdb-docker@bc7e1c48bedbd259df885dd922a13f79dfef0107 3.0/x86_64/alpine
+Tags: 2.0.18
+Architectures: amd64
+GitCommit: 8a9633c19fa9c53a5446b9b62997ff389813e785
+Directory: 2.0
