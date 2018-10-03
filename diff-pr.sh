@@ -72,7 +72,7 @@ git -C oi fetch --quiet \
 
 images=( "$@" )
 if [ "${#images[@]}" -eq 0 ]; then
-	images=( $(git -C oi/library diff --name-only master...pull -- . | xargs -n1 basename) )
+	images=( $(git -C oi/library diff --name-only HEAD...pull -- . | xargs -n1 basename) )
 fi
 
 export BASHBREW_CACHE="${BASHBREW_CACHE:-${XDG_CACHE_HOME:-$HOME/.cache}/bashbrew}"
@@ -232,4 +232,12 @@ copy-tar tar temp
 rm -rf tar
 git -C temp add .
 
-git -C temp diff --minimal --ignore-all-space --find-copies="$findCopies" --find-copies-harder --irreversible-delete --staged
+git -C temp diff \
+	--minimal \
+	--ignore-all-space \
+	--find-renames="$findCopies" \
+	--break-rewrites \
+	--find-copies="$findCopies" \
+	--find-copies-harder \
+	--irreversible-delete \
+	--staged
