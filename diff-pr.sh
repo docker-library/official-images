@@ -17,6 +17,7 @@ usage() {
 allFiles=
 listTarballContents=1
 findCopies='20%'
+breakRewrites='20%/80%'
 
 uninterestingTarballContent=(
 	# "config_diff_2017_01_07.log"
@@ -191,7 +192,7 @@ copy-tar() {
 						*.tar.*|*.tgz)
 							tar -tf "$dst/$dDirName/$g" \
 								| grep -vE "$uninterestingTarballGrep" \
-								| sed -e 's!^./!!' \
+								| sed -e 's!^[.]/!!' \
 								| sort \
 								> "$dst/$dDirName/$g  'tar -t'"
 							;;
@@ -236,7 +237,7 @@ git -C temp diff \
 	--minimal \
 	--ignore-all-space \
 	--find-renames="$findCopies" \
-	--break-rewrites \
+	--break-rewrites="$breakRewrites" \
 	--find-copies="$findCopies" \
 	--find-copies-harder \
 	--irreversible-delete \
