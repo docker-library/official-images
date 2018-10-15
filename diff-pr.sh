@@ -17,7 +17,6 @@ usage() {
 allFiles=
 listTarballContents=1
 findCopies='20%'
-breakRewrites='20%/80%'
 
 uninterestingTarballContent=(
 	# "config_diff_2017_01_07.log"
@@ -237,7 +236,6 @@ git -C temp diff \
 	--minimal \
 	--ignore-all-space \
 	--find-renames="$findCopies" \
-	--break-rewrites="$breakRewrites" \
 	--find-copies="$findCopies" \
 	--find-copies-harder \
 	--irreversible-delete \
