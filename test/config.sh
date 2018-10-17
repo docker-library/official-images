@@ -93,6 +93,7 @@ imageTests+=(
 	'
 	[haxe]='
 		haxe-hello-world
+		haxe-haxelib-install
 	'
 	[hylang]='
 		hylang-sh
