@@ -22,3 +22,28 @@ Directory: 9000/alpine-jdk
 Tags: 9-onbuild, 9.2-onbuild, 9.2.0-onbuild, 9.2.0.0-onbuild
 Architectures: amd64, i386, arm32v5, arm64v8, ppc64le, s390x
 Directory: 9000/onbuild
+
+
+Tags: 9.1, 9.1.17, 9.1.17.0, 9.1-jre, 9.1.17-jre, 9.1.17.0-jre
+Architectures: amd64, i386, arm32v5, arm64v8, ppc64le, s390x
+Directory: 9000/jre
+GitCommit: 8bc3fe27670a851953345182fe12f14f5e708383
+GitFetch: refs/heads/9.1
+
+Tags: 9.1-alpine, 9.1.17-alpine, 9.1.17.0-alpine, 9.1-jre-alpine, 9.1.17-jre-alpine, 9.1.17.0-jre-alpine
+Architectures: amd64, i386, arm32v5, arm64v8, ppc64le, s390x
+Directory: 9000/jre
+GitCommit: 8bc3fe27670a851953345182fe12f14f5e708383
+GitFetch: refs/heads/9.1
+
+Tags: 9.1-jdk-alpine, 9.1.17-jdk-alpine, 9.1.17.0-jdk-alpine
+Architectures: amd64, i386, arm32v5, arm64v8, ppc64le, s390x
+Directory: 9000/alpine-jdk
+GitCommit: 8bc3fe27670a851953345182fe12f14f5e708383
+GitFetch: refs/heads/9.1
+
+Tags: 9.1-jdk, 9.1.17-jdk, 9.1.17.0-jdk
+Architectures: amd64, i386, arm32v5, arm64v8, ppc64le, s390x
+Directory: 9000/jdk
+GitCommit: 8bc3fe27670a851953345182fe12f14f5e708383
+GitFetch: refs/heads/9.1
