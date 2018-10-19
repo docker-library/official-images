@@ -8,8 +8,6 @@ repository manifest files.
 push options:
   -p			Don't build, only push image(s) to registry
 
-version options:
-  -n			Don't create datestamped image(s)
 EOUSAGE
 }
 
@@ -36,9 +34,6 @@ while getopts ":pna"  opt; do
 	case $opt in
 		p)
 			pushOnly=1
-			;;
-		n)
-			args+=' --no-datestamp'
 			;;
 		a)
 			shift
