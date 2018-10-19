@@ -75,8 +75,14 @@ push_image() {
 				didFail=1
 				continue
 			else
-				# Check if debian and push to debian omitted repo here
-
+				if [[ $repo == *"debian"* ]]; then
+					echo "Pushing $namespace/${repoTag/-debian/}..."
+					if ! "$docker" push "$namespace/${repoTag/-debian/}" &>> "$thisLog" < /dev/null; then
+						echo >&2 "- $namespace/${repoTag/-debian/} failed to push; see $thisLog"
+						didFail=1
+						continue
+					fi
+				fi
 			fi
 			if [ "$aliases" ]; then
 				for alias in $aliases; do
@@ -87,7 +93,14 @@ push_image() {
 						didFail=1
 						continue
 					else
-						# Check if debian and push to debian omitted repo here
+						if [[ $repo == *"debian"* ]]; then
+							echo "Pushing $namespace/$alias-${imageType/debian/}:$tag..."
+							if ! "$docker" push "$namespace/$alias-${imageType/debian/}:$tag" &>> "$thisLog" < /dev/null; then
+								echo >&2 "- $namespace/$alias-${imageType/debian/}:$tag failed to push; see $thisLog"
+								didFail=1
+								continue
+							fi
+						fi
 					fi
 				done
 			fi
