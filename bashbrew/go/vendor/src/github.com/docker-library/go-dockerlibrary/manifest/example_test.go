@@ -54,10 +54,18 @@ s390x-GitCommit: b6c460e7cd79b595267870a98013ec3078b490df
 i386-GitFetch: refs/heads/i386
 ppc64le-Directory: 1.5/ppc64le
 
+Tags: 1.5-alpine
+GitCommit: d7e2a8d90a9b8f5dfd5bcd428e0c33b68c40cc19
+Directory: 1.5
+File: Dockerfile.alpine
+s390x-File: Dockerfile.alpine.s390x.bad-boy
+
 SharedTags: raspbian
 GitCommit: deadbeefdeadbeefdeadbeefdeadbeefdeadbeef
 Tags: raspbian-s390x
 Architectures: s390x, i386
+File: Dockerfile-raspbian
+s390x-File: Dockerfile
 
 
 `)))
@@ -113,15 +121,24 @@ i: g@h j
 	// ppc64le-Directory: 1.5/ppc64le
 	// s390x-GitCommit: b6c460e7cd79b595267870a98013ec3078b490df
 	//
+	// Tags: 1.5-alpine
+	// GitCommit: d7e2a8d90a9b8f5dfd5bcd428e0c33b68c40cc19
+	// Directory: 1.5
+	// File: Dockerfile.alpine
+	// s390x-File: Dockerfile.alpine.s390x.bad-boy
+	//
 	// Tags: raspbian-s390x
 	// SharedTags: raspbian
 	// Architectures: i386, s390x
 	// GitCommit: deadbeefdeadbeefdeadbeefdeadbeefdeadbeef
+	// File: Dockerfile-raspbian
+	// s390x-File: Dockerfile
 	//
 	// Shared Tag Groups:
 	//
 	//   - latest
 	//     - 1.6.1, 1.6, 1
+	//     - 1.5-alpine
 	//
 	//   - 1.5.3-debian, 1.5-debian
 	//     - 1.5.3, 1.5
