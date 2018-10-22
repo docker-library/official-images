@@ -111,15 +111,16 @@ sharedTagsListTemplate='
 
 # TODO something less hacky than "git archive" hackery, like a "bashbrew archive" or "bashbrew context" or something
 template='
+	tempDir="$(mktemp -d)"
+	{{- "\n" -}}
 	{{- range $.Entries -}}
 		{{- $arch := .HasArchitecture arch | ternary arch (.Architectures | first) -}}
 		{{- $from := $.ArchDockerFrom $arch . -}}
+		{{- $outDir := join "_" $.RepoName (.Tags | last) -}}
 		git -C "$BASHBREW_CACHE/git" archive --format=tar
 		{{- " " -}}
 		{{- "--prefix=" -}}
-		{{- $.RepoName -}}
-		_
-		{{- .Tags | last -}}
+		{{- $outDir -}}
 		{{- "/" -}}
 		{{- " " -}}
 		{{- .ArchGitCommit $arch -}}
@@ -127,7 +128,10 @@ template='
 		{{- $dir := .ArchDirectory $arch -}}
 		{{- (eq $dir ".") | ternary "" $dir -}}
 		{{- "\n" -}}
+		mkdir -p "$tempDir/{{- $outDir -}}" && echo "{{- .ArchFile $arch -}}" > "$tempDir/{{- $outDir -}}/.bashbrew-dockerfile-name"
+		{{- "\n" -}}
 	{{- end -}}
+	tar -cC "$tempDir" . && rm -rf "$tempDir"
 '
 
 copy-tar() {
@@ -140,13 +144,24 @@ copy-tar() {
 		return
 	fi
 
-	# "Dockerfile*" at the end here ensures we capture "Dockerfile.builder" style repos in a useful way too (busybox, hello-world)
-	for d in "$src"/*/Dockerfile*; do
-		dDir="$(dirname "$d")"
-		dDirName="$(basename "$dDir")"
+	local d dockerfiles=()
+	for d in "$src"/*/.bashbrew-dockerfile-name; do
+		local bf="$(< "$d")" dDir="$(dirname "$d")"
+		if [ "$bf" = 'Dockerfile' ]; then
+			# "*" at the end here ensures we capture "Dockerfile.builder" style repos in a useful way too (busybox, hello-world)
+			dockerfiles+=( "$dDir/$bf"* )
+		else
+			dockerfiles+=( "$dDir/$bf" )
+		fi
+		rm "$d" # remove the ".bashbrew-dockerfile-name" file we created
+	done
+
+	for d in "${dockerfiles[@]}"; do
+		local dDir="$(dirname "$d")"
+		local dDirName="$(basename "$dDir")"
 
 		IFS=$'\n'
-		files=(
+		local files=(
 			"$(basename "$d")"
 			$(awk '
 				toupper($1) == "COPY" || toupper($1) == "ADD" {
@@ -172,12 +187,14 @@ copy-tar() {
 
 		mkdir -p "$dst/$dDirName"
 
+		local f origF failureMatters
 		for origF in "${files[@]}"; do
 			f="${origF# }" # trim off leading space (indicates we don't care about failure)
 			[ "$f" = "$origF" ] && failureMatters=1 || failureMatters=
 
-			globbed=( $(cd "$dDir" && eval "echo $f") )
+			local globbed=( $(cd "$dDir" && eval "echo $f") )
 
+			local g
 			for g in "${globbed[@]}"; do
 				if [ -z "$failureMatters" ] && [ ! -e "$dDir/$g" ]; then
 					continue
