@@ -8,8 +8,6 @@ repository manifest files.
 push options:
   -p			Don't build, only push image(s) to registry
 
-version options:
-  -n			Don't create datestamped image(s)
 EOUSAGE
 }
 
@@ -37,9 +35,6 @@ while getopts ":pna"  opt; do
 		p)
 			pushOnly=1
 			;;
-		n)
-			args+=' --no-datestamp'
-			;;
 		a)
 			shift
 			aliases=$1 && shift
@@ -66,22 +61,22 @@ cd bashbrew/
 if [ -z "$TAGS" ]; then
 	if [ -z "$pushOnly" ]; then
 		# Build and push all images
-		./bashbrew.sh build $LIBRARY --library=../library --namespaces=resin $args
+		./bashbrew.sh build $LIBRARY --library=../library --namespaces=balenalib $args
 		is_success $?
 	else
 		# Push all images
-		./bashbrew.sh push $LIBRARY --library=../library --namespaces=resin $args
+		./bashbrew.sh push $LIBRARY --library=../library --namespaces=balenalib $args
 		is_success $?
 	fi
 else
 	for tag in $TAGS; do
 		if [ -z "$pushOnly" ]; then
 			# Build specified images only
-			./bashbrew.sh build $LIBRARY:$tag --library=../library --namespaces=resin $args
+			./bashbrew.sh build $LIBRARY:$tag --library=../library --namespaces=balenalib $args
 			is_success $? $tag
 		else
 			# Push specified images
-			./bashbrew.sh push $LIBRARY:$tag --library=../library --namespaces=resin $args
+			./bashbrew.sh push $LIBRARY:$tag --library=../library --namespaces=balenalib $args
 			is_success $? $tag
 		fi
 	done

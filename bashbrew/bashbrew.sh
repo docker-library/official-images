@@ -23,9 +23,6 @@ self="$(basename "$0")"
 
 check_image_type() {
 	local repo="$1"
-	if [[ $repo == *"buildpack-deps" ]]; then
-		echo '-buildpack-deps'
-	fi
 	if [[ $repo == *"golang" ]]; then
 		echo '-golang'
 	fi
@@ -56,11 +53,8 @@ get_image_type() {
 		imageType+=$(check_image_type $repo)
 	;;
 	*)
+		imageType='debian'
 		imageType=$(check_image_type $repo)
-		if [ -z "$imageType" ]; then
-			imageType='debian'
-		fi
-		imageType="${imageType#*-}"
 	;;
 	esac
 }
@@ -81,10 +75,10 @@ push_image() {
 				didFail=1
 				continue
 			else
-				if [ "$doDatestamp" ] && [ "$tag" != "latest" ]; then
-					echo "Pushing $namespace/$repoTag-$dateStamp..."
-					if ! "$docker" push "$namespace/$repoTag-$dateStamp" &>> "$thisLog" < /dev/null; then
-						echo >&2 "- $namespace/$repoTag-$dateStamp failed to push; see $thisLog"
+				if [[ $repo == *"debian"* ]]; then
+					echo "Pushing $namespace/${repoTag/-debian/}..."
+					if ! "$docker" push "$namespace/${repoTag/-debian/}" &>> "$thisLog" < /dev/null; then
+						echo >&2 "- $namespace/${repoTag/-debian/} failed to push; see $thisLog"
 						didFail=1
 						continue
 					fi
@@ -99,11 +93,10 @@ push_image() {
 						didFail=1
 						continue
 					else
-						if [ "$doDatestamp" ] && [ "$tag" != "latest" ]; then
-							"$docker" tag "$namespace/$repoTag-$dateStamp" "$namespace/$alias-$imageType:$tag-$dateStamp"
-							echo "Pushing alias: $namespace/$alias-$imageType:$tag-$dateStamp..."
-							if ! "$docker" push "$namespace/$alias-$imageType:$tag-$dateStamp" &>> "$thisLog" < /dev/null; then
-								echo >&2 "- $namespace/$alias-$imageType:$tag-$dateStamp failed to push; see $thisLog"
+						if [[ $repo == *"debian"* ]]; then
+							echo "Pushing $namespace/$alias-${imageType/debian/}:$tag..."
+							if ! "$docker" push "$namespace/$alias-${imageType/debian/}:$tag" &>> "$thisLog" < /dev/null; then
+								echo >&2 "- $namespace/$alias-${imageType/debian/}:$tag failed to push; see $thisLog"
 								didFail=1
 								continue
 							fi
@@ -113,9 +106,6 @@ push_image() {
 			fi
 		else
 			echo "$docker push" "$namespace/$repoTag"
-			if [ "$doDatestamp" ] && [ "$tag" != "latest" ]; then
-				echo "$docker push" "$namespace/$repoTag-$dateStamp"
-			fi
 		fi
 	done
 }
@@ -144,13 +134,9 @@ clean_image() {
 		if [ "$aliases" ]; then
 			for alias in $aliases; do
 				remove_image "$namespace/$alias-$imageType:$tag"
-				remove_image "$namespace/$alias-$imageType:$tag-$dateStamp"
 			done
 		fi
 
-		if [ "$doDatestamp" ] && [ "$tag" != "latest" ]; then
-			remove_image "$namespace/$repoTag-$dateStamp"
-		fi
 		remove_image "$namespace/$repoTag"
 		remove_image "$repoTag"
 
@@ -200,20 +186,16 @@ build options:
 push options:
   --no-push          Don't push, print what would push
 
-version options:
-  --no-datestamp     Don't create datestamped image
 EOUSAGE
 }
 
 # arg handling
-opts="$(getopt -o 'h?' --long 'all,docker:,help,library:,logs:,namespaces:,no-build,no-clone,no-push,src:,no-datestamp,alias:' -- "$@" || { usage >&2 && false; })"
+opts="$(getopt -o 'h?' --long 'all,docker:,help,library:,logs:,namespaces:,no-build,no-clone,no-push,src:,alias:' -- "$@" || { usage >&2 && false; })"
 eval set -- "$opts"
 
 doClone=1
 doBuild=1
 doPush=1
-doDatestamp=1
-dateStamp=$(date +'%Y%m%d' -u)
 buildAll=
 while true; do
 	flag=$1
@@ -230,7 +212,6 @@ while true; do
 		--no-clone) doClone= ;;
 		--no-push) doPush= ;;
 		--src) src="$1" && shift ;;
-		--no-datestamp) doDatestamp= ;;
 		--) break ;;
 		*)
 			{
@@ -473,7 +454,7 @@ while [ "$#" -gt 0 ]; do
 				
 				if ! (
 					set -x
-					"$docker" pull "resin/$repoTag"
+					"$docker" pull "balenalib/$repoTag"
 					"$docker" build --pull -t "$repoTag" "$gitRepo/$gitDir"
 				) &>> "$thisLog"; then
 					echo "- failed 'docker build'; see $thisLog"
@@ -498,18 +479,6 @@ while [ "$#" -gt 0 ]; do
 					fi
 
 					tag="${repoTag#*:}"
-					# don't need a datestamp for latest tag.
-					if [ "$doDatestamp" ] && [ "$tag" != "latest" ]; then
-						if ! (
-							set -x
-							"$docker" tag "$repoTag" "$namespace/$repoTag-$dateStamp"
-						) &>> "$thisLog"; then
-							echo "- failed 'docker tag'; see $thisLog"
-							didFail=1
-							clean_image
-							continue
-						fi
-					fi
 				done
 				push_image
 				clean_image
