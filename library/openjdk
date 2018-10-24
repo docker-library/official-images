@@ -88,12 +88,12 @@ Directory: 10/jdk/oracle
 
 Tags: 10.0.2-jdk-sid, 10.0.2-sid, 10.0-jdk-sid, 10.0-sid, 10-jdk-sid, 10-sid, 10.0.2-jdk, 10.0.2, 10.0-jdk, 10.0, 10-jdk, 10
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: bca955fe8c80ff7272e9f4a4ffa8b822a27a0aef
+GitCommit: 23e96e231951fc0edb5a1974280f6f460a44151f
 Directory: 10/jdk
 
 Tags: 10.0.2-jdk-slim-sid, 10.0.2-slim-sid, 10.0-jdk-slim-sid, 10.0-slim-sid, 10-jdk-slim-sid, 10-slim-sid, 10.0.2-jdk-slim, 10.0.2-slim, 10.0-jdk-slim, 10.0-slim, 10-jdk-slim, 10-slim
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: bca955fe8c80ff7272e9f4a4ffa8b822a27a0aef
+GitCommit: 23e96e231951fc0edb5a1974280f6f460a44151f
 Directory: 10/jdk/slim
 
 Tags: 10.0.2-jdk-windowsservercore-ltsc2016, 10.0.2-windowsservercore-ltsc2016, 10.0-jdk-windowsservercore-ltsc2016, 10.0-windowsservercore-ltsc2016, 10-jdk-windowsservercore-ltsc2016, 10-windowsservercore-ltsc2016
@@ -119,12 +119,12 @@ Constraints: nanoserver-sac2016
 
 Tags: 10.0.2-jre-sid, 10.0-jre-sid, 10-jre-sid, 10.0.2-jre, 10.0-jre, 10-jre
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: bca955fe8c80ff7272e9f4a4ffa8b822a27a0aef
+GitCommit: 23e96e231951fc0edb5a1974280f6f460a44151f
 Directory: 10/jre
 
 Tags: 10.0.2-jre-slim-sid, 10.0-jre-slim-sid, 10-jre-slim-sid, 10.0.2-jre-slim, 10.0-jre-slim, 10-jre-slim
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: bca955fe8c80ff7272e9f4a4ffa8b822a27a0aef
+GitCommit: 23e96e231951fc0edb5a1974280f6f460a44151f
 Directory: 10/jre/slim
 
 Tags: 8u181-jdk-stretch, 8u181-stretch, 8-jdk-stretch, 8-stretch, 8u181-jdk, 8u181, 8-jdk, 8
@@ -137,29 +137,29 @@ Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: 86918ee28d383e7af63f535a2558040dce141099
 Directory: 8/jdk/slim
 
-Tags: 8u171-jdk-alpine3.8, 8u171-alpine3.8, 8-jdk-alpine3.8, 8-alpine3.8, 8u171-jdk-alpine, 8u171-alpine, 8-jdk-alpine, 8-alpine
+Tags: 8u181-jdk-alpine3.8, 8u181-alpine3.8, 8-jdk-alpine3.8, 8-alpine3.8, 8u181-jdk-alpine, 8u181-alpine, 8-jdk-alpine, 8-alpine
 Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: 1778c73b834d04d5b5c61baee4cce8c127031f9c
+GitCommit: 47a6539cd18023dafb45db9013455136cc0bca07
 Directory: 8/jdk/alpine
 
-Tags: 8u181-jdk-windowsservercore-ltsc2016, 8u181-windowsservercore-ltsc2016, 8-jdk-windowsservercore-ltsc2016, 8-windowsservercore-ltsc2016
-SharedTags: 8u181-jdk-windowsservercore, 8u181-windowsservercore, 8-jdk-windowsservercore, 8-windowsservercore
+Tags: 8u191-jdk-windowsservercore-ltsc2016, 8u191-windowsservercore-ltsc2016, 8-jdk-windowsservercore-ltsc2016, 8-windowsservercore-ltsc2016
+SharedTags: 8u191-jdk-windowsservercore, 8u191-windowsservercore, 8-jdk-windowsservercore, 8-windowsservercore
 Architectures: windows-amd64
-GitCommit: 7d6b0528da55c7b74feff4f565c9dbb8907b8c9a
+GitCommit: fdf3bb8d168120655fe39e4098713e704db809df
 Directory: 8/jdk/windows/windowsservercore-ltsc2016
 Constraints: windowsservercore-ltsc2016
 
-Tags: 8u181-jdk-windowsservercore-1709, 8u181-windowsservercore-1709, 8-jdk-windowsservercore-1709, 8-windowsservercore-1709
-SharedTags: 8u181-jdk-windowsservercore, 8u181-windowsservercore, 8-jdk-windowsservercore, 8-windowsservercore
+Tags: 8u191-jdk-windowsservercore-1709, 8u191-windowsservercore-1709, 8-jdk-windowsservercore-1709, 8-windowsservercore-1709
+SharedTags: 8u191-jdk-windowsservercore, 8u191-windowsservercore, 8-jdk-windowsservercore, 8-windowsservercore
 Architectures: windows-amd64
-GitCommit: 7d6b0528da55c7b74feff4f565c9dbb8907b8c9a
+GitCommit: fdf3bb8d168120655fe39e4098713e704db809df
 Directory: 8/jdk/windows/windowsservercore-1709
 Constraints: windowsservercore-1709
 
-Tags: 8u181-jdk-nanoserver-sac2016, 8u181-nanoserver-sac2016, 8-jdk-nanoserver-sac2016, 8-nanoserver-sac2016
-SharedTags: 8u181-jdk-nanoserver, 8u181-nanoserver, 8-jdk-nanoserver, 8-nanoserver
+Tags: 8u191-jdk-nanoserver-sac2016, 8u191-nanoserver-sac2016, 8-jdk-nanoserver-sac2016, 8-nanoserver-sac2016
+SharedTags: 8u191-jdk-nanoserver, 8u191-nanoserver, 8-jdk-nanoserver, 8-nanoserver
 Architectures: windows-amd64
-GitCommit: 7d6b0528da55c7b74feff4f565c9dbb8907b8c9a
+GitCommit: fdf3bb8d168120655fe39e4098713e704db809df
 Directory: 8/jdk/windows/nanoserver-sac2016
 Constraints: nanoserver-sac2016
 
@@ -173,9 +173,9 @@ Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: 86918ee28d383e7af63f535a2558040dce141099
 Directory: 8/jre/slim
 
-Tags: 8u171-jre-alpine3.8, 8-jre-alpine3.8, 8u171-jre-alpine, 8-jre-alpine
+Tags: 8u181-jre-alpine3.8, 8-jre-alpine3.8, 8u181-jre-alpine, 8-jre-alpine
 Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: 1778c73b834d04d5b5c61baee4cce8c127031f9c
+GitCommit: 47a6539cd18023dafb45db9013455136cc0bca07
 Directory: 8/jre/alpine
 
 Tags: 7u181-jdk-jessie, 7u181-jessie, 7-jdk-jessie, 7-jessie, 7u181-jdk, 7u181, 7-jdk, 7
