@@ -1,10 +1,43 @@
-# maintainer: Trong Nghia Nguyen - resin.io <james@resin.io>
+jessie-build-20181025: git://github.com/balena-io-library/base-images@27a1869f6093ab1042cc38a780b75c014269ac8d balena-base-images/aarch64/debian/jessie/build
+jessie-build: git://github.com/balena-io-library/base-images@27a1869f6093ab1042cc38a780b75c014269ac8d balena-base-images/aarch64/debian/jessie/build
 
-buster: git://github.com/resin-io-library/base-images@5ac085067c5c162dbba36b776011b20bfda49757 resin-base-images/debian/aarch64/buster
+jessie-run-20181025: git://github.com/balena-io-library/base-images@27a1869f6093ab1042cc38a780b75c014269ac8d balena-base-images/aarch64/debian/jessie/run
+jessie-run: git://github.com/balena-io-library/base-images@27a1869f6093ab1042cc38a780b75c014269ac8d balena-base-images/aarch64/debian/jessie/run
+jessie-20181025: git://github.com/balena-io-library/base-images@27a1869f6093ab1042cc38a780b75c014269ac8d balena-base-images/aarch64/debian/jessie/run
+jessie: git://github.com/balena-io-library/base-images@27a1869f6093ab1042cc38a780b75c014269ac8d balena-base-images/aarch64/debian/jessie/run
 
-jessie: git://github.com/resin-io-library/base-images@5ac085067c5c162dbba36b776011b20bfda49757 resin-base-images/debian/aarch64/jessie
-latest: git://github.com/resin-io-library/base-images@5ac085067c5c162dbba36b776011b20bfda49757 resin-base-images/debian/aarch64/jessie
+stretch-build-20181025: git://github.com/balena-io-library/base-images@27a1869f6093ab1042cc38a780b75c014269ac8d balena-base-images/aarch64/debian/stretch/build
+stretch-build: git://github.com/balena-io-library/base-images@27a1869f6093ab1042cc38a780b75c014269ac8d balena-base-images/aarch64/debian/stretch/build
+latest-build-20181025: git://github.com/balena-io-library/base-images@27a1869f6093ab1042cc38a780b75c014269ac8d balena-base-images/aarch64/debian/stretch/build
+latest-build: git://github.com/balena-io-library/base-images@27a1869f6093ab1042cc38a780b75c014269ac8d balena-base-images/aarch64/debian/stretch/build
+build-20181025: git://github.com/balena-io-library/base-images@27a1869f6093ab1042cc38a780b75c014269ac8d balena-base-images/aarch64/debian/stretch/build
+build: git://github.com/balena-io-library/base-images@27a1869f6093ab1042cc38a780b75c014269ac8d balena-base-images/aarch64/debian/stretch/build
 
-sid: git://github.com/resin-io-library/base-images@5ac085067c5c162dbba36b776011b20bfda49757 resin-base-images/debian/aarch64/sid
+stretch-run-20181025: git://github.com/balena-io-library/base-images@27a1869f6093ab1042cc38a780b75c014269ac8d balena-base-images/aarch64/debian/stretch/run
+stretch-run: git://github.com/balena-io-library/base-images@27a1869f6093ab1042cc38a780b75c014269ac8d balena-base-images/aarch64/debian/stretch/run
+stretch-20181025: git://github.com/balena-io-library/base-images@27a1869f6093ab1042cc38a780b75c014269ac8d balena-base-images/aarch64/debian/stretch/run
+stretch: git://github.com/balena-io-library/base-images@27a1869f6093ab1042cc38a780b75c014269ac8d balena-base-images/aarch64/debian/stretch/run
+latest-run-20181025: git://github.com/balena-io-library/base-images@27a1869f6093ab1042cc38a780b75c014269ac8d balena-base-images/aarch64/debian/stretch/run
+latest-run: git://github.com/balena-io-library/base-images@27a1869f6093ab1042cc38a780b75c014269ac8d balena-base-images/aarch64/debian/stretch/run
+latest-20181025: git://github.com/balena-io-library/base-images@27a1869f6093ab1042cc38a780b75c014269ac8d balena-base-images/aarch64/debian/stretch/run
+latest: git://github.com/balena-io-library/base-images@27a1869f6093ab1042cc38a780b75c014269ac8d balena-base-images/aarch64/debian/stretch/run
+run-20181025: git://github.com/balena-io-library/base-images@27a1869f6093ab1042cc38a780b75c014269ac8d balena-base-images/aarch64/debian/stretch/run
+run: git://github.com/balena-io-library/base-images@27a1869f6093ab1042cc38a780b75c014269ac8d balena-base-images/aarch64/debian/stretch/run
+20181025: git://github.com/balena-io-library/base-images@27a1869f6093ab1042cc38a780b75c014269ac8d balena-base-images/aarch64/debian/stretch/run
 
-stretch: git://github.com/resin-io-library/base-images@5ac085067c5c162dbba36b776011b20bfda49757 resin-base-images/debian/aarch64/stretch
+buster-build-20181025: git://github.com/balena-io-library/base-images@27a1869f6093ab1042cc38a780b75c014269ac8d balena-base-images/aarch64/debian/buster/build
+buster-build: git://github.com/balena-io-library/base-images@27a1869f6093ab1042cc38a780b75c014269ac8d balena-base-images/aarch64/debian/buster/build
+
+buster-run-20181025: git://github.com/balena-io-library/base-images@27a1869f6093ab1042cc38a780b75c014269ac8d balena-base-images/aarch64/debian/buster/run
+buster-run: git://github.com/balena-io-library/base-images@27a1869f6093ab1042cc38a780b75c014269ac8d balena-base-images/aarch64/debian/buster/run
+buster-20181025: git://github.com/balena-io-library/base-images@27a1869f6093ab1042cc38a780b75c014269ac8d balena-base-images/aarch64/debian/buster/run
+buster: git://github.com/balena-io-library/base-images@27a1869f6093ab1042cc38a780b75c014269ac8d balena-base-images/aarch64/debian/buster/run
+
+sid-build-20181025: git://github.com/balena-io-library/base-images@27a1869f6093ab1042cc38a780b75c014269ac8d balena-base-images/aarch64/debian/sid/build
+sid-build: git://github.com/balena-io-library/base-images@27a1869f6093ab1042cc38a780b75c014269ac8d balena-base-images/aarch64/debian/sid/build
+
+sid-run-20181025: git://github.com/balena-io-library/base-images@27a1869f6093ab1042cc38a780b75c014269ac8d balena-base-images/aarch64/debian/sid/run
+sid-run: git://github.com/balena-io-library/base-images@27a1869f6093ab1042cc38a780b75c014269ac8d balena-base-images/aarch64/debian/sid/run
+sid-20181025: git://github.com/balena-io-library/base-images@27a1869f6093ab1042cc38a780b75c014269ac8d balena-base-images/aarch64/debian/sid/run
+sid: git://github.com/balena-io-library/base-images@27a1869f6093ab1042cc38a780b75c014269ac8d balena-base-images/aarch64/debian/sid/run
+
