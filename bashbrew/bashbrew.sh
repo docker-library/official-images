@@ -41,20 +41,20 @@ get_image_type() {
 	local repo=$1
 	case "$repo" in
 	*"alpine"*)
-		imageType='alpine'
+		imageType='-alpine'
 		imageType+=$(check_image_type $repo)
 	;;
 	*"fedora"*)
-		imageType='fedora'
+		imageType='-fedora'
 		imageType+=$(check_image_type $repo)
 	;;
 	*"ubuntu"*)
-		imageType='ubuntu'
+		imageType='-ubuntu'
 		imageType+=$(check_image_type $repo)
 	;;
 	*)
-		imageType='debian'
-		imageType=$(check_image_type $repo)
+		imageType='-debian'
+		imageType+=$(check_image_type $repo)
 	;;
 	esac
 }
@@ -77,6 +77,7 @@ push_image() {
 			else
 				if [[ $repo == *"debian"* ]]; then
 					echo "Pushing $namespace/${repoTag/-debian/}..."
+					"$docker" tag "$namespace/$repoTag" "$namespace/${repoTag/-debian/}"
 					if ! "$docker" push "$namespace/${repoTag/-debian/}" &>> "$thisLog" < /dev/null; then
 						echo >&2 "- $namespace/${repoTag/-debian/} failed to push; see $thisLog"
 						didFail=1
@@ -86,17 +87,18 @@ push_image() {
 			fi
 			if [ "$aliases" ]; then
 				for alias in $aliases; do
-					"$docker" tag "$namespace/$repoTag" "$namespace/$alias-$imageType:$tag"
-					echo "Pushing alias: $namespace/$alias-$imageType:$tag..."
-					if ! "$docker" push "$namespace/$alias-$imageType:$tag" &>> "$thisLog" < /dev/null; then
-						echo >&2 "- $namespace/$alias-$imageType:$tag failed to push; see $thisLog"
+					"$docker" tag "$namespace/$repoTag" "$namespace/$alias$imageType:$tag"
+					echo "Pushing alias: $namespace/$alias$imageType:$tag..."
+					if ! "$docker" push "$namespace/$alias$imageType:$tag" &>> "$thisLog" < /dev/null; then
+						echo >&2 "- $namespace/$alias$imageType:$tag failed to push; see $thisLog"
 						didFail=1
 						continue
 					else
 						if [[ $repo == *"debian"* ]]; then
-							echo "Pushing $namespace/$alias-${imageType/debian/}:$tag..."
-							if ! "$docker" push "$namespace/$alias-${imageType/debian/}:$tag" &>> "$thisLog" < /dev/null; then
-								echo >&2 "- $namespace/$alias-${imageType/debian/}:$tag failed to push; see $thisLog"
+							"$docker" tag "$namespace/$repoTag" "$namespace/$alias${imageType/-debian/}:$tag"
+							echo "Pushing $namespace/$alias${imageType/-debian/}:$tag..."
+							if ! "$docker" push "$namespace/$alias${imageType/-debian/}:$tag" &>> "$thisLog" < /dev/null; then
+								echo >&2 "- $namespace/$alias${imageType/-debian/}:$tag failed to push; see $thisLog"
 								didFail=1
 								continue
 							fi
