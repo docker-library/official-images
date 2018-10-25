@@ -38,6 +38,7 @@ type Manifest2822Entry struct {
 	GitFetch  string
 	GitCommit string
 	Directory string
+	File      string
 
 	// architecture-specific versions of the above fields
 	ArchValues map[string]string
@@ -56,6 +57,7 @@ var (
 
 		GitFetch:  "refs/heads/master",
 		Directory: ".",
+		File:      "Dockerfile",
 	}
 )
 
@@ -81,7 +83,7 @@ func (entry Manifest2822Entry) Clone() Manifest2822Entry {
 
 func (entry *Manifest2822Entry) SeedArchValues() {
 	for field, val := range entry.Paragraph.Values {
-		if strings.HasSuffix(field, "-GitRepo") || strings.HasSuffix(field, "-GitFetch") || strings.HasSuffix(field, "-GitCommit") || strings.HasSuffix(field, "-Directory") {
+		if strings.HasSuffix(field, "-GitRepo") || strings.HasSuffix(field, "-GitFetch") || strings.HasSuffix(field, "-GitCommit") || strings.HasSuffix(field, "-Directory") || strings.HasSuffix(field, "-File") {
 			entry.ArchValues[field] = val
 		}
 	}
@@ -118,7 +120,7 @@ func (a Manifest2822Entry) SameBuildArtifacts(b Manifest2822Entry) bool {
 		}
 	}
 
-	return a.ArchitecturesString() == b.ArchitecturesString() && a.GitRepo == b.GitRepo && a.GitFetch == b.GitFetch && a.GitCommit == b.GitCommit && a.Directory == b.Directory && a.ConstraintsString() == b.ConstraintsString()
+	return a.ArchitecturesString() == b.ArchitecturesString() && a.GitRepo == b.GitRepo && a.GitFetch == b.GitFetch && a.GitCommit == b.GitCommit && a.Directory == b.Directory && a.File == b.File && a.ConstraintsString() == b.ConstraintsString()
 }
 
 // returns a list of architecture-specific fields in an Entry
@@ -160,6 +162,9 @@ func (entry Manifest2822Entry) ClearDefaults(defaults Manifest2822Entry) Manifes
 	if entry.Directory == defaults.Directory {
 		entry.Directory = ""
 	}
+	if entry.File == defaults.File {
+		entry.File = ""
+	}
 	for _, key := range defaults.archFields() {
 		if defaults.ArchValues[key] == entry.ArchValues[key] {
 			delete(entry.ArchValues, key)
@@ -196,6 +201,9 @@ func (entry Manifest2822Entry) String() string {
 	}
 	if str := entry.Directory; str != "" {
 		ret = append(ret, "Directory: "+str)
+	}
+	if str := entry.File; str != "" {
+		ret = append(ret, "File: "+str)
 	}
 	for _, key := range entry.archFields() {
 		ret = append(ret, key+": "+entry.ArchValues[key])
@@ -261,6 +269,13 @@ func (entry Manifest2822Entry) ArchDirectory(arch string) string {
 		return val
 	}
 	return entry.Directory
+}
+
+func (entry Manifest2822Entry) ArchFile(arch string) string {
+	if val, ok := entry.ArchValues[arch+"-File"]; ok && val != "" {
+		return val
+	}
+	return entry.File
 }
 
 func (entry Manifest2822Entry) HasTag(tag string) bool {
