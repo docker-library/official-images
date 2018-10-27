@@ -104,8 +104,15 @@ push_image() {
 							fi
 						fi
 					fi
+					# Clean up pushed aliases
+					remove_image "$namespace/$alias$imageType:$tag"
+					remove_image "$namespace/$alias${imageType/-debian/}:$tag"
 				done
 			fi
+			# Clean up pushed images
+			remove_image "$namespace/${repoTag/-debian/}"
+			remove_image "$namespace/$repoTag"
+			remove_image "$repoTag"
 		else
 			echo "$docker push" "$namespace/$repoTag"
 		fi
@@ -121,27 +128,6 @@ remove_image() {
 		if "$docker" rmi -f "$1" ;then
 			break	
 		fi
-	done
-}
-
-clean_image() {
-	for namespace in $namespaces; do
-		if [ "$namespace" = '_' ]; then
-			# skip this namespace
-			continue
-		fi
-
-		tag="${repoTag#*:}"
-
-		if [ "$aliases" ]; then
-			for alias in $aliases; do
-				remove_image "$namespace/$alias-$imageType:$tag"
-			done
-		fi
-
-		remove_image "$namespace/$repoTag"
-		remove_image "$repoTag"
-
 	done
 }
 
@@ -454,7 +440,6 @@ while [ "$#" -gt 0 ]; do
 				) &>> "$thisLog"; then
 					echo "- failed 'docker build'; see $thisLog"
 					didFail=1
-					clean_image
 					continue
 				fi
 				
@@ -469,14 +454,12 @@ while [ "$#" -gt 0 ]; do
 					) &>> "$thisLog"; then
 						echo "- failed 'docker tag'; see $thisLog"
 						didFail=1
-						clean_image
 						continue
 					fi
 
 					tag="${repoTag#*:}"
 				done
 				push_image
-				clean_image
 			fi
 			;;
 		list)
@@ -490,7 +473,6 @@ while [ "$#" -gt 0 ]; do
 			;;
 		push)
 			push_image
-			clean_image
 			;;
 	esac
 done
