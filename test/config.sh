@@ -88,6 +88,7 @@ imageTests+=(
 	'
 	[haskell]='
 		haskell-cabal
+		haskell-stack
 		haskell-ghci
 		haskell-runhaskell
 	'
