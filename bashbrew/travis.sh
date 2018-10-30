@@ -47,20 +47,27 @@ if badTags="$(bashbrew list "${repos[@]}" | grep -E ':.+latest.*|:.*latest.+')" 
 	exit 1
 fi
 
-cmds=(
-	'list'
-	'list --uniq'
-	'cat'
-)
-if [ "$extraCommands" ]; then
-	cmds+=(
-		'list --build-order'
-		'from --apply-constraints'
-	)
+if [ -n "$extraCommands" ] && naughtyFrom="$(../naughty-from.sh "${repos[@]}")" && [ -n "$naughtyFrom" ]; then
+	echo >&2
+	echo >&2 "Invalid 'FROM' + 'Architectures' combinations detected:"
+	echo >&2
+	echo >&2 "$naughtyFrom"
+	echo >&2
+	echo >&2 'Read https://github.com/docker-library/official-images#multiple-architectures for more details.'
+	echo >&2
+	exit 1
 fi
 
-export PS4=$'\n\n$ '
-for cmd in "${cmds[@]}"; do
-	( set -x && bashbrew $cmd "${repos[@]}" )
-done
+_bashbrew() {
+	echo $'\n\n$ bashbrew' "$@" "${repos[@]}"
+	bashbrew "$@" "${repos[@]}"
+}
+
+_bashbrew list
+_bashbrew list --uniq
+_bashbrew cat
+if [ -n "$extraCommands" ]; then
+	_bashbrew list --build-order
+	_bashbrew from --apply-constraints
+fi
 echo; echo
