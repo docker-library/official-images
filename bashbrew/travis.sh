@@ -24,7 +24,7 @@ if [ "$TRAVIS_BRANCH" = 'master' -a "$TRAVIS_PULL_REQUEST" = 'false' ]; then
 elif [ "$(git diff --numstat "$UPSTREAM...$HEAD" -- . | wc -l)" -ne 0 ]; then
 	# changes in bashbrew/ -- keep "--all" so we test the bashbrew script changes appropriately
 	echo >&2 'Changes in bashbrew/ detected!'
-	extraCommands=1
+	#extraCommands=1 # TODO this takes a lot of load and often fails (force pushes to maintainer branches, etc)
 else
 	repos=( $(git diff --numstat "$UPSTREAM...$HEAD" -- ../library | awk -F '/' '{ print $2 }') )
 	extraCommands=1
