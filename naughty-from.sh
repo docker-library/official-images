@@ -64,7 +64,8 @@ for img in $tags; do
 	done
 done
 
-for naughtyFrom in "${naughtyFroms[@]}"; do
+for naughtyFrom in "${naughtyFroms[@]:-}"; do
+	[ -n "$naughtyFrom" ] || continue # https://mywiki.wooledge.org/BashFAQ/112#BashFAQ.2F112.line-8 (empty array + "set -u" + bash 4.3 == sad day)
 	img="${naughtyFrom%%=*}"
 	from="${naughtyFrom#$img=}"
 	arches="${naughtyFromsArches[$naughtyFrom]}"
