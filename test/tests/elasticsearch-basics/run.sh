@@ -13,7 +13,7 @@ clientImage='buildpack-deps:stretch-curl'
 
 # Create an instance of the container-under-test
 # (explicitly setting a low memory limit since the image defaults to 2GB)
-cid="$(docker run -d -e ES_JAVA_OPTS='-Xms64m -Xmx64m' "$image")"
+cid="$(docker run -d -e ES_JAVA_OPTS='-Xms128m -Xmx128m' "$image")"
 trap "docker rm -vf $cid > /dev/null" EXIT
 
 _request() {
