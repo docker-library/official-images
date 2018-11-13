@@ -23,16 +23,16 @@ The name of this program was chosen in an attempt to reflect that upstream-first
 Some images have been ported for other architectures, and many of these are officially supported (to various degrees).
 
 -	Architectures officially supported by Docker, Inc. for running Docker: (see [download.docker.com](https://download.docker.com/linux/))
-	-	IBM z Systems (`s390x`): https://hub.docker.com/u/s390x/
 	-	ARMv7 32-bit (`arm32v7`): https://hub.docker.com/u/arm32v7/
-	-	Windows x86-64 (`windows-amd64`): https://hub.docker.com/u/winamd64/
-	-	Linux x86-64 (`amd64`): https://hub.docker.com/u/amd64/
--	Other architectures built by official images: (but *not* officially supported by Docker, Inc.)
-	-	IBM POWER8 (`ppc64le`): https://hub.docker.com/u/ppc64le/
-	-	x86/i686 (`i386`): https://hub.docker.com/u/i386/
 	-	ARMv8 64-bit (`arm64v8`): https://hub.docker.com/u/arm64v8/
-	-	ARMv6 32-bit (`arm32v6`): https://hub.docker.com/u/arm32v6/ (Raspberry Pi 1, Raspberry Pi Zero)
+	-	Linux x86-64 (`amd64`): https://hub.docker.com/u/amd64/
+	-	Windows x86-64 (`windows-amd64`): https://hub.docker.com/u/winamd64/
+-	Other architectures built by official images: (but *not* officially supported by Docker, Inc.)
 	-	ARMv5 32-bit (`arm32v5`): https://hub.docker.com/u/arm32v5/
+	-	ARMv6 32-bit (`arm32v6`): https://hub.docker.com/u/arm32v6/ (Raspberry Pi 1, Raspberry Pi Zero)
+	-	IBM POWER8 (`ppc64le`): https://hub.docker.com/u/ppc64le/
+	-	IBM z Systems (`s390x`): https://hub.docker.com/u/s390x/
+	-	x86/i686 (`i386`): https://hub.docker.com/u/i386/
 
 As of 2017-09-12, these other architectures are included under the non-prefixed images via ["manifest lists"](https://docs.docker.com/registry/spec/manifest-v2-2/#manifest-list) (also known as ["indexes" in the OCI image specification](https://github.com/opencontainers/image-spec/blob/v1.0.0/image-index.md)), such that, for example, `docker run hello-world` should run as-is on all supported platforms.
 
