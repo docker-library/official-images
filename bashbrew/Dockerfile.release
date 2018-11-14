@@ -30,7 +30,7 @@ ENV MANIFEST_TOOL_GPG_KEY 27F3EA268A97867EAF0BD05C0F386284C03A1162
 RUN set -euxo pipefail; \
 	\
 	export GNUPGHOME="$(mktemp -d)"; \
-	gpg --keyserver ha.pool.sks-keyservers.net --recv-keys "$MANIFEST_TOOL_GPG_KEY"; \
+	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$MANIFEST_TOOL_GPG_KEY"; \
 	\
 	mkdir -p bin; \
 	\
