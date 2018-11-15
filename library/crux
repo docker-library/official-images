@@ -1,4 +1,16 @@
-# maintainer: James Mills <prologic@shortcircuit.net.au> (@prologic)
+Maintainers: James Mills <prologic@shortcircuit.net.au> (@prologic)
+GitRepo: https://github.com/cruxlinux/docker-crux
 
-latest: git://github.com/prologic/docker-crux@c614d61c53c05c02a43a34187fa1370db2c61524
-3.1: git://github.com/prologic/docker-crux@c614d61c53c05c02a43a34187fa1370db2c61524
+Tags: 3.4, latest
+Architectures: amd64, arm64v8
+arm64v8-GitFetch: refs/heads/release-3.4-aarch64
+arm64v8-GitCommit: 9e26df864d2329a493b30b716ed36314509f0273
+amd64-GitFetch: refs/heads/release-3.4-x86_64
+amd64-GitCommit: da081a9004c5559cd77a1e2c2521193ccb2afdd2
+
+Tags: 3.2
+Architectures: amd64, arm64v8
+arm64v8-GitFetch: refs/heads/release-3.2-aarch64
+arm64v8-GitCommit: bd3c44a73d37dc57b3295a3793cb7a6c544bc428
+amd64-GitFetch: refs/heads/release-3.2-x86_64
+amd64-GitCommit: 07e966125ba3d6d48a12489830917e8a9bc983a7
