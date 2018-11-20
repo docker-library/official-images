@@ -166,7 +166,9 @@ copy-tar() {
 			$(awk '
 				toupper($1) == "COPY" || toupper($1) == "ADD" {
 					for (i = 2; i < NF; i++) {
-						print $i
+						if ($i !~ /^--chown=/) {
+							print $i
+						}
 					}
 				}
 			' "$d")
