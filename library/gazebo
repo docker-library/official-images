@@ -9,12 +9,12 @@ GitRepo: https://github.com/osrf/docker_images.git
 
 Tags: gzserver7, gzserver7-xenial
 Architectures: amd64
-GitCommit: c5ca5054c6921645802f21e888b79f464863eb1a
+GitCommit: ed75e08b51ca57c98fad49705091ceb89a96814c
 Directory: gazebo/7/ubuntu/xenial/gzserver7
 
 Tags: libgazebo7, libgazebo7-xenial
 Architectures: amd64
-GitCommit: c5ca5054c6921645802f21e888b79f464863eb1a
+GitCommit: ed75e08b51ca57c98fad49705091ceb89a96814c
 Directory: gazebo/7/ubuntu/xenial/libgazebo7
 
 
@@ -26,12 +26,12 @@ Directory: gazebo/7/ubuntu/xenial/libgazebo7
 
 Tags: gzserver8, gzserver8-xenial
 Architectures: amd64
-GitCommit: c5ca5054c6921645802f21e888b79f464863eb1a
+GitCommit: ed75e08b51ca57c98fad49705091ceb89a96814c
 Directory: gazebo/8/ubuntu/xenial/gzserver8
 
 Tags: libgazebo8, libgazebo8-xenial
 Architectures: amd64
-GitCommit: c5ca5054c6921645802f21e888b79f464863eb1a
+GitCommit: ed75e08b51ca57c98fad49705091ceb89a96814c
 Directory: gazebo/8/ubuntu/xenial/libgazebo8
 
 
@@ -43,23 +43,36 @@ Directory: gazebo/8/ubuntu/xenial/libgazebo8
 
 Tags: gzserver9-xenial
 Architectures: amd64
-GitCommit: df787a9fad9aacbea3ae2e85aa6247d8baa522fd
+GitCommit: 6e6d8b6a56b30bd799fdf916479f535d3de963c1
 Directory: gazebo/9/ubuntu/xenial/gzserver9
 
 Tags: libgazebo9-xenial
 Architectures: amd64
-GitCommit: df787a9fad9aacbea3ae2e85aa6247d8baa522fd
+GitCommit: 6e6d8b6a56b30bd799fdf916479f535d3de963c1
 Directory: gazebo/9/ubuntu/xenial/libgazebo9
 
 ########################################
 # Distro: ubuntu:bionic
 
 Tags: gzserver9, gzserver9-bionic
-Architectures: amd64
-GitCommit: df787a9fad9aacbea3ae2e85aa6247d8baa522fd
+Architectures: amd64, arm32v7, arm64v8
+GitCommit: 6e6d8b6a56b30bd799fdf916479f535d3de963c1
 Directory: gazebo/9/ubuntu/bionic/gzserver9
 
 Tags: libgazebo9, libgazebo9-bionic, latest
-Architectures: amd64
-GitCommit: df787a9fad9aacbea3ae2e85aa6247d8baa522fd
+Architectures: amd64, arm32v7, arm64v8
+GitCommit: 6e6d8b6a56b30bd799fdf916479f535d3de963c1
 Directory: gazebo/9/ubuntu/bionic/libgazebo9
+
+########################################
+# Distro: debian:stretch
+
+Tags: gzserver9-stretch
+Architectures: amd64, arm32v7, arm64v8
+GitCommit: 9fbac2c659d6feb6fbb24f7b2662441cf1a6cf4b
+Directory: gazebo/9/debian/stretch/gzserver9
+
+Tags: libgazebo9-stretch
+Architectures: amd64, arm32v7, arm64v8
+GitCommit: 9fbac2c659d6feb6fbb24f7b2662441cf1a6cf4b
+Directory: gazebo/9/debian/stretch/libgazebo9
