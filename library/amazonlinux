@@ -4,13 +4,21 @@ Maintainers: Amazon Linux Team <amazon-linux@amazon.com> (@aws),
              Eric Warehime (@Eric-Warehime)
 GitRepo: https://github.com/aws/amazon-linux-docker-images.git
 
-Tags: 2.0.20181010, 2, latest
-GitFetch: refs/heads/amzn2
-GitCommit: 1a13f4b999a22b95b0d8bbd10d4190e9fc1b43fd
+Tags: 2.0.20181114, 2, latest
+Architectures: amd64, arm64v8
+GitCommit: f5382475bb163a79163c2ce9c6d314d6b44f3146
+amd64-GitFetch: refs/heads/amzn2
+amd64-GitCommit: 3de85bea51cc97f74263a12825564db727b55996
+arm64v8-GitFetch: refs/heads/amzn2-arm64
+arm64v8-GitCommit: 14959a2fbe9917c11d80c790055ef1adae6bb950
 
-Tags: 2.0.20181010-with-sources, 2-with-sources, with-sources
-GitFetch: refs/heads/amzn2-with-sources
-GitCommit: 6106ad994573efd33d622c052d6bba0929849090
+Tags: 2.0.20181114-with-sources, 2-with-sources, with-sources
+Architectures: amd64, arm64v8
+GitCommit: f5382475bb163a79163c2ce9c6d314d6b44f3146
+amd64-GitFetch: refs/heads/amzn2-with-sources
+amd64-GitCommit: d214b0bd288b5c03410b41d4b827bfe52a4fa71a
+arm64v8-GitFetch: refs/heads/amzn2-arm64-with-sources
+arm64v8-GitCommit: 8e3456bb252d76ba169af5c6e4599a33526cdc90
 
 Tags: 2018.03.0.20180827, 2018.03, 1
 GitFetch: refs/heads/2018.03
