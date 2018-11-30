@@ -470,4 +470,9 @@ while [ "$#" -gt 0 ]; do
 	esac
 done
 
+# Clean up all the Dockerfiles after building. This will free up hundreds of MB of space on the build server.
+if [ -d "$gitRepo" ]; then
+	rm -rf "$gitRepo"
+fi
+
 [ -z "$didFail" ]
