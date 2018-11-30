@@ -1,4 +1,5 @@
 #!/bin/bash
 set -e
 
-cabal update
+cabal new-update
+cabal new-install --lib hashable
