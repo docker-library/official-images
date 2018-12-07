@@ -66,53 +66,59 @@ push_image() {
 			continue
 		fi
 
-		tag="${repoTag#*:}"
+		firstTag="${repoTag#*:}"
 
 		if [ "$doPush" ]; then
-			echo "Pushing $namespace/$repoTag..."
-			if ! "$docker" push "$namespace/$repoTag" &>> "$thisLog" < /dev/null; then
-				echo >&2 "- $namespace/$repoTag failed to push; see $thisLog"
-				didFail=1
-				continue
-			else
-				if [[ $repo == *"debian"* ]]; then
-					echo "Pushing $namespace/${repoTag/-debian/}..."
-					"$docker" tag "$namespace/$repoTag" "$namespace/${repoTag/-debian/}"
-					if ! "$docker" push "$namespace/${repoTag/-debian/}" &>> "$thisLog" < /dev/null; then
-						echo >&2 "- $namespace/${repoTag/-debian/} failed to push; see $thisLog"
-						didFail=1
-						continue
-					fi
-				fi
-			fi
-			if [ "$aliases" ]; then
-				for alias in $aliases; do
-					"$docker" tag "$namespace/$repoTag" "$namespace/$alias$imageType:$tag"
-					echo "Pushing alias: $namespace/$alias$imageType:$tag..."
-					if ! "$docker" push "$namespace/$alias$imageType:$tag" &>> "$thisLog" < /dev/null; then
-						echo >&2 "- $namespace/$alias$imageType:$tag failed to push; see $thisLog"
-						didFail=1
-						continue
-					else
-						if [[ $repo == *"debian"* ]]; then
-							"$docker" tag "$namespace/$repoTag" "$namespace/$alias${imageType/-debian/}:$tag"
-							echo "Pushing $namespace/$alias${imageType/-debian/}:$tag..."
-							if ! "$docker" push "$namespace/$alias${imageType/-debian/}:$tag" &>> "$thisLog" < /dev/null; then
-								echo >&2 "- $namespace/$alias${imageType/-debian/}:$tag failed to push; see $thisLog"
-								didFail=1
-								continue
-							fi
+			for aliasTag in $aliasTags; do
+				repoTag="$repo:$aliasTag"
+				tag="${repoTag#*:}"
+
+				"$docker" tag "$repo:$firstTag" "$namespace/$repoTag"
+				echo "Pushing $namespace/$repoTag..."
+				if ! "$docker" push "$namespace/$repoTag" &>> "$thisLog" < /dev/null; then
+					echo >&2 "- $namespace/$repoTag failed to push; see $thisLog"
+					didFail=1
+					continue
+				else
+					if [[ $repo == *"debian"* ]]; then
+						echo "Pushing $namespace/${repoTag/-debian/}..."
+						"$docker" tag "$namespace/$repoTag" "$namespace/${repoTag/-debian/}"
+						if ! "$docker" push "$namespace/${repoTag/-debian/}" &>> "$thisLog" < /dev/null; then
+							echo >&2 "- $namespace/${repoTag/-debian/} failed to push; see $thisLog"
+							didFail=1
+							continue
 						fi
 					fi
-					# Clean up pushed aliases
-					remove_image "$namespace/$alias$imageType:$tag"
-					remove_image "$namespace/$alias${imageType/-debian/}:$tag"
-				done
-			fi
-			# Clean up pushed images
-			remove_image "$namespace/${repoTag/-debian/}"
-			remove_image "$namespace/$repoTag"
-			remove_image "$repoTag"
+				fi
+				if [ "$aliases" ]; then
+					for alias in $aliases; do
+						"$docker" tag "$namespace/$repoTag" "$namespace/$alias$imageType:$tag"
+						echo "Pushing alias: $namespace/$alias$imageType:$tag..."
+						if ! "$docker" push "$namespace/$alias$imageType:$tag" &>> "$thisLog" < /dev/null; then
+							echo >&2 "- $namespace/$alias$imageType:$tag failed to push; see $thisLog"
+							didFail=1
+							continue
+						else
+							if [[ $repo == *"debian"* ]]; then
+								"$docker" tag "$namespace/$repoTag" "$namespace/$alias${imageType/-debian/}:$tag"
+								echo "Pushing $namespace/$alias${imageType/-debian/}:$tag..."
+								if ! "$docker" push "$namespace/$alias${imageType/-debian/}:$tag" &>> "$thisLog" < /dev/null; then
+									echo >&2 "- $namespace/$alias${imageType/-debian/}:$tag failed to push; see $thisLog"
+									didFail=1
+									continue
+								fi
+							fi
+						fi
+						# Clean up pushed aliases
+						remove_image "$namespace/$alias$imageType:$tag"
+						remove_image "$namespace/$alias${imageType/-debian/}:$tag"
+					done
+				fi
+				remove_image "$namespace/${repoTag/-debian/}"
+				remove_image "$namespace/$repoTag"
+			done
+			# Clean up
+			remove_image "$repo:$firstTag"
 		else
 			echo "$docker push" "$namespace/$repoTag"
 		fi
@@ -247,6 +253,7 @@ queue=()
 declare -A repoGitRepo=()
 declare -A repoGitRef=()
 declare -A repoGitDir=()
+declare -A repoAliasList=()
 
 logDir="$logs/$subcommand-$(date +'%Y-%m-%d--%H-%M-%S')"
 mkdir -p "$logDir"
@@ -304,8 +311,9 @@ for repoTag in "${repos[@]}"; do
 	
 	tags=()
 	for line in "${repoTagLines[@]}"; do
-		tag="$(echo "$line" | awk -F ': +' '{ print $1 }')"
-		repoDir="$(echo "$line" | awk -F ': +' '{ print $2 }')"
+		tag="$(echo "$line" | jq -r '.tag')"
+		repoDir="$(echo "$line" | jq -r '.repoDir')"
+		aliasTags="$(echo "$line" | jq -r '.alias')"
 		
 		gitUrl="${repoDir%%@*}"
 		commitDir="${repoDir#*@}"
@@ -355,6 +363,7 @@ for repoTag in "${repos[@]}"; do
 		repoGitRepo[$repo:$tag]="$gitRepo"
 		repoGitRef[$repo:$tag]="$gitRef"
 		repoGitDir[$repo:$tag]="$gitDir"
+		repoAliasList[$repo:$tag]="$aliasTags"
 		tags+=( "$repo:$tag" )
 	done
 	
@@ -372,6 +381,7 @@ while [ "$#" -gt 0 ]; do
 	gitRepo="${repoGitRepo[$repoTag]}"
 	gitRef="${repoGitRef[$repoTag]}"
 	gitDir="${repoGitDir[$repoTag]}"
+	aliasTags="${repoAliasList[$repoTag]}"
 	shift
 	if [ -z "$gitRepo" ]; then
 		echo >&2 'Unknown repo:tag:' "$repoTag"
@@ -442,23 +452,6 @@ while [ "$#" -gt 0 ]; do
 					didFail=1
 					continue
 				fi
-				
-				for namespace in $namespaces; do
-					if [ "$namespace" = '_' ]; then
-						# images FROM other images is explicitly supported
-						continue
-					fi
-					if ! (
-						set -x
-						"$docker" tag "$repoTag" "$namespace/$repoTag"
-					) &>> "$thisLog"; then
-						echo "- failed 'docker tag'; see $thisLog"
-						didFail=1
-						continue
-					fi
-
-					tag="${repoTag#*:}"
-				done
 				push_image
 			fi
 			;;
@@ -476,5 +469,10 @@ while [ "$#" -gt 0 ]; do
 			;;
 	esac
 done
+
+# Clean up all the Dockerfiles after building. This will free up hundreds of MB of space on the build server.
+if [ -d "$gitRepo" ]; then
+	rm -rf "$gitRepo"
+fi
 
 [ -z "$didFail" ]
