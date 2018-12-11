@@ -117,13 +117,22 @@ for dockerImage in "$@"; do
 			# "slim-jessie" is still "slim"
 			variant='slim'
 			;;
+		psmdb-*)
+			# Percona Server for MongoDB is still "mongo"
+			variant='psmdb'
+			;;
 	esac
 	
 	testRepo="$repo"
 	if [ -z "$keepNamespace" ]; then
 		testRepo="${testRepo##*/}"
 	fi
-	[ -z "${testAlias[$repo]}" ] || testRepo="${testAlias[$repo]}"
+	
+	if [ -n "${testAlias[$repo:$variant]}" ]; then
+		testRepo="${testAlias[$repo:$variant]}"
+	elif [ -n "${testAlias[$repo]}" ]; then
+		testRepo="${testAlias[$repo]}"
+	fi
 	
 	explicitVariant=
 	if [ \
