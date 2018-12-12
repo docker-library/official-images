@@ -26,6 +26,7 @@ testAlias+=(
 
 	[mariadb]='mysql'
 	[percona]='mysql'
+	[percona:psmdb]='mongo'
 
 	[hola-mundo]='hello-world'
 	[hello-seattle]='hello-world'
@@ -263,4 +264,6 @@ globalExcludeTests+=(
 	[ruby:alpine_ruby-gems]=1
 	[ruby:slim_ruby-bundler]=1
 	[ruby:slim_ruby-gems]=1
+	[percona:psmdb_percona-tokudb]=1
+	[percona:psmdb_percona-rocksdb]=1
 )
