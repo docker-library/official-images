@@ -46,9 +46,9 @@ for img in $tags; do
 			| amd64=docker.elastic.co/elasticsearch/elasticsearch:* \
 			| amd64=docker.elastic.co/kibana/kibana:* \
 			| amd64=docker.elastic.co/logstash/logstash:* \
-			| windows-*=microsoft/nanoserver \
+			| windows-*=mcr.microsoft.com/windows/nanoserver:* \
+			| windows-*=mcr.microsoft.com/windows/servercore:* \
 			| windows-*=microsoft/nanoserver:* \
-			| windows-*=microsoft/windowsservercore \
 			| windows-*=microsoft/windowsservercore:* \
 			) continue ;;
 		esac
