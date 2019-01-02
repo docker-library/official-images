@@ -135,6 +135,7 @@ imageTests+=(
 	[openjdk]='
 		java-hello-world
 		java-uimanager-font
+		java-ca-certificates
 	'
 	[open-liberty]='
 		open-liberty-hello-world
