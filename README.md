@@ -40,6 +40,10 @@ If you're curious about how these are built, head over to https://doi-janky.info
 
 See the [multi-arch section](#multiple-architectures) below for recommendations in adding more architectures to an official image.
 
+## More FAQs?
+
+Yes! We have [a dedicated FAQ repository](https://github.com/docker-library/faq) where we try to collect other common questions (both about the program and about our practices).
+
 ## Contributing to the standard library
 
 Thank you for your interest in the Docker official images project! We strive to make these instructions as simple and straightforward as possible, but if you find yourself lost, don't hesitate to seek us out on Freenode IRC in channel `#docker-library` or by creating a GitHub issue here.
