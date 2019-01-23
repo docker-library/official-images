@@ -17,6 +17,7 @@ imageTests[:onbuild]+='
 '
 
 testAlias+=(
+	[amazoncorretto]='openjdk'
 	[iojs]='node'
 	[jruby]='ruby'
 	[pypy]='python'
@@ -26,6 +27,7 @@ testAlias+=(
 
 	[mariadb]='mysql'
 	[percona]='mysql'
+	[percona:psmdb]='mongo'
 
 	[hola-mundo]='hello-world'
 	[hello-seattle]='hello-world'
@@ -88,6 +90,7 @@ imageTests+=(
 	'
 	[haskell]='
 		haskell-cabal
+		haskell-stack
 		haskell-ghci
 		haskell-runhaskell
 	'
@@ -133,11 +136,14 @@ imageTests+=(
 	[openjdk]='
 		java-hello-world
 		java-uimanager-font
+		java-ca-certificates
 	'
 	[open-liberty]='
 		open-liberty-hello-world
 	'
 	[percona]='
+		percona-tokudb
+		percona-rocksdb
 	'
 	[perl]='
 		perl-hello-world
@@ -260,4 +266,6 @@ globalExcludeTests+=(
 	[ruby:alpine_ruby-gems]=1
 	[ruby:slim_ruby-bundler]=1
 	[ruby:slim_ruby-gems]=1
+	[percona:psmdb_percona-tokudb]=1
+	[percona:psmdb_percona-rocksdb]=1
 )

@@ -80,5 +80,12 @@ func ParseLineBased(readerIn io.Reader) (*Manifest2822, error) {
 		}
 	}
 
+	if len(manifest.Global.Maintainers) < 1 {
+		return nil, fmt.Errorf("missing Maintainers")
+	}
+	if invalidMaintainers := manifest.Global.InvalidMaintainers(); len(invalidMaintainers) > 0 {
+		return nil, fmt.Errorf("invalid Maintainers: %q (expected format %q)", strings.Join(invalidMaintainers, ", "), MaintainersFormat)
+	}
+
 	return manifest, nil
 }

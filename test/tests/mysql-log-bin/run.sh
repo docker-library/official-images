@@ -21,6 +21,7 @@ mysql() {
 		--link "$cname":mysql \
 		--entrypoint mysql \
 		"$image" \
+		-uroot \
 		-hmysql \
 		--silent \
 		"$@"
