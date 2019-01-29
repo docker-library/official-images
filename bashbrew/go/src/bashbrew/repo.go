@@ -70,10 +70,11 @@ func (r Repo) EntryIdentifier(entry *manifest.Manifest2822Entry) string {
 // create a new "Repo" object representing a single "Manifest2822Entry" object
 func (r Repo) EntryRepo(entry *manifest.Manifest2822Entry) *Repo {
 	return &Repo{
-		RepoName: r.RepoName,
-		TagName:  entry.Tags[0],
-		Manifest: r.Manifest,
-		TagEntry: entry,
+		RepoName:   r.RepoName,
+		TagName:    entry.Tags[0],
+		Manifest:   r.Manifest,
+		TagEntry:   entry,
+		TagEntries: []*manifest.Manifest2822Entry{entry},
 	}
 }
 
