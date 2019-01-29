@@ -36,14 +36,14 @@ func cmdList(c *cli.Context) error {
 			if r.TagEntry == nil {
 				fmt.Printf("%s\n", r.RepoName)
 			} else {
-				for _, tag := range r.Tags(namespace, uniq, *r.TagEntry) {
+				for _, tag := range r.Tags(namespace, uniq, r.TagEntry) {
 					fmt.Printf("%s\n", tag)
 				}
 			}
 			continue
 		}
 
-		var entries []manifest.Manifest2822Entry
+		var entries []*manifest.Manifest2822Entry
 		if buildOrder {
 			entries, err = r.SortedEntries(applyConstraints)
 			if err != nil {

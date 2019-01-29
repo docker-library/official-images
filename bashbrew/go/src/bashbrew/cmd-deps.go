@@ -67,7 +67,7 @@ func cmdFamily(parents bool, c *cli.Context) error {
 				continue
 			}
 
-			from, err := r.DockerFrom(&entry)
+			from, err := r.DockerFrom(entry)
 			if err != nil {
 				return cli.NewMultiError(fmt.Errorf(`failed fetching/scraping FROM for %q (tags %q)`, r.RepoName, entry.TagsString()), err)
 			}

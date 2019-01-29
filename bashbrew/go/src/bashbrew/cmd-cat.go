@@ -13,8 +13,17 @@ import (
 )
 
 var DefaultCatFormat = `
-{{- if i }}{{ "\n\n" }}{{ end -}}
-{{- .TagName | ternary (.Manifest.GetTag .TagName) .Manifest -}}
+{{- if i -}}
+	{{- "\n\n" -}}
+{{- end -}}
+{{- with .TagEntries -}}
+	{{- range $i, $e := . -}}
+		{{- if $i -}}{{- "\n\n" -}}{{- end -}}
+		{{- $e -}}
+	{{- end -}}
+{{- else -}}
+	{{- .Manifest -}}
+{{- end -}}
 `
 
 func cmdCat(c *cli.Context) error {
