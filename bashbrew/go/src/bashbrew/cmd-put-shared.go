@@ -19,7 +19,7 @@ func entriesToManifestToolYaml(singleArch bool, r Repo, entries ...*manifest.Man
 	expectedNumber := 0
 	entryIdentifiers := []string{}
 	for _, entry := range entries {
-		entryIdentifiers = append(entryIdentifiers, r.EntryIdentifier(*entry))
+		entryIdentifiers = append(entryIdentifiers, r.EntryIdentifier(entry))
 
 		for _, entryArch := range entry.Architectures {
 			if singleArch && entryArch != arch {
@@ -36,7 +36,7 @@ func entriesToManifestToolYaml(singleArch bool, r Repo, entries ...*manifest.Man
 
 			var archNamespace string
 			if archNamespace, ok = archNamespaces[entryArch]; !ok || archNamespace == "" {
-				fmt.Fprintf(os.Stderr, "warning: no arch-namespace specified for %q; skipping (%q)\n", entryArch, r.EntryIdentifier(*entry))
+				fmt.Fprintf(os.Stderr, "warning: no arch-namespace specified for %q; skipping (%q)\n", entryArch, r.EntryIdentifier(entry))
 				continue
 			}
 
@@ -106,7 +106,7 @@ func cmdPutShared(c *cli.Context) error {
 			// handle all multi-architecture tags first (regardless of whether they have SharedTags)
 			// turn them into SharedTagGroup objects so all manifest-tool invocations can be handled by a single process/loop
 			for _, entry := range r.Entries() {
-				entryCopy := entry
+				entryCopy := *entry
 				sharedTagGroups = append(sharedTagGroups, manifest.SharedTagGroup{
 					SharedTags: entry.Tags,
 					Entries:    []*manifest.Manifest2822Entry{&entryCopy},

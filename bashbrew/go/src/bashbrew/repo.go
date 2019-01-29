@@ -51,16 +51,19 @@ type Repo struct {
 	TagName  string
 	Manifest *manifest.Manifest2822
 	TagEntry *manifest.Manifest2822Entry
+
+	// if "TagName" refers to a SharedTag, "TagEntry" will be the first match, this will contain all matches (otherwise it will be just "TagEntry")
+	TagEntries []*manifest.Manifest2822Entry
 }
 
 func (r Repo) Identifier() string {
 	if r.TagEntry != nil {
-		return r.EntryIdentifier(*r.TagEntry)
+		return r.EntryIdentifier(r.TagEntry)
 	}
 	return r.RepoName
 }
 
-func (r Repo) EntryIdentifier(entry manifest.Manifest2822Entry) string {
+func (r Repo) EntryIdentifier(entry *manifest.Manifest2822Entry) string {
 	return r.RepoName + ":" + entry.Tags[0]
 }
 
@@ -76,7 +79,7 @@ func (r Repo) EntryRepo(entry *manifest.Manifest2822Entry) *Repo {
 
 var haveOutputSkippedMessage = map[string]bool{}
 
-func (r Repo) SkipConstraints(entry manifest.Manifest2822Entry) bool {
+func (r Repo) SkipConstraints(entry *manifest.Manifest2822Entry) bool {
 	repoTag := r.RepoName + ":" + entry.Tags[0]
 
 	// TODO decide if "arch" and "constraints" should be handled separately (but probably not)
@@ -135,16 +138,19 @@ NextConstraint:
 	return false
 }
 
-func (r Repo) Entries() []manifest.Manifest2822Entry {
+func (r Repo) Entries() []*manifest.Manifest2822Entry {
 	if r.TagName == "" {
-		return r.Manifest.Entries
+		ret := []*manifest.Manifest2822Entry{}
+		for i := range r.Manifest.Entries {
+			ret = append(ret, &r.Manifest.Entries[i])
+		}
+		return ret
 	} else {
-		// TODO what if r.TagName isn't a single entry, but is a SharedTag ?
-		return []manifest.Manifest2822Entry{*r.Manifest.GetTag(r.TagName)}
+		return r.TagEntries
 	}
 }
 
-func (r Repo) Tags(namespace string, uniq bool, entry manifest.Manifest2822Entry) []string {
+func (r Repo) Tags(namespace string, uniq bool, entry *manifest.Manifest2822Entry) []string {
 	tagRepo := path.Join(namespace, r.RepoName)
 	ret := []string{}
 	tags := append([]string{}, entry.Tags...)
@@ -177,6 +183,14 @@ func fetch(repo string) (*Repo, error) {
 	}
 	if tagName != "" {
 		r.TagEntry = man.GetTag(tagName)
+		if r.TagEntry == nil {
+			// must be a SharedTag
+			r.TagEntries = man.GetSharedTag(tagName)
+			r.TagEntry = r.TagEntries[0]
+		} else {
+			// not a SharedTag, backfill TagEntries
+			r.TagEntries = []*manifest.Manifest2822Entry{r.TagEntry}
+		}
 	}
 	repoCache[repo] = r
 	return r, nil

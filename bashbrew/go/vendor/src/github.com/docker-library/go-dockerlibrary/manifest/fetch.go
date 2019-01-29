@@ -9,6 +9,13 @@ import (
 	"strings"
 )
 
+func validateTagName(man *Manifest2822, repoName, tagName string) error {
+	if tagName != "" && (man.GetTag(tagName) == nil && len(man.GetSharedTag(tagName)) == 0) {
+		return fmt.Errorf("tag not found in manifest for %q: %q", repoName, tagName)
+	}
+	return nil
+}
+
 // "library" is the default "library directory"
 // returns the parsed version of (in order):
 //   if "repo" is a URL, the remote contents of that URL
@@ -33,10 +40,10 @@ func Fetch(library, repo string) (string, string, *Manifest2822, error) {
 		}
 		defer resp.Body.Close()
 		man, err := Parse(resp.Body)
-		if tagName != "" && man.GetTag(tagName) == nil {
-			return repoName, tagName, man, fmt.Errorf("tag not found in manifest for %q: %q", repoName, tagName)
+		if err != nil {
+			return repoName, tagName, man, err
 		}
-		return repoName, tagName, man, err
+		return repoName, tagName, man, validateTagName(man, repoName, tagName)
 	}
 
 	// try file paths
@@ -55,10 +62,10 @@ func Fetch(library, repo string) (string, string, *Manifest2822, error) {
 		if err == nil {
 			defer f.Close()
 			man, err := Parse(f)
-			if tagName != "" && man.GetTag(tagName) == nil {
-				return repoName, tagName, man, fmt.Errorf("tag not found in manifest for %q: %q", repoName, tagName)
+			if err != nil {
+				return repoName, tagName, man, err
 			}
-			return repoName, tagName, man, err
+			return repoName, tagName, man, validateTagName(man, repoName, tagName)
 		}
 	}
 

@@ -38,7 +38,7 @@ func sortRepos(repos []string, applyConstraints bool) ([]string, error) {
 	return ret, nil
 }
 
-func (r Repo) SortedEntries(applyConstraints bool) ([]manifest.Manifest2822Entry, error) {
+func (r Repo) SortedEntries(applyConstraints bool) ([]*manifest.Manifest2822Entry, error) {
 	entries := r.Entries()
 
 	// short circuit if we don't have to go further
@@ -49,7 +49,7 @@ func (r Repo) SortedEntries(applyConstraints bool) ([]manifest.Manifest2822Entry
 	// create individual "Repo" objects for each entry in "r" so they can be sorted by the same "sortRepoObjects" function
 	rs := []*Repo{}
 	for i := range entries {
-		rs = append(rs, r.EntryRepo(&entries[i]))
+		rs = append(rs, r.EntryRepo(entries[i]))
 	}
 
 	rs, err := sortRepoObjects(rs, applyConstraints)
@@ -57,9 +57,9 @@ func (r Repo) SortedEntries(applyConstraints bool) ([]manifest.Manifest2822Entry
 		return nil, err
 	}
 
-	ret := []manifest.Manifest2822Entry{}
+	ret := []*manifest.Manifest2822Entry{}
 	for _, entryR := range rs {
-		ret = append(ret, *entryR.TagEntry)
+		ret = append(ret, entryR.TagEntries...)
 	}
 	return ret, nil
 }
@@ -101,7 +101,7 @@ func sortRepoObjects(rs []*Repo, applyConstraints bool) ([]*Repo, error) {
 				continue
 			}
 
-			from, err := r.DockerFrom(&entry)
+			from, err := r.DockerFrom(entry)
 			if err != nil {
 				return nil, err
 			}

@@ -308,20 +308,20 @@ func (entry Manifest2822Entry) HasArchitecture(arch string) bool {
 }
 
 func (manifest Manifest2822) GetTag(tag string) *Manifest2822Entry {
-	for _, entry := range manifest.Entries {
+	for i, entry := range manifest.Entries {
 		if entry.HasTag(tag) {
-			return &entry
+			return &manifest.Entries[i]
 		}
 	}
 	return nil
 }
 
 // GetSharedTag returns a list of entries with the given tag in entry.SharedTags (or the empty list if there are no entries with the given tag).
-func (manifest Manifest2822) GetSharedTag(tag string) []Manifest2822Entry {
-	ret := []Manifest2822Entry{}
-	for _, entry := range manifest.Entries {
+func (manifest Manifest2822) GetSharedTag(tag string) []*Manifest2822Entry {
+	ret := []*Manifest2822Entry{}
+	for i, entry := range manifest.Entries {
 		if entry.HasSharedTag(tag) {
-			ret = append(ret, entry)
+			ret = append(ret, &manifest.Entries[i])
 		}
 	}
 	return ret

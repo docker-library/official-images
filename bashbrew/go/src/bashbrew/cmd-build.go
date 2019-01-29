@@ -44,7 +44,7 @@ func cmdBuild(c *cli.Context) error {
 				continue
 			}
 
-			from, err := r.DockerFrom(&entry)
+			from, err := r.DockerFrom(entry)
 			if err != nil {
 				return cli.NewMultiError(fmt.Errorf(`failed fetching/scraping FROM for %q (tags %q)`, r.RepoName, entry.TagsString()), err)
 			}
@@ -69,7 +69,7 @@ func cmdBuild(c *cli.Context) error {
 				}
 			}
 
-			cacheTag, err := r.DockerCacheName(&entry)
+			cacheTag, err := r.DockerCacheName(entry)
 			if err != nil {
 				return cli.NewMultiError(fmt.Errorf(`failed calculating "cache hash" for %q (tags %q)`, r.RepoName, entry.TagsString()), err)
 			}
@@ -79,7 +79,7 @@ func cmdBuild(c *cli.Context) error {
 			if err != nil {
 				fmt.Printf("Building %s (%s)\n", cacheTag, r.EntryIdentifier(entry))
 				if !dryRun {
-					commit, err := r.fetchGitRepo(arch, &entry)
+					commit, err := r.fetchGitRepo(arch, entry)
 					if err != nil {
 						return cli.NewMultiError(fmt.Errorf(`failed fetching git repo for %q (tags %q)`, r.RepoName, entry.TagsString()), err)
 					}
