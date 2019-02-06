@@ -184,20 +184,31 @@ Some examples at the time of writing:
 
 Following the Docker guidelines it is highly recommended that the resulting image be just one concern per container; predominantly this means just one process per container, so there is no need for a full init system. There are two situations where an init-like process would be helpful for the container. The first being signal handling. If the process launched does not handle `SIGTERM` by exiting, it will not be killed since it is PID 1 in the container (see "NOTE" at the end of the [Foreground section](https://docs.docker.com/engine/reference/run/#foreground) in the docker docs). The second situation would be zombie reaping. If the process spawns child processes and does not properly reap them it will lead to a full process table, which can prevent the whole system from spawning any new processes. For both of these concerns we recommend [tini](https://github.com/krallin/tini). It is incredibly small, has minimal external dependencies, fills each of these roles, and does only the necessary parts of reaping and signal forwarding.
 
-Here is a snippet of a `Dockerfile` to add in tini (be sure to use it in `CMD` or `ENTRYPOINT` as appropriate):
+Be sure to use tini in `CMD` or `ENTRYPOINT` as appropriate.
+
+It is best to install tini from a package. If tini is not available as a package here is a snippet of a `Dockerfile` to add in tini:
 
 ```Dockerfile
-# grab tini for signal processing and zombie killing
-ENV TINI_VERSION v0.9.0
-RUN set -x \
-	&& curl -fSL "https://github.com/krallin/tini/releases/download/$TINI_VERSION/tini" -o /usr/local/bin/tini \
-	&& curl -fSL "https://github.com/krallin/tini/releases/download/$TINI_VERSION/tini.asc" -o /usr/local/bin/tini.asc \
-	&& export GNUPGHOME="$(mktemp -d)" \
-	&& gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 6380DC428747F6C393FEACA59A84159D7001A4E5 \
-	&& gpg --batch --verify /usr/local/bin/tini.asc /usr/local/bin/tini \
-	&& rm -r "$GNUPGHOME" /usr/local/bin/tini.asc \
-	&& chmod +x /usr/local/bin/tini \
-	&& tini -h
+# alpine:3.4+ rather use: apk add --no-cache tini
+# ubuntu:18.10+ rather use: apt-get install -y tini
+# debian:10+ rather use: apt-get install -y tini
+#
+# Install tini for signal processing and zombie killing
+ENV TINI_VERSION v0.18.0
+ENV TINI_SIGN_KEY 595E85A6B1B4779EA4DAAEC70B588DFF0527A9B7
+RUN set -eux; \
+  wget -O /usr/local/bin/tini "https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini"; \
+  wget -O /usr/local/bin/tini.asc "https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini.asc"; \
+  export GNUPGHOME="$(mktemp -d)"; \
+  gpg --batch --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys "$TINI_SIGN_KEY" || \
+  gpg --batch --keyserver hkp://ipv4.pool.sks-keyservers.net --recv-keys "$TINI_SIGN_KEY" || \
+  gpg --batch --keyserver hkp://pgp.mit.edu:80 --recv-keys "$TINI_SIGN_KEY" || \
+  gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$TINI_SIGN_KEY"; \
+  gpg --batch --verify /usr/local/bin/tini.asc /usr/local/bin/tini; \
+  command -v gpgconf && gpgconf --kill all || :; \
+  rm -r "$GNUPGHOME" /usr/local/bin/tini.asc; \
+  chmod +x /usr/local/bin/tini; \
+  tini --version
 ```
 
 #### Cacheability
