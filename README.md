@@ -63,7 +63,7 @@ Some images have been ported for other architectures, and many of these are offi
 	-	Linux x86-64 (`amd64`): https://hub.docker.com/u/amd64/
 	-	Windows x86-64 (`windows-amd64`): https://hub.docker.com/u/winamd64/
 -	Other architectures built by official images: (but *not* officially supported by Docker, Inc.)
-	-	ARMv5 32-bit (`arm32v5`): https://hub.docker.com/u/arm32v5/
+	-	ARMv5 32-bit (`arm32v5`): https://hub.docker.com/u/arm32v5/ (Raspberry 2x) 
 	-	ARMv6 32-bit (`arm32v6`): https://hub.docker.com/u/arm32v6/ (Raspberry Pi 1, Raspberry Pi Zero)
 	-	IBM POWER8 (`ppc64le`): https://hub.docker.com/u/ppc64le/
 	-	IBM z Systems (`s390x`): https://hub.docker.com/u/s390x/
