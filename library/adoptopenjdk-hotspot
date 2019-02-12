@@ -1,0 +1,52 @@
+# AdoptOpenJDK official images for OpenJDK with HotSpot
+
+Maintainers: Dinakar Guniguntala <dinakar.g@in.ibm.com> (@dinogun)
+GitRepo: https://github.com/AdoptOpenJDK/openjdk-docker.git
+
+Tags: latest, 8, 8-jdk, jdk, 8u202-b08-jdk
+Architectures: amd64, ppc64le, s390x
+GitCommit: fa579f13f003e98d2a08be21a1ac313d93ec7b1a
+Directory: 8/jdk/ubuntu
+File: Dockerfile.hotspot.releases.full
+
+Tags: 8-jdk-alpine, jdk-alpine, 8u202-b08-jdk-alpine
+Architectures: amd64
+GitCommit: fa579f13f003e98d2a08be21a1ac313d93ec7b1a
+Directory: 8/jdk/alpine
+File: Dockerfile.hotspot.releases.full
+
+Tags: 8-slim, slim, 8-jdk-slim, 8u202-b08-jdk-slim
+Architectures: amd64, ppc64le, s390x
+GitCommit: fa579f13f003e98d2a08be21a1ac313d93ec7b1a
+Directory: 8/jdk/ubuntu
+File: Dockerfile.hotspot.releases.slim
+
+Tags: 8-slim-alpine, slim-alpine, 8-jdk-slim-alpine, 8u202-b08-jdk-slim-alpine
+Architectures: amd64
+GitCommit: fa579f13f003e98d2a08be21a1ac313d93ec7b1a
+Directory: 8/jdk/alpine
+File: Dockerfile.hotspot.releases.slim
+
+Tags: 11, 11-jdk, 11.0.2.7-jdk
+Architectures: amd64, ppc64le, s390x
+GitCommit: fa579f13f003e98d2a08be21a1ac313d93ec7b1a
+Directory: 11/jdk/ubuntu
+File: Dockerfile.hotspot.releases.full
+
+Tags: 11-jdk-alpine, 11.0.2.7-jdk-alpine
+Architectures: amd64
+GitCommit: fa579f13f003e98d2a08be21a1ac313d93ec7b1a
+Directory: 11/jdk/alpine
+File: Dockerfile.hotspot.releases.full
+
+Tags: 11-slim, 11-jdk-slim, 11.0.2.7-jdk-slim
+Architectures: amd64, ppc64le, s390x
+GitCommit: fa579f13f003e98d2a08be21a1ac313d93ec7b1a
+Directory: 11/jdk/ubuntu
+File: Dockerfile.hotspot.releases.slim
+
+Tags: 11-slim-alpine, 11-jdk-slim-alpine, 11.0.2.7-jdk-slim-alpine
+Architectures: amd64
+GitCommit: fa579f13f003e98d2a08be21a1ac313d93ec7b1a
+Directory: 11/jdk/alpine
+File: Dockerfile.hotspot.releases.slim
