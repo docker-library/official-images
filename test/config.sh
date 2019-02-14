@@ -11,6 +11,8 @@ globalTests+=(
 # for "explicit" images, only run tests that are explicitly specified for that image/variant
 explicitTests+=(
 	[:onbuild]=1
+	[:nanoserver]=1
+	[:windowsservercore]=1
 )
 imageTests[:onbuild]+='
 	override-cmd
