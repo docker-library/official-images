@@ -186,13 +186,9 @@ Following the Docker guidelines it is highly recommended that the resulting imag
 
 Be sure to use tini in `CMD` or `ENTRYPOINT` as appropriate.
 
-It is best to install tini from a package. If tini is not available as a package here is a snippet of a `Dockerfile` to add in tini:
+It is best to install tini from a distribution-provided package (ex. `apt-get install tini`). If tini is not available in your distribution or is too old, here is a snippet of a `Dockerfile` to add in tini:
 
 ```Dockerfile
-# alpine:3.4+ rather use: apk add --no-cache tini
-# ubuntu:18.10+ rather use: apt-get install -y tini
-# debian:10+ rather use: apt-get install -y tini
-#
 # Install tini for signal processing and zombie killing
 ENV TINI_VERSION v0.18.0
 ENV TINI_SIGN_KEY 595E85A6B1B4779EA4DAAEC70B588DFF0527A9B7
@@ -200,9 +196,6 @@ RUN set -eux; \
   wget -O /usr/local/bin/tini "https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini"; \
   wget -O /usr/local/bin/tini.asc "https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini.asc"; \
   export GNUPGHOME="$(mktemp -d)"; \
-  gpg --batch --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys "$TINI_SIGN_KEY" || \
-  gpg --batch --keyserver hkp://ipv4.pool.sks-keyservers.net --recv-keys "$TINI_SIGN_KEY" || \
-  gpg --batch --keyserver hkp://pgp.mit.edu:80 --recv-keys "$TINI_SIGN_KEY" || \
   gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$TINI_SIGN_KEY"; \
   gpg --batch --verify /usr/local/bin/tini.asc /usr/local/bin/tini; \
   command -v gpgconf && gpgconf --kill all || :; \
