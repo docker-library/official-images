@@ -130,11 +130,17 @@ for dockerImage in "$@"; do
 		testRepo="${testRepo##*/}"
 	fi
 	
-	if [ -n "${testAlias[$repo:$variant]}" ]; then
-		testRepo="${testAlias[$repo:$variant]}"
-	elif [ -n "${testAlias[$repo]}" ]; then
-		testRepo="${testAlias[$repo]}"
-	fi
+	for possibleAlias in \
+		"${testAlias[$repo:$variant]}" \
+		"${testAlias[$repo]}" \
+		"${testAlias[$testRepo:$variant]}" \
+		"${testAlias[$testRepo]}" \
+	; do
+		if [ -n "$possibleAlias" ]; then
+			testRepo="$possibleAlias"
+			break
+		fi
+	done
 	
 	explicitVariant=
 	if [ \
