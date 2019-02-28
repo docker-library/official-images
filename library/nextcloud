@@ -1,94 +1,49 @@
-# This file is generated via https://github.com/nextcloud/docker/blob/be19f23e61abbdac03e66fa58ec85a3822cb1c54/generate-stackbrew-library.sh
+# This file is generated via https://github.com/nextcloud/docker/blob/768d2e620d2df351aac8dc20b48d5d1aae039280/generate-stackbrew-library.sh
 
 Maintainers: Nextcloud <docker@nextcloud.com> (@nextcloud)
 GitRepo: https://github.com/nextcloud/docker.git
 
-Tags: 13.0.12RC1-apache, 13.0.12-rc-apache, 13.0-rc-apache, 13-rc-apache, 13.0.12RC1, 13.0.12-rc, 13.0-rc, 13-rc
+Tags: 13.0.12-apache, 13.0-apache, 13-apache, 13.0.12, 13.0, 13
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le
-GitCommit: f9e1ef8537f66be5a5b7cf3da86af46ae502897d
-Directory: 13.0-rc/apache
-
-Tags: 13.0.12RC1-fpm-alpine, 13.0.12-rc-fpm-alpine, 13.0-rc-fpm-alpine, 13-rc-fpm-alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le
-GitCommit: f9e1ef8537f66be5a5b7cf3da86af46ae502897d
-Directory: 13.0-rc/fpm-alpine
-
-Tags: 13.0.12RC1-fpm, 13.0.12-rc-fpm, 13.0-rc-fpm, 13-rc-fpm
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le
-GitCommit: f9e1ef8537f66be5a5b7cf3da86af46ae502897d
-Directory: 13.0-rc/fpm
-
-Tags: 13.0.11-apache, 13.0-apache, 13-apache, 13.0.11, 13.0, 13
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le
-GitCommit: 891feeaf9485b9dba320aeac61504a81bfaeb462
+GitCommit: 77a5099fe9dbae5ffd096a3e898056df2b6f514c
 Directory: 13.0/apache
 
-Tags: 13.0.11-fpm-alpine, 13.0-fpm-alpine, 13-fpm-alpine
+Tags: 13.0.12-fpm-alpine, 13.0-fpm-alpine, 13-fpm-alpine
 Architectures: amd64, arm32v6, arm64v8, i386, ppc64le
-GitCommit: 891feeaf9485b9dba320aeac61504a81bfaeb462
+GitCommit: 77a5099fe9dbae5ffd096a3e898056df2b6f514c
 Directory: 13.0/fpm-alpine
 
-Tags: 13.0.11-fpm, 13.0-fpm, 13-fpm
+Tags: 13.0.12-fpm, 13.0-fpm, 13-fpm
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le
-GitCommit: 891feeaf9485b9dba320aeac61504a81bfaeb462
+GitCommit: 77a5099fe9dbae5ffd096a3e898056df2b6f514c
 Directory: 13.0/fpm
 
-Tags: 14.0.8RC2-apache, 14.0.8-rc-apache, 14.0-rc-apache, 14-rc-apache, 14.0.8RC2, 14.0.8-rc, 14.0-rc, 14-rc
+Tags: 14.0.8-apache, 14.0-apache, 14-apache, 14.0.8, 14.0, 14
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le
-GitCommit: e21fac2471d9ebdd7329a0f4345840b0b8d5b928
-Directory: 14.0-rc/apache
-
-Tags: 14.0.8RC2-fpm-alpine, 14.0.8-rc-fpm-alpine, 14.0-rc-fpm-alpine, 14-rc-fpm-alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le
-GitCommit: e21fac2471d9ebdd7329a0f4345840b0b8d5b928
-Directory: 14.0-rc/fpm-alpine
-
-Tags: 14.0.8RC2-fpm, 14.0.8-rc-fpm, 14.0-rc-fpm, 14-rc-fpm
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le
-GitCommit: e21fac2471d9ebdd7329a0f4345840b0b8d5b928
-Directory: 14.0-rc/fpm
-
-Tags: 14.0.7-apache, 14.0-apache, 14-apache, production-apache, 14.0.7, 14.0, 14, production
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le
-GitCommit: 891feeaf9485b9dba320aeac61504a81bfaeb462
+GitCommit: 3235cfeb09fa419ad21de03ca576dfc7d1b3816e
 Directory: 14.0/apache
 
-Tags: 14.0.7-fpm-alpine, 14.0-fpm-alpine, 14-fpm-alpine, production-fpm-alpine
+Tags: 14.0.8-fpm-alpine, 14.0-fpm-alpine, 14-fpm-alpine
 Architectures: amd64, arm32v6, arm64v8, i386, ppc64le
-GitCommit: 891feeaf9485b9dba320aeac61504a81bfaeb462
+GitCommit: 3235cfeb09fa419ad21de03ca576dfc7d1b3816e
 Directory: 14.0/fpm-alpine
 
-Tags: 14.0.7-fpm, 14.0-fpm, 14-fpm, production-fpm
+Tags: 14.0.8-fpm, 14.0-fpm, 14-fpm
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le
-GitCommit: 891feeaf9485b9dba320aeac61504a81bfaeb462
+GitCommit: 3235cfeb09fa419ad21de03ca576dfc7d1b3816e
 Directory: 14.0/fpm
 
-Tags: 15.0.5RC2-apache, 15.0.5-rc-apache, 15.0-rc-apache, 15-rc-apache, rc-apache, 15.0.5RC2, 15.0.5-rc, 15.0-rc, 15-rc, rc
+Tags: 15.0.5-apache, 15.0-apache, 15-apache, apache, stable-apache, production-apache, 15.0.5, 15.0, 15, latest, stable, production
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le
-GitCommit: e21fac2471d9ebdd7329a0f4345840b0b8d5b928
-Directory: 15.0-rc/apache
-
-Tags: 15.0.5RC2-fpm-alpine, 15.0.5-rc-fpm-alpine, 15.0-rc-fpm-alpine, 15-rc-fpm-alpine, rc-fpm-alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le
-GitCommit: e21fac2471d9ebdd7329a0f4345840b0b8d5b928
-Directory: 15.0-rc/fpm-alpine
-
-Tags: 15.0.5RC2-fpm, 15.0.5-rc-fpm, 15.0-rc-fpm, 15-rc-fpm, rc-fpm
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le
-GitCommit: e21fac2471d9ebdd7329a0f4345840b0b8d5b928
-Directory: 15.0-rc/fpm
-
-Tags: 15.0.4-apache, 15.0-apache, 15-apache, apache, stable-apache, 15.0.4, 15.0, 15, latest, stable
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le
-GitCommit: 891feeaf9485b9dba320aeac61504a81bfaeb462
+GitCommit: 532834349b9e12e9739d82e9fd58858d7251f690
 Directory: 15.0/apache
 
-Tags: 15.0.4-fpm-alpine, 15.0-fpm-alpine, 15-fpm-alpine, fpm-alpine, stable-fpm-alpine
+Tags: 15.0.5-fpm-alpine, 15.0-fpm-alpine, 15-fpm-alpine, fpm-alpine, stable-fpm-alpine, production-fpm-alpine
 Architectures: amd64, arm32v6, arm64v8, i386, ppc64le
-GitCommit: 891feeaf9485b9dba320aeac61504a81bfaeb462
+GitCommit: 532834349b9e12e9739d82e9fd58858d7251f690
 Directory: 15.0/fpm-alpine
 
-Tags: 15.0.4-fpm, 15.0-fpm, 15-fpm, fpm, stable-fpm
+Tags: 15.0.5-fpm, 15.0-fpm, 15-fpm, fpm, stable-fpm, production-fpm
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le
-GitCommit: 891feeaf9485b9dba320aeac61504a81bfaeb462
+GitCommit: 532834349b9e12e9739d82e9fd58858d7251f690
 Directory: 15.0/fpm
