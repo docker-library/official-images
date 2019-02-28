@@ -9,7 +9,7 @@ image="$1"
 hello="world-$RANDOM-$RANDOM"
 
 # test first with --entrypoint to verify that we even have echo (tests for single-binary images FROM scratch, essentially)
-if ! testOutput="$(docker run --rm --entrypoint echo "$image" "Hello $hello" 2>/dev/null)"; then
+if ! testOutput="$(docker run --rm --entrypoint echo "$image" -n "Hello $hello" 2>/dev/null)"; then
 	echo >&2 'image does not appear to contain "echo" -- assuming single-binary image'
 	exit
 fi
