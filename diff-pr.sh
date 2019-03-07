@@ -194,7 +194,11 @@ copy-tar() {
 			f="${origF# }" # trim off leading space (indicates we don't care about failure)
 			[ "$f" = "$origF" ] && failureMatters=1 || failureMatters=
 
-			local globbed=( $(cd "$dDir" && eval "echo $f") )
+			local globbed
+			globbed=( $(cd "$dDir" && find -path "./$f") )
+			if [ "${#globbed[@]}" -eq 0 ]; then
+				globbed=( "$f" )
+			fi
 
 			local g
 			for g in "${globbed[@]}"; do
