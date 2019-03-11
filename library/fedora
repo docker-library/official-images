@@ -22,12 +22,13 @@ arm32v7-Directory: armhfp/
 arm64v8-Directory: aarch64/
 ppc64le-Directory: ppc64le/
 
-Tags: rawhide, 30
-Architectures: amd64, arm64v8
+Tags: 30
+Architectures: amd64, arm64v8, arm32v7
 GitFetch: refs/heads/30
-GitCommit: 07f7169806e2630d102b39cc88e30b785c6e58f8
+GitCommit: b091e0166429546b1d2a06efc0547a74dc8252ab
 amd64-Directory: x86_64/
 arm64v8-Directory: aarch64/
+arm32v7-Directory: armhfp/
 
 Tags: 28
 Architectures: amd64, arm64v8, ppc64le, s390x, arm32v7
@@ -42,9 +43,16 @@ arm32v7-Directory: armhfp/
 Tags: latest, 29
 Architectures: amd64, arm64v8, ppc64le, s390x, arm32v7
 GitFetch: refs/heads/29
-GitCommit: d6b79f1510106f18f150a7de3b502588a46862c1
+GitCommit: 4dbc2ccd3b4d52258981eaf12043025054d53023
 amd64-Directory: x86_64/
 arm64v8-Directory: aarch64/
 ppc64le-Directory: ppc64le/
 s390x-Directory: s390x/
+arm32v7-Directory: armhfp/
+
+Tags: rawhide, 31
+Architectures: amd64, arm32v7
+GitFetch: refs/heads/31
+GitCommit: 28518cef68c11ccfb8e1fb10b22b5e1271e9f28e
+amd64-Directory: x86_64/
 arm32v7-Directory: armhfp/
