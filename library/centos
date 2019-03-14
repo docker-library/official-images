@@ -4,14 +4,14 @@ Directory: docker
 Constraints: !aufs
 
 Tags: latest, centos7, 7
-GitFetch: refs/heads/CentOS-7
-GitCommit: a77b36c6c55559b0db5bf9e74e61d32ea709a179
+GitFetch: refs/heads/CentOS-7-x86_64
+GitCommit: 9a389e11460bd809bb83c5fd4f095dbc8398d8cc
 arm32v7-GitFetch: refs/heads/CentOS-7armhfp
 arm32v7-GitCommit: 8022ae6d18ddf031b1b3a80549eeb46d1deb6dcd
-arm64v8-GitFetch: refs/heads/CentOS-7arm64
-arm64v8-GitCommit: 3f2d79108da41d1994d96e3a0536dc97da5f7cd7
-ppc64le-GitFetch: refs/heads/CentOS-7ppc64le
-ppc64le-GitCommit: d43064393557a76ae7c6d56db30d243fce2773e8
+arm64v8-GitFetch: refs/heads/CentOS-7-aarch64
+arm64v8-GitCommit: ccc35e05e7a1b7bd2b4a4ed6be7910b969b8c1e7
+ppc64le-GitFetch: refs/heads/CentOS-7-ppc64le
+ppc64le-GitCommit: 52ccf50bc484922ddf51544761180600ea1fb486
 i386-GitFetch: refs/heads/CentOS-7i386
 i386-GitCommit: 544a072ae2bb6eb378cf3ba587b24127629e9505
 Architectures: amd64, arm64v8, arm32v7, ppc64le, i386
