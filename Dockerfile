@@ -38,7 +38,7 @@ RUN set -ex; \
 	cd bashbrew/go; \
 	export GOPATH="$PWD:$PWD/vendor"; \
 	cd src; \
-	go install -v ./...
+	CGO_ENABLED=0 go install -v ./...
 
 VOLUME $BASHBREW_CACHE
 
