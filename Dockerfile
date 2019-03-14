@@ -3,8 +3,9 @@ FROM tianon/docker-tianon
 RUN set -eux; \
 	apt-get update; \
 	apt-get install -y --no-install-recommends \
-# ssl for downloading files
+# wget for downloading files (especially in tests, which run in this environment)
 		ca-certificates \
+		wget \
 # git for cloning source code
 		git \
 	; \
