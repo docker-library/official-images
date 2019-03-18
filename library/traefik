@@ -1,15 +1,33 @@
 Maintainers: Emile Vauge <emile@vauge.com> (@emilevauge), Vincent Demeester <vincent@sbr.pm> (@vdemeester), Ludovic Fernandez <ludovic@containo.us> (@ldez), Julien Salleyron <julien@containo.us> (@juliens), Nicolas Mengin <nicolas@containo.us> (@nmengin), Michael Matur <michael@containo.us> (@mmatur), Damien Duportal <damien@containo.us> (@dduportal)
 GitRepo: https://github.com/containous/traefik-library-image.git
 
-Tags: v1.7.9, 1.7.9, v1.7, 1.7, maroilles, latest
+Tags: v2.0.0-alpha1, 2.0.0-alpha1, v2.0, 2.0, faisselle
 Architectures: amd64, arm64v8, arm32v6
+GitCommit: 13ae09d9184e8460eab094d42a9770d7085b9178
+amd64-Directory: scratch/amd64
+arm32v6-Directory: scratch/arm
+arm64v8-Directory: scratch/arm64
+
+Tags: v2.0.0-alpha1-alpine, 2.0.0-alpha1-alpine, v2.0-alpine, 2.0-alpine, faisselle-alpine
+Architectures: amd64, arm64v8, arm32v6
+GitCommit: 13ae09d9184e8460eab094d42a9770d7085b9178
+Directory: alpine
+
+Tags: v2.0.0-alpha1-nanoserver, 2.0.0-alpha1-nanoserver, v2.0-nanoserver, 2.0-nanoserver, faisselle-nanoserver, v2.0.0-alpha1-nanoserver-sac2016, 2.0.0-alpha1-nanoserver-sac2016, v2.0-nanoserver-sac2016, 2.0-nanoserver-sac2016, faisselle-nanoserver-sac2016
+Architectures: windows-amd64
+GitCommit: 13ae09d9184e8460eab094d42a9770d7085b9178
+Directory: windows
+Constraints: nanoserver-sac2016
+
+Tags: v1.7.9, 1.7.9, v1.7, 1.7, maroilles, latest
+Architectures: amd64, arm32v6, arm64v8
 GitCommit: 77849defe7ccf84ce569147e2c269b2e3b26006b
 amd64-Directory: scratch/amd64
 arm32v6-Directory: scratch/arm
 arm64v8-Directory: scratch/arm64
 
 Tags: v1.7.9-alpine, 1.7.9-alpine, v1.7-alpine, 1.7-alpine, maroilles-alpine, alpine
-Architectures: amd64, arm64v8, arm32v6
+Architectures: amd64, arm32v6, arm64v8
 GitCommit: 77849defe7ccf84ce569147e2c269b2e3b26006b
 Directory: alpine
 
