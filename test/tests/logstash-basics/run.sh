@@ -64,7 +64,7 @@ _req-msg() {
 }
 
 # Make sure our container is listening
-. "$dir/../../retry.sh" --tries 20 '! _req-exit 7' # "Failed to connect to host."
+. "$dir/../../retry.sh" --tries 60 '! _req-exit 7' # "Failed to connect to host."
 
 for msg in \
 	'hi' \
