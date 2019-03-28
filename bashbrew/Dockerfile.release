@@ -5,7 +5,6 @@ RUN apk add --no-cache \
 		gnupg
 
 WORKDIR /usr/src/bashbrew
-ENV GOPATH /usr/src/bashbrew:/usr/src/bashbrew/vendor
 ENV CGO_ENABLED 0
 
 ENV BASHBREW_ARCHES \
@@ -73,7 +72,8 @@ RUN set -euxo pipefail; \
 				-ldflags '-s -w' \
 				-tags netgo -installsuffix netgo \
 				-o "$targetBin" \
-				./src/bashbrew \
+				-mod vendor \
+				bashbrew/src/bashbrew \
 			; \
 			ls -lAFh "$targetBin"; \
 			file "$targetBin"; \

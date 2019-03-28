@@ -70,8 +70,12 @@ func main() {
 
 	// TODO add "Description" to app and commands (for longer-form description of their functionality)
 
-	cli.VersionFlag.Name = "version" // remove "-v" from VersionFlag
-	cli.HelpFlag.Name = "help, h, ?" // add "-?" to HelpFlag
+	// add "-?" to HelpFlag
+	cli.HelpFlag = cli.BoolFlag{
+		Name:  "help, h, ?",
+		Usage: "show help",
+	}
+
 	app.Flags = []cli.Flag{
 		cli.BoolFlag{
 			Name:   "debug",

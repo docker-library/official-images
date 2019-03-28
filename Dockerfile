@@ -35,11 +35,9 @@ RUN mkdir -p "$BASHBREW_CACHE" \
 WORKDIR $DIR
 COPY . $DIR
 
-RUN set -ex; \
-	cd bashbrew/go; \
-	export GOPATH="$PWD:$PWD/vendor"; \
-	cd src; \
-	CGO_ENABLED=0 go install -v ./...
+RUN set -eux; \
+	CGO_ENABLED=0 ./bashbrew/bashbrew.sh --help > /dev/null; \
+	cp -vL bashbrew/go/bin/bashbrew /usr/local/bin/
 
 VOLUME $BASHBREW_CACHE
 
