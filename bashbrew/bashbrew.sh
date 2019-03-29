@@ -1,8 +1,13 @@
-#!/bin/bash
-set -e
+#!/usr/bin/env bash
+set -Eeuo pipefail
 
-dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
+dir="$(readlink -f "$BASH_SOURCE")"
+dir="$(dirname "$dir")"
 
-( cd "$dir/go" && go build -o bin/bashbrew -mod vendor bashbrew/src/bashbrew > /dev/null )
+export GO111MODULE=on
+(
+	cd "$dir/go"
+	go build -o bin/bashbrew -mod vendor bashbrew/src/bashbrew > /dev/null
+)
 
 exec "$dir/go/bin/bashbrew" "$@"
