@@ -1,15 +1,14 @@
-# this file is generated via https://github.com/docker-library/mongo/blob/1ff34f6624a09ce06948728f1584ac41a8d99811/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/mongo/blob/757cedc3266e4c93d69b5c7d95cb68296d0f4d21/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/mongo.git
 
-Tags: 3.4.20-jessie, 3.4-jessie
+Tags: 3.4.20-xenial, 3.4-xenial
 SharedTags: 3.4.20, 3.4
-# see http://repo.mongodb.org/apt/debian/dists/jessie/mongodb-org/3.4/main/
-# (i386, ppc64el, s390x are empty)
-Architectures: amd64
-GitCommit: e0b3c10c48a9e4839106f7c895f9a95f4be9196d
+# see http://repo.mongodb.org/apt/ubuntu/dists/xenial/mongodb-org/3.4/multiverse/
+Architectures: amd64, arm64v8
+GitCommit: 757cedc3266e4c93d69b5c7d95cb68296d0f4d21
 Directory: 3.4
 
 Tags: 3.4.20-windowsservercore-ltsc2016, 3.4-windowsservercore-ltsc2016
@@ -26,12 +25,11 @@ GitCommit: 135be00ece480b72826d871f5725214c35a1a9ab
 Directory: 3.4/windows/windowsservercore-1709
 Constraints: windowsservercore-1709
 
-Tags: 3.6.11-stretch, 3.6-stretch, 3-stretch
+Tags: 3.6.11-xenial, 3.6-xenial, 3-xenial
 SharedTags: 3.6.11, 3.6, 3
-# see http://repo.mongodb.org/apt/debian/dists/stretch/mongodb-org/3.6/main/
-# (i386, ppc64el, s390x are empty)
-Architectures: amd64
-GitCommit: e0b3c10c48a9e4839106f7c895f9a95f4be9196d
+# see http://repo.mongodb.org/apt/ubuntu/dists/xenial/mongodb-org/3.6/multiverse/
+Architectures: amd64, arm64v8
+GitCommit: 757cedc3266e4c93d69b5c7d95cb68296d0f4d21
 Directory: 3.6
 
 Tags: 3.6.11-windowsservercore-ltsc2016, 3.6-windowsservercore-ltsc2016, 3-windowsservercore-ltsc2016
@@ -51,9 +49,8 @@ Constraints: windowsservercore-1709
 Tags: 4.0.8-xenial, 4.0-xenial, 4-xenial, xenial
 SharedTags: 4.0.8, 4.0, 4, latest
 # see http://repo.mongodb.org/apt/ubuntu/dists/xenial/mongodb-org/4.0/multiverse/
-# (i386, ppc64el, s390x are empty)
 Architectures: amd64, arm64v8
-GitCommit: 89f19dc16431025c00a4709e0da6d751cf94830f
+GitCommit: 757cedc3266e4c93d69b5c7d95cb68296d0f4d21
 Directory: 4.0
 
 Tags: 4.0.8-windowsservercore-ltsc2016, 4.0-windowsservercore-ltsc2016, 4-windowsservercore-ltsc2016, windowsservercore-ltsc2016
@@ -77,12 +74,11 @@ GitCommit: e5a1fc424128c4a583b5b991279353709abdcbb2
 Directory: 4.0/windows/windowsservercore-1803
 Constraints: windowsservercore-1803
 
-Tags: 4.1.9-xenial, 4.1-xenial, unstable-xenial
+Tags: 4.1.9-bionic, 4.1-bionic, unstable-bionic
 SharedTags: 4.1.9, 4.1, unstable
-# see http://repo.mongodb.org/apt/ubuntu/dists/xenial/mongodb-org/4.1/multiverse/
-# (i386, ppc64el, s390x are empty)
-Architectures: amd64, arm64v8
-GitCommit: e0b3c10c48a9e4839106f7c895f9a95f4be9196d
+# see http://repo.mongodb.org/apt/ubuntu/dists/bionic/mongodb-org/4.1/multiverse/
+Architectures: amd64, arm64v8, s390x
+GitCommit: 757cedc3266e4c93d69b5c7d95cb68296d0f4d21
 Directory: 4.1
 
 Tags: 4.1.9-windowsservercore-ltsc2016, 4.1-windowsservercore-ltsc2016, unstable-windowsservercore-ltsc2016
