@@ -27,6 +27,6 @@ mysql() {
 		"$@"
 }
 
-. "$dir/../../retry.sh" --tries 20 "echo 'SELECT 1' | mysql"
+. "$dir/../../retry.sh" --tries 30 "echo 'SELECT 1' | mysql"
 
 # yay, must be OK
