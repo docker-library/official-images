@@ -13,7 +13,7 @@ if docker info --format '{{ join .SecurityOptions "\n" }}' 2>/dev/null |tac|tac|
 	# make container with jq since it is not guaranteed on the host
 	jqImage='librarytest/mongo-basics-jq:alpine'
 	docker build -t "$jqImage" - > /dev/null <<-'EOF'
-		FROM alpine:3.5
+		FROM alpine:3.9
 
 		RUN apk add --no-cache jq
 
