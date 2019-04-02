@@ -41,7 +41,7 @@ mysql() {
 		"$MYSQL_DATABASE"
 }
 
-. "$dir/../../retry.sh" --tries 20 "echo 'SELECT 1' | mysql"
+. "$dir/../../retry.sh" --tries 30 "echo 'SELECT 1' | mysql"
 
 [ "$(echo 'SELECT COUNT(*) FROM test' | mysql)" = 1 ]
 [ "$(echo 'SELECT c FROM test' | mysql)" = 'goodbye!' ]
