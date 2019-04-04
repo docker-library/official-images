@@ -11,38 +11,36 @@ USAGE:
    bashbrew [global options] command [command options] [arguments...]
 
 COMMANDS:
-     list   list repo:tag combinations for a given repo
-     build  build (and tag) repo:tag combinations for a given repo
-     tag    tag repo:tag into a namespace (especially for pushing)
-     push   push namespace/repo:tag (see also "tag")
-
+     list, ls    list repo:tag combinations for a given repo
+     build       build (and tag) repo:tag combinations for a given repo
+     tag         tag repo:tag into a namespace (especially for pushing)
+     push        push namespace/repo:tag (see also "tag")
+     put-shared  update shared tags in the registry (and multi-architecture tags)
+     help, h     Shows a list of commands or help for one command
    plumbing:
-     children  print the repos built FROM a given repo or repo:tag
-     parents   print the repos this repo or repo:tag is FROM
-     cat       print manifest contents for repo or repo:tag
-     from      print FROM for repo:tag
+     children, offspring, descendants, progeny  print the repos built FROM a given repo or repo:tag
+     parents, ancestors, progenitors            print the repos this repo or repo:tag is FROM
+     cat                                        print manifest contents for repo or repo:tag
+     from                                       print FROM for repo:tag
 
 GLOBAL OPTIONS:
    --debug                  enable more output (esp. all "docker build" output instead of only output on failure) [$BASHBREW_DEBUG]
    --no-sort                do not apply any sorting, even via --build-order
-   --constraint value       build constraints (see Constraints in Manifest2822Entry)
+   --arch value             the current platform architecture (default: "amd64") [$BASHBREW_ARCH]
+   --constraint value       build constraints (see Constraints in Manifest2822Entry) [$BASHBREW_CONSTRAINTS]
    --exclusive-constraints  skip entries which do not have Constraints
+   --arch-namespace value   architecture to push namespace mappings for creating indexes/manifest lists ("arch=namespace" ala "s390x=tianons390x") [$BASHBREW_ARCH_NAMESPACES]
    --config value           where default "flags" configuration can be overridden more persistently (default: "/home/tianon/.config/bashbrew") [$BASHBREW_CONFIG]
    --library value          where the bodies are buried (default: "/home/tianon/docker/official-images/library") [$BASHBREW_LIBRARY]
    --cache value            where the git wizardry is stashed (default: "/home/tianon/.cache/bashbrew") [$BASHBREW_CACHE]
    --help, -h, -?           show help
-
 ```
 
-## Building
-
-Go version 1.6 or above is required for compilation of Bashbrew.
-
-Bashbrew itself is built using `gb` ([github.com/constabulary/gb](https://github.com/constabulary/gb)).
-
-Once in the `go` subdirectory, `gb build` should produce `go/bin/bashbrew`, ready for use.
+## Installing
 
 Pre-built binaries are available to [download from Jenkins (for a large variety of supported architectures)](https://doi-janky.infosiftr.net/job/bashbrew/lastSuccessfulBuild/artifact/bin/).
+
+For building `bashbrew` yourself, there are clues in [`bashbrew.sh`](bashbrew.sh) and [`.travis.yml`](../.travis.yml) (although it's a pretty standard Go application).
 
 ## Usage
 
