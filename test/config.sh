@@ -125,6 +125,9 @@ imageTests+=(
 		mongo-tls-basics
 		mongo-tls-auth
 	'
+	[mongo-express]='
+		mongo-express-run
+	'
 	[mono]='
 	'
 	[mysql]='
