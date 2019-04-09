@@ -196,7 +196,9 @@ copy-tar() {
 
 			local globbed
 			# "find: warning: -path ./xxx/ will not match anything because it ends with /."
-			globbed=( $(cd "$dDir" && find -path "./${f%/}") )
+			local findGlobbedPath="${f%/}"
+			findGlobbedPath="${f#./}"
+			globbed=( $(cd "$dDir" && find -path "./$findGlobbedPath") )
 			if [ "${#globbed[@]}" -eq 0 ]; then
 				globbed=( "$f" )
 			fi
