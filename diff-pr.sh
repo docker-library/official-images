@@ -174,6 +174,7 @@ copy-tar() {
 			' "$d")
 
 			# some extra files which are likely interesting if they exist, but no big loss if they do not
+			' .dockerignore' # will be used automatically by "docker build"
 			' *.manifest' # debian/ubuntu "package versions" list
 			' *.ks' # fedora "kickstart" (rootfs build script)
 			' build*.txt' # ubuntu "build-info.txt", debian "build-command.txt"
