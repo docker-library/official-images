@@ -5,37 +5,37 @@ GitRepo: https://github.com/AdoptOpenJDK/openjdk-docker.git
 
 #-----------------------------hotspot v8 images---------------------------------
 
-Tags: latest, hotspot, hotspot-8, hotspot-8-jdk, hotspot-jdk, jdk8u202-b08
+Tags: 8-hotspot, 8-jdk-hotspot, 8u202-b08-jdk-hotspot
 Architectures: amd64, ppc64le, s390x
 GitCommit: d304b93e74b513db102bb3f32482d4027fff01f2
 Directory: 8/jdk/ubuntu
 File: Dockerfile.hotspot.releases.full
 
-Tags: hotspot-8-jre, hotspot-jre, jre8u202-b08
+Tags: 8-jre-hotspot, 8u202-b08-jre-hotspot
 Architectures: amd64, ppc64le, s390x
 GitCommit: d304b93e74b513db102bb3f32482d4027fff01f2
 Directory: 8/jre/ubuntu
 File: Dockerfile.hotspot.releases.full
 
-Tags: hotspot-8-jdk-alpine, hotspot-jdk-alpine, jdk8u202-b08-alpine
+Tags: 8-jdk-hotspot-alpine, 8u202-b08-jdk-hotspot-alpine
 Architectures: amd64
 GitCommit: d304b93e74b513db102bb3f32482d4027fff01f2
 Directory: 8/jdk/alpine
 File: Dockerfile.hotspot.releases.full
 
-Tags: hotspot-8-jre-alpine, hotspot-jre-alpine, jre8u202-b08-alpine
+Tags: 8-jre-hotspot-alpine, 8u202-b08-jre-hotspot-alpine
 Architectures: amd64
 GitCommit: d304b93e74b513db102bb3f32482d4027fff01f2
 Directory: 8/jre/alpine
 File: Dockerfile.hotspot.releases.full
 
-Tags: hotspot-8-slim, hotspot-slim, hotspot-8-jdk-slim, jdk8u202-b08-slim
+Tags: 8-jdk-hotspot-slim, 8u202-b08-jdk-hotspot-slim
 Architectures: amd64, ppc64le, s390x
 GitCommit: d304b93e74b513db102bb3f32482d4027fff01f2
 Directory: 8/jdk/ubuntu
 File: Dockerfile.hotspot.releases.slim
 
-Tags: hotspot-8-alpine-slim, hotspot-alpine-slim, hotspot-8-jdk-alpine-slim, jdk8u202-b08-alpine-slim
+Tags: 8-jdk-hotspot-alpine-slim, 8u202-b08-jdk-hotspot-alpine-slim
 Architectures: amd64
 GitCommit: d304b93e74b513db102bb3f32482d4027fff01f2
 Directory: 8/jdk/alpine
@@ -43,37 +43,37 @@ File: Dockerfile.hotspot.releases.slim
 
 #-----------------------------hotspot v11 images--------------------------------
 
-Tags: hotspot-11, hotspot-11-jdk, jdk-11.0.2.9
+Tags: 11-hotspot, 11-jdk-hotspot, 11.0.2_9-jdk-hotspot
 Architectures: amd64, ppc64le, s390x
 GitCommit: d304b93e74b513db102bb3f32482d4027fff01f2
 Directory: 11/jdk/ubuntu
 File: Dockerfile.hotspot.releases.full
 
-Tags: hotspot-11-jre, jre-11.0.2.9
+Tags: 11-jre-hotspot, 11.0.2_9-jre-hotspot
 Architectures: amd64, ppc64le, s390x
 GitCommit: d304b93e74b513db102bb3f32482d4027fff01f2
 Directory: 11/jre/ubuntu
 File: Dockerfile.hotspot.releases.full
 
-Tags: hotspot-11-jdk-alpine, jdk-11.0.2.9-alpine
+Tags: 11-jdk-hotspot-alpine, 11.0.2_9-jdk-hotspot-alpine
 Architectures: amd64
 GitCommit: d304b93e74b513db102bb3f32482d4027fff01f2
 Directory: 11/jdk/alpine
 File: Dockerfile.hotspot.releases.full
 
-Tags: hotspot-11-jre-alpine, jre-11.0.2.9-alpine
+Tags: 11-jre-hotspot-alpine, 11.0.2_9-jre-hotspot-alpine
 Architectures: amd64
 GitCommit: d304b93e74b513db102bb3f32482d4027fff01f2
 Directory: 11/jre/alpine
 File: Dockerfile.hotspot.releases.full
 
-Tags: hotspot-11-slim, hotspot-11-jdk-slim, jdk-11.0.2.9-slim
+Tags: 11-jdk-hotspot-slim, 11.0.2_9-jdk-hotspot-slim
 Architectures: amd64, ppc64le, s390x
 GitCommit: d304b93e74b513db102bb3f32482d4027fff01f2
 Directory: 11/jdk/ubuntu
 File: Dockerfile.hotspot.releases.slim
 
-Tags: hotspot-11-alpine-slim, hotspot-11-jdk-alpine-slim, jdk-11.0.2.9-alpine-slim
+Tags: 11-jdk-hotspot-alpine-slim, 11.0.2_9-jdk-hotspot-alpine-slim
 Architectures: amd64
 GitCommit: d304b93e74b513db102bb3f32482d4027fff01f2
 Directory: 11/jdk/alpine
@@ -81,37 +81,37 @@ File: Dockerfile.hotspot.releases.slim
 
 #-----------------------------hotspot v12 images--------------------------------
 
-Tags: hotspot-12, hotspot-12-jdk, jdk-12.33
+Tags: latest, hotspot, 12-hotspot, 12-jdk-hotspot, 12_33-jdk-hotspot
 Architectures: amd64, ppc64le, s390x
 GitCommit: d304b93e74b513db102bb3f32482d4027fff01f2
 Directory: 12/jdk/ubuntu
 File: Dockerfile.hotspot.releases.full
 
-Tags: hotspot-12-jre, jre-12.33
+Tags: 12-jre-hotspot, 12_33-jre-hotspot
 Architectures: amd64, ppc64le, s390x
 GitCommit: d304b93e74b513db102bb3f32482d4027fff01f2
 Directory: 12/jre/ubuntu
 File: Dockerfile.hotspot.releases.full
 
-Tags: hotspot-12-jdk-alpine, jdk-12.33-alpine
+Tags: 12-jdk-hotspot-alpine, 12_33-jdk-hotspot-alpine
 Architectures: amd64
 GitCommit: d304b93e74b513db102bb3f32482d4027fff01f2
 Directory: 12/jdk/alpine
 File: Dockerfile.hotspot.releases.full
 
-Tags: hotspot-12-jre-alpine, jre-12.33-alpine
+Tags: 12-jre-hotspot-alpine, 12_33-jre-hotspot-alpine
 Architectures: amd64
 GitCommit: d304b93e74b513db102bb3f32482d4027fff01f2
 Directory: 12/jre/alpine
 File: Dockerfile.hotspot.releases.full
 
-Tags: hotspot-12-slim, hotspot-12-jdk-slim, jdk-12.33-slim
+Tags: 12-jdk-hotspot-slim, 12_33-jdk-hotspot-slim
 Architectures: amd64, ppc64le, s390x
 GitCommit: d304b93e74b513db102bb3f32482d4027fff01f2
 Directory: 12/jdk/ubuntu
 File: Dockerfile.hotspot.releases.slim
 
-Tags: hotspot-12-alpine-slim, hotspot-12-jdk-alpine-slim, jdk-12.33-alpine-slim
+Tags: 12-jdk-hotspot-alpine-slim, 12_33-jdk-hotspot-alpine-slim
 Architectures: amd64
 GitCommit: d304b93e74b513db102bb3f32482d4027fff01f2
 Directory: 12/jdk/alpine
@@ -121,37 +121,37 @@ File: Dockerfile.hotspot.releases.slim
 
 #------------------------------openj9 v8 images---------------------------------
 
-Tags: openj9, openj9-8, openj9-8-jdk, openj9-jdk, jdk8u202-b08_openj9-0.12.1
+Tags: 8-openj9, 8-jdk-openj9, 8u202-b08-jdk-openj9-0.12.1
 Architectures: amd64, ppc64le, s390x
 GitCommit: d304b93e74b513db102bb3f32482d4027fff01f2
 Directory: 8/jdk/ubuntu
 File: Dockerfile.openj9.releases.full
 
-Tags: openj9-8-jre, openj9-jre, jre8u202-b08_openj9-0.12.1
+Tags: 8-jre-openj9, 8u202-b08-jre-openj9-0.12.1
 Architectures: amd64, ppc64le, s390x
 GitCommit: d304b93e74b513db102bb3f32482d4027fff01f2
 Directory: 8/jre/ubuntu
 File: Dockerfile.openj9.releases.full
 
-Tags: openj9-8-jdk-alpine, openj9-jdk-alpine, jdk8u202-b08_openj9-0.12.1-alpine
+Tags: 8-jdk-openj9-alpine, 8u202-b08-jdk-openj9-0.12.1-alpine
 Architectures: amd64
 GitCommit: d304b93e74b513db102bb3f32482d4027fff01f2
 Directory: 8/jdk/alpine
 File: Dockerfile.openj9.releases.full
 
-Tags: openj9-8-jre-alpine, openj9-jre-alpine, jre8u202-b08_openj9-0.12.1-alpine
+Tags: 8-jre-openj9-alpine, 8u202-b08-jre-openj9-0.12.1-alpine
 Architectures: amd64
 GitCommit: d304b93e74b513db102bb3f32482d4027fff01f2
 Directory: 8/jre/alpine
 File: Dockerfile.openj9.releases.full
 
-Tags: openj9-8-slim, openj9-slim, openj9-8-jdk-slim, jdk8u202-b08_openj9-0.12.1-slim
+Tags: 8-jdk-openj9-slim, 8u202-b08-jdk-openj9-0.12.1-slim
 Architectures: amd64, ppc64le, s390x
 GitCommit: d304b93e74b513db102bb3f32482d4027fff01f2
 Directory: 8/jdk/ubuntu
 File: Dockerfile.openj9.releases.slim
 
-Tags: openj9-8-alpine-slim, openj9-alpine-slim, openj9-8-jdk-alpine-slim, jdk8u202-b08_openj9-0.12.1-alpine-slim
+Tags: 8-jdk-openj9-alpine-slim, 8u202-b08-jdk-openj9-0.12.1-alpine-slim
 Architectures: amd64
 GitCommit: d304b93e74b513db102bb3f32482d4027fff01f2
 Directory: 8/jdk/alpine
@@ -159,37 +159,37 @@ File: Dockerfile.openj9.releases.slim
 
 #------------------------------openj9 v11 images--------------------------------
 
-Tags: openj9-11, openj9-11-jdk, jdk-11.0.2.9_openj9-0.12.1
+Tags: 11-openj9, 11-jdk-openj9, 11.0.2_9-jdk-openj9-0.12.1
 Architectures: amd64, ppc64le, s390x
 GitCommit: d304b93e74b513db102bb3f32482d4027fff01f2
 Directory: 11/jdk/ubuntu
 File: Dockerfile.openj9.releases.full
 
-Tags: openj9-11-jre, jre-11.0.2.9_openj9-0.12.1
+Tags: 11-jre-openj9, 11.0.2_9-jre-openj9-0.12.1
 Architectures: amd64, ppc64le, s390x
 GitCommit: d304b93e74b513db102bb3f32482d4027fff01f2
 Directory: 11/jre/ubuntu
 File: Dockerfile.openj9.releases.full
 
-Tags: openj9-11-jdk-alpine, jdk-11.0.2.9_openj9-0.12.1-alpine
+Tags: 11-jdk-openj9-alpine, 11.0.2_9-jdk-openj9-0.12.1-alpine
 Architectures: amd64
 GitCommit: d304b93e74b513db102bb3f32482d4027fff01f2
 Directory: 11/jdk/alpine
 File: Dockerfile.openj9.releases.full
 
-Tags: openj9-11-jre-alpine, jre-11.0.2.9_openj9-0.12.1-alpine
+Tags: 11-jre-openj9-alpine, 11.0.2_9-jre-openj9-0.12.1-alpine
 Architectures: amd64
 GitCommit: d304b93e74b513db102bb3f32482d4027fff01f2
 Directory: 11/jre/alpine
 File: Dockerfile.openj9.releases.full
 
-Tags: openj9-11-slim, openj9-11-jdk-slim, jdk-11.0.2.9_openj9-0.12.1-slim
+Tags: 11-jdk-openj9-slim, 11.0.2_9-jdk-openj9-0.12.1-slim
 Architectures: amd64, ppc64le, s390x
 GitCommit: d304b93e74b513db102bb3f32482d4027fff01f2
 Directory: 11/jdk/ubuntu
 File: Dockerfile.openj9.releases.slim
 
-Tags: openj9-11-alpine-slim, openj9-11-jdk-alpine-slim, jdk-11.0.2.9_openj9-0.12.1-alpine-slim
+Tags: 11-jdk-openj9-alpine-slim, 11.0.2_9-jdk-openj9-0.12.1-alpine-slim
 Architectures: amd64
 GitCommit: d304b93e74b513db102bb3f32482d4027fff01f2
 Directory: 11/jdk/alpine
@@ -197,37 +197,37 @@ File: Dockerfile.openj9.releases.slim
 
 #------------------------------openj9 v12 images--------------------------------
 
-Tags: openj9-12, openj9-12-jdk, jdk-12.33_openj9-0.13.0
+Tags: openj9, 12-openj9, 12-jdk-openj9, 12_33-jdk-openj9-0.13.0
 Architectures: amd64, ppc64le, s390x
 GitCommit: d304b93e74b513db102bb3f32482d4027fff01f2
 Directory: 12/jdk/ubuntu
 File: Dockerfile.openj9.releases.full
 
-Tags: openj9-12-jre, jre-12.33_openj9-0.13.0
+Tags: 12-jre-openj9, 12_33-jre-openj9-0.13.0
 Architectures: amd64, ppc64le, s390x
 GitCommit: d304b93e74b513db102bb3f32482d4027fff01f2
 Directory: 12/jre/ubuntu
 File: Dockerfile.openj9.releases.full
 
-Tags: openj9-12-jdk-alpine, jdk-12.33_openj9-0.13.0-alpine
+Tags: 12-jdk-openj9-alpine, 12_33-jdk-openj9-0.13.0-alpine
 Architectures: amd64
 GitCommit: d304b93e74b513db102bb3f32482d4027fff01f2
 Directory: 12/jdk/alpine
 File: Dockerfile.openj9.releases.full
 
-Tags: openj9-12-jre-alpine, jre-12.33_openj9-0.13.0-alpine
+Tags: 12-jre-openj9-alpine, 12_33-jre-openj9-0.13.0-alpine
 Architectures: amd64
 GitCommit: d304b93e74b513db102bb3f32482d4027fff01f2
 Directory: 12/jre/alpine
 File: Dockerfile.openj9.releases.full
 
-Tags: openj9-12-slim, openj9-12-jdk-slim, jdk-12.33_openj9-0.13.0-slim
+Tags: 12-jdk-openj9-slim, 12_33-jdk-openj9-0.13.0-slim
 Architectures: amd64, ppc64le, s390x
 GitCommit: d304b93e74b513db102bb3f32482d4027fff01f2
 Directory: 12/jdk/ubuntu
 File: Dockerfile.openj9.releases.slim
 
-Tags: openj9-12-alpine-slim, openj9-12-jdk-alpine-slim, jdk-12.33_openj9-0.13.0-alpine-slim
+Tags: 12-jdk-openj9-alpine-slim, 12_33-jdk-openj9-0.13.0-alpine-slim
 Architectures: amd64
 GitCommit: d304b93e74b513db102bb3f32482d4027fff01f2
 Directory: 12/jdk/alpine
