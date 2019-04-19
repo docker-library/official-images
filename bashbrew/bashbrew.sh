@@ -35,6 +35,9 @@ check_image_type() {
 	if [[ $repo == *"openjdk" ]]; then
 		echo '-openjdk'
 	fi
+	if [[ $repo == *"dotnet" ]]; then
+		echo '-dotnet'
+	fi
 }
 
 get_image_type() {
