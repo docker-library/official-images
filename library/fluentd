@@ -3,25 +3,13 @@ Maintainers: Masahiro Nakagawa <repeatedly@gmail.com> (@repeatedly),
 GitRepo: https://github.com/fluent/fluentd-docker-image.git
 
 # Alpine images
-Tags: v1.3.3-1.0, v1.3-1
+Tags: v1.4.2-2.0, v1.4-2, latest
 Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: 82b73cc11a01626efb95f4f78fa0b67653602d61
-Directory: v1.3/alpine
-
-# Alpine onbuild images
-Tags: v1.3.3-onbuild-1.0, v1.3-onbuild-1
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: 82b73cc11a01626efb95f4f78fa0b67653602d61
-Directory: v1.3/alpine-onbuild
+GitCommit: dabca3c327d08be6d43a8919316a57ca2228e603
+Directory: v1.4/alpine
 
 # Debian images
-Tags: v1.3.3-debian-1.0, v1.3-debian-1
+Tags: v1.4.2-debian-2.0, v1.4-debian-2
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 82b73cc11a01626efb95f4f78fa0b67653602d61
-Directory: v1.3/debian
-
-# Debian onbuild images
-Tags: v1.3.3-debian-onbuild-1.0, v1.3-debian-onbuild-1
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 82b73cc11a01626efb95f4f78fa0b67653602d61
-Directory: v1.3/debian-onbuild
+GitCommit: dabca3c327d08be6d43a8919316a57ca2228e603
+Directory: v1.4/debian
