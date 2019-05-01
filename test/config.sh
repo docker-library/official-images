@@ -40,6 +40,9 @@ testAlias+=(
 imageTests+=(
 	[aerospike]='
 	'
+	[alpine]='
+		alpine-apk-add
+	'
 	[busybox]='
 	'
 	[cassandra]='
