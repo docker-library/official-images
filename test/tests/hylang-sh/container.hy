@@ -2,7 +2,7 @@
   (+ 2 2)
   (print))
 
-(import [subprocess] [sys])
+(import subprocess sys)
 (subprocess.check_call [sys.executable "-m" "pip" "install" "-q" "sh"])
 
 (import [sh [echo]])
