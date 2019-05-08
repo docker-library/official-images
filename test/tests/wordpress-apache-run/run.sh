@@ -6,7 +6,7 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 # Use a client image with curl for testing
 clientImage='buildpack-deps:buster-curl'
 
-mysqlImage='mysql:5.7'
+mysqlImage='mariadb:10.3'
 serverImage="$1"
 
 # Create an instance of the container-under-test

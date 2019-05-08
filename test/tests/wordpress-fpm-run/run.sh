@@ -15,7 +15,7 @@ RUN set -x && apt-get update && apt-get install -y libfcgi0ldbl && rm -rf /var/l
 ENTRYPOINT ["cgi-fcgi"]
 EOF
 
-mysqlImage='mysql:5.7'
+mysqlImage='mariadb:10.3'
 
 # Create an instance of the container-under-test
 mysqlCid="$(docker run -d -e MYSQL_ROOT_PASSWORD="test-$RANDOM-password-$RANDOM-$$" "$mysqlImage")"
