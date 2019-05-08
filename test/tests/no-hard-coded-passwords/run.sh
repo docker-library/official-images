@@ -27,8 +27,20 @@ ret=0
 for user in "${!passwds[@]}"; do
 	pass="${passwds[$user]}"
 
-	if [ -z "$pass" -o '*' = "$pass" ]; then
-		# '*' and '' mean no password
+	if [ -z "$pass" ]; then
+		# for root this is a security vulnerability (see CVE-2019-5021, for example)
+		if [ "$user" = 'root' ]; then
+			echo >&2 "error: empty password detected for '$user'"
+			ret=1
+		else
+			echo >&2 "warning: empty password detected for '$user'"
+		fi
+		continue
+	fi
+
+	if [ "$pass" = '*' ]; then
+		# "If the password field contains some string that is not a valid result of crypt(3), for instance ! or *, the user will not be able to use a unix password to log in (but the user may log in the system by other means)."
+		# (Debian uses this for having default-provided accounts without a password but also without being explicitly locked, for example)
 		continue
 	fi
 
