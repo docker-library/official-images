@@ -100,7 +100,7 @@ sub get_manifest_p ($org, $repo, $ref, $tries = 3) {
 	}
 
 	return ua_retry_simple_req_p(GET => "$publicProxy/v2/$org/$repo/manifests/$ref")->then(sub ($tx) {
-		return if $tx->res->code == 404;
+		return if $tx->res->code == 404 || $tx->res->code == 401;
 
 		if (!$lastTry && $tx->res->code != 200) {
 			return get_manifest_p($org, $repo, $ref, $tries);
