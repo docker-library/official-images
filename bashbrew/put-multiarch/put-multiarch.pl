@@ -11,6 +11,8 @@ use Mojo::UserAgent;
 use Mojo::Util;
 
 my $publicProxy = $ENV{DOCKERHUB_PUBLIC_PROXY} || die 'missing DOCKERHUB_PUBLIC_PROXY env (https://github.com/tianon/dockerhub-public-proxy)';
+my $dryRun = ($ARGV[0] || '') eq '--dry-run';
+shift @ARGV if $dryRun;
 
 my $ua = Mojo::UserAgent->new->max_redirects(10)->connect_timeout(120)->inactivity_timeout(120);
 $ua->transactor->name(join ' ',
@@ -381,6 +383,8 @@ Mojo::Promise->map({ concurrency => 8 }, sub ($img) {
 			return head_manifest_p($org, $repo, $manifestListDigest)->then(sub ($exists) {
 				# if we already have the manifest we're planning to push in the namespace where we plan to push it, we can skip all blob mounts! \m/
 				return if $exists;
+				# (we can also skip if we're in "dry run" mode since we only care about the final manifest matching in that case)
+				return if $dryRun;
 
 				return (
 					@neededArtifactPromises
@@ -426,7 +430,12 @@ Mojo::Promise->map({ concurrency => 8 }, sub ($img) {
 				# let's do one final check of the tag we're pushing to see if it's already the manifest we expect it to be (to avoid making literally every image constantly "Updated a few seconds ago" all the time)
 				return get_manifest_p($org, $repo, $tag)->then(sub ($manifestData = undef) {
 					if ($manifestData && $manifestData->{digest} eq $manifestListDigest) {
-						say "Skipping $org/$repo:$tag ($manifestListDigest)";
+						say "Skipping $org/$repo:$tag ($manifestListDigest)" unless $dryRun; # if we're in "dry run" mode, we need clean output
+						return;
+					}
+
+					if ($dryRun) {
+						say "Would push $org/$repo:$tag ($manifestListDigest)";
 						return;
 					}
 
