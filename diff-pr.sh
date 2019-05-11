@@ -260,10 +260,12 @@ rm -rf tar
 git -C temp add .
 
 git -C temp diff \
-	--minimal \
-	--ignore-all-space \
-	--find-renames="$findCopies" \
-	--find-copies="$findCopies" \
 	--find-copies-harder \
+	--find-copies="$findCopies" \
+	--find-renames="$findCopies" \
+	--ignore-blank-lines \
+	--ignore-space-at-eol \
+	--ignore-space-change \
 	--irreversible-delete \
+	--minimal \
 	--staged
