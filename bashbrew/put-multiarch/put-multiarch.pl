@@ -71,7 +71,15 @@ sub arch_to_platform ($arch) {
 	}x) {
 		return (
 			os => $1 // 'linux',
-			architecture => ($2 eq 'i386' ? '386' : $2),
+			architecture => (
+				$2 eq 'i386'
+				? '386'
+				: (
+					$2 eq 'arm32'
+					? 'arm'
+					: $2
+				)
+			),
 			($3 ? (variant => $3) : ()),
 		);
 	}
