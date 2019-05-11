@@ -28,6 +28,6 @@ if [ -t 1 ]; then
 fi
 
 dir="$(dirname "$BASH_SOURCE")"
-img="$(docker build -q "$dir")"
+img="$(docker build -q -t oi/put-multiarch --cache-from oi/put-multiarch "$dir")"
 
 exec docker run --rm --init "${args[@]}" "$img" "$@"
