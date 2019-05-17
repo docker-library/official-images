@@ -128,6 +128,17 @@ imageTests+=(
 		mysql-initdb
 		mysql-log-bin
 	'
+	[nextcloud]='
+		nextcloud-cli-mysql
+		nextcloud-cli-postgres
+		nextcloud-cli-sqlite
+	'
+	[nextcloud:apache]='
+		nextcloud-apache-run
+	'
+	[nextcloud:fpm]='
+		nextcloud-fpm-run
+	'
 	[node]='
 		node-hello-world
 	'
