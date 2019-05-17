@@ -67,12 +67,14 @@ func cmdFamily(parents bool, c *cli.Context) error {
 				continue
 			}
 
-			from, err := r.DockerFrom(entry)
+			meta, err := r.DockerfileMetadata(entry)
 			if err != nil {
 				return cli.NewMultiError(fmt.Errorf(`failed fetching/scraping FROM for %q (tags %q)`, r.RepoName, entry.TagsString()), err)
 			}
-			for _, tag := range r.Tags("", false, entry) {
-				network.AddEdge(from, tag)
+			for _, from := range meta.Froms {
+				for _, tag := range r.Tags("", false, entry) {
+					network.AddEdge(from, tag)
+				}
 			}
 		}
 	}

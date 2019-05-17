@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strings"
 
 	"github.com/codegangsta/cli"
 )
@@ -27,13 +28,14 @@ func cmdFrom(c *cli.Context) error {
 				continue
 			}
 
-			from, err := r.DockerFrom(entry)
+			meta, err := r.DockerfileMetadata(entry)
 			if err != nil {
 				return cli.NewMultiError(fmt.Errorf(`failed fetching/scraping FROM for %q (tags %q)`, r.RepoName, entry.TagsString()), err)
 			}
 
+			froms := strings.Join(meta.Froms, " ")
 			for _, tag := range r.Tags(namespace, uniq, entry) {
-				fmt.Printf("%s: %s\n", tag, from)
+				fmt.Printf("%s: %s\n", tag, froms)
 			}
 		}
 	}
