@@ -61,8 +61,7 @@ _arches() {
 _froms() {
 	bashbrew cat --format '
 		{{- range .TagEntries -}}
-			{{- $meta := $.DockerfileMetadata . -}}
-			{{- $meta.Froms | join "\n" -}}
+			{{- $.DockerFroms . | join "\n" -}}
 			{{- "\n" -}}
 		{{- end -}}
 	' "$@" | sort -u

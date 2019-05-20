@@ -101,12 +101,12 @@ func sortRepoObjects(rs []*Repo, applyConstraints bool) ([]*Repo, error) {
 				continue
 			}
 
-			meta, err := r.DockerfileMetadata(entry)
+			froms, err := r.DockerFroms(entry)
 			if err != nil {
 				return nil, err
 			}
 
-			for _, from := range meta.Froms {
+			for _, from := range froms {
 				fromNode, ok := canonicalNodes[from]
 				if !ok {
 					// if our FROM isn't in the list of things we're sorting, it isn't relevant in this context

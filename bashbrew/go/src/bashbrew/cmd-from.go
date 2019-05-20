@@ -28,14 +28,14 @@ func cmdFrom(c *cli.Context) error {
 				continue
 			}
 
-			meta, err := r.DockerfileMetadata(entry)
+			froms, err := r.DockerFroms(entry)
 			if err != nil {
 				return cli.NewMultiError(fmt.Errorf(`failed fetching/scraping FROM for %q (tags %q)`, r.RepoName, entry.TagsString()), err)
 			}
 
-			froms := strings.Join(meta.Froms, " ")
+			fromsString := strings.Join(froms, " ")
 			for _, tag := range r.Tags(namespace, uniq, entry) {
-				fmt.Printf("%s: %s\n", tag, froms)
+				fmt.Printf("%s: %s\n", tag, fromsString)
 			}
 		}
 	}

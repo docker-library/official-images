@@ -17,7 +17,7 @@ import (
 	"github.com/docker-library/go-dockerlibrary/manifest"
 )
 
-type DockerfileMetadata struct {
+type dockerfileMetadata struct {
 	StageFroms []string              // every image "FROM" instruction value (or the parent stage's FROM value in the case of a named stage)
 	StageNames []string              // the name of any named stage (in order)
 	StageNameFroms map[string]string // map of stage names to FROM values (or the parent stage's FROM value in the case of a named stage), useful for resolving stage names to FROM values
@@ -30,7 +30,7 @@ func (r Repo) DockerFrom(entry *manifest.Manifest2822Entry) (string, error) {
 }
 
 func (r Repo) ArchDockerFrom(arch string, entry *manifest.Manifest2822Entry) (string, error) {
-	dockerfileMeta, err := r.ArchDockerfileMetadata(arch, entry)
+	dockerfileMeta, err := r.archDockerfileMetadata(arch, entry)
 	if err != nil {
 		return "", err
 	}
@@ -38,13 +38,25 @@ func (r Repo) ArchDockerFrom(arch string, entry *manifest.Manifest2822Entry) (st
 	return dockerfileMeta.StageFroms[len(dockerfileMeta.StageFroms)-1], nil
 }
 
-func (r Repo) DockerfileMetadata(entry *manifest.Manifest2822Entry) (*DockerfileMetadata, error) {
-	return r.ArchDockerfileMetadata(arch, entry)
+func (r Repo) DockerFroms(entry *manifest.Manifest2822Entry) ([]string, error) {
+	return r.ArchDockerFroms(arch, entry)
 }
 
-var dockerfileMetadataCache = map[string]*DockerfileMetadata{}
+func (r Repo) ArchDockerFroms(arch string, entry *manifest.Manifest2822Entry) ([]string, error) {
+	dockerfileMeta, err := r.archDockerfileMetadata(arch, entry)
+	if err != nil {
+		return nil, err
+	}
+	return dockerfileMeta.Froms, nil
+}
 
-func (r Repo) ArchDockerfileMetadata(arch string, entry *manifest.Manifest2822Entry) (*DockerfileMetadata, error) {
+func (r Repo) dockerfileMetadata(entry *manifest.Manifest2822Entry) (*dockerfileMetadata, error) {
+	return r.archDockerfileMetadata(arch, entry)
+}
+
+var dockerfileMetadataCache = map[string]*dockerfileMetadata{}
+
+func (r Repo) archDockerfileMetadata(arch string, entry *manifest.Manifest2822Entry) (*dockerfileMetadata, error) {
 	commit, err := r.fetchGitRepo(arch, entry)
 	if err != nil {
 		return nil, err
@@ -79,8 +91,8 @@ func (r Repo) ArchDockerfileMetadata(arch string, entry *manifest.Manifest2822En
 	return meta, nil
 }
 
-func parseDockerfileMetadata(dockerfile io.Reader) (*DockerfileMetadata, error) {
-	meta := &DockerfileMetadata{
+func parseDockerfileMetadata(dockerfile io.Reader) (*dockerfileMetadata, error) {
+	meta := &dockerfileMetadata{
 		// panic: assignment to entry in nil map
 		StageNameFroms: map[string]string{},
 		// (nil slices work fine)
@@ -215,7 +227,7 @@ func (r Repo) dockerBuildUniqueBits(entry *manifest.Manifest2822Entry) ([]string
 		entry.ArchDirectory(arch),
 		entry.ArchFile(arch),
 	}
-	meta, err := r.DockerfileMetadata(entry)
+	meta, err := r.dockerfileMetadata(entry)
 	if err != nil {
 		return nil, err
 	}
