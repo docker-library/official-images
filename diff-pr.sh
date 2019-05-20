@@ -115,7 +115,7 @@ template='
 	{{- "\n" -}}
 	{{- range $.Entries -}}
 		{{- $arch := .HasArchitecture arch | ternary arch (.Architectures | first) -}}
-		{{- $from := $.ArchDockerFrom $arch . -}}
+		{{- $froms := $.ArchDockerFroms $arch . -}}
 		{{- $outDir := join "_" $.RepoName (.Tags | last) -}}
 		git -C "$BASHBREW_CACHE/git" archive --format=tar
 		{{- " " -}}
