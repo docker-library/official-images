@@ -25,19 +25,6 @@ type dockerfileMetadata struct {
 	Froms  []string // every "FROM" or "COPY --from=xxx" value (minus named and/or numbered stages in the case of "--from=")
 }
 
-func (r Repo) DockerFrom(entry *manifest.Manifest2822Entry) (string, error) {
-	return r.ArchDockerFrom(arch, entry)
-}
-
-func (r Repo) ArchDockerFrom(arch string, entry *manifest.Manifest2822Entry) (string, error) {
-	dockerfileMeta, err := r.archDockerfileMetadata(arch, entry)
-	if err != nil {
-		return "", err
-	}
-
-	return dockerfileMeta.StageFroms[len(dockerfileMeta.StageFroms)-1], nil
-}
-
 func (r Repo) DockerFroms(entry *manifest.Manifest2822Entry) ([]string, error) {
 	return r.ArchDockerFroms(arch, entry)
 }
