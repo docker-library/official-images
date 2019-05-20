@@ -150,7 +150,7 @@ func parseDockerfileMetadata(dockerfile io.Reader) (*dockerfileMetadata, error) 
 				meta.StageNames = append(meta.StageNames, stageName)
 				meta.StageNameFroms[stageName] = from
 			}
-		case "ADD", "COPY":
+		case "COPY":
 			for _, arg := range fields[1:] {
 				if !strings.HasPrefix(arg, "--") {
 					// doesn't appear to be a "flag"; time to bail!
