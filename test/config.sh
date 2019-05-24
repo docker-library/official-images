@@ -20,6 +20,7 @@ imageTests[:onbuild]+='
 
 testAlias+=(
 	[amazoncorretto]='openjdk'
+	[adoptopenjdk]='openjdk'
 	[iojs]='node'
 	[jruby]='ruby'
 	[pypy]='python'
