@@ -274,6 +274,8 @@ globalExcludeTests+=(
 	# alpine/slim openjdk images are headless and so can't do font stuff
 	[openjdk:alpine_java-uimanager-font]=1
 	[openjdk:slim_java-uimanager-font]=1
+	# and adoptopenjdk has opted not to
+	[adoptopenjdk_java-uimanager-font]=1
 
 	# no "native" dependencies
 	[ruby:alpine_ruby-bundler]=1
