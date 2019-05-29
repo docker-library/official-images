@@ -6,7 +6,7 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 image="$1"
 
 # Use the alpine image since it is small and has wget in it that we can use
-clientImage="alpine:latest"
+clientImage="alpine:3.9"
 
 serverImage="$1"
 
