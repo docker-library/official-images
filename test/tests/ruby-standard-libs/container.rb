@@ -106,8 +106,12 @@ if defined?(RUBY_ENGINE) && RUBY_ENGINE == 'jruby'
 end
 
 require 'rubygems/version'
-if Gem::Version.create(RUBY_VERSION) >= Gem::Version.create('2.5')
+rubyVersion = Gem::Version.create(RUBY_VERSION)
+if rubyVersion >= Gem::Version.create('2.5')
 	stdlib.delete('mathn')
+end
+if rubyVersion >= Gem::Version.create('2.7')
+	stdlib.delete('profiler')
 end
 
 result = 'ok'
