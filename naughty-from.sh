@@ -17,6 +17,14 @@ _is_naughty() {
 	local from="$1"; shift
 
 	case "$BASHBREW_ARCH=$from" in
+		# a few images that no longer exist (and are thus not permissible)
+		# https://techcommunity.microsoft.com/t5/Containers/Removing-the-latest-Tag-An-Update-on-MCR/ba-p/393045
+		*=mcr.microsoft.com/windows/nanoserver:latest \
+		| *=mcr.microsoft.com/windows/servercore:latest \
+		| *=microsoft/nanoserver:latest \
+		| *=microsoft/windowsservercore:latest \
+		) return 0 ;;
+
 		# a few explicitly permissible exceptions to Santa's naughty list
 		*=scratch \
 		| amd64=docker.elastic.co/elasticsearch/elasticsearch:* \
