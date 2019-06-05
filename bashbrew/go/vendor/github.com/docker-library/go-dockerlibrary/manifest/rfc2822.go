@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"io"
+	"path"
 	"regexp"
 	"sort"
 	"strings"
@@ -384,6 +385,7 @@ func (manifest *Manifest2822) AddEntry(entry Manifest2822Entry) error {
 	}
 
 	entry.DeduplicateSharedTags()
+	entry.Directory = path.Clean(entry.Directory)
 
 	if invalidArchitectures := entry.InvalidArchitectures(); len(invalidArchitectures) > 0 {
 		return fmt.Errorf("Tags %q has invalid Architectures: %q", entry.TagsString(), strings.Join(invalidArchitectures, ", "))
