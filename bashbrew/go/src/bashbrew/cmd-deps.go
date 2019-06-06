@@ -67,13 +67,20 @@ func cmdFamily(parents bool, c *cli.Context) error {
 				continue
 			}
 
-			froms, err := r.DockerFroms(entry)
-			if err != nil {
-				return cli.NewMultiError(fmt.Errorf(`failed fetching/scraping FROM for %q (tags %q)`, r.RepoName, entry.TagsString()), err)
+			entryArches := []string{arch}
+			if !applyConstraints {
+				entryArches = entry.Architectures
 			}
-			for _, from := range froms {
-				for _, tag := range r.Tags("", false, entry) {
-					network.AddEdge(from, tag)
+
+			for _, entryArch := range entryArches {
+				froms, err := r.ArchDockerFroms(entryArch, entry)
+				if err != nil {
+					return cli.NewMultiError(fmt.Errorf(`failed fetching/scraping FROM for %q (tags %q, arch %q)`, r.RepoName, entry.TagsString(), entryArch), err)
+				}
+				for _, from := range froms {
+					for _, tag := range r.Tags("", false, entry) {
+						network.AddEdge(from, tag)
+					}
 				}
 			}
 		}

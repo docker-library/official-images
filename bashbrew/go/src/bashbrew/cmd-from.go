@@ -28,9 +28,26 @@ func cmdFrom(c *cli.Context) error {
 				continue
 			}
 
-			froms, err := r.DockerFroms(entry)
-			if err != nil {
-				return cli.NewMultiError(fmt.Errorf(`failed fetching/scraping FROM for %q (tags %q)`, r.RepoName, entry.TagsString()), err)
+			entryArches := []string{arch}
+			if !applyConstraints {
+				entryArches = entry.Architectures
+			}
+
+			froms := []string{}
+			for _, entryArch := range entryArches {
+				archFroms, err := r.ArchDockerFroms(entryArch, entry)
+				if err != nil {
+					return cli.NewMultiError(fmt.Errorf(`failed fetching/scraping FROM for %q (tags %q, arch %q)`, r.RepoName, entry.TagsString(), entryArch), err)
+				}
+			ArchFroms:
+				for _, archFrom := range archFroms {
+					for _, from := range froms {
+						if from == archFrom {
+							continue ArchFroms
+						}
+					}
+					froms = append(froms, archFrom)
+				}
 			}
 
 			fromsString := strings.Join(froms, " ")

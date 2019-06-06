@@ -55,7 +55,7 @@ var dockerfileMetadataCache = map[string]*dockerfileMetadata{}
 func (r Repo) archDockerfileMetadata(arch string, entry *manifest.Manifest2822Entry) (*dockerfileMetadata, error) {
 	commit, err := r.fetchGitRepo(arch, entry)
 	if err != nil {
-		return nil, err
+		return nil, cli.NewMultiError(fmt.Errorf("failed fetching Git repo for arch %q from entry %q", arch, entry.String()), err)
 	}
 
 	dockerfileFile := path.Join(entry.ArchDirectory(arch), entry.ArchFile(arch))
@@ -70,17 +70,17 @@ func (r Repo) archDockerfileMetadata(arch string, entry *manifest.Manifest2822En
 
 	dockerfile, err := gitShow(commit, dockerfileFile)
 	if err != nil {
-		return nil, err
+		return nil, cli.NewMultiError(fmt.Errorf(`failed "git show" for %q from commit %q`, dockerfileFile, commit), err)
 	}
 	defer dockerfile.Close()
 
 	meta, err := parseDockerfileMetadata(dockerfile)
 	if err != nil {
-		return nil, err
+		return nil, cli.NewMultiError(fmt.Errorf(`failed parsing Dockerfile metadata for %q from commit %q`, dockerfileFile, commit), err)
 	}
 
 	if err := dockerfile.Close(); err != nil {
-		return nil, err
+		return nil, cli.NewMultiError(fmt.Errorf(`failed closing "git show" for %q from commit %q`, dockerfileFile, commit), err)
 	}
 
 	dockerfileMetadataCache[cacheKey] = meta
