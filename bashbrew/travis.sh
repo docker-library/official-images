@@ -68,6 +68,6 @@ _bashbrew list --uniq
 _bashbrew cat
 if [ -n "$extraCommands" ]; then
 	_bashbrew list --build-order
-	_bashbrew from --apply-constraints
+	_bashbrew from
 fi
 echo; echo
