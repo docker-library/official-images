@@ -18,11 +18,11 @@ import (
 )
 
 type dockerfileMetadata struct {
-	StageFroms []string              // every image "FROM" instruction value (or the parent stage's FROM value in the case of a named stage)
-	StageNames []string              // the name of any named stage (in order)
+	StageFroms     []string          // every image "FROM" instruction value (or the parent stage's FROM value in the case of a named stage)
+	StageNames     []string          // the name of any named stage (in order)
 	StageNameFroms map[string]string // map of stage names to FROM values (or the parent stage's FROM value in the case of a named stage), useful for resolving stage names to FROM values
 
-	Froms  []string // every "FROM" or "COPY --from=xxx" value (minus named and/or numbered stages in the case of "--from=")
+	Froms []string // every "FROM" or "COPY --from=xxx" value (minus named and/or numbered stages in the case of "--from=")
 }
 
 // this returns the "FROM" value for the last stage (which essentially determines the "base" for the final published image)
@@ -118,7 +118,7 @@ func parseDockerfileMetadata(dockerfile io.Reader) (*dockerfileMetadata, error) 
 				// ignore blank lines and comments
 				continue
 			}
-			line = line[0:len(line)-1]+nextLine
+			line = line[0:len(line)-1] + nextLine
 		}
 
 		fields := strings.Fields(line)
