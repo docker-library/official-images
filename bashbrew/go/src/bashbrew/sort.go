@@ -5,7 +5,7 @@ import (
 	"pault.ag/go/topsort"
 )
 
-func sortRepos(repos []string, applyConstraints bool) ([]string, error) {
+func sortRepos(repos []string, applyConstraints bool, namespace string) ([]string, error) {
 	rs := []*Repo{}
 	rsMap := map[*Repo]string{}
 	for _, repo := range repos {
@@ -26,7 +26,7 @@ func sortRepos(repos []string, applyConstraints bool) ([]string, error) {
 		return repos, nil
 	}
 
-	rs, err := sortRepoObjects(rs, applyConstraints)
+	rs, err := sortRepoObjects(rs, applyConstraints, namespace)
 	if err != nil {
 		return nil, err
 	}
@@ -38,7 +38,7 @@ func sortRepos(repos []string, applyConstraints bool) ([]string, error) {
 	return ret, nil
 }
 
-func (r Repo) SortedEntries(applyConstraints bool) ([]*manifest.Manifest2822Entry, error) {
+func (r Repo) SortedEntries(applyConstraints bool, namespace string) ([]*manifest.Manifest2822Entry, error) {
 	entries := r.Entries()
 
 	// short circuit if we don't have to go further
@@ -52,7 +52,7 @@ func (r Repo) SortedEntries(applyConstraints bool) ([]*manifest.Manifest2822Entr
 		rs = append(rs, r.EntryRepo(entries[i]))
 	}
 
-	rs, err := sortRepoObjects(rs, applyConstraints)
+	rs, err := sortRepoObjects(rs, applyConstraints, namespace)
 	if err != nil {
 		return nil, err
 	}
@@ -64,7 +64,14 @@ func (r Repo) SortedEntries(applyConstraints bool) ([]*manifest.Manifest2822Entr
 	return ret, nil
 }
 
-func sortRepoObjects(rs []*Repo, applyConstraints bool) ([]*Repo, error) {
+func addNamespace(namespace, tag string) string {
+	if namespace != "" {
+		tag = namespace + "/" + tag
+	}
+	return tag
+}
+
+func sortRepoObjects(rs []*Repo, applyConstraints bool, namespace string) ([]*Repo, error) {
 	// short circuit if we don't have to go further
 	if noSortFlag || len(rs) <= 1 {
 		return rs, nil
@@ -79,12 +86,13 @@ func sortRepoObjects(rs []*Repo, applyConstraints bool) ([]*Repo, error) {
 	for _, r := range rs {
 		node := r.Identifier()
 		for _, entry := range r.Entries() {
+			node = addNamespace(namespace, node)
 			for _, tag := range r.Tags("", false, entry) {
+				tag = addNamespace(namespace, tag)
 				if canonicalRepo, ok := canonicalRepos[tag]; ok && canonicalRepo.TagName != "" {
 					// if we run into a duplicate, we want to prefer a specific tag over a full repo
 					continue
 				}
-
 				canonicalNodes[tag] = node
 				canonicalRepos[tag] = r
 			}
@@ -115,6 +123,8 @@ func sortRepoObjects(rs []*Repo, applyConstraints bool) ([]*Repo, error) {
 
 				// TODO somehow reconcile/avoid "a:a -> b:b, b:b -> a:c" (which will exhibit here as cyclic)
 				for _, tag := range r.Tags("", false, entry) {
+					tag = addNamespace(namespace, tag)
+
 					if tagNode, ok := canonicalNodes[tag]; ok {
 						if tagNode == fromNode {
 							// don't be cyclic

@@ -14,13 +14,13 @@ func cmdList(c *cli.Context) error {
 	}
 
 	uniq := c.Bool("uniq")
-	namespace := ""
+	namespace := c.String("namespace")
 	applyConstraints := c.Bool("apply-constraints")
 	onlyRepos := c.Bool("repos")
 
 	buildOrder := c.Bool("build-order")
 	if buildOrder {
-		repos, err = sortRepos(repos, applyConstraints)
+		repos, err = sortRepos(repos, applyConstraints, namespace)
 		if err != nil {
 			return cli.NewMultiError(fmt.Errorf(`failed sorting repo list`), err)
 		}
@@ -45,7 +45,7 @@ func cmdList(c *cli.Context) error {
 
 		var entries []*manifest.Manifest2822Entry
 		if buildOrder {
-			entries, err = r.SortedEntries(applyConstraints)
+			entries, err = r.SortedEntries(applyConstraints, namespace)
 			if err != nil {
 				return cli.NewMultiError(fmt.Errorf(`failed sorting entries list for %q`, repo), err)
 			}

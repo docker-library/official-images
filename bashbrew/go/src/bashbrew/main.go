@@ -220,6 +220,7 @@ func main() {
 			Flags: []cli.Flag{
 				commonFlags["all"],
 				commonFlags["uniq"],
+				commonFlags["namespace"],
 				commonFlags["apply-constraints"],
 				cli.BoolFlag{
 					Name:  "build-order",

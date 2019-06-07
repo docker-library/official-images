@@ -12,13 +12,13 @@ func cmdBuild(c *cli.Context) error {
 		return cli.NewMultiError(fmt.Errorf(`failed gathering repo list`), err)
 	}
 
-	repos, err = sortRepos(repos, true)
+	namespace := c.String("namespace")
+	repos, err = sortRepos(repos, true, namespace)
 	if err != nil {
 		return cli.NewMultiError(fmt.Errorf(`failed sorting repo list`), err)
 	}
 
 	uniq := c.Bool("uniq")
-	namespace := c.String("namespace")
 	pull := c.String("pull")
 	switch pull {
 	case "always", "missing", "never":
@@ -34,7 +34,7 @@ func cmdBuild(c *cli.Context) error {
 			return cli.NewMultiError(fmt.Errorf(`failed fetching repo %q`, repo), err)
 		}
 
-		entries, err := r.SortedEntries(true)
+		entries, err := r.SortedEntries(true, namespace)
 		if err != nil {
 			return cli.NewMultiError(fmt.Errorf(`failed sorting entries list for %q`, repo), err)
 		}
