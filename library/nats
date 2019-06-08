@@ -2,29 +2,35 @@ Maintainers: Derek Collison <derek@synadia.com> (@derekcollison),
              Ivan Kozlovic <ivan@synadia.com> (@kozlovic),
              Waldemar Salinas <wally@synadia.com> (@wallyqs)
 GitRepo: https://github.com/nats-io/nats-docker.git
-GitCommit: 349eabff215ee6b068f46d34df378aba52790805
+GitCommit: f94c8e5fe7242e29752374eb464ef99954ae53f9
 
-Tags: 1.4.1-linux, linux
-SharedTags: 1.4.1, latest
+Tags: 2.0.0-linux, linux
+SharedTags: 2.0.0, latest
 Architectures: amd64, arm32v6, arm32v7, arm64v8
-amd64-GitCommit: 349eabff215ee6b068f46d34df378aba52790805
+amd64-GitCommit: f94c8e5fe7242e29752374eb464ef99954ae53f9
 amd64-Directory: amd64
-arm32v6-GitCommit: 349eabff215ee6b068f46d34df378aba52790805
+arm32v6-GitCommit: f94c8e5fe7242e29752374eb464ef99954ae53f9
 arm32v6-Directory: arm32v6
-arm32v7-GitCommit: 349eabff215ee6b068f46d34df378aba52790805
+arm32v7-GitCommit: f94c8e5fe7242e29752374eb464ef99954ae53f9
 arm32v7-Directory: arm32v7
-arm64v8-GitCommit: 349eabff215ee6b068f46d34df378aba52790805
+arm64v8-GitCommit: f94c8e5fe7242e29752374eb464ef99954ae53f9
 arm64v8-Directory: arm64v8
 
-Tags: 1.4.1-nanoserver, nanoserver
-SharedTags: 1.4.1, latest
+Tags: 2.0.0-nanoserver, nanoserver
+SharedTags: 2.0.0, latest
 Architectures: windows-amd64
-windows-amd64-GitCommit: 349eabff215ee6b068f46d34df378aba52790805
+windows-amd64-GitCommit: f94c8e5fe7242e29752374eb464ef99954ae53f9
 windows-amd64-Directory: windows/nanoserver
-Constraints: nanoserver
+Constraints: nanoserver-1803
 
-Tags: 1.4.1-windowsservercore, windowsservercore
+Tags: 2.0.0-nanoserver-1809, nanoserver-1809
 Architectures: windows-amd64
-windows-amd64-GitCommit: 349eabff215ee6b068f46d34df378aba52790805
+windows-amd64-GitCommit: f94c8e5fe7242e29752374eb464ef99954ae53f9
+windows-amd64-Directory: windows/nanoserver2019
+Constraints: nanoserver-1809
+
+Tags: 2.0.0-windowsservercore, windowsservercore
+Architectures: windows-amd64
+windows-amd64-GitCommit: f94c8e5fe7242e29752374eb464ef99954ae53f9
 windows-amd64-Directory: windows/windowsservercore
-Constraints: windowsservercore
+Constraints: windowsservercore-ltsc2016
