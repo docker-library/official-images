@@ -5,8 +5,8 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
 image="$1"
 
-# since we have curl in the liberty image, we'll use that
-clientImage="$1"
+# Use the alpine image since it is small and has wget in it that we can use
+clientImage="alpine:3.9"
 
 serverImage="$1"
 

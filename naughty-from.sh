@@ -17,6 +17,14 @@ _is_naughty() {
 	local from="$1"; shift
 
 	case "$BASHBREW_ARCH=$from" in
+		# a few images that no longer exist (and are thus not permissible)
+		# https://techcommunity.microsoft.com/t5/Containers/Removing-the-latest-Tag-An-Update-on-MCR/ba-p/393045
+		*=mcr.microsoft.com/windows/nanoserver:latest \
+		| *=mcr.microsoft.com/windows/servercore:latest \
+		| *=microsoft/nanoserver:latest \
+		| *=microsoft/windowsservercore:latest \
+		) return 0 ;;
+
 		# a few explicitly permissible exceptions to Santa's naughty list
 		*=scratch \
 		| amd64=docker.elastic.co/elasticsearch/elasticsearch:* \
@@ -63,10 +71,14 @@ declare -A naughtyFromsArches=(
 	#[img:tag=from:tag]='arch arch ...'
 )
 naughtyFroms=()
+declare -A allNaughty=(
+	#[img:tag]=1
+)
 
 tags="$(bashbrew list --uniq "$@" | sort -u)"
 for img in $tags; do
 	arches="$(_arches "$img")"
+	hasNice= # do we have _any_ arches that aren't naughty? (so we can make the message better if not)
 	for BASHBREW_ARCH in $arches; do
 		export BASHBREW_ARCH
 
@@ -97,15 +109,25 @@ for img in $tags; do
 					naughtyFromsArches["$img=$from"]+=', '
 				fi
 				naughtyFromsArches["$img=$from"]+="$BASHBREW_ARCH"
+			else
+				hasNice=1
 			fi
 		done
 	done
+
+	if [ -z "$hasNice" ]; then
+		allNaughty["$img"]=1
+	fi
 done
 
 for naughtyFrom in "${naughtyFroms[@]:-}"; do
 	[ -n "$naughtyFrom" ] || continue # https://mywiki.wooledge.org/BashFAQ/112#BashFAQ.2F112.line-8 (empty array + "set -u" + bash 4.3 == sad day)
 	img="${naughtyFrom%%=*}"
 	from="${naughtyFrom#$img=}"
-	arches="${naughtyFromsArches[$naughtyFrom]}"
-	echo " - $img (FROM $from) [$arches]"
+	if [ -n "${allNaughty["$img"]:-}" ]; then
+		echo " - $img (FROM $from) -- completely unsupported base!"
+	else
+		arches="${naughtyFromsArches[$naughtyFrom]}"
+		echo " - $img (FROM $from) [$arches]"
+	fi
 done

@@ -61,7 +61,6 @@ func gitStream(args ...string) (io.ReadCloser, error) {
 }
 
 func gitArchive(commit string, dir string) (io.ReadCloser, error) {
-	dir = path.Clean(dir)
 	if dir == "." {
 		dir = ""
 	} else {
