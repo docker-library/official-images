@@ -72,29 +72,24 @@ func (r Repo) archDockerfileMetadata(arch string, entry *manifest.Manifest2822En
 	if err != nil {
 		return nil, cli.NewMultiError(fmt.Errorf(`failed "git show" for %q from commit %q`, dockerfileFile, commit), err)
 	}
-	defer dockerfile.Close()
 
 	meta, err := parseDockerfileMetadata(dockerfile)
 	if err != nil {
 		return nil, cli.NewMultiError(fmt.Errorf(`failed parsing Dockerfile metadata for %q from commit %q`, dockerfileFile, commit), err)
 	}
 
-	if err := dockerfile.Close(); err != nil {
-		return nil, cli.NewMultiError(fmt.Errorf(`failed closing "git show" for %q from commit %q`, dockerfileFile, commit), err)
-	}
-
 	dockerfileMetadataCache[cacheKey] = meta
 	return meta, nil
 }
 
-func parseDockerfileMetadata(dockerfile io.Reader) (*dockerfileMetadata, error) {
+func parseDockerfileMetadata(dockerfile string) (*dockerfileMetadata, error) {
 	meta := &dockerfileMetadata{
 		// panic: assignment to entry in nil map
 		StageNameFroms: map[string]string{},
 		// (nil slices work fine)
 	}
 
-	scanner := bufio.NewScanner(dockerfile)
+	scanner := bufio.NewScanner(strings.NewReader(dockerfile))
 	for scanner.Scan() {
 		line := strings.TrimSpace(scanner.Text())
 
