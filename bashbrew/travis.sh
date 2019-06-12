@@ -58,6 +58,15 @@ if [ -n "$extraCommands" ] && naughtyFrom="$(../naughty-from.sh "${repos[@]}")" 
 	exit 1
 fi
 
+if [ -n "$extraCommands" ] && naughtyConstraints="$(../naughty-constraints.sh "${repos[@]}")" && [ -n "$naughtyConstraints" ]; then
+	echo >&2
+	echo >&2 "Invalid 'FROM' + 'Constraints' combinations detected:"
+	echo >&2
+	echo >&2 "$naughtyConstraints"
+	echo >&2
+	exit 1
+fi
+
 _bashbrew() {
 	echo $'\n\n$ bashbrew' "$@" "${repos[@]}"
 	bashbrew "$@" "${repos[@]}"
