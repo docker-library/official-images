@@ -83,7 +83,6 @@ func cmdPutShared(c *cli.Context) error {
 		return cli.NewMultiError(fmt.Errorf(`failed gathering repo list`), err)
 	}
 
-	namespace := c.String("namespace")
 	dryRun := c.Bool("dry-run")
 	force := c.Bool("force")
 	singleArch := c.Bool("single-arch")

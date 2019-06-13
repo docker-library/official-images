@@ -22,6 +22,7 @@ var (
 	defaultCache   string
 
 	arch                 string
+	namespace            string
 	constraints          []string
 	exclusiveConstraints bool
 
@@ -32,12 +33,13 @@ var (
 
 	// separated so that FlagsConfig.ApplyTo can access them
 	flagEnvVars = map[string]string{
-		"debug":   "BASHBREW_DEBUG",
-		"arch":    "BASHBREW_ARCH",
-		"config":  "BASHBREW_CONFIG",
-		"library": "BASHBREW_LIBRARY",
-		"cache":   "BASHBREW_CACHE",
-		"pull":    "BASHBREW_PULL",
+		"debug":     "BASHBREW_DEBUG",
+		"arch":      "BASHBREW_ARCH",
+		"namespace": "BASHBREW_NAMESPACE",
+		"config":    "BASHBREW_CONFIG",
+		"library":   "BASHBREW_LIBRARY",
+		"cache":     "BASHBREW_CACHE",
+		"pull":      "BASHBREW_PULL",
 
 		"constraint":     "BASHBREW_CONSTRAINTS",
 		"arch-namespace": "BASHBREW_ARCH_NAMESPACES",
@@ -92,6 +94,11 @@ func main() {
 			Value:  manifest.DefaultArchitecture,
 			EnvVar: flagEnvVars["arch"],
 			Usage:  "the current platform architecture",
+		},
+		cli.StringFlag{
+			Name:   "namespace",
+			EnvVar: flagEnvVars["namespace"],
+			Usage:  "a repo namespace to act upon/in",
 		},
 		cli.StringSliceFlag{
 			Name:   "constraint",
@@ -156,6 +163,7 @@ func main() {
 			noSortFlag = c.GlobalBool("no-sort")
 
 			arch = c.GlobalString("arch")
+			namespace = c.GlobalString("namespace")
 			constraints = c.GlobalStringSlice("constraint")
 			exclusiveConstraints = c.GlobalBool("exclusive-constraints")
 
@@ -189,10 +197,6 @@ func main() {
 			Name:  "uniq, unique",
 			Usage: "only act upon the first tag of each entry",
 		},
-		"namespace": cli.StringFlag{
-			Name:  "namespace",
-			Usage: "a repo namespace to act upon/in",
-		},
 		"apply-constraints": cli.BoolFlag{
 			Name:  "apply-constraints",
 			Usage: "apply Constraints as if repos were building",
@@ -220,7 +224,6 @@ func main() {
 			Flags: []cli.Flag{
 				commonFlags["all"],
 				commonFlags["uniq"],
-				commonFlags["namespace"],
 				commonFlags["apply-constraints"],
 				cli.BoolFlag{
 					Name:  "build-order",
@@ -240,7 +243,6 @@ func main() {
 			Flags: []cli.Flag{
 				commonFlags["all"],
 				commonFlags["uniq"],
-				commonFlags["namespace"],
 				cli.StringFlag{
 					Name:   "pull",
 					Value:  "missing",
@@ -258,8 +260,11 @@ func main() {
 			Flags: []cli.Flag{
 				commonFlags["all"],
 				commonFlags["uniq"],
-				commonFlags["namespace"],
 				commonFlags["dry-run"],
+				cli.StringFlag{
+					Name:  "target-namespace",
+					Usage: `target namespace to tag into ("docker tag namespace/repo:tag target-namespace/repo:tag")`,
+				},
 			},
 			Before: subcommandBeforeFactory("tag"),
 			Action: cmdTag,
@@ -270,7 +275,6 @@ func main() {
 			Flags: []cli.Flag{
 				commonFlags["all"],
 				commonFlags["uniq"],
-				commonFlags["namespace"],
 				commonFlags["dry-run"],
 				commonFlags["force"],
 			},
@@ -282,7 +286,6 @@ func main() {
 			Usage: `update shared tags in the registry (and multi-architecture tags)`,
 			Flags: []cli.Flag{
 				commonFlags["all"],
-				commonFlags["namespace"],
 				commonFlags["dry-run"],
 				commonFlags["force"],
 				cli.BoolFlag{

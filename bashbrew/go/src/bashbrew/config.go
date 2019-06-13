@@ -22,11 +22,11 @@ type FlagsConfigEntry struct {
 	Cache      string
 	Debug      string
 	Unique     string
-	Namespace  string
 	BuildOrder string
 	Pull       string
 
 	Arch                 string
+	Namespace            string
 	Constraints          []string `delim:"," strip:"\n\r\t "`
 	ExclusiveConstraints string
 	ApplyConstraints     string
@@ -50,9 +50,6 @@ func (dst *FlagsConfigEntry) Apply(src FlagsConfigEntry) {
 	if src.Unique != "" {
 		dst.Unique = src.Unique
 	}
-	if src.Namespace != "" {
-		dst.Namespace = src.Namespace
-	}
 	if src.BuildOrder != "" {
 		dst.BuildOrder = src.BuildOrder
 	}
@@ -61,6 +58,9 @@ func (dst *FlagsConfigEntry) Apply(src FlagsConfigEntry) {
 	}
 	if src.Arch != "" {
 		dst.Arch = src.Arch
+	}
+	if src.Namespace != "" {
+		dst.Namespace = src.Namespace
 	}
 	if len(src.Constraints) > 0 {
 		dst.Constraints = src.Constraints[:]
@@ -84,6 +84,7 @@ func (config FlagsConfigEntry) Vars() map[string]map[string]interface{} {
 			"debug":   config.Debug,
 
 			"arch":                  config.Arch,
+			"namespace":             config.Namespace,
 			"constraint":            config.Constraints,
 			"exclusive-constraints": config.ExclusiveConstraints,
 
@@ -92,7 +93,6 @@ func (config FlagsConfigEntry) Vars() map[string]map[string]interface{} {
 
 		"local": {
 			"uniq":        config.Unique,
-			"namespace":   config.Namespace,
 			"build-order": config.BuildOrder,
 			"pull":        config.Pull,
 

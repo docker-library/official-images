@@ -16,7 +16,6 @@ func cmdPush(c *cli.Context) error {
 	}
 
 	uniq := c.Bool("uniq")
-	namespace := c.String("namespace")
 	dryRun := c.Bool("dry-run")
 	force := c.Bool("force")
 
