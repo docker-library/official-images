@@ -1,55 +1,105 @@
-# this file is generated via https://github.com/docker-library/tomcat/blob/7eae995786f14b4e96010bcc11338724706e30eb/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/tomcat/blob/1c1e57eac69764f7c46309d7321f381209067d9c/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/tomcat.git
 
-Tags: 7.0.94-jdk8, 7.0-jdk8, 7-jdk8, 7.0.94, 7.0, 7
-Architectures: amd64
-GitCommit: 7eae995786f14b4e96010bcc11338724706e30eb
-Directory: 7/jdk8
-
-Tags: 7.0.94-jdk8-slim, 7.0-jdk8-slim, 7-jdk8-slim, 7.0.94-slim, 7.0-slim, 7-slim
-Architectures: amd64
-GitCommit: 7eae995786f14b4e96010bcc11338724706e30eb
-Directory: 7/jdk8-slim
-
-Tags: 8.5.42-jdk8, 8.5-jdk8, 8-jdk8, jdk8, 8.5.42, 8.5, 8, latest
-Architectures: amd64
-GitCommit: 1c438768f847f4af954a8f63cd6ffbffef076e30
-Directory: 8.5/jdk8
-
-Tags: 8.5.42-jdk8-slim, 8.5-jdk8-slim, 8-jdk8-slim, jdk8-slim, 8.5.42-slim, 8.5-slim, 8-slim, slim
-Architectures: amd64
-GitCommit: 1c438768f847f4af954a8f63cd6ffbffef076e30
-Directory: 8.5/jdk8-slim
-
-Tags: 8.5.42-jdk11, 8.5-jdk11, 8-jdk11, jdk11
+Tags: 9.0.21-jdk11-openjdk, 9.0-jdk11-openjdk, 9-jdk11-openjdk, 9.0.21-jdk11, 9.0-jdk11, 9-jdk11, 9.0.21, 9.0, 9
 Architectures: amd64, arm64v8
-GitCommit: 1c438768f847f4af954a8f63cd6ffbffef076e30
-Directory: 8.5/jdk11
+GitCommit: 1c1e57eac69764f7c46309d7321f381209067d9c
+Directory: 9.0/jdk11/openjdk
 
-Tags: 8.5.42-jdk11-slim, 8.5-jdk11-slim, 8-jdk11-slim, jdk11-slim
+Tags: 9.0.21-jdk11-openjdk-slim, 9.0-jdk11-openjdk-slim, 9-jdk11-openjdk-slim
 Architectures: amd64, arm64v8
-GitCommit: 1c438768f847f4af954a8f63cd6ffbffef076e30
-Directory: 8.5/jdk11-slim
+GitCommit: 1c1e57eac69764f7c46309d7321f381209067d9c
+Directory: 9.0/jdk11/openjdk-slim
 
-Tags: 9.0.21-jdk8, 9.0-jdk8, 9-jdk8
+Tags: 9.0.21-jdk11-adoptopenjdk-hotspot, 9.0-jdk11-adoptopenjdk-hotspot, 9-jdk11-adoptopenjdk-hotspot
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 1c1e57eac69764f7c46309d7321f381209067d9c
+Directory: 9.0/jdk11/adoptopenjdk-hotspot
+
+Tags: 9.0.21-jdk11-adoptopenjdk-openj9, 9.0-jdk11-adoptopenjdk-openj9, 9-jdk11-adoptopenjdk-openj9
+Architectures: amd64, ppc64le, s390x
+GitCommit: 1c1e57eac69764f7c46309d7321f381209067d9c
+Directory: 9.0/jdk11/adoptopenjdk-openj9
+
+Tags: 9.0.21-jdk8-openjdk, 9.0-jdk8-openjdk, 9-jdk8-openjdk, 9.0.21-jdk8, 9.0-jdk8, 9-jdk8
 Architectures: amd64
-GitCommit: 32a6acab8417c3812c92887d8cc6660fd4aa4bc4
-Directory: 9.0/jdk8
+GitCommit: 1c1e57eac69764f7c46309d7321f381209067d9c
+Directory: 9.0/jdk8/openjdk
 
-Tags: 9.0.21-jdk8-slim, 9.0-jdk8-slim, 9-jdk8-slim
+Tags: 9.0.21-jdk8-openjdk-slim, 9.0-jdk8-openjdk-slim, 9-jdk8-openjdk-slim
 Architectures: amd64
-GitCommit: 32a6acab8417c3812c92887d8cc6660fd4aa4bc4
-Directory: 9.0/jdk8-slim
+GitCommit: 1c1e57eac69764f7c46309d7321f381209067d9c
+Directory: 9.0/jdk8/openjdk-slim
 
-Tags: 9.0.21-jdk11, 9.0-jdk11, 9-jdk11, 9.0.21, 9.0, 9
-Architectures: amd64, arm64v8
-GitCommit: 32a6acab8417c3812c92887d8cc6660fd4aa4bc4
-Directory: 9.0/jdk11
+Tags: 9.0.21-jdk8-adoptopenjdk-hotspot, 9.0-jdk8-adoptopenjdk-hotspot, 9-jdk8-adoptopenjdk-hotspot
+Architectures: amd64, ppc64le, s390x
+GitCommit: 1c1e57eac69764f7c46309d7321f381209067d9c
+Directory: 9.0/jdk8/adoptopenjdk-hotspot
 
-Tags: 9.0.21-jdk11-slim, 9.0-jdk11-slim, 9-jdk11-slim, 9.0.21-slim, 9.0-slim, 9-slim
+Tags: 9.0.21-jdk8-adoptopenjdk-openj9, 9.0-jdk8-adoptopenjdk-openj9, 9-jdk8-adoptopenjdk-openj9
+Architectures: amd64, ppc64le, s390x
+GitCommit: 1c1e57eac69764f7c46309d7321f381209067d9c
+Directory: 9.0/jdk8/adoptopenjdk-openj9
+
+Tags: 8.5.42-jdk11-openjdk, 8.5-jdk11-openjdk, 8-jdk11-openjdk, jdk11-openjdk, 8.5.42-jdk11, 8.5-jdk11, 8-jdk11, jdk11
 Architectures: amd64, arm64v8
-GitCommit: 32a6acab8417c3812c92887d8cc6660fd4aa4bc4
-Directory: 9.0/jdk11-slim
+GitCommit: 1c1e57eac69764f7c46309d7321f381209067d9c
+Directory: 8.5/jdk11/openjdk
+
+Tags: 8.5.42-jdk11-openjdk-slim, 8.5-jdk11-openjdk-slim, 8-jdk11-openjdk-slim, jdk11-openjdk-slim
+Architectures: amd64, arm64v8
+GitCommit: 1c1e57eac69764f7c46309d7321f381209067d9c
+Directory: 8.5/jdk11/openjdk-slim
+
+Tags: 8.5.42-jdk11-adoptopenjdk-hotspot, 8.5-jdk11-adoptopenjdk-hotspot, 8-jdk11-adoptopenjdk-hotspot, jdk11-adoptopenjdk-hotspot
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 1c1e57eac69764f7c46309d7321f381209067d9c
+Directory: 8.5/jdk11/adoptopenjdk-hotspot
+
+Tags: 8.5.42-jdk11-adoptopenjdk-openj9, 8.5-jdk11-adoptopenjdk-openj9, 8-jdk11-adoptopenjdk-openj9, jdk11-adoptopenjdk-openj9
+Architectures: amd64, ppc64le, s390x
+GitCommit: 1c1e57eac69764f7c46309d7321f381209067d9c
+Directory: 8.5/jdk11/adoptopenjdk-openj9
+
+Tags: 8.5.42-jdk8-openjdk, 8.5-jdk8-openjdk, 8-jdk8-openjdk, jdk8-openjdk, 8.5.42-jdk8, 8.5-jdk8, 8-jdk8, jdk8, 8.5.42, 8.5, 8, latest
+Architectures: amd64
+GitCommit: 1c1e57eac69764f7c46309d7321f381209067d9c
+Directory: 8.5/jdk8/openjdk
+
+Tags: 8.5.42-jdk8-openjdk-slim, 8.5-jdk8-openjdk-slim, 8-jdk8-openjdk-slim, jdk8-openjdk-slim
+Architectures: amd64
+GitCommit: 1c1e57eac69764f7c46309d7321f381209067d9c
+Directory: 8.5/jdk8/openjdk-slim
+
+Tags: 8.5.42-jdk8-adoptopenjdk-hotspot, 8.5-jdk8-adoptopenjdk-hotspot, 8-jdk8-adoptopenjdk-hotspot, jdk8-adoptopenjdk-hotspot
+Architectures: amd64, ppc64le, s390x
+GitCommit: 1c1e57eac69764f7c46309d7321f381209067d9c
+Directory: 8.5/jdk8/adoptopenjdk-hotspot
+
+Tags: 8.5.42-jdk8-adoptopenjdk-openj9, 8.5-jdk8-adoptopenjdk-openj9, 8-jdk8-adoptopenjdk-openj9, jdk8-adoptopenjdk-openj9
+Architectures: amd64, ppc64le, s390x
+GitCommit: 1c1e57eac69764f7c46309d7321f381209067d9c
+Directory: 8.5/jdk8/adoptopenjdk-openj9
+
+Tags: 7.0.94-jdk8-openjdk, 7.0-jdk8-openjdk, 7-jdk8-openjdk, 7.0.94-jdk8, 7.0-jdk8, 7-jdk8, 7.0.94, 7.0, 7
+Architectures: amd64
+GitCommit: 1c1e57eac69764f7c46309d7321f381209067d9c
+Directory: 7/jdk8/openjdk
+
+Tags: 7.0.94-jdk8-openjdk-slim, 7.0-jdk8-openjdk-slim, 7-jdk8-openjdk-slim
+Architectures: amd64
+GitCommit: 1c1e57eac69764f7c46309d7321f381209067d9c
+Directory: 7/jdk8/openjdk-slim
+
+Tags: 7.0.94-jdk8-adoptopenjdk-hotspot, 7.0-jdk8-adoptopenjdk-hotspot, 7-jdk8-adoptopenjdk-hotspot
+Architectures: amd64, ppc64le, s390x
+GitCommit: 1c1e57eac69764f7c46309d7321f381209067d9c
+Directory: 7/jdk8/adoptopenjdk-hotspot
+
+Tags: 7.0.94-jdk8-adoptopenjdk-openj9, 7.0-jdk8-adoptopenjdk-openj9, 7-jdk8-adoptopenjdk-openj9
+Architectures: amd64, ppc64le, s390x
+GitCommit: 1c1e57eac69764f7c46309d7321f381209067d9c
+Directory: 7/jdk8/adoptopenjdk-openj9
