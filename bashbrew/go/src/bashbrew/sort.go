@@ -101,27 +101,28 @@ func sortRepoObjects(rs []*Repo, applyConstraints bool) ([]*Repo, error) {
 				continue
 			}
 
-			from, err := r.DockerFrom(entry)
+			froms, err := r.DockerFroms(entry)
 			if err != nil {
 				return nil, err
 			}
-			from = latestizeRepoTag(from)
 
-			fromNode, ok := canonicalNodes[from]
-			if !ok {
-				// if our FROM isn't in the list of things we're sorting, it isn't relevant in this context
-				continue
-			}
+			for _, from := range froms {
+				fromNode, ok := canonicalNodes[from]
+				if !ok {
+					// if our FROM isn't in the list of things we're sorting, it isn't relevant in this context
+					continue
+				}
 
-			// TODO somehow reconcile/avoid "a:a -> b:b, b:b -> a:c" (which will exhibit here as cyclic)
-			for _, tag := range r.Tags("", false, entry) {
-				if tagNode, ok := canonicalNodes[tag]; ok {
-					if tagNode == fromNode {
-						// don't be cyclic
-						continue
-					}
-					if err := network.AddEdge(fromNode, tagNode); err != nil {
-						return nil, err
+				// TODO somehow reconcile/avoid "a:a -> b:b, b:b -> a:c" (which will exhibit here as cyclic)
+				for _, tag := range r.Tags("", false, entry) {
+					if tagNode, ok := canonicalNodes[tag]; ok {
+						if tagNode == fromNode {
+							// don't be cyclic
+							continue
+						}
+						if err := network.AddEdge(fromNode, tagNode); err != nil {
+							return nil, err
+						}
 					}
 				}
 			}

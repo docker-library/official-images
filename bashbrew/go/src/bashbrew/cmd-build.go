@@ -44,27 +44,29 @@ func cmdBuild(c *cli.Context) error {
 				continue
 			}
 
-			from, err := r.DockerFrom(entry)
+			froms, err := r.DockerFroms(entry)
 			if err != nil {
 				return cli.NewMultiError(fmt.Errorf(`failed fetching/scraping FROM for %q (tags %q)`, r.RepoName, entry.TagsString()), err)
 			}
 
-			if from != "scratch" && pull != "never" {
-				doPull := false
-				switch pull {
-				case "always":
-					doPull = true
-				case "missing":
-					_, err := dockerInspect("{{.Id}}", from)
-					doPull = (err != nil)
-				default:
-					return fmt.Errorf(`unexpected value for --pull: %s`, pull)
-				}
-				if doPull {
-					// TODO detect if "from" is something we've built (ie, "python:3-onbuild" is "FROM python:3" but we don't want to pull "python:3" if we "bashbrew build python")
-					fmt.Printf("Pulling %s (%s)\n", from, r.EntryIdentifier(entry))
-					if !dryRun {
-						dockerPull(from)
+			for _, from := range froms {
+				if from != "scratch" && pull != "never" {
+					doPull := false
+					switch pull {
+					case "always":
+						doPull = true
+					case "missing":
+						_, err := dockerInspect("{{.Id}}", from)
+						doPull = (err != nil)
+					default:
+						return fmt.Errorf(`unexpected value for --pull: %s`, pull)
+					}
+					if doPull {
+						// TODO detect if "from" is something we've built (ie, "python:3-onbuild" is "FROM python:3" but we don't want to pull "python:3" if we "bashbrew build python")
+						fmt.Printf("Pulling %s (%s)\n", from, r.EntryIdentifier(entry))
+						if !dryRun {
+							dockerPull(from)
+						}
 					}
 				}
 			}
@@ -89,6 +91,8 @@ func cmdBuild(c *cli.Context) error {
 						return cli.NewMultiError(fmt.Errorf(`failed generating git archive for %q (tags %q)`, r.RepoName, entry.TagsString()), err)
 					}
 					defer archive.Close()
+
+					// TODO use "meta.StageNames" to do "docker build --target" so we can tag intermediate stages too for cache (streaming "git archive" directly to "docker build" makes that a little hard to accomplish without re-streaming)
 
 					err = dockerBuild(cacheTag, entry.ArchFile(arch), archive)
 					if err != nil {
