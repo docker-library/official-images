@@ -242,7 +242,9 @@ func (r Repo) fetchGitRepo(arch string, entry *manifest.Manifest2822Entry) (stri
 		return "", err
 	}
 
-	_, err = gitRepo.CreateTag(arch+"/"+r.RepoName+"/"+entry.Tags[0], goGitPlumbing.NewHash(commit), nil)
+	gitTag := arch+"/"+r.RepoName+"/"+entry.Tags[0]
+	gitRepo.DeleteTag(gitTag) // avoid "ErrTagExists"
+	_, err = gitRepo.CreateTag(gitTag, goGitPlumbing.NewHash(commit), nil)
 	if err != nil {
 		return "", err
 	}
