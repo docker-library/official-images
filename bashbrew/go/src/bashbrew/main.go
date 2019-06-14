@@ -214,6 +214,10 @@ func main() {
 			Name:  "force",
 			Usage: "always push (skip the clever Hub API lookups that no-op things sooner if a push doesn't seem necessary)",
 		},
+		"target-namespace": cli.StringFlag{
+			Name:  "target-namespace",
+			Usage: `target namespace to act into ("docker tag namespace/repo:tag target-namespace/repo:tag", "docker push target-namespace/repo:tag")`,
+		},
 	}
 
 	app.Commands = []cli.Command{
@@ -261,10 +265,7 @@ func main() {
 				commonFlags["all"],
 				commonFlags["uniq"],
 				commonFlags["dry-run"],
-				cli.StringFlag{
-					Name:  "target-namespace",
-					Usage: `target namespace to tag into ("docker tag namespace/repo:tag target-namespace/repo:tag")`,
-				},
+				commonFlags["target-namespace"],
 			},
 			Before: subcommandBeforeFactory("tag"),
 			Action: cmdTag,
@@ -277,6 +278,7 @@ func main() {
 				commonFlags["uniq"],
 				commonFlags["dry-run"],
 				commonFlags["force"],
+				commonFlags["target-namespace"],
 			},
 			Before: subcommandBeforeFactory("push"),
 			Action: cmdPush,
@@ -288,6 +290,7 @@ func main() {
 				commonFlags["all"],
 				commonFlags["dry-run"],
 				commonFlags["force"],
+				commonFlags["target-namespace"],
 				cli.BoolFlag{
 					Name:  "single-arch",
 					Usage: `only act on the current architecture (for pushing "amd64/hello-world:latest", for example)`,

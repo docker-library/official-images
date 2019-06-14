@@ -16,11 +16,15 @@ func cmdPush(c *cli.Context) error {
 	}
 
 	uniq := c.Bool("uniq")
+	targetNamespace := c.String("target-namespace")
 	dryRun := c.Bool("dry-run")
 	force := c.Bool("force")
 
-	if namespace == "" {
-		return fmt.Errorf(`"--namespace" is a required flag for "push"`)
+	if targetNamespace == "" {
+		targetNamespace = namespace
+	}
+	if targetNamespace == "" {
+		return fmt.Errorf(`either "--target-namespace" or "--namespace" is a required flag for "push"`)
 	}
 
 	for _, repo := range repos {
@@ -29,7 +33,7 @@ func cmdPush(c *cli.Context) error {
 			return cli.NewMultiError(fmt.Errorf(`failed fetching repo %q`, repo), err)
 		}
 
-		tagRepo := path.Join(namespace, r.RepoName)
+		tagRepo := path.Join(targetNamespace, r.RepoName)
 		for _, entry := range r.Entries() {
 			if r.SkipConstraints(entry) {
 				continue

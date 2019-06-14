@@ -17,9 +17,6 @@ func cmdTag(c *cli.Context) error {
 	targetNamespace := c.String("target-namespace")
 	dryRun := c.Bool("dry-run")
 
-	if namespace == "" {
-		return fmt.Errorf(`"--namespace" is a required flag for "tag"`)
-	}
 	if targetNamespace == "" {
 		return fmt.Errorf(`"--target-namespace" is a required flag for "tag"`)
 	}
