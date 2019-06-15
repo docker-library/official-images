@@ -14,11 +14,11 @@ func cmdTag(c *cli.Context) error {
 	}
 
 	uniq := c.Bool("uniq")
-	namespace := c.String("namespace")
+	targetNamespace := c.String("target-namespace")
 	dryRun := c.Bool("dry-run")
 
-	if namespace == "" {
-		return fmt.Errorf(`"--namespace" is a required flag for "tag"`)
+	if targetNamespace == "" {
+		return fmt.Errorf(`"--target-namespace" is a required flag for "tag"`)
 	}
 
 	for _, repo := range repos {
@@ -33,12 +33,13 @@ func cmdTag(c *cli.Context) error {
 			}
 
 			for _, tag := range r.Tags("", uniq, entry) {
-				namespacedTag := path.Join(namespace, tag)
-				fmt.Printf("Tagging %s\n", namespacedTag)
+				sourceTag := path.Join(namespace, tag)
+				targetTag := path.Join(targetNamespace, tag)
+				fmt.Printf("Tagging %s\n", targetTag)
 				if !dryRun {
-					err = dockerTag(tag, namespacedTag)
+					err = dockerTag(sourceTag, targetTag)
 					if err != nil {
-						return cli.NewMultiError(fmt.Errorf(`failed tagging %q as %q`, tag, namespacedTag), err)
+						return cli.NewMultiError(fmt.Errorf(`failed tagging %q as %q`, sourceTag, targetTag), err)
 					}
 				}
 			}

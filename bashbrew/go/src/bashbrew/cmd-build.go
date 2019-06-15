@@ -18,7 +18,6 @@ func cmdBuild(c *cli.Context) error {
 	}
 
 	uniq := c.Bool("uniq")
-	namespace := c.String("namespace")
 	pull := c.String("pull")
 	switch pull {
 	case "always", "missing", "never":

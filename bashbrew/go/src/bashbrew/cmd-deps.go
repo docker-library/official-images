@@ -50,7 +50,7 @@ func cmdFamily(parents bool, c *cli.Context) error {
 				continue
 			}
 
-			for _, tag := range r.Tags("", false, entry) {
+			for _, tag := range r.Tags(namespace, false, entry) {
 				network.AddNode(tag, entry)
 			}
 		}
@@ -78,7 +78,7 @@ func cmdFamily(parents bool, c *cli.Context) error {
 					return cli.NewMultiError(fmt.Errorf(`failed fetching/scraping FROM for %q (tags %q, arch %q)`, r.RepoName, entry.TagsString(), entryArch), err)
 				}
 				for _, from := range froms {
-					for _, tag := range r.Tags("", false, entry) {
+					for _, tag := range r.Tags(namespace, false, entry) {
 						network.AddEdge(from, tag)
 					}
 				}
@@ -99,7 +99,7 @@ func cmdFamily(parents bool, c *cli.Context) error {
 				continue
 			}
 
-			for _, tag := range r.Tags("", uniq, entry) {
+			for _, tag := range r.Tags(namespace, uniq, entry) {
 				nodes := []topsortDepthNodes{}
 				if parents {
 					nodes = append(nodes, topsortDepthNodes{

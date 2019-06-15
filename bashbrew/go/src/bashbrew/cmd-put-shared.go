@@ -83,13 +83,16 @@ func cmdPutShared(c *cli.Context) error {
 		return cli.NewMultiError(fmt.Errorf(`failed gathering repo list`), err)
 	}
 
-	namespace := c.String("namespace")
 	dryRun := c.Bool("dry-run")
+	targetNamespace := c.String("target-namespace")
 	force := c.Bool("force")
 	singleArch := c.Bool("single-arch")
 
-	if namespace == "" {
-		return fmt.Errorf(`"--namespace" is a required flag for "put-shared"`)
+	if targetNamespace == "" {
+		targetNamespace = namespace
+	}
+	if targetNamespace == "" {
+		return fmt.Errorf(`either "--target-namespace" or "--namespace" is a required flag for "put-shared"`)
 	}
 
 	for _, repo := range repos {
@@ -98,7 +101,7 @@ func cmdPutShared(c *cli.Context) error {
 			return cli.NewMultiError(fmt.Errorf(`failed fetching repo %q`, repo), err)
 		}
 
-		targetRepo := path.Join(namespace, r.RepoName)
+		targetRepo := path.Join(targetNamespace, r.RepoName)
 
 		sharedTagGroups := []manifest.SharedTagGroup{}
 

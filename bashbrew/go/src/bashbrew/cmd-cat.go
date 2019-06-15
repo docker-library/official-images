@@ -55,6 +55,9 @@ func cmdCat(c *cli.Context) error {
 		"arch": func() string {
 			return arch
 		},
+		"namespace": func() string {
+			return namespace
+		},
 		"archNamespace": func(arch string) string {
 			return archNamespaces[arch]
 		},

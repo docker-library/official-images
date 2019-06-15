@@ -14,7 +14,6 @@ func cmdList(c *cli.Context) error {
 	}
 
 	uniq := c.Bool("uniq")
-	namespace := ""
 	applyConstraints := c.Bool("apply-constraints")
 	onlyRepos := c.Bool("repos")
 

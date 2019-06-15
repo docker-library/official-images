@@ -79,7 +79,7 @@ func sortRepoObjects(rs []*Repo, applyConstraints bool) ([]*Repo, error) {
 	for _, r := range rs {
 		node := r.Identifier()
 		for _, entry := range r.Entries() {
-			for _, tag := range r.Tags("", false, entry) {
+			for _, tag := range r.Tags(namespace, false, entry) {
 				if canonicalRepo, ok := canonicalRepos[tag]; ok && canonicalRepo.TagName != "" {
 					// if we run into a duplicate, we want to prefer a specific tag over a full repo
 					continue
@@ -114,7 +114,7 @@ func sortRepoObjects(rs []*Repo, applyConstraints bool) ([]*Repo, error) {
 				}
 
 				// TODO somehow reconcile/avoid "a:a -> b:b, b:b -> a:c" (which will exhibit here as cyclic)
-				for _, tag := range r.Tags("", false, entry) {
+				for _, tag := range r.Tags(namespace, false, entry) {
 					if tagNode, ok := canonicalNodes[tag]; ok {
 						if tagNode == fromNode {
 							// don't be cyclic
