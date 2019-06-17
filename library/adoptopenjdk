@@ -5,15 +5,15 @@ GitRepo: https://github.com/AdoptOpenJDK/openjdk-docker.git
 
 #-----------------------------hotspot v8 images---------------------------------
 
-Tags: 8u212-b03-jdk-hotspot, 8-jdk-hotspot, 8-hotspot
+Tags: 8u212-b04-jdk-hotspot, 8-jdk-hotspot, 8-hotspot
 Architectures: amd64, ppc64le, s390x
-GitCommit: ba8e2ff59253f16c76878d032a846199d58f453e
+GitCommit: 02e23cd61cc3e013c160a564b4ac0e4d18d94a0b
 Directory: 8/jdk/ubuntu
 File: Dockerfile.hotspot.releases.full
 
-Tags: 8u212-b03-jre-hotspot, 8-jre-hotspot
+Tags: 8u212-b04-jre-hotspot, 8-jre-hotspot
 Architectures: amd64, ppc64le, s390x
-GitCommit: ba8e2ff59253f16c76878d032a846199d58f453e
+GitCommit: 02e23cd61cc3e013c160a564b4ac0e4d18d94a0b
 Directory: 8/jre/ubuntu
 File: Dockerfile.hotspot.releases.full
 
