@@ -16,7 +16,7 @@ import (
 )
 
 var (
-	GitCommitRegex = regexp.MustCompile(`^[0-9a-f]{1,40}$`)
+	GitCommitRegex = regexp.MustCompile(`^[0-9a-f]{1,64}$`)
 	GitFetchRegex  = regexp.MustCompile(`^refs/(heads|tags)/[^*?:]+$`)
 )
 
@@ -86,6 +86,14 @@ func (entry *Manifest2822Entry) SeedArchValues() {
 	for field, val := range entry.Paragraph.Values {
 		if strings.HasSuffix(field, "-GitRepo") || strings.HasSuffix(field, "-GitFetch") || strings.HasSuffix(field, "-GitCommit") || strings.HasSuffix(field, "-Directory") || strings.HasSuffix(field, "-File") {
 			entry.ArchValues[field] = val
+		}
+	}
+}
+func (entry *Manifest2822Entry) CleanDirectoryValues() {
+	entry.Directory = path.Clean(entry.Directory)
+	for field, val := range entry.ArchValues {
+		if strings.HasSuffix(field, "-Directory") && val != "" {
+			entry.ArchValues[field] = path.Clean(val)
 		}
 	}
 }
@@ -385,7 +393,7 @@ func (manifest *Manifest2822) AddEntry(entry Manifest2822Entry) error {
 	}
 
 	entry.DeduplicateSharedTags()
-	entry.Directory = path.Clean(entry.Directory)
+	entry.CleanDirectoryValues()
 
 	if invalidArchitectures := entry.InvalidArchitectures(); len(invalidArchitectures) > 0 {
 		return fmt.Errorf("Tags %q has invalid Architectures: %q", entry.TagsString(), strings.Join(invalidArchitectures, ", "))
