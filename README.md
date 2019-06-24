@@ -117,8 +117,8 @@ Rebuilding the same `Dockerfile` should result in the same version of the image 
 No official images can be derived from, or depend on, non-official images with the following notable exceptions:
 
 -	[`FROM scratch`](https://hub.docker.com/_/scratch/)
--	[`FROM microsoft/windowsservercore`](https://hub.docker.com/r/microsoft/windowsservercore/)
--	[`FROM microsoft/nanoserver`](https://hub.docker.com/r/microsoft/nanoserver/)
+-	[`FROM mcr.microsoft.com/windows/servercore`](https://hub.docker.com/r/microsoft/windowsservercore/)
+-	[`FROM mcr.microsoft.com/windows/nanoserver`](https://hub.docker.com/r/microsoft/nanoserver/)
 
 #### Consistency
 
