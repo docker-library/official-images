@@ -147,11 +147,12 @@ copy-tar() {
 	local d dockerfiles=()
 	for d in "$src"/*/.bashbrew-dockerfile-name; do
 		local bf="$(< "$d")" dDir="$(dirname "$d")"
+		dockerfiles+=( "$dDir/$bf" )
 		if [ "$bf" = 'Dockerfile' ]; then
-			# "*" at the end here ensures we capture "Dockerfile.builder" style repos in a useful way too (busybox, hello-world)
-			dockerfiles+=( "$dDir/$bf"* )
-		else
-			dockerfiles+=( "$dDir/$bf" )
+			# if "Dockerfile.builder" exists, let's check that too (busybox, hello-world)
+			if [ -f "$dDir/$bf.builder" ]; then
+				dockerfiles+=( "$dDir/$bf.builder" )
+			fi
 		fi
 		rm "$d" # remove the ".bashbrew-dockerfile-name" file we created
 	done
