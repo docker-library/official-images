@@ -25,10 +25,6 @@ EOD
 cid="$(docker run -d "$serverImage")"
 trap "docker rm -vf $cid > /dev/null" EXIT
 
-# RACY TESTS ARE RACY
-sleep 1
-# TODO find a cleaner solution to this, similar to what we do in mysql-basics
-
 fcgi-request() {
 	local method="$1"
 
@@ -47,6 +43,9 @@ fcgi-request() {
 		"$clientImage" \
 		-bind -connect fpm:9000
 }
+
+# wait until ready
+. "$dir/../../retry.sh" --tries 30 'fcgi-request GET /index.php' > /dev/null 2>&1
 
 # Check that we can request /index.php with no params
 [ -n "$(fcgi-request GET "/index.php")" ]
