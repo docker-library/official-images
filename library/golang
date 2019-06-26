@@ -1,9 +1,41 @@
-# this file is generated via https://github.com/docker-library/golang/blob/a3e99c2914478c623a6142c4a61e2e508e0bc7e8/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/golang/blob/a8b5183271450c7519e8b1b179f00292757f8e7b/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit),
              Johan Euphrosine <proppy@google.com> (@proppy)
 GitRepo: https://github.com/docker-library/golang.git
+
+Tags: 1.13beta1-buster, 1.13-rc-buster, rc-buster
+SharedTags: 1.13beta1, 1.13-rc, rc
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: a8b5183271450c7519e8b1b179f00292757f8e7b
+Directory: 1.13-rc/buster
+
+Tags: 1.13beta1-alpine3.10, 1.13-rc-alpine3.10, rc-alpine3.10, 1.13beta1-alpine, 1.13-rc-alpine, rc-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: a8b5183271450c7519e8b1b179f00292757f8e7b
+Directory: 1.13-rc/alpine3.10
+
+Tags: 1.13beta1-windowsservercore-ltsc2016, 1.13-rc-windowsservercore-ltsc2016, rc-windowsservercore-ltsc2016
+SharedTags: 1.13beta1-windowsservercore, 1.13-rc-windowsservercore, rc-windowsservercore, 1.13beta1, 1.13-rc, rc
+Architectures: windows-amd64
+GitCommit: a8b5183271450c7519e8b1b179f00292757f8e7b
+Directory: 1.13-rc/windows/windowsservercore-ltsc2016
+Constraints: windowsservercore-ltsc2016
+
+Tags: 1.13beta1-windowsservercore-1803, 1.13-rc-windowsservercore-1803, rc-windowsservercore-1803
+SharedTags: 1.13beta1-windowsservercore, 1.13-rc-windowsservercore, rc-windowsservercore, 1.13beta1, 1.13-rc, rc
+Architectures: windows-amd64
+GitCommit: a8b5183271450c7519e8b1b179f00292757f8e7b
+Directory: 1.13-rc/windows/windowsservercore-1803
+Constraints: windowsservercore-1803
+
+Tags: 1.13beta1-windowsservercore-1809, 1.13-rc-windowsservercore-1809, rc-windowsservercore-1809
+SharedTags: 1.13beta1-windowsservercore, 1.13-rc-windowsservercore, rc-windowsservercore, 1.13beta1, 1.13-rc, rc
+Architectures: windows-amd64
+GitCommit: a8b5183271450c7519e8b1b179f00292757f8e7b
+Directory: 1.13-rc/windows/windowsservercore-1809
+Constraints: windowsservercore-1809
 
 Tags: 1.12.6-stretch, 1.12-stretch, 1-stretch, stretch
 SharedTags: 1.12.6, 1.12, 1, latest
