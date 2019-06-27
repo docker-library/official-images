@@ -1,24 +1,25 @@
-#MySQL is not officially supported for arm64v8.
-#Ongoing issue for the same is: https://github.com/docker-library/mysql/issues/318
+# MySQL is not officially supported for arm64v8.
+# Ongoing issue for the same is: https://github.com/docker-library/mysql/issues/318
+# We don't support arm64v8 FTM for XWiki 10.x since that requires Java 11 and XWiki 10.x doesn't support Java 11.
 Maintainers: XWiki Core Dev Team <committers@xwiki.org> (@xwiki)
 GitRepo: https://github.com/xwiki-contrib/docker-xwiki.git
 
 Tags: 10, 10.11, 10.11.8, 10-mysql-tomcat, mysql-tomcat, lts-mysql-tomcat, lts-mysql, lts
 Architectures: amd64
-GitCommit: 2e3fb7a19f326c9b49a9c08057e6962ef0b1e83a
+GitCommit: 94346cc5c12e5b4410c7ee68083c596cdd708085
 Directory: 10/mysql-tomcat
 
 Tags: 10-postgres-tomcat, 10.11-postgres-tomcat, 10.11.8-postgres-tomcat, postgres-tomcat, lts-postgres-tomcat, lts-postgres
-Architectures: amd64, arm64v8
-GitCommit: 2e3fb7a19f326c9b49a9c08057e6962ef0b1e83a
+Architectures: amd64
+GitCommit: 94346cc5c12e5b4410c7ee68083c596cdd708085
 Directory: 10/postgres-tomcat
 
-Tags: 11, 11.4, 11-mysql-tomcat, 11.4-mysql-tomcat, stable-mysql-tomcat, stable-mysql, stable, latest
+Tags: 11, 11.5, 11-mysql-tomcat, 11.5-mysql-tomcat, stable-mysql-tomcat, stable-mysql, stable, latest
 Architectures: amd64
-GitCommit: 04de95a03c648f4d498785d75d481de4bc4cabc9
+GitCommit: 94346cc5c12e5b4410c7ee68083c596cdd708085
 Directory: 11/mysql-tomcat
 
-Tags: 11-postgres-tomcat, 11.4-postgres-tomcat, stable-postgres-tomcat, stable-postgres
+Tags: 11-postgres-tomcat, 11.5-postgres-tomcat, stable-postgres-tomcat, stable-postgres
 Architectures: amd64, arm64v8
-GitCommit: 04de95a03c648f4d498785d75d481de4bc4cabc9
+GitCommit: 94346cc5c12e5b4410c7ee68083c596cdd708085
 Directory: 11/postgres-tomcat
