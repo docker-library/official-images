@@ -18,6 +18,9 @@ import (
 var (
 	GitCommitRegex = regexp.MustCompile(`^[0-9a-f]{1,64}$`)
 	GitFetchRegex  = regexp.MustCompile(`^refs/(heads|tags)/[^*?:]+$`)
+
+	// https://github.com/docker/distribution/blob/v2.7.1/reference/regexp.go#L37
+	ValidTagRegex = regexp.MustCompile(`^\w[\w.-]{0,127}$`)
 )
 
 type Manifest2822 struct {
@@ -395,6 +398,9 @@ func (manifest *Manifest2822) AddEntry(entry Manifest2822Entry) error {
 	entry.DeduplicateSharedTags()
 	entry.CleanDirectoryValues()
 
+	if invalidTags := entry.InvalidTags(); len(invalidTags) > 0 {
+		return fmt.Errorf("Tags %q has invalid (Shared)Tags: %q", entry.TagsString(), strings.Join(invalidTags, ", "))
+	}
 	if invalidArchitectures := entry.InvalidArchitectures(); len(invalidArchitectures) > 0 {
 		return fmt.Errorf("Tags %q has invalid Architectures: %q", entry.TagsString(), strings.Join(invalidArchitectures, ", "))
 	}
@@ -453,6 +459,16 @@ func (entry Manifest2822Entry) InvalidMaintainers() []string {
 	for _, maintainer := range entry.Maintainers {
 		if !MaintainersRegex.MatchString(maintainer) {
 			invalid = append(invalid, maintainer)
+		}
+	}
+	return invalid
+}
+
+func (entry Manifest2822Entry) InvalidTags() []string {
+	invalid := []string{}
+	for _, tag := range append(append([]string{}, entry.Tags...), entry.SharedTags...) {
+		if !ValidTagRegex.MatchString(tag) {
+			invalid = append(invalid, tag)
 		}
 	}
 	return invalid
