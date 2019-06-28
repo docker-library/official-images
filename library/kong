@@ -2,82 +2,36 @@ Maintainers: Kong Docker Maintainers <support@konghq.com> (@thekonginc)
 GitRepo: https://github.com/Kong/docker-kong.git
 # needs "Constraints" to match "centos" (which this image is "FROM")
 
-Tags: 1.2.0-alpine, 1.2.0, 1.2, latest
-GitCommit: b6724821a203b5a089edfeafe2a165bccdba074e
-GitFetch: refs/tags/1.2.0
+Tags: 1.2.1-alpine, 1.2.1, 1.2, latest
+GitCommit: 43b86e0b483f8312d32450f9adc8bf3c60a8e2e8
+GitFetch: refs/tags/1.2.1
 Directory: alpine
 
-Tags: 1.2.0-centos, 1.2-centos
-GitCommit: b6724821a203b5a089edfeafe2a165bccdba074e
-GitFetch: refs/tags/1.2.0
+Tags: 1.2.1-centos, 1.2-centos
+GitCommit: 43b86e0b483f8312d32450f9adc8bf3c60a8e2e8
+GitFetch: refs/tags/1.2.1
 Constraints: !aufs
 Directory: centos
 
 Tags: 1.1.2-alpine, 1.1.2, 1.1
-GitCommit: bb4efafd0e2272be1c27b9aa2de60cd0022a3fad
+GitCommit: 32cce9650f1877b85a71b33595bd4eb45134e50f
 GitFetch: refs/tags/1.1.2
 Directory: alpine
 
 Tags: 1.1.2-centos, 1.1-centos
-GitCommit: bb4efafd0e2272be1c27b9aa2de60cd0022a3fad
+GitCommit: 32cce9650f1877b85a71b33595bd4eb45134e50f
 GitFetch: refs/tags/1.1.2
 Constraints: !aufs
 Directory: centos
 
 Tags: 1.0.3-alpine, 1.0.3, 1.0
-GitCommit: 61ca745bf9ae97af6d950dace81680a855b96a45
+GitCommit: 5605ef3e52111bb4edfa48def7aee19ada9bf8fb
 GitFetch: refs/tags/1.0.3
 Directory: alpine
 
 Tags: 1.0.3-centos, 1.0-centos
-GitCommit: 61ca745bf9ae97af6d950dace81680a855b96a45
+GitCommit: 5605ef3e52111bb4edfa48def7aee19ada9bf8fb
 GitFetch: refs/tags/1.0.3
 Constraints: !aufs
 Directory: centos
 
-Tags: 0.15.0-alpine, 0.15-alpine, 0.15.0, 0.15
-GitCommit: 7b766824d850af001d0c6c7a0ecbaced4522d575
-GitFetch: refs/tags/0.15.0
-Directory: alpine
-
-Tags: 0.15.0-centos, 0.15-centos
-GitCommit: 7b766824d850af001d0c6c7a0ecbaced4522d575
-GitFetch: refs/tags/0.15.0
-Constraints: !aufs
-Directory: centos
-
-Tags: 0.14.1-alpine, 0.14-alpine, 0.14.1, 0.14
-GitCommit: 9bbc9e8b4a61cba5cc4e4e4562a802dace4348ff
-Directory: alpine
-
-Tags: 0.14.1-centos, 0.14-centos
-GitCommit: 9bbc9e8b4a61cba5cc4e4e4562a802dace4348ff
-Constraints: !aufs
-Directory: centos
-
-Tags: 0.13.1-alpine, 0.13-alpine, 0.13.1, 0.13
-GitCommit: 6e2035c5739482f0616021a7eda04ec6809d9f3e
-Directory: alpine
-
-Tags: 0.13.1-centos, 0.13-centos
-GitCommit: 6e2035c5739482f0616021a7eda04ec6809d9f3e
-Constraints: !aufs
-Directory: centos
-
-Tags: 0.12-alpine, 0.12.3-alpine
-GitCommit: 95f9e8ebfd735f4ab09af71bf060d200a9a7a981
-Directory: alpine
-
-Tags: 0.12-centos, 0.12.3-centos, 0.12, 0.12.3
-GitCommit: 95f9e8ebfd735f4ab09af71bf060d200a9a7a981
-Constraints: !aufs
-Directory: centos
-
-Tags: 0.11-alpine, 0.11.2-alpine
-GitCommit: 2ed0fad88ed81623ea4afb2111033a9d87f3c03c
-Directory: alpine
-
-Tags: 0.11, 0.11.2
-GitCommit: aa9ab06921a36079eb362229c9241ef9b3cf894e
-Constraints: !aufs
-Directory: centos
