@@ -53,7 +53,12 @@ rabbitmqctl() {
 	docker run -i --rm --link "$cname" -e RABBITMQ_ERLANG_COOKIE "$serverImage" \
 		rabbitmqctl --node "rabbit@$cname" "$@"
 }
+rabbitmq-diagnostics() {
+	docker run -i --rm --link "$cname" -e RABBITMQ_ERLANG_COOKIE "$serverImage" \
+		rabbitmq-diagnostics --node "rabbit@$cname" "$@"
+}
 
-. "$dir/../../retry.sh" 'rabbitmqctl status'
+. "$dir/../../retry.sh" 'rabbitmq-diagnostics check_port_connectivity'
 
+rabbitmqctl status
 testssl --protocols --standard --each-cipher
