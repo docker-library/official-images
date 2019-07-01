@@ -192,6 +192,7 @@ imageTests+=(
 	'
 	[rabbitmq]='
 		rabbitmq-basics
+		rabbitmq-tls
 	'
 	[r-base]='
 	'
