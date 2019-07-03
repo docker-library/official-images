@@ -6,24 +6,26 @@ GitRepo: https://github.com/alt-cloud/docker-brew-alt.git
 Constraints: !aufs
 
 Tags: p9, latest
-Architectures: amd64, i386, arm64v8
+Architectures: amd64, i386, arm64v8, ppc64le
 GitFetch: refs/heads/p9
-GitCommit: 95077f7ba31b84afd197195b9d120ab1ca4021d3
+GitCommit: 9f4e4ef359c3b555458af34084e3d7236dc001e8
 amd64-Directory: x86_64/
 i386-Directory: i586/
 arm64v8-Directory: aarch64/
+ppc64le-Directory: ppc64le/
 
 Tags: p8
 Architectures: amd64, i386
 GitFetch: refs/heads/p8
-GitCommit: 6c0cb7e244cab49515ddff7d081861eca5bf14e6
+GitCommit: cb59c4c01e5791db758805ab64a6522d790dedd4
 amd64-Directory: x86_64/
 i386-Directory: i586/
 
 Tags: sisyphus
-Architectures: amd64, i386, arm64v8
+Architectures: amd64, i386, arm64v8, ppc64le
 GitFetch: refs/heads/sisyphus
-GitCommit: d32040422c8f7711a2849f6af41d25bdba420e4d
+GitCommit: 9b79e4b2426ae41d188e838c511eb1097aef21f9
 amd64-Directory: x86_64/
 arm64v8-Directory: aarch64/
 i386-Directory: i586/
+ppc64le-Directory: ppc64le/
