@@ -100,7 +100,7 @@ sub bashbrew (@) {
 	return $output;
 }
 
-sub get_manifest_p ($org, $repo, $ref, $tries = 3) {
+sub get_manifest_p ($org, $repo, $ref, $tries = 10) {
 	--$tries;
 	my $lastTry = $tries < 1;
 
@@ -143,7 +143,7 @@ sub get_manifest_p ($org, $repo, $ref, $tries = 3) {
 	});
 }
 
-sub get_blob_p ($org, $repo, $ref, $tries = 3) {
+sub get_blob_p ($org, $repo, $ref, $tries = 10) {
 	die "unexpected blob reference for '$org/$repo': '$ref'" unless $ref =~ m!^sha256:!;
 
 	--$tries;
@@ -361,11 +361,13 @@ Mojo::Promise->map({ concurrency => 8 }, sub ($img) {
 		? ( "$repo:$tag" )
 		: ( List::Util::uniq sort split /\n/, bashbrew('list', $repo) )
 	);
+	return Mojo::Promise->resolve unless @tags; # no tags, nothing to do! (opensuse, etc)
 
 	return Mojo::Promise->map({ concurrency => 1 }, sub ($repoTag) {
 		my (undef, $repo, $tag) = split_image_name($repoTag);
 
 		my @arches = List::Util::uniq sort split /\n/, bashbrew('cat', '--format', '{{ range .Entries }}{{ range .Architectures }}{{ . }}={{ archNamespace . }}{{ "\n" }}{{ end }}{{ end }}', "$repo:$tag");
+		return Mojo::Promise->resolve unless @arches; # no arches, nothing to do!
 
 		return Mojo::Promise->map({ concurrency => 1 }, sub ($archData) {
 			my ($arch, $archNamespace) = split /=/, $archData;
