@@ -39,7 +39,7 @@ fcgi-request() {
 }
 
 # Make sure that PHP-FPM is listening and ready
-. "$dir/../../retry.sh" --tries 30 'fcgi-request GET /index.php' > /dev/null 2>&1
+. "$dir/../../retry.sh" --tries 50 --sleep 5 'fcgi-request GET /index.php' > /dev/null 2>&1
 
 # Check that we can request / and that it contains the pattern "Finish setup" somewhere
 # <input type="submit" class="primary" value="Finish setup" data-finishing="Finishing …">

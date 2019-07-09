@@ -23,7 +23,7 @@ _request() {
 }
 
 # Make sure that Apache is listening and ready
-. "$dir/../../retry.sh" --tries 30 '_request GET / --output /dev/null'
+. "$dir/../../retry.sh" --tries 50 --sleep 5 '_request GET / --output /dev/null'
 
 # Check that we can request / and that it contains the pattern "Finish setup" somewhere
 # <input type="submit" class="primary" value="Finish setup" data-finishing="Finishing …">
