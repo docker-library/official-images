@@ -1,7 +1,12 @@
 Maintainers: Andy Li <andy@onthewings.net> (@andyli)
 GitRepo: https://github.com/HaxeFoundation/docker-library-haxe.git
 
-Tags: 3.4.7-stretch, 3.4-stretch, 3.4.7, 3.4, latest
+Tags: 3.4.7-buster, 3.4-buster, 3.4.7, 3.4, latest
+Architectures: amd64, arm32v7, arm64v8
+GitCommit: d1948525b8a09b71846fd77d92a9c83162eb5c73
+Directory: 3.4/buster
+
+Tags: 3.4.7-stretch, 3.4-stretch
 Architectures: amd64, arm32v7, arm64v8
 GitCommit: e60ab8c2df98de16d9abfaf90b9227059433fd2e
 Directory: 3.4/stretch
@@ -11,12 +16,24 @@ Architectures: amd64
 GitCommit: d94c754a343676aede20497b5d28e8264e446ca6
 Directory: 3.4/jessie
 
-Tags: 3.4.7-windowsservercore-ltsc2016, 3.4-windowsservercore-ltsc2016, 3.4.7-windowsservercore, 3.4-windowsservercore
+Tags: 3.4.7-windowsservercore-1803, 3.4-windowsservercore-1803, 3.4.7-windowsservercore, 3.4-windowsservercore, 3.4.7, 3.4, latest
 Architectures: windows-amd64
-GitCommit: 5253ae458dec8d641082674de522a055f245a62e
-Directory: 3.4/windowsservercore-ltsc2016
+GitCommit: 9ff3af6f429e90f5a5bd913ab9a471022e4e467a
+Directory: 3.4/windowsservercore-1803
+Constraints: windowsservercore-1803
 
-Tags: 3.4.7-alpine3.9, 3.4-alpine3.9, 3.4.7-alpine, 3.4-alpine
+Tags: 3.4.7-windowsservercore-ltsc2016, 3.4-windowsservercore-ltsc2016, 3.4.7-windowsservercore, 3.4-windowsservercore, 3.4.7, 3.4, latest
+Architectures: windows-amd64
+GitCommit: 9ff3af6f429e90f5a5bd913ab9a471022e4e467a
+Directory: 3.4/windowsservercore-ltsc2016
+Constraints: windowsservercore-ltsc2016
+
+Tags: 3.4.7-alpine3.10, 3.4-alpine3.10, 3.4.7-alpine, 3.4-alpine
+Architectures: amd64, arm64v8
+GitCommit: d1948525b8a09b71846fd77d92a9c83162eb5c73
+Directory: 3.4/alpine3.10
+
+Tags: 3.4.7-alpine3.9, 3.4-alpine3.9
 Architectures: amd64, arm64v8
 GitCommit: e1f20012ff683a360ce99a0bccfbaf1996246832
 Directory: 3.4/alpine3.9
@@ -31,12 +48,12 @@ Architectures: amd64, arm64v8
 GitCommit: 63ce668557c6f5afe60bac087ec24f19390f2707
 Directory: 3.4/alpine3.7
 
-Tags: 3.4.7-alpine3.6, 3.4-alpine3.6
-Architectures: amd64, arm64v8
-GitCommit: 63ce668557c6f5afe60bac087ec24f19390f2707
-Directory: 3.4/alpine3.6
+Tags: 3.3.0-rc.1-buster, 3.3.0-buster, 3.3.0-rc.1, 3.3-buster, 3.3.0, 3.3
+Architectures: amd64, arm32v7, arm64v8
+GitCommit: d1948525b8a09b71846fd77d92a9c83162eb5c73
+Directory: 3.3/buster
 
-Tags: 3.3.0-rc.1-stretch, 3.3.0-stretch, 3.3-stretch, 3.3.0-rc.1, 3.3.0, 3.3
+Tags: 3.3.0-rc.1-stretch, 3.3.0-stretch, 3.3-stretch
 Architectures: amd64, arm32v7, arm64v8
 GitCommit: e60ab8c2df98de16d9abfaf90b9227059433fd2e
 Directory: 3.3/stretch
@@ -46,12 +63,24 @@ Architectures: amd64
 GitCommit: d94c754a343676aede20497b5d28e8264e446ca6
 Directory: 3.3/jessie
 
-Tags: 3.3.0-rc.1-windowsservercore-ltsc2016, 3.3.0-windowsservercore-ltsc2016, 3.3-windowsservercore-ltsc2016, 3.3.0-rc.1-windowsservercore, 3.3.0-windowsservercore, 3.3-windowsservercore
+Tags: 3.3.0-rc.1-windowsservercore-1803, 3.3.0-rc.1-windowsservercore, 3.3.0-windowsservercore-1803, 3.3-windowsservercore-1803, 3.3.0-windowsservercore, 3.3-windowsservercore, 3.3.0-rc.1, 3.3.0, 3.3
 Architectures: windows-amd64
-GitCommit: 5253ae458dec8d641082674de522a055f245a62e
-Directory: 3.3/windowsservercore-ltsc2016
+GitCommit: 9ff3af6f429e90f5a5bd913ab9a471022e4e467a
+Directory: 3.3/windowsservercore-1803
+Constraints: windowsservercore-1803
 
-Tags: 3.3.0-rc.1-alpine3.9, 3.3.0-rc.1-alpine, 3.3.0-alpine3.9, 3.3-alpine3.9, 3.3.0-alpine, 3.3-alpine
+Tags: 3.3.0-rc.1-windowsservercore-ltsc2016, 3.3.0-windowsservercore-ltsc2016, 3.3-windowsservercore-ltsc2016, 3.3.0-rc.1-windowsservercore, 3.3.0-windowsservercore, 3.3-windowsservercore, 3.3.0-rc.1, 3.3.0, 3.3
+Architectures: windows-amd64
+GitCommit: 9ff3af6f429e90f5a5bd913ab9a471022e4e467a
+Directory: 3.3/windowsservercore-ltsc2016
+Constraints: windowsservercore-ltsc2016
+
+Tags: 3.3.0-rc.1-alpine3.10, 3.3.0-rc.1-alpine, 3.3.0-alpine3.10, 3.3-alpine3.10, 3.3.0-alpine, 3.3-alpine
+Architectures: amd64, arm64v8
+GitCommit: d1948525b8a09b71846fd77d92a9c83162eb5c73
+Directory: 3.3/alpine3.10
+
+Tags: 3.3.0-rc.1-alpine3.9, 3.3.0-alpine3.9, 3.3-alpine3.9
 Architectures: amd64, arm64v8
 GitCommit: e1f20012ff683a360ce99a0bccfbaf1996246832
 Directory: 3.3/alpine3.9
@@ -66,12 +95,12 @@ Architectures: amd64, arm64v8
 GitCommit: 63ce668557c6f5afe60bac087ec24f19390f2707
 Directory: 3.3/alpine3.7
 
-Tags: 3.3.0-rc.1-alpine3.6, 3.3.0-alpine3.6, 3.3-alpine3.6
-Architectures: amd64, arm64v8
-GitCommit: 63ce668557c6f5afe60bac087ec24f19390f2707
-Directory: 3.3/alpine3.6
+Tags: 3.2.1-buster, 3.2-buster, 3.2.1, 3.2
+Architectures: amd64, arm32v7, arm64v8
+GitCommit: d1948525b8a09b71846fd77d92a9c83162eb5c73
+Directory: 3.2/buster
 
-Tags: 3.2.1-stretch, 3.2-stretch, 3.2.1, 3.2
+Tags: 3.2.1-stretch, 3.2-stretch
 Architectures: amd64, arm32v7, arm64v8
 GitCommit: e60ab8c2df98de16d9abfaf90b9227059433fd2e
 Directory: 3.2/stretch
@@ -81,12 +110,24 @@ Architectures: amd64
 GitCommit: d94c754a343676aede20497b5d28e8264e446ca6
 Directory: 3.2/jessie
 
-Tags: 3.2.1-windowsservercore-ltsc2016, 3.2-windowsservercore-ltsc2016, 3.2.1-windowsservercore, 3.2-windowsservercore
+Tags: 3.2.1-windowsservercore-1803, 3.2-windowsservercore-1803, 3.2.1-windowsservercore, 3.2-windowsservercore, 3.2.1, 3.2
 Architectures: windows-amd64
-GitCommit: 5253ae458dec8d641082674de522a055f245a62e
-Directory: 3.2/windowsservercore-ltsc2016
+GitCommit: 9ff3af6f429e90f5a5bd913ab9a471022e4e467a
+Directory: 3.2/windowsservercore-1803
+Constraints: windowsservercore-1803
 
-Tags: 3.2.1-alpine3.9, 3.2-alpine3.9, 3.2.1-alpine, 3.2-alpine
+Tags: 3.2.1-windowsservercore-ltsc2016, 3.2-windowsservercore-ltsc2016, 3.2.1-windowsservercore, 3.2-windowsservercore, 3.2.1, 3.2
+Architectures: windows-amd64
+GitCommit: 9ff3af6f429e90f5a5bd913ab9a471022e4e467a
+Directory: 3.2/windowsservercore-ltsc2016
+Constraints: windowsservercore-ltsc2016
+
+Tags: 3.2.1-alpine3.10, 3.2-alpine3.10, 3.2.1-alpine, 3.2-alpine
+Architectures: amd64, arm64v8
+GitCommit: d1948525b8a09b71846fd77d92a9c83162eb5c73
+Directory: 3.2/alpine3.10
+
+Tags: 3.2.1-alpine3.9, 3.2-alpine3.9
 Architectures: amd64, arm64v8
 GitCommit: e1f20012ff683a360ce99a0bccfbaf1996246832
 Directory: 3.2/alpine3.9
@@ -101,12 +142,7 @@ Architectures: amd64, arm64v8
 GitCommit: 63ce668557c6f5afe60bac087ec24f19390f2707
 Directory: 3.2/alpine3.7
 
-Tags: 3.2.1-alpine3.6, 3.2-alpine3.6
-Architectures: amd64, arm64v8
-GitCommit: 63ce668557c6f5afe60bac087ec24f19390f2707
-Directory: 3.2/alpine3.6
-
-Tags: 3.1.3-stretch, 3.1-stretch, 3.1.3, 3.1
+Tags: 3.1.3-stretch, 3.1-stretch
 Architectures: amd64, arm32v7, arm64v8
 GitCommit: e60ab8c2df98de16d9abfaf90b9227059433fd2e
 Directory: 3.1/stretch
@@ -116,12 +152,24 @@ Architectures: amd64
 GitCommit: d94c754a343676aede20497b5d28e8264e446ca6
 Directory: 3.1/jessie
 
-Tags: 3.1.3-windowsservercore-ltsc2016, 3.1-windowsservercore-ltsc2016, 3.1.3-windowsservercore, 3.1-windowsservercore
+Tags: 3.1.3-windowsservercore-1803, 3.1-windowsservercore-1803, 3.1.3-windowsservercore, 3.1-windowsservercore, 3.1.3, 3.1
 Architectures: windows-amd64
-GitCommit: 5253ae458dec8d641082674de522a055f245a62e
-Directory: 3.1/windowsservercore-ltsc2016
+GitCommit: 9ff3af6f429e90f5a5bd913ab9a471022e4e467a
+Directory: 3.1/windowsservercore-1803
+Constraints: windowsservercore-1803
 
-Tags: 4.0.0-rc.3-stretch, 4.0.0-stretch, 4.0-stretch, 4.0.0-rc.3, 4.0.0, 4.0
+Tags: 3.1.3-windowsservercore-ltsc2016, 3.1-windowsservercore-ltsc2016, 3.1.3-windowsservercore, 3.1-windowsservercore, 3.1.3, 3.1
+Architectures: windows-amd64
+GitCommit: 9ff3af6f429e90f5a5bd913ab9a471022e4e467a
+Directory: 3.1/windowsservercore-ltsc2016
+Constraints: windowsservercore-ltsc2016
+
+Tags: 4.0.0-rc.3-buster, 4.0.0-buster, 4.0.0-rc.3, 4.0-buster, 4.0.0, 4.0
+Architectures: amd64, arm32v7, arm64v8
+GitCommit: d1948525b8a09b71846fd77d92a9c83162eb5c73
+Directory: 4.0/buster
+
+Tags: 4.0.0-rc.3-stretch, 4.0.0-stretch, 4.0-stretch
 Architectures: amd64, arm32v7, arm64v8
 GitCommit: cbdd0660674ed25410f08254872805669659bf6c
 Directory: 4.0/stretch
@@ -131,12 +179,24 @@ Architectures: amd64
 GitCommit: cbdd0660674ed25410f08254872805669659bf6c
 Directory: 4.0/jessie
 
-Tags: 4.0.0-rc.3-windowsservercore-ltsc2016, 4.0.0-windowsservercore-ltsc2016, 4.0-windowsservercore-ltsc2016, 4.0.0-rc.3-windowsservercore, 4.0.0-windowsservercore, 4.0-windowsservercore
+Tags: 4.0.0-rc.3-windowsservercore-1803, 4.0.0-rc.3-windowsservercore, 4.0.0-windowsservercore-1803, 4.0-windowsservercore-1803, 4.0.0-windowsservercore, 4.0-windowsservercore, 4.0.0-rc.3, 4.0.0, 4.0
 Architectures: windows-amd64
-GitCommit: 5253ae458dec8d641082674de522a055f245a62e
-Directory: 4.0/windowsservercore-ltsc2016
+GitCommit: 9ff3af6f429e90f5a5bd913ab9a471022e4e467a
+Directory: 4.0/windowsservercore-1803
+Constraints: windowsservercore-1803
 
-Tags: 4.0.0-rc.3-alpine3.9, 4.0.0-rc.3-alpine, 4.0.0-alpine3.9, 4.0-alpine3.9, 4.0.0-alpine, 4.0-alpine
+Tags: 4.0.0-rc.3-windowsservercore-ltsc2016, 4.0.0-windowsservercore-ltsc2016, 4.0-windowsservercore-ltsc2016, 4.0.0-rc.3-windowsservercore, 4.0.0-windowsservercore, 4.0-windowsservercore, 4.0.0-rc.3, 4.0.0, 4.0
+Architectures: windows-amd64
+GitCommit: 9ff3af6f429e90f5a5bd913ab9a471022e4e467a
+Directory: 4.0/windowsservercore-ltsc2016
+Constraints: windowsservercore-ltsc2016
+
+Tags: 4.0.0-rc.3-alpine3.10, 4.0.0-rc.3-alpine, 4.0.0-alpine3.10, 4.0-alpine3.10, 4.0.0-alpine, 4.0-alpine
+Architectures: amd64, arm64v8
+GitCommit: d1948525b8a09b71846fd77d92a9c83162eb5c73
+Directory: 4.0/alpine3.10
+
+Tags: 4.0.0-rc.3-alpine3.9, 4.0.0-alpine3.9, 4.0-alpine3.9
 Architectures: amd64, arm64v8
 GitCommit: cbdd0660674ed25410f08254872805669659bf6c
 Directory: 4.0/alpine3.9
@@ -150,9 +210,4 @@ Tags: 4.0.0-rc.3-alpine3.7, 4.0.0-alpine3.7, 4.0-alpine3.7
 Architectures: amd64, arm64v8
 GitCommit: cbdd0660674ed25410f08254872805669659bf6c
 Directory: 4.0/alpine3.7
-
-Tags: 4.0.0-rc.3-alpine3.6, 4.0.0-alpine3.6, 4.0-alpine3.6
-Architectures: amd64, arm64v8
-GitCommit: cbdd0660674ed25410f08254872805669659bf6c
-Directory: 4.0/alpine3.6
 
