@@ -1,6 +1,7 @@
 # Docker Official Images
 
 [![Build Status](https://travis-ci.org/docker-library/official-images.svg?branch=master)](https://travis-ci.org/docker-library/official-images)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fdocker-library%2Fofficial-images.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fdocker-library%2Fofficial-images?ref=badge_shield)
 
 ## Table of Contents
 
@@ -420,3 +421,7 @@ See the [multi-arch section](#multiple-architectures) for details on how to spec
 ## Bashbrew
 
 Bashbrew (`bashbrew`) is a tool for cloning, building, tagging, and pushing the Docker official images. See [`README.md` in the `bashbrew/` subfolder](bashbrew/README.md) for more information.
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fdocker-library%2Fofficial-images.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fdocker-library%2Fofficial-images?ref=badge_large)
