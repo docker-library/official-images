@@ -52,7 +52,7 @@ docker_() {
 		"$@"
 }
 
-. "$dir/../../retry.sh" 'docker_ version'
+. "$dir/../../retry.sh" --tries 30 'docker_ version'
 
 [ "$(docker_ images -q | wc -l)" = '0' ]
 docker_ pull busybox
