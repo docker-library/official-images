@@ -286,4 +286,8 @@ globalExcludeTests+=(
 	[ruby:slim_ruby-gems]=1
 	[percona:psmdb_percona-tokudb]=1
 	[percona:psmdb_percona-rocksdb]=1
+
+	# the Swift slim images are not expected to be able to run the swift-hello-world test because it involves compiling Swift code. The slim images are for running an already built binary.
+	# https://github.com/docker-library/official-images/pull/6302#issuecomment-512181863
+	[swift:slim_swift-hello-world]=1
 )
