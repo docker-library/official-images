@@ -1,4 +1,4 @@
-# this file is generated via https://github.com/docker-library/golang/blob/a8b5183271450c7519e8b1b179f00292757f8e7b/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/golang/blob/caca81426c40bd592bcfcde80485af80faedeb31/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit),
@@ -37,8 +37,13 @@ GitCommit: a8b5183271450c7519e8b1b179f00292757f8e7b
 Directory: 1.13-rc/windows/windowsservercore-1809
 Constraints: windowsservercore-1809
 
-Tags: 1.12.7-stretch, 1.12-stretch, 1-stretch, stretch
+Tags: 1.12.7-buster, 1.12-buster, 1-buster, buster
 SharedTags: 1.12.7, 1.12, 1, latest
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: caca81426c40bd592bcfcde80485af80faedeb31
+Directory: 1.12/buster
+
+Tags: 1.12.7-stretch, 1.12-stretch, 1-stretch, stretch
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: ce2392f637d95ca2a09dee58d04578948c520cca
 Directory: 1.12/stretch
@@ -74,8 +79,13 @@ GitCommit: ce2392f637d95ca2a09dee58d04578948c520cca
 Directory: 1.12/windows/windowsservercore-1809
 Constraints: windowsservercore-1809
 
-Tags: 1.11.12-stretch, 1.11-stretch
+Tags: 1.11.12-buster, 1.11-buster
 SharedTags: 1.11.12, 1.11
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: caca81426c40bd592bcfcde80485af80faedeb31
+Directory: 1.11/buster
+
+Tags: 1.11.12-stretch, 1.11-stretch
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: 103d42338bd9c3f661ade41f39dbc88fe9dc83a3
 Directory: 1.11/stretch
