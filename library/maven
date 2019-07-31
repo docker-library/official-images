@@ -15,11 +15,19 @@ Tags: 3.6.1-jdk-12, 3.6-jdk-12, 3-jdk-12
 Architectures: amd64
 GitCommit: 671605eb62f155b14d600b6941095a16e0b06f5e
 Directory: jdk-12
+Constraints: !aufs
 
 Tags: 3.6.1-jdk-13, 3.6-jdk-13, 3-jdk-13
 Architectures: amd64
 GitCommit: 671605eb62f155b14d600b6941095a16e0b06f5e
 Directory: jdk-13
+Constraints: !aufs
+
+Tags: 3.6.1-jdk-14, 3.6-jdk-14, 3-jdk-14
+Architectures: amd64
+GitCommit: 6613e08c6615a86223d26e545c7eed0ea018df6a
+Directory: jdk-14
+Constraints: !aufs
 
 Tags: 3.6.1-jdk-8-slim, 3.6-jdk-8-slim, 3-jdk-8-slim
 Architectures: amd64
@@ -42,11 +50,11 @@ GitCommit: 671605eb62f155b14d600b6941095a16e0b06f5e
 Directory: ibmjava-8
 
 Tags: 3.6.1-amazoncorretto-11, 3.6-amazoncorretto-11, 3-amazoncorretto-11, 3-amazoncorretto, amazoncorretto
-Architectures: amd64
+Architectures: amd64, arm64v8
 GitCommit: 671605eb62f155b14d600b6941095a16e0b06f5e
 Directory: amazoncorretto-11
 
 Tags: 3.6.1-amazoncorretto-8, 3.6-amazoncorretto-8, 3-amazoncorretto-8
-Architectures: amd64
+Architectures: amd64, arm64v8
 GitCommit: b7890c3af48387de72563b71d72b79bb9a328894
 Directory: amazoncorretto-8
