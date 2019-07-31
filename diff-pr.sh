@@ -1,5 +1,5 @@
-#!/bin/bash
-set -eo pipefail
+#!/usr/bin/env bash
+set -Eeuo pipefail
 shopt -s dotglob
 
 # make sure we can GTFO
@@ -158,24 +158,26 @@ copy-tar() {
 	done
 
 	for d in "${dockerfiles[@]}"; do
-		local dDir="$(dirname "$d")"
-		local dDirName="$(basename "$dDir")"
+		local dDir; dDir="$(dirname "$d")"
+		local dDirName; dDirName="$(basename "$dDir")"
 
-		IFS=$'\n'
-		local files=(
-			"$(basename "$d")"
-			$(awk '
-				toupper($1) == "COPY" || toupper($1) == "ADD" {
-					for (i = 2; i < NF; i++) {
-						if ($i ~ /^--from=/) {
-							next
-						}
-						if ($i !~ /^--chown=/) {
-							print $i
-						}
+		local IFS=$'\n'
+		local dBase; dBase="$(basename "$d")"
+		local copyAddContext; copyAddContext="$(awk '
+			toupper($1) == "COPY" || toupper($1) == "ADD" {
+				for (i = 2; i < NF; i++) {
+					if ($i ~ /^--from=/) {
+						next
+					}
+					if ($i !~ /^--chown=/) {
+						print $i
 					}
 				}
-			' "$d")
+			}
+		' "$d")"
+		local files=(
+			"$dBase"
+			$copyAddContext
 
 			# some extra files which are likely interesting if they exist, but no big loss if they do not
 			' .dockerignore' # will be used automatically by "docker build"
@@ -214,7 +216,8 @@ copy-tar() {
 					continue
 				fi
 
-				mkdir -p "$(dirname "$dst/$dDirName/$g")"
+				local gDir; gDir="$(dirname "$dst/$dDirName/$g")"
+				mkdir -p "$gDir"
 				cp -alT "$dDir/$g" "$dst/$dDirName/$g"
 
 				if [ "$listTarballContents" ]; then
@@ -235,6 +238,8 @@ copy-tar() {
 
 mkdir temp
 git -C temp init --quiet
+git -C temp config user.name 'Bogus'
+git -C temp config user.email 'bogus@bogus'
 
 bashbrew list "${images[@]}" | sort -uV > temp/_bashbrew-list || :
 bashbrew cat --format "$archesListTemplate" "${images[@]}" | sort -V > temp/_bashbrew-arches || :
