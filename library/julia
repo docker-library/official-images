@@ -1,11 +1,16 @@
-# this file is generated via https://github.com/docker-library/julia/blob/56a09f211ead57236aaedff59c61de3ed81fea72/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/julia/blob/1c1bfc53b104b73332954b1544adb53d52a190fa/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/julia.git
 
-Tags: 1.1.1-stretch, 1.1-stretch, 1-stretch, stretch
+Tags: 1.1.1-buster, 1.1-buster, 1-buster, buster
 SharedTags: 1.1.1, 1.1, 1, latest
+Architectures: amd64, arm64v8, i386
+GitCommit: 1c1bfc53b104b73332954b1544adb53d52a190fa
+Directory: 1.1/buster
+
+Tags: 1.1.1-stretch, 1.1-stretch, 1-stretch, stretch
 Architectures: amd64, arm64v8, i386
 GitCommit: 36c40cb93c8ca5c717ab7395a775f5683f176e97
 Directory: 1.1/stretch
@@ -24,8 +29,13 @@ GitCommit: 36c40cb93c8ca5c717ab7395a775f5683f176e97
 Directory: 1.1/windows/windowsservercore-1803
 Constraints: windowsservercore-1803
 
-Tags: 1.0.4-stretch, 1.0-stretch
+Tags: 1.0.4-buster, 1.0-buster
 SharedTags: 1.0.4, 1.0
+Architectures: amd64, arm32v7, arm64v8, i386
+GitCommit: 1c1bfc53b104b73332954b1544adb53d52a190fa
+Directory: 1.0/buster
+
+Tags: 1.0.4-stretch, 1.0-stretch
 Architectures: amd64, arm32v7, arm64v8, i386
 GitCommit: 092cb514a9994ee61ae883f53d56ea03c89a3c0c
 Directory: 1.0/stretch
