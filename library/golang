@@ -1,4 +1,4 @@
-# this file is generated via https://github.com/docker-library/golang/blob/caca81426c40bd592bcfcde80485af80faedeb31/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/golang/blob/7e21408e1f6ffe1809fb76bbfc1d9f1bb20e54bb/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit),
@@ -36,6 +36,20 @@ Architectures: windows-amd64
 GitCommit: a8b5183271450c7519e8b1b179f00292757f8e7b
 Directory: 1.13-rc/windows/windowsservercore-1809
 Constraints: windowsservercore-1809
+
+Tags: 1.13beta1-nanoserver-1803, 1.13-rc-nanoserver-1803, rc-nanoserver-1803
+SharedTags: 1.13beta1-nanoserver, 1.13-rc-nanoserver, rc-nanoserver
+Architectures: windows-amd64
+GitCommit: 88b5e2b06f35a9bd7ae91dd3a534be8dcf9be8c7
+Directory: 1.13-rc/windows/nanoserver-1803
+Constraints: nanoserver-1803, windowsservercore-1803
+
+Tags: 1.13beta1-nanoserver-1809, 1.13-rc-nanoserver-1809, rc-nanoserver-1809
+SharedTags: 1.13beta1-nanoserver, 1.13-rc-nanoserver, rc-nanoserver
+Architectures: windows-amd64
+GitCommit: 88b5e2b06f35a9bd7ae91dd3a534be8dcf9be8c7
+Directory: 1.13-rc/windows/nanoserver-1809
+Constraints: nanoserver-1809, windowsservercore-1809
 
 Tags: 1.12.7-buster, 1.12-buster, 1-buster, buster
 SharedTags: 1.12.7, 1.12, 1, latest
@@ -79,6 +93,20 @@ GitCommit: ce2392f637d95ca2a09dee58d04578948c520cca
 Directory: 1.12/windows/windowsservercore-1809
 Constraints: windowsservercore-1809
 
+Tags: 1.12.7-nanoserver-1803, 1.12-nanoserver-1803, 1-nanoserver-1803, nanoserver-1803
+SharedTags: 1.12.7-nanoserver, 1.12-nanoserver, 1-nanoserver, nanoserver
+Architectures: windows-amd64
+GitCommit: 88b5e2b06f35a9bd7ae91dd3a534be8dcf9be8c7
+Directory: 1.12/windows/nanoserver-1803
+Constraints: nanoserver-1803, windowsservercore-1803
+
+Tags: 1.12.7-nanoserver-1809, 1.12-nanoserver-1809, 1-nanoserver-1809, nanoserver-1809
+SharedTags: 1.12.7-nanoserver, 1.12-nanoserver, 1-nanoserver, nanoserver
+Architectures: windows-amd64
+GitCommit: 88b5e2b06f35a9bd7ae91dd3a534be8dcf9be8c7
+Directory: 1.12/windows/nanoserver-1809
+Constraints: nanoserver-1809, windowsservercore-1809
+
 Tags: 1.11.12-buster, 1.11-buster
 SharedTags: 1.11.12, 1.11
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
@@ -120,3 +148,17 @@ Architectures: windows-amd64
 GitCommit: 103d42338bd9c3f661ade41f39dbc88fe9dc83a3
 Directory: 1.11/windows/windowsservercore-1809
 Constraints: windowsservercore-1809
+
+Tags: 1.11.12-nanoserver-1803, 1.11-nanoserver-1803
+SharedTags: 1.11.12-nanoserver, 1.11-nanoserver
+Architectures: windows-amd64
+GitCommit: 88b5e2b06f35a9bd7ae91dd3a534be8dcf9be8c7
+Directory: 1.11/windows/nanoserver-1803
+Constraints: nanoserver-1803, windowsservercore-1803
+
+Tags: 1.11.12-nanoserver-1809, 1.11-nanoserver-1809
+SharedTags: 1.11.12-nanoserver, 1.11-nanoserver
+Architectures: windows-amd64
+GitCommit: 88b5e2b06f35a9bd7ae91dd3a534be8dcf9be8c7
+Directory: 1.11/windows/nanoserver-1809
+Constraints: nanoserver-1809, windowsservercore-1809
