@@ -103,21 +103,23 @@ for img in $tags; do
 
 		[ -n "$froms" ] # rough sanity check
 
+		allExpected=
 		for from in $froms; do
-			expected="$(_expected_constraints "$from" | sort -u)"
-			missing="$(comm -13 <(echo "$constraints") <(echo "$expected"))"
-			if [ -n "$missing" ]; then
-				imgMissing[$from]+=$'\n'"$missing"
-			fi
-			extra="$(comm -23 <(echo "$constraints") <(echo "$expected"))"
-			if [ "$from" = 'scratch' ]; then
-				# if a given image is "FROM scratch", then consider "!aufs" an acceptable constraint that doesn't show
-				extra="$(grep -vE '^!aufs$' <<<"$extra" || :)"
-			fi
-			if [ -n "$extra" ]; then
-				imgExtra[$from]+=$'\n'"$extra"
-			fi
+			expected="$(_expected_constraints "$from")"
+			allExpected="$(sort -u <<<"$allExpected"$'\n'"$expected")"
 		done
+		missing="$(comm -13 <(echo "$constraints") <(echo "$allExpected"))"
+		if [ -n "$missing" ]; then
+			imgMissing[$from]+=$'\n'"$missing"
+		fi
+		extra="$(comm -23 <(echo "$constraints") <(echo "$allExpected"))"
+		if [ "$from" = 'scratch' ]; then
+			# if a given image is "FROM scratch", then consider "!aufs" an acceptable constraint that doesn't show
+			extra="$(grep -vE '^!aufs$' <<<"$extra" || :)"
+		fi
+		if [ -n "$extra" ]; then
+			imgExtra[$from]+=$'\n'"$extra"
+		fi
 	done
 	if [ "${#imgMissing[@]}" -gt 0 ]; then
 		for from in $(IFS=$'\n'; sort -u <<<"${!imgMissing[*]}"); do
