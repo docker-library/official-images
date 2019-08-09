@@ -15,12 +15,12 @@ cid="$(docker run -d \
 trap "docker rm -vf $cid > /dev/null" EXIT
 
 _occ() {
-	docker exec -u www-data $cid php occ $1
+	docker exec -u www-data "$cid" php occ "$@"
 }
 
 # Give some time to install
 . "$dir/../../retry.sh" --tries 30 '_occ app:list' > /dev/null
 
 # Check if NextCloud is installed
-_occ status | grep -iq "installed: true"
+_occ status | grep -iq 'installed: true'
 _occ check
