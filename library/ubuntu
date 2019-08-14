@@ -6,25 +6,25 @@ GitRepo: https://github.com/tianon/docker-brew-ubuntu-core.git
 GitCommit: 07cb1245324aa5a328c4cc0b33643f0fbe71cba8
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-amd64
 amd64-GitFetch: refs/heads/dist-amd64
-amd64-GitCommit: 105329f5da5f205e3d2bcb1f96ce32a472e56239
+amd64-GitCommit: 9db8c72dd02e8f9fd5dba82ff9266174b088e2e6
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-arm32v7
 arm32v7-GitFetch: refs/heads/dist-arm32v7
-arm32v7-GitCommit: c3d8288f337be0505fff51f5199003484a22e43f
+arm32v7-GitCommit: edf4b3472573859a4c68be125e245b22f3e16eb8
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-arm64v8
 arm64v8-GitFetch: refs/heads/dist-arm64v8
-arm64v8-GitCommit: 66d9f8c9cb45e47eda6cc2b0e62672718a90736f
+arm64v8-GitCommit: 85ab0ca9e300e854125fd6db84ae780ab3ddbfd7
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-i386
 i386-GitFetch: refs/heads/dist-i386
-i386-GitCommit: 06f4ff92ffac8e45e5eacfc6720bf0c8497c7b75
+i386-GitCommit: d77de623d202aecba19c830b31e8e788a03cca1f
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-ppc64le
 ppc64le-GitFetch: refs/heads/dist-ppc64le
-ppc64le-GitCommit: 7e53ca66af9237ed78179b2cc9435e591eb65846
+ppc64le-GitCommit: b05ad9ba30c722b2ebccc6a59c8a400f4e3ccb98
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-s390x
 s390x-GitFetch: refs/heads/dist-s390x
-s390x-GitCommit: 78be03b74fef65bcfb009c19495f82900aaad7a3
+s390x-GitCommit: e4483afb5b904d9554519d2e50c2f8a781ab5e1f
 
-# 20190718 (bionic)
-Tags: 18.04, bionic-20190718, bionic, latest
+# 20190807 (bionic)
+Tags: 18.04, bionic-20190807, bionic, latest
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: bionic
 
@@ -33,13 +33,13 @@ Tags: 18.10, cosmic-20190719, cosmic
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: cosmic
 
-# 20190718 (disco)
-Tags: 19.04, disco-20190718, disco, rolling
+# 20190809 (disco)
+Tags: 19.04, disco-20190809, disco, rolling
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: disco
 
-# 20190717.1 (eoan)
-Tags: 19.10, eoan-20190717.1, eoan, devel
+# 20190813 (eoan)
+Tags: 19.10, eoan-20190813, eoan, devel
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: eoan
 
