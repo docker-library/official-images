@@ -19,10 +19,16 @@ _is_naughty() {
 	case "$BASHBREW_ARCH=$from" in
 		# a few images that no longer exist (and are thus not permissible)
 		# https://techcommunity.microsoft.com/t5/Containers/Removing-the-latest-Tag-An-Update-on-MCR/ba-p/393045
-		*=mcr.microsoft.com/windows/nanoserver:latest \
-		| *=mcr.microsoft.com/windows/servercore:latest \
-		| *=microsoft/nanoserver:latest \
-		| *=microsoft/windowsservercore:latest \
+		*=mcr.microsoft.com/windows/*:latest \
+		| *=microsoft/*:latest \
+		) return 0 ;;
+		# https://twitter.com/virtualMarkos/status/1116396381332070400
+		*=mcr.microsoft.com/windows/*:1709* \
+		| *=microsoft/*:1709* \
+		) return 0 ;;
+		# https://twitter.com/tianon/status/1116804290859810816
+		*=mcr.microsoft.com/windows/nanoserver:sac2016 \
+		| *=microsoft/nanoserver:sac2016 \
 		) return 0 ;;
 
 		# a few explicitly permissible exceptions to Santa's naughty list
