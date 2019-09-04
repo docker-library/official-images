@@ -22,11 +22,13 @@ _is_naughty() {
 		*=mcr.microsoft.com/windows/*:latest \
 		| *=microsoft/*:latest \
 		) return 0 ;;
-		# https://twitter.com/virtualMarkos/status/1116396381332070400
+		# https://docs.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/base-image-lifecycle
+		# "04/09/2019"
 		*=mcr.microsoft.com/windows/*:1709* \
 		| *=microsoft/*:1709* \
 		) return 0 ;;
-		# https://twitter.com/tianon/status/1116804290859810816
+		# https://docs.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/base-image-lifecycle
+		# "10/09/2018"
 		*=mcr.microsoft.com/windows/nanoserver:sac2016 \
 		| *=microsoft/nanoserver:sac2016 \
 		) return 0 ;;
