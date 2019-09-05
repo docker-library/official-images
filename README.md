@@ -245,6 +245,11 @@ The `Dockerfile` should be written to help mitigate man-in-the-middle attacks du
 	    # install
 	```
 
+	-	**Note:** the use of either SHA1 or MD5 should be considered a "checksum of last resort" as both are considered generally unsafe:
+
+		-	["Single-block collision for MD5" from 2012](https://marc-stevens.nl/research/md5-1block-collision/)
+		-	["Announcing the first SHA1 collision" from 2017](https://security.googleblog.com/2017/02/announcing-first-sha1-collision.html)
+
 -	**Best**: *full key fingerprint imported to apt-key which will check signatures when packages are downloaded and installed.*
 
 	```Dockerfile
