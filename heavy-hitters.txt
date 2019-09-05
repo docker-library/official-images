@@ -11,7 +11,7 @@ buildpack-deps
 alpine
 centos
 
-# to get a one-liner "grep" to take a list and pare it down to just heavy hitters, use something like:
+# to get a one-liner "grep" to take a list and parse it down to just heavy hitters, use something like:
 #   echo "grep -E '^($(grep -vE '^$|^#' heavy-hitters.txt | paste -sd '|'))(:|\$)'"
 # output will be something like:
 #   grep -E '^(foo|bar|baz|...)(:|$)'
