@@ -378,25 +378,19 @@ The first entry is the "global" metadata for the image. The only required field 
 	# this is a comment and will be ignored
 	Maintainers: John Smith <jsmith@example.com> (@example-jsmith),
 	             Anne Smith <asmith@example.com> (@example-asmith)
-	GitRepo: https://github.com/docker-library/wordpress.git
+	GitRepo: https://github.com/example/docker-example.git
+	GitCommit: deadbeefdeadbeefdeadbeefdeadbeefdeadbeef
 	
 	# this is also a comment, and will also be ignored
 	
-	Tags: 4.1.1, 4.1, 4, latest
-	GitCommit: bbef6075afa043cbfe791b8de185105065c02c01
+	Tags: 1.2.3, 1.2, 1, latest
+	Directory: 1
 	
-	Tags: 2.6.17, 2.6
-	GitRepo: https://github.com/docker-library/redis.git
-	GitCommit: 062335e0a8d20cab2041f25dfff2fbaf58544471
-	Directory: 2.6
-	
-	Tags: 13.2, harlequin
-	GitRepo: https://github.com/openSUSE/docker-containers-build.git
-	GitFetch: refs/heads/openSUSE-13.1
-	GitCommit: 0d21bc58cd26da2a0a59588affc506b977d6a846
-	Directory: docker
-	Constraints: !aufs
-	Maintainers: Bob Smith (@example-bsmith)
+	Tags: 2.0-rc1, 2.0-rc, 2-rc, rc
+	GitRepo: https://github.com/example/docker-example-rc.git
+	GitFetch: refs/heads/2.0-pre-release
+	GitCommit: beefdeadbeefdeadbeefdeadbeefdeadbeefdead
+	Directory: 2
 
 Bashbrew will fetch code out of the Git repository (`GitRepo`) at the commit specified (`GitCommit`). If the commit referenced is not available by fetching `master` of the associated `GitRepo`, it becomes necessary to supply a value for `GitFetch` in order to tell Bashbrew what ref to fetch in order to get the commit necessary.
 
