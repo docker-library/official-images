@@ -79,7 +79,12 @@ func sortRepoObjects(rs []*Repo, applyConstraints bool) ([]*Repo, error) {
 	for _, r := range rs {
 		node := r.Identifier()
 		for _, entry := range r.Entries() {
-			for _, tag := range r.Tags(namespace, false, entry) {
+			// add edges both with and without namespace so sorting still works properly for official images ("bashbrew --namespace amd64 list --build-order wordpress php")
+			// this should be reasonably harmless for other use cases of --namespace but catches things like "tianon/foo -> tianon/bar" and things like "php -> wordpress" equally even if we're building to target a different namespace
+			tags := []string{}
+			tags = append(tags, r.Tags("", false, entry)...)
+			tags = append(tags, r.Tags(namespace, false, entry)...)
+			for _, tag := range tags {
 				if canonicalRepo, ok := canonicalRepos[tag]; ok && canonicalRepo.TagName != "" {
 					// if we run into a duplicate, we want to prefer a specific tag over a full repo
 					continue
