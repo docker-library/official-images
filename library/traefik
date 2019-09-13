@@ -1,22 +1,34 @@
 Maintainers: Emile Vauge <emile@vauge.com> (@emilevauge), Vincent Demeester <vincent@sbr.pm> (@vdemeester), Ludovic Fernandez <ludovic@containo.us> (@ldez), Julien Salleyron <julien@containo.us> (@juliens), Nicolas Mengin <nicolas@containo.us> (@nmengin), Michael Matur <michael@containo.us> (@mmatur), Damien Duportal <damien@containo.us> (@dduportal)
 GitRepo: https://github.com/containous/traefik-library-image.git
 
-Tags: v2.0.0-rc3, 2.0.0-rc3, v2.0, 2.0, montdor
+Tags: v2.0.0-rc4, 2.0.0-rc4, v2.0, 2.0, montdor
 Architectures: amd64, arm64v8, arm32v6
-GitCommit: 65a0466cd3336a0fd048ef4b06cd9a08a9edae6e
+GitCommit: 0927ea0eed9c1ba28eacf0518bfafc2cb69941a9
 Directory: scratch
 
-Tags: v2.0.0-rc3-alpine, 2.0.0-rc3-alpine, v2.0-alpine, 2.0-alpine, montdor-alpine
+Tags: v2.0.0-rc4-alpine, 2.0.0-rc4-alpine, v2.0-alpine, 2.0-alpine, montdor-alpine
 Architectures: amd64, arm64v8, arm32v6
-GitCommit: 65a0466cd3336a0fd048ef4b06cd9a08a9edae6e
+GitCommit: 0927ea0eed9c1ba28eacf0518bfafc2cb69941a9
 Directory: alpine
 
-Tags: v1.7.15, 1.7.15, v1.7, 1.7, maroilles, latest
+Tags: v2.0.0-rc4-windowsservercore-1809, 2.0.0-rc4-windowsservercore-1809, v2.0-windowsservercore-1809, 2.0-windowsservercore-1809, montdor-windowsservercore-1809
+Architectures: windows-amd64
+GitCommit: 0927ea0eed9c1ba28eacf0518bfafc2cb69941a9
+Directory: windows/1809
+Constraints: windowsservercore-1809
+
+Tags: v1.7.16, 1.7.16, v1.7, 1.7, maroilles, latest
 Architectures: amd64, arm32v6, arm64v8
-GitCommit: 7fdb3306ad96133928541d5305b771173aab0313
+GitCommit: 29a4436c806b126b154fdc4dae3eceb074927f4b
 Directory: scratch
 
-Tags: v1.7.15-alpine, 1.7.15-alpine, v1.7-alpine, 1.7-alpine, maroilles-alpine, alpine
+Tags: v1.7.16-alpine, 1.7.16-alpine, v1.7-alpine, 1.7-alpine, maroilles-alpine, alpine
 Architectures: amd64, arm32v6, arm64v8
-GitCommit: 7fdb3306ad96133928541d5305b771173aab0313
+GitCommit: 29a4436c806b126b154fdc4dae3eceb074927f4b
 Directory: alpine
+
+Tags: v1.7.16-windowsservercore-1809, 1.7.16-windowsservercore-1809, v1.7-windowsservercore-1809, 1.7-windowsservercore-1809, maroilles-windowsservercore-1809, windowsservercore-1809
+Architectures: windows-amd64
+GitCommit: 29a4436c806b126b154fdc4dae3eceb074927f4b
+Directory: windows/1809
+Constraints: windowsservercore-1809
