@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+PS4='+\t '
 
 # make sure we can GTFO
 trap 'echo >&2 Ctrl+C captured, exiting; exit 1' SIGINT
@@ -14,12 +15,15 @@ src="$dir/src"
 logs="$dir/logs"
 namespaces='_'
 docker='docker'
+maxBgJobs=20
+defaultSleepTime=2
 
 library="$(readlink -f "$library")"
 src="$(readlink -f "$src")"
 logs="$(readlink -f "$logs")"
 
 self="$(basename "$0")"
+declare -a danglingImages=()
 
 check_image_type() {
 	local repo="$1"
@@ -62,6 +66,24 @@ get_image_type() {
 	esac
 }
 
+check_bg_jobs() {
+	while [ $(jobs -rp | wc -l) -gt "$maxBgJobs" ]; do
+		echo "Current background jobs maxed out, wait for a job to finish!"
+		sleep $defaultSleepTime
+	done
+}
+
+push_in_background() {
+	local image=$1
+
+	if ! "$docker" push "$image" &>> "$thisLog" < /dev/null; then
+		echo >&2 "- $image failed to push; see $thisLog"
+		didFail=1
+	fi
+
+	remove_image "$image"
+}
+
 push_image() {
 	for namespace in $namespaces; do
 		if [ "$namespace" = '_' ]; then
@@ -78,50 +100,38 @@ push_image() {
 
 				"$docker" tag "$repo:$firstTag" "$namespace/$repoTag"
 				echo "Pushing $namespace/$repoTag..."
-				if ! "$docker" push "$namespace/$repoTag" &>> "$thisLog" < /dev/null; then
-					echo >&2 "- $namespace/$repoTag failed to push; see $thisLog"
-					didFail=1
-					continue
-				else
-					if [[ $repo == *"debian"* ]]; then
-						echo "Pushing $namespace/${repoTag/-debian/}..."
-						"$docker" tag "$namespace/$repoTag" "$namespace/${repoTag/-debian/}"
-						if ! "$docker" push "$namespace/${repoTag/-debian/}" &>> "$thisLog" < /dev/null; then
-							echo >&2 "- $namespace/${repoTag/-debian/} failed to push; see $thisLog"
-							didFail=1
-							continue
-						fi
-					fi
+				check_bg_jobs
+				push_in_background "$namespace/$repoTag" &
+				if [[ $repo == *"debian"* ]]; then
+					echo "Pushing $namespace/${repoTag/-debian/}..."
+					"$docker" tag "$repo:$firstTag" "$namespace/${repoTag/-debian/}"
+					check_bg_jobs
+					push_in_background "$namespace/${repoTag/-debian/}" &
 				fi
+
 				if [ "$aliases" ]; then
 					for alias in $aliases; do
-						"$docker" tag "$namespace/$repoTag" "$namespace/$alias$imageType:$tag"
+						"$docker" tag "$repo:$firstTag" "$namespace/$alias$imageType:$tag"
 						echo "Pushing alias: $namespace/$alias$imageType:$tag..."
-						if ! "$docker" push "$namespace/$alias$imageType:$tag" &>> "$thisLog" < /dev/null; then
-							echo >&2 "- $namespace/$alias$imageType:$tag failed to push; see $thisLog"
-							didFail=1
-							continue
-						else
-							if [[ $repo == *"debian"* ]]; then
-								"$docker" tag "$namespace/$repoTag" "$namespace/$alias${imageType/-debian/}:$tag"
-								echo "Pushing $namespace/$alias${imageType/-debian/}:$tag..."
-								if ! "$docker" push "$namespace/$alias${imageType/-debian/}:$tag" &>> "$thisLog" < /dev/null; then
-									echo >&2 "- $namespace/$alias${imageType/-debian/}:$tag failed to push; see $thisLog"
-									didFail=1
-									continue
-								fi
-							fi
+						check_bg_jobs
+						push_in_background "$namespace/$alias$imageType:$tag" &
+						if [[ $repo == *"debian"* ]]; then
+							"$docker" tag "$repo:$firstTag" "$namespace/$alias${imageType/-debian/}:$tag"
+							echo "Pushing $namespace/$alias${imageType/-debian/}:$tag..."
+							check_bg_jobs
+							push_in_background "$namespace/$alias${imageType/-debian/}:$tag" &
 						fi
 						# Clean up pushed aliases
-						remove_image "$namespace/$alias$imageType:$tag"
-						remove_image "$namespace/$alias${imageType/-debian/}:$tag"
+						#remove_image "$namespace/$alias$imageType:$tag"
+						#remove_image "$namespace/$alias${imageType/-debian/}:$tag"
 					done
 				fi
-				remove_image "$namespace/${repoTag/-debian/}"
-				remove_image "$namespace/$repoTag"
+				#remove_image "$namespace/${repoTag/-debian/}"
+				#remove_image "$namespace/$repoTag"
 			done
 			# Clean up
-			remove_image "$repo:$firstTag"
+			danglingImages+=("$repo:$firstTag")
+			#remove_image "$repo:$firstTag"
 		else
 			echo "$docker push" "$namespace/$repoTag"
 		fi
@@ -471,6 +481,13 @@ while [ "$#" -gt 0 ]; do
 			push_image
 			;;
 	esac
+done
+
+wait
+
+#Remove all dangling images
+for image in ${danglingImages[*]}; do
+    remove_image "$image"
 done
 
 # Clean up all the Dockerfiles after building. This will free up hundreds of MB of space on the build server.
