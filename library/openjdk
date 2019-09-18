@@ -1,4 +1,4 @@
-# this file is generated via https://github.com/docker-library/openjdk/blob/1da04ec4480417f82cef3cfb25b25cc118da2f56/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/openjdk/blob/ed268792d921e9ec999584d7d7d0b8c03a48ed4d/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
@@ -10,6 +10,16 @@ Architectures: amd64
 GitCommit: 70db83bbbbcc0a6e9406ff695581e82fe4d84a1d
 Directory: 14/jdk/oracle
 Constraints: !aufs
+
+Tags: 14-ea-14-jdk-buster, 14-ea-14-buster, 14-ea-jdk-buster, 14-ea-buster, 14-jdk-buster, 14-buster
+Architectures: amd64
+GitCommit: 3d26403f6d5d290f9bd23fb6a68fec1c5ac54656
+Directory: 14/jdk
+
+Tags: 14-ea-14-jdk-slim-buster, 14-ea-14-slim-buster, 14-ea-jdk-slim-buster, 14-ea-slim-buster, 14-jdk-slim-buster, 14-slim-buster, 14-ea-14-jdk-slim, 14-ea-14-slim, 14-ea-jdk-slim, 14-ea-slim, 14-jdk-slim, 14-slim
+Architectures: amd64
+GitCommit: 3d26403f6d5d290f9bd23fb6a68fec1c5ac54656
+Directory: 14/jdk/slim
 
 Tags: 14-ea-12-jdk-alpine3.10, 14-ea-12-alpine3.10, 14-ea-jdk-alpine3.10, 14-ea-alpine3.10, 14-jdk-alpine3.10, 14-alpine3.10, 14-ea-12-jdk-alpine, 14-ea-12-alpine, 14-ea-jdk-alpine, 14-ea-alpine, 14-jdk-alpine, 14-alpine
 Architectures: amd64
@@ -37,60 +47,42 @@ GitCommit: 70db83bbbbcc0a6e9406ff695581e82fe4d84a1d
 Directory: 14/jdk/windows/windowsservercore-ltsc2016
 Constraints: windowsservercore-ltsc2016
 
-Tags: 13-jdk-oraclelinux7, 13-oraclelinux7, 13-jdk-oracle, 13-oracle
-SharedTags: 13-jdk, 13
+Tags: 13-jdk-oraclelinux7, 13-oraclelinux7, jdk-oraclelinux7, oraclelinux7, 13-jdk-oracle, 13-oracle, jdk-oracle, oracle
+SharedTags: 13-jdk, 13, jdk, latest
 Architectures: amd64
 GitCommit: 7efc7a9956ea7f0f55fc752ca18a55e193d9c55a
 Directory: 13/jdk/oracle
 Constraints: !aufs
 
-Tags: 13-jdk-windowsservercore-1809, 13-windowsservercore-1809
-SharedTags: 13-jdk-windowsservercore, 13-windowsservercore, 13-jdk, 13
+Tags: 13-jdk-buster, 13-buster, jdk-buster, buster
+Architectures: amd64
+GitCommit: 3d26403f6d5d290f9bd23fb6a68fec1c5ac54656
+Directory: 13/jdk
+
+Tags: 13-jdk-slim-buster, 13-slim-buster, jdk-slim-buster, slim-buster, 13-jdk-slim, 13-slim, jdk-slim, slim
+Architectures: amd64
+GitCommit: 3d26403f6d5d290f9bd23fb6a68fec1c5ac54656
+Directory: 13/jdk/slim
+
+Tags: 13-jdk-windowsservercore-1809, 13-windowsservercore-1809, jdk-windowsservercore-1809, windowsservercore-1809
+SharedTags: 13-jdk-windowsservercore, 13-windowsservercore, jdk-windowsservercore, windowsservercore, 13-jdk, 13, jdk, latest
 Architectures: windows-amd64
 GitCommit: aeb02a53ca43da29d6e820e5fe485db7ba03b879
 Directory: 13/jdk/windows/windowsservercore-1809
 Constraints: windowsservercore-1809
 
-Tags: 13-jdk-windowsservercore-1803, 13-windowsservercore-1803
-SharedTags: 13-jdk-windowsservercore, 13-windowsservercore, 13-jdk, 13
+Tags: 13-jdk-windowsservercore-1803, 13-windowsservercore-1803, jdk-windowsservercore-1803, windowsservercore-1803
+SharedTags: 13-jdk-windowsservercore, 13-windowsservercore, jdk-windowsservercore, windowsservercore, 13-jdk, 13, jdk, latest
 Architectures: windows-amd64
 GitCommit: aeb02a53ca43da29d6e820e5fe485db7ba03b879
 Directory: 13/jdk/windows/windowsservercore-1803
 Constraints: windowsservercore-1803
 
-Tags: 13-jdk-windowsservercore-ltsc2016, 13-windowsservercore-ltsc2016
-SharedTags: 13-jdk-windowsservercore, 13-windowsservercore, 13-jdk, 13
+Tags: 13-jdk-windowsservercore-ltsc2016, 13-windowsservercore-ltsc2016, jdk-windowsservercore-ltsc2016, windowsservercore-ltsc2016
+SharedTags: 13-jdk-windowsservercore, 13-windowsservercore, jdk-windowsservercore, windowsservercore, 13-jdk, 13, jdk, latest
 Architectures: windows-amd64
 GitCommit: aeb02a53ca43da29d6e820e5fe485db7ba03b879
 Directory: 13/jdk/windows/windowsservercore-ltsc2016
-Constraints: windowsservercore-ltsc2016
-
-Tags: 12.0.2-jdk-oraclelinux7, 12.0.2-oraclelinux7, 12.0-jdk-oraclelinux7, 12.0-oraclelinux7, 12-jdk-oraclelinux7, 12-oraclelinux7, jdk-oraclelinux7, oraclelinux7, 12.0.2-jdk-oracle, 12.0.2-oracle, 12.0-jdk-oracle, 12.0-oracle, 12-jdk-oracle, 12-oracle, jdk-oracle, oracle
-SharedTags: 12.0.2-jdk, 12.0.2, 12.0-jdk, 12.0, 12-jdk, 12, jdk, latest
-Architectures: amd64
-GitCommit: ab157251df23dd65820061df29cf063449a77fbb
-Directory: 12/jdk/oracle
-Constraints: !aufs
-
-Tags: 12.0.2-jdk-windowsservercore-1809, 12.0.2-windowsservercore-1809, 12.0-jdk-windowsservercore-1809, 12.0-windowsservercore-1809, 12-jdk-windowsservercore-1809, 12-windowsservercore-1809, jdk-windowsservercore-1809, windowsservercore-1809
-SharedTags: 12.0.2-jdk-windowsservercore, 12.0.2-windowsservercore, 12.0-jdk-windowsservercore, 12.0-windowsservercore, 12-jdk-windowsservercore, 12-windowsservercore, jdk-windowsservercore, windowsservercore, 12.0.2-jdk, 12.0.2, 12.0-jdk, 12.0, 12-jdk, 12, jdk, latest
-Architectures: windows-amd64
-GitCommit: ab157251df23dd65820061df29cf063449a77fbb
-Directory: 12/jdk/windows/windowsservercore-1809
-Constraints: windowsservercore-1809
-
-Tags: 12.0.2-jdk-windowsservercore-1803, 12.0.2-windowsservercore-1803, 12.0-jdk-windowsservercore-1803, 12.0-windowsservercore-1803, 12-jdk-windowsservercore-1803, 12-windowsservercore-1803, jdk-windowsservercore-1803, windowsservercore-1803
-SharedTags: 12.0.2-jdk-windowsservercore, 12.0.2-windowsservercore, 12.0-jdk-windowsservercore, 12.0-windowsservercore, 12-jdk-windowsservercore, 12-windowsservercore, jdk-windowsservercore, windowsservercore, 12.0.2-jdk, 12.0.2, 12.0-jdk, 12.0, 12-jdk, 12, jdk, latest
-Architectures: windows-amd64
-GitCommit: ab157251df23dd65820061df29cf063449a77fbb
-Directory: 12/jdk/windows/windowsservercore-1803
-Constraints: windowsservercore-1803
-
-Tags: 12.0.2-jdk-windowsservercore-ltsc2016, 12.0.2-windowsservercore-ltsc2016, 12.0-jdk-windowsservercore-ltsc2016, 12.0-windowsservercore-ltsc2016, 12-jdk-windowsservercore-ltsc2016, 12-windowsservercore-ltsc2016, jdk-windowsservercore-ltsc2016, windowsservercore-ltsc2016
-SharedTags: 12.0.2-jdk-windowsservercore, 12.0.2-windowsservercore, 12.0-jdk-windowsservercore, 12.0-windowsservercore, 12-jdk-windowsservercore, 12-windowsservercore, jdk-windowsservercore, windowsservercore, 12.0.2-jdk, 12.0.2, 12.0-jdk, 12.0, 12-jdk, 12, jdk, latest
-Architectures: windows-amd64
-GitCommit: ab157251df23dd65820061df29cf063449a77fbb
-Directory: 12/jdk/windows/windowsservercore-ltsc2016
 Constraints: windowsservercore-ltsc2016
 
 Tags: 11.0.4-jdk-stretch, 11.0.4-stretch, 11.0-jdk-stretch, 11.0-stretch, 11-jdk-stretch, 11-stretch
