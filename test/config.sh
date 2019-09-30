@@ -122,6 +122,8 @@ imageTests+=(
 	[mongo]='
 		mongo-basics
 		mongo-auth-basics
+		mongo-tls-basics
+		mongo-tls-auth
 	'
 	[mono]='
 	'
