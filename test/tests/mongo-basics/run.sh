@@ -54,27 +54,74 @@ docker_run_seccomp() {
 
 cname="mongo-container-$RANDOM-$RANDOM"
 mongodRunArgs=( -d --name "$cname" )
+mongodCmdArgs=()
 mongoArgs=( --host mongo )
 
 testDir="$(readlink -f "$(dirname "$BASH_SOURCE")")"
-testName="$(basename "$testDir")" # "mongo-basics" or "mongo-auth-basics"
-case "$testName" in
-	*auth*)
-		rootUser="root-$RANDOM"
-		rootPass="root-$RANDOM-$RANDOM-password"
-		mongodRunArgs+=(
-			-e MONGO_INITDB_ROOT_USERNAME="$rootUser"
-			-e MONGO_INITDB_ROOT_PASSWORD="$rootPass"
+testName="$(basename "$testDir")" # "mongo-basics" or "mongo-auth-basics" or "mongo-tls-auth"
+if [[ "$testName" == *auth* ]]; then
+	rootUser="root-$RANDOM"
+	rootPass="root-$RANDOM-$RANDOM-password"
+	mongodRunArgs+=(
+		-e MONGO_INITDB_ROOT_USERNAME="$rootUser"
+		-e MONGO_INITDB_ROOT_PASSWORD="$rootPass"
+	)
+	mongoArgs+=(
+		--username="$rootUser"
+		--password="$rootPass"
+		--authenticationDatabase='admin'
+	)
+fi
+if [[ "$testName" == *tls* ]]; then
+	tlsImage="$("$testDir/../image-name.sh" librarytest/mongo-tls "$image")"
+	"$testDir/../docker-build.sh" "$testDir" "$tlsImage" <<-EOD
+		FROM $image
+		RUN set -eux; \
+			mkdir /certs; \
+			openssl genrsa -out /certs/ca-private.key 8192; \
+			openssl req -new -x509 \
+				-key /certs/ca-private.key \
+				-out /certs/ca.crt \
+				-days $(( 365 * 30 )) \
+				-subj '/CN=lolca'; \
+			openssl genrsa -out /certs/private.key 4096; \
+			openssl req -new -key /certs/private.key \
+				-out /certs/cert.csr -subj '/CN=mongo'; \
+			openssl x509 -req -in /certs/cert.csr \
+				-CA /certs/ca.crt -CAkey /certs/ca-private.key -CAcreateserial \
+				-out /certs/cert.crt -days $(( 365 * 30 )); \
+			openssl verify -CAfile /certs/ca.crt /certs/cert.crt; \
+			chown -R mongodb:mongodb /certs
+		RUN cat /certs/cert.crt /certs/private.key > /certs/both.pem # yeah, what
+	EOD
+	image="$tlsImage"
+	mongodRunArgs+=(
+		--hostname mongo
+	)
+	# test for 4.2+ (where "s/ssl/tls/" was applied to all related options/flags)
+	# see https://docs.mongodb.com/manual/tutorial/configure-ssl/#procedures-using-net-ssl-settings
+	if docker run --rm "$image" mongod --help 2>&1 | grep -q -- ' --tlsMode '; then
+		mongodCmdArgs+=(
+			--tlsMode requireTLS
+			--tlsCertificateKeyFile /certs/both.pem
 		)
 		mongoArgs+=(
-			--username="$rootUser"
-			--password="$rootPass"
-			--authenticationDatabase='admin'
+			--tls
+			--tlsCAFile /certs/ca.crt
 		)
-		;;
-esac
+	else
+		mongodCmdArgs+=(
+			--sslMode requireSSL
+			--sslPEMKeyFile /certs/both.pem
+		)
+		mongoArgs+=(
+			--ssl
+			--sslCAFile /certs/ca.crt
+		)
+	fi
+fi
 
-cid="$(docker_run_seccomp "${mongodRunArgs[@]}" "$image")"
+cid="$(docker_run_seccomp "${mongodRunArgs[@]}" "$image" "${mongodCmdArgs[@]}")"
 trap "docker rm -vf $cid > /dev/null" EXIT
 
 mongo() {
@@ -85,6 +132,9 @@ mongo_eval() {
 	mongo --quiet --eval "$@"
 }
 
+. "$testDir/../../retry.sh" "mongo_eval 'quit(db.stats().ok ? 0 : 1);'"
+
+if false; then
 tries=10
 while ! mongo_eval 'quit(db.stats().ok ? 0 : 1);' &> /dev/null; do
 	(( tries-- ))
@@ -97,6 +147,7 @@ while ! mongo_eval 'quit(db.stats().ok ? 0 : 1);' &> /dev/null; do
 	echo >&2 -n .
 	sleep 2
 done
+fi
 
 [ "$(mongo_eval 'db.test.count();')" = 0 ]
 mongo_eval 'db.test.save({ _id: 1, a: 2, b: 3, c: "hello" });' > /dev/null
