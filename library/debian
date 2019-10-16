@@ -7,28 +7,28 @@ GitRepo: https://github.com/debuerreotype/docker-debian-artifacts.git
 GitCommit: 951e610764ded554c06f7aed46b6a5564850f4fc
 # https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-amd64
 amd64-GitFetch: refs/heads/dist-amd64
-amd64-GitCommit: 74e1a3304401c2eb9c6624ae1056d0a438c15189
+amd64-GitCommit: fd091f0a2aa0f469ee1ff991cb99748025d567f8
 # https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm32v5
 arm32v5-GitFetch: refs/heads/dist-arm32v5
-arm32v5-GitCommit: 6b546e3346bfd02c7f59e546f184a104d43a3bb0
+arm32v5-GitCommit: d0d2becece372abb4f1e86ead34d03336e43f0e9
 # https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm32v7
 arm32v7-GitFetch: refs/heads/dist-arm32v7
-arm32v7-GitCommit: f8e9cc5c7ff99b690227f88a10f8b4e161f22f08
+arm32v7-GitCommit: 90d4575d77177b270e2e4c04da92c4fe14daf93c
 # https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm64v8
 arm64v8-GitFetch: refs/heads/dist-arm64v8
-arm64v8-GitCommit: fc56b02dcf08bea6b7ccf197020ad37082913b43
+arm64v8-GitCommit: 649f6f66695271955bc4e2a05c27a317b6250d88
 # https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-i386
 i386-GitFetch: refs/heads/dist-i386
-i386-GitCommit: 2a13b9e0a42d068a698b7e5d1b12c196aa821dd8
+i386-GitCommit: 91c9c54b97e89cc0cb152a094a5b79f5885180eb
 # https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-ppc64le
 ppc64le-GitFetch: refs/heads/dist-ppc64le
-ppc64le-GitCommit: b60e32d92d355916e301dfe05528275f11ec9b9e
+ppc64le-GitCommit: 848f0b49f91b6b0edff91075e87909c08b062e2c
 # https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-s390x
 s390x-GitFetch: refs/heads/dist-s390x
-s390x-GitCommit: 44d8c5c644a705284d497a716c1f7eded1fad0f3
+s390x-GitCommit: 28f852e1f142a327952e8f6cab88495baf697cba
 
 # bullseye -- Debian x.y Testing distribution - Not Released
-Tags: bullseye, bullseye-20190910
+Tags: bullseye, bullseye-20191014
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: bullseye
 
@@ -36,12 +36,12 @@ Tags: bullseye-backports
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: bullseye/backports
 
-Tags: bullseye-slim, bullseye-20190910-slim
+Tags: bullseye-slim, bullseye-20191014-slim
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: bullseye/slim
 
 # buster -- Debian 10.1 Released 07 September 2019
-Tags: buster, buster-20190910, 10.1, 10, latest
+Tags: buster, buster-20191014, 10.1, 10, latest
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: buster
 
@@ -49,35 +49,35 @@ Tags: buster-backports
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: buster/backports
 
-Tags: buster-slim, buster-20190910-slim, 10.1-slim, 10-slim
+Tags: buster-slim, buster-20191014-slim, 10.1-slim, 10-slim
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: buster/slim
 
 # experimental -- Experimental packages - not released; use at your own risk.
-Tags: experimental, experimental-20190910
+Tags: experimental, experimental-20191014
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: experimental
 
 # jessie -- Debian 8.11 Released 23 June 2018
-Tags: jessie, jessie-20190910, 8.11, 8
+Tags: jessie, jessie-20191014, 8.11, 8
 Architectures: amd64, arm32v5, arm32v7, i386
 Directory: jessie
 
-Tags: jessie-slim, jessie-20190910-slim, 8.11-slim, 8-slim
+Tags: jessie-slim, jessie-20191014-slim, 8.11-slim, 8-slim
 Architectures: amd64, arm32v5, arm32v7, i386
 Directory: jessie/slim
 
 # oldoldstable -- Debian 8.11 Released 23 June 2018
-Tags: oldoldstable, oldoldstable-20190910
+Tags: oldoldstable, oldoldstable-20191014
 Architectures: amd64, arm32v5, arm32v7, i386
 Directory: oldoldstable
 
-Tags: oldoldstable-slim, oldoldstable-20190910-slim
+Tags: oldoldstable-slim, oldoldstable-20191014-slim
 Architectures: amd64, arm32v5, arm32v7, i386
 Directory: oldoldstable/slim
 
 # oldstable -- Debian 9.11 Released 08 September 2019
-Tags: oldstable, oldstable-20190910
+Tags: oldstable, oldstable-20191014
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: oldstable
 
@@ -85,26 +85,26 @@ Tags: oldstable-backports
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: oldstable/backports
 
-Tags: oldstable-slim, oldstable-20190910-slim
+Tags: oldstable-slim, oldstable-20191014-slim
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: oldstable/slim
 
 # rc-buggy -- Experimental packages - not released; use at your own risk.
-Tags: rc-buggy, rc-buggy-20190910
+Tags: rc-buggy, rc-buggy-20191014
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: rc-buggy
 
 # sid -- Debian x.y Unstable - Not Released
-Tags: sid, sid-20190910
+Tags: sid, sid-20191014
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: sid
 
-Tags: sid-slim, sid-20190910-slim
+Tags: sid-slim, sid-20191014-slim
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: sid/slim
 
 # stable -- Debian 10.1 Released 07 September 2019
-Tags: stable, stable-20190910
+Tags: stable, stable-20191014
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: stable
 
@@ -112,12 +112,12 @@ Tags: stable-backports
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: stable/backports
 
-Tags: stable-slim, stable-20190910-slim
+Tags: stable-slim, stable-20191014-slim
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: stable/slim
 
 # stretch -- Debian 9.11 Released 08 September 2019
-Tags: stretch, stretch-20190910, 9.11, 9
+Tags: stretch, stretch-20191014, 9.11, 9
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: stretch
 
@@ -125,12 +125,12 @@ Tags: stretch-backports
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: stretch/backports
 
-Tags: stretch-slim, stretch-20190910-slim, 9.11-slim, 9-slim
+Tags: stretch-slim, stretch-20191014-slim, 9.11-slim, 9-slim
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: stretch/slim
 
 # testing -- Debian x.y Testing distribution - Not Released
-Tags: testing, testing-20190910
+Tags: testing, testing-20191014
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: testing
 
@@ -138,15 +138,15 @@ Tags: testing-backports
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: testing/backports
 
-Tags: testing-slim, testing-20190910-slim
+Tags: testing-slim, testing-20191014-slim
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: testing/slim
 
 # unstable -- Debian x.y Unstable - Not Released
-Tags: unstable, unstable-20190910
+Tags: unstable, unstable-20191014
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: unstable
 
-Tags: unstable-slim, unstable-20190910-slim
+Tags: unstable-slim, unstable-20191014-slim
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: unstable/slim
