@@ -1,9 +1,60 @@
-# this file is generated via https://github.com/docker-library/golang/blob/d0e60d1b37c547901e6be72ba088fbb585b095b8/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/golang/blob/ba5eb71bcc5a3f539dc0142dbc0d8dca0a4a30e0/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit),
              Johan Euphrosine <proppy@google.com> (@proppy)
 GitRepo: https://github.com/docker-library/golang.git
+
+Tags: 1.13.2-buster
+SharedTags: 1.13.2
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 8d1985ae2c1fcb0b451c91925bb5712ac39a4633
+Directory: 1.13.2/buster
+
+Tags: 1.13.2-stretch
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 8d1985ae2c1fcb0b451c91925bb5712ac39a4633
+Directory: 1.13.2/stretch
+
+Tags: 1.13.2-alpine3.10, 1.13.2-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 8d1985ae2c1fcb0b451c91925bb5712ac39a4633
+Directory: 1.13.2/alpine3.10
+
+Tags: 1.13.2-windowsservercore-ltsc2016
+SharedTags: 1.13.2-windowsservercore, 1.13.2
+Architectures: windows-amd64
+GitCommit: 8d1985ae2c1fcb0b451c91925bb5712ac39a4633
+Directory: 1.13.2/windows/windowsservercore-ltsc2016
+Constraints: windowsservercore-ltsc2016
+
+Tags: 1.13.2-windowsservercore-1803
+SharedTags: 1.13.2-windowsservercore, 1.13.2
+Architectures: windows-amd64
+GitCommit: 8d1985ae2c1fcb0b451c91925bb5712ac39a4633
+Directory: 1.13.2/windows/windowsservercore-1803
+Constraints: windowsservercore-1803
+
+Tags: 1.13.2-windowsservercore-1809
+SharedTags: 1.13.2-windowsservercore, 1.13.2
+Architectures: windows-amd64
+GitCommit: 8d1985ae2c1fcb0b451c91925bb5712ac39a4633
+Directory: 1.13.2/windows/windowsservercore-1809
+Constraints: windowsservercore-1809
+
+Tags: 1.13.2-nanoserver-1803
+SharedTags: 1.13.2-nanoserver
+Architectures: windows-amd64
+GitCommit: 8d1985ae2c1fcb0b451c91925bb5712ac39a4633
+Directory: 1.13.2/windows/nanoserver-1803
+Constraints: nanoserver-1803, windowsservercore-1803
+
+Tags: 1.13.2-nanoserver-1809
+SharedTags: 1.13.2-nanoserver
+Architectures: windows-amd64
+GitCommit: 8d1985ae2c1fcb0b451c91925bb5712ac39a4633
+Directory: 1.13.2/windows/nanoserver-1809
+Constraints: nanoserver-1809, windowsservercore-1809
 
 Tags: 1.13.3-buster, 1.13-buster, 1-buster, buster
 SharedTags: 1.13.3, 1.13, 1, latest
@@ -54,6 +105,62 @@ SharedTags: 1.13.3-nanoserver, 1.13-nanoserver, 1-nanoserver, nanoserver
 Architectures: windows-amd64
 GitCommit: a4deea14ce3306822bb9352ccf124af8c0eea257
 Directory: 1.13/windows/nanoserver-1809
+Constraints: nanoserver-1809, windowsservercore-1809
+
+Tags: 1.12.11-buster
+SharedTags: 1.12.11
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 8d1985ae2c1fcb0b451c91925bb5712ac39a4633
+Directory: 1.12.11/buster
+
+Tags: 1.12.11-stretch
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 8d1985ae2c1fcb0b451c91925bb5712ac39a4633
+Directory: 1.12.11/stretch
+
+Tags: 1.12.11-alpine3.10, 1.12.11-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 8d1985ae2c1fcb0b451c91925bb5712ac39a4633
+Directory: 1.12.11/alpine3.10
+
+Tags: 1.12.11-alpine3.9
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 8d1985ae2c1fcb0b451c91925bb5712ac39a4633
+Directory: 1.12.11/alpine3.9
+
+Tags: 1.12.11-windowsservercore-ltsc2016
+SharedTags: 1.12.11-windowsservercore, 1.12.11
+Architectures: windows-amd64
+GitCommit: 8d1985ae2c1fcb0b451c91925bb5712ac39a4633
+Directory: 1.12.11/windows/windowsservercore-ltsc2016
+Constraints: windowsservercore-ltsc2016
+
+Tags: 1.12.11-windowsservercore-1803
+SharedTags: 1.12.11-windowsservercore, 1.12.11
+Architectures: windows-amd64
+GitCommit: 8d1985ae2c1fcb0b451c91925bb5712ac39a4633
+Directory: 1.12.11/windows/windowsservercore-1803
+Constraints: windowsservercore-1803
+
+Tags: 1.12.11-windowsservercore-1809
+SharedTags: 1.12.11-windowsservercore, 1.12.11
+Architectures: windows-amd64
+GitCommit: 8d1985ae2c1fcb0b451c91925bb5712ac39a4633
+Directory: 1.12.11/windows/windowsservercore-1809
+Constraints: windowsservercore-1809
+
+Tags: 1.12.11-nanoserver-1803
+SharedTags: 1.12.11-nanoserver
+Architectures: windows-amd64
+GitCommit: 8d1985ae2c1fcb0b451c91925bb5712ac39a4633
+Directory: 1.12.11/windows/nanoserver-1803
+Constraints: nanoserver-1803, windowsservercore-1803
+
+Tags: 1.12.11-nanoserver-1809
+SharedTags: 1.12.11-nanoserver
+Architectures: windows-amd64
+GitCommit: 8d1985ae2c1fcb0b451c91925bb5712ac39a4633
+Directory: 1.12.11/windows/nanoserver-1809
 Constraints: nanoserver-1809, windowsservercore-1809
 
 Tags: 1.12.12-buster, 1.12-buster
