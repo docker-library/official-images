@@ -3,47 +3,42 @@
 
 Maintainers: Tianon Gravi <tianon@debian.org> (@tianon), Michael Hudson-Doyle <michael.hudson@ubuntu.com> (@mwhudson)
 GitRepo: https://github.com/tianon/docker-brew-ubuntu-core.git
-GitCommit: 132be9a606922501e2e107de6e2214ba64c4ab7c
+GitCommit: 2a658dc75f44c6b3a9bbae6526c1825cad12b03c
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-amd64
 amd64-GitFetch: refs/heads/dist-amd64
-amd64-GitCommit: 30f325d6526a6dd5ff9f5663a80dcc56db363e2a
+amd64-GitCommit: 8f4b095575c0e00752e10e60765c1bd65625ae95
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-arm32v7
 arm32v7-GitFetch: refs/heads/dist-arm32v7
-arm32v7-GitCommit: fb65fcce4535dba0de17b2c661b35ad0e4a75242
+arm32v7-GitCommit: 3c1630469ff60341105f34768fbcad4850395c2d
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-arm64v8
 arm64v8-GitFetch: refs/heads/dist-arm64v8
-arm64v8-GitCommit: 9783225db8ebbadee41827008ea1171bcc3dbc22
+arm64v8-GitCommit: 800d645e11148350b265fbe6c1dabf1067bdfc95
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-i386
 i386-GitFetch: refs/heads/dist-i386
-i386-GitCommit: 908e399b2053a6404c5c8ef3e006e40290df0fd5
+i386-GitCommit: 9c5fc5f361080f35e9f2133700eece703d1fc792
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-ppc64le
 ppc64le-GitFetch: refs/heads/dist-ppc64le
-ppc64le-GitCommit: e4c43883691b641c9b0cd7282ceb9c3302f32023
+ppc64le-GitCommit: 69126d091f6b56d786667ba55ac33cbe651d900d
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-s390x
 s390x-GitFetch: refs/heads/dist-s390x
-s390x-GitCommit: 09ace12e95a8e2fe2dc6b94d191610819c88f391
+s390x-GitCommit: 1cfbe45ebfeabe2fddd231be59a53b1ce1550fd1
 
-# 20190912.1 (bionic)
-Tags: 18.04, bionic-20190912.1, bionic, latest
+# 20191010 (bionic)
+Tags: 18.04, bionic-20191010, bionic, latest
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: bionic
 
-# 20190719 (cosmic)
-Tags: 18.10, cosmic-20190719, cosmic
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: cosmic
-
-# 20190913 (disco)
-Tags: 19.04, disco-20190913, disco, rolling
+# 20191011 (disco)
+Tags: 19.04, disco-20191011, disco
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: disco
 
-# 20190916 (eoan)
-Tags: 19.10, eoan-20190916, eoan, devel
+# 20191017 (eoan)
+Tags: 19.10, eoan-20191017, eoan, rolling
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: eoan
 
-# 20190904 (xenial)
-Tags: 16.04, xenial-20190904, xenial
+# 20191010 (xenial)
+Tags: 16.04, xenial-20191010, xenial
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: xenial
