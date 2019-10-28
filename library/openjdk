@@ -1,24 +1,24 @@
-# this file is generated via https://github.com/docker-library/openjdk/blob/ed268792d921e9ec999584d7d7d0b8c03a48ed4d/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/openjdk/blob/1743b5266c186071b3005311d1d2cb61f6e539b0/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/openjdk.git
 
-Tags: 14-ea-19-jdk-oraclelinux7, 14-ea-19-oraclelinux7, 14-ea-jdk-oraclelinux7, 14-ea-oraclelinux7, 14-jdk-oraclelinux7, 14-oraclelinux7, 14-ea-19-jdk-oracle, 14-ea-19-oracle, 14-ea-jdk-oracle, 14-ea-oracle, 14-jdk-oracle, 14-oracle
-SharedTags: 14-ea-19-jdk, 14-ea-19, 14-ea-jdk, 14-ea, 14-jdk, 14
+Tags: 14-ea-20-jdk-oraclelinux7, 14-ea-20-oraclelinux7, 14-ea-jdk-oraclelinux7, 14-ea-oraclelinux7, 14-jdk-oraclelinux7, 14-oraclelinux7, 14-ea-20-jdk-oracle, 14-ea-20-oracle, 14-ea-jdk-oracle, 14-ea-oracle, 14-jdk-oracle, 14-oracle
+SharedTags: 14-ea-20-jdk, 14-ea-20, 14-ea-jdk, 14-ea, 14-jdk, 14
 Architectures: amd64
-GitCommit: 64c974878212b45f5c2f6b4a3e3319f1d5a1f05d
+GitCommit: 25c3b44ab83e14a4692bd54a85be026956710341
 Directory: 14/jdk/oracle
 Constraints: !aufs
 
-Tags: 14-ea-19-jdk-buster, 14-ea-19-buster, 14-ea-jdk-buster, 14-ea-buster, 14-jdk-buster, 14-buster
+Tags: 14-ea-20-jdk-buster, 14-ea-20-buster, 14-ea-jdk-buster, 14-ea-buster, 14-jdk-buster, 14-buster
 Architectures: amd64
-GitCommit: 64c974878212b45f5c2f6b4a3e3319f1d5a1f05d
+GitCommit: 25c3b44ab83e14a4692bd54a85be026956710341
 Directory: 14/jdk
 
-Tags: 14-ea-19-jdk-slim-buster, 14-ea-19-slim-buster, 14-ea-jdk-slim-buster, 14-ea-slim-buster, 14-jdk-slim-buster, 14-slim-buster, 14-ea-19-jdk-slim, 14-ea-19-slim, 14-ea-jdk-slim, 14-ea-slim, 14-jdk-slim, 14-slim
+Tags: 14-ea-20-jdk-slim-buster, 14-ea-20-slim-buster, 14-ea-jdk-slim-buster, 14-ea-slim-buster, 14-jdk-slim-buster, 14-slim-buster, 14-ea-20-jdk-slim, 14-ea-20-slim, 14-ea-jdk-slim, 14-ea-slim, 14-jdk-slim, 14-slim
 Architectures: amd64
-GitCommit: 64c974878212b45f5c2f6b4a3e3319f1d5a1f05d
+GitCommit: 25c3b44ab83e14a4692bd54a85be026956710341
 Directory: 14/jdk/slim
 
 Tags: 14-ea-15-jdk-alpine3.10, 14-ea-15-alpine3.10, 14-ea-jdk-alpine3.10, 14-ea-alpine3.10, 14-jdk-alpine3.10, 14-alpine3.10, 14-ea-15-jdk-alpine, 14-ea-15-alpine, 14-ea-jdk-alpine, 14-ea-alpine, 14-jdk-alpine, 14-alpine
@@ -26,26 +26,40 @@ Architectures: amd64
 GitCommit: bde1e9a0f36e12e3df58b81acddd695fd140cf6a
 Directory: 14/jdk/alpine
 
-Tags: 14-ea-19-jdk-windowsservercore-1809, 14-ea-19-windowsservercore-1809, 14-ea-jdk-windowsservercore-1809, 14-ea-windowsservercore-1809, 14-jdk-windowsservercore-1809, 14-windowsservercore-1809
-SharedTags: 14-ea-19-jdk-windowsservercore, 14-ea-19-windowsservercore, 14-ea-jdk-windowsservercore, 14-ea-windowsservercore, 14-jdk-windowsservercore, 14-windowsservercore, 14-ea-19-jdk, 14-ea-19, 14-ea-jdk, 14-ea, 14-jdk, 14
+Tags: 14-ea-20-jdk-windowsservercore-1809, 14-ea-20-windowsservercore-1809, 14-ea-jdk-windowsservercore-1809, 14-ea-windowsservercore-1809, 14-jdk-windowsservercore-1809, 14-windowsservercore-1809
+SharedTags: 14-ea-20-jdk-windowsservercore, 14-ea-20-windowsservercore, 14-ea-jdk-windowsservercore, 14-ea-windowsservercore, 14-jdk-windowsservercore, 14-windowsservercore, 14-ea-20-jdk, 14-ea-20, 14-ea-jdk, 14-ea, 14-jdk, 14
 Architectures: windows-amd64
-GitCommit: 64c974878212b45f5c2f6b4a3e3319f1d5a1f05d
+GitCommit: 25c3b44ab83e14a4692bd54a85be026956710341
 Directory: 14/jdk/windows/windowsservercore-1809
 Constraints: windowsservercore-1809
 
-Tags: 14-ea-19-jdk-windowsservercore-1803, 14-ea-19-windowsservercore-1803, 14-ea-jdk-windowsservercore-1803, 14-ea-windowsservercore-1803, 14-jdk-windowsservercore-1803, 14-windowsservercore-1803
-SharedTags: 14-ea-19-jdk-windowsservercore, 14-ea-19-windowsservercore, 14-ea-jdk-windowsservercore, 14-ea-windowsservercore, 14-jdk-windowsservercore, 14-windowsservercore, 14-ea-19-jdk, 14-ea-19, 14-ea-jdk, 14-ea, 14-jdk, 14
+Tags: 14-ea-20-jdk-windowsservercore-1803, 14-ea-20-windowsservercore-1803, 14-ea-jdk-windowsservercore-1803, 14-ea-windowsservercore-1803, 14-jdk-windowsservercore-1803, 14-windowsservercore-1803
+SharedTags: 14-ea-20-jdk-windowsservercore, 14-ea-20-windowsservercore, 14-ea-jdk-windowsservercore, 14-ea-windowsservercore, 14-jdk-windowsservercore, 14-windowsservercore, 14-ea-20-jdk, 14-ea-20, 14-ea-jdk, 14-ea, 14-jdk, 14
 Architectures: windows-amd64
-GitCommit: 64c974878212b45f5c2f6b4a3e3319f1d5a1f05d
+GitCommit: 25c3b44ab83e14a4692bd54a85be026956710341
 Directory: 14/jdk/windows/windowsservercore-1803
 Constraints: windowsservercore-1803
 
-Tags: 14-ea-19-jdk-windowsservercore-ltsc2016, 14-ea-19-windowsservercore-ltsc2016, 14-ea-jdk-windowsservercore-ltsc2016, 14-ea-windowsservercore-ltsc2016, 14-jdk-windowsservercore-ltsc2016, 14-windowsservercore-ltsc2016
-SharedTags: 14-ea-19-jdk-windowsservercore, 14-ea-19-windowsservercore, 14-ea-jdk-windowsservercore, 14-ea-windowsservercore, 14-jdk-windowsservercore, 14-windowsservercore, 14-ea-19-jdk, 14-ea-19, 14-ea-jdk, 14-ea, 14-jdk, 14
+Tags: 14-ea-20-jdk-windowsservercore-ltsc2016, 14-ea-20-windowsservercore-ltsc2016, 14-ea-jdk-windowsservercore-ltsc2016, 14-ea-windowsservercore-ltsc2016, 14-jdk-windowsservercore-ltsc2016, 14-windowsservercore-ltsc2016
+SharedTags: 14-ea-20-jdk-windowsservercore, 14-ea-20-windowsservercore, 14-ea-jdk-windowsservercore, 14-ea-windowsservercore, 14-jdk-windowsservercore, 14-windowsservercore, 14-ea-20-jdk, 14-ea-20, 14-ea-jdk, 14-ea, 14-jdk, 14
 Architectures: windows-amd64
-GitCommit: 64c974878212b45f5c2f6b4a3e3319f1d5a1f05d
+GitCommit: 25c3b44ab83e14a4692bd54a85be026956710341
 Directory: 14/jdk/windows/windowsservercore-ltsc2016
 Constraints: windowsservercore-ltsc2016
+
+Tags: 14-ea-20-jdk-nanoserver-1809, 14-ea-20-nanoserver-1809, 14-ea-jdk-nanoserver-1809, 14-ea-nanoserver-1809, 14-jdk-nanoserver-1809, 14-nanoserver-1809
+SharedTags: 14-ea-20-jdk-nanoserver, 14-ea-20-nanoserver, 14-ea-jdk-nanoserver, 14-ea-nanoserver, 14-jdk-nanoserver, 14-nanoserver
+Architectures: windows-amd64
+GitCommit: 25c3b44ab83e14a4692bd54a85be026956710341
+Directory: 14/jdk/windows/nanoserver-1809
+Constraints: nanoserver-1809, windowsservercore-1809
+
+Tags: 14-ea-20-jdk-nanoserver-1803, 14-ea-20-nanoserver-1803, 14-ea-jdk-nanoserver-1803, 14-ea-nanoserver-1803, 14-jdk-nanoserver-1803, 14-nanoserver-1803
+SharedTags: 14-ea-20-jdk-nanoserver, 14-ea-20-nanoserver, 14-ea-jdk-nanoserver, 14-ea-nanoserver, 14-jdk-nanoserver, 14-nanoserver
+Architectures: windows-amd64
+GitCommit: 25c3b44ab83e14a4692bd54a85be026956710341
+Directory: 14/jdk/windows/nanoserver-1803
+Constraints: nanoserver-1803, windowsservercore-1803
 
 Tags: 13.0.1-jdk-oraclelinux7, 13.0.1-oraclelinux7, 13.0-jdk-oraclelinux7, 13.0-oraclelinux7, 13-jdk-oraclelinux7, 13-oraclelinux7, jdk-oraclelinux7, oraclelinux7, 13.0.1-jdk-oracle, 13.0.1-oracle, 13.0-jdk-oracle, 13.0-oracle, 13-jdk-oracle, 13-oracle, jdk-oracle, oracle
 SharedTags: 13.0.1-jdk, 13.0.1, 13.0-jdk, 13.0, 13-jdk, 13, jdk, latest
@@ -67,23 +81,37 @@ Directory: 13/jdk/slim
 Tags: 13.0.1-jdk-windowsservercore-1809, 13.0.1-windowsservercore-1809, 13.0-jdk-windowsservercore-1809, 13.0-windowsservercore-1809, 13-jdk-windowsservercore-1809, 13-windowsservercore-1809, jdk-windowsservercore-1809, windowsservercore-1809
 SharedTags: 13.0.1-jdk-windowsservercore, 13.0.1-windowsservercore, 13.0-jdk-windowsservercore, 13.0-windowsservercore, 13-jdk-windowsservercore, 13-windowsservercore, jdk-windowsservercore, windowsservercore, 13.0.1-jdk, 13.0.1, 13.0-jdk, 13.0, 13-jdk, 13, jdk, latest
 Architectures: windows-amd64
-GitCommit: 0a1e59a9fbc4f2cabaef69d9fede0ffe283dc431
+GitCommit: 15835397954c9ec123e42e685035ecd239e0a1db
 Directory: 13/jdk/windows/windowsservercore-1809
 Constraints: windowsservercore-1809
 
 Tags: 13.0.1-jdk-windowsservercore-1803, 13.0.1-windowsservercore-1803, 13.0-jdk-windowsservercore-1803, 13.0-windowsservercore-1803, 13-jdk-windowsservercore-1803, 13-windowsservercore-1803, jdk-windowsservercore-1803, windowsservercore-1803
 SharedTags: 13.0.1-jdk-windowsservercore, 13.0.1-windowsservercore, 13.0-jdk-windowsservercore, 13.0-windowsservercore, 13-jdk-windowsservercore, 13-windowsservercore, jdk-windowsservercore, windowsservercore, 13.0.1-jdk, 13.0.1, 13.0-jdk, 13.0, 13-jdk, 13, jdk, latest
 Architectures: windows-amd64
-GitCommit: 0a1e59a9fbc4f2cabaef69d9fede0ffe283dc431
+GitCommit: 15835397954c9ec123e42e685035ecd239e0a1db
 Directory: 13/jdk/windows/windowsservercore-1803
 Constraints: windowsservercore-1803
 
 Tags: 13.0.1-jdk-windowsservercore-ltsc2016, 13.0.1-windowsservercore-ltsc2016, 13.0-jdk-windowsservercore-ltsc2016, 13.0-windowsservercore-ltsc2016, 13-jdk-windowsservercore-ltsc2016, 13-windowsservercore-ltsc2016, jdk-windowsservercore-ltsc2016, windowsservercore-ltsc2016
 SharedTags: 13.0.1-jdk-windowsservercore, 13.0.1-windowsservercore, 13.0-jdk-windowsservercore, 13.0-windowsservercore, 13-jdk-windowsservercore, 13-windowsservercore, jdk-windowsservercore, windowsservercore, 13.0.1-jdk, 13.0.1, 13.0-jdk, 13.0, 13-jdk, 13, jdk, latest
 Architectures: windows-amd64
-GitCommit: 0a1e59a9fbc4f2cabaef69d9fede0ffe283dc431
+GitCommit: 15835397954c9ec123e42e685035ecd239e0a1db
 Directory: 13/jdk/windows/windowsservercore-ltsc2016
 Constraints: windowsservercore-ltsc2016
+
+Tags: 13.0.1-jdk-nanoserver-1809, 13.0.1-nanoserver-1809, 13.0-jdk-nanoserver-1809, 13.0-nanoserver-1809, 13-jdk-nanoserver-1809, 13-nanoserver-1809, jdk-nanoserver-1809, nanoserver-1809
+SharedTags: 13.0.1-jdk-nanoserver, 13.0.1-nanoserver, 13.0-jdk-nanoserver, 13.0-nanoserver, 13-jdk-nanoserver, 13-nanoserver, jdk-nanoserver, nanoserver
+Architectures: windows-amd64
+GitCommit: 15835397954c9ec123e42e685035ecd239e0a1db
+Directory: 13/jdk/windows/nanoserver-1809
+Constraints: nanoserver-1809, windowsservercore-1809
+
+Tags: 13.0.1-jdk-nanoserver-1803, 13.0.1-nanoserver-1803, 13.0-jdk-nanoserver-1803, 13.0-nanoserver-1803, 13-jdk-nanoserver-1803, 13-nanoserver-1803, jdk-nanoserver-1803, nanoserver-1803
+SharedTags: 13.0.1-jdk-nanoserver, 13.0.1-nanoserver, 13.0-jdk-nanoserver, 13.0-nanoserver, 13-jdk-nanoserver, 13-nanoserver, jdk-nanoserver, nanoserver
+Architectures: windows-amd64
+GitCommit: 15835397954c9ec123e42e685035ecd239e0a1db
+Directory: 13/jdk/windows/nanoserver-1803
+Constraints: nanoserver-1803, windowsservercore-1803
 
 Tags: 11.0.5-jdk-stretch, 11.0.5-stretch, 11.0-jdk-stretch, 11.0-stretch, 11-jdk-stretch, 11-stretch
 SharedTags: 11.0.5-jdk, 11.0.5, 11.0-jdk, 11.0, 11-jdk, 11
@@ -117,6 +145,20 @@ GitCommit: fb20f308cef5db398462495afd2f7bc60f51590a
 Directory: 11/jdk/windows/windowsservercore-ltsc2016
 Constraints: windowsservercore-ltsc2016
 
+Tags: 11.0.5-jdk-nanoserver-1809, 11.0.5-nanoserver-1809, 11.0-jdk-nanoserver-1809, 11.0-nanoserver-1809, 11-jdk-nanoserver-1809, 11-nanoserver-1809
+SharedTags: 11.0.5-jdk-nanoserver, 11.0.5-nanoserver, 11.0-jdk-nanoserver, 11.0-nanoserver, 11-jdk-nanoserver, 11-nanoserver
+Architectures: windows-amd64
+GitCommit: 15835397954c9ec123e42e685035ecd239e0a1db
+Directory: 11/jdk/windows/nanoserver-1809
+Constraints: nanoserver-1809, windowsservercore-1809
+
+Tags: 11.0.5-jdk-nanoserver-1803, 11.0.5-nanoserver-1803, 11.0-jdk-nanoserver-1803, 11.0-nanoserver-1803, 11-jdk-nanoserver-1803, 11-nanoserver-1803
+SharedTags: 11.0.5-jdk-nanoserver, 11.0.5-nanoserver, 11.0-jdk-nanoserver, 11.0-nanoserver, 11-jdk-nanoserver, 11-nanoserver
+Architectures: windows-amd64
+GitCommit: 15835397954c9ec123e42e685035ecd239e0a1db
+Directory: 11/jdk/windows/nanoserver-1803
+Constraints: nanoserver-1803, windowsservercore-1803
+
 Tags: 11.0.5-jre-stretch, 11.0-jre-stretch, 11-jre-stretch
 SharedTags: 11.0.5-jre, 11.0-jre, 11-jre
 Architectures: amd64, arm64v8
@@ -148,6 +190,20 @@ Architectures: windows-amd64
 GitCommit: fb20f308cef5db398462495afd2f7bc60f51590a
 Directory: 11/jre/windows/windowsservercore-ltsc2016
 Constraints: windowsservercore-ltsc2016
+
+Tags: 11.0.5-jre-nanoserver-1809, 11.0-jre-nanoserver-1809, 11-jre-nanoserver-1809
+SharedTags: 11.0.5-jre-nanoserver, 11.0-jre-nanoserver, 11-jre-nanoserver
+Architectures: windows-amd64
+GitCommit: 15835397954c9ec123e42e685035ecd239e0a1db
+Directory: 11/jre/windows/nanoserver-1809
+Constraints: nanoserver-1809, windowsservercore-1809
+
+Tags: 11.0.5-jre-nanoserver-1803, 11.0-jre-nanoserver-1803, 11-jre-nanoserver-1803
+SharedTags: 11.0.5-jre-nanoserver, 11.0-jre-nanoserver, 11-jre-nanoserver
+Architectures: windows-amd64
+GitCommit: 15835397954c9ec123e42e685035ecd239e0a1db
+Directory: 11/jre/windows/nanoserver-1803
+Constraints: nanoserver-1803, windowsservercore-1803
 
 Tags: 8u232-jdk-stretch, 8u232-stretch, 8-jdk-stretch, 8-stretch
 SharedTags: 8u232-jdk, 8u232, 8-jdk, 8
@@ -181,6 +237,20 @@ GitCommit: 403960ed0b1f6dcb2f3194f7f3139bb954e28b77
 Directory: 8/jdk/windows/windowsservercore-ltsc2016
 Constraints: windowsservercore-ltsc2016
 
+Tags: 8u232-jdk-nanoserver-1809, 8u232-nanoserver-1809, 8-jdk-nanoserver-1809, 8-nanoserver-1809
+SharedTags: 8u232-jdk-nanoserver, 8u232-nanoserver, 8-jdk-nanoserver, 8-nanoserver
+Architectures: windows-amd64
+GitCommit: 15835397954c9ec123e42e685035ecd239e0a1db
+Directory: 8/jdk/windows/nanoserver-1809
+Constraints: nanoserver-1809, windowsservercore-1809
+
+Tags: 8u232-jdk-nanoserver-1803, 8u232-nanoserver-1803, 8-jdk-nanoserver-1803, 8-nanoserver-1803
+SharedTags: 8u232-jdk-nanoserver, 8u232-nanoserver, 8-jdk-nanoserver, 8-nanoserver
+Architectures: windows-amd64
+GitCommit: 15835397954c9ec123e42e685035ecd239e0a1db
+Directory: 8/jdk/windows/nanoserver-1803
+Constraints: nanoserver-1803, windowsservercore-1803
+
 Tags: 8u232-jre-stretch, 8-jre-stretch
 SharedTags: 8u232-jre, 8-jre
 Architectures: amd64
@@ -212,3 +282,17 @@ Architectures: windows-amd64
 GitCommit: 403960ed0b1f6dcb2f3194f7f3139bb954e28b77
 Directory: 8/jre/windows/windowsservercore-ltsc2016
 Constraints: windowsservercore-ltsc2016
+
+Tags: 8u232-jre-nanoserver-1809, 8-jre-nanoserver-1809
+SharedTags: 8u232-jre-nanoserver, 8-jre-nanoserver
+Architectures: windows-amd64
+GitCommit: 15835397954c9ec123e42e685035ecd239e0a1db
+Directory: 8/jre/windows/nanoserver-1809
+Constraints: nanoserver-1809, windowsservercore-1809
+
+Tags: 8u232-jre-nanoserver-1803, 8-jre-nanoserver-1803
+SharedTags: 8u232-jre-nanoserver, 8-jre-nanoserver
+Architectures: windows-amd64
+GitCommit: 15835397954c9ec123e42e685035ecd239e0a1db
+Directory: 8/jre/windows/nanoserver-1803
+Constraints: nanoserver-1803, windowsservercore-1803
