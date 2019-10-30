@@ -1,3 +1,4 @@
+# https://stdgems.org/ (https://github.com/janlelis/stdgems)
 stdlib = [
 	'abbrev',
 	'base64',
@@ -108,10 +109,22 @@ end
 require 'rubygems/version'
 rubyVersion = Gem::Version.create(RUBY_VERSION)
 if rubyVersion >= Gem::Version.create('2.5')
+	# https://bugs.ruby-lang.org/issues/13335
 	stdlib.delete('mathn')
 end
 if rubyVersion >= Gem::Version.create('2.7')
+	# https://bugs.ruby-lang.org/issues/15652
+	# "Removed from standard library. No one maintains it"
 	stdlib.delete('profiler')
+	# https://bugs.ruby-lang.org/issues/16170
+	# "removing some of the unmaintained libraries"
+	stdlib.delete('cmath')
+	stdlib.delete('e2mmap')
+	stdlib.delete('scanf')
+	stdlib.delete('shell')
+	stdlib.delete('sync')
+	stdlib.delete('thwait')
+	stdlib.delete('tracer')
 end
 
 result = 'ok'
