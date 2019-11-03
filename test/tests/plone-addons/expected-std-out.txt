@@ -4,3 +4,8 @@ extends = develop.cfg
 develop += src/eea.facetednavigation
 eggs += eea.facetednavigation
 zcml += eea.facetednavigation-meta
+
+[plonesite]
+enabled = False
+site-id = Plone
+profiles += eea.facetednavigation:default
