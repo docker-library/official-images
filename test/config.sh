@@ -179,6 +179,7 @@ imageTests+=(
 	[plone]='
 		plone-basics
 		plone-addons
+		plone-versions
 		plone-zeoclient
 	'
 	[postgres]='
