@@ -179,6 +179,7 @@ imageTests+=(
 	[plone]='
 		plone-basics
 		plone-addons
+		plone-cors
 		plone-versions
 		plone-zeoclient
 	'
