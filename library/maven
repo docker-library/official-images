@@ -1,6 +1,11 @@
 Maintainers: Carlos Sanchez <carlos@apache.org> (@carlossg)
 GitRepo: https://github.com/carlossg/docker-maven.git
 
+Tags: 3.6.2-jdk-11-openj9, 3.6-jdk-11-openj9, 3-jdk-11-openj9
+Architectures: amd64, ppc64le, s390x
+GitCommit: 6f912331309f5ab9745a91ef5884f3a0b46dfc1d
+Directory: jdk-11-openj9
+
 Tags: 3.6.2-jdk-11-slim, 3.6.2-slim, 3.6-jdk-11-slim, 3.6-slim, 3-jdk-11-slim, slim
 Architectures: amd64, arm64v8
 GitCommit: 081d9d041aa640694fceabc02c72fe93d5cd42cd
@@ -10,12 +15,6 @@ Tags: 3.6.2-jdk-11, 3.6.2, 3.6-jdk-11, 3.6, 3-jdk-11, 3, latest
 Architectures: amd64, arm64v8
 GitCommit: 081d9d041aa640694fceabc02c72fe93d5cd42cd
 Directory: jdk-11
-
-Tags: 3.6.2-jdk-12, 3.6-jdk-12, 3-jdk-12
-Architectures: amd64
-GitCommit: 081d9d041aa640694fceabc02c72fe93d5cd42cd
-Directory: jdk-12
-Constraints: !aufs
 
 Tags: 3.6.2-jdk-13, 3.6-jdk-13, 3-jdk-13
 Architectures: amd64
@@ -28,6 +27,11 @@ Architectures: amd64
 GitCommit: 081d9d041aa640694fceabc02c72fe93d5cd42cd
 Directory: jdk-14
 Constraints: !aufs
+
+Tags: 3.6.2-jdk-8-openj9, 3.6-jdk-8-openj9, 3-jdk-8-openj9
+Architectures: amd64, ppc64le, s390x
+GitCommit: 6f912331309f5ab9745a91ef5884f3a0b46dfc1d
+Directory: jdk-8-openj9
 
 Tags: 3.6.2-jdk-8-slim, 3.6-jdk-8-slim, 3-jdk-8-slim
 Architectures: amd64
