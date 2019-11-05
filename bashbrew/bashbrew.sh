@@ -15,7 +15,7 @@ src="$dir/src"
 logs="$dir/logs"
 namespaces='_'
 docker='docker'
-maxBgJobs=20
+maxBgJobs=5
 defaultSleepTime=2
 
 library="$(readlink -f "$library")"
