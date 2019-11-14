@@ -75,7 +75,8 @@ fi
 if [[ "$testName" == *tls* ]]; then
 	tlsImage="$("$testDir/../image-name.sh" librarytest/mongo-tls "$image")"
 	"$testDir/../docker-build.sh" "$testDir" "$tlsImage" <<-EOD
-		FROM $image
+		FROM alpine:3.10 AS certs
+		RUN apk add --no-cache openssl
 		RUN set -eux; \
 			mkdir /certs; \
 			openssl genrsa -out /certs/ca-private.key 8192; \
@@ -90,8 +91,11 @@ if [[ "$testName" == *tls* ]]; then
 			openssl x509 -req -in /certs/cert.csr \
 				-CA /certs/ca.crt -CAkey /certs/ca-private.key -CAcreateserial \
 				-out /certs/cert.crt -days $(( 365 * 30 )); \
-			openssl verify -CAfile /certs/ca.crt /certs/cert.crt; \
-			chown -R mongodb:mongodb /certs
+			openssl verify -CAfile /certs/ca.crt /certs/cert.crt
+
+		FROM $image
+		# gotta be :0 because percona's mongo doesn't have a mongodb group and estesp slayed tianon with https://github.com/moby/moby/pull/34263/files#diff-f157a3a45b3e5d85aadff73bff1f5a7cR170-R171
+		COPY --from=certs --chown=mongodb:0 /certs /certs
 		RUN cat /certs/cert.crt /certs/private.key > /certs/both.pem # yeah, what
 	EOD
 	image="$tlsImage"
