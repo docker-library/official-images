@@ -2,21 +2,21 @@ Maintainers: Kong Docker Maintainers <support@konghq.com> (@thekonginc)
 GitRepo: https://github.com/Kong/docker-kong.git
 # needs "Constraints" to match "centos" (which this image is "FROM")
 
-Tags: 1.4.0-alpine, 1.4.0, 1.4, alpine, latest
-GitCommit: 3064639825d8f33fa84220993de49c5cfee5a3a9
-GitFetch: refs/tags/1.4.0
+Tags: 1.4.1-alpine, 1.4.1, 1.4, alpine, latest
+GitCommit: a05efeb1ce8e95def24b8c0adb67ccd3d3ff6e51
+GitFetch: refs/tags/1.4.1
 Directory: alpine
 Architectures: amd64
 
 Tags: 1.4.0-ubuntu, 1.4-ubuntu, ubuntu
-GitCommit: 3064639825d8f33fa84220993de49c5cfee5a3a9
-GitFetch: refs/tags/1.4.0
+GitCommit: a05efeb1ce8e95def24b8c0adb67ccd3d3ff6e51
+GitFetch: refs/tags/1.4.1
 Directory: ubuntu
 Architectures: amd64, arm64v8
 
-Tags: 1.4.0-centos, 1.4-centos, centos
-GitCommit: 3064639825d8f33fa84220993de49c5cfee5a3a9
-GitFetch: refs/tags/1.4.0
+Tags: 1.4.1-centos, 1.4-centos, centos
+GitCommit: a05efeb1ce8e95def24b8c0adb67ccd3d3ff6e51
+GitFetch: refs/tags/1.4.1
 Constraints: !aufs
 Directory: centos
 Architectures: amd64
