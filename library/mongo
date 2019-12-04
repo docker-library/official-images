@@ -1,4 +1,4 @@
-# this file is generated via https://github.com/docker-library/mongo/blob/2f757af6d12f4239cf5541455b011921ee4c06d1/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/mongo/blob/9ba0d6f19538d7922f62a41cea6589e366b100d3/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
@@ -53,6 +53,13 @@ GitCommit: 6d7dddef73dba24e57f1eabff64346950d46157c
 Directory: 4.0/windows/windowsservercore-1803
 Constraints: windowsservercore-1803
 
+Tags: 4.0.13-windowsservercore-1809, 4.0-windowsservercore-1809
+SharedTags: 4.0.13-windowsservercore, 4.0-windowsservercore, 4.0.13, 4.0
+Architectures: windows-amd64
+GitCommit: 9ba0d6f19538d7922f62a41cea6589e366b100d3
+Directory: 4.0/windows/windowsservercore-1809
+Constraints: windowsservercore-1809
+
 Tags: 4.2.1-bionic, 4.2-bionic, 4-bionic, bionic
 SharedTags: 4.2.1, 4.2, 4, latest
 # see http://repo.mongodb.org/apt/ubuntu/dists/bionic/mongodb-org/4.2/multiverse/
@@ -73,3 +80,10 @@ Architectures: windows-amd64
 GitCommit: 62bea45864a0d356c346266b94b0fad1413ca033
 Directory: 4.2/windows/windowsservercore-1803
 Constraints: windowsservercore-1803
+
+Tags: 4.2.1-windowsservercore-1809, 4.2-windowsservercore-1809, 4-windowsservercore-1809, windowsservercore-1809
+SharedTags: 4.2.1-windowsservercore, 4.2-windowsservercore, 4-windowsservercore, windowsservercore, 4.2.1, 4.2, 4, latest
+Architectures: windows-amd64
+GitCommit: 9ba0d6f19538d7922f62a41cea6589e366b100d3
+Directory: 4.2/windows/windowsservercore-1809
+Constraints: windowsservercore-1809
