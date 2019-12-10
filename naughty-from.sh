@@ -23,6 +23,11 @@ _is_naughty() {
 		| *=microsoft/*:latest \
 		) return 0 ;;
 		# https://docs.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/base-image-lifecycle
+		# "11/12/2019"
+		*=mcr.microsoft.com/windows/*:1803* \
+		| *=microsoft/*:1803* \
+		) return 0 ;;
+		# https://docs.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/base-image-lifecycle
 		# "04/09/2019"
 		*=mcr.microsoft.com/windows/*:1709* \
 		| *=microsoft/*:1709* \
