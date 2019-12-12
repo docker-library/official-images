@@ -2,7 +2,7 @@ Maintainers: Chris Potter <crpotter@us.ibm.com> (@crpotter),
              Wendy Raschke <wraschke@us.ibm.com> (@wraschke),
              Arthur De Magalhaes <arthurdm@ca.ibm.com> (@arthurdm)
 GitRepo: https://github.com/OpenLiberty/ci.docker.git
-GitCommit: 504fdf26e680b1f71de82ac4099044cb55e8e2d8
+GitCommit: 43bf4e06d9d58f757582d1189fe74d905327a27d
 Architectures: amd64, i386, ppc64le, s390x
 
 Tags: kernel, kernel-java8-openj9
@@ -12,6 +12,16 @@ File: Dockerfile.ubuntu.adoptopenjdk8
 
 Tags: full, full-java8-openj9, latest
 Directory: releases/latest/full
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.adoptopenjdk8
+
+Tags: 19.0.0.12-kernel-java8-openj9
+Directory: releases/19.0.0.12/kernel
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.adoptopenjdk8
+
+Tags: 19.0.0.12-full-java8-openj9
+Directory: releases/19.0.0.12/full
 Architectures: amd64, ppc64le, s390x
 File: Dockerfile.ubuntu.adoptopenjdk8
 
@@ -202,176 +212,5 @@ File: Dockerfile.ubuntu.adoptopenjdk8
 
 Tags: 19.0.0.9-springBoot1-java11
 Directory: releases/19.0.0.9/springBoot1
-Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.adoptopenjdk11
-
-Tags: 19.0.0.6-kernel, 19.0.0.6-kernel-java8-ibm
-Directory: releases/19.0.0.6/kernel
-File: Dockerfile.ubuntu.ibmjava8
-
-Tags: 19.0.0.6-kernel-java8-ibmsfj
-Directory: releases/19.0.0.6/kernel
-Architectures: amd64
-File: Dockerfile.alpine.ibmsfj8
-
-Tags: 19.0.0.6-kernel-java8-openj9
-Directory: releases/19.0.0.6/kernel
-Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.adoptopenjdk8
-
-Tags: 19.0.0.6-kernel-java11
-Directory: releases/19.0.0.6/kernel
-Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.adoptopenjdk11
-
-Tags: 19.0.0.6-webProfile8, 19.0.0.6-webProfile8-java8-ibm
-Directory: releases/19.0.0.6/webProfile8
-File: Dockerfile.ubuntu.ibmjava8
-
-Tags: 19.0.0.6-webProfile8-java8-ibmsfj
-Directory: releases/19.0.0.6/webProfile8
-Architectures: amd64
-File: Dockerfile.alpine.ibmsfj8
-
-Tags: 19.0.0.6-webProfile8-java8-openj9
-Directory: releases/19.0.0.6/webProfile8
-Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.adoptopenjdk8
-
-Tags: 19.0.0.6-webProfile8-java11
-Directory: releases/19.0.0.6/webProfile8
-Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.adoptopenjdk11
-
-Tags: 19.0.0.6-javaee8, 19.0.0.6-javaee8-java8-ibm
-Directory: releases/19.0.0.6/javaee8
-File: Dockerfile.ubuntu.ibmjava8
-
-Tags: 19.0.0.6-javaee8-java8-ibmsfj
-Directory: releases/19.0.0.6/javaee8
-Architectures: amd64
-File: Dockerfile.alpine.ibmsfj8
-
-Tags: 19.0.0.6-javaee8-java8-openj9
-Directory: releases/19.0.0.6/javaee8
-Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.adoptopenjdk8
-
-Tags: 19.0.0.6-javaee8-java11
-Directory: releases/19.0.0.6/javaee8
-Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.adoptopenjdk11
-
-Tags: 19.0.0.6-microProfile1, 19.0.0.6-microProfile1-java8-ibm
-Directory: releases/19.0.0.6/microProfile1
-File: Dockerfile.ubuntu.ibmjava8
-
-Tags: 19.0.0.6-microProfile1-java8-ibmsfj
-Directory: releases/19.0.0.6/microProfile1
-Architectures: amd64
-File: Dockerfile.alpine.ibmsfj8
-
-Tags: 19.0.0.6-microProfile1-java8-openj9
-Directory: releases/19.0.0.6/microProfile1
-Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.adoptopenjdk8
-
-Tags: 19.0.0.6-microProfile1-java11
-Directory: releases/19.0.0.6/microProfile1
-Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.adoptopenjdk11
-
-Tags: 19.0.0.6-microProfile2, 19.0.0.6-microProfile2-java8-ibm
-Directory: releases/19.0.0.6/microProfile2
-File: Dockerfile.ubuntu.ibmjava8
-
-Tags: 19.0.0.6-microProfile2-java8-ibmsfj
-Directory: releases/19.0.0.6/microProfile2
-Architectures: amd64
-File: Dockerfile.alpine.ibmsfj8
-
-Tags: 19.0.0.6-microProfile2-java8-openj9
-Directory: releases/19.0.0.6/microProfile2
-Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.adoptopenjdk8
-
-Tags: 19.0.0.6-microProfile2-java11
-Directory: releases/19.0.0.6/microProfile2
-Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.adoptopenjdk11
-
-Tags: 19.0.0.6-springBoot2, 19.0.0.6-springBoot2-java8-ibm
-Directory: releases/19.0.0.6/springBoot2
-File: Dockerfile.ubuntu.ibmjava8
-
-Tags: 19.0.0.6-springBoot2-java8-ibmsfj
-Directory: releases/19.0.0.6/springBoot2
-Architectures: amd64
-File: Dockerfile.alpine.ibmsfj8
-
-Tags: 19.0.0.6-springBoot2-java8-openj9
-Directory: releases/19.0.0.6/springBoot2
-Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.adoptopenjdk8
-
-Tags: 19.0.0.6-springBoot2-java11
-Directory: releases/19.0.0.6/springBoot2
-Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.adoptopenjdk11
-
-Tags: 19.0.0.6-webProfile7, 19.0.0.6-webProfile7-java8-ibm
-Directory: releases/19.0.0.6/webProfile7
-File: Dockerfile.ubuntu.ibmjava8
-
-Tags: 19.0.0.6-webProfile7-java8-ibmsfj
-Directory: releases/19.0.0.6/webProfile7
-Architectures: amd64
-File: Dockerfile.alpine.ibmsfj8
-
-Tags: 19.0.0.6-webProfile7-java8-openj9
-Directory: releases/19.0.0.6/webProfile7
-Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.adoptopenjdk8
-
-Tags: 19.0.0.6-webProfile7-java11
-Directory: releases/19.0.0.6/webProfile7
-Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.adoptopenjdk11
-
-Tags: 19.0.0.6-javaee7, 19.0.0.6-javaee7-java8-ibm
-Directory: releases/19.0.0.6/javaee7
-File: Dockerfile.ubuntu.ibmjava8
-
-Tags: 19.0.0.6-javaee7-java8-ibmsfj
-Directory: releases/19.0.0.6/javaee7
-Architectures: amd64
-File: Dockerfile.alpine.ibmsfj8
-
-Tags: 19.0.0.6-javaee7-java8-openj9
-Directory: releases/19.0.0.6/javaee7
-Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.adoptopenjdk8
-
-Tags: 19.0.0.6-javaee7-java11
-Directory: releases/19.0.0.6/javaee7
-Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.adoptopenjdk11
-
-Tags: 19.0.0.6-springBoot1, 19.0.0.6-springBoot1-java8-ibm
-Directory: releases/19.0.0.6/springBoot1
-File: Dockerfile.ubuntu.ibmjava8
-
-Tags: 19.0.0.6-springBoot1-java8-ibmsfj
-Directory: releases/19.0.0.6/springBoot1
-Architectures: amd64
-File: Dockerfile.alpine.ibmsfj8
-
-Tags: 19.0.0.6-springBoot1-java8-openj9
-Directory: releases/19.0.0.6/springBoot1
-Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.adoptopenjdk8
-
-Tags: 19.0.0.6-springBoot1-java11
-Directory: releases/19.0.0.6/springBoot1
 Architectures: amd64, ppc64le, s390x
 File: Dockerfile.ubuntu.adoptopenjdk11
