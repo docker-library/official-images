@@ -1,7 +1,19 @@
-Maintainers: James Mills (@prologic),
-             Lee Jones (@lag-linaro)
+Maintainers: Mateusz Charytoniuk (@mcharytoniuk),
+             Wawrzyniec Niewodniczanski (@wawrzek)
 GitRepo: https://github.com/cruxlinux/docker-crux
 GitCommit: 26d68b9fbd54b774c53558faf2d3f1f94048c89a
+
+Tags: 3.5, latest
+Architectures: amd64
+amd64-GitFetch: refs/heads/release-3.5-x86_64
+amd64-GitCommit: ebe7d77cae26c9b5584212dabb1ba9223f9c8e5e
+
+Tags: 3.4
+Architectures: amd64, arm64v8
+arm64v8-GitFetch: refs/heads/release-3.4-aarch64
+arm64v8-GitCommit: 9e26df864d2329a493b30b716ed36314509f0273
+amd64-GitFetch: refs/heads/release-3.4-x86_64
+amd64-GitCommit: da081a9004c5559cd77a1e2c2521193ccb2afdd2
 
 Tags: 3.4, latest
 Architectures: amd64, arm64v8
