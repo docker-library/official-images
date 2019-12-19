@@ -1,8 +1,46 @@
-# this file is generated via https://github.com/docker-library/openjdk/blob/e2fbda03b975d10f70c32858cff764f0c8606ac9/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/openjdk/blob/50dcb999fcc9a922bd4a60769bcc514ca988a56f/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/openjdk.git
+
+Tags: 15-ea-1-jdk-oraclelinux7, 15-ea-1-oraclelinux7, 15-ea-jdk-oraclelinux7, 15-ea-oraclelinux7, 15-jdk-oraclelinux7, 15-oraclelinux7, 15-ea-1-jdk-oracle, 15-ea-1-oracle, 15-ea-jdk-oracle, 15-ea-oracle, 15-jdk-oracle, 15-oracle
+SharedTags: 15-ea-1-jdk, 15-ea-1, 15-ea-jdk, 15-ea, 15-jdk, 15
+Architectures: amd64
+GitCommit: 50dcb999fcc9a922bd4a60769bcc514ca988a56f
+Directory: 15/jdk/oracle
+Constraints: !aufs
+
+Tags: 15-ea-1-jdk-buster, 15-ea-1-buster, 15-ea-jdk-buster, 15-ea-buster, 15-jdk-buster, 15-buster
+Architectures: amd64
+GitCommit: 50dcb999fcc9a922bd4a60769bcc514ca988a56f
+Directory: 15/jdk
+
+Tags: 15-ea-1-jdk-slim-buster, 15-ea-1-slim-buster, 15-ea-jdk-slim-buster, 15-ea-slim-buster, 15-jdk-slim-buster, 15-slim-buster, 15-ea-1-jdk-slim, 15-ea-1-slim, 15-ea-jdk-slim, 15-ea-slim, 15-jdk-slim, 15-slim
+Architectures: amd64
+GitCommit: 50dcb999fcc9a922bd4a60769bcc514ca988a56f
+Directory: 15/jdk/slim
+
+Tags: 15-ea-1-jdk-windowsservercore-1809, 15-ea-1-windowsservercore-1809, 15-ea-jdk-windowsservercore-1809, 15-ea-windowsservercore-1809, 15-jdk-windowsservercore-1809, 15-windowsservercore-1809
+SharedTags: 15-ea-1-jdk-windowsservercore, 15-ea-1-windowsservercore, 15-ea-jdk-windowsservercore, 15-ea-windowsservercore, 15-jdk-windowsservercore, 15-windowsservercore, 15-ea-1-jdk, 15-ea-1, 15-ea-jdk, 15-ea, 15-jdk, 15
+Architectures: windows-amd64
+GitCommit: 50dcb999fcc9a922bd4a60769bcc514ca988a56f
+Directory: 15/jdk/windows/windowsservercore-1809
+Constraints: windowsservercore-1809
+
+Tags: 15-ea-1-jdk-windowsservercore-ltsc2016, 15-ea-1-windowsservercore-ltsc2016, 15-ea-jdk-windowsservercore-ltsc2016, 15-ea-windowsservercore-ltsc2016, 15-jdk-windowsservercore-ltsc2016, 15-windowsservercore-ltsc2016
+SharedTags: 15-ea-1-jdk-windowsservercore, 15-ea-1-windowsservercore, 15-ea-jdk-windowsservercore, 15-ea-windowsservercore, 15-jdk-windowsservercore, 15-windowsservercore, 15-ea-1-jdk, 15-ea-1, 15-ea-jdk, 15-ea, 15-jdk, 15
+Architectures: windows-amd64
+GitCommit: 50dcb999fcc9a922bd4a60769bcc514ca988a56f
+Directory: 15/jdk/windows/windowsservercore-ltsc2016
+Constraints: windowsservercore-ltsc2016
+
+Tags: 15-ea-1-jdk-nanoserver-1809, 15-ea-1-nanoserver-1809, 15-ea-jdk-nanoserver-1809, 15-ea-nanoserver-1809, 15-jdk-nanoserver-1809, 15-nanoserver-1809
+SharedTags: 15-ea-1-jdk-nanoserver, 15-ea-1-nanoserver, 15-ea-jdk-nanoserver, 15-ea-nanoserver, 15-jdk-nanoserver, 15-nanoserver
+Architectures: windows-amd64
+GitCommit: 50dcb999fcc9a922bd4a60769bcc514ca988a56f
+Directory: 15/jdk/windows/nanoserver-1809
+Constraints: nanoserver-1809, windowsservercore-1809
 
 Tags: 14-ea-27-jdk-oraclelinux7, 14-ea-27-oraclelinux7, 14-ea-jdk-oraclelinux7, 14-ea-oraclelinux7, 14-jdk-oraclelinux7, 14-oraclelinux7, 14-ea-27-jdk-oracle, 14-ea-27-oracle, 14-ea-jdk-oracle, 14-ea-oracle, 14-jdk-oracle, 14-oracle
 SharedTags: 14-ea-27-jdk, 14-ea-27, 14-ea-jdk, 14-ea, 14-jdk, 14
