@@ -225,6 +225,7 @@ imageTests+=(
 		ruby-gems
 		ruby-bundler
 		ruby-nonroot
+		ruby-binstubs
 	'
 	[rust]='
 		rust-hello-world
