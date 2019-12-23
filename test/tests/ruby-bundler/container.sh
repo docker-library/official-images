@@ -12,3 +12,5 @@ BUNDLE_FROZEN=0 bundle install
 cp Gemfile.lock Gemfile.lock.orig
 BUNDLE_FROZEN=1 bundle install
 diff -u Gemfile.lock.orig Gemfile.lock >&2
+bundle install --deployment
+diff -u Gemfile.lock.orig Gemfile.lock >&2
