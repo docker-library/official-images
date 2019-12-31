@@ -208,6 +208,7 @@ imageTests+=(
 	'
 	[redis]='
 		redis-basics
+		redis-basics-tls
 		redis-basics-config
 		redis-basics-persistent
 	'
