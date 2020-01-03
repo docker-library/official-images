@@ -12,5 +12,10 @@ BUNDLE_FROZEN=0 bundle install
 cp Gemfile.lock Gemfile.lock.orig
 BUNDLE_FROZEN=1 bundle install
 diff -u Gemfile.lock.orig Gemfile.lock >&2
-bundle install --deployment
+
+if ruby -rbundler -e 'exit Gem::Version.new(Bundler::VERSION) >= Gem::Version.new("2.1") ? 0 : 1'; then
+	BUNDLE_DEPLOYMENT=1 bundle install
+else
+	bundle install --deployment
+fi
 diff -u Gemfile.lock.orig Gemfile.lock >&2
