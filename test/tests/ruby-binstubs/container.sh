@@ -8,6 +8,5 @@ cp Gemfile "$dir"
 
 cd "$dir"
 
-gem install bundler -v "$1"
 bundle install
 bundle audit version
