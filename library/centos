@@ -3,10 +3,14 @@ GitRepo: https://github.com/CentOS/sig-cloud-instance-images.git
 Directory: docker
 Constraints: !aufs
 
-Tags: latest, centos8, 8
-GitFetch: refs/heads/CentOS-8-x86_64
-GitCommit: 0510c8e67cb3a48db178a8302157cdf7d9e99a0c
-Architectures: amd64
+Tags: latest, centos8, 8, centos8.1.1911, 8.1.1911
+GitFetch: refs/heads/CentOS-8.1.1911-x86_64
+GitCommit: 404952a3839ef0eab15ab345791cc32cc0bc84f4
+arm64v8-GitFetch: refs/heads/CentOS-8.1.1911-aarch64
+arm64v8-GitCommit: 7b5b42c528085516ec2ea43aff8e68b1f63b66fd
+ppc64le-GitFetch: refs/heads/CentOS-8.1.1911-ppc64le
+ppc64le-GitCommit: 967b419190d05c135211fd5c087b1d22451aa0e9
+Architectures: amd64, arm64v8, ppc64le
 
 Tags: centos7, 7
 GitFetch: refs/heads/CentOS-7-x86_64
