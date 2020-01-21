@@ -3,65 +3,52 @@
 
 Maintainers: Tianon Gravi <tianon@debian.org> (@tianon), Michael Hudson-Doyle <michael.hudson@ubuntu.com> (@mwhudson)
 GitRepo: https://github.com/tianon/docker-brew-ubuntu-core.git
-GitCommit: efdd82ca8c770de2972669ad2e183e09dc252d81
+GitCommit: 049685086825d4fddac171b13b0f31dd07e71c97
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-amd64
 amd64-GitFetch: refs/heads/dist-amd64
-amd64-GitCommit: d4313e13366d24a97bd178db4450f63e221803f1
+amd64-GitCommit: 14faa76f80e543f7507828430ff50b4a58466ffd
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-arm32v7
 arm32v7-GitFetch: refs/heads/dist-arm32v7
-arm32v7-GitCommit: 03e1d206cbe6130a367c79584a0827b9418933cf
+arm32v7-GitCommit: 5502ee29867cc48a90f6fb043f60f296830d265b
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-arm64v8
 arm64v8-GitFetch: refs/heads/dist-arm64v8
-arm64v8-GitCommit: 99ed4d71526542d85c692f21886516392b450ff4
+arm64v8-GitCommit: d97a4330278f617a0764753a7dd697c0cb2a9b7f
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-i386
 i386-GitFetch: refs/heads/dist-i386
-i386-GitCommit: 26e33b861267d07acdb42c8a5874622eb15d964b
+i386-GitCommit: 4ec6933ebb724129be891420c332a4357ff529f3
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-ppc64le
 ppc64le-GitFetch: refs/heads/dist-ppc64le
-ppc64le-GitCommit: 592fdc7def08d0098b7ccd7f8cae0eec8e690b4f
+ppc64le-GitCommit: e1e2763c9aacbe9ecc332cd1abfcc8cced4aedb1
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-s390x
 s390x-GitFetch: refs/heads/dist-s390x
-s390x-GitCommit: 01bf8b9205803f23839faf868fcd0056666ece66
+s390x-GitCommit: 99c2c7683156defea72e8a271ab03d24decc1d90
 
-# 20191029 (bionic)
-Tags: 18.04, bionic-20191029, bionic, latest
+# 20191202 (bionic)
+Tags: 18.04, bionic-20191202, bionic, latest
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: bionic
 
-# 20191030 (disco)
-Tags: 19.04, disco-20191030, disco
+# 20191127 (disco)
+Tags: 19.04, disco-20191127, disco
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: disco
 
-# 20191101 (eoan)
-Tags: 19.10, eoan-20191101, eoan, rolling
+# 20191127 (eoan)
+Tags: 19.10, eoan-20191127, eoan, rolling
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: eoan
 
-# 20191030 (focal)
-Tags: 20.04, focal-20191030, focal, devel
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+# 20191129 (focal)
+Tags: 20.04, focal-20191129, focal, devel
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
 Directory: focal
 
-# 20190515 (trusty)
-Tags: 14.04, trusty-20190515, trusty
+# 20191217 (trusty)
+Tags: 14.04, trusty-20191217, trusty
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le
-GitCommit: 7a1a4f883de2d81351a82c86c24a0033dcae03db
 Directory: trusty
-amd64-GitCommit: 010bf9649b1d10e2c34b159a9a9b338d0fdd4939
-amd64-GitFetch: refs/heads/dist-amd64
-arm32v7-GitCommit: b9a951ace1f2e2e418828a197f62678c337f903e
-arm32v7-GitFetch: refs/heads/dist-arm32v7
-arm64v8-GitCommit: dffe0ea71413c9ca297a0935bade25c3ad3348a3
-arm64v8-GitFetch: refs/heads/dist-arm64v8
-i386-GitCommit: 2f8e166f4a725c5bcf3e96e2986d312f39a14098
-i386-GitFetch: refs/heads/dist-i386
-ppc64le-GitCommit: bbbf38c2900bd6aea408e3690be45e74bf2de1a5
-ppc64le-GitFetch: refs/heads/dist-ppc64le
-s390x-GitCommit: 4f55bf693232c85b18f9e6084c8f6780a24c3ba4
-s390x-GitFetch: refs/heads/dist-s390x
 
-# 20191108 (xenial)
-Tags: 16.04, xenial-20191108, xenial
+# 20191212 (xenial)
+Tags: 16.04, xenial-20191212, xenial
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: xenial
