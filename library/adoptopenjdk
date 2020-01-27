@@ -27,14 +27,6 @@ Directory: 8/jdk/windows/windowsservercore-1809
 File: Dockerfile.hotspot.releases.full
 Constraints: windowsservercore-1809
 
-Tags: 8u232-b09-jdk-hotspot-windowsservercore-1803, 8-jdk-hotspot-windowsservercore-1803, 8-hotspot-windowsservercore-1803
-SharedTags: 8u232-b09-jdk-hotspot-windowsservercore, 8-jdk-hotspot-windowsservercore, 8-hotspot-windowsservercore, 8u232-b09-jdk-hotspot, 8-jdk-hotspot, 8-hotspot
-Architectures: windows-amd64
-GitCommit: 3b20018f331a9201b86405fbacdebe034bf522bf
-Directory: 8/jdk/windows/windowsservercore-1803
-File: Dockerfile.hotspot.releases.full
-Constraints: windowsservercore-1803
-
 Tags: 8u232-b09-jre-hotspot-bionic, 8-jre-hotspot-bionic
 SharedTags: 8u232-b09-jre-hotspot, 8-jre-hotspot
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
@@ -57,14 +49,6 @@ GitCommit: 3b20018f331a9201b86405fbacdebe034bf522bf
 Directory: 8/jre/windows/windowsservercore-1809
 File: Dockerfile.hotspot.releases.full
 Constraints: windowsservercore-1809
-
-Tags: 8u232-b09-jre-hotspot-windowsservercore-1803, 8-jre-hotspot-windowsservercore-1803
-SharedTags: 8u232-b09-jre-hotspot-windowsservercore, 8-jre-hotspot-windowsservercore, 8u232-b09-jre-hotspot, 8-jre-hotspot
-Architectures: windows-amd64
-GitCommit: 3b20018f331a9201b86405fbacdebe034bf522bf
-Directory: 8/jre/windows/windowsservercore-1803
-File: Dockerfile.hotspot.releases.full
-Constraints: windowsservercore-1803
 
 #-----------------------------hotspot v11 images--------------------------------
 
@@ -91,14 +75,6 @@ Directory: 11/jdk/windows/windowsservercore-1809
 File: Dockerfile.hotspot.releases.full
 Constraints: windowsservercore-1809
 
-Tags: 11.0.6_10-jdk-hotspot-windowsservercore-1803, 11-jdk-hotspot-windowsservercore-1803, 11-hotspot-windowsservercore-1803
-SharedTags: 11.0.6_10-jdk-hotspot-windowsservercore, 11-jdk-hotspot-windowsservercore, 11-hotspot-windowsservercore, 11.0.6_10-jdk-hotspot, 11-jdk-hotspot, 11-hotspot
-Architectures: windows-amd64
-GitCommit: 6ef982afbdd32a0b2195c9ee0fa36328535a3c64
-Directory: 11/jdk/windows/windowsservercore-1803
-File: Dockerfile.hotspot.releases.full
-Constraints: windowsservercore-1803
-
 Tags: 11.0.6_10-jre-hotspot-bionic, 11-jre-hotspot-bionic
 SharedTags: 11.0.6_10-jre-hotspot, 11-jre-hotspot
 Architectures: amd64, arm64v8, ppc64le, s390x
@@ -121,14 +97,6 @@ GitCommit: 6ef982afbdd32a0b2195c9ee0fa36328535a3c64
 Directory: 11/jre/windows/windowsservercore-1809
 File: Dockerfile.hotspot.releases.full
 Constraints: windowsservercore-1809
-
-Tags: 11.0.6_10-jre-hotspot-windowsservercore-1803, 11-jre-hotspot-windowsservercore-1803
-SharedTags: 11.0.6_10-jre-hotspot-windowsservercore, 11-jre-hotspot-windowsservercore, 11.0.6_10-jre-hotspot, 11-jre-hotspot
-Architectures: windows-amd64
-GitCommit: 6ef982afbdd32a0b2195c9ee0fa36328535a3c64
-Directory: 11/jre/windows/windowsservercore-1803
-File: Dockerfile.hotspot.releases.full
-Constraints: windowsservercore-1803
 
 #-----------------------------hotspot v13 images--------------------------------
 
@@ -155,14 +123,6 @@ Directory: 13/jdk/windows/windowsservercore-1809
 File: Dockerfile.hotspot.releases.full
 Constraints: windowsservercore-1809
 
-Tags: 13.0.2_8-jdk-hotspot-windowsservercore-1803, 13-jdk-hotspot-windowsservercore-1803, 13-hotspot-windowsservercore-1803, hotspot-windowsservercore-1803
-SharedTags: 13.0.2_8-jdk-hotspot-windowsservercore, 13-jdk-hotspot-windowsservercore, 13-hotspot-windowsservercore, hotspot-windowsservercore, 13.0.2_8-jdk-hotspot, 13-jdk-hotspot, 13-hotspot, hotspot, latest
-Architectures: windows-amd64
-GitCommit: 6ef982afbdd32a0b2195c9ee0fa36328535a3c64
-Directory: 13/jdk/windows/windowsservercore-1803
-File: Dockerfile.hotspot.releases.full
-Constraints: windowsservercore-1803
-
 Tags: 13.0.2_8-jre-hotspot-bionic, 13-jre-hotspot-bionic
 SharedTags: 13.0.2_8-jre-hotspot, 13-jre-hotspot
 Architectures: amd64, arm64v8, ppc64le, s390x
@@ -185,14 +145,6 @@ GitCommit: 6ef982afbdd32a0b2195c9ee0fa36328535a3c64
 Directory: 13/jre/windows/windowsservercore-1809
 File: Dockerfile.hotspot.releases.full
 Constraints: windowsservercore-1809
-
-Tags: 13.0.2_8-jre-hotspot-windowsservercore-1803, 13-jre-hotspot-windowsservercore-1803
-SharedTags: 13.0.2_8-jre-hotspot-windowsservercore, 13-jre-hotspot-windowsservercore, 13.0.2_8-jre-hotspot, 13-jre-hotspot
-Architectures: windows-amd64
-GitCommit: 6ef982afbdd32a0b2195c9ee0fa36328535a3c64
-Directory: 13/jre/windows/windowsservercore-1803
-File: Dockerfile.hotspot.releases.full
-Constraints: windowsservercore-1803
 
 #------------------------------openj9 v8 images-------------------------------
 
@@ -219,14 +171,6 @@ Directory: 8/jdk/windows/windowsservercore-1809
 File: Dockerfile.openj9.releases.full
 Constraints: windowsservercore-1809
 
-Tags: 8u242-b08-jdk-openj9-0.18.1-windowsservercore-1803, 8-jdk-openj9-windowsservercore-1803, 8-openj9-windowsservercore-1803
-SharedTags: 8u242-b08-jdk-openj9-0.18.1-windowsservercore, 8-jdk-openj9-windowsservercore, 8-openj9-windowsservercore, 8u242-b08-jdk-openj9-0.18.1, 8-jdk-openj9, 8-openj9
-Architectures: windows-amd64
-GitCommit: 6ef982afbdd32a0b2195c9ee0fa36328535a3c64
-Directory: 8/jdk/windows/windowsservercore-1803
-File: Dockerfile.openj9.releases.full
-Constraints: windowsservercore-1803
-
 Tags: 8u242-b08-jre-openj9-0.18.1-bionic, 8-jre-openj9-bionic
 SharedTags: 8u242-b08-jre-openj9-0.18.1, 8-jre-openj9
 Architectures: amd64, ppc64le, s390x
@@ -249,14 +193,6 @@ GitCommit: 6ef982afbdd32a0b2195c9ee0fa36328535a3c64
 Directory: 8/jre/windows/windowsservercore-1809
 File: Dockerfile.openj9.releases.full
 Constraints: windowsservercore-1809
-
-Tags: 8u242-b08-jre-openj9-0.18.1-windowsservercore-1803, 8-jre-openj9-windowsservercore-1803
-SharedTags: 8u242-b08-jre-openj9-0.18.1-windowsservercore, 8-jre-openj9-windowsservercore, 8u242-b08-jre-openj9-0.18.1, 8-jre-openj9
-Architectures: windows-amd64
-GitCommit: 6ef982afbdd32a0b2195c9ee0fa36328535a3c64
-Directory: 8/jre/windows/windowsservercore-1803
-File: Dockerfile.openj9.releases.full
-Constraints: windowsservercore-1803
 
 #------------------------------openj9 v11 images-------------------------------
 
@@ -283,14 +219,6 @@ Directory: 11/jdk/windows/windowsservercore-1809
 File: Dockerfile.openj9.releases.full
 Constraints: windowsservercore-1809
 
-Tags: 11.0.6_10-jdk-openj9-0.18.1-windowsservercore-1803, 11-jdk-openj9-windowsservercore-1803, 11-openj9-windowsservercore-1803
-SharedTags: 11.0.6_10-jdk-openj9-0.18.1-windowsservercore, 11-jdk-openj9-windowsservercore, 11-openj9-windowsservercore, 11.0.6_10-jdk-openj9-0.18.1, 11-jdk-openj9, 11-openj9
-Architectures: windows-amd64
-GitCommit: 6ef982afbdd32a0b2195c9ee0fa36328535a3c64
-Directory: 11/jdk/windows/windowsservercore-1803
-File: Dockerfile.openj9.releases.full
-Constraints: windowsservercore-1803
-
 Tags: 11.0.6_10-jre-openj9-0.18.1-bionic, 11-jre-openj9-bionic
 SharedTags: 11.0.6_10-jre-openj9-0.18.1, 11-jre-openj9
 Architectures: amd64, ppc64le, s390x
@@ -313,14 +241,6 @@ GitCommit: 6ef982afbdd32a0b2195c9ee0fa36328535a3c64
 Directory: 11/jre/windows/windowsservercore-1809
 File: Dockerfile.openj9.releases.full
 Constraints: windowsservercore-1809
-
-Tags: 11.0.6_10-jre-openj9-0.18.1-windowsservercore-1803, 11-jre-openj9-windowsservercore-1803
-SharedTags: 11.0.6_10-jre-openj9-0.18.1-windowsservercore, 11-jre-openj9-windowsservercore, 11.0.6_10-jre-openj9-0.18.1, 11-jre-openj9
-Architectures: windows-amd64
-GitCommit: 6ef982afbdd32a0b2195c9ee0fa36328535a3c64
-Directory: 11/jre/windows/windowsservercore-1803
-File: Dockerfile.openj9.releases.full
-Constraints: windowsservercore-1803
 
 #------------------------------openj9 v13 images-------------------------------
 
@@ -347,14 +267,6 @@ Directory: 13/jdk/windows/windowsservercore-1809
 File: Dockerfile.openj9.releases.full
 Constraints: windowsservercore-1809
 
-Tags: 13.0.2_8-jdk-openj9-0.18.0-windowsservercore-1803, 13-jdk-openj9-windowsservercore-1803, 13-openj9-windowsservercore-1803, openj9-windowsservercore-1803
-SharedTags: 13.0.2_8-jdk-openj9-0.18.0-windowsservercore, 13-jdk-openj9-windowsservercore, 13-openj9-windowsservercore, openj9-windowsservercore, 13.0.2_8-jdk-openj9-0.18.0, 13-jdk-openj9, 13-openj9, openj9
-Architectures: windows-amd64
-GitCommit: 6ef982afbdd32a0b2195c9ee0fa36328535a3c64
-Directory: 13/jdk/windows/windowsservercore-1803
-File: Dockerfile.openj9.releases.full
-Constraints: windowsservercore-1803
-
 Tags: 13.0.2_8-jre-openj9-0.18.0-bionic, 13-jre-openj9-bionic
 SharedTags: 13.0.2_8-jre-openj9-0.18.0, 13-jre-openj9
 Architectures: amd64, ppc64le, s390x
@@ -377,11 +289,3 @@ GitCommit: 6ef982afbdd32a0b2195c9ee0fa36328535a3c64
 Directory: 13/jre/windows/windowsservercore-1809
 File: Dockerfile.openj9.releases.full
 Constraints: windowsservercore-1809
-
-Tags: 13.0.2_8-jre-openj9-0.18.0-windowsservercore-1803, 13-jre-openj9-windowsservercore-1803
-SharedTags: 13.0.2_8-jre-openj9-0.18.0-windowsservercore, 13-jre-openj9-windowsservercore, 13.0.2_8-jre-openj9-0.18.0, 13-jre-openj9
-Architectures: windows-amd64
-GitCommit: 6ef982afbdd32a0b2195c9ee0fa36328535a3c64
-Directory: 13/jre/windows/windowsservercore-1803
-File: Dockerfile.openj9.releases.full
-Constraints: windowsservercore-1803
