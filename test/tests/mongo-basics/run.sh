@@ -13,7 +13,7 @@ if docker info --format '{{ join .SecurityOptions "\n" }}' 2>/dev/null |tac|tac|
 	# make container with jq since it is not guaranteed on the host
 	jqImage='librarytest/mongo-basics-jq:alpine'
 	docker build -t "$jqImage" - > /dev/null <<-'EOF'
-		FROM alpine:3.9
+		FROM alpine:3.11
 
 		RUN apk add --no-cache jq
 
@@ -75,7 +75,7 @@ fi
 if [[ "$testName" == *tls* ]]; then
 	tlsImage="$("$testDir/../image-name.sh" librarytest/mongo-tls "$image")"
 	"$testDir/../docker-build.sh" "$testDir" "$tlsImage" <<-EOD
-		FROM alpine:3.10 AS certs
+		FROM alpine:3.11 AS certs
 		RUN apk add --no-cache openssl
 		RUN set -eux; \
 			mkdir /certs; \
@@ -129,7 +129,11 @@ cid="$(docker_run_seccomp "${mongodRunArgs[@]}" "$image" "${mongodCmdArgs[@]}")"
 trap "docker rm -vf $cid > /dev/null" EXIT
 
 mongo() {
-	docker_run_seccomp --rm -i --link "$cname":mongo "$image" mongo "${mongoArgs[@]}" "$@"
+	docker_run_seccomp --rm -i \
+		--link "$cname":mongo \
+		--entrypoint mongo \
+		"$image" \
+		"${mongoArgs[@]}" "$@"
 }
 
 mongo_eval() {

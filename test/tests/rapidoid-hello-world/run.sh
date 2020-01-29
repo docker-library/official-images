@@ -9,7 +9,7 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 image="$1"
 
 # Use a client image with curl for testing
-clientImage='buildpack-deps:stretch-curl'
+clientImage='buildpack-deps:buster-curl'
 
 # Create an instance of the container-under-test
 serverImage="$("$dir/../image-name.sh" librarytest/rapidoid-hello-web "$image")"
@@ -31,7 +31,9 @@ _request() {
 	local url="${1#/}"
 	shift
 
-	docker run --rm --link "$cid":rapidoid "$clientImage" \
+	docker run --rm \
+		--link "$cid":rapidoid \
+		"$clientImage" \
 		curl -fs -X"$method" "$@" "http://rapidoid:8888/$url"
 }
 

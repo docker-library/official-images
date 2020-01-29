@@ -6,7 +6,7 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 serverImage="$1"
 
 # Use a client image with curl for testing
-clientImage='buildpack-deps:stretch-curl'
+clientImage='buildpack-deps:buster-curl'
 
 # Create an instance of the container-under-test
 cid="$(docker run -d "$serverImage")"
@@ -19,7 +19,9 @@ _request() {
 	local url="${1}"
 	shift
 
-	docker run --rm --link "$cid":ghost "$clientImage" \
+	docker run --rm \
+		--link "$cid":ghost \
+		"$clientImage" \
 		curl -fs -X"$method" "$@" "http://ghost:2368/$url"
 }
 

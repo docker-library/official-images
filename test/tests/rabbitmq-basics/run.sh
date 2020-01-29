@@ -19,7 +19,10 @@ cid="$(docker run -d --name "$cname" "$serverImage")"
 trap "docker rm -vf $cid > /dev/null" EXIT
 
 client() {
-	docker run -i --rm --link "$cname":rabbitmq "$clientImage" "$@"
+	docker run -i --rm \
+		--link "$cname":rabbitmq \
+		"$clientImage" \
+		"$@"
 }
 
 . "$dir/../../retry.sh" 'client testconn.py'

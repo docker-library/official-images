@@ -5,8 +5,8 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
 image="$1"
 
-# since the "slim" tomcat variants don't have wget, we'll use buildpack-deps
-clientImage='buildpack-deps:stretch-curl'
+# Use a client image with curl for testing
+clientImage='buildpack-deps:buster-curl'
 
 serverImage="$("$dir/../image-name.sh" librarytest/tomcat-hello-world "$image")"
 "$dir/../docker-build.sh" "$dir" "$serverImage" <<EOD
@@ -22,8 +22,10 @@ _request() {
 	local url="${1#/}"
 	shift
 
-	docker run --rm --link "$cid":tomcat "$clientImage" \
-		wget -q -O - "$@" "http://tomcat:8080/$url"
+	docker run --rm \
+		--link "$cid":tomcat \
+		"$clientImage" \
+		curl -fsSL "$@" "http://tomcat:8080/$url"
 }
 
 # Make sure that Tomcat is listening
