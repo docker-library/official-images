@@ -29,7 +29,8 @@ fcgi-request() {
 		url="${url%%\?*}"
 	fi
 
-	docker run --rm -i --link "$cid":fpm \
+	docker run --rm -i \
+		--link "$cid":fpm \
 		-e REQUEST_METHOD="$method" \
 		-e SCRIPT_NAME="$url" \
 		-e SCRIPT_FILENAME=/var/www/html/"${url#/}" \

@@ -23,7 +23,8 @@ memcached-command() {
 	} \
 		| docker run --rm -i \
 			--link "$cname":memcached \
-			"$clientImage" nc memcached 11211 \
+			"$clientImage" \
+			nc memcached 11211 \
 		| tr -d '\r'
 }
 
