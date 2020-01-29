@@ -20,22 +20,18 @@ _is_naughty() {
 		# a few images that no longer exist (and are thus not permissible)
 		# https://techcommunity.microsoft.com/t5/Containers/Removing-the-latest-Tag-An-Update-on-MCR/ba-p/393045
 		*=mcr.microsoft.com/windows/*:latest \
-		| *=microsoft/*:latest \
 		) return 0 ;;
 		# https://docs.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/base-image-lifecycle
 		# "11/12/2019"
 		*=mcr.microsoft.com/windows/*:1803* \
-		| *=microsoft/*:1803* \
 		) return 0 ;;
 		# https://docs.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/base-image-lifecycle
 		# "04/09/2019"
 		*=mcr.microsoft.com/windows/*:1709* \
-		| *=microsoft/*:1709* \
 		) return 0 ;;
 		# https://docs.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/base-image-lifecycle
 		# "10/09/2018"
 		*=mcr.microsoft.com/windows/nanoserver:sac2016 \
-		| *=microsoft/nanoserver:sac2016 \
 		) return 0 ;;
 
 		# a few explicitly permissible exceptions to Santa's naughty list
@@ -45,8 +41,6 @@ _is_naughty() {
 		| amd64=docker.elastic.co/logstash/logstash:* \
 		| windows-*=mcr.microsoft.com/windows/nanoserver:* \
 		| windows-*=mcr.microsoft.com/windows/servercore:* \
-		| windows-*=microsoft/nanoserver:* \
-		| windows-*=microsoft/windowsservercore:* \
 		) return 1 ;;
 
 		# "x/y" and not an approved exception
