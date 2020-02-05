@@ -1,88 +1,96 @@
 Maintainers: Paul Tagliamonte <paultag@hylang.org> (@paultag), Hy Docker Team (@hylang/docker)
 GitRepo: https://github.com/hylang/docker-hylang.git
-GitCommit: 8c8dece8ba1c8528be0dac3a72f6a448186c6bc2
+GitCommit: 719e29b0f0c187efa3a57b8f30b7a852a37ff65b
 Directory: dockerfiles-generated
 
-Tags: 0.17.0-python3.7-buster, 0.17-python3.7-buster, 0-python3.7-buster, python3.7-buster, 0.17.0-buster, 0.17-buster, 0-buster, buster
-SharedTags: 0.17.0-python3.7, 0.17-python3.7, 0-python3.7, python3.7, 0.17.0, 0.17, 0, latest
+Tags: 0.18.0-python3.8-buster, 0.18-python3.8-buster, 0-python3.8-buster, python3.8-buster, 0.18.0-buster, 0.18-buster, 0-buster, buster
+SharedTags: 0.18.0-python3.8, 0.18-python3.8, 0-python3.8, python3.8, 0.18.0, 0.18, 0, latest
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+File: Dockerfile.python3.8-buster
+
+Tags: 0.18.0-python3.8-alpine, 0.18-python3.8-alpine, 0-python3.8-alpine, python3.8-alpine, 0.18.0-alpine, 0.18-alpine, 0-alpine, alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+File: Dockerfile.python3.8-alpine
+
+Tags: 0.18.0-python3.8-alpine3.10, 0.18-python3.8-alpine3.10, 0-python3.8-alpine3.10, python3.8-alpine3.10, 0.18.0-alpine3.10, 0.18-alpine3.10, 0-alpine3.10, alpine3.10
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+File: Dockerfile.python3.8-alpine3.10
+
+Tags: 0.18.0-python3.8-windowsservercore-1809, 0.18-python3.8-windowsservercore-1809, 0-python3.8-windowsservercore-1809, python3.8-windowsservercore-1809, 0.18.0-windowsservercore-1809, 0.18-windowsservercore-1809, 0-windowsservercore-1809, windowsservercore-1809
+SharedTags: 0.18.0-python3.8, 0.18-python3.8, 0-python3.8, python3.8, 0.18.0, 0.18, 0, latest
+Architectures: windows-amd64
+Constraints: windowsservercore-1809
+File: Dockerfile.python3.8-windowsservercore-1809
+
+Tags: 0.18.0-python3.8-windowsservercore-ltsc2016, 0.18-python3.8-windowsservercore-ltsc2016, 0-python3.8-windowsservercore-ltsc2016, python3.8-windowsservercore-ltsc2016, 0.18.0-windowsservercore-ltsc2016, 0.18-windowsservercore-ltsc2016, 0-windowsservercore-ltsc2016, windowsservercore-ltsc2016
+SharedTags: 0.18.0-python3.8, 0.18-python3.8, 0-python3.8, python3.8, 0.18.0, 0.18, 0, latest
+Architectures: windows-amd64
+Constraints: windowsservercore-ltsc2016
+File: Dockerfile.python3.8-windowsservercore-ltsc2016
+
+Tags: 0.18.0-python3.7-buster, 0.18-python3.7-buster, 0-python3.7-buster, python3.7-buster
+SharedTags: 0.18.0-python3.7, 0.18-python3.7, 0-python3.7, python3.7
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 File: Dockerfile.python3.7-buster
 
-Tags: 0.17.0-python3.7-stretch, 0.17-python3.7-stretch, 0-python3.7-stretch, python3.7-stretch, 0.17.0-stretch, 0.17-stretch, 0-stretch, stretch
+Tags: 0.18.0-python3.7-stretch, 0.18-python3.7-stretch, 0-python3.7-stretch, python3.7-stretch
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 File: Dockerfile.python3.7-stretch
 
-Tags: 0.17.0-python3.7-alpine3.10, 0.17-python3.7-alpine3.10, 0-python3.7-alpine3.10, python3.7-alpine3.10, 0.17.0-alpine3.10, 0.17-alpine3.10, 0-alpine3.10, alpine3.10, 0.17.0-python3.7-alpine, 0.17-python3.7-alpine, 0-python3.7-alpine, python3.7-alpine, 0.17.0-alpine, 0.17-alpine, 0-alpine, alpine
+Tags: 0.18.0-python3.7-alpine, 0.18-python3.7-alpine, 0-python3.7-alpine, python3.7-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+File: Dockerfile.python3.7-alpine
+
+Tags: 0.18.0-python3.7-alpine3.10, 0.18-python3.7-alpine3.10, 0-python3.7-alpine3.10, python3.7-alpine3.10
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 File: Dockerfile.python3.7-alpine3.10
 
-Tags: 0.17.0-python3.7-windowsservercore-1809, 0.17-python3.7-windowsservercore-1809, 0-python3.7-windowsservercore-1809, python3.7-windowsservercore-1809, 0.17.0-windowsservercore-1809, 0.17-windowsservercore-1809, 0-windowsservercore-1809, windowsservercore-1809
-SharedTags: 0.17.0-python3.7, 0.17-python3.7, 0-python3.7, python3.7, 0.17.0, 0.17, 0, latest
+Tags: 0.18.0-python3.7-windowsservercore-1809, 0.18-python3.7-windowsservercore-1809, 0-python3.7-windowsservercore-1809, python3.7-windowsservercore-1809
+SharedTags: 0.18.0-python3.7, 0.18-python3.7, 0-python3.7, python3.7
 Architectures: windows-amd64
 Constraints: windowsservercore-1809
 File: Dockerfile.python3.7-windowsservercore-1809
 
-Tags: 0.17.0-python3.7-windowsservercore-ltsc2016, 0.17-python3.7-windowsservercore-ltsc2016, 0-python3.7-windowsservercore-ltsc2016, python3.7-windowsservercore-ltsc2016, 0.17.0-windowsservercore-ltsc2016, 0.17-windowsservercore-ltsc2016, 0-windowsservercore-ltsc2016, windowsservercore-ltsc2016
-SharedTags: 0.17.0-python3.7, 0.17-python3.7, 0-python3.7, python3.7, 0.17.0, 0.17, 0, latest
+Tags: 0.18.0-python3.7-windowsservercore-ltsc2016, 0.18-python3.7-windowsservercore-ltsc2016, 0-python3.7-windowsservercore-ltsc2016, python3.7-windowsservercore-ltsc2016
+SharedTags: 0.18.0-python3.7, 0.18-python3.7, 0-python3.7, python3.7
 Architectures: windows-amd64
 Constraints: windowsservercore-ltsc2016
 File: Dockerfile.python3.7-windowsservercore-ltsc2016
 
-Tags: 0.17.0-python3.6-buster, 0.17-python3.6-buster, 0-python3.6-buster, python3.6-buster
-SharedTags: 0.17.0-python3.6, 0.17-python3.6, 0-python3.6, python3.6
+Tags: 0.18.0-python3.6-buster, 0.18-python3.6-buster, 0-python3.6-buster, python3.6-buster
+SharedTags: 0.18.0-python3.6, 0.18-python3.6, 0-python3.6, python3.6
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 File: Dockerfile.python3.6-buster
 
-Tags: 0.17.0-python3.6-stretch, 0.17-python3.6-stretch, 0-python3.6-stretch, python3.6-stretch
+Tags: 0.18.0-python3.6-stretch, 0.18-python3.6-stretch, 0-python3.6-stretch, python3.6-stretch
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 File: Dockerfile.python3.6-stretch
 
-Tags: 0.17.0-python3.6-alpine3.10, 0.17-python3.6-alpine3.10, 0-python3.6-alpine3.10, python3.6-alpine3.10, 0.17.0-python3.6-alpine, 0.17-python3.6-alpine, 0-python3.6-alpine, python3.6-alpine
+Tags: 0.18.0-python3.6-alpine, 0.18-python3.6-alpine, 0-python3.6-alpine, python3.6-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+File: Dockerfile.python3.6-alpine
+
+Tags: 0.18.0-python3.6-alpine3.10, 0.18-python3.6-alpine3.10, 0-python3.6-alpine3.10, python3.6-alpine3.10
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 File: Dockerfile.python3.6-alpine3.10
 
-Tags: 0.17.0-python3.5-buster, 0.17-python3.5-buster, 0-python3.5-buster, python3.5-buster
-SharedTags: 0.17.0-python3.5, 0.17-python3.5, 0-python3.5, python3.5
+Tags: 0.18.0-python3.5-buster, 0.18-python3.5-buster, 0-python3.5-buster, python3.5-buster
+SharedTags: 0.18.0-python3.5, 0.18-python3.5, 0-python3.5, python3.5
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 File: Dockerfile.python3.5-buster
 
-Tags: 0.17.0-python3.5-stretch, 0.17-python3.5-stretch, 0-python3.5-stretch, python3.5-stretch
+Tags: 0.18.0-python3.5-stretch, 0.18-python3.5-stretch, 0-python3.5-stretch, python3.5-stretch
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 File: Dockerfile.python3.5-stretch
 
-Tags: 0.17.0-python3.5-alpine3.10, 0.17-python3.5-alpine3.10, 0-python3.5-alpine3.10, python3.5-alpine3.10, 0.17.0-python3.5-alpine, 0.17-python3.5-alpine, 0-python3.5-alpine, python3.5-alpine
+Tags: 0.18.0-python3.5-alpine, 0.18-python3.5-alpine, 0-python3.5-alpine, python3.5-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+File: Dockerfile.python3.5-alpine
+
+Tags: 0.18.0-python3.5-alpine3.10, 0.18-python3.5-alpine3.10, 0-python3.5-alpine3.10, python3.5-alpine3.10
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 File: Dockerfile.python3.5-alpine3.10
 
-Tags: 0.17.0-python2.7-buster, 0.17-python2.7-buster, 0-python2.7-buster, python2.7-buster
-SharedTags: 0.17.0-python2.7, 0.17-python2.7, 0-python2.7, python2.7
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-File: Dockerfile.python2.7-buster
-
-Tags: 0.17.0-python2.7-stretch, 0.17-python2.7-stretch, 0-python2.7-stretch, python2.7-stretch
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-File: Dockerfile.python2.7-stretch
-
-Tags: 0.17.0-python2.7-alpine3.10, 0.17-python2.7-alpine3.10, 0-python2.7-alpine3.10, python2.7-alpine3.10, 0.17.0-python2.7-alpine, 0.17-python2.7-alpine, 0-python2.7-alpine, python2.7-alpine
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-File: Dockerfile.python2.7-alpine3.10
-
-Tags: 0.17.0-python2.7-windowsservercore-1809, 0.17-python2.7-windowsservercore-1809, 0-python2.7-windowsservercore-1809, python2.7-windowsservercore-1809
-SharedTags: 0.17.0-python2.7, 0.17-python2.7, 0-python2.7, python2.7
-Architectures: windows-amd64
-Constraints: windowsservercore-1809
-File: Dockerfile.python2.7-windowsservercore-1809
-
-Tags: 0.17.0-python2.7-windowsservercore-ltsc2016, 0.17-python2.7-windowsservercore-ltsc2016, 0-python2.7-windowsservercore-ltsc2016, python2.7-windowsservercore-ltsc2016
-SharedTags: 0.17.0-python2.7, 0.17-python2.7, 0-python2.7, python2.7
-Architectures: windows-amd64
-Constraints: windowsservercore-ltsc2016
-File: Dockerfile.python2.7-windowsservercore-ltsc2016
-
-Tags: 0.17.0-pypy3.6-stretch, 0.17-pypy3.6-stretch, 0-pypy3.6-stretch, pypy3.6-stretch, 0.17.0-pypy-stretch, 0.17-pypy-stretch, 0-pypy-stretch, pypy-stretch
+Tags: 0.18.0-pypy3.6-stretch, 0.18-pypy3.6-stretch, 0-pypy3.6-stretch, pypy3.6-stretch, 0.18.0-pypy-stretch, 0.18-pypy-stretch, 0-pypy-stretch, pypy-stretch
 Architectures: amd64, arm64v8, i386, ppc64le, s390x
 File: Dockerfile.pypy3.6-stretch
-
-Tags: 0.17.0-pypy2.7-jessie, 0.17-pypy2.7-jessie, 0-pypy2.7-jessie, pypy2.7-jessie
-Architectures: amd64, i386
-File: Dockerfile.pypy2.7-jessie
