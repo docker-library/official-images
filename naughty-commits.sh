@@ -44,6 +44,9 @@ for img in $imgs; do
 		potentiallyNaughtyCommits=( $(_git log --diff-filter=DMT --format='format:%H' "$topCommit" -- "${potentiallyNaughtyGlobs[@]}") )
 		unset IFS
 
+		# bash 4.3 sucks (https://stackoverflow.com/a/7577209/433558)
+		[ "${#potentiallyNaughtyCommits[@]}" -gt 0 ] || continue
+
 		for commit in "${potentiallyNaughtyCommits[@]}"; do
 			[ -z "${seenCommits[$commit]:-}" ] || break
 			seenCommits[$commit]=1
@@ -56,6 +59,9 @@ for img in $imgs; do
 					|| :
 			) )
 			unset IFS
+
+			# bash 4.3 sucks (https://stackoverflow.com/a/7577209/433558)
+			[ "${#binaryFiles[@]}" -gt 0 ] || continue
 
 			naughtyReasons=()
 			for file in "${binaryFiles[@]}"; do

@@ -51,33 +51,38 @@ if badTags="$(bashbrew list "${repos[@]}" | grep -E ':.+latest.*|:.*latest.+')" 
 	exit 1
 fi
 
-if [ -n "$extraCommands" ] && naughtyFrom="$(../naughty-from.sh "${repos[@]}")" && [ -n "$naughtyFrom" ]; then
-	echo >&2
-	echo >&2 "Invalid 'FROM' + 'Architectures' combinations detected:"
-	echo >&2
-	echo >&2 "$naughtyFrom"
-	echo >&2
-	echo >&2 'Read https://github.com/docker-library/official-images#multiple-architectures for more details.'
-	echo >&2
-	exit 1
-fi
+if [ -n "$extraCommands" ]; then
+	naughtyFrom="$(../naughty-from.sh "${repos[@]}")"
+	if [ -n "$naughtyFrom" ]; then
+		echo >&2
+		echo >&2 "Invalid 'FROM' + 'Architectures' combinations detected:"
+		echo >&2
+		echo >&2 "$naughtyFrom"
+		echo >&2
+		echo >&2 'Read https://github.com/docker-library/official-images#multiple-architectures for more details.'
+		echo >&2
+		exit 1
+	fi
 
-if [ -n "$extraCommands" ] && naughtyConstraints="$(../naughty-constraints.sh "${repos[@]}")" && [ -n "$naughtyConstraints" ]; then
-	echo >&2
-	echo >&2 "Invalid 'FROM' + 'Constraints' combinations detected:"
-	echo >&2
-	echo >&2 "$naughtyConstraints"
-	echo >&2
-	exit 1
-fi
+	naughtyConstraints="$(../naughty-constraints.sh "${repos[@]}")"
+	if [ -n "$naughtyConstraints" ]; then
+		echo >&2
+		echo >&2 "Invalid 'FROM' + 'Constraints' combinations detected:"
+		echo >&2
+		echo >&2 "$naughtyConstraints"
+		echo >&2
+		exit 1
+	fi
 
-if [ -n "$extraCommands" ] && naughtyCommits="$(../naughty-commits.sh "${repos[@]}")" && [ -n "$naughtyCommits" ]; then
-	echo >&2
-	echo >&2 "Unpleasant commits detected:"
-	echo >&2
-	echo >&2 "$naughtyCommits"
-	echo >&2
-	exit 1
+	naughtyCommits="$(../naughty-commits.sh "${repos[@]}")"
+	if [ -n "$naughtyCommits" ]; then
+		echo >&2
+		echo >&2 "Unpleasant commits detected:"
+		echo >&2
+		echo >&2 "$naughtyCommits"
+		echo >&2
+		exit 1
+	fi
 fi
 
 _bashbrew() {
