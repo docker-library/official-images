@@ -4,48 +4,48 @@ Maintainers: Dinakar Guniguntala <dinakar.g@in.ibm.com> (@dinogun)
 GitRepo: https://github.com/AdoptOpenJDK/openjdk-docker.git
 
 #-----------------------------hotspot v8 images---------------------------------
-Tags: 8u232-b09-jdk-hotspot-bionic, 8-jdk-hotspot-bionic, 8-hotspot-bionic
-SharedTags: 8u232-b09-jdk-hotspot, 8-jdk-hotspot, 8-hotspot
-Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 3b20018f331a9201b86405fbacdebe034bf522bf
+Tags: 8u242-b08-jdk-hotspot-bionic, 8-jdk-hotspot-bionic, 8-hotspot-bionic
+SharedTags: 8u242-b08-jdk-hotspot, 8-jdk-hotspot, 8-hotspot
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: e8f080aaad6e6ab09929063c1d001af6281a0660
 Directory: 8/jdk/ubuntu
 File: Dockerfile.hotspot.releases.full
 
-Tags: 8u232-b09-jdk-hotspot-windowsservercore-ltsc2016, 8-jdk-hotspot-windowsservercore-ltsc2016, 8-hotspot-windowsservercore-ltsc2016
-SharedTags: 8u232-b09-jdk-hotspot-windowsservercore, 8-jdk-hotspot-windowsservercore, 8-hotspot-windowsservercore, 8u232-b09-jdk-hotspot, 8-jdk-hotspot, 8-hotspot
+Tags: 8u242-b08-jdk-hotspot-windowsservercore-ltsc2016, 8-jdk-hotspot-windowsservercore-ltsc2016, 8-hotspot-windowsservercore-ltsc2016
+SharedTags: 8u242-b08-jdk-hotspot-windowsservercore, 8-jdk-hotspot-windowsservercore, 8-hotspot-windowsservercore, 8u242-b08-jdk-hotspot, 8-jdk-hotspot, 8-hotspot
 Architectures: windows-amd64
-GitCommit: 3b20018f331a9201b86405fbacdebe034bf522bf
+GitCommit: e8f080aaad6e6ab09929063c1d001af6281a0660
 Directory: 8/jdk/windows/windowsservercore-ltsc2016
 File: Dockerfile.hotspot.releases.full
 Constraints: windowsservercore-ltsc2016
 
-Tags: 8u232-b09-jdk-hotspot-windowsservercore-1809, 8-jdk-hotspot-windowsservercore-1809, 8-hotspot-windowsservercore-1809
-SharedTags: 8u232-b09-jdk-hotspot-windowsservercore, 8-jdk-hotspot-windowsservercore, 8-hotspot-windowsservercore, 8u232-b09-jdk-hotspot, 8-jdk-hotspot, 8-hotspot
+Tags: 8u242-b08-jdk-hotspot-windowsservercore-1809, 8-jdk-hotspot-windowsservercore-1809, 8-hotspot-windowsservercore-1809
+SharedTags: 8u242-b08-jdk-hotspot-windowsservercore, 8-jdk-hotspot-windowsservercore, 8-hotspot-windowsservercore, 8u242-b08-jdk-hotspot, 8-jdk-hotspot, 8-hotspot
 Architectures: windows-amd64
-GitCommit: 3b20018f331a9201b86405fbacdebe034bf522bf
+GitCommit: e8f080aaad6e6ab09929063c1d001af6281a0660
 Directory: 8/jdk/windows/windowsservercore-1809
 File: Dockerfile.hotspot.releases.full
 Constraints: windowsservercore-1809
 
-Tags: 8u232-b09-jre-hotspot-bionic, 8-jre-hotspot-bionic
-SharedTags: 8u232-b09-jre-hotspot, 8-jre-hotspot
-Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 3b20018f331a9201b86405fbacdebe034bf522bf
+Tags: 8u242-b08-jre-hotspot-bionic, 8-jre-hotspot-bionic
+SharedTags: 8u242-b08-jre-hotspot, 8-jre-hotspot
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: e8f080aaad6e6ab09929063c1d001af6281a0660
 Directory: 8/jre/ubuntu
 File: Dockerfile.hotspot.releases.full
 
-Tags: 8u232-b09-jre-hotspot-windowsservercore-ltsc2016, 8-jre-hotspot-windowsservercore-ltsc2016
-SharedTags: 8u232-b09-jre-hotspot-windowsservercore, 8-jre-hotspot-windowsservercore, 8u232-b09-jre-hotspot, 8-jre-hotspot
+Tags: 8u242-b08-jre-hotspot-windowsservercore-ltsc2016, 8-jre-hotspot-windowsservercore-ltsc2016
+SharedTags: 8u242-b08-jre-hotspot-windowsservercore, 8-jre-hotspot-windowsservercore, 8u242-b08-jre-hotspot, 8-jre-hotspot
 Architectures: windows-amd64
-GitCommit: 3b20018f331a9201b86405fbacdebe034bf522bf
+GitCommit: e8f080aaad6e6ab09929063c1d001af6281a0660
 Directory: 8/jre/windows/windowsservercore-ltsc2016
 File: Dockerfile.hotspot.releases.full
 Constraints: windowsservercore-ltsc2016
 
-Tags: 8u232-b09-jre-hotspot-windowsservercore-1809, 8-jre-hotspot-windowsservercore-1809
-SharedTags: 8u232-b09-jre-hotspot-windowsservercore, 8-jre-hotspot-windowsservercore, 8u232-b09-jre-hotspot, 8-jre-hotspot
+Tags: 8u242-b08-jre-hotspot-windowsservercore-1809, 8-jre-hotspot-windowsservercore-1809
+SharedTags: 8u242-b08-jre-hotspot-windowsservercore, 8-jre-hotspot-windowsservercore, 8u242-b08-jre-hotspot, 8-jre-hotspot
 Architectures: windows-amd64
-GitCommit: 3b20018f331a9201b86405fbacdebe034bf522bf
+GitCommit: e8f080aaad6e6ab09929063c1d001af6281a0660
 Directory: 8/jre/windows/windowsservercore-1809
 File: Dockerfile.hotspot.releases.full
 Constraints: windowsservercore-1809
