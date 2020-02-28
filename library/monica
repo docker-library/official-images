@@ -1,18 +1,18 @@
+# This file is generated via https://github.com/monicahq/docker/blob/d7628ea5587c7b99a0bfcc7fe812b8c256cdecfa/generate-stackbrew-library.sh
 Maintainers: Alexis Saettler <alexis@saettler.org> (@asbiin)
-GitRepo: https://github.com/monicahq/monica.git
+GitRepo: https://github.com/monicahq/docker.git
 
-Tags: 2.16.0-alpine-apache, 2.16.0-alpine, 2.16.0, alpine, apache, latest
-Architectures: amd64
-GitCommit: e3c79ada95ba6b34281628ee044a7bf0e9920f26
-Directory: scripts/docker/apache/
+Tags: 2.16.0-apache, 2.16-apache, 2-apache, apache, 2.16.0, 2.16, 2, latest
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le
+Directory: apache
+GitCommit: 4b18765e9d43e432a6b57990d9d37c1bc40feea3
 
-Tags: 2.16.0-php-apache, php-apache
-Architectures: amd64
-GitCommit: e3c79ada95ba6b34281628ee044a7bf0e9920f26
-Directory: scripts/docker/php-apache/
+Tags: 2.16.0-fpm, 2.16-fpm, 2-fpm, fpm
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le
+Directory: fpm
+GitCommit: 4b18765e9d43e432a6b57990d9d37c1bc40feea3
 
-Tags: 2.16.0-alpine-fpm, 2.16.0-fpm, fpm
-Architectures: amd64
-GitCommit: e3c79ada95ba6b34281628ee044a7bf0e9920f26
-Directory: scripts/docker/fpm/
-
+Tags: 2.16.0-fpm-alpine, 2.16-fpm-alpine, 2-fpm-alpine, fpm-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le
+Directory: fpm-alpine
+GitCommit: 4b18765e9d43e432a6b57990d9d37c1bc40feea3
