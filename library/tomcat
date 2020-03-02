@@ -1,4 +1,4 @@
-# this file is generated via https://github.com/docker-library/tomcat/blob/d9ff58163f9cca32b08791fc1428a3cf0de34262/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/tomcat/blob/ac48cbb92d2664675929d013fd163fbc153697d9/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
@@ -9,6 +9,16 @@ Architectures: amd64
 GitCommit: d61dafcbdcbc6715cab5ab6c58a8fa259062400d
 Directory: 9.0/jdk13/openjdk-oracle
 Constraints: !aufs
+
+Tags: 9.0.31-jdk13-openjdk-buster, 9.0-jdk13-openjdk-buster, 9-jdk13-openjdk-buster
+Architectures: amd64
+GitCommit: ac48cbb92d2664675929d013fd163fbc153697d9
+Directory: 9.0/jdk13/openjdk-buster
+
+Tags: 9.0.31-jdk13-openjdk-slim-buster, 9.0-jdk13-openjdk-slim-buster, 9-jdk13-openjdk-slim-buster
+Architectures: amd64
+GitCommit: ac48cbb92d2664675929d013fd163fbc153697d9
+Directory: 9.0/jdk13/openjdk-slim-buster
 
 Tags: 9.0.31-jdk11-openjdk, 9.0-jdk11-openjdk, 9-jdk11-openjdk, 9.0.31-jdk11, 9.0-jdk11, 9-jdk11, 9.0.31, 9.0, 9
 Architectures: amd64, arm64v8
@@ -46,7 +56,7 @@ GitCommit: d61dafcbdcbc6715cab5ab6c58a8fa259062400d
 Directory: 9.0/jdk8/openjdk-slim
 
 Tags: 9.0.31-jdk8-adoptopenjdk-hotspot, 9.0-jdk8-adoptopenjdk-hotspot, 9-jdk8-adoptopenjdk-hotspot
-Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+Architectures: amd64, arm64v8, ppc64le, s390x
 GitCommit: d61dafcbdcbc6715cab5ab6c58a8fa259062400d
 Directory: 9.0/jdk8/adoptopenjdk-hotspot
 
@@ -65,6 +75,16 @@ Architectures: amd64
 GitCommit: c94a988c9e74d6a60247e4671a84c95a47d627c9
 Directory: 8.5/jdk13/openjdk-oracle
 Constraints: !aufs
+
+Tags: 8.5.51-jdk13-openjdk-buster, 8.5-jdk13-openjdk-buster, 8-jdk13-openjdk-buster, jdk13-openjdk-buster
+Architectures: amd64
+GitCommit: ac48cbb92d2664675929d013fd163fbc153697d9
+Directory: 8.5/jdk13/openjdk-buster
+
+Tags: 8.5.51-jdk13-openjdk-slim-buster, 8.5-jdk13-openjdk-slim-buster, 8-jdk13-openjdk-slim-buster, jdk13-openjdk-slim-buster
+Architectures: amd64
+GitCommit: ac48cbb92d2664675929d013fd163fbc153697d9
+Directory: 8.5/jdk13/openjdk-slim-buster
 
 Tags: 8.5.51-jdk11-openjdk, 8.5-jdk11-openjdk, 8-jdk11-openjdk, jdk11-openjdk, 8.5.51-jdk11, 8.5-jdk11, 8-jdk11, jdk11
 Architectures: amd64, arm64v8
@@ -102,7 +122,7 @@ GitCommit: c94a988c9e74d6a60247e4671a84c95a47d627c9
 Directory: 8.5/jdk8/openjdk-slim
 
 Tags: 8.5.51-jdk8-adoptopenjdk-hotspot, 8.5-jdk8-adoptopenjdk-hotspot, 8-jdk8-adoptopenjdk-hotspot, jdk8-adoptopenjdk-hotspot
-Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+Architectures: amd64, arm64v8, ppc64le, s390x
 GitCommit: c94a988c9e74d6a60247e4671a84c95a47d627c9
 Directory: 8.5/jdk8/adoptopenjdk-hotspot
 
@@ -127,7 +147,7 @@ GitCommit: 07ba3db3812d3add3bf51699090ec85a927d4a73
 Directory: 7/jdk8/openjdk-slim
 
 Tags: 7.0.100-jdk8-adoptopenjdk-hotspot, 7.0-jdk8-adoptopenjdk-hotspot, 7-jdk8-adoptopenjdk-hotspot
-Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+Architectures: amd64, arm64v8, ppc64le, s390x
 GitCommit: 07ba3db3812d3add3bf51699090ec85a927d4a73
 Directory: 7/jdk8/adoptopenjdk-hotspot
 
