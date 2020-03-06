@@ -52,6 +52,12 @@ for user in "${!passwds[@]}"; do
 
 	if [ "${pass:0:1}" = '$' ]; then
 		# gotta be crypt ($id$salt$encrypted), must be a fail
+		if [[ "$1" == cirros* ]] && [ "$user" = 'cirros' ]; then
+			# cirros is "supposed" to have a password for the cirros user
+			# https://github.com/cirros-dev/cirros/tree/68771c7620ec100db4afb75dc4c145f4e49fe7fc#readme
+			echo >&2 "warning: CirrOS has a password for the 'cirros' user (as intended)"
+			continue
+		fi
 		echo >&2 "error: crypt password detected for '$user': '$pass'"
 		ret=1
 		continue
