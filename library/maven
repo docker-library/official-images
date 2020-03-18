@@ -16,12 +16,6 @@ Architectures: amd64, arm64v8
 GitCommit: d3dd6bc261c6173c5e52e3a7a36b6a3d8d2800b4
 Directory: jdk-11
 
-Tags: 3.6.3-jdk-13, 3.6-jdk-13, 3-jdk-13
-Architectures: amd64
-GitCommit: d3dd6bc261c6173c5e52e3a7a36b6a3d8d2800b4
-Directory: jdk-13
-Constraints: !aufs
-
 Tags: 3.6.3-jdk-14, 3.6-jdk-14, 3-jdk-14
 Architectures: amd64
 GitCommit: d3dd6bc261c6173c5e52e3a7a36b6a3d8d2800b4
@@ -42,6 +36,12 @@ Tags: 3.6.3-jdk-8, 3.6-jdk-8, 3-jdk-8
 Architectures: amd64
 GitCommit: d3dd6bc261c6173c5e52e3a7a36b6a3d8d2800b4
 Directory: jdk-8
+
+Tags: 3.6.3-openjdk-15, 3.6-openjdk-15, 3-openjdk-15
+Architectures: amd64
+GitCommit: 4ba4f1c3b6600e64c8c430dfea2ef65ff18608ff
+Directory: openjdk-15
+Constraints: !aufs
 
 Tags: 3.6.3-ibmjava-8-alpine, 3.6.3-ibmjava-alpine, 3.6-ibmjava-8-alpine, 3.6-ibmjava-alpine, 3-ibmjava-8-alpine, ibmjava-alpine
 Architectures: amd64
