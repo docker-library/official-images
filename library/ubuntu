@@ -6,35 +6,35 @@ GitRepo: https://github.com/tianon/docker-brew-ubuntu-core.git
 GitCommit: ee01f7f13c4b7bf4b910932934f70b4494e9d865
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-amd64
 amd64-GitFetch: refs/heads/dist-amd64
-amd64-GitCommit: cfb552709a84c4732eedf2ff89ac2e46f62ba4f8
+amd64-GitCommit: 857debd4347496c541f9806c084710dace49cd27
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-arm32v7
 arm32v7-GitFetch: refs/heads/dist-arm32v7
-arm32v7-GitCommit: 7df36e967bc017159ecd9cadd358af5ae8379ae5
+arm32v7-GitCommit: f0b4d56e1aa41f95d876fc736e37e6d550e84f94
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-arm64v8
 arm64v8-GitFetch: refs/heads/dist-arm64v8
-arm64v8-GitCommit: 5dfc98855869d3bd4ad3d076c93031f4dc006fb4
+arm64v8-GitCommit: 5faab87721fcc15ca30abb10e0a605bab8befc80
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-i386
 i386-GitFetch: refs/heads/dist-i386
-i386-GitCommit: 0923bdd2b1a7f888a6e9e35ac91a3820c36d3bb3
+i386-GitCommit: 68f218d1be44ca632c6d3492575da5469578d911
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-ppc64le
 ppc64le-GitFetch: refs/heads/dist-ppc64le
-ppc64le-GitCommit: 3169722f19267b246c7651868102e617f8ec9de7
+ppc64le-GitCommit: 889f5e970deac46489176bbb958bd15694c9a3bc
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-s390x
 s390x-GitFetch: refs/heads/dist-s390x
-s390x-GitCommit: 4368668427366bf1704e07eed11902c9a18f029a
+s390x-GitCommit: cbb1cb073e28c63317796c65d2c4aaf1819881c3
 
-# 20200219 (bionic)
-Tags: 18.04, bionic-20200219, bionic, latest
+# 20200311 (bionic)
+Tags: 18.04, bionic-20200311, bionic, latest
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: bionic
 
-# 20200207 (eoan)
-Tags: 19.10, eoan-20200207, eoan, rolling
+# 20200313 (eoan)
+Tags: 19.10, eoan-20200313, eoan, rolling
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: eoan
 
-# 20200115 (focal)
-Tags: 20.04, focal-20200115, focal, devel
+# 20200319 (focal)
+Tags: 20.04, focal-20200319, focal, devel
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
 Directory: focal
 
