@@ -67,6 +67,7 @@ Some images have been ported for other architectures, and many of these are offi
 	-	ARMv5 32-bit (`arm32v5`): https://hub.docker.com/u/arm32v5/
 	-	IBM POWER8 (`ppc64le`): https://hub.docker.com/u/ppc64le/
 	-	IBM z Systems (`s390x`): https://hub.docker.com/u/s390x/
+	-	MIPS64 (`mips64le`): https://hub.docker.com/u/mips64le/
 	-	x86/i686 (`i386`): https://hub.docker.com/u/i386/
 
 As of 2017-09-12, these other architectures are included under the non-prefixed images via ["manifest lists"](https://docs.docker.com/registry/spec/manifest-v2-2/#manifest-list) (also known as ["indexes" in the OCI image specification](https://github.com/opencontainers/image-spec/blob/v1.0.0/image-index.md)), such that, for example, `docker run hello-world` should run as-is on all supported platforms.
