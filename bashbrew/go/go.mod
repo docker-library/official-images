@@ -1,8 +1,10 @@
 module bashbrew
 
+go 1.13
+
 require (
 	github.com/codegangsta/cli v1.20.0
-	github.com/docker-library/go-dockerlibrary v0.0.0-20190627000812-fed46530e521
+	github.com/docker-library/go-dockerlibrary v0.0.0-20200415185511-8f28c0fe22db
 	golang.org/x/crypto v0.0.0-20190611184440-5c40567a22f8 // indirect
 	golang.org/x/net v0.0.0-20190613194153-d28f0bde5980 // indirect
 	golang.org/x/sys v0.0.0-20190613124609-5ed2794edfdc // indirect
