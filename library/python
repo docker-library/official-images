@@ -6,7 +6,7 @@ GitRepo: https://github.com/docker-library/python.git
 
 Tags: 3.9.0a5-buster, 3.9-rc-buster, rc-buster
 SharedTags: 3.9.0a5, 3.9-rc, rc
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: 9f79a9df8fec373757cd0c2a2a75ce41c113e28b
 Directory: 3.9-rc/buster
 
@@ -31,12 +31,12 @@ Constraints: windowsservercore-1809
 
 Tags: 3.8.2-buster, 3.8-buster, 3-buster, buster
 SharedTags: 3.8.2, 3.8, 3, latest
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: 21d2ab0a50100ebdaf32f4bbb214bf21f857d1da
 Directory: 3.8/buster
 
 Tags: 3.8.2-slim-buster, 3.8-slim-buster, 3-slim-buster, slim-buster, 3.8.2-slim, 3.8-slim, 3-slim, slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: 21d2ab0a50100ebdaf32f4bbb214bf21f857d1da
 Directory: 3.8/buster/slim
 
@@ -66,22 +66,22 @@ Constraints: windowsservercore-1809
 
 Tags: 3.7.7-buster, 3.7-buster
 SharedTags: 3.7.7, 3.7
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: 695bd3c10cdf1692a2af9abdc51f0eff99731e78
 Directory: 3.7/buster
 
 Tags: 3.7.7-slim-buster, 3.7-slim-buster, 3.7.7-slim, 3.7-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: 695bd3c10cdf1692a2af9abdc51f0eff99731e78
 Directory: 3.7/buster/slim
 
 Tags: 3.7.7-stretch, 3.7-stretch
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: 695bd3c10cdf1692a2af9abdc51f0eff99731e78
 Directory: 3.7/stretch
 
 Tags: 3.7.7-slim-stretch, 3.7-slim-stretch
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: 695bd3c10cdf1692a2af9abdc51f0eff99731e78
 Directory: 3.7/stretch/slim
 
@@ -111,22 +111,22 @@ Constraints: windowsservercore-1809
 
 Tags: 3.6.10-buster, 3.6-buster
 SharedTags: 3.6.10, 3.6
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: ac47c1bc7bffe22af0c4193f1b1656ca07a24a97
 Directory: 3.6/buster
 
 Tags: 3.6.10-slim-buster, 3.6-slim-buster, 3.6.10-slim, 3.6-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: ac47c1bc7bffe22af0c4193f1b1656ca07a24a97
 Directory: 3.6/buster/slim
 
 Tags: 3.6.10-stretch, 3.6-stretch
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: ac47c1bc7bffe22af0c4193f1b1656ca07a24a97
 Directory: 3.6/stretch
 
 Tags: 3.6.10-slim-stretch, 3.6-slim-stretch
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: ac47c1bc7bffe22af0c4193f1b1656ca07a24a97
 Directory: 3.6/stretch/slim
 
@@ -142,22 +142,22 @@ Directory: 3.6/alpine3.10
 
 Tags: 3.5.9-buster, 3.5-buster
 SharedTags: 3.5.9, 3.5
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: 4a844ea3151d1452f3f824f4a9b9231c2acb75a2
 Directory: 3.5/buster
 
 Tags: 3.5.9-slim-buster, 3.5-slim-buster, 3.5.9-slim, 3.5-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: 4a844ea3151d1452f3f824f4a9b9231c2acb75a2
 Directory: 3.5/buster/slim
 
 Tags: 3.5.9-stretch, 3.5-stretch
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: 4a844ea3151d1452f3f824f4a9b9231c2acb75a2
 Directory: 3.5/stretch
 
 Tags: 3.5.9-slim-stretch, 3.5-slim-stretch
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: 4a844ea3151d1452f3f824f4a9b9231c2acb75a2
 Directory: 3.5/stretch/slim
 
@@ -173,22 +173,22 @@ Directory: 3.5/alpine3.10
 
 Tags: 2.7.17-buster, 2.7-buster, 2-buster
 SharedTags: 2.7.17, 2.7, 2
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: aab9eaf66f960332ab6e19c0d81e0b6e6fa90a3b
 Directory: 2.7/buster
 
 Tags: 2.7.17-slim-buster, 2.7-slim-buster, 2-slim-buster, 2.7.17-slim, 2.7-slim, 2-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: aab9eaf66f960332ab6e19c0d81e0b6e6fa90a3b
 Directory: 2.7/buster/slim
 
 Tags: 2.7.17-stretch, 2.7-stretch, 2-stretch
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: aab9eaf66f960332ab6e19c0d81e0b6e6fa90a3b
 Directory: 2.7/stretch
 
 Tags: 2.7.17-slim-stretch, 2.7-slim-stretch, 2-slim-stretch
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: aab9eaf66f960332ab6e19c0d81e0b6e6fa90a3b
 Directory: 2.7/stretch/slim
 
