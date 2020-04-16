@@ -1,10 +1,10 @@
-# this file is generated via https://github.com/docker-library/busybox/blob/50acaf8cbc81f4f987ddb75b1ea5fbbcd5462bf4/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/busybox/blob/68c99dc583c8755e7dce77acdd356bfde00046b6/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit),
              Jérôme Petazzoni <jerome.petazzoni@gmail.com> (@jpetazzo)
 GitRepo: https://github.com/docker-library/busybox.git
-GitCommit: 50acaf8cbc81f4f987ddb75b1ea5fbbcd5462bf4
+GitCommit: 68c99dc583c8755e7dce77acdd356bfde00046b6
 # https://github.com/docker-library/busybox/tree/dist-amd64
 amd64-GitFetch: refs/heads/dist-amd64
 amd64-GitCommit: 08d3f7114ee5ac055c0fedad0a930e67c5f8b6f4
@@ -23,6 +23,9 @@ arm64v8-GitCommit: 2fa8a48dd97c90c0da68c00fd60a104242a25b88
 # https://github.com/docker-library/busybox/tree/dist-i386
 i386-GitFetch: refs/heads/dist-i386
 i386-GitCommit: 1e9e91d4ccf98236a6a86b7eae6d0a5e6dd4cb29
+# https://github.com/docker-library/busybox/tree/dist-mips64le
+mips64le-GitFetch: refs/heads/dist-mips64le
+mips64le-GitCommit: 6ed838e3538d927d93e3d312305c14790f3b13b4
 # https://github.com/docker-library/busybox/tree/dist-ppc64le
 ppc64le-GitFetch: refs/heads/dist-ppc64le
 ppc64le-GitCommit: dbdb1569a13fd471906468518bc877828abcb25d
@@ -31,11 +34,11 @@ s390x-GitFetch: refs/heads/dist-s390x
 s390x-GitCommit: e33236a4281c705ecf4dfdd0606277c7cfa4bd72
 
 Tags: 1.31.1-uclibc, 1.31-uclibc, 1-uclibc, uclibc
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le
 Directory: uclibc
 
 Tags: 1.31.1-glibc, 1.31-glibc, 1-glibc, glibc
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 Directory: glibc
 
 Tags: 1.31.1-musl, 1.31-musl, 1-musl, musl
@@ -43,12 +46,13 @@ Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: musl
 
 Tags: 1.31.1, 1.31, 1, latest
-Architectures: amd64, arm32v5, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+Architectures: amd64, arm32v5, arm32v6, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 amd64-Directory: uclibc
 arm32v5-Directory: uclibc
 arm32v6-Directory: musl
 arm32v7-Directory: uclibc
 arm64v8-Directory: uclibc
 i386-Directory: uclibc
+mips64le-Directory: uclibc
 ppc64le-Directory: glibc
 s390x-Directory: glibc
