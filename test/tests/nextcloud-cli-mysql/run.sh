@@ -3,7 +3,7 @@ set -eo pipefail
 
 dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
-dbImage='mariadb:10'
+dbImage='mariadb:10.3'
 serverImage="$1"
 dbPass="test-$RANDOM-password-$RANDOM-$$"
 dbName="test-$RANDOM-db"
