@@ -3,45 +3,91 @@ GitRepo: https://github.com/carlossg/docker-maven.git
 
 Tags: 3.6.3-jdk-11-openj9, 3.6-jdk-11-openj9, 3-jdk-11-openj9
 Architectures: amd64, ppc64le, s390x
-GitCommit: d3dd6bc261c6173c5e52e3a7a36b6a3d8d2800b4
+GitCommit: 26ba49149787c85b9c51222b47c00879b2a0afde
 Directory: jdk-11-openj9
 
 Tags: 3.6.3-jdk-11-slim, 3.6.3-slim, 3.6-jdk-11-slim, 3.6-slim, 3-jdk-11-slim, slim
 Architectures: amd64, arm64v8
-GitCommit: d3dd6bc261c6173c5e52e3a7a36b6a3d8d2800b4
+GitCommit: 26ba49149787c85b9c51222b47c00879b2a0afde
 Directory: jdk-11-slim
 
 Tags: 3.6.3-jdk-11, 3.6-jdk-11, 3-jdk-11
 Architectures: amd64, arm64v8
-GitCommit: d3dd6bc261c6173c5e52e3a7a36b6a3d8d2800b4
+GitCommit: 26ba49149787c85b9c51222b47c00879b2a0afde
 Directory: jdk-11
 
 Tags: 3.6.3-jdk-14, 3.6.3, 3.6-jdk-14, 3.6, 3-jdk-14, 3, latest
 Architectures: amd64
-GitCommit: d3dd6bc261c6173c5e52e3a7a36b6a3d8d2800b4
+GitCommit: 26ba49149787c85b9c51222b47c00879b2a0afde
 Directory: jdk-14
 Constraints: !aufs
 
 Tags: 3.6.3-jdk-8-openj9, 3.6-jdk-8-openj9, 3-jdk-8-openj9
 Architectures: amd64, ppc64le, s390x
-GitCommit: d3dd6bc261c6173c5e52e3a7a36b6a3d8d2800b4
+GitCommit: 26ba49149787c85b9c51222b47c00879b2a0afde
 Directory: jdk-8-openj9
 
 Tags: 3.6.3-jdk-8-slim, 3.6-jdk-8-slim, 3-jdk-8-slim
 Architectures: amd64
-GitCommit: d3dd6bc261c6173c5e52e3a7a36b6a3d8d2800b4
+GitCommit: 26ba49149787c85b9c51222b47c00879b2a0afde
 Directory: jdk-8-slim
 
 Tags: 3.6.3-jdk-8, 3.6-jdk-8, 3-jdk-8
 Architectures: amd64
-GitCommit: d3dd6bc261c6173c5e52e3a7a36b6a3d8d2800b4
+GitCommit: 26ba49149787c85b9c51222b47c00879b2a0afde
 Directory: jdk-8
+
+Tags: 3.6.3-openjdk-11-slim, 3.6.3-openjdk-slim, 3.6-openjdk-11-slim, 3.6-openjdk-slim, 3-openjdk-11-slim, openjdk-slim
+Architectures: amd64, arm64v8
+GitCommit: 26ba49149787c85b9c51222b47c00879b2a0afde
+Directory: openjdk-11-slim
+
+Tags: 3.6.3-openjdk-11, 3.6-openjdk-11, 3-openjdk-11
+Architectures: amd64, arm64v8
+GitCommit: 26ba49149787c85b9c51222b47c00879b2a0afde
+Directory: openjdk-11
+
+Tags: 3.6.3-openjdk-14, 3.6.3, 3.6.3-openjdk, 3.6-openjdk-14, 3.6, 3.6-openjdk, 3-openjdk-14, 3-openjdk, openjdk
+Architectures: amd64
+GitCommit: 26ba49149787c85b9c51222b47c00879b2a0afde
+Directory: openjdk-14
+Constraints: !aufs
 
 Tags: 3.6.3-openjdk-15, 3.6-openjdk-15, 3-openjdk-15
 Architectures: amd64
 GitCommit: 4ba4f1c3b6600e64c8c430dfea2ef65ff18608ff
 Directory: openjdk-15
 Constraints: !aufs
+
+Tags: 3.6.3-openjdk-8-slim, 3.6-openjdk-8-slim, 3-openjdk-8-slim
+Architectures: amd64
+GitCommit: 26ba49149787c85b9c51222b47c00879b2a0afde
+Directory: openjdk-8-slim
+
+Tags: 3.6.3-openjdk-8, 3.6-openjdk-8, 3-openjdk-8
+Architectures: amd64
+GitCommit: 26ba49149787c85b9c51222b47c00879b2a0afde
+Directory: openjdk-8
+
+Tags: 3.6.3-adoptopenjdk-11-openj9, 3.6-adoptopenjdk-11-openj9, 3-adoptopenjdk-11-openj9
+Architectures: amd64, ppc64le, s390x
+GitCommit: 26ba49149787c85b9c51222b47c00879b2a0afde
+Directory: adoptopenjdk-11-openj9
+
+Tags: 3.6.3-adoptopenjdk-11, 3.6-adoptopenjdk-11, 3-adoptopenjdk-11
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: d98fc55d68cbd5fa8df9e59c95678e1d702b0925
+Directory: adoptopenjdk-11
+
+Tags: 3.6.3-adoptopenjdk-8-openj9, 3.6-adoptopenjdk-8-openj9, 3-adoptopenjdk-8-openj9
+Architectures: amd64, ppc64le, s390x
+GitCommit: 26ba49149787c85b9c51222b47c00879b2a0afde
+Directory: adoptopenjdk-8-openj9
+
+Tags: 3.6.3-adoptopenjdk-8, 3.6-adoptopenjdk-8, 3-adoptopenjdk-8
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: d98fc55d68cbd5fa8df9e59c95678e1d702b0925
+Directory: adoptopenjdk-8
 
 Tags: 3.6.3-ibmjava-8-alpine, 3.6.3-ibmjava-alpine, 3.6-ibmjava-8-alpine, 3.6-ibmjava-alpine, 3-ibmjava-8-alpine, ibmjava-alpine
 Architectures: amd64
