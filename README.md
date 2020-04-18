@@ -67,6 +67,7 @@ Some images have been ported for other architectures, and many of these are offi
 	-	ARMv5 32-bit (`arm32v5`): https://hub.docker.com/u/arm32v5/
 	-	IBM POWER8 (`ppc64le`): https://hub.docker.com/u/ppc64le/
 	-	IBM z Systems (`s390x`): https://hub.docker.com/u/s390x/
+	-	MIPS64 (`mips64le`): https://hub.docker.com/u/mips64le/
 	-	x86/i686 (`i386`): https://hub.docker.com/u/i386/
 
 As of 2017-09-12, these other architectures are included under the non-prefixed images via ["manifest lists"](https://docs.docker.com/registry/spec/manifest-v2-2/#manifest-list) (also known as ["indexes" in the OCI image specification](https://github.com/opencontainers/image-spec/blob/v1.0.0/image-index.md)), such that, for example, `docker run hello-world` should run as-is on all supported platforms.
@@ -250,20 +251,7 @@ The `Dockerfile` should be written to help mitigate man-in-the-middle attacks du
 		-	["Single-block collision for MD5" from 2012](https://marc-stevens.nl/research/md5-1block-collision/)
 		-	["Announcing the first SHA1 collision" from 2017](https://security.googleblog.com/2017/02/announcing-first-sha1-collision.html)
 
--	**Best**: *full key fingerprint imported to apt-key which will check signatures when packages are downloaded and installed.*
-
-	```Dockerfile
-	RUN apt-key adv --keyserver ha.pool.sks-keyservers.net --recv-keys 492EAFE8CD016A07919F1D2B9ECBEC467F0CEB10
-	RUN echo "deb http://repo.mongodb.org/apt/debian wheezy/mongodb-org/$MONGO_MAJOR main" > /etc/apt/sources.list.d/mongodb-org.list
-	RUN apt-get update \
-	    && apt-get install -y mongodb-org=$MONGO_VERSION \
-	    && rm -rf /var/lib/apt/lists/* \
-	    # ...
-	```
-
-	(As a side note, `rm -rf /var/lib/apt/lists/*` is *roughly* the opposite of `apt-get update` -- it ensures that the layer doesn't include the extra ~8MB of APT package list data, and enforces [appropriate `apt-get update` usage](https://docs.docker.com/engine/articles/dockerfile_best-practices/#apt-get).)
-
--	**Alternate Best**: *full key fingerprint import, download over https, verify PGP signature of download.*
+-	**Best**: *full key fingerprint import, download over https, verify PGP signature of download.*
 
 	```Dockerfile
 	# gpg: key F73C700D: public key "Larry Hastings <larry@hastings.org>" imported
@@ -275,6 +263,29 @@ The `Dockerfile` should be written to help mitigate man-in-the-middle attacks du
 	    && rm -r "$GNUPGHOME" python.tar.xz.asc \
 	    # install
 	```
+
+-	**Alternate Best**: *full key fingerprint imported to apt which will check signatures when packages are downloaded and installed.*
+
+	```Dockerfile
+	RUN set -ex; \
+	    key='A4A9406876FCBD3C456770C88C718D3B5072E1F5'; \
+	    export GNUPGHOME="$(mktemp -d)"; \
+	    gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; \
+	    gpg --batch --armor --export "$key" > /etc/apt/trusted.gpg.d/mysql.gpg.asc; \
+	    gpgconf --kill all; \
+	    rm -rf "$GNUPGHOME"; \
+	    apt-key list > /dev/null
+
+	RUN echo "deb http://repo.mysql.com/apt/debian/ stretch mysql-${MYSQL_MAJOR}" > /etc/apt/sources.list.d/mysql.list
+	
+	RUN apt-get update \
+	    && apt-get install -y mysql-community-client="${MYSQL_VERSION}" mysql-community-server-core="${MYSQL_VERSION}" \
+	    && rm -rf /var/lib/apt/lists/* \
+	    # ...
+
+	```
+
+	(As a side note, `rm -rf /var/lib/apt/lists/*` is *roughly* the opposite of `apt-get update` -- it ensures that the layer doesn't include the extra ~8MB of APT package list data, and enforces [appropriate `apt-get update` usage](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#apt-get).)
 
 ##### Runtime Configuration
 

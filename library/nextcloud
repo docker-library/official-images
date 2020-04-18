@@ -1,64 +1,64 @@
-# This file is generated via https://github.com/nextcloud/docker/blob/f2489f014216122820d159c1c31081a069461c32/generate-stackbrew-library.sh
+# This file is generated via https://github.com/nextcloud/docker/blob/cd33ab0e419b905454be9f18677ea176b798f1ac/generate-stackbrew-library.sh
 
 Maintainers: Nextcloud <docker@nextcloud.com> (@nextcloud)
 GitRepo: https://github.com/nextcloud/docker.git
 
-Tags: 15.0.14-apache, 15.0-apache, 15-apache, 15.0.14, 15.0, 15
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le
-GitCommit: 481072c892324145f1ac8115a152e65449f24f5e
-Directory: 15.0/apache
-
-Tags: 15.0.14-fpm-alpine, 15.0-fpm-alpine, 15-fpm-alpine
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le
-GitCommit: 0e244154342864c7fde6df21eb933ac46735b804
-Directory: 15.0/fpm-alpine
-
-Tags: 15.0.14-fpm, 15.0-fpm, 15-fpm
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le
-GitCommit: 481072c892324145f1ac8115a152e65449f24f5e
-Directory: 15.0/fpm
-
-Tags: 16.0.7-apache, 16.0-apache, 16-apache, 16.0.7, 16.0, 16
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le
-GitCommit: 481072c892324145f1ac8115a152e65449f24f5e
+Tags: 16.0.9-apache, 16.0-apache, 16-apache, 16.0.9, 16.0, 16
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 63438ef792fdedd4ceb80664d22391aca21f6bd1
 Directory: 16.0/apache
 
-Tags: 16.0.7-fpm-alpine, 16.0-fpm-alpine, 16-fpm-alpine
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le
-GitCommit: 0e244154342864c7fde6df21eb933ac46735b804
+Tags: 16.0.9-fpm-alpine, 16.0-fpm-alpine, 16-fpm-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 63438ef792fdedd4ceb80664d22391aca21f6bd1
 Directory: 16.0/fpm-alpine
 
-Tags: 16.0.7-fpm, 16.0-fpm, 16-fpm
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le
-GitCommit: 481072c892324145f1ac8115a152e65449f24f5e
+Tags: 16.0.9-fpm, 16.0-fpm, 16-fpm
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 63438ef792fdedd4ceb80664d22391aca21f6bd1
 Directory: 16.0/fpm
 
-Tags: 17.0.2-apache, 17.0-apache, 17-apache, apache, 17.0.2, 17.0, 17, latest
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le
-GitCommit: 481072c892324145f1ac8115a152e65449f24f5e
+Tags: 17.0.5-apache, 17.0-apache, 17-apache, production-apache, 17.0.5, 17.0, 17, production
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 63438ef792fdedd4ceb80664d22391aca21f6bd1
 Directory: 17.0/apache
 
-Tags: 17.0.2-fpm-alpine, 17.0-fpm-alpine, 17-fpm-alpine, fpm-alpine
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le
-GitCommit: 0e244154342864c7fde6df21eb933ac46735b804
+Tags: 17.0.5-fpm-alpine, 17.0-fpm-alpine, 17-fpm-alpine, production-fpm-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 63438ef792fdedd4ceb80664d22391aca21f6bd1
 Directory: 17.0/fpm-alpine
 
-Tags: 17.0.2-fpm, 17.0-fpm, 17-fpm, fpm
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le
-GitCommit: 481072c892324145f1ac8115a152e65449f24f5e
+Tags: 17.0.5-fpm, 17.0-fpm, 17-fpm, production-fpm
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 63438ef792fdedd4ceb80664d22391aca21f6bd1
 Directory: 17.0/fpm
 
-Tags: 18.0.0beta4-apache, 18.0.0-beta-apache, 18.0-beta-apache, 18-beta-apache, 18.0.0beta4, 18.0.0-beta, 18.0-beta, 18-beta
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le
-GitCommit: 08916e2cc058ddb4aae96f960f06682037f6a0b4
-Directory: 18.0-beta/apache
+Tags: 18.0.3-apache, 18.0-apache, 18-apache, apache, stable-apache, 18.0.3, 18.0, 18, latest, stable
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 63438ef792fdedd4ceb80664d22391aca21f6bd1
+Directory: 18.0/apache
 
-Tags: 18.0.0beta4-fpm-alpine, 18.0.0-beta-fpm-alpine, 18.0-beta-fpm-alpine, 18-beta-fpm-alpine
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le
-GitCommit: 0e244154342864c7fde6df21eb933ac46735b804
-Directory: 18.0-beta/fpm-alpine
+Tags: 18.0.3-fpm-alpine, 18.0-fpm-alpine, 18-fpm-alpine, fpm-alpine, stable-fpm-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 63438ef792fdedd4ceb80664d22391aca21f6bd1
+Directory: 18.0/fpm-alpine
 
-Tags: 18.0.0beta4-fpm, 18.0.0-beta-fpm, 18.0-beta-fpm, 18-beta-fpm
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le
-GitCommit: 08916e2cc058ddb4aae96f960f06682037f6a0b4
-Directory: 18.0-beta/fpm
+Tags: 18.0.3-fpm, 18.0-fpm, 18-fpm, fpm, stable-fpm
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 63438ef792fdedd4ceb80664d22391aca21f6bd1
+Directory: 18.0/fpm
+
+Tags: 19.0.0beta2-apache, 19.0.0-beta-apache, 19.0-beta-apache, 19-beta-apache, 19.0.0beta2, 19.0.0-beta, 19.0-beta, 19-beta
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 1891bfa5e09842b6d92719d44b7fe01594227c38
+Directory: 19.0-beta/apache
+
+Tags: 19.0.0beta2-fpm-alpine, 19.0.0-beta-fpm-alpine, 19.0-beta-fpm-alpine, 19-beta-fpm-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 1891bfa5e09842b6d92719d44b7fe01594227c38
+Directory: 19.0-beta/fpm-alpine
+
+Tags: 19.0.0beta2-fpm, 19.0.0-beta-fpm, 19.0-beta-fpm, 19-beta-fpm
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 1891bfa5e09842b6d92719d44b7fe01594227c38
+Directory: 19.0-beta/fpm

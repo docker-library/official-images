@@ -21,13 +21,17 @@ UPSTREAM="$(git rev-parse --verify FETCH_HEAD)"
 if [ "$TRAVIS_BRANCH" = 'master' -a "$TRAVIS_PULL_REQUEST" = 'false' ]; then
 	# if we're testing master itself, RUN ALL THE THINGS
 	echo >&2 'Testing master -- BUILD ALL THE THINGS!'
+elif [ "$(git diff --numstat "$UPSTREAM...$HEAD" -- ../library | wc -l)" -ne 0 ]; then
+	# changes in library/ -- run our extended tests regardless of bashbrew changes
+	repos=( $(git diff --numstat "$UPSTREAM...$HEAD" -- ../library | awk -F '/' '{ print $2 }') )
+	extraCommands=1
 elif [ "$(git diff --numstat "$UPSTREAM...$HEAD" -- . | wc -l)" -ne 0 ]; then
 	# changes in bashbrew/ -- keep "--all" so we test the bashbrew script changes appropriately
 	echo >&2 'Changes in bashbrew/ detected!'
 	#extraCommands=1 # TODO this takes a lot of load and often fails (force pushes to maintainer branches, etc)
 else
-	repos=( $(git diff --numstat "$UPSTREAM...$HEAD" -- ../library | awk -F '/' '{ print $2 }') )
-	extraCommands=1
+	# no changes to library/ or bashbrew/ -- skip tests
+	repos=()
 fi
 
 if [ "${#repos[@]}" -eq 0 ]; then
@@ -47,24 +51,38 @@ if badTags="$(bashbrew list "${repos[@]}" | grep -E ':.+latest.*|:.*latest.+')" 
 	exit 1
 fi
 
-if [ -n "$extraCommands" ] && naughtyFrom="$(../naughty-from.sh "${repos[@]}")" && [ -n "$naughtyFrom" ]; then
-	echo >&2
-	echo >&2 "Invalid 'FROM' + 'Architectures' combinations detected:"
-	echo >&2
-	echo >&2 "$naughtyFrom"
-	echo >&2
-	echo >&2 'Read https://github.com/docker-library/official-images#multiple-architectures for more details.'
-	echo >&2
-	exit 1
-fi
+if [ -n "$extraCommands" ]; then
+	naughtyFrom="$(../naughty-from.sh "${repos[@]}")"
+	if [ -n "$naughtyFrom" ]; then
+		echo >&2
+		echo >&2 "Invalid 'FROM' + 'Architectures' combinations detected:"
+		echo >&2
+		echo >&2 "$naughtyFrom"
+		echo >&2
+		echo >&2 'Read https://github.com/docker-library/official-images#multiple-architectures for more details.'
+		echo >&2
+		exit 1
+	fi
 
-if [ -n "$extraCommands" ] && naughtyConstraints="$(../naughty-constraints.sh "${repos[@]}")" && [ -n "$naughtyConstraints" ]; then
-	echo >&2
-	echo >&2 "Invalid 'FROM' + 'Constraints' combinations detected:"
-	echo >&2
-	echo >&2 "$naughtyConstraints"
-	echo >&2
-	exit 1
+	naughtyConstraints="$(../naughty-constraints.sh "${repos[@]}")"
+	if [ -n "$naughtyConstraints" ]; then
+		echo >&2
+		echo >&2 "Invalid 'FROM' + 'Constraints' combinations detected:"
+		echo >&2
+		echo >&2 "$naughtyConstraints"
+		echo >&2
+		exit 1
+	fi
+
+	naughtyCommits="$(../naughty-commits.sh "${repos[@]}")"
+	if [ -n "$naughtyCommits" ]; then
+		echo >&2
+		echo >&2 "Unpleasant commits detected:"
+		echo >&2
+		echo >&2 "$naughtyCommits"
+		echo >&2
+		exit 1
+	fi
 fi
 
 _bashbrew() {

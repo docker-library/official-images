@@ -75,7 +75,6 @@ declare -A allNaughty=(
 )
 
 tags="$(bashbrew list --uniq "$@" | sort -u)"
-naughtyCount=0
 for img in $tags; do
 	arches="$(_arches "$img")"
 	constraints="$(bashbrew cat --format '{{ .TagEntry.Constraints | join "\n" }}' "$img" | sort -u)"
@@ -127,7 +126,6 @@ for img in $tags; do
 			missing="$(sed '/^$/d' <<<"$missing" | sort -u)"
 			echo " - $img -- missing constraints (FROM $from):"
 			sed 's/^/   - /' <<<"$missing"
-			(( naughtyCount++ )) || :
 		done
 	fi
 	if [ "${#imgExtra[@]}" -gt 0 ]; then
@@ -136,9 +134,6 @@ for img in $tags; do
 			extra="$(sed '/^$/d' <<<"$extra" | sort -u)"
 			echo " - $img -- extra constraints (FROM $from):"
 			sed 's/^/   - /' <<<"$extra"
-			(( naughtyCount++ )) || :
 		done
 	fi
 done
-
-exit "$naughtyCount"

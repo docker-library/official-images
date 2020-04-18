@@ -3,9 +3,10 @@ set -eo pipefail
 
 dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
-# since we have curl in the php image, we'll use that
-clientImage="$1"
 serverImage="$1"
+
+# Use a client image with curl for testing
+clientImage='buildpack-deps:buster-curl'
 
 # Create an instance of the container-under-test
 cid="$(docker run -d "$serverImage")"
@@ -18,7 +19,9 @@ _request() {
 	local url="${1#/}"
 	shift
 
-	docker run --rm --link "$cid":apache "$clientImage" \
+	docker run --rm \
+		--link "$cid":apache \
+		"$clientImage" \
 		curl -fsL -X"$method" "$@" "http://apache/$url"
 }
 

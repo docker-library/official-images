@@ -5,8 +5,8 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
 image="$1"
 
-# Use the alpine image since it is small and has wget in it that we can use
-clientImage="alpine:3.9"
+# Use a client image with curl for testing
+clientImage='buildpack-deps:buster-curl'
 
 serverImage="$1"
 
@@ -18,8 +18,10 @@ _request() {
 	local url="${1#/}"
 	shift
 
-	docker run --rm --link "$cid":open-liberty "$clientImage" \
-		wget -q -O - "$@" "http://open-liberty:9080/$url"
+	docker run --rm \
+		--link "$cid":open-liberty \
+		"$clientImage" \
+		curl -fsSL "$@" "http://open-liberty:9080/$url"
 }
 
 # Make sure that Open Liberty is listening
