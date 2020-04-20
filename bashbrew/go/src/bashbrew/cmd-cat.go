@@ -77,7 +77,7 @@ func cmdCat(c *cli.Context) error {
 				case manifest.Manifest2822Entry:
 					entries = append(entries, v)
 				default:
-					panic(fmt.Sprintf(`"archFilter" encountered unknown type: %T`, v, v))
+					panic(fmt.Sprintf(`"archFilter" encountered unknown type: %T`, v))
 				}
 			}
 			filtered := []manifest.Manifest2822Entry{}
