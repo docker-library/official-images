@@ -77,7 +77,7 @@ Constraints: windowsservercore-1809
 
 Tags: 11.0.7_10-jre-hotspot-bionic, 11-jre-hotspot-bionic
 SharedTags: 11.0.7_10-jre-hotspot, 11-jre-hotspot
-Architectures: amd64, arm64v8, ppc64le, s390x
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
 GitCommit: f104ef0fd80dc1d8e2b796a80f00512ab06a1465
 Directory: 11/jre/ubuntu
 File: Dockerfile.hotspot.releases.full
@@ -148,48 +148,48 @@ Constraints: windowsservercore-1809
 
 #-----------------------------hotspot v14 images--------------------------------
 
-Tags: 14_36-jdk-hotspot-bionic, 14-jdk-hotspot-bionic, 14-hotspot-bionic, hotspot-bionic
-SharedTags: 14_36-jdk-hotspot, 14-jdk-hotspot, 14-hotspot, hotspot, latest
+Tags: 14.0.1_7-jdk-hotspot-bionic, 14-jdk-hotspot-bionic, 14-hotspot-bionic, hotspot-bionic
+SharedTags: 14.0.1_7-jdk-hotspot, 14-jdk-hotspot, 14-hotspot, hotspot, latest
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 3b28dd3fb7230f208ed49da507432a01741b1259
+GitCommit: 2fb3fcc43ea049fd4bd020910e23ecdf492deb58
 Directory: 14/jdk/ubuntu
 File: Dockerfile.hotspot.releases.full
 
-Tags: 14_36-jdk-hotspot-windowsservercore-ltsc2016, 14-jdk-hotspot-windowsservercore-ltsc2016, 14-hotspot-windowsservercore-ltsc2016, hotspot-windowsservercore-ltsc2016
-SharedTags: 14_36-jdk-hotspot-windowsservercore, 14-jdk-hotspot-windowsservercore, 14-hotspot-windowsservercore, hotspot-windowsservercore, 14_36-jdk-hotspot, 14-jdk-hotspot, 14-hotspot, hotspot, latest
+Tags: 14.0.1_7-jdk-hotspot-windowsservercore-ltsc2016, 14-jdk-hotspot-windowsservercore-ltsc2016, 14-hotspot-windowsservercore-ltsc2016, hotspot-windowsservercore-ltsc2016
+SharedTags: 14.0.1_7-jdk-hotspot-windowsservercore, 14-jdk-hotspot-windowsservercore, 14-hotspot-windowsservercore, hotspot-windowsservercore, 14.0.1_7-jdk-hotspot, 14-jdk-hotspot, 14-hotspot, hotspot, latest
 Architectures: windows-amd64
-GitCommit: 3b28dd3fb7230f208ed49da507432a01741b1259
+GitCommit: 2fb3fcc43ea049fd4bd020910e23ecdf492deb58
 Directory: 14/jdk/windows/windowsservercore-ltsc2016
 File: Dockerfile.hotspot.releases.full
 Constraints: windowsservercore-ltsc2016
 
-Tags: 14_36-jdk-hotspot-windowsservercore-1809, 14-jdk-hotspot-windowsservercore-1809, 14-hotspot-windowsservercore-1809, hotspot-windowsservercore-1809
-SharedTags: 14_36-jdk-hotspot-windowsservercore, 14-jdk-hotspot-windowsservercore, 14-hotspot-windowsservercore, hotspot-windowsservercore, 14_36-jdk-hotspot, 14-jdk-hotspot, 14-hotspot, hotspot, latest
+Tags: 14.0.1_7-jdk-hotspot-windowsservercore-1809, 14-jdk-hotspot-windowsservercore-1809, 14-hotspot-windowsservercore-1809, hotspot-windowsservercore-1809
+SharedTags: 14.0.1_7-jdk-hotspot-windowsservercore, 14-jdk-hotspot-windowsservercore, 14-hotspot-windowsservercore, hotspot-windowsservercore, 14.0.1_7-jdk-hotspot, 14-jdk-hotspot, 14-hotspot, hotspot, latest
 Architectures: windows-amd64
-GitCommit: 3b28dd3fb7230f208ed49da507432a01741b1259
+GitCommit: 2fb3fcc43ea049fd4bd020910e23ecdf492deb58
 Directory: 14/jdk/windows/windowsservercore-1809
 File: Dockerfile.hotspot.releases.full
 Constraints: windowsservercore-1809
 
-Tags: 14_36-jre-hotspot-bionic, 14-jre-hotspot-bionic
-SharedTags: 14_36-jre-hotspot, 14-jre-hotspot
-Architectures: amd64, arm64v8, ppc64le, s390x
-GitCommit: 3b28dd3fb7230f208ed49da507432a01741b1259
+Tags: 14.0.1_7-jre-hotspot-bionic, 14-jre-hotspot-bionic
+SharedTags: 14.0.1_7-jre-hotspot, 14-jre-hotspot
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 2fb3fcc43ea049fd4bd020910e23ecdf492deb58
 Directory: 14/jre/ubuntu
 File: Dockerfile.hotspot.releases.full
 
-Tags: 14_36-jre-hotspot-windowsservercore-ltsc2016, 14-jre-hotspot-windowsservercore-ltsc2016
-SharedTags: 14_36-jre-hotspot-windowsservercore, 14-jre-hotspot-windowsservercore, 14_36-jre-hotspot, 14-jre-hotspot
+Tags: 14.0.1_7-jre-hotspot-windowsservercore-ltsc2016, 14-jre-hotspot-windowsservercore-ltsc2016
+SharedTags: 14.0.1_7-jre-hotspot-windowsservercore, 14-jre-hotspot-windowsservercore, 14.0.1_7-jre-hotspot, 14-jre-hotspot
 Architectures: windows-amd64
-GitCommit: 3b28dd3fb7230f208ed49da507432a01741b1259
+GitCommit: 2fb3fcc43ea049fd4bd020910e23ecdf492deb58
 Directory: 14/jre/windows/windowsservercore-ltsc2016
 File: Dockerfile.hotspot.releases.full
 Constraints: windowsservercore-ltsc2016
 
-Tags: 14_36-jre-hotspot-windowsservercore-1809, 14-jre-hotspot-windowsservercore-1809
-SharedTags: 14_36-jre-hotspot-windowsservercore, 14-jre-hotspot-windowsservercore, 14_36-jre-hotspot, 14-jre-hotspot
+Tags: 14.0.1_7-jre-hotspot-windowsservercore-1809, 14-jre-hotspot-windowsservercore-1809
+SharedTags: 14.0.1_7-jre-hotspot-windowsservercore, 14-jre-hotspot-windowsservercore, 14.0.1_7-jre-hotspot, 14-jre-hotspot
 Architectures: windows-amd64
-GitCommit: 3b28dd3fb7230f208ed49da507432a01741b1259
+GitCommit: 2fb3fcc43ea049fd4bd020910e23ecdf492deb58
 Directory: 14/jre/windows/windowsservercore-1809
 File: Dockerfile.hotspot.releases.full
 Constraints: windowsservercore-1809
