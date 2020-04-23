@@ -6,35 +6,35 @@ GitRepo: https://github.com/tianon/docker-brew-ubuntu-core.git
 GitCommit: ee01f7f13c4b7bf4b910932934f70b4494e9d865
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-amd64
 amd64-GitFetch: refs/heads/dist-amd64
-amd64-GitCommit: 857debd4347496c541f9806c084710dace49cd27
+amd64-GitCommit: fbcb3103ee22258b052bd7978989a302230ac5e5
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-arm32v7
 arm32v7-GitFetch: refs/heads/dist-arm32v7
-arm32v7-GitCommit: f0b4d56e1aa41f95d876fc736e37e6d550e84f94
+arm32v7-GitCommit: 2d226ac9c51d3e77b3352b348af81d2ce8046357
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-arm64v8
 arm64v8-GitFetch: refs/heads/dist-arm64v8
-arm64v8-GitCommit: 5faab87721fcc15ca30abb10e0a605bab8befc80
+arm64v8-GitCommit: 6c6cba81ea81daeba1c16e4d231057b077198432
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-i386
 i386-GitFetch: refs/heads/dist-i386
-i386-GitCommit: 68f218d1be44ca632c6d3492575da5469578d911
+i386-GitCommit: e9c190197e733a175c20dfea16d83c108929e09a
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-ppc64le
 ppc64le-GitFetch: refs/heads/dist-ppc64le
-ppc64le-GitCommit: 889f5e970deac46489176bbb958bd15694c9a3bc
+ppc64le-GitCommit: 1adcfd27dc890f4a12764d3ab7dccd3bb1457d05
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-s390x
 s390x-GitFetch: refs/heads/dist-s390x
-s390x-GitCommit: cbb1cb073e28c63317796c65d2c4aaf1819881c3
+s390x-GitCommit: 3923c4d23a4291d5648abffc478baf4e9095dfdc
 
-# 20200311 (bionic)
-Tags: 18.04, bionic-20200311, bionic, latest
+# 20200403 (bionic)
+Tags: 18.04, bionic-20200403, bionic, latest
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: bionic
 
-# 20200313 (eoan)
-Tags: 19.10, eoan-20200313, eoan, rolling
+# 20200410 (eoan)
+Tags: 19.10, eoan-20200410, eoan, rolling
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: eoan
 
-# 20200319 (focal)
-Tags: 20.04, focal-20200319, focal, devel
+# 20200423 (focal)
+Tags: 20.04, focal-20200423, focal, devel
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
 Directory: focal
 
@@ -43,7 +43,7 @@ Tags: 14.04, trusty-20191217, trusty
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le
 Directory: trusty
 
-# 20200212 (xenial)
-Tags: 16.04, xenial-20200212, xenial
+# 20200326 (xenial)
+Tags: 16.04, xenial-20200326, xenial
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: xenial
