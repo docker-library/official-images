@@ -36,7 +36,7 @@ if [ -z "$BASHBREW_SECOND_STAGE" ]; then
 
 	docker build --pull -t "$dockerImage" "$dir" > /dev/null
 
-	args=()
+	args=( --init )
 
 	if [ "$pull" = '0' ]; then
 		args+=( --name "bashbrew-test-local-$RANDOM" )
