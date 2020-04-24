@@ -32,9 +32,13 @@ pull="$1"
 shift || { usage >&2 && exit 1; }
 
 if [ -z "$BASHBREW_SECOND_STAGE" ]; then
-	dockerImage='bashbrew'
+	dockerRepo='oisupport/bashbrew'
+	dockerBase="$dockerRepo:base"
+	dockerImage="$dockerRepo:test-pr"
 
-	docker build --pull -t "$dockerImage" "$dir" > /dev/null
+	bashbrewVersion="$(< "$dir/bashbrew-version")"
+	docker build -t "$dockerBase" --pull "https://github.com/docker-library/bashbrew.git#v$bashbrewVersion" > /dev/null
+	docker build -t "$dockerImage" "$dir" > /dev/null
 
 	args=( --init )
 
