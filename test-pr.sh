@@ -169,6 +169,7 @@ declare -A failedBuild=() failedTests=()
 for img in "${files[@]}"; do
 	IFS=$'\n'
 	uniqImgs=( $(bashbrew list --uniq --build-order "$img") )
+	uniqImgs=( $(bashbrew cat --format '{{ if .TagEntry.HasArchitecture arch }}{{ $.RepoName }}:{{ .TagEntry.Tags | first }}{{ end }}' "${uniqImgs[@]}") ) # filter to just the set supported by the current BASHBREW_ARCH
 	unset IFS
 
 	echo
