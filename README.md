@@ -304,7 +304,7 @@ For image updates which constitute a security fix, there are a few things we rec
 
 #### Multiple Architectures
 
-Each repo can specify multiple architectures for any and all tags. If no architecture is specified, images are built in Linux on `amd64` (aka x86-64). To specify more or different architectures, use the `Architectures` field (comma-delimited list, whitespace is trimmed). Valid architectures are found in [`oci-platform.go`](https://github.com/docker-library/official-images/blob/a7ad3081aa5f51584653073424217e461b72670a/bashbrew/go/vendor/src/github.com/docker-library/go-dockerlibrary/architecture/oci-platform.go#L14-L25):
+Each repo can specify multiple architectures for any and all tags. If no architecture is specified, images are built in Linux on `amd64` (aka x86-64). To specify more or different architectures, use the `Architectures` field (comma-delimited list, whitespace is trimmed). Valid architectures are found in [Bashbrew's `oci-platform.go` file](https://github.com/docker-library/bashbrew/blob/v0.1.0/vendor/github.com/docker-library/go-dockerlibrary/architecture/oci-platform.go#L14-L26):
 
 -	`amd64`
 -	`arm32v6`
@@ -429,4 +429,4 @@ See the [multi-arch section](#multiple-architectures) for details on how to spec
 
 ## Bashbrew
 
-Bashbrew (`bashbrew`) is a tool for cloning, building, tagging, and pushing the Docker official images. See [`README.md` in the `bashbrew/` subfolder](bashbrew/README.md) for more information.
+Bashbrew (`bashbrew`) is a tool for cloning, building, tagging, and pushing the Docker official images. See [the Bashbrew `README`](https://github.com/docker-library/bashbrew#readme) for more information.
