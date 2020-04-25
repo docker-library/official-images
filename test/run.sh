@@ -1,5 +1,5 @@
-#!/bin/bash
-set -e
+#!/usr/bin/env bash
+set -Eeuo pipefail
 
 dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
@@ -46,7 +46,7 @@ while true; do
 	esac
 done
 
-if [ $# -eq 0 ]; then
+if [ "$#" -eq 0 ]; then
 	usage >&2
 	exit 1
 fi
@@ -59,9 +59,20 @@ declare -A globalExcludeTests=()
 declare -A explicitTests=()
 
 # if there are no user-specified configs, use the default config
-if [ ${#configs} -eq 0 ]; then
-	configs+=("$dir/config.sh")
+if [ "${#configs[@]}" -eq 0 ]; then
+	configs+=( "$dir/config.sh" )
 fi
+
+case "$(uname -o)" in
+	Msys)
+		# https://stackoverflow.com/a/34386471/433558
+		# https://github.com/docker/toolbox/blob/6960f28d5b01857d69b2095a02949264f09d3e57/windows/start.sh#L104-L107
+		docker() {
+			MSYS_NO_PATHCONV=1 command docker "$@"
+		}
+		export -f docker
+		;;
+esac
 
 # load the configs
 declare -A testPaths=()
@@ -72,7 +83,7 @@ for conf in "${configs[@]}"; do
 	confDir="$(dirname "$conf")"
 
 	for testName in ${globalTests[@]} ${imageTests[@]}; do
-		[ "${testPaths[$testName]}" ] && continue
+		[ -n "${testPaths[$testName]:-}" ] && continue
 
 		if [ -d "$confDir/tests/$testName" ]; then
 			# Test directory found relative to the conf file
@@ -116,11 +127,11 @@ for dockerImage in "$@"; do
 			variant='psmdb'
 			;;
 		*nanoserver*)
-			# all nanoserver variants are windows and should have explict tests
+			# all nanoserver variants are windows
 			variant='nanoserver'
 			;;
 		*windowsservercore*)
-			# all servercore variants are windows and should have explict tests
+			# all servercore variants are windows
 			variant='windowsservercore'
 			;;
 	esac
@@ -131,10 +142,10 @@ for dockerImage in "$@"; do
 	fi
 	
 	for possibleAlias in \
-		"${testAlias[$repo:$variant]}" \
-		"${testAlias[$repo]}" \
-		"${testAlias[$testRepo:$variant]}" \
-		"${testAlias[$testRepo]}" \
+		"${testAlias[$repo:$variant]:-}" \
+		"${testAlias[$repo]:-}" \
+		"${testAlias[$testRepo:$variant]:-}" \
+		"${testAlias[$testRepo]:-}" \
 	; do
 		if [ -n "$possibleAlias" ]; then
 			testRepo="$possibleAlias"
@@ -144,9 +155,9 @@ for dockerImage in "$@"; do
 	
 	explicitVariant=
 	if [ \
-		"${explicitTests[:$variant]}" \
-		-o "${explicitTests[$repo:$variant]}" \
-		-o "${explicitTests[$testRepo:$variant]}" \
+		"${explicitTests[:$variant]:-}" \
+		-o "${explicitTests[$repo:$variant]:-}" \
+		-o "${explicitTests[$testRepo:$variant]:-}" \
 	]; then
 		explicitVariant=1
 	fi
@@ -156,41 +167,41 @@ for dockerImage in "$@"; do
 		testCandidates+=( "${globalTests[@]}" )
 	fi
 	testCandidates+=(
-		${imageTests[:$variant]}
+		${imageTests[:$variant]:-}
 	)
 	if [ -z "$explicitVariant" ]; then
 		testCandidates+=(
-			${imageTests[$testRepo]}
+			${imageTests[$testRepo]:-}
 		)
 	fi
 	testCandidates+=(
-		${imageTests[$testRepo:$variant]}
+		${imageTests[$testRepo:$variant]:-}
 	)
 	if [ "$testRepo" != "$repo" ]; then
 		if [ -z "$explicitVariant" ]; then
 			testCandidates+=(
-				${imageTests[$repo]}
+				${imageTests[$repo]:-}
 			)
 		fi
 		testCandidates+=(
-			${imageTests[$repo:$variant]}
+			${imageTests[$repo:$variant]:-}
 		)
 	fi
 	
 	tests=()
 	for t in "${testCandidates[@]}"; do
-		if [ ${#argTests[@]} -gt 0 -a -z "${argTests[$t]}" ]; then
+		if [ "${#argTests[@]}" -gt 0 ] && [ -z "${argTests[$t]:-}" ]; then
 			# skipping due to -t
 			continue
 		fi
 		
 		if [ \
-			! -z "${globalExcludeTests[${testRepo}_$t]}" \
-			-o ! -z "${globalExcludeTests[${testRepo}:${variant}_$t]}" \
-			-o ! -z "${globalExcludeTests[:${variant}_$t]}" \
-			-o ! -z "${globalExcludeTests[${repo}_$t]}" \
-			-o ! -z "${globalExcludeTests[${repo}:${variant}_$t]}" \
-			-o ! -z "${globalExcludeTests[:${variant}_$t]}" \
+			! -z "${globalExcludeTests[${testRepo}_$t]:-}" \
+			-o ! -z "${globalExcludeTests[${testRepo}:${variant}_$t]:-}" \
+			-o ! -z "${globalExcludeTests[:${variant}_$t]:-}" \
+			-o ! -z "${globalExcludeTests[${repo}_$t]:-}" \
+			-o ! -z "${globalExcludeTests[${repo}:${variant}_$t]:-}" \
+			-o ! -z "${globalExcludeTests[:${variant}_$t]:-}" \
 		]; then
 			# skipping due to exclude
 			continue
@@ -223,10 +234,11 @@ for dockerImage in "$@"; do
 		scriptDir="${testPaths[$t]}"
 		if [ -d "$scriptDir" ]; then
 			script="$scriptDir/run.sh"
-			if [ -x "$script" -a ! -d "$script" ]; then
+			if [ -x "$script" ] && [ ! -d "$script" ]; then
 				# TODO dryRun logic
-				if output="$("$script" $dockerImage)"; then
-					if [ -f "$scriptDir/expected-std-out.txt" ] && ! d="$(echo "$output" | diff -u "$scriptDir/expected-std-out.txt" - 2>/dev/null)"; then
+				if output="$("$script" "$dockerImage")"; then
+					output="$(tr -d '\r' <<<"$output")" # Windows gives us \r\n ...  :D
+					if [ -f "$scriptDir/expected-std-out.txt" ] && ! d="$(diff -u "$scriptDir/expected-std-out.txt" - <<<"$output" 2>/dev/null)"; then
 						echo 'failed; unexpected output:'
 						echo "$d"
 						didFail=1
@@ -252,6 +264,6 @@ for dockerImage in "$@"; do
 	done
 done
 
-if [ "$didFail" ]; then
+if [ -n "$didFail" ]; then
 	exit 1
 fi
