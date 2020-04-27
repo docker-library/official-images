@@ -22,31 +22,33 @@ if docker info --format '{{ join .SecurityOptions "\n" }}' 2>/dev/null |tac|tac|
 
 	# need set_mempolicy syscall to be able to do numactl for mongodb
 	# if "set_mempolicy" is not in the always allowed list, add it
-	extraSeccomp="$(echo "$seccomp" | docker run -i --rm "$jqImage" --tab '
-		.syscalls[] |= if (
-			.action == "SCMP_ACT_ALLOW"
-			and .args == []
-			and .comment == ""
-			and .includes == {}
-			and .excludes == {}
-		) then (
-			if ( .names | index("set_mempolicy") ) > 0 then
+	extraSeccomp="$(
+		docker run -i --rm "$jqImage" --tab '
+			.syscalls[] |= if (
+				.action == "SCMP_ACT_ALLOW"
+				and .args == []
+				and .comment == ""
+				and .includes == {}
+				and .excludes == {}
+			) then (
+				if ( .names | index("set_mempolicy") ) > 0 then
+					.
+				else (
+					.names |= . + ["set_mempolicy"]
+				) end
+			)
+			else
 				.
-			else (
-				.names |= . + ["set_mempolicy"]
-			) end
-		)
-		else
-			.
-		end
-	')"
+			end
+		' <<<"$seccomp"
+	)"
 else
 	echo >&2 'warning: the current Docker daemon does not appear to support seccomp'
 fi
 
 docker_run_seccomp() {
 	if [ "$haveSeccomp" ]; then
-		docker run --security-opt seccomp=<(echo "$extraSeccomp") "$@"
+		docker run --security-opt seccomp=<(cat <<<"$extraSeccomp") "$@"
 	else
 		docker run "$@"
 	fi

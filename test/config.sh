@@ -11,8 +11,6 @@ globalTests+=(
 # for "explicit" images, only run tests that are explicitly specified for that image/variant
 explicitTests+=(
 	[:onbuild]=1
-	[:nanoserver]=1
-	[:windowsservercore]=1
 )
 imageTests[:onbuild]+='
 	override-cmd
@@ -272,6 +270,14 @@ globalExcludeTests+=(
 	[swarm_utc]=1
 	[traefik_utc]=1
 
+	# windows!
+	[:nanoserver_cve-2014--shellshock]=1
+	[:nanoserver_no-hard-coded-passwords]=1
+	[:nanoserver_utc]=1
+	[:windowsservercore_cve-2014--shellshock]=1
+	[:windowsservercore_no-hard-coded-passwords]=1
+	[:windowsservercore_utc]=1
+
 	[hello-world_no-hard-coded-passwords]=1
 	[nats_no-hard-coded-passwords]=1
 	[nats-streaming_no-hard-coded-passwords]=1
@@ -282,9 +288,10 @@ globalExcludeTests+=(
 	# https://github.com/docker-library/official-images/pull/1721#issuecomment-234128477
 	[clearlinux_no-hard-coded-passwords]=1
 
-	# alpine/slim openjdk images are headless and so can't do font stuff
+	# alpine/slim/nanoserver openjdk images are headless and so can't do font stuff
 	[openjdk:alpine_java-uimanager-font]=1
 	[openjdk:slim_java-uimanager-font]=1
+	[openjdk:nanoserver_java-uimanager-font]=1
 	# and adoptopenjdk has opted not to
 	[adoptopenjdk_java-uimanager-font]=1
 
@@ -299,4 +306,10 @@ globalExcludeTests+=(
 	# the Swift slim images are not expected to be able to run the swift-hello-world test because it involves compiling Swift code. The slim images are for running an already built binary.
 	# https://github.com/docker-library/official-images/pull/6302#issuecomment-512181863
 	[swift:slim_swift-hello-world]=1
+
+	# TODO adjust MongoDB tests to use docker networks instead of links so they can work on Windows (and consider using PowerShell to generate appropriate certificates for TLS tests instead of openssl)
+	[mongo:windowsservercore_mongo-basics]=1
+	[mongo:windowsservercore_mongo-auth-basics]=1
+	[mongo:windowsservercore_mongo-tls-basics]=1
+	[mongo:windowsservercore_mongo-tls-auth]=1
 )
