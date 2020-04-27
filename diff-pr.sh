@@ -223,11 +223,13 @@ copy-tar() {
 				if [ "$listTarballContents" ]; then
 					case "$g" in
 						*.tar.*|*.tgz)
-							tar -tf "$dst/$dDirName/$g" \
-								| grep -vE "$uninterestingTarballGrep" \
-								| sed -e 's!^[.]/!!' \
-								| sort \
-								> "$dst/$dDirName/$g  'tar -t'"
+							if [ -s "$dst/$dDirName/$g" ]; then
+								tar -tf "$dst/$dDirName/$g" \
+									| grep -vE "$uninterestingTarballGrep" \
+									| sed -e 's!^[.]/!!' \
+									| sort \
+									> "$dst/$dDirName/$g  'tar -t'"
+							fi
 							;;
 					esac
 				fi
