@@ -1,5 +1,4 @@
-#!/bin/bash
-set -e
+#!/usr/bin/env bash
 
 globalTests+=(
 	utc
@@ -264,10 +263,15 @@ imageTests+=(
 
 globalExcludeTests+=(
 	# single-binary images
+	[hello-world_no-hard-coded-passwords]=1
 	[hello-world_utc]=1
-	[nats_utc]=1
+	[nats-streaming_no-hard-coded-passwords]=1
 	[nats-streaming_utc]=1
+	[nats_no-hard-coded-passwords]=1
+	[nats_utc]=1
+	[swarm_no-hard-coded-passwords]=1
 	[swarm_utc]=1
+	[traefik_no-hard-coded-passwords]=1
 	[traefik_utc]=1
 
 	# windows!
@@ -277,12 +281,6 @@ globalExcludeTests+=(
 	[:windowsservercore_cve-2014--shellshock]=1
 	[:windowsservercore_no-hard-coded-passwords]=1
 	[:windowsservercore_utc]=1
-
-	[hello-world_no-hard-coded-passwords]=1
-	[nats_no-hard-coded-passwords]=1
-	[nats-streaming_no-hard-coded-passwords]=1
-	[swarm_no-hard-coded-passwords]=1
-	[traefik_no-hard-coded-passwords]=1
 
 	# clearlinux has no /etc/password
 	# https://github.com/docker-library/official-images/pull/1721#issuecomment-234128477

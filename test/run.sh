@@ -154,13 +154,18 @@ for dockerImage in "$@"; do
 	done
 	
 	explicitVariant=
-	if [ \
+	for possibleExplicit in \
 		"${explicitTests[:$variant]:-}" \
-		-o "${explicitTests[$repo:$variant]:-}" \
-		-o "${explicitTests[$testRepo:$variant]:-}" \
-	]; then
-		explicitVariant=1
-	fi
+		"${explicitTests[$repo:$variant]:-}" \
+		"${explicitTests[$repo]:-}" \
+		"${explicitTests[$testRepo:$variant]:-}" \
+		"${explicitTests[$testRepo]:-}" \
+	; do
+		if [ -n "$possibleExplicit" ]; then
+			explicitVariant=1
+			break
+		fi
+	done
 	
 	testCandidates=()
 	if [ -z "$explicitVariant" ]; then
