@@ -5,6 +5,9 @@ shopt -s dotglob
 # make sure we can GTFO
 trap 'echo >&2 Ctrl+C captured, exiting; exit 1' SIGINT
 
+# if bashbrew is missing, bail early with a sane error
+bashbrew --version > /dev/null
+
 usage() {
 	cat <<-EOUSAGE
 		usage: $0 [PR number] [repo[:tag]]
@@ -57,7 +60,8 @@ fi
 pull="$1" # PR number
 shift
 
-#dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
+diffDir="$(readlink -f "$BASH_SOURCE")"
+diffDir="$(dirname "$diffDir")"
 
 tempDir="$(mktemp -d)"
 trap "rm -rf '$tempDir'" EXIT
@@ -67,12 +71,19 @@ git clone --quiet \
 	https://github.com/docker-library/official-images.git \
 	oi
 
-git -C oi fetch --quiet \
-	origin "pull/$pull/merge":pull
+if [ "$pull" != '0' ]; then
+	git -C oi fetch --quiet \
+		origin "pull/$pull/merge":refs/heads/pull
+else
+	git -C oi fetch --quiet --update-shallow \
+		"$diffDir" HEAD:refs/heads/pull
+fi
 
-images=( "$@" )
-if [ "${#images[@]}" -eq 0 ]; then
-	images=( $(git -C oi/library diff --name-only HEAD...pull -- . | xargs -n1 basename) )
+if [ "$#" -eq 0 ]; then
+	images="$(git -C oi/library diff --name-only HEAD...pull -- .)"
+	[ -n "$images" ] || exit 0
+	images="$(xargs -n1 basename <<<"$images")"
+	set -- $images
 fi
 
 export BASHBREW_CACHE="${BASHBREW_CACHE:-${XDG_CACHE_HOME:-$HOME/.cache}/bashbrew}"
@@ -146,7 +157,8 @@ copy-tar() {
 
 	local d dockerfiles=()
 	for d in "$src"/*/.bashbrew-dockerfile-name; do
-		local bf="$(< "$d")" dDir="$(dirname "$d")"
+		local bf; bf="$(< "$d")"
+		local dDir; dDir="$(dirname "$d")"
 		dockerfiles+=( "$dDir/$bf" )
 		if [ "$bf" = 'Dockerfile' ]; then
 			# if "Dockerfile.builder" exists, let's check that too (busybox, hello-world)
@@ -205,7 +217,8 @@ copy-tar() {
 			# "find: warning: -path ./xxx/ will not match anything because it ends with /."
 			local findGlobbedPath="${f%/}"
 			findGlobbedPath="${findGlobbedPath#./}"
-			globbed=( $(cd "$dDir" && find -path "./$findGlobbedPath") )
+			local globbedStr; globbedStr="$(cd "$dDir" && find -path "./$findGlobbedPath")"
+			local -a globbed=( $globbedStr )
 			if [ "${#globbed[@]}" -eq 0 ]; then
 				globbed=( "$f" )
 			fi
@@ -243,9 +256,9 @@ git -C temp init --quiet
 git -C temp config user.name 'Bogus'
 git -C temp config user.email 'bogus@bogus'
 
-bashbrew list "${images[@]}" | sort -uV > temp/_bashbrew-list || :
-bashbrew cat --format "$archesListTemplate" "${images[@]}" | sort -V > temp/_bashbrew-arches || :
-bashbrew cat --format "$sharedTagsListTemplate" "${images[@]}" | grep -vE '^$' | sort -V > temp/_bashbrew-shared-tags || :
+bashbrew list "${images[@]}" 2>>temp/_bashbrew.err | sort -uV > temp/_bashbrew-list || :
+bashbrew cat --format "$archesListTemplate" "${images[@]}" 2>>temp/_bashbrew.err | sort -V > temp/_bashbrew-arches || :
+bashbrew cat --format "$sharedTagsListTemplate" "${images[@]}" 2>>temp/_bashbrew.err | grep -vE '^$' | sort -V > temp/_bashbrew-shared-tags || :
 for image in "${images[@]}"; do
 	if script="$(bashbrew cat -f "$template" "$image")"; then
 		mkdir tar
@@ -260,9 +273,9 @@ git -C temp commit --quiet --allow-empty -m 'initial' || :
 git -C oi checkout --quiet pull
 
 git -C temp rm --quiet -rf . || :
-bashbrew list "${images[@]}" | sort -uV > temp/_bashbrew-list || :
-bashbrew cat --format "$archesListTemplate" "${images[@]}" | sort -V > temp/_bashbrew-arches || :
-bashbrew cat --format "$sharedTagsListTemplate" "${images[@]}" | grep -vE '^$' | sort -V > temp/_bashbrew-shared-tags || :
+bashbrew list "${images[@]}" 2>>temp/_bashbrew.err | sort -uV > temp/_bashbrew-list || :
+bashbrew cat --format "$archesListTemplate" "${images[@]}" 2>>temp/_bashbrew.err | sort -V > temp/_bashbrew-arches || :
+bashbrew cat --format "$sharedTagsListTemplate" "${images[@]}" 2>>temp/_bashbrew.err | grep -vE '^$' | sort -V > temp/_bashbrew-shared-tags || :
 script="$(bashbrew cat -f "$template" "${images[@]}")"
 mkdir tar
 ( eval "$script" | tar -xiC tar )
