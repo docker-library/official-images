@@ -22,31 +22,6 @@ jobs:
           bashbrew --version
           .github/workflows/naughty.sh
 
-  label:
-    name: Label
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - id: labels
-        name: Generate List
-        run: |
-          labels="$(.github/workflows/pr-labels.sh)"
-          labels="$(jq -Rsc 'rtrimstr("\n") | split("\n") | { labels: ., count: length }' <<<"$labels")"
-          jq . <<<"$labels"
-          echo "::set-output name=labels::$labels"
-      - name: Apply Labels
-        uses: actions/github-script@0.9.0
-        with:
-          script: |
-            const data = ${{ steps.labels.outputs.labels }}
-            github.issues.addLabels({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.payload.pull_request.number,
-              labels: data.labels,
-            })
-        if: fromJSON(steps.labels.outputs.labels).count > 0
-
   diff:
     name: Diff
     runs-on: ubuntu-latest
