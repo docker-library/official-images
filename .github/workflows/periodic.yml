@@ -1,7 +1,7 @@
 # 🤬 https://github.com/actions/labeler/issues/12 / https://github.community/t5/GitHub-Actions/GitHub-actions-are-severely-limited-on-PRs/m-p/54669/highlight/true#M9249
 # (this workflow shouldn't exist)
 
-name: Label PRs
+name: Periodic Actions
 
 on:
   schedule:
@@ -13,9 +13,10 @@ defaults:
 
 jobs:
 
-  label:
-    name: Label
+  periodic:
+    name: Periodic
     runs-on: ubuntu-latest
+    timeout-minutes: 15 # given that this runs every 15 minutes, it needs to take less than that to do whatever it is going to do
     steps:
       - name: Apply Labels
         uses: actions/github-script@0.9.0
