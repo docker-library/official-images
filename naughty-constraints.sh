@@ -83,23 +83,7 @@ for img in $tags; do
 	for BASHBREW_ARCH in $arches; do
 		export BASHBREW_ARCH
 
-		if ! froms="$(_froms "$img" 2>/dev/null)"; then
-			# if we can't fetch the tags from their real locations, let's try the warehouse
-			refsList="$(
-				bashbrew list --uniq "$img" \
-				| sed \
-					-e 's!:!/!' \
-					-e "s!^!refs/tags/$BASHBREW_ARCH/!" \
-					-e 's!$!:!'
-			)"
-			[ -n "$refsList" ]
-			git -C "$BASHBREW_CACHE/git" \
-				fetch --no-tags --quiet \
-				https://github.com/docker-library/commit-warehouse.git \
-				$refsList
-			froms="$(_froms "$img")"
-		fi
-
+		froms="$(_froms "$img")"
 		[ -n "$froms" ] # rough sanity check
 
 		allExpected=
