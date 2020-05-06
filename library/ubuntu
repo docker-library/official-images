@@ -3,25 +3,25 @@
 
 Maintainers: Tianon Gravi <tianon@debian.org> (@tianon), Michael Hudson-Doyle <michael.hudson@ubuntu.com> (@mwhudson)
 GitRepo: https://github.com/tianon/docker-brew-ubuntu-core.git
-GitCommit: 543729660926c2e282ce03edec05d75519864edc
+GitCommit: d81d3601822cfa67c1059eae410643bc50dbf10b
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-amd64
 amd64-GitFetch: refs/heads/dist-amd64
-amd64-GitCommit: fbcb3103ee22258b052bd7978989a302230ac5e5
+amd64-GitCommit: 451851eab04432157249eb444d5a42714e2a7112
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-arm32v7
 arm32v7-GitFetch: refs/heads/dist-arm32v7
-arm32v7-GitCommit: 2d226ac9c51d3e77b3352b348af81d2ce8046357
+arm32v7-GitCommit: 2723aa361f2fc9955ea4933ce2d6c0b0ac6f6c42
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-arm64v8
 arm64v8-GitFetch: refs/heads/dist-arm64v8
-arm64v8-GitCommit: 6c6cba81ea81daeba1c16e4d231057b077198432
+arm64v8-GitCommit: 8a109db37bded99cda7581e671bb3ff01b6fbd67
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-i386
 i386-GitFetch: refs/heads/dist-i386
-i386-GitCommit: e9c190197e733a175c20dfea16d83c108929e09a
+i386-GitCommit: 4902894147b5757a458ccba504d125bb31366e5c
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-ppc64le
 ppc64le-GitFetch: refs/heads/dist-ppc64le
-ppc64le-GitCommit: 1adcfd27dc890f4a12764d3ab7dccd3bb1457d05
+ppc64le-GitCommit: 5aad122c480c4f6793b3a77bfd80cdbbe43f01b7
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-s390x
 s390x-GitFetch: refs/heads/dist-s390x
-s390x-GitCommit: 3923c4d23a4291d5648abffc478baf4e9095dfdc
+s390x-GitCommit: 6e4ba041e957684c766645453bef17e6248dbb9c
 
 # 20200403 (bionic)
 Tags: 18.04, bionic-20200403, bionic
@@ -34,9 +34,14 @@ Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: eoan
 
 # 20200423 (focal)
-Tags: 20.04, focal-20200423, focal, latest, rolling, devel
+Tags: 20.04, focal-20200423, focal, latest, rolling
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
 Directory: focal
+
+# 20200505 (groovy)
+Tags: 20.10, groovy-20200505, groovy, devel
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+Directory: groovy
 
 # 20191217 (trusty)
 Tags: 14.04, trusty-20191217, trusty
