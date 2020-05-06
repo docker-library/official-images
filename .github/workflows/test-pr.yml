@@ -14,6 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - name: Check for Common Issues
         run: |
           git clone --depth 1 https://github.com/docker-library/bashbrew.git -b master ~/bashbrew
@@ -29,6 +31,8 @@ jobs:
       strategy: ${{ steps.generate-jobs.outputs.strategy }}
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - id: generate-jobs
         name: Generate Jobs
         run: |
