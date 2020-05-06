@@ -1,20 +1,20 @@
 # this file is generated with gomplate:
 # template: https://github.com/caddyserver/caddy-docker/blob/8779f909a654f865839d244bbb3edee602f87d85/stackbrew.tmpl
-# config context: https://github.com/caddyserver/caddy-docker/blob/f403b960e241dea75f87d5245386185c9fc9a42a/stackbrew-config.yaml
+# config context: https://github.com/caddyserver/caddy-docker/blob/c09e27ca73c56565d4526eef27adbac9ba57575c/stackbrew-config.yaml
 Maintainers: Dave Henderson (@hairyhenderson)
 
 Tags: 2.0.0-alpine, 2-alpine, alpine
 SharedTags: 2.0.0, 2, latest
 GitRepo: https://github.com/caddyserver/caddy-docker.git
 Directory: alpine
-GitCommit: d9baf11b7abb9343891bb9c28f8cc7137ae94b68
-Architectures: amd64, arm64v8, arm32v6, arm32v7
+GitCommit: c09e27ca73c56565d4526eef27adbac9ba57575c
+Architectures: amd64, arm64v8, arm32v6, arm32v7, ppc64le, s390x
 
 Tags: 2.0.0-builder, 2-builder, builder
 GitRepo: https://github.com/caddyserver/caddy-docker.git
 Directory: builder
 GitCommit: d9baf11b7abb9343891bb9c28f8cc7137ae94b68
-Architectures: amd64, arm64v8, arm32v6, arm32v7
+Architectures: amd64, arm64v8, arm32v6, arm32v7, ppc64le, s390x
 
 Tags: 2.0.0-windowsservercore-1809, 2-windowsservercore-1809, windowsservercore-1809
 SharedTags: 2.0.0-windowsservercore, 2-windowsservercore, windowsservercore, 2.0.0, 2, latest
