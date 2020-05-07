@@ -25,7 +25,23 @@ for repo; do
 		)
 	]' <<<"$newStrategy")"
 	jq -c . <<<"$newStrategy" > /dev/null # sanity check
-	strategy="$(jq -c --argjson strategy "$strategy" '.matrix.include = ($strategy.matrix.include // []) + .matrix.include' <<<"$newStrategy")"
+	strategy="$(jq -c '
+		# https://stackoverflow.com/a/53666584/433558
+		def meld(a; b):
+			if (a | type) == "object" and (b | type) == "object" then
+				# for some reason, "a" and "b" go out of scope for reduce??
+				a as $a | b as $b |
+				reduce (a + b | keys_unsorted[]) as $k
+					({}; .[$k] = meld($a[$k]; $b[$k]))
+			elif (a | type) == "array" and (b | type) == "array" then
+				a + b
+			elif b == null then
+				a
+			else
+				b
+			end;
+		meld(.[0]; .[1])
+	' <<<"[$strategy,$newStrategy]")"
 done
 jq -c . <<<"$strategy" > /dev/null # sanity check
 

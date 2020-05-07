@@ -96,10 +96,6 @@ for img in $tags; do
 			imgMissing[$from]+=$'\n'"$missing"
 		fi
 		extra="$(comm -23 <(echo "$constraints") <(echo "$allExpected"))"
-		if [ "$from" = 'scratch' ]; then
-			# if a given image is "FROM scratch", then consider "!aufs" an acceptable constraint that doesn't show
-			extra="$(grep -vE '^!aufs$' <<<"$extra" || :)"
-		fi
 		if [ -n "$extra" ]; then
 			imgExtra[$from]+=$'\n'"$extra"
 		fi
