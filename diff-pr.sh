@@ -256,10 +256,10 @@ git -C temp init --quiet
 git -C temp config user.name 'Bogus'
 git -C temp config user.email 'bogus@bogus'
 
-bashbrew list "${images[@]}" 2>>temp/_bashbrew.err | sort -uV > temp/_bashbrew-list || :
-bashbrew cat --format "$archesListTemplate" "${images[@]}" 2>>temp/_bashbrew.err | sort -V > temp/_bashbrew-arches || :
-bashbrew cat --format "$sharedTagsListTemplate" "${images[@]}" 2>>temp/_bashbrew.err | grep -vE '^$' | sort -V > temp/_bashbrew-shared-tags || :
-for image in "${images[@]}"; do
+bashbrew list "$@" 2>>temp/_bashbrew.err | sort -uV > temp/_bashbrew-list || :
+bashbrew cat --format "$archesListTemplate" "$@" 2>>temp/_bashbrew.err | sort -V > temp/_bashbrew-arches || :
+bashbrew cat --format "$sharedTagsListTemplate" "$@" 2>>temp/_bashbrew.err | grep -vE '^$' | sort -V > temp/_bashbrew-shared-tags || :
+for image; do
 	if script="$(bashbrew cat -f "$template" "$image")"; then
 		mkdir tar
 		( eval "$script" | tar -xiC tar )
@@ -273,10 +273,10 @@ git -C temp commit --quiet --allow-empty -m 'initial' || :
 git -C oi checkout --quiet pull
 
 git -C temp rm --quiet -rf . || :
-bashbrew list "${images[@]}" 2>>temp/_bashbrew.err | sort -uV > temp/_bashbrew-list || :
-bashbrew cat --format "$archesListTemplate" "${images[@]}" 2>>temp/_bashbrew.err | sort -V > temp/_bashbrew-arches || :
-bashbrew cat --format "$sharedTagsListTemplate" "${images[@]}" 2>>temp/_bashbrew.err | grep -vE '^$' | sort -V > temp/_bashbrew-shared-tags || :
-script="$(bashbrew cat -f "$template" "${images[@]}")"
+bashbrew list "$@" 2>>temp/_bashbrew.err | sort -uV > temp/_bashbrew-list || :
+bashbrew cat --format "$archesListTemplate" "$@" 2>>temp/_bashbrew.err | sort -V > temp/_bashbrew-arches || :
+bashbrew cat --format "$sharedTagsListTemplate" "$@" 2>>temp/_bashbrew.err | grep -vE '^$' | sort -V > temp/_bashbrew-shared-tags || :
+script="$(bashbrew cat -f "$template" "$@")"
 mkdir tar
 ( eval "$script" | tar -xiC tar )
 copy-tar tar temp
