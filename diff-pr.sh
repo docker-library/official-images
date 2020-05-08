@@ -92,34 +92,6 @@ export BASHBREW_LIBRARY="$PWD/oi/library"
 : "${BASHBREW_ARCH:=amd64}" # TODO something smarter with arches
 export BASHBREW_ARCH
 
-# "bashbrew cat" template for duplicating something like "bashbrew list --uniq" but with architectures too
-archesListTemplate='
-	{{- range $e := $.Entries -}}
-		{{- range .Architectures -}}
-			{{- $.RepoName -}}:{{- $e.Tags | last -}}
-			{{- " @ " -}}
-			{{- . -}}
-			{{- "\n" -}}
-		{{- end -}}
-	{{- end -}}
-'
-# ... and SharedTags
-sharedTagsListTemplate='
-	{{- range $group := .Manifest.GetSharedTagGroups -}}
-		{{- range $tag := $group.SharedTags -}}
-			{{- join ":" $.RepoName $tag -}}
-			{{- " -- " -}}
-			{{- range $i, $e := $group.Entries -}}
-				{{- if gt $i 0 -}}
-					{{- ", " -}}
-				{{- end -}}
-				{{- join ":" $.RepoName ($e.Tags | last) -}}
-			{{- end -}}
-			{{- "\n" -}}
-		{{- end -}}
-	{{- end -}}
-'
-
 # TODO something less hacky than "git archive" hackery, like a "bashbrew archive" or "bashbrew context" or something
 template='
 	tempDir="$(mktemp -d)"
@@ -251,16 +223,36 @@ copy-tar() {
 	done
 }
 
+# a mimic of "bashbrew cat" which should sort slightly more deterministically (so even full-order-changing PRs should have reasonable diffs)
+_bashbrew-cat() {
+	local img first=1
+	for img; do
+		if [ -n "$first" ]; then
+			first=
+		else
+			echo; echo
+		fi
+		bashbrew cat --format '{{ printf "%s\n" (.Manifest.Global.ClearDefaults defaults) }}' "$img"
+		bashbrew list --uniq "$img" \
+			| sort -V \
+			| xargs -r bashbrew list --uniq --build-order \
+			| xargs -r bashbrew cat --format '
+				{{- range $e := .TagEntries -}}
+					{{- printf "\n%s\n" ($e.ClearDefaults $.Manifest.Global) -}}
+				{{- end -}}
+			'
+	done
+}
+
 mkdir temp
 git -C temp init --quiet
 git -C temp config user.name 'Bogus'
 git -C temp config user.email 'bogus@bogus'
 
 bashbrew list "$@" 2>>temp/_bashbrew.err | sort -uV > temp/_bashbrew-list || :
-bashbrew cat --format "$archesListTemplate" "$@" 2>>temp/_bashbrew.err | sort -V > temp/_bashbrew-arches || :
-bashbrew cat --format "$sharedTagsListTemplate" "$@" 2>>temp/_bashbrew.err | grep -vE '^$' | sort -V > temp/_bashbrew-shared-tags || :
+_bashbrew-cat "$@" 2>>temp/_bashbrew.err > temp/_bashbrew-cat || :
 for image; do
-	if script="$(bashbrew cat -f "$template" "$image")"; then
+	if script="$(bashbrew cat --format "$template" "$image")"; then
 		mkdir tar
 		( eval "$script" | tar -xiC tar )
 		copy-tar tar temp
@@ -274,9 +266,8 @@ git -C oi checkout --quiet pull
 
 git -C temp rm --quiet -rf . || :
 bashbrew list "$@" 2>>temp/_bashbrew.err | sort -uV > temp/_bashbrew-list || :
-bashbrew cat --format "$archesListTemplate" "$@" 2>>temp/_bashbrew.err | sort -V > temp/_bashbrew-arches || :
-bashbrew cat --format "$sharedTagsListTemplate" "$@" 2>>temp/_bashbrew.err | grep -vE '^$' | sort -V > temp/_bashbrew-shared-tags || :
-script="$(bashbrew cat -f "$template" "$@")"
+_bashbrew-cat "$@" 2>>temp/_bashbrew.err > temp/_bashbrew-cat || :
+script="$(bashbrew cat --format "$template" "$@")"
 mkdir tar
 ( eval "$script" | tar -xiC tar )
 copy-tar tar temp
