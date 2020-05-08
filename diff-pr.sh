@@ -121,7 +121,7 @@ copy-tar() {
 	local src="$1"; shift
 	local dst="$1"; shift
 
-	if [ "$allFiles" ]; then
+	if [ -n "$allFiles" ]; then
 		mkdir -p "$dst"
 		cp -al "$src"/*/ "$dst/"
 		return
@@ -129,6 +129,7 @@ copy-tar() {
 
 	local d dockerfiles=()
 	for d in "$src"/*/.bashbrew-dockerfile-name; do
+		[ -f "$d" ] || continue
 		local bf; bf="$(< "$d")"
 		local dDir; dDir="$(dirname "$d")"
 		dockerfiles+=( "$dDir/$bf" )
@@ -205,9 +206,9 @@ copy-tar() {
 				mkdir -p "$gDir"
 				cp -alT "$dDir/$g" "$dst/$dDirName/$g"
 
-				if [ "$listTarballContents" ]; then
+				if [ -n "$listTarballContents" ]; then
 					case "$g" in
-						*.tar.*|*.tgz)
+						*.tar.* | *.tgz)
 							if [ -s "$dst/$dDirName/$g" ]; then
 								tar -tf "$dst/$dDirName/$g" \
 									| grep -vE "$uninterestingTarballGrep" \
@@ -249,6 +250,9 @@ git -C temp init --quiet
 git -C temp config user.name 'Bogus'
 git -C temp config user.email 'bogus@bogus'
 
+# handle "new-image" PRs gracefully
+for img; do touch "$BASHBREW_LIBRARY/$img"; [ -s "$BASHBREW_LIBRARY/$img" ] || echo 'Maintainers: New Image! :D (@docker-library-bot)' > "$BASHBREW_LIBRARY/$img"; done
+
 bashbrew list "$@" 2>>temp/_bashbrew.err | sort -uV > temp/_bashbrew-list || :
 _bashbrew-cat "$@" 2>>temp/_bashbrew.err > temp/_bashbrew-cat || :
 for image; do
@@ -262,7 +266,11 @@ done
 git -C temp add . || :
 git -C temp commit --quiet --allow-empty -m 'initial' || :
 
+git -C oi clean --quiet --force
 git -C oi checkout --quiet pull
+
+# handle "deleted-image" PRs gracefully :(
+for img; do touch "$BASHBREW_LIBRARY/$img"; [ -s "$BASHBREW_LIBRARY/$img" ] || echo 'Maintainers: Deleted Image D: (@docker-library-bot)' > "$BASHBREW_LIBRARY/$img"; done
 
 git -C temp rm --quiet -rf . || :
 bashbrew list "$@" 2>>temp/_bashbrew.err | sort -uV > temp/_bashbrew-list || :
