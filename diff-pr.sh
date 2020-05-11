@@ -224,27 +224,6 @@ copy-tar() {
 	done
 }
 
-# a mimic of "bashbrew cat" which should sort slightly more deterministically (so even full-order-changing PRs should have reasonable diffs)
-_bashbrew-cat() {
-	local img first=1
-	for img; do
-		if [ -n "$first" ]; then
-			first=
-		else
-			echo; echo
-		fi
-		bashbrew cat --format '{{ printf "%s\n" (.Manifest.Global.ClearDefaults defaults) }}' "$img"
-		bashbrew list --uniq "$img" \
-			| sort -V \
-			| xargs -r bashbrew list --uniq --build-order \
-			| xargs -r bashbrew cat --format '
-				{{- range $e := .TagEntries -}}
-					{{- printf "\n%s\n" ($e.ClearDefaults $.Manifest.Global) -}}
-				{{- end -}}
-			'
-	done
-}
-
 mkdir temp
 git -C temp init --quiet
 git -C temp config user.name 'Bogus'
@@ -254,7 +233,7 @@ git -C temp config user.email 'bogus@bogus'
 for img; do touch "$BASHBREW_LIBRARY/$img"; [ -s "$BASHBREW_LIBRARY/$img" ] || echo 'Maintainers: New Image! :D (@docker-library-bot)' > "$BASHBREW_LIBRARY/$img"; done
 
 bashbrew list "$@" 2>>temp/_bashbrew.err | sort -uV > temp/_bashbrew-list || :
-_bashbrew-cat "$@" 2>>temp/_bashbrew.err > temp/_bashbrew-cat || :
+"$diffDir/_bashbrew-cat-sorted.sh" "$@" 2>>temp/_bashbrew.err > temp/_bashbrew-cat || :
 for image; do
 	if script="$(bashbrew cat --format "$template" "$image")"; then
 		mkdir tar
@@ -274,7 +253,7 @@ for img; do touch "$BASHBREW_LIBRARY/$img"; [ -s "$BASHBREW_LIBRARY/$img" ] || e
 
 git -C temp rm --quiet -rf . || :
 bashbrew list "$@" 2>>temp/_bashbrew.err | sort -uV > temp/_bashbrew-list || :
-_bashbrew-cat "$@" 2>>temp/_bashbrew.err > temp/_bashbrew-cat || :
+"$diffDir/_bashbrew-cat-sorted.sh" "$@" 2>>temp/_bashbrew.err > temp/_bashbrew-cat || :
 script="$(bashbrew cat --format "$template" "$@")"
 mkdir tar
 ( eval "$script" | tar -xiC tar )
