@@ -1,0 +1,15 @@
+# see https://openeuler.org/en/releases.html
+Maintainers: caihaomin <caihaomin@huawei.com> (@openeulerHW)
+GitRepo: https://github.com/openeulerHW/openeuler-image.git
+GitCommit: 712590bf3fee6c362da4fb0a47af760faf603d5c
+
+Tags: 20.03-LTS, 20.03, 20, latest
+Architectures: amd64, arm64v8
+# https://github.com/openeulerHW/openeuler-image/tree/dist-amd64
+amd64-GitFetch: refs/heads/dist-amd64
+amd64-GitCommit: 26c33f81afeebe4ff0b007ef2b0561589c77930c
+amd64-Directory: build
+# https://github.com/openeulerHW/openeuler-image/tree/dist-arm64
+arm64v8-GitFetch: refs/heads/dist-arm64
+arm64v8-GitCommit: 3ede232c35033864091a543321089ea2f8ae03cb
+arm64v8-Directory: build
