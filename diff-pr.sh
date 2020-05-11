@@ -92,34 +92,6 @@ export BASHBREW_LIBRARY="$PWD/oi/library"
 : "${BASHBREW_ARCH:=amd64}" # TODO something smarter with arches
 export BASHBREW_ARCH
 
-# "bashbrew cat" template for duplicating something like "bashbrew list --uniq" but with architectures too
-archesListTemplate='
-	{{- range $e := $.Entries -}}
-		{{- range .Architectures -}}
-			{{- $.RepoName -}}:{{- $e.Tags | last -}}
-			{{- " @ " -}}
-			{{- . -}}
-			{{- "\n" -}}
-		{{- end -}}
-	{{- end -}}
-'
-# ... and SharedTags
-sharedTagsListTemplate='
-	{{- range $group := .Manifest.GetSharedTagGroups -}}
-		{{- range $tag := $group.SharedTags -}}
-			{{- join ":" $.RepoName $tag -}}
-			{{- " -- " -}}
-			{{- range $i, $e := $group.Entries -}}
-				{{- if gt $i 0 -}}
-					{{- ", " -}}
-				{{- end -}}
-				{{- join ":" $.RepoName ($e.Tags | last) -}}
-			{{- end -}}
-			{{- "\n" -}}
-		{{- end -}}
-	{{- end -}}
-'
-
 # TODO something less hacky than "git archive" hackery, like a "bashbrew archive" or "bashbrew context" or something
 template='
 	tempDir="$(mktemp -d)"
@@ -149,7 +121,7 @@ copy-tar() {
 	local src="$1"; shift
 	local dst="$1"; shift
 
-	if [ "$allFiles" ]; then
+	if [ -n "$allFiles" ]; then
 		mkdir -p "$dst"
 		cp -al "$src"/*/ "$dst/"
 		return
@@ -157,6 +129,7 @@ copy-tar() {
 
 	local d dockerfiles=()
 	for d in "$src"/*/.bashbrew-dockerfile-name; do
+		[ -f "$d" ] || continue
 		local bf; bf="$(< "$d")"
 		local dDir; dDir="$(dirname "$d")"
 		dockerfiles+=( "$dDir/$bf" )
@@ -233,9 +206,9 @@ copy-tar() {
 				mkdir -p "$gDir"
 				cp -alT "$dDir/$g" "$dst/$dDirName/$g"
 
-				if [ "$listTarballContents" ]; then
+				if [ -n "$listTarballContents" ]; then
 					case "$g" in
-						*.tar.*|*.tgz)
+						*.tar.* | *.tgz)
 							if [ -s "$dst/$dDirName/$g" ]; then
 								tar -tf "$dst/$dDirName/$g" \
 									| grep -vE "$uninterestingTarballGrep" \
@@ -256,11 +229,13 @@ git -C temp init --quiet
 git -C temp config user.name 'Bogus'
 git -C temp config user.email 'bogus@bogus'
 
+# handle "new-image" PRs gracefully
+for img; do touch "$BASHBREW_LIBRARY/$img"; [ -s "$BASHBREW_LIBRARY/$img" ] || echo 'Maintainers: New Image! :D (@docker-library-bot)' > "$BASHBREW_LIBRARY/$img"; done
+
 bashbrew list "$@" 2>>temp/_bashbrew.err | sort -uV > temp/_bashbrew-list || :
-bashbrew cat --format "$archesListTemplate" "$@" 2>>temp/_bashbrew.err | sort -V > temp/_bashbrew-arches || :
-bashbrew cat --format "$sharedTagsListTemplate" "$@" 2>>temp/_bashbrew.err | grep -vE '^$' | sort -V > temp/_bashbrew-shared-tags || :
+"$diffDir/_bashbrew-cat-sorted.sh" "$@" 2>>temp/_bashbrew.err > temp/_bashbrew-cat || :
 for image; do
-	if script="$(bashbrew cat -f "$template" "$image")"; then
+	if script="$(bashbrew cat --format "$template" "$image")"; then
 		mkdir tar
 		( eval "$script" | tar -xiC tar )
 		copy-tar tar temp
@@ -270,13 +245,16 @@ done
 git -C temp add . || :
 git -C temp commit --quiet --allow-empty -m 'initial' || :
 
+git -C oi clean --quiet --force
 git -C oi checkout --quiet pull
+
+# handle "deleted-image" PRs gracefully :(
+for img; do touch "$BASHBREW_LIBRARY/$img"; [ -s "$BASHBREW_LIBRARY/$img" ] || echo 'Maintainers: Deleted Image D: (@docker-library-bot)' > "$BASHBREW_LIBRARY/$img"; done
 
 git -C temp rm --quiet -rf . || :
 bashbrew list "$@" 2>>temp/_bashbrew.err | sort -uV > temp/_bashbrew-list || :
-bashbrew cat --format "$archesListTemplate" "$@" 2>>temp/_bashbrew.err | sort -V > temp/_bashbrew-arches || :
-bashbrew cat --format "$sharedTagsListTemplate" "$@" 2>>temp/_bashbrew.err | grep -vE '^$' | sort -V > temp/_bashbrew-shared-tags || :
-script="$(bashbrew cat -f "$template" "$@")"
+"$diffDir/_bashbrew-cat-sorted.sh" "$@" 2>>temp/_bashbrew.err > temp/_bashbrew-cat || :
+script="$(bashbrew cat --format "$template" "$@")"
 mkdir tar
 ( eval "$script" | tar -xiC tar )
 copy-tar tar temp
