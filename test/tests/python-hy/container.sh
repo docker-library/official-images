@@ -1,5 +1,5 @@
 #!/bin/sh
-set -e
+set -eu
 
 python=
 for c in pypy3 pypy python3 python; do
@@ -18,9 +18,11 @@ fi
 # see https://github.com/hylang/hy/issues/1111 for example breakage
 if ! "$python" -c 'import sys; exit((sys.version_info[0] == 3 and sys.version_info[1] >= 8) or sys.version_info[0] > 3)'; then
 	echo >&2 'skipping Hy test -- not allowed on Python 3.8+ (yet!)'
-	cat expected-std-out.txt # cheaters gunna cheat
+	# cheaters gunna cheat
+	cat expected-std-out.txt
 	exit
 fi
 
-pip install -q 'hy==0.16.0'
+pip install -q 'hy==0.17.0'
+
 hy ./container.hy

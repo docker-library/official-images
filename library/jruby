@@ -1,20 +1,31 @@
 Maintainers: Brian Goff <cpuguy83@gmail.com> (@cpuguy83)
 GitRepo: https://github.com/cpuguy83/docker-jruby.git
 GitFetch: refs/heads/master
-GitCommit: 4f090791f66566bb1954b0d124f109505e748fc5
+GitCommit: 669ad8f91df152ae83deef766569e0b1f5ec6b2f
 
-Tags: latest, 9, 9.2, 9.2.9, 9.2-jre, 9.2.9-jre, 9.2.9.0, 9.2.9.0-jre
+Tags: latest, 9, 9.2, 9.2.11, 9.2-jre, 9.2-jre8, 9.2.11-jre, 9.2.11-jre8, 9.2.11.1, 9.2.11.1-jre, 9.2.11.1-jre8
 Architectures: amd64
-Directory: 9000/jre
+Directory: 9000/jre8
 
-Tags: 9-jdk, 9.2-jdk, 9.2.9-jdk, 9.2.9.0-jdk
+Tags: 9-jdk, 9-jdk8, 9.2-jdk, 9.2-jdk8, 9.2.11-jdk, 9.2.11-jdk8, 9.2.11.1-jdk, 9.2.11.1-jdk8
 Architectures: amd64
-Directory: 9000/jdk
+Directory: 9000/jdk8
 
-Tags: 9-onbuild, 9.2-onbuild, 9.2.9-onbuild, 9.2.9.0-onbuild
+Tags: 9.2-jre11, 9.2.11-jre11, 9.2.11.1-jre11
 Architectures: amd64
-Directory: 9000/onbuild
+Directory: 9000/jre11
 
+Tags: 9.2-jdk11, 9.2.11-jdk11, 9.2.11.1-jdk11
+Architectures: amd64
+Directory: 9000/jdk11
+
+Tags: 9.2-jdk14, 9.2.11-jdk14, 9.2.11.1-jdk14
+Architectures: amd64
+Directory: 9000/jdk14
+
+Tags: 9-onbuild, 9.2-onbuild, 9.2.11-onbuild, 9.2.11.1-onbuild
+Architectures: amd64
+Directory: 9000/onbuild-jdk8
 
 Tags: 9.1, 9.1.17, 9.1.17.0, 9.1-jre, 9.1.17-jre, 9.1.17.0-jre
 Architectures: amd64

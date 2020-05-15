@@ -5,6 +5,9 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
 image="$1"
 
+# Use a client image with curl for testing
+clientImage='buildpack-deps:buster-curl'
+
 cname="silverpeas-container-$RANDOM-$RANDOM"
 # when running the first time, a silverpeas process is spawn before starting Silverpeas
 # (this configuration process can take some time)
@@ -19,7 +22,10 @@ cid="$(
 trap "docker rm -vf $cid > /dev/null" EXIT
 
 check_running() {
-	docker run --rm --link "$cid":silverpeas "$image" wget http://silverpeas:8000/silverpeas -O /dev/null
+	docker run --rm \
+		--link "$cid":silverpeas \
+		"$clientImage" \
+		curl -fs http://silverpeas:8000/silverpeas > /dev/null
 }
 
 . "$dir/../../retry.sh" --tries 20 --sleep 5 'check_running'

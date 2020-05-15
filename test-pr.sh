@@ -32,11 +32,15 @@ pull="$1"
 shift || { usage >&2 && exit 1; }
 
 if [ -z "$BASHBREW_SECOND_STAGE" ]; then
-	dockerImage='bashbrew'
+	dockerRepo='oisupport/bashbrew'
+	dockerBase="$dockerRepo:base"
+	dockerImage="$dockerRepo:test-pr"
 
-	docker build --pull -t "$dockerImage" "$dir" > /dev/null
+	bashbrewVersion="$(< "$dir/bashbrew-version")"
+	docker build -t "$dockerBase" --pull "https://github.com/docker-library/bashbrew.git#v$bashbrewVersion" > /dev/null
+	docker build -t "$dockerImage" "$dir" > /dev/null
 
-	args=()
+	args=( --init )
 
 	if [ "$pull" = '0' ]; then
 		args+=( --name "bashbrew-test-local-$RANDOM" )
@@ -165,6 +169,7 @@ declare -A failedBuild=() failedTests=()
 for img in "${files[@]}"; do
 	IFS=$'\n'
 	uniqImgs=( $(bashbrew list --uniq --build-order "$img") )
+	uniqImgs=( $(bashbrew cat --format '{{ if .TagEntry.HasArchitecture arch }}{{ $.RepoName }}:{{ .TagEntry.Tags | first }}{{ end }}' "${uniqImgs[@]}") ) # filter to just the set supported by the current BASHBREW_ARCH
 	unset IFS
 
 	echo

@@ -9,7 +9,7 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 image="$1"
 
 # Use a client image with curl for testing
-clientImage='buildpack-deps:stretch-curl'
+clientImage='buildpack-deps:buster-curl'
 
 # Create an instance of the container-under-test
 serverImage="$("$dir/../image-name.sh" librarytest/jetty-hello-web "$image")"
@@ -27,7 +27,9 @@ _request() {
 	local url="${1#/}"
 	shift
 
-	docker run --rm --link "$cid":jetty "$clientImage" \
+	docker run --rm \
+		--link "$cid":jetty \
+		"$clientImage" \
 		curl -fs -X"$method" "$@" "http://jetty:8080/$url"
 }
 
