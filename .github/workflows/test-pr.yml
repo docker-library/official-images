@@ -47,6 +47,14 @@ jobs:
     name: ${{ matrix.name }}
     runs-on: ${{ matrix.os }}
     steps:
+      - name: Prepare Git
+        run: |
+          # enable symlinks on Windows (https://git-scm.com/docs/git-config#Documentation/git-config.txt-coresymlinks)
+          git config --global core.symlinks true
+          # also, make sure Windows symlinks are *real* symlinks (https://github.com/git-for-windows/git/pull/156)
+          echo '::set-env name=MSYS::winsymlinks:nativestrict'
+          # https://github.com/docker-library/bashbrew/blob/a40a54d4d81b9fd2e39b4d7ba3fe203e8b022a67/scripts/github-actions/generate.sh#L146-L149
+        if: runner.os == 'Windows'
       - uses: actions/checkout@v2
       - name: Prepare Environment
         run: ${{ matrix.runs.prepare }}
