@@ -125,6 +125,15 @@ imageTests+=(
 		mongo-tls-basics
 		mongo-tls-auth
 	'
+	[monica:apache]='
+		monica-apache-run
+	'
+	[monica:fpm]='
+		monica-fpm-run
+	'
+	[monica:fpm-alpine]='
+		monica-fpm-run
+	'
 	[mono]='
 	'
 	[mysql]='
