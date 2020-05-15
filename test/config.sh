@@ -281,6 +281,9 @@ globalExcludeTests+=(
 	[:windowsservercore_cve-2014--shellshock]=1
 	[:windowsservercore_no-hard-coded-passwords]=1
 	[:windowsservercore_utc]=1
+	# https://github.com/docker-library/official-images/pull/2578#issuecomment-274889851
+	[nats:nanoserver_override-cmd]=1
+	[nats:windowsservercore_override-cmd]=1
 
 	# clearlinux has no /etc/password
 	# https://github.com/docker-library/official-images/pull/1721#issuecomment-234128477
