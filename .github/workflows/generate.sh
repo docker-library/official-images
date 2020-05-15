@@ -17,12 +17,17 @@ for repo; do
 		.matrix.include[]
 		| ([ .meta.entries[].tags[0] ]) as $tags
 		| .name = ($tags | join(", "))
+		# replace "build" steps with something that uses "bashbrew" instead of "docker build"
+		# https://github.com/docker-library/bashbrew/blob/a40a54d4d81b9fd2e39b4d7ba3fe203e8b022a67/scripts/github-actions/generate.sh#L74-L93
 		| .runs.prepare += "\ngit clone --depth 1 https://github.com/docker-library/bashbrew.git ~/bashbrew\n~/bashbrew/bashbrew.sh --version"
 		| .runs.build = (
 			(if .os | startswith("windows-") then "export BASHBREW_ARCH=windows-amd64 BASHBREW_CONSTRAINTS=" + ([ .meta.entries[].constraints[] ] | join(", ") | @sh) + "\n" else "" end)
 			+ "export BASHBREW_LIBRARY=\"$PWD/library\"\n"
 			+ ([ $tags[] | "~/bashbrew/bashbrew.sh build " + @sh ] | join("\n"))
 		)
+		# use our local clone of official-images for running tests (so test changes can be tested too, if they live in the PR with the image change)
+		# https://github.com/docker-library/bashbrew/blob/a40a54d4d81b9fd2e39b4d7ba3fe203e8b022a67/scripts/github-actions/generate.sh#L95
+		| .runs.test |= gsub("[^\n\t ]+/run[.]sh "; "./test/run.sh ")
 	]' <<<"$newStrategy")"
 	jq -c . <<<"$newStrategy" > /dev/null # sanity check
 	strategy="$(jq -c '
