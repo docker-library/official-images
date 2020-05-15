@@ -146,8 +146,28 @@ copy-tar() {
 		local dDir; dDir="$(dirname "$d")"
 		local dDirName; dDirName="$(basename "$dDir")"
 
+		# TODO choke on "syntax" parser directive
+		# TODO handle "escape" parser directive reasonably
+		local flatDockerfile; flatDockerfile="$(
+			gawk '
+				BEGIN { line = "" }
+				/^[[:space:]]*#/ {
+					gsub(/^[[:space:]]+/, "")
+					print
+					next
+				}
+				{
+					if (match($0, /^(.*)(\\[[:space:]]*)$/, m)) {
+						line = line m[1]
+						next
+					}
+					print line $0
+					line = ""
+				}
+			' "$d"
+		)"
+
 		local IFS=$'\n'
-		local dBase; dBase="$(basename "$d")"
 		local copyAddContext; copyAddContext="$(awk '
 			toupper($1) == "COPY" || toupper($1) == "ADD" {
 				for (i = 2; i < NF; i++) {
@@ -159,7 +179,8 @@ copy-tar() {
 					}
 				}
 			}
-		' "$d")"
+		' <<<"$flatDockerfile")"
+		local dBase; dBase="$(basename "$d")"
 		local files=(
 			"$dBase"
 			$copyAddContext
@@ -198,23 +219,25 @@ copy-tar() {
 
 			local g
 			for g in "${globbed[@]}"; do
-				if [ -z "$failureMatters" ] && [ ! -e "$dDir/$g" ]; then
+				local srcG="$dDir/$g" dstG="$dst/$dDirName/$g"
+
+				if [ -z "$failureMatters" ] && [ ! -e "$srcG" ]; then
 					continue
 				fi
 
-				local gDir; gDir="$(dirname "$dst/$dDirName/$g")"
+				local gDir; gDir="$(dirname "$dstG")"
 				mkdir -p "$gDir"
-				cp -alT "$dDir/$g" "$dst/$dDirName/$g"
+				cp -alT "$srcG" "$dstG"
 
 				if [ -n "$listTarballContents" ]; then
 					case "$g" in
 						*.tar.* | *.tgz)
-							if [ -s "$dst/$dDirName/$g" ]; then
-								tar -tf "$dst/$dDirName/$g" \
+							if [ -s "$dstG" ]; then
+								tar -tf "$dstG" \
 									| grep -vE "$uninterestingTarballGrep" \
 									| sed -e 's!^[.]/!!' \
 									| sort \
-									> "$dst/$dDirName/$g  'tar -t'"
+									> "$dstG  'tar -t'"
 							fi
 							;;
 					esac
