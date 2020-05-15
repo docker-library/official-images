@@ -255,10 +255,6 @@ imageTests+=(
 	[zookeeper]='
 		zookeeper-basics
 	'
-# example onbuild
-#	[python:onbuild]='
-#		py-onbuild
-#	'
 )
 
 globalExcludeTests+=(
@@ -274,18 +270,7 @@ globalExcludeTests+=(
 	[traefik_no-hard-coded-passwords]=1
 	[traefik_utc]=1
 
-	# windows!
-	[:nanoserver_cve-2014--shellshock]=1
-	[:nanoserver_no-hard-coded-passwords]=1
-	[:nanoserver_utc]=1
-	[:windowsservercore_cve-2014--shellshock]=1
-	[:windowsservercore_no-hard-coded-passwords]=1
-	[:windowsservercore_utc]=1
-	# https://github.com/docker-library/official-images/pull/2578#issuecomment-274889851
-	[nats:nanoserver_override-cmd]=1
-	[nats:windowsservercore_override-cmd]=1
-
-	# clearlinux has no /etc/password
+	# clearlinux has no /etc/passwd
 	# https://github.com/docker-library/official-images/pull/1721#issuecomment-234128477
 	[clearlinux_no-hard-coded-passwords]=1
 
@@ -293,20 +278,32 @@ globalExcludeTests+=(
 	[openjdk:alpine_java-uimanager-font]=1
 	[openjdk:slim_java-uimanager-font]=1
 	[openjdk:nanoserver_java-uimanager-font]=1
-	# and adoptopenjdk has opted not to
-	[adoptopenjdk_java-uimanager-font]=1
+
+	# the Swift slim images are not expected to be able to run the swift-hello-world test because it involves compiling Swift code. The slim images are for running an already built binary.
+	# https://github.com/docker-library/official-images/pull/6302#issuecomment-512181863
+	[swift:slim_swift-hello-world]=1
 
 	# no "native" dependencies
 	[ruby:alpine_ruby-bundler]=1
 	[ruby:alpine_ruby-gems]=1
 	[ruby:slim_ruby-bundler]=1
 	[ruby:slim_ruby-gems]=1
+
+	# MySQL-assuming tests cannot be run on MongoDB-providing images
 	[percona:psmdb_percona-tokudb]=1
 	[percona:psmdb_percona-rocksdb]=1
 
-	# the Swift slim images are not expected to be able to run the swift-hello-world test because it involves compiling Swift code. The slim images are for running an already built binary.
-	# https://github.com/docker-library/official-images/pull/6302#issuecomment-512181863
-	[swift:slim_swift-hello-world]=1
+	# windows!
+	[:nanoserver_cve-2014--shellshock]=1
+	[:nanoserver_no-hard-coded-passwords]=1
+	[:nanoserver_utc]=1
+	[:windowsservercore_cve-2014--shellshock]=1
+	[:windowsservercore_no-hard-coded-passwords]=1
+	[:windowsservercore_utc]=1
+
+	# https://github.com/docker-library/official-images/pull/2578#issuecomment-274889851
+	[nats:nanoserver_override-cmd]=1
+	[nats:windowsservercore_override-cmd]=1
 
 	# TODO adjust MongoDB tests to use docker networks instead of links so they can work on Windows (and consider using PowerShell to generate appropriate certificates for TLS tests instead of openssl)
 	[mongo:windowsservercore_mongo-basics]=1
