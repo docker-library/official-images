@@ -9,12 +9,12 @@ GitRepo: https://github.com/osrf/docker_images.git
 
 Tags: gzserver7, gzserver7-xenial
 Architectures: amd64
-GitCommit: e296cc1a131ef3b2ac62a91d6bf31ab6fb27884d
+GitCommit: 6f18102d57b424ce454f61e4ac432e3d6d71f670
 Directory: gazebo/7/ubuntu/xenial/gzserver7
 
 Tags: libgazebo7, libgazebo7-xenial
 Architectures: amd64
-GitCommit: e296cc1a131ef3b2ac62a91d6bf31ab6fb27884d
+GitCommit: 6f18102d57b424ce454f61e4ac432e3d6d71f670
 Directory: gazebo/7/ubuntu/xenial/libgazebo7
 
 
@@ -26,12 +26,12 @@ Directory: gazebo/7/ubuntu/xenial/libgazebo7
 
 Tags: gzserver9-xenial
 Architectures: amd64
-GitCommit: 844fe41c654dd84ba291d01620fc11f7ec99c9ad
+GitCommit: 6f18102d57b424ce454f61e4ac432e3d6d71f670
 Directory: gazebo/9/ubuntu/xenial/gzserver9
 
 Tags: libgazebo9-xenial
 Architectures: amd64
-GitCommit: 844fe41c654dd84ba291d01620fc11f7ec99c9ad
+GitCommit: 6f18102d57b424ce454f61e4ac432e3d6d71f670
 Directory: gazebo/9/ubuntu/xenial/libgazebo9
 
 ########################################
@@ -39,12 +39,12 @@ Directory: gazebo/9/ubuntu/xenial/libgazebo9
 
 Tags: gzserver9, gzserver9-bionic
 Architectures: amd64
-GitCommit: 2f090a032f756498681f948e60711908cfb524d6
+GitCommit: 6f18102d57b424ce454f61e4ac432e3d6d71f670
 Directory: gazebo/9/ubuntu/bionic/gzserver9
 
 Tags: libgazebo9, libgazebo9-bionic
 Architectures: amd64
-GitCommit: 2f090a032f756498681f948e60711908cfb524d6
+GitCommit: 6f18102d57b424ce454f61e4ac432e3d6d71f670
 Directory: gazebo/9/ubuntu/bionic/libgazebo9
 
 ########################################
@@ -52,12 +52,12 @@ Directory: gazebo/9/ubuntu/bionic/libgazebo9
 
 Tags: gzserver9-stretch
 Architectures: amd64
-GitCommit: e02819ea8bb6838c133d476a7f41f5079836eb4a
+GitCommit: 6f18102d57b424ce454f61e4ac432e3d6d71f670
 Directory: gazebo/9/debian/stretch/gzserver9
 
 Tags: libgazebo9-stretch
 Architectures: amd64
-GitCommit: e02819ea8bb6838c133d476a7f41f5079836eb4a
+GitCommit: 6f18102d57b424ce454f61e4ac432e3d6d71f670
 Directory: gazebo/9/debian/stretch/libgazebo9
 
 
@@ -69,12 +69,12 @@ Directory: gazebo/9/debian/stretch/libgazebo9
 
 Tags: gzserver10, gzserver10-bionic
 Architectures: amd64
-GitCommit: f1b7ad09fa3bc6b88621c5f4ff2da9669c9ccb3e
+GitCommit: 6f18102d57b424ce454f61e4ac432e3d6d71f670
 Directory: gazebo/10/ubuntu/bionic/gzserver10
 
 Tags: libgazebo10, libgazebo10-bionic
 Architectures: amd64
-GitCommit: f1b7ad09fa3bc6b88621c5f4ff2da9669c9ccb3e
+GitCommit: 6f18102d57b424ce454f61e4ac432e3d6d71f670
 Directory: gazebo/10/ubuntu/bionic/libgazebo10
 
 
@@ -84,12 +84,25 @@ Directory: gazebo/10/ubuntu/bionic/libgazebo10
 ########################################
 # Distro: ubuntu:bionic
 
-Tags: gzserver11, gzserver11-bionic
+Tags: gzserver11-bionic
 Architectures: amd64
-GitCommit: bd0ef992496452d93ea929ea5921b123acdab58c
+GitCommit: 6f18102d57b424ce454f61e4ac432e3d6d71f670
 Directory: gazebo/11/ubuntu/bionic/gzserver11
 
-Tags: libgazebo11, libgazebo11-bionic, latest
+Tags: libgazebo11-bionic
 Architectures: amd64
-GitCommit: bd0ef992496452d93ea929ea5921b123acdab58c
+GitCommit: 6f18102d57b424ce454f61e4ac432e3d6d71f670
 Directory: gazebo/11/ubuntu/bionic/libgazebo11
+
+########################################
+# Distro: ubuntu:focal
+
+Tags: gzserver11, gzserver11-focal
+Architectures: amd64
+GitCommit: 43e969496f5cabe19dd658c18c85f742bdaf6923
+Directory: gazebo/11/ubuntu/focal/gzserver11
+
+Tags: libgazebo11, libgazebo11-focal, latest
+Architectures: amd64
+GitCommit: 43e969496f5cabe19dd658c18c85f742bdaf6923
+Directory: gazebo/11/ubuntu/focal/libgazebo11
