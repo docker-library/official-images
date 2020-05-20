@@ -7,6 +7,10 @@ serverImage="$1"
 
 # Use a client image with curl for testing
 clientImage='buildpack-deps:buster-curl'
+# ensure the clientImage is ready and available
+if ! docker image inspect "$clientImage" &> /dev/null; then
+	docker pull "$clientImage" > /dev/null
+fi
 
 # Create an instance of the container-under-test
 cid="$(docker run -d "$serverImage")"

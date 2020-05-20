@@ -3,10 +3,19 @@ set -Eeuo pipefail
 
 dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
+serverImage="$1"
+
 clientImage='buildpack-deps:buster-curl'
+# ensure the clientImage is ready and available
+if ! docker image inspect "$clientImage" &> /dev/null; then
+	docker pull "$clientImage" > /dev/null
+fi
 
 mongoImage='mongo:4.0'
-serverImage="$1"
+# ensure the mongoImage is ready and available
+if ! docker image inspect "$mongoImage" &> /dev/null; then
+	docker pull "$mongoImage" > /dev/null
+fi
 
 # Create an instance of the container-under-test
 mongoCid="$(docker run -d "$mongoImage")"
