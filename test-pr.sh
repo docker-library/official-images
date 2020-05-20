@@ -101,7 +101,7 @@ if [ -z "$BASHBREW_SECOND_STAGE" ]; then
 
 	cmd=( ./test-pr.sh "$pull" "$@" )
 
-	if [ -t 1 ]; then
+	if [ -t 0 ] && [ -t 1 ]; then
 		# only add "-t" if we have a TTY
 		args+=( -t )
 	fi

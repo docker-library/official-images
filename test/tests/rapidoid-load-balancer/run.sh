@@ -10,6 +10,10 @@ image="$1"
 
 # Use a client image with curl for testing
 clientImage='buildpack-deps:buster-curl'
+# ensure the clientImage is ready and available
+if ! docker image inspect "$clientImage" &> /dev/null; then
+	docker pull "$clientImage" > /dev/null
+fi
 
 app1id="$(docker run -d "$image" rapidoid.port=80 id=app1 app.services=ping,status)"
 app2id="$(docker run -d "$image" rapidoid.port=80 id=app2 app.services=ping,status)"

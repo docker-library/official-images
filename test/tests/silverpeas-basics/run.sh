@@ -7,6 +7,10 @@ image="$1"
 
 # Use a client image with curl for testing
 clientImage='buildpack-deps:buster-curl'
+# ensure the clientImage is ready and available
+if ! docker image inspect "$clientImage" &> /dev/null; then
+	docker pull "$clientImage" > /dev/null
+fi
 
 cname="silverpeas-container-$RANDOM-$RANDOM"
 # when running the first time, a silverpeas process is spawn before starting Silverpeas

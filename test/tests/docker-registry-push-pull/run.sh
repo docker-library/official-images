@@ -8,10 +8,16 @@ case "${image##*/}" in
 	docker:*dind*)
 		dockerImage="$image"
 		registryImage='registry'
+		if ! docker image inspect "$registryImage" &> /dev/null; then
+			docker pull "$registryImage" > /dev/null
+		fi
 		;;
 	registry:*|registry)
 		registryImage="$image"
 		dockerImage='docker:dind'
+		if ! docker image inspect "$dockerImage" &> /dev/null; then
+			docker pull "$dockerImage" > /dev/null
+		fi
 		;;
 	*)
 		echo >&2 "error: unable to determine whether '$image' is registry or docker:dind"
