@@ -1,31 +1,76 @@
 Maintainers: Andy Li <andy@onthewings.net> (@andyli)
 GitRepo: https://github.com/HaxeFoundation/docker-library-haxe.git
 
-Tags: 4.0.5-buster, 4.0-buster
-SharedTags: 4.0.5, 4.0, latest
+Tags: 4.1.0-buster, 4.1-buster
+SharedTags: 4.1.0, 4.1, latest
 Architectures: amd64, arm32v7, arm64v8
-GitCommit: 38b1ceb14a5692ae2c655c056baaff79d963da33
+GitCommit: 1f586bf85c12ce5c9300f24079912b94c73bc3f7
+Directory: 4.1/buster
+
+Tags: 4.1.0-stretch, 4.1-stretch
+Architectures: amd64, arm32v7, arm64v8
+GitCommit: e57329c158b19f881c57a0496afbaf4446895fca
+Directory: 4.1/stretch
+
+Tags: 4.1.0-windowsservercore-1809, 4.1-windowsservercore-1809
+SharedTags: 4.1.0-windowsservercore, 4.1-windowsservercore, 4.1.0, 4.1, latest
+Architectures: windows-amd64
+GitCommit: 286da0c345c3d9b9912fc6e87926d55390d6b66f
+Directory: 4.1/windowsservercore-1809
+Constraints: windowsservercore-1809
+
+Tags: 4.1.0-windowsservercore-ltsc2016, 4.1-windowsservercore-ltsc2016
+SharedTags: 4.1.0-windowsservercore, 4.1-windowsservercore, 4.1.0, 4.1, latest
+Architectures: windows-amd64
+GitCommit: 286da0c345c3d9b9912fc6e87926d55390d6b66f
+Directory: 4.1/windowsservercore-ltsc2016
+Constraints: windowsservercore-ltsc2016
+
+Tags: 4.1.0-alpine3.11, 4.1-alpine3.11, 4.1.0-alpine, 4.1-alpine
+Architectures: amd64, arm64v8
+GitCommit: e57329c158b19f881c57a0496afbaf4446895fca
+Directory: 4.1/alpine3.11
+
+Tags: 4.1.0-alpine3.10, 4.1-alpine3.10
+Architectures: amd64, arm64v8
+GitCommit: e57329c158b19f881c57a0496afbaf4446895fca
+Directory: 4.1/alpine3.10
+
+Tags: 4.1.0-alpine3.9, 4.1-alpine3.9
+Architectures: amd64, arm64v8
+GitCommit: 9452cd39492aae3456889ac6ba92072dd73ad19f
+Directory: 4.1/alpine3.9
+
+Tags: 4.1.0-alpine3.8, 4.1-alpine3.8
+Architectures: amd64, arm64v8
+GitCommit: 9452cd39492aae3456889ac6ba92072dd73ad19f
+Directory: 4.1/alpine3.8
+
+Tags: 4.0.5-buster, 4.0-buster
+SharedTags: 4.0.5, 4.0
+Architectures: amd64, arm32v7, arm64v8
+GitCommit: 1f586bf85c12ce5c9300f24079912b94c73bc3f7
 Directory: 4.0/buster
 
 Tags: 4.0.5-stretch, 4.0-stretch
 Architectures: amd64, arm32v7, arm64v8
-GitCommit: 38b1ceb14a5692ae2c655c056baaff79d963da33
+GitCommit: e57329c158b19f881c57a0496afbaf4446895fca
 Directory: 4.0/stretch
 
 Tags: 4.0.5-jessie, 4.0-jessie
 Architectures: amd64
-GitCommit: 38b1ceb14a5692ae2c655c056baaff79d963da33
+GitCommit: 02dd441749ccca93e1898b130b569a3f40cd6241
 Directory: 4.0/jessie
 
 Tags: 4.0.5-windowsservercore-1809, 4.0-windowsservercore-1809
-SharedTags: 4.0.5-windowsservercore, 4.0-windowsservercore, 4.0.5, 4.0, latest
+SharedTags: 4.0.5-windowsservercore, 4.0-windowsservercore, 4.0.5, 4.0
 Architectures: windows-amd64
 GitCommit: 38b1ceb14a5692ae2c655c056baaff79d963da33
 Directory: 4.0/windowsservercore-1809
 Constraints: windowsservercore-1809
 
 Tags: 4.0.5-windowsservercore-ltsc2016, 4.0-windowsservercore-ltsc2016
-SharedTags: 4.0.5-windowsservercore, 4.0-windowsservercore, 4.0.5, 4.0, latest
+SharedTags: 4.0.5-windowsservercore, 4.0-windowsservercore, 4.0.5, 4.0
 Architectures: windows-amd64
 GitCommit: 38b1ceb14a5692ae2c655c056baaff79d963da33
 Directory: 4.0/windowsservercore-ltsc2016
@@ -33,38 +78,38 @@ Constraints: windowsservercore-ltsc2016
 
 Tags: 4.0.5-alpine3.11, 4.0-alpine3.11, 4.0.5-alpine, 4.0-alpine
 Architectures: amd64, arm64v8
-GitCommit: c06030895887da79e312f97bb434ca0f0e0f7f22
+GitCommit: e57329c158b19f881c57a0496afbaf4446895fca
 Directory: 4.0/alpine3.11
 
 Tags: 4.0.5-alpine3.10, 4.0-alpine3.10
 Architectures: amd64, arm64v8
-GitCommit: 38b1ceb14a5692ae2c655c056baaff79d963da33
+GitCommit: e57329c158b19f881c57a0496afbaf4446895fca
 Directory: 4.0/alpine3.10
 
 Tags: 4.0.5-alpine3.9, 4.0-alpine3.9
 Architectures: amd64, arm64v8
-GitCommit: 38b1ceb14a5692ae2c655c056baaff79d963da33
+GitCommit: 9452cd39492aae3456889ac6ba92072dd73ad19f
 Directory: 4.0/alpine3.9
 
 Tags: 4.0.5-alpine3.8, 4.0-alpine3.8
 Architectures: amd64, arm64v8
-GitCommit: 38b1ceb14a5692ae2c655c056baaff79d963da33
+GitCommit: 9452cd39492aae3456889ac6ba92072dd73ad19f
 Directory: 4.0/alpine3.8
 
 Tags: 3.4.7-buster, 3.4-buster
 SharedTags: 3.4.7, 3.4
 Architectures: amd64, arm32v7, arm64v8
-GitCommit: b62c53f203ae20f2b3dcc1af2881ccab602a4fe1
+GitCommit: 1f586bf85c12ce5c9300f24079912b94c73bc3f7
 Directory: 3.4/buster
 
 Tags: 3.4.7-stretch, 3.4-stretch
 Architectures: amd64, arm32v7, arm64v8
-GitCommit: b62c53f203ae20f2b3dcc1af2881ccab602a4fe1
+GitCommit: e57329c158b19f881c57a0496afbaf4446895fca
 Directory: 3.4/stretch
 
 Tags: 3.4.7-jessie, 3.4-jessie
 Architectures: amd64
-GitCommit: b62c53f203ae20f2b3dcc1af2881ccab602a4fe1
+GitCommit: 02dd441749ccca93e1898b130b569a3f40cd6241
 Directory: 3.4/jessie
 
 Tags: 3.4.7-windowsservercore-1809, 3.4-windowsservercore-1809
@@ -83,38 +128,38 @@ Constraints: windowsservercore-ltsc2016
 
 Tags: 3.4.7-alpine3.11, 3.4-alpine3.11, 3.4.7-alpine, 3.4-alpine
 Architectures: amd64, arm64v8
-GitCommit: c06030895887da79e312f97bb434ca0f0e0f7f22
+GitCommit: e57329c158b19f881c57a0496afbaf4446895fca
 Directory: 3.4/alpine3.11
 
 Tags: 3.4.7-alpine3.10, 3.4-alpine3.10
 Architectures: amd64, arm64v8
-GitCommit: b62c53f203ae20f2b3dcc1af2881ccab602a4fe1
+GitCommit: e57329c158b19f881c57a0496afbaf4446895fca
 Directory: 3.4/alpine3.10
 
 Tags: 3.4.7-alpine3.9, 3.4-alpine3.9
 Architectures: amd64, arm64v8
-GitCommit: b62c53f203ae20f2b3dcc1af2881ccab602a4fe1
+GitCommit: bf02021c6d7938b000481a0878d029c5816437f8
 Directory: 3.4/alpine3.9
 
 Tags: 3.4.7-alpine3.8, 3.4-alpine3.8
 Architectures: amd64, arm64v8
-GitCommit: b62c53f203ae20f2b3dcc1af2881ccab602a4fe1
+GitCommit: bf02021c6d7938b000481a0878d029c5816437f8
 Directory: 3.4/alpine3.8
 
 Tags: 3.3.0-rc.1-buster, 3.3.0-buster, 3.3-buster
 SharedTags: 3.3.0-rc.1, 3.3.0, 3.3
 Architectures: amd64, arm32v7, arm64v8
-GitCommit: b62c53f203ae20f2b3dcc1af2881ccab602a4fe1
+GitCommit: 1f586bf85c12ce5c9300f24079912b94c73bc3f7
 Directory: 3.3/buster
 
 Tags: 3.3.0-rc.1-stretch, 3.3.0-stretch, 3.3-stretch
 Architectures: amd64, arm32v7, arm64v8
-GitCommit: b62c53f203ae20f2b3dcc1af2881ccab602a4fe1
+GitCommit: e57329c158b19f881c57a0496afbaf4446895fca
 Directory: 3.3/stretch
 
 Tags: 3.3.0-rc.1-jessie, 3.3.0-jessie, 3.3-jessie
 Architectures: amd64
-GitCommit: b62c53f203ae20f2b3dcc1af2881ccab602a4fe1
+GitCommit: 02dd441749ccca93e1898b130b569a3f40cd6241
 Directory: 3.3/jessie
 
 Tags: 3.3.0-rc.1-windowsservercore-1809, 3.3.0-windowsservercore-1809, 3.3-windowsservercore-1809
@@ -133,38 +178,38 @@ Constraints: windowsservercore-ltsc2016
 
 Tags: 3.3.0-rc.1-alpine3.11, 3.3.0-rc.1-alpine, 3.3.0-alpine3.11, 3.3-alpine3.11, 3.3.0-alpine, 3.3-alpine
 Architectures: amd64, arm64v8
-GitCommit: c06030895887da79e312f97bb434ca0f0e0f7f22
+GitCommit: e57329c158b19f881c57a0496afbaf4446895fca
 Directory: 3.3/alpine3.11
 
 Tags: 3.3.0-rc.1-alpine3.10, 3.3.0-alpine3.10, 3.3-alpine3.10
 Architectures: amd64, arm64v8
-GitCommit: b62c53f203ae20f2b3dcc1af2881ccab602a4fe1
+GitCommit: e57329c158b19f881c57a0496afbaf4446895fca
 Directory: 3.3/alpine3.10
 
 Tags: 3.3.0-rc.1-alpine3.9, 3.3.0-alpine3.9, 3.3-alpine3.9
 Architectures: amd64, arm64v8
-GitCommit: b62c53f203ae20f2b3dcc1af2881ccab602a4fe1
+GitCommit: bf02021c6d7938b000481a0878d029c5816437f8
 Directory: 3.3/alpine3.9
 
 Tags: 3.3.0-rc.1-alpine3.8, 3.3.0-alpine3.8, 3.3-alpine3.8
 Architectures: amd64, arm64v8
-GitCommit: b62c53f203ae20f2b3dcc1af2881ccab602a4fe1
+GitCommit: bf02021c6d7938b000481a0878d029c5816437f8
 Directory: 3.3/alpine3.8
 
 Tags: 3.2.1-buster, 3.2-buster
 SharedTags: 3.2.1, 3.2
 Architectures: amd64, arm32v7, arm64v8
-GitCommit: b62c53f203ae20f2b3dcc1af2881ccab602a4fe1
+GitCommit: 1f586bf85c12ce5c9300f24079912b94c73bc3f7
 Directory: 3.2/buster
 
 Tags: 3.2.1-stretch, 3.2-stretch
 Architectures: amd64, arm32v7, arm64v8
-GitCommit: b62c53f203ae20f2b3dcc1af2881ccab602a4fe1
+GitCommit: e57329c158b19f881c57a0496afbaf4446895fca
 Directory: 3.2/stretch
 
 Tags: 3.2.1-jessie, 3.2-jessie
 Architectures: amd64
-GitCommit: b62c53f203ae20f2b3dcc1af2881ccab602a4fe1
+GitCommit: 02dd441749ccca93e1898b130b569a3f40cd6241
 Directory: 3.2/jessie
 
 Tags: 3.2.1-windowsservercore-1809, 3.2-windowsservercore-1809
@@ -183,32 +228,32 @@ Constraints: windowsservercore-ltsc2016
 
 Tags: 3.2.1-alpine3.11, 3.2-alpine3.11, 3.2.1-alpine, 3.2-alpine
 Architectures: amd64, arm64v8
-GitCommit: c06030895887da79e312f97bb434ca0f0e0f7f22
+GitCommit: e57329c158b19f881c57a0496afbaf4446895fca
 Directory: 3.2/alpine3.11
 
 Tags: 3.2.1-alpine3.10, 3.2-alpine3.10
 Architectures: amd64, arm64v8
-GitCommit: b62c53f203ae20f2b3dcc1af2881ccab602a4fe1
+GitCommit: e57329c158b19f881c57a0496afbaf4446895fca
 Directory: 3.2/alpine3.10
 
 Tags: 3.2.1-alpine3.9, 3.2-alpine3.9
 Architectures: amd64, arm64v8
-GitCommit: b62c53f203ae20f2b3dcc1af2881ccab602a4fe1
+GitCommit: bf02021c6d7938b000481a0878d029c5816437f8
 Directory: 3.2/alpine3.9
 
 Tags: 3.2.1-alpine3.8, 3.2-alpine3.8
 Architectures: amd64, arm64v8
-GitCommit: b62c53f203ae20f2b3dcc1af2881ccab602a4fe1
+GitCommit: bf02021c6d7938b000481a0878d029c5816437f8
 Directory: 3.2/alpine3.8
 
 Tags: 3.1.3-stretch, 3.1-stretch
 Architectures: amd64, arm32v7, arm64v8
-GitCommit: b62c53f203ae20f2b3dcc1af2881ccab602a4fe1
+GitCommit: e57329c158b19f881c57a0496afbaf4446895fca
 Directory: 3.1/stretch
 
 Tags: 3.1.3-jessie, 3.1-jessie
 Architectures: amd64
-GitCommit: b62c53f203ae20f2b3dcc1af2881ccab602a4fe1
+GitCommit: 02dd441749ccca93e1898b130b569a3f40cd6241
 Directory: 3.1/jessie
 
 Tags: 3.1.3-windowsservercore-1809, 3.1-windowsservercore-1809
