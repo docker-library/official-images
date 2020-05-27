@@ -1,28 +1,31 @@
 Maintainers: Ivan Kozlovic <ivan@synadia.com> (@kozlovic)
 GitRepo: https://github.com/nats-io/nats-streaming-docker.git
-GitCommit: 9716618a61deba8a7e28b69d53d95d698bde5117
+GitFetch: refs/heads/reorg
+GitCommit: 3e10ccce3f22524ee3103a8a527f24a094050c2b
 
-Tags: 0.17.0-linux, linux
-SharedTags: 0.17.0, latest
+Tags: 0.17.0-alpine3.11, 0.17-alpine3.11, alpine3.11, 0.17.0-alpine, 0.17-alpine, alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8
-amd64-GitCommit: 9716618a61deba8a7e28b69d53d95d698bde5117
-amd64-Directory: amd64
-arm32v6-GitCommit: 9716618a61deba8a7e28b69d53d95d698bde5117
-arm32v6-Directory: arm32v6
-arm32v7-GitCommit: 9716618a61deba8a7e28b69d53d95d698bde5117
-arm32v7-Directory: arm32v7
-arm64v8-GitCommit: 9716618a61deba8a7e28b69d53d95d698bde5117
-arm64v8-Directory: arm64v8
+Directory: 0.17.0/alpine3.11
 
-Tags: 0.17.0-nanoserver-1809, nanoserver-1809
-SharedTags: 0.17.0, latest
-Architectures: windows-amd64
-windows-amd64-GitCommit: 9716618a61deba8a7e28b69d53d95d698bde5117
-windows-amd64-Directory: windows/nanoserver-1809
-Constraints: nanoserver-1809
+Tags: 0.17.0-scratch, 0.17-scratch, scratch, 0.17.0-linux, 0.17-linux, linux
+SharedTags: 0.17.0, 0.17, latest
+Architectures: amd64, arm32v6, arm32v7, arm64v8
+Directory: 0.17.0/scratch
 
-Tags: 0.17.0-windowsservercore, windowsservercore
+Tags: 0.17.0-windowsservercore-1809, 0.17-windowsservercore-1809, windowsservercore-1809
+SharedTags: 0.17.0-windowsservercore, 0.17-windowsservercore, windowsservercore
 Architectures: windows-amd64
-windows-amd64-GitCommit: 9716618a61deba8a7e28b69d53d95d698bde5117
-windows-amd64-Directory: windows/windowsservercore
+Directory: 0.17.0/windowsservercore-1809
+Constraints: windowsservercore-1809
+
+Tags: 0.17.0-nanoserver-1809, 0.17-nanoserver-1809, nanoserver-1809
+SharedTags: 0.17.0-nanoserver, 0.17-nanoserver, nanoserver, 0.17.0, 0.17, latest
+Architectures: windows-amd64
+Directory: 0.17.0/nanoserver-1809
+Constraints: nanoserver-1809, windowsservercore-1809
+
+Tags: 0.17.0-windowsservercore-ltsc2016, 0.17-windowsservercore-ltsc2016, windowsservercore-ltsc2016
+SharedTags: 0.17.0-windowsservercore, 0.17-windowsservercore, windowsservercore
+Architectures: windows-amd64
+Directory: 0.17.0/windowsservercore-ltsc2016
 Constraints: windowsservercore-ltsc2016
