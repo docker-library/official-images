@@ -66,3 +66,24 @@ Architectures: windows-amd64
 GitCommit: 3ec50f2f7ae9fd2c824682bc08d07a093bbdb521
 Directory: 4.2/windows/windowsservercore-1809
 Constraints: windowsservercore-1809
+
+Tags: 4.4.0-rc7-bionic, 4.4-rc-bionic
+SharedTags: 4.4.0-rc7, 4.4-rc
+# see http://repo.mongodb.org/apt/ubuntu/dists/bionic/mongodb-org/testing/multiverse/
+Architectures: amd64, arm64v8, s390x
+GitCommit: 3fecc7f8e812d9dc8b03e83f47bfe544442ad9a3
+Directory: 4.4-rc
+
+Tags: 4.4.0-rc7-windowsservercore-ltsc2016, 4.4-rc-windowsservercore-ltsc2016
+SharedTags: 4.4.0-rc7-windowsservercore, 4.4-rc-windowsservercore, 4.4.0-rc7, 4.4-rc
+Architectures: windows-amd64
+GitCommit: 3fecc7f8e812d9dc8b03e83f47bfe544442ad9a3
+Directory: 4.4-rc/windows/windowsservercore-ltsc2016
+Constraints: windowsservercore-ltsc2016
+
+Tags: 4.4.0-rc7-windowsservercore-1809, 4.4-rc-windowsservercore-1809
+SharedTags: 4.4.0-rc7-windowsservercore, 4.4-rc-windowsservercore, 4.4.0-rc7, 4.4-rc
+Architectures: windows-amd64
+GitCommit: 3fecc7f8e812d9dc8b03e83f47bfe544442ad9a3
+Directory: 4.4-rc/windows/windowsservercore-1809
+Constraints: windowsservercore-1809
