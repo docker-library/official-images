@@ -13,7 +13,19 @@ s390x-Directory: s390x/
 i386-Directory: x86/
 amd64-Directory: x86_64/
 
-Tags: 3.11.6, 3.11, 3, latest
+Tags: 3.12.0, 3.12, 3, latest
+Architectures: arm64v8, arm32v6, arm32v7, ppc64le, s390x, i386, amd64
+GitFetch: refs/heads/v3.12
+GitCommit: 90788e211ec6d5df183d79d6cb02e068b258d198
+arm64v8-Directory: aarch64/
+arm32v6-Directory: armhf/
+arm32v7-Directory: armv7/
+ppc64le-Directory: ppc64le/
+s390x-Directory: s390x/
+i386-Directory: x86/
+amd64-Directory: x86_64/
+
+Tags: 3.11.6, 3.11
 Architectures: arm64v8, arm32v6, arm32v7, ppc64le, s390x, i386, amd64
 GitFetch: refs/heads/v3.11
 GitCommit: c5510d5b1d2546d133f7b0938690c3c1e2cd9549
@@ -44,17 +56,6 @@ GitCommit: d7eb97a39abbdfe6ba73236f844cb80b756280d1
 arm64v8-Directory: aarch64/
 arm32v6-Directory: armhf/
 arm32v7-Directory: armv7/
-ppc64le-Directory: ppc64le/
-s390x-Directory: s390x/
-i386-Directory: x86/
-amd64-Directory: x86_64/
-
-Tags: 3.8.5, 3.8
-Architectures: arm64v8, arm32v6, ppc64le, s390x, i386, amd64
-GitFetch: refs/heads/v3.8
-GitCommit: c0919567e0350f0128fcad803d8e79c4ecfdf258
-arm64v8-Directory: aarch64/
-arm32v6-Directory: armhf/
 ppc64le-Directory: ppc64le/
 s390x-Directory: s390x/
 i386-Directory: x86/
