@@ -9,4 +9,4 @@ cp composer.json "$dir"
 cd "$dir"
 
 composer --version
-composer install
+composer install --no-interaction --no-progress --no-suggest --no-ansi --profile
