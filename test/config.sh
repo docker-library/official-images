@@ -182,6 +182,7 @@ imageTests+=(
 		plone-cors
 		plone-versions
 		plone-zeoclient
+		plone-zeosite
 	'
 	[postgres]='
 		postgres-basics
