@@ -5,8 +5,12 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
 image="$1"
 
-# since we have curl in the php image, we'll use that
-clientImage="$1"
+# Use a client image with curl for testing
+clientImage='buildpack-deps:buster-curl'
+# ensure the clientImage is ready and available
+if ! docker image inspect "$clientImage" &> /dev/null; then
+	docker pull "$clientImage" > /dev/null
+fi
 
 serverImage="$("$dir/../image-name.sh" librarytest/php-apache-hello-web "$image")"
 "$dir/../docker-build.sh" "$dir" "$serverImage" <<EOD
@@ -25,7 +29,9 @@ _request() {
 	local url="${1#/}"
 	shift
 
-	docker run --rm --link "$cid":apache "$clientImage" \
+	docker run --rm \
+		--link "$cid":apache \
+		"$clientImage" \
 		curl -fs -X"$method" "$@" "http://apache/$url"
 }
 

@@ -8,9 +8,9 @@ image="$1"
 # Build a client image with cgi-fcgi for testing
 clientImage='librarytest/nextcloud-fpm-run:fcgi-client'
 docker build -t "$clientImage" - > /dev/null <<'EOF'
-FROM debian:stretch-slim
+FROM debian:buster-slim
 
-RUN set -x && apt-get update && apt-get install -y libfcgi0ldbl && rm -rf /var/lib/apt/lists/*
+RUN set -x && apt-get update && apt-get install -y --no-install-recommends libfcgi-bin && rm -rf /var/lib/apt/lists/*
 
 ENTRYPOINT ["cgi-fcgi"]
 EOF
@@ -29,7 +29,8 @@ fcgi-request() {
 		url="${url%%\?*}"
 	fi
 
-	docker run --rm -i --link "$cid":fpm \
+	docker run --rm -i \
+		--link "$cid":fpm \
 		-e REQUEST_METHOD="$method" \
 		-e SCRIPT_NAME="$url" \
 		-e SCRIPT_FILENAME=/var/www/html/"${url#/}" \

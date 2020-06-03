@@ -3,10 +3,18 @@ set -eo pipefail
 
 dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
-# since we have curl in the php image, we'll use that
-clientImage="$1"
+# Use a client image with curl for testing
+clientImage='buildpack-deps:buster-curl'
+# ensure the clientImage is ready and available
+if ! docker image inspect "$clientImage" &> /dev/null; then
+	docker pull "$clientImage" > /dev/null
+fi
 
 mysqlImage='mysql:5.7'
+# ensure the mysqlImage is ready and available
+if ! docker image inspect "$mysqlImage" &> /dev/null; then
+	docker pull "$mysqlImage" > /dev/null
+fi
 serverImage="$1"
 
 # Create an instance of the container-under-test
@@ -22,7 +30,9 @@ _request() {
 	local url="${1#/}"
 	shift
 
-	docker run --rm --link "$cid":apache "$clientImage" \
+	docker run --rm \
+		--link "$cid":apache \
+		"$clientImage" \
 		curl -fsL -X"$method" "$@" "http://apache/$url"
 }
 

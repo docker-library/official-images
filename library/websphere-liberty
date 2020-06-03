@@ -2,7 +2,7 @@ Maintainers: Chris Potter <crpotter@us.ibm.com> (@crpotter),
              Wendy Raschke <wraschke@us.ibm.com> (@wraschke),
              Arthur De Magalhaes <arthurdm@ca.ibm.com> (@arthurdm)
 GitRepo: https://github.com/WASdev/ci.docker.git
-GitCommit: 3c8a6c6ca9af05c504fb26788030e4f8ff5125b6
+GitCommit: c89d127a536ed68bbf8d3d5ad92da443fb1a87d0
 Architectures: amd64, i386, ppc64le, s390x
 
 Tags: beta
@@ -16,6 +16,22 @@ Tags: full, latest
 Directory: ga/latest/full
 File: Dockerfile.ubuntu.ibmjava8
 
+Tags: 20.0.0.5-kernel-java8-ibmjava
+Directory: ga/20.0.0.5/kernel
+File: Dockerfile.ubuntu.ibmjava8
+
+Tags: 20.0.0.5-full-java8-ibmjava
+Directory: ga/20.0.0.5/full
+File: Dockerfile.ubuntu.ibmjava8
+
+Tags: 20.0.0.3-kernel-java8-ibmjava
+Directory: ga/20.0.0.3/kernel
+File: Dockerfile.ubuntu.ibmjava8
+
+Tags: 20.0.0.3-full-java8-ibmjava
+Directory: ga/20.0.0.3/full
+File: Dockerfile.ubuntu.ibmjava8
+
 Tags: 19.0.0.12-kernel-java8-ibmjava
 Directory: ga/19.0.0.12/kernel
 File: Dockerfile.ubuntu.ibmjava8
@@ -23,83 +39,3 @@ File: Dockerfile.ubuntu.ibmjava8
 Tags: 19.0.0.12-full-java8-ibmjava
 Directory: ga/19.0.0.12/full
 File: Dockerfile.ubuntu.ibmjava8
-
-Tags: 19.0.0.9-kernel
-Directory: ga/19.0.0.9/kernel
-
-Tags: 19.0.0.9-kernel-java11
-Directory: ga/19.0.0.9/kernel
-File: Dockerfile.java11
-Architectures: amd64, ppc64le, s390x
-
-Tags: 19.0.0.9-javaee8
-Directory: ga/19.0.0.9/javaee8
-
-Tags: 19.0.0.9-javaee8-java11
-Directory: ga/19.0.0.9/javaee8
-File: Dockerfile.java11
-Architectures: amd64, ppc64le, s390x
-
-Tags: 19.0.0.9-webProfile8
-Directory: ga/19.0.0.9/webProfile8
-
-Tags: 19.0.0.9-webProfile8-java11
-Directory: ga/19.0.0.9/webProfile8
-File: Dockerfile.java11
-Architectures: amd64, ppc64le, s390x
-
-Tags: 19.0.0.9-microProfile1
-Directory: ga/19.0.0.9/microProfile1
-
-Tags: 19.0.0.9-microProfile1-java11
-Directory: ga/19.0.0.9/microProfile1
-File: Dockerfile.java11
-Architectures: amd64, ppc64le, s390x
-
-Tags: 19.0.0.9-microProfile2
-Directory: ga/19.0.0.9/microProfile2
-
-Tags: 19.0.0.9-microProfile2-java11
-Directory: ga/19.0.0.9/microProfile2
-File: Dockerfile.java11
-Architectures: amd64, ppc64le, s390x
-
-Tags: 19.0.0.9-microProfile3
-Directory: ga/19.0.0.9/microProfile3
-
-Tags: 19.0.0.9-microProfile3-java11
-Directory: ga/19.0.0.9/microProfile3
-File: Dockerfile.java11
-Architectures: amd64, ppc64le, s390x
-
-Tags: 19.0.0.9-springBoot2
-Directory: ga/19.0.0.9/springBoot2
-
-Tags: 19.0.0.9-springBoot2-java11
-Directory: ga/19.0.0.9/springBoot2
-File: Dockerfile.java11
-Architectures: amd64, ppc64le, s390x
-
-Tags: 19.0.0.9-springBoot1
-Directory: ga/19.0.0.9/springBoot1
-
-Tags: 19.0.0.9-springBoot1-java11
-Directory: ga/19.0.0.9/springBoot1
-File: Dockerfile.java11
-Architectures: amd64, ppc64le, s390x
-
-Tags: 19.0.0.9-webProfile7
-Directory: ga/19.0.0.9/webProfile7
-
-Tags: 19.0.0.9-webProfile7-java11
-Directory: ga/19.0.0.9/webProfile7
-File: Dockerfile.java11
-Architectures: amd64, ppc64le, s390x
-
-Tags: 19.0.0.9-javaee7
-Directory: ga/19.0.0.9/javaee7
-
-Tags: 19.0.0.9-javaee7-java11
-Directory: ga/19.0.0.9/javaee7
-File: Dockerfile.java11
-Architectures: amd64, ppc64le, s390x

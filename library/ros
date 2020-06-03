@@ -9,22 +9,22 @@ GitRepo: https://github.com/osrf/docker_images.git
 
 Tags: kinetic-ros-core, kinetic-ros-core-xenial
 Architectures: amd64, arm32v7, arm64v8
-GitCommit: 460ddc4707530c2179788e2100d5c624cf2af3d7
+GitCommit: 0b33e61b5bbed5b93b9fba2d5bae5db604ff9b58
 Directory: ros/kinetic/ubuntu/xenial/ros-core
 
 Tags: kinetic-ros-base, kinetic-ros-base-xenial, kinetic
 Architectures: amd64, arm32v7, arm64v8
-GitCommit: 460ddc4707530c2179788e2100d5c624cf2af3d7
+GitCommit: 0b33e61b5bbed5b93b9fba2d5bae5db604ff9b58
 Directory: ros/kinetic/ubuntu/xenial/ros-base
 
 Tags: kinetic-robot, kinetic-robot-xenial
 Architectures: amd64, arm32v7, arm64v8
-GitCommit: 460ddc4707530c2179788e2100d5c624cf2af3d7
+GitCommit: 7ff09c2a75e902bc2bb25a1f1ae748ec4e9c7a4b
 Directory: ros/kinetic/ubuntu/xenial/robot
 
 Tags: kinetic-perception, kinetic-perception-xenial
 Architectures: amd64, arm32v7, arm64v8
-GitCommit: 460ddc4707530c2179788e2100d5c624cf2af3d7
+GitCommit: 7ff09c2a75e902bc2bb25a1f1ae748ec4e9c7a4b
 Directory: ros/kinetic/ubuntu/xenial/perception
 
 
@@ -36,22 +36,22 @@ Directory: ros/kinetic/ubuntu/xenial/perception
 
 Tags: melodic-ros-core, melodic-ros-core-bionic
 Architectures: amd64, arm32v7, arm64v8
-GitCommit: 460ddc4707530c2179788e2100d5c624cf2af3d7
+GitCommit: 0b33e61b5bbed5b93b9fba2d5bae5db604ff9b58
 Directory: ros/melodic/ubuntu/bionic/ros-core
 
 Tags: melodic-ros-base, melodic-ros-base-bionic, melodic, latest
 Architectures: amd64, arm32v7, arm64v8
-GitCommit: 460ddc4707530c2179788e2100d5c624cf2af3d7
+GitCommit: 0b33e61b5bbed5b93b9fba2d5bae5db604ff9b58
 Directory: ros/melodic/ubuntu/bionic/ros-base
 
 Tags: melodic-robot, melodic-robot-bionic
 Architectures: amd64, arm32v7, arm64v8
-GitCommit: 460ddc4707530c2179788e2100d5c624cf2af3d7
+GitCommit: 7ff09c2a75e902bc2bb25a1f1ae748ec4e9c7a4b
 Directory: ros/melodic/ubuntu/bionic/robot
 
 Tags: melodic-perception, melodic-perception-bionic
 Architectures: amd64, arm32v7, arm64v8
-GitCommit: 460ddc4707530c2179788e2100d5c624cf2af3d7
+GitCommit: 7ff09c2a75e902bc2bb25a1f1ae748ec4e9c7a4b
 Directory: ros/melodic/ubuntu/bionic/perception
 
 ########################################
@@ -59,40 +59,73 @@ Directory: ros/melodic/ubuntu/bionic/perception
 
 Tags: melodic-ros-core-stretch
 Architectures: amd64, arm64v8
-GitCommit: 460ddc4707530c2179788e2100d5c624cf2af3d7
+GitCommit: 0b33e61b5bbed5b93b9fba2d5bae5db604ff9b58
 Directory: ros/melodic/debian/stretch/ros-core
 
 Tags: melodic-ros-base-stretch
 Architectures: amd64, arm64v8
-GitCommit: 460ddc4707530c2179788e2100d5c624cf2af3d7
+GitCommit: 0b33e61b5bbed5b93b9fba2d5bae5db604ff9b58
 Directory: ros/melodic/debian/stretch/ros-base
 
 Tags: melodic-robot-stretch
 Architectures: amd64, arm64v8
-GitCommit: 460ddc4707530c2179788e2100d5c624cf2af3d7
+GitCommit: 7ff09c2a75e902bc2bb25a1f1ae748ec4e9c7a4b
 Directory: ros/melodic/debian/stretch/robot
 
 Tags: melodic-perception-stretch
 Architectures: amd64, arm64v8
-GitCommit: 460ddc4707530c2179788e2100d5c624cf2af3d7
+GitCommit: 7ff09c2a75e902bc2bb25a1f1ae748ec4e9c7a4b
 Directory: ros/melodic/debian/stretch/perception
 
 
 ################################################################################
-# Release: crystal
+# Release: noetic
 
 ########################################
-# Distro: ubuntu:bionic
+# Distro: ubuntu:focal
 
-Tags: crystal-ros-core, crystal-ros-core-bionic
-Architectures: amd64, arm64v8
-GitCommit: 557e1a220d460b83402b7ed44b5cfcfb7e39524e
-Directory: ros/crystal/ubuntu/bionic/ros-core
+Tags: noetic-ros-core, noetic-ros-core-focal
+Architectures: amd64, arm32v7, arm64v8
+GitCommit: bba0ef85a9b417f3815d2cba3b36e7754611a428
+Directory: ros/noetic/ubuntu/focal/ros-core
 
-Tags: crystal-ros-base, crystal-ros-base-bionic, crystal
+Tags: noetic-ros-base, noetic-ros-base-focal, noetic
+Architectures: amd64, arm32v7, arm64v8
+GitCommit: cc4e832f92bcac995b9a2c9ca8a7b8fcf85c5c28
+Directory: ros/noetic/ubuntu/focal/ros-base
+
+Tags: noetic-robot, noetic-robot-focal
+Architectures: amd64, arm32v7, arm64v8
+GitCommit: bba0ef85a9b417f3815d2cba3b36e7754611a428
+Directory: ros/noetic/ubuntu/focal/robot
+
+Tags: noetic-perception, noetic-perception-focal
+Architectures: amd64, arm32v7, arm64v8
+GitCommit: bba0ef85a9b417f3815d2cba3b36e7754611a428
+Directory: ros/noetic/ubuntu/focal/perception
+
+########################################
+# Distro: debian:buster
+
+Tags: noetic-ros-core-buster
 Architectures: amd64, arm64v8
-GitCommit: 557e1a220d460b83402b7ed44b5cfcfb7e39524e
-Directory: ros/crystal/ubuntu/bionic/ros-base
+GitCommit: bba0ef85a9b417f3815d2cba3b36e7754611a428
+Directory: ros/noetic/debian/buster/ros-core
+
+Tags: noetic-ros-base-buster
+Architectures: amd64, arm64v8
+GitCommit: cc4e832f92bcac995b9a2c9ca8a7b8fcf85c5c28
+Directory: ros/noetic/debian/buster/ros-base
+
+Tags: noetic-robot-buster
+Architectures: amd64, arm64v8
+GitCommit: bba0ef85a9b417f3815d2cba3b36e7754611a428
+Directory: ros/noetic/debian/buster/robot
+
+Tags: noetic-perception-buster
+Architectures: amd64, arm64v8
+GitCommit: bba0ef85a9b417f3815d2cba3b36e7754611a428
+Directory: ros/noetic/debian/buster/perception
 
 
 ################################################################################
@@ -103,12 +136,12 @@ Directory: ros/crystal/ubuntu/bionic/ros-base
 
 Tags: dashing-ros-core, dashing-ros-core-bionic
 Architectures: amd64, arm32v7, arm64v8
-GitCommit: d188a5a15dba3d3fa266e4578c1ed2e1b4421c72
+GitCommit: 0b33e61b5bbed5b93b9fba2d5bae5db604ff9b58
 Directory: ros/dashing/ubuntu/bionic/ros-core
 
 Tags: dashing-ros-base, dashing-ros-base-bionic, dashing
 Architectures: amd64, arm32v7, arm64v8
-GitCommit: d188a5a15dba3d3fa266e4578c1ed2e1b4421c72
+GitCommit: 0b33e61b5bbed5b93b9fba2d5bae5db604ff9b58
 Directory: ros/dashing/ubuntu/bionic/ros-base
 
 
@@ -120,10 +153,10 @@ Directory: ros/dashing/ubuntu/bionic/ros-base
 
 Tags: eloquent-ros-core, eloquent-ros-core-bionic
 Architectures: amd64, arm32v7, arm64v8
-GitCommit: 9b63c2f2a11ef18c93f7c8f35770625fc48181d8
+GitCommit: 0b33e61b5bbed5b93b9fba2d5bae5db604ff9b58
 Directory: ros/eloquent/ubuntu/bionic/ros-core
 
 Tags: eloquent-ros-base, eloquent-ros-base-bionic, eloquent
 Architectures: amd64, arm32v7, arm64v8
-GitCommit: 9b63c2f2a11ef18c93f7c8f35770625fc48181d8
+GitCommit: 0b33e61b5bbed5b93b9fba2d5bae5db604ff9b58
 Directory: ros/eloquent/ubuntu/bionic/ros-base

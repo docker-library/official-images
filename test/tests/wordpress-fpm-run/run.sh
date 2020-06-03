@@ -8,14 +8,18 @@ image="$1"
 # Build a client image with cgi-fcgi for testing
 clientImage='librarytest/wordpress-fpm-run:fcgi-client'
 docker build -t "$clientImage" - > /dev/null <<'EOF'
-FROM debian:stretch-slim
+FROM debian:buster-slim
 
-RUN set -x && apt-get update && apt-get install -y libfcgi0ldbl && rm -rf /var/lib/apt/lists/*
+RUN set -x && apt-get update && apt-get install -y --no-install-recommends libfcgi-bin && rm -rf /var/lib/apt/lists/*
 
 ENTRYPOINT ["cgi-fcgi"]
 EOF
 
 mysqlImage='mysql:5.7'
+# ensure the mysqlImage is ready and available
+if ! docker image inspect "$mysqlImage" &> /dev/null; then
+	docker pull "$mysqlImage" > /dev/null
+fi
 
 # Create an instance of the container-under-test
 mysqlCid="$(docker run -d -e MYSQL_ROOT_PASSWORD="test-$RANDOM-password-$RANDOM-$$" "$mysqlImage")"

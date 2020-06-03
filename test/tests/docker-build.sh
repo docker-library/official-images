@@ -30,4 +30,4 @@ fi
 
 cp -RL "$dir" "$tmp/dir"
 
-docker build -t "$imageTag" "$tmp" > /dev/null
+command docker build -t "$imageTag" "$tmp" > /dev/null

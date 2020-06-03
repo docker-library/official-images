@@ -1,122 +1,90 @@
-# this file is generated via https://github.com/docker-library/golang/blob/4bf3297b1dee4f81cac5a1e9ad6aaf9566236baf/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/golang/blob/4598bb8c77b4e162d2a1d14598d9d83a8e3750c2/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit),
              Johan Euphrosine <proppy@google.com> (@proppy)
 GitRepo: https://github.com/docker-library/golang.git
 
-Tags: 1.14beta1-buster, 1.14-rc-buster, rc-buster
-SharedTags: 1.14beta1, 1.14-rc, rc
+Tags: 1.14.4-buster, 1.14-buster, 1-buster, buster
+SharedTags: 1.14.4, 1.14, 1, latest
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 4ea106f4309ef37328a78371210e7aa509c762d0
-Directory: 1.14-rc/buster
+GitCommit: cd63d15b01bf2b1c1ffad1b2752eb4a5d7ff8971
+Directory: 1.14/buster
 
-Tags: 1.14beta1-alpine3.11, 1.14-rc-alpine3.11, rc-alpine3.11, 1.14beta1-alpine, 1.14-rc-alpine, rc-alpine
+Tags: 1.14.4-stretch, 1.14-stretch, 1-stretch, stretch
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: cd63d15b01bf2b1c1ffad1b2752eb4a5d7ff8971
+Directory: 1.14/stretch
+
+Tags: 1.14.4-alpine3.12, 1.14-alpine3.12, 1-alpine3.12, alpine3.12, 1.14.4-alpine, 1.14-alpine, 1-alpine, alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 73558b65009ae95e19cc94c2b1baff381a577371
-Directory: 1.14-rc/alpine3.11
+GitCommit: cd63d15b01bf2b1c1ffad1b2752eb4a5d7ff8971
+Directory: 1.14/alpine3.12
 
-Tags: 1.14beta1-windowsservercore-ltsc2016, 1.14-rc-windowsservercore-ltsc2016, rc-windowsservercore-ltsc2016
-SharedTags: 1.14beta1-windowsservercore, 1.14-rc-windowsservercore, rc-windowsservercore, 1.14beta1, 1.14-rc, rc
+Tags: 1.14.4-alpine3.11, 1.14-alpine3.11, 1-alpine3.11, alpine3.11
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: cd63d15b01bf2b1c1ffad1b2752eb4a5d7ff8971
+Directory: 1.14/alpine3.11
+
+Tags: 1.14.4-windowsservercore-ltsc2016, 1.14-windowsservercore-ltsc2016, 1-windowsservercore-ltsc2016, windowsservercore-ltsc2016
+SharedTags: 1.14.4-windowsservercore, 1.14-windowsservercore, 1-windowsservercore, windowsservercore, 1.14.4, 1.14, 1, latest
 Architectures: windows-amd64
-GitCommit: 4ea106f4309ef37328a78371210e7aa509c762d0
-Directory: 1.14-rc/windows/windowsservercore-ltsc2016
+GitCommit: cd63d15b01bf2b1c1ffad1b2752eb4a5d7ff8971
+Directory: 1.14/windows/windowsservercore-ltsc2016
 Constraints: windowsservercore-ltsc2016
 
-Tags: 1.14beta1-windowsservercore-1809, 1.14-rc-windowsservercore-1809, rc-windowsservercore-1809
-SharedTags: 1.14beta1-windowsservercore, 1.14-rc-windowsservercore, rc-windowsservercore, 1.14beta1, 1.14-rc, rc
+Tags: 1.14.4-windowsservercore-1809, 1.14-windowsservercore-1809, 1-windowsservercore-1809, windowsservercore-1809
+SharedTags: 1.14.4-windowsservercore, 1.14-windowsservercore, 1-windowsservercore, windowsservercore, 1.14.4, 1.14, 1, latest
 Architectures: windows-amd64
-GitCommit: 4ea106f4309ef37328a78371210e7aa509c762d0
-Directory: 1.14-rc/windows/windowsservercore-1809
+GitCommit: cd63d15b01bf2b1c1ffad1b2752eb4a5d7ff8971
+Directory: 1.14/windows/windowsservercore-1809
 Constraints: windowsservercore-1809
 
-Tags: 1.14beta1-nanoserver-1809, 1.14-rc-nanoserver-1809, rc-nanoserver-1809
-SharedTags: 1.14beta1-nanoserver, 1.14-rc-nanoserver, rc-nanoserver
+Tags: 1.14.4-nanoserver-1809, 1.14-nanoserver-1809, 1-nanoserver-1809, nanoserver-1809
+SharedTags: 1.14.4-nanoserver, 1.14-nanoserver, 1-nanoserver, nanoserver
 Architectures: windows-amd64
-GitCommit: 4ea106f4309ef37328a78371210e7aa509c762d0
-Directory: 1.14-rc/windows/nanoserver-1809
+GitCommit: cd63d15b01bf2b1c1ffad1b2752eb4a5d7ff8971
+Directory: 1.14/windows/nanoserver-1809
 Constraints: nanoserver-1809, windowsservercore-1809
 
-Tags: 1.13.6-buster, 1.13-buster, 1-buster, buster
-SharedTags: 1.13.6, 1.13, 1, latest
+Tags: 1.13.12-buster, 1.13-buster
+SharedTags: 1.13.12, 1.13
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 7b69aab8c4a9117743168ca8b19b314c0307e415
+GitCommit: 1fd658db53dda4cc4a677377e03aac01557666fe
 Directory: 1.13/buster
 
-Tags: 1.13.6-stretch, 1.13-stretch, 1-stretch, stretch
+Tags: 1.13.12-stretch, 1.13-stretch
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 7b69aab8c4a9117743168ca8b19b314c0307e415
+GitCommit: 1fd658db53dda4cc4a677377e03aac01557666fe
 Directory: 1.13/stretch
 
-Tags: 1.13.6-alpine3.11, 1.13-alpine3.11, 1-alpine3.11, alpine3.11, 1.13.6-alpine, 1.13-alpine, 1-alpine, alpine
+Tags: 1.13.12-alpine3.12, 1.13-alpine3.12, 1.13.12-alpine, 1.13-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 7b69aab8c4a9117743168ca8b19b314c0307e415
+GitCommit: 1fd658db53dda4cc4a677377e03aac01557666fe
+Directory: 1.13/alpine3.12
+
+Tags: 1.13.12-alpine3.11, 1.13-alpine3.11
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 1fd658db53dda4cc4a677377e03aac01557666fe
 Directory: 1.13/alpine3.11
 
-Tags: 1.13.6-alpine3.10, 1.13-alpine3.10, 1-alpine3.10, alpine3.10
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 7b69aab8c4a9117743168ca8b19b314c0307e415
-Directory: 1.13/alpine3.10
-
-Tags: 1.13.6-windowsservercore-ltsc2016, 1.13-windowsservercore-ltsc2016, 1-windowsservercore-ltsc2016, windowsservercore-ltsc2016
-SharedTags: 1.13.6-windowsservercore, 1.13-windowsservercore, 1-windowsservercore, windowsservercore, 1.13.6, 1.13, 1, latest
+Tags: 1.13.12-windowsservercore-ltsc2016, 1.13-windowsservercore-ltsc2016
+SharedTags: 1.13.12-windowsservercore, 1.13-windowsservercore, 1.13.12, 1.13
 Architectures: windows-amd64
-GitCommit: 7b69aab8c4a9117743168ca8b19b314c0307e415
+GitCommit: 1fd658db53dda4cc4a677377e03aac01557666fe
 Directory: 1.13/windows/windowsservercore-ltsc2016
 Constraints: windowsservercore-ltsc2016
 
-Tags: 1.13.6-windowsservercore-1809, 1.13-windowsservercore-1809, 1-windowsservercore-1809, windowsservercore-1809
-SharedTags: 1.13.6-windowsservercore, 1.13-windowsservercore, 1-windowsservercore, windowsservercore, 1.13.6, 1.13, 1, latest
+Tags: 1.13.12-windowsservercore-1809, 1.13-windowsservercore-1809
+SharedTags: 1.13.12-windowsservercore, 1.13-windowsservercore, 1.13.12, 1.13
 Architectures: windows-amd64
-GitCommit: 7b69aab8c4a9117743168ca8b19b314c0307e415
+GitCommit: 1fd658db53dda4cc4a677377e03aac01557666fe
 Directory: 1.13/windows/windowsservercore-1809
 Constraints: windowsservercore-1809
 
-Tags: 1.13.6-nanoserver-1809, 1.13-nanoserver-1809, 1-nanoserver-1809, nanoserver-1809
-SharedTags: 1.13.6-nanoserver, 1.13-nanoserver, 1-nanoserver, nanoserver
+Tags: 1.13.12-nanoserver-1809, 1.13-nanoserver-1809
+SharedTags: 1.13.12-nanoserver, 1.13-nanoserver
 Architectures: windows-amd64
-GitCommit: 7b69aab8c4a9117743168ca8b19b314c0307e415
+GitCommit: 1fd658db53dda4cc4a677377e03aac01557666fe
 Directory: 1.13/windows/nanoserver-1809
-Constraints: nanoserver-1809, windowsservercore-1809
-
-Tags: 1.12.15-buster, 1.12-buster
-SharedTags: 1.12.15, 1.12
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: c57b5d1851d334d3bc8a966ae5d0769d767ea288
-Directory: 1.12/buster
-
-Tags: 1.12.15-stretch, 1.12-stretch
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: c57b5d1851d334d3bc8a966ae5d0769d767ea288
-Directory: 1.12/stretch
-
-Tags: 1.12.15-alpine3.11, 1.12-alpine3.11, 1.12.15-alpine, 1.12-alpine
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: c57b5d1851d334d3bc8a966ae5d0769d767ea288
-Directory: 1.12/alpine3.11
-
-Tags: 1.12.15-alpine3.10, 1.12-alpine3.10
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: c57b5d1851d334d3bc8a966ae5d0769d767ea288
-Directory: 1.12/alpine3.10
-
-Tags: 1.12.15-windowsservercore-ltsc2016, 1.12-windowsservercore-ltsc2016
-SharedTags: 1.12.15-windowsservercore, 1.12-windowsservercore, 1.12.15, 1.12
-Architectures: windows-amd64
-GitCommit: c57b5d1851d334d3bc8a966ae5d0769d767ea288
-Directory: 1.12/windows/windowsservercore-ltsc2016
-Constraints: windowsservercore-ltsc2016
-
-Tags: 1.12.15-windowsservercore-1809, 1.12-windowsservercore-1809
-SharedTags: 1.12.15-windowsservercore, 1.12-windowsservercore, 1.12.15, 1.12
-Architectures: windows-amd64
-GitCommit: c57b5d1851d334d3bc8a966ae5d0769d767ea288
-Directory: 1.12/windows/windowsservercore-1809
-Constraints: windowsservercore-1809
-
-Tags: 1.12.15-nanoserver-1809, 1.12-nanoserver-1809
-SharedTags: 1.12.15-nanoserver, 1.12-nanoserver
-Architectures: windows-amd64
-GitCommit: c57b5d1851d334d3bc8a966ae5d0769d767ea288
-Directory: 1.12/windows/nanoserver-1809
 Constraints: nanoserver-1809, windowsservercore-1809

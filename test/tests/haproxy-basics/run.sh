@@ -8,7 +8,11 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
 image="$1"
 
-clientImage='buildpack-deps:stretch-curl'
+clientImage='buildpack-deps:buster-curl'
+# ensure the clientImage is ready and available
+if ! docker image inspect "$clientImage" &> /dev/null; then
+	docker pull "$clientImage" > /dev/null
+fi
 
 # Create an instance of the container-under-test
 serverImage="$("$dir/../image-name.sh" librarytest/haproxy-basics "$image")"
@@ -35,7 +39,9 @@ _request() {
 		false
 	fi
 
-	docker run --rm --link "$cid":haproxy "$clientImage" \
+	docker run --rm \
+		--link "$cid":haproxy \
+		"$clientImage" \
 		curl -fsSL -X"$method" --connect-to '::haproxy:' "$@" "$proto://example.com/$url"
 }
 
