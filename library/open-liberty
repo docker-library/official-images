@@ -2,7 +2,7 @@ Maintainers: Chris Potter <crpotter@us.ibm.com> (@crpotter),
              Wendy Raschke <wraschke@us.ibm.com> (@wraschke),
              Arthur De Magalhaes <arthurdm@ca.ibm.com> (@arthurdm)
 GitRepo: https://github.com/OpenLiberty/ci.docker.git
-GitCommit: 17276f4286810d86d3a067c34dd60a06cfdb2c35
+GitCommit: b778798a0985ecff3f8d3786bc7c8e34d40a0a52
 Architectures: amd64, i386, ppc64le, s390x
 
 Tags: kernel, kernel-java8-openj9
@@ -15,13 +15,13 @@ Directory: releases/latest/full
 Architectures: amd64, ppc64le, s390x
 File: Dockerfile.ubuntu.adoptopenjdk8
 
-Tags: 20.0.0.5-kernel-java8-openj9
-Directory: releases/20.0.0.5/kernel
+Tags: 20.0.0.6-kernel-java8-openj9
+Directory: releases/20.0.0.6/kernel
 Architectures: amd64, ppc64le, s390x
 File: Dockerfile.ubuntu.adoptopenjdk8
 
-Tags: 20.0.0.5-full-java8-openj9
-Directory: releases/20.0.0.5/full
+Tags: 20.0.0.6-full-java8-openj9
+Directory: releases/20.0.0.6/full
 Architectures: amd64, ppc64le, s390x
 File: Dockerfile.ubuntu.adoptopenjdk8
 
@@ -32,15 +32,5 @@ File: Dockerfile.ubuntu.adoptopenjdk8
 
 Tags: 20.0.0.3-full-java8-openj9
 Directory: releases/20.0.0.3/full
-Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.adoptopenjdk8
-
-Tags: 19.0.0.12-kernel-java8-openj9
-Directory: releases/19.0.0.12/kernel
-Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.adoptopenjdk8
-
-Tags: 19.0.0.12-full-java8-openj9
-Directory: releases/19.0.0.12/full
 Architectures: amd64, ppc64le, s390x
 File: Dockerfile.ubuntu.adoptopenjdk8
