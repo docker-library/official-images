@@ -5,6 +5,38 @@ Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Johan Euphrosine <proppy@google.com> (@proppy)
 GitRepo: https://github.com/docker-library/golang.git
 
+Tags: 1.15beta1-buster, 1.15-rc-buster, rc-buster
+SharedTags: 1.15beta1, 1.15-rc, rc
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 2f3748d2626444e8e2072a59b76b33c3c22b914c
+Directory: 1.15-rc/buster
+
+Tags: 1.15beta1-alpine3.12, 1.15-rc-alpine3.12, rc-alpine3.12, 1.15beta1-alpine, 1.15-rc-alpine, rc-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 2f3748d2626444e8e2072a59b76b33c3c22b914c
+Directory: 1.15-rc/alpine3.12
+
+Tags: 1.15beta1-windowsservercore-ltsc2016, 1.15-rc-windowsservercore-ltsc2016, rc-windowsservercore-ltsc2016
+SharedTags: 1.15beta1-windowsservercore, 1.15-rc-windowsservercore, rc-windowsservercore, 1.15beta1, 1.15-rc, rc
+Architectures: windows-amd64
+GitCommit: 2f3748d2626444e8e2072a59b76b33c3c22b914c
+Directory: 1.15-rc/windows/windowsservercore-ltsc2016
+Constraints: windowsservercore-ltsc2016
+
+Tags: 1.15beta1-windowsservercore-1809, 1.15-rc-windowsservercore-1809, rc-windowsservercore-1809
+SharedTags: 1.15beta1-windowsservercore, 1.15-rc-windowsservercore, rc-windowsservercore, 1.15beta1, 1.15-rc, rc
+Architectures: windows-amd64
+GitCommit: 2f3748d2626444e8e2072a59b76b33c3c22b914c
+Directory: 1.15-rc/windows/windowsservercore-1809
+Constraints: windowsservercore-1809
+
+Tags: 1.15beta1-nanoserver-1809, 1.15-rc-nanoserver-1809, rc-nanoserver-1809
+SharedTags: 1.15beta1-nanoserver, 1.15-rc-nanoserver, rc-nanoserver
+Architectures: windows-amd64
+GitCommit: 2f3748d2626444e8e2072a59b76b33c3c22b914c
+Directory: 1.15-rc/windows/nanoserver-1809
+Constraints: nanoserver-1809, windowsservercore-1809
+
 Tags: 1.14.4-buster, 1.14-buster, 1-buster, buster
 SharedTags: 1.14.4, 1.14, 1, latest
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
