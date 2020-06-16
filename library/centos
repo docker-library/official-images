@@ -2,7 +2,16 @@ Maintainers: The CentOS Project <cloud-ops@centos.org> (@CentOS)
 GitRepo: https://github.com/CentOS/sig-cloud-instance-images.git
 Directory: docker
 
-Tags: latest, centos8, 8, centos8.1.1911, 8.1.1911
+Tags: latest, centos8, 8, centos8.2.2004, 8.2.2004
+GitFetch: refs/heads/CentOS-8-x86_64
+GitCommit: 5125788a241618b4d37254050d0bddcbd5b7df33
+arm64v8-GitFetch: refs/heads/CentOS-8-aarch64
+arm64v8-GitCommit: e95dba14f002e894a02ac0e7b8d51cb82035a30e
+ppc64le-GitFetch: refs/heads/CentOS-8-ppc64le
+ppc64le-GitCommit: 006350a458663e8b30ac7fcf1f73f60933067c7c
+Architectures: amd64, arm64v8, ppc64le
+
+Tags: centos8.1.1911, 8.1.1911
 GitFetch: refs/heads/CentOS-8.1.1911-x86_64
 GitCommit: 52cc14a6dd2efc45265417a4690964d32cf13857
 arm64v8-GitFetch: refs/heads/CentOS-8.1.1911-aarch64
