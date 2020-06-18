@@ -39,6 +39,9 @@ _is_naughty() {
 		| amd64=docker.elastic.co/elasticsearch/elasticsearch:* \
 		| amd64=docker.elastic.co/kibana/kibana:* \
 		| amd64=docker.elastic.co/logstash/logstash:* \
+		| arm64v8=docker.elastic.co/elasticsearch/elasticsearch:* \
+		| arm64v8=docker.elastic.co/kibana/kibana:* \
+		| arm64v8=docker.elastic.co/logstash/logstash:* \
 		| windows-*=mcr.microsoft.com/windows/nanoserver:* \
 		| windows-*=mcr.microsoft.com/windows/servercore:* \
 		) return 1 ;;
