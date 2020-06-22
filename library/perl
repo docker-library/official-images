@@ -1,31 +1,55 @@
 Maintainers: Peter Martini <PeterCMartini@GMail.com> (@PeterMartini),
              Zak B. Elep <zakame@cpan.org> (@zakame)
 GitRepo: https://github.com/perl/docker-perl.git
-GitCommit: fdcec00a5b9019726c2839cea1596e37b490f5a2
+GitCommit: 6234cfc650c3bf55001600dcc174aae5ecb4e85d
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 
-Tags: latest, 5, 5.30, 5.30.3, 5-buster, 5.30-buster, 5.30.3-buster
+Tags: latest, 5, 5.32, 5.32.0, 5-buster, 5.32-buster, 5.32.0-buster
+Directory: 5.032.000-main-buster
+
+Tags: 5-stretch, 5.32-stretch, 5.32.0-stretch
+Directory: 5.032.000-main-stretch
+
+Tags: slim, 5-slim, 5.32-slim, 5.32.0-slim, slim-buster, 5-slim-buster, 5.32-slim-buster, 5.32.0-slim-buster
+Directory: 5.032.000-slim-buster
+
+Tags: slim-stretch, 5-slim-stretch, 5.32-slim-stretch, 5.32.0-slim-stretch
+Directory: 5.032.000-slim-stretch
+
+Tags: threaded, 5-threaded, 5.32-threaded, 5.32.0-threaded, threaded-buster, 5-threaded-buster, 5.32-threaded-buster, 5.32.0-threaded-buster
+Directory: 5.032.000-main,threaded-buster
+
+Tags: threaded-stretch, 5-threaded-stretch, 5.32-threaded-stretch, 5.32.0-threaded-stretch
+Directory: 5.032.000-main,threaded-stretch
+
+Tags: slim-threaded, 5-slim-threaded, 5.32-slim-threaded, 5.32.0-slim-threaded, slim-threaded-buster, 5-slim-threaded-buster, 5.32-slim-threaded-buster, 5.32.0-slim-threaded-buster
+Directory: 5.032.000-slim,threaded-buster
+
+Tags: slim-threaded-stretch, 5-slim-threaded-stretch, 5.32-slim-threaded-stretch, 5.32.0-slim-threaded-stretch
+Directory: 5.032.000-slim,threaded-stretch
+
+Tags: 5.30, 5.30.3, 5.30-buster, 5.30.3-buster
 Directory: 5.030.003-main-buster
 
-Tags: 5-stretch, 5.30-stretch, 5.30.3-stretch
+Tags: 5.30-stretch, 5.30.3-stretch
 Directory: 5.030.003-main-stretch
 
-Tags: slim, 5-slim, 5.30-slim, 5.30.3-slim, slim-buster, 5-slim-buster, 5.30-slim-buster, 5.30.3-slim-buster
+Tags: 5.30-slim, 5.30.3-slim, 5.30-slim-buster, 5.30.3-slim-buster
 Directory: 5.030.003-slim-buster
 
-Tags: slim-stretch, 5-slim-stretch, 5.30-slim-stretch, 5.30.3-slim-stretch
+Tags: 5.30-slim-stretch, 5.30.3-slim-stretch
 Directory: 5.030.003-slim-stretch
 
-Tags: threaded, 5-threaded, 5.30-threaded, 5.30.3-threaded, threaded-buster, 5-threaded-buster, 5.30-threaded-buster, 5.30.3-threaded-buster
+Tags: 5.30-threaded, 5.30.3-threaded, 5.30-threaded-buster, 5.30.3-threaded-buster
 Directory: 5.030.003-main,threaded-buster
 
-Tags: threaded-stretch, 5-threaded-stretch, 5.30-threaded-stretch, 5.30.3-threaded-stretch
+Tags: 5.30-threaded-stretch, 5.30.3-threaded-stretch
 Directory: 5.030.003-main,threaded-stretch
 
-Tags: slim-threaded, 5-slim-threaded, 5.30-slim-threaded, 5.30.3-slim-threaded, slim-threaded-buster, 5-slim-threaded-buster, 5.30-slim-threaded-buster, 5.30.3-slim-threaded-buster
+Tags: 5.30-slim-threaded, 5.30.3-slim-threaded, 5.30-slim-threaded-buster, 5.30.3-slim-threaded-buster
 Directory: 5.030.003-slim,threaded-buster
 
-Tags: slim-threaded-stretch, 5-slim-threaded-stretch, 5.30-slim-threaded-stretch, 5.30.3-slim-threaded-stretch
+Tags: 5.30-slim-threaded-stretch, 5.30.3-slim-threaded-stretch
 Directory: 5.030.003-slim,threaded-stretch
 
 Tags: 5.28, 5.28.3, 5.28-buster, 5.28.3-buster
@@ -51,27 +75,3 @@ Directory: 5.028.003-slim,threaded-buster
 
 Tags: 5.28-slim-threaded-stretch, 5.28.3-slim-threaded-stretch
 Directory: 5.028.003-slim,threaded-stretch
-
-Tags: 5.26, 5.26.3, 5.26-buster, 5.26.3-buster
-Directory: 5.026.003-main-buster
-
-Tags: 5.26-stretch, 5.26.3-stretch
-Directory: 5.026.003-main-stretch
-
-Tags: 5.26-slim, 5.26.3-slim, 5.26-slim-buster, 5.26.3-slim-buster
-Directory: 5.026.003-slim-buster
-
-Tags: 5.26-slim-stretch, 5.26.3-slim-stretch
-Directory: 5.026.003-slim-stretch
-
-Tags: 5.26-threaded, 5.26.3-threaded, 5.26-threaded-buster, 5.26.3-threaded-buster
-Directory: 5.026.003-main,threaded-buster
-
-Tags: 5.26-threaded-stretch, 5.26.3-threaded-stretch
-Directory: 5.026.003-main,threaded-stretch
-
-Tags: 5.26-slim-threaded, 5.26.3-slim-threaded, 5.26-slim-threaded-buster, 5.26.3-slim-threaded-buster
-Directory: 5.026.003-slim,threaded-buster
-
-Tags: 5.26-slim-threaded-stretch, 5.26.3-slim-threaded-stretch
-Directory: 5.026.003-slim,threaded-stretch
