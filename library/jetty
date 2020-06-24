@@ -1,39 +1,125 @@
-Maintainers: Mike Dillon <mike@appropriate.io> (@md5),
-             Greg Wilkins <gregw@webtide.com> (@gregw)
-GitRepo: https://github.com/appropriate/docker-jetty.git
+Maintainers: Greg Wilkins <gregw@webtide.com> (@gregw),
+             Lachlan Roberts <lachlan@webtide.com> (@lachlan-roberts)
+             Olivier Lamy <olamy@webtide.com> (@olamy)
+             Joakim Erdfelt <joakim@webtide.com> (@joakime)
+GitRepo: https://github.com/eclipse/jetty.docker.git
 
-Tags: 9.4.27-jre11-slim, 9.4-jre11-slim, 9-jre11-slim
+Tags: 11.0.0-alpha0-jre11-slim
+Architectures: amd64
+Directory: 11.0-jre11-slim
+GitCommit: dfaf2665196c13fc9b5d47c5cada3188d3d7fb30
+
+Tags: 11.0.0-alpha0-jre11
+Architectures: amd64
+Directory: 11.0-jre11
+GitCommit: dfaf2665196c13fc9b5d47c5cada3188d3d7fb30
+
+Tags: 11.0.0-alpha0-jdk14-slim
+Architectures: amd64
+Directory: 11.0-jdk14-slim
+GitCommit: 9c6c5560976c7e2bf71ee67b77c409ac4b21fd74
+
+Tags: 11.0.0-alpha0, 11.0.0-alpha0-jdk14
+Architectures: amd64
+Directory: 11.0-jdk14
+GitCommit: 9c6c5560976c7e2bf71ee67b77c409ac4b21fd74
+
+Tags: 11.0.0-alpha0-jdk11-slim
+Architectures: amd64
+Directory: 11.0-jdk11-slim
+GitCommit: 9c6c5560976c7e2bf71ee67b77c409ac4b21fd74
+
+Tags: 11.0.0-alpha0-jdk11
+Architectures: amd64
+Directory: 11.0-jdk11
+GitCommit: 9c6c5560976c7e2bf71ee67b77c409ac4b21fd74
+
+Tags: 10.0.0.beta0-jre11-slim
+Architectures: amd64
+Directory: 10.0-jre11-slim
+GitCommit: dfaf2665196c13fc9b5d47c5cada3188d3d7fb30
+
+Tags: 10.0.0.beta0-jre11
+Architectures: amd64
+Directory: 10.0-jre11
+GitCommit: dfaf2665196c13fc9b5d47c5cada3188d3d7fb30
+
+Tags: 10.0.0.beta0-jdk14-slim
+Architectures: amd64
+Directory: 10.0-jdk14-slim
+GitCommit: 9c6c5560976c7e2bf71ee67b77c409ac4b21fd74
+
+Tags: 10.0.0.beta0, 10.0.0.beta0-jdk14
+Architectures: amd64
+Directory: 10.0-jdk14
+GitCommit: 9c6c5560976c7e2bf71ee67b77c409ac4b21fd74
+
+Tags: 10.0.0.beta0-jdk11-slim
+Architectures: amd64
+Directory: 10.0-jdk11-slim
+GitCommit: 9c6c5560976c7e2bf71ee67b77c409ac4b21fd74
+
+Tags: 10.0.0.beta0-jdk11
+Architectures: amd64
+Directory: 10.0-jdk11
+GitCommit: 9c6c5560976c7e2bf71ee67b77c409ac4b21fd74
+
+Tags: 9.4.30-jre11-slim, 9.4-jre11-slim, 9-jre11-slim
 Architectures: amd64, arm64v8
 Directory: 9.4-jre11-slim
-GitCommit: 89dfeafc4a603611cf5135249acbe218b515439c
+GitCommit: 9c6c5560976c7e2bf71ee67b77c409ac4b21fd74
 
-Tags: 9.4.27-jre11, 9.4-jre11, 9-jre11
+Tags: 9.4.30-jre11, 9.4-jre11, 9-jre11
 Architectures: amd64, arm64v8
 Directory: 9.4-jre11
-GitCommit: 89dfeafc4a603611cf5135249acbe218b515439c
+GitCommit: 9c6c5560976c7e2bf71ee67b77c409ac4b21fd74
 
-Tags: 9.4.27-jre8, 9.4-jre8, 9-jre8
+Tags: 9.4.30-jre8-slim, 9.4-jre8-slim, 9-jre8-slim
+Architectures: amd64
+Directory: 9.4-jre8-slim
+GitCommit: f92d1fff1d1be3199fb0dfb2847f28636bf12157
+
+Tags: 9.4.30-jre8, 9.4-jre8, 9-jre8
 Architectures: amd64
 Directory: 9.4-jre8
-GitCommit: 89dfeafc4a603611cf5135249acbe218b515439c
+GitCommit: 9c6c5560976c7e2bf71ee67b77c409ac4b21fd74
 
-Tags: 9.4.27-jdk13-slim, 9.4-jdk13-slim, 9-jdk13-slim
+Tags: 9.4.30-jdk14-slim, 9.4-jdk14-slim, 9-jdk14-slim
 Architectures: amd64
-Directory: 9.4-jdk13-slim
-GitCommit: 89dfeafc4a603611cf5135249acbe218b515439c
+Directory: 9.4-jdk14-slim
+GitCommit: 9c6c5560976c7e2bf71ee67b77c409ac4b21fd74
 
-Tags: 9.4.27, 9.4, 9, 9.4.27-jdk13, 9.4-jdk13, 9-jdk13, latest, jdk13
+Tags: 9.4.30, 9.4, 9, 9.4.30-jdk14, 9.4-jdk14, 9-jdk14, latest, jdk14
 Architectures: amd64
-Directory: 9.4-jdk13
-GitCommit: 89dfeafc4a603611cf5135249acbe218b515439c
+Directory: 9.4-jdk14
+GitCommit: 9c6c5560976c7e2bf71ee67b77c409ac4b21fd74
+
+Tags: 9.4.30-jdk11-slim, 9.4-jdk11-slim, 9-jdk11-slim
+Architectures: amd64
+Directory: 9.4-jdk11-slim
+GitCommit: dfaf2665196c13fc9b5d47c5cada3188d3d7fb30
+
+Tags: 9.4.30-jdk11, 9.4-jdk11, 9-jdk11
+Architectures: amd64
+Directory: 9.4-jdk11
+GitCommit: dfaf2665196c13fc9b5d47c5cada3188d3d7fb30
+
+Tags: 9.4.30-jdk8-slim, 9.4-jdk8-slim, 9-jdk8-slim
+Architectures: amd64
+Directory: 9.4-jdk8-slim
+GitCommit: dfaf2665196c13fc9b5d47c5cada3188d3d7fb30
+
+Tags: 9.4.30-jdk8, 9.4-jdk8, 9-jdk8
+Architectures: amd64
+Directory: 9.4-jdk8
+GitCommit: dfaf2665196c13fc9b5d47c5cada3188d3d7fb30
 
 Tags: 9.3.28-jre8, 9.3-jre8
 Architectures: amd64
 Directory: 9.3-jre8
-GitCommit: 28562cbee783f1ccb94c375b7e9165c6cfe6d2e2
+GitCommit: f4b8a22e641c5673498e21a4a8a1e0f506d61aa4
 
-Tags: 9.2.29-jre8, 9.2-jre8
+Tags: 9.2.30-jre8, 9.2-jre8
 Architectures: amd64
 Directory: 9.2-jre8
-GitCommit: 28562cbee783f1ccb94c375b7e9165c6cfe6d2e2
-
+GitCommit: 9c6c5560976c7e2bf71ee67b77c409ac4b21fd74
