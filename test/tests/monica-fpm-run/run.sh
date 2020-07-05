@@ -18,9 +18,18 @@ EOF
 mysqlImage='mysql:5.7'
 
 # Create an instance of the container-under-test
-mysqlCid="$(docker run -d -e MYSQL_RANDOM_ROOT_PASSWORD=true -e MYSQL_DATABASE=monica -e MYSQL_USER=homestead -e MYSQL_PASSWORD=secret "$mysqlImage")"
+mysqlCid="$(docker run -d \
+	-e MYSQL_RANDOM_ROOT_PASSWORD=true \
+	-e MYSQL_DATABASE=monica \
+	-e MYSQL_USER=homestead \
+	-e MYSQL_PASSWORD=secret \
+	"$mysqlImage")"
 trap "docker rm -vf $mysqlCid > /dev/null" EXIT
-cid="$(docker run -d --link "$mysqlCid":mysql -e DB_HOST=mysql "$image")"
+
+cid="$(docker run -d \
+	--link "$mysqlCid":mysql \
+	-e DB_HOST=mysql \
+	"$image")"
 trap "docker rm -vf $cid $mysqlCid > /dev/null" EXIT
 
 fcgi-request() {

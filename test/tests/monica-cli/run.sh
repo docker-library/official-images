@@ -22,20 +22,13 @@ cid="$(docker run -d \
 	"$image")"
 trap "docker rm -vf $cid $mysqlCid > /dev/null" EXIT
 
-_request() {
-	local method="$1"
-	shift
-
-	local url="${1#/}"
-	shift
-
-	docker run --rm --link "$cid":apache "$image" \
-		curl -fsL -X"$method" "$@" "http://apache/$url"
+_artisan() {
+	docker exec "$cid" php artisan "$@"
 }
 
-# Make sure that Apache is listening and ready
-. "$dir/../../retry.sh" --tries 30 '_request GET / --output /dev/null'
+# Give some time to install
+. "$dir/../../retry.sh" --tries 30 '_artisan migrate:status' > /dev/null
 
-# Check that we can request / and that it contains the pattern "Welcome" somewhere
-_request GET '/' |tac|tac| grep -iq "Welcome"
-# (without "|tac|tac|" we get "broken pipe" since "grep" closes the pipe before "curl" is done reading it)
+# Check if installation is complete
+_artisan monica:getversion
+_artisan schedule:run | grep -iq 'No scheduled commands are ready to run.'

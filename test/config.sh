@@ -122,6 +122,9 @@ imageTests+=(
 		mongo-tls-basics
 		mongo-tls-auth
 	'
+	[monica]='
+		monica-cli
+	'
 	[monica:apache]='
 		monica-apache-run
 	'
