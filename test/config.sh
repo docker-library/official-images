@@ -308,6 +308,9 @@ globalExcludeTests+=(
 	[nats-streaming:nanoserver_override-cmd]=1
 	[nats-streaming:windowsservercore_override-cmd]=1
 
+	# https://github.com/docker-library/official-images/pull/8329#issuecomment-656383836
+	[traefik:windowsservercore_override-cmd]=1
+
 	# TODO adjust MongoDB tests to use docker networks instead of links so they can work on Windows (and consider using PowerShell to generate appropriate certificates for TLS tests instead of openssl)
 	[mongo:windowsservercore_mongo-basics]=1
 	[mongo:windowsservercore_mongo-auth-basics]=1
