@@ -2,56 +2,39 @@ Maintainers: Kong Docker Maintainers <support@konghq.com> (@thekonginc)
 GitRepo: https://github.com/Kong/docker-kong.git
 # needs "Constraints" to match "centos" (which this image is "FROM")
 
-Tags: 2.1.0-rc.1-alpine, 2.1-alpine, 2.1.0-rc.1, 2.1
-GitCommit: 5b5169dff2834cc867f3156950c4e52eb0c907b2
-GitFetch: refs/tags/2.1.0-rc.1
+Tags: 2.1.0-alpine, 2.1-alpine, 2.1.0, 2.1, 2, alpine, latest
+GitCommit: ab4e1d8a61d80e5884e940f76622f729e751f563
+GitFetch: refs/tags/2.1.0
 Directory: alpine
 Architectures: amd64
 
-Tags: 2.1.0-rc.1-ubuntu, 2.1-ubuntu
-GitCommit: 5b5169dff2834cc867f3156950c4e52eb0c907b2
-GitFetch: refs/tags/2.1.0-rc.1
+Tags: 2.1.0-ubuntu, 2.1-ubuntu, ubuntu
+GitCommit: ab4e1d8a61d80e5884e940f76622f729e751f563
+GitFetch: refs/tags/2.1.0
 Directory: ubuntu
 Architectures: amd64, arm64v8
 
-Tags: 2.1.0-rc.1-centos, 2.1-centos
-GitCommit: 5b5169dff2834cc867f3156950c4e52eb0c907b2
-GitFetch: refs/tags/2.1.0-rc.1
+Tags: 2.1.0-centos, 2.1-centos, centos
+GitCommit: ab4e1d8a61d80e5884e940f76622f729e751f563
+GitFetch: refs/tags/2.1.0
 Directory: centos
 Architectures: amd64
 
-Tags: 2.0.5-alpine, 2.0.5, 2.0, 2, latest, alpine
+Tags: 2.0.5-alpine, 2.0.5, 2.0
 GitCommit: 60626098f2f32fe1528eb4ffacff13fd1c3e919f
 GitFetch: refs/tags/2.0.5
 Directory: alpine
 Architectures: amd64
 
-Tags: 2.0.5-ubuntu, 2.0-ubuntu, ubuntu
+Tags: 2.0.5-ubuntu, 2.0-ubuntu
 GitCommit: 60626098f2f32fe1528eb4ffacff13fd1c3e919f
 GitFetch: refs/tags/2.0.5
 Directory: ubuntu
 Architectures: amd64, arm64v8
 
-Tags: 2.0.5-centos, 2.0-centos, centos
+Tags: 2.0.5-centos, 2.0-centos
 GitCommit: 60626098f2f32fe1528eb4ffacff13fd1c3e919f
 GitFetch: refs/tags/2.0.5
 Directory: centos
 Architectures: amd64
 
-Tags: 1.5.1-alpine, 1.5.1, 1.5, 1
-GitCommit: 8ba4389169d5873be65a09001d06293ccdfc7caf
-GitFetch: refs/tags/1.5.1
-Directory: alpine
-Architectures: amd64
-
-Tags: 1.5.1-ubuntu, 1.5-ubuntu
-GitCommit: 8ba4389169d5873be65a09001d06293ccdfc7caf
-GitFetch: refs/tags/1.5.1
-Directory: ubuntu
-Architectures: amd64, arm64v8
-
-Tags: 1.5.1-centos, 1.5-centos
-GitCommit: 8ba4389169d5873be65a09001d06293ccdfc7caf
-GitFetch: refs/tags/1.5.1
-Directory: centos
-Architectures: amd64
