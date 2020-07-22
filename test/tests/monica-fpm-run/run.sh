@@ -16,6 +16,10 @@ ENTRYPOINT ["cgi-fcgi"]
 EOF
 
 mysqlImage='mysql:5.7'
+# ensure the mysqlImage is ready and available
+if ! docker image inspect "$mysqlImage" &> /dev/null; then
+	docker pull "$mysqlImage" > /dev/null
+fi
 
 # Create an instance of the container-under-test
 mysqlCid="$(docker run -d \
