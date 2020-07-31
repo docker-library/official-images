@@ -4,22 +4,42 @@ Maintainers: Tianon Gravi <tianon@dockerproject.org> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/docker.git
 
-Tags: 19.03.12, 19.03, 19, stable, test, latest
+Tags: 19.03.13-beta1, 19.03-rc, rc, test
+Architectures: amd64, arm32v6, arm32v7, arm64v8
+GitCommit: 4f5b0cb5438527c6913a943ae07b4d2b1eaa8393
+Directory: 19.03-rc
+
+Tags: 19.03.13-beta1-dind, 19.03-rc-dind, rc-dind, test-dind
+Architectures: amd64, arm32v6, arm32v7, arm64v8
+GitCommit: 4f5b0cb5438527c6913a943ae07b4d2b1eaa8393
+Directory: 19.03-rc/dind
+
+Tags: 19.03.13-beta1-dind-rootless, 19.03-rc-dind-rootless, rc-dind-rootless, test-dind-rootless
+Architectures: amd64
+GitCommit: 399f205733e0162fe6f6529fad8f2231b843606e
+Directory: 19.03-rc/dind-rootless
+
+Tags: 19.03.13-beta1-git, 19.03-rc-git, rc-git, test-git
+Architectures: amd64, arm32v6, arm32v7, arm64v8
+GitCommit: 7a67842e7ff12c1426ae6a67ac1b7a701b51f3df
+Directory: 19.03-rc/git
+
+Tags: 19.03.12, 19.03, 19, stable, latest
 Architectures: amd64, arm32v6, arm32v7, arm64v8
 GitCommit: 86f7f4b563c7c6fe4620c5a8d82694a78f41989f
 Directory: 19.03
 
-Tags: 19.03.12-dind, 19.03-dind, 19-dind, stable-dind, test-dind, dind
+Tags: 19.03.12-dind, 19.03-dind, 19-dind, stable-dind, dind
 Architectures: amd64, arm32v6, arm32v7, arm64v8
 GitCommit: 93c19dff54de9876f736b3aa8026be5ad5987388
 Directory: 19.03/dind
 
-Tags: 19.03.12-dind-rootless, 19.03-dind-rootless, 19-dind-rootless, stable-dind-rootless, test-dind-rootless, dind-rootless
+Tags: 19.03.12-dind-rootless, 19.03-dind-rootless, 19-dind-rootless, stable-dind-rootless, dind-rootless
 Architectures: amd64
 GitCommit: 399f205733e0162fe6f6529fad8f2231b843606e
 Directory: 19.03/dind-rootless
 
-Tags: 19.03.12-git, 19.03-git, 19-git, stable-git, test-git, git
+Tags: 19.03.12-git, 19.03-git, 19-git, stable-git, git
 Architectures: amd64, arm32v6, arm32v7, arm64v8
 GitCommit: 7a67842e7ff12c1426ae6a67ac1b7a701b51f3df
 Directory: 19.03/git
