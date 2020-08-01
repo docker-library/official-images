@@ -17,7 +17,7 @@ fi
 # The keygen below is a bit ugly, because spiped-generate-key.sh expects /spiped/key to be a directory (you can't bind mount a non-existing file),
 # but the entrypoint expects /spiped/key to be the actual keyfile.
 # So we first symlink /spiped/key to some directory, then generate the keyfile and then replace the symlink by the generated keyfile.
-cid_keygen="$(docker run -d "$image" sh -c 'ln -s /tmp /spiped/key && spiped-generate-key.sh && mv -f -T /tmp/spiped-keyfile /spiped/key')"
+cid_keygen="$(docker run -d "$image" sh -c 'ln -s /tmp /spiped/key && spiped-generate-key.sh && rm /spiped/key && mv /tmp/spiped-keyfile /spiped/key')"
 cid_d="$(docker run --volumes-from="$cid_keygen" -d "$image" -d -s '[0.0.0.0]:8080' -t 'example.com:80')"
 cid_e="$(docker run --volumes-from="$cid_keygen" --link "$cid_d":spiped_d -d "$image" -e -s '[0.0.0.0]:80' -t 'spiped_d:8080')"
 trap "docker rm -vf $cid_keygen $cid_d $cid_e > /dev/null" EXIT
