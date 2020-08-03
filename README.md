@@ -219,53 +219,36 @@ This is one place that experience ends up trumping documentation for the path to
 
 ##### Image Build
 
-The `Dockerfile` should be written to help mitigate man-in-the-middle attacks during build: using https where possible; importing PGP keys with the full fingerprint in the `Dockerfile` to check package signing; embedding checksums directly in the `Dockerfile` if PGP signing is not provided. When importing PGP keys, we recommend using the [high-availability server pool](https://sks-keyservers.net/overview-of-pools.php#pool_ha) from sks-keyservers (`ha.pool.sks-keyservers.net`). Here are a few good and bad examples:
+The `Dockerfile` should be written to help mitigate interception attacks during build. Our requirements focus on three main objectives: verifying the source, verifying author, and verifying the content; these are respectively accomplished by the following: using https where possible; importing PGP keys with the full fingerprint in the `Dockerfile` to check signatures; embedding checksums directly in the `Dockerfile`. All three should be used when possible. Just https and embedded checksum can be used when no signature is published. As a last resort, just an embedded checksum is acceptable if the site doesn't have https available and no signature.
 
--	**Bad**: *download the file over http with no verification.*
+The purpose in recommending the use of https for downloading needed artifacts is that it ensures that the download is from a trusted source which also happens to make interception much more difficult.
 
-	```Dockerfile
-	RUN curl -fSL "http://julialang.s3.amazonaws.com/bin/linux/x64/${JULIA_VERSION%[.-]*}/julia-${JULIA_VERSION}-linux-x86_64.tar.gz" | tar ... \
-	    # install
-	```
+The purpose in recommending PGP signature verification is to ensure that only an authorized user published the given artifact. When importing PGP keys, please use the [high-availability server pool](https://sks-keyservers.net/overview-of-pools.php#pool_ha) from sks-keyservers (`ha.pool.sks-keyservers.net`). While there are often transient failures with servers in this pool, the build servers have a proxy that greatly improves reliability (see the FAQ section on [keys and verification](https://github.com/docker-library/faq/#openpgp--gnupg-keys-and-verification)).
 
--	**Good**: *download the file over https, but still no verification.*
+The purpose in recommending checksum verification is to verify that the artifact is as expected. This ensures that when remote content changes, the Dockerfile also will change and provide a natural `docker build` cache bust. As a bonus, this also prevents accidentally downloading newer-than-expected artifacts on poorly versioned files.
 
-	```Dockerfile
-	RUN curl -fSL "https://julialang.s3.amazonaws.com/bin/linux/x64/${JULIA_VERSION%[.-]*}/julia-${JULIA_VERSION}-linux-x86_64.tar.gz" | tar ... \
-	    # install
-	```
+Below are some examples:
 
--	**Better**: *embed the checksum into the `Dockerfile`. It would be better to use https here too, if it is available.*
+-	**Preferred**: *download over https, PGP key full fingerprint import and `asc` verification, embedded checksum verified.*
 
 	```Dockerfile
-	ENV RUBY_DOWNLOAD_SHA256 5ffc0f317e429e6b29d4a98ac521c3ce65481bfd22a8cf845fa02a7b113d9b44
-	RUN curl -fSL -o ruby.tar.gz "http://cache.ruby-lang.org/pub/ruby/$RUBY_MAJOR/ruby-$RUBY_VERSION.tar.gz" \
-	    && echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.gz" | sha256sum -c - \
-	    # install
-	```
-
-	-	**Note:** the use of either SHA1 or MD5 should be considered a "checksum of last resort" as both are considered generally unsafe:
-
-		-	["Single-block collision for MD5" from 2012](https://marc-stevens.nl/research/md5-1block-collision/)
-		-	["Announcing the first SHA1 collision" from 2017](https://security.googleblog.com/2017/02/announcing-first-sha1-collision.html)
-
--	**Best**: *full key fingerprint import, download over https, verify PGP signature of download.*
-
-	```Dockerfile
+	ENV PYTHON_DOWNLOAD_SHA512 (sha512-value-here)
+	RUN set -eux; \
+	    curl -fL "https://www.python.org/ftp/python/$PYTHON_VERSION/Python-$PYTHON_VERSION.tar.xz" -o python.tar.xz; \
+	    curl -fL "https://www.python.org/ftp/python/$PYTHON_VERSION/Python-$PYTHON_VERSION.tar.xz.asc" -o python.tar.xz.asc; \
+	    export GNUPGHOME="$(mktemp -d)"; \
 	# gpg: key F73C700D: public key "Larry Hastings <larry@hastings.org>" imported
-	RUN curl -fSL "https://www.python.org/ftp/python/$PYTHON_VERSION/Python-$PYTHON_VERSION.tar.xz" -o python.tar.xz \
-	    && curl -fSL "https://www.python.org/ftp/python/$PYTHON_VERSION/Python-$PYTHON_VERSION.tar.xz.asc" -o python.tar.xz.asc \
-	    && export GNUPGHOME="$(mktemp -d)" \
-	    && gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 97FC712E4C024BBEA48A61ED3A5CA953F73C700D \
-	    && gpg --batch --verify python.tar.xz.asc python.tar.xz \
-	    && rm -r "$GNUPGHOME" python.tar.xz.asc \
+	    gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 97FC712E4C024BBEA48A61ED3A5CA953F73C700D; \
+	    gpg --batch --verify python.tar.xz.asc python.tar.xz; \
+	    rm -r "$GNUPGHOME" python.tar.xz.asc; \
+	    echo "$PYTHON_DOWNLOAD_SHA512 *python.tar.xz" | sha512sum --strict --check; \
 	    # install
 	```
 
--	**Alternate Best**: *full key fingerprint imported to apt which will check signatures when packages are downloaded and installed.*
+-	**Alternate**: *full key fingerprint imported to apt which will check signatures and checksums when packages are downloaded and installed.*
 
 	```Dockerfile
-	RUN set -ex; \
+	RUN set -eux; \
 	    key='A4A9406876FCBD3C456770C88C718D3B5072E1F5'; \
 	    export GNUPGHOME="$(mktemp -d)"; \
 	    gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; \
@@ -274,16 +257,37 @@ The `Dockerfile` should be written to help mitigate man-in-the-middle attacks du
 	    rm -rf "$GNUPGHOME"; \
 	    apt-key list > /dev/null
 
-	RUN echo "deb http://repo.mysql.com/apt/debian/ stretch mysql-${MYSQL_MAJOR}" > /etc/apt/sources.list.d/mysql.list
-	
-	RUN apt-get update \
-	    && apt-get install -y mysql-community-client="${MYSQL_VERSION}" mysql-community-server-core="${MYSQL_VERSION}" \
-	    && rm -rf /var/lib/apt/lists/* \
+	RUN set -eux; \
+	    echo "deb http://repo.mysql.com/apt/debian/ stretch mysql-${MYSQL_MAJOR}" > /etc/apt/sources.list.d/mysql.list; \
+	    apt-get update; \
+	    apt-get install -y mysql-community-client="${MYSQL_VERSION}" mysql-community-server-core="${MYSQL_VERSION}"; \
+	    rm -rf /var/lib/apt/lists/*; \
 	    # ...
-
 	```
 
 	(As a side note, `rm -rf /var/lib/apt/lists/*` is *roughly* the opposite of `apt-get update` -- it ensures that the layer doesn't include the extra ~8MB of APT package list data, and enforces [appropriate `apt-get update` usage](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#apt-get).)
+
+-	**Less Secure Alternate**: *embed the checksum into the `Dockerfile`.*
+
+	```Dockerfile
+	ENV RUBY_DOWNLOAD_SHA256 (sha256-value-here)
+	RUN set -eux; \
+	    curl -fL -o ruby.tar.gz "https://cache.ruby-lang.org/pub/ruby/$RUBY_MAJOR/ruby-$RUBY_VERSION.tar.gz"; \
+	    echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.gz" | sha256sum -c --strict --check; \
+	    # install
+	```
+
+	-	**Note:** the use of either SHA1 or MD5 should be considered a "checksum of last resort" as both are considered generally unsafe:
+
+		-	["Single-block collision for MD5" from 2012](https://marc-stevens.nl/research/md5-1block-collision/)
+		-	["Announcing the first SHA1 collision" from 2017](https://security.googleblog.com/2017/02/announcing-first-sha1-collision.html)
+
+-	**Unacceptable**: *download the file over http(s) with no verification.*
+
+	```Dockerfile
+	RUN curl -fL "https://julialang.s3.amazonaws.com/bin/linux/x64/${JULIA_VERSION%[.-]*}/julia-${JULIA_VERSION}-linux-x86_64.tar.gz" | tar ... \
+	    # install
+	```
 
 ##### Runtime Configuration
 
