@@ -235,6 +235,9 @@ imageTests+=(
 	[silverpeas]='
 		silverpeas-basics
 	'
+	[spiped]='
+		spiped-basics
+	'
 	[swipl]='
 		swipl-modules
 	'
