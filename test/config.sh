@@ -63,6 +63,9 @@ imageTests+=(
 	'
 	[django]='
 	'
+	[eclipse-mosquitto]='
+		eclipse-mosquitto-basics
+	'
 	[elasticsearch]='
 		elasticsearch-basics
 	'
