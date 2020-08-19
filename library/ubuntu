@@ -6,35 +6,35 @@ GitRepo: https://github.com/tianon/docker-brew-ubuntu-core.git
 GitCommit: b283fc7d1e14f7b6e97f697f19ab4990e7001994
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-amd64
 amd64-GitFetch: refs/heads/dist-amd64
-amd64-GitCommit: 3d44d0b838eeb78c5baee976a4a529976b326878
+amd64-GitCommit: 15a1e4b83d943559f3809ae714aa7045fe5b14a1
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-arm32v7
 arm32v7-GitFetch: refs/heads/dist-arm32v7
-arm32v7-GitCommit: 0e367aa88cea91784a7c5acf206f977d229668ee
+arm32v7-GitCommit: 82db2e6f3c4680845f002c94f8753a9abfab41e6
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-arm64v8
 arm64v8-GitFetch: refs/heads/dist-arm64v8
-arm64v8-GitCommit: 61dda2c4d82483dd132253faa76be54c9005bf5c
+arm64v8-GitCommit: 1af07eed5ef52eb13d165a9d5988f676fdf94653
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-i386
 i386-GitFetch: refs/heads/dist-i386
-i386-GitCommit: 59753d5e8c4eea1af8ed9e617d5d1cfa929ee948
+i386-GitCommit: 6b97ed0c29171d4ce3efabbc8f630e3bab0cd30d
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-ppc64le
 ppc64le-GitFetch: refs/heads/dist-ppc64le
-ppc64le-GitCommit: f7beb934e1886466d4cc5d97986e92a53c5173b8
+ppc64le-GitCommit: 3e869d6ac0a57c23186626a751c09b703490168c
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-s390x
 s390x-GitFetch: refs/heads/dist-s390x
-s390x-GitCommit: fa9f13cd6b4cb3f796369750e23b0dc46c5918e4
+s390x-GitCommit: 39b60119d15fd25706e8a0b3db367a76a790e241
 
-# 20200713 (bionic)
-Tags: 18.04, bionic-20200713, bionic
+# 20200807 (bionic)
+Tags: 18.04, bionic-20200807, bionic
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: bionic
 
-# 20200720 (focal)
-Tags: 20.04, focal-20200720, focal, latest, rolling
+# 20200729 (focal)
+Tags: 20.04, focal-20200729, focal, latest, rolling
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
 Directory: focal
 
-# 20200723 (groovy)
-Tags: 20.10, groovy-20200723, groovy, devel
+# 20200812 (groovy)
+Tags: 20.10, groovy-20200812, groovy, devel
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
 Directory: groovy
 
@@ -43,7 +43,7 @@ Tags: 14.04, trusty-20191217, trusty
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le
 Directory: trusty
 
-# 20200706 (xenial)
-Tags: 16.04, xenial-20200706, xenial
+# 20200807 (xenial)
+Tags: 16.04, xenial-20200807, xenial
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: xenial
