@@ -74,7 +74,7 @@ declare -A allNaughty=(
 	#[img:tag]=1
 )
 
-tags="$(bashbrew list --uniq "$@" | sort -u)"
+tags="$(bashbrew --namespace '' list --uniq "$@" | sort -u)"
 for img in $tags; do
 	arches="$(_arches "$img")"
 	constraints="$(bashbrew cat --format '{{ .TagEntry.Constraints | join "\n" }}' "$img" | sort -u)"

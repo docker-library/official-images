@@ -85,7 +85,7 @@ declare -A allNaughty=(
 	#[img:tag]=1
 )
 
-tags="$(bashbrew list --uniq "$@" | sort -u)"
+tags="$(bashbrew --namespace '' list --uniq "$@" | sort -u)"
 for img in $tags; do
 	arches="$(_arches "$img")"
 	hasNice= # do we have _any_ arches that aren't naughty? (so we can make the message better if not)
