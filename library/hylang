@@ -1,6 +1,6 @@
 Maintainers: Paul Tagliamonte <paultag@hylang.org> (@paultag), Hy Docker Team (@hylang/docker)
 GitRepo: https://github.com/hylang/docker-hylang.git
-GitCommit: f9c873b7f71f466e5af5ea666ed0f8f42835c688
+GitCommit: 9167d73eea7c65b6ad2c158cb4a67eb559490f9b
 Directory: dockerfiles-generated
 
 Tags: 0.19.0-python3.8-buster, 0.19-python3.8-buster, 0-python3.8-buster, python3.8-buster, 0.19.0-buster, 0.19-buster, 0-buster, buster
@@ -91,7 +91,12 @@ Tags: 0.19.0-python3.5-alpine3.11, 0.19-python3.5-alpine3.11, 0-python3.5-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 File: Dockerfile.python3.5-alpine3.11
 
-Tags: 0.19.0-pypy3.6-buster, 0.19-pypy3.6-buster, 0-pypy3.6-buster, pypy3.6-buster, 0.19.0-pypy-buster, 0.19-pypy-buster, 0-pypy-buster, pypy-buster
-SharedTags: 0.19.0-pypy3.6, 0.19-pypy3.6, 0-pypy3.6, pypy3.6, 0.19.0-pypy, 0.19-pypy, 0-pypy, pypy
-Architectures: amd64, arm64v8, i386, ppc64le, s390x
+Tags: 0.19.0-pypy3.7-buster, 0.19-pypy3.7-buster, 0-pypy3.7-buster, pypy3.7-buster, 0.19.0-pypy-buster, 0.19-pypy-buster, 0-pypy-buster, pypy-buster
+SharedTags: 0.19.0-pypy3.7, 0.19-pypy3.7, 0-pypy3.7, pypy3.7, 0.19.0-pypy, 0.19-pypy, 0-pypy, pypy
+Architectures: amd64, arm64v8, i386, s390x
+File: Dockerfile.pypy3.7-buster
+
+Tags: 0.19.0-pypy3.6-buster, 0.19-pypy3.6-buster, 0-pypy3.6-buster, pypy3.6-buster
+SharedTags: 0.19.0-pypy3.6, 0.19-pypy3.6, 0-pypy3.6, pypy3.6
+Architectures: amd64, i386, s390x
 File: Dockerfile.pypy3.6-buster
