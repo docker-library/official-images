@@ -157,7 +157,11 @@ if rubyVersion >= Gem::Version.create('3.0')
 	stdlib.delete('tmpdir')
 	stdlib.delete('tsort')
 	stdlib.delete('weakref')
-	stdlib.delete('xmlrpc')
+	stdlib.delete('xmlrpc/client')
+	stdlib.delete('xmlrpc/server')
+	# https://github.com/ruby/ruby/blob/v3_0_0_preview1/NEWS.md#stdlib-compatibility-issues
+	# https://bugs.ruby-lang.org/issues/8446
+	stdlib.delete('sdbm')
 end
 
 result = 'ok'
