@@ -2,16 +2,26 @@ Maintainers: David Barratt <dbarratt@wikimedia.org> (@davidbarratt),
              Kunal Mehta <legoktm@wikimedia.org> (@legoktm),
              addshore <addshorewiki@gmail.com> (@addshore)
 GitRepo: https://github.com/wikimedia/mediawiki-docker.git
-GitCommit: f5fa040dfbe95ffc2d21db1f7356911e324066de
+GitCommit: 7fb7a88b3dd745fdd1115ad701a1e5f5c6236420
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le
 
-Tags: 1.34.4, 1.34, legacy, stable, latest
+Tags: 1.35.0, 1.35, stable, latest
+Directory: 1.35/apache
+
+Tags: 1.35.0-fpm, 1.35-fpm, stable-fpm
+Directory: 1.35/fpm
+
+Tags: 1.35.0-fpm-alpine, 1.35-fpm-alpine, stable-fpm-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le
+Directory: 1.35/fpm-alpine
+
+Tags: 1.34.4, 1.34, legacy
 Directory: 1.34/apache
 
-Tags: 1.34.4-fpm, 1.34-fpm, legacy-fpm, stable-fpm
+Tags: 1.34.4-fpm, 1.34-fpm, legacy-fpm
 Directory: 1.34/fpm
 
-Tags: 1.34.4-fpm-alpine, 1.34-fpm-alpine, legacy-fpm-alpline, stable-fpm-alpine
+Tags: 1.34.4-fpm-alpine, 1.34-fpm-alpine, legacy-fpm-alpline
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le
 Directory: 1.34/fpm-alpine
 
