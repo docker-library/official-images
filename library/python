@@ -4,6 +4,36 @@ Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/python.git
 
+Tags: 3.10.0a1-buster, 3.10-rc-buster, rc-buster
+SharedTags: 3.10.0a1, 3.10-rc, rc
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: f215c79ef860f3e633fb9199b925cf32e8b49b97
+Directory: 3.10-rc/buster
+
+Tags: 3.10.0a1-slim-buster, 3.10-rc-slim-buster, rc-slim-buster, 3.10.0a1-slim, 3.10-rc-slim, rc-slim
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: f215c79ef860f3e633fb9199b925cf32e8b49b97
+Directory: 3.10-rc/buster/slim
+
+Tags: 3.10.0a1-alpine3.12, 3.10-rc-alpine3.12, rc-alpine3.12, 3.10.0a1-alpine, 3.10-rc-alpine, rc-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: f215c79ef860f3e633fb9199b925cf32e8b49b97
+Directory: 3.10-rc/alpine3.12
+
+Tags: 3.10.0a1-windowsservercore-ltsc2016, 3.10-rc-windowsservercore-ltsc2016, rc-windowsservercore-ltsc2016
+SharedTags: 3.10.0a1-windowsservercore, 3.10-rc-windowsservercore, rc-windowsservercore, 3.10.0a1, 3.10-rc, rc
+Architectures: windows-amd64
+GitCommit: f215c79ef860f3e633fb9199b925cf32e8b49b97
+Directory: 3.10-rc/windows/windowsservercore-ltsc2016
+Constraints: windowsservercore-ltsc2016
+
+Tags: 3.10.0a1-windowsservercore-1809, 3.10-rc-windowsservercore-1809, rc-windowsservercore-1809
+SharedTags: 3.10.0a1-windowsservercore, 3.10-rc-windowsservercore, rc-windowsservercore, 3.10.0a1, 3.10-rc, rc
+Architectures: windows-amd64
+GitCommit: f215c79ef860f3e633fb9199b925cf32e8b49b97
+Directory: 3.10-rc/windows/windowsservercore-1809
+Constraints: windowsservercore-1809
+
 Tags: 3.9.0-buster, 3.9-buster, 3-buster, buster
 SharedTags: 3.9.0, 3.9, 3, latest
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
