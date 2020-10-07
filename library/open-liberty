@@ -2,7 +2,7 @@ Maintainers: Chris Potter <crpotter@us.ibm.com> (@crpotter),
              Wendy Raschke <wraschke@us.ibm.com> (@wraschke),
              Arthur De Magalhaes <arthurdm@ca.ibm.com> (@arthurdm)
 GitRepo: https://github.com/OpenLiberty/ci.docker.git
-GitCommit: f00edd9cde30ac11d08c0bce4a2de8d435bd8f5d
+GitCommit: 0eaa90a2e98aaa7c67c902ab44b39ac60c8b1357
 Architectures: amd64, i386, ppc64le, s390x
 
 Tags: kernel, kernel-java8-openj9
@@ -12,6 +12,16 @@ File: Dockerfile.ubuntu.adoptopenjdk8
 
 Tags: full, full-java8-openj9, latest
 Directory: releases/latest/full
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.adoptopenjdk8
+
+Tags: 20.0.0.10-kernel-java8-openj9
+Directory: releases/20.0.0.10/kernel
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.adoptopenjdk8
+
+Tags: 20.0.0.10-full-java8-openj9
+Directory: releases/20.0.0.10/full
 Architectures: amd64, ppc64le, s390x
 File: Dockerfile.ubuntu.adoptopenjdk8
 
