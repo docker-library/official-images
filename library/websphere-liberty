@@ -2,7 +2,7 @@ Maintainers: Chris Potter <crpotter@us.ibm.com> (@crpotter),
              Wendy Raschke <wraschke@us.ibm.com> (@wraschke),
              Arthur De Magalhaes <arthurdm@ca.ibm.com> (@arthurdm)
 GitRepo: https://github.com/WASdev/ci.docker.git
-GitCommit: 259400d0cfe000c3741919640983c4e9a4fca3b8
+GitCommit: 79c6e4c3f4a0f6b08f399ce4781176877b5b420d
 Architectures: amd64, i386, ppc64le, s390x
 
 Tags: beta
@@ -14,6 +14,14 @@ File: Dockerfile.ubuntu.ibmjava8
 
 Tags: full, latest
 Directory: ga/latest/full
+File: Dockerfile.ubuntu.ibmjava8
+
+Tags: 20.0.0.10-kernel-java8-ibmjava
+Directory: ga/20.0.0.10/kernel
+File: Dockerfile.ubuntu.ibmjava8
+
+Tags: 20.0.0.10-full-java8-ibmjava
+Directory: ga/20.0.0.10/full
 File: Dockerfile.ubuntu.ibmjava8
 
 Tags: 20.0.0.9-kernel-java8-ibmjava
