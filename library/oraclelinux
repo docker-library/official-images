@@ -4,10 +4,10 @@ GitCommit: 01a15ec99c7470a3391c691509db1759b41eaf66
 GitFetch: refs/heads/master
 # https://github.com/oracle/container-images/tree/dist-amd64
 amd64-GitFetch: refs/heads/dist-amd64
-amd64-GitCommit: 283700269a887af4a45ba9bc614d8ad777cf702c
+amd64-GitCommit: 52339856c3cf67775e37b128952ba43c19507ab2
 # https://github.com/oracle/container-images/tree/dist-arm64v8
 arm64v8-GitFetch: refs/heads/dist-arm64v8
-arm64v8-GitCommit: 154f9654e60f610896647ea9de43e383b6cc2850
+arm64v8-GitCommit: 4a17af9c6111f19751a5dba3f558bc84a2a11028
 
 Tags: 8.2, 8
 Architectures: amd64, arm64v8
@@ -25,7 +25,11 @@ Tags: 8-slim
 Architectures: amd64, arm64v8
 Directory: 8-slim
 
-Tags: 7.8, 7
+Tags: 7.9, 7
+Architectures: amd64, arm64v8
+Directory: 7.9
+
+Tags: 7.8
 Architectures: amd64, arm64v8
 Directory: 7.8
 
