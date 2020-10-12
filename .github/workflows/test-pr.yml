@@ -46,7 +46,8 @@ jobs:
           echo "::set-output name=strategy::$strategy"
 
   test:
-    needs: generate-jobs
+    needs:
+      - generate-jobs
     strategy: ${{ fromJson(needs.generate-jobs.outputs.strategy) }}
     name: ${{ matrix.name }}
     runs-on: ${{ matrix.os }}
