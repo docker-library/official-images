@@ -38,13 +38,18 @@ if [ "$jdk" != "${tryJdks[0]}" ]; then
 	echo >&2 "warning: using '$jdk' instead of '${tryJdks[0]}' (results may vary!)"
 fi
 
+# if possible, use "--release" in case $jdk and $image have mismatching Java versions
+javac='javac'
+if docker run --rm "$jdk" java --help 2>&1 | grep -q -- '--release'; then
+	javac='javac --release 8'
+fi
+
 newImage="$("$runDir/image-name.sh" librarytest/java-hello-world "$image")"
 "$runDir/docker-build.sh" "$testDir" "$newImage" <<EOD
 FROM $jdk AS jdk
 WORKDIR /container
 COPY dir/container.java ./
-# if possible, use "--release" in case $jdk and $image have mismatching Java versions
-RUN if javac --help 2>&1 | grep -q -- '--release'; then javac --release 8 ./container.java; else javac ./container.java; fi
+RUN $javac ./container.java
 FROM $image
 COPY --from=jdk /container /container
 WORKDIR /container
