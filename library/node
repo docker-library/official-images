@@ -1,39 +1,74 @@
-# this file is generated via https://github.com/nodejs/docker-node/blob/94a4913649bf6b3d13da30c4cb480770a86b3877/generate-stackbrew-library.sh
+# this file is generated via https://github.com/nodejs/docker-node/blob/9a8ea84f6258c8ad9edbb010484a52016df66e8d/generate-stackbrew-library.sh
 
 Maintainers: The Node.js Docker Team <https://github.com/nodejs/docker-node> (@nodejs)
 GitRepo: https://github.com/nodejs/docker-node.git
 
-Tags: 14.14.0-stretch, 14.14-stretch, 14-stretch, stretch, current-stretch, 14.14.0, 14.14, 14, latest, current
+Tags: 15.0.0-stretch, 15.0-stretch, 15-stretch, stretch, current-stretch, 15.0.0, 15.0, 15, latest, current
+Architectures: amd64, arm32v7, arm64v8
+GitCommit: 9a8ea84f6258c8ad9edbb010484a52016df66e8d
+Directory: 15/stretch
+
+Tags: 15.0.0-stretch-slim, 15.0-stretch-slim, 15-stretch-slim, stretch-slim, current-stretch-slim, 15.0.0-slim, 15.0-slim, 15-slim, slim, current-slim
+Architectures: amd64, arm32v7, arm64v8
+GitCommit: 9a8ea84f6258c8ad9edbb010484a52016df66e8d
+Directory: 15/stretch-slim
+
+Tags: 15.0.0-buster, 15.0-buster, 15-buster, buster, current-buster
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 9a8ea84f6258c8ad9edbb010484a52016df66e8d
+Directory: 15/buster
+
+Tags: 15.0.0-buster-slim, 15.0-buster-slim, 15-buster-slim, buster-slim, current-buster-slim
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 9a8ea84f6258c8ad9edbb010484a52016df66e8d
+Directory: 15/buster-slim
+
+Tags: 15.0.0-alpine3.10, 15.0-alpine3.10, 15-alpine3.10, alpine3.10, current-alpine3.10
+Architectures: amd64, arm32v6, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 9a8ea84f6258c8ad9edbb010484a52016df66e8d
+Directory: 15/alpine3.10
+
+Tags: 15.0.0-alpine3.11, 15.0-alpine3.11, 15-alpine3.11, alpine3.11, current-alpine3.11, 15.0.0-alpine, 15.0-alpine, 15-alpine, alpine, current-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 9a8ea84f6258c8ad9edbb010484a52016df66e8d
+Directory: 15/alpine3.11
+
+Tags: 15.0.0-alpine3.12, 15.0-alpine3.12, 15-alpine3.12, alpine3.12, current-alpine3.12
+Architectures: amd64, arm32v6, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 9a8ea84f6258c8ad9edbb010484a52016df66e8d
+Directory: 15/alpine3.12
+
+Tags: 14.14.0-stretch, 14.14-stretch, 14-stretch, 14.14.0, 14.14, 14
 Architectures: amd64, arm32v7, arm64v8
 GitCommit: 7b11db1cab459beb96448e18ec421ec952fa0491
 Directory: 14/stretch
 
-Tags: 14.14.0-stretch-slim, 14.14-stretch-slim, 14-stretch-slim, stretch-slim, current-stretch-slim, 14.14.0-slim, 14.14-slim, 14-slim, slim, current-slim
+Tags: 14.14.0-stretch-slim, 14.14-stretch-slim, 14-stretch-slim, 14.14.0-slim, 14.14-slim, 14-slim
 Architectures: amd64, arm32v7, arm64v8
 GitCommit: 7b11db1cab459beb96448e18ec421ec952fa0491
 Directory: 14/stretch-slim
 
-Tags: 14.14.0-buster, 14.14-buster, 14-buster, buster, current-buster
+Tags: 14.14.0-buster, 14.14-buster, 14-buster
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
 GitCommit: 7b11db1cab459beb96448e18ec421ec952fa0491
 Directory: 14/buster
 
-Tags: 14.14.0-buster-slim, 14.14-buster-slim, 14-buster-slim, buster-slim, current-buster-slim
+Tags: 14.14.0-buster-slim, 14.14-buster-slim, 14-buster-slim
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
 GitCommit: 7b11db1cab459beb96448e18ec421ec952fa0491
 Directory: 14/buster-slim
 
-Tags: 14.14.0-alpine3.10, 14.14-alpine3.10, 14-alpine3.10, alpine3.10, current-alpine3.10
+Tags: 14.14.0-alpine3.10, 14.14-alpine3.10, 14-alpine3.10
 Architectures: amd64, arm32v6, arm32v7, arm64v8, ppc64le, s390x
 GitCommit: 7b11db1cab459beb96448e18ec421ec952fa0491
 Directory: 14/alpine3.10
 
-Tags: 14.14.0-alpine3.11, 14.14-alpine3.11, 14-alpine3.11, alpine3.11, current-alpine3.11, 14.14.0-alpine, 14.14-alpine, 14-alpine, alpine, current-alpine
+Tags: 14.14.0-alpine3.11, 14.14-alpine3.11, 14-alpine3.11, 14.14.0-alpine, 14.14-alpine, 14-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, ppc64le, s390x
 GitCommit: 7b11db1cab459beb96448e18ec421ec952fa0491
 Directory: 14/alpine3.11
 
-Tags: 14.14.0-alpine3.12, 14.14-alpine3.12, 14-alpine3.12, alpine3.12, current-alpine3.12
+Tags: 14.14.0-alpine3.12, 14.14-alpine3.12, 14-alpine3.12
 Architectures: amd64, arm32v6, arm32v7, arm64v8, ppc64le, s390x
 GitCommit: 7b11db1cab459beb96448e18ec421ec952fa0491
 Directory: 14/alpine3.12
