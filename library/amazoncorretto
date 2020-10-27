@@ -4,9 +4,9 @@ Maintainers: Amazon Corretto Team <corretto-team@amazon.com> (@corretto),
              Clive Verghese <verghese@amazon.com> (@cliveverghese)
 GitRepo: https://github.com/corretto/corretto-docker.git
 GitFetch: refs/heads/master
-GitCommit: a3fd68cecd5b89dc29f398d7f8f7959bc99b01b1
+GitCommit: f6f36d9494e2d65a1b85e18990d3069cbffff4e9
 
-Tags: 8, 8u265, 8u265-al2, 8-al2-full,8-al2-jdk, latest
+Tags: 8, 8u272, 8u272-al2, 8-al2-full,8-al2-jdk, latest
 Architectures: amd64, arm64v8
 Directory: 8/jdk/al2
 
@@ -14,15 +14,11 @@ Tags: 11, 11.0.9, 11.0.9-al2, 11-al2-jdk, 11-al2-full
 Architectures: amd64, arm64v8
 Directory: 11/jdk/al2
 
-Tags: 15, 15-al2-jdk, 15-al2-full
-Architectures: amd64, arm64v8
-Directory: 15/jdk/al2
-
-Tags: 8-alpine, 8u262-alpine, 8-alpine-full, 8-alpine-jdk
+Tags: 8-alpine, 8u272-alpine, 8-alpine-full, 8-alpine-jdk
 Architectures: amd64
 Directory: 8/jdk/alpine
 
-Tags: 8-alpine-jre, 8u262-alpine-jre
+Tags: 8-alpine-jre, 8u272-alpine-jre
 Architectures: amd64
 Directory: 8/jre/alpine
 
@@ -30,6 +26,10 @@ Tags: 11-alpine, 11.0.9-alpine, 11-alpine-full, 11-alpine-jdk
 Architectures: amd64
 Directory: 11/jdk/alpine
 
-Tags: 15-alpine, 15-alpine-full, 15-alpine-jdk
+Tags: 15, 15.0.1, 15.0.1-al2, 15-al2-jdk, 15-al2-full
+Architectures: amd64, arm64v8
+Directory: 15/jdk/al2
+
+Tags: 15-alpine, 15.0.1-alpine, 15-alpine-full, 15-alpine-jdk
 Architectures: amd64
 Directory: 15/jdk/alpine
