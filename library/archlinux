@@ -1,12 +1,18 @@
-# tarballs built by soyuz on a rootless environment
-# see https://github.com/archlinux/archlinux-docker/tree/no-root-build
+# https://gitlab.archlinux.org/archlinux/archlinux-docker
 
-Maintainers: Santiago Torres-Arias <santiago@archlinux.org> (@SantiagoTores),
+Maintainers: Santiago Torres-Arias <santiago@archlinux.org> (@SantiagoTorres),
              Christian Rebischke <Chris.Rebischke@archlinux.org> (@shibumi),
              Pierre Schmitz <pierre@archlinux.de> (@pierres),
              Justin Kromlinger <hashworks@archlinux.org> (@hashworks)
 GitRepo: https://github.com/archlinux/archlinux-docker.git
 
-Tags: latest, 20200908
-GitCommit: 8b34d7582a2a8e7501063e7e4097550c6d9cf637
-GitFetch: refs/tags/20200908
+Tags: latest, base, base-20201102.0.8296
+GitCommit: 72f354a55672eabb43d5f928dbcb38e86b4fd0b3
+GitFetch: refs/tags/v20201102.0.8296
+File: Dockerfile.base
+
+Tags: base-devel, base-devel-20201102.0.8296
+GitCommit: 72f354a55672eabb43d5f928dbcb38e86b4fd0b3
+GitFetch: refs/tags/v20201102.0.8296
+File: Dockerfile.base-devel
+
