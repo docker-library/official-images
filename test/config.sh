@@ -182,6 +182,12 @@ imageTests+=(
 	[php:fpm]='
 		php-fpm-hello-web
 	'
+	[phpmyadmin:apache]='
+		phpmyadmin-apache-run
+	'
+	[phpmyadmin:fpm]='
+		phpmyadmin-fpm-run
+	'
 	[plone]='
 		plone-basics
 		plone-addons
