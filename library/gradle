@@ -1,6 +1,6 @@
 Maintainers: Keegan Witt <keeganwitt@gmail.com> (@keeganwitt)
 GitRepo: https://github.com/keeganwitt/docker-gradle.git
-GitCommit: d1f217e41c055c31266b3d8d94dc896cdbe4f0a6
+GitCommit: 8e50459d57c5d88c005efc392c24feea5bafd11f
 
 
 # Hotspot
@@ -48,10 +48,12 @@ Tags: 6.7.0-jre11-openj9, 6.7-jre11-openj9, jre11-openj9
 Architectures: amd64, ppc64le, s390x
 Directory: openj9/jre11
 
-Tags: 6.7.0-jdk15-openj9, 6.7-jdk15-openj9, jdk15-openj9
-Architectures: amd64, ppc64le, s390x
-Directory: openj9/jdk15
+# temporarily commented out, due to OpenJ9 bug
+#Tags: 6.7.0-jdk15-openj9, 6.7-jdk15-openj9, jdk15-openj9
+#Architectures: amd64, ppc64le, s390x
+#Directory: openj9/jdk15
 
-Tags: 6.7.0-jre15-openj9, 6.7-jre15-openj9, jre15-openj9
-Architectures: amd64, ppc64le, s390x
-Directory: openj9/jre15
+# temporarily commented out, due to OpenJ9 bug
+#Tags: 6.7.0-jre15-openj9, 6.7-jre15-openj9, jre15-openj9
+#Architectures: amd64, ppc64le, s390x
+#Directory: openj9/jre15
