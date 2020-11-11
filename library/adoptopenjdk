@@ -6,7 +6,7 @@ GitRepo: https://github.com/AdoptOpenJDK/openjdk-docker.git
 #-----------------------------hotspot v8 images---------------------------------
 Tags: 8u272-b10-jdk-hotspot-focal, 8-jdk-hotspot-focal, 8-hotspot-focal
 SharedTags: 8u272-b10-jdk-hotspot, 8-jdk-hotspot, 8-hotspot, 8-jdk, 8
-Architectures: amd64, arm64v8, ppc64le, s390x
+Architectures: amd64, arm32v7, arm64v8, ppc64le
 GitCommit: 9b88ff88450a006bb669e4def8dab866e56baad9
 Directory: 8/jdk/ubuntu
 File: Dockerfile.hotspot.releases.full
@@ -29,7 +29,7 @@ Constraints: windowsservercore-ltsc2016
 
 Tags: 8u272-b10-jre-hotspot-focal, 8-jre-hotspot-focal
 SharedTags: 8u272-b10-jre-hotspot, 8-jre-hotspot, 8-jre
-Architectures: amd64, arm64v8, ppc64le, s390x
+Architectures: amd64, arm32v7, arm64v8, ppc64le
 GitCommit: 9b88ff88450a006bb669e4def8dab866e56baad9
 Directory: 8/jre/ubuntu
 File: Dockerfile.hotspot.releases.full
