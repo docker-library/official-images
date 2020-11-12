@@ -1,0 +1,23 @@
+<div class="background highlight"></div>
+<table cellpadding="0" cellspacing="0">
+  <tbody>
+    <% if(sections[0] && !sections[0].docHtml.match(/<h[12]>/)){ %>
+      <tr>
+        <td class="docs">
+          <h1><%= title %></h1>
+        </td>
+        <td class="code highlight"></td>
+      </tr>
+    <% } %>
+    <% sections.forEach(function(section){ %>
+      <tr>
+        <td class="docs">
+          <%- section.docHtml %>
+        </td>
+        <td class="code highlight">
+          <pre class="<%- language %>"><%- section.codeHtml %></pre>
+        </td>
+      </tr>
+    <% }); %>
+  </tbody>
+</table>

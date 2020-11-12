@@ -1,0 +1,84 @@
+{
+	"requireCurlyBraces": [
+		"for",
+		"while",
+		"do",
+		"try",
+		"catch"
+	],
+	"requireSpaceAfterKeywords": [
+		"if",
+		"else",
+		"for",
+		"while",
+		"do",
+		"switch",
+		"return",
+		"try",
+		"catch"
+	],
+	"requireSpacesInFunctionExpression": {
+		"beforeOpeningRoundBrace": true,
+		"beforeOpeningCurlyBrace": true
+	},
+	"requireCommaBeforeLineBreak": false,
+	"requireOperatorBeforeLineBreak": [
+		"?",
+		"+",
+		"-",
+		"/",
+		"*",
+		"=",
+		"==",
+		"===",
+		"!=",
+		"!==",
+		">",
+		">=",
+		"<",
+		"<="
+	],
+	"disallowLeftStickedOperators": [
+	    "?",
+	    "+",
+	    
+	    "/",
+	    "*",
+	    "=",
+	    "==",
+	    "===",
+	    "!=",
+	    "!==",
+	    ">",
+	    ">=",
+	    "<",
+	    "<="
+	],
+	"disallowRightStickedOperators": [
+	    "?",
+	    "+",
+	    "/",
+	    "*",
+	    ":",
+	    "=",
+	    "==",
+	    "===",
+	    "!=",
+	    "!==",
+	    ">",
+	    ">=",
+	    "<",
+	    "<="
+	],
+	"disallowSpaceAfterPrefixUnaryOperators": ["++", "--", "+", "-", "~", "!"],
+	"disallowSpaceBeforePostfixUnaryOperators": ["++", "--"],
+	"validateIndentation": "\t",
+	"disallowMixedSpacesAndTabs": "smart",
+	"disallowTrailingWhitespace": true,
+	"requireLineFeedAtFileEnd": true,
+	"safeContextKeyword": [ "self" ],
+	"requireDotNotation": true,
+	"disallowYodaConditions": true,
+	"validateJSDoc": false,
+	"excludeFiles": ["node_modules/**", "vendor/**"]
+}

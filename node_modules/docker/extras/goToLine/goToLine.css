@@ -1,0 +1,49 @@
+#jumpto{
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+#jumpbox{
+  width: 778px;
+  font-size: 32px;
+  height: 40px;
+  padding: 4px 10px;
+  border: 1px solid #aaa;
+}
+
+#jumpbox:focus{
+  outline: none
+}
+
+#jumpto .overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+#jumpto .box{
+  background: white;
+  position: absolute;
+  z-index: 2;
+  top: 10%;
+  max-height: 80%;
+  overflow: hidden;
+  left: 50%;
+  margin-left: -410px;
+  width: 800px;
+  padding: 10px;
+  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.5);
+  -ms-box-shadow: 0 1px 4px rgba(0,0,0,0.5);
+  -o-box-shadow: 0 1px 4px rgba(0,0,0,0.5);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}

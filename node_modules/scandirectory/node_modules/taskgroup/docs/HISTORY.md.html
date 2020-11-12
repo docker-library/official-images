@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset='UTF-8'>
+  <title>TaskGroup API Documentation</title>
+  <link rel='stylesheet' href='assets/biscotto.css' type='text/css'>
+  <script src='assets/biscotto.js'></script>
+  <script src='assets/search_data.js'></script>
+</head>
+  <body>
+    <div id='base' data-path=''></div>
+<div id='header'>
+  <div id='menu'>
+    <a href='README.md.html' title='TaskGroup'>TaskGroup</a>
+    &raquo;
+    <a href='class_index.html' title='Index'>Index</a>
+    &raquo;
+    <span class='title'>HISTORY.md</span>
+    <nav>
+      <ul>
+        <li class='noframes'>
+          (<a class='noframes' href='#'>no frames</a>)
+        </li>
+      </ul>
+    </nav>
+    <div id='search'>
+      <a id='class_list_link' href='class_list.html'>Classes</a>
+      <a id='method_list_link' href='method_list.html'>Methods</a>
+      <a id='extra_list_link' href='extra_list.html'>Extras</a>
+    </div>
+  </div>
+  <iframe id='search_frame'></iframe>
+  <div id='fuzzySearch'>
+    <input type='text'>
+    <ol></ol>
+  </div>
+  <div id='help'>
+    <p>
+      Quickly fuzzy find classes, mixins, methods, file:
+    </p>
+    <ul>
+      <li>
+        <span>Ctrl-T</span>
+        Open fuzzy finder dialog
+      </li>
+    </ul>
+    <p>
+      In frame mode you can toggle the list naviation frame on the left side:
+    </p>
+    <ul>
+      <li>
+        <span>Ctrl-L</span>
+        Toggle list view
+      </li>
+    </ul>
+    <p>
+      You can focus a list in frame mode or toggle a tab in frameless mode:
+    </p>
+    <ul>
+      <li>
+        <span>Ctrl-C</span>
+        Class list
+      </li>
+      <li>
+        <span>Ctrl-I</span>
+        Mixin list
+      </li>
+      <li>
+        <span>Ctrl-F</span>
+        File list
+      </li>
+      <li>
+        <span>Ctrl-M</span>
+        Method list
+      </li>
+      <li>
+        <span>Ctrl-E</span>
+        Extras list
+      </li>
+    </ul>
+    <p>
+      You can focus and blur the search input:
+    </p>
+    <ul>
+      <li>
+        <span>Ctrl-S</span>
+        Focus search input
+      </li>
+      <li>
+        <span>Esc</span>
+        Blur search input
+      </li>
+    </ul>
+    <p>
+      In frameless mode you can close the list tab:
+    </p>
+    <ul>
+      <li>
+        <span>Esc</span>
+        Close list tab
+      </li>
+    </ul>
+  </div>
+</div>
+    <div id='content'>
+      <nav class='toc'>
+        <p class='title'>
+          <a class='hide_toc' href='#'>
+            <strong>Table of Contents</strong>
+          </a>
+          <small>
+            (<a class='float_toc' href='#'>left</a>)
+          </small>
+        </p>
+      </nav>
+      <div id='filecontents'>
+        <h1 id="history">History</h1>
+<h2 id="v4-3-1-2015-december-10">v4.3.1 2015 December 10</h2>
+<ul>
+<li>Removed <code>cyclic.js</code> as the problem it solved was solved by npm v2 and above</li>
+</ul>
+<h2 id="v4-3-0-march-15-2015">v4.3.0 March 15, 2015</h2>
+<ul>
+<li>Module.exports now exports the TaskGroup class, of which <code>Task</code> and <code>TaskGroup</code> are now children</li>
+<li>Added <code>Task</code> attribute on the TaskGroup class to allow over-riding of what should be the sub-task class</li>
+<li>Added <code>TaskGroup</code> attribute on the TaskGroup class to allow over-riding of what should be the sub-taskgroup class</li>
+<li>Added the <code>sync</code> configuration option, which when set to <code>true</code> will allow the execution of a Task or TaskGroup to execute synchronously</li>
+<li>Updated dependencies</li>
+</ul>
+<h2 id="v4-2-1-february-20-2015">v4.2.1 February 20, 2015</h2>
+<ul>
+<li>Output more information about errors when a task completes twice</li>
+</ul>
+<h2 id="v4-2-0-february-2-2015">v4.2.0 February 2, 2015</h2>
+<ul>
+<li>Reintroduced <code>try...catch</code> for Node v0.8 and browser environments with a workaround to prevent error suppression<ul>
+<li>Thanks to <a href="https://github.com/kksharma1618">kksharma1618</a> for <a href="https://github.com/bevry/taskgroup/issues/17">issue #17</a></li>
+<li>Closes <a href="https://github.com/bevry/taskgroup/issues/17">issue #18</a></li>
+</ul>
+</li>
+<li>You can now ignore all the warnings from the v4.1.0 changelog as the behaviour is more or less the same as v4.0.5 but with added improvements</li>
+</ul>
+<h2 id="v4-1-0-february-2-2015">v4.1.0 February 2, 2015</h2>
+<ul>
+<li>This release fixes the errors in completion callbacks being swallowed/lost<ul>
+<li>Thanks to <a href="https://github.com/kksharma1618">kksharma1618</a> for <a href="https://github.com/bevry/taskgroup/issues/17">issue #17</a></li>
+</ul>
+</li>
+<li>The following changes have been made<ul>
+<li>We no longer use <code>try...catch</code> at all, if you want error catching in your task, you must not disable domains (they are enabled by default) - <a href="https://github.com/bevry/taskgroup/issues/17#issuecomment-72383610">why?</a></li>
+<li>We now force exit the domain when the task&#39;s method calls its completion callback</li>
+<li>Domains now wrap only the firing of the task&#39;s method, rather than the preparation too as before</li>
+<li>Removed superflous check to ensure a task has a method before execution</li>
+<li>Ensured the actual check to ensure a task has a method before execution also checks if the method is actually a function (via checking for <code>.bind</code>) as the superflous check did</li>
+</ul>
+</li>
+<li>This <strong>could</strong> introduce the following issues in the following cases:<ul>
+<li>You may get errors that were suppressed before now showing themselves, this is good, but it may cause unexpected things to break loudly that were breaking silently before</li>
+<li>If you have domains disabled and an error is thrown, you will get a different flow of logic than before as the error will be caught in your code, not TaskGroup&#39;s</li>
+<li>The domain&#39;s flow has improved, but this may cause a different flow than you were expecting previously</li>
+</ul>
+</li>
+<li>This <strong>will</strong> introduce the following issues in the following cases:<ul>
+<li>If you are still on Node v0.8, synchronous errors and perhaps asynchronous errors thrown within your task method will no longer be caught by TaskGroup (due to Node 0.8&#39;s crippled domain functionality) and instead will need to be caught by your code either via preferably sent to the task method&#39;s completion callback rather than thrown, or via your own try...catch. But please upgrade to Node 0.10 or higher.<ul>
+<li>If you are running TaskGroup in a web browser, you will need to catch errors manually or utilise a domain shim (browserify has one by default) - <a href="https://github.com/bevry/taskgroup/issues/18">why?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>In other words, this release is the most stable yet, but do run your tests (you should always do this)</li>
+</ul>
+<h2 id="v4-0-5-august-3-2014">v4.0.5 August 3, 2014</h2>
+<ul>
+<li>Changed an error output to be of error type</li>
+</ul>
+<h2 id="v4-0-4-august-3-2014">v4.0.4 August 3, 2014</h2>
+<ul>
+<li>Added the ability to turn off using domains by setting the new task option <code>domain</code> to <code>false</code> (defaults to <code>true</code>)</li>
+<li>Added the ability to turn off using <a href="https://github.com/bevry/ambi">ambi</a> by setting the new task option <code>ambi</code> to <code>false</code> (defaults to <code>true</code>)</li>
+</ul>
+<h2 id="v4-0-3-july-11-2014">v4.0.3 July 11, 2014</h2>
+<ul>
+<li>Use <code>setImmediate</code> instead of <code>nextTick</code> to avoid <code>(node) warning: Recursive process.nextTick detected. This will break in the next version of node. Please use setImmediate for recursive deferral.</code> errors</li>
+<li>Updated dependencies</li>
+</ul>
+<h2 id="v4-0-2-june-18-2014">v4.0.2 June 18, 2014</h2>
+<ul>
+<li>Added support for <code>done</code>, <code>whenDone</code>, <code>onceDone</code>, <code>once</code>, and <code>on</code> configuration options</li>
+</ul>
+<h2 id="v4-0-1-june-16-2014">v4.0.1 June 16, 2014</h2>
+<ul>
+<li>Fixed <code>Recursive process.nextTick detected</code> error (regression since v4.0.0)</li>
+</ul>
+<h2 id="v4-0-0-june-16-2014">v4.0.0 June 16, 2014</h2>
+<ul>
+<li>Significant rewrite with b/c breaks<ul>
+<li>Completion listeners should now be accomplished via <code>.done(listener)</code> (listens once) or <code>.whenDone(listener)</code> (listener persists)<ul>
+<li>These methods are promises in that they will execute the listener if the item is already complete</li>
+<li>They listen for the <code>done</code> event</li>
+</ul>
+</li>
+<li>The execution of tasks and groups have had a great deal of investment to ensure execution is intuitive and consistent across different use cases<ul>
+<li>Refer to to <code>src/lib/test/taskgroup-usage-test.coffee</code> for the guaranteed expectations across different scenarios</li>
+</ul>
+</li>
+<li>In earlier versions you could use <code>tasks.exit()</code> during execution to clear remaning items, stop execution, and exit, you can no longer do this, instead use the completion callback with an error, or call <code>tasks.clear()</code> then the completion callback</li>
+<li>Refer to the <a href="http://learn.bevry.me/taskgroup/api">new public api docs</a> for the latest usage</li>
+</ul>
+</li>
+<li>Changes<ul>
+<li><code>complete</code> event is now <code>completed</code>, but you really should be using the new <code>done</code> event or the promise methods</li>
+<li><code>run</code> event is now <code>started</code></li>
+<li>A lot of internal variables and methods have had their functionality changed or removed, if a method or variable is not in the <a href="http://learn.bevry.me/taskgroup/api">public api</a>, do not use it</li>
+<li>There is now a default <code>error</code> and <code>completed</code> listener that will emit the <code>done</code> event if there are listeners for it, if there is no <code>done</code> event listeners, and an error has occured, we will throw the error</li>
+<li>Tasks and groups will now only receive a default name when required, this is to prevent set names from being over-written by the default</li>
+<li>Adding of tasks and groups to a group instance will now return the group instance rather than the added tasks to ensure chainability, if you want the created tasks, use <code>.createTask(...)</code> and <code>.createGroup(...)</code> instead, then add the result manually</li>
+</ul>
+</li>
+<li>Introductions<ul>
+<li><code>passed</code>, <code>failed</code>, <code>destroyed</code> events are new</li>
+<li>Task only<ul>
+<li>new <code>timeout</code> option that accepts a number of milliseconds to wait before throwing an error</li>
+<li>new <code>onError</code> option that defaults to <code>&#39;exit&#39;</code> but can also accept <code>&#39;ignore&#39;</code> which will ignore duplicated exit errors (useful when combined with timeout event)</li>
+</ul>
+</li>
+<li>TaskGroup only<ul>
+<li>new <code>onError</code> option that defaults to <code>&#39;exit&#39;</code> but can also accept <code>&#39;ignore&#39;</code> which will ignore all task errors</li>
+<li>new <code>setNestedConfig(config)</code> and <code>setNestedTaskConfig(config)</code> options to set configuration for all children</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="v3-4-0-may-8-2014">v3.4.0 May 8, 2014</h2>
+<ul>
+<li>Added <code>context</code> option for Task, to perform a late bind on the method</li>
+<li>Asynchronous task methods can now accept optional arguments thanks to new <a href="https://github.com/bevry/ambi">ambi</a> version</li>
+<li>Updated dependencies</li>
+</ul>
+<h2 id="v3-3-9-may-4-2014">v3.3.9 May 4, 2014</h2>
+<ul>
+<li>Added <a href="https://github.com/bevry/extendonclass">extendonclass</a> support</li>
+<li>Added <code>Task.create</code> and <code>TaskGroup.create</code> helpers</li>
+<li>Will no longer fall over if an invalid argument is passed as configuration</li>
+<li>Updated dependencies</li>
+</ul>
+<h2 id="v3-3-8-february-5-2014">v3.3.8 February 5, 2014</h2>
+<ul>
+<li>More descriptive error when a task is fired without a method to fire</li>
+</ul>
+<h2 id="v3-3-7-january-30-2014">v3.3.7 January 30, 2014</h2>
+<ul>
+<li>Improvements around adding tasks to task groups and passing arguments to Task and TaskGroup constructors</li>
+</ul>
+<h2 id="v3-3-6-november-29-2013">v3.3.6 November 29, 2013</h2>
+<ul>
+<li>Properly fixed v3.3.3 issue while maintaining node.js v0.8 and browserify support<ul>
+<li>Thanks to <a href="https://github.com/pflannery">pflannery</a> for <a href="https://github.com/bevry/taskgroup/pull/11">pull request #11</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="v3-3-5-november-28-2013">v3.3.5 November 28, 2013</h2>
+<ul>
+<li>Re-added Node.js v0.8 support (regression since v3.3.3)</li>
+</ul>
+<h2 id="v3-3-4-november-27-2013">v3.3.4 November 27, 2013</h2>
+<ul>
+<li>Fixed the v3.3.3 fix</li>
+</ul>
+<h2 id="v3-3-3-november-27-2013">v3.3.3 November 27, 2013</h2>
+<ul>
+<li>Fixed possible &quot;(node) warning: Recursive process.nextTick detected. This will break in the next version of node. Please use setImmediate for recursive deferral.&quot; error under certain circumstances</li>
+</ul>
+<h2 id="v3-3-2-november-19-2013">v3.3.2 November 19, 2013</h2>
+<ul>
+<li>Don&#39;t add or create empty tasks and groups</li>
+</ul>
+<h2 id="v3-3-1-november-6-2013">v3.3.1 November 6, 2013</h2>
+<ul>
+<li>Fixed child event bubbling by using duck typing (regression since v3.3.0)</li>
+<li>Better error handling on uncaught task exceptions</li>
+<li>Tasks will now get a default name set to ease debugging</li>
+</ul>
+<h2 id="v3-3-0-november-1-2013">v3.3.0 November 1, 2013</h2>
+<ul>
+<li>Bindings are now more explicit</li>
+<li>Improved configuration parsing</li>
+<li>Configuration is now accessed via <code>getConfig()</code></li>
+<li>Dropped component.io and bower support, just use ender or browserify</li>
+</ul>
+<h2 id="v3-2-4-october-27-2013">v3.2.4 October 27, 2013</h2>
+<ul>
+<li>Re-packaged</li>
+</ul>
+<h2 id="v3-2-3-september-18-2013">v3.2.3 September 18, 2013</h2>
+<ul>
+<li>Fixed cyclic dependency problem on windows (since v2.1.3)</li>
+<li>Added bower support</li>
+</ul>
+<h2 id="v3-2-2-september-18-2013">v3.2.2 September 18, 2013</h2>
+<ul>
+<li>Component.io compatibility</li>
+</ul>
+<h2 id="v3-2-1-august-19-2013">v3.2.1 August 19, 2013</h2>
+<ul>
+<li>Republish with older verson of joe dev dependency to try and stop cyclic errors</li>
+<li>Better node 0.8 support when catching thrown errors</li>
+</ul>
+<h2 id="v3-2-0-august-19-2013">v3.2.0 August 19, 2013</h2>
+<ul>
+<li>Wrapped Task execution in a domain to catch uncaught errors within the task execution, as well as added checks to ensure the completion callback does not fire multiple times<ul>
+<li>These will be reported via the <code>error</code> event that the Task will emit<ul>
+<li>If the Task is part of a TaskGroup, the TaskGroup will listen for this, kill the TaskGroup and emit an <code>error</code> event on the TaskGroup</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Moved from EventEmitter2 to node&#39;s own EventEmitter to ensure domain compatibility</li>
+</ul>
+<h2 id="v3-1-2-april-6-2013">v3.1.2 April 6, 2013</h2>
+<ul>
+<li>Added <code>getTotals()</code> to <code>TaskGroup</code></li>
+<li>Added <code>complete()</code> to <code>Task</code></li>
+</ul>
+<h2 id="v3-1-1-april-5-2013">v3.1.1 April 5, 2013</h2>
+<ul>
+<li>Fixed task run issue under certain circumstances</li>
+<li>Added <code>exit(err)</code> function</li>
+</ul>
+<h2 id="v3-1-0-april-5-2013">v3.1.0 April 5, 2013</h2>
+<ul>
+<li>Tasks can now have the arguments that are sent to them customized by the <code>args</code> configuration option</li>
+<li>Group inline functions now support an optional completion callback</li>
+<li>Group events for items now have their first argument as the item the event was for</li>
+</ul>
+<h2 id="v3-0-0-april-5-2013">v3.0.0 April 5, 2013</h2>
+<ul>
+<li>Significant rewrite and b/c break</li>
+</ul>
+<h2 id="v2-0-0-march-27-2013">v2.0.0 March 27, 2013</h2>
+<ul>
+<li>Split from bal-util</li>
+</ul>
+<h2 id="v1-16-14-march-27-2013">v1.16.14 March 27, 2013</h2>
+<ul>
+<li>Killed explicit browser support, use <a href="http://browserify.org/">Browserify</a> instead</li>
+<li>Removed the <code>out</code> directory from git</li>
+<li>Now compiled with the coffee-script bare option</li>
+</ul>
+<h2 id="v1-16-13-march-23-2013">v1.16.13 March 23, 2013</h2>
+<ul>
+<li><code>balUtilEvents</code> changes:<ul>
+<li><code>EventEmitterEnhanced</code> changes:<ul>
+<li>Now works with <code>once</code> calls in node 0.10.0<ul>
+<li>Closes <a href="https://github.com/bevry/docpad/issues/462">bevry/docpad#462</a></li>
+</ul>
+</li>
+<li>Changed <code>emitSync</code> to be an alias to <code>emitSerial</code> and <code>emitAsync</code> to be an alias to <code>emitParallel</code></li>
+<li>Added new <code>getListenerGroup</code> function</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>balUtilFlow</code> changes:<ul>
+<li><code>fireWithOptionalCallback</code> can now take the method as an array of <code>[fireMethod,introspectMethod]</code>  useful for pesly binds</li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-16-12-march-18-2013">v1.16.12 March 18, 2013</h2>
+<ul>
+<li><code>balUtilFlow</code> changes:<ul>
+<li><code>Groups::run</code> signature changed from no arguments to a single <code>mode</code> argument</li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-16-11-march-10-2013">v1.16.11 March 10, 2013</h2>
+<ul>
+<li><code>balUtilModules</code> changes:<ul>
+<li>Fixed <code>getCountryCode</code> and <code>getLanguageCode</code> failing when there is no locale code</li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-16-10-march-8-2013">v1.16.10 March 8, 2013</h2>
+<ul>
+<li><code>balUtilModules</code> changes:<ul>
+<li>Fixed <code>requireFresh</code> regression, added test</li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-16-9-march-8-2013">v1.16.9 March 8, 2013</h2>
+<ul>
+<li><code>balUtilModules</code> changes:<ul>
+<li>Added <code>getLocaleCode</code></li>
+<li>Added <code>getCountryCode</code></li>
+<li>Added <code>getLanguageCode</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-16-8-february-16-2013">v1.16.8 February 16, 2013</h2>
+<ul>
+<li><code>balUtilModules</code> changes:<ul>
+<li><code>spawnMultiple</code>, <code>execMultiple</code>: now accept a <code>tasksMode</code> option that can be <code>serial</code> (default) or <code>parallel</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-16-7-february-12-2013">v1.16.7 February 12, 2013</h2>
+<ul>
+<li><code>balUtilPaths</code> changes:<ul>
+<li><code>readPath</code>: do not prefer gzip, but still support it for decoding, as the zlib library is buggy</li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-16-6-february-12-2013">v1.16.6 February 12, 2013</h2>
+<ul>
+<li><code>balUtilPaths</code> changes:<ul>
+<li><code>readPath</code>: add support for gzip decoding for node 0.6 and higher</li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-16-5-february-6-2013">v1.16.5 February 6, 2013</h2>
+<ul>
+<li>More <a href="http://browserify.org/">browserify</a> support</li>
+</ul>
+<h2 id="v1-16-4-february-6-2013">v1.16.4 February 6, 2013</h2>
+<ul>
+<li><a href="http://browserify.org/">Browserify</a> support</li>
+</ul>
+<h2 id="v1-16-3-february-5-2013">v1.16.3 February 5, 2013</h2>
+<ul>
+<li>Node v0.4 support</li>
+<li><code>balUtilPaths</code> changes:<ul>
+<li>Removed deprecated <code>console.log</code>s when errors occur (they are now sent to the callback)</li>
+<li>Fixed <code>determineExecPath</code> when executable requires the environment configuration</li>
+</ul>
+</li>
+<li><code>balUtilTypes</code> changes:<ul>
+<li><code>isEmptyObject</code> now works for empty values (e.g. <code>null</code>)</li>
+</ul>
+</li>
+<li><code>balUtilFlow</code> changes:<ul>
+<li>Added <code>clone</code></li>
+<li>Added <code>deepClone</code></li>
+<li><code>setDeep</code> and <code>getDeep</code> now handle <code>undefined</code> values correctly</li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-16-2-february-1-2013">v1.16.2 February 1, 2013</h2>
+<ul>
+<li><code>balUtilPaths</code> changes:<ul>
+<li>Added timeout support to <code>readPath</code></li>
+</ul>
+</li>
+<li><code>balUtilFlow</code> changes:<ul>
+<li>Added <code>setDeep</code></li>
+<li>Added <code>getDeep</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-16-1-january-25-2013">v1.16.1 January 25, 2013</h2>
+<ul>
+<li><code>balUtilFlow</code> changes:<ul>
+<li>Added <code>safeShallowExtendPlainObjects</code></li>
+<li>Added <code>safeDeepExtendPlainObjects</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-16-0-january-24-2013">v1.16.0 January 24, 2013</h2>
+<ul>
+<li>Node v0.9 compatability</li>
+<li><code>balUtilModules</code> changes:<ul>
+<li>Added <code>getEnvironmentPaths</code></li>
+<li>Added <code>getStandardExecPaths(execName)</code></li>
+<li><code>exec</code> now supports the <code>output</code> option</li>
+<li><code>determineExecPath</code> now resolves the possible paths and checks for their existance<ul>
+<li>This avoids Node v0.9&#39;s ENOENT crash when executing a path that doesn&#39;t exit</li>
+</ul>
+</li>
+<li><code>getExecPath</code> will now try for <code>.exe</code> paths as well when running on windows if an extension hasn&#39;t already been defined</li>
+<li><code>getGitPath</code>, <code>getNodePath</code>, <code>getNpmPath</code> will now also check the environment paths</li>
+</ul>
+</li>
+<li><code>balUtilFlow</code> changes:<ul>
+<li>Added <code>createSnore</code></li>
+<li>Added <code>suffixArray</code></li>
+<li><code>flow</code> now accepts the signatures <code>({object,actions,action,args,tasks,next})</code>, <code>(object, action, args, next)</code> and <code>(actions,args,next)</code></li>
+<li><code>Group</code> changes:<ul>
+<li><code>mode</code> can now be either <code>parallel</code> or <code>serial</code>, rather than <code>async</code> and <code>sync</code></li>
+<li><code>async()</code> is now <code>parallel()</code> (aliased for b/c)</li>
+<li><code>sync()</code> is now <code>serial()</code> (aliased for b/c)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>balUtilTypes</code> changes:<ul>
+<li>Added <code>isEmptyObject</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-15-4-january-8-2013">v1.15.4 January 8, 2013</h2>
+<ul>
+<li><code>balUtilPaths</code> changes:<ul>
+<li>Renamed <code>testIgnorePatterns</code> to <code>isIgnoredPath</code><ul>
+<li>Added aliases for b/c compatibility</li>
+</ul>
+</li>
+<li>Added new <code>ignorePaths</code> option</li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-15-3-december-24-2012">v1.15.3 December 24, 2012</h2>
+<ul>
+<li><code>balUtilModules</code> changes:<ul>
+<li>Added <code>requireFresh</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-15-2-december-16-2012">v1.15.2 December 16, 2012</h2>
+<ul>
+<li><code>balUtilPaths</code> changes:<ul>
+<li>Fixed <code>scandir</code> not inheriting ignore patterns when recursing</li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-15-1-december-15-2012">v1.15.1 December 15, 2012</h2>
+<ul>
+<li><code>balUtilPaths</code> changes:<ul>
+<li>Fixed <code>testIgnorePatterns</code> when <code>ignoreCommonPatterns</code> is set to <code>true</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-15-0-december-15-2012">v1.15.0 December 15, 2012</h2>
+<ul>
+<li><code>balUtilPaths</code> changes:<ul>
+<li>Added <code>testIgnorePatterns</code></li>
+<li>Renamed <code>ignorePatterns</code> to <code>ignoreCommonPatterns</code>, and added new <code>ignoreCustomPatterns</code><ul>
+<li>Affects <code>scandir</code> options</li>
+</ul>
+</li>
+<li>Added emac cache files to <code>ignoreCommonPatterns</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-14-1-december-14-2012">v1.14.1 December 14, 2012</h2>
+<ul>
+<li><code>balUtilModules</code> changes:<ul>
+<li>Added <code>getExecPath</code> that will fetch an executable path based on the paths within the environment <code>PATH</code> variable</li>
+</ul>
+</li>
+<li>Rebuilt with CoffeeScript 1.4.x</li>
+</ul>
+<h2 id="v1-14-0-november-23-2012">v1.14.0 November 23, 2012</h2>
+<ul>
+<li><code>balUtilPaths</code> changes:<ul>
+<li><code>readPath</code> will now follow url redirects</li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-13-13-october-26-2012">v1.13.13 October 26, 2012</h2>
+<ul>
+<li><code>balUtilPaths</code> changes:<ul>
+<li>Files that start with <code>~</code> are now correctly ignored in <code>commonIgnorePatterns</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-13-12-october-22-2012">v1.13.12 October 22, 2012</h2>
+<ul>
+<li><code>balUtilFlow</code> changes:<ul>
+<li><code>extend</code> is now an alias of <code>shallowExtendPlainObjects</code> as they were exactly the same</li>
+</ul>
+</li>
+<li><code>balUtilHTML</code> changes:<ul>
+<li><code>replaceElement</code> and <code>replaceElementAsync</code> changes:<ul>
+<li>now accept arguments in object form as well</li>
+<li>accept a <code>removeIndentation</code> argument that defaults to <code>true</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-13-11-october-22-2012">v1.13.11 October 22, 2012</h2>
+<ul>
+<li><code>balUtilPaths</code> changes:<ul>
+<li><code>ensurePath</code> now returns <code>err</code> and <code>exists</code> instead of just <code>err</code></li>
+</ul>
+</li>
+<li><code>balUtilModules</code> changes:<ul>
+<li><code>initGitRepo</code> will now default <code>remote</code> to <code>origin</code> and <code>branch</code> to <code>master</code></li>
+<li>Added <code>initOrPullGitRepo</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-13-10-october-7-2012">v1.13.10 October 7, 2012</h2>
+<ul>
+<li><code>balUtilPaths</code> changes:<ul>
+<li>Added <code>shallowExtendPlainObjects</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-13-9-october-7-2012">v1.13.9 October 7, 2012</h2>
+<ul>
+<li><code>balUtilPaths</code> changes:<ul>
+<li>VIM swap files now added to <code>commonIgnorePatterns</code><ul>
+<li>Thanks to <a href="https://github.com/sfrdmn">Sean Fridman</a> for <a href="https://github.com/balupton/bal-util/pull/4">pull request #4</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-13-8-october-2-2012">v1.13.8 October 2, 2012</h2>
+<ul>
+<li><code>balUtilModules</code> changes:<ul>
+<li>Added <code>openProcess</code> and <code>closeProcess</code>, and using them in <code>spawn</code> and <code>exec</code>, used to prevent <code>EMFILE</code> errors when there are too many open processes</li>
+<li>Max number of open processes is configurable via the <code>NODE_MAX_OPEN_PROCESSES</code> environment variable
+<code>balUtilPaths</code> changes:</li>
+<li>Max number of open files is now configurable via the<code>NODE_MAX_OPEN_FILES</code> environment variable</li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-13-7-september-24-2012">v1.13.7 September 24, 2012</h2>
+<ul>
+<li><code>balUtilPaths</code> changes:<ul>
+<li>Added <code>textExtensions</code> and <code>binaryExtensions</code><ul>
+<li>The environment variables <code>TEXT_EXTENSIONS</code> and <code>BINARY_EXTENSIONS</code> will append to these arrays</li>
+</ul>
+</li>
+<li>Added <code>isText</code> and <code>isTextSync</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-13-6-september-18-2012">v1.13.6 September 18, 2012</h2>
+<ul>
+<li><code>balUtilPaths</code> changes:<ul>
+<li>Improved <code>getEncoding</code>/<code>getEncodingSync</code> detection<ul>
+<li>Will now scan start, middle and end, instead of just middle</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-13-5-september-13-2012">v1.13.5 September 13, 2012</h2>
+<ul>
+<li><code>balUtilPaths</code> changes:<ul>
+<li>Added <code>getEncoding</code> and <code>getEncodingSync</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-13-4-august-28-2012">v1.13.4 August 28, 2012</h2>
+<ul>
+<li><code>balUtilModules</code> changes:<ul>
+<li>Failing to retrieve the path on <code>getGitPath</code>, <code>getNodePath</code> and <code>getNpmPath</code> will now result in an error</li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-13-3-august-28-2012">v1.13.3 August 28, 2012</h2>
+<ul>
+<li><code>balUtilModules</code> changes:<ul>
+<li>Fixed <code>exec</code> and <code>execMultiple</code></li>
+<li>Added <code>gitCommands</code>, <code>nodeCommands</code> and <code>npmCommands</code></li>
+</ul>
+</li>
+<li>Dropped node v0.4 support, min required version now 0.6</li>
+</ul>
+<h2 id="v1-13-2-august-16-2012">v1.13.2 August 16, 2012</h2>
+<ul>
+<li>Repackaged</li>
+</ul>
+<h2 id="v1-13-1-august-16-2012">v1.13.1 August 16, 2012</h2>
+<ul>
+<li><code>balUtilHTML</code> changes:<ul>
+<li>Fixed <code>replaceElement</code> from mixing up elements that start with our desired selector, instead of being only our desired selector</li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-13-0-august-3-2012">v1.13.0 August 3, 2012</h2>
+<ul>
+<li><code>balUtilModules</code> changes:<ul>
+<li>Added <code>determineExecPath</code>, <code>getNpmPath</code>, <code>getTmpPath</code>, <code>nodeCommand</code> and <code>gitCommand</code></li>
+<li><code>initNodeModules</code> and <code>initGitRepo</code> will now get the determined path of the executable if a path isn&#39;t passed</li>
+</ul>
+</li>
+<li>Re-added markdown files to npm distribution as they are required for the npm website</li>
+</ul>
+<h2 id="v1-12-5-july-18-2012">v1.12.5 July 18, 2012</h2>
+<ul>
+<li><code>balUtilTypes</code> changes:<ul>
+<li>Better checks for <code>isString</code> and <code>isNumber</code> under some environments</li>
+</ul>
+</li>
+<li><code>balUtilFlow</code> changes:<ul>
+<li>Removed ambigious <code>clone</code> function, use <code>dereference</code> or <code>extend</code> or <code>deepExtendPlainObjects</code> instead</li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-12-4-july-12-2012">v1.12.4 July 12, 2012</h2>
+<ul>
+<li><code>balUtilTypes</code> changes:<ul>
+<li><code>isObject</code> now also checks truthyness to avoid <code>null</code> and <code>undefined</code> from being objects</li>
+<li><code>isPlainObject</code> got so good, it can&#39;t get better</li>
+</ul>
+</li>
+<li><code>balUtilFlow</code> changes:<ul>
+<li>added <code>deepExtendPlainObjects</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-12-3-july-12-2012">v1.12.3 July 12, 2012</h2>
+<ul>
+<li><code>balUtilModules</code> changes:<ul>
+<li><code>npmCommand</code> will now only prefix with the nodePath if the npmPath exists</li>
+<li><code>npmCommand</code> and <code>initNodeModules</code> now use async fs calls instead of sync calls</li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-12-2-july-12-2012">v1.12.2 July 12, 2012</h2>
+<ul>
+<li><code>balUtilFlow</code> changes:<ul>
+<li>Added <code>dereference</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-12-1-july-10-2012">v1.12.1 July 10, 2012</h2>
+<ul>
+<li><code>balUtilModules</code> changes:<ul>
+<li>Added <code>stdin</code> option to <code>spawn</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-12-0-july-7-2012">v1.12.0 July 7, 2012</h2>
+<ul>
+<li>Rejigged <code>balUtilTypes</code> and now top level<ul>
+<li>Other components now make use of this instead of inline <code>typeof</code> and <code>instanceof</code> checks</li>
+</ul>
+</li>
+<li><code>balUtilFlow</code> changes:<ul>
+<li><code>isArray</code> and <code>toString</code> moved to <code>balUtilTypes</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-11-2-july-7-2012">v1.11.2 July 7, 2012</h2>
+<ul>
+<li><code>balUtilFlow</code> changes:<ul>
+<li>Added <code>clone</code></li>
+</ul>
+</li>
+<li><code>balUtilModules</code> changes:<ul>
+<li>Fixed exists warning on <code>initNodeModules</code></li>
+</ul>
+</li>
+<li><code>balUtilPaths</code> changes:<ul>
+<li>Added <code>scanlist</code></li>
+<li><code>scandir</code> changes:<ul>
+<li>If <code>readFiles</code> is <code>true</code>, then we will return the contents into the list entries as well as the tree entries (we weren&#39;t doing this for lists before)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-11-1-july-4-2012">v1.11.1 July 4, 2012</h2>
+<ul>
+<li><code>balUtilFlow</code> changes:<ul>
+<li><code>Group</code> changes:<ul>
+<li>Cleaned up the context handling code</li>
+</ul>
+</li>
+<li><code>Block</code> changes:<ul>
+<li>Block constructor as well as <code>createSubBlock</code> arguments is now a single <code>opts</code> object, acceping the options <code>name</code>, <code>fn</code>, <code>parentBlock</code> and the new <code>complete</code></li>
+<li>Fixed bug introduced in v1.11.0 causing blocks to complete instantly (instead of once their tasks are finished)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-11-0-july-1-2012">v1.11.0 July 1, 2012</h2>
+<ul>
+<li>Added <code>balUtilHTML</code>:<ul>
+<li><code>getAttribute(attributes,attribute)</code></li>
+<li><code>detectIndentation(source)</code></li>
+<li><code>removeIndentation(source)</code></li>
+<li><code>replaceElement(source, elementNameMatcher, replaceElementCallback)</code></li>
+<li><code>replaceElementAsync(source, elementNameMatcher, replaceElementCallback, next)</code></li>
+</ul>
+</li>
+<li><code>balUtilFlow</code> changes:<ul>
+<li><code>wait(delay,fn)</code> introduced as an alternative to <code>setTimeout</code></li>
+<li><code>Group</code> changes:<ul>
+<li><code>push</code> and <code>pushAndRun</code> signatures are now <code>([context], task)</code><ul>
+<li><code>context</code> is optional, and what we should bind to this</li>
+<li>it saves us having to often wrap our task pushing into for each scopes</li>
+</ul>
+</li>
+<li>task completion callbacks are now optional, if not specified a task will be completed as soon as it finishes executing</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>balUtilEvents</code>, <code>balUtilModules</code> changes:<ul>
+<li>Now make use of the <code>balUtilFlow.push|pushAndRun</code> new <code>context</code> argument to simplify some loops</li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-10-3-june-26-2012">v1.10.3 June 26, 2012</h2>
+<ul>
+<li><code>balUtilModules</code> changes:<ul>
+<li><code>initNodeModules</code> will now install modules from cache, unless <code>force</code> is true</li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-10-2-june-26-2012">v1.10.2 June 26, 2012</h2>
+<ul>
+<li><code>balUtilModules</code> changes:<ul>
+<li><code>initNodeModules</code> will now never install modules from cache</li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-10-1-june-26-2012">v1.10.1 June 26, 2012</h2>
+<ul>
+<li><code>balUtilModules</code> changes:<ul>
+<li>Fixed <code>npmCommand</code> under some situations</li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-10-0-june-26-2012">v1.10.0 June 26, 2012</h2>
+<ul>
+<li><code>balUtilModules</code> changes:<ul>
+<li>Added <code>spawnMultiple</code>, <code>execMultiple</code>, <code>gitGitPath</code>, <code>getNodePath</code>, and <code>npmCommand</code></li>
+<li><code>spawn</code> and <code>exec</code> are now only for single commands, use the new <code>spawnMultiple</code> and <code>execMultiple</code> for multiple commands instead</li>
+<li>error exit code is now anything that isnt <code>0</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-9-4-june-22-2012">v1.9.4 June 22, 2012</h2>
+<ul>
+<li>Fixed a problem with large asynchronous groups</li>
+</ul>
+<h2 id="v1-9-3-june-22-2012">v1.9.3 June 22, 2012</h2>
+<ul>
+<li><code>balUtilFlow</code> changes:<ul>
+<li>Added <code>extractOptsAndCallback</code> and <code>extend</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-9-2-june-21-2012">v1.9.2 June 21, 2012</h2>
+<ul>
+<li><code>balUtilFlow</code> changes:<ul>
+<li>Added <code>fireWithOptionalCallback</code>, updated groups and emitters to use this</li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-9-1-june-21-2012">v1.9.1 June 21, 2012</h2>
+<ul>
+<li><code>balUtilModules</code> changes:<ul>
+<li><code>initNodeModules</code> now supports <code>output</code> option</li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-9-0-june-21-2012">v1.9.0 June 21, 2012</h2>
+<ul>
+<li><code>balUtilEvents</code> changes:<ul>
+<li><code>EventEmitterEnhanced</code> changes:<ul>
+<li><code>emitSync</code> and <code>emitAsync</code> changes:<ul>
+<li>The next callback is now optional, if it is not detected then we will automatically mark the listener as completed once we have executed it (in other words, if it doesn&#39;t have a next callback, then we treat it as a synchronous listener)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-8-8-june-19-2012">v1.8.8 June 19, 2012</h2>
+<ul>
+<li>Fixed a problem with large synchronous groups</li>
+</ul>
+<h2 id="v1-8-7-june-19-2012">v1.8.7 June 19, 2012</h2>
+<ul>
+<li>Defaulted <code>dependencies</code> to an empty object, to hopefully fix <a href="https://github.com/isaacs/npm/pull/2540">npm issue #2540</a></li>
+</ul>
+<h2 id="v1-8-6-june-19-2012">v1.8.6 June 19, 2012</h2>
+<ul>
+<li><code>balUtilEvents</code> changes:<ul>
+<li>Split <code>emitSync</code> and <code>emitAsync</code> out of <code>EventSystem</code> and into new <code>EventEmitterEnhanced</code> that <code>EventSystem</code> extends</li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-8-5-june-11-2012">v1.8.5 June 11, 2012</h2>
+<ul>
+<li>Made next callbacks necessary by default</li>
+</ul>
+<h2 id="v1-8-4-june-11-2012">v1.8.4 June 11, 2012</h2>
+<ul>
+<li><code>balUtilModule</code> changes:<ul>
+<li><code>spawn</code><ul>
+<li>will now return results in the order of <code>err</code>, <code>stdout</code>, <code>stderr</code>, <code>code</code>, <code>signal</code></li>
+<li>now splits string commands using <code>/ /</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>balUtilFlow</code> changes:<ul>
+<li><code>Group</code> will now only return error as an array if we have more than one error</li>
+</ul>
+</li>
+<li>Updated for Joe v1.0.0</li>
+</ul>
+<h2 id="v1-8-3-june-9-2012">v1.8.3 June 9, 2012</h2>
+<ul>
+<li><code>balUtilCompare</code> changes:<ul>
+<li><code>packageCompare</code> will now fail gracefully if it receives malformed json</li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-8-2-june-9-2012">v1.8.2 June 9, 2012</h2>
+<ul>
+<li>Removed request dependency, we now use the native http/https modules</li>
+</ul>
+<h2 id="v1-8-1-june-9-2012">v1.8.1 June 9, 2012</h2>
+<ul>
+<li>Restructured directories</li>
+<li>Removed generated docs, use the wiki instead</li>
+<li>Moved tests from Mocha to <a href="https://github.com/bevry/joe">Joe</a></li>
+<li>Travis now tests against node v0.7</li>
+<li><code>balUtilPaths</code> changes:<ul>
+<li>Added <code>exists</code> and <code>existsSync</code> to normalize node&#39;s 0.6 to 0.8 api differences</li>
+</ul>
+</li>
+<li>Made <a href="https://github.com/mikeal/request">request</a> an optional dependency</li>
+</ul>
+<h2 id="v1-8-0-june-9-2012">v1.8.0 June 9, 2012</h2>
+<ul>
+<li>Added expiremental <code>balUtilFlow.Block</code></li>
+<li>Possibly some undocumented <code>balUtilFlow.Group</code> changes</li>
+</ul>
+<h2 id="v1-7-0-june-4-2012">v1.7.0 June 4, 2012</h2>
+<ul>
+<li><code>balUtilFlow</code> changes:<ul>
+<li><code>Group</code> changes:<ul>
+<li>Constructor now supports <code>next</code> and <code>mode</code> arguments in any order</li>
+<li><code>clear()</code> now clears everything</li>
+<li>Added <code>hasTasks()</code></li>
+<li>Group completion callback&#39;s first argument (the error argument) is now an array of errors (or null if no errors)</li>
+<li>Added <code>breakOnError</code> option (defaults to <code>true</code>)</li>
+<li>Added <code>autoClear</code> option to clear once all tasks have run (defualts to <code>false</code>)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-6-5-may-30-2012">v1.6.5 May 30, 2012</h2>
+<ul>
+<li><code>balUtilFlow</code> changes:<ul>
+<li><code>Group</code> changes:<ul>
+<li>Reverted the change made in v1.6.4 where errors in callbacks still increment the complete count<ul>
+<li>Instead, you should be using the <code>hasExited()</code> instead of <code>hasCompleted()</code> which is used to find out if everything passed successfully</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-6-4-may-30-2012">v1.6.4 May 30, 2012</h2>
+<ul>
+<li><code>balUtilFlow</code> changes:<ul>
+<li>Added <code>flow({object,action,[args],[tasks],next})</code> to simplify calling a series of functions of an object</li>
+<li><code>Group</code> changes:<ul>
+<li>If complete callback is called with an error, it&#39;ll still increment the complete count (it didn&#39;t before)</li>
+<li>Added <code>hasExited()</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>balUtilPaths</code> changes:<ul>
+<li><code>writeFile</code> will now call <code>ensurePath</code> before writing the file</li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-6-3-may-22-2012">v1.6.3 May 22, 2012</h2>
+<ul>
+<li><code>balUtilPaths</code> changes:<ul>
+<li>Fixed a problem introduced with v1.6.0 with <code>isDirectory</code> not opening the file before closing it</li>
+<li>If the number of open files becomes a negative number, we will now throw an error</li>
+<li>Decreased the max amount of allowed open files from <code>500</code> to <code>100</code></li>
+<li>Increased the wait time for opening a file from <code>50</code> to <code>100</code><ul>
+<li>This is now customisable through the global <code>waitingToOpenFileDelay</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-6-2-may-13-2012">v1.6.2 May 13, 2012</h2>
+<ul>
+<li>Added support for <code>balUtilFlow</code> and <code>balUtilTypes</code> to be used inside web browsers</li>
+</ul>
+<h2 id="v1-6-1-may-4-2012">v1.6.1 May 4, 2012</h2>
+<ul>
+<li><code>balUtilPaths</code> changes:<ul>
+<li>Fixed <code>initNodeModules</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-6-0-may-4-2012">v1.6.0 May 4, 2012</h2>
+<ul>
+<li>We now pre-compile our coffee-script</li>
+<li><code>balUtilPaths</code> changes:<ul>
+<li>Added <code>readFile</code>, <code>writeFile</code>, <code>mkdir</code>, <code>stat</code>, <code>readdir</code>, <code>unlink</code>, <code>rmdir</code></li>
+<li>Renamed <code>rmdir</code> to <code>rmdirDeep</code></li>
+</ul>
+</li>
+<li><code>balUtilModules</code> changes:<ul>
+<li>Removed <code>initGitSubmodules</code>, <code>gitPull</code></li>
+<li>Added <code>initGitRepo</code></li>
+<li>Rewrote <code>initNodeModules</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-5-0-april-18-2012">v1.5.0 April 18, 2012</h2>
+<ul>
+<li><code>balUtilPaths</code> changes:<ul>
+<li><code>scan</code> was removed, not sure what it was used for</li>
+<li><code>isDirectory</code> now returns the <code>fileStat</code> argument to the callback</li>
+<li><code>scandir</code> changes:<ul>
+<li><code>ignorePatterns</code> option when set to true now uses the new <code>balUtilPaths.commonIgnorePatterns</code> property</li>
+<li>fixed error throwing when passed an invalid path</li>
+<li>now supports a new <code>stat</code> option</li>
+<li>will return the <code>fileStat</code> argument to the <code>fileAction</code> and <code>dirAction</code> callbacks</li>
+<li><code>ignorePatterns</code> and <code>ignoreHiddenFiles</code> will now correctly be passed to child scandir calls</li>
+</ul>
+</li>
+<li><code>cpdir</code> and <code>rpdir</code> now uses <code>path.join</code> and support <code>ignoreHiddenFiles</code> and <code>ignorePatterns</code></li>
+<li><code>writetree</code> now uses <code>path.join</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-4-3-april-14-2012">v1.4.3 April 14, 2012</h2>
+<ul>
+<li>CoffeeScript dependency is now bundled</li>
+<li>Fixed incorrect octal <code>0700</code> should have been <code>700</code></li>
+</ul>
+<h2 id="v1-4-2-april-5-2012">v1.4.2 April 5, 2012</h2>
+<ul>
+<li>Fixed a failing test due to the <code>bal-util.npm</code> to <code>bal-util</code> rename</li>
+<li>Improvements to <code>balUtilModules.spawn</code><ul>
+<li>will only return an error if the exit code was <code>1</code></li>
+<li>will also contain the <code>code</code> and <code>signal</code> with the results</li>
+<li><code>results[x][0]</code> is now the stderr string, rather than an error object</li>
+</ul>
+</li>
+</ul>
+<h2 id="v1-4-1-april-5-2012">v1.4.1 April 5, 2012</h2>
+<ul>
+<li>Added <code>spawn</code> to <code>balUtilModules</code></li>
+<li>Added <code>ignoreHiddenFiles</code> option to <code>balUtilPaths.scandir</code></li>
+</ul>
+<h2 id="v1-4-0-april-2-2012">v1.4.0 April 2, 2012</h2>
+<ul>
+<li>Renamed <code>balUtilGroups</code> to <code>balUtilFlow</code></li>
+<li>Added <code>toString</code>, <code>isArray</code> and <code>each</code> to <code>balUtilFlow</code></li>
+<li>Added <code>rpdir</code>, <code>empty</code>, and <code>isPathOlderThan</code> to <code>balUtilPaths</code></li>
+</ul>
+<h2 id="v1-3-0-february-26-2012">v1.3.0 February 26, 2012</h2>
+<ul>
+<li>Added <code>openFile</code> and <code>closeFile</code> to open and close files safely (always stays below the maximum number of allowed open files)</li>
+<li>Updated all path utilities to use <code>openFile</code> and <code>closeFile</code></li>
+<li>Added npm scripts</li>
+</ul>
+<h2 id="v1-2-0-february-14-2012">v1.2.0 February 14, 2012</h2>
+<ul>
+<li>Removed single and multi modes from <code>exec</code>, now always returns the same consistent <code>callback(err,results)</code> instead</li>
+</ul>
+<h2 id="v1-1-0-february-6-2012">v1.1.0 February 6, 2012</h2>
+<ul>
+<li>Modularized</li>
+<li>Added <a href="http://jashkenas.github.com/docco/">docco</a> docs</li>
+</ul>
+<h2 id="v1-0-february-5-2012">v1.0 February 5, 2012</h2>
+<ul>
+<li>Moved unit tests to <a href="http://visionmedia.github.com/mocha/">Mocha</a><ul>
+<li>Offers more flexible unit testing</li>
+<li>Offers better guarantees that tests actually ran, and that they actually ran correctly</li>
+</ul>
+</li>
+<li>Added <code>readPath</code> and <code>scantree</code></li>
+<li>Added <code>readFiles</code> option to <code>scandir</code></li>
+<li><code>scandir</code> now supports arguments in object format</li>
+<li>Removed <code>parallel</code></li>
+<li>Tasks inside groups now are passed <code>next</code> as there only argument</li>
+<li>Removed <code>resolvePath</code>, <code>expandPath</code> and <code>expandPaths</code>, they were essentially the same as <code>path.resolve</code></li>
+<li>Most functions will now chain</li>
+<li><code>comparePackage</code> now supports comparing two local, or two remote packages</li>
+<li>Added <code>gitPull</code></li>
+</ul>
+<h2 id="v0-9-january-18-2012">v0.9 January 18, 2012</h2>
+<ul>
+<li>Added <code>exec</code>, <code>initNodeModules</code>, <code>initGitSubmodules</code>, <code>EventSystem.when</code></li>
+<li>Added support for no callbacks</li>
+</ul>
+<h2 id="v0-8-november-2-2011">v0.8 November 2, 2011</h2>
+<ul>
+<li>Considerable improvements to <code>scandir</code>, <code>cpdir</code> and <code>rmdir</code><ul>
+<li>Note, passing <code>false</code> as the file or dir actions will now skip all of that type. Pass <code>null</code> if you do not want that.</li>
+<li><code>dirAction</code> is now fired before we read the directories children, if you want it to fire after then in the next callback, pass a callback in the 3rd argument. See <code>rmdir</code> for an example of this.</li>
+</ul>
+</li>
+<li>Fixed npm web to url warnings</li>
+</ul>
+<h2 id="v0-7-october-3-2011">v0.7 October 3, 2011</h2>
+<ul>
+<li>Added <code>versionCompare</code> and <code>packageCompare</code> functions<ul>
+<li>Added <code>request</code> dependency</li>
+</ul>
+</li>
+</ul>
+<h2 id="v0-6-september-14-2011">v0.6 September 14, 2011</h2>
+<ul>
+<li>Updated <code>util.Group</code> to support <code>async</code> and <code>sync</code> grouping</li>
+</ul>
+<h2 id="v0-4-june-2-2011">v0.4 June 2, 2011</h2>
+<ul>
+<li>Added util.type for testing the type of a variable</li>
+<li>Added util.expandPath and util.expandPaths</li>
+</ul>
+<h2 id="v0-3-june-1-2011">v0.3 June 1, 2011</h2>
+<ul>
+<li>Added util.Group class for your async needs :)</li>
+</ul>
+<h2 id="v0-2-may-20-2011">v0.2 May 20, 2011</h2>
+<ul>
+<li>Added some tests with expresso</li>
+<li>util.scandir now returns err,list,tree</li>
+<li>Added util.writetree</li>
+</ul>
+<h2 id="v0-1-may-18-2011">v0.1 May 18, 2011</h2>
+<ul>
+<li>Initial commit</li>
+</ul>
+
+      </div>
+    </div>
+    <div id='footer'>
+  Generated on
+  Thu Dec 10 2015 14:34:38 GMT+0800 (AWST)
+  by
+  <a href='https://github.com/gjtorikian/biscotto' title='TomDoc-CoffeeScript API documentation generator'>Biscotto</a>
+  v2.3.1
+  (Node.js v5.2.0).
+  &#10034;
+  Press Ctrl-h to see the keyboard shortcuts
+</div>
+  </body>
+</html>

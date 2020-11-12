@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" media="all" href="<%= relativeDir %>doc-style.css" />
+  <script src="<%= relativeDir %>doc-filelist.js"></script>
+  <script>
+    var relativeDir = <%- JSON.stringify(relativeDir) %>;
+    var thisFile = <%- JSON.stringify(filename) %>;
+    var defaultSidebar = <%= sidebar === 'disable' ? 'false' : sidebar %>;
+  </script>
+  <script src="<%= relativeDir %>doc-script.js"></script>
+<% js.forEach(function(j){ %>
+  <script src="<%= relativeDir + j %>"></script>
+<% });
+
+   css.forEach(function(c){ %>
+  <link rel="stylesheet" href="<%= relativeDir + c %>" />
+<% }); %>
+</head>
+<body<%= sidebar === 'disable' ? ' class="no-sidebar"' : '' %>>
+  <div id="sidebar_wrapper">
+    <div id="sidebar_switch">
+      <span class="tree">Files</span>
+      <span class="headings">Headings</span>
+    </div>
+    <div id="tree"></div>
+    <div id="headings">
+<%    headings.list.forEach(function(h){ %>
+      <div class="heading h<%= h.level %>">
+        <a href="#<%= h.id %>"><%= h.text %></a>
+      </div>
+<%    }); %>
+    </div>
+  </div>
+  <div id="sidebar-toggle"></div>
+  <div id="container">
+    <%- content %>
+  </div>
+</body>
+</html>
