@@ -19,7 +19,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: ${{ github.event.pull_request.merge_commit_sha }}
+          # ideally this would be "github.event.pull_request.merge_commit_sha" but according to https://docs.github.com/en/free-pro-team@latest/rest/reference/pulls#get-a-pull-request if "mergeable" is null (meaning there's a background job in-progress to check mergeability), that value is undefined...
+          ref: ${{ github.event.pull_request.head.sha }}
           fetch-depth: 0
       - id: labels
         name: Gather List
@@ -48,7 +49,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: ${{ github.event.pull_request.merge_commit_sha }}
+          # again, this would ideally be "github.event.pull_request.merge_commit_sha" but we might not have that yet when this runs, so we compromise by checkout out the latest code from the target branch (so we get the latest "diff-pr.sh" script to run)
+          ref: ${{ github.event.pull_request.base.ref }}
           fetch-depth: 0
       - name: Prepare Environment
         run: |
@@ -56,10 +58,12 @@ jobs:
           ~/bashbrew/bashbrew.sh --version > /dev/null
       - id: diff
         name: Generate Diff
+        env:
+          GITHUB_PR_NUMBER: ${{ github.event.pull_request.number }}
         run: |
           export PATH="$HOME/bashbrew/bin:$PATH"
           bashbrew --version > /dev/null
-          diff="$(./diff-pr.sh 0 | tee /dev/stderr)"
+          diff="$(./diff-pr.sh "$GITHUB_PR_NUMBER" | tee /dev/stderr)"
           set +x
           json="$(jq <<<"$diff" -Rcs '{ diff: ., length: length }')"
           echo "::set-output name=diff::$json"
