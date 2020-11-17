@@ -67,15 +67,9 @@ jobs:
         run: |
           export PATH="$HOME/bashbrew/bin:$PATH"
           bashbrew --version > /dev/null
-          diff="$(./diff-pr.sh "$GITHUB_PR_NUMBER" | tee /dev/stderr)"
+          ./diff-pr.sh "$GITHUB_PR_NUMBER" | tee "$GITHUB_WORKSPACE/oi-pr.diff"
           set +x
-          {
-            diffMarker="ENDOFOIPRDIFF$RANDOM$RANDOM$RANDOM"
-            echo "PR_DIFF<<$diffMarker"
-            echo "$diff"
-            echo "$diffMarker"
-          } >> "$GITHUB_ENV"
-          length="$(jq <<<"$diff" -Rcs 'length')"
+          length="$(jq -Rcs 'length' "$GITHUB_WORKSPACE/oi-pr.diff")"
           echo "::set-output name=length::$length"
       - name: Comment
         uses: actions/github-script@v3
@@ -104,7 +98,8 @@ jobs:
               }
             }
             if (needNewComment) {
-              const diff = process.env.PR_DIFF;
+              const fs = require('fs');
+              const diff = fs.readFileSync(process.env.GITHUB_WORKSPACE + '/oi-pr.diff');
               const body = "<details>\n<summary>" + commentText + "</summary>\n\n```diff\n" + diff + "\n```\n\n</details>";
               await github.issues.createComment({
                 owner: context.repo.owner,
