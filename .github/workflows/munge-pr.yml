@@ -25,7 +25,11 @@ jobs:
       - id: labels
         name: Gather List
         run: |
-          labels="$(.github/workflows/pr-labels.sh)"
+          git fetch --quiet https://github.com/docker-library/official-images.git master
+          labels="$(git diff --numstat FETCH_HEAD...HEAD -- library/ | cut -d$'\t' -f3-)"
+          if [ -n "$labels" ] && newImages="$(git diff --name-only --diff-filter=A FETCH_HEAD...HEAD -- $labels && [ -n "$newImages" ]; then
+            labels+=$'\nnew-image'
+          fi
           labels="$(jq -Rsc 'rtrimstr("\n") | split("\n") | { labels: ., count: length }' <<<"$labels")"
           jq . <<<"$labels"
           echo "::set-output name=labels::$labels"
