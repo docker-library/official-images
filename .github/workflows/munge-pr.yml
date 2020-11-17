@@ -27,7 +27,7 @@ jobs:
         run: |
           git fetch --quiet https://github.com/docker-library/official-images.git master
           labels="$(git diff --numstat FETCH_HEAD...HEAD -- library/ | cut -d$'\t' -f3-)"
-          if [ -n "$labels" ] && newImages="$(git diff --name-only --diff-filter=A FETCH_HEAD...HEAD -- $labels && [ -n "$newImages" ]; then
+          if [ -n "$labels" ] && newImages="$(git diff --name-only --diff-filter=A FETCH_HEAD...HEAD -- $labels)" && [ -n "$newImages" ]; then
             labels+=$'\nnew-image'
           fi
           labels="$(jq -Rsc 'rtrimstr("\n") | split("\n") | { labels: ., count: length }' <<<"$labels")"
