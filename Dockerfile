@@ -9,6 +9,8 @@ RUN set -eux; \
 		wget \
 # git for cloning source code
 		git \
+# gawk for diff-pr.sh
+		gawk \
 	; \
 	rm -rf /var/lib/apt/lists/*
 
