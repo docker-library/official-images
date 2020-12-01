@@ -58,16 +58,16 @@ jobs:
           fetch-depth: 0
       - name: Prepare Environment
         run: |
-          git clone --depth 1 https://github.com/docker-library/bashbrew.git -b master ~/bashbrew
-          ~/bashbrew/bashbrew.sh --version > /dev/null
+          # this mimics "test-pr.sh", but without running repo-local scripts (to avoid CVE-2020-15228 via the scripts being updated to write nasty things to $GITHUB_ENV)
+          bashbrewVersion="$(< bashbrew-version)"
+          docker build --pull --tag oisupport/bashbrew:base "https://github.com/docker-library/bashbrew.git#v$bashbrewVersion"
+          docker build --tag oisupport/bashbrew:diff-pr .
       - id: diff
         name: Generate Diff
         env:
           GITHUB_PR_NUMBER: ${{ github.event.pull_request.number }}
         run: |
-          export PATH="$HOME/bashbrew/bin:$PATH"
-          bashbrew --version > /dev/null
-          ./diff-pr.sh "$GITHUB_PR_NUMBER" | tee "$GITHUB_WORKSPACE/oi-pr.diff"
+          docker run --rm --read-only --tmpfs /tmp oisupport/bashbrew:diff-pr ./diff-pr.sh "$GITHUB_PR_NUMBER" | tee "$GITHUB_WORKSPACE/oi-pr.diff"
           set +x
           length="$(jq -Rcs 'length' "$GITHUB_WORKSPACE/oi-pr.diff")"
           echo "::set-output name=length::$length"
