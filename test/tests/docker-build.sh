@@ -18,7 +18,7 @@ dir="$1"; shift
 
 imageTag="$1"; shift
 
-tmp="$(mktemp -t -d docker-library-test-build-XXXXXXXXXX)"
+tmp="$(mktemp -d "${TMPDIR:-/tmp}/docker-library-test-build-XXXXXXXXXX")"
 trap "rm -rf '$tmp'" EXIT
 
 cat > "$tmp/Dockerfile"
