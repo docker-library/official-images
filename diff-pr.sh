@@ -258,12 +258,11 @@ for img; do touch "$BASHBREW_LIBRARY/$img"; [ -s "$BASHBREW_LIBRARY/$img" ] || e
 bashbrew list "$@" 2>>temp/_bashbrew.err | sort -uV > temp/_bashbrew-list || :
 "$diffDir/_bashbrew-cat-sorted.sh" "$@" 2>>temp/_bashbrew.err > temp/_bashbrew-cat || :
 for image; do
-	if script="$(bashbrew cat --format "$template" "$image")"; then
-		mkdir tar
-		( eval "$script" | tar -xiC tar )
-		copy-tar tar temp
-		rm -rf tar
-	fi
+	script="$(bashbrew cat --format "$template" "$image")"
+	mkdir tar
+	( eval "$script" | tar -xiC tar )
+	copy-tar tar temp
+	rm -rf tar
 done
 git -C temp add . || :
 git -C temp commit --quiet --allow-empty -m 'initial' || :
