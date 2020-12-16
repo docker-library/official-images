@@ -4,22 +4,42 @@ Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/rabbitmq.git
 
-Tags: 3.8.8, 3.8, 3, latest
+Tags: 3.8.10-beta.1, 3.8-rc
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 66ddebbb7fc778c481da06856e350ceae3e02113
+GitCommit: 61bde14964280981fb12890d4614befc902da79a
+Directory: 3.8-rc/ubuntu
+
+Tags: 3.8.10-beta.1-management, 3.8-rc-management
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 888638927482f86af6e88bebb67423926cb1112f
+Directory: 3.8-rc/ubuntu/management
+
+Tags: 3.8.10-beta.1-alpine, 3.8-rc-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 61bde14964280981fb12890d4614befc902da79a
+Directory: 3.8-rc/alpine
+
+Tags: 3.8.10-beta.1-management-alpine, 3.8-rc-management-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 888638927482f86af6e88bebb67423926cb1112f
+Directory: 3.8-rc/alpine/management
+
+Tags: 3.8.9, 3.8, 3, latest
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 093344023cb30eb36f05adaab3ae51bb939ee1ae
 Directory: 3.8/ubuntu
 
-Tags: 3.8.8-management, 3.8-management, 3-management, management
+Tags: 3.8.9-management, 3.8-management, 3-management, management
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: 888638927482f86af6e88bebb67423926cb1112f
 Directory: 3.8/ubuntu/management
 
-Tags: 3.8.8-alpine, 3.8-alpine, 3-alpine, alpine
+Tags: 3.8.9-alpine, 3.8-alpine, 3-alpine, alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 66ddebbb7fc778c481da06856e350ceae3e02113
+GitCommit: 093344023cb30eb36f05adaab3ae51bb939ee1ae
 Directory: 3.8/alpine
 
-Tags: 3.8.8-management-alpine, 3.8-management-alpine, 3-management-alpine, management-alpine
+Tags: 3.8.9-management-alpine, 3.8-management-alpine, 3-management-alpine, management-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: 888638927482f86af6e88bebb67423926cb1112f
 Directory: 3.8/alpine/management

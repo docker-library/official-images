@@ -15,11 +15,18 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
 image="$1"
 
+# Create an instance of the container-under-test
+serverImage="$("$dir/../image-name.sh" librarytest/eclipse-mosquitto-basics "$image")"
+"$dir/../docker-build.sh" "$dir" "$serverImage" <<EOD
+FROM $image
+COPY dir/mosquitto.conf /mosquitto/config/
+EOD
+
 cname="eclipse-mosquitto-container-$RANDOM-$RANDOM"
 cid="$(docker run -d \
 	--name "$cname" \
-	"$image"
-)"
+	"$serverImage")"
+
 trap "docker rm -vf $cid > /dev/null" EXIT
 
 _publish() {
@@ -30,8 +37,8 @@ _publish() {
 	shift
 
 	docker run --rm \
-		--link "$cname":eclipse-mosquitto \
-		"$image" \
+		--link "$cid":eclipse-mosquitto \
+		"$serverImage" \
 		mosquitto_pub \
 			-t $topic \
 			-m ${payload} \
@@ -44,8 +51,8 @@ _subscribe() {
 	shift
 
 	docker run --rm \
-		--link "$cname":eclipse-mosquitto \
-		"$image" \
+		--link "$cid":eclipse-mosquitto \
+		"$serverImage" \
 		mosquitto_sub \
 			-t $topic \
 			-C 1 \

@@ -302,6 +302,10 @@ globalExcludeTests+=(
 	# https://github.com/docker-library/official-images/pull/6302#issuecomment-512181863
 	[swift:slim_swift-hello-world]=1
 
+	# The new tag kernel-slim provides the bare minimum server image for users to build upon to create their application images.
+	# https://github.com/docker-library/official-images/pull/8993#issuecomment-723328400
+	[open-liberty:slim_open-liberty-hello-world]=1
+
 	# no "native" dependencies
 	[ruby:alpine_ruby-bundler]=1
 	[ruby:alpine_ruby-gems]=1
