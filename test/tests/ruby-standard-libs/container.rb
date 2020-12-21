@@ -162,6 +162,9 @@ if rubyVersion >= Gem::Version.create('3.0')
 	# https://github.com/ruby/ruby/blob/v3_0_0_preview1/NEWS.md#stdlib-compatibility-issues
 	# https://bugs.ruby-lang.org/issues/8446
 	stdlib.delete('sdbm')
+	# https://github.com/ruby/ruby/blob/v3_0_0_rc1/NEWS.md#stdlib-compatibility-issues
+	# https://bugs.ruby-lang.org/issues/17303
+	stdlib.delete('webrick')
 end
 
 result = 'ok'
