@@ -1,143 +1,97 @@
 # this file is generated with gomplate:
 # template: https://github.com/caddyserver/caddy-docker/blob/c74bdca53a1efd5195a9c35005e5515afb5feeff/stackbrew.tmpl
-# config context: https://github.com/caddyserver/caddy-docker/blob/253a295b9dde0448fb447ef6802efc7d4474a500/stackbrew-config.yaml
+# config context: https://github.com/caddyserver/caddy-docker/blob/2093c4a571bfe356447008d229195eb7063232b2/stackbrew-config.yaml
 Maintainers: Dave Henderson (@hairyhenderson)
 
-Tags: 2.1.1-alpine
-SharedTags: 2.1.1
-GitRepo: https://github.com/caddyserver/caddy-docker.git
-Directory: 2.1/alpine
-GitCommit: 98b7497fbd428e50040ef34f7a4ba2833c22780f
-Architectures: amd64, arm64v8, arm32v6, arm32v7, ppc64le, s390x
-
-Tags: 2.1.1-builder-alpine
-SharedTags: 2.1.1-builder
-GitRepo: https://github.com/caddyserver/caddy-docker.git
-Directory: 2.1/builder
-GitCommit: a54f7d1165d6240f53984ad42475ac833b2e6562
-Architectures: amd64, arm64v8, arm32v6, arm32v7, ppc64le, s390x
-
-Tags: 2.1.1-windowsservercore-1809
-SharedTags: 2.1.1-windowsservercore, 2.1.1
-GitRepo: https://github.com/caddyserver/caddy-docker.git
-Directory: 2.1/windows/1809
-GitCommit: 98b7497fbd428e50040ef34f7a4ba2833c22780f
-Architectures: windows-amd64
-Constraints: windowsservercore-1809
-
-Tags: 2.1.1-windowsservercore-ltsc2016
-SharedTags: 2.1.1-windowsservercore, 2.1.1
-GitRepo: https://github.com/caddyserver/caddy-docker.git
-Directory: 2.1/windows/ltsc2016
-GitCommit: 98b7497fbd428e50040ef34f7a4ba2833c22780f
-Architectures: windows-amd64
-Constraints: windowsservercore-ltsc2016
-
-Tags: 2.1.1-builder-windowsservercore-1809
-SharedTags: 2.1.1-builder
-GitRepo: https://github.com/caddyserver/caddy-docker.git
-Directory: 2.1/windows-builder/1809
-GitCommit: a54f7d1165d6240f53984ad42475ac833b2e6562
-Architectures: windows-amd64
-Constraints: windowsservercore-1809
-
-Tags: 2.1.1-builder-windowsservercore-ltsc2016
-SharedTags: 2.1.1-builder
-GitRepo: https://github.com/caddyserver/caddy-docker.git
-Directory: 2.1/windows-builder/ltsc2016
-GitCommit: a54f7d1165d6240f53984ad42475ac833b2e6562
-Architectures: windows-amd64
-Constraints: windowsservercore-ltsc2016
-
-Tags: 2.2.1-alpine, 2-alpine, alpine
-SharedTags: 2.2.1, 2, latest
+Tags: 2.2.1-alpine
+SharedTags: 2.2.1
 GitRepo: https://github.com/caddyserver/caddy-docker.git
 Directory: 2.2/alpine
 GitCommit: 66905660327fd16a9d95c95da1e59a3302493dc8
 Architectures: amd64, arm64v8, arm32v6, arm32v7, ppc64le, s390x
 
-Tags: 2.2.1-builder-alpine, 2-builder-alpine, builder-alpine
-SharedTags: 2.2.1-builder, 2-builder, builder
+Tags: 2.2.1-builder-alpine
+SharedTags: 2.2.1-builder
 GitRepo: https://github.com/caddyserver/caddy-docker.git
 Directory: 2.2/builder
-GitCommit: 66905660327fd16a9d95c95da1e59a3302493dc8
+GitCommit: 2093c4a571bfe356447008d229195eb7063232b2
 Architectures: amd64, arm64v8, arm32v6, arm32v7, ppc64le, s390x
 
-Tags: 2.2.1-windowsservercore-1809, 2-windowsservercore-1809, windowsservercore-1809
-SharedTags: 2.2.1-windowsservercore, 2-windowsservercore, windowsservercore, 2.2.1, 2, latest
+Tags: 2.2.1-windowsservercore-1809
+SharedTags: 2.2.1-windowsservercore, 2.2.1
 GitRepo: https://github.com/caddyserver/caddy-docker.git
 Directory: 2.2/windows/1809
 GitCommit: 66905660327fd16a9d95c95da1e59a3302493dc8
 Architectures: windows-amd64
 Constraints: windowsservercore-1809
 
-Tags: 2.2.1-windowsservercore-ltsc2016, 2-windowsservercore-ltsc2016, windowsservercore-ltsc2016
-SharedTags: 2.2.1-windowsservercore, 2-windowsservercore, windowsservercore, 2.2.1, 2, latest
+Tags: 2.2.1-windowsservercore-ltsc2016
+SharedTags: 2.2.1-windowsservercore, 2.2.1
 GitRepo: https://github.com/caddyserver/caddy-docker.git
 Directory: 2.2/windows/ltsc2016
 GitCommit: 66905660327fd16a9d95c95da1e59a3302493dc8
 Architectures: windows-amd64
 Constraints: windowsservercore-ltsc2016
 
-Tags: 2.2.1-builder-windowsservercore-1809, 2-builder-windowsservercore-1809, builder-windowsservercore-1809
-SharedTags: 2.2.1-builder, 2-builder, builder
+Tags: 2.2.1-builder-windowsservercore-1809
+SharedTags: 2.2.1-builder
 GitRepo: https://github.com/caddyserver/caddy-docker.git
 Directory: 2.2/windows-builder/1809
-GitCommit: 66905660327fd16a9d95c95da1e59a3302493dc8
+GitCommit: 2093c4a571bfe356447008d229195eb7063232b2
 Architectures: windows-amd64
 Constraints: windowsservercore-1809
 
-Tags: 2.2.1-builder-windowsservercore-ltsc2016, 2-builder-windowsservercore-ltsc2016, builder-windowsservercore-ltsc2016
-SharedTags: 2.2.1-builder, 2-builder, builder
+Tags: 2.2.1-builder-windowsservercore-ltsc2016
+SharedTags: 2.2.1-builder
 GitRepo: https://github.com/caddyserver/caddy-docker.git
 Directory: 2.2/windows-builder/ltsc2016
-GitCommit: 66905660327fd16a9d95c95da1e59a3302493dc8
+GitCommit: 2093c4a571bfe356447008d229195eb7063232b2
 Architectures: windows-amd64
 Constraints: windowsservercore-ltsc2016
 
-Tags: 2.3.0-rc.1-alpine
-SharedTags: 2.3.0-rc.1
+Tags: 2.3.0-alpine, 2-alpine, alpine
+SharedTags: 2.3.0, 2, latest
 GitRepo: https://github.com/caddyserver/caddy-docker.git
 Directory: 2.3/alpine
-GitCommit: 253a295b9dde0448fb447ef6802efc7d4474a500
+GitCommit: 2093c4a571bfe356447008d229195eb7063232b2
 Architectures: amd64, arm64v8, arm32v6, arm32v7, ppc64le, s390x
 
-Tags: 2.3.0-rc.1-builder-alpine
-SharedTags: 2.3.0-rc.1-builder
+Tags: 2.3.0-builder-alpine, 2-builder-alpine, builder-alpine
+SharedTags: 2.3.0-builder, 2-builder, builder
 GitRepo: https://github.com/caddyserver/caddy-docker.git
 Directory: 2.3/builder
-GitCommit: 253a295b9dde0448fb447ef6802efc7d4474a500
+GitCommit: 2093c4a571bfe356447008d229195eb7063232b2
 Architectures: amd64, arm64v8, arm32v6, arm32v7, ppc64le, s390x
 
-Tags: 2.3.0-rc.1-windowsservercore-1809
-SharedTags: 2.3.0-rc.1-windowsservercore, 2.3.0-rc.1
+Tags: 2.3.0-windowsservercore-1809, 2-windowsservercore-1809, windowsservercore-1809
+SharedTags: 2.3.0-windowsservercore, 2-windowsservercore, windowsservercore, 2.3.0, 2, latest
 GitRepo: https://github.com/caddyserver/caddy-docker.git
 Directory: 2.3/windows/1809
-GitCommit: 253a295b9dde0448fb447ef6802efc7d4474a500
+GitCommit: 2093c4a571bfe356447008d229195eb7063232b2
 Architectures: windows-amd64
 Constraints: windowsservercore-1809
 
-Tags: 2.3.0-rc.1-windowsservercore-ltsc2016
-SharedTags: 2.3.0-rc.1-windowsservercore, 2.3.0-rc.1
+Tags: 2.3.0-windowsservercore-ltsc2016, 2-windowsservercore-ltsc2016, windowsservercore-ltsc2016
+SharedTags: 2.3.0-windowsservercore, 2-windowsservercore, windowsservercore, 2.3.0, 2, latest
 GitRepo: https://github.com/caddyserver/caddy-docker.git
 Directory: 2.3/windows/ltsc2016
-GitCommit: 253a295b9dde0448fb447ef6802efc7d4474a500
+GitCommit: 2093c4a571bfe356447008d229195eb7063232b2
 Architectures: windows-amd64
 Constraints: windowsservercore-ltsc2016
 
-Tags: 2.3.0-rc.1-builder-windowsservercore-1809
-SharedTags: 2.3.0-rc.1-builder
+Tags: 2.3.0-builder-windowsservercore-1809, 2-builder-windowsservercore-1809, builder-windowsservercore-1809
+SharedTags: 2.3.0-builder, 2-builder, builder
 GitRepo: https://github.com/caddyserver/caddy-docker.git
 Directory: 2.3/windows-builder/1809
-GitCommit: 253a295b9dde0448fb447ef6802efc7d4474a500
+GitCommit: 2093c4a571bfe356447008d229195eb7063232b2
 Architectures: windows-amd64
 Constraints: windowsservercore-1809
 
-Tags: 2.3.0-rc.1-builder-windowsservercore-ltsc2016
-SharedTags: 2.3.0-rc.1-builder
+Tags: 2.3.0-builder-windowsservercore-ltsc2016, 2-builder-windowsservercore-ltsc2016, builder-windowsservercore-ltsc2016
+SharedTags: 2.3.0-builder, 2-builder, builder
 GitRepo: https://github.com/caddyserver/caddy-docker.git
 Directory: 2.3/windows-builder/ltsc2016
-GitCommit: 253a295b9dde0448fb447ef6802efc7d4474a500
+GitCommit: 2093c4a571bfe356447008d229195eb7063232b2
 Architectures: windows-amd64
 Constraints: windowsservercore-ltsc2016
 
