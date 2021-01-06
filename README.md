@@ -39,6 +39,8 @@
 
 The Docker Official Images are curated images [hosted on Docker Hub](https://hub.docker.com/u/library). The main tenets are:
 
+- Focus on [Free](https://www.fsf.org/) and [Open-Source](https://opensource.org/) Software
+
 - Support [multiple architectures](#architectures-other-than-amd64)
 
 - Exemplify [`Dockerfile` best practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
