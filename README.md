@@ -37,7 +37,7 @@
 
 ## What are "Official Images"?
 
-The Docker Official Images are curated images hosted on Docker Hub. The main tenets are:
+The Docker Official Images are curated images [hosted on Docker Hub](https://hub.docker.com/u/library). The main tenets are:
 
 - Support [multiple architectures](#architectures-other-than-amd64)
 
