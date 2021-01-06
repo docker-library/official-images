@@ -43,7 +43,7 @@ The Docker Official Images are curated images [hosted on Docker Hub](https://hub
 
 - Exemplify [`Dockerfile` best practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
 
-- Actively rebuilt for updates and security fixes
+- [Actively rebuilt](#library-definition-files) for updates and security fixes
 
 - Adhere to upstream recommendations
 
