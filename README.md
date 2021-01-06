@@ -39,7 +39,7 @@
 
 The Docker Official Images are curated images hosted on Docker Hub. The main tenets are:
 
-- Support multiple architectures
+- Support [multiple architectures](#architectures-other-than-amd64)
 
 - Exemplify Dockerfile best practices
 
