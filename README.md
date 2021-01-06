@@ -37,17 +37,23 @@
 
 ## What are "Official Images"?
 
+The Docker Official Images are curated images [hosted on Docker Hub](https://hub.docker.com/u/library). The main tenets are:
+
+- Focus on [Free](https://www.fsf.org/) and [Open-Source](https://opensource.org/) Software
+
+- Support [multiple architectures](#architectures-other-than-amd64)
+
+- Exemplify [`Dockerfile` best practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
+
+- [Actively rebuild](#library-definition-files) for updates and security fixes
+
+- Adhere to upstream recommendations
+
+- Add minimal quality-of-life behavior for the container environment where fit
+
 See [Docker's documentation](https://docs.docker.com/docker-hub/official_repos/) for a good high-level overview of the program.
 
-## What do you mean by "Official"?
-
-In many cases, the images in this program are not only supported but also *maintained* directly by the relevant upstream projects.
-
-For some, they're developed in collaboration with the upstream project (or with the explicit blessing of the upstream project).
-
-In all cases, we strive to create images that are true to the upstream project's vision for how their project is intended to be consumed, occasionally adding additional behavior to make them more friendly to use within Docker / containerization in general.
-
-The name of this program was chosen in an attempt to reflect that upstream-first focus (although in hindsight, it's clear that it was a choice with some amount of confusion potential for which we're sorry).
+In essence we strive to heed upstream's recommendations on how they intend for their software to be consumed. Many images are maintained in collaboration with the relevant upstream project if not maintained directly by them. Additionally we aim to exemplify the best practices for Dockerfiles to serve as a reference when making or deriving your own images from them.
 
 (If you are a representative of an upstream for which there exists an image and you would like to get involved, please see the [Maintainership](#maintainership) section below!)
 
