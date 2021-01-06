@@ -41,7 +41,7 @@ The Docker Official Images are curated images [hosted on Docker Hub](https://hub
 
 - Support [multiple architectures](#architectures-other-than-amd64)
 
-- Exemplify Dockerfile best practices
+- Exemplify [`Dockerfile` best practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
 
 - Actively rebuilt for updates and security fixes
 
