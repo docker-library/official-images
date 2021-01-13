@@ -25,15 +25,31 @@ Directory: 12/postgres-tomcat
 GitCommit: 3f09b1d7e286b4c2ff611742c417a118111f5e84
 
 # This tag description should be removed once the XWiki 12.x LTS is out
-Tags: 12.6, 12.6.6, 12.6-mysql-tomcat, 12.6.6-mysql-tomcat
+Tags: 12.6, 12.6.7, 12.6-mysql-tomcat, 12.6.7-mysql-tomcat
 Architectures: amd64
 Directory: 12/mysql-tomcat
-GitCommit: 3f09b1d7e286b4c2ff611742c417a118111f5e84
+GitCommit: b0cf482e10e8b0507122ce654f5a7d660063620f
 GitFetch: refs/heads/stable-12.6.x
 
 # This tag description should be removed once the XWiki 12.x LTS is out
-Tags: 12.6-postgres-tomcat, 12.6.6-postgres-tomcat
+Tags: 12.6-postgres-tomcat, 12.6.7-postgres-tomcat
 Architectures: amd64, arm64v8
 Directory: 12/postgres-tomcat
-GitCommit: 3f09b1d7e286b4c2ff611742c417a118111f5e84
+GitCommit: b0cf482e10e8b0507122ce654f5a7d660063620f
+GitFetch: refs/heads/stable-12.6.x
+
+# The following tags are provided to fix a mistake done in recent release
+# and to restore back the right version for XWiki 12.6.6. 
+# This should be removed at next release.
+
+Tags: 12.6.6, 12.6.6-mysql-tomcat
+Architectures: amd64
+Directory: 12/mysql-tomcat
+GitCommit: 6e8cf93219d2b42759376f4348aff4199671b574
+GitFetch: refs/heads/stable-12.6.x
+
+Tags: 12.6.6-postgres-tomcat
+Architectures: amd64, arm64v8
+Directory: 12/postgres-tomcat
+GitCommit: 6e8cf93219d2b42759376f4348aff4199671b574
 GitFetch: refs/heads/stable-12.6.x
