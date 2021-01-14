@@ -14,12 +14,12 @@ Architectures: amd64, arm64v8
 Directory: 11/postgres-tomcat
 GitCommit: fc3d7a23974f857981b4a9bb6cd3b49a6a462882
 
-Tags: 12, 12.10, 12.10.1, 12-mysql-tomcat, 12.10-mysql-tomcat, 12.10.1-mysql-tomcat, mysql-tomcat, stable-mysql-tomcat, stable-mysql, stable, latest, lts-mysql-tomcat, lts-mysql, lts
+Tags: 12, 12.10, 12.10.2, 12-mysql-tomcat, 12.10-mysql-tomcat, 12.10.2-mysql-tomcat, mysql-tomcat, stable-mysql-tomcat, stable-mysql, stable, latest, lts-mysql-tomcat, lts-mysql, lts
 Architectures: amd64
 Directory: 12/mysql-tomcat
 GitCommit: 3f09b1d7e286b4c2ff611742c417a118111f5e84
 
-Tags: 12-postgres-tomcat, 12.10-postgres-tomcat, 12.10.1-postgres-tomcat, postgres-tomcat, stable-postgres-tomcat, stable-postgres, lts-postgres-tomcat, lts-postgres
+Tags: 12-postgres-tomcat, 12.10-postgres-tomcat, 12.10.2-postgres-tomcat, postgres-tomcat, stable-postgres-tomcat, stable-postgres, lts-postgres-tomcat, lts-postgres
 Architectures: amd64, arm64v8
 Directory: 12/postgres-tomcat
 GitCommit: 3f09b1d7e286b4c2ff611742c417a118111f5e84
@@ -39,17 +39,15 @@ GitCommit: b0cf482e10e8b0507122ce654f5a7d660063620f
 GitFetch: refs/heads/stable-12.6.x
 
 # The following tags are provided to fix a mistake done in recent release
-# and to restore back the right version for XWiki 12.6.6. 
+# and to restore back the right version for XWiki 12.10.1. 
 # This should be removed at next release.
 
-Tags: 12.6.6, 12.6.6-mysql-tomcat
+Tags: 12.10.1, 12.10.1-mysql-tomcat
 Architectures: amd64
 Directory: 12/mysql-tomcat
-GitCommit: 6e8cf93219d2b42759376f4348aff4199671b574
-GitFetch: refs/heads/stable-12.6.x
+GitCommit: 85e6e9b40365d2c2bca902f4697500343f16c749
 
-Tags: 12.6.6-postgres-tomcat
+Tags: 12.10.1-postgres-tomcat
 Architectures: amd64, arm64v8
 Directory: 12/postgres-tomcat
-GitCommit: 6e8cf93219d2b42759376f4348aff4199671b574
-GitFetch: refs/heads/stable-12.6.x
+GitCommit: 85e6e9b40365d2c2bca902f4697500343f16c749
