@@ -2,7 +2,7 @@ Maintainers: Chris Potter <crpotter@us.ibm.com> (@crpotter),
              Wendy Raschke <wraschke@us.ibm.com> (@wraschke),
              Arthur De Magalhaes <arthurdm@ca.ibm.com> (@arthurdm)
 GitRepo: https://github.com/OpenLiberty/ci.docker.git
-GitCommit: 51ff2606fcecbcb70c35fd69f3adcb214eb34c7b
+GitCommit: c7ad269918729cfef66c5972e21231e3339e64a7
 Architectures: amd64, i386, ppc64le, s390x
 
 Tags: beta
@@ -32,6 +32,26 @@ File: Dockerfile.ubuntu.adoptopenjdk8
 
 Tags: full-java11-openj9
 Directory: releases/latest/full
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.adoptopenjdk11
+
+Tags: 21.0.0.1-kernel-slim-java8-openj9
+Directory: releases/21.0.0.1/kernel-slim
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.adoptopenjdk8
+
+Tags: 21.0.0.1-kernel-slim-java11-openj9
+Directory: releases/21.0.0.1/kernel-slim
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.adoptopenjdk11
+
+Tags: 21.0.0.1-full-java8-openj9
+Directory: releases/21.0.0.1/full
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.adoptopenjdk8
+
+Tags: 21.0.0.1-full-java11-openj9
+Directory: releases/21.0.0.1/full
 Architectures: amd64, ppc64le, s390x
 File: Dockerfile.ubuntu.adoptopenjdk11
 
