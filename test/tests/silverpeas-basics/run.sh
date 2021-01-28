@@ -68,7 +68,7 @@ check_running() {
 }
 
 # wait for the Silverpeas starting to be completed
-. "$dir/../../retry.sh" --tries 20 --sleep 5 'check_running'
+. "$dir/../../retry.sh" --tries 20 --sleep 10 'check_running'
 
 expected='Configured: [OK] Running:    [OK] Active:     [OK]  INFO: JBoss is running '
 [ "$(docker exec "$cname" /opt/silverpeas/bin/silverpeas status | tr '\n' ' ')" = "$expected" ]
