@@ -1,36 +1,41 @@
-# this file is generated via https://github.com/docker-library/python/blob/0559964914e6603abb50ef17da03265ebb3646cd/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/python/blob/77bc1b09cb908b61e12fed603286516e4b5a9877/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/python.git
 
-Tags: 3.10.0a4-buster, 3.10-rc-buster, rc-buster
-SharedTags: 3.10.0a4, 3.10-rc, rc
+Tags: 3.10.0a5-buster, 3.10-rc-buster, rc-buster
+SharedTags: 3.10.0a5, 3.10-rc, rc
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: abc7a218dad70c7d1bc5a35923d57026a3353622
+GitCommit: 903be329e07ba3c212dab940f891a6f9ed7ece75
 Directory: 3.10-rc/buster
 
-Tags: 3.10.0a4-slim-buster, 3.10-rc-slim-buster, rc-slim-buster, 3.10.0a4-slim, 3.10-rc-slim, rc-slim
+Tags: 3.10.0a5-slim-buster, 3.10-rc-slim-buster, rc-slim-buster, 3.10.0a5-slim, 3.10-rc-slim, rc-slim
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: abc7a218dad70c7d1bc5a35923d57026a3353622
+GitCommit: 903be329e07ba3c212dab940f891a6f9ed7ece75
 Directory: 3.10-rc/buster/slim
 
-Tags: 3.10.0a4-alpine3.12, 3.10-rc-alpine3.12, rc-alpine3.12, 3.10.0a4-alpine, 3.10-rc-alpine, rc-alpine
+Tags: 3.10.0a5-alpine3.13, 3.10-rc-alpine3.13, rc-alpine3.13, 3.10.0a5-alpine, 3.10-rc-alpine, rc-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: abc7a218dad70c7d1bc5a35923d57026a3353622
+GitCommit: e8674e6765191491bd69161c41c89e37acb8b9f2
+Directory: 3.10-rc/alpine3.13
+
+Tags: 3.10.0a5-alpine3.12, 3.10-rc-alpine3.12, rc-alpine3.12
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 903be329e07ba3c212dab940f891a6f9ed7ece75
 Directory: 3.10-rc/alpine3.12
 
-Tags: 3.10.0a4-windowsservercore-1809, 3.10-rc-windowsservercore-1809, rc-windowsservercore-1809
-SharedTags: 3.10.0a4-windowsservercore, 3.10-rc-windowsservercore, rc-windowsservercore, 3.10.0a4, 3.10-rc, rc
+Tags: 3.10.0a5-windowsservercore-1809, 3.10-rc-windowsservercore-1809, rc-windowsservercore-1809
+SharedTags: 3.10.0a5-windowsservercore, 3.10-rc-windowsservercore, rc-windowsservercore, 3.10.0a5, 3.10-rc, rc
 Architectures: windows-amd64
-GitCommit: abc7a218dad70c7d1bc5a35923d57026a3353622
+GitCommit: 903be329e07ba3c212dab940f891a6f9ed7ece75
 Directory: 3.10-rc/windows/windowsservercore-1809
 Constraints: windowsservercore-1809
 
-Tags: 3.10.0a4-windowsservercore-ltsc2016, 3.10-rc-windowsservercore-ltsc2016, rc-windowsservercore-ltsc2016
-SharedTags: 3.10.0a4-windowsservercore, 3.10-rc-windowsservercore, rc-windowsservercore, 3.10.0a4, 3.10-rc, rc
+Tags: 3.10.0a5-windowsservercore-ltsc2016, 3.10-rc-windowsservercore-ltsc2016, rc-windowsservercore-ltsc2016
+SharedTags: 3.10.0a5-windowsservercore, 3.10-rc-windowsservercore, rc-windowsservercore, 3.10.0a5, 3.10-rc, rc
 Architectures: windows-amd64
-GitCommit: abc7a218dad70c7d1bc5a35923d57026a3353622
+GitCommit: 903be329e07ba3c212dab940f891a6f9ed7ece75
 Directory: 3.10-rc/windows/windowsservercore-ltsc2016
 Constraints: windowsservercore-ltsc2016
 
@@ -45,7 +50,12 @@ Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: afc4106edc395bed8dfe7a497444033b12452406
 Directory: 3.9/buster/slim
 
-Tags: 3.9.1-alpine3.12, 3.9-alpine3.12, 3-alpine3.12, alpine3.12, 3.9.1-alpine, 3.9-alpine, 3-alpine, alpine
+Tags: 3.9.1-alpine3.13, 3.9-alpine3.13, 3-alpine3.13, alpine3.13, 3.9.1-alpine, 3.9-alpine, 3-alpine, alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: e8674e6765191491bd69161c41c89e37acb8b9f2
+Directory: 3.9/alpine3.13
+
+Tags: 3.9.1-alpine3.12, 3.9-alpine3.12, 3-alpine3.12, alpine3.12
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: afc4106edc395bed8dfe7a497444033b12452406
 Directory: 3.9/alpine3.12
@@ -75,15 +85,15 @@ Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: e06cdfe67b154306266bd2ab4d84db0c3b4b3542
 Directory: 3.8/buster/slim
 
-Tags: 3.8.7-alpine3.12, 3.8-alpine3.12, 3.8.7-alpine, 3.8-alpine
+Tags: 3.8.7-alpine3.13, 3.8-alpine3.13, 3.8.7-alpine, 3.8-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: e8674e6765191491bd69161c41c89e37acb8b9f2
+Directory: 3.8/alpine3.13
+
+Tags: 3.8.7-alpine3.12, 3.8-alpine3.12
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: e06cdfe67b154306266bd2ab4d84db0c3b4b3542
 Directory: 3.8/alpine3.12
-
-Tags: 3.8.7-alpine3.11, 3.8-alpine3.11
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: e06cdfe67b154306266bd2ab4d84db0c3b4b3542
-Directory: 3.8/alpine3.11
 
 Tags: 3.8.7-windowsservercore-1809, 3.8-windowsservercore-1809
 SharedTags: 3.8.7-windowsservercore, 3.8-windowsservercore, 3.8.7, 3.8
@@ -120,15 +130,15 @@ Architectures: amd64, arm32v5, arm32v7, arm64v8, i386
 GitCommit: 72724b61c96c9685e831991de913f633852e8e07
 Directory: 3.7/stretch/slim
 
-Tags: 3.7.9-alpine3.12, 3.7-alpine3.12, 3.7.9-alpine, 3.7-alpine
+Tags: 3.7.9-alpine3.13, 3.7-alpine3.13, 3.7.9-alpine, 3.7-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: e8674e6765191491bd69161c41c89e37acb8b9f2
+Directory: 3.7/alpine3.13
+
+Tags: 3.7.9-alpine3.12, 3.7-alpine3.12
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: 72724b61c96c9685e831991de913f633852e8e07
 Directory: 3.7/alpine3.12
-
-Tags: 3.7.9-alpine3.11, 3.7-alpine3.11
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 72724b61c96c9685e831991de913f633852e8e07
-Directory: 3.7/alpine3.11
 
 Tags: 3.7.9-windowsservercore-1809, 3.7-windowsservercore-1809
 SharedTags: 3.7.9-windowsservercore, 3.7-windowsservercore, 3.7.9, 3.7
@@ -165,12 +175,12 @@ Architectures: amd64, arm32v5, arm32v7, arm64v8, i386
 GitCommit: 729e780f3913e6f83002f4f71215d192f9eb92a5
 Directory: 3.6/stretch/slim
 
-Tags: 3.6.12-alpine3.12, 3.6-alpine3.12, 3.6.12-alpine, 3.6-alpine
+Tags: 3.6.12-alpine3.13, 3.6-alpine3.13, 3.6.12-alpine, 3.6-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: e8674e6765191491bd69161c41c89e37acb8b9f2
+Directory: 3.6/alpine3.13
+
+Tags: 3.6.12-alpine3.12, 3.6-alpine3.12
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: 729e780f3913e6f83002f4f71215d192f9eb92a5
 Directory: 3.6/alpine3.12
-
-Tags: 3.6.12-alpine3.11, 3.6-alpine3.11
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 729e780f3913e6f83002f4f71215d192f9eb92a5
-Directory: 3.6/alpine3.11
