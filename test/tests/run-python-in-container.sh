@@ -19,18 +19,29 @@ case "$1" in
 			echo >&2 'error: unable to determine how to run python'
 			exit 1
 		fi
-		source "$runDir/run-in-container.sh" "$testDir" "$1" "$python" container.py
+
+		# ensure pip does not complain about a new version being available
+		# or that a new version will no longer work with this python version
+		source "$runDir/run-in-container.sh" \
+			--docker-arg --env=PIP_DISABLE_PIP_VERSION_CHECK=1 \
+			--docker-arg --env=PIP_NO_PYTHON_VERSION_WARNING=1 \
+			"$testDir" "$1" "$python" container.py
 		;;
 
 	*)
-		source "$runDir/run-in-container.sh" "$testDir" "$1" sh -ec '
-			for c in pypy3 pypy python3 python; do
-				if [ -x "/usr/local/bin/$c" ]; then
-					exec "/usr/local/bin/$c" "$@"
-				fi
-			done
-			echo >&2 "error: unable to determine how to run python"
-			exit 1
-		' -- ./container.py
+		# ensure pip does not complain about a new version being available
+		# or that a new version will no longer work with this python version
+		source "$runDir/run-in-container.sh" \
+			--docker-arg --env=PIP_DISABLE_PIP_VERSION_CHECK=1 \
+			--docker-arg --env=PIP_NO_PYTHON_VERSION_WARNING=1 \
+			"$testDir" "$1" sh -ec '
+				for c in pypy3 pypy python3 python; do
+					if [ -x "/usr/local/bin/$c" ]; then
+						exec "/usr/local/bin/$c" "$@"
+					fi
+				done
+				echo >&2 "error: unable to determine how to run python"
+				exit 1
+			'  -- ./container.py
 		;;
 esac
