@@ -20,7 +20,7 @@ serverImage="$("$dir/../image-name.sh" librarytest/haproxy-basics "$image")"
 FROM $image
 COPY dir/haproxy.cfg /usr/local/etc/haproxy/
 EOD
-cid="$(docker run -d "$serverImage")"
+cid="$(docker run -d --sysctl net.ipv4.ip_unprivileged_port_start=0 "$serverImage")"
 trap "docker rm -vf $cid > /dev/null" EXIT
 
 _request() {

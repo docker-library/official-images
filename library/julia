@@ -1,16 +1,41 @@
-# this file is generated via https://github.com/docker-library/julia/blob/1b5419f202a882cd7acf6ea1d43cab37c7b7e983/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/julia/blob/3637fcd50d99c6be64cb1f56d870ac3b3e3fac69/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/julia.git
 
+Tags: 1.6.0-rc1-buster, 1.6.0-buster, 1.6-buster, 1.6-rc-buster
+SharedTags: 1.6.0-rc1, 1.6.0, 1.6, 1.6-rc
+Architectures: amd64, arm64v8, i386, ppc64le
+GitCommit: 88e200c1d20d69f8e80986bbd152ea128feddaa3
+Directory: 1.6-rc/buster
+
+Tags: 1.6.0-rc1-windowsservercore-1809, 1.6.0-windowsservercore-1809, 1.6-windowsservercore-1809, 1.6-rc-windowsservercore-1809
+SharedTags: 1.6.0-rc1, 1.6.0, 1.6, 1.6-rc
+Architectures: windows-amd64
+GitCommit: 88e200c1d20d69f8e80986bbd152ea128feddaa3
+Directory: 1.6-rc/windows/windowsservercore-1809
+Constraints: windowsservercore-1809
+
+Tags: 1.6.0-rc1-windowsservercore-ltsc2016, 1.6.0-windowsservercore-ltsc2016, 1.6-windowsservercore-ltsc2016, 1.6-rc-windowsservercore-ltsc2016
+SharedTags: 1.6.0-rc1, 1.6.0, 1.6, 1.6-rc
+Architectures: windows-amd64
+GitCommit: 88e200c1d20d69f8e80986bbd152ea128feddaa3
+Directory: 1.6-rc/windows/windowsservercore-ltsc2016
+Constraints: windowsservercore-ltsc2016
+
 Tags: 1.5.3-buster, 1.5-buster, 1-buster, buster
 SharedTags: 1.5.3, 1.5, 1, latest
 Architectures: amd64, arm64v8, i386
-GitCommit: 221740e8163a4bdb858065b5cca1ae774ea3a73a
+GitCommit: 1a43a633f80d76bd6bf20b88797b18971b87de4e
 Directory: 1.5/buster
 
-Tags: 1.5.3-alpine3.12, 1.5-alpine3.12, 1-alpine3.12, alpine3.12, 1.5.3-alpine, 1.5-alpine, 1-alpine, alpine
+Tags: 1.5.3-alpine3.13, 1.5-alpine3.13, 1-alpine3.13, alpine3.13, 1.5.3-alpine, 1.5-alpine, 1-alpine, alpine
+Architectures: amd64
+GitCommit: 3637fcd50d99c6be64cb1f56d870ac3b3e3fac69
+Directory: 1.5/alpine3.13
+
+Tags: 1.5.3-alpine3.12, 1.5-alpine3.12, 1-alpine3.12, alpine3.12
 Architectures: amd64
 GitCommit: 221740e8163a4bdb858065b5cca1ae774ea3a73a
 Directory: 1.5/alpine3.12

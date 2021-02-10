@@ -17,9 +17,10 @@ cid="$(
 		-e MAX_HEAP_SIZE='128m' \
 		-e HEAP_NEWSIZE='32m' \
 		-e JVM_OPTS='
+			-Dcassandra.ring_delay_ms=0
+			-Dcom.sun.management.jmxremote.authenticate=false
 			-Dcom.sun.management.jmxremote.port=7199
 			-Dcom.sun.management.jmxremote.ssl=false
-			-Dcom.sun.management.jmxremote.authenticate=false
 		' \
 		"$image"
 )"
