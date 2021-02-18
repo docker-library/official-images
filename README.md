@@ -168,7 +168,7 @@ All official images should provide a consistent interface. A beginning user shou
 3.	If the image only contains the main executable and its linked libraries (ie no shell) then it is fine to use the executable as the `ENTRYPOINT`, since that is the only thing that can run:
 
 	```Dockerfile
-	ENTRYPOINT ["swarm"]
+	ENTRYPOINT ["fully-static-binary"]
 	CMD ["--help"]
 	```
 

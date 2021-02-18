@@ -195,7 +195,6 @@ Defines image+test combinations which shouldn't ever run (usually because they w
 globalExcludeTests+=(
 	# single-binary images
 	[hello-world_utc]=1
-	[swarm_utc]=1
 )
 ```
 
