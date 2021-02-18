@@ -284,8 +284,6 @@ globalExcludeTests+=(
 	[nats-streaming_utc]=1
 	[nats_no-hard-coded-passwords]=1
 	[nats_utc]=1
-	[swarm_no-hard-coded-passwords]=1
-	[swarm_utc]=1
 	[traefik_no-hard-coded-passwords]=1
 	[traefik_utc]=1
 
