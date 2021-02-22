@@ -2,7 +2,7 @@ Maintainers: Paul Lam <paul@quantisan.com> (@Quantisan),
              Wes Morgan <wesmorgan@icloud.com> (@cap10morgan)
 Architectures: amd64, arm64v8
 GitRepo: https://github.com/Quantisan/docker-clojure.git
-GitCommit: 4a571955122850ebcb7b01e517c505c2d1270726
+GitCommit: 2f5485a76bb1a4a99a2604b75826ae0c7556d055
 
 Tags: latest
 Directory: target/openjdk-11-slim-buster/latest
@@ -23,11 +23,11 @@ Tags: openjdk-8-boot-slim-buster, openjdk-8-boot-2.8.3-slim-buster
 Architectures: amd64
 Directory: target/openjdk-8-slim-buster/boot
 
-Tags: openjdk-8-tools-deps, openjdk-8-tools-deps-1.10.2.774, openjdk-8-tools-deps-buster, openjdk-8-tools-deps-1.10.2.774-buster
+Tags: openjdk-8-tools-deps, openjdk-8-tools-deps-1.10.2.790, openjdk-8-tools-deps-buster, openjdk-8-tools-deps-1.10.2.790-buster
 Architectures: amd64
 Directory: target/openjdk-8-buster/tools-deps
 
-Tags: openjdk-8-tools-deps-slim-buster, openjdk-8-tools-deps-1.10.2.774-slim-buster
+Tags: openjdk-8-tools-deps-slim-buster, openjdk-8-tools-deps-1.10.2.790-slim-buster
 Architectures: amd64
 Directory: target/openjdk-8-slim-buster/tools-deps
 
@@ -43,10 +43,10 @@ Directory: target/openjdk-11-buster/boot
 Tags: openjdk-11-boot-slim-buster, openjdk-11-boot-2.8.3-slim-buster, boot-slim-buster, boot-2.8.3-slim-buster
 Directory: target/openjdk-11-slim-buster/boot
 
-Tags: openjdk-11-tools-deps, openjdk-11-tools-deps-1.10.2.774, tools-deps, tools-deps-1.10.2.774, openjdk-11-tools-deps-buster, openjdk-11-tools-deps-1.10.2.774-buster, tools-deps-buster, tools-deps-1.10.2.774-buster
+Tags: openjdk-11-tools-deps, openjdk-11-tools-deps-1.10.2.790, tools-deps, tools-deps-1.10.2.790, openjdk-11-tools-deps-buster, openjdk-11-tools-deps-1.10.2.790-buster, tools-deps-buster, tools-deps-1.10.2.790-buster
 Directory: target/openjdk-11-buster/tools-deps
 
-Tags: openjdk-11-tools-deps-slim-buster, openjdk-11-tools-deps-1.10.2.774-slim-buster, tools-deps-1.10.2.774-slim-buster, tools-deps-slim-buster
+Tags: openjdk-11-tools-deps-slim-buster, openjdk-11-tools-deps-1.10.2.790-slim-buster, tools-deps-1.10.2.790-slim-buster, tools-deps-slim-buster
 Directory: target/openjdk-11-slim-buster/tools-deps
 
 Tags: openjdk-15, openjdk-15-lein, openjdk-15-lein-2.9.5, openjdk-15-slim-buster, openjdk-15-lein-slim-buster, openjdk-15-lein-2.9.5-slim-buster
@@ -61,10 +61,10 @@ Directory: target/openjdk-15-slim-buster/boot
 Tags: openjdk-15-boot-buster, openjdk-15-boot-2.8.3-buster
 Directory: target/openjdk-15-buster/boot
 
-Tags: openjdk-15-tools-deps, openjdk-15-tools-deps-1.10.2.774, openjdk-15-tools-deps-slim-buster, openjdk-15-tools-deps-1.10.2.774-slim-buster
+Tags: openjdk-15-tools-deps, openjdk-15-tools-deps-1.10.2.790, openjdk-15-tools-deps-slim-buster, openjdk-15-tools-deps-1.10.2.790-slim-buster
 Directory: target/openjdk-15-slim-buster/tools-deps
 
-Tags: openjdk-15-tools-deps-buster, openjdk-15-tools-deps-1.10.2.774-buster
+Tags: openjdk-15-tools-deps-buster, openjdk-15-tools-deps-1.10.2.790-buster
 Directory: target/openjdk-15-buster/tools-deps
 
 Tags: openjdk-16, openjdk-16-lein, openjdk-16-lein-2.9.5, openjdk-16-slim-buster, openjdk-16-lein-slim-buster, openjdk-16-lein-2.9.5-slim-buster
@@ -79,20 +79,38 @@ Directory: target/openjdk-16-slim-buster/boot
 Tags: openjdk-16-boot-buster, openjdk-16-boot-2.8.3-buster
 Directory: target/openjdk-16-buster/boot
 
-Tags: openjdk-16-tools-deps, openjdk-16-tools-deps-1.10.2.774, openjdk-16-tools-deps-slim-buster, openjdk-16-tools-deps-1.10.2.774-slim-buster
+Tags: openjdk-16-tools-deps, openjdk-16-tools-deps-1.10.2.790, openjdk-16-tools-deps-slim-buster, openjdk-16-tools-deps-1.10.2.790-slim-buster
 Directory: target/openjdk-16-slim-buster/tools-deps
 
-Tags: openjdk-16-tools-deps-buster, openjdk-16-tools-deps-1.10.2.774-buster
+Tags: openjdk-16-tools-deps-buster, openjdk-16-tools-deps-1.10.2.790-buster
 Directory: target/openjdk-16-buster/tools-deps
 
-Tags: openjdk-16-alpine, openjdk-16-lein-alpine, openjdk-16-lein-2.9.5-alpine
-Architectures: amd64
-Directory: target/openjdk-16-alpine/lein
+Tags: openjdk-17, openjdk-17-lein, openjdk-17-lein-2.9.5, openjdk-17-slim-buster, openjdk-17-lein-slim-buster, openjdk-17-lein-2.9.5-slim-buster
+Directory: target/openjdk-17-slim-buster/lein
 
-Tags: openjdk-16-boot-alpine, openjdk-16-boot-2.8.3-alpine
-Architectures: amd64
-Directory: target/openjdk-16-alpine/boot
+Tags: openjdk-17-buster, openjdk-17-lein-buster, openjdk-17-lein-2.9.5-buster
+Directory: target/openjdk-17-buster/lein
 
-Tags: openjdk-16-tools-deps-alpine, openjdk-16-tools-deps-1.10.2.774-alpine
+Tags: openjdk-17-boot, openjdk-17-boot-2.8.3, openjdk-17-boot-slim-buster, openjdk-17-boot-2.8.3-slim-buster
+Directory: target/openjdk-17-slim-buster/boot
+
+Tags: openjdk-17-boot-buster, openjdk-17-boot-2.8.3-buster
+Directory: target/openjdk-17-buster/boot
+
+Tags: openjdk-17-tools-deps, openjdk-17-tools-deps-1.10.2.790, openjdk-17-tools-deps-slim-buster, openjdk-17-tools-deps-1.10.2.790-slim-buster
+Directory: target/openjdk-17-slim-buster/tools-deps
+
+Tags: openjdk-17-tools-deps-buster, openjdk-17-tools-deps-1.10.2.790-buster
+Directory: target/openjdk-17-buster/tools-deps
+
+Tags: openjdk-17-alpine, openjdk-17-lein-alpine, openjdk-17-lein-2.9.5-alpine
 Architectures: amd64
-Directory: target/openjdk-16-alpine/tools-deps
+Directory: target/openjdk-17-alpine/lein
+
+Tags: openjdk-17-boot-alpine, openjdk-17-boot-2.8.3-alpine
+Architectures: amd64
+Directory: target/openjdk-17-alpine/boot
+
+Tags: openjdk-17-tools-deps-alpine, openjdk-17-tools-deps-1.10.2.790-alpine
+Architectures: amd64
+Directory: target/openjdk-17-alpine/tools-deps
