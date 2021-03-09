@@ -1,6 +1,6 @@
 Maintainers: Paul Tagliamonte <paultag@hylang.org> (@paultag), Hy Docker Team (@hylang/docker)
 GitRepo: https://github.com/hylang/docker-hylang.git
-GitCommit: 358927d5e5c58bdc7197fb79d0e1ce01ebbf9b5c
+GitCommit: 2b9abbea083ffe4b8e86eb5951f470d04a2aa9c0
 Directory: dockerfiles-generated
 
 Tags: 0.20.0-python3.8-buster, 0.20-python3.8-buster, 0-python3.8-buster, python3.8-buster, 0.20.0-buster, 0.20-buster, 0-buster, buster
@@ -45,18 +45,6 @@ Tags: 0.20.0-python3.7-alpine3.12, 0.20-python3.7-alpine3.12, 0-python3.7-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 File: Dockerfile.python3.7-alpine3.12
 
-Tags: 0.20.0-python3.7-windowsservercore-1809, 0.20-python3.7-windowsservercore-1809, 0-python3.7-windowsservercore-1809, python3.7-windowsservercore-1809
-SharedTags: 0.20.0-python3.7, 0.20-python3.7, 0-python3.7, python3.7
-Architectures: windows-amd64
-Constraints: windowsservercore-1809
-File: Dockerfile.python3.7-windowsservercore-1809
-
-Tags: 0.20.0-python3.7-windowsservercore-ltsc2016, 0.20-python3.7-windowsservercore-ltsc2016, 0-python3.7-windowsservercore-ltsc2016, python3.7-windowsservercore-ltsc2016
-SharedTags: 0.20.0-python3.7, 0.20-python3.7, 0-python3.7, python3.7
-Architectures: windows-amd64
-Constraints: windowsservercore-ltsc2016
-File: Dockerfile.python3.7-windowsservercore-ltsc2016
-
 Tags: 0.20.0-python3.6-buster, 0.20-python3.6-buster, 0-python3.6-buster, python3.6-buster
 SharedTags: 0.20.0-python3.6, 0.20-python3.6, 0-python3.6, python3.6
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
@@ -79,7 +67,19 @@ SharedTags: 0.20.0-pypy3.7, 0.20-pypy3.7, 0-pypy3.7, pypy3.7, 0.20.0-pypy, 0.20-
 Architectures: amd64, arm64v8, i386, s390x
 File: Dockerfile.pypy3.7-buster
 
+Tags: 0.20.0-pypy3.7-windowsservercore-1809, 0.20-pypy3.7-windowsservercore-1809, 0-pypy3.7-windowsservercore-1809, pypy3.7-windowsservercore-1809, 0.20.0-pypy-windowsservercore-1809, 0.20-pypy-windowsservercore-1809, 0-pypy-windowsservercore-1809, pypy-windowsservercore-1809
+SharedTags: 0.20.0-pypy3.7, 0.20-pypy3.7, 0-pypy3.7, pypy3.7, 0.20.0-pypy, 0.20-pypy, 0-pypy, pypy
+Architectures: windows-amd64
+Constraints: windowsservercore-1809
+File: Dockerfile.pypy3.7-windowsservercore-1809
+
 Tags: 0.20.0-pypy3.6-buster, 0.20-pypy3.6-buster, 0-pypy3.6-buster, pypy3.6-buster
 SharedTags: 0.20.0-pypy3.6, 0.20-pypy3.6, 0-pypy3.6, pypy3.6
 Architectures: amd64, arm64v8, i386, s390x
 File: Dockerfile.pypy3.6-buster
+
+Tags: 0.20.0-pypy3.6-windowsservercore-1809, 0.20-pypy3.6-windowsservercore-1809, 0-pypy3.6-windowsservercore-1809, pypy3.6-windowsservercore-1809
+SharedTags: 0.20.0-pypy3.6, 0.20-pypy3.6, 0-pypy3.6, pypy3.6
+Architectures: windows-amd64
+Constraints: windowsservercore-1809
+File: Dockerfile.pypy3.6-windowsservercore-1809
