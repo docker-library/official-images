@@ -35,9 +35,8 @@ _request() {
 # Check that /ghost/ redirects to setup (the image is unconfigured by default)
 ghostVersion="$(docker inspect --format '{{range .Config.Env}}{{ . }}{{"\n"}}{{end}}' "$serverImage" | awk -F= '$1 == "GHOST_VERSION" { print $2 }')"
 case "$ghostVersion" in
-	0.*) _request GET '/ghost/' -I |tac|tac| grep -q '^Location: .*setup' ;;
-	1.*) _request GET '/ghost/api/v0.1/authentication/setup/' |tac|tac| grep -q 'status":false' ;;
 	2.*) _request GET '/ghost/api/v2/admin/authentication/setup/' |tac|tac| grep -q 'status":false' ;;
 	3.*) _request GET '/ghost/api/v3/admin/authentication/setup/' |tac|tac| grep -q 'status":false' ;;
+	4.*) _request GET '/ghost/api/v4/admin/authentication/setup/' |tac|tac| grep -q 'status":false' ;;
 	*) echo "no tests for version ${ghostVersion}" && exit 1 ;;
 esac
