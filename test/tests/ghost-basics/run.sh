@@ -30,7 +30,7 @@ _request() {
 }
 
 # Make sure that Ghost is listening and ready
-. "$dir/../../retry.sh" '_request GET / --output /dev/null --fail'
+. "$dir/../../retry.sh" '_request GET / --output /dev/null'
 
 # Check that /ghost/ redirects to setup (the image is unconfigured by default)
 ghostVersion="$(docker inspect --format '{{range .Config.Env}}{{ . }}{{"\n"}}{{end}}' "$serverImage" | awk -F= '$1 == "GHOST_VERSION" { print $2 }')"
