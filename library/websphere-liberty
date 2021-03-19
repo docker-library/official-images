@@ -2,7 +2,7 @@ Maintainers: Chris Potter <crpotter@us.ibm.com> (@crpotter),
              Wendy Raschke <wraschke@us.ibm.com> (@wraschke),
              Arthur De Magalhaes <arthurdm@ca.ibm.com> (@arthurdm)
 GitRepo: https://github.com/WASdev/ci.docker.git
-GitCommit: 854f1d394d8df085f8fcab0508e121375722ac3b
+GitCommit: 63fced9324fd5f4f488fdaeb54c05fb9fd2e1428
 Architectures: amd64, i386, ppc64le, s390x
 
 Tags: kernel
@@ -58,11 +58,3 @@ Tags: 20.0.0.12-full-java11-openj9
 Directory: ga/20.0.0.12/full
 Architectures: amd64, ppc64le, s390x
 File: Dockerfile.ubuntu.adoptopenjdk11
-
-Tags: 20.0.0.9-kernel-java8-ibmjava
-Directory: ga/20.0.0.9/kernel
-File: Dockerfile.ubuntu.ibmjava8
-
-Tags: 20.0.0.9-full-java8-ibmjava
-Directory: ga/20.0.0.9/full
-File: Dockerfile.ubuntu.ibmjava8
