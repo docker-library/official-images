@@ -26,23 +26,32 @@ cid="$(docker run -d \
 	"$image")"
 trap "docker rm -vf $cid $mysqlCid > /dev/null" EXIT
 
-_logs() {
-	docker logs "$cid"
-}
-
 _artisan() {
 	docker exec "$cid" php artisan "$@"
 }
 
+# returns success when all database migrations are finished
+_migrate_done() {
+	local status
+	status="$(_artisan migrate:status)"
+	if grep -q ' Yes ' <<<"$status" && ! grep -q ' No ' <<<"$status"; then
+		return 0
+	fi
+	return 1
+}
+
+# check artisan command for specific output; print and error when not found
 _artisan_test() {
-	match=$1
-	shift
-	output=$(_artisan "$@")
-	echo $output | grep -iq "$match" || echo "'$match' not found in: $output"
+	local match="$1"; shift
+	output="$(_artisan "$@")"
+	if ! grep -iq "$match" <<<"$output"; then
+		echo "Match: '$match' not found in: $output"
+		return 1
+	fi
 }
 
 # Give some time to install
-. "$dir/../../retry.sh" --tries 30 '_logs | grep -iq "Monica v.* is set up, enjoy."'
+. "$dir/../../retry.sh" --tries 30 '_migrate_done'
 
 # Check if installation is complete
 _artisan monica:getversion > /dev/null
