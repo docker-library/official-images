@@ -26,13 +26,25 @@ cid="$(docker run -d \
 	"$image")"
 trap "docker rm -vf $cid $mysqlCid > /dev/null" EXIT
 
+_logs() {
+	docker logs "$cid"
+}
+
 _artisan() {
 	docker exec "$cid" php artisan "$@"
 }
 
+_artisan_test() {
+	match=$1
+	shift
+	output=$(_artisan "$@")
+	echo $output | grep -iq "$match" || echo "'$match' not found in: $output"
+}
+
 # Give some time to install
-. "$dir/../../retry.sh" --tries 30 '_artisan migrate:status' > /dev/null
+. "$dir/../../retry.sh" --tries 30 '_logs | grep -iq "Monica v.* is set up, enjoy."'
 
 # Check if installation is complete
-_artisan monica:getversion
-_artisan schedule:run | grep -iq 'No scheduled commands are ready to run.'
+_artisan monica:getversion > /dev/null
+_artisan_test 'Running scheduled command:' schedule:run
+_artisan_test 'No scheduled commands are ready to run.' schedule:run
