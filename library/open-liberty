@@ -2,7 +2,7 @@ Maintainers: Chris Potter <crpotter@us.ibm.com> (@crpotter),
              Wendy Raschke <wraschke@us.ibm.com> (@wraschke),
              Arthur De Magalhaes <arthurdm@ca.ibm.com> (@arthurdm)
 GitRepo: https://github.com/OpenLiberty/ci.docker.git
-GitCommit: ce388adb04648887154867bba1ca0a6986fa635a
+GitCommit: b1dbcedaacc014f39de1123c5432e33836c5430a
 Architectures: amd64, i386, ppc64le, s390x
 
 Tags: beta
@@ -35,23 +35,23 @@ Directory: releases/latest/full
 Architectures: amd64, ppc64le, s390x
 File: Dockerfile.ubuntu.adoptopenjdk11
 
-Tags: 21.0.0.2-kernel-slim-java8-openj9
-Directory: releases/21.0.0.2/kernel-slim
+Tags: 21.0.0.3-kernel-slim-java8-openj9
+Directory: releases/21.0.0.3/kernel-slim
 Architectures: amd64, ppc64le, s390x
 File: Dockerfile.ubuntu.adoptopenjdk8
 
-Tags: 21.0.0.2-kernel-slim-java11-openj9
-Directory: releases/21.0.0.2/kernel-slim
+Tags: 21.0.0.3-kernel-slim-java11-openj9
+Directory: releases/21.0.0.3/kernel-slim
 Architectures: amd64, ppc64le, s390x
 File: Dockerfile.ubuntu.adoptopenjdk11
 
-Tags: 21.0.0.2-full-java8-openj9
-Directory: releases/21.0.0.2/full
+Tags: 21.0.0.3-full-java8-openj9
+Directory: releases/21.0.0.3/full
 Architectures: amd64, ppc64le, s390x
 File: Dockerfile.ubuntu.adoptopenjdk8
 
-Tags: 21.0.0.2-full-java11-openj9
-Directory: releases/21.0.0.2/full
+Tags: 21.0.0.3-full-java11-openj9
+Directory: releases/21.0.0.3/full
 Architectures: amd64, ppc64le, s390x
 File: Dockerfile.ubuntu.adoptopenjdk11
 
@@ -74,13 +74,3 @@ Tags: 20.0.0.12-full-java11-openj9
 Directory: releases/20.0.0.12/full
 Architectures: amd64, ppc64le, s390x
 File: Dockerfile.ubuntu.adoptopenjdk11
-
-Tags: 20.0.0.9-kernel-java8-openj9
-Directory: releases/20.0.0.9/kernel
-Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.adoptopenjdk8
-
-Tags: 20.0.0.9-full-java8-openj9
-Directory: releases/20.0.0.9/full
-Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.adoptopenjdk8
