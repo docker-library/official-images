@@ -1,167 +1,289 @@
-# this file is generated via https://github.com/docker-library/openjdk/blob/072171f6298a3c360f26de25291a45f082d36bca/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/openjdk/blob/1c120f817997a67599a5970a84689528596b60fe/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/openjdk.git
 
-Tags: 11-ea-9-jre-sid, 11-ea-jre-sid, 11-jre-sid, 11-ea-9-jre, 11-ea-jre, 11-jre
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 02a49915095f254cbf321292ab7a021529686448
-Directory: 11-jre
+Tags: 17-ea-14-jdk-oraclelinux8, 17-ea-14-oraclelinux8, 17-ea-jdk-oraclelinux8, 17-ea-oraclelinux8, 17-jdk-oraclelinux8, 17-oraclelinux8, 17-ea-14-jdk-oracle, 17-ea-14-oracle, 17-ea-jdk-oracle, 17-ea-oracle, 17-jdk-oracle, 17-oracle
+SharedTags: 17-ea-14-jdk, 17-ea-14, 17-ea-jdk, 17-ea, 17-jdk, 17
+Architectures: amd64, arm64v8
+GitCommit: 9089ceb01cb8c5785cee80a66b21f46bcc6b8905
+Directory: 17/jdk/oraclelinux8
 
-Tags: 11-ea-9-jre-slim-sid, 11-ea-jre-slim-sid, 11-jre-slim-sid, 11-ea-9-jre-slim, 11-ea-jre-slim, 11-jre-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 02a49915095f254cbf321292ab7a021529686448
-Directory: 11-jre/slim
+Tags: 17-ea-14-jdk-oraclelinux7, 17-ea-14-oraclelinux7, 17-ea-jdk-oraclelinux7, 17-ea-oraclelinux7, 17-jdk-oraclelinux7, 17-oraclelinux7
+Architectures: amd64, arm64v8
+GitCommit: 9089ceb01cb8c5785cee80a66b21f46bcc6b8905
+Directory: 17/jdk/oraclelinux7
 
-Tags: 11-ea-9-jdk-sid, 11-ea-9-sid, 11-ea-jdk-sid, 11-ea-sid, 11-jdk-sid, 11-sid, 11-ea-9-jdk, 11-ea-9, 11-ea-jdk, 11-ea, 11-jdk, 11
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 02a49915095f254cbf321292ab7a021529686448
-Directory: 11-jdk
+Tags: 17-ea-14-jdk-buster, 17-ea-14-buster, 17-ea-jdk-buster, 17-ea-buster, 17-jdk-buster, 17-buster
+Architectures: amd64, arm64v8
+GitCommit: 9089ceb01cb8c5785cee80a66b21f46bcc6b8905
+Directory: 17/jdk/buster
 
-Tags: 11-ea-9-jdk-slim-sid, 11-ea-9-slim-sid, 11-ea-jdk-slim-sid, 11-ea-slim-sid, 11-jdk-slim-sid, 11-slim-sid, 11-ea-9-jdk-slim, 11-ea-9-slim, 11-ea-jdk-slim, 11-ea-slim, 11-jdk-slim, 11-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 02a49915095f254cbf321292ab7a021529686448
-Directory: 11-jdk/slim
+Tags: 17-ea-14-jdk-slim-buster, 17-ea-14-slim-buster, 17-ea-jdk-slim-buster, 17-ea-slim-buster, 17-jdk-slim-buster, 17-slim-buster, 17-ea-14-jdk-slim, 17-ea-14-slim, 17-ea-jdk-slim, 17-ea-slim, 17-jdk-slim, 17-slim
+Architectures: amd64, arm64v8
+GitCommit: 9089ceb01cb8c5785cee80a66b21f46bcc6b8905
+Directory: 17/jdk/slim-buster
 
-Tags: 10.0.1-10-jre-sid, 10.0.1-jre-sid, 10.0-jre-sid, 10-jre-sid, 10.0.1-10-jre, 10.0.1-jre, 10.0-jre, 10-jre
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 7ab38b79b0a20fcd4a04c58dfa57a9c0b9b24dd4
-Directory: 10-jre
+Tags: 17-ea-10-jdk-alpine3.13, 17-ea-10-alpine3.13, 17-ea-jdk-alpine3.13, 17-ea-alpine3.13, 17-jdk-alpine3.13, 17-alpine3.13, 17-ea-10-jdk-alpine, 17-ea-10-alpine, 17-ea-jdk-alpine, 17-ea-alpine, 17-jdk-alpine, 17-alpine
+Architectures: amd64
+GitCommit: 3487760f41217ce478a1fe4cee88d8edde180a0b
+Directory: 17/jdk/alpine3.13
 
-Tags: 10.0.1-10-jre-slim-sid, 10.0.1-jre-slim-sid, 10.0-jre-slim-sid, 10-jre-slim-sid, 10.0.1-10-jre-slim, 10.0.1-jre-slim, 10.0-jre-slim, 10-jre-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 7ab38b79b0a20fcd4a04c58dfa57a9c0b9b24dd4
-Directory: 10-jre/slim
+Tags: 17-ea-10-jdk-alpine3.12, 17-ea-10-alpine3.12, 17-ea-jdk-alpine3.12, 17-ea-alpine3.12, 17-jdk-alpine3.12, 17-alpine3.12
+Architectures: amd64
+GitCommit: 3487760f41217ce478a1fe4cee88d8edde180a0b
+Directory: 17/jdk/alpine3.12
 
-Tags: 10.0.1-10-jdk-sid, 10.0.1-10-sid, 10.0.1-jdk-sid, 10.0.1-sid, 10.0-jdk-sid, 10.0-sid, 10-jdk-sid, 10-sid, 10.0.1-10-jdk, 10.0.1-10, 10.0.1-jdk, 10.0.1, 10.0-jdk, 10.0, 10-jdk, 10
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 7ab38b79b0a20fcd4a04c58dfa57a9c0b9b24dd4
-Directory: 10-jdk
-
-Tags: 10.0.1-10-jdk-slim-sid, 10.0.1-10-slim-sid, 10.0.1-jdk-slim-sid, 10.0.1-slim-sid, 10.0-jdk-slim-sid, 10.0-slim-sid, 10-jdk-slim-sid, 10-slim-sid, 10.0.1-10-jdk-slim, 10.0.1-10-slim, 10.0.1-jdk-slim, 10.0.1-slim, 10.0-jdk-slim, 10.0-slim, 10-jdk-slim, 10-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 7ab38b79b0a20fcd4a04c58dfa57a9c0b9b24dd4
-Directory: 10-jdk/slim
-
-Tags: 9.0.4-12-jre-sid, 9.0.4-jre-sid, 9.0-jre-sid, 9-jre-sid, 9.0.4-12-jre, 9.0.4-jre, 9.0-jre, 9-jre
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 01ca700a105984964865430aee1251932956925e
-Directory: 9-jre
-
-Tags: 9.0.4-12-jre-slim-sid, 9.0.4-jre-slim-sid, 9.0-jre-slim-sid, 9-jre-slim-sid, 9.0.4-12-jre-slim, 9.0.4-jre-slim, 9.0-jre-slim, 9-jre-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 01ca700a105984964865430aee1251932956925e
-Directory: 9-jre/slim
-
-Tags: 9.0.4-12-jdk-sid, 9.0.4-12-sid, 9.0.4-jdk-sid, 9.0.4-sid, 9.0-jdk-sid, 9.0-sid, 9-jdk-sid, 9-sid, 9.0.4-12-jdk, 9.0.4-12, 9.0.4-jdk, 9.0.4, 9.0-jdk, 9.0, 9-jdk, 9
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 01ca700a105984964865430aee1251932956925e
-Directory: 9-jdk
-
-Tags: 9.0.4-12-jdk-slim-sid, 9.0.4-12-slim-sid, 9.0.4-jdk-slim-sid, 9.0.4-slim-sid, 9.0-jdk-slim-sid, 9.0-slim-sid, 9-jdk-slim-sid, 9-slim-sid, 9.0.4-12-jdk-slim, 9.0.4-12-slim, 9.0.4-jdk-slim, 9.0.4-slim, 9.0-jdk-slim, 9.0-slim, 9-jdk-slim, 9-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 01ca700a105984964865430aee1251932956925e
-Directory: 9-jdk/slim
-
-Tags: 9.0.4-jdk-windowsservercore-ltsc2016, 9.0.4-windowsservercore-ltsc2016, 9.0-jdk-windowsservercore-ltsc2016, 9.0-windowsservercore-ltsc2016, 9-jdk-windowsservercore-ltsc2016, 9-windowsservercore-ltsc2016
-SharedTags: 9.0.4-jdk-windowsservercore, 9.0.4-windowsservercore, 9.0-jdk-windowsservercore, 9.0-windowsservercore, 9-jdk-windowsservercore, 9-windowsservercore
+Tags: 17-ea-14-jdk-windowsservercore-1809, 17-ea-14-windowsservercore-1809, 17-ea-jdk-windowsservercore-1809, 17-ea-windowsservercore-1809, 17-jdk-windowsservercore-1809, 17-windowsservercore-1809
+SharedTags: 17-ea-14-jdk-windowsservercore, 17-ea-14-windowsservercore, 17-ea-jdk-windowsservercore, 17-ea-windowsservercore, 17-jdk-windowsservercore, 17-windowsservercore, 17-ea-14-jdk, 17-ea-14, 17-ea-jdk, 17-ea, 17-jdk, 17
 Architectures: windows-amd64
-GitCommit: 3b9644b8ef34cb59878b9d75a72920b5046dec9f
-Directory: 9-jdk/windows/windowsservercore-ltsc2016
+GitCommit: 9089ceb01cb8c5785cee80a66b21f46bcc6b8905
+Directory: 17/jdk/windows/windowsservercore-1809
+Constraints: windowsservercore-1809
+
+Tags: 17-ea-14-jdk-windowsservercore-ltsc2016, 17-ea-14-windowsservercore-ltsc2016, 17-ea-jdk-windowsservercore-ltsc2016, 17-ea-windowsservercore-ltsc2016, 17-jdk-windowsservercore-ltsc2016, 17-windowsservercore-ltsc2016
+SharedTags: 17-ea-14-jdk-windowsservercore, 17-ea-14-windowsservercore, 17-ea-jdk-windowsservercore, 17-ea-windowsservercore, 17-jdk-windowsservercore, 17-windowsservercore, 17-ea-14-jdk, 17-ea-14, 17-ea-jdk, 17-ea, 17-jdk, 17
+Architectures: windows-amd64
+GitCommit: 9089ceb01cb8c5785cee80a66b21f46bcc6b8905
+Directory: 17/jdk/windows/windowsservercore-ltsc2016
 Constraints: windowsservercore-ltsc2016
 
-Tags: 9.0.4-jdk-windowsservercore-1709, 9.0.4-windowsservercore-1709, 9.0-jdk-windowsservercore-1709, 9.0-windowsservercore-1709, 9-jdk-windowsservercore-1709, 9-windowsservercore-1709
-SharedTags: 9.0.4-jdk-windowsservercore, 9.0.4-windowsservercore, 9.0-jdk-windowsservercore, 9.0-windowsservercore, 9-jdk-windowsservercore, 9-windowsservercore
+Tags: 17-ea-14-jdk-nanoserver-1809, 17-ea-14-nanoserver-1809, 17-ea-jdk-nanoserver-1809, 17-ea-nanoserver-1809, 17-jdk-nanoserver-1809, 17-nanoserver-1809
+SharedTags: 17-ea-14-jdk-nanoserver, 17-ea-14-nanoserver, 17-ea-jdk-nanoserver, 17-ea-nanoserver, 17-jdk-nanoserver, 17-nanoserver
 Architectures: windows-amd64
-GitCommit: 3b9644b8ef34cb59878b9d75a72920b5046dec9f
-Directory: 9-jdk/windows/windowsservercore-1709
-Constraints: windowsservercore-1709
+GitCommit: 9089ceb01cb8c5785cee80a66b21f46bcc6b8905
+Directory: 17/jdk/windows/nanoserver-1809
+Constraints: nanoserver-1809, windowsservercore-1809
 
-Tags: 9.0.4-jdk-nanoserver-sac2016, 9.0.4-nanoserver-sac2016, 9.0-jdk-nanoserver-sac2016, 9.0-nanoserver-sac2016, 9-jdk-nanoserver-sac2016, 9-nanoserver-sac2016
-SharedTags: 9.0.4-jdk-nanoserver, 9.0.4-nanoserver, 9.0-jdk-nanoserver, 9.0-nanoserver, 9-jdk-nanoserver, 9-nanoserver
+Tags: 16-jdk-oraclelinux8, 16-oraclelinux8, jdk-oraclelinux8, oraclelinux8, 16-jdk-oracle, 16-oracle, jdk-oracle, oracle
+SharedTags: 16-jdk, 16, jdk, latest
+Architectures: amd64, arm64v8
+GitCommit: e3e3d529643940779bc694d96d7586986e38ed3b
+Directory: 16/jdk/oraclelinux8
+
+Tags: 16-jdk-oraclelinux7, 16-oraclelinux7, jdk-oraclelinux7, oraclelinux7
+Architectures: amd64, arm64v8
+GitCommit: e3e3d529643940779bc694d96d7586986e38ed3b
+Directory: 16/jdk/oraclelinux7
+
+Tags: 16-jdk-buster, 16-buster, jdk-buster, buster
+Architectures: amd64, arm64v8
+GitCommit: e3e3d529643940779bc694d96d7586986e38ed3b
+Directory: 16/jdk/buster
+
+Tags: 16-jdk-slim-buster, 16-slim-buster, jdk-slim-buster, slim-buster, 16-jdk-slim, 16-slim, jdk-slim, slim
+Architectures: amd64, arm64v8
+GitCommit: e3e3d529643940779bc694d96d7586986e38ed3b
+Directory: 16/jdk/slim-buster
+
+Tags: 16-jdk-windowsservercore-1809, 16-windowsservercore-1809, jdk-windowsservercore-1809, windowsservercore-1809
+SharedTags: 16-jdk-windowsservercore, 16-windowsservercore, jdk-windowsservercore, windowsservercore, 16-jdk, 16, jdk, latest
 Architectures: windows-amd64
-GitCommit: 3b9644b8ef34cb59878b9d75a72920b5046dec9f
-Directory: 9-jdk/windows/nanoserver-sac2016
-Constraints: nanoserver-sac2016
+GitCommit: e3e3d529643940779bc694d96d7586986e38ed3b
+Directory: 16/jdk/windows/windowsservercore-1809
+Constraints: windowsservercore-1809
 
-Tags: 8u162-jre-stretch, 8-jre-stretch, jre-stretch, 8u162-jre, 8-jre, jre
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 1506887e16eba85b37dcf0a5ff8c9c2abe3fa9b7
-Directory: 8-jre
-
-Tags: 8u162-jre-slim-stretch, 8-jre-slim-stretch, jre-slim-stretch, 8u162-jre-slim, 8-jre-slim, jre-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 1506887e16eba85b37dcf0a5ff8c9c2abe3fa9b7
-Directory: 8-jre/slim
-
-Tags: 8u151-jre-alpine3.7, 8-jre-alpine3.7, jre-alpine3.7, 8u151-jre-alpine, 8-jre-alpine, jre-alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: 2598f7123fce9ea870e67f8f9df745b2b49866c0
-Directory: 8-jre/alpine
-
-Tags: 8u162-jdk-stretch, 8u162-stretch, 8-jdk-stretch, 8-stretch, jdk-stretch, stretch, 8u162-jdk, 8u162, 8-jdk, 8, jdk, latest
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 1506887e16eba85b37dcf0a5ff8c9c2abe3fa9b7
-Directory: 8-jdk
-
-Tags: 8u162-jdk-slim-stretch, 8u162-slim-stretch, 8-jdk-slim-stretch, 8-slim-stretch, jdk-slim-stretch, slim-stretch, 8u162-jdk-slim, 8u162-slim, 8-jdk-slim, 8-slim, jdk-slim, slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 1506887e16eba85b37dcf0a5ff8c9c2abe3fa9b7
-Directory: 8-jdk/slim
-
-Tags: 8u151-jdk-alpine3.7, 8u151-alpine3.7, 8-jdk-alpine3.7, 8-alpine3.7, jdk-alpine3.7, alpine3.7, 8u151-jdk-alpine, 8u151-alpine, 8-jdk-alpine, 8-alpine, jdk-alpine, alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: 2598f7123fce9ea870e67f8f9df745b2b49866c0
-Directory: 8-jdk/alpine
-
-Tags: 8u161-jdk-windowsservercore-ltsc2016, 8u161-windowsservercore-ltsc2016, 8-jdk-windowsservercore-ltsc2016, 8-windowsservercore-ltsc2016, jdk-windowsservercore-ltsc2016, windowsservercore-ltsc2016
-SharedTags: 8u161-jdk-windowsservercore, 8u161-windowsservercore, 8-jdk-windowsservercore, 8-windowsservercore, jdk-windowsservercore, windowsservercore
+Tags: 16-jdk-windowsservercore-ltsc2016, 16-windowsservercore-ltsc2016, jdk-windowsservercore-ltsc2016, windowsservercore-ltsc2016
+SharedTags: 16-jdk-windowsservercore, 16-windowsservercore, jdk-windowsservercore, windowsservercore, 16-jdk, 16, jdk, latest
 Architectures: windows-amd64
-GitCommit: 3b9644b8ef34cb59878b9d75a72920b5046dec9f
-Directory: 8-jdk/windows/windowsservercore-ltsc2016
+GitCommit: e3e3d529643940779bc694d96d7586986e38ed3b
+Directory: 16/jdk/windows/windowsservercore-ltsc2016
 Constraints: windowsservercore-ltsc2016
 
-Tags: 8u161-jdk-windowsservercore-1709, 8u161-windowsservercore-1709, 8-jdk-windowsservercore-1709, 8-windowsservercore-1709, jdk-windowsservercore-1709, windowsservercore-1709
-SharedTags: 8u161-jdk-windowsservercore, 8u161-windowsservercore, 8-jdk-windowsservercore, 8-windowsservercore, jdk-windowsservercore, windowsservercore
+Tags: 16-jdk-nanoserver-1809, 16-nanoserver-1809, jdk-nanoserver-1809, nanoserver-1809
+SharedTags: 16-jdk-nanoserver, 16-nanoserver, jdk-nanoserver, nanoserver
 Architectures: windows-amd64
-GitCommit: 3b9644b8ef34cb59878b9d75a72920b5046dec9f
-Directory: 8-jdk/windows/windowsservercore-1709
-Constraints: windowsservercore-1709
+GitCommit: 07973f4c38b7b735e400d3ed7fc5efd8648d6cc1
+Directory: 16/jdk/windows/nanoserver-1809
+Constraints: nanoserver-1809, windowsservercore-1809
 
-Tags: 8u161-jdk-nanoserver-sac2016, 8u161-nanoserver-sac2016, 8-jdk-nanoserver-sac2016, 8-nanoserver-sac2016, jdk-nanoserver-sac2016, nanoserver-sac2016
-SharedTags: 8u161-jdk-nanoserver, 8u161-nanoserver, 8-jdk-nanoserver, 8-nanoserver, jdk-nanoserver, nanoserver
+Tags: 15.0.2-jdk-oraclelinux8, 15.0.2-oraclelinux8, 15.0-jdk-oraclelinux8, 15.0-oraclelinux8, 15-jdk-oraclelinux8, 15-oraclelinux8, 15.0.2-jdk-oracle, 15.0.2-oracle, 15.0-jdk-oracle, 15.0-oracle, 15-jdk-oracle, 15-oracle
+SharedTags: 15.0.2-jdk, 15.0.2, 15.0-jdk, 15.0, 15-jdk, 15
+Architectures: amd64, arm64v8
+GitCommit: 3fec00485b8448f6a9a4c150ad8a770306ca6814
+Directory: 15/jdk/oraclelinux8
+
+Tags: 15.0.2-jdk-oraclelinux7, 15.0.2-oraclelinux7, 15.0-jdk-oraclelinux7, 15.0-oraclelinux7, 15-jdk-oraclelinux7, 15-oraclelinux7
+Architectures: amd64, arm64v8
+GitCommit: 3fec00485b8448f6a9a4c150ad8a770306ca6814
+Directory: 15/jdk/oraclelinux7
+
+Tags: 15.0.2-jdk-buster, 15.0.2-buster, 15.0-jdk-buster, 15.0-buster, 15-jdk-buster, 15-buster
+Architectures: amd64, arm64v8
+GitCommit: 3fec00485b8448f6a9a4c150ad8a770306ca6814
+Directory: 15/jdk/buster
+
+Tags: 15.0.2-jdk-slim-buster, 15.0.2-slim-buster, 15.0-jdk-slim-buster, 15.0-slim-buster, 15-jdk-slim-buster, 15-slim-buster, 15.0.2-jdk-slim, 15.0.2-slim, 15.0-jdk-slim, 15.0-slim, 15-jdk-slim, 15-slim
+Architectures: amd64, arm64v8
+GitCommit: 3fec00485b8448f6a9a4c150ad8a770306ca6814
+Directory: 15/jdk/slim-buster
+
+Tags: 15.0.2-jdk-windowsservercore-1809, 15.0.2-windowsservercore-1809, 15.0-jdk-windowsservercore-1809, 15.0-windowsservercore-1809, 15-jdk-windowsservercore-1809, 15-windowsservercore-1809
+SharedTags: 15.0.2-jdk-windowsservercore, 15.0.2-windowsservercore, 15.0-jdk-windowsservercore, 15.0-windowsservercore, 15-jdk-windowsservercore, 15-windowsservercore, 15.0.2-jdk, 15.0.2, 15.0-jdk, 15.0, 15-jdk, 15
 Architectures: windows-amd64
-GitCommit: 3b9644b8ef34cb59878b9d75a72920b5046dec9f
-Directory: 8-jdk/windows/nanoserver-sac2016
-Constraints: nanoserver-sac2016
+GitCommit: 3fec00485b8448f6a9a4c150ad8a770306ca6814
+Directory: 15/jdk/windows/windowsservercore-1809
+Constraints: windowsservercore-1809
 
-Tags: 7u171-jre-jessie, 7-jre-jessie, 7u171-jre, 7-jre
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 4b6e3ba250722e251ce8b615d3edf8a3196c08c9
-Directory: 7-jre
+Tags: 15.0.2-jdk-windowsservercore-ltsc2016, 15.0.2-windowsservercore-ltsc2016, 15.0-jdk-windowsservercore-ltsc2016, 15.0-windowsservercore-ltsc2016, 15-jdk-windowsservercore-ltsc2016, 15-windowsservercore-ltsc2016
+SharedTags: 15.0.2-jdk-windowsservercore, 15.0.2-windowsservercore, 15.0-jdk-windowsservercore, 15.0-windowsservercore, 15-jdk-windowsservercore, 15-windowsservercore, 15.0.2-jdk, 15.0.2, 15.0-jdk, 15.0, 15-jdk, 15
+Architectures: windows-amd64
+GitCommit: 3fec00485b8448f6a9a4c150ad8a770306ca6814
+Directory: 15/jdk/windows/windowsservercore-ltsc2016
+Constraints: windowsservercore-ltsc2016
 
-Tags: 7u171-jre-slim-jessie, 7-jre-slim-jessie, 7u171-jre-slim, 7-jre-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 4b6e3ba250722e251ce8b615d3edf8a3196c08c9
-Directory: 7-jre/slim
+Tags: 15.0.2-jdk-nanoserver-1809, 15.0.2-nanoserver-1809, 15.0-jdk-nanoserver-1809, 15.0-nanoserver-1809, 15-jdk-nanoserver-1809, 15-nanoserver-1809
+SharedTags: 15.0.2-jdk-nanoserver, 15.0.2-nanoserver, 15.0-jdk-nanoserver, 15.0-nanoserver, 15-jdk-nanoserver, 15-nanoserver
+Architectures: windows-amd64
+GitCommit: 3fec00485b8448f6a9a4c150ad8a770306ca6814
+Directory: 15/jdk/windows/nanoserver-1809
+Constraints: nanoserver-1809, windowsservercore-1809
 
-Tags: 7u151-jre-alpine3.7, 7-jre-alpine3.7, 7u151-jre-alpine, 7-jre-alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: 17d0f9f3411d82622c762163d85cc4a6ba69af95
-Directory: 7-jre/alpine
+Tags: 11.0.10-jdk-oraclelinux8, 11.0.10-oraclelinux8, 11.0-jdk-oraclelinux8, 11.0-oraclelinux8, 11-jdk-oraclelinux8, 11-oraclelinux8, 11.0.10-jdk-oracle, 11.0.10-oracle, 11.0-jdk-oracle, 11.0-oracle, 11-jdk-oracle, 11-oracle
+Architectures: amd64, arm64v8
+GitCommit: a931d588491254902ef85d9d8afd79064cad57eb
+Directory: 11/jdk/oraclelinux8
 
-Tags: 7u171-jdk-jessie, 7u171-jessie, 7-jdk-jessie, 7-jessie, 7u171-jdk, 7u171, 7-jdk, 7
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 4b6e3ba250722e251ce8b615d3edf8a3196c08c9
-Directory: 7-jdk
+Tags: 11.0.10-jdk-oraclelinux7, 11.0.10-oraclelinux7, 11.0-jdk-oraclelinux7, 11.0-oraclelinux7, 11-jdk-oraclelinux7, 11-oraclelinux7
+Architectures: amd64, arm64v8
+GitCommit: a931d588491254902ef85d9d8afd79064cad57eb
+Directory: 11/jdk/oraclelinux7
 
-Tags: 7u171-jdk-slim-jessie, 7u171-slim-jessie, 7-jdk-slim-jessie, 7-slim-jessie, 7u171-jdk-slim, 7u171-slim, 7-jdk-slim, 7-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 4b6e3ba250722e251ce8b615d3edf8a3196c08c9
-Directory: 7-jdk/slim
+Tags: 11.0.10-jdk-buster, 11.0.10-buster, 11.0-jdk-buster, 11.0-buster, 11-jdk-buster, 11-buster
+SharedTags: 11.0.10-jdk, 11.0.10, 11.0-jdk, 11.0, 11-jdk, 11
+Architectures: amd64, arm64v8
+GitCommit: a931d588491254902ef85d9d8afd79064cad57eb
+Directory: 11/jdk/buster
 
-Tags: 7u151-jdk-alpine3.7, 7u151-alpine3.7, 7-jdk-alpine3.7, 7-alpine3.7, 7u151-jdk-alpine, 7u151-alpine, 7-jdk-alpine, 7-alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: 17d0f9f3411d82622c762163d85cc4a6ba69af95
-Directory: 7-jdk/alpine
+Tags: 11.0.10-jdk-slim-buster, 11.0.10-slim-buster, 11.0-jdk-slim-buster, 11.0-slim-buster, 11-jdk-slim-buster, 11-slim-buster, 11.0.10-jdk-slim, 11.0.10-slim, 11.0-jdk-slim, 11.0-slim, 11-jdk-slim, 11-slim
+Architectures: amd64, arm64v8
+GitCommit: a931d588491254902ef85d9d8afd79064cad57eb
+Directory: 11/jdk/slim-buster
+
+Tags: 11.0.10-jdk-windowsservercore-1809, 11.0.10-windowsservercore-1809, 11.0-jdk-windowsservercore-1809, 11.0-windowsservercore-1809, 11-jdk-windowsservercore-1809, 11-windowsservercore-1809
+SharedTags: 11.0.10-jdk-windowsservercore, 11.0.10-windowsservercore, 11.0-jdk-windowsservercore, 11.0-windowsservercore, 11-jdk-windowsservercore, 11-windowsservercore, 11.0.10-jdk, 11.0.10, 11.0-jdk, 11.0, 11-jdk, 11
+Architectures: windows-amd64
+GitCommit: afad1bffdd2669d07c45199bc709037f21fe582b
+Directory: 11/jdk/windows/windowsservercore-1809
+Constraints: windowsservercore-1809
+
+Tags: 11.0.10-jdk-windowsservercore-ltsc2016, 11.0.10-windowsservercore-ltsc2016, 11.0-jdk-windowsservercore-ltsc2016, 11.0-windowsservercore-ltsc2016, 11-jdk-windowsservercore-ltsc2016, 11-windowsservercore-ltsc2016
+SharedTags: 11.0.10-jdk-windowsservercore, 11.0.10-windowsservercore, 11.0-jdk-windowsservercore, 11.0-windowsservercore, 11-jdk-windowsservercore, 11-windowsservercore, 11.0.10-jdk, 11.0.10, 11.0-jdk, 11.0, 11-jdk, 11
+Architectures: windows-amd64
+GitCommit: afad1bffdd2669d07c45199bc709037f21fe582b
+Directory: 11/jdk/windows/windowsservercore-ltsc2016
+Constraints: windowsservercore-ltsc2016
+
+Tags: 11.0.10-jdk-nanoserver-1809, 11.0.10-nanoserver-1809, 11.0-jdk-nanoserver-1809, 11.0-nanoserver-1809, 11-jdk-nanoserver-1809, 11-nanoserver-1809
+SharedTags: 11.0.10-jdk-nanoserver, 11.0.10-nanoserver, 11.0-jdk-nanoserver, 11.0-nanoserver, 11-jdk-nanoserver, 11-nanoserver
+Architectures: windows-amd64
+GitCommit: afad1bffdd2669d07c45199bc709037f21fe582b
+Directory: 11/jdk/windows/nanoserver-1809
+Constraints: nanoserver-1809, windowsservercore-1809
+
+Tags: 11.0.10-jre-buster, 11.0-jre-buster, 11-jre-buster
+SharedTags: 11.0.10-jre, 11.0-jre, 11-jre
+Architectures: amd64, arm64v8
+GitCommit: 4b66dda0a183517f14600278223ff014b541870a
+Directory: 11/jre/buster
+
+Tags: 11.0.10-jre-slim-buster, 11.0-jre-slim-buster, 11-jre-slim-buster, 11.0.10-jre-slim, 11.0-jre-slim, 11-jre-slim
+Architectures: amd64, arm64v8
+GitCommit: 4b66dda0a183517f14600278223ff014b541870a
+Directory: 11/jre/slim-buster
+
+Tags: 11.0.10-jre-windowsservercore-1809, 11.0-jre-windowsservercore-1809, 11-jre-windowsservercore-1809
+SharedTags: 11.0.10-jre-windowsservercore, 11.0-jre-windowsservercore, 11-jre-windowsservercore, 11.0.10-jre, 11.0-jre, 11-jre
+Architectures: windows-amd64
+GitCommit: afad1bffdd2669d07c45199bc709037f21fe582b
+Directory: 11/jre/windows/windowsservercore-1809
+Constraints: windowsservercore-1809
+
+Tags: 11.0.10-jre-windowsservercore-ltsc2016, 11.0-jre-windowsservercore-ltsc2016, 11-jre-windowsservercore-ltsc2016
+SharedTags: 11.0.10-jre-windowsservercore, 11.0-jre-windowsservercore, 11-jre-windowsservercore, 11.0.10-jre, 11.0-jre, 11-jre
+Architectures: windows-amd64
+GitCommit: afad1bffdd2669d07c45199bc709037f21fe582b
+Directory: 11/jre/windows/windowsservercore-ltsc2016
+Constraints: windowsservercore-ltsc2016
+
+Tags: 11.0.10-jre-nanoserver-1809, 11.0-jre-nanoserver-1809, 11-jre-nanoserver-1809
+SharedTags: 11.0.10-jre-nanoserver, 11.0-jre-nanoserver, 11-jre-nanoserver
+Architectures: windows-amd64
+GitCommit: afad1bffdd2669d07c45199bc709037f21fe582b
+Directory: 11/jre/windows/nanoserver-1809
+Constraints: nanoserver-1809, windowsservercore-1809
+
+Tags: 8u282-jdk-oraclelinux8, 8u282-oraclelinux8, 8-jdk-oraclelinux8, 8-oraclelinux8, 8u282-jdk-oracle, 8u282-oracle, 8-jdk-oracle, 8-oracle
+Architectures: amd64
+GitCommit: 3fec00485b8448f6a9a4c150ad8a770306ca6814
+Directory: 8/jdk/oraclelinux8
+
+Tags: 8u282-jdk-oraclelinux7, 8u282-oraclelinux7, 8-jdk-oraclelinux7, 8-oraclelinux7
+Architectures: amd64
+GitCommit: 3fec00485b8448f6a9a4c150ad8a770306ca6814
+Directory: 8/jdk/oraclelinux7
+
+Tags: 8u282-jdk-buster, 8u282-buster, 8-jdk-buster, 8-buster
+SharedTags: 8u282-jdk, 8u282, 8-jdk, 8
+Architectures: amd64
+GitCommit: 3fec00485b8448f6a9a4c150ad8a770306ca6814
+Directory: 8/jdk/buster
+
+Tags: 8u282-jdk-slim-buster, 8u282-slim-buster, 8-jdk-slim-buster, 8-slim-buster, 8u282-jdk-slim, 8u282-slim, 8-jdk-slim, 8-slim
+Architectures: amd64
+GitCommit: 3fec00485b8448f6a9a4c150ad8a770306ca6814
+Directory: 8/jdk/slim-buster
+
+Tags: 8u282-jdk-windowsservercore-1809, 8u282-windowsservercore-1809, 8-jdk-windowsservercore-1809, 8-windowsservercore-1809
+SharedTags: 8u282-jdk-windowsservercore, 8u282-windowsservercore, 8-jdk-windowsservercore, 8-windowsservercore, 8u282-jdk, 8u282, 8-jdk, 8
+Architectures: windows-amd64
+GitCommit: 3fec00485b8448f6a9a4c150ad8a770306ca6814
+Directory: 8/jdk/windows/windowsservercore-1809
+Constraints: windowsservercore-1809
+
+Tags: 8u282-jdk-windowsservercore-ltsc2016, 8u282-windowsservercore-ltsc2016, 8-jdk-windowsservercore-ltsc2016, 8-windowsservercore-ltsc2016
+SharedTags: 8u282-jdk-windowsservercore, 8u282-windowsservercore, 8-jdk-windowsservercore, 8-windowsservercore, 8u282-jdk, 8u282, 8-jdk, 8
+Architectures: windows-amd64
+GitCommit: 3fec00485b8448f6a9a4c150ad8a770306ca6814
+Directory: 8/jdk/windows/windowsservercore-ltsc2016
+Constraints: windowsservercore-ltsc2016
+
+Tags: 8u282-jdk-nanoserver-1809, 8u282-nanoserver-1809, 8-jdk-nanoserver-1809, 8-nanoserver-1809
+SharedTags: 8u282-jdk-nanoserver, 8u282-nanoserver, 8-jdk-nanoserver, 8-nanoserver
+Architectures: windows-amd64
+GitCommit: 3fec00485b8448f6a9a4c150ad8a770306ca6814
+Directory: 8/jdk/windows/nanoserver-1809
+Constraints: nanoserver-1809, windowsservercore-1809
+
+Tags: 8u282-jre-buster, 8-jre-buster
+SharedTags: 8u282-jre, 8-jre
+Architectures: amd64
+GitCommit: 3fec00485b8448f6a9a4c150ad8a770306ca6814
+Directory: 8/jre/buster
+
+Tags: 8u282-jre-slim-buster, 8-jre-slim-buster, 8u282-jre-slim, 8-jre-slim
+Architectures: amd64
+GitCommit: 3fec00485b8448f6a9a4c150ad8a770306ca6814
+Directory: 8/jre/slim-buster
+
+Tags: 8u282-jre-windowsservercore-1809, 8-jre-windowsservercore-1809
+SharedTags: 8u282-jre-windowsservercore, 8-jre-windowsservercore, 8u282-jre, 8-jre
+Architectures: windows-amd64
+GitCommit: 3fec00485b8448f6a9a4c150ad8a770306ca6814
+Directory: 8/jre/windows/windowsservercore-1809
+Constraints: windowsservercore-1809
+
+Tags: 8u282-jre-windowsservercore-ltsc2016, 8-jre-windowsservercore-ltsc2016
+SharedTags: 8u282-jre-windowsservercore, 8-jre-windowsservercore, 8u282-jre, 8-jre
+Architectures: windows-amd64
+GitCommit: 3fec00485b8448f6a9a4c150ad8a770306ca6814
+Directory: 8/jre/windows/windowsservercore-ltsc2016
+Constraints: windowsservercore-ltsc2016
+
+Tags: 8u282-jre-nanoserver-1809, 8-jre-nanoserver-1809
+SharedTags: 8u282-jre-nanoserver, 8-jre-nanoserver
+Architectures: windows-amd64
+GitCommit: 3fec00485b8448f6a9a4c150ad8a770306ca6814
+Directory: 8/jre/windows/nanoserver-1809
+Constraints: nanoserver-1809, windowsservercore-1809

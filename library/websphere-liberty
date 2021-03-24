@@ -1,24 +1,60 @@
-Maintainers: Wendy Raschke <wraschke@us.ibm.com> (@wraschke),
-             Andy Naumann <naumann@us.ibm.com> (@naumanna),
+Maintainers: Chris Potter <crpotter@us.ibm.com> (@crpotter),
+             Wendy Raschke <wraschke@us.ibm.com> (@wraschke),
              Arthur De Magalhaes <arthurdm@ca.ibm.com> (@arthurdm)
 GitRepo: https://github.com/WASdev/ci.docker.git
-GitCommit: 5e7810ada00c061b6fd014384a9979653a7b0129
+GitCommit: 63fced9324fd5f4f488fdaeb54c05fb9fd2e1428
 Architectures: amd64, i386, ppc64le, s390x
 
 Tags: kernel
-Directory: ga/developer/kernel
+Directory: ga/latest/kernel
+File: Dockerfile.ubuntu.ibmjava8
 
-Tags: microProfile
-Directory: ga/developer/microProfile
+Tags: kernel-java11-openj9
+Directory: ga/latest/kernel
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.adoptopenjdk11
 
-Tags: webProfile6
-Directory: ga/developer/webProfile6
+Tags: full, latest
+Directory: ga/latest/full
+File: Dockerfile.ubuntu.ibmjava8
 
-Tags: webProfile7
-Directory: ga/developer/webProfile7
+Tags: full-java11-openj9
+Directory: ga/latest/full
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.adoptopenjdk11
 
-Tags: javaee7, latest
-Directory: ga/developer/javaee7
+Tags: 21.0.0.3-kernel-java8-ibmjava
+Directory: ga/21.0.0.3/kernel
+File: Dockerfile.ubuntu.ibmjava8
 
-Tags: beta
-Directory: beta
+Tags: 21.0.0.3-kernel-java11-openj9
+Directory: ga/21.0.0.3/kernel
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.adoptopenjdk11
+
+Tags: 21.0.0.3-full-java8-ibmjava
+Directory: ga/21.0.0.3/full
+File: Dockerfile.ubuntu.ibmjava8
+
+Tags: 21.0.0.3-full-java11-openj9
+Directory: ga/latest/full
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.adoptopenjdk11
+
+Tags: 20.0.0.12-kernel-java8-ibmjava
+Directory: ga/20.0.0.12/kernel
+File: Dockerfile.ubuntu.ibmjava8
+
+Tags: 20.0.0.12-kernel-java11-openj9
+Directory: ga/20.0.0.12/kernel
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.adoptopenjdk11
+
+Tags: 20.0.0.12-full-java8-ibmjava
+Directory: ga/20.0.0.12/full
+File: Dockerfile.ubuntu.ibmjava8
+
+Tags: 20.0.0.12-full-java11-openj9
+Directory: ga/20.0.0.12/full
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.adoptopenjdk11

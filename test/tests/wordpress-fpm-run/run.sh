@@ -3,43 +3,54 @@ set -eo pipefail
 
 dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
-# since we have curl in the php image, we'll use that
-clientImage="$1"
+image="$1"
 
 # Build a client image with cgi-fcgi for testing
-nginxImage="$("$dir/../image-name.sh" librarytest/wordpress-fpm-run-nginx "$1")"
-"$dir/../docker-build.sh" "$dir" "$nginxImage" <<EOD
-FROM nginx:alpine
-COPY dir/nginx-default.conf /etc/nginx/conf.d/default.conf
-EOD
+clientImage='librarytest/wordpress-fpm-run:fcgi-client'
+docker build -t "$clientImage" - > /dev/null <<'EOF'
+FROM debian:buster-slim
+
+RUN set -x && apt-get update && apt-get install -y --no-install-recommends libfcgi-bin && rm -rf /var/lib/apt/lists/*
+
+ENTRYPOINT ["cgi-fcgi"]
+EOF
 
 mysqlImage='mysql:5.7'
-serverImage="$1"
+# ensure the mysqlImage is ready and available
+if ! docker image inspect "$mysqlImage" &> /dev/null; then
+	docker pull "$mysqlImage" > /dev/null
+fi
 
 # Create an instance of the container-under-test
 mysqlCid="$(docker run -d -e MYSQL_ROOT_PASSWORD="test-$RANDOM-password-$RANDOM-$$" "$mysqlImage")"
 trap "docker rm -vf $mysqlCid > /dev/null" EXIT
-cid="$(docker run -d --link "$mysqlCid":mysql "$serverImage")"
+cid="$(docker run -d --link "$mysqlCid":mysql "$image")"
 trap "docker rm -vf $cid $mysqlCid > /dev/null" EXIT
-nginxCid="$(docker run -d --link "$cid":fpm --volumes-from "$cid" "$nginxImage")"
-trap "docker rm -vf $nginxCid $cid $mysqlCid > /dev/null" EXIT
 
-_request() {
+fcgi-request() {
 	local method="$1"
-	shift
 
-	local url="${1#/}"
-	shift
+	local url="$2"
+	local queryString=
+	if [[ "$url" == *\?* ]]; then
+		queryString="${url#*\?}"
+		url="${url%%\?*}"
+	fi
 
-	docker run --rm --link "$nginxCid":nginx "$clientImage" \
-		curl -fsL -X"$method" "$@" "http://nginx/$url"
+	docker run --rm -i --link "$cid":fpm \
+		-e REQUEST_METHOD="$method" \
+		-e SCRIPT_NAME="$url" \
+		-e SCRIPT_FILENAME=/var/www/html/"${url#/}" \
+		-e QUERY_STRING="$queryString" \
+		"$clientImage" \
+		-bind -connect fpm:9000
 }
 
 # Make sure that PHP-FPM is listening and ready
-. "$dir/../../retry.sh" --tries 30 '_request GET / --output /dev/null'
+. "$dir/../../retry.sh" --tries 30 'fcgi-request GET /index.php' > /dev/null 2>&1
 # (give it a bit long since it won't start until MySQL is started and ready)
 
-# Check that we can request / and that it contains the word "setup" somewhere
+# index.php redirects to wp-admin/install.php, check that it contains the word "setup" somewhere
 # <form id="setup" method="post" action="?step=1"><label class='screen-reader-text' for='language'>Select a default language</label>
-_request GET '/' |tac|tac| grep -iq setup
+fcgi-request GET '/wp-admin/install.php' |tac|tac| grep -iq setup
 # (without "|tac|tac|" we get "broken pipe" since "grep" closes the pipe before "curl" is done reading it)

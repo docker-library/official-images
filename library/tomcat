@@ -1,135 +1,315 @@
-# this file is generated via https://github.com/docker-library/tomcat/blob/fae008566295d1eec89de04385215fdd54eceda5/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/tomcat/blob/9097c32ecc7ceecb0cbda4c20512913643a06b5a/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/tomcat.git
 
-Tags: 7.0.86-jre7, 7.0-jre7, 7-jre7, 7.0.86, 7.0, 7
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: d30e763f14a26d2b3acfbce53ff2e53c6f119eaf
-Directory: 7/jre7
+Tags: 10.0.4-jdk16-openjdk-buster, 10.0-jdk16-openjdk-buster, 10-jdk16-openjdk-buster, 10.0.4-jdk16-openjdk, 10.0-jdk16-openjdk, 10-jdk16-openjdk, 10.0.4-jdk16, 10.0-jdk16, 10-jdk16
+Architectures: amd64, arm64v8
+GitCommit: 9097c32ecc7ceecb0cbda4c20512913643a06b5a
+Directory: 10.0/jdk16/openjdk-buster
 
-Tags: 7.0.86-jre7-slim, 7.0-jre7-slim, 7-jre7-slim, 7.0.86-slim, 7.0-slim, 7-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: d30e763f14a26d2b3acfbce53ff2e53c6f119eaf
-Directory: 7/jre7-slim
+Tags: 10.0.4-jdk16-openjdk-slim-buster, 10.0-jdk16-openjdk-slim-buster, 10-jdk16-openjdk-slim-buster, 10.0.4-jdk16-openjdk-slim, 10.0-jdk16-openjdk-slim, 10-jdk16-openjdk-slim
+Architectures: amd64, arm64v8
+GitCommit: 9097c32ecc7ceecb0cbda4c20512913643a06b5a
+Directory: 10.0/jdk16/openjdk-slim-buster
 
-Tags: 7.0.86-jre7-alpine, 7.0-jre7-alpine, 7-jre7-alpine, 7.0.86-alpine, 7.0-alpine, 7-alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: a46495d93b02266f616208b1599c26a2df0ae7f8
-Directory: 7/jre7-alpine
+Tags: 10.0.4-jdk16-corretto, 10.0-jdk16-corretto, 10-jdk16-corretto
+Architectures: amd64, arm64v8
+GitCommit: 9097c32ecc7ceecb0cbda4c20512913643a06b5a
+Directory: 10.0/jdk16/corretto
 
-Tags: 7.0.86-jre8, 7.0-jre8, 7-jre8
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: d30e763f14a26d2b3acfbce53ff2e53c6f119eaf
-Directory: 7/jre8
+Tags: 10.0.4-jdk15-openjdk-oraclelinux7, 10.0-jdk15-openjdk-oraclelinux7, 10-jdk15-openjdk-oraclelinux7, 10.0.4-jdk15-openjdk-oracle, 10.0-jdk15-openjdk-oracle, 10-jdk15-openjdk-oracle
+Architectures: amd64, arm64v8
+GitCommit: d424ec06ddd6349b97bcbdc2d5907030a35bdc84
+Directory: 10.0/jdk15/openjdk-oraclelinux7
 
-Tags: 7.0.86-jre8-slim, 7.0-jre8-slim, 7-jre8-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: d30e763f14a26d2b3acfbce53ff2e53c6f119eaf
-Directory: 7/jre8-slim
+Tags: 10.0.4-jdk15-openjdk-buster, 10.0-jdk15-openjdk-buster, 10-jdk15-openjdk-buster, 10.0.4-jdk15-openjdk, 10.0-jdk15-openjdk, 10-jdk15-openjdk, 10.0.4-jdk15, 10.0-jdk15, 10-jdk15
+Architectures: amd64, arm64v8
+GitCommit: d424ec06ddd6349b97bcbdc2d5907030a35bdc84
+Directory: 10.0/jdk15/openjdk-buster
 
-Tags: 7.0.86-jre8-alpine, 7.0-jre8-alpine, 7-jre8-alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: a46495d93b02266f616208b1599c26a2df0ae7f8
-Directory: 7/jre8-alpine
+Tags: 10.0.4-jdk15-openjdk-slim-buster, 10.0-jdk15-openjdk-slim-buster, 10-jdk15-openjdk-slim-buster, 10.0.4-jdk15-openjdk-slim, 10.0-jdk15-openjdk-slim, 10-jdk15-openjdk-slim
+Architectures: amd64, arm64v8
+GitCommit: d424ec06ddd6349b97bcbdc2d5907030a35bdc84
+Directory: 10.0/jdk15/openjdk-slim-buster
 
-Tags: 8.0.51-jre7, 8.0-jre7, 8.0.51, 8.0
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: eb611b28ea26adad400611ac46691a0c3dc89c7d
-Directory: 8.0/jre7
+Tags: 10.0.4-jdk15-adoptopenjdk-hotspot, 10.0-jdk15-adoptopenjdk-hotspot, 10-jdk15-adoptopenjdk-hotspot
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 9097c32ecc7ceecb0cbda4c20512913643a06b5a
+Directory: 10.0/jdk15/adoptopenjdk-hotspot
 
-Tags: 8.0.51-jre7-slim, 8.0-jre7-slim, 8.0.51-slim, 8.0-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: eb611b28ea26adad400611ac46691a0c3dc89c7d
-Directory: 8.0/jre7-slim
+Tags: 10.0.4-jdk15-adoptopenjdk-openj9, 10.0-jdk15-adoptopenjdk-openj9, 10-jdk15-adoptopenjdk-openj9
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: 9097c32ecc7ceecb0cbda4c20512913643a06b5a
+Directory: 10.0/jdk15/adoptopenjdk-openj9
 
-Tags: 8.0.51-jre7-alpine, 8.0-jre7-alpine, 8.0.51-alpine, 8.0-alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: 6ab703d29e98ab7a091bee846a58b8288cb81521
-Directory: 8.0/jre7-alpine
+Tags: 10.0.4-jdk15-corretto, 10.0-jdk15-corretto, 10-jdk15-corretto
+Architectures: amd64, arm64v8
+GitCommit: 9097c32ecc7ceecb0cbda4c20512913643a06b5a
+Directory: 10.0/jdk15/corretto
 
-Tags: 8.0.51-jre8, 8.0-jre8
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: eb611b28ea26adad400611ac46691a0c3dc89c7d
-Directory: 8.0/jre8
+Tags: 10.0.4-jdk11-openjdk-buster, 10.0-jdk11-openjdk-buster, 10-jdk11-openjdk-buster, 10.0.4-jdk11-openjdk, 10.0-jdk11-openjdk, 10-jdk11-openjdk, 10.0.4-jdk11, 10.0-jdk11, 10-jdk11, 10.0.4, 10.0, 10
+Architectures: amd64, arm64v8
+GitCommit: d424ec06ddd6349b97bcbdc2d5907030a35bdc84
+Directory: 10.0/jdk11/openjdk-buster
 
-Tags: 8.0.51-jre8-slim, 8.0-jre8-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: eb611b28ea26adad400611ac46691a0c3dc89c7d
-Directory: 8.0/jre8-slim
+Tags: 10.0.4-jdk11-openjdk-slim-buster, 10.0-jdk11-openjdk-slim-buster, 10-jdk11-openjdk-slim-buster, 10.0.4-jdk11-openjdk-slim, 10.0-jdk11-openjdk-slim, 10-jdk11-openjdk-slim
+Architectures: amd64, arm64v8
+GitCommit: d424ec06ddd6349b97bcbdc2d5907030a35bdc84
+Directory: 10.0/jdk11/openjdk-slim-buster
 
-Tags: 8.0.51-jre8-alpine, 8.0-jre8-alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: 6ab703d29e98ab7a091bee846a58b8288cb81521
-Directory: 8.0/jre8-alpine
+Tags: 10.0.4-jdk11-adoptopenjdk-hotspot, 10.0-jdk11-adoptopenjdk-hotspot, 10-jdk11-adoptopenjdk-hotspot
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: d424ec06ddd6349b97bcbdc2d5907030a35bdc84
+Directory: 10.0/jdk11/adoptopenjdk-hotspot
 
-Tags: 8.5.30-jre8, 8.5-jre8, 8-jre8, jre8, 8.5.30, 8.5, 8, latest
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: e8a6bec69c82f8d55c5c2c17021a62b36d8bfb19
-Directory: 8.5/jre8
+Tags: 10.0.4-jdk11-adoptopenjdk-openj9, 10.0-jdk11-adoptopenjdk-openj9, 10-jdk11-adoptopenjdk-openj9
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: d424ec06ddd6349b97bcbdc2d5907030a35bdc84
+Directory: 10.0/jdk11/adoptopenjdk-openj9
 
-Tags: 8.5.30-jre8-slim, 8.5-jre8-slim, 8-jre8-slim, jre8-slim, 8.5.30-slim, 8.5-slim, 8-slim, slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: e8a6bec69c82f8d55c5c2c17021a62b36d8bfb19
-Directory: 8.5/jre8-slim
+Tags: 10.0.4-jdk11-corretto, 10.0-jdk11-corretto, 10-jdk11-corretto
+Architectures: amd64, arm64v8
+GitCommit: d424ec06ddd6349b97bcbdc2d5907030a35bdc84
+Directory: 10.0/jdk11/corretto
 
-Tags: 8.5.30-jre8-alpine, 8.5-jre8-alpine, 8-jre8-alpine, jre8-alpine, 8.5.30-alpine, 8.5-alpine, 8-alpine, alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: e8a6bec69c82f8d55c5c2c17021a62b36d8bfb19
-Directory: 8.5/jre8-alpine
+Tags: 10.0.4-jdk8-openjdk-buster, 10.0-jdk8-openjdk-buster, 10-jdk8-openjdk-buster, 10.0.4-jdk8-openjdk, 10.0-jdk8-openjdk, 10-jdk8-openjdk, 10.0.4-jdk8, 10.0-jdk8, 10-jdk8
+Architectures: amd64
+GitCommit: d424ec06ddd6349b97bcbdc2d5907030a35bdc84
+Directory: 10.0/jdk8/openjdk-buster
 
-Tags: 8.5.30-jre9, 8.5-jre9, 8-jre9, jre9
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: e8a6bec69c82f8d55c5c2c17021a62b36d8bfb19
-Directory: 8.5/jre9
+Tags: 10.0.4-jdk8-openjdk-slim-buster, 10.0-jdk8-openjdk-slim-buster, 10-jdk8-openjdk-slim-buster, 10.0.4-jdk8-openjdk-slim, 10.0-jdk8-openjdk-slim, 10-jdk8-openjdk-slim
+Architectures: amd64
+GitCommit: d424ec06ddd6349b97bcbdc2d5907030a35bdc84
+Directory: 10.0/jdk8/openjdk-slim-buster
 
-Tags: 8.5.30-jre9-slim, 8.5-jre9-slim, 8-jre9-slim, jre9-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: e8a6bec69c82f8d55c5c2c17021a62b36d8bfb19
-Directory: 8.5/jre9-slim
+Tags: 10.0.4-jdk8-adoptopenjdk-hotspot, 10.0-jdk8-adoptopenjdk-hotspot, 10-jdk8-adoptopenjdk-hotspot
+Architectures: amd64, ppc64le, s390x
+GitCommit: d424ec06ddd6349b97bcbdc2d5907030a35bdc84
+Directory: 10.0/jdk8/adoptopenjdk-hotspot
 
-Tags: 8.5.30-jre10, 8.5-jre10, 8-jre10, jre10
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: e8a6bec69c82f8d55c5c2c17021a62b36d8bfb19
-Directory: 8.5/jre10
+Tags: 10.0.4-jdk8-adoptopenjdk-openj9, 10.0-jdk8-adoptopenjdk-openj9, 10-jdk8-adoptopenjdk-openj9
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: d424ec06ddd6349b97bcbdc2d5907030a35bdc84
+Directory: 10.0/jdk8/adoptopenjdk-openj9
 
-Tags: 8.5.30-jre10-slim, 8.5-jre10-slim, 8-jre10-slim, jre10-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: e8a6bec69c82f8d55c5c2c17021a62b36d8bfb19
-Directory: 8.5/jre10-slim
+Tags: 10.0.4-jdk8-corretto, 10.0-jdk8-corretto, 10-jdk8-corretto
+Architectures: amd64, arm64v8
+GitCommit: d424ec06ddd6349b97bcbdc2d5907030a35bdc84
+Directory: 10.0/jdk8/corretto
 
-Tags: 9.0.7-jre8, 9.0-jre8, 9-jre8
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: e8a6bec69c82f8d55c5c2c17021a62b36d8bfb19
-Directory: 9.0/jre8
+Tags: 9.0.44-jdk16-openjdk-buster, 9.0-jdk16-openjdk-buster, 9-jdk16-openjdk-buster, jdk16-openjdk-buster, 9.0.44-jdk16-openjdk, 9.0-jdk16-openjdk, 9-jdk16-openjdk, jdk16-openjdk, 9.0.44-jdk16, 9.0-jdk16, 9-jdk16, jdk16
+Architectures: amd64, arm64v8
+GitCommit: 9097c32ecc7ceecb0cbda4c20512913643a06b5a
+Directory: 9.0/jdk16/openjdk-buster
 
-Tags: 9.0.7-jre8-slim, 9.0-jre8-slim, 9-jre8-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: e8a6bec69c82f8d55c5c2c17021a62b36d8bfb19
-Directory: 9.0/jre8-slim
+Tags: 9.0.44-jdk16-openjdk-slim-buster, 9.0-jdk16-openjdk-slim-buster, 9-jdk16-openjdk-slim-buster, jdk16-openjdk-slim-buster, 9.0.44-jdk16-openjdk-slim, 9.0-jdk16-openjdk-slim, 9-jdk16-openjdk-slim, jdk16-openjdk-slim
+Architectures: amd64, arm64v8
+GitCommit: 9097c32ecc7ceecb0cbda4c20512913643a06b5a
+Directory: 9.0/jdk16/openjdk-slim-buster
 
-Tags: 9.0.7-jre8-alpine, 9.0-jre8-alpine, 9-jre8-alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: e8a6bec69c82f8d55c5c2c17021a62b36d8bfb19
-Directory: 9.0/jre8-alpine
+Tags: 9.0.44-jdk16-corretto, 9.0-jdk16-corretto, 9-jdk16-corretto, jdk16-corretto
+Architectures: amd64, arm64v8
+GitCommit: 9097c32ecc7ceecb0cbda4c20512913643a06b5a
+Directory: 9.0/jdk16/corretto
 
-Tags: 9.0.7-jre9, 9.0-jre9, 9-jre9, 9.0.7, 9.0, 9
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: e8a6bec69c82f8d55c5c2c17021a62b36d8bfb19
-Directory: 9.0/jre9
+Tags: 9.0.44-jdk15-openjdk-oraclelinux7, 9.0-jdk15-openjdk-oraclelinux7, 9-jdk15-openjdk-oraclelinux7, jdk15-openjdk-oraclelinux7, 9.0.44-jdk15-openjdk-oracle, 9.0-jdk15-openjdk-oracle, 9-jdk15-openjdk-oracle, jdk15-openjdk-oracle
+Architectures: amd64, arm64v8
+GitCommit: 255c4ab938a4528ca3f0c16a934dd8b4fdc3b818
+Directory: 9.0/jdk15/openjdk-oraclelinux7
 
-Tags: 9.0.7-jre9-slim, 9.0-jre9-slim, 9-jre9-slim, 9.0.7-slim, 9.0-slim, 9-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: e8a6bec69c82f8d55c5c2c17021a62b36d8bfb19
-Directory: 9.0/jre9-slim
+Tags: 9.0.44-jdk15-openjdk-buster, 9.0-jdk15-openjdk-buster, 9-jdk15-openjdk-buster, jdk15-openjdk-buster, 9.0.44-jdk15-openjdk, 9.0-jdk15-openjdk, 9-jdk15-openjdk, jdk15-openjdk, 9.0.44-jdk15, 9.0-jdk15, 9-jdk15, jdk15
+Architectures: amd64, arm64v8
+GitCommit: 255c4ab938a4528ca3f0c16a934dd8b4fdc3b818
+Directory: 9.0/jdk15/openjdk-buster
 
-Tags: 9.0.7-jre10, 9.0-jre10, 9-jre10
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: e8a6bec69c82f8d55c5c2c17021a62b36d8bfb19
-Directory: 9.0/jre10
+Tags: 9.0.44-jdk15-openjdk-slim-buster, 9.0-jdk15-openjdk-slim-buster, 9-jdk15-openjdk-slim-buster, jdk15-openjdk-slim-buster, 9.0.44-jdk15-openjdk-slim, 9.0-jdk15-openjdk-slim, 9-jdk15-openjdk-slim, jdk15-openjdk-slim
+Architectures: amd64, arm64v8
+GitCommit: 255c4ab938a4528ca3f0c16a934dd8b4fdc3b818
+Directory: 9.0/jdk15/openjdk-slim-buster
 
-Tags: 9.0.7-jre10-slim, 9.0-jre10-slim, 9-jre10-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: e8a6bec69c82f8d55c5c2c17021a62b36d8bfb19
-Directory: 9.0/jre10-slim
+Tags: 9.0.44-jdk15-adoptopenjdk-hotspot, 9.0-jdk15-adoptopenjdk-hotspot, 9-jdk15-adoptopenjdk-hotspot, jdk15-adoptopenjdk-hotspot
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 9097c32ecc7ceecb0cbda4c20512913643a06b5a
+Directory: 9.0/jdk15/adoptopenjdk-hotspot
+
+Tags: 9.0.44-jdk15-adoptopenjdk-openj9, 9.0-jdk15-adoptopenjdk-openj9, 9-jdk15-adoptopenjdk-openj9, jdk15-adoptopenjdk-openj9
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: 9097c32ecc7ceecb0cbda4c20512913643a06b5a
+Directory: 9.0/jdk15/adoptopenjdk-openj9
+
+Tags: 9.0.44-jdk15-corretto, 9.0-jdk15-corretto, 9-jdk15-corretto, jdk15-corretto
+Architectures: amd64, arm64v8
+GitCommit: 9097c32ecc7ceecb0cbda4c20512913643a06b5a
+Directory: 9.0/jdk15/corretto
+
+Tags: 9.0.44-jdk11-openjdk-buster, 9.0-jdk11-openjdk-buster, 9-jdk11-openjdk-buster, jdk11-openjdk-buster, 9.0.44-jdk11-openjdk, 9.0-jdk11-openjdk, 9-jdk11-openjdk, jdk11-openjdk, 9.0.44-jdk11, 9.0-jdk11, 9-jdk11, jdk11, 9.0.44, 9.0, 9, latest
+Architectures: amd64, arm64v8
+GitCommit: 255c4ab938a4528ca3f0c16a934dd8b4fdc3b818
+Directory: 9.0/jdk11/openjdk-buster
+
+Tags: 9.0.44-jdk11-openjdk-slim-buster, 9.0-jdk11-openjdk-slim-buster, 9-jdk11-openjdk-slim-buster, jdk11-openjdk-slim-buster, 9.0.44-jdk11-openjdk-slim, 9.0-jdk11-openjdk-slim, 9-jdk11-openjdk-slim, jdk11-openjdk-slim
+Architectures: amd64, arm64v8
+GitCommit: 255c4ab938a4528ca3f0c16a934dd8b4fdc3b818
+Directory: 9.0/jdk11/openjdk-slim-buster
+
+Tags: 9.0.44-jdk11-adoptopenjdk-hotspot, 9.0-jdk11-adoptopenjdk-hotspot, 9-jdk11-adoptopenjdk-hotspot, jdk11-adoptopenjdk-hotspot
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 255c4ab938a4528ca3f0c16a934dd8b4fdc3b818
+Directory: 9.0/jdk11/adoptopenjdk-hotspot
+
+Tags: 9.0.44-jdk11-adoptopenjdk-openj9, 9.0-jdk11-adoptopenjdk-openj9, 9-jdk11-adoptopenjdk-openj9, jdk11-adoptopenjdk-openj9
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: 255c4ab938a4528ca3f0c16a934dd8b4fdc3b818
+Directory: 9.0/jdk11/adoptopenjdk-openj9
+
+Tags: 9.0.44-jdk11-corretto, 9.0-jdk11-corretto, 9-jdk11-corretto, jdk11-corretto
+Architectures: amd64, arm64v8
+GitCommit: 255c4ab938a4528ca3f0c16a934dd8b4fdc3b818
+Directory: 9.0/jdk11/corretto
+
+Tags: 9.0.44-jdk8-openjdk-buster, 9.0-jdk8-openjdk-buster, 9-jdk8-openjdk-buster, jdk8-openjdk-buster, 9.0.44-jdk8-openjdk, 9.0-jdk8-openjdk, 9-jdk8-openjdk, jdk8-openjdk, 9.0.44-jdk8, 9.0-jdk8, 9-jdk8, jdk8
+Architectures: amd64
+GitCommit: 255c4ab938a4528ca3f0c16a934dd8b4fdc3b818
+Directory: 9.0/jdk8/openjdk-buster
+
+Tags: 9.0.44-jdk8-openjdk-slim-buster, 9.0-jdk8-openjdk-slim-buster, 9-jdk8-openjdk-slim-buster, jdk8-openjdk-slim-buster, 9.0.44-jdk8-openjdk-slim, 9.0-jdk8-openjdk-slim, 9-jdk8-openjdk-slim, jdk8-openjdk-slim
+Architectures: amd64
+GitCommit: 255c4ab938a4528ca3f0c16a934dd8b4fdc3b818
+Directory: 9.0/jdk8/openjdk-slim-buster
+
+Tags: 9.0.44-jdk8-adoptopenjdk-hotspot, 9.0-jdk8-adoptopenjdk-hotspot, 9-jdk8-adoptopenjdk-hotspot, jdk8-adoptopenjdk-hotspot
+Architectures: amd64, ppc64le, s390x
+GitCommit: 255c4ab938a4528ca3f0c16a934dd8b4fdc3b818
+Directory: 9.0/jdk8/adoptopenjdk-hotspot
+
+Tags: 9.0.44-jdk8-adoptopenjdk-openj9, 9.0-jdk8-adoptopenjdk-openj9, 9-jdk8-adoptopenjdk-openj9, jdk8-adoptopenjdk-openj9
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: 255c4ab938a4528ca3f0c16a934dd8b4fdc3b818
+Directory: 9.0/jdk8/adoptopenjdk-openj9
+
+Tags: 9.0.44-jdk8-corretto, 9.0-jdk8-corretto, 9-jdk8-corretto, jdk8-corretto
+Architectures: amd64, arm64v8
+GitCommit: 255c4ab938a4528ca3f0c16a934dd8b4fdc3b818
+Directory: 9.0/jdk8/corretto
+
+Tags: 8.5.64-jdk16-openjdk-buster, 8.5-jdk16-openjdk-buster, 8-jdk16-openjdk-buster, 8.5.64-jdk16-openjdk, 8.5-jdk16-openjdk, 8-jdk16-openjdk, 8.5.64-jdk16, 8.5-jdk16, 8-jdk16
+Architectures: amd64, arm64v8
+GitCommit: 9097c32ecc7ceecb0cbda4c20512913643a06b5a
+Directory: 8.5/jdk16/openjdk-buster
+
+Tags: 8.5.64-jdk16-openjdk-slim-buster, 8.5-jdk16-openjdk-slim-buster, 8-jdk16-openjdk-slim-buster, 8.5.64-jdk16-openjdk-slim, 8.5-jdk16-openjdk-slim, 8-jdk16-openjdk-slim
+Architectures: amd64, arm64v8
+GitCommit: 9097c32ecc7ceecb0cbda4c20512913643a06b5a
+Directory: 8.5/jdk16/openjdk-slim-buster
+
+Tags: 8.5.64-jdk16-corretto, 8.5-jdk16-corretto, 8-jdk16-corretto
+Architectures: amd64, arm64v8
+GitCommit: 9097c32ecc7ceecb0cbda4c20512913643a06b5a
+Directory: 8.5/jdk16/corretto
+
+Tags: 8.5.64-jdk15-openjdk-oraclelinux7, 8.5-jdk15-openjdk-oraclelinux7, 8-jdk15-openjdk-oraclelinux7, 8.5.64-jdk15-openjdk-oracle, 8.5-jdk15-openjdk-oracle, 8-jdk15-openjdk-oracle
+Architectures: amd64, arm64v8
+GitCommit: 6d492f551d57461b8a385028ce3c7942e5eab4d9
+Directory: 8.5/jdk15/openjdk-oraclelinux7
+
+Tags: 8.5.64-jdk15-openjdk-buster, 8.5-jdk15-openjdk-buster, 8-jdk15-openjdk-buster, 8.5.64-jdk15-openjdk, 8.5-jdk15-openjdk, 8-jdk15-openjdk, 8.5.64-jdk15, 8.5-jdk15, 8-jdk15
+Architectures: amd64, arm64v8
+GitCommit: 6d492f551d57461b8a385028ce3c7942e5eab4d9
+Directory: 8.5/jdk15/openjdk-buster
+
+Tags: 8.5.64-jdk15-openjdk-slim-buster, 8.5-jdk15-openjdk-slim-buster, 8-jdk15-openjdk-slim-buster, 8.5.64-jdk15-openjdk-slim, 8.5-jdk15-openjdk-slim, 8-jdk15-openjdk-slim
+Architectures: amd64, arm64v8
+GitCommit: 6d492f551d57461b8a385028ce3c7942e5eab4d9
+Directory: 8.5/jdk15/openjdk-slim-buster
+
+Tags: 8.5.64-jdk15-adoptopenjdk-hotspot, 8.5-jdk15-adoptopenjdk-hotspot, 8-jdk15-adoptopenjdk-hotspot
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 9097c32ecc7ceecb0cbda4c20512913643a06b5a
+Directory: 8.5/jdk15/adoptopenjdk-hotspot
+
+Tags: 8.5.64-jdk15-adoptopenjdk-openj9, 8.5-jdk15-adoptopenjdk-openj9, 8-jdk15-adoptopenjdk-openj9
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: 9097c32ecc7ceecb0cbda4c20512913643a06b5a
+Directory: 8.5/jdk15/adoptopenjdk-openj9
+
+Tags: 8.5.64-jdk15-corretto, 8.5-jdk15-corretto, 8-jdk15-corretto
+Architectures: amd64, arm64v8
+GitCommit: 9097c32ecc7ceecb0cbda4c20512913643a06b5a
+Directory: 8.5/jdk15/corretto
+
+Tags: 8.5.64-jdk11-openjdk-buster, 8.5-jdk11-openjdk-buster, 8-jdk11-openjdk-buster, 8.5.64-jdk11-openjdk, 8.5-jdk11-openjdk, 8-jdk11-openjdk, 8.5.64-jdk11, 8.5-jdk11, 8-jdk11
+Architectures: amd64, arm64v8
+GitCommit: 6d492f551d57461b8a385028ce3c7942e5eab4d9
+Directory: 8.5/jdk11/openjdk-buster
+
+Tags: 8.5.64-jdk11-openjdk-slim-buster, 8.5-jdk11-openjdk-slim-buster, 8-jdk11-openjdk-slim-buster, 8.5.64-jdk11-openjdk-slim, 8.5-jdk11-openjdk-slim, 8-jdk11-openjdk-slim
+Architectures: amd64, arm64v8
+GitCommit: 6d492f551d57461b8a385028ce3c7942e5eab4d9
+Directory: 8.5/jdk11/openjdk-slim-buster
+
+Tags: 8.5.64-jdk11-adoptopenjdk-hotspot, 8.5-jdk11-adoptopenjdk-hotspot, 8-jdk11-adoptopenjdk-hotspot
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 6d492f551d57461b8a385028ce3c7942e5eab4d9
+Directory: 8.5/jdk11/adoptopenjdk-hotspot
+
+Tags: 8.5.64-jdk11-adoptopenjdk-openj9, 8.5-jdk11-adoptopenjdk-openj9, 8-jdk11-adoptopenjdk-openj9
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: 6d492f551d57461b8a385028ce3c7942e5eab4d9
+Directory: 8.5/jdk11/adoptopenjdk-openj9
+
+Tags: 8.5.64-jdk11-corretto, 8.5-jdk11-corretto, 8-jdk11-corretto
+Architectures: amd64, arm64v8
+GitCommit: 6d492f551d57461b8a385028ce3c7942e5eab4d9
+Directory: 8.5/jdk11/corretto
+
+Tags: 8.5.64-jdk8-openjdk-buster, 8.5-jdk8-openjdk-buster, 8-jdk8-openjdk-buster, 8.5.64-jdk8-openjdk, 8.5-jdk8-openjdk, 8-jdk8-openjdk, 8.5.64-jdk8, 8.5-jdk8, 8-jdk8, 8.5.64, 8.5, 8
+Architectures: amd64
+GitCommit: 6d492f551d57461b8a385028ce3c7942e5eab4d9
+Directory: 8.5/jdk8/openjdk-buster
+
+Tags: 8.5.64-jdk8-openjdk-slim-buster, 8.5-jdk8-openjdk-slim-buster, 8-jdk8-openjdk-slim-buster, 8.5.64-jdk8-openjdk-slim, 8.5-jdk8-openjdk-slim, 8-jdk8-openjdk-slim
+Architectures: amd64
+GitCommit: 6d492f551d57461b8a385028ce3c7942e5eab4d9
+Directory: 8.5/jdk8/openjdk-slim-buster
+
+Tags: 8.5.64-jdk8-adoptopenjdk-hotspot, 8.5-jdk8-adoptopenjdk-hotspot, 8-jdk8-adoptopenjdk-hotspot
+Architectures: amd64, ppc64le, s390x
+GitCommit: 6d492f551d57461b8a385028ce3c7942e5eab4d9
+Directory: 8.5/jdk8/adoptopenjdk-hotspot
+
+Tags: 8.5.64-jdk8-adoptopenjdk-openj9, 8.5-jdk8-adoptopenjdk-openj9, 8-jdk8-adoptopenjdk-openj9
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: 6d492f551d57461b8a385028ce3c7942e5eab4d9
+Directory: 8.5/jdk8/adoptopenjdk-openj9
+
+Tags: 8.5.64-jdk8-corretto, 8.5-jdk8-corretto, 8-jdk8-corretto
+Architectures: amd64, arm64v8
+GitCommit: 6d492f551d57461b8a385028ce3c7942e5eab4d9
+Directory: 8.5/jdk8/corretto
+
+Tags: 7.0.108-jdk8-openjdk-buster, 7.0-jdk8-openjdk-buster, 7-jdk8-openjdk-buster, 7.0.108-jdk8-openjdk, 7.0-jdk8-openjdk, 7-jdk8-openjdk, 7.0.108-jdk8, 7.0-jdk8, 7-jdk8, 7.0.108, 7.0, 7
+Architectures: amd64
+GitCommit: 8b00f26319b7daa59980d92c35d359ef7bc1db87
+Directory: 7/jdk8/openjdk-buster
+
+Tags: 7.0.108-jdk8-openjdk-slim-buster, 7.0-jdk8-openjdk-slim-buster, 7-jdk8-openjdk-slim-buster, 7.0.108-jdk8-openjdk-slim, 7.0-jdk8-openjdk-slim, 7-jdk8-openjdk-slim
+Architectures: amd64
+GitCommit: 8b00f26319b7daa59980d92c35d359ef7bc1db87
+Directory: 7/jdk8/openjdk-slim-buster
+
+Tags: 7.0.108-jdk8-adoptopenjdk-hotspot, 7.0-jdk8-adoptopenjdk-hotspot, 7-jdk8-adoptopenjdk-hotspot
+Architectures: amd64, ppc64le, s390x
+GitCommit: 8b00f26319b7daa59980d92c35d359ef7bc1db87
+Directory: 7/jdk8/adoptopenjdk-hotspot
+
+Tags: 7.0.108-jdk8-adoptopenjdk-openj9, 7.0-jdk8-adoptopenjdk-openj9, 7-jdk8-adoptopenjdk-openj9
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: 8b00f26319b7daa59980d92c35d359ef7bc1db87
+Directory: 7/jdk8/adoptopenjdk-openj9
+
+Tags: 7.0.108-jdk8-corretto, 7.0-jdk8-corretto, 7-jdk8-corretto
+Architectures: amd64, arm64v8
+GitCommit: 8b00f26319b7daa59980d92c35d359ef7bc1db87
+Directory: 7/jdk8/corretto

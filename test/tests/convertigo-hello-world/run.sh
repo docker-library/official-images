@@ -3,12 +3,14 @@ set -eo pipefail
 
 dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
-image="$1"
-
-# since we have curl in the convertigo image, we'll use that
-clientImage="$1"
-
 serverImage="$1"
+
+# Use a client image with curl for testing
+clientImage='buildpack-deps:buster-curl'
+# ensure the clientImage is ready and available
+if ! docker image inspect "$clientImage" &> /dev/null; then
+	docker pull "$clientImage" > /dev/null
+fi
 
 # Create an instance of the container-under-test
 cid="$(docker run -d "$serverImage")"
@@ -18,7 +20,9 @@ _request() {
 	local url="${1#/}"
 	shift
 
-	docker run --rm --link "$cid":convertigo "$clientImage" \
+	docker run --rm \
+		--link "$cid":convertigo \
+		"$clientImage" \
 		curl -s "$@" "http://convertigo:28080/$url"
 }
 

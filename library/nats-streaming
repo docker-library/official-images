@@ -1,28 +1,30 @@
 Maintainers: Ivan Kozlovic <ivan@synadia.com> (@kozlovic)
 GitRepo: https://github.com/nats-io/nats-streaming-docker.git
-GitCommit: eaff03b1e4f88d0eb0eb476a8d1b36cac6fdf8df
+GitCommit: 027bb1517c3ad002b118766a23611597978dc159
 
-Tags: 0.9.2-linux, linux
-SharedTags: 0.9.2, latest
+Tags: 0.21.1-alpine3.13, 0.21-alpine3.13, alpine3.13, 0.21.1-alpine, 0.21-alpine, alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8
-amd64-GitCommit: eaff03b1e4f88d0eb0eb476a8d1b36cac6fdf8df
-amd64-Directory: amd64
-arm32v6-GitCommit: eaff03b1e4f88d0eb0eb476a8d1b36cac6fdf8df
-arm32v6-Directory: arm32v6
-arm32v7-GitCommit: eaff03b1e4f88d0eb0eb476a8d1b36cac6fdf8df
-arm32v7-Directory: arm32v7
-arm64v8-GitCommit: eaff03b1e4f88d0eb0eb476a8d1b36cac6fdf8df
-arm64v8-Directory: arm64v8
+Directory: 0.21.1/alpine3.13
 
-Tags: 0.9.2-nanoserver, nanoserver
-SharedTags: 0.9.2, latest
-Architectures: windows-amd64
-windows-amd64-GitCommit: eaff03b1e4f88d0eb0eb476a8d1b36cac6fdf8df
-windows-amd64-Directory: windows/nanoserver
-Constraints: nanoserver
+Tags: 0.21.1-scratch, 0.21-scratch, scratch, 0.21.1-linux, 0.21-linux, linux
+SharedTags: 0.21.1, 0.21, latest
+Architectures: amd64, arm32v6, arm32v7, arm64v8
+Directory: 0.21.1/scratch
 
-Tags: 0.9.2-windowsservercore, windowsservercore
+Tags: 0.21.1-windowsservercore-1809, 0.21-windowsservercore-1809, windowsservercore-1809
+SharedTags: 0.21.1-windowsservercore, 0.21-windowsservercore, windowsservercore
 Architectures: windows-amd64
-windows-amd64-GitCommit: eaff03b1e4f88d0eb0eb476a8d1b36cac6fdf8df
-windows-amd64-Directory: windows/windowsservercore
-Constraints: windowsservercore
+Directory: 0.21.1/windowsservercore-1809
+Constraints: windowsservercore-1809
+
+Tags: 0.21.1-nanoserver-1809, 0.21-nanoserver-1809, nanoserver-1809
+SharedTags: 0.21.1-nanoserver, 0.21-nanoserver, nanoserver, 0.21.1, 0.21, latest
+Architectures: windows-amd64
+Directory: 0.21.1/nanoserver-1809
+Constraints: nanoserver-1809, windowsservercore-1809
+
+Tags: 0.21.1-windowsservercore-ltsc2016, 0.21-windowsservercore-ltsc2016, windowsservercore-ltsc2016
+SharedTags: 0.21.1-windowsservercore, 0.21-windowsservercore, windowsservercore
+Architectures: windows-amd64
+Directory: 0.21.1/windowsservercore-ltsc2016
+Constraints: windowsservercore-ltsc2016

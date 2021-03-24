@@ -1,50 +1,59 @@
 Maintainers: Keegan Witt <keeganwitt@gmail.com> (@keeganwitt)
 GitRepo: https://github.com/keeganwitt/docker-gradle.git
+GitCommit: ef27237d21e823cc0e075fff946322b5e551e8c4
 
-Tags: 4.7.0-jdk7, 4.7-jdk7, jdk7
-GitCommit: 431aae214e78e2e44b2edcc9e611cbf8acc2ba19
-Directory: jdk7
 
-Tags: 4.7.0-jre7, 4.7-jre7, jre7
-GitCommit: 431aae214e78e2e44b2edcc9e611cbf8acc2ba19
-Directory: jre7
+# Hotspot
 
-Tags: 4.7.0-jdk7-alpine, 4.7-jdk7-alpine, jdk7-alpine
-GitCommit: 431aae214e78e2e44b2edcc9e611cbf8acc2ba19
-Directory: jdk7-alpine
+Tags: 6.8.3-jdk8, 6.8.3-jdk8-hotspot, 6.8-jdk8, 6.8-jdk8-hotspot, jdk8, jdk8-hotspot, 6.8.3-jdk, 6.8.3-jdk-hotspot, 6.8-jdk, 6.8-jdk-hotspot, jdk, jdk-hotspot, 6.8.3, 6.8.3-hotspot, 6.8, 6.8-hotspot, latest, hotspot
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+Directory: hotspot/jdk8
 
-Tags: 4.7.0-jre7-alpine, 4.7-jre7-alpine, jre7-alpine
-GitCommit: 431aae214e78e2e44b2edcc9e611cbf8acc2ba19
-Directory: jre7-alpine
+Tags: 6.8.3-jre8, 6.8.3-jre8-hotspot, 6.8-jre8, 6.8-jre8-hotspot, jre8, jre8-hotspot, 6.8.3-jre, 6.8.3-jre-hotspot, 6.8-jre, 6.8-jre-hotspot, jre, jre-hotspot
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+Directory: hotspot/jre8
 
-Tags: 4.7.0-jdk8, 4.7-jdk8, jdk8, 4.7.0-jdk, 4.7-jdk, jdk, 4.7.0, 4.7, latest
-GitCommit: 431aae214e78e2e44b2edcc9e611cbf8acc2ba19
-Directory: jdk8
+Tags: 6.8.3-jdk11, 6.8.3-jdk11-hotspot, 6.8-jdk11, 6.8-jdk11-hotspot, jdk11, jdk11-hotspot
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+Directory: hotspot/jdk11
 
-Tags: 4.7.0-jre8, 4.7-jre8, jre8, 4.7.0-jre, 4.7-jre, jre
-GitCommit: 431aae214e78e2e44b2edcc9e611cbf8acc2ba19
-Directory: jre8
+Tags: 6.8.3-jre11, 6.8.3-jre11-hotspot, 6.8-jre11, 6.8-jre11-hotspot, jre11, jre11-hotspot
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+Directory: hotspot/jre11
 
-Tags: 4.7.0-jdk8-alpine, 4.7-jdk8-alpine, jdk8-alpine, 4.7.0-jdk-alpine, 4.7-jdk-alpine, jdk-alpine, 4.7.0-alpine, 4.7-alpine, alpine
-GitCommit: 431aae214e78e2e44b2edcc9e611cbf8acc2ba19
-Directory: jdk8-alpine
+Tags: 6.8.3-jdk15, 6.8.3-jdk15-hotspot, 6.8-jdk15, 6.8-jdk15-hotspot, jdk15, jdk15-hotspot
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+Directory: hotspot/jdk15
 
-Tags: 4.7.0-jre8-alpine, 4.7-jre8-alpine, jre8-alpine, 4.7.0-jre-alpine, 4.7-jre-alpine, jre-alpine
-GitCommit: 431aae214e78e2e44b2edcc9e611cbf8acc2ba19
-Directory: jre8-alpine
+Tags: 6.8.3-jre15, 6.8.3-jre15-hotspot, 6.8-jre15, 6.8-jre15-hotspot, jre15, jre15-hotspot
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+Directory: hotspot/jre15
 
-Tags: 4.7.0-jdk9, 4.7-jdk9, jdk9
-GitCommit: 431aae214e78e2e44b2edcc9e611cbf8acc2ba19
-Directory: jdk9
 
-Tags: 4.7.0-jre9, 4.7-jre9, jre9
-GitCommit: 431aae214e78e2e44b2edcc9e611cbf8acc2ba19
-Directory: jre9
+# OpenJ9
 
-Tags: 4.7.0-jdk10, 4.7-jdk10, jdk10
-GitCommit: 431aae214e78e2e44b2edcc9e611cbf8acc2ba19
-Directory: jdk10
+Tags: 6.8.3-jdk8-openj9, 6.8-jdk8-openj9, jdk8-openj9, 6.8.3-jdk-openj9, 6.8-jdk-openj9, jdk-openj9, 6.8.3-openj9, 6.8-openj9, openj9
+Architectures: amd64, ppc64le, s390x
+Directory: openj9/jdk8
 
-Tags: 4.7.0-jre10, 4.7-jre10, jre10
-GitCommit: 431aae214e78e2e44b2edcc9e611cbf8acc2ba19
-Directory: jre10
+Tags: 6.8.3-jre8-openj9, 6.8-jre8-openj9, jre8-openj9, 6.8.3-jre-openj9, 6.8-jre-openj9, jre-openj9
+Architectures: amd64, ppc64le, s390x
+Directory: openj9/jre8
+
+Tags: 6.8.3-jdk11-openj9, 6.8-jdk11-openj9, jdk11-openj9
+Architectures: amd64, ppc64le, s390x
+Directory: openj9/jdk11
+
+Tags: 6.8.3-jre11-openj9, 6.8-jre11-openj9, jre11-openj9
+Architectures: amd64, ppc64le, s390x
+Directory: openj9/jre11
+
+# temporarily commented out, due to OpenJ9 bug
+#Tags: 6.8.3-jdk15-openj9, 6.8-jdk15-openj9, jdk15-openj9
+#Architectures: amd64, ppc64le, s390x
+#Directory: openj9/jdk15
+
+# temporarily commented out, due to OpenJ9 bug
+#Tags: 6.8.3-jre15-openj9, 6.8-jre15-openj9, jre15-openj9
+#Architectures: amd64, ppc64le, s390x
+#Directory: openj9/jre15

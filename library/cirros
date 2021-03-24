@@ -1,6 +1,14 @@
-# maintainer: Erica Windisch <eric@windisch.us> (@ewindisch)
-# Supporting latest & -1 stable releases of CirrOS.
+# this file is generated via https://github.com/tianon/docker-brew-cirros/blob/bc178480989db677c1271933567a0555e35856dc/generate-stackbrew-library.sh
 
-latest: git://github.com/ewindisch/docker-cirros@fd9aa114c465237518535d3545d4f9c4bc1d0aa5
-0.3.4: git://github.com/ewindisch/docker-cirros@fd9aa114c465237518535d3545d4f9c4bc1d0aa5
-0.3.3: git://github.com/ewindisch/docker-cirros@5ef3f5024b0aa80553cc34be9eff6685cb31b458
+Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon)
+GitRepo: https://github.com/tianon/docker-brew-cirros.git
+GitFetch: refs/heads/dist
+GitCommit: 6b155af1eeb835ab219369aeec45139b2f4ba11b
+Architectures: amd64, arm32v5, arm64v8, i386, ppc64le
+amd64-Directory: arches/amd64
+arm32v5-Directory: arches/arm32v5
+arm64v8-Directory: arches/arm64v8
+i386-Directory: arches/i386
+ppc64le-Directory: arches/ppc64le
+
+Tags: 0.5.2, 0.5, 0, latest

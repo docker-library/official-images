@@ -35,7 +35,7 @@ mysql() {
 		"$MYSQL_DATABASE"
 }
 
-. "$dir/../../retry.sh" --tries 20 "echo 'SELECT 1' | mysql"
+. "$dir/../../retry.sh" --tries 30 "echo 'SELECT 1' | mysql"
 
 echo 'CREATE TABLE test (a INT, b INT, c VARCHAR(255))' | mysql
 [ "$(echo 'SELECT COUNT(*) FROM test' | mysql)" = 0 ]

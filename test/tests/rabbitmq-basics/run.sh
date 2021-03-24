@@ -9,8 +9,10 @@ serverImage="$1"
 
 clientImage="$("$dir/../image-name.sh" librarytest/rabbitmq-basics "$serverImage")"
 "$dir/../docker-build.sh" "$dir" "$clientImage" <<EOD
-FROM python:3.6-slim
-RUN pip install pika==0.11.0
+FROM python:3.7-alpine
+# ensure pip does not complain about a new version being available
+ENV PIP_DISABLE_PIP_VERSION_CHECK=1
+RUN pip install pika==1.1.0
 COPY dir/*.py /usr/local/bin/
 EOD
 
@@ -19,7 +21,10 @@ cid="$(docker run -d --name "$cname" "$serverImage")"
 trap "docker rm -vf $cid > /dev/null" EXIT
 
 client() {
-	docker run -i --rm --link "$cname":rabbitmq "$clientImage" "$@"
+	docker run -i --rm \
+		--link "$cname":rabbitmq \
+		"$clientImage" \
+		"$@"
 }
 
 . "$dir/../../retry.sh" 'client testconn.py'

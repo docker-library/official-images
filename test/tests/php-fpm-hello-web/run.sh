@@ -8,9 +8,9 @@ image="$1"
 # Build a client image with cgi-fcgi for testing
 clientImage='librarytest/php-fpm-hello-web:fcgi-client'
 docker build -t "$clientImage" - > /dev/null <<'EOF'
-FROM debian:stretch-slim
+FROM debian:buster-slim
 
-RUN set -x && apt-get update && apt-get install -y libfcgi0ldbl && rm -rf /var/lib/apt/lists/*
+RUN set -x && apt-get update && apt-get install -y --no-install-recommends libfcgi-bin && rm -rf /var/lib/apt/lists/*
 
 ENTRYPOINT ["cgi-fcgi"]
 EOF
@@ -24,10 +24,6 @@ EOD
 # Create an instance of the container-under-test
 cid="$(docker run -d "$serverImage")"
 trap "docker rm -vf $cid > /dev/null" EXIT
-
-# RACY TESTS ARE RACY
-sleep 1
-# TODO find a cleaner solution to this, similar to what we do in mysql-basics
 
 fcgi-request() {
 	local method="$1"
@@ -47,6 +43,9 @@ fcgi-request() {
 		"$clientImage" \
 		-bind -connect fpm:9000
 }
+
+# wait until ready
+. "$dir/../../retry.sh" --tries 30 'fcgi-request GET /index.php' > /dev/null 2>&1
 
 # Check that we can request /index.php with no params
 [ -n "$(fcgi-request GET "/index.php")" ]

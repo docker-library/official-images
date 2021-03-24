@@ -8,12 +8,17 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
 image="$1"
 
-# our image may not have "curl" (Alpine variants, for example)
-clientImage='buildpack-deps:stretch-curl'
+# Use a client image with curl for testing
+clientImage='buildpack-deps:buster-curl'
+# ensure the clientImage is ready and available
+if ! docker image inspect "$clientImage" &> /dev/null; then
+	docker pull "$clientImage" > /dev/null
+fi
 
 # Create an instance of the container-under-test
 # (explicitly setting a low memory limit since the image defaults to 2GB)
-cid="$(docker run -d -e ES_JAVA_OPTS='-Xms32m -Xmx32m' "$image")"
+# (disable "bootstrap checks" by setting discovery.type option)
+cid="$(docker run -d -e ES_JAVA_OPTS='-Xms128m -Xmx128m' -e discovery.type=single-node "$image")"
 trap "docker rm -vf $cid > /dev/null" EXIT
 
 _request() {
@@ -26,7 +31,8 @@ _request() {
 	# https://github.com/docker/docker/issues/14203#issuecomment-129865960 (DOCKER_FIX)
 	docker run --rm --link "$cid":es \
 		-e DOCKER_FIX='                                        ' \
-		"$clientImage" curl -fs -X"$method" "$@" "http://es:9200/$url"
+		"$clientImage" \
+		curl -fs -X"$method" "$@" "http://es:9200/$url"
 }
 
 _trimmed() {
@@ -59,11 +65,11 @@ _req-exit GET '/_cat/indices/test1?h=docs.count' 22 # "HTTP page not retrieved. 
 _req-exit GET '/_cat/indices/test2?h=docs.count' 22 # "HTTP page not retrieved. 4xx"
 
 doc='{"a":"b","c":{"d":"e"}}'
-_request POST '/test1/test/1?refresh=true' --data "$doc" -o /dev/null
+_request POST '/test1/test/1?refresh=true' --data "$doc" --header 'Content-Type: application/json' -o /dev/null
 _req-comp GET '/_cat/indices/test1?h=docs.count' 1
 _req-exit GET '/_cat/indices/test2?h=docs.count' 22 # "HTTP page not retrieved. 4xx"
 
-_request POST '/test2/test/1?refresh=true' --data "$doc" -o /dev/null
+_request POST '/test2/test/1?refresh=true' --data "$doc" --header 'Content-Type: application/json' -o /dev/null
 _req-comp GET '/_cat/indices/test1?h=docs.count' 1
 _req-comp GET '/_cat/indices/test2?h=docs.count' 1
 

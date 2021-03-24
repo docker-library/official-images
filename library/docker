@@ -1,65 +1,45 @@
-# this file is generated via https://github.com/docker-library/docker/blob/cb8d918e103504ee5b9106aa254177bcb7889a03/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/docker/blob/12d1c2763b54d29137ec448a3e4ad1a9aefae1a0/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <tianon@dockerproject.org> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/docker.git
 
-Tags: 18.04.0-ce, 18.04.0, 18.04, 18, edge, test, latest
-Architectures: amd64, arm32v6, arm64v8, ppc64le, s390x
-GitCommit: 574fe5c582aa0ba432cf5f57ac921d42eafd5e36
-Directory: 18.04
+Tags: 20.10.5, 20.10, 20, latest
+Architectures: amd64, arm32v6, arm32v7, arm64v8
+GitCommit: 9728dce92752348ac2623bcf96436f1a89e15dd3
+Directory: 20.10
 
-Tags: 18.04.0-ce-dind, 18.04.0-dind, 18.04-dind, 18-dind, edge-dind, test-dind, dind
-Architectures: amd64, arm32v6, arm64v8, ppc64le, s390x
-GitCommit: 574fe5c582aa0ba432cf5f57ac921d42eafd5e36
-Directory: 18.04/dind
+Tags: 20.10.5-dind, 20.10-dind, 20-dind, dind
+Architectures: amd64, arm32v6, arm32v7, arm64v8
+GitCommit: 094faa88f437cafef7aeb0cc36e75b59046cc4b9
+Directory: 20.10/dind
 
-Tags: 18.04.0-ce-git, 18.04.0-git, 18.04-git, 18-git, edge-git, test-git, git
-Architectures: amd64, arm32v6, arm64v8, ppc64le, s390x
-GitCommit: 574fe5c582aa0ba432cf5f57ac921d42eafd5e36
-Directory: 18.04/git
+Tags: 20.10.5-dind-rootless, 20.10-dind-rootless, 20-dind-rootless, dind-rootless
+Architectures: amd64
+GitCommit: 9728dce92752348ac2623bcf96436f1a89e15dd3
+Directory: 20.10/dind-rootless
 
-Tags: 18.03.1-ce-rc2, 18.03-rc, rc
-Architectures: amd64, arm32v6, arm64v8, ppc64le, s390x
-GitCommit: 73ca9d9788a42be204d9843cab4e57ca56f33fdb
-Directory: 18.03-rc
+Tags: 20.10.5-git, 20.10-git, 20-git, git
+Architectures: amd64, arm32v6, arm32v7, arm64v8
+GitCommit: 387e351394bfad74bceebf8303c6c8e39c3d4ed4
+Directory: 20.10/git
 
-Tags: 18.03.1-ce-rc2-dind, 18.03-rc-dind, rc-dind
-Architectures: amd64, arm32v6, arm64v8, ppc64le, s390x
-GitCommit: 9fef62af4ad3a24c43894a16e06ba160b592e06a
-Directory: 18.03-rc/dind
+Tags: 19.03.15, 19.03, 19
+Architectures: amd64, arm32v6, arm32v7, arm64v8
+GitCommit: 835c371c516ebdf67adc0c76bbfb38bf9d3e586c
+Directory: 19.03
 
-Tags: 18.03.1-ce-rc2-git, 18.03-rc-git, rc-git
-Architectures: amd64, arm32v6, arm64v8, ppc64le, s390x
-GitCommit: 9fef62af4ad3a24c43894a16e06ba160b592e06a
-Directory: 18.03-rc/git
+Tags: 19.03.15-dind, 19.03-dind, 19-dind
+Architectures: amd64, arm32v6, arm32v7, arm64v8
+GitCommit: b1d2628005e12e79079c025c3653cba248d6f264
+Directory: 19.03/dind
 
-Tags: 18.03.0-ce, 18.03.0, 18.03, stable
-Architectures: amd64, arm32v6, arm64v8, ppc64le, s390x
-GitCommit: 1ad458b04229d155bbec6bbd4b5142497aa8126a
-Directory: 18.03
+Tags: 19.03.15-dind-rootless, 19.03-dind-rootless, 19-dind-rootless
+Architectures: amd64
+GitCommit: 835c371c516ebdf67adc0c76bbfb38bf9d3e586c
+Directory: 19.03/dind-rootless
 
-Tags: 18.03.0-ce-dind, 18.03.0-dind, 18.03-dind, stable-dind
-Architectures: amd64, arm32v6, arm64v8, ppc64le, s390x
-GitCommit: 5b158e3ca87bdc20069754a796c00b270e40cfdb
-Directory: 18.03/dind
-
-Tags: 18.03.0-ce-git, 18.03.0-git, 18.03-git, stable-git
-Architectures: amd64, arm32v6, arm64v8, ppc64le, s390x
-GitCommit: 1ad458b04229d155bbec6bbd4b5142497aa8126a
-Directory: 18.03/git
-
-Tags: 17.12.1-ce, 17.12.1, 17.12, 17
-Architectures: amd64, arm32v6, arm64v8, ppc64le, s390x
-GitCommit: eec0f6e5549ab940b53332f836be817c877d1154
-Directory: 17.12
-
-Tags: 17.12.1-ce-dind, 17.12.1-dind, 17.12-dind, 17-dind
-Architectures: amd64, arm32v6, arm64v8, ppc64le, s390x
-GitCommit: 5b158e3ca87bdc20069754a796c00b270e40cfdb
-Directory: 17.12/dind
-
-Tags: 17.12.1-ce-git, 17.12.1-git, 17.12-git, 17-git
-Architectures: amd64, arm32v6, arm64v8, ppc64le, s390x
-GitCommit: de9fda490429cf83734ef78b58f0ae9cfed1b087
-Directory: 17.12/git
+Tags: 19.03.15-git, 19.03-git, 19-git
+Architectures: amd64, arm32v6, arm32v7, arm64v8
+GitCommit: 12d1c2763b54d29137ec448a3e4ad1a9aefae1a0
+Directory: 19.03/git

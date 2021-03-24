@@ -1,18 +1,39 @@
+# MySQL is not officially supported for arm64v8.
+# Ongoing issue for the same is: https://github.com/docker-library/mysql/issues/318
+# We don't support arm64v8 FTM for XWiki 10.x since that requires Java 11 and XWiki 10.x doesn't support Java 11.
 Maintainers: XWiki Core Dev Team <committers@xwiki.org> (@xwiki)
 GitRepo: https://github.com/xwiki-contrib/docker-xwiki.git
 
-Tags: 9, 9.11, 9.11.3, 9-mysql-tomcat, mysql-tomcat, lts-mysql-tomcat, lts-mysql, lts
-GitCommit: bdf1a8464a668061ba564249461633f0445e08a6
-Directory: 9/mysql-tomcat
+Tags: 13, 13.1, 13.1.0, 13-mysql-tomcat, 13.1-mysql-tomcat, 13.1.0-mysql-tomcat, mysql-tomcat, stable-mysql-tomcat, stable-mysql, stable, latest
+Architectures: amd64
+Directory: 13/mysql-tomcat
+GitCommit: d5a826fd0874f5734767df4cdae4f124ed487d50
 
-Tags: 9-postgres-tomcat, 9.11-postgres-tomcat, 9.11.3-postgres-tomcat, postgres-tomcat, lts-postgres-tomcat, lts-postgres
-GitCommit: bdf1a8464a668061ba564249461633f0445e08a6
-Directory: 9/postgres-tomcat
+Tags: 13-postgres-tomcat, 13.1-postgres-tomcat, 13.1.0-postgres-tomcat, postgres-tomcat, stable-postgres-tomcat, stable-postgres
+Architectures: amd64, arm64v8
+Directory: 13/postgres-tomcat
+GitCommit: d5a826fd0874f5734767df4cdae4f124ed487d50
 
-Tags: 10, 10.3, 10-mysql-tomcat, 10.3-mysql-tomcat, stable-mysql-tomcat, stable-mysql, stable, latest
-GitCommit: 1b02c423a736424a30c390ddb77a0128aa925f17
-Directory: 10/mysql-tomcat
+Tags: 12, 12.10, 12.10.5, 12-mysql-tomcat, 12.10-mysql-tomcat, 12.10.5-mysql-tomcat, lts-mysql-tomcat, lts-mysql, lts
+Architectures: amd64
+Directory: 12/mysql-tomcat
+GitCommit: fa6a9086e02c084a0a3dd527a17af3cf24738e50
 
-Tags: 10-postgres-tomcat, 10.3-postgres-tomcat, stable-postgres-tomcat, stable-postgres
-GitCommit: 1b02c423a736424a30c390ddb77a0128aa925f17
-Directory: 10/postgres-tomcat
+Tags: 12-postgres-tomcat, 12.10-postgres-tomcat, 12.10.5-postgres-tomcat, lts-postgres-tomcat, lts-postgres
+Architectures: amd64, arm64v8
+Directory: 12/postgres-tomcat
+GitCommit: fa6a9086e02c084a0a3dd527a17af3cf24738e50
+
+# This tag description should be removed now.
+Tags: 12.6, 12.6.8, 12.6-mysql-tomcat, 12.6.8-mysql-tomcat
+Architectures: amd64
+Directory: 12/mysql-tomcat
+GitCommit: 4f6080d2e7d4b358f09517b4d1e6537261c7574e
+GitFetch: refs/heads/stable-12.6.x
+
+# This tag description should be removed now.
+Tags: 12.6-postgres-tomcat, 12.6.8-postgres-tomcat
+Architectures: amd64, arm64v8
+Directory: 12/postgres-tomcat
+GitCommit: 4f6080d2e7d4b358f09517b4d1e6537261c7574e
+GitFetch: refs/heads/stable-12.6.x

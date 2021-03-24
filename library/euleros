@@ -1,7 +1,44 @@
-Maintainers: Li Ruilin <liruilin4@huawei.com> (@Kazero0)
+Maintainers: Li Ruilin <liruilin4@huawei.com> (@Kazero0),
+             Liu Hua <sdu.liu@huawei.com> (@liusdu)
 GitRepo: https://github.com/euleros/euleros-docker-images.git
-GitFetch: refs/heads/master
-GitCommit: e1e5020fe9fd5030c9e5d34d5e86a74b379eff36
+GitCommit: db22e2c392c3922d2c674110c90667576618f348
 
-Tags: 2.2, latest
+Tags: 2.3.1809, latest
+Architectures: arm64v8, amd64
+# https://github.com/euleros/euleros-docker-images/tree/v2.3.1809-arm64
+arm64v8-GitFetch: refs/heads/v2.3.1809-arm64
+arm64v8-GitCommit: 6b013446976a40f497470975238f5d002d9fff30
+arm64v8-Directory: 2.3.1809/aarch64/
+# https://github.com/euleros/euleros-docker-images/tree/v2.3.1809-amd64
+amd64-GitFetch: refs/heads/v2.3.1809-amd64
+amd64-GitCommit: db22e2c392c3922d2c674110c90667576618f348
+amd64-Directory: 2.3.1809/x86_64/
+
+
+Tags: 2.3.1806
+Architectures: arm64v8, amd64
+# https://github.com/euleros/euleros-docker-images/tree/v2.3.1806-arm64
+arm64v8-GitFetch: refs/heads/v2.3.1806-arm64
+arm64v8-GitCommit: 3cc318b6aaaeb3c69c3ee577f06c1a42c20c9ec5
+arm64v8-Directory: 2.3.1806/aarch64/
+# https://github.com/euleros/euleros-docker-images/tree/v2.3.1806-amd64
+amd64-GitFetch: refs/heads/v2.3.1806-amd64
+amd64-GitCommit: e304245f74141e6e856a017c8d204c27300c1da8
+amd64-Directory: 2.3.1806/x86_64/
+
+Tags: 2.3.1803
+Architectures: arm64v8, amd64
+# https://github.com/euleros/euleros-docker-images/tree/v2.3.1803-arm64
+arm64v8-GitFetch: refs/heads/v2.3.1803-arm64
+arm64v8-GitCommit: 319851fa9feead40201cb2a20b6b8b65e0815429
+arm64v8-Directory: 2.3.1803/aarch64/
+# https://github.com/euleros/euleros-docker-images/tree/v2.3.1803-amd64
+amd64-GitFetch: refs/heads/v2.3.1803-amd64
+amd64-GitCommit: 5afd15edcd49671adefb6dff87537f2943ae1107
+amd64-Directory: 2.3.1803/x86_64/
+
+Tags: 2.2
+Architectures: amd64
+GitFetch: refs/heads/v2.2
+GitCommit: 959f378638f222bd1eebe8dccf267cccbc118174
 Directory: 2.2
