@@ -6,48 +6,42 @@ GitRepo: https://github.com/tianon/docker-brew-ubuntu-core.git
 GitCommit: 307c20ce58171e7e30925ddc2588f7f7bff6e167
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-amd64
 amd64-GitFetch: refs/heads/dist-amd64
-amd64-GitCommit: e72e50c16ab07b13c35af97bed0cc7860369e0c6
+amd64-GitCommit: 7145f9723125e6e4367dc0fb428ffd9f2bc00334
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-arm32v7
 arm32v7-GitFetch: refs/heads/dist-arm32v7
-arm32v7-GitCommit: 7ea37b34b92ba79aa17515ffffd7c3fe1610014f
+arm32v7-GitCommit: 07d0874b0e3c7fd63751efbada94cabcaa4ecea2
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-arm64v8
 arm64v8-GitFetch: refs/heads/dist-arm64v8
-arm64v8-GitCommit: 6bc96465ec1bc64f4f91b4656fa560ccda3e07bf
+arm64v8-GitCommit: f6c798bd7248f69db272e17677153fc119f41301
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-i386
 i386-GitFetch: refs/heads/dist-i386
 i386-GitCommit: e5a8b7d32e5a0c45f8b376e8e972518349fa3421
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-ppc64le
 ppc64le-GitFetch: refs/heads/dist-ppc64le
-ppc64le-GitCommit: f44f90ccc338f3c6331c9bd489e7c14f15dd4e88
+ppc64le-GitCommit: aeea2327ab771608c3ae6fa0a4994bbf4e8217b5
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-s390x
 s390x-GitFetch: refs/heads/dist-s390x
-s390x-GitCommit: f581ef59da43737fdafbb76931e9ba6285da9266
+s390x-GitCommit: 4ec8d1da77a57ac65d4036c24bffacfc3203dfad
 
 # 20210325 (bionic)
 Tags: 18.04, bionic-20210325, bionic
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: bionic
 
-# 20210325 (focal)
-Tags: 20.04, focal-20210325, focal, latest
+# 20210401 (focal)
+Tags: 20.04, focal-20210401, focal, latest
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
 Directory: focal
 
-# 20210325 (groovy)
-Tags: 20.10, groovy-20210325, groovy, rolling
+# 20210325.1 (groovy)
+Tags: 20.10, groovy-20210325.1, groovy, rolling
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
 Directory: groovy
 
-# 20210119 (hirsute)
-Tags: 21.04, hirsute-20210119, hirsute, devel
+# 20210401 (hirsute)
+Tags: 21.04, hirsute-20210401, hirsute, devel
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
 Directory: hirsute
-amd64-GitCommit: ec931883d8292935b62ac40757287491e6ff467e
-arm32v7-GitCommit: f2ed9c714e4231e0d964095eaba5504fb4ce017d
-arm64v8-GitCommit: 69b377c4bbe13073c3ae2dd0c541dc7b52cc32ba
-i386-GitCommit: 68ae4b1742136f031c3a4770e3e4776a3618df1f
-ppc64le-GitCommit: eb34d4327f126b9f60a873362854b09293f6d9ff
-s390x-GitCommit: 0342e501a11386aedd5597555481cb9b10921eda
 
 # 20191217 (trusty)
 Tags: 14.04, trusty-20191217, trusty
