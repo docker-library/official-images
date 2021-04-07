@@ -27,7 +27,7 @@ _request() {
 }
 
 # Make sure that Tomcat is listening
-. "$dir/../../retry.sh" '_request / &> /dev/null'
+. "$dir/../../retry.sh" -s 5 '_request / &> /dev/null'
 
 # Check that we can request /
 [ -n "$(_request '/')" ]
