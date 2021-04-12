@@ -262,6 +262,9 @@ imageTests+=(
 	[tomcat]='
 		tomcat-hello-world
 	'
+	[varnish]='
+		varnish
+	'
 	[wordpress:apache]='
 		wordpress-apache-run
 	'
