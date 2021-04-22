@@ -26,7 +26,6 @@ testAlias+=(
 	[ubuntu]='debian'
 	[ubuntu-debootstrap]='debian'
 
-	[mariadb]='mysql'
 	[percona]='mysql'
 	[percona:psmdb]='mongo'
 
@@ -115,6 +114,11 @@ imageTests+=(
 	'
 	[logstash]='
 		logstash-basics
+	'
+	[mariadb]='
+		mysql-basics
+		mysql-initdb
+		mariadb-extras
 	'
 	[memcached]='
 		memcached-basics
