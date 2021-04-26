@@ -55,5 +55,5 @@ _artisan_test() {
 
 # Check if installation is complete
 _artisan monica:getversion > /dev/null
-_artisan_test 'Running scheduled command:' schedule:run
+_artisan schedule:run
 _artisan_test 'No scheduled commands are ready to run.' schedule:run
