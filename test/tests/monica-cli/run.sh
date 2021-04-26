@@ -55,5 +55,4 @@ _artisan_test() {
 
 # Check if installation is complete
 _artisan monica:getversion > /dev/null
-_artisan schedule:run > /dev/null
-_artisan_test 'No scheduled commands are ready to run.' schedule:run
+. "$dir/../../retry.sh" --tries 5 -- _artisan_test 'No scheduled commands are ready to run.' schedule:run
