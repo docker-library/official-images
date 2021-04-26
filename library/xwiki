@@ -1,18 +1,17 @@
 # MySQL is not officially supported for arm64v8.
 # Ongoing issue for the same is: https://github.com/docker-library/mysql/issues/318
-# We don't support arm64v8 FTM for XWiki 10.x since that requires Java 11 and XWiki 10.x doesn't support Java 11.
 Maintainers: XWiki Core Dev Team <committers@xwiki.org> (@xwiki)
 GitRepo: https://github.com/xwiki-contrib/docker-xwiki.git
 
-Tags: 13, 13.2, 13.2.0, 13-mysql-tomcat, 13.2-mysql-tomcat, 13.2.0-mysql-tomcat, mysql-tomcat, stable-mysql-tomcat, stable-mysql, stable, latest
+Tags: 13, 13.3, 13.3.0, 13-mysql-tomcat, 13.3-mysql-tomcat, 13.3.0-mysql-tomcat, mysql-tomcat, stable-mysql-tomcat, stable-mysql, stable, latest
 Architectures: amd64
 Directory: 13/mysql-tomcat
-GitCommit: aad779028a6f54d9821560d01d6a03633e180a8b
+GitCommit: 2cb4312482f06cacf7b638bb3777e0ecad4d003a
 
-Tags: 13-postgres-tomcat, 13.2-postgres-tomcat, 13.2.0-postgres-tomcat, postgres-tomcat, stable-postgres-tomcat, stable-postgres
+Tags: 13-postgres-tomcat, 13.3-postgres-tomcat, 13.3.0-postgres-tomcat, postgres-tomcat, stable-postgres-tomcat, stable-postgres
 Architectures: amd64, arm64v8
 Directory: 13/postgres-tomcat
-GitCommit: aad779028a6f54d9821560d01d6a03633e180a8b
+GitCommit: 2cb4312482f06cacf7b638bb3777e0ecad4d003a
 
 Tags: 12, 12.10, 12.10.6, 12-mysql-tomcat, 12.10-mysql-tomcat, 12.10.6-mysql-tomcat, lts-mysql-tomcat, lts-mysql, lts
 Architectures: amd64
