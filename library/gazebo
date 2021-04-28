@@ -2,23 +2,6 @@ Maintainers: Tully Foote <tfoote+buildfarm@osrfoundation.org> (@tfoote)
 GitRepo: https://github.com/osrf/docker_images.git
 
 ################################################################################
-# Release: 7
-
-########################################
-# Distro: ubuntu:xenial
-
-Tags: gzserver7, gzserver7-xenial
-Architectures: amd64
-GitCommit: c2b11f03428e862ab6c8f106823fac7d9d9ac48c
-Directory: gazebo/7/ubuntu/xenial/gzserver7
-
-Tags: libgazebo7, libgazebo7-xenial
-Architectures: amd64
-GitCommit: c2b11f03428e862ab6c8f106823fac7d9d9ac48c
-Directory: gazebo/7/ubuntu/xenial/libgazebo7
-
-
-################################################################################
 # Release: 9
 
 ########################################
@@ -26,12 +9,12 @@ Directory: gazebo/7/ubuntu/xenial/libgazebo7
 
 Tags: gzserver9-xenial
 Architectures: amd64
-GitCommit: d521594aab0f506c90998ab79bc4dbc9c20e39b8
+GitCommit: c1a6cab08c9a8b85c869d24b31f6243ad4646cee
 Directory: gazebo/9/ubuntu/xenial/gzserver9
 
 Tags: libgazebo9-xenial
 Architectures: amd64
-GitCommit: d521594aab0f506c90998ab79bc4dbc9c20e39b8
+GitCommit: c1a6cab08c9a8b85c869d24b31f6243ad4646cee
 Directory: gazebo/9/ubuntu/xenial/libgazebo9
 
 ########################################
@@ -39,43 +22,13 @@ Directory: gazebo/9/ubuntu/xenial/libgazebo9
 
 Tags: gzserver9, gzserver9-bionic
 Architectures: amd64
-GitCommit: 14c917e2aba1d985be1d62672669a577c0cc2eaa
+GitCommit: 7178a9d0d509c8c222fffa6edff4d84124fb46ee
 Directory: gazebo/9/ubuntu/bionic/gzserver9
 
 Tags: libgazebo9, libgazebo9-bionic
 Architectures: amd64
-GitCommit: 14c917e2aba1d985be1d62672669a577c0cc2eaa
+GitCommit: 7178a9d0d509c8c222fffa6edff4d84124fb46ee
 Directory: gazebo/9/ubuntu/bionic/libgazebo9
-
-########################################
-# Distro: debian:stretch
-
-Tags: gzserver9-stretch
-Architectures: amd64
-GitCommit: a6c5b63e1ba4291e94b91ac5ff067c0d3f7d3c37
-Directory: gazebo/9/debian/stretch/gzserver9
-
-Tags: libgazebo9-stretch
-Architectures: amd64
-GitCommit: a6c5b63e1ba4291e94b91ac5ff067c0d3f7d3c37
-Directory: gazebo/9/debian/stretch/libgazebo9
-
-
-################################################################################
-# Release: 10
-
-########################################
-# Distro: ubuntu:bionic
-
-Tags: gzserver10, gzserver10-bionic
-Architectures: amd64
-GitCommit: c2b11f03428e862ab6c8f106823fac7d9d9ac48c
-Directory: gazebo/10/ubuntu/bionic/gzserver10
-
-Tags: libgazebo10, libgazebo10-bionic
-Architectures: amd64
-GitCommit: c2b11f03428e862ab6c8f106823fac7d9d9ac48c
-Directory: gazebo/10/ubuntu/bionic/libgazebo10
 
 
 ################################################################################
