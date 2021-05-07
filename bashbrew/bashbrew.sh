@@ -183,6 +183,8 @@ common options:
                      are "FROM base-image:some-version")
   --alias="$alias"
                      Specify alias for Docker images.
+  --platform="$platform"
+                     Specify target platform for Docker images.
 
 build options:
   --no-build         Don't build, print what would build
@@ -197,7 +199,7 @@ EOUSAGE
 }
 
 # arg handling
-opts="$(getopt -o 'h?' --long 'all,docker:,help,library:,logs:,namespaces:,no-build,no-clone,no-push,src:,alias:' -- "$@" || { usage >&2 && false; })"
+opts="$(getopt -o 'h?' --long 'all,docker:,help,library:,logs:,namespaces:,no-build,no-clone,no-push,src:,alias,platform:' -- "$@" || { usage >&2 && false; })"
 eval set -- "$opts"
 
 doClone=1
@@ -215,6 +217,7 @@ while true; do
 		--logs) logs="$1" && shift ;;
 		--namespaces) namespaces="$1" && shift ;;
 		--alias) aliases+=" $1" && shift ;;
+		--platform) platform+="--platform=$1" && shift ;;
 		--no-build) doBuild= ;;
 		--no-clone) doClone= ;;
 		--no-push) doPush= ;;
@@ -459,7 +462,7 @@ while [ "$#" -gt 0 ]; do
 				if ! (
 					set -x
 					"$docker" pull "balenalib/$repoTag"
-					"$docker" build --pull -t "$repoTag" "$gitRepo/$gitDir"
+					"$docker" build --pull "$platform" -t "$repoTag" "$gitRepo/$gitDir"
 				) &>> "$thisLog"; then
 					echo "- failed 'docker build'; see $thisLog"
 					didFail=1
