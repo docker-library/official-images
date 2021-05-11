@@ -144,8 +144,13 @@ remove_image() {
 	while [ "$retries" -lt 3 ]; do
 		let retries=retries+1
 		echo "Retrying remove $1"
-		if "$docker" rmi -f "$1" ;then
-			break	
+		if ! (
+			set -x
+			"$docker" rmi -f "$1"
+			break
+		); then
+			# Just continue when  `docker rmi` failed
+			continue
 		fi
 	done
 }
