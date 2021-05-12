@@ -204,7 +204,7 @@ EOUSAGE
 }
 
 # arg handling
-opts="$(getopt -o 'h?' --long 'all,docker:,help,library:,logs:,namespaces:,no-build,no-clone,no-push,src:,alias,platform:' -- "$@" || { usage >&2 && false; })"
+opts="$(getopt -o 'h?' --long 'all,docker:,help,library:,logs:,namespaces:,no-build,no-clone,no-push,src:,platform:,alias:' -- "$@" || { usage >&2 && false; })"
 eval set -- "$opts"
 
 doClone=1
@@ -221,8 +221,8 @@ while true; do
 		--library) library="$1" && shift ;;
 		--logs) logs="$1" && shift ;;
 		--namespaces) namespaces="$1" && shift ;;
+		--platform) platform="--platform=$1" && shift ;;
 		--alias) aliases+=" $1" && shift ;;
-		--platform) platform+="--platform=$1" && shift ;;
 		--no-build) doBuild= ;;
 		--no-clone) doClone= ;;
 		--no-push) doPush= ;;
