@@ -467,7 +467,7 @@ while [ "$#" -gt 0 ]; do
 				if ! (
 					set -x
 					"$docker" pull "balenalib/$repoTag"
-					"$docker" build --pull "$platform" -t "$repoTag" "$gitRepo/$gitDir"
+					"$docker" build --pull $platform -t "$repoTag" "$gitRepo/$gitDir"
 				) &>> "$thisLog"; then
 					echo "- failed 'docker build'; see $thisLog"
 					didFail=1
