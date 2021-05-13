@@ -335,6 +335,10 @@ globalExcludeTests+=(
 	[traefik:windowsservercore_override-cmd]=1
 
 	# TODO adjust MongoDB tests to use docker networks instead of links so they can work on Windows (and consider using PowerShell to generate appropriate certificates for TLS tests instead of openssl)
+	[mongo:nanoserver_mongo-basics]=1
+	[mongo:nanoserver_mongo-auth-basics]=1
+	[mongo:nanoserver_mongo-tls-basics]=1
+	[mongo:nanoserver_mongo-tls-auth]=1
 	[mongo:windowsservercore_mongo-basics]=1
 	[mongo:windowsservercore_mongo-auth-basics]=1
 	[mongo:windowsservercore_mongo-tls-basics]=1
