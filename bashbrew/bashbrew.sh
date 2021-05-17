@@ -147,11 +147,11 @@ remove_image() {
 		if ! (
 			set -x
 			"$docker" rmi -f "$1"
-			break
 		); then
 			# Just continue when  `docker rmi` failed
 			continue
 		fi
+		break
 	done
 }
 

@@ -6,7 +6,8 @@ This script processes the specified Docker images using the corresponding
 repository manifest files.
 
 push options:
-  -p			Don't build, only push image(s) to registry
+  -p			Don't build, only push image(s) to registry.
+  -a			Specify image aliases.
 
 EOUSAGE
 }
@@ -30,7 +31,7 @@ aliases=
 args=
 
 # Args handling
-while getopts ":pna"  opt; do
+while getopts ":pa"  opt; do
 	case $opt in
 		p)
 			pushOnly=1
@@ -48,6 +49,11 @@ while getopts ":pna"  opt; do
       		;;
 	esac
 done
+
+# parse platform
+if [ ! -z "$PLATFORM" ]; then
+	args+=" --platform=$PLATFORM"
+fi
 
 # parse aliases
 if [ ! -z "$aliases" ]; then
@@ -91,4 +97,4 @@ if [ $exitCode -eq 1 ]; then
 	# Then clean up untagged images.
 	docker rmi $(docker images --filter dangling=true -q)
 	exit 1
-fi	
+fi
