@@ -6,25 +6,25 @@ GitRepo: https://github.com/tianon/docker-brew-ubuntu-core.git
 GitCommit: 29172377e5a8343945621e490da0ca315cbf46f9
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-amd64
 amd64-GitFetch: refs/heads/dist-amd64
-amd64-GitCommit: 4b7cb6f04bc4054f9ab1fa42b549caa1a41b7c92
+amd64-GitCommit: 042ff8d516e356e9df18e1c34235553fa150d19d
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-arm32v7
 arm32v7-GitFetch: refs/heads/dist-arm32v7
-arm32v7-GitCommit: 33d13659793c901ec68569a2e9f61b2480fe6a7a
+arm32v7-GitCommit: c99673400e40700c65e2afd6d233c6d5d73463b0
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-arm64v8
 arm64v8-GitFetch: refs/heads/dist-arm64v8
-arm64v8-GitCommit: f6204791c7de14b80e35044e7188a298fa130ada
+arm64v8-GitCommit: f326827936c5b8d9b24f92f3850bcc8a3f3406fe
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-i386
 i386-GitFetch: refs/heads/dist-i386
-i386-GitCommit: d17f75c6c98c92f320ffa928a4d69bed19aa17fd
+i386-GitCommit: 3c9dbae7fd81c3f24658dfbb3112021fda21aed4
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-ppc64le
 ppc64le-GitFetch: refs/heads/dist-ppc64le
-ppc64le-GitCommit: 4bb5c324d4d62a97c6eab7101a8afab92350c13a
+ppc64le-GitCommit: f2b438ddb47387976cee9d3c49982e3cfa255ac3
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-s390x
 s390x-GitFetch: refs/heads/dist-s390x
-s390x-GitCommit: a3dad9e5ee57e0f55c68b5f0e4dc1456789b4d6c
+s390x-GitCommit: c52f6cf820b8a4b5a0364526634af990429cb4c3
 
-# 20210416 (bionic)
-Tags: 18.04, bionic-20210416, bionic
+# 20210512 (bionic)
+Tags: 18.04, bionic-20210512, bionic
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: bionic
 
@@ -33,13 +33,13 @@ Tags: 20.04, focal-20210416, focal, latest
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
 Directory: focal
 
-# 20210416 (groovy)
-Tags: 20.10, groovy-20210416, groovy
+# 20210514 (groovy)
+Tags: 20.10, groovy-20210514, groovy
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
 Directory: groovy
 
-# 20210422 (hirsute)
-Tags: 21.04, hirsute-20210422, hirsute, rolling, devel
+# 20210514 (hirsute)
+Tags: 21.04, hirsute-20210514, hirsute, rolling
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
 Directory: hirsute
 
@@ -48,7 +48,7 @@ Tags: 14.04, trusty-20191217, trusty
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le
 Directory: trusty
 
-# 20210416 (xenial)
-Tags: 16.04, xenial-20210416, xenial
+# 20210429 (xenial)
+Tags: 16.04, xenial-20210429, xenial
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: xenial
