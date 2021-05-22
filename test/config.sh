@@ -54,6 +54,9 @@ imageTests+=(
 	[convertigo]='
 		convertigo-hello-world
 	'
+	[dart]='
+		dart-hello-world
+	'
 	[debian]='
 		debian-apt-get
 	'
