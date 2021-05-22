@@ -85,7 +85,7 @@ Yes! We have [a dedicated FAQ repository](https://github.com/docker-library/faq)
 
 ## Contributing to the standard library
 
-Thank you for your interest in the Docker official images project! We strive to make these instructions as simple and straightforward as possible, but if you find yourself lost, don't hesitate to seek us out on Freenode IRC in channel `#docker-library` or by creating a GitHub issue here.
+Thank you for your interest in the Docker official images project! We strive to make these instructions as simple and straightforward as possible, but if you find yourself lost, don't hesitate to seek us out on [Libera.Chat IRC](https://libera.chat) in channel `#docker-library` or by creating a GitHub issue here.
 
 Be sure to familiarize yourself with [Official Repositories on Docker Hub](https://docs.docker.com/docker-hub/official_repos/) and the [Best practices for writing Dockerfiles](https://docs.docker.com/articles/dockerfile_best-practices/) in the Docker documentation. These will be the foundation of the review process performed by the official images maintainers. If you'd like the review process to go more smoothly, please ensure that your `Dockerfile`s adhere to all the points mentioned there, as well as [below](README.md#review-guidelines), before submitting a pull request.
 
