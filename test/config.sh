@@ -2,7 +2,6 @@
 
 globalTests+=(
 	utc
-	cve-2014--shellshock
 	no-hard-coded-passwords
 	override-cmd
 )
@@ -321,10 +320,8 @@ globalExcludeTests+=(
 	[percona:psmdb_percona-rocksdb]=1
 
 	# windows!
-	[:nanoserver_cve-2014--shellshock]=1
 	[:nanoserver_no-hard-coded-passwords]=1
 	[:nanoserver_utc]=1
-	[:windowsservercore_cve-2014--shellshock]=1
 	[:windowsservercore_no-hard-coded-passwords]=1
 	[:windowsservercore_utc]=1
 
