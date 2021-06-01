@@ -8,8 +8,12 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
 image="$1"
 
-# our image may not have "curl" (Alpine variants, for example)
-clientImage='buildpack-deps:stretch-curl'
+# Use a client image with curl for testing
+clientImage='buildpack-deps:buster-curl'
+# ensure the clientImage is ready and available
+if ! docker image inspect "$clientImage" &> /dev/null; then
+	docker pull "$clientImage" > /dev/null
+fi
 
 # input via HTTP (default port 0.0.0.0:8080)
 # output via stdout, newline-delimited nothing-but-the-message
@@ -33,9 +37,11 @@ trap "docker rm -vf $cid > /dev/null" EXIT
 
 _request() {
 	# https://github.com/docker/docker/issues/14203#issuecomment-129865960 (DOCKER_FIX)
-	docker run --rm --link "$cid":logstash \
+	docker run --rm \
+		--link "$cid":logstash \
 		-e DOCKER_FIX='                                        ' \
-		"$clientImage" curl -fs "$@" "http://logstash:8080"
+		"$clientImage" \
+		curl -fs "$@" "http://logstash:8080"
 }
 
 _trimmed() {

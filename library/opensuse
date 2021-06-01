@@ -1,19 +1,6 @@
-# Header of manifest
-# Merge manifest files from each branch afterwards 
-# Maintainers, repo and constraints are common headers for every release
 Maintainers: Flavio Castelli <fcastelli@suse.com> (@flavio),
              Aleksa Sarai <asarai@suse.com> (@cyphar),
              Jordi Massaguer Pla <jmassaguerpla@suse.com> (@jordimassaguerpla),
              David Cassany Viladomat <dcassany@suse.com> (@davidcassany),
              Fabian Vogt <fvogt@suse.com> (@Vogtinator)
 GitRepo: https://github.com/openSUSE/docker-containers-build.git
-Constraints: !aufs
-
-# This is the multiarch section specific for openSUSE-Leap-42.3
-Tags: 42.3,latest,leap
-Architectures: amd64, arm64v8, ppc64le
-GitFetch: refs/heads/openSUSE-Leap-42.3
-GitCommit: 0611a04c49ad2d19cf4765455549e028f8a8015d
-amd64-Directory: x86_64/
-arm64v8-Directory: aarch64/
-ppc64le-Directory: ppc64le/

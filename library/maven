@@ -1,77 +1,152 @@
 Maintainers: Carlos Sanchez <carlos@apache.org> (@carlossg)
 GitRepo: https://github.com/carlossg/docker-maven.git
 
-Tags: 3.6.0-jdk-11-slim, 3.6.0-slim, 3.6-jdk-11-slim, 3.6-slim, 3-jdk-11-slim, slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 05f4802aa5c253dcf75fe967c6f45b3fb1e2f26e
-Directory: jdk-11-slim
+Tags: 3.8.1-jdk-11, 3.8-jdk-11, 3-jdk-11
+Architectures: amd64, arm64v8
+GitCommit: bdffb5117c33476d554325d8efe5866306004b99
+Directory: openjdk-11
 
-Tags: 3.6.0-jdk-11, 3.6.0, 3.6-jdk-11, 3.6, 3-jdk-11, 3, latest
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 05f4802aa5c253dcf75fe967c6f45b3fb1e2f26e
-Directory: jdk-11
+Tags: 3.8.1-jdk-11-openj9, 3.8-jdk-11-openj9, 3-jdk-11-openj9
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: bdffb5117c33476d554325d8efe5866306004b99
+Directory: adoptopenjdk-11-openj9
 
-Tags: 3.6.0-jdk-12-alpine, 3.6-jdk-12-alpine, 3-jdk-12-alpine
+Tags: 3.8.1-jdk-11-slim, 3.8-jdk-11-slim, 3-jdk-11-slim
+Architectures: amd64, arm64v8
+GitCommit: bdffb5117c33476d554325d8efe5866306004b99
+Directory: openjdk-11-slim
+
+Tags: 3.8.1-jdk-8, 3.8-jdk-8, 3-jdk-8
 Architectures: amd64
-GitCommit: 0607c2d00e31df3d2166bb0ab4f5097bdf2ede0e
-Directory: jdk-12-alpine
+GitCommit: bdffb5117c33476d554325d8efe5866306004b99
+Directory: openjdk-8
 
-Tags: 3.6.0-jdk-12, 3.6-jdk-12, 3-jdk-12
+Tags: 3.8.1-jdk-8-openj9, 3.8-jdk-8-openj9, 3-jdk-8-openj9
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: bdffb5117c33476d554325d8efe5866306004b99
+Directory: adoptopenjdk-8-openj9
+
+Tags: 3.8.1-jdk-8-slim, 3.8-jdk-8-slim, 3-jdk-8-slim
 Architectures: amd64
-GitCommit: 0607c2d00e31df3d2166bb0ab4f5097bdf2ede0e
-Directory: jdk-12
+GitCommit: bdffb5117c33476d554325d8efe5866306004b99
+Directory: openjdk-8-slim
 
-Tags: 3.6.0-jdk-13-alpine, 3.6-jdk-13-alpine, 3-jdk-13-alpine
+Tags: 3.8.1-openjdk-11, 3.8-openjdk-11, 3-openjdk-11
+Architectures: amd64, arm64v8
+GitCommit: bdffb5117c33476d554325d8efe5866306004b99
+Directory: openjdk-11
+
+Tags: 3.8.1-openjdk-11-slim, 3.8-openjdk-11-slim, 3-openjdk-11-slim
+Architectures: amd64, arm64v8
+GitCommit: bdffb5117c33476d554325d8efe5866306004b99
+Directory: openjdk-11-slim
+
+Tags: 3.8.1-openjdk-15, 3.8-openjdk-15, 3-openjdk-15
+Architectures: amd64, arm64v8
+GitCommit: bdffb5117c33476d554325d8efe5866306004b99
+Directory: openjdk-15
+
+Tags: 3.8.1-openjdk-15-slim, 3.8-openjdk-15-slim, 3-openjdk-15-slim
+Architectures: amd64, arm64v8
+GitCommit: bdffb5117c33476d554325d8efe5866306004b99
+Directory: openjdk-15-slim
+
+Tags: 3.8.1-openjdk-16, 3.8.1, 3.8.1-openjdk, 3.8-openjdk-16, 3.8, 3.8-openjdk, 3-openjdk-16, 3, latest, 3-openjdk, openjdk
+Architectures: amd64, arm64v8
+GitCommit: bdffb5117c33476d554325d8efe5866306004b99
+Directory: openjdk-16
+
+Tags: 3.8.1-openjdk-16-slim, 3.8-openjdk-16-slim, 3-openjdk-16-slim
+Architectures: amd64, arm64v8
+GitCommit: bdffb5117c33476d554325d8efe5866306004b99
+Directory: openjdk-16-slim
+
+Tags: 3.8.1-openjdk-17, 3.8-openjdk-17, 3-openjdk-17
+Architectures: amd64, arm64v8
+GitCommit: bdffb5117c33476d554325d8efe5866306004b99
+Directory: openjdk-17
+
+Tags: 3.8.1-openjdk-17-slim, 3.8-openjdk-17-slim, 3-openjdk-17-slim
+Architectures: amd64, arm64v8
+GitCommit: bdffb5117c33476d554325d8efe5866306004b99
+Directory: openjdk-17-slim
+
+Tags: 3.8.1-openjdk-8, 3.8-openjdk-8, 3-openjdk-8
 Architectures: amd64
-GitCommit: 3d97cfcd4a2de189542db8e3f618cf168b262168
-Directory: jdk-13-alpine
+GitCommit: bdffb5117c33476d554325d8efe5866306004b99
+Directory: openjdk-8
 
-Tags: 3.6.0-jdk-13, 3.6-jdk-13, 3-jdk-13
+Tags: 3.8.1-openjdk-8-slim, 3.8-openjdk-8-slim, 3-openjdk-8-slim
 Architectures: amd64
-GitCommit: 3d97cfcd4a2de189542db8e3f618cf168b262168
-Directory: jdk-13
+GitCommit: bdffb5117c33476d554325d8efe5866306004b99
+Directory: openjdk-8-slim
 
-Tags: 3.6.0-jdk-7-alpine, 3.6-jdk-7-alpine, 3-jdk-7-alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: 05f4802aa5c253dcf75fe967c6f45b3fb1e2f26e
-Directory: jdk-7-alpine
+Tags: 3.8.1-adoptopenjdk-11, 3.8-adoptopenjdk-11, 3-adoptopenjdk-11
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: bdffb5117c33476d554325d8efe5866306004b99
+Directory: adoptopenjdk-11
 
-Tags: 3.6.0-jdk-7-slim, 3.6-jdk-7-slim, 3-jdk-7-slim
-Architectures: amd64, arm32v5, arm32v7, i386
-GitCommit: 05f4802aa5c253dcf75fe967c6f45b3fb1e2f26e
-Directory: jdk-7-slim
+Tags: 3.8.1-adoptopenjdk-11-openj9, 3.8-adoptopenjdk-11-openj9, 3-adoptopenjdk-11-openj9
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: bdffb5117c33476d554325d8efe5866306004b99
+Directory: adoptopenjdk-11-openj9
 
-Tags: 3.6.0-jdk-7, 3.6-jdk-7, 3-jdk-7
-Architectures: amd64, arm32v5, arm32v7, i386
-GitCommit: 05f4802aa5c253dcf75fe967c6f45b3fb1e2f26e
-Directory: jdk-7
+Tags: 3.8.1-adoptopenjdk-15, 3.8.1-adoptopenjdk, 3.8-adoptopenjdk-15, 3.8-adoptopenjdk, 3-adoptopenjdk-15, 3-adoptopenjdk, adoptopenjdk
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: bdffb5117c33476d554325d8efe5866306004b99
+Directory: adoptopenjdk-15
 
-Tags: 3.6.0-jdk-8-alpine, 3.6.0-alpine, 3.6-jdk-8-alpine, 3.6-alpine, 3-jdk-8-alpine, alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: 05f4802aa5c253dcf75fe967c6f45b3fb1e2f26e
-Directory: jdk-8-alpine
+Tags: 3.8.1-adoptopenjdk-15-openj9, 3.8-adoptopenjdk-15-openj9, 3-adoptopenjdk-15-openj9
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: bdffb5117c33476d554325d8efe5866306004b99
+Directory: adoptopenjdk-15-openj9
 
-Tags: 3.6.0-jdk-8-slim, 3.6-jdk-8-slim, 3-jdk-8-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 05f4802aa5c253dcf75fe967c6f45b3fb1e2f26e
-Directory: jdk-8-slim
+Tags: 3.8.1-adoptopenjdk-16, 3.8-adoptopenjdk-16, 3-adoptopenjdk-16
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: b1a19f5406f0d01cd8fe689efbb838474c48db4f
+Directory: adoptopenjdk-16
 
-Tags: 3.6.0-jdk-8, 3.6-jdk-8, 3-jdk-8
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 05f4802aa5c253dcf75fe967c6f45b3fb1e2f26e
-Directory: jdk-8
+Tags: 3.8.1-adoptopenjdk-16-openj9, 3.8-adoptopenjdk-16-openj9, 3-adoptopenjdk-16-openj9
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: b1a19f5406f0d01cd8fe689efbb838474c48db4f
+Directory: adoptopenjdk-16-openj9
 
-Tags: 3.6.0-ibmjava-8-alpine, 3.6.0-ibmjava-alpine, 3.6-ibmjava-8-alpine, 3.6-ibmjava-alpine, 3-ibmjava-8-alpine, ibmjava-alpine
-Architectures: amd64
-GitCommit: 05f4802aa5c253dcf75fe967c6f45b3fb1e2f26e
-Directory: ibmjava-8-alpine
+Tags: 3.8.1-adoptopenjdk-8, 3.8-adoptopenjdk-8, 3-adoptopenjdk-8
+Architectures: amd64, ppc64le, s390x
+GitCommit: bdffb5117c33476d554325d8efe5866306004b99
+Directory: adoptopenjdk-8
 
-Tags: 3.6.0-ibmjava-8, 3.6.0-ibmjava, 3.6-ibmjava-8, 3.6-ibmjava, 3-ibmjava-8
+Tags: 3.8.1-adoptopenjdk-8-openj9, 3.8-adoptopenjdk-8-openj9, 3-adoptopenjdk-8-openj9
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: bdffb5117c33476d554325d8efe5866306004b99
+Directory: adoptopenjdk-8-openj9
+
+Tags: 3.8.1-ibmjava-8, 3.8.1-ibmjava, 3.8-ibmjava-8, 3.8-ibmjava, 3-ibmjava-8, 3-ibmjava, ibmjava
 Architectures: amd64, i386, ppc64le, s390x
-GitCommit: 05f4802aa5c253dcf75fe967c6f45b3fb1e2f26e
+GitCommit: bdffb5117c33476d554325d8efe5866306004b99
 Directory: ibmjava-8
 
-Tags: 3.6.0-amazoncorretto-8, 3.6-amazoncorretto-8, 3-amazoncorretto-8
+Tags: 3.8.1-ibmjava-8-alpine, 3.8.1-ibmjava-alpine, 3.8-ibmjava-8-alpine, 3.8-ibmjava-alpine, 3-ibmjava-8-alpine, ibmjava-alpine
 Architectures: amd64
-GitCommit: bfa2170e4978496508dc1006cd5ae18e60ae918a
+GitCommit: bdffb5117c33476d554325d8efe5866306004b99
+Directory: ibmjava-8-alpine
+
+Tags: 3.8.1-amazoncorretto-11, 3.8.1-amazoncorretto, 3.8-amazoncorretto-11, 3.8-amazoncorretto, 3-amazoncorretto-11, 3-amazoncorretto, amazoncorretto
+Architectures: amd64, arm64v8
+GitCommit: bdffb5117c33476d554325d8efe5866306004b99
+Directory: amazoncorretto-11
+
+Tags: 3.8.1-amazoncorretto-15, 3.8-amazoncorretto-15, 3-amazoncorretto-15
+Architectures: amd64, arm64v8
+GitCommit: bdffb5117c33476d554325d8efe5866306004b99
+Directory: amazoncorretto-15
+
+Tags: 3.8.1-amazoncorretto-16, 3.8-amazoncorretto-16, 3-amazoncorretto-16
+Architectures: amd64, arm64v8
+GitCommit: b6352962a604bfffb21a535e0999c0292b68c1db
+Directory: amazoncorretto-16
+
+Tags: 3.8.1-amazoncorretto-8, 3.8-amazoncorretto-8, 3-amazoncorretto-8
+Architectures: amd64, arm64v8
+GitCommit: bdffb5117c33476d554325d8efe5866306004b99
 Directory: amazoncorretto-8

@@ -1,90 +1,78 @@
-Maintainers: Wendy Raschke <wraschke@us.ibm.com> (@wraschke),
-             Andy Naumann <naumann@us.ibm.com> (@naumanna),
+Maintainers: Chris Potter <crpotter@us.ibm.com> (@crpotter),
+             Wendy Raschke <wraschke@us.ibm.com> (@wraschke),
              Arthur De Magalhaes <arthurdm@ca.ibm.com> (@arthurdm)
 GitRepo: https://github.com/WASdev/ci.docker.git
-GitCommit: 0de7bdf0673af9bd320ae8eeb247033c697ecddc
+GitCommit: 8d30234391a62a3a6b2c32b45801cb5e914781fa
 Architectures: amd64, i386, ppc64le, s390x
 
-Tags: beta
-Directory: beta
+Tags: kernel
+Directory: ga/latest/kernel
+File: Dockerfile.ubuntu.ibmjava8
 
-Tags: 19.0.0.3-kernel, kernel
-Directory: ga/19.0.0.3/kernel
+Tags: kernel-java11-openj9
+Directory: ga/latest/kernel
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.adoptopenjdk11
 
-Tags: 19.0.0.3-javaee8, javaee8, latest
-Directory: ga/19.0.0.3/javaee8
+Tags: full, latest
+Directory: ga/latest/full
+File: Dockerfile.ubuntu.ibmjava8
 
-Tags: 19.0.0.3-webProfile8, webProfile8
-Directory: ga/19.0.0.3/webProfile8
+Tags: full-java11-openj9
+Directory: ga/latest/full
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.adoptopenjdk11
 
-Tags: 19.0.0.3-microProfile1, microProfile1
-Directory: ga/19.0.0.3/microProfile1
+Tags: 21.0.0.5-kernel-java8-ibmjava
+Directory: ga/21.0.0.5/kernel
+File: Dockerfile.ubuntu.ibmjava8
 
-Tags: 19.0.0.3-microProfile2, microProfile2
-Directory: ga/19.0.0.3/microProfile2
+Tags: 21.0.0.5-kernel-java11-openj9
+Directory: ga/21.0.0.5/kernel
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.adoptopenjdk11
 
-Tags: 19.0.0.3-springBoot2, springBoot2
-Directory: ga/19.0.0.3/springBoot2
+Tags: 21.0.0.5-full-java8-ibmjava
+Directory: ga/21.0.0.5/full
+File: Dockerfile.ubuntu.ibmjava8
 
-Tags: 19.0.0.3-springBoot1, springBoot1
-Directory: ga/19.0.0.3/springBoot1
+Tags: 21.0.0.5-full-java11-openj9
+Directory: ga/21.0.0.5/full
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.adoptopenjdk11
 
-Tags: 19.0.0.3-webProfile7, webProfile7
-Directory: ga/19.0.0.3/webProfile7
+Tags: 21.0.0.3-kernel-java8-ibmjava
+Directory: ga/21.0.0.3/kernel
+File: Dockerfile.ubuntu.ibmjava8
 
-Tags: 19.0.0.3-javaee7, javaee7
-Directory: ga/19.0.0.3/javaee7
+Tags: 21.0.0.3-kernel-java11-openj9
+Directory: ga/21.0.0.3/kernel
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.adoptopenjdk11
 
-Tags: 18.0.0.4-kernel
-Directory: ga/18.0.0.4/kernel
+Tags: 21.0.0.3-full-java8-ibmjava
+Directory: ga/21.0.0.3/full
+File: Dockerfile.ubuntu.ibmjava8
 
-Tags: 18.0.0.4-javaee8
-Directory: ga/18.0.0.4/javaee8
+Tags: 21.0.0.3-full-java11-openj9
+Directory: ga/21.0.0.3/full
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.adoptopenjdk11
 
-Tags: 18.0.0.4-webProfile8
-Directory: ga/18.0.0.4/webProfile8
+Tags: 20.0.0.12-kernel-java8-ibmjava
+Directory: ga/20.0.0.12/kernel
+File: Dockerfile.ubuntu.ibmjava8
 
-Tags: 18.0.0.4-microProfile1
-Directory: ga/18.0.0.4/microProfile1
+Tags: 20.0.0.12-kernel-java11-openj9
+Directory: ga/20.0.0.12/kernel
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.adoptopenjdk11
 
-Tags: 18.0.0.4-microProfile2
-Directory: ga/18.0.0.4/microProfile2
+Tags: 20.0.0.12-full-java8-ibmjava
+Directory: ga/20.0.0.12/full
+File: Dockerfile.ubuntu.ibmjava8
 
-Tags: 18.0.0.4-springBoot2
-Directory: ga/18.0.0.4/springBoot2
-
-Tags: 18.0.0.4-springBoot1
-Directory: ga/18.0.0.4/springBoot1
-
-Tags: 18.0.0.4-webProfile7
-Directory: ga/18.0.0.4/webProfile7
-
-Tags: 18.0.0.4-javaee7
-Directory: ga/18.0.0.4/javaee7
-
-Tags: 18.0.0.3-kernel
-Directory: ga/18.0.0.3/kernel
-
-Tags: 18.0.0.3-javaee8
-Directory: ga/18.0.0.3/javaee8
-
-Tags: 18.0.0.3-webProfile8
-Directory: ga/18.0.0.3/webProfile8
-
-Tags: 18.0.0.3-microProfile1
-Directory: ga/18.0.0.3/microProfile1
-
-Tags: 18.0.0.3-microProfile2
-Directory: ga/18.0.0.3/microProfile2
-
-Tags: 18.0.0.3-springBoot2
-Directory: ga/18.0.0.3/springBoot2
-
-Tags: 18.0.0.3-springBoot1
-Directory: ga/18.0.0.3/springBoot1
-
-Tags: 18.0.0.3-webProfile7
-Directory: ga/18.0.0.3/webProfile7
-
-Tags: 18.0.0.3-javaee7
-Directory: ga/18.0.0.3/javaee7
+Tags: 20.0.0.12-full-java11-openj9
+Directory: ga/20.0.0.12/full
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.adoptopenjdk11

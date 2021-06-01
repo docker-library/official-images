@@ -1,59 +1,55 @@
-# this file is generated via https://github.com/docker-library/julia/blob/ce675aacea50716cc41bf795f6ac53fc74e55209/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/julia/blob/c82315d05c48897137be2720a5ee9f0132f1b06b/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/julia.git
 
-Tags: 1.1.0-stretch, 1.1-stretch, 1-stretch, stretch
-SharedTags: 1.1.0, 1.1, 1, latest
-Architectures: amd64, i386
-GitCommit: cccb8b5148d509a74cb12b64de44ad7b20328f23
-Directory: 1.1/stretch
+Tags: 1.6.1-buster, 1.6-buster, 1-buster, buster
+SharedTags: 1.6.1, 1.6, 1, latest
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le
+GitCommit: 6458311a816406d7b1eb6d37ae92a6e27e32028c
+Directory: 1.6/buster
 
-Tags: 1.1.0-windowsservercore-ltsc2016, 1.1-windowsservercore-ltsc2016, 1-windowsservercore-ltsc2016, windowsservercore-ltsc2016
-SharedTags: 1.1.0, 1.1, 1, latest
+Tags: 1.6.1-alpine3.13, 1.6-alpine3.13, 1-alpine3.13, alpine3.13, 1.6.1-alpine, 1.6-alpine, 1-alpine, alpine
+Architectures: amd64
+GitCommit: 6458311a816406d7b1eb6d37ae92a6e27e32028c
+Directory: 1.6/alpine3.13
+
+Tags: 1.6.1-windowsservercore-1809, 1.6-windowsservercore-1809, 1-windowsservercore-1809, windowsservercore-1809
+SharedTags: 1.6.1, 1.6, 1, latest
 Architectures: windows-amd64
-GitCommit: cccb8b5148d509a74cb12b64de44ad7b20328f23
-Directory: 1.1/windows/windowsservercore-ltsc2016
+GitCommit: 6458311a816406d7b1eb6d37ae92a6e27e32028c
+Directory: 1.6/windows/windowsservercore-1809
+Constraints: windowsservercore-1809
+
+Tags: 1.6.1-windowsservercore-ltsc2016, 1.6-windowsservercore-ltsc2016, 1-windowsservercore-ltsc2016, windowsservercore-ltsc2016
+SharedTags: 1.6.1, 1.6, 1, latest
+Architectures: windows-amd64
+GitCommit: 6458311a816406d7b1eb6d37ae92a6e27e32028c
+Directory: 1.6/windows/windowsservercore-ltsc2016
 Constraints: windowsservercore-ltsc2016
 
-Tags: 1.1.0-windowsservercore-1709, 1.1-windowsservercore-1709, 1-windowsservercore-1709, windowsservercore-1709
-SharedTags: 1.1.0, 1.1, 1, latest
-Architectures: windows-amd64
-GitCommit: cccb8b5148d509a74cb12b64de44ad7b20328f23
-Directory: 1.1/windows/windowsservercore-1709
-Constraints: windowsservercore-1709
-
-Tags: 1.1.0-windowsservercore-1803, 1.1-windowsservercore-1803, 1-windowsservercore-1803, windowsservercore-1803
-SharedTags: 1.1.0, 1.1, 1, latest
-Architectures: windows-amd64
-GitCommit: cccb8b5148d509a74cb12b64de44ad7b20328f23
-Directory: 1.1/windows/windowsservercore-1803
-Constraints: windowsservercore-1803
-
-Tags: 1.0.3-stretch, 1.0-stretch
-SharedTags: 1.0.3, 1.0
+Tags: 1.0.5-buster, 1.0-buster
+SharedTags: 1.0.5, 1.0
 Architectures: amd64, arm32v7, arm64v8, i386
-GitCommit: 60c9e91e86668dfd86f19034ebee211dfe3dd423
+GitCommit: 4c770401df0b946da5cf61150bedb05280b218a6
+Directory: 1.0/buster
+
+Tags: 1.0.5-stretch, 1.0-stretch
+Architectures: amd64, arm32v7, arm64v8, i386
+GitCommit: 4c770401df0b946da5cf61150bedb05280b218a6
 Directory: 1.0/stretch
 
-Tags: 1.0.3-windowsservercore-ltsc2016, 1.0-windowsservercore-ltsc2016
-SharedTags: 1.0.3, 1.0
+Tags: 1.0.5-windowsservercore-1809, 1.0-windowsservercore-1809
+SharedTags: 1.0.5, 1.0
 Architectures: windows-amd64
-GitCommit: 60c9e91e86668dfd86f19034ebee211dfe3dd423
+GitCommit: fc3c116c6fe19f870091df6843ed63a37f6c291b
+Directory: 1.0/windows/windowsservercore-1809
+Constraints: windowsservercore-1809
+
+Tags: 1.0.5-windowsservercore-ltsc2016, 1.0-windowsservercore-ltsc2016
+SharedTags: 1.0.5, 1.0
+Architectures: windows-amd64
+GitCommit: fc3c116c6fe19f870091df6843ed63a37f6c291b
 Directory: 1.0/windows/windowsservercore-ltsc2016
 Constraints: windowsservercore-ltsc2016
-
-Tags: 1.0.3-windowsservercore-1709, 1.0-windowsservercore-1709
-SharedTags: 1.0.3, 1.0
-Architectures: windows-amd64
-GitCommit: 60c9e91e86668dfd86f19034ebee211dfe3dd423
-Directory: 1.0/windows/windowsservercore-1709
-Constraints: windowsservercore-1709
-
-Tags: 1.0.3-windowsservercore-1803, 1.0-windowsservercore-1803
-SharedTags: 1.0.3, 1.0
-Architectures: windows-amd64
-GitCommit: 60c9e91e86668dfd86f19034ebee211dfe3dd423
-Directory: 1.0/windows/windowsservercore-1803
-Constraints: windowsservercore-1803

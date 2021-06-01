@@ -1,30 +1,33 @@
 Maintainers: Derek Collison <derek@synadia.com> (@derekcollison),
              Ivan Kozlovic <ivan@synadia.com> (@kozlovic),
-             Waldemar Salinas <wally@synadia.com> (@wallyqs)
+             Waldemar Salinas <wally@synadia.com> (@wallyqs),
+             Jaime Piña <jaime@synadia.com> (@variadico)
 GitRepo: https://github.com/nats-io/nats-docker.git
-GitCommit: 349eabff215ee6b068f46d34df378aba52790805
+GitCommit: 7acef1794d5a3e92344e681cbcae7906ad8194e4
 
-Tags: 1.4.1-linux, linux
-SharedTags: 1.4.1, latest
+Tags: 2.2.6-alpine3.13, 2.2-alpine3.13, 2-alpine3.13, alpine3.13, 2.2.6-alpine, 2.2-alpine, 2-alpine, alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8
-amd64-GitCommit: 349eabff215ee6b068f46d34df378aba52790805
-amd64-Directory: amd64
-arm32v6-GitCommit: 349eabff215ee6b068f46d34df378aba52790805
-arm32v6-Directory: arm32v6
-arm32v7-GitCommit: 349eabff215ee6b068f46d34df378aba52790805
-arm32v7-Directory: arm32v7
-arm64v8-GitCommit: 349eabff215ee6b068f46d34df378aba52790805
-arm64v8-Directory: arm64v8
+Directory: 2.2.6/alpine3.13
 
-Tags: 1.4.1-nanoserver, nanoserver
-SharedTags: 1.4.1, latest
-Architectures: windows-amd64
-windows-amd64-GitCommit: 349eabff215ee6b068f46d34df378aba52790805
-windows-amd64-Directory: windows/nanoserver
-Constraints: nanoserver
+Tags: 2.2.6-scratch, 2.2-scratch, 2-scratch, scratch, 2.2.6-linux, 2.2-linux, 2-linux, linux
+SharedTags: 2.2.6, 2.2, 2, latest
+Architectures: amd64, arm32v6, arm32v7, arm64v8
+Directory: 2.2.6/scratch
 
-Tags: 1.4.1-windowsservercore, windowsservercore
+Tags: 2.2.6-windowsservercore-1809, 2.2-windowsservercore-1809, 2-windowsservercore-1809, windowsservercore-1809
+SharedTags: 2.2.6-windowsservercore, 2.2-windowsservercore, 2-windowsservercore, windowsservercore
 Architectures: windows-amd64
-windows-amd64-GitCommit: 349eabff215ee6b068f46d34df378aba52790805
-windows-amd64-Directory: windows/windowsservercore
-Constraints: windowsservercore
+Directory: 2.2.6/windowsservercore-1809
+Constraints: windowsservercore-1809
+
+Tags: 2.2.6-nanoserver-1809, 2.2-nanoserver-1809, 2-nanoserver-1809, nanoserver-1809
+SharedTags: 2.2.6-nanoserver, 2.2-nanoserver, 2-nanoserver, nanoserver, 2.2.6, 2.2, 2, latest
+Architectures: windows-amd64
+Directory: 2.2.6/nanoserver-1809
+Constraints: nanoserver-1809, windowsservercore-1809
+
+Tags: 2.2.6-windowsservercore-ltsc2016, 2.2-windowsservercore-ltsc2016, 2-windowsservercore-ltsc2016, windowsservercore-ltsc2016
+SharedTags: 2.2.6-windowsservercore, 2.2-windowsservercore, 2-windowsservercore, windowsservercore
+Architectures: windows-amd64
+Directory: 2.2.6/windowsservercore-ltsc2016
+Constraints: windowsservercore-ltsc2016

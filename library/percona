@@ -1,30 +1,43 @@
 Maintainers: Evgeniy Patlan <evgeniy.patlan@percona.com> (@EvgeniyPatlan),
-             Mykola Marzhan <mykola.marzhan@percona.com> (@delgod)
+             Viacheslav Sarzhan <slava.sarzhan@percona.com> (@hors),
+             Mykola Marzhan <mykola.marzhan@percona.com> (@delgod),
+             Oleksandr Miroshnychenko <alex.miroshnychenko@percona.com> (@vorsel),
+             Illia Pshonkin <illia.pshonkin@percona.com> (@Sudokamikaze)
 GitRepo: https://github.com/percona/percona-docker.git
-GitFetch: refs/heads/master
+GitFetch: refs/heads/main
 Architectures: amd64
 
-Tags: 8.0.15-5-centos, 8.0-centos, 8-centos, 8.0.15-5, 8.0, 8, ps-8.0.15-5, ps-8.0, ps-8
-GitCommit: 9557526f4c48078ecb58167cf02ce808407ee273
-Directory: percona-server.80
+Tags: 8.0.23-14-centos, 8.0-centos, 8-centos, 8.0.23-14, 8.0, 8, ps-8.0.23-14, ps-8.0, ps-8
+GitCommit: 93b3cf2b7693c9dda94178fb3ce1d630e7f47a72
+Directory: percona-server-8.0
 File: Dockerfile
 
-Tags: 5.7.25-centos, 5.7-centos, 5-centos, centos, 5.7.25, 5.7, 5, ps-5.7.25, ps-5.7, ps-5, latest
-GitCommit: cedbd67233e531efa730eef3de64a0ad2bd65739
-Directory: percona-server.57
+Tags: 5.7.33-centos, 5.7-centos, 5-centos, centos, 5.7.33, 5.7, 5, ps-5.7.33, ps-5.7, ps-5, latest
+GitCommit: 9551c99eb560904aa3ea8a69c1e7f7fff3554c2b
+Directory: percona-server-5.7
 File: Dockerfile-dockerhub
 
-Tags: 5.6.43-centos, 5.6-centos, 5.6.43, 5.6, ps-5.6.43, ps-5.6
-GitCommit: c0bbda5f3e2c3a32ac45f22c51f5282d77afd5cc
-Directory: percona-server.56
+Tags: 5.6.51-centos, 5.6-centos, 5.6.51, 5.6, ps-5.6.51, ps-5.6
+GitCommit: f31a00a8b59ee17f9305403b109fd1eb50256493
+Directory: percona-server-5.6
 File: Dockerfile-dockerhub
 
-Tags: psmdb-4.0.6, psmdb-4.0
-GitCommit: 9e691d7409c1a246fc6440809ddccf36458b6b04
-Directory: percona-server-mongodb.40
+Tags: psmdb-4.4.5, psmdb-4.4
+GitCommit: 4bc78f495f344a3c0cef5a321d52cee5b95047b9
+Directory: percona-server-mongodb-4.4
 File: Dockerfile
 
-Tags: psmdb-3.6.11, psmdb-3.6
-GitCommit: 61192e2e81b7576f68c58637283dfff8284b2595
-Directory: percona-server-mongodb.36
+Tags: psmdb-4.2.14, psmdb-4.2
+GitCommit: 5a7b7589afe005db9e296ebb2970225b5d5eb926
+Directory: percona-server-mongodb-4.2
+File: Dockerfile
+
+Tags: psmdb-4.0.23, psmdb-4.0
+GitCommit: 123ac8939a7d8cbf265fb8a122ff1fe469445d93
+Directory: percona-server-mongodb-4.0
+File: Dockerfile
+
+Tags: psmdb-3.6.23, psmdb-3.6
+GitCommit: b32c7e632fe0d8b058ce32c0430a1783cfd557a0
+Directory: percona-server-mongodb-3.6
 File: Dockerfile

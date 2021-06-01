@@ -1,0 +1,23 @@
+
+[buildout]
+extends = develop.cfg
+find-links += 
+develop += src/eea.facetednavigation
+eggs += eea.facetednavigation
+zcml += eea.facetednavigation-meta
+
+[plonesite]
+enabled = True
+site-id = plone
+profiles += eea.facetednavigation:universal
+
+[versions]
+eea.facetednavigation=13.7
+plone.restapi=6.13.0
+
+
+[instance]
+zeo-client = true
+zeo-address = zeo:8080
+shared-blob = off
+http-fast-listen = off

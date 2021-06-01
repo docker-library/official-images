@@ -1,57 +1,74 @@
 Maintainers: Keegan Witt <keeganwitt@gmail.com> (@keeganwitt)
 GitRepo: https://github.com/groovy/docker-groovy.git
 
-Tags: 2.5.6-jdk8, 2.5-jdk8, 2.5.6-jdk, 2.5-jdk, jdk8, jdk
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 65e8534ddfec8bf91f1a0b6309dfc82ab7fb5f98
+
+# Groovy 3
+
+Tags: 3.0.8-jdk8, 3.0-jdk8, 3.0.8-jdk, 3.0-jdk, jdk8, jdk
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: fc758151cb38024e32f2bf1d05d672eb589d5872
 Directory: jdk8
 
-Tags: 2.5.6-jre8, 2.5-jre8, 2.5.6-jre, 2.5-jre, 2.5.6, 2.5, jre8, jre, latest
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 65e8534ddfec8bf91f1a0b6309dfc82ab7fb5f98
+Tags: 3.0.8-jre8, 3.0-jre8, 3.0.8-jre, 3.0-jre, 3.0.8, 3.0, jre8, jre, latest
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: fc758151cb38024e32f2bf1d05d672eb589d5872
 Directory: jre8
 
-Tags: 2.5.6-jdk8-alpine, 2.5-jdk8-alpine, 2.5.6-jdk-alpine, 2.5-jdk-alpine, jdk8-alpine, jdk-alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: 65e8534ddfec8bf91f1a0b6309dfc82ab7fb5f98
-Directory: jdk8-alpine
-
-Tags: 2.5.6-jre8-alpine, 2.5-jre8-alpine, 2.5.6-jre-alpine, 2.5-jre-alpine, 2.5.6-alpine, 2.5-alpine, jre8-alpine, jre-alpine, alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: 65e8534ddfec8bf91f1a0b6309dfc82ab7fb5f98
-Directory: jre8-alpine
-
-Tags: 2.5.6-jdk11, 2.5-jdk11, jdk11
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 65e8534ddfec8bf91f1a0b6309dfc82ab7fb5f98
+Tags: 3.0.8-jdk11, 3.0-jdk11, jdk11
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: fc758151cb38024e32f2bf1d05d672eb589d5872
 Directory: jdk11
 
-Tags: 2.5.6-jre11, 2.5-jre11, jre11
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 65e8534ddfec8bf91f1a0b6309dfc82ab7fb5f98
+Tags: 3.0.8-jre11, 3.0-jre11, jre11
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: fc758151cb38024e32f2bf1d05d672eb589d5872
 Directory: jre11
 
+Tags: 3.0.8-jdk16, 3.0-jdk16, jdk16
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: fc758151cb38024e32f2bf1d05d672eb589d5872
+Directory: jdk16
 
-Tags: 3.0.0-alpha-4-jdk8, 3.0-jdk8, 3.0.0-alpha-4-jdk, 3.0-jdk
-GitFetch: refs/heads/3.0
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 192832ebac6c015df49359d49dc77557e1fccb8b
+Tags: 3.0.8-jre16, 3.0-jre16, jre16
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: fc758151cb38024e32f2bf1d05d672eb589d5872
+Directory: jre16
+
+
+# Groovy 4
+
+Tags: 4.0.0-alpha-3-jdk8, 4.0-jdk8, 4.0.0-alpha-3-jdk, 4.0-jdk
+GitFetch: refs/heads/4.0
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: ad50fefc1fc19511003471541a68eba490642bd8
 Directory: jdk8
 
-Tags: 3.0.0-alpha-4-jre8, 3.0-jre8, 3.0.0-alpha-4-jre, 3.0-jre, 3.0.0-alpha-4, 3.0
-GitFetch: refs/heads/3.0
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 192832ebac6c015df49359d49dc77557e1fccb8b
+Tags: 4.0.0-alpha-3-jre8, 4.0-jre8, 4.0.0-alpha-3-jre, 4.0-jre, 4.0.0-alpha-3, 4.0
+GitFetch: refs/heads/4.0
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: ad50fefc1fc19511003471541a68eba490642bd8
 Directory: jre8
 
-Tags: 3.0.0-alpha-4-jdk8-alpine, 3.0-jdk8-alpine, 3.0.0-alpha-4-jdk-alpine, 3.0-jdk-alpine
-GitFetch: refs/heads/3.0
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: 192832ebac6c015df49359d49dc77557e1fccb8b
-Directory: jdk8-alpine
+Tags: 4.0.0-alpha-3-jdk11, 4.0-jdk11
+GitFetch: refs/heads/4.0
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: ad50fefc1fc19511003471541a68eba490642bd8
+Directory: jdk11
 
-Tags: 3.0.0-alpha-4-jre8-alpine, 3.0-jre8-alpine, 3.0.0-alpha-4-jre-alpine, 3.0-jre-alpine, 3.0.0-alpha-4-alpine, 3.0-alpine
-GitFetch: refs/heads/3.0
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: 192832ebac6c015df49359d49dc77557e1fccb8b
-Directory: jre8-alpine
+Tags: 4.0.0-alpha-3-jre11, 4.0-jre11
+GitFetch: refs/heads/4.0
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: ad50fefc1fc19511003471541a68eba490642bd8
+Directory: jre11
+
+Tags: 4.0.0-alpha-3-jdk16, 4.0-jdk16
+GitFetch: refs/heads/4.0
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: ad50fefc1fc19511003471541a68eba490642bd8
+Directory: jdk16
+
+Tags: 4.0.0-alpha-3-jre16, 4.0-jre16
+GitFetch: refs/heads/4.0
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: ad50fefc1fc19511003471541a68eba490642bd8
+Directory: jre16

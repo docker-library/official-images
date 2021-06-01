@@ -1,13 +1,35 @@
-Maintainers: Amazon Corretto Team (@corretto),
-             Eric Edens (@ericedens),
-             iliana weller (@ilianaw)
+Maintainers: Amazon Corretto Team <corretto-team@amazon.com> (@corretto),
+             James Guo <junguoj@amazon.com> (@jguo11),
+             Ben Taylor <benty@amazon.com> (@benty-amzn),
+             Clive Verghese <verghese@amazon.com> (@cliveverghese)
+GitRepo: https://github.com/corretto/corretto-docker.git
+GitFetch: refs/heads/master
+GitCommit: 4e2c302e3ba78f2d964fb82fce2e2d25a459d4ee
 
-Tags: 8, 8u202, 8-al2-full, latest
-GitRepo: https://github.com/corretto/corretto-8-docker.git
-GitFetch: refs/heads/8-al2-full
-GitCommit: 00075d9caa52634b489867a1a8c5a146b1695d0a
+Tags: 8, 8u292, 8u292-al2, 8-al2-full,8-al2-jdk, latest
+Architectures: amd64, arm64v8
+Directory: 8/jdk/al2
 
-Tags: 11, 11.0.2, 11-al2-full
-GitRepo: https://github.com/corretto/corretto-11-docker.git
-GitFetch: refs/heads/11-al2-full
-GitCommit: 13edf15055f74d5cbe0c3f5f8a0c1665414cadfd
+Tags: 11, 11.0.11, 11.0.11-al2, 11-al2-jdk, 11-al2-full
+Architectures: amd64, arm64v8
+Directory: 11/jdk/al2
+
+Tags: 8-alpine, 8u292-alpine, 8-alpine-full, 8-alpine-jdk
+Architectures: amd64
+Directory: 8/jdk/alpine
+
+Tags: 8-alpine-jre, 8u282-alpine-jre
+Architectures: amd64
+Directory: 8/jre/alpine
+
+Tags: 11-alpine, 11.0.11-alpine, 11-alpine-full, 11-alpine-jdk
+Architectures: amd64
+Directory: 11/jdk/alpine
+
+Tags: 16, 16.0.1, 16.0.1-al2, 16-al2-jdk, 16-al2-full
+Architectures: amd64, arm64v8
+Directory: 16/jdk/al2
+
+Tags: 16-alpine, 16.0.1-alpine, 16-alpine-full, 16-alpine-jdk
+Architectures: amd64
+Directory: 16/jdk/alpine

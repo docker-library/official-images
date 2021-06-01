@@ -1,3 +1,4 @@
+# https://stdgems.org/ (https://github.com/janlelis/stdgems)
 stdlib = [
 	'abbrev',
 	'base64',
@@ -106,8 +107,64 @@ if defined?(RUBY_ENGINE) && RUBY_ENGINE == 'jruby'
 end
 
 require 'rubygems/version'
-if Gem::Version.create(RUBY_VERSION) >= Gem::Version.create('2.5')
+rubyVersion = Gem::Version.create(RUBY_VERSION)
+if rubyVersion >= Gem::Version.create('2.5')
+	# https://bugs.ruby-lang.org/issues/13335
 	stdlib.delete('mathn')
+end
+if rubyVersion >= Gem::Version.create('2.7')
+	# https://bugs.ruby-lang.org/issues/15652
+	# "Removed from standard library. No one maintains it"
+	stdlib.delete('profiler')
+	# https://bugs.ruby-lang.org/issues/16170
+	# "removing some of the unmaintained libraries"
+	stdlib.delete('cmath')
+	stdlib.delete('e2mmap')
+	stdlib.delete('scanf')
+	stdlib.delete('shell')
+	stdlib.delete('sync')
+	stdlib.delete('thwait')
+	stdlib.delete('tracer')
+end
+if rubyVersion >= Gem::Version.create('3.0')
+	# https://www.ruby-lang.org/en/news/2020/09/25/ruby-3-0-0-preview1-released/
+	# Removed libraries no longer part of stdlib.
+	stdlib.delete('English')
+	stdlib.delete('abbrev')
+	stdlib.delete('base64')
+	stdlib.delete('erb')
+	stdlib.delete('find')
+	stdlib.delete('io/nonblock')
+	stdlib.delete('io/wait')
+	stdlib.delete('net/ftp')
+	stdlib.delete('net/http')
+	stdlib.delete('net/imap')
+	stdlib.delete('net/protocol')
+	stdlib.delete('net/telnet')
+	stdlib.delete('nkf')
+	stdlib.delete('open-uri')
+	stdlib.delete('optparse')
+	stdlib.delete('resolv')
+	stdlib.delete('resolv-replace')
+	stdlib.delete('rexml')
+	stdlib.delete('rinda')
+	stdlib.delete('rss')
+	stdlib.delete('securerandom')
+	stdlib.delete('set')
+	stdlib.delete('shellwords')
+	stdlib.delete('tempfile')
+	stdlib.delete('time')
+	stdlib.delete('tmpdir')
+	stdlib.delete('tsort')
+	stdlib.delete('weakref')
+	stdlib.delete('xmlrpc/client')
+	stdlib.delete('xmlrpc/server')
+	# https://github.com/ruby/ruby/blob/v3_0_0_preview1/NEWS.md#stdlib-compatibility-issues
+	# https://bugs.ruby-lang.org/issues/8446
+	stdlib.delete('sdbm')
+	# https://github.com/ruby/ruby/blob/v3_0_0_rc1/NEWS.md#stdlib-compatibility-issues
+	# https://bugs.ruby-lang.org/issues/17303
+	stdlib.delete('webrick')
 end
 
 result = 'ok'

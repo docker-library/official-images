@@ -1,0 +1,16 @@
+
+[buildout]
+extends = develop.cfg
+find-links += 
+develop += src/eea.facetednavigation
+eggs += eea.facetednavigation
+zcml += eea.facetednavigation-meta
+
+[plonesite]
+enabled = True
+site-id = plone
+profiles += eea.facetednavigation:universal
+
+[versions]
+eea.facetednavigation=13.3
+plone.restapi=5.0.0

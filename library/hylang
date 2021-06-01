@@ -1,9 +1,124 @@
-Maintainers: Paul Tagliamonte <paultag@hylang.org> (@paultag)
+Maintainers: Paul Tagliamonte <paultag@hylang.org> (@paultag), Hy Docker Team (@hylang/docker)
+GitRepo: https://github.com/hylang/docker-hylang.git
+GitCommit: a9b44f188690a2d07590dde5e46499b58e42b6a3
+Directory: dockerfiles-generated
 
-# https://github.com/hylang/hy/tree/0.13.1
-Tags: 0.13.1, 0.13, 0, latest
-# arches scraped from "python:3"
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitRepo: https://github.com/hylang/hy.git
-GitFetch: refs/tags/0.13.1
-GitCommit: 3631499a4e3886333f54b967ea479a54fe84714d
+Tags: 1.0a1-python3.9-buster, python3.9-buster, 1.0a1-buster, buster
+SharedTags: 1.0a1-python3.9, python3.9, 1.0a1, latest
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+File: Dockerfile.python3.9-buster
+
+Tags: 1.0a1-python3.9-alpine3.13, python3.9-alpine3.13, 1.0a1-alpine3.13, alpine3.13, 1.0a1-python3.9-alpine, python3.9-alpine, 1.0a1-alpine, alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+File: Dockerfile.python3.9-alpine3.13
+
+Tags: 1.0a1-python3.9-alpine3.12, python3.9-alpine3.12, 1.0a1-alpine3.12, alpine3.12
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+File: Dockerfile.python3.9-alpine3.12
+
+Tags: 1.0a1-python3.9-windowsservercore-1809, python3.9-windowsservercore-1809, 1.0a1-windowsservercore-1809, windowsservercore-1809
+SharedTags: 1.0a1-python3.9, python3.9, 1.0a1, latest
+Architectures: windows-amd64
+Constraints: windowsservercore-1809
+File: Dockerfile.python3.9-windowsservercore-1809
+
+Tags: 1.0a1-python3.9-windowsservercore-ltsc2016, python3.9-windowsservercore-ltsc2016, 1.0a1-windowsservercore-ltsc2016, windowsservercore-ltsc2016
+SharedTags: 1.0a1-python3.9, python3.9, 1.0a1, latest
+Architectures: windows-amd64
+Constraints: windowsservercore-ltsc2016
+File: Dockerfile.python3.9-windowsservercore-ltsc2016
+
+Tags: 1.0a1-python3.8-buster, python3.8-buster
+SharedTags: 1.0a1-python3.8, python3.8
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+File: Dockerfile.python3.8-buster
+
+Tags: 1.0a1-python3.8-alpine3.13, python3.8-alpine3.13, 1.0a1-python3.8-alpine, python3.8-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+File: Dockerfile.python3.8-alpine3.13
+
+Tags: 1.0a1-python3.8-alpine3.12, python3.8-alpine3.12
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+File: Dockerfile.python3.8-alpine3.12
+
+Tags: 1.0a1-python3.8-windowsservercore-1809, python3.8-windowsservercore-1809
+SharedTags: 1.0a1-python3.8, python3.8
+Architectures: windows-amd64
+Constraints: windowsservercore-1809
+File: Dockerfile.python3.8-windowsservercore-1809
+
+Tags: 1.0a1-python3.8-windowsservercore-ltsc2016, python3.8-windowsservercore-ltsc2016
+SharedTags: 1.0a1-python3.8, python3.8
+Architectures: windows-amd64
+Constraints: windowsservercore-ltsc2016
+File: Dockerfile.python3.8-windowsservercore-ltsc2016
+
+Tags: 1.0a1-python3.7-buster, python3.7-buster
+SharedTags: 1.0a1-python3.7, python3.7
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+File: Dockerfile.python3.7-buster
+
+Tags: 1.0a1-python3.7-stretch, python3.7-stretch
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386
+File: Dockerfile.python3.7-stretch
+
+Tags: 1.0a1-python3.7-alpine3.13, python3.7-alpine3.13, 1.0a1-python3.7-alpine, python3.7-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+File: Dockerfile.python3.7-alpine3.13
+
+Tags: 1.0a1-python3.7-alpine3.12, python3.7-alpine3.12
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+File: Dockerfile.python3.7-alpine3.12
+
+Tags: 1.0a1-python3.6-buster, python3.6-buster
+SharedTags: 1.0a1-python3.6, python3.6
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+File: Dockerfile.python3.6-buster
+
+Tags: 1.0a1-python3.6-stretch, python3.6-stretch
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386
+File: Dockerfile.python3.6-stretch
+
+Tags: 1.0a1-python3.6-alpine3.13, python3.6-alpine3.13, 1.0a1-python3.6-alpine, python3.6-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+File: Dockerfile.python3.6-alpine3.13
+
+Tags: 1.0a1-python3.6-alpine3.12, python3.6-alpine3.12
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+File: Dockerfile.python3.6-alpine3.12
+
+Tags: 1.0a1-python3.10-rc-buster, python3.10-rc-buster
+SharedTags: 1.0a1-python3.10-rc, python3.10-rc
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+File: Dockerfile.python3.10-rc-buster
+
+Tags: 1.0a1-python3.10-rc-alpine3.13, python3.10-rc-alpine3.13, 1.0a1-python3.10-rc-alpine, python3.10-rc-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+File: Dockerfile.python3.10-rc-alpine3.13
+
+Tags: 1.0a1-python3.10-rc-alpine3.12, python3.10-rc-alpine3.12
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+File: Dockerfile.python3.10-rc-alpine3.12
+
+Tags: 1.0a1-python3.10-rc-windowsservercore-1809, python3.10-rc-windowsservercore-1809
+SharedTags: 1.0a1-python3.10-rc, python3.10-rc
+Architectures: windows-amd64
+Constraints: windowsservercore-1809
+File: Dockerfile.python3.10-rc-windowsservercore-1809
+
+Tags: 1.0a1-python3.10-rc-windowsservercore-ltsc2016, python3.10-rc-windowsservercore-ltsc2016
+SharedTags: 1.0a1-python3.10-rc, python3.10-rc
+Architectures: windows-amd64
+Constraints: windowsservercore-ltsc2016
+File: Dockerfile.python3.10-rc-windowsservercore-ltsc2016
+
+Tags: 1.0a1-pypy3.7-buster, pypy3.7-buster, 1.0a1-pypy-buster, pypy-buster
+SharedTags: 1.0a1-pypy3.7, pypy3.7, 1.0a1-pypy, pypy
+Architectures: amd64, arm64v8, i386, s390x
+File: Dockerfile.pypy3.7-buster
+
+Tags: 1.0a1-pypy3.7-windowsservercore-1809, pypy3.7-windowsservercore-1809, 1.0a1-pypy-windowsservercore-1809, pypy-windowsservercore-1809
+SharedTags: 1.0a1-pypy3.7, pypy3.7, 1.0a1-pypy, pypy
+Architectures: windows-amd64
+Constraints: windowsservercore-1809
+File: Dockerfile.pypy3.7-windowsservercore-1809

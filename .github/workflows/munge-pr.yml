@@ -1,0 +1,111 @@
+name: Munge PR
+
+on:
+  pull_request_target:
+
+defaults:
+  run:
+    shell: 'bash -Eeuo pipefail -x {0}'
+
+env:
+  # https://github.com/docker-library/bashbrew/issues/10
+  GIT_LFS_SKIP_SMUDGE: 1
+
+jobs:
+
+  apply-labels:
+    name: Apply Labels
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          # ideally this would be "github.event.pull_request.merge_commit_sha" but according to https://docs.github.com/en/free-pro-team@latest/rest/reference/pulls#get-a-pull-request if "mergeable" is null (meaning there's a background job in-progress to check mergeability), that value is undefined...
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+      - id: labels
+        name: Gather List
+        run: |
+          git fetch --quiet https://github.com/docker-library/official-images.git master
+          labels="$(git diff --numstat FETCH_HEAD...HEAD -- library/ | cut -d$'\t' -f3-)"
+          if [ -n "$labels" ] && newImages="$(git diff --name-only --diff-filter=A FETCH_HEAD...HEAD -- $labels)" && [ -n "$newImages" ]; then
+            labels+=$'\nnew-image'
+          fi
+          labels="$(jq -Rsc 'rtrimstr("\n") | split("\n") | { labels: ., count: length }' <<<"$labels")"
+          jq . <<<"$labels"
+          echo "::set-output name=labels::$labels"
+      - name: Apply Labels
+        uses: actions/github-script@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const data = ${{ steps.labels.outputs.labels }};
+            github.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.pull_request.number,
+              labels: data.labels,
+            });
+        if: fromJSON(steps.labels.outputs.labels).count > 0
+
+  diff:
+    name: Diff Comment
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          # again, this would ideally be "github.event.pull_request.merge_commit_sha" but we might not have that yet when this runs, so we compromise by checkout out the latest code from the target branch (so we get the latest "diff-pr.sh" script to run)
+          ref: ${{ github.event.pull_request.base.ref }}
+          fetch-depth: 0
+      - name: Prepare Environment
+        run: |
+          # this mimics "test-pr.sh", but without running repo-local scripts (to avoid CVE-2020-15228 via the scripts being updated to write nasty things to $GITHUB_ENV)
+          bashbrewVersion="$(< bashbrew-version)"
+          docker build --pull --tag oisupport/bashbrew:base "https://github.com/docker-library/bashbrew.git#v$bashbrewVersion"
+          docker build --tag oisupport/bashbrew:diff-pr .
+      - id: diff
+        name: Generate Diff
+        env:
+          GITHUB_PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          docker run --rm --read-only --tmpfs /tmp oisupport/bashbrew:diff-pr ./diff-pr.sh "$GITHUB_PR_NUMBER" | tee "$GITHUB_WORKSPACE/oi-pr.diff"
+          set +x
+          length="$(jq -Rcs 'length' "$GITHUB_WORKSPACE/oi-pr.diff")"
+          echo "::set-output name=length::$length"
+      - name: Comment
+        uses: actions/github-script@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { data: comments } = await github.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.pull_request.number,
+            });
+            const commentText = 'Diff for ' + context.payload.pull_request.head.sha + ':';
+            needNewComment = true;
+            for (let j = 0; j < comments.length; ++j) {
+              const comment = comments[j];
+              if (comment.user.login === 'github-actions[bot]') {
+                if (comment.body.includes(commentText)) {
+                  needNewComment = false;
+                } else {
+                  await github.issues.deleteComment({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    comment_id: comment.id,
+                  });
+                }
+              }
+            }
+            if (needNewComment) {
+              const fs = require('fs');
+              const diff = fs.readFileSync(process.env.GITHUB_WORKSPACE + '/oi-pr.diff');
+              const body = "<details>\n<summary>" + commentText + "</summary>\n\n```diff\n" + diff + "\n```\n\n</details>";
+              await github.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.payload.pull_request.number,
+                body: body,
+              });
+            }
+        if: fromJSON(steps.diff.outputs.length) > 0

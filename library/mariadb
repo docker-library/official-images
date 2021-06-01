@@ -1,35 +1,30 @@
-# this file is generated via https://github.com/docker-library/mariadb/blob/b5689dcb9e0f411ed05070a9ce96ad1768f48825/generate-stackbrew-library.sh
+# this file is generated via https://github.com/MariaDB/mariadb-docker/blob/b180797cece7d65e23156fd872368e34d3d2a757/generate-stackbrew-library.sh
 
-Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
-             Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
-GitRepo: https://github.com/docker-library/mariadb.git
+Maintainers: Daniel Black <daniel@mariadb.org> (@grooverdan),
+             Daniel Bartholomew <dbart@mariadb.com> (@dbart)
+GitRepo: https://github.com/MariaDB/mariadb-docker.git
 
-Tags: 10.4.4-bionic, 10.4-bionic, rc-bionic, 10.4.4, 10.4, rc
+Tags: 10.6.1-focal, 10.6-focal, beta-focal, 10.6.1, 10.6, beta
 Architectures: amd64, arm64v8, ppc64le
-GitCommit: 23417d54f56958b193e65ab548c34b3b336a1758
+GitCommit: 2ef69de05f84aee8a141c0d37cdb5b9790ac91d9
+Directory: 10.6
+
+Tags: 10.5.10-focal, 10.5-focal, 10-focal, focal, 10.5.10, 10.5, 10, latest
+Architectures: amd64, arm64v8, ppc64le
+GitCommit: 6f5d272ca053105901c23fcdc44884907aa4d11d
+Directory: 10.5
+
+Tags: 10.4.19-focal, 10.4-focal, 10.4.19, 10.4
+Architectures: amd64, arm64v8, ppc64le
+GitCommit: 6f5d272ca053105901c23fcdc44884907aa4d11d
 Directory: 10.4
 
-Tags: 10.3.14-bionic, 10.3-bionic, 10-bionic, bionic, 10.3.14, 10.3, 10, latest
+Tags: 10.3.29-focal, 10.3-focal, 10.3.29, 10.3
 Architectures: amd64, arm64v8, ppc64le
-GitCommit: 32aca58b13ee20d6514587e1a57ec9a0632fbe1d
+GitCommit: 6f5d272ca053105901c23fcdc44884907aa4d11d
 Directory: 10.3
 
-Tags: 10.2.23-bionic, 10.2-bionic, 10.2.23, 10.2
+Tags: 10.2.38-bionic, 10.2-bionic, 10.2.38, 10.2
 Architectures: amd64, arm64v8, ppc64le
-GitCommit: fa087985605ca508ac661a52164db8c292c9f779
+GitCommit: 6f5d272ca053105901c23fcdc44884907aa4d11d
 Directory: 10.2
-
-Tags: 10.1.38-bionic, 10.1-bionic, 10.1.38, 10.1
-Architectures: amd64, arm64v8, ppc64le
-GitCommit: 93f1e9c9082364522c77b94e98299d7d398089f8
-Directory: 10.1
-
-Tags: 10.0.38-xenial, 10.0-xenial, 10.0.38, 10.0
-Architectures: amd64, arm64v8, i386, ppc64le
-GitCommit: 93f1e9c9082364522c77b94e98299d7d398089f8
-Directory: 10.0
-
-Tags: 5.5.63-trusty, 5.5-trusty, 5-trusty, 5.5.63, 5.5, 5
-Architectures: amd64, i386, ppc64le
-GitCommit: 93f1e9c9082364522c77b94e98299d7d398089f8
-Directory: 5.5

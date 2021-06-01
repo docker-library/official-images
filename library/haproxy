@@ -1,55 +1,75 @@
-# this file is generated via https://github.com/docker-library/haproxy/blob/1e9525fb1db023943e1e37a0f26d9e2b77b74020/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/haproxy/blob/ae10fbf9bae067e11222c34344c9032060ffa997/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/haproxy.git
 
-Tags: 1.9.6, 1.9, 1, latest
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 9fd5e8fbbf8898027be1fed2aef616495fc09174
-Directory: 1.9
+Tags: 2.5-dev0, 2.5-dev
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: ae10fbf9bae067e11222c34344c9032060ffa997
+Directory: 2.5-rc
 
-Tags: 1.9.6-alpine, 1.9-alpine, 1-alpine, alpine
+Tags: 2.5-dev0-alpine, 2.5-dev-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 9fd5e8fbbf8898027be1fed2aef616495fc09174
-Directory: 1.9/alpine
+GitCommit: ae10fbf9bae067e11222c34344c9032060ffa997
+Directory: 2.5-rc/alpine
 
-Tags: 1.8.19, 1.8
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: b28cb99a56e39f27d49117ea9d34a652a2c55d47
+Tags: 2.4.0, 2.4, lts, latest
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: ae10fbf9bae067e11222c34344c9032060ffa997
+Directory: 2.4
+
+Tags: 2.4.0-alpine, 2.4-alpine, lts-alpine, alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: ae10fbf9bae067e11222c34344c9032060ffa997
+Directory: 2.4/alpine
+
+Tags: 2.3.10, 2.3
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: db9335048c43b78fb4daec1ac9d7d171fc209d78
+Directory: 2.3
+
+Tags: 2.3.10-alpine, 2.3-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: db9335048c43b78fb4daec1ac9d7d171fc209d78
+Directory: 2.3/alpine
+
+Tags: 2.2.14, 2.2
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: 99d68b7d5b3ec68cdfcb7e0cef173e054d491bcb
+Directory: 2.2
+
+Tags: 2.2.14-alpine, 2.2-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 99d68b7d5b3ec68cdfcb7e0cef173e054d491bcb
+Directory: 2.2/alpine
+
+Tags: 2.0.22, 2.0
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: a67c29391a51f0fa90c0256b35b5c27d8bc598ce
+Directory: 2.0
+
+Tags: 2.0.22-alpine, 2.0-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: a67c29391a51f0fa90c0256b35b5c27d8bc598ce
+Directory: 2.0/alpine
+
+Tags: 1.8.30, 1.8
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: 0e7b078d5ff2ed9f29e4223a5d3d38d191818505
 Directory: 1.8
 
-Tags: 1.8.19-alpine, 1.8-alpine
+Tags: 1.8.30-alpine, 1.8-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: b28cb99a56e39f27d49117ea9d34a652a2c55d47
+GitCommit: 0e7b078d5ff2ed9f29e4223a5d3d38d191818505
 Directory: 1.8/alpine
 
-Tags: 1.7.11, 1.7
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 4a2d233b1a42e255b8e4097d50d2241b97bd446e
+Tags: 1.7.14, 1.7
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: 2991130ba47e26edd1e0eb32239c3a4a7b579aa6
 Directory: 1.7
 
-Tags: 1.7.11-alpine, 1.7-alpine
+Tags: 1.7.14-alpine, 1.7-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 0ff254cfc41e9877ebb9b8e48a22a41888ee0171
+GitCommit: 2991130ba47e26edd1e0eb32239c3a4a7b579aa6
 Directory: 1.7/alpine
-
-Tags: 1.6.14, 1.6
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 4a2d233b1a42e255b8e4097d50d2241b97bd446e
-Directory: 1.6
-
-Tags: 1.6.14-alpine, 1.6-alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: 4a2d233b1a42e255b8e4097d50d2241b97bd446e
-Directory: 1.6/alpine
-
-Tags: 1.5.19, 1.5
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 4a2d233b1a42e255b8e4097d50d2241b97bd446e
-Directory: 1.5
-
-Tags: 1.5.19-alpine, 1.5-alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: 4a2d233b1a42e255b8e4097d50d2241b97bd446e
-Directory: 1.5/alpine

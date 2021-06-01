@@ -1,0 +1,387 @@
+# AdoptOpenJDK official images for OpenJDK with HotSpot and OpenJDK with Eclipse OpenJ9.
+
+Maintainers: George Adams <george.adams@microsoft.com> (@gdams_)
+GitRepo: https://github.com/AdoptOpenJDK/openjdk-docker.git
+
+#-----------------------------hotspot v8 images---------------------------------
+Tags: 8u292-b10-jdk-hotspot-focal, 8-jdk-hotspot-focal, 8-hotspot-focal
+SharedTags: 8u292-b10-jdk-hotspot, 8-jdk-hotspot, 8-hotspot, 8-jdk, 8
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 8/jdk/ubuntu
+File: Dockerfile.hotspot.releases.full
+
+Tags: 8u292-b10-jdk-hotspot-windowsservercore-1809, 8-jdk-hotspot-windowsservercore-1809, 8-hotspot-windowsservercore-1809
+SharedTags: 8u292-b10-jdk-hotspot-windowsservercore, 8-jdk-hotspot-windowsservercore, 8-hotspot-windowsservercore, 8u292-b10-jdk-hotspot, 8-jdk-hotspot, 8-hotspot, 8-jdk, 8
+Architectures: windows-amd64
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 8/jdk/windows/windowsservercore-1809
+File: Dockerfile.hotspot.releases.full
+Constraints: windowsservercore-1809
+
+Tags: 8u292-b10-jdk-hotspot-windowsservercore-ltsc2016, 8-jdk-hotspot-windowsservercore-ltsc2016, 8-hotspot-windowsservercore-ltsc2016
+SharedTags: 8u292-b10-jdk-hotspot-windowsservercore, 8-jdk-hotspot-windowsservercore, 8-hotspot-windowsservercore, 8u292-b10-jdk-hotspot, 8-jdk-hotspot, 8-hotspot, 8-jdk, 8
+Architectures: windows-amd64
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 8/jdk/windows/windowsservercore-ltsc2016
+File: Dockerfile.hotspot.releases.full
+Constraints: windowsservercore-ltsc2016
+
+Tags: 8u292-b10-jre-hotspot-focal, 8-jre-hotspot-focal
+SharedTags: 8u292-b10-jre-hotspot, 8-jre-hotspot, 8-jre
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 8/jre/ubuntu
+File: Dockerfile.hotspot.releases.full
+
+Tags: 8u292-b10-jre-hotspot-windowsservercore-1809, 8-jre-hotspot-windowsservercore-1809
+SharedTags: 8u292-b10-jre-hotspot-windowsservercore, 8-jre-hotspot-windowsservercore, 8u292-b10-jre-hotspot, 8-jre-hotspot, 8-jre
+Architectures: windows-amd64
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 8/jre/windows/windowsservercore-1809
+File: Dockerfile.hotspot.releases.full
+Constraints: windowsservercore-1809
+
+Tags: 8u292-b10-jre-hotspot-windowsservercore-ltsc2016, 8-jre-hotspot-windowsservercore-ltsc2016
+SharedTags: 8u292-b10-jre-hotspot-windowsservercore, 8-jre-hotspot-windowsservercore, 8u292-b10-jre-hotspot, 8-jre-hotspot, 8-jre
+Architectures: windows-amd64
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 8/jre/windows/windowsservercore-ltsc2016
+File: Dockerfile.hotspot.releases.full
+Constraints: windowsservercore-ltsc2016
+
+
+#-----------------------------hotspot v11 images---------------------------------
+Tags: 11.0.11_9-jdk-hotspot-focal, 11-jdk-hotspot-focal, 11-hotspot-focal
+SharedTags: 11.0.11_9-jdk-hotspot, 11-jdk-hotspot, 11-hotspot, 11-jdk, 11
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 11/jdk/ubuntu
+File: Dockerfile.hotspot.releases.full
+
+Tags: 11.0.11_9-jdk-hotspot-windowsservercore-1809, 11-jdk-hotspot-windowsservercore-1809, 11-hotspot-windowsservercore-1809
+SharedTags: 11.0.11_9-jdk-hotspot-windowsservercore, 11-jdk-hotspot-windowsservercore, 11-hotspot-windowsservercore, 11.0.11_9-jdk-hotspot, 11-jdk-hotspot, 11-hotspot, 11-jdk, 11
+Architectures: windows-amd64
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 11/jdk/windows/windowsservercore-1809
+File: Dockerfile.hotspot.releases.full
+Constraints: windowsservercore-1809
+
+Tags: 11.0.11_9-jdk-hotspot-windowsservercore-ltsc2016, 11-jdk-hotspot-windowsservercore-ltsc2016, 11-hotspot-windowsservercore-ltsc2016
+SharedTags: 11.0.11_9-jdk-hotspot-windowsservercore, 11-jdk-hotspot-windowsservercore, 11-hotspot-windowsservercore, 11.0.11_9-jdk-hotspot, 11-jdk-hotspot, 11-hotspot, 11-jdk, 11
+Architectures: windows-amd64
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 11/jdk/windows/windowsservercore-ltsc2016
+File: Dockerfile.hotspot.releases.full
+Constraints: windowsservercore-ltsc2016
+
+Tags: 11.0.11_9-jre-hotspot-focal, 11-jre-hotspot-focal
+SharedTags: 11.0.11_9-jre-hotspot, 11-jre-hotspot, 11-jre
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 11/jre/ubuntu
+File: Dockerfile.hotspot.releases.full
+
+Tags: 11.0.11_9-jre-hotspot-windowsservercore-1809, 11-jre-hotspot-windowsservercore-1809
+SharedTags: 11.0.11_9-jre-hotspot-windowsservercore, 11-jre-hotspot-windowsservercore, 11.0.11_9-jre-hotspot, 11-jre-hotspot, 11-jre
+Architectures: windows-amd64
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 11/jre/windows/windowsservercore-1809
+File: Dockerfile.hotspot.releases.full
+Constraints: windowsservercore-1809
+
+Tags: 11.0.11_9-jre-hotspot-windowsservercore-ltsc2016, 11-jre-hotspot-windowsservercore-ltsc2016
+SharedTags: 11.0.11_9-jre-hotspot-windowsservercore, 11-jre-hotspot-windowsservercore, 11.0.11_9-jre-hotspot, 11-jre-hotspot, 11-jre
+Architectures: windows-amd64
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 11/jre/windows/windowsservercore-ltsc2016
+File: Dockerfile.hotspot.releases.full
+Constraints: windowsservercore-ltsc2016
+
+
+#-----------------------------hotspot v15 images---------------------------------
+Tags: 15.0.2_7-jdk-hotspot-focal, 15-jdk-hotspot-focal, 15-hotspot-focal
+SharedTags: 15.0.2_7-jdk-hotspot, 15-jdk-hotspot, 15-hotspot, 15-jdk, 15
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 15/jdk/ubuntu
+File: Dockerfile.hotspot.releases.full
+
+Tags: 15.0.2_7-jdk-hotspot-windowsservercore-1809, 15-jdk-hotspot-windowsservercore-1809, 15-hotspot-windowsservercore-1809
+SharedTags: 15.0.2_7-jdk-hotspot-windowsservercore, 15-jdk-hotspot-windowsservercore, 15-hotspot-windowsservercore, 15.0.2_7-jdk-hotspot, 15-jdk-hotspot, 15-hotspot, 15-jdk, 15
+Architectures: windows-amd64
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 15/jdk/windows/windowsservercore-1809
+File: Dockerfile.hotspot.releases.full
+Constraints: windowsservercore-1809
+
+Tags: 15.0.2_7-jdk-hotspot-windowsservercore-ltsc2016, 15-jdk-hotspot-windowsservercore-ltsc2016, 15-hotspot-windowsservercore-ltsc2016
+SharedTags: 15.0.2_7-jdk-hotspot-windowsservercore, 15-jdk-hotspot-windowsservercore, 15-hotspot-windowsservercore, 15.0.2_7-jdk-hotspot, 15-jdk-hotspot, 15-hotspot, 15-jdk, 15
+Architectures: windows-amd64
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 15/jdk/windows/windowsservercore-ltsc2016
+File: Dockerfile.hotspot.releases.full
+Constraints: windowsservercore-ltsc2016
+
+Tags: 15.0.2_7-jre-hotspot-focal, 15-jre-hotspot-focal
+SharedTags: 15.0.2_7-jre-hotspot, 15-jre-hotspot, 15-jre
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 15/jre/ubuntu
+File: Dockerfile.hotspot.releases.full
+
+Tags: 15.0.2_7-jre-hotspot-windowsservercore-1809, 15-jre-hotspot-windowsservercore-1809
+SharedTags: 15.0.2_7-jre-hotspot-windowsservercore, 15-jre-hotspot-windowsservercore, 15.0.2_7-jre-hotspot, 15-jre-hotspot, 15-jre
+Architectures: windows-amd64
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 15/jre/windows/windowsservercore-1809
+File: Dockerfile.hotspot.releases.full
+Constraints: windowsservercore-1809
+
+Tags: 15.0.2_7-jre-hotspot-windowsservercore-ltsc2016, 15-jre-hotspot-windowsservercore-ltsc2016
+SharedTags: 15.0.2_7-jre-hotspot-windowsservercore, 15-jre-hotspot-windowsservercore, 15.0.2_7-jre-hotspot, 15-jre-hotspot, 15-jre
+Architectures: windows-amd64
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 15/jre/windows/windowsservercore-ltsc2016
+File: Dockerfile.hotspot.releases.full
+Constraints: windowsservercore-ltsc2016
+
+
+#-----------------------------hotspot v16 images---------------------------------
+Tags: 16.0.1_9-jdk-hotspot-focal, 16-jdk-hotspot-focal, 16-hotspot-focal, hotspot-focal
+SharedTags: 16.0.1_9-jdk-hotspot, 16-jdk-hotspot, 16-hotspot, hotspot, 16-jdk, 16, jdk, latest
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 16/jdk/ubuntu
+File: Dockerfile.hotspot.releases.full
+
+Tags: 16.0.1_9-jdk-hotspot-windowsservercore-1809, 16-jdk-hotspot-windowsservercore-1809, 16-hotspot-windowsservercore-1809, hotspot-windowsservercore-1809
+SharedTags: 16.0.1_9-jdk-hotspot-windowsservercore, 16-jdk-hotspot-windowsservercore, 16-hotspot-windowsservercore, hotspot-windowsservercore, 16.0.1_9-jdk-hotspot, 16-jdk-hotspot, 16-hotspot, hotspot, 16-jdk, 16, jdk, latest
+Architectures: windows-amd64
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 16/jdk/windows/windowsservercore-1809
+File: Dockerfile.hotspot.releases.full
+Constraints: windowsservercore-1809
+
+Tags: 16.0.1_9-jdk-hotspot-windowsservercore-ltsc2016, 16-jdk-hotspot-windowsservercore-ltsc2016, 16-hotspot-windowsservercore-ltsc2016, hotspot-windowsservercore-ltsc2016
+SharedTags: 16.0.1_9-jdk-hotspot-windowsservercore, 16-jdk-hotspot-windowsservercore, 16-hotspot-windowsservercore, hotspot-windowsservercore, 16.0.1_9-jdk-hotspot, 16-jdk-hotspot, 16-hotspot, hotspot, 16-jdk, 16, jdk, latest
+Architectures: windows-amd64
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 16/jdk/windows/windowsservercore-ltsc2016
+File: Dockerfile.hotspot.releases.full
+Constraints: windowsservercore-ltsc2016
+
+Tags: 16.0.1_9-jre-hotspot-focal, 16-jre-hotspot-focal
+SharedTags: 16.0.1_9-jre-hotspot, 16-jre-hotspot, 16-jre
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 16/jre/ubuntu
+File: Dockerfile.hotspot.releases.full
+
+Tags: 16.0.1_9-jre-hotspot-windowsservercore-1809, 16-jre-hotspot-windowsservercore-1809
+SharedTags: 16.0.1_9-jre-hotspot-windowsservercore, 16-jre-hotspot-windowsservercore, 16.0.1_9-jre-hotspot, 16-jre-hotspot, 16-jre
+Architectures: windows-amd64
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 16/jre/windows/windowsservercore-1809
+File: Dockerfile.hotspot.releases.full
+Constraints: windowsservercore-1809
+
+Tags: 16.0.1_9-jre-hotspot-windowsservercore-ltsc2016, 16-jre-hotspot-windowsservercore-ltsc2016
+SharedTags: 16.0.1_9-jre-hotspot-windowsservercore, 16-jre-hotspot-windowsservercore, 16.0.1_9-jre-hotspot, 16-jre-hotspot, 16-jre
+Architectures: windows-amd64
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 16/jre/windows/windowsservercore-ltsc2016
+File: Dockerfile.hotspot.releases.full
+Constraints: windowsservercore-ltsc2016
+
+
+#-----------------------------openj9 v8 images---------------------------------
+Tags: 8u292-b10-jdk-openj9-0.26.0-focal, 8-jdk-openj9-focal, 8-openj9-focal
+SharedTags: 8u292-b10-jdk-openj9-0.26.0, 8-jdk-openj9, 8-openj9
+Architectures: amd64, ppc64le, s390x
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 8/jdk/ubuntu
+File: Dockerfile.openj9.releases.full
+
+Tags: 8u292-b10-jdk-openj9-0.26.0-windowsservercore-1809, 8-jdk-openj9-windowsservercore-1809, 8-openj9-windowsservercore-1809
+SharedTags: 8u292-b10-jdk-openj9-0.26.0-windowsservercore, 8-jdk-openj9-windowsservercore, 8-openj9-windowsservercore, 8u292-b10-jdk-openj9-0.26.0, 8-jdk-openj9, 8-openj9
+Architectures: windows-amd64
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 8/jdk/windows/windowsservercore-1809
+File: Dockerfile.openj9.releases.full
+Constraints: windowsservercore-1809
+
+Tags: 8u292-b10-jdk-openj9-0.26.0-windowsservercore-ltsc2016, 8-jdk-openj9-windowsservercore-ltsc2016, 8-openj9-windowsservercore-ltsc2016
+SharedTags: 8u292-b10-jdk-openj9-0.26.0-windowsservercore, 8-jdk-openj9-windowsservercore, 8-openj9-windowsservercore, 8u292-b10-jdk-openj9-0.26.0, 8-jdk-openj9, 8-openj9
+Architectures: windows-amd64
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 8/jdk/windows/windowsservercore-ltsc2016
+File: Dockerfile.openj9.releases.full
+Constraints: windowsservercore-ltsc2016
+
+Tags: 8u292-b10-jre-openj9-0.26.0-focal, 8-jre-openj9-focal
+SharedTags: 8u292-b10-jre-openj9-0.26.0, 8-jre-openj9
+Architectures: amd64, ppc64le, s390x
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 8/jre/ubuntu
+File: Dockerfile.openj9.releases.full
+
+Tags: 8u292-b10-jre-openj9-0.26.0-windowsservercore-1809, 8-jre-openj9-windowsservercore-1809
+SharedTags: 8u292-b10-jre-openj9-0.26.0-windowsservercore, 8-jre-openj9-windowsservercore, 8u292-b10-jre-openj9-0.26.0, 8-jre-openj9
+Architectures: windows-amd64
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 8/jre/windows/windowsservercore-1809
+File: Dockerfile.openj9.releases.full
+Constraints: windowsservercore-1809
+
+Tags: 8u292-b10-jre-openj9-0.26.0-windowsservercore-ltsc2016, 8-jre-openj9-windowsservercore-ltsc2016
+SharedTags: 8u292-b10-jre-openj9-0.26.0-windowsservercore, 8-jre-openj9-windowsservercore, 8u292-b10-jre-openj9-0.26.0, 8-jre-openj9
+Architectures: windows-amd64
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 8/jre/windows/windowsservercore-ltsc2016
+File: Dockerfile.openj9.releases.full
+Constraints: windowsservercore-ltsc2016
+
+
+#-----------------------------openj9 v11 images---------------------------------
+Tags: 11.0.11_9-jdk-openj9-0.26.0-focal, 11-jdk-openj9-focal, 11-openj9-focal
+SharedTags: 11.0.11_9-jdk-openj9-0.26.0, 11-jdk-openj9, 11-openj9
+Architectures: amd64, ppc64le, s390x
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 11/jdk/ubuntu
+File: Dockerfile.openj9.releases.full
+
+Tags: 11.0.11_9-jdk-openj9-0.26.0-windowsservercore-1809, 11-jdk-openj9-windowsservercore-1809, 11-openj9-windowsservercore-1809
+SharedTags: 11.0.11_9-jdk-openj9-0.26.0-windowsservercore, 11-jdk-openj9-windowsservercore, 11-openj9-windowsservercore, 11.0.11_9-jdk-openj9-0.26.0, 11-jdk-openj9, 11-openj9
+Architectures: windows-amd64
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 11/jdk/windows/windowsservercore-1809
+File: Dockerfile.openj9.releases.full
+Constraints: windowsservercore-1809
+
+Tags: 11.0.11_9-jdk-openj9-0.26.0-windowsservercore-ltsc2016, 11-jdk-openj9-windowsservercore-ltsc2016, 11-openj9-windowsservercore-ltsc2016
+SharedTags: 11.0.11_9-jdk-openj9-0.26.0-windowsservercore, 11-jdk-openj9-windowsservercore, 11-openj9-windowsservercore, 11.0.11_9-jdk-openj9-0.26.0, 11-jdk-openj9, 11-openj9
+Architectures: windows-amd64
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 11/jdk/windows/windowsservercore-ltsc2016
+File: Dockerfile.openj9.releases.full
+Constraints: windowsservercore-ltsc2016
+
+Tags: 11.0.11_9-jre-openj9-0.26.0-focal, 11-jre-openj9-focal
+SharedTags: 11.0.11_9-jre-openj9-0.26.0, 11-jre-openj9
+Architectures: amd64, ppc64le, s390x
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 11/jre/ubuntu
+File: Dockerfile.openj9.releases.full
+
+Tags: 11.0.11_9-jre-openj9-0.26.0-windowsservercore-1809, 11-jre-openj9-windowsservercore-1809
+SharedTags: 11.0.11_9-jre-openj9-0.26.0-windowsservercore, 11-jre-openj9-windowsservercore, 11.0.11_9-jre-openj9-0.26.0, 11-jre-openj9
+Architectures: windows-amd64
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 11/jre/windows/windowsservercore-1809
+File: Dockerfile.openj9.releases.full
+Constraints: windowsservercore-1809
+
+Tags: 11.0.11_9-jre-openj9-0.26.0-windowsservercore-ltsc2016, 11-jre-openj9-windowsservercore-ltsc2016
+SharedTags: 11.0.11_9-jre-openj9-0.26.0-windowsservercore, 11-jre-openj9-windowsservercore, 11.0.11_9-jre-openj9-0.26.0, 11-jre-openj9
+Architectures: windows-amd64
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 11/jre/windows/windowsservercore-ltsc2016
+File: Dockerfile.openj9.releases.full
+Constraints: windowsservercore-ltsc2016
+
+
+#-----------------------------openj9 v15 images---------------------------------
+Tags: 15.0.2_7-jdk-openj9-0.24.0-focal, 15-jdk-openj9-focal, 15-openj9-focal
+SharedTags: 15.0.2_7-jdk-openj9-0.24.0, 15-jdk-openj9, 15-openj9
+Architectures: amd64, ppc64le, s390x
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 15/jdk/ubuntu
+File: Dockerfile.openj9.releases.full
+
+Tags: 15.0.2_7-jdk-openj9-0.24.0-windowsservercore-1809, 15-jdk-openj9-windowsservercore-1809, 15-openj9-windowsservercore-1809
+SharedTags: 15.0.2_7-jdk-openj9-0.24.0-windowsservercore, 15-jdk-openj9-windowsservercore, 15-openj9-windowsservercore, 15.0.2_7-jdk-openj9-0.24.0, 15-jdk-openj9, 15-openj9
+Architectures: windows-amd64
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 15/jdk/windows/windowsservercore-1809
+File: Dockerfile.openj9.releases.full
+Constraints: windowsservercore-1809
+
+Tags: 15.0.2_7-jdk-openj9-0.24.0-windowsservercore-ltsc2016, 15-jdk-openj9-windowsservercore-ltsc2016, 15-openj9-windowsservercore-ltsc2016
+SharedTags: 15.0.2_7-jdk-openj9-0.24.0-windowsservercore, 15-jdk-openj9-windowsservercore, 15-openj9-windowsservercore, 15.0.2_7-jdk-openj9-0.24.0, 15-jdk-openj9, 15-openj9
+Architectures: windows-amd64
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 15/jdk/windows/windowsservercore-ltsc2016
+File: Dockerfile.openj9.releases.full
+Constraints: windowsservercore-ltsc2016
+
+Tags: 15.0.2_7-jre-openj9-0.24.0-focal, 15-jre-openj9-focal
+SharedTags: 15.0.2_7-jre-openj9-0.24.0, 15-jre-openj9
+Architectures: amd64, ppc64le, s390x
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 15/jre/ubuntu
+File: Dockerfile.openj9.releases.full
+
+Tags: 15.0.2_7-jre-openj9-0.24.0-windowsservercore-1809, 15-jre-openj9-windowsservercore-1809
+SharedTags: 15.0.2_7-jre-openj9-0.24.0-windowsservercore, 15-jre-openj9-windowsservercore, 15.0.2_7-jre-openj9-0.24.0, 15-jre-openj9
+Architectures: windows-amd64
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 15/jre/windows/windowsservercore-1809
+File: Dockerfile.openj9.releases.full
+Constraints: windowsservercore-1809
+
+Tags: 15.0.2_7-jre-openj9-0.24.0-windowsservercore-ltsc2016, 15-jre-openj9-windowsservercore-ltsc2016
+SharedTags: 15.0.2_7-jre-openj9-0.24.0-windowsservercore, 15-jre-openj9-windowsservercore, 15.0.2_7-jre-openj9-0.24.0, 15-jre-openj9
+Architectures: windows-amd64
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 15/jre/windows/windowsservercore-ltsc2016
+File: Dockerfile.openj9.releases.full
+Constraints: windowsservercore-ltsc2016
+
+
+#-----------------------------openj9 v16 images---------------------------------
+Tags: 16.0.1_9-jdk-openj9-0.26.0-focal, 16-jdk-openj9-focal, 16-openj9-focal, openj9-focal
+SharedTags: 16.0.1_9-jdk-openj9-0.26.0, 16-jdk-openj9, 16-openj9, openj9
+Architectures: amd64, ppc64le, s390x
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 16/jdk/ubuntu
+File: Dockerfile.openj9.releases.full
+
+Tags: 16.0.1_9-jdk-openj9-0.26.0-windowsservercore-1809, 16-jdk-openj9-windowsservercore-1809, 16-openj9-windowsservercore-1809, openj9-windowsservercore-1809
+SharedTags: 16.0.1_9-jdk-openj9-0.26.0-windowsservercore, 16-jdk-openj9-windowsservercore, 16-openj9-windowsservercore, openj9-windowsservercore, 16.0.1_9-jdk-openj9-0.26.0, 16-jdk-openj9, 16-openj9, openj9
+Architectures: windows-amd64
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 16/jdk/windows/windowsservercore-1809
+File: Dockerfile.openj9.releases.full
+Constraints: windowsservercore-1809
+
+Tags: 16.0.1_9-jdk-openj9-0.26.0-windowsservercore-ltsc2016, 16-jdk-openj9-windowsservercore-ltsc2016, 16-openj9-windowsservercore-ltsc2016, openj9-windowsservercore-ltsc2016
+SharedTags: 16.0.1_9-jdk-openj9-0.26.0-windowsservercore, 16-jdk-openj9-windowsservercore, 16-openj9-windowsservercore, openj9-windowsservercore, 16.0.1_9-jdk-openj9-0.26.0, 16-jdk-openj9, 16-openj9, openj9
+Architectures: windows-amd64
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 16/jdk/windows/windowsservercore-ltsc2016
+File: Dockerfile.openj9.releases.full
+Constraints: windowsservercore-ltsc2016
+
+Tags: 16.0.1_9-jre-openj9-0.26.0-focal, 16-jre-openj9-focal
+SharedTags: 16.0.1_9-jre-openj9-0.26.0, 16-jre-openj9
+Architectures: amd64, ppc64le, s390x
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 16/jre/ubuntu
+File: Dockerfile.openj9.releases.full
+
+Tags: 16.0.1_9-jre-openj9-0.26.0-windowsservercore-1809, 16-jre-openj9-windowsservercore-1809
+SharedTags: 16.0.1_9-jre-openj9-0.26.0-windowsservercore, 16-jre-openj9-windowsservercore, 16.0.1_9-jre-openj9-0.26.0, 16-jre-openj9
+Architectures: windows-amd64
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 16/jre/windows/windowsservercore-1809
+File: Dockerfile.openj9.releases.full
+Constraints: windowsservercore-1809
+
+Tags: 16.0.1_9-jre-openj9-0.26.0-windowsservercore-ltsc2016, 16-jre-openj9-windowsservercore-ltsc2016
+SharedTags: 16.0.1_9-jre-openj9-0.26.0-windowsservercore, 16-jre-openj9-windowsservercore, 16.0.1_9-jre-openj9-0.26.0, 16-jre-openj9
+Architectures: windows-amd64
+GitCommit: c945a5b588b63553a7bb36c28b6751716e35070c
+Directory: 16/jre/windows/windowsservercore-ltsc2016
+File: Dockerfile.openj9.releases.full
+Constraints: windowsservercore-ltsc2016
