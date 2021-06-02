@@ -54,29 +54,6 @@ Architectures: amd64, arm32v7, arm64v8
 GitCommit: df19ab7d5993d3b78a908362cdcd1479a8e78b35
 Directory: ros/melodic/ubuntu/bionic/perception
 
-########################################
-# Distro: debian:stretch
-
-Tags: melodic-ros-core-stretch
-Architectures: amd64, arm64v8
-GitCommit: d017429ffef82c2ae91e5f81a4a60640b2ad6c1b
-Directory: ros/melodic/debian/stretch/ros-core
-
-Tags: melodic-ros-base-stretch
-Architectures: amd64, arm64v8
-GitCommit: df19ab7d5993d3b78a908362cdcd1479a8e78b35
-Directory: ros/melodic/debian/stretch/ros-base
-
-Tags: melodic-robot-stretch
-Architectures: amd64, arm64v8
-GitCommit: df19ab7d5993d3b78a908362cdcd1479a8e78b35
-Directory: ros/melodic/debian/stretch/robot
-
-Tags: melodic-perception-stretch
-Architectures: amd64, arm64v8
-GitCommit: df19ab7d5993d3b78a908362cdcd1479a8e78b35
-Directory: ros/melodic/debian/stretch/perception
-
 
 ################################################################################
 # Release: noetic
@@ -151,28 +128,6 @@ Directory: ros/dashing/ubuntu/bionic/ros1-bridge
 
 
 ################################################################################
-# Release: eloquent
-
-########################################
-# Distro: ubuntu:bionic
-
-Tags: eloquent-ros-core, eloquent-ros-core-bionic
-Architectures: amd64, arm32v7, arm64v8
-GitCommit: 45dbb7bd0bb08303e50ecde4a60e827f7cec0ab0
-Directory: ros/eloquent/ubuntu/bionic/ros-core
-
-Tags: eloquent-ros-base, eloquent-ros-base-bionic, eloquent
-Architectures: amd64, arm32v7, arm64v8
-GitCommit: b3e79c3aef3687b56b3c1052ae38aa7010234834
-Directory: ros/eloquent/ubuntu/bionic/ros-base
-
-Tags: eloquent-ros1-bridge, eloquent-ros1-bridge-bionic
-Architectures: amd64, arm32v7, arm64v8
-GitCommit: 45dbb7bd0bb08303e50ecde4a60e827f7cec0ab0
-Directory: ros/eloquent/ubuntu/bionic/ros1-bridge
-
-
-################################################################################
 # Release: foxy
 
 ########################################
@@ -236,3 +191,4 @@ Tags: rolling-ros1-bridge, rolling-ros1-bridge-focal
 Architectures: amd64, arm64v8
 GitCommit: 11c613986e35a1f36fd0fa18b49173e0c564cf1d
 Directory: ros/rolling/ubuntu/focal/ros1-bridge
+
