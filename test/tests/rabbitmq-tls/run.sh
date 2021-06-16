@@ -27,7 +27,7 @@ EOD
 
 testImage="$("$dir/../image-name.sh" librarytest/rabbitmq-tls-test "$1")"
 "$dir/../docker-build.sh" "$dir" "$testImage" <<'EOD'
-FROM alpine:3.11
+FROM alpine:3.14
 RUN apk add --no-cache bash coreutils drill openssl procps
 # https://github.com/drwetter/testssl.sh/releases
 ENV TESTSSL_VERSION 2.9.5-8
