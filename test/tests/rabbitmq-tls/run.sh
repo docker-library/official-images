@@ -27,12 +27,12 @@ EOD
 
 testImage="$("$dir/../image-name.sh" librarytest/rabbitmq-tls-test "$1")"
 "$dir/../docker-build.sh" "$dir" "$testImage" <<'EOD'
-FROM alpine:3.11
+FROM alpine:3.14
 RUN apk add --no-cache bash coreutils drill openssl procps
 # https://github.com/drwetter/testssl.sh/releases
-ENV TESTSSL_VERSION 2.9.5-8
+ENV TESTSSL_VERSION 3.0.5
 RUN set -eux; \
-	wget -O testssl.tgz "https://github.com/drwetter/testssl.sh/archive/v${TESTSSL_VERSION}.tar.gz"; \
+	wget -O testssl.tgz "https://github.com/drwetter/testssl.sh/archive/${TESTSSL_VERSION}.tar.gz"; \
 	tar -xvf testssl.tgz -C /opt; \
 	rm testssl.tgz; \
 	ln -sv "/opt/testssl.sh-$TESTSSL_VERSION/testssl.sh" /usr/local/bin/; \
@@ -71,4 +71,6 @@ rabbitmq-diagnostics() {
 . "$dir/../../retry.sh" 'rabbitmq-diagnostics check_port_connectivity'
 
 rabbitmqctl status
-testssl --protocols --standard --each-cipher
+testssl --each-cipher
+testssl --standard
+#testssl --protocols # RabbitMQ still supports TLS 1.0/1.1 which are "deprecated" in testssl.sh 3.0+ (and thus fail this test)
