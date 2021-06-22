@@ -200,7 +200,7 @@ RUN set -eux; \
   wget -O /usr/local/bin/tini "https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini"; \
   wget -O /usr/local/bin/tini.asc "https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini.asc"; \
   export GNUPGHOME="$(mktemp -d)"; \
-  gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$TINI_SIGN_KEY"; \
+  gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$TINI_SIGN_KEY"; \
   gpg --batch --verify /usr/local/bin/tini.asc /usr/local/bin/tini; \
   command -v gpgconf && gpgconf --kill all || :; \
   rm -r "$GNUPGHOME" /usr/local/bin/tini.asc; \
@@ -228,7 +228,7 @@ The `Dockerfile` should be written to help mitigate interception attacks during 
 
 The purpose in recommending the use of https for downloading needed artifacts is that it ensures that the download is from a trusted source which also happens to make interception much more difficult.
 
-The purpose in recommending PGP signature verification is to ensure that only an authorized user published the given artifact. When importing PGP keys, please use the [high-availability server pool](https://sks-keyservers.net/overview-of-pools.php#pool_ha) from sks-keyservers (`ha.pool.sks-keyservers.net`). While there are often transient failures with servers in this pool, the build servers have a proxy that greatly improves reliability (see the FAQ section on [keys and verification](https://github.com/docker-library/faq/#openpgp--gnupg-keys-and-verification)).
+The purpose in recommending PGP signature verification is to ensure that only an authorized user published the given artifact. When importing PGP keys, please use the [the `keys.openpgp.org` service](https://keys.openpgp.org/about) when possible (preferring `keyserver.ubuntu.com` otherwise). See also the FAQ section on [keys and verification](https://github.com/docker-library/faq/#openpgp--gnupg-keys-and-verification).
 
 The purpose in recommending checksum verification is to verify that the artifact is as expected. This ensures that when remote content changes, the Dockerfile also will change and provide a natural `docker build` cache bust. As a bonus, this also prevents accidentally downloading newer-than-expected artifacts on poorly versioned files.
 
@@ -243,7 +243,7 @@ Below are some examples:
 	    curl -fL "https://www.python.org/ftp/python/$PYTHON_VERSION/Python-$PYTHON_VERSION.tar.xz.asc" -o python.tar.xz.asc; \
 	    export GNUPGHOME="$(mktemp -d)"; \
 	# gpg: key F73C700D: public key "Larry Hastings <larry@hastings.org>" imported
-	    gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 97FC712E4C024BBEA48A61ED3A5CA953F73C700D; \
+	    gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 97FC712E4C024BBEA48A61ED3A5CA953F73C700D; \
 	    gpg --batch --verify python.tar.xz.asc python.tar.xz; \
 	    rm -r "$GNUPGHOME" python.tar.xz.asc; \
 	    echo "$PYTHON_DOWNLOAD_SHA512 *python.tar.xz" | sha512sum --strict --check; \
@@ -256,7 +256,7 @@ Below are some examples:
 	RUN set -eux; \
 	    key='A4A9406876FCBD3C456770C88C718D3B5072E1F5'; \
 	    export GNUPGHOME="$(mktemp -d)"; \
-	    gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; \
+	    gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; \
 	    gpg --batch --armor --export "$key" > /etc/apt/trusted.gpg.d/mysql.gpg.asc; \
 	    gpgconf --kill all; \
 	    rm -rf "$GNUPGHOME"; \
