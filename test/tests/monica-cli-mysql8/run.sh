@@ -5,7 +5,7 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
 image="$1"
 
-dbImage='mysql:5.7'
+dbImage='mysql:8.0'
 # ensure the dbImage is ready and available
 if ! docker image inspect "$dbImage" &> /dev/null; then
 	docker pull "$dbImage" > /dev/null
