@@ -3,7 +3,14 @@ GitRepo: https://github.com/AlmaLinux/docker-images.git
 
 Tags: latest, 8, 8.4
 GitFetch: refs/heads/almalinux-8-x86_64
-GitCommit: 3317c1f96704c1cbbab9257ac51a791fb7e28987
+GitCommit: 875d1e6ce39cf5a5495148fce53471f9be49a4c3
 arm64v8-GitFetch: refs/heads/almalinux-8-aarch64
-arm64v8-GitCommit: 22f71ba269cb4ecb6dd771912f27cf5d8cc9da9a
+arm64v8-GitCommit: 54188857c898d835b22e23d273f8022cb8d1f1ce
+Architectures: amd64, arm64v8
+
+Tags: minimal, 8-minimal, 8.4-minimal
+GitFetch: refs/heads/almalinux-8-x86_64-minimal
+GitCommit: bc74e29d58210f825911fe73cd7ec0f724d1f78f
+arm64v8-GitFetch: refs/heads/almalinux-8-aarch64-minimal
+arm64v8-GitCommit: c0291ce4ff7d7bedb0fef86a863cb7405fb77520
 Architectures: amd64, arm64v8
