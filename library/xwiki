@@ -3,15 +3,16 @@
 Maintainers: XWiki Core Dev Team <committers@xwiki.org> (@xwiki)
 GitRepo: https://github.com/xwiki-contrib/docker-xwiki.git
 
-Tags: 13, 13.4, 13.4.0, 13-mysql-tomcat, 13.4-mysql-tomcat, 13.4.0-mysql-tomcat, mysql-tomcat, stable-mysql-tomcat, stable-mysql, stable, latest
-Architectures: amd64
-Directory: 13/mysql-tomcat
-GitCommit: 5384037f6f8cee294b1d40e3affaaefcb0f218dc
+# To uncomment for releasing 13.5
+#Tags: 13, 13.4, 13.4.0, 13-mysql-tomcat, 13.4-mysql-tomcat, 13.4.0-mysql-tomcat, mysql-tomcat, stable-mysql-tomcat, stable-mysql, stable, latest
+#Architectures: amd64
+#Directory: 13/mysql-tomcat
+#GitCommit: 5384037f6f8cee294b1d40e3affaaefcb0f218dc
 
-Tags: 13-postgres-tomcat, 13.4-postgres-tomcat, 13.4.0-postgres-tomcat, postgres-tomcat, stable-postgres-tomcat, stable-postgres
-Architectures: amd64, arm64v8
-Directory: 13/postgres-tomcat
-GitCommit: 5384037f6f8cee294b1d40e3affaaefcb0f218dc
+#Tags: 13-postgres-tomcat, 13.4-postgres-tomcat, 13.4.0-postgres-tomcat, postgres-tomcat, stable-postgres-tomcat, stable-postgres
+#Architectures: amd64, arm64v8
+#Directory: 13/postgres-tomcat
+#GitCommit: 5384037f6f8cee294b1d40e3affaaefcb0f218dc
 
 Tags: 12, 12.10, 12.10.8, 12-mysql-tomcat, 12.10-mysql-tomcat, 12.10.8-mysql-tomcat, lts-mysql-tomcat, lts-mysql, lts
 Architectures: amd64
@@ -22,3 +23,17 @@ Tags: 12-postgres-tomcat, 12.10-postgres-tomcat, 12.10.8-postgres-tomcat, lts-po
 Architectures: amd64, arm64v8
 Directory: 12/postgres-tomcat
 GitCommit: aafaa4b2af0417118382af0d238aa6b9eed68035
+
+# XWiki SAS recommended version
+# Note that the tags 13, stable and latest should be removed once 13.5 is released
+Tags: 13.4, 13.4.1, 13.4-mysql-tomcat, 13.4.1-mysql-tomcat, 13, 13-mysql-tomcat, mysql-tomcat, stable-mysql-tomcat, stable-mysql, stable, latest
+Architectures: amd64
+Directory: 13/mysql-tomcat
+GitCommit: 2baf2c948fcd5d144bd1fddd57d34153901ac625
+GitFetch: refs/heads/stable-13.4.x
+
+Tags: 13.4-postgres-tomcat, 13.4.1-postgres-tomcat, 13-postgres-tomcat, postgres-tomcat, stable-postgres-tomcat, stable-postgres
+Architectures: amd64, arm64v8
+Directory: 13/postgres-tomcat
+GitCommit: 2baf2c948fcd5d144bd1fddd57d34153901ac625
+GitFetch: refs/heads/stable-13.4.x
