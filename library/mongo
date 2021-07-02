@@ -4,37 +4,64 @@ Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/mongo.git
 
-Tags: 5.0.0-rc2-focal, 5.0-rc-focal
-SharedTags: 5.0.0-rc2, 5.0-rc
+Tags: 5.0.0-rc4-focal, 5.0-rc-focal
+SharedTags: 5.0.0-rc4, 5.0-rc
 Architectures: amd64, arm64v8
-GitCommit: 7e855fe0b1cebd6d39016066adc9a5f34d1332c9
+GitCommit: 8c771c519383f0df12d071b8e983d09d8bdfe7c3
 Directory: 5.0-rc
 
-Tags: 5.0.0-rc2-windowsservercore-1809, 5.0-rc-windowsservercore-1809
-SharedTags: 5.0.0-rc2-windowsservercore, 5.0-rc-windowsservercore, 5.0.0-rc2, 5.0-rc
+Tags: 5.0.0-rc4-windowsservercore-1809, 5.0-rc-windowsservercore-1809
+SharedTags: 5.0.0-rc4-windowsservercore, 5.0-rc-windowsservercore, 5.0.0-rc4, 5.0-rc
 Architectures: windows-amd64
-GitCommit: 7e855fe0b1cebd6d39016066adc9a5f34d1332c9
+GitCommit: 8c771c519383f0df12d071b8e983d09d8bdfe7c3
 Directory: 5.0-rc/windows/windowsservercore-1809
 Constraints: windowsservercore-1809
 
-Tags: 5.0.0-rc2-windowsservercore-ltsc2016, 5.0-rc-windowsservercore-ltsc2016
-SharedTags: 5.0.0-rc2-windowsservercore, 5.0-rc-windowsservercore, 5.0.0-rc2, 5.0-rc
+Tags: 5.0.0-rc4-windowsservercore-ltsc2016, 5.0-rc-windowsservercore-ltsc2016
+SharedTags: 5.0.0-rc4-windowsservercore, 5.0-rc-windowsservercore, 5.0.0-rc4, 5.0-rc
 Architectures: windows-amd64
-GitCommit: 7e855fe0b1cebd6d39016066adc9a5f34d1332c9
+GitCommit: 8c771c519383f0df12d071b8e983d09d8bdfe7c3
 Directory: 5.0-rc/windows/windowsservercore-ltsc2016
 Constraints: windowsservercore-ltsc2016
 
-Tags: 5.0.0-rc2-nanoserver-1809, 5.0-rc-nanoserver-1809
-SharedTags: 5.0.0-rc2-nanoserver, 5.0-rc-nanoserver
+Tags: 5.0.0-rc4-nanoserver-1809, 5.0-rc-nanoserver-1809
+SharedTags: 5.0.0-rc4-nanoserver, 5.0-rc-nanoserver
 Architectures: windows-amd64
-GitCommit: 7e855fe0b1cebd6d39016066adc9a5f34d1332c9
+GitCommit: 8c771c519383f0df12d071b8e983d09d8bdfe7c3
 Directory: 5.0-rc/windows/nanoserver-1809
+Constraints: nanoserver-1809, windowsservercore-1809
+
+Tags: 4.4.7-rc0-focal, 4.4-rc-focal
+SharedTags: 4.4.7-rc0, 4.4-rc
+Architectures: amd64, arm64v8
+GitCommit: 919fca743f3e769f3d22feb0a3d50bb82e97d342
+Directory: 4.4-rc
+
+Tags: 4.4.7-rc0-windowsservercore-1809, 4.4-rc-windowsservercore-1809
+SharedTags: 4.4.7-rc0-windowsservercore, 4.4-rc-windowsservercore, 4.4.7-rc0, 4.4-rc
+Architectures: windows-amd64
+GitCommit: 919fca743f3e769f3d22feb0a3d50bb82e97d342
+Directory: 4.4-rc/windows/windowsservercore-1809
+Constraints: windowsservercore-1809
+
+Tags: 4.4.7-rc0-windowsservercore-ltsc2016, 4.4-rc-windowsservercore-ltsc2016
+SharedTags: 4.4.7-rc0-windowsservercore, 4.4-rc-windowsservercore, 4.4.7-rc0, 4.4-rc
+Architectures: windows-amd64
+GitCommit: 919fca743f3e769f3d22feb0a3d50bb82e97d342
+Directory: 4.4-rc/windows/windowsservercore-ltsc2016
+Constraints: windowsservercore-ltsc2016
+
+Tags: 4.4.7-rc0-nanoserver-1809, 4.4-rc-nanoserver-1809
+SharedTags: 4.4.7-rc0-nanoserver, 4.4-rc-nanoserver
+Architectures: windows-amd64
+GitCommit: 919fca743f3e769f3d22feb0a3d50bb82e97d342
+Directory: 4.4-rc/windows/nanoserver-1809
 Constraints: nanoserver-1809, windowsservercore-1809
 
 Tags: 4.4.6-bionic, 4.4-bionic, 4-bionic, bionic
 SharedTags: 4.4.6, 4.4, 4, latest
 Architectures: amd64, arm64v8, s390x
-GitCommit: f14ca0c10b5a76bf41f65127b1b666659e91017e
+GitCommit: cb8a419053858e510fc68ed2d69415b3e50011cb
 Directory: 4.4
 
 Tags: 4.4.6-windowsservercore-1809, 4.4-windowsservercore-1809, 4-windowsservercore-1809, windowsservercore-1809
@@ -61,7 +88,7 @@ Constraints: nanoserver-1809, windowsservercore-1809
 Tags: 4.2.14-bionic, 4.2-bionic
 SharedTags: 4.2.14, 4.2
 Architectures: amd64, arm64v8
-GitCommit: f14ca0c10b5a76bf41f65127b1b666659e91017e
+GitCommit: cb8a419053858e510fc68ed2d69415b3e50011cb
 Directory: 4.2
 
 Tags: 4.2.14-windowsservercore-1809, 4.2-windowsservercore-1809
@@ -88,7 +115,7 @@ Constraints: nanoserver-1809, windowsservercore-1809
 Tags: 4.0.25-xenial, 4.0-xenial
 SharedTags: 4.0.25, 4.0
 Architectures: amd64, arm64v8
-GitCommit: 724081d1586a930c9b50d6337f086d29968a7389
+GitCommit: cb8a419053858e510fc68ed2d69415b3e50011cb
 Directory: 4.0
 
 Tags: 4.0.25-windowsservercore-1809, 4.0-windowsservercore-1809

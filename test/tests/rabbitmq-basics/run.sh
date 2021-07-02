@@ -17,7 +17,16 @@ COPY dir/*.py /usr/local/bin/
 EOD
 
 cname="rabbitmq-container-$RANDOM-$RANDOM"
-cid="$(docker run -d --name "$cname" "$serverImage")"
+# use sh to create a minimal config so that we don't get this error on 3.9+:
+# PLAIN login refused: user 'guest' can only connect via localhost
+cid="$(
+	docker run -d \
+		--name "$cname" \
+		--user rabbitmq \
+		--entrypoint sh \
+		"$serverImage" \
+		-c 'echo "loopback_users.guest = false" >> /etc/rabbitmq/rabbitmq.conf && exec rabbitmq-server'
+)"
 trap "docker rm -vf $cid > /dev/null" EXIT
 
 client() {

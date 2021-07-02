@@ -129,6 +129,8 @@ imageTests+=(
 	'
 	[monica]='
 		monica-cli
+		monica-cli-mysql8
+		monica-cli-mariadb10
 	'
 	[monica:apache]='
 		monica-apache-run
