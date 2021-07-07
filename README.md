@@ -278,7 +278,7 @@ Below are some examples:
 	ENV RUBY_DOWNLOAD_SHA256 (sha256-value-here)
 	RUN set -eux; \
 	    curl -fL -o ruby.tar.gz "https://cache.ruby-lang.org/pub/ruby/$RUBY_MAJOR/ruby-$RUBY_VERSION.tar.gz"; \
-	    echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.gz" | sha256sum -c --strict --check; \
+	    echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.gz" | sha256sum --strict --check; \
 	    # install
 	```
 
