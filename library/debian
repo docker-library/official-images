@@ -4,7 +4,7 @@
 Maintainers: Tianon Gravi <tianon@debian.org> (@tianon),
              Paul Tagliamonte <paultag@debian.org> (@paultag)
 GitRepo: https://github.com/debuerreotype/docker-debian-artifacts.git
-GitCommit: 90a83b6b730031399d45a49809364b07df0d0087
+GitCommit: 9c1a3db18852520a8b72a4795c7b197bcc93e8a0
 # https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-amd64
 amd64-GitFetch: refs/heads/dist-amd64
 amd64-GitCommit: a4f413e5917d5917fb2343c0c37ea0728114c084
@@ -26,6 +26,9 @@ mips64le-GitCommit: d114a529a4a7df3ddb4909dc8891edb9031350eb
 # https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-ppc64le
 ppc64le-GitFetch: refs/heads/dist-ppc64le
 ppc64le-GitCommit: 476679fee8da3b4e947246d5580978380175cd8c
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-riscv64
+riscv64-GitFetch: refs/heads/dist-riscv64
+riscv64-GitCommit: 8c328b0330ae017cd49f86d7b089d12f1b28bd98
 # https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-s390x
 s390x-GitFetch: refs/heads/dist-s390x
 s390x-GitCommit: 296659d8855ee79e91507b85cade40d99ab893f2
@@ -58,7 +61,7 @@ Directory: buster/slim
 
 # experimental -- Experimental packages - not released; use at your own risk.
 Tags: experimental, experimental-20210621
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, riscv64, s390x
 Directory: experimental
 
 # oldstable -- Debian 9.13 Released 18 July 2020
@@ -81,11 +84,11 @@ Directory: rc-buggy
 
 # sid -- Debian x.y Unstable - Not Released
 Tags: sid, sid-20210621
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, riscv64, s390x
 Directory: sid
 
 Tags: sid-slim, sid-20210621-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, riscv64, s390x
 Directory: sid/slim
 
 # stable -- Debian 10.10 Released 19 June 2021
@@ -129,9 +132,9 @@ Directory: testing/slim
 
 # unstable -- Debian x.y Unstable - Not Released
 Tags: unstable, unstable-20210621
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, riscv64, s390x
 Directory: unstable
 
 Tags: unstable-slim, unstable-20210621-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, riscv64, s390x
 Directory: unstable/slim
