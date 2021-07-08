@@ -1,10 +1,10 @@
-# this file is generated via https://github.com/docker-library/busybox/blob/6fce185cf328515b4ac9093efccc5adf212a2573/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/busybox/blob/ba8de1363a5bff92c31876539715b88d7dee5f54/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit),
              Jérôme Petazzoni <jerome.petazzoni@gmail.com> (@jpetazzo)
 GitRepo: https://github.com/docker-library/busybox.git
-GitCommit: 6fce185cf328515b4ac9093efccc5adf212a2573
+GitCommit: ba8de1363a5bff92c31876539715b88d7dee5f54
 # https://github.com/docker-library/busybox/tree/dist-amd64
 amd64-GitFetch: refs/heads/dist-amd64
 amd64-GitCommit: 2bcc4bf56c2a4594aa31feb8b42d5eab76d168bb
@@ -29,12 +29,15 @@ mips64le-GitCommit: e152603121edbf1117006ff7d843de5ff26fe864
 # https://github.com/docker-library/busybox/tree/dist-ppc64le
 ppc64le-GitFetch: refs/heads/dist-ppc64le
 ppc64le-GitCommit: 9c6ff55d8efc0ab835a9fe70c660c907ccb1a325
+# https://github.com/docker-library/busybox/tree/dist-riscv64
+riscv64-GitFetch: refs/heads/dist-riscv64
+riscv64-GitCommit: 87ee88572c15dfbca78263ca2118fd4afd9d3cc2
 # https://github.com/docker-library/busybox/tree/dist-s390x
 s390x-GitFetch: refs/heads/dist-s390x
 s390x-GitCommit: 6b63b93035aa234e8e09843bca168f518db651f6
 
 Tags: 1.33.1-uclibc, 1.33-uclibc, 1-uclibc, stable-uclibc, uclibc
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, riscv64
 Directory: stable/uclibc
 
 Tags: 1.33.1-glibc, 1.33-glibc, 1-glibc, stable-glibc, glibc
@@ -46,7 +49,7 @@ Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: stable/musl
 
 Tags: 1.33.1, 1.33, 1, stable, latest
-Architectures: amd64, arm32v5, arm32v6, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Architectures: amd64, arm32v5, arm32v6, arm32v7, arm64v8, i386, mips64le, ppc64le, riscv64, s390x
 amd64-Directory: stable/uclibc
 arm32v5-Directory: stable/uclibc
 arm32v6-Directory: stable/musl
@@ -55,4 +58,5 @@ arm64v8-Directory: stable/uclibc
 i386-Directory: stable/uclibc
 mips64le-Directory: stable/uclibc
 ppc64le-Directory: stable/glibc
+riscv64-Directory: stable/uclibc
 s390x-Directory: stable/glibc
