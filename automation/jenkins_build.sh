@@ -96,5 +96,4 @@ if [ $exitCode -eq 1 ]; then
 	docker rm -v $(docker ps --filter status=exited --filter "ancestor=$LIBRARY" -q)
 	# Then clean up untagged images.
 	docker rmi $(docker images --filter dangling=true -q)
-	exit 1
 fi
