@@ -3,7 +3,7 @@ set -eo pipefail
 
 dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
-dbImage='mariadb:10.3'
+dbImage='mariadb:10.5'
 # ensure the dbImage is ready and available
 if ! docker image inspect "$dbImage" &> /dev/null; then
 	docker pull "$dbImage" > /dev/null

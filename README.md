@@ -71,6 +71,7 @@ Some images have been ported for other architectures, and many of these are offi
 	-	IBM POWER8 (`ppc64le`): https://hub.docker.com/u/ppc64le/
 	-	IBM z Systems (`s390x`): https://hub.docker.com/u/s390x/
 	-	MIPS64 LE (`mips64le`): https://hub.docker.com/u/mips64le/
+	-	RISC-V 64-bit (`riscv64`): https://hub.docker.com/u/riscv64/
 	-	x86/i686 (`i386`): https://hub.docker.com/u/i386/
 
 As of 2017-09-12, these other architectures are included under the non-prefixed images via ["manifest lists"](https://docs.docker.com/registry/spec/manifest-v2-2/#manifest-list) (also known as ["indexes" in the OCI image specification](https://github.com/opencontainers/image-spec/blob/v1.0.0/image-index.md)), such that, for example, `docker run hello-world` should run as-is on all supported platforms.
@@ -278,7 +279,7 @@ Below are some examples:
 	ENV RUBY_DOWNLOAD_SHA256 (sha256-value-here)
 	RUN set -eux; \
 	    curl -fL -o ruby.tar.gz "https://cache.ruby-lang.org/pub/ruby/$RUBY_MAJOR/ruby-$RUBY_VERSION.tar.gz"; \
-	    echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.gz" | sha256sum -c --strict --check; \
+	    echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.gz" | sha256sum --strict --check; \
 	    # install
 	```
 
@@ -311,7 +312,7 @@ For image updates which constitute a security fix, there are a few things we rec
 
 #### Multiple Architectures
 
-Each repo can specify multiple architectures for any and all tags. If no architecture is specified, images are built in Linux on `amd64` (aka x86-64). To specify more or different architectures, use the `Architectures` field (comma-delimited list, whitespace is trimmed). Valid architectures are found in [Bashbrew's `oci-platform.go` file](https://github.com/docker-library/bashbrew/blob/v0.1.0/vendor/github.com/docker-library/go-dockerlibrary/architecture/oci-platform.go#L14-L26):
+Each repo can specify multiple architectures for any and all tags. If no architecture is specified, images are built in Linux on `amd64` (aka x86-64). To specify more or different architectures, use the `Architectures` field (comma-delimited list, whitespace is trimmed). Valid architectures are found in [Bashbrew's `oci-platform.go` file](https://github.com/docker-library/bashbrew/blob/v0.1.2/architecture/oci-platform.go#L14-L27):
 
 -	`amd64`
 -	`arm32v6`
@@ -320,6 +321,7 @@ Each repo can specify multiple architectures for any and all tags. If no archite
 -	`i386`
 -	`mips64le`
 -	`ppc64le`
+-	`riscv64`
 -	`s390x`
 -	`windows-amd64`
 
