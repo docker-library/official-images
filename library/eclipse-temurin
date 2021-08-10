@@ -12,7 +12,7 @@ Directory: 8/jdk/ubuntu
 File: Dockerfile.releases.full
 
 Tags: 8u302-b08-jdk-nanoserver-1809, 8-jdk-nanoserver-1809, 8-nanoserver-1809
-SharedTags: 8u302-b08-jdk-nanoserver, 8-jdk-nanoserver, 8-nanoserver, 8u302-b08-jdk, 8-jdk, 8
+SharedTags: 8u302-b08-jdk-nanoserver, 8-jdk-nanoserver, 8-nanoserver
 Architectures: windows-amd64
 GitCommit: 2f3ab31a0cde57caef5d839128c79033e85edc15
 Directory: 8/jdk/windows/nanoserver-1809
@@ -45,7 +45,7 @@ Directory: 11/jdk/ubuntu
 File: Dockerfile.releases.full
 
 Tags: 11.0.12_7-jdk-nanoserver-1809, 11-jdk-nanoserver-1809, 11-nanoserver-1809
-SharedTags: 11.0.12_7-jdk-nanoserver, 11-jdk-nanoserver, 11-nanoserver, 11.0.12_7-jdk, 11-jdk, 11
+SharedTags: 11.0.12_7-jdk-nanoserver, 11-jdk-nanoserver, 11-nanoserver
 Architectures: windows-amd64
 GitCommit: 2f3ab31a0cde57caef5d839128c79033e85edc15
 Directory: 11/jdk/windows/nanoserver-1809
@@ -70,31 +70,31 @@ Constraints: windowsservercore-ltsc2016
 
 
 #------------------------------v16 images---------------------------------
-Tags: 16.0.2_7-jdk-focal, 16-jdk-focal, 16-focal, hotspot-focal
-SharedTags: 16.0.2_7-jdk, 16-jdk, 16, hotspot, latest
+Tags: 16.0.2_7-jdk-focal, 16-jdk-focal, 16-focal
+SharedTags: 16.0.2_7-jdk, 16-jdk, 16, latest
 Architectures: amd64, arm64v8, ppc64le
 GitCommit: 2f3ab31a0cde57caef5d839128c79033e85edc15
 Directory: 16/jdk/ubuntu
 File: Dockerfile.releases.full
 
-Tags: 16.0.2_7-jdk-nanoserver-1809, 16-jdk-nanoserver-1809, 16-nanoserver-1809, hotspot-nanoserver-1809
-SharedTags: 16.0.2_7-jdk-nanoserver, 16-jdk-nanoserver, 16-nanoserver, hotspot-nanoserver, 16.0.2_7-jdk, 16-jdk, 16, hotspot, latest
+Tags: 16.0.2_7-jdk-nanoserver-1809, 16-jdk-nanoserver-1809, 16-nanoserver-1809
+SharedTags: 16.0.2_7-jdk-nanoserver, 16-jdk-nanoserver, 16-nanoserver
 Architectures: windows-amd64
 GitCommit: 2f3ab31a0cde57caef5d839128c79033e85edc15
 Directory: 16/jdk/windows/nanoserver-1809
 File: Dockerfile.releases.full
 Constraints: nanoserver-1809, windowsservercore-1809
 
-Tags: 16.0.2_7-jdk-windowsservercore-1809, 16-jdk-windowsservercore-1809, 16-windowsservercore-1809, hotspot-windowsservercore-1809
-SharedTags: 16.0.2_7-jdk-windowsservercore, 16-jdk-windowsservercore, 16-windowsservercore, hotspot-windowsservercore, 16.0.2_7-jdk, 16-jdk, 16, hotspot, latest
+Tags: 16.0.2_7-jdk-windowsservercore-1809, 16-jdk-windowsservercore-1809, 16-windowsservercore-1809
+SharedTags: 16.0.2_7-jdk-windowsservercore, 16-jdk-windowsservercore, 16-windowsservercore, 16.0.2_7-jdk, 16-jdk, 16, latest
 Architectures: windows-amd64
 GitCommit: 2f3ab31a0cde57caef5d839128c79033e85edc15
 Directory: 16/jdk/windows/windowsservercore-1809
 File: Dockerfile.releases.full
 Constraints: windowsservercore-1809
 
-Tags: 16.0.2_7-jdk-windowsservercore-ltsc2016, 16-jdk-windowsservercore-ltsc2016, 16-windowsservercore-ltsc2016, hotspot-windowsservercore-ltsc2016
-SharedTags: 16.0.2_7-jdk-windowsservercore, 16-jdk-windowsservercore, 16-windowsservercore, hotspot-windowsservercore, 16.0.2_7-jdk, 16-jdk, 16, hotspot, latest
+Tags: 16.0.2_7-jdk-windowsservercore-ltsc2016, 16-jdk-windowsservercore-ltsc2016, 16-windowsservercore-ltsc2016
+SharedTags: 16.0.2_7-jdk-windowsservercore, 16-jdk-windowsservercore, 16-windowsservercore, 16.0.2_7-jdk, 16-jdk, 16, latest
 Architectures: windows-amd64
 GitCommit: 2f3ab31a0cde57caef5d839128c79033e85edc15
 Directory: 16/jdk/windows/windowsservercore-ltsc2016
