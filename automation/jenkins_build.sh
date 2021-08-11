@@ -88,12 +88,13 @@ else
 	done
 fi
 
+# we need to clean up all untagged images after each run.
+# First remove all stopped containers.
+docker rm -v $(docker ps --filter status=exited --filter "ancestor=$LIBRARY" -q)
+# Then clean up untagged images.
+docker rmi $(docker images --filter dangling=true -q)
+
 # if the build is marked as failed, print failed images and tidy up everything
 if [ $exitCode -eq 1 ]; then
 	echo Failed images: ${failedList[@]}
-	# we need to clean up all untagged images when builds fail.
-	# First remove all stopped containers.
-	docker rm -v $(docker ps --filter status=exited --filter "ancestor=$LIBRARY" -q)
-	# Then clean up untagged images.
-	docker rmi $(docker images --filter dangling=true -q)
 fi
