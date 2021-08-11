@@ -78,7 +78,6 @@ push_in_background() {
 
 	if ! "$docker" push "$image" &>> "$thisLog" < /dev/null; then
 		echo >&2 "- $image failed to push; see $thisLog"
-		didFail=1
 	fi
 
 	remove_image "$image"
