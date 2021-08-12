@@ -7,20 +7,20 @@ GitRepo: https://github.com/adoptium/containers.git
 Tags: 8u302-b08-jdk-focal, 8-jdk-focal, 8-focal
 SharedTags: 8u302-b08-jdk, 8-jdk, 8
 Architectures: amd64, arm64v8, ppc64le
-GitCommit: bdb263d9eec4f46d60550be822b2174b53af2e90
+GitCommit: f01e2df4062823b3290d65500cf13f47c9ad7c1c
 Directory: 8/jdk/ubuntu
 File: Dockerfile.releases.full
 
 Tags: 8u302-b08-jdk-centos7, 8-jdk-centos7, 8-centos7
 Architectures: amd64, arm64v8, ppc64le
-GitCommit: bdb263d9eec4f46d60550be822b2174b53af2e90
+GitCommit: f01e2df4062823b3290d65500cf13f47c9ad7c1c
 Directory: 8/jdk/centos
 File: Dockerfile.releases.full
 
 Tags: 8u302-b08-jdk-windowsservercore-1809, 8-jdk-windowsservercore-1809, 8-windowsservercore-1809
 SharedTags: 8u302-b08-jdk-windowsservercore, 8-jdk-windowsservercore, 8-windowsservercore, 8u302-b08-jdk, 8-jdk, 8
 Architectures: windows-amd64
-GitCommit: bdb263d9eec4f46d60550be822b2174b53af2e90
+GitCommit: f01e2df4062823b3290d65500cf13f47c9ad7c1c
 Directory: 8/jdk/windows/windowsservercore-1809
 File: Dockerfile.releases.full
 Constraints: windowsservercore-1809
@@ -28,7 +28,7 @@ Constraints: windowsservercore-1809
 Tags: 8u302-b08-jdk-windowsservercore-ltsc2016, 8-jdk-windowsservercore-ltsc2016, 8-windowsservercore-ltsc2016
 SharedTags: 8u302-b08-jdk-windowsservercore, 8-jdk-windowsservercore, 8-windowsservercore, 8u302-b08-jdk, 8-jdk, 8
 Architectures: windows-amd64
-GitCommit: bdb263d9eec4f46d60550be822b2174b53af2e90
+GitCommit: f01e2df4062823b3290d65500cf13f47c9ad7c1c
 Directory: 8/jdk/windows/windowsservercore-ltsc2016
 File: Dockerfile.releases.full
 Constraints: windowsservercore-ltsc2016
@@ -36,7 +36,7 @@ Constraints: windowsservercore-ltsc2016
 Tags: 8u302-b08-jdk-nanoserver-1809, 8-jdk-nanoserver-1809, 8-nanoserver-1809
 SharedTags: 8u302-b08-jdk-nanoserver, 8-jdk-nanoserver, 8-nanoserver
 Architectures: windows-amd64
-GitCommit: bdb263d9eec4f46d60550be822b2174b53af2e90
+GitCommit: f01e2df4062823b3290d65500cf13f47c9ad7c1c
 Directory: 8/jdk/windows/nanoserver-1809
 File: Dockerfile.releases.full
 Constraints: nanoserver-1809, windowsservercore-1809
@@ -45,21 +45,21 @@ Constraints: nanoserver-1809, windowsservercore-1809
 #------------------------------v11 images---------------------------------
 Tags: 11.0.12_7-jdk-focal, 11-jdk-focal, 11-focal
 SharedTags: 11.0.12_7-jdk, 11-jdk, 11
-Architectures: amd64, arm64v8, ppc64le
-GitCommit: bdb263d9eec4f46d60550be822b2174b53af2e90
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: f01e2df4062823b3290d65500cf13f47c9ad7c1c
 Directory: 11/jdk/ubuntu
 File: Dockerfile.releases.full
 
 Tags: 11.0.12_7-jdk-centos7, 11-jdk-centos7, 11-centos7
 Architectures: amd64, arm64v8, ppc64le
-GitCommit: bdb263d9eec4f46d60550be822b2174b53af2e90
+GitCommit: f01e2df4062823b3290d65500cf13f47c9ad7c1c
 Directory: 11/jdk/centos
 File: Dockerfile.releases.full
 
 Tags: 11.0.12_7-jdk-windowsservercore-1809, 11-jdk-windowsservercore-1809, 11-windowsservercore-1809
 SharedTags: 11.0.12_7-jdk-windowsservercore, 11-jdk-windowsservercore, 11-windowsservercore, 11.0.12_7-jdk, 11-jdk, 11
 Architectures: windows-amd64
-GitCommit: bdb263d9eec4f46d60550be822b2174b53af2e90
+GitCommit: f01e2df4062823b3290d65500cf13f47c9ad7c1c
 Directory: 11/jdk/windows/windowsservercore-1809
 File: Dockerfile.releases.full
 Constraints: windowsservercore-1809
@@ -67,7 +67,7 @@ Constraints: windowsservercore-1809
 Tags: 11.0.12_7-jdk-windowsservercore-ltsc2016, 11-jdk-windowsservercore-ltsc2016, 11-windowsservercore-ltsc2016
 SharedTags: 11.0.12_7-jdk-windowsservercore, 11-jdk-windowsservercore, 11-windowsservercore, 11.0.12_7-jdk, 11-jdk, 11
 Architectures: windows-amd64
-GitCommit: bdb263d9eec4f46d60550be822b2174b53af2e90
+GitCommit: f01e2df4062823b3290d65500cf13f47c9ad7c1c
 Directory: 11/jdk/windows/windowsservercore-ltsc2016
 File: Dockerfile.releases.full
 Constraints: windowsservercore-ltsc2016
@@ -75,7 +75,7 @@ Constraints: windowsservercore-ltsc2016
 Tags: 11.0.12_7-jdk-nanoserver-1809, 11-jdk-nanoserver-1809, 11-nanoserver-1809
 SharedTags: 11.0.12_7-jdk-nanoserver, 11-jdk-nanoserver, 11-nanoserver
 Architectures: windows-amd64
-GitCommit: bdb263d9eec4f46d60550be822b2174b53af2e90
+GitCommit: f01e2df4062823b3290d65500cf13f47c9ad7c1c
 Directory: 11/jdk/windows/nanoserver-1809
 File: Dockerfile.releases.full
 Constraints: nanoserver-1809, windowsservercore-1809
@@ -85,20 +85,20 @@ Constraints: nanoserver-1809, windowsservercore-1809
 Tags: 16.0.2_7-jdk-focal, 16-jdk-focal, 16-focal
 SharedTags: 16.0.2_7-jdk, 16-jdk, 16, latest
 Architectures: amd64, arm64v8, ppc64le
-GitCommit: bdb263d9eec4f46d60550be822b2174b53af2e90
+GitCommit: f01e2df4062823b3290d65500cf13f47c9ad7c1c
 Directory: 16/jdk/ubuntu
 File: Dockerfile.releases.full
 
 Tags: 16.0.2_7-jdk-centos7, 16-jdk-centos7, 16-centos7
 Architectures: amd64, arm64v8, ppc64le
-GitCommit: bdb263d9eec4f46d60550be822b2174b53af2e90
+GitCommit: f01e2df4062823b3290d65500cf13f47c9ad7c1c
 Directory: 16/jdk/centos
 File: Dockerfile.releases.full
 
 Tags: 16.0.2_7-jdk-windowsservercore-1809, 16-jdk-windowsservercore-1809, 16-windowsservercore-1809
 SharedTags: 16.0.2_7-jdk-windowsservercore, 16-jdk-windowsservercore, 16-windowsservercore, 16.0.2_7-jdk, 16-jdk, 16, latest
 Architectures: windows-amd64
-GitCommit: bdb263d9eec4f46d60550be822b2174b53af2e90
+GitCommit: f01e2df4062823b3290d65500cf13f47c9ad7c1c
 Directory: 16/jdk/windows/windowsservercore-1809
 File: Dockerfile.releases.full
 Constraints: windowsservercore-1809
@@ -106,7 +106,7 @@ Constraints: windowsservercore-1809
 Tags: 16.0.2_7-jdk-windowsservercore-ltsc2016, 16-jdk-windowsservercore-ltsc2016, 16-windowsservercore-ltsc2016
 SharedTags: 16.0.2_7-jdk-windowsservercore, 16-jdk-windowsservercore, 16-windowsservercore, 16.0.2_7-jdk, 16-jdk, 16, latest
 Architectures: windows-amd64
-GitCommit: bdb263d9eec4f46d60550be822b2174b53af2e90
+GitCommit: f01e2df4062823b3290d65500cf13f47c9ad7c1c
 Directory: 16/jdk/windows/windowsservercore-ltsc2016
 File: Dockerfile.releases.full
 Constraints: windowsservercore-ltsc2016
@@ -114,7 +114,7 @@ Constraints: windowsservercore-ltsc2016
 Tags: 16.0.2_7-jdk-nanoserver-1809, 16-jdk-nanoserver-1809, 16-nanoserver-1809
 SharedTags: 16.0.2_7-jdk-nanoserver, 16-jdk-nanoserver, 16-nanoserver
 Architectures: windows-amd64
-GitCommit: bdb263d9eec4f46d60550be822b2174b53af2e90
+GitCommit: f01e2df4062823b3290d65500cf13f47c9ad7c1c
 Directory: 16/jdk/windows/nanoserver-1809
 File: Dockerfile.releases.full
 Constraints: nanoserver-1809, windowsservercore-1809
