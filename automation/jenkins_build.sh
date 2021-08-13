@@ -94,7 +94,7 @@ docker rm -v $(docker ps --filter status=exited --filter "ancestor=$LIBRARY" -q)
 # Then clean up untagged images.
 docker rmi $(docker images --filter dangling=true -q)
 # Clean up all downloaded Dockerfiles
-rm -rf bashbrew/src
+rm -rf src
 
 # if the build is marked as failed, print failed images and tidy up everything
 if [ $exitCode -eq 1 ]; then
