@@ -7,7 +7,7 @@ GitCommit: bdffb5117c33476d554325d8efe5866306004b99
 Directory: openjdk-11
 
 Tags: 3.8.1-jdk-11-openj9, 3.8-jdk-11-openj9, 3-jdk-11-openj9
-Architectures: amd64, arm64v8, ppc64le, s390x
+Architectures: amd64, ppc64le, s390x
 GitCommit: bdffb5117c33476d554325d8efe5866306004b99
 Directory: adoptopenjdk-11-openj9
 
@@ -17,17 +17,17 @@ GitCommit: bdffb5117c33476d554325d8efe5866306004b99
 Directory: openjdk-11-slim
 
 Tags: 3.8.1-jdk-8, 3.8-jdk-8, 3-jdk-8
-Architectures: amd64
+Architectures: amd64, arm64v8
 GitCommit: bdffb5117c33476d554325d8efe5866306004b99
 Directory: openjdk-8
 
 Tags: 3.8.1-jdk-8-openj9, 3.8-jdk-8-openj9, 3-jdk-8-openj9
-Architectures: amd64, arm64v8, ppc64le, s390x
+Architectures: amd64, ppc64le, s390x
 GitCommit: bdffb5117c33476d554325d8efe5866306004b99
 Directory: adoptopenjdk-8-openj9
 
 Tags: 3.8.1-jdk-8-slim, 3.8-jdk-8-slim, 3-jdk-8-slim
-Architectures: amd64
+Architectures: amd64, arm64v8
 GitCommit: bdffb5117c33476d554325d8efe5866306004b99
 Directory: openjdk-8-slim
 
@@ -40,16 +40,6 @@ Tags: 3.8.1-openjdk-11-slim, 3.8-openjdk-11-slim, 3-openjdk-11-slim
 Architectures: amd64, arm64v8
 GitCommit: bdffb5117c33476d554325d8efe5866306004b99
 Directory: openjdk-11-slim
-
-Tags: 3.8.1-openjdk-15, 3.8-openjdk-15, 3-openjdk-15
-Architectures: amd64, arm64v8
-GitCommit: bdffb5117c33476d554325d8efe5866306004b99
-Directory: openjdk-15
-
-Tags: 3.8.1-openjdk-15-slim, 3.8-openjdk-15-slim, 3-openjdk-15-slim
-Architectures: amd64, arm64v8
-GitCommit: bdffb5117c33476d554325d8efe5866306004b99
-Directory: openjdk-15-slim
 
 Tags: 3.8.1-openjdk-16, 3.8.1, 3.8.1-openjdk, 3.8-openjdk-16, 3.8, 3.8-openjdk, 3-openjdk-16, 3, latest, 3-openjdk, openjdk
 Architectures: amd64, arm64v8
@@ -72,12 +62,12 @@ GitCommit: bdffb5117c33476d554325d8efe5866306004b99
 Directory: openjdk-17-slim
 
 Tags: 3.8.1-openjdk-8, 3.8-openjdk-8, 3-openjdk-8
-Architectures: amd64
+Architectures: amd64, arm64v8
 GitCommit: bdffb5117c33476d554325d8efe5866306004b99
 Directory: openjdk-8
 
 Tags: 3.8.1-openjdk-8-slim, 3.8-openjdk-8-slim, 3-openjdk-8-slim
-Architectures: amd64
+Architectures: amd64, arm64v8
 GitCommit: bdffb5117c33476d554325d8efe5866306004b99
 Directory: openjdk-8-slim
 
@@ -87,7 +77,7 @@ GitCommit: bdffb5117c33476d554325d8efe5866306004b99
 Directory: adoptopenjdk-11
 
 Tags: 3.8.1-adoptopenjdk-11-openj9, 3.8-adoptopenjdk-11-openj9, 3-adoptopenjdk-11-openj9
-Architectures: amd64, arm64v8, ppc64le, s390x
+Architectures: amd64, ppc64le, s390x
 GitCommit: bdffb5117c33476d554325d8efe5866306004b99
 Directory: adoptopenjdk-11-openj9
 
@@ -97,7 +87,7 @@ GitCommit: bdffb5117c33476d554325d8efe5866306004b99
 Directory: adoptopenjdk-15
 
 Tags: 3.8.1-adoptopenjdk-15-openj9, 3.8-adoptopenjdk-15-openj9, 3-adoptopenjdk-15-openj9
-Architectures: amd64, arm64v8, ppc64le, s390x
+Architectures: amd64, ppc64le, s390x
 GitCommit: bdffb5117c33476d554325d8efe5866306004b99
 Directory: adoptopenjdk-15-openj9
 
@@ -107,17 +97,17 @@ GitCommit: b1a19f5406f0d01cd8fe689efbb838474c48db4f
 Directory: adoptopenjdk-16
 
 Tags: 3.8.1-adoptopenjdk-16-openj9, 3.8-adoptopenjdk-16-openj9, 3-adoptopenjdk-16-openj9
-Architectures: amd64, arm64v8, ppc64le, s390x
+Architectures: amd64, ppc64le, s390x
 GitCommit: b1a19f5406f0d01cd8fe689efbb838474c48db4f
 Directory: adoptopenjdk-16-openj9
 
 Tags: 3.8.1-adoptopenjdk-8, 3.8-adoptopenjdk-8, 3-adoptopenjdk-8
-Architectures: amd64, ppc64le, s390x
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
 GitCommit: bdffb5117c33476d554325d8efe5866306004b99
 Directory: adoptopenjdk-8
 
 Tags: 3.8.1-adoptopenjdk-8-openj9, 3.8-adoptopenjdk-8-openj9, 3-adoptopenjdk-8-openj9
-Architectures: amd64, arm64v8, ppc64le, s390x
+Architectures: amd64, ppc64le, s390x
 GitCommit: bdffb5117c33476d554325d8efe5866306004b99
 Directory: adoptopenjdk-8-openj9
 
@@ -135,11 +125,6 @@ Tags: 3.8.1-amazoncorretto-11, 3.8.1-amazoncorretto, 3.8-amazoncorretto-11, 3.8-
 Architectures: amd64, arm64v8
 GitCommit: bdffb5117c33476d554325d8efe5866306004b99
 Directory: amazoncorretto-11
-
-Tags: 3.8.1-amazoncorretto-15, 3.8-amazoncorretto-15, 3-amazoncorretto-15
-Architectures: amd64, arm64v8
-GitCommit: bdffb5117c33476d554325d8efe5866306004b99
-Directory: amazoncorretto-15
 
 Tags: 3.8.1-amazoncorretto-16, 3.8-amazoncorretto-16, 3-amazoncorretto-16
 Architectures: amd64, arm64v8
