@@ -1,16 +1,26 @@
-# this file is generated via https://github.com/docker-library/python/blob/de6d03fdb504ff4f7b891f00fa79d1260d79870a/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/python/blob/f154e5d1c8f5b582aa2fd782df880b9cc96bb431/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/python.git
 
-Tags: 3.10.0rc1-buster, 3.10-rc-buster, rc-buster
+Tags: 3.10.0rc1-bullseye, 3.10-rc-bullseye, rc-bullseye
 SharedTags: 3.10.0rc1, 3.10-rc, rc
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: f154e5d1c8f5b582aa2fd782df880b9cc96bb431
+Directory: 3.10-rc/bullseye
+
+Tags: 3.10.0rc1-slim-bullseye, 3.10-rc-slim-bullseye, rc-slim-bullseye, 3.10.0rc1-slim, 3.10-rc-slim, rc-slim
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: f154e5d1c8f5b582aa2fd782df880b9cc96bb431
+Directory: 3.10-rc/bullseye/slim
+
+Tags: 3.10.0rc1-buster, 3.10-rc-buster, rc-buster
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: f534df63dae90b4baa08631ee9f1ee2d3ff1d825
 Directory: 3.10-rc/buster
 
-Tags: 3.10.0rc1-slim-buster, 3.10-rc-slim-buster, rc-slim-buster, 3.10.0rc1-slim, 3.10-rc-slim, rc-slim
+Tags: 3.10.0rc1-slim-buster, 3.10-rc-slim-buster, rc-slim-buster
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: f534df63dae90b4baa08631ee9f1ee2d3ff1d825
 Directory: 3.10-rc/buster/slim
@@ -39,13 +49,23 @@ GitCommit: f534df63dae90b4baa08631ee9f1ee2d3ff1d825
 Directory: 3.10-rc/windows/windowsservercore-ltsc2016
 Constraints: windowsservercore-ltsc2016
 
-Tags: 3.9.6-buster, 3.9-buster, 3-buster, buster
+Tags: 3.9.6-bullseye, 3.9-bullseye, 3-bullseye, bullseye
 SharedTags: 3.9.6, 3.9, 3, latest
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: f154e5d1c8f5b582aa2fd782df880b9cc96bb431
+Directory: 3.9/bullseye
+
+Tags: 3.9.6-slim-bullseye, 3.9-slim-bullseye, 3-slim-bullseye, slim-bullseye, 3.9.6-slim, 3.9-slim, 3-slim, slim
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: f154e5d1c8f5b582aa2fd782df880b9cc96bb431
+Directory: 3.9/bullseye/slim
+
+Tags: 3.9.6-buster, 3.9-buster, 3-buster, buster
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: 9c6007b87f2fa537c8c923fc67a93640e0cb503e
 Directory: 3.9/buster
 
-Tags: 3.9.6-slim-buster, 3.9-slim-buster, 3-slim-buster, slim-buster, 3.9.6-slim, 3.9-slim, 3-slim, slim
+Tags: 3.9.6-slim-buster, 3.9-slim-buster, 3-slim-buster, slim-buster
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: 9c6007b87f2fa537c8c923fc67a93640e0cb503e
 Directory: 3.9/buster/slim
@@ -74,13 +94,23 @@ GitCommit: 9c6007b87f2fa537c8c923fc67a93640e0cb503e
 Directory: 3.9/windows/windowsservercore-ltsc2016
 Constraints: windowsservercore-ltsc2016
 
-Tags: 3.8.11-buster, 3.8-buster
+Tags: 3.8.11-bullseye, 3.8-bullseye
 SharedTags: 3.8.11, 3.8
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: f154e5d1c8f5b582aa2fd782df880b9cc96bb431
+Directory: 3.8/bullseye
+
+Tags: 3.8.11-slim-bullseye, 3.8-slim-bullseye, 3.8.11-slim, 3.8-slim
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: f154e5d1c8f5b582aa2fd782df880b9cc96bb431
+Directory: 3.8/bullseye/slim
+
+Tags: 3.8.11-buster, 3.8-buster
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: 670a51bde142663856c29c3ef85efcebde0aec6d
 Directory: 3.8/buster
 
-Tags: 3.8.11-slim-buster, 3.8-slim-buster, 3.8.11-slim, 3.8-slim
+Tags: 3.8.11-slim-buster, 3.8-slim-buster
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: 670a51bde142663856c29c3ef85efcebde0aec6d
 Directory: 3.8/buster/slim
@@ -95,26 +125,26 @@ Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: 670a51bde142663856c29c3ef85efcebde0aec6d
 Directory: 3.8/alpine3.13
 
-Tags: 3.7.11-buster, 3.7-buster
+Tags: 3.7.11-bullseye, 3.7-bullseye
 SharedTags: 3.7.11, 3.7
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: f154e5d1c8f5b582aa2fd782df880b9cc96bb431
+Directory: 3.7/bullseye
+
+Tags: 3.7.11-slim-bullseye, 3.7-slim-bullseye, 3.7.11-slim, 3.7-slim
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: f154e5d1c8f5b582aa2fd782df880b9cc96bb431
+Directory: 3.7/bullseye/slim
+
+Tags: 3.7.11-buster, 3.7-buster
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: b59ce53e3213c9717177fe9a4f25f3e3ffeba56e
 Directory: 3.7/buster
 
-Tags: 3.7.11-slim-buster, 3.7-slim-buster, 3.7.11-slim, 3.7-slim
+Tags: 3.7.11-slim-buster, 3.7-slim-buster
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: b59ce53e3213c9717177fe9a4f25f3e3ffeba56e
 Directory: 3.7/buster/slim
-
-Tags: 3.7.11-stretch, 3.7-stretch
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386
-GitCommit: b59ce53e3213c9717177fe9a4f25f3e3ffeba56e
-Directory: 3.7/stretch
-
-Tags: 3.7.11-slim-stretch, 3.7-slim-stretch
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386
-GitCommit: b59ce53e3213c9717177fe9a4f25f3e3ffeba56e
-Directory: 3.7/stretch/slim
 
 Tags: 3.7.11-alpine3.14, 3.7-alpine3.14, 3.7.11-alpine, 3.7-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
@@ -126,26 +156,26 @@ Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: b59ce53e3213c9717177fe9a4f25f3e3ffeba56e
 Directory: 3.7/alpine3.13
 
-Tags: 3.6.14-buster, 3.6-buster
+Tags: 3.6.14-bullseye, 3.6-bullseye
 SharedTags: 3.6.14, 3.6
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: f154e5d1c8f5b582aa2fd782df880b9cc96bb431
+Directory: 3.6/bullseye
+
+Tags: 3.6.14-slim-bullseye, 3.6-slim-bullseye, 3.6.14-slim, 3.6-slim
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: f154e5d1c8f5b582aa2fd782df880b9cc96bb431
+Directory: 3.6/bullseye/slim
+
+Tags: 3.6.14-buster, 3.6-buster
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: ec760ffc5e62ad800a1dc5b5e280d234d0736a55
 Directory: 3.6/buster
 
-Tags: 3.6.14-slim-buster, 3.6-slim-buster, 3.6.14-slim, 3.6-slim
+Tags: 3.6.14-slim-buster, 3.6-slim-buster
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: ec760ffc5e62ad800a1dc5b5e280d234d0736a55
 Directory: 3.6/buster/slim
-
-Tags: 3.6.14-stretch, 3.6-stretch
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386
-GitCommit: ec760ffc5e62ad800a1dc5b5e280d234d0736a55
-Directory: 3.6/stretch
-
-Tags: 3.6.14-slim-stretch, 3.6-slim-stretch
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386
-GitCommit: ec760ffc5e62ad800a1dc5b5e280d234d0736a55
-Directory: 3.6/stretch/slim
 
 Tags: 3.6.14-alpine3.14, 3.6-alpine3.14, 3.6.14-alpine, 3.6-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
