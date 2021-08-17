@@ -4,32 +4,32 @@ Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/buildpack-deps.git
 
-Tags: bullseye-curl, testing-curl
+Tags: bullseye-curl, stable-curl, curl
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: 98a5ab81d47a106c458cdf90733df0ee8beea06c
 Directory: debian/bullseye/curl
 
-Tags: bullseye-scm, testing-scm
+Tags: bullseye-scm, stable-scm, scm
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: 65d69325ad741cea6dee20781c1faaab2e003d87
 Directory: debian/bullseye/scm
 
-Tags: bullseye, testing
+Tags: bullseye, stable, latest
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: 65d69325ad741cea6dee20781c1faaab2e003d87
 Directory: debian/bullseye
 
-Tags: buster-curl, stable-curl, curl
+Tags: buster-curl, oldstable-curl
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: 98a5ab81d47a106c458cdf90733df0ee8beea06c
 Directory: debian/buster/curl
 
-Tags: buster-scm, stable-scm, scm
+Tags: buster-scm, oldstable-scm
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: 65d69325ad741cea6dee20781c1faaab2e003d87
 Directory: debian/buster/scm
 
-Tags: buster, stable, latest
+Tags: buster, oldstable
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: 65d69325ad741cea6dee20781c1faaab2e003d87
 Directory: debian/buster
@@ -49,17 +49,17 @@ Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, riscv6
 GitCommit: 65d69325ad741cea6dee20781c1faaab2e003d87
 Directory: debian/sid
 
-Tags: stretch-curl, oldstable-curl
+Tags: stretch-curl, oldoldstable-curl
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386
 GitCommit: 93d2a6f64abe6787b7dd25c7d5322af1fa2e3f55
 Directory: debian/stretch/curl
 
-Tags: stretch-scm, oldstable-scm
+Tags: stretch-scm, oldoldstable-scm
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386
 GitCommit: 65d69325ad741cea6dee20781c1faaab2e003d87
 Directory: debian/stretch/scm
 
-Tags: stretch, oldstable
+Tags: stretch, oldoldstable
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386
 GitCommit: 65d69325ad741cea6dee20781c1faaab2e003d87
 Directory: debian/stretch
