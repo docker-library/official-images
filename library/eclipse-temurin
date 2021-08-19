@@ -41,6 +41,42 @@ Directory: 8/jdk/windows/nanoserver-1809
 File: Dockerfile.releases.full
 Constraints: nanoserver-1809, windowsservercore-1809
 
+Tags: 8u302-b08-jre-focal, 8-jre-focal
+SharedTags: 8u302-b08-jre, 8-jre
+Architectures: amd64
+GitCommit: 85457d397296c2b988998d8e98fe403df7cdcdc8
+Directory: 8/jre/ubuntu
+File: Dockerfile.releases.full
+
+Tags: 8u302-b08-jre-centos7, 8-jre-centos7
+Architectures: amd64
+GitCommit: 85457d397296c2b988998d8e98fe403df7cdcdc8
+Directory: 8/jre/centos
+File: Dockerfile.releases.full
+
+Tags: 8u302-b08-jre-windowsservercore-1809, 8-jre-windowsservercore-1809
+SharedTags: 8u302-b08-jre-windowsservercore, 8-jre-windowsservercore, 8u302-b08-jre, 8-jre
+Architectures: windows-amd64
+GitCommit: 85457d397296c2b988998d8e98fe403df7cdcdc8
+Directory: 8/jre/windows/windowsservercore-1809
+File: Dockerfile.releases.full
+Constraints: windowsservercore-1809
+
+Tags: 8u302-b08-jre-windowsservercore-ltsc2016, 8-jre-windowsservercore-ltsc2016
+SharedTags: 8u302-b08-jre-windowsservercore, 8-jre-windowsservercore, 8u302-b08-jre, 8-jre
+Architectures: windows-amd64
+GitCommit: 85457d397296c2b988998d8e98fe403df7cdcdc8
+Directory: 8/jre/windows/windowsservercore-ltsc2016
+File: Dockerfile.releases.full
+Constraints: windowsservercore-ltsc2016
+
+Tags: 8u302-b08-jre-nanoserver-1809, 8-jre-nanoserver-1809
+SharedTags: 8u302-b08-jre-nanoserver, 8-jre-nanoserver
+Architectures: windows-amd64
+GitCommit: 85457d397296c2b988998d8e98fe403df7cdcdc8
+Directory: 8/jre/windows/nanoserver-1809
+File: Dockerfile.releases.full
+Constraints: nanoserver-1809, windowsservercore-1809
 
 #------------------------------v11 images---------------------------------
 Tags: 11.0.12_7-jdk-focal, 11-jdk-focal, 11-focal
