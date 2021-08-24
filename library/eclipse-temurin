@@ -4,6 +4,12 @@ Maintainers: George Adams <george.adams@microsoft.com> (@gdams)
 GitRepo: https://github.com/adoptium/containers.git
 
 #------------------------------v8 images---------------------------------
+Tags: 8u302-b08-jdk-alpine3, 8-jdk-alpine3, 8-alpine3
+Architectures: amd64
+GitCommit: bfa8aa26f8ae68d79e0a83eac84718f28d8e594c
+Directory: 8/jdk/alpine
+File: Dockerfile.releases.full
+
 Tags: 8u302-b08-jdk-focal, 8-jdk-focal, 8-focal
 SharedTags: 8u302-b08-jdk, 8-jdk, 8
 Architectures: amd64, arm64v8, ppc64le
@@ -40,6 +46,12 @@ GitCommit: 94ec04760777535e1ba0374f5ba051eabcf9b2ac
 Directory: 8/jdk/windows/nanoserver-1809
 File: Dockerfile.releases.full
 Constraints: nanoserver-1809, windowsservercore-1809
+
+Tags: 8u302-b08-jre-alpine3, 8-jre-alpine3
+Architectures: amd64
+GitCommit: bfa8aa26f8ae68d79e0a83eac84718f28d8e594c
+Directory: 8/jre/alpine
+File: Dockerfile.releases.full
 
 Tags: 8u302-b08-jre-focal, 8-jre-focal
 SharedTags: 8u302-b08-jre, 8-jre
@@ -79,6 +91,12 @@ File: Dockerfile.releases.full
 Constraints: nanoserver-1809, windowsservercore-1809
 
 #------------------------------v11 images---------------------------------
+Tags: 11.0.12_7-jdk-alpine3, 11-jdk-alpine3, 11-alpine3
+Architectures: amd64
+GitCommit: bfa8aa26f8ae68d79e0a83eac84718f28d8e594c
+Directory: 11/jdk/alpine
+File: Dockerfile.releases.full
+
 Tags: 11.0.12_7-jdk-focal, 11-jdk-focal, 11-focal
 SharedTags: 11.0.12_7-jdk, 11-jdk, 11
 Architectures: amd64, arm64v8, ppc64le, s390x
@@ -118,6 +136,12 @@ Constraints: nanoserver-1809, windowsservercore-1809
 
 
 #------------------------------v16 images---------------------------------
+Tags: 16.0.2_7-jdk-alpine3, 16-jdk-alpine3, 16-alpine3
+Architectures: amd64
+GitCommit: bfa8aa26f8ae68d79e0a83eac84718f28d8e594c
+Directory: 16/jdk/alpine
+File: Dockerfile.releases.full
+
 Tags: 16.0.2_7-jdk-focal, 16-jdk-focal, 16-focal
 SharedTags: 16.0.2_7-jdk, 16-jdk, 16, latest
 Architectures: amd64, arm64v8, ppc64le
