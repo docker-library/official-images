@@ -1,13 +1,18 @@
-# this file was generated using https://github.com/varnish/docker-varnish/blob/51a66e74c3a56e4def767d3ad3f6c8ad1a4addaa/populate.sh
+# this file was generated using https://github.com/varnish/docker-varnish/blob/e343aa923034760f607ae65cc5f20fa789818ab3/populate.sh
 Maintainers: Guillaume Quintard <guillaume@varni.sh> (@gquintard)
 GitRepo: https://github.com/varnish/docker-varnish.git
 
-Tags: 6.0, 6.0.7-1, 6.0.7, stable
-Architectures: amd64
-Directory: stable/debian
-GitCommit: 51a66e74c3a56e4def767d3ad3f6c8ad1a4addaa
-
-Tags: 6.6, 6.6.0-1, 6.6.0, 6, latest, fresh
-Architectures: amd64
+Tags: fresh, 6.6.1, 6.6, latest
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: fresh/debian
-GitCommit: 51a66e74c3a56e4def767d3ad3f6c8ad1a4addaa
+GitCommit: e343aa923034760f607ae65cc5f20fa789818ab3
+
+Tags: fresh-alpine, 6.6.1-alpine, 6.6-alpine, alpine
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+Directory: fresh/alpine
+GitCommit: e343aa923034760f607ae65cc5f20fa789818ab3
+
+Tags: stable, 6.0.8, 6.0
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+Directory: stable/debian
+GitCommit: e343aa923034760f607ae65cc5f20fa789818ab3
