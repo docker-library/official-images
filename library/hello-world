@@ -1,9 +1,9 @@
-# this file is generated via https://github.com/docker-library/hello-world/blob/837f63a4a9cc1e06320f47abb98965b6c5672b30/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/hello-world/blob/c6676f682a833388a087758d8789b43fbe003397/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/hello-world.git
-GitCommit: 837f63a4a9cc1e06320f47abb98965b6c5672b30
+GitCommit: c6676f682a833388a087758d8789b43fbe003397
 
 Tags: linux
 SharedTags: latest
@@ -26,6 +26,13 @@ riscv64-GitCommit: 06d4f12fae7ec1adcfddec64fbadfcd1a1e90e65
 riscv64-Directory: riscv64/hello-world
 s390x-GitCommit: 7ecae6978055d2fb6960e2a29d24a2af612e2716
 s390x-Directory: s390x/hello-world
+
+Tags: nanoserver-ltsc2022
+SharedTags: nanoserver, latest
+Architectures: windows-amd64
+windows-amd64-GitCommit: c6676f682a833388a087758d8789b43fbe003397
+windows-amd64-Directory: amd64/hello-world/nanoserver-ltsc2022
+Constraints: nanoserver-ltsc2022
 
 Tags: nanoserver-1809
 SharedTags: nanoserver, latest
