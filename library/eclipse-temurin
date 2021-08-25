@@ -4,7 +4,7 @@ Maintainers: George Adams <george.adams@microsoft.com> (@gdams)
 GitRepo: https://github.com/adoptium/containers.git
 
 #------------------------------v8 images---------------------------------
-Tags: 8u302-b08-jdk-alpine3, 8-jdk-alpine3, 8-alpine3
+Tags: 8u302-b08-jdk-alpine, 8-jdk-alpine, 8-alpine
 Architectures: amd64
 GitCommit: bfa8aa26f8ae68d79e0a83eac84718f28d8e594c
 Directory: 8/jdk/alpine
@@ -47,7 +47,7 @@ Directory: 8/jdk/windows/nanoserver-1809
 File: Dockerfile.releases.full
 Constraints: nanoserver-1809, windowsservercore-1809
 
-Tags: 8u302-b08-jre-alpine3, 8-jre-alpine3
+Tags: 8u302-b08-jre-alpine, 8-jre-alpine
 Architectures: amd64
 GitCommit: bfa8aa26f8ae68d79e0a83eac84718f28d8e594c
 Directory: 8/jre/alpine
@@ -91,7 +91,7 @@ File: Dockerfile.releases.full
 Constraints: nanoserver-1809, windowsservercore-1809
 
 #------------------------------v11 images---------------------------------
-Tags: 11.0.12_7-jdk-alpine3, 11-jdk-alpine3, 11-alpine3
+Tags: 11.0.12_7-jdk-alpine, 11-jdk-alpine, 11-alpine
 Architectures: amd64
 GitCommit: bfa8aa26f8ae68d79e0a83eac84718f28d8e594c
 Directory: 11/jdk/alpine
@@ -136,7 +136,7 @@ Constraints: nanoserver-1809, windowsservercore-1809
 
 
 #------------------------------v16 images---------------------------------
-Tags: 16.0.2_7-jdk-alpine3, 16-jdk-alpine3, 16-alpine3
+Tags: 16.0.2_7-jdk-alpine, 16-jdk-alpine, 16-alpine
 Architectures: amd64
 GitCommit: bfa8aa26f8ae68d79e0a83eac84718f28d8e594c
 Directory: 16/jdk/alpine
