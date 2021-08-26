@@ -19,20 +19,30 @@ _is_naughty() {
 	case "$BASHBREW_ARCH=$from" in
 		# a few images that no longer exist (and are thus not permissible)
 		# https://techcommunity.microsoft.com/t5/Containers/Removing-the-latest-Tag-An-Update-on-MCR/ba-p/393045
-		*=mcr.microsoft.com/windows/*:latest \
-		) return 0 ;;
+		*=mcr.microsoft.com/windows/*:latest) return 0 ;;
+
+		# 20H2 is not *technically* EOL until 05/10/2022, but its use is discouraged here given the existence of ltsc2022
+		# 2004 is not *technically* EOL until 12/14/2021, but its use is discouraged here given the existence of ltsc2022
+
+		# https://docs.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/base-image-lifecycle
+		# "05/11/2021"
+		*=mcr.microsoft.com/windows/*:1909*) return 0 ;;
+
+		# https://docs.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/base-image-lifecycle
+		# "12/08/2020"
+		*=mcr.microsoft.com/windows/*:1903*) return 0 ;;
+
 		# https://docs.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/base-image-lifecycle
 		# "11/12/2019"
-		*=mcr.microsoft.com/windows/*:1803* \
-		) return 0 ;;
+		*=mcr.microsoft.com/windows/*:1803*) return 0 ;;
+
 		# https://docs.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/base-image-lifecycle
 		# "04/09/2019"
-		*=mcr.microsoft.com/windows/*:1709* \
-		) return 0 ;;
+		*=mcr.microsoft.com/windows/*:1709*) return 0 ;;
+
 		# https://docs.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/base-image-lifecycle
 		# "10/09/2018"
-		*=mcr.microsoft.com/windows/nanoserver:sac2016 \
-		) return 0 ;;
+		*=mcr.microsoft.com/windows/nanoserver:sac2016) return 0 ;;
 
 		# a few explicitly permissible exceptions to Santa's naughty list
 		*=scratch \
