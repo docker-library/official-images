@@ -31,6 +31,13 @@ Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: 2cd4dab7bd702c7315864c428ba286827d50cda3
 Directory: 1.17/alpine3.13
 
+Tags: 1.17.0-windowsservercore-ltsc2022, 1.17-windowsservercore-ltsc2022, 1-windowsservercore-ltsc2022, windowsservercore-ltsc2022
+SharedTags: 1.17.0-windowsservercore, 1.17-windowsservercore, 1-windowsservercore, windowsservercore, 1.17.0, 1.17, 1, latest
+Architectures: windows-amd64
+GitCommit: fb3f71bc6fec6f7f3680fad5f1d71e0324894b25
+Directory: 1.17/windows/windowsservercore-ltsc2022
+Constraints: windowsservercore-ltsc2022
+
 Tags: 1.17.0-windowsservercore-1809, 1.17-windowsservercore-1809, 1-windowsservercore-1809, windowsservercore-1809
 SharedTags: 1.17.0-windowsservercore, 1.17-windowsservercore, 1-windowsservercore, windowsservercore, 1.17.0, 1.17, 1, latest
 Architectures: windows-amd64
@@ -44,6 +51,13 @@ Architectures: windows-amd64
 GitCommit: 2cd4dab7bd702c7315864c428ba286827d50cda3
 Directory: 1.17/windows/windowsservercore-ltsc2016
 Constraints: windowsservercore-ltsc2016
+
+Tags: 1.17.0-nanoserver-ltsc2022, 1.17-nanoserver-ltsc2022, 1-nanoserver-ltsc2022, nanoserver-ltsc2022
+SharedTags: 1.17.0-nanoserver, 1.17-nanoserver, 1-nanoserver, nanoserver
+Architectures: windows-amd64
+GitCommit: fb3f71bc6fec6f7f3680fad5f1d71e0324894b25
+Directory: 1.17/windows/nanoserver-ltsc2022
+Constraints: nanoserver-ltsc2022, windowsservercore-ltsc2022
 
 Tags: 1.17.0-nanoserver-1809, 1.17-nanoserver-1809, 1-nanoserver-1809, nanoserver-1809
 SharedTags: 1.17.0-nanoserver, 1.17-nanoserver, 1-nanoserver, nanoserver
@@ -78,6 +92,13 @@ Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: 4c1da70f967b2b38b254e166e787d017cc9ca351
 Directory: 1.16/alpine3.13
 
+Tags: 1.16.7-windowsservercore-ltsc2022, 1.16-windowsservercore-ltsc2022
+SharedTags: 1.16.7-windowsservercore, 1.16-windowsservercore, 1.16.7, 1.16
+Architectures: windows-amd64
+GitCommit: fb3f71bc6fec6f7f3680fad5f1d71e0324894b25
+Directory: 1.16/windows/windowsservercore-ltsc2022
+Constraints: windowsservercore-ltsc2022
+
 Tags: 1.16.7-windowsservercore-1809, 1.16-windowsservercore-1809
 SharedTags: 1.16.7-windowsservercore, 1.16-windowsservercore, 1.16.7, 1.16
 Architectures: windows-amd64
@@ -91,6 +112,13 @@ Architectures: windows-amd64
 GitCommit: 4c1da70f967b2b38b254e166e787d017cc9ca351
 Directory: 1.16/windows/windowsservercore-ltsc2016
 Constraints: windowsservercore-ltsc2016
+
+Tags: 1.16.7-nanoserver-ltsc2022, 1.16-nanoserver-ltsc2022
+SharedTags: 1.16.7-nanoserver, 1.16-nanoserver
+Architectures: windows-amd64
+GitCommit: fb3f71bc6fec6f7f3680fad5f1d71e0324894b25
+Directory: 1.16/windows/nanoserver-ltsc2022
+Constraints: nanoserver-ltsc2022, windowsservercore-ltsc2022
 
 Tags: 1.16.7-nanoserver-1809, 1.16-nanoserver-1809
 SharedTags: 1.16.7-nanoserver, 1.16-nanoserver
