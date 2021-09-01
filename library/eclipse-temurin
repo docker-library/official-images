@@ -116,6 +116,18 @@ Directory: 11/jdk/windows/nanoserver-1809
 File: Dockerfile.releases.full
 Constraints: nanoserver-1809, windowsservercore-1809
 
+Tags: 11.0.12_7-jre-focal, 11-jre-focal
+SharedTags: 11.0.12_7-jre, 11-jre
+Architectures: amd64
+GitCommit: a106577e67528cdea053976a4306a4a1c08323c4
+Directory: 11/jre/ubuntu
+File: Dockerfile.releases.full
+
+Tags: 11.0.12_7-jre-centos7, 11-jre-centos7
+Architectures: amd64
+GitCommit: a106577e67528cdea053976a4306a4a1c08323c4
+Directory: 11/jre/centos
+File: Dockerfile.releases.full
 
 #------------------------------v16 images---------------------------------
 Tags: 16.0.2_7-jdk-focal, 16-jdk-focal, 16-focal
