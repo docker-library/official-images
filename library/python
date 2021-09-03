@@ -1,4 +1,4 @@
-# this file is generated via https://github.com/docker-library/python/blob/f154e5d1c8f5b582aa2fd782df880b9cc96bb431/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/python/blob/daf9e7d25e1e7d7c0f3dde48329b12a7fc3ae15e/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
@@ -34,6 +34,13 @@ Tags: 3.10.0rc1-alpine3.13, 3.10-rc-alpine3.13, rc-alpine3.13
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: f534df63dae90b4baa08631ee9f1ee2d3ff1d825
 Directory: 3.10-rc/alpine3.13
+
+Tags: 3.10.0rc1-windowsservercore-ltsc2022, 3.10-rc-windowsservercore-ltsc2022, rc-windowsservercore-ltsc2022
+SharedTags: 3.10.0rc1-windowsservercore, 3.10-rc-windowsservercore, rc-windowsservercore, 3.10.0rc1, 3.10-rc, rc
+Architectures: windows-amd64
+GitCommit: daf9e7d25e1e7d7c0f3dde48329b12a7fc3ae15e
+Directory: 3.10-rc/windows/windowsservercore-ltsc2022
+Constraints: windowsservercore-ltsc2022
 
 Tags: 3.10.0rc1-windowsservercore-1809, 3.10-rc-windowsservercore-1809, rc-windowsservercore-1809
 SharedTags: 3.10.0rc1-windowsservercore, 3.10-rc-windowsservercore, rc-windowsservercore, 3.10.0rc1, 3.10-rc, rc
@@ -79,6 +86,13 @@ Tags: 3.9.7-alpine3.13, 3.9-alpine3.13, 3-alpine3.13, alpine3.13
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: bb70f324485b99613b4d1a279aea61e56768243f
 Directory: 3.9/alpine3.13
+
+Tags: 3.9.7-windowsservercore-ltsc2022, 3.9-windowsservercore-ltsc2022, 3-windowsservercore-ltsc2022, windowsservercore-ltsc2022
+SharedTags: 3.9.7-windowsservercore, 3.9-windowsservercore, 3-windowsservercore, windowsservercore, 3.9.7, 3.9, 3, latest
+Architectures: windows-amd64
+GitCommit: 5b1611fc4d48f5f9874e98d66656c0d8a92f64ca
+Directory: 3.9/windows/windowsservercore-ltsc2022
+Constraints: windowsservercore-ltsc2022
 
 Tags: 3.9.7-windowsservercore-1809, 3.9-windowsservercore-1809, 3-windowsservercore-1809, windowsservercore-1809
 SharedTags: 3.9.7-windowsservercore, 3.9-windowsservercore, 3-windowsservercore, windowsservercore, 3.9.7, 3.9, 3, latest
