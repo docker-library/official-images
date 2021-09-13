@@ -2,15 +2,36 @@ Maintainers: The AlmaLinux OS Foundation <cloud-infra@almalinux.org> (@AlmaLinux
 GitRepo: https://github.com/AlmaLinux/docker-images.git
 
 Tags: latest, 8, 8.4
-GitFetch: refs/heads/almalinux-8-x86_64
-GitCommit: 875d1e6ce39cf5a5495148fce53471f9be49a4c3
-arm64v8-GitFetch: refs/heads/almalinux-8-aarch64
-arm64v8-GitCommit: 54188857c898d835b22e23d273f8022cb8d1f1ce
+GitFetch: refs/heads/almalinux-8-x86_64-default
+GitCommit: 226a6650f4713fa050b1eec92dd4b6e974493e5c
+arm64v8-GitFetch: refs/heads/almalinux-8-aarch64-default
+arm64v8-GitCommit: 63a41e97c4b96311e802cfff56cce6caacce399d
 Architectures: amd64, arm64v8
 
 Tags: minimal, 8-minimal, 8.4-minimal
 GitFetch: refs/heads/almalinux-8-x86_64-minimal
-GitCommit: bc74e29d58210f825911fe73cd7ec0f724d1f78f
+GitCommit: 62c988b53a408c9d1124cc4a17b0f471ce716b73
 arm64v8-GitFetch: refs/heads/almalinux-8-aarch64-minimal
-arm64v8-GitCommit: c0291ce4ff7d7bedb0fef86a863cb7405fb77520
+arm64v8-GitCommit: 269d87f8720165979b79ecfd9b70aace0297675c
+Architectures: amd64, arm64v8
+
+Tags: micro, 8-micro, 8.4-micro
+GitFetch: refs/heads/almalinux-8-x86_64-micro
+GitCommit: 8221e72561dc5d9ffd3e01664f47deeeca2c4678
+arm64v8-GitFetch: refs/heads/almalinux-8-aarch64-micro
+arm64v8-GitCommit: fb5f0d1869557cbfbe16748b9dacee3f73a74f5d
+Architectures: amd64, arm64v8
+
+Tags: init, 8-init, 8.4-init
+GitFetch: refs/heads/almalinux-8-x86_64-init
+GitCommit: cf3a890a339807ad121bc83ea613b597330a6e89
+arm64v8-GitFetch: refs/heads/almalinux-8-aarch64-init
+arm64v8-GitCommit: 78115cd85a0b46b4974eeb44849796b0eaa9d477
+Architectures: amd64, arm64v8
+
+Tags: base, 8-base, 8.4-base
+GitFetch: refs/heads/almalinux-8-x86_64-base
+GitCommit: ad28b9b6ad3672c86857d6320cc8dd41d5ca3c66
+arm64v8-GitFetch: refs/heads/almalinux-8-aarch64-base
+arm64v8-GitCommit: f0eb492b0f6ce61501251f18feb3ddde0bb64efe
 Architectures: amd64, arm64v8
