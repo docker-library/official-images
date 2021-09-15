@@ -1,4 +1,4 @@
-# Docker Official Images 
+# Docker Official Images
 
 ## Table of Contents
 
