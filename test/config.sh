@@ -17,6 +17,7 @@ imageTests[:onbuild]+='
 testAlias+=(
 	[amazoncorretto]='openjdk'
 	[adoptopenjdk]='openjdk'
+	[eclipse-temurin]='openjdk'
 	[sapmachine]='openjdk'
 	[iojs]='node'
 	[jruby]='ruby'
