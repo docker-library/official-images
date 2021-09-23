@@ -197,14 +197,14 @@ Constraints: nanoserver-1809, windowsservercore-1809
 #------------------------------v17 images---------------------------------
 Tags: 17_35-jdk-focal, 17-jdk-focal, 17-focal
 SharedTags: 17_35-jdk, 17-jdk, 17, latest
-Architectures: amd64
-GitCommit: 63defc24ed1b9051b48f6dfc747761a1b88a3b42
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: d066d94f1cfd49219d1efce08c5d4d3649619f9a
 Directory: 17/jdk/ubuntu
 File: Dockerfile.releases.full
 
 Tags: 17_35-jdk-centos7, 17-jdk-centos7, 17-centos7
-Architectures: amd64
-GitCommit: 63defc24ed1b9051b48f6dfc747761a1b88a3b42
+Architectures: amd64, arm64v8, ppc64le
+GitCommit: d066d94f1cfd49219d1efce08c5d4d3649619f9a
 Directory: 17/jdk/centos
 File: Dockerfile.releases.full
 
@@ -231,3 +231,4 @@ GitCommit: 63defc24ed1b9051b48f6dfc747761a1b88a3b42
 Directory: 17/jdk/windows/nanoserver-1809
 File: Dockerfile.releases.full
 Constraints: nanoserver-1809, windowsservercore-1809
+
