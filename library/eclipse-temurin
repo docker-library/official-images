@@ -6,14 +6,14 @@ GitRepo: https://github.com/adoptium/containers.git
 #------------------------------v8 images---------------------------------
 Tags: 8u302-b08-jdk-focal, 8-jdk-focal, 8-focal
 SharedTags: 8u302-b08-jdk, 8-jdk, 8
-Architectures: amd64, arm64v8, ppc64le
-GitCommit: 63defc24ed1b9051b48f6dfc747761a1b88a3b42
+Architectures: amd64, arm32v7, arm64v8, ppc64le
+GitCommit: b54d893a02d99a837374d6ca2195ba26fd9154ce
 Directory: 8/jdk/ubuntu
 File: Dockerfile.releases.full
 
 Tags: 8u302-b08-jdk-centos7, 8-jdk-centos7, 8-centos7
-Architectures: amd64, arm64v8, ppc64le
-GitCommit: 63defc24ed1b9051b48f6dfc747761a1b88a3b42
+Architectures: amd64, arm32v7, arm64v8, ppc64le
+GitCommit: b54d893a02d99a837374d6ca2195ba26fd9154ce
 Directory: 8/jdk/centos
 File: Dockerfile.releases.full
 
@@ -195,16 +195,22 @@ Constraints: nanoserver-1809, windowsservercore-1809
 
 
 #------------------------------v17 images---------------------------------
+Tags: 17_35-jdk-alpine, 17-jdk-alpine, 17-alpine
+Architectures: amd64
+GitCommit: b54d893a02d99a837374d6ca2195ba26fd9154ce
+Directory: 17/jdk/alpine
+File: Dockerfile.releases.full
+
 Tags: 17_35-jdk-focal, 17-jdk-focal, 17-focal
 SharedTags: 17_35-jdk, 17-jdk, 17, latest
-Architectures: amd64, arm64v8, ppc64le, s390x
-GitCommit: d066d94f1cfd49219d1efce08c5d4d3649619f9a
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: b54d893a02d99a837374d6ca2195ba26fd9154ce
 Directory: 17/jdk/ubuntu
 File: Dockerfile.releases.full
 
 Tags: 17_35-jdk-centos7, 17-jdk-centos7, 17-centos7
-Architectures: amd64, arm64v8, ppc64le
-GitCommit: d066d94f1cfd49219d1efce08c5d4d3649619f9a
+Architectures: amd64, arm32v7, arm64v8, ppc64le
+GitCommit: b54d893a02d99a837374d6ca2195ba26fd9154ce
 Directory: 17/jdk/centos
 File: Dockerfile.releases.full
 
