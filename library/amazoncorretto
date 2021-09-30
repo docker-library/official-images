@@ -4,7 +4,7 @@ Maintainers: Amazon Corretto Team <corretto-team@amazon.com> (@corretto),
              Clive Verghese <verghese@amazon.com> (@cliveverghese)
 GitRepo: https://github.com/corretto/corretto-docker.git
 GitFetch: refs/heads/master
-GitCommit: 9dbaca385d16c9f6ff9b0eb5b71eccdeb19909f3 
+GitCommit: 9c390e14b946bb0511046952d1cfc3d2087ba450
 
 Tags: 8, 8u302, 8u302-al2, 8-al2-full,8-al2-jdk, latest
 Architectures: amd64, arm64v8
@@ -33,3 +33,11 @@ Directory: 16/jdk/al2
 Tags: 16-alpine, 16.0.2-alpine, 16-alpine-full, 16-alpine-jdk
 Architectures: amd64
 Directory: 16/jdk/alpine
+
+Tags: 17, 17.0.0, 17.0.0-al2, 17-al2-jdk, 17-al2-full
+Architectures: amd64, arm64v8
+Directory: 17/jdk/al2
+
+Tags: 17-alpine, 17.0.0-alpine, 17-alpine-full, 17-alpine-jdk
+Architectures: amd64
+Directory: 17/jdk/alpine
