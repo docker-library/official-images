@@ -10,6 +10,11 @@ defaults:
 env:
   # https://github.com/docker-library/bashbrew/issues/10
   GIT_LFS_SKIP_SMUDGE: 1
+  
+# Cancel existing runs if user makes another push
+concurrency:
+  group: "${{ github.ref }}"
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
 
