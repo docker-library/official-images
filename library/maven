@@ -41,7 +41,7 @@ Architectures: amd64, arm64v8
 GitCommit: 0a7b1ef030687a5d95ce3e7567a4c279ab87dc81
 Directory: openjdk-11-slim
 
-Tags: 3.8.2-openjdk-16, 3.8.2, 3.8.2-openjdk, 3.8-openjdk-16, 3.8, 3.8-openjdk, 3-openjdk-16, 3, latest, 3-openjdk, openjdk
+Tags: 3.8.2-openjdk-16, 3.8-openjdk-16, 3-openjdk-16
 Architectures: amd64, arm64v8
 GitCommit: 0a7b1ef030687a5d95ce3e7567a4c279ab87dc81
 Directory: openjdk-16
@@ -51,7 +51,7 @@ Architectures: amd64, arm64v8
 GitCommit: 0a7b1ef030687a5d95ce3e7567a4c279ab87dc81
 Directory: openjdk-16-slim
 
-Tags: 3.8.2-openjdk-17, 3.8-openjdk-17, 3-openjdk-17
+Tags: 3.8.2-openjdk-17, 3.8.2, 3.8.2-openjdk, 3.8-openjdk-17, 3.8, 3.8-openjdk, 3-openjdk-17, 3, latest, 3-openjdk, openjdk
 Architectures: amd64, arm64v8
 GitCommit: 0a7b1ef030687a5d95ce3e7567a4c279ab87dc81
 Directory: openjdk-17
@@ -112,17 +112,22 @@ GitCommit: 0a7b1ef030687a5d95ce3e7567a4c279ab87dc81
 Directory: adoptopenjdk-8-openj9
 
 Tags: 3.8.2-eclipse-temurin-11, 3.8-eclipse-temurin-11, 3-eclipse-temurin-11
-Architectures: amd64, arm64v8, ppc64le, s390x
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
 GitCommit: fb98b767f20d898dcfaa998a6d4b5d2c9237252e
 Directory: eclipse-temurin-11
 
-Tags: 3.8.2-eclipse-temurin-16, 3.8.2-eclipse-temurin, 3.8-eclipse-temurin-16, 3.8-eclipse-temurin, 3-eclipse-temurin-16, 3-eclipse-temurin, eclipse-temurin
-Architectures: amd64, arm64v8, ppc64le
+Tags: 3.8.2-eclipse-temurin-16, 3.8-eclipse-temurin-16, 3-eclipse-temurin-16
+Architectures: amd64, arm64v8, ppc64le, s390x
 GitCommit: fb98b767f20d898dcfaa998a6d4b5d2c9237252e
 Directory: eclipse-temurin-16
 
+Tags: 3.8.2-eclipse-temurin-17, 3.8.2-eclipse-temurin, 3.8-eclipse-temurin-17, 3.8-eclipse-temurin, 3-eclipse-temurin-17, 3-eclipse-temurin, eclipse-temurin
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: c1813682290d413cae0da59d074ee80df045db73
+Directory: eclipse-temurin-17
+
 Tags: 3.8.2-eclipse-temurin-8, 3.8-eclipse-temurin-8, 3-eclipse-temurin-8
-Architectures: amd64, arm64v8, ppc64le
+Architectures: amd64, arm32v7, arm64v8, ppc64le
 GitCommit: fb98b767f20d898dcfaa998a6d4b5d2c9237252e
 Directory: eclipse-temurin-8
 
@@ -145,6 +150,11 @@ Tags: 3.8.2-amazoncorretto-16, 3.8-amazoncorretto-16, 3-amazoncorretto-16
 Architectures: amd64, arm64v8
 GitCommit: 0a7b1ef030687a5d95ce3e7567a4c279ab87dc81
 Directory: amazoncorretto-16
+
+Tags: 3.8.2-amazoncorretto-17, 3.8-amazoncorretto-17, 3-amazoncorretto-17
+Architectures: amd64, arm64v8
+GitCommit: 09bbbf942bef1b62cb64692966d4ec829dff24ba
+Directory: amazoncorretto-17
 
 Tags: 3.8.2-amazoncorretto-8, 3.8-amazoncorretto-8, 3-amazoncorretto-8
 Architectures: amd64, arm64v8
