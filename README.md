@@ -236,6 +236,7 @@ The purpose in recommending checksum verification is to verify that the artifact
 Below are some examples:
 
 -	**Preferred**: *download over https, PGP key full fingerprint import and `asc` verification, embedded checksum verified.*
+-	**Note:**: verifying the PGP signature of the hash file only is as secure as verifying the signature of the data itself and common practice (given that it's a strong hash)
 
 	```Dockerfile
 	ENV PYTHON_DOWNLOAD_SHA512 (sha512-value-here)
