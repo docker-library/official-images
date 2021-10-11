@@ -34,5 +34,4 @@ _request() {
 
 # Check that we can request / and that it contains the pattern "Finish setup" somewhere
 # <input type="submit" class="primary" value="Finish setup" data-finishing="Finishing …">
-_request GET '/' |tac|tac| grep -iq "Finish setup"
-# (without "|tac|tac|" we get "broken pipe" since "grep" closes the pipe before "curl" is done reading it)
+_request GET '/' | grep -i "Finish setup" > /dev/null
