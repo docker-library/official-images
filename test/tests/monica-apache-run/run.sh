@@ -41,5 +41,4 @@ _request() {
 . "$dir/../../retry.sh" --tries 30 '_request GET / --output /dev/null'
 
 # Check that we can request / and that it contains the pattern "Welcome" somewhere
-_request GET '/' |tac|tac| grep -iq "Welcome"
-# (without "|tac|tac|" we get "broken pipe" since "grep" closes the pipe before "curl" is done reading it)
+_request GET '/' | grep -i "Welcome" > /dev/null

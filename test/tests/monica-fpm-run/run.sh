@@ -61,5 +61,4 @@ fcgi-request() {
 . "$dir/../../retry.sh" --tries 30 'fcgi-request GET /index.php' > /dev/null 2>&1
 
 # Check that we can request /register and that it contains the pattern "Welcome" somewhere
-fcgi-request GET '/index.php' register |tac|tac| grep -iq "Welcome"
-# (without "|tac|tac|" we get "broken pipe" since "grep" closes the pipe before "curl" is done reading it)
+fcgi-request GET '/index.php' register | grep -i "Welcome" > /dev/null

@@ -52,5 +52,4 @@ fcgi-request() {
 
 # index.php redirects to wp-admin/install.php, check that it contains the word "setup" somewhere
 # <form id="setup" method="post" action="?step=1"><label class='screen-reader-text' for='language'>Select a default language</label>
-fcgi-request GET '/wp-admin/install.php' |tac|tac| grep -iq setup
-# (without "|tac|tac|" we get "broken pipe" since "grep" closes the pipe before "curl" is done reading it)
+fcgi-request GET '/wp-admin/install.php' | grep -i setup > /dev/null

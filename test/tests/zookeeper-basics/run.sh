@@ -24,4 +24,4 @@ zkCli() {
 . "$dir/../../retry.sh" --tries "$ZOOKEEPER_TEST_TRIES" --sleep "$ZOOKEEPER_TEST_SLEEP" zkCli ls /
 
 # List and check Zookeeper root
-zkCli ls / |tac|tac| grep -q '^\[zookeeper\]$'
+zkCli ls / | grep '^\[zookeeper\]$' > /dev/null
