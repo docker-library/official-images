@@ -42,6 +42,7 @@ fcgi-request() {
 		-e SCRIPT_NAME="$url" \
 		-e SCRIPT_FILENAME=/var/www/html/"${url#/}" \
 		-e QUERY_STRING="$queryString" \
+		-e HTTP_HOST='localhost' \
 		"$clientImage" \
 		-bind -connect fpm:9000
 }
