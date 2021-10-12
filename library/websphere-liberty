@@ -12,7 +12,7 @@ File: Dockerfile.ubuntu.ibmjava8
 Tags: kernel-java11-openj9
 Directory: ga/latest/kernel
 Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.adoptopenjdk11
+File: Dockerfile.ubuntu.openjdk11
 
 Tags: full, latest
 Directory: ga/latest/full
@@ -21,7 +21,7 @@ File: Dockerfile.ubuntu.ibmjava8
 Tags: full-java11-openj9
 Directory: ga/latest/full
 Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.adoptopenjdk11
+File: Dockerfile.ubuntu.openjdk11
 
 Tags: 21.0.0.10-kernel-java8-ibmjava
 Directory: ga/21.0.0.10/kernel
@@ -30,7 +30,7 @@ File: Dockerfile.ubuntu.ibmjava8
 Tags: 21.0.0.10-kernel-java11-openj9
 Directory: ga/21.0.0.10/kernel
 Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.adoptopenjdk11
+File: Dockerfile.ubuntu.openjdk11
 
 Tags: 21.0.0.10-full-java8-ibmjava
 Directory: ga/21.0.0.10/full
@@ -39,7 +39,25 @@ File: Dockerfile.ubuntu.ibmjava8
 Tags: 21.0.0.10-full-java11-openj9
 Directory: ga/21.0.0.10/full
 Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.adoptopenjdk11
+File: Dockerfile.ubuntu.openjdk11
+
+Tags: 21.0.0.9-kernel-java8-ibmjava
+Directory: ga/21.0.0.9/kernel
+File: Dockerfile.ubuntu.ibmjava8
+
+Tags: 21.0.0.9-kernel-java11-openj9
+Directory: ga/21.0.0.9/kernel
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk11
+
+Tags: 21.0.0.9-full-java8-ibmjava
+Directory: ga/21.0.0.9/full
+File: Dockerfile.ubuntu.ibmjava8
+
+Tags: 21.0.0.9-full-java11-openj9
+Directory: ga/21.0.0.9/full
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk11
 
 Tags: 21.0.0.6-kernel-java8-ibmjava
 Directory: ga/21.0.0.6/kernel
@@ -48,7 +66,7 @@ File: Dockerfile.ubuntu.ibmjava8
 Tags: 21.0.0.6-kernel-java11-openj9
 Directory: ga/21.0.0.6/kernel
 Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.adoptopenjdk11
+File: Dockerfile.ubuntu.openjdk11
 
 Tags: 21.0.0.6-full-java8-ibmjava
 Directory: ga/21.0.0.6/full
@@ -57,4 +75,4 @@ File: Dockerfile.ubuntu.ibmjava8
 Tags: 21.0.0.6-full-java11-openj9
 Directory: ga/21.0.0.6/full
 Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.adoptopenjdk11
+File: Dockerfile.ubuntu.openjdk11
