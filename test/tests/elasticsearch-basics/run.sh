@@ -55,7 +55,7 @@ _req-exit() {
 }
 
 # Make sure our container is listening
-. "$dir/../../retry.sh" '! _req-exit GET / 7' # "Failed to connect to host."
+. "$dir/../../retry.sh" --tries 20 '! _req-exit GET / 7' # "Failed to connect to host."
 
 # Perform simple health check
 _req-comp GET '/_cat/health?h=status' 'green'
