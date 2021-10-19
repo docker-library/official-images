@@ -19,19 +19,15 @@ testAlias+=(
 	[adoptopenjdk]='openjdk'
 	[eclipse-temurin]='openjdk'
 	[sapmachine]='openjdk'
-	[iojs]='node'
+
 	[jruby]='ruby'
 	[pypy]='python'
 
 	[ubuntu]='debian'
-	[ubuntu-debootstrap]='debian'
 
 	[mariadb]='mysql'
 	[percona]='mysql'
 	[percona:psmdb]='mongo'
-
-	[hola-mundo]='hello-world'
-	[hello-seattle]='hello-world'
 )
 
 imageTests+=(
@@ -41,8 +37,6 @@ imageTests+=(
 	'
 	[cassandra]='
 		cassandra-basics
-	'
-	[celery]='
 	'
 	[clojure]='
 	'
@@ -64,8 +58,6 @@ imageTests+=(
 		docker-dind
 		docker-registry-push-pull
 	'
-	[django]='
-	'
 	[eclipse-mosquitto]='
 		eclipse-mosquitto-basics
 	'
@@ -77,9 +69,6 @@ imageTests+=(
 	'
 	[erlang]='
 		erlang-hello-world
-	'
-	[fsharp]='
-		fsharp-hello-world
 	'
 	[gcc]='
 		gcc-c-hello-world
@@ -220,8 +209,6 @@ imageTests+=(
 		rabbitmq-tls
 	'
 	[r-base]='
-	'
-	[rails]='
 	'
 	[rapidoid]='
 		rapidoid-hello-world
