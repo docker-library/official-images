@@ -58,7 +58,7 @@ jobs:
     if: fromJSON(needs.gather.outputs.images).count > 0
     steps:
       - name: Apply Labels
-        uses: actions/github-script@v3
+        uses: actions/github-script@v5
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
@@ -67,7 +67,8 @@ jobs:
             if (data.new.length > 0) {
               labels.push('new-image');
             }
-            github.issues.addLabels({
+            console.log(labels);
+            await github.rest.issues.addLabels({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.payload.pull_request.number,
@@ -109,28 +110,33 @@ jobs:
         run: |
           docker run --rm --read-only --tmpfs /tmp oisupport/bashbrew:diff-pr ./diff-pr.sh "$GITHUB_PR_NUMBER" | tee "$GITHUB_WORKSPACE/oi-pr.diff"
       - name: Comment
-        uses: actions/github-script@v3
+        uses: actions/github-script@v5
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const { data: comments } = await github.issues.listComments({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.payload.pull_request.number,
-            });
             const commentText = 'Diff for ' + context.payload.pull_request.head.sha + ':';
             needNewComment = true;
-            for (let j = 0; j < comments.length; ++j) {
-              const comment = comments[j];
-              if (comment.user.login === 'github-actions[bot]') {
-                if (comment.body.includes(commentText)) {
-                  needNewComment = false;
-                } else {
-                  await github.issues.deleteComment({
-                    owner: context.repo.owner,
-                    repo: context.repo.repo,
-                    comment_id: comment.id,
-                  });
+            console.log('Reviewing existing comments...');
+            for await (const { data: comments } of github.paginate.iterator(
+              github.rest.issues.listComments,
+              {
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.payload.pull_request.number,
+              }
+            )) {
+              for (const comment of comments) {
+                if (comment.user.login === 'github-actions[bot]') {
+                  if (needNewComment && comment.body.includes(commentText)) {
+                    needNewComment = false;
+                  } else {
+                    console.log('Deleting comment: ' + comment.id);
+                    await github.rest.issues.deleteComment({
+                      owner: context.repo.owner,
+                      repo: context.repo.repo,
+                      comment_id: comment.id,
+                    });
+                  }
                 }
               }
             }
@@ -142,7 +148,8 @@ jobs:
               if (maint.length > 0) {
                 body += "\n\nRelevant Maintainers:\n\n" + maint;
               }
-              await github.issues.createComment({
+              console.log('Creating new comment...');
+              await github.rest.issues.createComment({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 issue_number: context.payload.pull_request.number,
