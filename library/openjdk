@@ -45,6 +45,13 @@ Architectures: amd64
 GitCommit: 20db9bb3edad42224dcdfa0ea95030c2848851cd
 Directory: 18/jdk/alpine3.13
 
+Tags: 18-ea-20-jdk-windowsservercore-ltsc2022, 18-ea-20-windowsservercore-ltsc2022, 18-ea-jdk-windowsservercore-ltsc2022, 18-ea-windowsservercore-ltsc2022, 18-jdk-windowsservercore-ltsc2022, 18-windowsservercore-ltsc2022
+SharedTags: 18-ea-20-jdk-windowsservercore, 18-ea-20-windowsservercore, 18-ea-jdk-windowsservercore, 18-ea-windowsservercore, 18-jdk-windowsservercore, 18-windowsservercore, 18-ea-20-jdk, 18-ea-20, 18-ea-jdk, 18-ea, 18-jdk, 18
+Architectures: windows-amd64
+GitCommit: 2254a4e60b722f3315e06ebaecbd27b8e0263284
+Directory: 18/jdk/windows/windowsservercore-ltsc2022
+Constraints: windowsservercore-ltsc2022
+
 Tags: 18-ea-20-jdk-windowsservercore-1809, 18-ea-20-windowsservercore-1809, 18-ea-jdk-windowsservercore-1809, 18-ea-windowsservercore-1809, 18-jdk-windowsservercore-1809, 18-windowsservercore-1809
 SharedTags: 18-ea-20-jdk-windowsservercore, 18-ea-20-windowsservercore, 18-ea-jdk-windowsservercore, 18-ea-windowsservercore, 18-jdk-windowsservercore, 18-windowsservercore, 18-ea-20-jdk, 18-ea-20, 18-ea-jdk, 18-ea, 18-jdk, 18
 Architectures: windows-amd64
@@ -96,6 +103,13 @@ Tags: 17.0.1-jdk-slim-buster, 17.0.1-slim-buster, 17.0-jdk-slim-buster, 17.0-sli
 Architectures: amd64, arm64v8
 GitCommit: 41610205127c2a4f0af64f68b859726993503a89
 Directory: 17/jdk/slim-buster
+
+Tags: 17.0.1-jdk-windowsservercore-ltsc2022, 17.0.1-windowsservercore-ltsc2022, 17.0-jdk-windowsservercore-ltsc2022, 17.0-windowsservercore-ltsc2022, 17-jdk-windowsservercore-ltsc2022, 17-windowsservercore-ltsc2022, jdk-windowsservercore-ltsc2022, windowsservercore-ltsc2022
+SharedTags: 17.0.1-jdk-windowsservercore, 17.0.1-windowsservercore, 17.0-jdk-windowsservercore, 17.0-windowsservercore, 17-jdk-windowsservercore, 17-windowsservercore, jdk-windowsservercore, windowsservercore, 17.0.1-jdk, 17.0.1, 17.0-jdk, 17.0, 17-jdk, 17, jdk, latest
+Architectures: windows-amd64
+GitCommit: 2254a4e60b722f3315e06ebaecbd27b8e0263284
+Directory: 17/jdk/windows/windowsservercore-ltsc2022
+Constraints: windowsservercore-ltsc2022
 
 Tags: 17.0.1-jdk-windowsservercore-1809, 17.0.1-windowsservercore-1809, 17.0-jdk-windowsservercore-1809, 17.0-windowsservercore-1809, 17-jdk-windowsservercore-1809, 17-windowsservercore-1809, jdk-windowsservercore-1809, windowsservercore-1809
 SharedTags: 17.0.1-jdk-windowsservercore, 17.0.1-windowsservercore, 17.0-jdk-windowsservercore, 17.0-windowsservercore, 17-jdk-windowsservercore, 17-windowsservercore, jdk-windowsservercore, windowsservercore, 17.0.1-jdk, 17.0.1, 17.0-jdk, 17.0, 17-jdk, 17, jdk, latest
@@ -149,6 +163,13 @@ Architectures: amd64, arm64v8
 GitCommit: 61bfbb30ae5a0395f08d41107b86bcce90d70ba6
 Directory: 11/jdk/slim-buster
 
+Tags: 11.0.13-jdk-windowsservercore-ltsc2022, 11.0.13-windowsservercore-ltsc2022, 11.0-jdk-windowsservercore-ltsc2022, 11.0-windowsservercore-ltsc2022, 11-jdk-windowsservercore-ltsc2022, 11-windowsservercore-ltsc2022
+SharedTags: 11.0.13-jdk-windowsservercore, 11.0.13-windowsservercore, 11.0-jdk-windowsservercore, 11.0-windowsservercore, 11-jdk-windowsservercore, 11-windowsservercore, 11.0.13-jdk, 11.0.13, 11.0-jdk, 11.0, 11-jdk, 11
+Architectures: windows-amd64
+GitCommit: 2254a4e60b722f3315e06ebaecbd27b8e0263284
+Directory: 11/jdk/windows/windowsservercore-ltsc2022
+Constraints: windowsservercore-ltsc2022
+
 Tags: 11.0.13-jdk-windowsservercore-1809, 11.0.13-windowsservercore-1809, 11.0-jdk-windowsservercore-1809, 11.0-windowsservercore-1809, 11-jdk-windowsservercore-1809, 11-windowsservercore-1809
 SharedTags: 11.0.13-jdk-windowsservercore, 11.0.13-windowsservercore, 11.0-jdk-windowsservercore, 11.0-windowsservercore, 11-jdk-windowsservercore, 11-windowsservercore, 11.0.13-jdk, 11.0.13, 11.0-jdk, 11.0, 11-jdk, 11
 Architectures: windows-amd64
@@ -190,6 +211,13 @@ Tags: 11.0.13-jre-slim-buster, 11.0-jre-slim-buster, 11-jre-slim-buster
 Architectures: amd64, arm64v8
 GitCommit: 61bfbb30ae5a0395f08d41107b86bcce90d70ba6
 Directory: 11/jre/slim-buster
+
+Tags: 11.0.13-jre-windowsservercore-ltsc2022, 11.0-jre-windowsservercore-ltsc2022, 11-jre-windowsservercore-ltsc2022
+SharedTags: 11.0.13-jre-windowsservercore, 11.0-jre-windowsservercore, 11-jre-windowsservercore, 11.0.13-jre, 11.0-jre, 11-jre
+Architectures: windows-amd64
+GitCommit: 2254a4e60b722f3315e06ebaecbd27b8e0263284
+Directory: 11/jre/windows/windowsservercore-ltsc2022
+Constraints: windowsservercore-ltsc2022
 
 Tags: 11.0.13-jre-windowsservercore-1809, 11.0-jre-windowsservercore-1809, 11-jre-windowsservercore-1809
 SharedTags: 11.0.13-jre-windowsservercore, 11.0-jre-windowsservercore, 11-jre-windowsservercore, 11.0.13-jre, 11.0-jre, 11-jre
@@ -243,6 +271,13 @@ Architectures: amd64, arm64v8
 GitCommit: 3ce4449d7f01afa6001a711e17cdd379b76848f8
 Directory: 8/jdk/slim-buster
 
+Tags: 8u312-jdk-windowsservercore-ltsc2022, 8u312-windowsservercore-ltsc2022, 8-jdk-windowsservercore-ltsc2022, 8-windowsservercore-ltsc2022
+SharedTags: 8u312-jdk-windowsservercore, 8u312-windowsservercore, 8-jdk-windowsservercore, 8-windowsservercore, 8u312-jdk, 8u312, 8-jdk, 8
+Architectures: windows-amd64
+GitCommit: 2254a4e60b722f3315e06ebaecbd27b8e0263284
+Directory: 8/jdk/windows/windowsservercore-ltsc2022
+Constraints: windowsservercore-ltsc2022
+
 Tags: 8u312-jdk-windowsservercore-1809, 8u312-windowsservercore-1809, 8-jdk-windowsservercore-1809, 8-windowsservercore-1809
 SharedTags: 8u312-jdk-windowsservercore, 8u312-windowsservercore, 8-jdk-windowsservercore, 8-windowsservercore, 8u312-jdk, 8u312, 8-jdk, 8
 Architectures: windows-amd64
@@ -284,6 +319,13 @@ Tags: 8u312-jre-slim-buster, 8-jre-slim-buster
 Architectures: amd64, arm64v8
 GitCommit: 3ce4449d7f01afa6001a711e17cdd379b76848f8
 Directory: 8/jre/slim-buster
+
+Tags: 8u312-jre-windowsservercore-ltsc2022, 8-jre-windowsservercore-ltsc2022
+SharedTags: 8u312-jre-windowsservercore, 8-jre-windowsservercore, 8u312-jre, 8-jre
+Architectures: windows-amd64
+GitCommit: 2254a4e60b722f3315e06ebaecbd27b8e0263284
+Directory: 8/jre/windows/windowsservercore-ltsc2022
+Constraints: windowsservercore-ltsc2022
 
 Tags: 8u312-jre-windowsservercore-1809, 8-jre-windowsservercore-1809
 SharedTags: 8u312-jre-windowsservercore, 8-jre-windowsservercore, 8u312-jre, 8-jre
