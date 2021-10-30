@@ -6,18 +6,28 @@ GitRepo: https://github.com/keeganwitt/docker-gradle.git
 
 Tags: 7.2.0-jdk8, 7.2-jdk8, 7-jdk8, jdk8
 Architectures: amd64, arm32v7, arm64v8, ppc64le
-GitCommit: 12de35caaf73bc28651fa6fa00c7dd4078695de9
+GitCommit: f957af12473296d56233e110d51976d77fb45661
 Directory: jdk8
 
 Tags: 7.2.0-jdk11, 7.2-jdk11, 7-jdk11, jdk11
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 12de35caaf73bc28651fa6fa00c7dd4078695de9
+GitCommit: f957af12473296d56233e110d51976d77fb45661
 Directory: jdk11
+
+Tags: 7.2.0-jdk11-alpine, 7.2-jdk11-alpine, 7-jdk11-alpine, jdk11-alpine
+Architectures: amd64
+GitCommit: f957af12473296d56233e110d51976d77fb45661
+Directory: jdk11-alpine
 
 Tags: 7.2.0-jdk17, 7.2-jdk17, 7-jdk17, jdk17, 7.2.0-jdk, 7.2-jdk, 7-jdk, jdk, 7.2.0, 7.2, 7, latest
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 12de35caaf73bc28651fa6fa00c7dd4078695de9
+GitCommit: f957af12473296d56233e110d51976d77fb45661
 Directory: jdk17
+
+Tags: 7.2.0-jdk17-alpine, 7.2-jdk17-alpine, 7-jdk17-alpine, jdk17-alpine, 7.2.0-jdk-alpine, 7.2-jdk-alpine, 7-jdk-alpine, jdk-alpine, 7.2.0-alpine, 7.2-alpine, 7-alpine, alpine
+Architectures: amd64
+GitCommit: f957af12473296d56233e110d51976d77fb45661
+Directory: jdk17-alpine
 
 
 # Gradle 6.x
@@ -25,17 +35,29 @@ Directory: jdk17
 Tags: 6.9.1-jdk8, 6.9-jdk8, 6-jdk8
 GitFetch: refs/heads/6
 Architectures: amd64, arm32v7, arm64v8, ppc64le
-GitCommit: c1589fa3ca8eca327c505c1a088902e83cac9b3e
+GitCommit: e1cf6931390c1ea7ddadc705f2416f27bc0c5cae
 Directory: jdk8
 
 Tags: 6.9.1-jdk11, 6.9-jdk11, 6-jdk11
 GitFetch: refs/heads/6
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: c1589fa3ca8eca327c505c1a088902e83cac9b3e
+GitCommit: e1cf6931390c1ea7ddadc705f2416f27bc0c5cae
 Directory: jdk11
+
+Tags: 6.9.1-jdk11-alpine, 6.9-jdk11-alpine, 6-jdk11-alpine
+GitFetch: refs/heads/6
+Architectures: amd64
+GitCommit: e1cf6931390c1ea7ddadc705f2416f27bc0c5cae
+Directory: jdk11-alpine
 
 Tags: 6.9.1-jdk17, 6.9-jdk17, 6-jdk17, 6.9.1-jdk, 6.9-jdk, 6-jdk, 6.9.1, 6.9, 6
 GitFetch: refs/heads/6
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: c1589fa3ca8eca327c505c1a088902e83cac9b3e
+GitCommit: e1cf6931390c1ea7ddadc705f2416f27bc0c5cae
 Directory: jdk17
+
+Tags: 6.9.1-jdk17-alpine, 6.9-jdk17-alpine, 6-jdk17-alpine, 6.9.1-jdk-alpine, 6.9-jdk-alpine, 6-jdk-alpine, 6.9.1-alpine, 6.9-alpine, 6-alpine
+GitFetch: refs/heads/6
+Architectures: amd64
+GitCommit: e1cf6931390c1ea7ddadc705f2416f27bc0c5cae
+Directory: jdk17-alpine
