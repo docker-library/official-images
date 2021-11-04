@@ -3,28 +3,28 @@
 
 Maintainers: Tianon Gravi <tianon@debian.org> (@tianon), Michael Hudson-Doyle <michael.hudson@ubuntu.com> (@mwhudson)
 GitRepo: https://github.com/tianon/docker-brew-ubuntu-core.git
-GitCommit: eb7ef6f96261820e5b37aba7605b5b5c39ed5b64
+GitCommit: cf80ade55e2b6eac5966f54b017dfcd05028fea1
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-amd64
 amd64-GitFetch: refs/heads/dist-amd64
-amd64-GitCommit: b5a2c2a86e9dc83ef3a21551ea97e351697ed2d7
+amd64-GitCommit: 7b4824918e0284728bc03358f7a2e399a1c74035
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-arm32v7
 arm32v7-GitFetch: refs/heads/dist-arm32v7
-arm32v7-GitCommit: b25ee513431f00f8af411b584707f8ad25afeebf
+arm32v7-GitCommit: 3ef537b3c2609d2dfa1ebfe95a469bfe4b3cc9e1
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-arm64v8
 arm64v8-GitFetch: refs/heads/dist-arm64v8
-arm64v8-GitCommit: 10940bbfccb28587b9ae43421bd666e76bf01cfe
+arm64v8-GitCommit: a5749e141072b43a137adf82506f3703418c0bd4
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-i386
 i386-GitFetch: refs/heads/dist-i386
-i386-GitCommit: f6e15ddf8fced3fcaa895bab1b8e48a829c68791
+i386-GitCommit: 327d9856c3bcc57929fd8d97f46e5ff18abc1e5b
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-ppc64le
 ppc64le-GitFetch: refs/heads/dist-ppc64le
-ppc64le-GitCommit: 078a860cca584f21c612dca1dd8a0c3dd1187b40
+ppc64le-GitCommit: e1c4fa8a4c4948af8c591d34cc0e79d5590029f2
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-riscv64
 riscv64-GitFetch: refs/heads/dist-riscv64
-riscv64-GitCommit: 505c8efa41013f4af64a4805bfb32ba5099e46ed
+riscv64-GitCommit: 152a6a211fce34058898356b37fd592734f9577c
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-s390x
 s390x-GitFetch: refs/heads/dist-s390x
-s390x-GitCommit: e64385c6bef92d12eb09da81160f862b263925b0
+s390x-GitCommit: 53b58294565bb14384eca840f483b53ce84e9e29
 
 # 20210930 (bionic)
 Tags: 18.04, bionic-20210930, bionic
@@ -41,10 +41,15 @@ Tags: 21.04, hirsute-20210917, hirsute
 Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
 Directory: hirsute
 
-# 20211015 (impish)
-Tags: 21.10, impish-20211015, impish, rolling
+# 20211102 (impish)
+Tags: 21.10, impish-20211102, impish, rolling
 Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
 Directory: impish
+
+# 20211029 (jammy)
+Tags: 22.04, jammy-20211029, jammy, devel
+Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
+Directory: jammy
 
 # 20191217 (trusty)
 Tags: 14.04, trusty-20191217, trusty
