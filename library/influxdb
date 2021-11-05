@@ -1,6 +1,6 @@
-Maintainers: Daniel Moran <dmoran@influxdata.com> (@danxmoran)
+Maintainers: Will Baker <wbaker@influxdata.com> (@wbaker85)
 GitRepo: git://github.com/influxdata/influxdata-docker
-GitCommit: 33dfb46656b87f38948a78c69f90c21e27ecc5a8
+GitCommit: fa961b6b1825c1099d5edbe515cdd5c364c5869d
 
 Tags: 1.7, 1.7.11
 Architectures: amd64, arm32v7, arm64v8
@@ -52,10 +52,18 @@ Directory: influxdb/1.9/meta
 Tags: 1.9-meta-alpine, 1.9.5-meta-alpine
 Directory: influxdb/1.9/meta/alpine
 
-Tags: 2.0, 2.0.9, latest
+Tags: 2.0, 2.0.9
 Architectures: amd64, arm64v8
 Directory: influxdb/2.0
 
-Tags: 2.0-alpine, 2.0.9-alpine, alpine
+Tags: 2.0-alpine, 2.0.9-alpine
 Architectures: amd64, arm64v8
 Directory: influxdb/2.0/alpine
+
+Tags: 2.1, 2.1.0, latest
+Architectures: amd64, arm64v8
+Directory: influxdb/2.1
+
+Tags: 2.1-alpine, 2.1.0-alpine, alpine
+Architectures: amd64, arm64v8
+Directory: influxdb/2.1/alpine
