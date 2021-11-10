@@ -3,12 +3,17 @@ Maintainers: Derek Collison <derek@synadia.com> (@derekcollison),
              Waldemar Salinas <wally@synadia.com> (@wallyqs),
              Jaime Piña <jaime@synadia.com> (@variadico)
 GitRepo: https://github.com/nats-io/nats-docker.git
-GitFetch: refs/heads/main
-GitCommit: edcf3e2b3b3b909cca78069f1790bb3e9edc0851
+GitFetch: refs/heads/test_nr
+GitCommit: f620eaee77912568b490832647a943ec886af60e
 
 Tags: 2.6.4-alpine3.14, 2.6-alpine3.14, 2-alpine3.14, alpine3.14, 2.6.4-alpine, 2.6-alpine, 2-alpine, alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8
 Directory: 2.6.4/alpine3.14
+
+Tags: 2.6.4-alpine3.14-nr, 2.6-alpine3.14-nr, 2-alpine3.14-nr, alpine3.14-nr, 2.6.4-alpine-nr, 2.6-alpine-nr, 2-alpine-nr, alpine-nr
+SharedTags: 2.6.4, 2.6, 2, latest
+Architectures: amd64, arm32v6, arm32v7, arm64v8
+Directory: 2.6.4/alpine3.14-nr
 
 Tags: 2.6.4-scratch, 2.6-scratch, 2-scratch, scratch, 2.6.4-linux, 2.6-linux, 2-linux, linux
 SharedTags: 2.6.4, 2.6, 2, latest
