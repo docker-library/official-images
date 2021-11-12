@@ -44,5 +44,4 @@ fcgi-request() {
 
 # Check that we can request / and that it contains the pattern "Finish setup" somewhere
 # <input type="submit" class="primary" value="Finish setup" data-finishing="Finishing …">
-fcgi-request GET '/index.php' |tac|tac| grep -iq "Finish setup"
-# (without "|tac|tac|" we get "broken pipe" since "grep" closes the pipe before "curl" is done reading it)
+fcgi-request GET '/index.php' | grep -i "Finish setup" > /dev/null

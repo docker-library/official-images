@@ -2,75 +2,95 @@ Maintainers: Chris Potter <crpotter@us.ibm.com> (@crpotter),
              Wendy Raschke <wraschke@us.ibm.com> (@wraschke),
              Arthur De Magalhaes <arthurdm@ca.ibm.com> (@arthurdm)
 GitRepo: https://github.com/OpenLiberty/ci.docker.git
-GitCommit: c0b16e39ba0d342f2d818ec0ece7ebade5b2ba63
+GitCommit: bfa6a3c40defa7deace207359c8c5ff2ef847935
 Architectures: amd64, i386, ppc64le, s390x
 
 Tags: beta
 Directory: releases/latest/beta
 Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.adoptopenjdk8
+File: Dockerfile.ubuntu.openjdk8
 
 Tags: beta-java11
 Directory: releases/latest/beta
 Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.adoptopenjdk11
+File: Dockerfile.ubuntu.openjdk11
 
 Tags: kernel-slim, kernel-slim-java8-openj9
 Directory: releases/latest/kernel-slim
 Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.adoptopenjdk8
+File: Dockerfile.ubuntu.openjdk8
 
 Tags: kernel-slim-java11-openj9
 Directory: releases/latest/kernel-slim
 Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.adoptopenjdk11
+File: Dockerfile.ubuntu.openjdk11
 
 Tags: full, full-java8-openj9, latest
 Directory: releases/latest/full
 Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.adoptopenjdk8
+File: Dockerfile.ubuntu.openjdk8
 
 Tags: full-java11-openj9
 Directory: releases/latest/full
 Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.adoptopenjdk11
+File: Dockerfile.ubuntu.openjdk11
+
+Tags: 21.0.0.11-kernel-slim-java8-openj9
+Directory: releases/21.0.0.11/kernel-slim
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk8
+
+Tags: 21.0.0.11-kernel-slim-java11-openj9
+Directory: releases/21.0.0.11/kernel-slim
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk11
+
+Tags: 21.0.0.11-full-java8-openj9
+Directory: releases/21.0.0.11/full
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk8
+
+Tags: 21.0.0.11-full-java11-openj9
+Directory: releases/21.0.0.11/full
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk11
 
 Tags: 21.0.0.9-kernel-slim-java8-openj9
 Directory: releases/21.0.0.9/kernel-slim
 Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.adoptopenjdk8
+File: Dockerfile.ubuntu.openjdk8
 
 Tags: 21.0.0.9-kernel-slim-java11-openj9
 Directory: releases/21.0.0.9/kernel-slim
 Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.adoptopenjdk11
+File: Dockerfile.ubuntu.openjdk11
 
 Tags: 21.0.0.9-full-java8-openj9
 Directory: releases/21.0.0.9/full
 Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.adoptopenjdk8
+File: Dockerfile.ubuntu.openjdk8
 
 Tags: 21.0.0.9-full-java11-openj9
 Directory: releases/21.0.0.9/full
 Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.adoptopenjdk11
+File: Dockerfile.ubuntu.openjdk11
 
 Tags: 21.0.0.6-kernel-slim-java8-openj9
 Directory: releases/21.0.0.6/kernel-slim
 Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.adoptopenjdk8
+File: Dockerfile.ubuntu.openjdk8
 
 Tags: 21.0.0.6-kernel-slim-java11-openj9
 Directory: releases/21.0.0.6/kernel-slim
 Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.adoptopenjdk11
+File: Dockerfile.ubuntu.openjdk11
 
 Tags: 21.0.0.6-full-java8-openj9
 Directory: releases/21.0.0.6/full
 Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.adoptopenjdk8
+File: Dockerfile.ubuntu.openjdk8
 
 Tags: 21.0.0.6-full-java11-openj9
 Directory: releases/21.0.0.6/full
 Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.adoptopenjdk11
+File: Dockerfile.ubuntu.openjdk11

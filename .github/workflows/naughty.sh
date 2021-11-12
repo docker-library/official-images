@@ -3,7 +3,7 @@ set -Eeuo pipefail
 
 if [ "$#" -eq 0 ]; then
 	git fetch --quiet https://github.com/docker-library/official-images.git master
-	changes="$(git diff --numstat FETCH_HEAD...HEAD -- library/ | cut -d$'\t' -f3-)"
+	changes="$(git diff --no-renames --name-only --diff-filter='d' FETCH_HEAD...HEAD -- library/)"
 	repos="$(xargs -rn1 basename <<<"$changes")"
 	set -- $repos
 fi
