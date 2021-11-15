@@ -6,36 +6,58 @@ GitRepo: https://github.com/groovy/docker-groovy.git
 
 Tags: 3.0.9-jdk8, 3.0-jdk8, jdk8
 Architectures: amd64, arm32v7, arm64v8, ppc64le
-GitCommit: e46b8fbd268e1b4559178b87358aac7385f694d2
+GitCommit: a3aa08aa0ceaaf13f1ad73a882aba081ff46e816
 Directory: jdk8
 
 Tags: 3.0.9-jdk11, 3.0-jdk11, jdk11
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: e46b8fbd268e1b4559178b87358aac7385f694d2
+GitCommit: a3aa08aa0ceaaf13f1ad73a882aba081ff46e816
 Directory: jdk11
+
+Tags: 3.0.9-jdk11-alpine, 3.0-jdk11-alpine, jdk11-alpine
+Architectures: amd64
+GitCommit: a3aa08aa0ceaaf13f1ad73a882aba081ff46e816
+Directory: jdk11-alpine
 
 Tags: 3.0.9-jdk17, 3.0-jdk17, jdk17, 3.0.9-jdk, 3.0-jdk, 3.0.9, 3.0, 3, jdk, latest
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: e46b8fbd268e1b4559178b87358aac7385f694d2
+GitCommit: a3aa08aa0ceaaf13f1ad73a882aba081ff46e816
 Directory: jdk17
 
+Tags: 3.0.9-jdk17-alpine, 3.0-jdk17-alpine, jdk17-alpine, 3.0.9-jdk-alpine, 3.0-jdk-alpine, 3.0.9-alpine, 3.0-alpine, 3-alpine, jdk-alpine, alpine
+Architectures: amd64
+GitCommit: a3aa08aa0ceaaf13f1ad73a882aba081ff46e816
+Directory: jdk17-alpine
 
 # Groovy 4
 
 Tags: 4.0.0-beta-2-jdk8, 4.0.0-jdk8, 4.0-jdk8
 GitFetch: refs/heads/4.0
 Architectures: amd64, arm32v7, arm64v8, ppc64le
-GitCommit: 90f949922ebe0807d6cafbe1e0259922d5c2a469
+GitCommit: ca07f06d8a8e774a9cf401fd12e540f71b687bb5
 Directory: jdk8
 
 Tags: 4.0.0-beta-2-jdk11, 4.0.0-jdk11, 4.0-jdk11
 GitFetch: refs/heads/4.0
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 90f949922ebe0807d6cafbe1e0259922d5c2a469
+GitCommit: ca07f06d8a8e774a9cf401fd12e540f71b687bb5
 Directory: jdk11
+
+Tags: 4.0.0-beta-2-jdk11-alpine, 4.0.0-jdk11-alpine, 4.0-jdk11-alpine
+GitFetch: refs/heads/4.0
+Architectures: amd64
+GitCommit: ca07f06d8a8e774a9cf401fd12e540f71b687bb5
+Directory: jdk11-alpine
 
 Tags: 4.0.0-beta-2-jdk17, 4.0.0-jdk17, 4.0-jdk17, 4.0.0-beta-2-jdk, 4.0.0-jdk, 4.0.0-beta-2, 4.0.0, 4.0, 4
 GitFetch: refs/heads/4.0
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 90f949922ebe0807d6cafbe1e0259922d5c2a469
+GitCommit: ca07f06d8a8e774a9cf401fd12e540f71b687bb5
 Directory: jdk17
+
+
+Tags: 4.0.0-beta-2-jdk17-alpine, 4.0.0-jdk17-alpine, 4.0-jdk17-alpine, 4.0.0-beta-2-jdk-alpine, 4.0.0-jdk-alpine, 4.0.0-beta-2-alpine, 4.0.0-alpine, 4.0-alpine, 4-alpine
+GitFetch: refs/heads/4.0
+Architectures: amd64
+GitCommit: ca07f06d8a8e774a9cf401fd12e540f71b687bb5
+Directory: jdk17-alpine
