@@ -29,7 +29,7 @@ jobs:
       - id: gather
         name: Affected Images
         run: |
-          echo "::stop-commands::$(echo -n ${{ github.token }} | sha256sum | head -c 64)"
+          (set +x; echo "::stop-commands::$(echo -n ${{ github.token }} | sha256sum | head -c 64)")
           git fetch --quiet https://github.com/docker-library/official-images.git master
           images="$(git diff --no-renames --name-only FETCH_HEAD...HEAD -- library/)"
           if [ -n "$images" ]; then
@@ -52,6 +52,7 @@ jobs:
             }
           ')"
           jq . <<<"$images"
+          set +x
           echo "::$(echo -n ${{ github.token }} | sha256sum | head -c 64)::"
           echo "::set-output name=images::$images"
     outputs:
