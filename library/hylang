@@ -1,6 +1,6 @@
 Maintainers: Paul Tagliamonte <paultag@hylang.org> (@paultag), Hy Docker Team (@hylang/docker)
 GitRepo: https://github.com/hylang/docker-hylang.git
-GitCommit: 61ea4de27928559dc204c9fe7daa41607a4c08f7
+GitCommit: a96651faa387b5fd876e68a98cc081cb483d9b22
 Directory: dockerfiles-generated
 
 Tags: 1.0a3-python3.10-bullseye, python3.10-bullseye, 1.0a3-bullseye, bullseye
@@ -12,13 +12,13 @@ Tags: 1.0a3-python3.10-buster, python3.10-buster, 1.0a3-buster, buster
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 File: Dockerfile.python3.10-buster
 
-Tags: 1.0a3-python3.10-alpine3.14, python3.10-alpine3.14, 1.0a3-alpine3.14, alpine3.14, 1.0a3-python3.10-alpine, python3.10-alpine, 1.0a3-alpine, alpine
+Tags: 1.0a3-python3.10-alpine3.15, python3.10-alpine3.15, 1.0a3-alpine3.15, alpine3.15, 1.0a3-python3.10-alpine, python3.10-alpine, 1.0a3-alpine, alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+File: Dockerfile.python3.10-alpine3.15
+
+Tags: 1.0a3-python3.10-alpine3.14, python3.10-alpine3.14, 1.0a3-alpine3.14, alpine3.14
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 File: Dockerfile.python3.10-alpine3.14
-
-Tags: 1.0a3-python3.10-alpine3.13, python3.10-alpine3.13, 1.0a3-alpine3.13, alpine3.13
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-File: Dockerfile.python3.10-alpine3.13
 
 Tags: 1.0a3-python3.9-bullseye, python3.9-bullseye
 SharedTags: 1.0a3-python3.9, python3.9
@@ -29,13 +29,19 @@ Tags: 1.0a3-python3.9-buster, python3.9-buster
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 File: Dockerfile.python3.9-buster
 
-Tags: 1.0a3-python3.9-alpine3.14, python3.9-alpine3.14, 1.0a3-python3.9-alpine, python3.9-alpine
+Tags: 1.0a3-python3.9-alpine3.15, python3.9-alpine3.15, 1.0a3-python3.9-alpine, python3.9-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+File: Dockerfile.python3.9-alpine3.15
+
+Tags: 1.0a3-python3.9-alpine3.14, python3.9-alpine3.14
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 File: Dockerfile.python3.9-alpine3.14
 
-Tags: 1.0a3-python3.9-alpine3.13, python3.9-alpine3.13
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-File: Dockerfile.python3.9-alpine3.13
+Tags: 1.0a3-python3.9-windowsservercore-ltsc2022, python3.9-windowsservercore-ltsc2022
+SharedTags: 1.0a3-python3.9, python3.9
+Architectures: windows-amd64
+Constraints: windowsservercore-ltsc2022
+File: Dockerfile.python3.9-windowsservercore-ltsc2022
 
 Tags: 1.0a3-python3.9-windowsservercore-1809, python3.9-windowsservercore-1809
 SharedTags: 1.0a3-python3.9, python3.9
@@ -58,13 +64,13 @@ Tags: 1.0a3-python3.8-buster, python3.8-buster
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 File: Dockerfile.python3.8-buster
 
-Tags: 1.0a3-python3.8-alpine3.14, python3.8-alpine3.14, 1.0a3-python3.8-alpine, python3.8-alpine
+Tags: 1.0a3-python3.8-alpine3.15, python3.8-alpine3.15, 1.0a3-python3.8-alpine, python3.8-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+File: Dockerfile.python3.8-alpine3.15
+
+Tags: 1.0a3-python3.8-alpine3.14, python3.8-alpine3.14
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 File: Dockerfile.python3.8-alpine3.14
-
-Tags: 1.0a3-python3.8-alpine3.13, python3.8-alpine3.13
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-File: Dockerfile.python3.8-alpine3.13
 
 Tags: 1.0a3-python3.7-bullseye, python3.7-bullseye
 SharedTags: 1.0a3-python3.7, python3.7
@@ -75,13 +81,13 @@ Tags: 1.0a3-python3.7-buster, python3.7-buster
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 File: Dockerfile.python3.7-buster
 
-Tags: 1.0a3-python3.7-alpine3.14, python3.7-alpine3.14, 1.0a3-python3.7-alpine, python3.7-alpine
+Tags: 1.0a3-python3.7-alpine3.15, python3.7-alpine3.15, 1.0a3-python3.7-alpine, python3.7-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+File: Dockerfile.python3.7-alpine3.15
+
+Tags: 1.0a3-python3.7-alpine3.14, python3.7-alpine3.14
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 File: Dockerfile.python3.7-alpine3.14
-
-Tags: 1.0a3-python3.7-alpine3.13, python3.7-alpine3.13
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-File: Dockerfile.python3.7-alpine3.13
 
 Tags: 1.0a3-python3.6-bullseye, python3.6-bullseye
 SharedTags: 1.0a3-python3.6, python3.6
@@ -92,13 +98,13 @@ Tags: 1.0a3-python3.6-buster, python3.6-buster
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 File: Dockerfile.python3.6-buster
 
-Tags: 1.0a3-python3.6-alpine3.14, python3.6-alpine3.14, 1.0a3-python3.6-alpine, python3.6-alpine
+Tags: 1.0a3-python3.6-alpine3.15, python3.6-alpine3.15, 1.0a3-python3.6-alpine, python3.6-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+File: Dockerfile.python3.6-alpine3.15
+
+Tags: 1.0a3-python3.6-alpine3.14, python3.6-alpine3.14
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 File: Dockerfile.python3.6-alpine3.14
-
-Tags: 1.0a3-python3.6-alpine3.13, python3.6-alpine3.13
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-File: Dockerfile.python3.6-alpine3.13
 
 Tags: 1.0a3-pypy3.8-bullseye, pypy3.8-bullseye, 1.0a3-pypy-bullseye, pypy-bullseye
 SharedTags: 1.0a3-pypy3.8, pypy3.8, 1.0a3-pypy, pypy
