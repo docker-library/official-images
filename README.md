@@ -305,7 +305,7 @@ Official Repositories that require additional privileges should specify the mini
 
 For image updates which constitute a security fix, there are a few things we recommend to help ensure your update is merged, built, and released as quickly as possible:
 
-1.	[Contact us](MAINTAINERS) a few days in advance to give us a heads up and a timing estimate (so we can schedule time for the incoming update appropriately).
+1.	[Send an email to `doi-security@infosiftr.com`](mailto:doi-security@infosiftr.com) a few (business) days in advance to give us a heads up and a timing estimate (so we can schedule time for the incoming update appropriately).
 2.	Include `[security]` in the title of your pull request (for example, `[security] Update FooBar to 1.2.5, 1.3.7, 2.0.1`).
 3.	Keep the pull request free of changes that are unrelated to the security fix -- we'll still be doing review of the update, but it will be expedited so this will help us help you.
 4.	Be active and responsive to comments on the pull request after it's opened (as usual, but even more so if the timing of the release is of importance).
