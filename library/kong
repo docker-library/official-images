@@ -2,19 +2,37 @@ Maintainers: Kong Docker Maintainers <support@konghq.com> (@thekonginc)
 GitRepo: https://github.com/Kong/docker-kong.git
 # needs "Constraints" to match "centos" (which this image is "FROM")
 
-Tags: 2.6.0-alpine, 2.6.0, 2.6, alpine, latest
+Tags: 2.7.0-alpine, 2.7.0, 2.7, alpine, latest
+GitCommit: 4896c55914e46d044183c6a6541cf50366f5cffa
+GitFetch: refs/tags/2.7.0
+Directory: alpine
+Architectures: amd64, arm64v8
+
+Tags: 2.7.0-ubuntu, 2.7-ubuntu, ubuntu
+GitCommit: 4896c55914e46d044183c6a6541cf50366f5cffa
+GitFetch: refs/tags/2.7.0
+Directory: ubuntu
+Architectures: amd64, arm64v8
+
+Tags: 2.7.0-centos, 2.7-centos, centos
+GitCommit: 4896c55914e46d044183c6a6541cf50366f5cffa
+GitFetch: refs/tags/2.7.0
+Directory: centos
+Architectures: amd64
+
+Tags: 2.6.0-alpine, 2.6.0, 2.6
 GitCommit: 76ba9c46dd932e518016d48a8414d7af185c2a76
 GitFetch: refs/tags/2.6.0
 Directory: alpine
 Architectures: amd64, arm64v8
 
-Tags: 2.6.0-ubuntu, 2.6-ubuntu, ubuntu
+Tags: 2.6.0-ubuntu, 2.6-ubuntu
 GitCommit: 76ba9c46dd932e518016d48a8414d7af185c2a76
 GitFetch: refs/tags/2.6.0
 Directory: ubuntu
 Architectures: amd64, arm64v8
 
-Tags: 2.6.0-centos, 2.6-centos, centos
+Tags: 2.6.0-centos, 2.6-centos
 GitCommit: 76ba9c46dd932e518016d48a8414d7af185c2a76
 GitFetch: refs/tags/2.6.0
 Directory: centos
@@ -38,20 +56,3 @@ GitFetch: refs/tags/2.5.1
 Directory: centos
 Architectures: amd64
 
-Tags: 2.4.1-alpine, 2.4-alpine, 2.4.1, 2.4
-GitCommit: e1b0a6c7eddd327926027692863a9900fd856977
-GitFetch: refs/tags/2.4.1
-Directory: alpine
-Architectures: amd64, arm64v8
-
-Tags: 2.4.1-ubuntu, 2.4-ubuntu
-GitCommit: e1b0a6c7eddd327926027692863a9900fd856977
-GitFetch: refs/tags/2.4.1
-Directory: ubuntu
-Architectures: amd64, arm64v8
-
-Tags: 2.4.1-centos, 2.4-centos
-GitCommit: e1b0a6c7eddd327926027692863a9900fd856977
-GitFetch: refs/tags/2.4.1
-Directory: centos
-Architectures: amd64
