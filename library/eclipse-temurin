@@ -337,3 +337,62 @@ Directory: 17/jdk/windows/windowsservercore-ltsc2016
 File: Dockerfile.releases.full
 Constraints: windowsservercore-ltsc2016
 
+Tags: 17.0.1_12-jre-alpine, 17-jre-alpine
+Architectures: amd64
+GitCommit: f27c3a25735fe05463cd42d45f8f7e76d0623790
+Directory: 17/jre/alpine
+File: Dockerfile.releases.full
+
+Tags: 17.0.1_12-jre-focal, 17-jre-focal
+SharedTags: 17.0.1_12-jre, 17-jre
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: f27c3a25735fe05463cd42d45f8f7e76d0623790
+Directory: 17/jre/ubuntu
+File: Dockerfile.releases.full
+
+Tags: 17.0.1_12-jre-centos7, 17-jre-centos7
+Architectures: amd64, arm64v8, ppc64le
+GitCommit: f27c3a25735fe05463cd42d45f8f7e76d0623790
+Directory: 17/jre/centos
+File: Dockerfile.releases.full
+
+Tags: 17.0.1_12-jre-windowsservercore-ltsc2022, 17-jre-windowsservercore-ltsc2022
+SharedTags: 17.0.1_12-jre-windowsservercore, 17-jre-windowsservercore, 17.0.1_12-jre, 17-jre
+Architectures: windows-amd64
+GitCommit: f27c3a25735fe05463cd42d45f8f7e76d0623790
+Directory: 17/jre/windows/windowsservercore-ltsc2022
+File: Dockerfile.releases.full
+Constraints: windowsservercore-ltsc2022
+
+Tags: 17.0.1_12-jre-nanoserver-ltsc2022, 17-jre-nanoserver-ltsc2022
+SharedTags: 17.0.1_12-jre-nanoserver, 17-jre-nanoserver
+Architectures: windows-amd64
+GitCommit: f27c3a25735fe05463cd42d45f8f7e76d0623790
+Directory: 17/jre/windows/nanoserver-ltsc2022
+File: Dockerfile.releases.full
+Constraints: nanoserver-ltsc2022, windowsservercore-ltsc2022
+
+Tags: 17.0.1_12-jre-windowsservercore-1809, 17-jre-windowsservercore-1809
+SharedTags: 17.0.1_12-jre-windowsservercore, 17-jre-windowsservercore, 17.0.1_12-jre, 17-jre
+Architectures: windows-amd64
+GitCommit: f27c3a25735fe05463cd42d45f8f7e76d0623790
+Directory: 17/jre/windows/windowsservercore-1809
+File: Dockerfile.releases.full
+Constraints: windowsservercore-1809
+
+Tags: 17.0.1_12-jre-nanoserver-1809, 17-jre-nanoserver-1809
+SharedTags: 17.0.1_12-jre-nanoserver, 17-jre-nanoserver
+Architectures: windows-amd64
+GitCommit: f27c3a25735fe05463cd42d45f8f7e76d0623790
+Directory: 17/jre/windows/nanoserver-1809
+File: Dockerfile.releases.full
+Constraints: nanoserver-1809, windowsservercore-1809
+
+Tags: 17.0.1_12-jre-windowsservercore-ltsc2016, 17-jre-windowsservercore-ltsc2016
+SharedTags: 17.0.1_12-jre-windowsservercore, 17-jre-windowsservercore, 17.0.1_12-jre, 17-jre
+Architectures: windows-amd64
+GitCommit: f27c3a25735fe05463cd42d45f8f7e76d0623790
+Directory: 17/jre/windows/windowsservercore-ltsc2016
+File: Dockerfile.releases.full
+Constraints: windowsservercore-ltsc2016
+
