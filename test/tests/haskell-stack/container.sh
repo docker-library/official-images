@@ -1,6 +1,13 @@
 #!/bin/bash
 set -e
 
+case "$(dpkg --print-architecture)" in
+	*"arm64"*)
+		echo >&2 'skipping; stack does not support ARM64 at this time'
+		exit 0
+		;;
+esac
+
 # stack mostly sends to stderr
 if ! stackResult="$(stack --resolver ghc-$(ghc --print-project-version) new myproject 2>&1 > /dev/null)"; then
 	case "$stackResult" in
