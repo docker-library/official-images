@@ -4,20 +4,15 @@ Maintainers: The Node.js Docker Team <https://github.com/nodejs/docker-node> (@n
 GitRepo: https://github.com/nodejs/docker-node.git
 GitFetch: refs/heads/main
 
-Tags: 17-alpine3.12, 17.3-alpine3.12, 17.3.0-alpine3.12, alpine3.12, current-alpine3.12
-Architectures: amd64, arm32v6, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 39dc17f7f2bb3fb21001bdbafd335fd55cccbe06
-Directory: 17/alpine3.12
-
-Tags: 17-alpine3.13, 17.3-alpine3.13, 17.3.0-alpine3.13, alpine3.13, current-alpine3.13
-Architectures: amd64, arm32v6, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 39dc17f7f2bb3fb21001bdbafd335fd55cccbe06
-Directory: 17/alpine3.13
-
-Tags: 17-alpine, 17-alpine3.14, 17.3-alpine, 17.3-alpine3.14, 17.3.0-alpine, 17.3.0-alpine3.14, alpine, alpine3.14, current-alpine, current-alpine3.14
+Tags: 17-alpine3.14, 17.3-alpine3.14, 17.3.0-alpine3.14, alpine3.14, current-alpine3.14
 Architectures: amd64, arm32v6, arm32v7, arm64v8, ppc64le, s390x
 GitCommit: 39dc17f7f2bb3fb21001bdbafd335fd55cccbe06
 Directory: 17/alpine3.14
+
+Tags: 17-alpine, 17-alpine3.15, 17.3-alpine, 17.3-alpine3.15, 17.3.0-alpine, 17.3.0-alpine3.15, alpine, alpine3.15, current-alpine, current-alpine3.15
+Architectures: amd64, arm32v6, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 3760675a3f78207605d579f366facbb0d9f26de5
+Directory: 17/alpine3.15
 
 Tags: 17, 17-bullseye, 17.3, 17.3-bullseye, 17.3.0, 17.3.0-bullseye, bullseye, current, current-bullseye, latest
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
@@ -49,20 +44,15 @@ Architectures: amd64, arm32v7, arm64v8
 GitCommit: 39dc17f7f2bb3fb21001bdbafd335fd55cccbe06
 Directory: 17/stretch-slim
 
-Tags: 16-alpine3.12, 16.13-alpine3.12, 16.13.1-alpine3.12, gallium-alpine3.12, lts-alpine3.12
-Architectures: amd64, arm32v6, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 6f740b0ca772e978b44c11d194f369e554c54a14
-Directory: 16/alpine3.12
-
-Tags: 16-alpine3.13, 16.13-alpine3.13, 16.13.1-alpine3.13, gallium-alpine3.13, lts-alpine3.13
-Architectures: amd64, arm32v6, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 6f740b0ca772e978b44c11d194f369e554c54a14
-Directory: 16/alpine3.13
-
-Tags: 16-alpine, 16-alpine3.14, 16.13-alpine, 16.13-alpine3.14, 16.13.1-alpine, 16.13.1-alpine3.14, gallium-alpine, gallium-alpine3.14, lts-alpine, lts-alpine3.14
+Tags: 16-alpine3.14, 16.13-alpine3.14, 16.13.1-alpine3.14, gallium-alpine3.14, lts-alpine3.14
 Architectures: amd64, arm32v6, arm32v7, arm64v8, ppc64le, s390x
 GitCommit: 6f740b0ca772e978b44c11d194f369e554c54a14
 Directory: 16/alpine3.14
+
+Tags: 16-alpine, 16-alpine3.15, 16.13-alpine, 16.13-alpine3.15, 16.13.1-alpine, 16.13.1-alpine3.15, gallium-alpine, gallium-alpine3.15, lts-alpine, lts-alpine3.15
+Architectures: amd64, arm32v6, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 3760675a3f78207605d579f366facbb0d9f26de5
+Directory: 16/alpine3.15
 
 Tags: 16-bullseye, 16.13-bullseye, 16.13.1-bullseye, gallium-bullseye, lts-bullseye
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
@@ -94,20 +84,15 @@ Architectures: amd64, arm32v7, arm64v8
 GitCommit: 6f740b0ca772e978b44c11d194f369e554c54a14
 Directory: 16/stretch-slim
 
-Tags: 14-alpine3.12, 14.18-alpine3.12, 14.18.2-alpine3.12, fermium-alpine3.12
-Architectures: amd64, arm32v6, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: b695e030ea98f272d843feb98ee1ab62943071b3
-Directory: 14/alpine3.12
-
-Tags: 14-alpine3.13, 14.18-alpine3.13, 14.18.2-alpine3.13, fermium-alpine3.13
-Architectures: amd64, arm32v6, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: b695e030ea98f272d843feb98ee1ab62943071b3
-Directory: 14/alpine3.13
-
-Tags: 14-alpine, 14-alpine3.14, 14.18-alpine, 14.18-alpine3.14, 14.18.2-alpine, 14.18.2-alpine3.14, fermium-alpine, fermium-alpine3.14
+Tags: 14-alpine3.14, 14.18-alpine3.14, 14.18.2-alpine3.14, fermium-alpine3.14
 Architectures: amd64, arm32v6, arm32v7, arm64v8, ppc64le, s390x
 GitCommit: b695e030ea98f272d843feb98ee1ab62943071b3
 Directory: 14/alpine3.14
+
+Tags: 14-alpine, 14-alpine3.15, 14.18-alpine, 14.18-alpine3.15, 14.18.2-alpine, 14.18.2-alpine3.15, fermium-alpine, fermium-alpine3.15
+Architectures: amd64, arm32v6, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 3760675a3f78207605d579f366facbb0d9f26de5
+Directory: 14/alpine3.15
 
 Tags: 14-bullseye, 14.18-bullseye, 14.18.2-bullseye, fermium-bullseye
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
@@ -139,20 +124,15 @@ Architectures: amd64, arm32v7, arm64v8
 GitCommit: b695e030ea98f272d843feb98ee1ab62943071b3
 Directory: 14/stretch-slim
 
-Tags: 12-alpine3.12, 12.22-alpine3.12, 12.22.8-alpine3.12, erbium-alpine3.12
-Architectures: amd64, arm32v6, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 6e8999e5e1170fc6a791f3e549adfaa405da396e
-Directory: 12/alpine3.12
-
-Tags: 12-alpine3.13, 12.22-alpine3.13, 12.22.8-alpine3.13, erbium-alpine3.13
-Architectures: amd64, arm32v6, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 6e8999e5e1170fc6a791f3e549adfaa405da396e
-Directory: 12/alpine3.13
-
-Tags: 12-alpine, 12-alpine3.14, 12.22-alpine, 12.22-alpine3.14, 12.22.8-alpine, 12.22.8-alpine3.14, erbium-alpine, erbium-alpine3.14
+Tags: 12-alpine3.14, 12.22-alpine3.14, 12.22.8-alpine3.14, erbium-alpine3.14
 Architectures: amd64, arm32v6, arm32v7, arm64v8, ppc64le, s390x
 GitCommit: 6e8999e5e1170fc6a791f3e549adfaa405da396e
 Directory: 12/alpine3.14
+
+Tags: 12-alpine, 12-alpine3.15, 12.22-alpine, 12.22-alpine3.15, 12.22.8-alpine, 12.22.8-alpine3.15, erbium-alpine, erbium-alpine3.15
+Architectures: amd64, arm32v6, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 3760675a3f78207605d579f366facbb0d9f26de5
+Directory: 12/alpine3.15
 
 Tags: 12-bullseye, 12.22-bullseye, 12.22.8-bullseye, erbium-bullseye
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
