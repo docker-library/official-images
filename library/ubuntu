@@ -6,48 +6,48 @@ GitRepo: https://github.com/tianon/docker-brew-ubuntu-core.git
 GitCommit: cf80ade55e2b6eac5966f54b017dfcd05028fea1
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-amd64
 amd64-GitFetch: refs/heads/dist-amd64
-amd64-GitCommit: bf61e139e84e04f9d87fff5dc588a3f0398da627
+amd64-GitCommit: f2f3f01ed67bab2e24b8c4fda60ef035a871b4c7
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-arm32v7
 arm32v7-GitFetch: refs/heads/dist-arm32v7
-arm32v7-GitCommit: c5780ae6651285a4eab38d34b11ebbf3c35cb03a
+arm32v7-GitCommit: b416a05a98137563c9eedb34ff1a5db3ae657459
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-arm64v8
 arm64v8-GitFetch: refs/heads/dist-arm64v8
-arm64v8-GitCommit: 89f3861319946527e28fa758ace95ad38a5e3d74
+arm64v8-GitCommit: b24ce779db6372f1a2fe4db4a9412d2c9f1cd778
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-i386
 i386-GitFetch: refs/heads/dist-i386
-i386-GitCommit: 327d9856c3bcc57929fd8d97f46e5ff18abc1e5b
+i386-GitCommit: 9af261bbe0fb410d2281cf2925193e0456bb2705
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-ppc64le
 ppc64le-GitFetch: refs/heads/dist-ppc64le
-ppc64le-GitCommit: 0bab904068907bfefecfba1f3bf0aa27185ad9b0
+ppc64le-GitCommit: 70a7f11a78fc97c8f4716fe12770a1bfc5fff3cd
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-riscv64
 riscv64-GitFetch: refs/heads/dist-riscv64
-riscv64-GitCommit: a501bfd48048c0158abcc1225f1266c501553481
+riscv64-GitCommit: 627a6ccfd66e6bc22acb860504a5be0fdd12b070
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-s390x
 s390x-GitFetch: refs/heads/dist-s390x
-s390x-GitCommit: 019f4f20face8c498d7e9802cddf37bea18589a7
+s390x-GitCommit: deac45c1726305fb8847617b9a8aa9bd609535cc
 
-# 20210930 (bionic)
-Tags: 18.04, bionic-20210930, bionic
+# 20220105 (bionic)
+Tags: 18.04, bionic-20220105, bionic
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: bionic
 
-# 20211006 (focal)
-Tags: 20.04, focal-20211006, focal, latest
+# 20220105 (focal)
+Tags: 20.04, focal-20220105, focal, latest
 Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
 Directory: focal
 
-# 20211107 (hirsute)
-Tags: 21.04, hirsute-20211107, hirsute
+# 20211208 (hirsute)
+Tags: 21.04, hirsute-20211208, hirsute
 Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
 Directory: hirsute
 
-# 20211102 (impish)
-Tags: 21.10, impish-20211102, impish, rolling
+# 20220105 (impish)
+Tags: 21.10, impish-20220105, impish, rolling
 Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
 Directory: impish
 
-# 20211122 (jammy)
-Tags: 22.04, jammy-20211122, jammy, devel
+# 20220101 (jammy)
+Tags: 22.04, jammy-20220101, jammy, devel
 Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
 Directory: jammy
 
