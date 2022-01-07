@@ -11,7 +11,7 @@ Maintainers: Amazon Linux <amazon-linux@amazon.com> (@amazonlinux),
              Preston Carpenter (@timidger),
              Richard Kelly (@rpkelly)
 GitRepo: https://github.com/amazonlinux/container-images.git
-GitCommit: c9ec4113f694e139e5b2fc2eaf02da0aaa3c7f6c
+GitCommit: 74eec9ec400d191dbe3398ca0cbba0ac9f892929
 
 Tags: 2.0.20211201.0, 2, latest
 Architectures: amd64, arm64v8
@@ -36,3 +36,17 @@ Tags: 2018.03.0.20211201.0-with-sources, 2018.03-with-sources, 1-with-sources
 Architectures: amd64
 amd64-GitFetch: refs/heads/2018.03-with-sources
 amd64-GitCommit: 6da53c8eb5e75467c2121aa46dda93e2b0849fed
+
+Tags: 2022.0.20211222.0, 2022
+Architectures: amd64, arm64v8
+amd64-GitFetch: refs/heads/al2022
+amd64-GitCommit: 1fba7fb1f4da7ed8caded115b44c5365556007ac
+arm64v8-GitFetch: refs/heads/al2022-arm64
+arm64v8-GitCommit: 0979ec48511f56e9d4a9f34ec8961f2c3bb712c4
+
+Tags: 2022.0.20211222.0-with-sources, 2022-with-sources
+Architectures: amd64, arm64v8
+amd64-GitFetch: refs/heads/al2022-with-sources
+amd64-GitCommit: 4f40118029e43fa66b3444c9cf09fefbdfe534d9
+arm64v8-GitFetch: refs/heads/al2022-arm64-with-sources
+arm64v8-GitCommit: db3785deac747b6fa2de29957ac4d2eedae76adb
