@@ -9,12 +9,22 @@ Maintainers: Chris Gioran <chris@neo4j.com> (@digitalstain),
              Bledi Feshti <bledi.feshti@neo4j.com> (@bfeshti)
 GitRepo: https://github.com/neo4j/docker-neo4j-publish.git
 
-Tags: 4.4.2, 4.4.2-community, 4.4, 4.4-community, community, latest
+Tags: 4.4.3, 4.4.3-community, 4.4, 4.4-community, community, latest
+Architectures: amd64, arm64v8
+GitCommit: 83c5036e8784fc04020830fe16067177f70cee59
+Directory: 4.4.3/community
+
+Tags: 4.4.3-enterprise, 4.4-enterprise, enterprise
+Architectures: amd64, arm64v8
+GitCommit: 83c5036e8784fc04020830fe16067177f70cee59
+Directory: 4.4.3/enterprise
+
+Tags: 4.4.2, 4.4.2-community
 Architectures: amd64, arm64v8
 GitCommit: f767f9315f828292eb4fc97a7ab48c6243cf60c6
 Directory: 4.4.2/community
 
-Tags: 4.4.2-enterprise, 4.4-enterprise, enterprise
+Tags: 4.4.2-enterprise
 Architectures: amd64, arm64v8
 GitCommit: f767f9315f828292eb4fc97a7ab48c6243cf60c6
 Directory: 4.4.2/enterprise
@@ -342,106 +352,6 @@ Directory: 4.1.0/community
 Tags: 4.1.0-enterprise
 GitCommit: c22866bb7f4baac356bf65494a003e490082b6c0
 Directory: 4.1.0/enterprise
-
-Tags: 4.0.12, 4.0.12-community, 4.0, 4.0-community
-GitCommit: ad25da7f0473c2f7a157a4b6d6e9f646f403c2c3
-Directory: 4.0.12/community
-
-Tags: 4.0.12-enterprise, 4.0-enterprise
-GitCommit: ad25da7f0473c2f7a157a4b6d6e9f646f403c2c3
-Directory: 4.0.12/enterprise
-
-Tags: 4.0.11, 4.0.11-community
-GitCommit: 014785e7fb71b0cda5c52b21e9a609878ebf567a
-Directory: 4.0.11/community
-
-Tags: 4.0.11-enterprise
-GitCommit: 014785e7fb71b0cda5c52b21e9a609878ebf567a
-Directory: 4.0.11/enterprise
-
-Tags: 4.0.10, 4.0.10-community
-GitCommit: 15eccd11b9755a650f0460e9b652239d54fa7fa9
-Directory: 4.0.10/community
-
-Tags: 4.0.10-enterprise
-GitCommit: 15eccd11b9755a650f0460e9b652239d54fa7fa9
-Directory: 4.0.10/enterprise
-
-Tags: 4.0.9, 4.0.9-community
-GitCommit: 04a30cb462de38246f8411b7b03c17d06b948009
-Directory: 4.0.9/community
-
-Tags: 4.0.9-enterprise
-GitCommit: 04a30cb462de38246f8411b7b03c17d06b948009
-Directory: 4.0.9/enterprise
-
-Tags: 4.0.8, 4.0.8-community
-GitCommit: 81342d372e1fa225d49b7643d3210b9bcdb962b9
-Directory: 4.0.8/community
-
-Tags: 4.0.8-enterprise
-GitCommit: 81342d372e1fa225d49b7643d3210b9bcdb962b9
-Directory: 4.0.8/enterprise
-
-Tags: 4.0.7, 4.0.7-community
-GitCommit: d42c3ac9cde66e2a1dcb3f667fe73878dbf2218c
-Directory: 4.0.7/community
-
-Tags: 4.0.7-enterprise
-GitCommit: d42c3ac9cde66e2a1dcb3f667fe73878dbf2218c
-Directory: 4.0.7/enterprise
-
-Tags: 4.0.6, 4.0.6-community
-GitCommit: 07dcb3dd43df67337f74af5a71decc45d50b712d
-Directory: 4.0.6/community
-
-Tags: 4.0.6-enterprise
-GitCommit: 07dcb3dd43df67337f74af5a71decc45d50b712d
-Directory: 4.0.6/enterprise
-
-Tags: 4.0.5, 4.0.5-community
-GitCommit: b47f15c39f28e28e120adff7a00773e0a61c0efe
-Directory: 4.0.5/community
-
-Tags: 4.0.5-enterprise
-GitCommit: b47f15c39f28e28e120adff7a00773e0a61c0efe
-Directory: 4.0.5/enterprise
-
-Tags: 4.0.4, 4.0.4-community
-GitCommit: d5e5e4b1999611ecfa8ec59166acf1ddb703b21c
-Directory: 4.0.4/community
-
-Tags: 4.0.4-enterprise
-GitCommit: d5e5e4b1999611ecfa8ec59166acf1ddb703b21c
-Directory: 4.0.4/enterprise
-
-Tags: 4.0.3, 4.0.3-community
-GitCommit: 51ed84f02e569a0d86c6e634fab3ae6540806a7e
-Directory: 4.0.3/community
-
-Tags: 4.0.3-enterprise
-GitCommit: 51ed84f02e569a0d86c6e634fab3ae6540806a7e
-Directory: 4.0.3/enterprise
-
-Tags: 4.0.2, 4.0.2-community
-GitCommit: 56d28624bc264497ed7fae8253a52a92611c6fee
-Directory: 4.0.2/community
-
-Tags: 4.0.2-enterprise
-GitCommit: 56d28624bc264497ed7fae8253a52a92611c6fee
-Directory: 4.0.2/enterprise
-
-Tags: 4.0.1, 4.0.1-community
-GitCommit: 13c288e9c36ee22e682b459fb218c9239e2c1083
-Directory: 4.0.1/community
-
-Tags: 4.0.1-enterprise
-GitCommit: 13c288e9c36ee22e682b459fb218c9239e2c1083
-Directory: 4.0.1/enterprise
-
-Tags: 4.0.0, 4.0.0-community
-GitCommit: 685fb314ef8e451217b6806028b9ac4dbf44d3fc
-Directory: 4.0.0/community
 
 Tags: 4.0.0-enterprise
 GitCommit: 685fb314ef8e451217b6806028b9ac4dbf44d3fc
