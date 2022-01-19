@@ -1,4 +1,4 @@
-# this file is generated via https://github.com/docker-library/python/blob/222c5a1347165e8f6a691353ab3646dce73497ce/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/python/blob/22e9c0668304dad354820f1d466df4d80c4c613a/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
@@ -36,22 +36,22 @@ Constraints: windowsservercore-1809
 
 Tags: 3.10.2-bullseye, 3.10-bullseye, 3-bullseye, bullseye
 SharedTags: 3.10.2, 3.10, 3, latest
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: d7fa897e3d1c57cf144b6253ffb08a11b7a7511c
 Directory: 3.10/bullseye
 
 Tags: 3.10.2-slim-bullseye, 3.10-slim-bullseye, 3-slim-bullseye, slim-bullseye, 3.10.2-slim, 3.10-slim, 3-slim, slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: d7fa897e3d1c57cf144b6253ffb08a11b7a7511c
 Directory: 3.10/bullseye/slim
 
 Tags: 3.10.2-buster, 3.10-buster, 3-buster, buster
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: d7fa897e3d1c57cf144b6253ffb08a11b7a7511c
 Directory: 3.10/buster
 
 Tags: 3.10.2-slim-buster, 3.10-slim-buster, 3-slim-buster, slim-buster
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: d7fa897e3d1c57cf144b6253ffb08a11b7a7511c
 Directory: 3.10/buster/slim
 
@@ -185,125 +185,3 @@ Tags: 3.7.12-alpine3.14, 3.7-alpine3.14
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: a7655831c15e823dffd1c895e87d66edfeadebb7
 Directory: 3.7/alpine3.14
-
-# temporary fix for what we broke in the partial upgrade snafu
-
-Tags: 3.11.0a3-bullseye
-SharedTags: 3.11.0a3
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: d162396abd34f321f01d56d17e0d2ed954678ba2
-Directory: 3.11-rc/bullseye
-
-Tags: 3.11.0a3-slim-bullseye, 3.11.0a3-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: d162396abd34f321f01d56d17e0d2ed954678ba2
-Directory: 3.11-rc/bullseye/slim
-
-Tags: 3.11.0a3-alpine3.15, 3.11.0a3-alpine
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: d162396abd34f321f01d56d17e0d2ed954678ba2
-Directory: 3.11-rc/alpine3.15
-
-Tags: 3.11.0a3-windowsservercore-ltsc2022
-SharedTags: 3.11.0a3-windowsservercore, 3.11.0a3
-Architectures: windows-amd64
-GitCommit: d162396abd34f321f01d56d17e0d2ed954678ba2
-Directory: 3.11-rc/windows/windowsservercore-ltsc2022
-Constraints: windowsservercore-ltsc2022
-
-Tags: 3.11.0a3-windowsservercore-1809
-SharedTags: 3.11.0a3-windowsservercore, 3.11.0a3
-Architectures: windows-amd64
-GitCommit: d162396abd34f321f01d56d17e0d2ed954678ba2
-Directory: 3.11-rc/windows/windowsservercore-1809
-Constraints: windowsservercore-1809
-
-Tags: 3.10.1-bullseye
-SharedTags: 3.10.1
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: db32c7803dfc67e5a359514371e66d6405695e45
-Directory: 3.10/bullseye
-
-Tags: 3.10.1-slim-bullseye, 3.10.1-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: db32c7803dfc67e5a359514371e66d6405695e45
-Directory: 3.10/bullseye/slim
-
-Tags: 3.10.1-buster
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: db32c7803dfc67e5a359514371e66d6405695e45
-Directory: 3.10/buster
-
-Tags: 3.10.1-slim-buster
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: db32c7803dfc67e5a359514371e66d6405695e45
-Directory: 3.10/buster/slim
-
-Tags: 3.10.1-alpine3.15, 3.10.1-alpine
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: db32c7803dfc67e5a359514371e66d6405695e45
-Directory: 3.10/alpine3.15
-
-Tags: 3.10.1-alpine3.14
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: db32c7803dfc67e5a359514371e66d6405695e45
-Directory: 3.10/alpine3.14
-
-Tags: 3.10.1-windowsservercore-ltsc2022
-SharedTags: 3.10.1-windowsservercore, 3.10.1
-Architectures: windows-amd64
-GitCommit: db32c7803dfc67e5a359514371e66d6405695e45
-Directory: 3.10/windows/windowsservercore-ltsc2022
-Constraints: windowsservercore-ltsc2022
-
-Tags: 3.10.1-windowsservercore-1809
-SharedTags: 3.10.1-windowsservercore, 3.10.1
-Architectures: windows-amd64
-GitCommit: db32c7803dfc67e5a359514371e66d6405695e45
-Directory: 3.10/windows/windowsservercore-1809
-Constraints: windowsservercore-1809
-
-Tags: 3.9.9-bullseye
-SharedTags: 3.9.9
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 3d43bcf8ddd26ae85fd6a63a7e1d502b445c9cce
-Directory: 3.9/bullseye
-
-Tags: 3.9.9-slim-bullseye, 3.9.9-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 3d43bcf8ddd26ae85fd6a63a7e1d502b445c9cce
-Directory: 3.9/bullseye/slim
-
-Tags: 3.9.9-buster
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 3d43bcf8ddd26ae85fd6a63a7e1d502b445c9cce
-Directory: 3.9/buster
-
-Tags: 3.9.9-slim-buster
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 3d43bcf8ddd26ae85fd6a63a7e1d502b445c9cce
-Directory: 3.9/buster/slim
-
-Tags: 3.9.9-alpine3.15
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: b739aec8401a072f43ed5f5eec806e8cc1d1b106
-Directory: 3.9/alpine3.15
-
-Tags: 3.9.9-alpine3.14
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 3d43bcf8ddd26ae85fd6a63a7e1d502b445c9cce
-Directory: 3.9/alpine3.14
-
-Tags: 3.9.9-windowsservercore-ltsc2022
-SharedTags: 3.9.9-windowsservercore, 3.9.9
-Architectures: windows-amd64
-GitCommit: 3d43bcf8ddd26ae85fd6a63a7e1d502b445c9cce
-Directory: 3.9/windows/windowsservercore-ltsc2022
-Constraints: windowsservercore-ltsc2022
-
-Tags: 3.9.9-windowsservercore-1809
-SharedTags: 3.9.9-windowsservercore, 3.9.9
-Architectures: windows-amd64
-GitCommit: 3d43bcf8ddd26ae85fd6a63a7e1d502b445c9cce
-Directory: 3.9/windows/windowsservercore-1809
-Constraints: windowsservercore-1809
