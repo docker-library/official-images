@@ -143,9 +143,7 @@ imageTests+=(
 		mysql-log-bin
 	'
 	[nextcloud]='
-		nextcloud-cli-mysql
-		nextcloud-cli-postgres
-		nextcloud-cli-sqlite
+		nextcloud-cli
 	'
 	[nextcloud:apache]='
 		nextcloud-apache-run
