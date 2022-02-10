@@ -7,8 +7,8 @@ GitFetch: refs/heads/main
 #------------------------------v8 images---------------------------------
 Tags: 8u322-b06-jdk-focal, 8-jdk-focal, 8-focal
 SharedTags: 8u322-b06-jdk, 8-jdk, 8
-Architectures: amd64, arm64v8, ppc64le
-GitCommit: 130db1e5356f5a86868b70809c8311b0aad0c756
+Architectures: amd64, arm32v7, arm64v8, ppc64le
+GitCommit: 0cf76e40e5f3aab1257d66b739654345803df940
 Directory: 8/jdk/ubuntu
 File: Dockerfile.releases.full
 
@@ -52,8 +52,8 @@ Constraints: nanoserver-1809, windowsservercore-1809
 
 Tags: 8u322-b06-jre-focal, 8-jre-focal
 SharedTags: 8u322-b06-jre, 8-jre
-Architectures: amd64, arm64v8, ppc64le
-GitCommit: 130db1e5356f5a86868b70809c8311b0aad0c756
+Architectures: amd64, arm32v7, arm64v8, ppc64le
+GitCommit: 0cf76e40e5f3aab1257d66b739654345803df940
 Directory: 8/jre/ubuntu
 File: Dockerfile.releases.full
 
@@ -103,47 +103,47 @@ GitCommit: 130db1e5356f5a86868b70809c8311b0aad0c756
 Directory: 11/jdk/alpine
 File: Dockerfile.releases.full
 
-Tags: 11.0.14_9-jdk-focal, 11-jdk-focal, 11-focal
-SharedTags: 11.0.14_9-jdk, 11-jdk, 11
+Tags: 11.0.14.1_1-jdk-focal, 11-jdk-focal, 11-focal
+SharedTags: 11.0.14.1_1-jdk, 11-jdk, 11
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 130db1e5356f5a86868b70809c8311b0aad0c756
+GitCommit: 0cf76e40e5f3aab1257d66b739654345803df940
 Directory: 11/jdk/ubuntu
 File: Dockerfile.releases.full
 
-Tags: 11.0.14_9-jdk-centos7, 11-jdk-centos7, 11-centos7
+Tags: 11.0.14.1_1-jdk-centos7, 11-jdk-centos7, 11-centos7
 Architectures: amd64, arm64v8, ppc64le
-GitCommit: 130db1e5356f5a86868b70809c8311b0aad0c756
+GitCommit: 0cf76e40e5f3aab1257d66b739654345803df940
 Directory: 11/jdk/centos
 File: Dockerfile.releases.full
 
-Tags: 11.0.14_9-jdk-windowsservercore-ltsc2022, 11-jdk-windowsservercore-ltsc2022, 11-windowsservercore-ltsc2022
-SharedTags: 11.0.14_9-jdk-windowsservercore, 11-jdk-windowsservercore, 11-windowsservercore, 11.0.14_9-jdk, 11-jdk, 11
+Tags: 11.0.14.1_1-jdk-windowsservercore-ltsc2022, 11-jdk-windowsservercore-ltsc2022, 11-windowsservercore-ltsc2022
+SharedTags: 11.0.14.1_1-jdk-windowsservercore, 11-jdk-windowsservercore, 11-windowsservercore, 11.0.14.1_1-jdk, 11-jdk, 11
 Architectures: windows-amd64
-GitCommit: 130db1e5356f5a86868b70809c8311b0aad0c756
+GitCommit: 0cf76e40e5f3aab1257d66b739654345803df940
 Directory: 11/jdk/windows/windowsservercore-ltsc2022
 File: Dockerfile.releases.full
 Constraints: windowsservercore-ltsc2022
 
-Tags: 11.0.14_9-jdk-nanoserver-ltsc2022, 11-jdk-nanoserver-ltsc2022, 11-nanoserver-ltsc2022
-SharedTags: 11.0.14_9-jdk-nanoserver, 11-jdk-nanoserver, 11-nanoserver
+Tags: 11.0.14.1_1-jdk-nanoserver-ltsc2022, 11-jdk-nanoserver-ltsc2022, 11-nanoserver-ltsc2022
+SharedTags: 11.0.14.1_1-jdk-nanoserver, 11-jdk-nanoserver, 11-nanoserver
 Architectures: windows-amd64
-GitCommit: 130db1e5356f5a86868b70809c8311b0aad0c756
+GitCommit: 0cf76e40e5f3aab1257d66b739654345803df940
 Directory: 11/jdk/windows/nanoserver-ltsc2022
 File: Dockerfile.releases.full
 Constraints: nanoserver-ltsc2022, windowsservercore-ltsc2022
 
-Tags: 11.0.14_9-jdk-windowsservercore-1809, 11-jdk-windowsservercore-1809, 11-windowsservercore-1809
-SharedTags: 11.0.14_9-jdk-windowsservercore, 11-jdk-windowsservercore, 11-windowsservercore, 11.0.14_9-jdk, 11-jdk, 11
+Tags: 11.0.14.1_1-jdk-windowsservercore-1809, 11-jdk-windowsservercore-1809, 11-windowsservercore-1809
+SharedTags: 11.0.14.1_1-jdk-windowsservercore, 11-jdk-windowsservercore, 11-windowsservercore, 11.0.14.1_1-jdk, 11-jdk, 11
 Architectures: windows-amd64
-GitCommit: 130db1e5356f5a86868b70809c8311b0aad0c756
+GitCommit: 0cf76e40e5f3aab1257d66b739654345803df940
 Directory: 11/jdk/windows/windowsservercore-1809
 File: Dockerfile.releases.full
 Constraints: windowsservercore-1809
 
-Tags: 11.0.14_9-jdk-nanoserver-1809, 11-jdk-nanoserver-1809, 11-nanoserver-1809
-SharedTags: 11.0.14_9-jdk-nanoserver, 11-jdk-nanoserver, 11-nanoserver
+Tags: 11.0.14.1_1-jdk-nanoserver-1809, 11-jdk-nanoserver-1809, 11-nanoserver-1809
+SharedTags: 11.0.14.1_1-jdk-nanoserver, 11-jdk-nanoserver, 11-nanoserver
 Architectures: windows-amd64
-GitCommit: 130db1e5356f5a86868b70809c8311b0aad0c756
+GitCommit: 0cf76e40e5f3aab1257d66b739654345803df940
 Directory: 11/jdk/windows/nanoserver-1809
 File: Dockerfile.releases.full
 Constraints: nanoserver-1809, windowsservercore-1809
@@ -154,47 +154,47 @@ GitCommit: 130db1e5356f5a86868b70809c8311b0aad0c756
 Directory: 11/jre/alpine
 File: Dockerfile.releases.full
 
-Tags: 11.0.14_9-jre-focal, 11-jre-focal
-SharedTags: 11.0.14_9-jre, 11-jre
+Tags: 11.0.14.1_1-jre-focal, 11-jre-focal
+SharedTags: 11.0.14.1_1-jre, 11-jre
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 130db1e5356f5a86868b70809c8311b0aad0c756
+GitCommit: 0cf76e40e5f3aab1257d66b739654345803df940
 Directory: 11/jre/ubuntu
 File: Dockerfile.releases.full
 
-Tags: 11.0.14_9-jre-centos7, 11-jre-centos7
+Tags: 11.0.14.1_1-jre-centos7, 11-jre-centos7
 Architectures: amd64, arm64v8, ppc64le
-GitCommit: 130db1e5356f5a86868b70809c8311b0aad0c756
+GitCommit: 0cf76e40e5f3aab1257d66b739654345803df940
 Directory: 11/jre/centos
 File: Dockerfile.releases.full
 
-Tags: 11.0.14_9-jre-windowsservercore-ltsc2022, 11-jre-windowsservercore-ltsc2022
-SharedTags: 11.0.14_9-jre-windowsservercore, 11-jre-windowsservercore, 11.0.14_9-jre, 11-jre
+Tags: 11.0.14.1_1-jre-windowsservercore-ltsc2022, 11-jre-windowsservercore-ltsc2022
+SharedTags: 11.0.14.1_1-jre-windowsservercore, 11-jre-windowsservercore, 11.0.14.1_1-jre, 11-jre
 Architectures: windows-amd64
-GitCommit: 130db1e5356f5a86868b70809c8311b0aad0c756
+GitCommit: 0cf76e40e5f3aab1257d66b739654345803df940
 Directory: 11/jre/windows/windowsservercore-ltsc2022
 File: Dockerfile.releases.full
 Constraints: windowsservercore-ltsc2022
 
-Tags: 11.0.14_9-jre-nanoserver-ltsc2022, 11-jre-nanoserver-ltsc2022
-SharedTags: 11.0.14_9-jre-nanoserver, 11-jre-nanoserver
+Tags: 11.0.14.1_1-jre-nanoserver-ltsc2022, 11-jre-nanoserver-ltsc2022
+SharedTags: 11.0.14.1_1-jre-nanoserver, 11-jre-nanoserver
 Architectures: windows-amd64
-GitCommit: 130db1e5356f5a86868b70809c8311b0aad0c756
+GitCommit: 0cf76e40e5f3aab1257d66b739654345803df940
 Directory: 11/jre/windows/nanoserver-ltsc2022
 File: Dockerfile.releases.full
 Constraints: nanoserver-ltsc2022, windowsservercore-ltsc2022
 
-Tags: 11.0.14_9-jre-windowsservercore-1809, 11-jre-windowsservercore-1809
-SharedTags: 11.0.14_9-jre-windowsservercore, 11-jre-windowsservercore, 11.0.14_9-jre, 11-jre
+Tags: 11.0.14.1_1-jre-windowsservercore-1809, 11-jre-windowsservercore-1809
+SharedTags: 11.0.14.1_1-jre-windowsservercore, 11-jre-windowsservercore, 11.0.14.1_1-jre, 11-jre
 Architectures: windows-amd64
-GitCommit: 130db1e5356f5a86868b70809c8311b0aad0c756
+GitCommit: 0cf76e40e5f3aab1257d66b739654345803df940
 Directory: 11/jre/windows/windowsservercore-1809
 File: Dockerfile.releases.full
 Constraints: windowsservercore-1809
 
-Tags: 11.0.14_9-jre-nanoserver-1809, 11-jre-nanoserver-1809
-SharedTags: 11.0.14_9-jre-nanoserver, 11-jre-nanoserver
+Tags: 11.0.14.1_1-jre-nanoserver-1809, 11-jre-nanoserver-1809
+SharedTags: 11.0.14.1_1-jre-nanoserver, 11-jre-nanoserver
 Architectures: windows-amd64
-GitCommit: 130db1e5356f5a86868b70809c8311b0aad0c756
+GitCommit: 0cf76e40e5f3aab1257d66b739654345803df940
 Directory: 11/jre/windows/nanoserver-1809
 File: Dockerfile.releases.full
 Constraints: nanoserver-1809, windowsservercore-1809
@@ -339,4 +339,3 @@ GitCommit: 130db1e5356f5a86868b70809c8311b0aad0c756
 Directory: 17/jre/windows/nanoserver-1809
 File: Dockerfile.releases.full
 Constraints: nanoserver-1809, windowsservercore-1809
-
