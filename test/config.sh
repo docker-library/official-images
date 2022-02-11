@@ -62,9 +62,6 @@ imageTests+=(
 	[eclipse-mosquitto]='
 		eclipse-mosquitto-basics
 	'
-	[elasticsearch]='
-		elasticsearch-basics
-	'
 	[elixir]='
 		elixir-hello-world
 	'
