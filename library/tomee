@@ -1,7 +1,7 @@
 Maintainers: Alex Soto <asotobu@gmail.com> (@lordofthejars), Otavio Santana <otaviojava@apache.org> (@otaviojava), Jonathan Gallimore <jgallimore@apache.org> (@jgallimore), Rod Jenkins <jenkir14@nationwide.com> (@scriptmonkey)
 GitRepo: https://github.com/tomitribe/docker-tomee.git
-GitCommit: 210f85f1442d152c4d88b0fd3fc5b225a6a494dc
-Architectures: amd64
+GitCommit: 928565e89b2be78f6a0a3de4dbab5509ed95b526
+Architectures: amd64, arm64v8
 
 Tags: 8-jre-7.0.9-plume, 7.0.9-plume
 Directory: TomEE-7.0/jre8/plume
@@ -59,3 +59,15 @@ Directory: TomEE-9.0/jre11/microprofile
 
 Tags: 11-jre-9.0.0-M7-webprofile, 9.0.0-M7-webprofile, 9
 Directory: TomEE-9.0/jre11/webprofile
+
+Tags: 17-jdk-8.0.9-plume
+Directory: TomEE-8.0/jdk17/plume
+
+Tags: 17-jdk-8.0.9-plus
+Directory: TomEE-8.0/jdk17/plus
+
+Tags: 17-jdk-8.0.9-microprofile
+Directory: TomEE-8.0/jdk17/microprofile
+
+Tags: 17-jdk-8.0.9-webprofile
+Directory: TomEE-8.0/jdk17/webprofile
