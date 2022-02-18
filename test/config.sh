@@ -196,6 +196,7 @@ imageTests+=(
 	[python]='
 		python-hy
 		python-imports
+		python-no-pyc
 		python-pip-requests-ssl
 		python-sqlite3
 		python-stack-size
