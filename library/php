@@ -1,247 +1,127 @@
-# this file is generated via https://github.com/docker-library/php/blob/ad286b6ce185bcf8d5f15a1825652d1b9519dd7d/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/php/blob/5a45417aebf56cb0897be079ff8f0dfffd5f9d2c/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/php.git
 
-Tags: 8.1.3RC1-cli-bullseye, 8.1-rc-cli-bullseye, 8.1.3RC1-bullseye, 8.1-rc-bullseye, 8.1.3RC1-cli, 8.1-rc-cli, 8.1.3RC1, 8.1-rc
+Tags: 8.1.3-cli-bullseye, 8.1-cli-bullseye, 8-cli-bullseye, cli-bullseye, 8.1.3-bullseye, 8.1-bullseye, 8-bullseye, bullseye, 8.1.3-cli, 8.1-cli, 8-cli, cli, 8.1.3, 8.1, 8, latest
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: a013f410ff05ec348b34a85f6c9c2ae460c30086
-Directory: 8.1-rc/bullseye/cli
-
-Tags: 8.1.3RC1-apache-bullseye, 8.1-rc-apache-bullseye, 8.1.3RC1-apache, 8.1-rc-apache
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: a013f410ff05ec348b34a85f6c9c2ae460c30086
-Directory: 8.1-rc/bullseye/apache
-
-Tags: 8.1.3RC1-fpm-bullseye, 8.1-rc-fpm-bullseye, 8.1.3RC1-fpm, 8.1-rc-fpm
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: a013f410ff05ec348b34a85f6c9c2ae460c30086
-Directory: 8.1-rc/bullseye/fpm
-
-Tags: 8.1.3RC1-zts-bullseye, 8.1-rc-zts-bullseye, 8.1.3RC1-zts, 8.1-rc-zts
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: a013f410ff05ec348b34a85f6c9c2ae460c30086
-Directory: 8.1-rc/bullseye/zts
-
-Tags: 8.1.3RC1-cli-buster, 8.1-rc-cli-buster, 8.1.3RC1-buster, 8.1-rc-buster
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: a013f410ff05ec348b34a85f6c9c2ae460c30086
-Directory: 8.1-rc/buster/cli
-
-Tags: 8.1.3RC1-apache-buster, 8.1-rc-apache-buster
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: a013f410ff05ec348b34a85f6c9c2ae460c30086
-Directory: 8.1-rc/buster/apache
-
-Tags: 8.1.3RC1-fpm-buster, 8.1-rc-fpm-buster
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: a013f410ff05ec348b34a85f6c9c2ae460c30086
-Directory: 8.1-rc/buster/fpm
-
-Tags: 8.1.3RC1-zts-buster, 8.1-rc-zts-buster
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: a013f410ff05ec348b34a85f6c9c2ae460c30086
-Directory: 8.1-rc/buster/zts
-
-Tags: 8.1.3RC1-cli-alpine3.15, 8.1-rc-cli-alpine3.15, 8.1.3RC1-alpine3.15, 8.1-rc-alpine3.15, 8.1.3RC1-cli-alpine, 8.1-rc-cli-alpine, 8.1.3RC1-alpine, 8.1-rc-alpine
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: a013f410ff05ec348b34a85f6c9c2ae460c30086
-Directory: 8.1-rc/alpine3.15/cli
-
-Tags: 8.1.3RC1-fpm-alpine3.15, 8.1-rc-fpm-alpine3.15, 8.1.3RC1-fpm-alpine, 8.1-rc-fpm-alpine
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: a013f410ff05ec348b34a85f6c9c2ae460c30086
-Directory: 8.1-rc/alpine3.15/fpm
-
-Tags: 8.1.3RC1-cli-alpine3.14, 8.1-rc-cli-alpine3.14, 8.1.3RC1-alpine3.14, 8.1-rc-alpine3.14
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: a013f410ff05ec348b34a85f6c9c2ae460c30086
-Directory: 8.1-rc/alpine3.14/cli
-
-Tags: 8.1.3RC1-fpm-alpine3.14, 8.1-rc-fpm-alpine3.14
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: a013f410ff05ec348b34a85f6c9c2ae460c30086
-Directory: 8.1-rc/alpine3.14/fpm
-
-Tags: 8.1.2-cli-bullseye, 8.1-cli-bullseye, 8-cli-bullseye, cli-bullseye, 8.1.2-bullseye, 8.1-bullseye, 8-bullseye, bullseye, 8.1.2-cli, 8.1-cli, 8-cli, cli, 8.1.2, 8.1, 8, latest
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: b4b4093acd612a1b489c6442585379275e9e4df6
+GitCommit: 5d78b1b441d4f90321323ccd9fd2ec6649383558
 Directory: 8.1/bullseye/cli
 
-Tags: 8.1.2-apache-bullseye, 8.1-apache-bullseye, 8-apache-bullseye, apache-bullseye, 8.1.2-apache, 8.1-apache, 8-apache, apache
+Tags: 8.1.3-apache-bullseye, 8.1-apache-bullseye, 8-apache-bullseye, apache-bullseye, 8.1.3-apache, 8.1-apache, 8-apache, apache
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: b4b4093acd612a1b489c6442585379275e9e4df6
+GitCommit: 5d78b1b441d4f90321323ccd9fd2ec6649383558
 Directory: 8.1/bullseye/apache
 
-Tags: 8.1.2-fpm-bullseye, 8.1-fpm-bullseye, 8-fpm-bullseye, fpm-bullseye, 8.1.2-fpm, 8.1-fpm, 8-fpm, fpm
+Tags: 8.1.3-fpm-bullseye, 8.1-fpm-bullseye, 8-fpm-bullseye, fpm-bullseye, 8.1.3-fpm, 8.1-fpm, 8-fpm, fpm
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: b4b4093acd612a1b489c6442585379275e9e4df6
+GitCommit: 5d78b1b441d4f90321323ccd9fd2ec6649383558
 Directory: 8.1/bullseye/fpm
 
-Tags: 8.1.2-zts-bullseye, 8.1-zts-bullseye, 8-zts-bullseye, zts-bullseye, 8.1.2-zts, 8.1-zts, 8-zts, zts
+Tags: 8.1.3-zts-bullseye, 8.1-zts-bullseye, 8-zts-bullseye, zts-bullseye, 8.1.3-zts, 8.1-zts, 8-zts, zts
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: b4b4093acd612a1b489c6442585379275e9e4df6
+GitCommit: 5d78b1b441d4f90321323ccd9fd2ec6649383558
 Directory: 8.1/bullseye/zts
 
-Tags: 8.1.2-cli-buster, 8.1-cli-buster, 8-cli-buster, cli-buster, 8.1.2-buster, 8.1-buster, 8-buster, buster
+Tags: 8.1.3-cli-buster, 8.1-cli-buster, 8-cli-buster, cli-buster, 8.1.3-buster, 8.1-buster, 8-buster, buster
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: b4b4093acd612a1b489c6442585379275e9e4df6
+GitCommit: 5d78b1b441d4f90321323ccd9fd2ec6649383558
 Directory: 8.1/buster/cli
 
-Tags: 8.1.2-apache-buster, 8.1-apache-buster, 8-apache-buster, apache-buster
+Tags: 8.1.3-apache-buster, 8.1-apache-buster, 8-apache-buster, apache-buster
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: b4b4093acd612a1b489c6442585379275e9e4df6
+GitCommit: 5d78b1b441d4f90321323ccd9fd2ec6649383558
 Directory: 8.1/buster/apache
 
-Tags: 8.1.2-fpm-buster, 8.1-fpm-buster, 8-fpm-buster, fpm-buster
+Tags: 8.1.3-fpm-buster, 8.1-fpm-buster, 8-fpm-buster, fpm-buster
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: b4b4093acd612a1b489c6442585379275e9e4df6
+GitCommit: 5d78b1b441d4f90321323ccd9fd2ec6649383558
 Directory: 8.1/buster/fpm
 
-Tags: 8.1.2-zts-buster, 8.1-zts-buster, 8-zts-buster, zts-buster
+Tags: 8.1.3-zts-buster, 8.1-zts-buster, 8-zts-buster, zts-buster
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: b4b4093acd612a1b489c6442585379275e9e4df6
+GitCommit: 5d78b1b441d4f90321323ccd9fd2ec6649383558
 Directory: 8.1/buster/zts
 
-Tags: 8.1.2-cli-alpine3.15, 8.1-cli-alpine3.15, 8-cli-alpine3.15, cli-alpine3.15, 8.1.2-alpine3.15, 8.1-alpine3.15, 8-alpine3.15, alpine3.15, 8.1.2-cli-alpine, 8.1-cli-alpine, 8-cli-alpine, cli-alpine, 8.1.2-alpine, 8.1-alpine, 8-alpine, alpine
+Tags: 8.1.3-cli-alpine3.15, 8.1-cli-alpine3.15, 8-cli-alpine3.15, cli-alpine3.15, 8.1.3-alpine3.15, 8.1-alpine3.15, 8-alpine3.15, alpine3.15, 8.1.3-cli-alpine, 8.1-cli-alpine, 8-cli-alpine, cli-alpine, 8.1.3-alpine, 8.1-alpine, 8-alpine, alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: b4b4093acd612a1b489c6442585379275e9e4df6
+GitCommit: 5d78b1b441d4f90321323ccd9fd2ec6649383558
 Directory: 8.1/alpine3.15/cli
 
-Tags: 8.1.2-fpm-alpine3.15, 8.1-fpm-alpine3.15, 8-fpm-alpine3.15, fpm-alpine3.15, 8.1.2-fpm-alpine, 8.1-fpm-alpine, 8-fpm-alpine, fpm-alpine
+Tags: 8.1.3-fpm-alpine3.15, 8.1-fpm-alpine3.15, 8-fpm-alpine3.15, fpm-alpine3.15, 8.1.3-fpm-alpine, 8.1-fpm-alpine, 8-fpm-alpine, fpm-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: b4b4093acd612a1b489c6442585379275e9e4df6
+GitCommit: 5d78b1b441d4f90321323ccd9fd2ec6649383558
 Directory: 8.1/alpine3.15/fpm
 
-Tags: 8.1.2-cli-alpine3.14, 8.1-cli-alpine3.14, 8-cli-alpine3.14, cli-alpine3.14, 8.1.2-alpine3.14, 8.1-alpine3.14, 8-alpine3.14, alpine3.14
+Tags: 8.1.3-cli-alpine3.14, 8.1-cli-alpine3.14, 8-cli-alpine3.14, cli-alpine3.14, 8.1.3-alpine3.14, 8.1-alpine3.14, 8-alpine3.14, alpine3.14
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: b4b4093acd612a1b489c6442585379275e9e4df6
+GitCommit: 5d78b1b441d4f90321323ccd9fd2ec6649383558
 Directory: 8.1/alpine3.14/cli
 
-Tags: 8.1.2-fpm-alpine3.14, 8.1-fpm-alpine3.14, 8-fpm-alpine3.14, fpm-alpine3.14
+Tags: 8.1.3-fpm-alpine3.14, 8.1-fpm-alpine3.14, 8-fpm-alpine3.14, fpm-alpine3.14
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: b4b4093acd612a1b489c6442585379275e9e4df6
+GitCommit: 5d78b1b441d4f90321323ccd9fd2ec6649383558
 Directory: 8.1/alpine3.14/fpm
 
-Tags: 8.0.16RC1-cli-bullseye, 8.0-rc-cli-bullseye, 8.0.16RC1-bullseye, 8.0-rc-bullseye, 8.0.16RC1-cli, 8.0-rc-cli, 8.0.16RC1, 8.0-rc
+Tags: 8.0.16-cli-bullseye, 8.0-cli-bullseye, 8.0.16-bullseye, 8.0-bullseye, 8.0.16-cli, 8.0-cli, 8.0.16, 8.0
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 0869d230526f28752ca2bfcb16131c788ce80ce6
-Directory: 8.0-rc/bullseye/cli
-
-Tags: 8.0.16RC1-apache-bullseye, 8.0-rc-apache-bullseye, 8.0.16RC1-apache, 8.0-rc-apache
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 0869d230526f28752ca2bfcb16131c788ce80ce6
-Directory: 8.0-rc/bullseye/apache
-
-Tags: 8.0.16RC1-fpm-bullseye, 8.0-rc-fpm-bullseye, 8.0.16RC1-fpm, 8.0-rc-fpm
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 0869d230526f28752ca2bfcb16131c788ce80ce6
-Directory: 8.0-rc/bullseye/fpm
-
-Tags: 8.0.16RC1-zts-bullseye, 8.0-rc-zts-bullseye, 8.0.16RC1-zts, 8.0-rc-zts
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 0869d230526f28752ca2bfcb16131c788ce80ce6
-Directory: 8.0-rc/bullseye/zts
-
-Tags: 8.0.16RC1-cli-buster, 8.0-rc-cli-buster, 8.0.16RC1-buster, 8.0-rc-buster
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 0869d230526f28752ca2bfcb16131c788ce80ce6
-Directory: 8.0-rc/buster/cli
-
-Tags: 8.0.16RC1-apache-buster, 8.0-rc-apache-buster
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 0869d230526f28752ca2bfcb16131c788ce80ce6
-Directory: 8.0-rc/buster/apache
-
-Tags: 8.0.16RC1-fpm-buster, 8.0-rc-fpm-buster
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 0869d230526f28752ca2bfcb16131c788ce80ce6
-Directory: 8.0-rc/buster/fpm
-
-Tags: 8.0.16RC1-zts-buster, 8.0-rc-zts-buster
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 0869d230526f28752ca2bfcb16131c788ce80ce6
-Directory: 8.0-rc/buster/zts
-
-Tags: 8.0.16RC1-cli-alpine3.15, 8.0-rc-cli-alpine3.15, 8.0.16RC1-alpine3.15, 8.0-rc-alpine3.15, 8.0.16RC1-cli-alpine, 8.0-rc-cli-alpine, 8.0.16RC1-alpine, 8.0-rc-alpine
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 0869d230526f28752ca2bfcb16131c788ce80ce6
-Directory: 8.0-rc/alpine3.15/cli
-
-Tags: 8.0.16RC1-fpm-alpine3.15, 8.0-rc-fpm-alpine3.15, 8.0.16RC1-fpm-alpine, 8.0-rc-fpm-alpine
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 0869d230526f28752ca2bfcb16131c788ce80ce6
-Directory: 8.0-rc/alpine3.15/fpm
-
-Tags: 8.0.16RC1-cli-alpine3.14, 8.0-rc-cli-alpine3.14, 8.0.16RC1-alpine3.14, 8.0-rc-alpine3.14
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 0869d230526f28752ca2bfcb16131c788ce80ce6
-Directory: 8.0-rc/alpine3.14/cli
-
-Tags: 8.0.16RC1-fpm-alpine3.14, 8.0-rc-fpm-alpine3.14
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 0869d230526f28752ca2bfcb16131c788ce80ce6
-Directory: 8.0-rc/alpine3.14/fpm
-
-Tags: 8.0.15-cli-bullseye, 8.0-cli-bullseye, 8.0.15-bullseye, 8.0-bullseye, 8.0.15-cli, 8.0-cli, 8.0.15, 8.0
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: b09fd3beb1bf3e9942dcc8d94262e08e157c9c1e
+GitCommit: 62763e00e2ead95227e0ed807b94cf85a793e887
 Directory: 8.0/bullseye/cli
 
-Tags: 8.0.15-apache-bullseye, 8.0-apache-bullseye, 8.0.15-apache, 8.0-apache
+Tags: 8.0.16-apache-bullseye, 8.0-apache-bullseye, 8.0.16-apache, 8.0-apache
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: b09fd3beb1bf3e9942dcc8d94262e08e157c9c1e
+GitCommit: 62763e00e2ead95227e0ed807b94cf85a793e887
 Directory: 8.0/bullseye/apache
 
-Tags: 8.0.15-fpm-bullseye, 8.0-fpm-bullseye, 8.0.15-fpm, 8.0-fpm
+Tags: 8.0.16-fpm-bullseye, 8.0-fpm-bullseye, 8.0.16-fpm, 8.0-fpm
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: b09fd3beb1bf3e9942dcc8d94262e08e157c9c1e
+GitCommit: 62763e00e2ead95227e0ed807b94cf85a793e887
 Directory: 8.0/bullseye/fpm
 
-Tags: 8.0.15-zts-bullseye, 8.0-zts-bullseye, 8.0.15-zts, 8.0-zts
+Tags: 8.0.16-zts-bullseye, 8.0-zts-bullseye, 8.0.16-zts, 8.0-zts
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: b09fd3beb1bf3e9942dcc8d94262e08e157c9c1e
+GitCommit: 62763e00e2ead95227e0ed807b94cf85a793e887
 Directory: 8.0/bullseye/zts
 
-Tags: 8.0.15-cli-buster, 8.0-cli-buster, 8.0.15-buster, 8.0-buster
+Tags: 8.0.16-cli-buster, 8.0-cli-buster, 8.0.16-buster, 8.0-buster
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: b09fd3beb1bf3e9942dcc8d94262e08e157c9c1e
+GitCommit: 62763e00e2ead95227e0ed807b94cf85a793e887
 Directory: 8.0/buster/cli
 
-Tags: 8.0.15-apache-buster, 8.0-apache-buster
+Tags: 8.0.16-apache-buster, 8.0-apache-buster
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: b09fd3beb1bf3e9942dcc8d94262e08e157c9c1e
+GitCommit: 62763e00e2ead95227e0ed807b94cf85a793e887
 Directory: 8.0/buster/apache
 
-Tags: 8.0.15-fpm-buster, 8.0-fpm-buster
+Tags: 8.0.16-fpm-buster, 8.0-fpm-buster
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: b09fd3beb1bf3e9942dcc8d94262e08e157c9c1e
+GitCommit: 62763e00e2ead95227e0ed807b94cf85a793e887
 Directory: 8.0/buster/fpm
 
-Tags: 8.0.15-zts-buster, 8.0-zts-buster
+Tags: 8.0.16-zts-buster, 8.0-zts-buster
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: b09fd3beb1bf3e9942dcc8d94262e08e157c9c1e
+GitCommit: 62763e00e2ead95227e0ed807b94cf85a793e887
 Directory: 8.0/buster/zts
 
-Tags: 8.0.15-cli-alpine3.15, 8.0-cli-alpine3.15, 8.0.15-alpine3.15, 8.0-alpine3.15, 8.0.15-cli-alpine, 8.0-cli-alpine, 8.0.15-alpine, 8.0-alpine
+Tags: 8.0.16-cli-alpine3.15, 8.0-cli-alpine3.15, 8.0.16-alpine3.15, 8.0-alpine3.15, 8.0.16-cli-alpine, 8.0-cli-alpine, 8.0.16-alpine, 8.0-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: b09fd3beb1bf3e9942dcc8d94262e08e157c9c1e
+GitCommit: 62763e00e2ead95227e0ed807b94cf85a793e887
 Directory: 8.0/alpine3.15/cli
 
-Tags: 8.0.15-fpm-alpine3.15, 8.0-fpm-alpine3.15, 8.0.15-fpm-alpine, 8.0-fpm-alpine
+Tags: 8.0.16-fpm-alpine3.15, 8.0-fpm-alpine3.15, 8.0.16-fpm-alpine, 8.0-fpm-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: b09fd3beb1bf3e9942dcc8d94262e08e157c9c1e
+GitCommit: 62763e00e2ead95227e0ed807b94cf85a793e887
 Directory: 8.0/alpine3.15/fpm
 
-Tags: 8.0.15-cli-alpine3.14, 8.0-cli-alpine3.14, 8.0.15-alpine3.14, 8.0-alpine3.14
+Tags: 8.0.16-cli-alpine3.14, 8.0-cli-alpine3.14, 8.0.16-alpine3.14, 8.0-alpine3.14
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: b09fd3beb1bf3e9942dcc8d94262e08e157c9c1e
+GitCommit: 62763e00e2ead95227e0ed807b94cf85a793e887
 Directory: 8.0/alpine3.14/cli
 
-Tags: 8.0.15-fpm-alpine3.14, 8.0-fpm-alpine3.14
+Tags: 8.0.16-fpm-alpine3.14, 8.0-fpm-alpine3.14
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: b09fd3beb1bf3e9942dcc8d94262e08e157c9c1e
+GitCommit: 62763e00e2ead95227e0ed807b94cf85a793e887
 Directory: 8.0/alpine3.14/fpm
 
 Tags: 7.4.28-cli-bullseye, 7.4-cli-bullseye, 7-cli-bullseye, 7.4.28-bullseye, 7.4-bullseye, 7-bullseye, 7.4.28-cli, 7.4-cli, 7-cli, 7.4.28, 7.4, 7
