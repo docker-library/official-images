@@ -1,6 +1,6 @@
 Maintainers: Paul Tagliamonte <paultag@hylang.org> (@paultag), Hy Docker Team (@hylang/docker)
 GitRepo: https://github.com/hylang/docker-hylang.git
-GitCommit: 21ba5dd50a89b8afc63a1352f8a41a16cf2c6c8a
+GitCommit: 85d90b27f2172cd51b8d96e7c0ae502df1d7e393
 Directory: dockerfiles-generated
 
 Tags: 1.0a4-python3.10-bullseye, python3.10-bullseye, 1.0a4-bullseye, bullseye
@@ -82,6 +82,21 @@ File: Dockerfile.python3.7-alpine3.15
 Tags: 1.0a4-python3.7-alpine3.14, python3.7-alpine3.14
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 File: Dockerfile.python3.7-alpine3.14
+
+Tags: 1.0a4-pypy3.9-bullseye, pypy3.9-bullseye
+SharedTags: 1.0a4-pypy3.9, pypy3.9
+Architectures: amd64, arm64v8, i386
+File: Dockerfile.pypy3.9-bullseye
+
+Tags: 1.0a4-pypy3.9-buster, pypy3.9-buster
+Architectures: amd64, arm64v8, i386, s390x
+File: Dockerfile.pypy3.9-buster
+
+Tags: 1.0a4-pypy3.9-windowsservercore-1809, pypy3.9-windowsservercore-1809
+SharedTags: 1.0a4-pypy3.9, pypy3.9
+Architectures: windows-amd64
+Constraints: windowsservercore-1809
+File: Dockerfile.pypy3.9-windowsservercore-1809
 
 Tags: 1.0a4-pypy3.8-bullseye, pypy3.8-bullseye, 1.0a4-pypy-bullseye, pypy-bullseye
 SharedTags: 1.0a4-pypy3.8, pypy3.8, 1.0a4-pypy, pypy
