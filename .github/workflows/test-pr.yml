@@ -46,6 +46,8 @@ jobs:
       - id: generate-jobs
         name: Generate Jobs
         run: |
+          # https://github.com/tianon/pgp-happy-eyeballs/issues/4
+          export BASHBREW_GENERATE_SKIP_PGP_PROXY=1
           git clone --depth 1 https://github.com/docker-library/bashbrew.git -b master ~/bashbrew
           strategy="$(.github/workflows/generate.sh ~/bashbrew)"
           jq . <<<"$strategy" # sanity check / debugging aid
