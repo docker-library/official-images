@@ -1,8 +1,7 @@
 Maintainers: Chris Potter <crpotter@us.ibm.com> (@crpotter),
              Wendy Raschke <wraschke@us.ibm.com> (@wraschke),
-             Arthur De Magalhaes <arthurdm@ca.ibm.com> (@arthurdm)
 GitRepo: https://github.com/OpenLiberty/ci.docker.git
-GitCommit: 4a37111114bd450a2d7e60fa9e5a0c2f8a9ac57d
+GitCommit: 097132542871f70feec7e0643e122fda9d7eb456
 Architectures: amd64, i386, ppc64le, s390x
 
 Tags: beta
@@ -14,6 +13,11 @@ Tags: beta-java11
 Directory: releases/latest/beta
 Architectures: amd64, ppc64le, s390x
 File: Dockerfile.ubuntu.openjdk11
+
+Tags: beta-java17
+Directory: releases/latest/beta
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk17
 
 Tags: kernel-slim, kernel-slim-java8-openj9
 Directory: releases/latest/kernel-slim
