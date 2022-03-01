@@ -2,7 +2,7 @@ Maintainers: Paul Lam <paul@quantisan.com> (@Quantisan),
              Wes Morgan <wes@wesmorgan.me> (@cap10morgan)
 Architectures: amd64, arm64v8
 GitRepo: https://github.com/Quantisan/docker-clojure.git
-GitCommit: a837594e09ea9321a0f3630b793917739b4684ba
+GitCommit: 65004e75d0280beee867d7a5b868f8b424c49b8d
 
 Tags: latest
 Directory: target/openjdk-17-slim-bullseye/latest
@@ -151,14 +151,32 @@ Directory: target/openjdk-18-slim-bullseye/tools-deps
 Tags: openjdk-18-bullseye, openjdk-18-tools-deps-bullseye, openjdk-18-tools-deps-1.10.3.1087-bullseye
 Directory: target/openjdk-18-bullseye/tools-deps
 
-Tags: openjdk-18-lein-alpine, openjdk-18-lein-2.9.8-alpine
-Architectures: amd64
-Directory: target/openjdk-18-alpine/lein
+Tags: openjdk-19-lein, openjdk-19-lein-2.9.8, openjdk-19-lein-slim-bullseye, openjdk-19-lein-2.9.8-slim-bullseye
+Directory: target/openjdk-19-slim-bullseye/lein
 
-Tags: openjdk-18-boot-alpine, openjdk-18-boot-2.8.3-alpine
-Architectures: amd64
-Directory: target/openjdk-18-alpine/boot
+Tags: openjdk-19-lein-bullseye, openjdk-19-lein-2.9.8-bullseye
+Directory: target/openjdk-19-bullseye/lein
 
-Tags: openjdk-18-alpine, openjdk-18-tools-deps-alpine, openjdk-18-tools-deps-1.10.3.1087-alpine
+Tags: openjdk-19-boot, openjdk-19-boot-2.8.3, openjdk-19-boot-slim-bullseye, openjdk-19-boot-2.8.3-slim-bullseye
+Directory: target/openjdk-19-slim-bullseye/boot
+
+Tags: openjdk-19-boot-bullseye, openjdk-19-boot-2.8.3-bullseye
+Directory: target/openjdk-19-bullseye/boot
+
+Tags: openjdk-19, openjdk-19-slim-bullseye, openjdk-19-tools-deps, openjdk-19-tools-deps-1.10.3.1087, openjdk-19-tools-deps-slim-bullseye, openjdk-19-tools-deps-1.10.3.1087-slim-bullseye
+Directory: target/openjdk-19-slim-bullseye/tools-deps
+
+Tags: openjdk-19-bullseye, openjdk-19-tools-deps-bullseye, openjdk-19-tools-deps-1.10.3.1087-bullseye
+Directory: target/openjdk-19-bullseye/tools-deps
+
+Tags: openjdk-19-lein-alpine, openjdk-19-lein-2.9.8-alpine
 Architectures: amd64
-Directory: target/openjdk-18-alpine/tools-deps
+Directory: target/openjdk-19-alpine/lein
+
+Tags: openjdk-19-boot-alpine, openjdk-19-boot-2.8.3-alpine
+Architectures: amd64
+Directory: target/openjdk-19-alpine/boot
+
+Tags: openjdk-19-alpine, openjdk-19-tools-deps-alpine, openjdk-19-tools-deps-1.10.3.1087-alpine
+Architectures: amd64
+Directory: target/openjdk-19-alpine/tools-deps
