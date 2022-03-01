@@ -4,10 +4,10 @@
 Maintainers: Joan Touzet <wohali@apache.org> (@wohali)
 GitRepo: https://github.com/apache/couchdb-docker
 GitFetch: refs/heads/main
-GitCommit: 5e0a54ced383627836c4fcc3d6a4e65e72e7890c
+GitCommit: 4dc3a6b1f2bd8d46489cad5828912f0a64bf0b36
 
 Tags: latest, 3.2.1, 3.2, 3
-Architectures: amd64, arm64v8
+Architectures: amd64, arm64v8, ppc64le
 Directory: 3.2.1
 
 Tags: 3.1.2, 3.1
@@ -18,8 +18,6 @@ Tags: 2.3.1, 2.3, 2
 Architectures: amd64, arm64v8
 Directory: 2.3.1
 
-# ppc64le support is dropped until we have CI support for the platform.
-#
 # 1.x is no longer supported by the Apache CouchDB team.
 #
 # dev, dev-cluster versions must not be published officially per
