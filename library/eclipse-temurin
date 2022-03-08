@@ -5,6 +5,12 @@ GitRepo: https://github.com/adoptium/containers.git
 GitFetch: refs/heads/main
 
 #------------------------------v8 images---------------------------------
+Tags: 8u322-b06-jdk-alpine, 8-jdk-alpine, 8-alpine
+Architectures: amd64
+GitCommit: 3cce04581c9f160bacf9052510b43ad9aeef7c8f
+Directory: 8/jdk/alpine
+File: Dockerfile.releases.full
+
 Tags: 8u322-b06-jdk-focal, 8-jdk-focal, 8-focal
 SharedTags: 8u322-b06-jdk, 8-jdk, 8
 Architectures: amd64, arm32v7, arm64v8, ppc64le
@@ -49,6 +55,12 @@ GitCommit: 130db1e5356f5a86868b70809c8311b0aad0c756
 Directory: 8/jdk/windows/nanoserver-1809
 File: Dockerfile.releases.full
 Constraints: nanoserver-1809, windowsservercore-1809
+
+Tags: 8u322-b06-jre-alpine, 8-jre-alpine
+Architectures: amd64
+GitCommit: 3cce04581c9f160bacf9052510b43ad9aeef7c8f
+Directory: 8/jre/alpine
+File: Dockerfile.releases.full
 
 Tags: 8u322-b06-jre-focal, 8-jre-focal
 SharedTags: 8u322-b06-jre, 8-jre
