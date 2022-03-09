@@ -1,16 +1,26 @@
 Maintainers: The AlmaLinux OS Foundation <cloud-infra@almalinux.org> (@AlmaLinux)
 GitRepo: https://github.com/AlmaLinux/docker-images.git
 
-Tags: latest, 8, 8.5, 8.5-20211112
-GitFetch: refs/heads/almalinux-8-x86_64-default
-GitCommit: 6e2df1f70f5c144198756f4be9a30e412e8bb065
-arm64v8-GitFetch: refs/heads/almalinux-8-aarch64-default
-arm64v8-GitCommit: 445a8085003f2b1d2de35218d49bf12944497575
-Architectures: amd64, arm64v8
+Tags: latest, 8, 8.5, 8.5-20220306
+GitFetch: refs/heads/al-8.5.4-20220306
+GitCommit: 800ecbd636ec5ebbedc99e46391dbea6e71c2646
+File: Dockerfile-x86_64-default
+arm64v8-GitFetch: refs/heads/al-8.5.4-20220306
+arm64v8-GitCommit: 800ecbd636ec5ebbedc99e46391dbea6e71c2646
+arm64v8-File: Dockerfile-aarch64-default
+ppc64le-GitFetch: refs/heads/al-8.5.4-20220306
+ppc64le-GitCommit: 800ecbd636ec5ebbedc99e46391dbea6e71c2646
+ppc64le-File: Dockerfile-ppc64le-default
+Architectures: amd64, arm64v8, ppc64le
 
-Tags: minimal, 8-minimal, 8.5-minimal-20211112
-GitFetch: refs/heads/almalinux-8-x86_64-minimal
-GitCommit: a5eb1823772e0154c96351879864d0badaf3c918
-arm64v8-GitFetch: refs/heads/almalinux-8-aarch64-minimal
-arm64v8-GitCommit: 2d75f992852621c11016c10ea7d74b6d5d552310
-Architectures: amd64, arm64v8
+Tags: minimal, 8-minimal, 8.5-minimal-20220306
+GitFetch: refs/heads/al-8.5.4-20220306
+GitCommit: 800ecbd636ec5ebbedc99e46391dbea6e71c2646
+File: Dockerfile-x86_64-minimal
+arm64v8-GitFetch: refs/heads/al-8.5.4-20220306
+arm64v8-GitCommit: 800ecbd636ec5ebbedc99e46391dbea6e71c2646
+arm64v8-File: Dockerfile-aarch64-minimal
+ppc64le-GitFetch: refs/heads/al-8.5.4-20220306
+ppc64le-GitCommit: 800ecbd636ec5ebbedc99e46391dbea6e71c2646
+ppc64le-File: Dockerfile-ppc64le-minimal
+Architectures: amd64, arm64v8, ppc64le
