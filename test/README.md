@@ -6,7 +6,7 @@
 $ ./run.sh
 
 usage: run.sh [-t test ...] image:tag [...]
-   ie: run.sh debian:wheezy
+   ie: run.sh debian:buster
        run.sh -t utc python:3
        run.sh -t utc python:3 -t python-hy
 
@@ -14,54 +14,37 @@ This script processes the specified Docker images to test their running
 environments.
 ```
 
-Run all the tests that are applicable to the `debian:wheezy` image:
+Run all the tests that are applicable to the `debian:buster` image:
 
 ```console
-$ ./run.sh debian:wheezy
-testing debian:wheezy
-	'utc' [1/2]...passed
-	'cve-2014--shellshock' [2/2]...passed
+$ ./run.sh debian:buster
+testing debian:buster
+	'utc' [1/4]...passed
+	'no-hard-coded-passwords' [2/4]...passed
+	'override-cmd' [3/4]...passed
+	'debian-apt-get' [4/4]...passed
 ```
 
-Try to run just the `python-hy` test against the `debian:wheezy` image: (which doesn't contain Python)
+Try to run just the `python-hy` test against the `debian:buster` image: (which doesn't contain Python)
 
 ```console
-$ ./run.sh -t python-hy debian:wheezy
-testing debian:wheezy
+$ ./run.sh -t python-hy debian:buster
+testing debian:buster
+	image has no tests...skipping
 ```
 
-Run the `utc` test against both the `python:3` and `python:2` images:
+Run the `utc` and `python-hy` tests against `python:3`, `pypy:3`, and `debian:buster`:
 
 ```console
-$ ./run.sh -t utc python:3 python:2
-testing python:3
-	'utc' [1/1]...passed
-testing python:2
-	'utc' [1/1]...passed
-```
-
-Run the `utc` and `python-hy` tests against `python:3`, `python:2`, and `debian:wheezy`:
-
-```console
-$ ./run.sh -t utc -t python-hy python:3 python:2 debian:wheezy
+$ ./run.sh -t utc -t python-hy python:3 pypy:3 debian:buster
 testing python:3
 	'utc' [1/2]...passed
 	'python-hy' [2/2]...passed
-testing python:2
-	'utc' [1/2]...passed
-	'python-hy' [2/2]...passed
-testing debian:wheezy
-	'utc' [1/1]...passed
-```
-
-Run the `python-hy` test against `python:3` and `pypy:3`:
-
-```console
-$ ./run.sh -t python-hy python:3 pypy:3
-testing python:3
-	'python-hy' [1/1]...passed
 testing pypy:3
-	'python-hy' [1/1]...passed
+	'utc' [1/2]...passed
+	'python-hy' [2/2]...passed
+testing debian:buster
+	'utc' [1/1]...passed
 ```
 
 ## Writing Tests
@@ -153,7 +136,7 @@ This list of tests applies to every image minus combinations listed in `globalEx
 ```bash
 globalTests+=(
 	utc
-	cve-2014--shellshock
+	no-hard-coded-passwords
 )
 ```
 
@@ -195,7 +178,6 @@ Defines image+test combinations which shouldn't ever run (usually because they w
 globalExcludeTests+=(
 	# single-binary images
 	[hello-world_utc]=1
-	[swarm_utc]=1
 )
 ```
 

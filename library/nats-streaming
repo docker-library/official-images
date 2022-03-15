@@ -1,28 +1,25 @@
 Maintainers: Ivan Kozlovic <ivan@synadia.com> (@kozlovic)
 GitRepo: https://github.com/nats-io/nats-streaming-docker.git
-GitCommit: 465ef4c302c17cf248755ad2c739ce26c720d221
+GitFetch: refs/heads/main
+GitCommit: aeaadde041dd34146cb3186b04c81fc81bfcaf10
 
-Tags: 0.11.2-linux, linux
-SharedTags: 0.11.2, latest
+Tags: 0.24.3-alpine3.15, 0.24-alpine3.15, alpine3.15, 0.24.3-alpine, 0.24-alpine, alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8
-amd64-GitCommit: 465ef4c302c17cf248755ad2c739ce26c720d221
-amd64-Directory: amd64
-arm32v6-GitCommit: 465ef4c302c17cf248755ad2c739ce26c720d221
-arm32v6-Directory: arm32v6
-arm32v7-GitCommit: 465ef4c302c17cf248755ad2c739ce26c720d221
-arm32v7-Directory: arm32v7
-arm64v8-GitCommit: 465ef4c302c17cf248755ad2c739ce26c720d221
-arm64v8-Directory: arm64v8
+Directory: 0.24.3/alpine3.15
 
-Tags: 0.11.2-nanoserver, nanoserver
-SharedTags: 0.11.2, latest
-Architectures: windows-amd64
-windows-amd64-GitCommit: 465ef4c302c17cf248755ad2c739ce26c720d221
-windows-amd64-Directory: windows/nanoserver
-Constraints: nanoserver
+Tags: 0.24.3-scratch, 0.24-scratch, scratch, 0.24.3-linux, 0.24-linux, linux
+SharedTags: 0.24.3, 0.24, latest
+Architectures: amd64, arm32v6, arm32v7, arm64v8
+Directory: 0.24.3/scratch
 
-Tags: 0.11.2-windowsservercore, windowsservercore
+Tags: 0.24.3-windowsservercore-1809, 0.24-windowsservercore-1809, windowsservercore-1809
+SharedTags: 0.24.3-windowsservercore, 0.24-windowsservercore, windowsservercore
 Architectures: windows-amd64
-windows-amd64-GitCommit: 465ef4c302c17cf248755ad2c739ce26c720d221
-windows-amd64-Directory: windows/windowsservercore
-Constraints: windowsservercore
+Directory: 0.24.3/windowsservercore-1809
+Constraints: windowsservercore-1809
+
+Tags: 0.24.3-nanoserver-1809, 0.24-nanoserver-1809, nanoserver-1809
+SharedTags: 0.24.3-nanoserver, 0.24-nanoserver, nanoserver, 0.24.3, 0.24, latest
+Architectures: windows-amd64
+Directory: 0.24.3/nanoserver-1809
+Constraints: nanoserver-1809, windowsservercore-1809

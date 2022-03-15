@@ -1,41 +1,101 @@
 Maintainers: Peter Martini <PeterCMartini@GMail.com> (@PeterMartini),
              Zak B. Elep <zakame@cpan.org> (@zakame)
 GitRepo: https://github.com/perl/docker-perl.git
-GitCommit: 892e2b4fbb58c48ee802cd13b34017300c630f18
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 8e053ca86a2dcb8862f738c19af3dd6c849460cd
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 
-Tags: latest, 5, 5.28, 5.28.0
-Directory: 5.028.000-main
+Tags: 5.34.0, 5.34, 5, latest, 5.34.0-bullseye, 5.34-bullseye, 5-bullseye, bullseye
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Directory: 5.034.000-main-bullseye
 
-Tags: slim, 5-slim, 5.28-slim, 5.28.0-slim
-Directory: 5.028.000-slim
+Tags: 5.34.0-buster, 5.34-buster, 5-buster, buster
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Directory: 5.034.000-main-buster
 
-Tags: threaded, 5-threaded, 5.28-threaded, 5.28.0-threaded
-Directory: 5.028.000-main,threaded
+Tags: 5.34.0-slim, 5.34-slim, 5-slim, slim, 5.34.0-slim-bullseye, 5.34-slim-bullseye, 5-slim-bullseye, slim-bullseye
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Directory: 5.034.000-slim-bullseye
 
-Tags: slim-threaded, 5-slim-threaded, 5.28-slim-threaded, 5.28.0-slim-threaded
-Directory: 5.028.000-slim,threaded
+Tags: 5.34.0-slim-buster, 5.34-slim-buster, 5-slim-buster, slim-buster
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Directory: 5.034.000-slim-buster
 
-Tags: 5.26, 5.26.2
-Directory: 5.026.002-main
+Tags: 5.34.0-threaded, 5.34-threaded, 5-threaded, threaded, 5.34.0-threaded-bullseye, 5.34-threaded-bullseye, 5-threaded-bullseye, threaded-bullseye
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Directory: 5.034.000-main,threaded-bullseye
 
-Tags: 5.26-slim, 5.26.2-slim
-Directory: 5.026.002-slim
+Tags: 5.34.0-threaded-buster, 5.34-threaded-buster, 5-threaded-buster, threaded-buster
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Directory: 5.034.000-main,threaded-buster
 
-Tags: 5.26-threaded, 5.26.2-threaded
-Directory: 5.026.002-main,threaded
+Tags: 5.34.0-slim-threaded, 5.34-slim-threaded, 5-slim-threaded, slim-threaded, 5.34.0-slim-threaded-bullseye, 5.34-slim-threaded-bullseye, 5-slim-threaded-bullseye, slim-threaded-bullseye
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Directory: 5.034.000-slim,threaded-bullseye
 
-Tags: 5.26-slim-threaded, 5.26.2-slim-threaded
-Directory: 5.026.002-slim,threaded
+Tags: 5.34.0-slim-threaded-buster, 5.34-slim-threaded-buster, 5-slim-threaded-buster, slim-threaded-buster
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Directory: 5.034.000-slim,threaded-buster
 
-Tags: 5.24, 5.24.4
-Directory: 5.024.004-main
+Tags: 5.32.1, 5.32, 5.32.1-bullseye, 5.32-bullseye
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Directory: 5.032.001-main-bullseye
 
-Tags: 5.24-slim, 5.24.4-slim
-Directory: 5.024.004-slim
+Tags: 5.32.1-buster, 5.32-buster
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Directory: 5.032.001-main-buster
 
-Tags: 5.24-threaded, 5.24.4-threaded
-Directory: 5.024.004-main,threaded
+Tags: 5.32.1-slim, 5.32-slim, 5.32.1-slim-bullseye, 5.32-slim-bullseye
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Directory: 5.032.001-slim-bullseye
 
-Tags: 5.24-slim-threaded, 5.24.4-slim-threaded
-Directory: 5.024.004-slim,threaded
+Tags: 5.32.1-slim-buster, 5.32-slim-buster
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Directory: 5.032.001-slim-buster
+
+Tags: 5.32.1-threaded, 5.32-threaded, 5.32.1-threaded-bullseye, 5.32-threaded-bullseye
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Directory: 5.032.001-main,threaded-bullseye
+
+Tags: 5.32.1-threaded-buster, 5.32-threaded-buster
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Directory: 5.032.001-main,threaded-buster
+
+Tags: 5.32.1-slim-threaded, 5.32-slim-threaded, 5.32.1-slim-threaded-bullseye, 5.32-slim-threaded-bullseye
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Directory: 5.032.001-slim,threaded-bullseye
+
+Tags: 5.32.1-slim-threaded-buster, 5.32-slim-threaded-buster
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Directory: 5.032.001-slim,threaded-buster
+
+Tags: 5.30.3, 5.30, 5.30.3-bullseye, 5.30-bullseye
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Directory: 5.030.003-main-bullseye
+
+Tags: 5.30.3-buster, 5.30-buster
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Directory: 5.030.003-main-buster
+
+Tags: 5.30.3-slim, 5.30-slim, 5.30.3-slim-bullseye, 5.30-slim-bullseye
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Directory: 5.030.003-slim-bullseye
+
+Tags: 5.30.3-slim-buster, 5.30-slim-buster
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Directory: 5.030.003-slim-buster
+
+Tags: 5.30.3-threaded, 5.30-threaded, 5.30.3-threaded-bullseye, 5.30-threaded-bullseye
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Directory: 5.030.003-main,threaded-bullseye
+
+Tags: 5.30.3-threaded-buster, 5.30-threaded-buster
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Directory: 5.030.003-main,threaded-buster
+
+Tags: 5.30.3-slim-threaded, 5.30-slim-threaded, 5.30.3-slim-threaded-bullseye, 5.30-slim-threaded-bullseye
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Directory: 5.030.003-slim,threaded-bullseye
+
+Tags: 5.30.3-slim-threaded-buster, 5.30-slim-threaded-buster
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Directory: 5.030.003-slim,threaded-buster

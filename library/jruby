@@ -1,49 +1,51 @@
-Maintainers: Brian Goff <cpuguy83@gmail.com> (@cpuguy83)
-GitRepo: https://github.com/cpuguy83/docker-jruby.git
+Maintainers: JRuby Admin <admin@jruby.org> (@jruby),
+             Charles Oliver Nutter <headius@headius.com> (@headius),
+             Thomas E Enebo <tom.enebo@gmail.com> (@enebo)
+GitRepo: https://github.com/jruby/docker-jruby.git
 GitFetch: refs/heads/master
-GitCommit: fadb44e816ee8d361d0ff45261efe1482a4d9441
+GitCommit: 2d3045347878d988c2e7de53c04a3069d50cd162
 
-Tags: latest, 9, 9.2, 9.2.0, 9.2-jre, 9.2.0-jre, 9.2.0.0, 9.2.0.0-jre
-Architectures: amd64, i386, arm32v5, arm64v8, ppc64le, s390x
-Directory: 9000/jre
+Tags: latest, 9, 9.3, 9.3.3, 9.3-jre, 9.3-jre8, 9.3.3-jre, 9.3.3-jre8, 9.3.3.0, 9.3.3.0-jre, 9.3.3.0-jre8
+Architectures: amd64
+Directory: 9.3/jre8
 
-Tags: 9-alpine, 9.2-alpine, 9.2.0-alpine, 9.2-jre-alpine, 9.2.0-jre-alpine, 9.2.0.0-alpine, 9.2.0.0-jre-alpine
-Architectures: amd64, arm64v8, ppc64le, s390x
-Directory: 9000/alpine-jre
+Tags: 9-jdk, 9-jdk8, 9.3-jdk, 9.3-jdk8, 9.3.3-jdk, 9.3.3-jdk8, 9.3.3.0-jdk, 9.3.3.0-jdk8
+Architectures: amd64
+Directory: 9.3/jdk8
 
-Tags: 9-jdk, 9.2-jdk, 9.2.0-jdk, 9.2.0.0-jdk
-Architectures: amd64, i386, arm32v5, arm64v8, ppc64le, s390x
-Directory: 9000/jdk
+Tags: 9.3-jre11, 9.3.3-jre11, 9.3.3.0-jre11
+Architectures: amd64
+Directory: 9.3/jre11
 
-Tags: 9-jdk-alpine, 9.2-jdk-alpine, 9.2.0-jdk-alpine, 9.2.0.0-jdk-alpine
-Architectures: amd64, arm64v8, ppc64le, s390x
-Directory: 9000/alpine-jdk
+Tags: 9.3-jdk11, 9.3.3-jdk11, 9.3.3.0-jdk11
+Architectures: amd64
+Directory: 9.3/jdk11
 
-Tags: 9-onbuild, 9.2-onbuild, 9.2.0-onbuild, 9.2.0.0-onbuild
-Architectures: amd64, i386, arm32v5, arm64v8, ppc64le, s390x
-Directory: 9000/onbuild
+Tags: 9.3-jdk17, 9.3.3-jdk17, 9.3.3.0-jdk17
+Architectures: amd64
+Directory: 9.3/jdk17
 
+Tags: 9.2, 9.2.20, 9.2-jre, 9.2-jre8, 9.2.20-jre, 9.2.20-jre8, 9.2.20.1, 9.2.20.0-jre, 9.2.20.0-jre8
+Architectures: amd64
+Directory: 9.2/jre8
 
-Tags: 9.1, 9.1.17, 9.1.17.0, 9.1-jre, 9.1.17-jre, 9.1.17.0-jre
-Architectures: amd64, i386, arm32v5, arm64v8, ppc64le, s390x
-Directory: 9000/jre
-GitCommit: 8bc3fe27670a851953345182fe12f14f5e708383
-GitFetch: refs/heads/9.1
+Tags: 9.2-jdk, 9.2-jdk8, 9.2.20-jdk, 9.2.20-jdk8, 9.2.20.0-jdk, 9.2.20.1-jdk8
+Architectures: amd64
+Directory: 9.2/jdk8
 
-Tags: 9.1-alpine, 9.1.17-alpine, 9.1.17.0-alpine, 9.1-jre-alpine, 9.1.17-jre-alpine, 9.1.17.0-jre-alpine
-Architectures: amd64, i386, arm32v5, arm64v8, ppc64le, s390x
-Directory: 9000/alpine-jre
-GitCommit: 8bc3fe27670a851953345182fe12f14f5e708383
-GitFetch: refs/heads/9.1
+Tags: 9.2-jre11, 9.2.20-jre11, 9.2.20.1-jre11
+Architectures: amd64
+Directory: 9.2/jre11
 
-Tags: 9.1-jdk-alpine, 9.1.17-jdk-alpine, 9.1.17.0-jdk-alpine
-Architectures: amd64, i386, arm32v5, arm64v8, ppc64le, s390x
-Directory: 9000/alpine-jdk
-GitCommit: 8bc3fe27670a851953345182fe12f14f5e708383
-GitFetch: refs/heads/9.1
+Tags: 9.2-jdk11, 9.2.20-jdk11, 9.2.20.1-jdk11
+Architectures: amd64
+Directory: 9.2/jdk11
 
-Tags: 9.1-jdk, 9.1.17-jdk, 9.1.17.0-jdk
-Architectures: amd64, i386, arm32v5, arm64v8, ppc64le, s390x
-Directory: 9000/jdk
-GitCommit: 8bc3fe27670a851953345182fe12f14f5e708383
-GitFetch: refs/heads/9.1
+Tags: 9.2-jdk17, 9.2.20-jdk17, 9.2.20.1-jdk17
+Architectures: amd64
+Directory: 9.2/jdk17
+
+Tags: 9.2-onbuild, 9.2.20-onbuild, 9.2.20.1-onbuild
+Architectures: amd64
+Directory: 9.2/onbuild-jdk8
+

@@ -1,48 +1,50 @@
 Maintainers: Kong Docker Maintainers <support@konghq.com> (@thekonginc)
 GitRepo: https://github.com/Kong/docker-kong.git
-# needs "Constraints" to match "centos" (which this image is "FROM")
 
-Tags: 1.0.0rc2-alpine, 1.0rc2-alpine, 1.0.0rc2, 1.0rc2
-GitCommit: e200d692b453f308d33f3f552293b66a47bee5ed
+Tags: 2.8.0-alpine, 2.8.0, 2.8, alpine, latest
+GitCommit: c32a80c3dd332d096d1a6461d2816ead344d43c5
+GitFetch: refs/tags/2.8.0
 Directory: alpine
+Architectures: amd64, arm64v8
 
-Tags: 1.0.0rc2-centos, 1.0rc2-centos
-GitCommit: e200d692b453f308d33f3f552293b66a47bee5ed
-Constraints: !aufs
-Directory: centos
+Tags: 2.8.0-ubuntu, 2.8-ubuntu, ubuntu
+GitCommit: c32a80c3dd332d096d1a6461d2816ead344d43c5
+GitFetch: refs/tags/2.8.0
+Directory: ubuntu
+Architectures: amd64, arm64v8
 
-Tags: 0.14.1-alpine, 0.14-alpine, 0.14.1, 0.14, latest
-GitCommit: 9bbc9e8b4a61cba5cc4e4e4562a802dace4348ff
+Tags: 2.7.1-alpine, 2.7.1, 2.7
+GitCommit: d47ddd41ea2a489f36d15d3da956709bcf62dcca
+GitFetch: refs/tags/2.7.1
 Directory: alpine
+Architectures: amd64, arm64v8
 
-Tags: 0.14.1-centos, 0.14-centos
-GitCommit: 9bbc9e8b4a61cba5cc4e4e4562a802dace4348ff
-Constraints: !aufs
-Directory: centos
+Tags: 2.7.1-ubuntu, 2.7-ubuntu
+GitCommit: d47ddd41ea2a489f36d15d3da956709bcf62dcca
+GitFetch: refs/tags/2.7.1
+Directory: ubuntu
+Architectures: amd64, arm64v8
 
-Tags: 0.13.1-alpine, 0.13-alpine, 0.13.1, 0.13
-GitCommit: 6e2035c5739482f0616021a7eda04ec6809d9f3e
+Tags: 2.6.0-alpine, 2.6.0, 2.6
+GitCommit: 37b2520bddf243a14d28fbf616cc3cccf9906d91
+GitFetch: refs/tags/2.6.0
 Directory: alpine
+Architectures: amd64, arm64v8
 
-Tags: 0.13.1-centos, 0.13-centos
-GitCommit: 6e2035c5739482f0616021a7eda04ec6809d9f3e
-Constraints: !aufs
-Directory: centos
+Tags: 2.6.0-ubuntu, 2.6-ubuntu
+GitCommit: 37b2520bddf243a14d28fbf616cc3cccf9906d91
+GitFetch: refs/tags/2.6.0
+Directory: ubuntu
+Architectures: amd64, arm64v8
 
-Tags: 0.12-alpine, 0.12.3-alpine
-GitCommit: 95f9e8ebfd735f4ab09af71bf060d200a9a7a981
+Tags: 2.5.1-alpine, 2.5.1, 2.5
+GitCommit: 74f3a1c189c13b8f94ae15343452fcd27ccce605
+GitFetch: refs/tags/2.5.1
 Directory: alpine
+Architectures: amd64, arm64v8
 
-Tags: 0.12-centos, 0.12.3-centos, 0.12, 0.12.3
-GitCommit: 95f9e8ebfd735f4ab09af71bf060d200a9a7a981
-Constraints: !aufs
-Directory: centos
-
-Tags: 0.11-alpine, 0.11.2-alpine
-GitCommit: 2ed0fad88ed81623ea4afb2111033a9d87f3c03c
-Directory: alpine
-
-Tags: 0.11, 0.11.2
-GitCommit: aa9ab06921a36079eb362229c9241ef9b3cf894e
-Constraints: !aufs
-Directory: centos
+Tags: 2.5.1-ubuntu, 2.5-ubuntu
+GitCommit: 74f3a1c189c13b8f94ae15343452fcd27ccce605
+GitFetch: refs/tags/2.5.1
+Directory: ubuntu
+Architectures: amd64, arm64v8

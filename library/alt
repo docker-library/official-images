@@ -3,19 +3,33 @@ Maintainers: ALT Linux Team Cloud <alt-cloud@altlinux.org> (@alt-cloud),
              Gleb Fotengauer-Malinovskiy <glebfm@altlinux.org> (@glebfm),
              Mikhail Gordeev <obirvalger@altlunux.org> (@obirvalger)
 GitRepo: https://github.com/alt-cloud/docker-brew-alt.git
-Constraints: !aufs
 
-Tags: p8, latest
-Architectures: amd64, i386
-GitFetch: refs/heads/p8
-GitCommit: a344c86cb9828d8414b0ef1f447f68e21a67a20e
+Tags: p10, latest
+Architectures: amd64, i386, arm64v8, arm32v7, ppc64le
+GitFetch: refs/heads/p10
+GitCommit: 88cc4c773b98eaf79a02f5e939c894892d9b2381
 amd64-Directory: x86_64/
 i386-Directory: i586/
+arm64v8-Directory: aarch64/
+arm32v7-Directory: armh/
+ppc64le-Directory: ppc64le/
+
+Tags: p9
+Architectures: amd64, i386, arm64v8, arm32v7, ppc64le
+GitFetch: refs/heads/p9
+GitCommit: f077885abfbffce43ead72f9a7e543738c3b5c29
+amd64-Directory: x86_64/
+i386-Directory: i586/
+arm64v8-Directory: aarch64/
+arm32v7-Directory: armh/
+ppc64le-Directory: ppc64le/
 
 Tags: sisyphus
-Architectures: amd64, i386, arm64v8
+Architectures: amd64, i386, arm64v8, arm32v7, ppc64le
 GitFetch: refs/heads/sisyphus
-GitCommit: 0233794bdbc8f239f051b7c012d02b19cd68afdf
+GitCommit: ae311abdba430479ce3104461f2607e7866baf4e
 amd64-Directory: x86_64/
 arm64v8-Directory: aarch64/
+arm32v7-Directory: armh/
 i386-Directory: i586/
+ppc64le-Directory: ppc64le/

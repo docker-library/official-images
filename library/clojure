@@ -1,34 +1,182 @@
 Maintainers: Paul Lam <paul@quantisan.com> (@Quantisan),
-             Wes Morgan <wesmorgan@icloud.com> (@cap10morgan),
-             Kirill Chernyshov <delaguardo@gmail.com> (@DeLaGuardo)
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+             Wes Morgan <wes@wesmorgan.me> (@cap10morgan)
+Architectures: amd64, arm64v8
 GitRepo: https://github.com/Quantisan/docker-clojure.git
-GitCommit: a2a9729b5bab38202a13c3ca2e7a7c440e03fed7
+GitCommit: 65004e75d0280beee867d7a5b868f8b424c49b8d
 
-Tags: lein-2.8.1, lein, latest
-Directory: debian/lein
+Tags: latest
+Directory: target/openjdk-17-slim-bullseye/latest
 
-Tags: lein-2.8.1-onbuild, lein-onbuild, onbuild
-Directory: debian/lein/onbuild
+Tags: openjdk-8-lein-buster, openjdk-8-lein-2.9.8-buster
+Directory: target/openjdk-8-buster/lein
 
-Tags: lein-2.8.1-alpine, lein-alpine, alpine
+Tags: openjdk-8-lein-slim-buster, openjdk-8-lein-2.9.8-slim-buster
+Directory: target/openjdk-8-slim-buster/lein
+
+Tags: openjdk-8-boot-buster, openjdk-8-boot-2.8.3-buster
+Directory: target/openjdk-8-buster/boot
+
+Tags: openjdk-8-boot-slim-buster, openjdk-8-boot-2.8.3-slim-buster
+Directory: target/openjdk-8-slim-buster/boot
+
+Tags: openjdk-8-buster, openjdk-8-tools-deps-buster, openjdk-8-tools-deps-1.10.3.1087-buster
+Directory: target/openjdk-8-buster/tools-deps
+
+Tags: openjdk-8-slim-buster, openjdk-8-tools-deps-slim-buster, openjdk-8-tools-deps-1.10.3.1087-slim-buster
+Directory: target/openjdk-8-slim-buster/tools-deps
+
+Tags: openjdk-11-lein-buster, openjdk-11-lein-2.9.8-buster
+Directory: target/openjdk-11-buster/lein
+
+Tags: openjdk-11-lein-slim-buster, openjdk-11-lein-2.9.8-slim-buster
+Directory: target/openjdk-11-slim-buster/lein
+
+Tags: openjdk-11-boot-buster, openjdk-11-boot-2.8.3-buster
+Directory: target/openjdk-11-buster/boot
+
+Tags: openjdk-11-boot-slim-buster, openjdk-11-boot-2.8.3-slim-buster
+Directory: target/openjdk-11-slim-buster/boot
+
+Tags: openjdk-11-buster, openjdk-11-tools-deps-buster, openjdk-11-tools-deps-1.10.3.1087-buster
+Directory: target/openjdk-11-buster/tools-deps
+
+Tags: openjdk-11-slim-buster, openjdk-11-tools-deps-slim-buster, openjdk-11-tools-deps-1.10.3.1087-slim-buster
+Directory: target/openjdk-11-slim-buster/tools-deps
+
+Tags: openjdk-17-lein-slim-buster, openjdk-17-lein-2.9.8-slim-buster, lein-slim-buster, lein-2.9.8-slim-buster
+Directory: target/openjdk-17-slim-buster/lein
+
+Tags: openjdk-17-lein-buster, openjdk-17-lein-2.9.8-buster, lein-buster, lein-2.9.8-buster
+Directory: target/openjdk-17-buster/lein
+
+Tags: openjdk-17-boot-slim-buster, openjdk-17-boot-2.8.3-slim-buster, boot-slim-buster, boot-2.8.3-slim-buster
+Directory: target/openjdk-17-slim-buster/boot
+
+Tags: openjdk-17-boot-buster, openjdk-17-boot-2.8.3-buster, boot-buster, boot-2.8.3-buster
+Directory: target/openjdk-17-buster/boot
+
+Tags: openjdk-17-slim-buster, openjdk-17-tools-deps-slim-buster, openjdk-17-tools-deps-1.10.3.1087-slim-buster, tools-deps-1.10.3.1087-slim-buster, tools-deps-slim-buster
+Directory: target/openjdk-17-slim-buster/tools-deps
+
+Tags: openjdk-17-buster, openjdk-17-tools-deps-buster, openjdk-17-tools-deps-1.10.3.1087-buster, tools-deps-buster, tools-deps-1.10.3.1087-buster
+Directory: target/openjdk-17-buster/tools-deps
+
+Tags: openjdk-18-lein-slim-buster, openjdk-18-lein-2.9.8-slim-buster
+Directory: target/openjdk-18-slim-buster/lein
+
+Tags: openjdk-18-lein-buster, openjdk-18-lein-2.9.8-buster
+Directory: target/openjdk-18-buster/lein
+
+Tags: openjdk-18-boot-slim-buster, openjdk-18-boot-2.8.3-slim-buster
+Directory: target/openjdk-18-slim-buster/boot
+
+Tags: openjdk-18-boot-buster, openjdk-18-boot-2.8.3-buster
+Directory: target/openjdk-18-buster/boot
+
+Tags: openjdk-18-slim-buster, openjdk-18-tools-deps-slim-buster, openjdk-18-tools-deps-1.10.3.1087-slim-buster
+Directory: target/openjdk-18-slim-buster/tools-deps
+
+Tags: openjdk-18-buster, openjdk-18-tools-deps-buster, openjdk-18-tools-deps-1.10.3.1087-buster
+Directory: target/openjdk-18-buster/tools-deps
+
+Tags: openjdk-8-lein-bullseye, openjdk-8-lein-2.9.8-bullseye
+Directory: target/openjdk-8-bullseye/lein
+
+Tags: openjdk-8-lein, openjdk-8-lein-2.9.8, openjdk-8-lein-slim-bullseye, openjdk-8-lein-2.9.8-slim-bullseye
+Directory: target/openjdk-8-slim-bullseye/lein
+
+Tags: openjdk-8-boot-bullseye, openjdk-8-boot-2.8.3-bullseye
+Directory: target/openjdk-8-bullseye/boot
+
+Tags: openjdk-8-boot, openjdk-8-boot-2.8.3, openjdk-8-boot-slim-bullseye, openjdk-8-boot-2.8.3-slim-bullseye
+Directory: target/openjdk-8-slim-bullseye/boot
+
+Tags: openjdk-8-bullseye, openjdk-8-tools-deps-bullseye, openjdk-8-tools-deps-1.10.3.1087-bullseye
+Directory: target/openjdk-8-bullseye/tools-deps
+
+Tags: openjdk-8, openjdk-8-slim-bullseye, openjdk-8-tools-deps, openjdk-8-tools-deps-1.10.3.1087, openjdk-8-tools-deps-slim-bullseye, openjdk-8-tools-deps-1.10.3.1087-slim-bullseye
+Directory: target/openjdk-8-slim-bullseye/tools-deps
+
+Tags: openjdk-11-lein-bullseye, openjdk-11-lein-2.9.8-bullseye
+Directory: target/openjdk-11-bullseye/lein
+
+Tags: openjdk-11-lein, openjdk-11-lein-2.9.8, openjdk-11-lein-slim-bullseye, openjdk-11-lein-2.9.8-slim-bullseye
+Directory: target/openjdk-11-slim-bullseye/lein
+
+Tags: openjdk-11-boot-bullseye, openjdk-11-boot-2.8.3-bullseye
+Directory: target/openjdk-11-bullseye/boot
+
+Tags: openjdk-11-boot, openjdk-11-boot-2.8.3, openjdk-11-boot-slim-bullseye, openjdk-11-boot-2.8.3-slim-bullseye
+Directory: target/openjdk-11-slim-bullseye/boot
+
+Tags: openjdk-11-bullseye, openjdk-11-tools-deps-bullseye, openjdk-11-tools-deps-1.10.3.1087-bullseye
+Directory: target/openjdk-11-bullseye/tools-deps
+
+Tags: openjdk-11, openjdk-11-slim-bullseye, openjdk-11-tools-deps, openjdk-11-tools-deps-1.10.3.1087, openjdk-11-tools-deps-slim-bullseye, openjdk-11-tools-deps-1.10.3.1087-slim-bullseye
+Directory: target/openjdk-11-slim-bullseye/tools-deps
+
+Tags: openjdk-17-lein, openjdk-17-lein-2.9.8, openjdk-17-lein-slim-bullseye, openjdk-17-lein-2.9.8-slim-bullseye, lein-slim-bullseye, lein-2.9.8-slim-bullseye, lein, lein-2.9.8
+Directory: target/openjdk-17-slim-bullseye/lein
+
+Tags: openjdk-17-lein-bullseye, openjdk-17-lein-2.9.8-bullseye, lein-bullseye, lein-2.9.8-bullseye
+Directory: target/openjdk-17-bullseye/lein
+
+Tags: openjdk-17-boot, openjdk-17-boot-2.8.3, openjdk-17-boot-slim-bullseye, openjdk-17-boot-2.8.3-slim-bullseye, boot, boot-2.8.3, boot-slim-bullseye, boot-2.8.3-slim-bullseye
+Directory: target/openjdk-17-slim-bullseye/boot
+
+Tags: openjdk-17-boot-bullseye, openjdk-17-boot-2.8.3-bullseye, boot-bullseye, boot-2.8.3-bullseye
+Directory: target/openjdk-17-bullseye/boot
+
+Tags: openjdk-17, openjdk-17-slim-bullseye, tools-deps, tools-deps-1.10.3.1087, tools-deps-1.10.3.1087-slim-bullseye, openjdk-17-tools-deps, openjdk-17-tools-deps-1.10.3.1087, openjdk-17-tools-deps-slim-bullseye, openjdk-17-tools-deps-1.10.3.1087-slim-bullseye
+Directory: target/openjdk-17-slim-bullseye/tools-deps
+
+Tags: openjdk-17-bullseye, openjdk-17-tools-deps-bullseye, openjdk-17-tools-deps-1.10.3.1087-bullseye, tools-deps-bullseye, tools-deps-1.10.3.1087-bullseye
+Directory: target/openjdk-17-bullseye/tools-deps
+
+Tags: openjdk-18-lein, openjdk-18-lein-2.9.8, openjdk-18-lein-slim-bullseye, openjdk-18-lein-2.9.8-slim-bullseye
+Directory: target/openjdk-18-slim-bullseye/lein
+
+Tags: openjdk-18-lein-bullseye, openjdk-18-lein-2.9.8-bullseye
+Directory: target/openjdk-18-bullseye/lein
+
+Tags: openjdk-18-boot, openjdk-18-boot-2.8.3, openjdk-18-boot-slim-bullseye, openjdk-18-boot-2.8.3-slim-bullseye
+Directory: target/openjdk-18-slim-bullseye/boot
+
+Tags: openjdk-18-boot-bullseye, openjdk-18-boot-2.8.3-bullseye
+Directory: target/openjdk-18-bullseye/boot
+
+Tags: openjdk-18, openjdk-18-slim-bullseye, openjdk-18-tools-deps, openjdk-18-tools-deps-1.10.3.1087, openjdk-18-tools-deps-slim-bullseye, openjdk-18-tools-deps-1.10.3.1087-slim-bullseye
+Directory: target/openjdk-18-slim-bullseye/tools-deps
+
+Tags: openjdk-18-bullseye, openjdk-18-tools-deps-bullseye, openjdk-18-tools-deps-1.10.3.1087-bullseye
+Directory: target/openjdk-18-bullseye/tools-deps
+
+Tags: openjdk-19-lein, openjdk-19-lein-2.9.8, openjdk-19-lein-slim-bullseye, openjdk-19-lein-2.9.8-slim-bullseye
+Directory: target/openjdk-19-slim-bullseye/lein
+
+Tags: openjdk-19-lein-bullseye, openjdk-19-lein-2.9.8-bullseye
+Directory: target/openjdk-19-bullseye/lein
+
+Tags: openjdk-19-boot, openjdk-19-boot-2.8.3, openjdk-19-boot-slim-bullseye, openjdk-19-boot-2.8.3-slim-bullseye
+Directory: target/openjdk-19-slim-bullseye/boot
+
+Tags: openjdk-19-boot-bullseye, openjdk-19-boot-2.8.3-bullseye
+Directory: target/openjdk-19-bullseye/boot
+
+Tags: openjdk-19, openjdk-19-slim-bullseye, openjdk-19-tools-deps, openjdk-19-tools-deps-1.10.3.1087, openjdk-19-tools-deps-slim-bullseye, openjdk-19-tools-deps-1.10.3.1087-slim-bullseye
+Directory: target/openjdk-19-slim-bullseye/tools-deps
+
+Tags: openjdk-19-bullseye, openjdk-19-tools-deps-bullseye, openjdk-19-tools-deps-1.10.3.1087-bullseye
+Directory: target/openjdk-19-bullseye/tools-deps
+
+Tags: openjdk-19-lein-alpine, openjdk-19-lein-2.9.8-alpine
 Architectures: amd64
-Directory: alpine/lein
+Directory: target/openjdk-19-alpine/lein
 
-Tags: lein-2.8.1-alpine-onbuild, lein-alpine-onbuild, alpine-onbuild
+Tags: openjdk-19-boot-alpine, openjdk-19-boot-2.8.3-alpine
 Architectures: amd64
-Directory: alpine/lein/onbuild
+Directory: target/openjdk-19-alpine/boot
 
-Tags: boot-2.8.1, boot
-Directory: debian/boot
-
-Tags: boot-2.8.1-alpine, boot-alpine
+Tags: openjdk-19-alpine, openjdk-19-tools-deps-alpine, openjdk-19-tools-deps-1.10.3.1087-alpine
 Architectures: amd64
-Directory: alpine/boot
-
-Tags: tools-deps-1.9.0.394, tools-deps
-Directory: debian/tools-deps
-
-Tags: tools-deps-1.9.0.394-alpine, tools-deps-alpine
-Architectures: amd64
-Directory: alpine/tools-deps
+Directory: target/openjdk-19-alpine/tools-deps

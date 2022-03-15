@@ -5,8 +5,12 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
 image="$1"
 
-# since we have curl in the liberty image, we'll use that
-clientImage="$1"
+# Use a client image with curl for testing
+clientImage='buildpack-deps:buster-curl'
+# ensure the clientImage is ready and available
+if ! docker image inspect "$clientImage" &> /dev/null; then
+	docker pull "$clientImage" > /dev/null
+fi
 
 serverImage="$1"
 
@@ -18,8 +22,10 @@ _request() {
 	local url="${1#/}"
 	shift
 
-	docker run --rm --link "$cid":open-liberty "$clientImage" \
-		wget -q -O - "$@" "http://open-liberty:9080/$url"
+	docker run --rm \
+		--link "$cid":open-liberty \
+		"$clientImage" \
+		curl -fsSL "$@" "http://open-liberty:9080/$url"
 }
 
 # Make sure that Open Liberty is listening

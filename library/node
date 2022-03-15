@@ -1,85 +1,166 @@
-# this file is generated via https://github.com/nodejs/docker-node/blob/26550a63bccd27928771aeb704c72de8ac540aeb/generate-stackbrew-library.sh
+# this file is generated via https://github.com/nodejs/docker-node/blob/57f92eddb5f960545f8549be10e20d5ecd67ddff/stackbrew.js
 
 Maintainers: The Node.js Docker Team <https://github.com/nodejs/docker-node> (@nodejs)
 GitRepo: https://github.com/nodejs/docker-node.git
+GitFetch: refs/heads/main
 
-Tags: 8.12.0-jessie, 8.12-jessie, 8-jessie, carbon-jessie, 8.12.0, 8.12, 8, carbon
-Architectures: arm32v7, arm64v8, amd64, i386, ppc64le, s390x
-GitCommit: 526c6e618300bdda0da4b3159df682cae83e14aa
-Directory: 8/jessie
+Tags: 17-alpine3.14, 17.7-alpine3.14, 17.7.1-alpine3.14, alpine3.14, current-alpine3.14
+Architectures: amd64, arm32v6, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 8a5843eb20862bf9a11d86f6f936b3bad21aca6b
+Directory: 17/alpine3.14
 
-Tags: 8.12.0-alpine, 8.12-alpine, 8-alpine, carbon-alpine
-Architectures: arm32v6, arm64v8, amd64, i386, ppc64le, s390x
-GitCommit: 526c6e618300bdda0da4b3159df682cae83e14aa
-Directory: 8/alpine
+Tags: 17-alpine, 17-alpine3.15, 17.7-alpine, 17.7-alpine3.15, 17.7.1-alpine, 17.7.1-alpine3.15, alpine, alpine3.15, current-alpine, current-alpine3.15
+Architectures: amd64, arm32v6, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 8a5843eb20862bf9a11d86f6f936b3bad21aca6b
+Directory: 17/alpine3.15
 
-Tags: 8.12.0-onbuild, 8.12-onbuild, 8-onbuild, carbon-onbuild
-Architectures: arm32v7, arm64v8, amd64, i386, ppc64le, s390x
-GitCommit: 526c6e618300bdda0da4b3159df682cae83e14aa
-Directory: 8/onbuild
+Tags: 17, 17-bullseye, 17.7, 17.7-bullseye, 17.7.1, 17.7.1-bullseye, bullseye, current, current-bullseye, latest
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 8a5843eb20862bf9a11d86f6f936b3bad21aca6b
+Directory: 17/bullseye
 
-Tags: 8.12.0-slim, 8.12-slim, 8-slim, carbon-slim
-Architectures: arm32v7, arm64v8, amd64, i386, ppc64le, s390x
-GitCommit: 526c6e618300bdda0da4b3159df682cae83e14aa
-Directory: 8/slim
+Tags: 17-bullseye-slim, 17-slim, 17.7-bullseye-slim, 17.7-slim, 17.7.1-bullseye-slim, 17.7.1-slim, bullseye-slim, current-bullseye-slim, current-slim, slim
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 8a5843eb20862bf9a11d86f6f936b3bad21aca6b
+Directory: 17/bullseye-slim
 
-Tags: 8.12.0-stretch, 8.12-stretch, 8-stretch, carbon-stretch
-Architectures: arm32v7, arm64v8, amd64, i386, ppc64le, s390x
-GitCommit: 526c6e618300bdda0da4b3159df682cae83e14aa
-Directory: 8/stretch
+Tags: 17-buster, 17.7-buster, 17.7.1-buster, buster, current-buster
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 8a5843eb20862bf9a11d86f6f936b3bad21aca6b
+Directory: 17/buster
 
-Tags: 6.14.4-jessie, 6.14-jessie, 6-jessie, boron-jessie, 6.14.4, 6.14, 6, boron
-Architectures: arm32v7, arm64v8, amd64, i386, ppc64le, s390x
-GitCommit: 72dd945d29dee5afa73956ebc971bf3a472442f7
-Directory: 6/jessie
+Tags: 17-buster-slim, 17.7-buster-slim, 17.7.1-buster-slim, buster-slim, current-buster-slim
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 8a5843eb20862bf9a11d86f6f936b3bad21aca6b
+Directory: 17/buster-slim
 
-Tags: 6.14.4-alpine, 6.14-alpine, 6-alpine, boron-alpine
-Architectures: amd64
-GitCommit: 72dd945d29dee5afa73956ebc971bf3a472442f7
-Directory: 6/alpine
+Tags: 17-stretch, 17.7-stretch, 17.7.1-stretch, current-stretch, stretch
+Architectures: amd64, arm32v7, arm64v8
+GitCommit: 8a5843eb20862bf9a11d86f6f936b3bad21aca6b
+Directory: 17/stretch
 
-Tags: 6.14.4-onbuild, 6.14-onbuild, 6-onbuild, boron-onbuild
-Architectures: arm32v7, arm64v8, amd64, i386, ppc64le, s390x
-GitCommit: 72dd945d29dee5afa73956ebc971bf3a472442f7
-Directory: 6/onbuild
+Tags: 17-stretch-slim, 17.7-stretch-slim, 17.7.1-stretch-slim, current-stretch-slim, stretch-slim
+Architectures: amd64, arm32v7, arm64v8
+GitCommit: 8a5843eb20862bf9a11d86f6f936b3bad21aca6b
+Directory: 17/stretch-slim
 
-Tags: 6.14.4-slim, 6.14-slim, 6-slim, boron-slim
-Architectures: arm32v7, arm64v8, amd64, i386, ppc64le, s390x
-GitCommit: 72dd945d29dee5afa73956ebc971bf3a472442f7
-Directory: 6/slim
+Tags: 16-alpine3.14, 16.14-alpine3.14, 16.14.0-alpine3.14, gallium-alpine3.14, lts-alpine3.14
+Architectures: amd64, arm32v6, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 50c2806d4af0b991ed853072741a30e5d0cb777a
+Directory: 16/alpine3.14
 
-Tags: 6.14.4-stretch, 6.14-stretch, 6-stretch, boron-stretch
-Architectures: arm32v7, arm64v8, amd64, i386, ppc64le, s390x
-GitCommit: 72dd945d29dee5afa73956ebc971bf3a472442f7
-Directory: 6/stretch
+Tags: 16-alpine, 16-alpine3.15, 16.14-alpine, 16.14-alpine3.15, 16.14.0-alpine, 16.14.0-alpine3.15, gallium-alpine, gallium-alpine3.15, lts-alpine, lts-alpine3.15
+Architectures: amd64, arm32v6, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 50c2806d4af0b991ed853072741a30e5d0cb777a
+Directory: 16/alpine3.15
 
-Tags: 10.12.0-jessie, 10.12-jessie, 10-jessie, jessie, 10.12.0, 10.12, 10, latest
-Architectures: arm32v7, arm64v8, amd64, i386, ppc64le, s390x
-GitCommit: 45fa3ebe94598758b9c9e4a382236fc7e879e2e6
-Directory: 10/jessie
+Tags: 16-bullseye, 16.14-bullseye, 16.14.0-bullseye, gallium-bullseye, lts-bullseye
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 50c2806d4af0b991ed853072741a30e5d0cb777a
+Directory: 16/bullseye
 
-Tags: 10.12.0-alpine, 10.12-alpine, 10-alpine, alpine
-Architectures: arm32v6, arm64v8, amd64, i386, ppc64le, s390x
-GitCommit: 45fa3ebe94598758b9c9e4a382236fc7e879e2e6
-Directory: 10/alpine
+Tags: 16-bullseye-slim, 16.14-bullseye-slim, 16.14.0-bullseye-slim, gallium-bullseye-slim, lts-bullseye-slim
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 50c2806d4af0b991ed853072741a30e5d0cb777a
+Directory: 16/bullseye-slim
 
-Tags: 10.12.0-slim, 10.12-slim, 10-slim, slim
-Architectures: arm32v7, arm64v8, amd64, i386, ppc64le, s390x
-GitCommit: 45fa3ebe94598758b9c9e4a382236fc7e879e2e6
-Directory: 10/slim
+Tags: 16, 16-buster, 16.14, 16.14-buster, 16.14.0, 16.14.0-buster, gallium, gallium-buster, lts, lts-buster, lts-gallium
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 50c2806d4af0b991ed853072741a30e5d0cb777a
+Directory: 16/buster
 
-Tags: 10.12.0-stretch, 10.12-stretch, 10-stretch, stretch
-Architectures: arm32v7, arm64v8, amd64, i386, ppc64le, s390x
-GitCommit: 45fa3ebe94598758b9c9e4a382236fc7e879e2e6
-Directory: 10/stretch
+Tags: 16-buster-slim, 16-slim, 16.14-buster-slim, 16.14-slim, 16.14.0-buster-slim, 16.14.0-slim, gallium-buster-slim, gallium-slim, lts-buster-slim, lts-slim
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 50c2806d4af0b991ed853072741a30e5d0cb777a
+Directory: 16/buster-slim
 
-Tags: chakracore-8.11.1, chakracore-8.11, chakracore-8
-Architectures: amd64
-GitCommit: 947280600648b70e067d35415d6812fd03127def
-Directory: chakracore/8
+Tags: 16-stretch, 16.14-stretch, 16.14.0-stretch, gallium-stretch, lts-stretch
+Architectures: amd64, arm32v7, arm64v8
+GitCommit: 50c2806d4af0b991ed853072741a30e5d0cb777a
+Directory: 16/stretch
 
-Tags: chakracore-10.6.0, chakracore-10.6, chakracore-10, chakracore
-Architectures: amd64
-GitCommit: ea61a26000dbc3b90708f4f024614dc41c94346e
-Directory: chakracore/10
+Tags: 16-stretch-slim, 16.14-stretch-slim, 16.14.0-stretch-slim, gallium-stretch-slim, lts-stretch-slim
+Architectures: amd64, arm32v7, arm64v8
+GitCommit: 50c2806d4af0b991ed853072741a30e5d0cb777a
+Directory: 16/stretch-slim
+
+Tags: 14-alpine3.14, 14.19-alpine3.14, 14.19.0-alpine3.14, fermium-alpine3.14
+Architectures: amd64, arm32v6, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: b36041b26d8423f1838fb8232411a12f882cbb6a
+Directory: 14/alpine3.14
+
+Tags: 14-alpine, 14-alpine3.15, 14.19-alpine, 14.19-alpine3.15, 14.19.0-alpine, 14.19.0-alpine3.15, fermium-alpine, fermium-alpine3.15
+Architectures: amd64, arm32v6, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: b36041b26d8423f1838fb8232411a12f882cbb6a
+Directory: 14/alpine3.15
+
+Tags: 14-bullseye, 14.19-bullseye, 14.19.0-bullseye, fermium-bullseye
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: b36041b26d8423f1838fb8232411a12f882cbb6a
+Directory: 14/bullseye
+
+Tags: 14-bullseye-slim, 14.19-bullseye-slim, 14.19.0-bullseye-slim, fermium-bullseye-slim
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: b36041b26d8423f1838fb8232411a12f882cbb6a
+Directory: 14/bullseye-slim
+
+Tags: 14-buster, 14.19-buster, 14.19.0-buster, fermium-buster
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: b36041b26d8423f1838fb8232411a12f882cbb6a
+Directory: 14/buster
+
+Tags: 14-buster-slim, 14.19-buster-slim, 14.19.0-buster-slim, fermium-buster-slim
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: b36041b26d8423f1838fb8232411a12f882cbb6a
+Directory: 14/buster-slim
+
+Tags: 14, 14-stretch, 14.19, 14.19-stretch, 14.19.0, 14.19.0-stretch, fermium, fermium-stretch
+Architectures: amd64, arm32v7, arm64v8
+GitCommit: b36041b26d8423f1838fb8232411a12f882cbb6a
+Directory: 14/stretch
+
+Tags: 14-slim, 14-stretch-slim, 14.19-slim, 14.19-stretch-slim, 14.19.0-slim, 14.19.0-stretch-slim, fermium-slim, fermium-stretch-slim
+Architectures: amd64, arm32v7, arm64v8
+GitCommit: b36041b26d8423f1838fb8232411a12f882cbb6a
+Directory: 14/stretch-slim
+
+Tags: 12-alpine3.14, 12.22-alpine3.14, 12.22.10-alpine3.14, erbium-alpine3.14
+Architectures: amd64, arm32v6, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 40ac15da3755945e22116d228f1cff8f5048a4ea
+Directory: 12/alpine3.14
+
+Tags: 12-alpine, 12-alpine3.15, 12.22-alpine, 12.22-alpine3.15, 12.22.10-alpine, 12.22.10-alpine3.15, erbium-alpine, erbium-alpine3.15
+Architectures: amd64, arm32v6, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 40ac15da3755945e22116d228f1cff8f5048a4ea
+Directory: 12/alpine3.15
+
+Tags: 12-bullseye, 12.22-bullseye, 12.22.10-bullseye, erbium-bullseye
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 40ac15da3755945e22116d228f1cff8f5048a4ea
+Directory: 12/bullseye
+
+Tags: 12-bullseye-slim, 12.22-bullseye-slim, 12.22.10-bullseye-slim, erbium-bullseye-slim
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 40ac15da3755945e22116d228f1cff8f5048a4ea
+Directory: 12/bullseye-slim
+
+Tags: 12-buster, 12.22-buster, 12.22.10-buster, erbium-buster
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 40ac15da3755945e22116d228f1cff8f5048a4ea
+Directory: 12/buster
+
+Tags: 12-buster-slim, 12.22-buster-slim, 12.22.10-buster-slim, erbium-buster-slim
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 40ac15da3755945e22116d228f1cff8f5048a4ea
+Directory: 12/buster-slim
+
+Tags: 12, 12-stretch, 12.22, 12.22-stretch, 12.22.10, 12.22.10-stretch, erbium, erbium-stretch
+Architectures: amd64, arm32v7, arm64v8
+GitCommit: 40ac15da3755945e22116d228f1cff8f5048a4ea
+Directory: 12/stretch
+
+Tags: 12-slim, 12-stretch-slim, 12.22-slim, 12.22-stretch-slim, 12.22.10-slim, 12.22.10-stretch-slim, erbium-slim, erbium-stretch-slim
+Architectures: amd64, arm32v7, arm64v8
+GitCommit: 40ac15da3755945e22116d228f1cff8f5048a4ea
+Directory: 12/stretch-slim
 

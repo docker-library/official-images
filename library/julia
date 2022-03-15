@@ -1,57 +1,110 @@
-# this file is generated via https://github.com/docker-library/julia/blob/19c41722f3d366865377bd2679b026a0ab1192cb/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/julia/blob/9c3bc606c8a83c7f65fb6ddf2b541be25785d9f4/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/julia.git
 
-Tags: 1.0.1-stretch, 1.0-stretch, 1-stretch, stretch
-SharedTags: 1.0.1, 1.0, 1, latest
-Architectures: amd64, i386
-GitCommit: bc6c8bde792335ec4b97ae58bbad10e965ecfaed
-Directory: 1.0/stretch
+Tags: 1.8.0-beta1-bullseye, 1.8-rc-bullseye
+SharedTags: 1.8.0-beta1, 1.8-rc
+Architectures: amd64, arm64v8, i386
+GitCommit: 716e0a0f8b6ee183790d3f81beccf3d6409f6f15
+Directory: 1.8-rc/bullseye
 
-Tags: 1.0.1-windowsservercore-ltsc2016, 1.0-windowsservercore-ltsc2016, 1-windowsservercore-ltsc2016, windowsservercore-ltsc2016
-SharedTags: 1.0.1, 1.0, 1, latest
+Tags: 1.8.0-beta1-buster, 1.8-rc-buster
+Architectures: amd64, arm64v8, i386
+GitCommit: 716e0a0f8b6ee183790d3f81beccf3d6409f6f15
+Directory: 1.8-rc/buster
+
+Tags: 1.8.0-beta1-alpine3.15, 1.8-rc-alpine3.15, 1.8.0-beta1-alpine, 1.8-rc-alpine
+Architectures: amd64
+GitCommit: 716e0a0f8b6ee183790d3f81beccf3d6409f6f15
+Directory: 1.8-rc/alpine3.15
+
+Tags: 1.8.0-beta1-alpine3.14, 1.8-rc-alpine3.14
+Architectures: amd64
+GitCommit: 716e0a0f8b6ee183790d3f81beccf3d6409f6f15
+Directory: 1.8-rc/alpine3.14
+
+Tags: 1.8.0-beta1-windowsservercore-ltsc2022, 1.8-rc-windowsservercore-ltsc2022
+SharedTags: 1.8.0-beta1, 1.8-rc, 1.8.0-beta1-windowsservercore, 1.8-rc-windowsservercore
 Architectures: windows-amd64
-GitCommit: bc6c8bde792335ec4b97ae58bbad10e965ecfaed
-Directory: 1.0/windows/windowsservercore-ltsc2016
-Constraints: windowsservercore-ltsc2016
+GitCommit: 716e0a0f8b6ee183790d3f81beccf3d6409f6f15
+Directory: 1.8-rc/windows/windowsservercore-ltsc2022
+Constraints: windowsservercore-ltsc2022
 
-Tags: 1.0.1-windowsservercore-1709, 1.0-windowsservercore-1709, 1-windowsservercore-1709, windowsservercore-1709
-SharedTags: 1.0.1, 1.0, 1, latest
+Tags: 1.8.0-beta1-windowsservercore-1809, 1.8-rc-windowsservercore-1809
+SharedTags: 1.8.0-beta1, 1.8-rc, 1.8.0-beta1-windowsservercore, 1.8-rc-windowsservercore
 Architectures: windows-amd64
-GitCommit: bc6c8bde792335ec4b97ae58bbad10e965ecfaed
-Directory: 1.0/windows/windowsservercore-1709
-Constraints: windowsservercore-1709
+GitCommit: 716e0a0f8b6ee183790d3f81beccf3d6409f6f15
+Directory: 1.8-rc/windows/windowsservercore-1809
+Constraints: windowsservercore-1809
 
-Tags: 1.0.1-windowsservercore-1803, 1.0-windowsservercore-1803, 1-windowsservercore-1803, windowsservercore-1803
-SharedTags: 1.0.1, 1.0, 1, latest
+Tags: 1.7.2-bullseye, 1.7-bullseye, 1-bullseye, bullseye
+SharedTags: 1.7.2, 1.7, 1, latest
+Architectures: amd64, arm32v7, arm64v8, i386
+GitCommit: c18dc57da4780a32746fbfcc34ba17f45dc5f5d7
+Directory: 1.7/bullseye
+
+Tags: 1.7.2-buster, 1.7-buster, 1-buster, buster
+Architectures: amd64, arm32v7, arm64v8, i386
+GitCommit: c18dc57da4780a32746fbfcc34ba17f45dc5f5d7
+Directory: 1.7/buster
+
+Tags: 1.7.2-alpine3.15, 1.7-alpine3.15, 1-alpine3.15, alpine3.15, 1.7.2-alpine, 1.7-alpine, 1-alpine, alpine
+Architectures: amd64
+GitCommit: c18dc57da4780a32746fbfcc34ba17f45dc5f5d7
+Directory: 1.7/alpine3.15
+
+Tags: 1.7.2-alpine3.14, 1.7-alpine3.14, 1-alpine3.14, alpine3.14
+Architectures: amd64
+GitCommit: c18dc57da4780a32746fbfcc34ba17f45dc5f5d7
+Directory: 1.7/alpine3.14
+
+Tags: 1.7.2-windowsservercore-ltsc2022, 1.7-windowsservercore-ltsc2022, 1-windowsservercore-ltsc2022, windowsservercore-ltsc2022
+SharedTags: 1.7.2, 1.7, 1, latest, 1.7.2-windowsservercore, 1.7-windowsservercore, 1-windowsservercore, windowsservercore
 Architectures: windows-amd64
-GitCommit: bc6c8bde792335ec4b97ae58bbad10e965ecfaed
-Directory: 1.0/windows/windowsservercore-1803
-Constraints: windowsservercore-1803
+GitCommit: c18dc57da4780a32746fbfcc34ba17f45dc5f5d7
+Directory: 1.7/windows/windowsservercore-ltsc2022
+Constraints: windowsservercore-ltsc2022
 
-Tags: 0.7.0-stretch, 0.7-stretch, 0-stretch
-SharedTags: 0.7.0, 0.7, 0
-Architectures: amd64, i386
-GitCommit: 9e8bb3426385de28cfac6576baef9bf580fe0e33
-Directory: 0/stretch
-
-Tags: 0.7.0-jessie, 0.7-jessie, 0-jessie
-Architectures: amd64, i386
-GitCommit: 9e8bb3426385de28cfac6576baef9bf580fe0e33
-Directory: 0/jessie
-
-Tags: 0.7.0-windowsservercore-ltsc2016, 0.7-windowsservercore-ltsc2016, 0-windowsservercore-ltsc2016
-SharedTags: 0.7.0, 0.7, 0
+Tags: 1.7.2-windowsservercore-1809, 1.7-windowsservercore-1809, 1-windowsservercore-1809, windowsservercore-1809
+SharedTags: 1.7.2, 1.7, 1, latest, 1.7.2-windowsservercore, 1.7-windowsservercore, 1-windowsservercore, windowsservercore
 Architectures: windows-amd64
-GitCommit: 9e8bb3426385de28cfac6576baef9bf580fe0e33
-Directory: 0/windows/windowsservercore-ltsc2016
-Constraints: windowsservercore-ltsc2016
+GitCommit: c18dc57da4780a32746fbfcc34ba17f45dc5f5d7
+Directory: 1.7/windows/windowsservercore-1809
+Constraints: windowsservercore-1809
 
-Tags: 0.7.0-windowsservercore-1709, 0.7-windowsservercore-1709, 0-windowsservercore-1709
-SharedTags: 0.7.0, 0.7, 0
+Tags: 1.6.5-bullseye, 1.6-bullseye
+SharedTags: 1.6.5, 1.6
+Architectures: amd64, arm32v7, arm64v8, i386
+GitCommit: 52273f729e87e22389794a4eae4dbd3a38a6cd79
+Directory: 1.6/bullseye
+
+Tags: 1.6.5-buster, 1.6-buster
+Architectures: amd64, arm32v7, arm64v8, i386
+GitCommit: 52273f729e87e22389794a4eae4dbd3a38a6cd79
+Directory: 1.6/buster
+
+Tags: 1.6.5-alpine3.15, 1.6-alpine3.15, 1.6.5-alpine, 1.6-alpine
+Architectures: amd64
+GitCommit: 52273f729e87e22389794a4eae4dbd3a38a6cd79
+Directory: 1.6/alpine3.15
+
+Tags: 1.6.5-alpine3.14, 1.6-alpine3.14
+Architectures: amd64
+GitCommit: 52273f729e87e22389794a4eae4dbd3a38a6cd79
+Directory: 1.6/alpine3.14
+
+Tags: 1.6.5-windowsservercore-ltsc2022, 1.6-windowsservercore-ltsc2022
+SharedTags: 1.6.5, 1.6, 1.6.5-windowsservercore, 1.6-windowsservercore
 Architectures: windows-amd64
-GitCommit: 9e8bb3426385de28cfac6576baef9bf580fe0e33
-Directory: 0/windows/windowsservercore-1709
-Constraints: windowsservercore-1709
+GitCommit: 52273f729e87e22389794a4eae4dbd3a38a6cd79
+Directory: 1.6/windows/windowsservercore-ltsc2022
+Constraints: windowsservercore-ltsc2022
+
+Tags: 1.6.5-windowsservercore-1809, 1.6-windowsservercore-1809
+SharedTags: 1.6.5, 1.6, 1.6.5-windowsservercore, 1.6-windowsservercore
+Architectures: windows-amd64
+GitCommit: 52273f729e87e22389794a4eae4dbd3a38a6cd79
+Directory: 1.6/windows/windowsservercore-1809
+Constraints: windowsservercore-1809

@@ -1,105 +1,84 @@
-# this file is generated via https://github.com/docker-flink/docker-flink/blob/785381538521378794872bbf06dae4cded597492/generate-stackbrew-library.sh
+# this file is generated via https://github.com/apache/flink-docker/blob/187238c6b444457d9b57279715fa16b37fe59e45/generate-stackbrew-library.sh
 
-Maintainers: Patrick Lucas <me@patricklucas.com> (@patricklucas),
-             Ismaël Mejía <iemejia@gmail.com> (@iemejia)
-GitRepo: https://github.com/docker-flink/docker-flink.git
+Maintainers: The Apache Flink Project <dev@flink.apache.org> (@ApacheFlink)
+GitRepo: https://github.com/apache/flink-docker.git
 
-Tags: 1.5.4-hadoop24-scala_2.11, 1.5.4-hadoop24, 1.5-hadoop24
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: bc9cb41923b6f725f74fa6db23f17573b52781fa
-Directory: 1.5/hadoop24-scala_2.11-debian
+Tags: 1.14.4-scala_2.12-java8, 1.14-scala_2.12-java8, scala_2.12-java8, 1.14.4-scala_2.12, 1.14-scala_2.12, scala_2.12, 1.14.4-java8, 1.14-java8, java8, 1.14.4, 1.14, latest
+Architectures: amd64,arm64v8
+GitCommit: 5f88136a8cebd45d28d89e2a8d272b233ae98a1c
+Directory: ./1.14/scala_2.12-java8-debian
 
-Tags: 1.5.4-hadoop26-scala_2.11, 1.5.4-hadoop26, 1.5-hadoop26
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: bc9cb41923b6f725f74fa6db23f17573b52781fa
-Directory: 1.5/hadoop26-scala_2.11-debian
+Tags: 1.14.4-scala_2.12-java11, 1.14-scala_2.12-java11, scala_2.12-java11, 1.14.4-java11, 1.14-java11, java11
+Architectures: amd64,arm64v8
+GitCommit: 5f88136a8cebd45d28d89e2a8d272b233ae98a1c
+Directory: ./1.14/scala_2.12-java11-debian
 
-Tags: 1.5.4-hadoop27-scala_2.11, 1.5.4-hadoop27, 1.5-hadoop27
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: bc9cb41923b6f725f74fa6db23f17573b52781fa
-Directory: 1.5/hadoop27-scala_2.11-debian
+Tags: 1.14.4-scala_2.11-java8, 1.14-scala_2.11-java8, scala_2.11-java8, 1.14.4-scala_2.11, 1.14-scala_2.11, scala_2.11
+Architectures: amd64,arm64v8
+GitCommit: 5f88136a8cebd45d28d89e2a8d272b233ae98a1c
+Directory: ./1.14/scala_2.11-java8-debian
 
-Tags: 1.5.4-hadoop28-scala_2.11, 1.5.4-hadoop28, 1.5-hadoop28
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: bc9cb41923b6f725f74fa6db23f17573b52781fa
-Directory: 1.5/hadoop28-scala_2.11-debian
+Tags: 1.14.4-scala_2.11-java11, 1.14-scala_2.11-java11, scala_2.11-java11
+Architectures: amd64,arm64v8
+GitCommit: 5f88136a8cebd45d28d89e2a8d272b233ae98a1c
+Directory: ./1.14/scala_2.11-java11-debian
 
-Tags: 1.5.4-scala_2.11, 1.5-scala_2.11, 1.5.4, 1.5
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: bc9cb41923b6f725f74fa6db23f17573b52781fa
-Directory: 1.5/scala_2.11-debian
+Tags: 1.13.6-scala_2.12-java8, 1.13-scala_2.12-java8, 1.13.6-scala_2.12, 1.13-scala_2.12, 1.13.6-java8, 1.13-java8, 1.13.6, 1.13
+Architectures: amd64
+GitCommit: 3dd2ef7d59ff91800fc82be1f0f04b01db9080bf
+Directory: ./1.13/scala_2.12-java8-debian
 
-Tags: 1.5.4-hadoop24-scala_2.11-alpine, 1.5.4-hadoop24-alpine, 1.5-hadoop24-alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: bc9cb41923b6f725f74fa6db23f17573b52781fa
-Directory: 1.5/hadoop24-scala_2.11-alpine
+Tags: 1.13.6-scala_2.12-java11, 1.13-scala_2.12-java11, 1.13.6-java11, 1.13-java11
+Architectures: amd64
+GitCommit: 3dd2ef7d59ff91800fc82be1f0f04b01db9080bf
+Directory: ./1.13/scala_2.12-java11-debian
 
-Tags: 1.5.4-hadoop26-scala_2.11-alpine, 1.5.4-hadoop26-alpine, 1.5-hadoop26-alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: bc9cb41923b6f725f74fa6db23f17573b52781fa
-Directory: 1.5/hadoop26-scala_2.11-alpine
+Tags: 1.13.6-scala_2.11-java8, 1.13-scala_2.11-java8, 1.13.6-scala_2.11, 1.13-scala_2.11
+Architectures: amd64
+GitCommit: 3dd2ef7d59ff91800fc82be1f0f04b01db9080bf
+Directory: ./1.13/scala_2.11-java8-debian
 
-Tags: 1.5.4-hadoop27-scala_2.11-alpine, 1.5.4-hadoop27-alpine, 1.5-hadoop27-alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: bc9cb41923b6f725f74fa6db23f17573b52781fa
-Directory: 1.5/hadoop27-scala_2.11-alpine
+Tags: 1.13.6-scala_2.11-java11, 1.13-scala_2.11-java11
+Architectures: amd64
+GitCommit: 3dd2ef7d59ff91800fc82be1f0f04b01db9080bf
+Directory: ./1.13/scala_2.11-java11-debian
 
-Tags: 1.5.4-hadoop28-scala_2.11-alpine, 1.5.4-hadoop28-alpine, 1.5-hadoop28-alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: bc9cb41923b6f725f74fa6db23f17573b52781fa
-Directory: 1.5/hadoop28-scala_2.11-alpine
+Tags: 1.12.7-scala_2.12-java8, 1.12-scala_2.12-java8, 1.12.7-scala_2.12, 1.12-scala_2.12, 1.12.7-java8, 1.12-java8, 1.12.7, 1.12
+Architectures: amd64
+GitCommit: 79bcbe515597ed4639da10709742cdcbe331fbc3
+Directory: ./1.12/scala_2.12-java8-debian
 
-Tags: 1.5.4-scala_2.11-alpine, 1.5-scala_2.11-alpine, 1.5.4-alpine, 1.5-alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: bc9cb41923b6f725f74fa6db23f17573b52781fa
-Directory: 1.5/scala_2.11-alpine
+Tags: 1.12.7-scala_2.12-java11, 1.12-scala_2.12-java11, 1.12.7-java11, 1.12-java11
+Architectures: amd64
+GitCommit: 79bcbe515597ed4639da10709742cdcbe331fbc3
+Directory: ./1.12/scala_2.12-java11-debian
 
-Tags: 1.6.1-hadoop24-scala_2.11, 1.6.1-hadoop24, 1.6-hadoop24, hadoop24
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: bc9cb41923b6f725f74fa6db23f17573b52781fa
-Directory: 1.6/hadoop24-scala_2.11-debian
+Tags: 1.12.7-scala_2.11-java8, 1.12-scala_2.11-java8, 1.12.7-scala_2.11, 1.12-scala_2.11
+Architectures: amd64
+GitCommit: 79bcbe515597ed4639da10709742cdcbe331fbc3
+Directory: ./1.12/scala_2.11-java8-debian
 
-Tags: 1.6.1-hadoop26-scala_2.11, 1.6.1-hadoop26, 1.6-hadoop26, hadoop26
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: bc9cb41923b6f725f74fa6db23f17573b52781fa
-Directory: 1.6/hadoop26-scala_2.11-debian
+Tags: 1.12.7-scala_2.11-java11, 1.12-scala_2.11-java11
+Architectures: amd64
+GitCommit: 79bcbe515597ed4639da10709742cdcbe331fbc3
+Directory: ./1.12/scala_2.11-java11-debian
 
-Tags: 1.6.1-hadoop27-scala_2.11, 1.6.1-hadoop27, 1.6-hadoop27, hadoop27
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: bc9cb41923b6f725f74fa6db23f17573b52781fa
-Directory: 1.6/hadoop27-scala_2.11-debian
+Tags: 1.11.6-scala_2.12-java8, 1.11-scala_2.12-java8, 1.11.6-scala_2.12, 1.11-scala_2.12, 1.11.6-java8, 1.11-java8, 1.11.6, 1.11
+Architectures: amd64
+GitCommit: 79bcbe515597ed4639da10709742cdcbe331fbc3
+Directory: ./1.11/scala_2.12-java8-debian
 
-Tags: 1.6.1-hadoop28-scala_2.11, 1.6.1-hadoop28, 1.6-hadoop28, hadoop28
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: bc9cb41923b6f725f74fa6db23f17573b52781fa
-Directory: 1.6/hadoop28-scala_2.11-debian
+Tags: 1.11.6-scala_2.12-java11, 1.11-scala_2.12-java11, 1.11.6-java11, 1.11-java11
+Architectures: amd64
+GitCommit: 79bcbe515597ed4639da10709742cdcbe331fbc3
+Directory: ./1.11/scala_2.12-java11-debian
 
-Tags: 1.6.1-scala_2.11, 1.6-scala_2.11, scala_2.11, 1.6.1, 1.6, latest
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: bc9cb41923b6f725f74fa6db23f17573b52781fa
-Directory: 1.6/scala_2.11-debian
+Tags: 1.11.6-scala_2.11-java8, 1.11-scala_2.11-java8, 1.11.6-scala_2.11, 1.11-scala_2.11
+Architectures: amd64
+GitCommit: 79bcbe515597ed4639da10709742cdcbe331fbc3
+Directory: ./1.11/scala_2.11-java8-debian
 
-Tags: 1.6.1-hadoop24-scala_2.11-alpine, 1.6.1-hadoop24-alpine, 1.6-hadoop24-alpine, hadoop24-alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: bc9cb41923b6f725f74fa6db23f17573b52781fa
-Directory: 1.6/hadoop24-scala_2.11-alpine
-
-Tags: 1.6.1-hadoop26-scala_2.11-alpine, 1.6.1-hadoop26-alpine, 1.6-hadoop26-alpine, hadoop26-alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: bc9cb41923b6f725f74fa6db23f17573b52781fa
-Directory: 1.6/hadoop26-scala_2.11-alpine
-
-Tags: 1.6.1-hadoop27-scala_2.11-alpine, 1.6.1-hadoop27-alpine, 1.6-hadoop27-alpine, hadoop27-alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: bc9cb41923b6f725f74fa6db23f17573b52781fa
-Directory: 1.6/hadoop27-scala_2.11-alpine
-
-Tags: 1.6.1-hadoop28-scala_2.11-alpine, 1.6.1-hadoop28-alpine, 1.6-hadoop28-alpine, hadoop28-alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: bc9cb41923b6f725f74fa6db23f17573b52781fa
-Directory: 1.6/hadoop28-scala_2.11-alpine
-
-Tags: 1.6.1-scala_2.11-alpine, 1.6-scala_2.11-alpine, scala_2.11-alpine, 1.6.1-alpine, 1.6-alpine, alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: bc9cb41923b6f725f74fa6db23f17573b52781fa
-Directory: 1.6/scala_2.11-alpine
+Tags: 1.11.6-scala_2.11-java11, 1.11-scala_2.11-java11
+Architectures: amd64
+GitCommit: 79bcbe515597ed4639da10709742cdcbe331fbc3
+Directory: ./1.11/scala_2.11-java11-debian

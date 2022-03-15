@@ -1,13 +1,15 @@
-# maintainer: Frank Celler <info@arangodb.com> (@fceller)
-# maintainer: Wilfried Goesgens <w.goesgens@arangodb.org> (@dothebart)
+Maintainers: Frank Celler <info@arangodb.com> (@fceller), Wilfried Goesgens <w.goesgens@arangodb.org> (@dothebart), Vadim Kondratyev <vadim@arangodb.org> (@KVS85)
+GitRepo: https://github.com/arangodb/arangodb-docker
+GitFetch: refs/heads/official
 
-2.8: https://github.com/arangodb/arangodb-docker@d6fca9a137cd21345b1d380fc0e72daacb6130ce jessie/2.8.11
-2.8.11: https://github.com/arangodb/arangodb-docker@d6fca9a137cd21345b1d380fc0e72daacb6130ce jessie/2.8.11
+Tags: 3.7, 3.7.17
+GitCommit: df34e6d0c1bb3a70c3537669d482c329a1a14128
+Directory: alpine/3.7.17
 
+Tags: 3.8, 3.8.6
+GitCommit: af354ba85e29e2bee525677b45a321530235a38d
+Directory: alpine/3.8.6
 
-
-3.2: https://github.com/arangodb/arangodb-docker@f6d954276d7d22724a36967deebb8c8729476321 stretch/3.2.16
-3.2.16: https://github.com/arangodb/arangodb-docker@f6d954276d7d22724a36967deebb8c8729476321 stretch/3.2.16
-3.3: https://github.com/arangodb/arangodb-docker@1042a480fcf5d5d4e33b01c24c887236707ad752 stretch/3.3.19
-3.3.19: https://github.com/arangodb/arangodb-docker@1042a480fcf5d5d4e33b01c24c887236707ad752 stretch/3.3.19
-latest: https://github.com/arangodb/arangodb-docker@1042a480fcf5d5d4e33b01c24c887236707ad752 stretch/3.3.19
+Tags: 3.9, 3.9.0, latest
+GitCommit: de7e9211691614f105c7809cb13405ef5afa0be8
+Directory: alpine/3.9.0

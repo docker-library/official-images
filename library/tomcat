@@ -1,105 +1,550 @@
-# this file is generated via https://github.com/docker-library/tomcat/blob/185917c653a1a7504e5cc82c0a8ceb6a8a171bc8/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/tomcat/blob/79e2b9c00a5fc56c6a80d850a3930634bf097e44/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/tomcat.git
 
-Tags: 7.0.91-jre7, 7.0-jre7, 7-jre7, 7.0.91, 7.0, 7
-Architectures: amd64, arm32v5, arm32v7, i386
-GitCommit: 92855dba2d4edffc55bc04f9b779a0826747ff4c
-Directory: 7/jre7
+Tags: 10.1.0-M11-jdk17-openjdk-bullseye, 10.1.0-jdk17-openjdk-bullseye, 10.1-jdk17-openjdk-bullseye, 10.1.0-M11-jdk17-openjdk, 10.1.0-jdk17-openjdk, 10.1-jdk17-openjdk, 10.1.0-M11-jdk17, 10.1.0-jdk17, 10.1-jdk17
+Architectures: amd64, arm64v8
+GitCommit: cf87b7c5e92939c351a0fe3082f51c5f366ab4e8
+Directory: 10.1/jdk17/openjdk-bullseye
 
-Tags: 7.0.91-jre7-slim, 7.0-jre7-slim, 7-jre7-slim, 7.0.91-slim, 7.0-slim, 7-slim
-Architectures: amd64, arm32v5, arm32v7, i386
-GitCommit: 92855dba2d4edffc55bc04f9b779a0826747ff4c
-Directory: 7/jre7-slim
+Tags: 10.1.0-M11-jdk17-openjdk-buster, 10.1.0-jdk17-openjdk-buster, 10.1-jdk17-openjdk-buster
+Architectures: amd64, arm64v8
+GitCommit: cf87b7c5e92939c351a0fe3082f51c5f366ab4e8
+Directory: 10.1/jdk17/openjdk-buster
 
-Tags: 7.0.91-jre7-alpine, 7.0-jre7-alpine, 7-jre7-alpine, 7.0.91-alpine, 7.0-alpine, 7-alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: e0cfc71038fca93f3e1b54ef4a4db58fb506d5be
-Directory: 7/jre7-alpine
+Tags: 10.1.0-M11-jdk17-openjdk-slim-bullseye, 10.1.0-jdk17-openjdk-slim-bullseye, 10.1-jdk17-openjdk-slim-bullseye, 10.1.0-M11-jdk17-openjdk-slim, 10.1.0-jdk17-openjdk-slim, 10.1-jdk17-openjdk-slim
+Architectures: amd64, arm64v8
+GitCommit: cf87b7c5e92939c351a0fe3082f51c5f366ab4e8
+Directory: 10.1/jdk17/openjdk-slim-bullseye
 
-Tags: 7.0.91-jre8, 7.0-jre8, 7-jre8
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 92855dba2d4edffc55bc04f9b779a0826747ff4c
-Directory: 7/jre8
+Tags: 10.1.0-M11-jdk17-openjdk-slim-buster, 10.1.0-jdk17-openjdk-slim-buster, 10.1-jdk17-openjdk-slim-buster
+Architectures: amd64, arm64v8
+GitCommit: cf87b7c5e92939c351a0fe3082f51c5f366ab4e8
+Directory: 10.1/jdk17/openjdk-slim-buster
 
-Tags: 7.0.91-jre8-slim, 7.0-jre8-slim, 7-jre8-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 92855dba2d4edffc55bc04f9b779a0826747ff4c
-Directory: 7/jre8-slim
+Tags: 10.1.0-M11-jdk17-corretto, 10.1.0-jdk17-corretto, 10.1-jdk17-corretto
+Architectures: amd64, arm64v8
+GitCommit: cf87b7c5e92939c351a0fe3082f51c5f366ab4e8
+Directory: 10.1/jdk17/corretto
 
-Tags: 7.0.91-jre8-alpine, 7.0-jre8-alpine, 7-jre8-alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: e0cfc71038fca93f3e1b54ef4a4db58fb506d5be
-Directory: 7/jre8-alpine
+Tags: 10.1.0-M11-jdk17-temurin-focal, 10.1.0-jdk17-temurin-focal, 10.1-jdk17-temurin-focal, 10.1.0-M11-jdk17-temurin, 10.1.0-jdk17-temurin, 10.1-jdk17-temurin
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: cf87b7c5e92939c351a0fe3082f51c5f366ab4e8
+Directory: 10.1/jdk17/temurin-focal
 
-Tags: 8.5.34-jre8, 8.5-jre8, 8-jre8, jre8, 8.5.34, 8.5, 8, latest
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: dec5126a93c8b4bdbb7480e3bccdc4ca13c024fd
-Directory: 8.5/jre8
+Tags: 10.1.0-M11-jre17-temurin-focal, 10.1.0-jre17-temurin-focal, 10.1-jre17-temurin-focal, 10.1.0-M11-jre17-temurin, 10.1.0-jre17-temurin, 10.1-jre17-temurin
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: cf87b7c5e92939c351a0fe3082f51c5f366ab4e8
+Directory: 10.1/jre17/temurin-focal
 
-Tags: 8.5.34-jre8-slim, 8.5-jre8-slim, 8-jre8-slim, jre8-slim, 8.5.34-slim, 8.5-slim, 8-slim, slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: dec5126a93c8b4bdbb7480e3bccdc4ca13c024fd
-Directory: 8.5/jre8-slim
+Tags: 10.1.0-M11-jdk16-temurin-focal, 10.1.0-jdk16-temurin-focal, 10.1-jdk16-temurin-focal, 10.1.0-M11-jdk16-temurin, 10.1.0-jdk16-temurin, 10.1-jdk16-temurin
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: cf87b7c5e92939c351a0fe3082f51c5f366ab4e8
+Directory: 10.1/jdk16/temurin-focal
 
-Tags: 8.5.34-jre8-alpine, 8.5-jre8-alpine, 8-jre8-alpine, jre8-alpine, 8.5.34-alpine, 8.5-alpine, 8-alpine, alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: af1646c18d6398e6cf27a29d32ff58b994d2566e
-Directory: 8.5/jre8-alpine
+Tags: 10.1.0-M11-jdk11-openjdk-bullseye, 10.1.0-jdk11-openjdk-bullseye, 10.1-jdk11-openjdk-bullseye, 10.1.0-M11-jdk11-openjdk, 10.1.0-jdk11-openjdk, 10.1-jdk11-openjdk, 10.1.0-M11-jdk11, 10.1.0-jdk11, 10.1-jdk11, 10.1.0-M11, 10.1.0, 10.1
+Architectures: amd64, arm64v8
+GitCommit: cf87b7c5e92939c351a0fe3082f51c5f366ab4e8
+Directory: 10.1/jdk11/openjdk-bullseye
 
-Tags: 8.5.34-jre10, 8.5-jre10, 8-jre10, jre10
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: dec5126a93c8b4bdbb7480e3bccdc4ca13c024fd
-Directory: 8.5/jre10
+Tags: 10.1.0-M11-jre11-openjdk-bullseye, 10.1.0-jre11-openjdk-bullseye, 10.1-jre11-openjdk-bullseye, 10.1.0-M11-jre11-openjdk, 10.1.0-jre11-openjdk, 10.1-jre11-openjdk, 10.1.0-M11-jre11, 10.1.0-jre11, 10.1-jre11
+Architectures: amd64, arm64v8
+GitCommit: cf87b7c5e92939c351a0fe3082f51c5f366ab4e8
+Directory: 10.1/jre11/openjdk-bullseye
 
-Tags: 8.5.34-jre10-slim, 8.5-jre10-slim, 8-jre10-slim, jre10-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: dec5126a93c8b4bdbb7480e3bccdc4ca13c024fd
-Directory: 8.5/jre10-slim
+Tags: 10.1.0-M11-jdk11-openjdk-buster, 10.1.0-jdk11-openjdk-buster, 10.1-jdk11-openjdk-buster
+Architectures: amd64, arm64v8
+GitCommit: cf87b7c5e92939c351a0fe3082f51c5f366ab4e8
+Directory: 10.1/jdk11/openjdk-buster
 
-Tags: 8.5.34-jre11, 8.5-jre11, 8-jre11, jre11
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 92bd4324e50c57fc1779ccc97c61aaa53bc0020d
-Directory: 8.5/jre11
+Tags: 10.1.0-M11-jre11-openjdk-buster, 10.1.0-jre11-openjdk-buster, 10.1-jre11-openjdk-buster
+Architectures: amd64, arm64v8
+GitCommit: cf87b7c5e92939c351a0fe3082f51c5f366ab4e8
+Directory: 10.1/jre11/openjdk-buster
 
-Tags: 8.5.34-jre11-slim, 8.5-jre11-slim, 8-jre11-slim, jre11-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 92bd4324e50c57fc1779ccc97c61aaa53bc0020d
-Directory: 8.5/jre11-slim
+Tags: 10.1.0-M11-jdk11-openjdk-slim-bullseye, 10.1.0-jdk11-openjdk-slim-bullseye, 10.1-jdk11-openjdk-slim-bullseye, 10.1.0-M11-jdk11-openjdk-slim, 10.1.0-jdk11-openjdk-slim, 10.1-jdk11-openjdk-slim
+Architectures: amd64, arm64v8
+GitCommit: cf87b7c5e92939c351a0fe3082f51c5f366ab4e8
+Directory: 10.1/jdk11/openjdk-slim-bullseye
 
-Tags: 9.0.12-jre8, 9.0-jre8, 9-jre8
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 56e65662f0e151aed90bd255aa97a10de17b8316
-Directory: 9.0/jre8
+Tags: 10.1.0-M11-jre11-openjdk-slim-bullseye, 10.1.0-jre11-openjdk-slim-bullseye, 10.1-jre11-openjdk-slim-bullseye, 10.1.0-M11-jre11-openjdk-slim, 10.1.0-jre11-openjdk-slim, 10.1-jre11-openjdk-slim
+Architectures: amd64, arm64v8
+GitCommit: cf87b7c5e92939c351a0fe3082f51c5f366ab4e8
+Directory: 10.1/jre11/openjdk-slim-bullseye
 
-Tags: 9.0.12-jre8-slim, 9.0-jre8-slim, 9-jre8-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 56e65662f0e151aed90bd255aa97a10de17b8316
-Directory: 9.0/jre8-slim
+Tags: 10.1.0-M11-jdk11-openjdk-slim-buster, 10.1.0-jdk11-openjdk-slim-buster, 10.1-jdk11-openjdk-slim-buster
+Architectures: amd64, arm64v8
+GitCommit: cf87b7c5e92939c351a0fe3082f51c5f366ab4e8
+Directory: 10.1/jdk11/openjdk-slim-buster
 
-Tags: 9.0.12-jre8-alpine, 9.0-jre8-alpine, 9-jre8-alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: 56e65662f0e151aed90bd255aa97a10de17b8316
-Directory: 9.0/jre8-alpine
+Tags: 10.1.0-M11-jre11-openjdk-slim-buster, 10.1.0-jre11-openjdk-slim-buster, 10.1-jre11-openjdk-slim-buster
+Architectures: amd64, arm64v8
+GitCommit: cf87b7c5e92939c351a0fe3082f51c5f366ab4e8
+Directory: 10.1/jre11/openjdk-slim-buster
 
-Tags: 9.0.12-jre10, 9.0-jre10, 9-jre10, 9.0.12, 9.0, 9
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 56e65662f0e151aed90bd255aa97a10de17b8316
-Directory: 9.0/jre10
+Tags: 10.1.0-M11-jdk11-corretto, 10.1.0-jdk11-corretto, 10.1-jdk11-corretto
+Architectures: amd64, arm64v8
+GitCommit: cf87b7c5e92939c351a0fe3082f51c5f366ab4e8
+Directory: 10.1/jdk11/corretto
 
-Tags: 9.0.12-jre10-slim, 9.0-jre10-slim, 9-jre10-slim, 9.0.12-slim, 9.0-slim, 9-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 56e65662f0e151aed90bd255aa97a10de17b8316
-Directory: 9.0/jre10-slim
+Tags: 10.1.0-M11-jdk11-temurin-focal, 10.1.0-jdk11-temurin-focal, 10.1-jdk11-temurin-focal, 10.1.0-M11-jdk11-temurin, 10.1.0-jdk11-temurin, 10.1-jdk11-temurin
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: cf87b7c5e92939c351a0fe3082f51c5f366ab4e8
+Directory: 10.1/jdk11/temurin-focal
 
-Tags: 9.0.12-jre11, 9.0-jre11, 9-jre11
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 92bd4324e50c57fc1779ccc97c61aaa53bc0020d
-Directory: 9.0/jre11
+Tags: 10.1.0-M11-jre11-temurin-focal, 10.1.0-jre11-temurin-focal, 10.1-jre11-temurin-focal, 10.1.0-M11-jre11-temurin, 10.1.0-jre11-temurin, 10.1-jre11-temurin
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: cf87b7c5e92939c351a0fe3082f51c5f366ab4e8
+Directory: 10.1/jre11/temurin-focal
 
-Tags: 9.0.12-jre11-slim, 9.0-jre11-slim, 9-jre11-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 92bd4324e50c57fc1779ccc97c61aaa53bc0020d
-Directory: 9.0/jre11-slim
+Tags: 10.0.17-jdk17-openjdk-bullseye, 10.0-jdk17-openjdk-bullseye, 10-jdk17-openjdk-bullseye, jdk17-openjdk-bullseye, 10.0.17-jdk17-openjdk, 10.0-jdk17-openjdk, 10-jdk17-openjdk, jdk17-openjdk, 10.0.17-jdk17, 10.0-jdk17, 10-jdk17, jdk17
+Architectures: amd64, arm64v8
+GitCommit: 4c87a455a77a4bf8362c1d7a68b950b5ae210476
+Directory: 10.0/jdk17/openjdk-bullseye
+
+Tags: 10.0.17-jdk17-openjdk-buster, 10.0-jdk17-openjdk-buster, 10-jdk17-openjdk-buster, jdk17-openjdk-buster
+Architectures: amd64, arm64v8
+GitCommit: 4c87a455a77a4bf8362c1d7a68b950b5ae210476
+Directory: 10.0/jdk17/openjdk-buster
+
+Tags: 10.0.17-jdk17-openjdk-slim-bullseye, 10.0-jdk17-openjdk-slim-bullseye, 10-jdk17-openjdk-slim-bullseye, jdk17-openjdk-slim-bullseye, 10.0.17-jdk17-openjdk-slim, 10.0-jdk17-openjdk-slim, 10-jdk17-openjdk-slim, jdk17-openjdk-slim
+Architectures: amd64, arm64v8
+GitCommit: 4c87a455a77a4bf8362c1d7a68b950b5ae210476
+Directory: 10.0/jdk17/openjdk-slim-bullseye
+
+Tags: 10.0.17-jdk17-openjdk-slim-buster, 10.0-jdk17-openjdk-slim-buster, 10-jdk17-openjdk-slim-buster, jdk17-openjdk-slim-buster
+Architectures: amd64, arm64v8
+GitCommit: 4c87a455a77a4bf8362c1d7a68b950b5ae210476
+Directory: 10.0/jdk17/openjdk-slim-buster
+
+Tags: 10.0.17-jdk17-corretto, 10.0-jdk17-corretto, 10-jdk17-corretto, jdk17-corretto
+Architectures: amd64, arm64v8
+GitCommit: 4c87a455a77a4bf8362c1d7a68b950b5ae210476
+Directory: 10.0/jdk17/corretto
+
+Tags: 10.0.17-jdk17-temurin-focal, 10.0-jdk17-temurin-focal, 10-jdk17-temurin-focal, jdk17-temurin-focal, 10.0.17-jdk17-temurin, 10.0-jdk17-temurin, 10-jdk17-temurin, jdk17-temurin
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 4c87a455a77a4bf8362c1d7a68b950b5ae210476
+Directory: 10.0/jdk17/temurin-focal
+
+Tags: 10.0.17-jre17-temurin-focal, 10.0-jre17-temurin-focal, 10-jre17-temurin-focal, jre17-temurin-focal, 10.0.17-jre17-temurin, 10.0-jre17-temurin, 10-jre17-temurin, jre17-temurin
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 4c87a455a77a4bf8362c1d7a68b950b5ae210476
+Directory: 10.0/jre17/temurin-focal
+
+Tags: 10.0.17-jdk16-temurin-focal, 10.0-jdk16-temurin-focal, 10-jdk16-temurin-focal, jdk16-temurin-focal, 10.0.17-jdk16-temurin, 10.0-jdk16-temurin, 10-jdk16-temurin, jdk16-temurin
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 4c87a455a77a4bf8362c1d7a68b950b5ae210476
+Directory: 10.0/jdk16/temurin-focal
+
+Tags: 10.0.17-jdk11-openjdk-bullseye, 10.0-jdk11-openjdk-bullseye, 10-jdk11-openjdk-bullseye, jdk11-openjdk-bullseye, 10.0.17-jdk11-openjdk, 10.0-jdk11-openjdk, 10-jdk11-openjdk, jdk11-openjdk, 10.0.17-jdk11, 10.0-jdk11, 10-jdk11, jdk11, 10.0.17, 10.0, 10, latest
+Architectures: amd64, arm64v8
+GitCommit: 4c87a455a77a4bf8362c1d7a68b950b5ae210476
+Directory: 10.0/jdk11/openjdk-bullseye
+
+Tags: 10.0.17-jre11-openjdk-bullseye, 10.0-jre11-openjdk-bullseye, 10-jre11-openjdk-bullseye, jre11-openjdk-bullseye, 10.0.17-jre11-openjdk, 10.0-jre11-openjdk, 10-jre11-openjdk, jre11-openjdk, 10.0.17-jre11, 10.0-jre11, 10-jre11, jre11
+Architectures: amd64, arm64v8
+GitCommit: 4c87a455a77a4bf8362c1d7a68b950b5ae210476
+Directory: 10.0/jre11/openjdk-bullseye
+
+Tags: 10.0.17-jdk11-openjdk-buster, 10.0-jdk11-openjdk-buster, 10-jdk11-openjdk-buster, jdk11-openjdk-buster
+Architectures: amd64, arm64v8
+GitCommit: 4c87a455a77a4bf8362c1d7a68b950b5ae210476
+Directory: 10.0/jdk11/openjdk-buster
+
+Tags: 10.0.17-jre11-openjdk-buster, 10.0-jre11-openjdk-buster, 10-jre11-openjdk-buster, jre11-openjdk-buster
+Architectures: amd64, arm64v8
+GitCommit: 4c87a455a77a4bf8362c1d7a68b950b5ae210476
+Directory: 10.0/jre11/openjdk-buster
+
+Tags: 10.0.17-jdk11-openjdk-slim-bullseye, 10.0-jdk11-openjdk-slim-bullseye, 10-jdk11-openjdk-slim-bullseye, jdk11-openjdk-slim-bullseye, 10.0.17-jdk11-openjdk-slim, 10.0-jdk11-openjdk-slim, 10-jdk11-openjdk-slim, jdk11-openjdk-slim
+Architectures: amd64, arm64v8
+GitCommit: 4c87a455a77a4bf8362c1d7a68b950b5ae210476
+Directory: 10.0/jdk11/openjdk-slim-bullseye
+
+Tags: 10.0.17-jre11-openjdk-slim-bullseye, 10.0-jre11-openjdk-slim-bullseye, 10-jre11-openjdk-slim-bullseye, jre11-openjdk-slim-bullseye, 10.0.17-jre11-openjdk-slim, 10.0-jre11-openjdk-slim, 10-jre11-openjdk-slim, jre11-openjdk-slim
+Architectures: amd64, arm64v8
+GitCommit: 4c87a455a77a4bf8362c1d7a68b950b5ae210476
+Directory: 10.0/jre11/openjdk-slim-bullseye
+
+Tags: 10.0.17-jdk11-openjdk-slim-buster, 10.0-jdk11-openjdk-slim-buster, 10-jdk11-openjdk-slim-buster, jdk11-openjdk-slim-buster
+Architectures: amd64, arm64v8
+GitCommit: 4c87a455a77a4bf8362c1d7a68b950b5ae210476
+Directory: 10.0/jdk11/openjdk-slim-buster
+
+Tags: 10.0.17-jre11-openjdk-slim-buster, 10.0-jre11-openjdk-slim-buster, 10-jre11-openjdk-slim-buster, jre11-openjdk-slim-buster
+Architectures: amd64, arm64v8
+GitCommit: 4c87a455a77a4bf8362c1d7a68b950b5ae210476
+Directory: 10.0/jre11/openjdk-slim-buster
+
+Tags: 10.0.17-jdk11-corretto, 10.0-jdk11-corretto, 10-jdk11-corretto, jdk11-corretto
+Architectures: amd64, arm64v8
+GitCommit: 4c87a455a77a4bf8362c1d7a68b950b5ae210476
+Directory: 10.0/jdk11/corretto
+
+Tags: 10.0.17-jdk11-temurin-focal, 10.0-jdk11-temurin-focal, 10-jdk11-temurin-focal, jdk11-temurin-focal, 10.0.17-jdk11-temurin, 10.0-jdk11-temurin, 10-jdk11-temurin, jdk11-temurin
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 4c87a455a77a4bf8362c1d7a68b950b5ae210476
+Directory: 10.0/jdk11/temurin-focal
+
+Tags: 10.0.17-jre11-temurin-focal, 10.0-jre11-temurin-focal, 10-jre11-temurin-focal, jre11-temurin-focal, 10.0.17-jre11-temurin, 10.0-jre11-temurin, 10-jre11-temurin, jre11-temurin
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 4c87a455a77a4bf8362c1d7a68b950b5ae210476
+Directory: 10.0/jre11/temurin-focal
+
+Tags: 10.0.17-jdk8-openjdk-bullseye, 10.0-jdk8-openjdk-bullseye, 10-jdk8-openjdk-bullseye, jdk8-openjdk-bullseye, 10.0.17-jdk8-openjdk, 10.0-jdk8-openjdk, 10-jdk8-openjdk, jdk8-openjdk, 10.0.17-jdk8, 10.0-jdk8, 10-jdk8, jdk8
+Architectures: amd64, arm64v8
+GitCommit: 4c87a455a77a4bf8362c1d7a68b950b5ae210476
+Directory: 10.0/jdk8/openjdk-bullseye
+
+Tags: 10.0.17-jre8-openjdk-bullseye, 10.0-jre8-openjdk-bullseye, 10-jre8-openjdk-bullseye, jre8-openjdk-bullseye, 10.0.17-jre8-openjdk, 10.0-jre8-openjdk, 10-jre8-openjdk, jre8-openjdk, 10.0.17-jre8, 10.0-jre8, 10-jre8, jre8
+Architectures: amd64, arm64v8
+GitCommit: 4c87a455a77a4bf8362c1d7a68b950b5ae210476
+Directory: 10.0/jre8/openjdk-bullseye
+
+Tags: 10.0.17-jdk8-openjdk-buster, 10.0-jdk8-openjdk-buster, 10-jdk8-openjdk-buster, jdk8-openjdk-buster
+Architectures: amd64, arm64v8
+GitCommit: 4c87a455a77a4bf8362c1d7a68b950b5ae210476
+Directory: 10.0/jdk8/openjdk-buster
+
+Tags: 10.0.17-jre8-openjdk-buster, 10.0-jre8-openjdk-buster, 10-jre8-openjdk-buster, jre8-openjdk-buster
+Architectures: amd64, arm64v8
+GitCommit: 4c87a455a77a4bf8362c1d7a68b950b5ae210476
+Directory: 10.0/jre8/openjdk-buster
+
+Tags: 10.0.17-jdk8-openjdk-slim-bullseye, 10.0-jdk8-openjdk-slim-bullseye, 10-jdk8-openjdk-slim-bullseye, jdk8-openjdk-slim-bullseye, 10.0.17-jdk8-openjdk-slim, 10.0-jdk8-openjdk-slim, 10-jdk8-openjdk-slim, jdk8-openjdk-slim
+Architectures: amd64, arm64v8
+GitCommit: 4c87a455a77a4bf8362c1d7a68b950b5ae210476
+Directory: 10.0/jdk8/openjdk-slim-bullseye
+
+Tags: 10.0.17-jre8-openjdk-slim-bullseye, 10.0-jre8-openjdk-slim-bullseye, 10-jre8-openjdk-slim-bullseye, jre8-openjdk-slim-bullseye, 10.0.17-jre8-openjdk-slim, 10.0-jre8-openjdk-slim, 10-jre8-openjdk-slim, jre8-openjdk-slim
+Architectures: amd64, arm64v8
+GitCommit: 4c87a455a77a4bf8362c1d7a68b950b5ae210476
+Directory: 10.0/jre8/openjdk-slim-bullseye
+
+Tags: 10.0.17-jdk8-openjdk-slim-buster, 10.0-jdk8-openjdk-slim-buster, 10-jdk8-openjdk-slim-buster, jdk8-openjdk-slim-buster
+Architectures: amd64, arm64v8
+GitCommit: 4c87a455a77a4bf8362c1d7a68b950b5ae210476
+Directory: 10.0/jdk8/openjdk-slim-buster
+
+Tags: 10.0.17-jre8-openjdk-slim-buster, 10.0-jre8-openjdk-slim-buster, 10-jre8-openjdk-slim-buster, jre8-openjdk-slim-buster
+Architectures: amd64, arm64v8
+GitCommit: 4c87a455a77a4bf8362c1d7a68b950b5ae210476
+Directory: 10.0/jre8/openjdk-slim-buster
+
+Tags: 10.0.17-jdk8-corretto, 10.0-jdk8-corretto, 10-jdk8-corretto, jdk8-corretto
+Architectures: amd64, arm64v8
+GitCommit: 4c87a455a77a4bf8362c1d7a68b950b5ae210476
+Directory: 10.0/jdk8/corretto
+
+Tags: 10.0.17-jdk8-temurin-focal, 10.0-jdk8-temurin-focal, 10-jdk8-temurin-focal, jdk8-temurin-focal, 10.0.17-jdk8-temurin, 10.0-jdk8-temurin, 10-jdk8-temurin, jdk8-temurin
+Architectures: amd64, arm32v7, arm64v8, ppc64le
+GitCommit: 4c87a455a77a4bf8362c1d7a68b950b5ae210476
+Directory: 10.0/jdk8/temurin-focal
+
+Tags: 10.0.17-jre8-temurin-focal, 10.0-jre8-temurin-focal, 10-jre8-temurin-focal, jre8-temurin-focal, 10.0.17-jre8-temurin, 10.0-jre8-temurin, 10-jre8-temurin, jre8-temurin
+Architectures: amd64, arm32v7, arm64v8, ppc64le
+GitCommit: 4c87a455a77a4bf8362c1d7a68b950b5ae210476
+Directory: 10.0/jre8/temurin-focal
+
+Tags: 9.0.59-jdk17-openjdk-bullseye, 9.0-jdk17-openjdk-bullseye, 9-jdk17-openjdk-bullseye, 9.0.59-jdk17-openjdk, 9.0-jdk17-openjdk, 9-jdk17-openjdk, 9.0.59-jdk17, 9.0-jdk17, 9-jdk17
+Architectures: amd64, arm64v8
+GitCommit: 0b17e070d74b66285bada07a78a5556cc9d0c0c9
+Directory: 9.0/jdk17/openjdk-bullseye
+
+Tags: 9.0.59-jdk17-openjdk-buster, 9.0-jdk17-openjdk-buster, 9-jdk17-openjdk-buster
+Architectures: amd64, arm64v8
+GitCommit: 0b17e070d74b66285bada07a78a5556cc9d0c0c9
+Directory: 9.0/jdk17/openjdk-buster
+
+Tags: 9.0.59-jdk17-openjdk-slim-bullseye, 9.0-jdk17-openjdk-slim-bullseye, 9-jdk17-openjdk-slim-bullseye, 9.0.59-jdk17-openjdk-slim, 9.0-jdk17-openjdk-slim, 9-jdk17-openjdk-slim
+Architectures: amd64, arm64v8
+GitCommit: 0b17e070d74b66285bada07a78a5556cc9d0c0c9
+Directory: 9.0/jdk17/openjdk-slim-bullseye
+
+Tags: 9.0.59-jdk17-openjdk-slim-buster, 9.0-jdk17-openjdk-slim-buster, 9-jdk17-openjdk-slim-buster
+Architectures: amd64, arm64v8
+GitCommit: 0b17e070d74b66285bada07a78a5556cc9d0c0c9
+Directory: 9.0/jdk17/openjdk-slim-buster
+
+Tags: 9.0.59-jdk17-corretto, 9.0-jdk17-corretto, 9-jdk17-corretto
+Architectures: amd64, arm64v8
+GitCommit: 0b17e070d74b66285bada07a78a5556cc9d0c0c9
+Directory: 9.0/jdk17/corretto
+
+Tags: 9.0.59-jdk17-temurin-focal, 9.0-jdk17-temurin-focal, 9-jdk17-temurin-focal, 9.0.59-jdk17-temurin, 9.0-jdk17-temurin, 9-jdk17-temurin
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 0b17e070d74b66285bada07a78a5556cc9d0c0c9
+Directory: 9.0/jdk17/temurin-focal
+
+Tags: 9.0.59-jre17-temurin-focal, 9.0-jre17-temurin-focal, 9-jre17-temurin-focal, 9.0.59-jre17-temurin, 9.0-jre17-temurin, 9-jre17-temurin
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 0b17e070d74b66285bada07a78a5556cc9d0c0c9
+Directory: 9.0/jre17/temurin-focal
+
+Tags: 9.0.59-jdk16-temurin-focal, 9.0-jdk16-temurin-focal, 9-jdk16-temurin-focal, 9.0.59-jdk16-temurin, 9.0-jdk16-temurin, 9-jdk16-temurin
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 0b17e070d74b66285bada07a78a5556cc9d0c0c9
+Directory: 9.0/jdk16/temurin-focal
+
+Tags: 9.0.59-jdk11-openjdk-bullseye, 9.0-jdk11-openjdk-bullseye, 9-jdk11-openjdk-bullseye, 9.0.59-jdk11-openjdk, 9.0-jdk11-openjdk, 9-jdk11-openjdk, 9.0.59-jdk11, 9.0-jdk11, 9-jdk11, 9.0.59, 9.0, 9
+Architectures: amd64, arm64v8
+GitCommit: 0b17e070d74b66285bada07a78a5556cc9d0c0c9
+Directory: 9.0/jdk11/openjdk-bullseye
+
+Tags: 9.0.59-jre11-openjdk-bullseye, 9.0-jre11-openjdk-bullseye, 9-jre11-openjdk-bullseye, 9.0.59-jre11-openjdk, 9.0-jre11-openjdk, 9-jre11-openjdk, 9.0.59-jre11, 9.0-jre11, 9-jre11
+Architectures: amd64, arm64v8
+GitCommit: 0b17e070d74b66285bada07a78a5556cc9d0c0c9
+Directory: 9.0/jre11/openjdk-bullseye
+
+Tags: 9.0.59-jdk11-openjdk-buster, 9.0-jdk11-openjdk-buster, 9-jdk11-openjdk-buster
+Architectures: amd64, arm64v8
+GitCommit: 0b17e070d74b66285bada07a78a5556cc9d0c0c9
+Directory: 9.0/jdk11/openjdk-buster
+
+Tags: 9.0.59-jre11-openjdk-buster, 9.0-jre11-openjdk-buster, 9-jre11-openjdk-buster
+Architectures: amd64, arm64v8
+GitCommit: 0b17e070d74b66285bada07a78a5556cc9d0c0c9
+Directory: 9.0/jre11/openjdk-buster
+
+Tags: 9.0.59-jdk11-openjdk-slim-bullseye, 9.0-jdk11-openjdk-slim-bullseye, 9-jdk11-openjdk-slim-bullseye, 9.0.59-jdk11-openjdk-slim, 9.0-jdk11-openjdk-slim, 9-jdk11-openjdk-slim
+Architectures: amd64, arm64v8
+GitCommit: 0b17e070d74b66285bada07a78a5556cc9d0c0c9
+Directory: 9.0/jdk11/openjdk-slim-bullseye
+
+Tags: 9.0.59-jre11-openjdk-slim-bullseye, 9.0-jre11-openjdk-slim-bullseye, 9-jre11-openjdk-slim-bullseye, 9.0.59-jre11-openjdk-slim, 9.0-jre11-openjdk-slim, 9-jre11-openjdk-slim
+Architectures: amd64, arm64v8
+GitCommit: 0b17e070d74b66285bada07a78a5556cc9d0c0c9
+Directory: 9.0/jre11/openjdk-slim-bullseye
+
+Tags: 9.0.59-jdk11-openjdk-slim-buster, 9.0-jdk11-openjdk-slim-buster, 9-jdk11-openjdk-slim-buster
+Architectures: amd64, arm64v8
+GitCommit: 0b17e070d74b66285bada07a78a5556cc9d0c0c9
+Directory: 9.0/jdk11/openjdk-slim-buster
+
+Tags: 9.0.59-jre11-openjdk-slim-buster, 9.0-jre11-openjdk-slim-buster, 9-jre11-openjdk-slim-buster
+Architectures: amd64, arm64v8
+GitCommit: 0b17e070d74b66285bada07a78a5556cc9d0c0c9
+Directory: 9.0/jre11/openjdk-slim-buster
+
+Tags: 9.0.59-jdk11-corretto, 9.0-jdk11-corretto, 9-jdk11-corretto
+Architectures: amd64, arm64v8
+GitCommit: 0b17e070d74b66285bada07a78a5556cc9d0c0c9
+Directory: 9.0/jdk11/corretto
+
+Tags: 9.0.59-jdk11-temurin-focal, 9.0-jdk11-temurin-focal, 9-jdk11-temurin-focal, 9.0.59-jdk11-temurin, 9.0-jdk11-temurin, 9-jdk11-temurin
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 0b17e070d74b66285bada07a78a5556cc9d0c0c9
+Directory: 9.0/jdk11/temurin-focal
+
+Tags: 9.0.59-jre11-temurin-focal, 9.0-jre11-temurin-focal, 9-jre11-temurin-focal, 9.0.59-jre11-temurin, 9.0-jre11-temurin, 9-jre11-temurin
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 0b17e070d74b66285bada07a78a5556cc9d0c0c9
+Directory: 9.0/jre11/temurin-focal
+
+Tags: 9.0.59-jdk8-openjdk-bullseye, 9.0-jdk8-openjdk-bullseye, 9-jdk8-openjdk-bullseye, 9.0.59-jdk8-openjdk, 9.0-jdk8-openjdk, 9-jdk8-openjdk, 9.0.59-jdk8, 9.0-jdk8, 9-jdk8
+Architectures: amd64, arm64v8
+GitCommit: 0b17e070d74b66285bada07a78a5556cc9d0c0c9
+Directory: 9.0/jdk8/openjdk-bullseye
+
+Tags: 9.0.59-jre8-openjdk-bullseye, 9.0-jre8-openjdk-bullseye, 9-jre8-openjdk-bullseye, 9.0.59-jre8-openjdk, 9.0-jre8-openjdk, 9-jre8-openjdk, 9.0.59-jre8, 9.0-jre8, 9-jre8
+Architectures: amd64, arm64v8
+GitCommit: 0b17e070d74b66285bada07a78a5556cc9d0c0c9
+Directory: 9.0/jre8/openjdk-bullseye
+
+Tags: 9.0.59-jdk8-openjdk-buster, 9.0-jdk8-openjdk-buster, 9-jdk8-openjdk-buster
+Architectures: amd64, arm64v8
+GitCommit: 0b17e070d74b66285bada07a78a5556cc9d0c0c9
+Directory: 9.0/jdk8/openjdk-buster
+
+Tags: 9.0.59-jre8-openjdk-buster, 9.0-jre8-openjdk-buster, 9-jre8-openjdk-buster
+Architectures: amd64, arm64v8
+GitCommit: 0b17e070d74b66285bada07a78a5556cc9d0c0c9
+Directory: 9.0/jre8/openjdk-buster
+
+Tags: 9.0.59-jdk8-openjdk-slim-bullseye, 9.0-jdk8-openjdk-slim-bullseye, 9-jdk8-openjdk-slim-bullseye, 9.0.59-jdk8-openjdk-slim, 9.0-jdk8-openjdk-slim, 9-jdk8-openjdk-slim
+Architectures: amd64, arm64v8
+GitCommit: 0b17e070d74b66285bada07a78a5556cc9d0c0c9
+Directory: 9.0/jdk8/openjdk-slim-bullseye
+
+Tags: 9.0.59-jre8-openjdk-slim-bullseye, 9.0-jre8-openjdk-slim-bullseye, 9-jre8-openjdk-slim-bullseye, 9.0.59-jre8-openjdk-slim, 9.0-jre8-openjdk-slim, 9-jre8-openjdk-slim
+Architectures: amd64, arm64v8
+GitCommit: 0b17e070d74b66285bada07a78a5556cc9d0c0c9
+Directory: 9.0/jre8/openjdk-slim-bullseye
+
+Tags: 9.0.59-jdk8-openjdk-slim-buster, 9.0-jdk8-openjdk-slim-buster, 9-jdk8-openjdk-slim-buster
+Architectures: amd64, arm64v8
+GitCommit: 0b17e070d74b66285bada07a78a5556cc9d0c0c9
+Directory: 9.0/jdk8/openjdk-slim-buster
+
+Tags: 9.0.59-jre8-openjdk-slim-buster, 9.0-jre8-openjdk-slim-buster, 9-jre8-openjdk-slim-buster
+Architectures: amd64, arm64v8
+GitCommit: 0b17e070d74b66285bada07a78a5556cc9d0c0c9
+Directory: 9.0/jre8/openjdk-slim-buster
+
+Tags: 9.0.59-jdk8-corretto, 9.0-jdk8-corretto, 9-jdk8-corretto
+Architectures: amd64, arm64v8
+GitCommit: 0b17e070d74b66285bada07a78a5556cc9d0c0c9
+Directory: 9.0/jdk8/corretto
+
+Tags: 9.0.59-jdk8-temurin-focal, 9.0-jdk8-temurin-focal, 9-jdk8-temurin-focal, 9.0.59-jdk8-temurin, 9.0-jdk8-temurin, 9-jdk8-temurin
+Architectures: amd64, arm32v7, arm64v8, ppc64le
+GitCommit: 0b17e070d74b66285bada07a78a5556cc9d0c0c9
+Directory: 9.0/jdk8/temurin-focal
+
+Tags: 9.0.59-jre8-temurin-focal, 9.0-jre8-temurin-focal, 9-jre8-temurin-focal, 9.0.59-jre8-temurin, 9.0-jre8-temurin, 9-jre8-temurin
+Architectures: amd64, arm32v7, arm64v8, ppc64le
+GitCommit: 0b17e070d74b66285bada07a78a5556cc9d0c0c9
+Directory: 9.0/jre8/temurin-focal
+
+Tags: 8.5.76-jdk17-openjdk-bullseye, 8.5-jdk17-openjdk-bullseye, 8-jdk17-openjdk-bullseye, 8.5.76-jdk17-openjdk, 8.5-jdk17-openjdk, 8-jdk17-openjdk, 8.5.76-jdk17, 8.5-jdk17, 8-jdk17
+Architectures: amd64, arm64v8
+GitCommit: 8d622bce32272ab0a5413e617952f2d786c82e2c
+Directory: 8.5/jdk17/openjdk-bullseye
+
+Tags: 8.5.76-jdk17-openjdk-buster, 8.5-jdk17-openjdk-buster, 8-jdk17-openjdk-buster
+Architectures: amd64, arm64v8
+GitCommit: 8d622bce32272ab0a5413e617952f2d786c82e2c
+Directory: 8.5/jdk17/openjdk-buster
+
+Tags: 8.5.76-jdk17-openjdk-slim-bullseye, 8.5-jdk17-openjdk-slim-bullseye, 8-jdk17-openjdk-slim-bullseye, 8.5.76-jdk17-openjdk-slim, 8.5-jdk17-openjdk-slim, 8-jdk17-openjdk-slim
+Architectures: amd64, arm64v8
+GitCommit: 8d622bce32272ab0a5413e617952f2d786c82e2c
+Directory: 8.5/jdk17/openjdk-slim-bullseye
+
+Tags: 8.5.76-jdk17-openjdk-slim-buster, 8.5-jdk17-openjdk-slim-buster, 8-jdk17-openjdk-slim-buster
+Architectures: amd64, arm64v8
+GitCommit: 8d622bce32272ab0a5413e617952f2d786c82e2c
+Directory: 8.5/jdk17/openjdk-slim-buster
+
+Tags: 8.5.76-jdk17-corretto, 8.5-jdk17-corretto, 8-jdk17-corretto
+Architectures: amd64, arm64v8
+GitCommit: 8d622bce32272ab0a5413e617952f2d786c82e2c
+Directory: 8.5/jdk17/corretto
+
+Tags: 8.5.76-jdk17-temurin-focal, 8.5-jdk17-temurin-focal, 8-jdk17-temurin-focal, 8.5.76-jdk17-temurin, 8.5-jdk17-temurin, 8-jdk17-temurin
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 8d622bce32272ab0a5413e617952f2d786c82e2c
+Directory: 8.5/jdk17/temurin-focal
+
+Tags: 8.5.76-jre17-temurin-focal, 8.5-jre17-temurin-focal, 8-jre17-temurin-focal, 8.5.76-jre17-temurin, 8.5-jre17-temurin, 8-jre17-temurin
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 8d622bce32272ab0a5413e617952f2d786c82e2c
+Directory: 8.5/jre17/temurin-focal
+
+Tags: 8.5.76-jdk16-temurin-focal, 8.5-jdk16-temurin-focal, 8-jdk16-temurin-focal, 8.5.76-jdk16-temurin, 8.5-jdk16-temurin, 8-jdk16-temurin
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 8d622bce32272ab0a5413e617952f2d786c82e2c
+Directory: 8.5/jdk16/temurin-focal
+
+Tags: 8.5.76-jdk11-openjdk-bullseye, 8.5-jdk11-openjdk-bullseye, 8-jdk11-openjdk-bullseye, 8.5.76-jdk11-openjdk, 8.5-jdk11-openjdk, 8-jdk11-openjdk, 8.5.76-jdk11, 8.5-jdk11, 8-jdk11, 8.5.76, 8.5, 8
+Architectures: amd64, arm64v8
+GitCommit: 8d622bce32272ab0a5413e617952f2d786c82e2c
+Directory: 8.5/jdk11/openjdk-bullseye
+
+Tags: 8.5.76-jre11-openjdk-bullseye, 8.5-jre11-openjdk-bullseye, 8-jre11-openjdk-bullseye, 8.5.76-jre11-openjdk, 8.5-jre11-openjdk, 8-jre11-openjdk, 8.5.76-jre11, 8.5-jre11, 8-jre11
+Architectures: amd64, arm64v8
+GitCommit: 8d622bce32272ab0a5413e617952f2d786c82e2c
+Directory: 8.5/jre11/openjdk-bullseye
+
+Tags: 8.5.76-jdk11-openjdk-buster, 8.5-jdk11-openjdk-buster, 8-jdk11-openjdk-buster
+Architectures: amd64, arm64v8
+GitCommit: 8d622bce32272ab0a5413e617952f2d786c82e2c
+Directory: 8.5/jdk11/openjdk-buster
+
+Tags: 8.5.76-jre11-openjdk-buster, 8.5-jre11-openjdk-buster, 8-jre11-openjdk-buster
+Architectures: amd64, arm64v8
+GitCommit: 8d622bce32272ab0a5413e617952f2d786c82e2c
+Directory: 8.5/jre11/openjdk-buster
+
+Tags: 8.5.76-jdk11-openjdk-slim-bullseye, 8.5-jdk11-openjdk-slim-bullseye, 8-jdk11-openjdk-slim-bullseye, 8.5.76-jdk11-openjdk-slim, 8.5-jdk11-openjdk-slim, 8-jdk11-openjdk-slim
+Architectures: amd64, arm64v8
+GitCommit: 8d622bce32272ab0a5413e617952f2d786c82e2c
+Directory: 8.5/jdk11/openjdk-slim-bullseye
+
+Tags: 8.5.76-jre11-openjdk-slim-bullseye, 8.5-jre11-openjdk-slim-bullseye, 8-jre11-openjdk-slim-bullseye, 8.5.76-jre11-openjdk-slim, 8.5-jre11-openjdk-slim, 8-jre11-openjdk-slim
+Architectures: amd64, arm64v8
+GitCommit: 8d622bce32272ab0a5413e617952f2d786c82e2c
+Directory: 8.5/jre11/openjdk-slim-bullseye
+
+Tags: 8.5.76-jdk11-openjdk-slim-buster, 8.5-jdk11-openjdk-slim-buster, 8-jdk11-openjdk-slim-buster
+Architectures: amd64, arm64v8
+GitCommit: 8d622bce32272ab0a5413e617952f2d786c82e2c
+Directory: 8.5/jdk11/openjdk-slim-buster
+
+Tags: 8.5.76-jre11-openjdk-slim-buster, 8.5-jre11-openjdk-slim-buster, 8-jre11-openjdk-slim-buster
+Architectures: amd64, arm64v8
+GitCommit: 8d622bce32272ab0a5413e617952f2d786c82e2c
+Directory: 8.5/jre11/openjdk-slim-buster
+
+Tags: 8.5.76-jdk11-corretto, 8.5-jdk11-corretto, 8-jdk11-corretto
+Architectures: amd64, arm64v8
+GitCommit: 8d622bce32272ab0a5413e617952f2d786c82e2c
+Directory: 8.5/jdk11/corretto
+
+Tags: 8.5.76-jdk11-temurin-focal, 8.5-jdk11-temurin-focal, 8-jdk11-temurin-focal, 8.5.76-jdk11-temurin, 8.5-jdk11-temurin, 8-jdk11-temurin
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 8d622bce32272ab0a5413e617952f2d786c82e2c
+Directory: 8.5/jdk11/temurin-focal
+
+Tags: 8.5.76-jre11-temurin-focal, 8.5-jre11-temurin-focal, 8-jre11-temurin-focal, 8.5.76-jre11-temurin, 8.5-jre11-temurin, 8-jre11-temurin
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 8d622bce32272ab0a5413e617952f2d786c82e2c
+Directory: 8.5/jre11/temurin-focal
+
+Tags: 8.5.76-jdk8-openjdk-bullseye, 8.5-jdk8-openjdk-bullseye, 8-jdk8-openjdk-bullseye, 8.5.76-jdk8-openjdk, 8.5-jdk8-openjdk, 8-jdk8-openjdk, 8.5.76-jdk8, 8.5-jdk8, 8-jdk8
+Architectures: amd64, arm64v8
+GitCommit: 8d622bce32272ab0a5413e617952f2d786c82e2c
+Directory: 8.5/jdk8/openjdk-bullseye
+
+Tags: 8.5.76-jre8-openjdk-bullseye, 8.5-jre8-openjdk-bullseye, 8-jre8-openjdk-bullseye, 8.5.76-jre8-openjdk, 8.5-jre8-openjdk, 8-jre8-openjdk, 8.5.76-jre8, 8.5-jre8, 8-jre8
+Architectures: amd64, arm64v8
+GitCommit: 8d622bce32272ab0a5413e617952f2d786c82e2c
+Directory: 8.5/jre8/openjdk-bullseye
+
+Tags: 8.5.76-jdk8-openjdk-buster, 8.5-jdk8-openjdk-buster, 8-jdk8-openjdk-buster
+Architectures: amd64, arm64v8
+GitCommit: 8d622bce32272ab0a5413e617952f2d786c82e2c
+Directory: 8.5/jdk8/openjdk-buster
+
+Tags: 8.5.76-jre8-openjdk-buster, 8.5-jre8-openjdk-buster, 8-jre8-openjdk-buster
+Architectures: amd64, arm64v8
+GitCommit: 8d622bce32272ab0a5413e617952f2d786c82e2c
+Directory: 8.5/jre8/openjdk-buster
+
+Tags: 8.5.76-jdk8-openjdk-slim-bullseye, 8.5-jdk8-openjdk-slim-bullseye, 8-jdk8-openjdk-slim-bullseye, 8.5.76-jdk8-openjdk-slim, 8.5-jdk8-openjdk-slim, 8-jdk8-openjdk-slim
+Architectures: amd64, arm64v8
+GitCommit: 8d622bce32272ab0a5413e617952f2d786c82e2c
+Directory: 8.5/jdk8/openjdk-slim-bullseye
+
+Tags: 8.5.76-jre8-openjdk-slim-bullseye, 8.5-jre8-openjdk-slim-bullseye, 8-jre8-openjdk-slim-bullseye, 8.5.76-jre8-openjdk-slim, 8.5-jre8-openjdk-slim, 8-jre8-openjdk-slim
+Architectures: amd64, arm64v8
+GitCommit: 8d622bce32272ab0a5413e617952f2d786c82e2c
+Directory: 8.5/jre8/openjdk-slim-bullseye
+
+Tags: 8.5.76-jdk8-openjdk-slim-buster, 8.5-jdk8-openjdk-slim-buster, 8-jdk8-openjdk-slim-buster
+Architectures: amd64, arm64v8
+GitCommit: 8d622bce32272ab0a5413e617952f2d786c82e2c
+Directory: 8.5/jdk8/openjdk-slim-buster
+
+Tags: 8.5.76-jre8-openjdk-slim-buster, 8.5-jre8-openjdk-slim-buster, 8-jre8-openjdk-slim-buster
+Architectures: amd64, arm64v8
+GitCommit: 8d622bce32272ab0a5413e617952f2d786c82e2c
+Directory: 8.5/jre8/openjdk-slim-buster
+
+Tags: 8.5.76-jdk8-corretto, 8.5-jdk8-corretto, 8-jdk8-corretto
+Architectures: amd64, arm64v8
+GitCommit: 8d622bce32272ab0a5413e617952f2d786c82e2c
+Directory: 8.5/jdk8/corretto
+
+Tags: 8.5.76-jdk8-temurin-focal, 8.5-jdk8-temurin-focal, 8-jdk8-temurin-focal, 8.5.76-jdk8-temurin, 8.5-jdk8-temurin, 8-jdk8-temurin
+Architectures: amd64, arm32v7, arm64v8, ppc64le
+GitCommit: 8d622bce32272ab0a5413e617952f2d786c82e2c
+Directory: 8.5/jdk8/temurin-focal
+
+Tags: 8.5.76-jre8-temurin-focal, 8.5-jre8-temurin-focal, 8-jre8-temurin-focal, 8.5.76-jre8-temurin, 8.5-jre8-temurin, 8-jre8-temurin
+Architectures: amd64, arm32v7, arm64v8, ppc64le
+GitCommit: 8d622bce32272ab0a5413e617952f2d786c82e2c
+Directory: 8.5/jre8/temurin-focal

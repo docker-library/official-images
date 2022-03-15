@@ -1,83 +1,63 @@
 Maintainers: Keegan Witt <keeganwitt@gmail.com> (@keeganwitt)
 GitRepo: https://github.com/keeganwitt/docker-gradle.git
-GitCommit: 1718fa65873e24d1e003dcd3828755e9fd39fa9d
 
-Tags: 4.10.2-jdk7, 4.10-jdk7, jdk7
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: jdk7
 
-Tags: 4.10.2-jre7, 4.10-jre7, jre7
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: jre7
+# Gradle 7.x
 
-Tags: 4.10.2-jdk7-alpine, 4.10-jdk7-alpine, jdk7-alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-Directory: jdk7-alpine
-
-Tags: 4.10.2-jdk7-slim, 4.10-jdk7-slim, jdk7-slim
-Architectures: amd64, arm32v5, arm32v7, i386
-Directory: jdk7-slim
-
-Tags: 4.10.2-jre7-alpine, 4.10-jre7-alpine, jre7-alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-Directory: jre7-alpine
-
-Tags: 4.10.2-jre7-slim, 4.10-jre7-slim, jre7-slim
-Architectures: amd64, arm32v5, arm32v7, i386
-Directory: jre7-slim
-
-Tags: 4.10.2-jdk8, 4.10-jdk8, jdk8, 4.10.2-jdk, 4.10-jdk, jdk, 4.10.2, 4.10, latest
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+Tags: 7.4.1-jdk8, 7.4-jdk8, 7-jdk8, jdk8
+Architectures: amd64, arm32v7, arm64v8, ppc64le
+GitCommit: 6e359bd3f1849544aac9076ab235e82051efb928
 Directory: jdk8
 
-Tags: 4.10.2-jre8, 4.10-jre8, jre8, 4.10.2-jre, 4.10-jre, jre
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: jre8
-
-Tags: 4.10.2-jdk8-alpine, 4.10-jdk8-alpine, jdk8-alpine, 4.10.2-jdk-alpine, 4.10-jdk-alpine, jdk-alpine, 4.10.2-alpine, 4.10-alpine, alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-Directory: jdk8-alpine
-
-Tags: 4.10.2-jdk8-slim, 4.10-jdk8-slim, jdk8-slim, 4.10.2-jdk-slim, 4.10-jdk-slim, jdk-slim, 4.10.2-slim, 4.10-slim, slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: jdk8-slim
-
-Tags: 4.10.2-jre8-alpine, 4.10-jre8-alpine, jre8-alpine, 4.10.2-jre-alpine, 4.10-jre-alpine, jre-alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-Directory: jre8-alpine
-
-Tags: 4.10.2-jre8-slim, 4.10-jre8-slim, jre8-slim, 4.10.2-jre-slim, 4.10-jre-slim, jre-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: jre8-slim
-
-Tags: 4.10.2-jdk10, 4.10-jdk10, jdk10
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: jdk10
-
-Tags: 4.10.2-jdk10-slim, 4.10-jdk10-slim, jdk10-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: jdk10-slim
-
-Tags: 4.10.2-jre10, 4.10-jre10, jre10
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: jre10
-
-Tags: 4.10.2-jre10-slim, 4.10-jre10-slim, jre10-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: jre10-slim
-
-Tags: 4.10.2-jdk11, 4.10-jdk11, jdk11
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
+Tags: 7.4.1-jdk11, 7.4-jdk11, 7-jdk11, jdk11
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 6e359bd3f1849544aac9076ab235e82051efb928
 Directory: jdk11
 
-Tags: 4.10.2-jdk11-slim, 4.10-jdk11-slim, jdk11-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: jdk11-slim
+Tags: 7.4.1-jdk11-alpine, 7.4-jdk11-alpine, 7-jdk11-alpine, jdk11-alpine
+Architectures: amd64
+GitCommit: 6e359bd3f1849544aac9076ab235e82051efb928
+Directory: jdk11-alpine
 
-Tags: 4.10.2-jre11, 4.10-jre11, jre11
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: jre11
+Tags: 7.4.1-jdk17, 7.4-jdk17, 7-jdk17, jdk17, 7.4.1-jdk, 7.4-jdk, 7-jdk, jdk, 7.4.1, 7.4, 7, latest
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 6e359bd3f1849544aac9076ab235e82051efb928
+Directory: jdk17
 
-Tags: 4.10.2-jre11-slim, 4.10-jre11-slim, jre11-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: jre11-slim
+Tags: 7.4.1-jdk17-alpine, 7.4-jdk17-alpine, 7-jdk17-alpine, jdk17-alpine, 7.4.1-jdk-alpine, 7.4-jdk-alpine, 7-jdk-alpine, jdk-alpine, 7.4.1-alpine, 7.4-alpine, 7-alpine, alpine
+Architectures: amd64
+GitCommit: 6e359bd3f1849544aac9076ab235e82051efb928
+Directory: jdk17-alpine
+
+
+# Gradle 6.x
+
+Tags: 6.9.2-jdk8, 6.9-jdk8, 6-jdk8
+GitFetch: refs/heads/6
+Architectures: amd64, arm32v7, arm64v8, ppc64le
+GitCommit: 52b6facc824989b809f42b71ea158b54e0402587
+Directory: jdk8
+
+Tags: 6.9.2-jdk11, 6.9-jdk11, 6-jdk11
+GitFetch: refs/heads/6
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 52b6facc824989b809f42b71ea158b54e0402587
+Directory: jdk11
+
+Tags: 6.9.2-jdk11-alpine, 6.9-jdk11-alpine, 6-jdk11-alpine
+GitFetch: refs/heads/6
+Architectures: amd64
+GitCommit: 52b6facc824989b809f42b71ea158b54e0402587
+Directory: jdk11-alpine
+
+Tags: 6.9.2-jdk17, 6.9-jdk17, 6-jdk17, 6.9.2-jdk, 6.9-jdk, 6-jdk, 6.9.2, 6.9, 6
+GitFetch: refs/heads/6
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 52b6facc824989b809f42b71ea158b54e0402587
+Directory: jdk17
+
+Tags: 6.9.2-jdk17-alpine, 6.9-jdk17-alpine, 6-jdk17-alpine, 6.9.2-jdk-alpine, 6.9-jdk-alpine, 6-jdk-alpine, 6.9.2-alpine, 6.9-alpine, 6-alpine
+GitFetch: refs/heads/6
+Architectures: amd64
+GitCommit: 52b6facc824989b809f42b71ea158b54e0402587
+Directory: jdk17-alpine
