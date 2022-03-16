@@ -6,7 +6,44 @@ Maintainers: Ted Kremenek <kremenek@apple.com> (@tkremenek),
 GitRepo: https://github.com/apple/swift-docker.git
 GitFetch: refs/heads/main
 
-Tags: 5.5.3, 5.5, 5.5.3-bionic, 5.5-bionic, bionic, latest
+
+Tags: 5.6.0, 5.6, 5.6.0-bionic, 5.6-bionic, bionic, latest
+GitCommit: 9209c88bd08662371acc957ef5b7e01a8e666624
+Directory: 5.6/ubuntu/18.04
+
+Tags: 5.6.0-slim, 5.6-slim, 5.6.0-bionic-slim, 5.6-bionic-slim, bionic-slim, slim
+GitCommit: 9209c88bd08662371acc957ef5b7e01a8e666624
+Directory: 5.6/ubuntu/18.04/slim
+
+Tags: 5.6.0-focal-slim, 5.6-focal-slim, focal-slim
+Architectures: amd64, arm64v8
+GitCommit: 9209c88bd08662371acc957ef5b7e01a8e666624
+Directory: 5.6/ubuntu/20.04/slim
+
+Tags: 5.6.0-focal, 5.6-focal, focal
+Architectures: amd64, arm64v8
+GitCommit: 9209c88bd08662371acc957ef5b7e01a8e666624
+Directory: 5.6/ubuntu/20.04
+
+Tags: 5.6.0-amazonlinux2, 5.6-amazonlinux2, amazonlinux2
+Architectures: amd64, arm64v8
+GitCommit: 9209c88bd08662371acc957ef5b7e01a8e666624
+Directory: 5.6/amazonlinux/2
+
+Tags: 5.6.0-amazonlinux2-slim, 5.6-amazonlinux2-slim, amazonlinux2-slim
+Architectures: amd64, arm64v8
+GitCommit: 9209c88bd08662371acc957ef5b7e01a8e666624
+Directory: 5.6/amazonlinux/2/slim
+
+Tags: 5.6.0-centos7, 5.6-centos7, centos7
+GitCommit: 9209c88bd08662371acc957ef5b7e01a8e666624
+Directory: 5.6/centos/7
+
+Tags: 5.6.0-centos7-slim, 5.6-centos7-slim, centos7-slim
+GitCommit: 9209c88bd08662371acc957ef5b7e01a8e666624
+Directory: 5.6/centos/7/slim
+
+Tags: 5.5.3, 5.5, 5.5.3-bionic, 5.5-bionic
 GitCommit: 9394b31e064cf0d80eaab08b692a2886c7aea8fe
 Directory: 5.5/ubuntu/18.04
 
@@ -14,43 +51,35 @@ Tags: 5.5.3-xenial, 5.5-xenial, xenial
 GitCommit: 9394b31e064cf0d80eaab08b692a2886c7aea8fe
 Directory: 5.5/ubuntu/16.04
 
-Tags: 5.5.3-slim, 5.5-slim, 5.5.3-bionic-slim, 5.5-bionic-slim, bionic-slim, slim
+Tags: 5.5.3-slim, 5.5-slim, 5.5.3-bionic-slim, 5.5-bionic-slim
 GitCommit: 9394b31e064cf0d80eaab08b692a2886c7aea8fe
 Directory: 5.5/ubuntu/18.04/slim
 
-Tags: 5.5.3-xenial-slim, 5.5-xenial-slim, xenial-slim
+Tags: 5.5.3-xenial-slim, 5.5-xenial-slim
 GitCommit: 9394b31e064cf0d80eaab08b692a2886c7aea8fe
 Directory: 5.5/ubuntu/16.04/slim
 
-Tags: 5.5.3-focal-slim, 5.5-focal-slim, focal-slim
+Tags: 5.5.3-focal-slim, 5.5-focal-slim
 GitCommit: 9394b31e064cf0d80eaab08b692a2886c7aea8fe
 Directory: 5.5/ubuntu/20.04/slim
 
-Tags: 5.5.3-focal, 5.5-focal, focal
+Tags: 5.5.3-focal, 5.5-focal
 GitCommit: 9394b31e064cf0d80eaab08b692a2886c7aea8fe
 Directory: 5.5/ubuntu/20.04
 
-Tags: 5.5.3-amazonlinux2, 5.5-amazonlinux2, amazonlinux2
+Tags: 5.5.3-amazonlinux2, 5.5-amazonlinux2
 GitCommit: 9394b31e064cf0d80eaab08b692a2886c7aea8fe
 Directory: 5.5/amazonlinux/2
 
-Tags: 5.5.3-amazonlinux2-slim, 5.5-amazonlinux2-slim, amazonlinux2-slim
+Tags: 5.5.3-amazonlinux2-slim, 5.5-amazonlinux2-slim
 GitCommit: 9394b31e064cf0d80eaab08b692a2886c7aea8fe
 Directory: 5.5/amazonlinux/2/slim
 
-Tags: 5.5.2-centos8, 5.5-centos8, centos8
-GitCommit: ffca0bee2c784cdff103aac3b9101b7589ca9945
-Directory: 5.5/centos/8
-
-Tags: 5.5.2-centos8-slim, 5.5-centos8-slim, centos8-slim
-GitCommit: ffca0bee2c784cdff103aac3b9101b7589ca9945
-Directory: 5.5/centos/8/slim
-
-Tags: 5.5.3-centos7, 5.5-centos7, centos7
+Tags: 5.5.3-centos7, 5.5-centos7
 GitCommit: 9394b31e064cf0d80eaab08b692a2886c7aea8fe
 Directory: 5.5/centos/7
 
-Tags: 5.5.3-centos7-slim, 5.5-centos7-slim, centos7-slim
+Tags: 5.5.3-centos7-slim, 5.5-centos7-slim
 GitCommit: 9394b31e064cf0d80eaab08b692a2886c7aea8fe
 Directory: 5.5/centos/7/slim
 
@@ -85,14 +114,6 @@ Directory: 5.4/amazonlinux/2
 Tags: 5.4.3-amazonlinux2-slim, 5.4-amazonlinux2-slim
 GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
 Directory: 5.4/amazonlinux/2/slim
-
-Tags: 5.4.3-centos8, 5.4-centos8
-GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
-Directory: 5.4/centos/8
-
-Tags: 5.4.3-centos8-slim, 5.4-centos8-slim
-GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
-Directory: 5.4/centos/8/slim
 
 Tags: 5.4.3-centos7, 5.4-centos7
 GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
@@ -134,14 +155,6 @@ Tags: 5.3.3-amazonlinux2-slim, 5.3-amazonlinux2-slim
 GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
 Directory: 5.3/amazonlinux/2/slim
 
-Tags: 5.3.3-centos8, 5.3-centos8
-GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
-Directory: 5.3/centos/8
-
-Tags: 5.3.3-centos8-slim, 5.3-centos8-slim
-GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
-Directory: 5.3/centos/8/slim
-
 Tags: 5.3.3-centos7, 5.3-centos7
 GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
 Directory: 5.3/centos/7
@@ -181,14 +194,6 @@ Directory: 5.2/amazonlinux/2
 Tags: 5.2.5-amazonlinux2-slim, 5.2-amazonlinux2-slim
 GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
 Directory: 5.2/amazonlinux/2/slim
-
-Tags: 5.2.5-centos8, 5.2-centos8
-GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
-Directory: 5.2/centos/8
-
-Tags: 5.2.5-centos8-slim, 5.2-centos8-slim
-GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
-Directory: 5.2/centos/8/slim
 
 Tags: 5.2.5-centos7, 5.2-centos7
 GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
