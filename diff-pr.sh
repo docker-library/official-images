@@ -236,6 +236,8 @@ copy-tar() {
 								tar -tf "$dstG" \
 									| grep -vE "$uninterestingTarballGrep" \
 									| sed -e 's!^[.]/!!' \
+										-r \
+										-e 's!([/.-]|^)((lib)?(c?python|py)-?)[0-9]+([.][0-9]+)?([/.-]|$)!\1\2XXX\6!g' \
 									| sort \
 									> "$dstG  'tar -t'"
 							fi
