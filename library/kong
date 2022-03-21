@@ -2,10 +2,22 @@ Maintainers: Kong Docker Maintainers <support@konghq.com> (@thekonginc)
 GitRepo: https://github.com/Kong/docker-kong.git
 # needs "Constraints" to match "centos" (which this image is "FROM")
 
-Tags: 2.3.3-alpine, 2.3-alpine, 2.3.3, 2.3, 2, alpine, latest
-GitCommit: 6a6944f5abb7bd2708a47f5571a5133ad976b343
-GitFetch: refs/tags/2.3.3
-Directory: alpine
+Tags: 2.3.3-20220321-alpine, 2.3.3-alpine, 2.3-alpine, alpine, 2.3.3, 2.3, latest
+File: Dockerfile.apk
+GitCommit: 5ddd9ef875692fbdafa6e90e70bf41b1b551eb69
+GitFetch: feat/slimages
+Architectures: amd64, arm64v8
+
+Tags: 2.3.3-20220321-debian, 2.3.3-debian, 2.3-debian, debian
+File: Dockerfile.deb
+GitCommit: 5ddd9ef875692fbdafa6e90e70bf41b1b551eb69
+GitFetch: feat/slimages
+Architectures: amd64, arm64v8
+
+Tags: 2.3.3-20220321-redhat, 2.3.3-redhat, 2.3-redhat, redhat
+File: Dockerfile.rpm
+GitCommit: 5ddd9ef875692fbdafa6e90e70bf41b1b551eb69
+GitFetch: feat/slimages
 Architectures: amd64, arm64v8
 
 Tags: 2.3.3-ubuntu, 2.3-ubuntu, ubuntu
