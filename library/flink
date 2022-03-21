@@ -1,55 +1,84 @@
-# this file is generated via https://github.com/apache/flink-docker/blob/f47f4a2e257279c4c28667e3ceff12bc5eb70afb/generate-stackbrew-library.sh
+# this file is generated via https://github.com/apache/flink-docker/blob/187238c6b444457d9b57279715fa16b37fe59e45/generate-stackbrew-library.sh
 
-Maintainers: Patrick Lucas <me@patricklucas.com> (@patricklucas),
-             Ismaël Mejía <iemejia@gmail.com> (@iemejia)
+Maintainers: The Apache Flink Project <dev@flink.apache.org> (@ApacheFlink)
 GitRepo: https://github.com/apache/flink-docker.git
 
-Tags: 1.12.2-scala_2.11-java8, 1.12-scala_2.11-java8, scala_2.11-java8, 1.12.2-scala_2.11, 1.12-scala_2.11, scala_2.11
-Architectures: amd64
-GitCommit: d9f24a0501b5ddd014a38e7262863e19d152086b
-Directory: ./1.12/scala_2.11-java8-debian
+Tags: 1.14.4-scala_2.12-java8, 1.14-scala_2.12-java8, scala_2.12-java8, 1.14.4-scala_2.12, 1.14-scala_2.12, scala_2.12, 1.14.4-java8, 1.14-java8, java8, 1.14.4, 1.14, latest
+Architectures: amd64,arm64v8
+GitCommit: 5f88136a8cebd45d28d89e2a8d272b233ae98a1c
+Directory: ./1.14/scala_2.12-java8-debian
 
-Tags: 1.12.2-scala_2.11-java11, 1.12-scala_2.11-java11, scala_2.11-java11
-Architectures: amd64
-GitCommit: d9f24a0501b5ddd014a38e7262863e19d152086b
-Directory: ./1.12/scala_2.11-java11-debian
+Tags: 1.14.4-scala_2.12-java11, 1.14-scala_2.12-java11, scala_2.12-java11, 1.14.4-java11, 1.14-java11, java11
+Architectures: amd64,arm64v8
+GitCommit: 5f88136a8cebd45d28d89e2a8d272b233ae98a1c
+Directory: ./1.14/scala_2.12-java11-debian
 
-Tags: 1.12.2-scala_2.12-java8, 1.12-scala_2.12-java8, scala_2.12-java8, 1.12.2-scala_2.12, 1.12-scala_2.12, scala_2.12, 1.12.2-java8, 1.12-java8, java8, 1.12.2, 1.12, latest
+Tags: 1.14.4-scala_2.11-java8, 1.14-scala_2.11-java8, scala_2.11-java8, 1.14.4-scala_2.11, 1.14-scala_2.11, scala_2.11
+Architectures: amd64,arm64v8
+GitCommit: 5f88136a8cebd45d28d89e2a8d272b233ae98a1c
+Directory: ./1.14/scala_2.11-java8-debian
+
+Tags: 1.14.4-scala_2.11-java11, 1.14-scala_2.11-java11, scala_2.11-java11
+Architectures: amd64,arm64v8
+GitCommit: 5f88136a8cebd45d28d89e2a8d272b233ae98a1c
+Directory: ./1.14/scala_2.11-java11-debian
+
+Tags: 1.13.6-scala_2.12-java8, 1.13-scala_2.12-java8, 1.13.6-scala_2.12, 1.13-scala_2.12, 1.13.6-java8, 1.13-java8, 1.13.6, 1.13
 Architectures: amd64
-GitCommit: d9f24a0501b5ddd014a38e7262863e19d152086b
+GitCommit: 3dd2ef7d59ff91800fc82be1f0f04b01db9080bf
+Directory: ./1.13/scala_2.12-java8-debian
+
+Tags: 1.13.6-scala_2.12-java11, 1.13-scala_2.12-java11, 1.13.6-java11, 1.13-java11
+Architectures: amd64
+GitCommit: 3dd2ef7d59ff91800fc82be1f0f04b01db9080bf
+Directory: ./1.13/scala_2.12-java11-debian
+
+Tags: 1.13.6-scala_2.11-java8, 1.13-scala_2.11-java8, 1.13.6-scala_2.11, 1.13-scala_2.11
+Architectures: amd64
+GitCommit: 3dd2ef7d59ff91800fc82be1f0f04b01db9080bf
+Directory: ./1.13/scala_2.11-java8-debian
+
+Tags: 1.13.6-scala_2.11-java11, 1.13-scala_2.11-java11
+Architectures: amd64
+GitCommit: 3dd2ef7d59ff91800fc82be1f0f04b01db9080bf
+Directory: ./1.13/scala_2.11-java11-debian
+
+Tags: 1.12.7-scala_2.12-java8, 1.12-scala_2.12-java8, 1.12.7-scala_2.12, 1.12-scala_2.12, 1.12.7-java8, 1.12-java8, 1.12.7, 1.12
+Architectures: amd64
+GitCommit: 79bcbe515597ed4639da10709742cdcbe331fbc3
 Directory: ./1.12/scala_2.12-java8-debian
 
-Tags: 1.12.2-scala_2.12-java11, 1.12-scala_2.12-java11, scala_2.12-java11, 1.12.2-java11, 1.12-java11, java11
+Tags: 1.12.7-scala_2.12-java11, 1.12-scala_2.12-java11, 1.12.7-java11, 1.12-java11
 Architectures: amd64
-GitCommit: d9f24a0501b5ddd014a38e7262863e19d152086b
+GitCommit: 79bcbe515597ed4639da10709742cdcbe331fbc3
 Directory: ./1.12/scala_2.12-java11-debian
 
-Tags: 1.11.3-scala_2.11-java8, 1.11-scala_2.11-java8, 1.11.3-scala_2.11, 1.11-scala_2.11
+Tags: 1.12.7-scala_2.11-java8, 1.12-scala_2.11-java8, 1.12.7-scala_2.11, 1.12-scala_2.11
 Architectures: amd64
-GitCommit: 7035f03679b11352f2fdecd9f6a9bb0ec8bc2022
-Directory: ./1.11/scala_2.11-java8-debian
+GitCommit: 79bcbe515597ed4639da10709742cdcbe331fbc3
+Directory: ./1.12/scala_2.11-java8-debian
 
-Tags: 1.11.3-scala_2.11-java11, 1.11-scala_2.11-java11
+Tags: 1.12.7-scala_2.11-java11, 1.12-scala_2.11-java11
 Architectures: amd64
-GitCommit: 7035f03679b11352f2fdecd9f6a9bb0ec8bc2022
-Directory: ./1.11/scala_2.11-java11-debian
+GitCommit: 79bcbe515597ed4639da10709742cdcbe331fbc3
+Directory: ./1.12/scala_2.11-java11-debian
 
-Tags: 1.11.3-scala_2.12-java8, 1.11-scala_2.12-java8, 1.11.3-scala_2.12, 1.11-scala_2.12, 1.11.3-java8, 1.11-java8, 1.11.3, 1.11
+Tags: 1.11.6-scala_2.12-java8, 1.11-scala_2.12-java8, 1.11.6-scala_2.12, 1.11-scala_2.12, 1.11.6-java8, 1.11-java8, 1.11.6, 1.11
 Architectures: amd64
-GitCommit: 7035f03679b11352f2fdecd9f6a9bb0ec8bc2022
+GitCommit: 79bcbe515597ed4639da10709742cdcbe331fbc3
 Directory: ./1.11/scala_2.12-java8-debian
 
-Tags: 1.11.3-scala_2.12-java11, 1.11-scala_2.12-java11, 1.11.3-java11, 1.11-java11
+Tags: 1.11.6-scala_2.12-java11, 1.11-scala_2.12-java11, 1.11.6-java11, 1.11-java11
 Architectures: amd64
-GitCommit: 7035f03679b11352f2fdecd9f6a9bb0ec8bc2022
+GitCommit: 79bcbe515597ed4639da10709742cdcbe331fbc3
 Directory: ./1.11/scala_2.12-java11-debian
 
-Tags: 1.10.3-scala_2.11, 1.10-scala_2.11
+Tags: 1.11.6-scala_2.11-java8, 1.11-scala_2.11-java8, 1.11.6-scala_2.11, 1.11-scala_2.11
 Architectures: amd64
-GitCommit: 2a89b61a261f803f8785fd5dd882b7f50ec33fce
-Directory: ./1.10/scala_2.11-debian
+GitCommit: 79bcbe515597ed4639da10709742cdcbe331fbc3
+Directory: ./1.11/scala_2.11-java8-debian
 
-Tags: 1.10.3-scala_2.12, 1.10-scala_2.12, 1.10.3, 1.10
+Tags: 1.11.6-scala_2.11-java11, 1.11-scala_2.11-java11
 Architectures: amd64
-GitCommit: 2a89b61a261f803f8785fd5dd882b7f50ec33fce
-Directory: ./1.10/scala_2.12-debian
+GitCommit: 79bcbe515597ed4639da10709742cdcbe331fbc3
+Directory: ./1.11/scala_2.11-java11-debian

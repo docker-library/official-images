@@ -1,25 +1,34 @@
 # MySQL is not officially supported for arm64v8.
 # Ongoing issue for the same is: https://github.com/docker-library/mysql/issues/318
-# We don't support arm64v8 FTM for XWiki 10.x since that requires Java 11 and XWiki 10.x doesn't support Java 11.
 Maintainers: XWiki Core Dev Team <committers@xwiki.org> (@xwiki)
 GitRepo: https://github.com/xwiki-contrib/docker-xwiki.git
 
-Tags: 13, 13.2, 13.2.0, 13-mysql-tomcat, 13.2-mysql-tomcat, 13.2.0-mysql-tomcat, mysql-tomcat, stable-mysql-tomcat, stable-mysql, stable, latest
+Tags: 14, 14.1, 14.1.0, 14-mysql-tomcat, 14.1-mysql-tomcat, 14.1.0-mysql-tomcat, mysql-tomcat, stable-mysql-tomcat, stable-mysql, stable, latest
+Architectures: amd64
+Directory: 14/mysql-tomcat
+GitCommit: a58dee92a7b638927a0651a18e00c981347392e7
+
+Tags: 14-postgres-tomcat, 14.1-postgres-tomcat, 14.1.0-postgres-tomcat, postgres-tomcat, stable-postgres-tomcat, stable-postgres
+Architectures: amd64, arm64v8
+Directory: 14/postgres-tomcat
+GitCommit: a58dee92a7b638927a0651a18e00c981347392e7
+
+Tags: 14-mariadb-tomcat, 14.1-mariadb-tomcat, mariadb-tomcat, stable-mariadb-tomcat, stable-mariadb
+Architectures: amd64, arm64v8
+Directory: 14/mariadb-tomcat
+GitCommit: a58dee92a7b638927a0651a18e00c981347392e7
+
+Tags: 13, 13.10, 13.10.3, 13-mysql-tomcat, 13.10-mysql-tomcat, 13.10.3-mysql-tomcat, lts-mysql-tomcat, lts-mysql, lts
 Architectures: amd64
 Directory: 13/mysql-tomcat
-GitCommit: aad779028a6f54d9821560d01d6a03633e180a8b
+GitCommit: 81320f6e74ec8afc478bddbdd0d732856b38e488
 
-Tags: 13-postgres-tomcat, 13.2-postgres-tomcat, 13.2.0-postgres-tomcat, postgres-tomcat, stable-postgres-tomcat, stable-postgres
+Tags: 13-postgres-tomcat, 13.10-postgres-tomcat, 13.10.3-postgres-tomcat, lts-postgres-tomcat, lts-postgres
 Architectures: amd64, arm64v8
 Directory: 13/postgres-tomcat
-GitCommit: aad779028a6f54d9821560d01d6a03633e180a8b
+GitCommit: 81320f6e74ec8afc478bddbdd0d732856b38e488
 
-Tags: 12, 12.10, 12.10.6, 12-mysql-tomcat, 12.10-mysql-tomcat, 12.10.6-mysql-tomcat, lts-mysql-tomcat, lts-mysql, lts
-Architectures: amd64
-Directory: 12/mysql-tomcat
-GitCommit: 246a8efc36a5838f17930b773314b12c90181740
-
-Tags: 12-postgres-tomcat, 12.10-postgres-tomcat, 12.10.6-postgres-tomcat, lts-postgres-tomcat, lts-postgres
+Tags: 13-mariadb-tomcat, 13.10-mariadb-tomcat, 13.10.3-mariadb-tomcat, lts-mariadb-tomcat, lts-mariadb
 Architectures: amd64, arm64v8
-Directory: 12/postgres-tomcat
-GitCommit: 246a8efc36a5838f17930b773314b12c90181740
+Directory: 13/mariadb-tomcat
+GitCommit: 81320f6e74ec8afc478bddbdd0d732856b38e488

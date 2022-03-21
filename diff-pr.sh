@@ -80,7 +80,7 @@ else
 fi
 
 if [ "$#" -eq 0 ]; then
-	images="$(git -C oi/library diff --name-only HEAD...pull -- .)"
+	images="$(git -C oi/library diff --no-renames --name-only HEAD...pull -- .)"
 	[ -n "$images" ] || exit 0
 	images="$(xargs -n1 basename <<<"$images")"
 	set -- $images
@@ -236,6 +236,8 @@ copy-tar() {
 								tar -tf "$dstG" \
 									| grep -vE "$uninterestingTarballGrep" \
 									| sed -e 's!^[.]/!!' \
+										-r \
+										-e 's!([/.-]|^)((lib)?(c?python|py)-?)[0-9]+([.][0-9]+)?([/.-]|$)!\1\2XXX\6!g' \
 									| sort \
 									> "$dstG  'tar -t'"
 							fi

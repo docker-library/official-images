@@ -5,10 +5,10 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
 image="$1"
 
-mysqlImage='mysql:5.7'
-# ensure the mysqlImage is ready and available
-if ! docker image inspect "$mysqlImage" &> /dev/null; then
-	docker pull "$mysqlImage" > /dev/null
+dbImage='mysql:5.7'
+# ensure the dbImage is ready and available
+if ! docker image inspect "$dbImage" &> /dev/null; then
+	docker pull "$dbImage" > /dev/null
 fi
 
 # Create an instance of the container-under-test
@@ -17,7 +17,7 @@ mysqlCid="$(docker run -d \
 	-e MYSQL_DATABASE=monica \
 	-e MYSQL_USER=homestead \
 	-e MYSQL_PASSWORD=secret \
-	"$mysqlImage")"
+	"$dbImage")"
 trap "docker rm -vf $mysqlCid > /dev/null" EXIT
 
 cid="$(docker run -d \
@@ -55,5 +55,4 @@ _artisan_test() {
 
 # Check if installation is complete
 _artisan monica:getversion > /dev/null
-_artisan_test 'Running scheduled command:' schedule:run
-_artisan_test 'No scheduled commands are ready to run.' schedule:run
+. "$dir/../../retry.sh" --tries 5 -- _artisan_test 'No scheduled commands are ready to run.' schedule:run

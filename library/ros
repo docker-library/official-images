@@ -2,33 +2,6 @@ Maintainers: Tully Foote <tfoote+buildfarm@osrfoundation.org> (@tfoote)
 GitRepo: https://github.com/osrf/docker_images.git
 
 ################################################################################
-# Release: kinetic
-
-########################################
-# Distro: ubuntu:xenial
-
-Tags: kinetic-ros-core, kinetic-ros-core-xenial
-Architectures: amd64, arm32v7, arm64v8
-GitCommit: df19ab7d5993d3b78a908362cdcd1479a8e78b35
-Directory: ros/kinetic/ubuntu/xenial/ros-core
-
-Tags: kinetic-ros-base, kinetic-ros-base-xenial, kinetic
-Architectures: amd64, arm32v7, arm64v8
-GitCommit: df19ab7d5993d3b78a908362cdcd1479a8e78b35
-Directory: ros/kinetic/ubuntu/xenial/ros-base
-
-Tags: kinetic-robot, kinetic-robot-xenial
-Architectures: amd64, arm32v7, arm64v8
-GitCommit: df19ab7d5993d3b78a908362cdcd1479a8e78b35
-Directory: ros/kinetic/ubuntu/xenial/robot
-
-Tags: kinetic-perception, kinetic-perception-xenial
-Architectures: amd64, arm32v7, arm64v8
-GitCommit: df19ab7d5993d3b78a908362cdcd1479a8e78b35
-Directory: ros/kinetic/ubuntu/xenial/perception
-
-
-################################################################################
 # Release: melodic
 
 ########################################
@@ -36,7 +9,7 @@ Directory: ros/kinetic/ubuntu/xenial/perception
 
 Tags: melodic-ros-core, melodic-ros-core-bionic
 Architectures: amd64, arm32v7, arm64v8
-GitCommit: df19ab7d5993d3b78a908362cdcd1479a8e78b35
+GitCommit: 11c613986e35a1f36fd0fa18b49173e0c564cf1d
 Directory: ros/melodic/ubuntu/bionic/ros-core
 
 Tags: melodic-ros-base, melodic-ros-base-bionic, melodic
@@ -54,29 +27,6 @@ Architectures: amd64, arm32v7, arm64v8
 GitCommit: df19ab7d5993d3b78a908362cdcd1479a8e78b35
 Directory: ros/melodic/ubuntu/bionic/perception
 
-########################################
-# Distro: debian:stretch
-
-Tags: melodic-ros-core-stretch
-Architectures: amd64, arm64v8
-GitCommit: df19ab7d5993d3b78a908362cdcd1479a8e78b35
-Directory: ros/melodic/debian/stretch/ros-core
-
-Tags: melodic-ros-base-stretch
-Architectures: amd64, arm64v8
-GitCommit: df19ab7d5993d3b78a908362cdcd1479a8e78b35
-Directory: ros/melodic/debian/stretch/ros-base
-
-Tags: melodic-robot-stretch
-Architectures: amd64, arm64v8
-GitCommit: df19ab7d5993d3b78a908362cdcd1479a8e78b35
-Directory: ros/melodic/debian/stretch/robot
-
-Tags: melodic-perception-stretch
-Architectures: amd64, arm64v8
-GitCommit: df19ab7d5993d3b78a908362cdcd1479a8e78b35
-Directory: ros/melodic/debian/stretch/perception
-
 
 ################################################################################
 # Release: noetic
@@ -86,7 +36,7 @@ Directory: ros/melodic/debian/stretch/perception
 
 Tags: noetic-ros-core, noetic-ros-core-focal
 Architectures: amd64, arm32v7, arm64v8
-GitCommit: df19ab7d5993d3b78a908362cdcd1479a8e78b35
+GitCommit: 11c613986e35a1f36fd0fa18b49173e0c564cf1d
 Directory: ros/noetic/ubuntu/focal/ros-core
 
 Tags: noetic-ros-base, noetic-ros-base-focal, noetic
@@ -109,7 +59,7 @@ Directory: ros/noetic/ubuntu/focal/perception
 
 Tags: noetic-ros-core-buster
 Architectures: amd64, arm64v8
-GitCommit: df19ab7d5993d3b78a908362cdcd1479a8e78b35
+GitCommit: 11c613986e35a1f36fd0fa18b49173e0c564cf1d
 Directory: ros/noetic/debian/buster/ros-core
 
 Tags: noetic-ros-base-buster
@@ -129,50 +79,6 @@ Directory: ros/noetic/debian/buster/perception
 
 
 ################################################################################
-# Release: dashing
-
-########################################
-# Distro: ubuntu:bionic
-
-Tags: dashing-ros-core, dashing-ros-core-bionic
-Architectures: amd64, arm32v7, arm64v8
-GitCommit: df19ab7d5993d3b78a908362cdcd1479a8e78b35
-Directory: ros/dashing/ubuntu/bionic/ros-core
-
-Tags: dashing-ros-base, dashing-ros-base-bionic, dashing
-Architectures: amd64, arm32v7, arm64v8
-GitCommit: df19ab7d5993d3b78a908362cdcd1479a8e78b35
-Directory: ros/dashing/ubuntu/bionic/ros-base
-
-Tags: dashing-ros1-bridge, dashing-ros1-bridge-bionic
-Architectures: amd64, arm32v7, arm64v8
-GitCommit: 0d38100e2fec914106507817e3122d467617e2ee
-Directory: ros/dashing/ubuntu/bionic/ros1-bridge
-
-
-################################################################################
-# Release: eloquent
-
-########################################
-# Distro: ubuntu:bionic
-
-Tags: eloquent-ros-core, eloquent-ros-core-bionic
-Architectures: amd64, arm32v7, arm64v8
-GitCommit: b3e79c3aef3687b56b3c1052ae38aa7010234834
-Directory: ros/eloquent/ubuntu/bionic/ros-core
-
-Tags: eloquent-ros-base, eloquent-ros-base-bionic, eloquent
-Architectures: amd64, arm32v7, arm64v8
-GitCommit: b3e79c3aef3687b56b3c1052ae38aa7010234834
-Directory: ros/eloquent/ubuntu/bionic/ros-base
-
-Tags: eloquent-ros1-bridge, eloquent-ros1-bridge-bionic
-Architectures: amd64, arm32v7, arm64v8
-GitCommit: b3e79c3aef3687b56b3c1052ae38aa7010234834
-Directory: ros/eloquent/ubuntu/bionic/ros1-bridge
-
-
-################################################################################
 # Release: foxy
 
 ########################################
@@ -180,7 +86,7 @@ Directory: ros/eloquent/ubuntu/bionic/ros1-bridge
 
 Tags: foxy-ros-core, foxy-ros-core-focal
 Architectures: amd64, arm64v8
-GitCommit: df19ab7d5993d3b78a908362cdcd1479a8e78b35
+GitCommit: 11c613986e35a1f36fd0fa18b49173e0c564cf1d
 Directory: ros/foxy/ubuntu/focal/ros-core
 
 Tags: foxy-ros-base, foxy-ros-base-focal, foxy, latest
@@ -190,28 +96,45 @@ Directory: ros/foxy/ubuntu/focal/ros-base
 
 Tags: foxy-ros1-bridge, foxy-ros1-bridge-focal
 Architectures: amd64, arm64v8
-GitCommit: f7d378b9d6ed10c72a2f686554f7b712e921c1aa
+GitCommit: 8c7ec280db9c754aa163e84bf70f4cbb902e69fb
 Directory: ros/foxy/ubuntu/focal/ros1-bridge
+
+
+################################################################################
+# Release: galactic
+
+########################################
+# Distro: ubuntu:focal
+
+Tags: galactic-ros-core, galactic-ros-core-focal
+Architectures: amd64, arm64v8
+GitCommit: 11c613986e35a1f36fd0fa18b49173e0c564cf1d
+Directory: ros/galactic/ubuntu/focal/ros-core
+
+Tags: galactic-ros-base, galactic-ros-base-focal, galactic
+Architectures: amd64, arm64v8
+GitCommit: 6511d8fc0754616550b7f5ea31a40084c2462938
+Directory: ros/galactic/ubuntu/focal/ros-base
+
+Tags: galactic-ros1-bridge, galactic-ros1-bridge-focal
+Architectures: amd64, arm64v8
+GitCommit: 8c7ec280db9c754aa163e84bf70f4cbb902e69fb
+Directory: ros/galactic/ubuntu/focal/ros1-bridge
 
 
 ################################################################################
 # Release: rolling
 
 ########################################
-# Distro: ubuntu:focal
+# Distro: ubuntu:jammy
 
-Tags: rolling-ros-core, rolling-ros-core-focal
+Tags: rolling-ros-core, rolling-ros-core-jammy
 Architectures: amd64, arm64v8
-GitCommit: a5644adacdca4a49faf10221620048175cdd7262
-Directory: ros/rolling/ubuntu/focal/ros-core
+GitCommit: 86029c8abad4b4e52d95a33af079bdb874fa0b0c
+Directory: ros/rolling/ubuntu/jammy/ros-core
 
-Tags: rolling-ros-base, rolling-ros-base-focal, rolling
+Tags: rolling-ros-base, rolling-ros-base-jammy, rolling
 Architectures: amd64, arm64v8
-GitCommit: a5644adacdca4a49faf10221620048175cdd7262
-Directory: ros/rolling/ubuntu/focal/ros-base
-
-Tags: rolling-ros1-bridge, rolling-ros1-bridge-focal
-Architectures: amd64, arm64v8
-GitCommit: a5644adacdca4a49faf10221620048175cdd7262
-Directory: ros/rolling/ubuntu/focal/ros1-bridge
+GitCommit: 86029c8abad4b4e52d95a33af079bdb874fa0b0c
+Directory: ros/rolling/ubuntu/jammy/ros-base
 

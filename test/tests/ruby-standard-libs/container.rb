@@ -166,6 +166,12 @@ if rubyVersion >= Gem::Version.create('3.0')
 	# https://bugs.ruby-lang.org/issues/17303
 	stdlib.delete('webrick')
 end
+if rubyVersion >= Gem::Version.create('3.1')
+	# https://github.com/ruby/ruby/pull/4525
+	stdlib.delete('dbm')
+	# https://github.com/ruby/ruby/pull/4526
+	stdlib.delete('gdbm')
+end
 
 result = 'ok'
 stdlib.each do |lib|
