@@ -354,10 +354,16 @@ Constraints: nanoserver-1809, windowsservercore-1809
 
 
 #------------------------------v18 images---------------------------------
+Tags: 18_36-jdk-alpine, 18-jdk-alpine, 18-alpine
+Architectures: amd64
+GitCommit: 535e41304f7bd6c0d45b42bf2af0f320323825da
+Directory: 18/jdk/alpine
+File: Dockerfile.releases.full
+
 Tags: 18_36-jdk-focal, 18-jdk-focal, 18-focal
 SharedTags: 18_36-jdk, 18-jdk, 18, latest
-Architectures: amd64, arm32v7, arm64v8, ppc64le
-GitCommit: ea1b744d6836852780c71306f923eb2674348595
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 535e41304f7bd6c0d45b42bf2af0f320323825da
 Directory: 18/jdk/ubuntu
 File: Dockerfile.releases.full
 
