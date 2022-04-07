@@ -4,7 +4,7 @@ Maintainers: Amazon Corretto Team <corretto-team@amazon.com> (@corretto),
              Joshua Cao <joshcao@amazon.com> (@caojoshua)
 GitRepo: https://github.com/corretto/corretto-docker.git
 GitFetch: refs/heads/main
-GitCommit: 265b12cf8161db3d7a2e8b49f0cbfccb054572a3
+GitCommit: 3466cc5e4f6c086e321d97658cbaa64efe678c08
 
 Tags: 8, 8u322, 8u322-al2, 8-al2-full, 8-al2-jdk, latest
 Architectures: amd64, arm64v8
@@ -81,3 +81,23 @@ Directory: 17/jdk/alpine/3.14
 Tags: 17-alpine3.15, 17.0.2-alpine3.15, 17-alpine3.15-full, 17-alpine3.15-jdk, 17-alpine, 17.0.2-alpine, 17-alpine-full, 17-alpine-jdk
 Architectures: amd64
 Directory: 17/jdk/alpine/3.15
+
+Tags: 18, 18.0.0, 18.0.0-al2, 18-al2-full, 18-al2-jdk
+Architectures: amd64, arm64v8
+Directory: 18/jdk/al2
+
+Tags: 18-alpine3.12, 18.0.0-alpine3.12, 18-alpine3.12-full, 18-alpine3.12-jdk
+Architectures: amd64
+Directory: 18/jdk/alpine/3.12
+
+Tags: 18-alpine3.13, 18.0.0-alpine3.13, 18-alpine3.13-full, 18-alpine3.13-jdk
+Architectures: amd64
+Directory: 18/jdk/alpine/3.13
+
+Tags: 18-alpine3.14, 18.0.0-alpine3.14, 18-alpine3.14-full, 18-alpine3.14-jdk
+Architectures: amd64
+Directory: 18/jdk/alpine/3.14
+
+Tags: 18-alpine3.15, 18.0.0-alpine3.15, 18-alpine3.15-full, 18-alpine3.15-jdk, 18-alpine, 18.0.0-alpine, 18-alpine-full, 18-alpine-jdk
+Architectures: amd64
+Directory: 18/jdk/alpine/3.15
