@@ -3,11 +3,19 @@ GitRepo: https://github.com/emqx/emqx-docker.git
 GitFetch: refs/heads/main
 
 Tags: 4.3.5, 4.3
+Architectures: amd64
 GitCommit: 6a9fdac90acb0bda15ec41ba3396150a05435fe8
 Directory: 4.3
 File: Dockerfile
 
 Tags: 4.4.2, 4.4, 4, latest
+Architectures: amd64, arm64v8
 GitCommit: 6a9fdac90acb0bda15ec41ba3396150a05435fe8
 Directory: 4.4
 File: Dockerfile
+
+Tags: 4.4.2-alpine, 4.4-alpine, 4-alpine, alpine
+Architectures: amd64, arm64v8
+GitCommit: a9afb225de7428c61ba0b75e08f3a15f6669f6ea
+Directory: 4.4
+File: Dockerfile.alpine
