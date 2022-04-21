@@ -3,46 +3,46 @@
 
 Maintainers: Tianon Gravi <tianon@debian.org> (@tianon), Michael Hudson-Doyle <michael.hudson@ubuntu.com> (@mwhudson)
 GitRepo: https://github.com/tianon/docker-brew-ubuntu-core.git
-GitCommit: e5557937fc10622c88c1f4023a2a334cabe7cdf9
+GitCommit: 8957cf73129c99416b238a8118c11da33b63b5c8
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-amd64
 amd64-GitFetch: refs/heads/dist-amd64
-amd64-GitCommit: 88ba31584652db8b96a29849ea2809d99ce3cc31
+amd64-GitCommit: 76df46d4a2c2e59f4bb5ee20425c6ef2435e9dfe
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-arm32v7
 arm32v7-GitFetch: refs/heads/dist-arm32v7
-arm32v7-GitCommit: 621ea6f8b657f6e4e9092ac70b04694be4c45916
+arm32v7-GitCommit: f4603cdb4c9b2b7987ab5d9af1d15077d1d0ea64
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-arm64v8
 arm64v8-GitFetch: refs/heads/dist-arm64v8
-arm64v8-GitCommit: 3135ef71bc8f8041586e90a816aaccc58fe866ef
+arm64v8-GitCommit: d5ce0d49d9eb2eca7ec551e3cc1377aba37f645f
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-i386
 i386-GitFetch: refs/heads/dist-i386
-i386-GitCommit: 9e1339fcc6eaf0f99dc613a3288447ba33e5d5c0
+i386-GitCommit: 5104cc8428c2143e539f9bf05a16b056feeda1a4
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-ppc64le
 ppc64le-GitFetch: refs/heads/dist-ppc64le
-ppc64le-GitCommit: 98d2f42eacc29f8f05ab07ba33030e83c99adb16
+ppc64le-GitCommit: 961913a12ddbf19a81490fc8d04ef624189005c4
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-riscv64
 riscv64-GitFetch: refs/heads/dist-riscv64
-riscv64-GitCommit: 5ff3d196c1e890fd27740038c90d003bade18ca4
+riscv64-GitCommit: 230a33fccb075d7e61541414be2547e83914903c
 # https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-s390x
 s390x-GitFetch: refs/heads/dist-s390x
-s390x-GitCommit: 881a5674e60759a6ab71a548048917caad53d1e3
+s390x-GitCommit: 8e50e683c09601d4895d31732cd6b92bce99076f
 
-# 20220401 (bionic)
-Tags: 18.04, bionic-20220401, bionic
+# 20220415 (bionic)
+Tags: 18.04, bionic-20220415, bionic
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: bionic
 
-# 20220404 (focal)
-Tags: 20.04, focal-20220404, focal, latest
+# 20220415 (focal)
+Tags: 20.04, focal-20220415, focal
 Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
 Directory: focal
 
-# 20220404 (impish)
-Tags: 21.10, impish-20220404, impish, rolling
+# 20220415 (impish)
+Tags: 21.10, impish-20220415, impish
 Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
 Directory: impish
 
-# 20220404 (jammy)
-Tags: 22.04, jammy-20220404, jammy, devel
+# 20220421 (jammy)
+Tags: 22.04, jammy-20220421, jammy, latest, rolling, devel
 Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
 Directory: jammy
 
