@@ -212,43 +212,6 @@ File: Dockerfile.releases.full
 Constraints: nanoserver-1809, windowsservercore-1809
 
 
-#------------------------------v16 images---------------------------------
-Tags: 16.0.2_7-jdk-alpine, 16-jdk-alpine, 16-alpine
-Architectures: amd64
-GitCommit: 817d2de453582aab82b4646824510f69d78d3111
-Directory: 16/jdk/alpine
-File: Dockerfile.releases.full
-
-Tags: 16.0.2_7-jdk-focal, 16-jdk-focal, 16-focal
-SharedTags: 16.0.2_7-jdk, 16-jdk, 16
-Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 78a1d4d015ee0759f269888a9d085ddc03f20b95
-Directory: 16/jdk/ubuntu
-File: Dockerfile.releases.full
-
-Tags: 16.0.2_7-jdk-centos7, 16-jdk-centos7, 16-centos7
-Architectures: amd64, arm64v8, ppc64le
-GitCommit: 63defc24ed1b9051b48f6dfc747761a1b88a3b42
-Directory: 16/jdk/centos
-File: Dockerfile.releases.full
-
-Tags: 16.0.2_7-jdk-windowsservercore-1809, 16-jdk-windowsservercore-1809, 16-windowsservercore-1809
-SharedTags: 16.0.2_7-jdk-windowsservercore, 16-jdk-windowsservercore, 16-windowsservercore, 16.0.2_7-jdk, 16-jdk, 16
-Architectures: windows-amd64
-GitCommit: c611c0d0d5c9efd70a7569a33dd7a46c31dfb06d
-Directory: 16/jdk/windows/windowsservercore-1809
-File: Dockerfile.releases.full
-Constraints: windowsservercore-1809
-
-Tags: 16.0.2_7-jdk-nanoserver-1809, 16-jdk-nanoserver-1809, 16-nanoserver-1809
-SharedTags: 16.0.2_7-jdk-nanoserver, 16-jdk-nanoserver, 16-nanoserver
-Architectures: windows-amd64
-GitCommit: c611c0d0d5c9efd70a7569a33dd7a46c31dfb06d
-Directory: 16/jdk/windows/nanoserver-1809
-File: Dockerfile.releases.full
-Constraints: nanoserver-1809, windowsservercore-1809
-
-
 #------------------------------v17 images---------------------------------
 Tags: 17.0.3_7-jdk-alpine, 17-jdk-alpine, 17-alpine
 Architectures: amd64
