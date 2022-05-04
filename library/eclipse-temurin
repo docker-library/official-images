@@ -5,22 +5,22 @@ GitRepo: https://github.com/adoptium/containers.git
 GitFetch: refs/heads/main
 
 #------------------------------v8 images---------------------------------
-Tags: 8u322-b06-jdk-alpine, 8-jdk-alpine, 8-alpine
+Tags: 8u332-b09-jdk-alpine, 8-jdk-alpine, 8-alpine
 Architectures: amd64
-GitCommit: 3cce04581c9f160bacf9052510b43ad9aeef7c8f
+GitCommit: 60cf3d8f95560f1b8e971dd511cc580714ad72cb
 Directory: 8/jdk/alpine
 File: Dockerfile.releases.full
 
-Tags: 8u322-b06-jdk-focal, 8-jdk-focal, 8-focal
-SharedTags: 8u322-b06-jdk, 8-jdk, 8
+Tags: 8u332-b09-jdk-focal, 8-jdk-focal, 8-focal
+SharedTags: 8u332-b09-jdk, 8-jdk, 8
 Architectures: amd64, arm32v7, arm64v8, ppc64le
-GitCommit: 78a1d4d015ee0759f269888a9d085ddc03f20b95
+GitCommit: 60cf3d8f95560f1b8e971dd511cc580714ad72cb
 Directory: 8/jdk/ubuntu
 File: Dockerfile.releases.full
 
-Tags: 8u322-b06-jdk-centos7, 8-jdk-centos7, 8-centos7
+Tags: 8u332-b09-jdk-centos7, 8-jdk-centos7, 8-centos7
 Architectures: amd64, arm64v8, ppc64le
-GitCommit: 130db1e5356f5a86868b70809c8311b0aad0c756
+GitCommit: 60cf3d8f95560f1b8e971dd511cc580714ad72cb
 Directory: 8/jdk/centos
 File: Dockerfile.releases.full
 
@@ -56,22 +56,22 @@ Directory: 8/jdk/windows/nanoserver-1809
 File: Dockerfile.releases.full
 Constraints: nanoserver-1809, windowsservercore-1809
 
-Tags: 8u322-b06-jre-alpine, 8-jre-alpine
+Tags: 8u332-b09-jre-alpine, 8-jre-alpine
 Architectures: amd64
-GitCommit: 3cce04581c9f160bacf9052510b43ad9aeef7c8f
+GitCommit: 60cf3d8f95560f1b8e971dd511cc580714ad72cb
 Directory: 8/jre/alpine
 File: Dockerfile.releases.full
 
-Tags: 8u322-b06-jre-focal, 8-jre-focal
-SharedTags: 8u322-b06-jre, 8-jre
+Tags: 8u332-b09-jre-focal, 8-jre-focal
+SharedTags: 8u332-b09-jre, 8-jre
 Architectures: amd64, arm32v7, arm64v8, ppc64le
-GitCommit: 78a1d4d015ee0759f269888a9d085ddc03f20b95
+GitCommit: 60cf3d8f95560f1b8e971dd511cc580714ad72cb
 Directory: 8/jre/ubuntu
 File: Dockerfile.releases.full
 
-Tags: 8u322-b06-jre-centos7, 8-jre-centos7
+Tags: 8u332-b09-jre-centos7, 8-jre-centos7
 Architectures: amd64, arm64v8, ppc64le
-GitCommit: 130db1e5356f5a86868b70809c8311b0aad0c756
+GitCommit: 60cf3d8f95560f1b8e971dd511cc580714ad72cb
 Directory: 8/jre/centos
 File: Dockerfile.releases.full
 
