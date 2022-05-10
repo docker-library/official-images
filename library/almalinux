@@ -1,18 +1,37 @@
 Maintainers: The AlmaLinux OS Foundation <cloud-infra@almalinux.org> (@AlmaLinux)
 GitRepo: https://github.com/AlmaLinux/docker-images.git
 
-Tags: latest, 8, 8.5, 8.5-20220306
-GitFetch: refs/heads/al-8.5.4-20220306
-GitCommit: 800ecbd636ec5ebbedc99e46391dbea6e71c2646
+Tags: latest, 8, 8.5, 8.5-20220510
+GitFetch: refs/heads/al-8.5.4-20220510
+GitCommit: cc33e53ccd8b33288eb3fbce9fd3bc308272c162
 amd64-File: Dockerfile-x86_64-default
 arm64v8-File: Dockerfile-aarch64-default
 ppc64le-File: Dockerfile-ppc64le-default
 Architectures: amd64, arm64v8, ppc64le
 
-Tags: minimal, 8-minimal, 8.5-minimal-20220306
-GitFetch: refs/heads/al-8.5.4-20220306
-GitCommit: 800ecbd636ec5ebbedc99e46391dbea6e71c2646
+Tags: minimal, 8-minimal, 8.5-minimal, 8.5-minimal-20220510
+GitFetch: refs/heads/al-8.5.4-20220510
+GitCommit: cc33e53ccd8b33288eb3fbce9fd3bc308272c162
 amd64-File: Dockerfile-x86_64-minimal
 arm64v8-File: Dockerfile-aarch64-minimal
 ppc64le-File: Dockerfile-ppc64le-minimal
 Architectures: amd64, arm64v8, ppc64le
+
+Tags: 9, 9.0-beta1, 9.0-20220507
+GitFetch: refs/heads/al-9.0.1-beta-20220507
+GitCommit: 76d2257072e5dd0a69baa0430653c4d4efeb5d7e
+amd64-File: Dockerfile-x86_64-default
+arm64v8-File: Dockerfile-aarch64-default
+ppc64le-File: Dockerfile-ppc64le-default
+s390x-File: Dockerfile-s390x-default
+Architectures: amd64, arm64v8, ppc64le, s390x
+
+Tags: 9-minimal,  9.0-minimal-beta1, 9.0-minimal-20220507
+GitFetch: refs/heads/al-9.0.1-beta-20220507
+GitCommit: 76d2257072e5dd0a69baa0430653c4d4efeb5d7e
+amd64-File: Dockerfile-x86_64-minimal
+arm64v8-File: Dockerfile-aarch64-minimal
+ppc64le-File: Dockerfile-ppc64le-minimal
+s390x-File: Dockerfile-s390x-minimal
+Architectures: amd64, arm64v8, ppc64le, s390x
+
