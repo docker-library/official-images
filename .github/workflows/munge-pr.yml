@@ -124,6 +124,16 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const commentText = 'Diff for ' + context.payload.pull_request.head.sha + ':';
+
+            const fs = require('fs');
+            const diff = fs.readFileSync(process.env.GITHUB_WORKSPACE + '/oi-pr.diff').toString().trimEnd();
+            var body = "<details>\n<summary>" + commentText + "</summary>\n\n```diff\n" + diff + "\n```\n\n</details>";
+            const maint = fs.readFileSync(process.env.GITHUB_WORKSPACE + '/oi-pr.maint').toString().trimEnd();
+            if (maint.length > 0) {
+              body += "\n\nRelevant Maintainers:\n\n" + maint;
+            }
+            fs.writeFileSync(process.env.GITHUB_STEP_SUMMARY, body);
+
             needNewComment = true;
             console.log('Reviewing existing comments...');
             for await (const { data: comments } of github.paginate.iterator(
@@ -150,13 +160,6 @@ jobs:
               }
             }
             if (needNewComment) {
-              const fs = require('fs');
-              const diff = fs.readFileSync(process.env.GITHUB_WORKSPACE + '/oi-pr.diff').toString().trimEnd();
-              var body = "<details>\n<summary>" + commentText + "</summary>\n\n```diff\n" + diff + "\n```\n\n</details>";
-              const maint = fs.readFileSync(process.env.GITHUB_WORKSPACE + '/oi-pr.maint').toString().trimEnd();
-              if (maint.length > 0) {
-                body += "\n\nRelevant Maintainers:\n\n" + maint;
-              }
               console.log('Creating new comment...');
               await github.rest.issues.createComment({
                 owner: context.repo.owner,
