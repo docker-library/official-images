@@ -1,0 +1,61 @@
+# Alibaba Dragonwell OpenJDK images provided by Alibaba Cloud.
+
+Maintainers: Joeylee <joeylee.lz@alibaba-inc.com> (@joeylee)
+GitRepo: https://github.com/dragonwell-containers/dragonwell-containers.git
+
+#------------------------------v8 images---------------------------------
+
+Tags: dragonwell-8.11.12_jdk8u332-ga-jdk-focal, 8-jdk-focal, 8-focal
+SharedTags: 8-jdk, 8
+Architectures: amd64, arm64v8
+GitCommit: c17eb125da6a99013db2996c22ae53db083aa442
+Directory: 8/jdk/ubuntu
+File: Dockerfile.releases.full
+
+Tags: dragonwell-8.11.12_jdk8u332-ga-jdk-centos, 8-jdk-centos, 8-centos
+Architectures: amd64, arm64v8
+GitCommit: c17eb125da6a99013db2996c22ae53db083aa442
+Directory: 8/jdk/centos
+File: Dockerfile.releases.full
+
+#------------------------------v11 images---------------------------------
+
+Tags: dragonwell-11.0.15.11.9_jdk-11.0.15-ga-alpine, 11-jdk-alpine, 11-alpine
+Architectures: amd64
+GitCommit: c17eb125da6a99013db2996c22ae53db083aa442
+Directory: 11/jdk/alpine
+File: Dockerfile.releases.full
+
+Tags: dragonwell-11.0.15.11.9_jdk-11.0.15-ga-jdk-focal, 11-jdk-focal, 11-focal
+SharedTags: 11-jdk, 11
+Architectures: amd64, arm64v8
+GitCommit: c17eb125da6a99013db2996c22ae53db083aa442
+Directory: 11/jdk/ubuntu
+File: Dockerfile.releases.full
+
+Tags: dragonwell-11.0.15.11.9_jdk-11.0.15-ga-jdk-centos7, 11-jdk-centos7, 11-centos7
+Architectures: amd64, arm64v8
+GitCommit: c17eb125da6a99013db2996c22ae53db083aa442
+Directory: 11/jdk/centos
+File: Dockerfile.releases.full
+
+#------------------------------v17 images---------------------------------
+
+Tags: dragonwell-11.0.15.11.9_jdk-11.0.15-ga-jdk-alpine, 17-jdk-alpine, 17-alpine
+Architectures: amd64
+GitCommit: c17eb125da6a99013db2996c22ae53db083aa442
+Directory: 17/jdk/alpine
+File: Dockerfile.releases.full
+
+Tags: dragonwell-17.0.3.0.3-jdk-focal, 17-jdk-focal, 17-focal
+SharedTags: 17-jdk, 17
+Architectures: amd64, arm64v8
+GitCommit: c17eb125da6a99013db2996c22ae53db083aa442
+Directory: 17/jdk/ubuntu
+File: Dockerfile.releases.full
+
+Tags: dragonwell-17.0.3.0.3-jdk-centos7, 17-jdk-centos7, 17-centos7
+Architectures: amd64, arm64v8
+GitCommit: c17eb125da6a99013db2996c22ae53db083aa442
+Directory: 17/jdk/centos
+File: Dockerfile.releases.full
