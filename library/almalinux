@@ -1,7 +1,7 @@
 Maintainers: The AlmaLinux OS Foundation <cloud-infra@almalinux.org> (@AlmaLinux)
 GitRepo: https://github.com/AlmaLinux/docker-images.git
 
-Tags: latest, 8, 8.5, 8.5-20220510
+Tags: 8.5, 8.5-20220510
 GitFetch: refs/heads/al-8.5.4-20220510
 GitCommit: cc33e53ccd8b33288eb3fbce9fd3bc308272c162
 amd64-File: Dockerfile-x86_64-default
@@ -9,9 +9,25 @@ arm64v8-File: Dockerfile-aarch64-default
 ppc64le-File: Dockerfile-ppc64le-default
 Architectures: amd64, arm64v8, ppc64le
 
-Tags: minimal, 8-minimal, 8.5-minimal, 8.5-minimal-20220510
+Tags: 8.5-minimal, 8.5-minimal-20220510
 GitFetch: refs/heads/al-8.5.4-20220510
 GitCommit: cc33e53ccd8b33288eb3fbce9fd3bc308272c162
+amd64-File: Dockerfile-x86_64-minimal
+arm64v8-File: Dockerfile-aarch64-minimal
+ppc64le-File: Dockerfile-ppc64le-minimal
+Architectures: amd64, arm64v8, ppc64le
+
+Tags: latest, 8, 8.6, 8.6-20220512
+GitFetch: refs/heads/al-8.6.0-20220512
+GitCommit: 072c414bfc77229e49ff1677a875a0ed5caf990b
+amd64-File: Dockerfile-x86_64-default
+arm64v8-File: Dockerfile-aarch64-default
+ppc64le-File: Dockerfile-ppc64le-default
+Architectures: amd64, arm64v8, ppc64le
+
+Tags: minimal, 8-minimal, 8.6-minimal, 8.6-minimal-20220512
+GitFetch: refs/heads/al-8.6.0-20220512
+GitCommit: 072c414bfc77229e49ff1677a875a0ed5caf990b
 amd64-File: Dockerfile-x86_64-minimal
 arm64v8-File: Dockerfile-aarch64-minimal
 ppc64le-File: Dockerfile-ppc64le-minimal
