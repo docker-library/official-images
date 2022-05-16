@@ -2,13 +2,26 @@ Maintainers: The Rocky Linux Foundation <infrastructure@rockylinux.org> (@rocky-
              Neil Hanlon <neil@resf.org> (@neilhanlon)
 GitRepo: https://github.com/rocky-linux/sig-cloud-instance-images.git
 
-Tags: latest, 8, 8.5.20220308
+Tags: latest, 8, 8.6, 8.6.20227707
+GitFetch: refs/heads/Rocky-8.6.20220707-Base-x86_64
+GitCommit: 09dbe262451ff0e93fe50df95f6811b234d3d509
+arm64v8-GitFetch: refs/heads/Rocky-8.6.20220707-Base-aarch64
+arm64v8-GitCommit: 411d541689cc277f778ce5a0aa260d5a82dd83f3
+Architectures: amd64, arm64v8
+
+Tags: 8-minimal, 8.6-minimal, 8.6.20220707-minimal
+GitFetch: refs/heads/Rocky-8.6.20220707-Minimal-x86_64
+GitCommit: ef6b5ec9cbad530e1ba673e44dcef9d4c5d5df6a
+arm64v8-GitFetch: refs/heads/Rocky-8.6.20220707-Minimal-aarch64
+arm64v8-GitCommit: 5ba5163c86e3a4ef12601ab1ed7ad7580f9c302b
+Architectures: amd64, arm64v8
+
+Tags: 8.5.20220308
 GitFetch: refs/heads/Rocky-8.5.20220308-x86_64
 GitCommit: 82660c9c8d02077321bf6b12bd6aa512dbfce4fc 
 arm64v8-GitFetch: refs/heads/Rocky-8.5.20220308-aarch64
 arm64v8-GitCommit: a73d2de52b19977008c07227b7527c719b7db623
 Architectures: amd64, arm64v8
-
 
 Tags: 8.5
 GitFetch: refs/heads/Rocky-8.5-x86_64
