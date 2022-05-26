@@ -12,10 +12,16 @@ Directory: 8/jdk/alpine
 File: Dockerfile.releases.full
 
 Tags: 8u332-b09-jdk-focal, 8-jdk-focal, 8-focal
+Architectures: amd64, arm32v7, arm64v8, ppc64le
+GitCommit: df60032f19531a9c7effc22c3c994f9428277700
+Directory: 8/jdk/ubuntu/focal
+File: Dockerfile.releases.full
+
+Tags: 8u332-b09-jdk-jammy, 8-jdk-jammy, 8-jammy
 SharedTags: 8u332-b09-jdk, 8-jdk, 8
 Architectures: amd64, arm32v7, arm64v8, ppc64le
-GitCommit: 087b411c6bb456e4c2a417aa358e6ff81d5775c4
-Directory: 8/jdk/ubuntu
+GitCommit: df60032f19531a9c7effc22c3c994f9428277700
+Directory: 8/jdk/ubuntu/jammy
 File: Dockerfile.releases.full
 
 Tags: 8u332-b09-jdk-centos7, 8-jdk-centos7, 8-centos7
@@ -63,10 +69,16 @@ Directory: 8/jre/alpine
 File: Dockerfile.releases.full
 
 Tags: 8u332-b09-jre-focal, 8-jre-focal
+Architectures: amd64, arm32v7, arm64v8, ppc64le
+GitCommit: df60032f19531a9c7effc22c3c994f9428277700
+Directory: 8/jre/ubuntu/focal
+File: Dockerfile.releases.full
+
+Tags: 8u332-b09-jre-jammy, 8-jre-jammy
 SharedTags: 8u332-b09-jre, 8-jre
 Architectures: amd64, arm32v7, arm64v8, ppc64le
-GitCommit: 087b411c6bb456e4c2a417aa358e6ff81d5775c4
-Directory: 8/jre/ubuntu
+GitCommit: df60032f19531a9c7effc22c3c994f9428277700
+Directory: 8/jre/ubuntu/jammy
 File: Dockerfile.releases.full
 
 Tags: 8u332-b09-jre-centos7, 8-jre-centos7
@@ -116,10 +128,16 @@ Directory: 11/jdk/alpine
 File: Dockerfile.releases.full
 
 Tags: 11.0.15_10-jdk-focal, 11-jdk-focal, 11-focal
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: df60032f19531a9c7effc22c3c994f9428277700
+Directory: 11/jdk/ubuntu/focal
+File: Dockerfile.releases.full
+
+Tags: 11.0.15_10-jdk-jammy, 11-jdk-jammy, 11-jammy
 SharedTags: 11.0.15_10-jdk, 11-jdk, 11
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 5a7c9b25bbca1cde27828e819f765614f7daf774
-Directory: 11/jdk/ubuntu
+GitCommit: df60032f19531a9c7effc22c3c994f9428277700
+Directory: 11/jdk/ubuntu/jammy
 File: Dockerfile.releases.full
 
 Tags: 11.0.15_10-jdk-centos7, 11-jdk-centos7, 11-centos7
@@ -167,10 +185,16 @@ Directory: 11/jre/alpine
 File: Dockerfile.releases.full
 
 Tags: 11.0.15_10-jre-focal, 11-jre-focal
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: df60032f19531a9c7effc22c3c994f9428277700
+Directory: 11/jre/ubuntu/focal
+File: Dockerfile.releases.full
+
+Tags: 11.0.15_10-jre-jammy, 11-jre-jammy
 SharedTags: 11.0.15_10-jre, 11-jre
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 5a7c9b25bbca1cde27828e819f765614f7daf774
-Directory: 11/jre/ubuntu
+GitCommit: df60032f19531a9c7effc22c3c994f9428277700
+Directory: 11/jre/ubuntu/jammy
 File: Dockerfile.releases.full
 
 Tags: 11.0.15_10-jre-centos7, 11-jre-centos7
@@ -220,10 +244,16 @@ Directory: 17/jdk/alpine
 File: Dockerfile.releases.full
 
 Tags: 17.0.3_7-jdk-focal, 17-jdk-focal, 17-focal
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: df60032f19531a9c7effc22c3c994f9428277700
+Directory: 17/jdk/ubuntu/focal
+File: Dockerfile.releases.full
+
+Tags: 17.0.3_7-jdk-jammy, 17-jdk-jammy, 17-jammy
 SharedTags: 17.0.3_7-jdk, 17-jdk, 17
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 5a7c9b25bbca1cde27828e819f765614f7daf774
-Directory: 17/jdk/ubuntu
+GitCommit: df60032f19531a9c7effc22c3c994f9428277700
+Directory: 17/jdk/ubuntu/jammy
 File: Dockerfile.releases.full
 
 Tags: 17.0.3_7-jdk-centos7, 17-jdk-centos7, 17-centos7
@@ -271,10 +301,16 @@ Directory: 17/jre/alpine
 File: Dockerfile.releases.full
 
 Tags: 17.0.3_7-jre-focal, 17-jre-focal
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: df60032f19531a9c7effc22c3c994f9428277700
+Directory: 17/jre/ubuntu/focal
+File: Dockerfile.releases.full
+
+Tags: 17.0.3_7-jre-jammy, 17-jre-jammy
 SharedTags: 17.0.3_7-jre, 17-jre
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 5a7c9b25bbca1cde27828e819f765614f7daf774
-Directory: 17/jre/ubuntu
+GitCommit: df60032f19531a9c7effc22c3c994f9428277700
+Directory: 17/jre/ubuntu/jammy
 File: Dockerfile.releases.full
 
 Tags: 17.0.3_7-jre-centos7, 17-jre-centos7
@@ -324,10 +360,16 @@ Directory: 18/jdk/alpine
 File: Dockerfile.releases.full
 
 Tags: 18.0.1_10-jdk-focal, 18-jdk-focal, 18-focal
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: df60032f19531a9c7effc22c3c994f9428277700
+Directory: 18/jdk/ubuntu/focal
+File: Dockerfile.releases.full
+
+Tags: 18.0.1_10-jdk-jammy, 18-jdk-jammy, 18-jammy
 SharedTags: 18.0.1_10-jdk, 18-jdk, 18, latest
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 28242a6a956d1be8550f78ad12e10a16ec8e583f
-Directory: 18/jdk/ubuntu
+GitCommit: df60032f19531a9c7effc22c3c994f9428277700
+Directory: 18/jdk/ubuntu/jammy
 File: Dockerfile.releases.full
 
 Tags: 18.0.1_10-jdk-centos7, 18-jdk-centos7, 18-centos7
@@ -375,10 +417,16 @@ Directory: 18/jre/alpine
 File: Dockerfile.releases.full
 
 Tags: 18.0.1_10-jre-focal, 18-jre-focal
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: df60032f19531a9c7effc22c3c994f9428277700
+Directory: 18/jre/ubuntu/focal
+File: Dockerfile.releases.full
+
+Tags: 18.0.1_10-jre-jammy, 18-jre-jammy
 SharedTags: 18.0.1_10-jre, 18-jre
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 28242a6a956d1be8550f78ad12e10a16ec8e583f
-Directory: 18/jre/ubuntu
+GitCommit: df60032f19531a9c7effc22c3c994f9428277700
+Directory: 18/jre/ubuntu/jammy
 File: Dockerfile.releases.full
 
 Tags: 18.0.1_10-jre-centos7, 18-jre-centos7
