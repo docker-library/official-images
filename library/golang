@@ -5,6 +5,60 @@ Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Johan Euphrosine <proppy@google.com> (@proppy)
 GitRepo: https://github.com/docker-library/golang.git
 
+Tags: 1.19beta1-bullseye, 1.19-rc-bullseye
+SharedTags: 1.19beta1, 1.19-rc
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: f53e9941dfc699b603b6c01cf5c0d8b89c303ee5
+Directory: 1.19-rc/bullseye
+
+Tags: 1.19beta1-buster, 1.19-rc-buster
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: f53e9941dfc699b603b6c01cf5c0d8b89c303ee5
+Directory: 1.19-rc/buster
+
+Tags: 1.19beta1-stretch, 1.19-rc-stretch
+Architectures: amd64, arm32v7, arm64v8, i386
+GitCommit: f53e9941dfc699b603b6c01cf5c0d8b89c303ee5
+Directory: 1.19-rc/stretch
+
+Tags: 1.19beta1-alpine3.16, 1.19-rc-alpine3.16, 1.19beta1-alpine, 1.19-rc-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: f53e9941dfc699b603b6c01cf5c0d8b89c303ee5
+Directory: 1.19-rc/alpine3.16
+
+Tags: 1.19beta1-alpine3.15, 1.19-rc-alpine3.15
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: f53e9941dfc699b603b6c01cf5c0d8b89c303ee5
+Directory: 1.19-rc/alpine3.15
+
+Tags: 1.19beta1-windowsservercore-ltsc2022, 1.19-rc-windowsservercore-ltsc2022
+SharedTags: 1.19beta1-windowsservercore, 1.19-rc-windowsservercore, 1.19beta1, 1.19-rc
+Architectures: windows-amd64
+GitCommit: f53e9941dfc699b603b6c01cf5c0d8b89c303ee5
+Directory: 1.19-rc/windows/windowsservercore-ltsc2022
+Constraints: windowsservercore-ltsc2022
+
+Tags: 1.19beta1-windowsservercore-1809, 1.19-rc-windowsservercore-1809
+SharedTags: 1.19beta1-windowsservercore, 1.19-rc-windowsservercore, 1.19beta1, 1.19-rc
+Architectures: windows-amd64
+GitCommit: f53e9941dfc699b603b6c01cf5c0d8b89c303ee5
+Directory: 1.19-rc/windows/windowsservercore-1809
+Constraints: windowsservercore-1809
+
+Tags: 1.19beta1-nanoserver-ltsc2022, 1.19-rc-nanoserver-ltsc2022
+SharedTags: 1.19beta1-nanoserver, 1.19-rc-nanoserver
+Architectures: windows-amd64
+GitCommit: f53e9941dfc699b603b6c01cf5c0d8b89c303ee5
+Directory: 1.19-rc/windows/nanoserver-ltsc2022
+Constraints: nanoserver-ltsc2022, windowsservercore-ltsc2022
+
+Tags: 1.19beta1-nanoserver-1809, 1.19-rc-nanoserver-1809
+SharedTags: 1.19beta1-nanoserver, 1.19-rc-nanoserver
+Architectures: windows-amd64
+GitCommit: f53e9941dfc699b603b6c01cf5c0d8b89c303ee5
+Directory: 1.19-rc/windows/nanoserver-1809
+Constraints: nanoserver-1809, windowsservercore-1809
+
 Tags: 1.18.3-bullseye, 1.18-bullseye, 1-bullseye, bullseye
 SharedTags: 1.18.3, 1.18, 1, latest
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
