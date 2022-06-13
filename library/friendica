@@ -4,77 +4,47 @@ Maintainers: Friendica <info@friendi.ca> (@friendica), Philipp Holzer <admin@phi
 GitRepo: https://github.com/friendica/docker.git
 GitFetch: refs/heads/stable
 
-Tags: 2021.09-apache, 2021.09
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: b16c56d2dae58c57db1b999d76d8c5834426717b
-Directory: 2021.09/apache
-
-Tags: 2021.09-fpm
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: b16c56d2dae58c57db1b999d76d8c5834426717b
-Directory: 2021.09/fpm
-
-Tags: 2021.09-fpm-alpine
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: b16c56d2dae58c57db1b999d76d8c5834426717b
-Directory: 2021.09/fpm-alpine
-
-Tags: 2022.02-apache, 2022.02
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: b16c56d2dae58c57db1b999d76d8c5834426717b
-Directory: 2022.02/apache
-
-Tags: 2022.02-fpm
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: b16c56d2dae58c57db1b999d76d8c5834426717b
-Directory: 2022.02/fpm
-
-Tags: 2022.02-fpm-alpine
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: b16c56d2dae58c57db1b999d76d8c5834426717b
-Directory: 2022.02/fpm-alpine
-
-Tags: 2022.03-apache, apache, stable-apache, 2022.03, latest, stable
+Tags: 2022.03-apache, 2022.03
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: b16c56d2dae58c57db1b999d76d8c5834426717b
 Directory: 2022.03/apache
 
-Tags: 2022.03-fpm, fpm, stable-fpm
+Tags: 2022.03-fpm
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: b16c56d2dae58c57db1b999d76d8c5834426717b
 Directory: 2022.03/fpm
 
-Tags: 2022.03-fpm-alpine, fpm-alpine, stable-fpm-alpine
+Tags: 2022.03-fpm-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: b16c56d2dae58c57db1b999d76d8c5834426717b
 Directory: 2022.03/fpm-alpine
 
-Tags: 2022.05-dev-apache, dev-apache, 2022.05-dev, dev
+Tags: 2022.06-apache, apache, stable-apache, 2022.06, latest, stable
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: b16c56d2dae58c57db1b999d76d8c5834426717b
-Directory: 2022.05-dev/apache
+GitCommit: 0747ab0d557876bc5ec11a46cce796c9e3044495
+Directory: 2022.06/apache
 
-Tags: 2022.05-dev-fpm, dev-fpm
+Tags: 2022.06-fpm, fpm, stable-fpm
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: b16c56d2dae58c57db1b999d76d8c5834426717b
-Directory: 2022.05-dev/fpm
+GitCommit: 0747ab0d557876bc5ec11a46cce796c9e3044495
+Directory: 2022.06/fpm
 
-Tags: 2022.05-dev-fpm-alpine, dev-fpm-alpine
+Tags: 2022.06-fpm-alpine, fpm-alpine, stable-fpm-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: b16c56d2dae58c57db1b999d76d8c5834426717b
-Directory: 2022.05-dev/fpm-alpine
+GitCommit: 0747ab0d557876bc5ec11a46cce796c9e3044495
+Directory: 2022.06/fpm-alpine
 
-Tags: 2022.05-rc-apache, rc-apache, 2022.05-rc, rc
+Tags: 2022.09-dev-apache, dev-apache, 2022.09-dev, dev
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: a6fbe76784f75a1bb5c4c16f394a1f620832b30e
-Directory: 2022.05-rc/apache
+GitCommit: 0747ab0d557876bc5ec11a46cce796c9e3044495
+Directory: 2022.09-dev/apache
 
-Tags: 2022.05-rc-fpm, rc-fpm
+Tags: 2022.09-dev-fpm, dev-fpm
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: a6fbe76784f75a1bb5c4c16f394a1f620832b30e
-Directory: 2022.05-rc/fpm
+GitCommit: 0747ab0d557876bc5ec11a46cce796c9e3044495
+Directory: 2022.09-dev/fpm
 
-Tags: 2022.05-rc-fpm-alpine, rc-fpm-alpine
+Tags: 2022.09-dev-fpm-alpine, dev-fpm-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: a6fbe76784f75a1bb5c4c16f394a1f620832b30e
-Directory: 2022.05-rc/fpm-alpine
+GitCommit: 0747ab0d557876bc5ec11a46cce796c9e3044495
+Directory: 2022.09-dev/fpm-alpine
