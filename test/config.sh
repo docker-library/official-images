@@ -169,6 +169,7 @@ imageTests+=(
 	'
 	[perl]='
 		perl-hello-world
+		perl-cpanm
 	'
 	[php]='
 		php-ext-install
