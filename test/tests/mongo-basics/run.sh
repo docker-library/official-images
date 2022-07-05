@@ -90,6 +90,14 @@ mongo() {
 mongo_eval() {
 	mongo --quiet --eval "$@"
 }
+mongo_eval_67788() {
+	# workaround for https://jira.mongodb.org/browse/SERVER-67788
+	local -
+	shopt -s extglob
+	local out
+	out="$(mongo_eval "$@")"
+	echo "${out##+([^0-9]*$'\n')}"
+}
 
 . "$testDir/../../retry.sh" "mongo_eval 'quit(db.stats().ok ? 0 : 1);'"
 
@@ -108,21 +116,21 @@ while ! mongo_eval 'quit(db.stats().ok ? 0 : 1);' &> /dev/null; do
 done
 fi
 
-[ "$(mongo_eval 'db.test.count();')" = 0 ]
+[ "$(mongo_eval_67788 'db.test.count();')" = 0 ]
 mongo_eval 'db.test.save({ _id: 1, a: 2, b: 3, c: "hello" });' > /dev/null
-[ "$(mongo_eval 'db.test.count();')" = 1 ]
+[ "$(mongo_eval_67788 'db.test.count();')" = 1 ]
 mongo_eval 'db.test.save({ _id: 1, a: 3, b: 4, c: "hello" });' > /dev/null
-[ "$(mongo_eval 'db.test.count();')" = 1 ]
-[ "$(mongo_eval 'db.test.findOne().a;')" = 3 ]
+[ "$(mongo_eval_67788 'db.test.count();')" = 1 ]
+[ "$(mongo_eval_67788 'db.test.findOne().a;')" = 3 ]
 
-[ "$(mongo_eval 'db.test2.count();')" = 0 ]
+[ "$(mongo_eval_67788 'db.test2.count();')" = 0 ]
 mongo_eval 'db.test2.save({ _id: "abc" });' > /dev/null
-[ "$(mongo_eval 'db.test2.count();')" = 1 ]
-[ "$(mongo_eval 'db.test.count();')" = 1 ]
+[ "$(mongo_eval_67788 'db.test2.count();')" = 1 ]
+[ "$(mongo_eval_67788 'db.test.count();')" = 1 ]
 mongo_eval 'db.test2.drop();' > /dev/null
-[ "$(mongo_eval 'db.test2.count();')" = 0 ]
-[ "$(mongo_eval 'db.test.count();')" = 1 ]
-[ "$(mongo_eval 'db.test.count();' database-that-does-not-exist)" = 0 ]
+[ "$(mongo_eval_67788 'db.test2.count();')" = 0 ]
+[ "$(mongo_eval_67788 'db.test.count();')" = 1 ]
+[ "$(mongo_eval_67788 'db.test.count();' database-that-does-not-exist)" = 0 ]
 
 mongo_eval 'db.dropDatabase();' > /dev/null
-[ "$(mongo_eval 'db.test.count();')" = 0 ]
+[ "$(mongo_eval_67788 'db.test.count();')" = 0 ]
