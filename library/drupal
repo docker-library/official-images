@@ -1,50 +1,275 @@
-# this file is generated via https://github.com/docker-library/drupal/blob/a97122faee2234e22f990e8c942b357e806511e1/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/drupal/blob/f4b9ef1b8d9a1ce5ca776533e0fbe3ff1ed0c16e/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/drupal.git
 
-Tags: 8.6.2-apache, 8.6-apache, 8-apache, apache, 8.6.2, 8.6, 8, latest
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le
-GitCommit: 48eb0d321cb472d76de0cf552192ee044f568ebe
-Directory: 8.6/apache
+Tags: 10.0.0-alpha6-php8.1-apache-bullseye, 10.0-rc-php8.1-apache-bullseye, rc-php8.1-apache-bullseye, 10.0.0-alpha6-php8.1-apache, 10.0-rc-php8.1-apache, rc-php8.1-apache, 10.0.0-alpha6-php8.1, 10.0-rc-php8.1, rc-php8.1, 10.0.0-alpha6-apache-bullseye, 10.0-rc-apache-bullseye, rc-apache-bullseye, 10.0.0-alpha6-apache, 10.0-rc-apache, rc-apache, 10.0.0-alpha6, 10.0-rc, rc
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 299b4810ab57bb8fa3bd4249d048dea5cafc98d2
+Directory: 10.0-rc/php8.1/apache-bullseye
 
-Tags: 8.6.2-fpm, 8.6-fpm, 8-fpm, fpm
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le
-GitCommit: 48eb0d321cb472d76de0cf552192ee044f568ebe
-Directory: 8.6/fpm
+Tags: 10.0.0-alpha6-php8.1-fpm-bullseye, 10.0-rc-php8.1-fpm-bullseye, rc-php8.1-fpm-bullseye, 10.0.0-alpha6-php8.1-fpm, 10.0-rc-php8.1-fpm, rc-php8.1-fpm, 10.0.0-alpha6-fpm-bullseye, 10.0-rc-fpm-bullseye, rc-fpm-bullseye, 10.0.0-alpha6-fpm, 10.0-rc-fpm, rc-fpm
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 299b4810ab57bb8fa3bd4249d048dea5cafc98d2
+Directory: 10.0-rc/php8.1/fpm-bullseye
 
-Tags: 8.6.2-fpm-alpine, 8.6-fpm-alpine, 8-fpm-alpine, fpm-alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le
-GitCommit: 48eb0d321cb472d76de0cf552192ee044f568ebe
-Directory: 8.6/fpm-alpine
+Tags: 10.0.0-alpha6-php8.1-apache-buster, 10.0-rc-php8.1-apache-buster, rc-php8.1-apache-buster, 10.0.0-alpha6-apache-buster, 10.0-rc-apache-buster, rc-apache-buster
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 299b4810ab57bb8fa3bd4249d048dea5cafc98d2
+Directory: 10.0-rc/php8.1/apache-buster
 
-Tags: 8.5.8-apache, 8.5-apache, 8.5.8, 8.5
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le
-GitCommit: 8a9569a2d2e9ded138454b34ae043afd0bdb2660
-Directory: 8.5/apache
+Tags: 10.0.0-alpha6-php8.1-fpm-buster, 10.0-rc-php8.1-fpm-buster, rc-php8.1-fpm-buster, 10.0.0-alpha6-fpm-buster, 10.0-rc-fpm-buster, rc-fpm-buster
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 299b4810ab57bb8fa3bd4249d048dea5cafc98d2
+Directory: 10.0-rc/php8.1/fpm-buster
 
-Tags: 8.5.8-fpm, 8.5-fpm
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le
-GitCommit: 8a9569a2d2e9ded138454b34ae043afd0bdb2660
-Directory: 8.5/fpm
+Tags: 10.0.0-alpha6-php8.1-fpm-alpine3.16, 10.0-rc-php8.1-fpm-alpine3.16, rc-php8.1-fpm-alpine3.16, 10.0.0-alpha6-php8.1-fpm-alpine, 10.0-rc-php8.1-fpm-alpine, rc-php8.1-fpm-alpine, 10.0.0-alpha6-fpm-alpine3.16, 10.0-rc-fpm-alpine3.16, rc-fpm-alpine3.16, 10.0.0-alpha6-fpm-alpine, 10.0-rc-fpm-alpine, rc-fpm-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 299b4810ab57bb8fa3bd4249d048dea5cafc98d2
+Directory: 10.0-rc/php8.1/fpm-alpine3.16
 
-Tags: 8.5.8-fpm-alpine, 8.5-fpm-alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le
-GitCommit: 8a9569a2d2e9ded138454b34ae043afd0bdb2660
-Directory: 8.5/fpm-alpine
+Tags: 10.0.0-alpha6-php8.1-fpm-alpine3.15, 10.0-rc-php8.1-fpm-alpine3.15, rc-php8.1-fpm-alpine3.15, 10.0.0-alpha6-fpm-alpine3.15, 10.0-rc-fpm-alpine3.15, rc-fpm-alpine3.15
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 299b4810ab57bb8fa3bd4249d048dea5cafc98d2
+Directory: 10.0-rc/php8.1/fpm-alpine3.15
 
-Tags: 7.60-apache, 7-apache, 7.60, 7
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 978f4a2b3b187dcf105d9c40cfd6b84ea8597850
-Directory: 7/apache
+Tags: 9.4.2-php8.1-apache-bullseye, 9.4-php8.1-apache-bullseye, 9-php8.1-apache-bullseye, php8.1-apache-bullseye, 9.4.2-php8.1-apache, 9.4-php8.1-apache, 9-php8.1-apache, php8.1-apache, 9.4.2-php8.1, 9.4-php8.1, 9-php8.1, php8.1
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: eebf08716cff1a14efbd1aecea05cc8cf5606321
+Directory: 9.4/php8.1/apache-bullseye
 
-Tags: 7.60-fpm, 7-fpm
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 978f4a2b3b187dcf105d9c40cfd6b84ea8597850
-Directory: 7/fpm
+Tags: 9.4.2-php8.1-fpm-bullseye, 9.4-php8.1-fpm-bullseye, 9-php8.1-fpm-bullseye, php8.1-fpm-bullseye, 9.4.2-php8.1-fpm, 9.4-php8.1-fpm, 9-php8.1-fpm, php8.1-fpm
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: eebf08716cff1a14efbd1aecea05cc8cf5606321
+Directory: 9.4/php8.1/fpm-bullseye
 
-Tags: 7.60-fpm-alpine, 7-fpm-alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: 978f4a2b3b187dcf105d9c40cfd6b84ea8597850
-Directory: 7/fpm-alpine
+Tags: 9.4.2-php8.1-apache-buster, 9.4-php8.1-apache-buster, 9-php8.1-apache-buster, php8.1-apache-buster
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: eebf08716cff1a14efbd1aecea05cc8cf5606321
+Directory: 9.4/php8.1/apache-buster
+
+Tags: 9.4.2-php8.1-fpm-buster, 9.4-php8.1-fpm-buster, 9-php8.1-fpm-buster, php8.1-fpm-buster
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: eebf08716cff1a14efbd1aecea05cc8cf5606321
+Directory: 9.4/php8.1/fpm-buster
+
+Tags: 9.4.2-php8.1-fpm-alpine3.16, 9.4-php8.1-fpm-alpine3.16, 9-php8.1-fpm-alpine3.16, php8.1-fpm-alpine3.16, 9.4.2-php8.1-fpm-alpine, 9.4-php8.1-fpm-alpine, 9-php8.1-fpm-alpine, php8.1-fpm-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: eebf08716cff1a14efbd1aecea05cc8cf5606321
+Directory: 9.4/php8.1/fpm-alpine3.16
+
+Tags: 9.4.2-php8.1-fpm-alpine3.15, 9.4-php8.1-fpm-alpine3.15, 9-php8.1-fpm-alpine3.15, php8.1-fpm-alpine3.15
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: eebf08716cff1a14efbd1aecea05cc8cf5606321
+Directory: 9.4/php8.1/fpm-alpine3.15
+
+Tags: 9.4.2-php8.0-apache-bullseye, 9.4-php8.0-apache-bullseye, 9-php8.0-apache-bullseye, php8.0-apache-bullseye, 9.4.2-php8.0-apache, 9.4-php8.0-apache, 9-php8.0-apache, php8.0-apache, 9.4.2-php8.0, 9.4-php8.0, 9-php8.0, php8.0, 9.4.2-apache-bullseye, 9.4-apache-bullseye, 9-apache-bullseye, apache-bullseye, 9.4.2-apache, 9.4-apache, 9-apache, apache, 9.4.2, 9.4, 9, latest
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: eebf08716cff1a14efbd1aecea05cc8cf5606321
+Directory: 9.4/php8.0/apache-bullseye
+
+Tags: 9.4.2-php8.0-fpm-bullseye, 9.4-php8.0-fpm-bullseye, 9-php8.0-fpm-bullseye, php8.0-fpm-bullseye, 9.4.2-php8.0-fpm, 9.4-php8.0-fpm, 9-php8.0-fpm, php8.0-fpm, 9.4.2-fpm-bullseye, 9.4-fpm-bullseye, 9-fpm-bullseye, fpm-bullseye, 9.4.2-fpm, 9.4-fpm, 9-fpm, fpm
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: eebf08716cff1a14efbd1aecea05cc8cf5606321
+Directory: 9.4/php8.0/fpm-bullseye
+
+Tags: 9.4.2-php8.0-apache-buster, 9.4-php8.0-apache-buster, 9-php8.0-apache-buster, php8.0-apache-buster, 9.4.2-apache-buster, 9.4-apache-buster, 9-apache-buster, apache-buster
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: eebf08716cff1a14efbd1aecea05cc8cf5606321
+Directory: 9.4/php8.0/apache-buster
+
+Tags: 9.4.2-php8.0-fpm-buster, 9.4-php8.0-fpm-buster, 9-php8.0-fpm-buster, php8.0-fpm-buster, 9.4.2-fpm-buster, 9.4-fpm-buster, 9-fpm-buster, fpm-buster
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: eebf08716cff1a14efbd1aecea05cc8cf5606321
+Directory: 9.4/php8.0/fpm-buster
+
+Tags: 9.4.2-php8.0-fpm-alpine3.16, 9.4-php8.0-fpm-alpine3.16, 9-php8.0-fpm-alpine3.16, php8.0-fpm-alpine3.16, 9.4.2-php8.0-fpm-alpine, 9.4-php8.0-fpm-alpine, 9-php8.0-fpm-alpine, php8.0-fpm-alpine, 9.4.2-fpm-alpine3.16, 9.4-fpm-alpine3.16, 9-fpm-alpine3.16, fpm-alpine3.16, 9.4.2-fpm-alpine, 9.4-fpm-alpine, 9-fpm-alpine, fpm-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: eebf08716cff1a14efbd1aecea05cc8cf5606321
+Directory: 9.4/php8.0/fpm-alpine3.16
+
+Tags: 9.4.2-php8.0-fpm-alpine3.15, 9.4-php8.0-fpm-alpine3.15, 9-php8.0-fpm-alpine3.15, php8.0-fpm-alpine3.15, 9.4.2-fpm-alpine3.15, 9.4-fpm-alpine3.15, 9-fpm-alpine3.15, fpm-alpine3.15
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: eebf08716cff1a14efbd1aecea05cc8cf5606321
+Directory: 9.4/php8.0/fpm-alpine3.15
+
+Tags: 9.4.2-php7.4-apache-bullseye, 9.4-php7.4-apache-bullseye, 9-php7.4-apache-bullseye, php7.4-apache-bullseye, 9.4.2-php7.4-apache, 9.4-php7.4-apache, 9-php7.4-apache, php7.4-apache, 9.4.2-php7.4, 9.4-php7.4, 9-php7.4, php7.4
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: eebf08716cff1a14efbd1aecea05cc8cf5606321
+Directory: 9.4/php7.4/apache-bullseye
+
+Tags: 9.4.2-php7.4-fpm-bullseye, 9.4-php7.4-fpm-bullseye, 9-php7.4-fpm-bullseye, php7.4-fpm-bullseye, 9.4.2-php7.4-fpm, 9.4-php7.4-fpm, 9-php7.4-fpm, php7.4-fpm
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: eebf08716cff1a14efbd1aecea05cc8cf5606321
+Directory: 9.4/php7.4/fpm-bullseye
+
+Tags: 9.4.2-php7.4-apache-buster, 9.4-php7.4-apache-buster, 9-php7.4-apache-buster, php7.4-apache-buster
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: eebf08716cff1a14efbd1aecea05cc8cf5606321
+Directory: 9.4/php7.4/apache-buster
+
+Tags: 9.4.2-php7.4-fpm-buster, 9.4-php7.4-fpm-buster, 9-php7.4-fpm-buster, php7.4-fpm-buster
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: eebf08716cff1a14efbd1aecea05cc8cf5606321
+Directory: 9.4/php7.4/fpm-buster
+
+Tags: 9.4.2-php7.4-fpm-alpine3.16, 9.4-php7.4-fpm-alpine3.16, 9-php7.4-fpm-alpine3.16, php7.4-fpm-alpine3.16, 9.4.2-php7.4-fpm-alpine, 9.4-php7.4-fpm-alpine, 9-php7.4-fpm-alpine, php7.4-fpm-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: eebf08716cff1a14efbd1aecea05cc8cf5606321
+Directory: 9.4/php7.4/fpm-alpine3.16
+
+Tags: 9.4.2-php7.4-fpm-alpine3.15, 9.4-php7.4-fpm-alpine3.15, 9-php7.4-fpm-alpine3.15, php7.4-fpm-alpine3.15
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: eebf08716cff1a14efbd1aecea05cc8cf5606321
+Directory: 9.4/php7.4/fpm-alpine3.15
+
+Tags: 9.3.18-php8.1-apache-bullseye, 9.3-php8.1-apache-bullseye, 9.3.18-php8.1-apache, 9.3-php8.1-apache, 9.3.18-php8.1, 9.3-php8.1
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 549bb3a430559f2293417f76f0decf1352ee934e
+Directory: 9.3/php8.1/apache-bullseye
+
+Tags: 9.3.18-php8.1-fpm-bullseye, 9.3-php8.1-fpm-bullseye, 9.3.18-php8.1-fpm, 9.3-php8.1-fpm
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 549bb3a430559f2293417f76f0decf1352ee934e
+Directory: 9.3/php8.1/fpm-bullseye
+
+Tags: 9.3.18-php8.1-apache-buster, 9.3-php8.1-apache-buster
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 549bb3a430559f2293417f76f0decf1352ee934e
+Directory: 9.3/php8.1/apache-buster
+
+Tags: 9.3.18-php8.1-fpm-buster, 9.3-php8.1-fpm-buster
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 549bb3a430559f2293417f76f0decf1352ee934e
+Directory: 9.3/php8.1/fpm-buster
+
+Tags: 9.3.18-php8.1-fpm-alpine3.16, 9.3-php8.1-fpm-alpine3.16, 9.3.18-php8.1-fpm-alpine, 9.3-php8.1-fpm-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 549bb3a430559f2293417f76f0decf1352ee934e
+Directory: 9.3/php8.1/fpm-alpine3.16
+
+Tags: 9.3.18-php8.1-fpm-alpine3.15, 9.3-php8.1-fpm-alpine3.15
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 549bb3a430559f2293417f76f0decf1352ee934e
+Directory: 9.3/php8.1/fpm-alpine3.15
+
+Tags: 9.3.18-php8.0-apache-bullseye, 9.3-php8.0-apache-bullseye, 9.3.18-php8.0-apache, 9.3-php8.0-apache, 9.3.18-php8.0, 9.3-php8.0, 9.3.18-apache-bullseye, 9.3-apache-bullseye, 9.3.18-apache, 9.3-apache, 9.3.18, 9.3
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 549bb3a430559f2293417f76f0decf1352ee934e
+Directory: 9.3/php8.0/apache-bullseye
+
+Tags: 9.3.18-php8.0-fpm-bullseye, 9.3-php8.0-fpm-bullseye, 9.3.18-php8.0-fpm, 9.3-php8.0-fpm, 9.3.18-fpm-bullseye, 9.3-fpm-bullseye, 9.3.18-fpm, 9.3-fpm
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 549bb3a430559f2293417f76f0decf1352ee934e
+Directory: 9.3/php8.0/fpm-bullseye
+
+Tags: 9.3.18-php8.0-apache-buster, 9.3-php8.0-apache-buster, 9.3.18-apache-buster, 9.3-apache-buster
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 549bb3a430559f2293417f76f0decf1352ee934e
+Directory: 9.3/php8.0/apache-buster
+
+Tags: 9.3.18-php8.0-fpm-buster, 9.3-php8.0-fpm-buster, 9.3.18-fpm-buster, 9.3-fpm-buster
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 549bb3a430559f2293417f76f0decf1352ee934e
+Directory: 9.3/php8.0/fpm-buster
+
+Tags: 9.3.18-php8.0-fpm-alpine3.16, 9.3-php8.0-fpm-alpine3.16, 9.3.18-php8.0-fpm-alpine, 9.3-php8.0-fpm-alpine, 9.3.18-fpm-alpine3.16, 9.3-fpm-alpine3.16, 9.3.18-fpm-alpine, 9.3-fpm-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 549bb3a430559f2293417f76f0decf1352ee934e
+Directory: 9.3/php8.0/fpm-alpine3.16
+
+Tags: 9.3.18-php8.0-fpm-alpine3.15, 9.3-php8.0-fpm-alpine3.15, 9.3.18-fpm-alpine3.15, 9.3-fpm-alpine3.15
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 549bb3a430559f2293417f76f0decf1352ee934e
+Directory: 9.3/php8.0/fpm-alpine3.15
+
+Tags: 9.3.18-php7.4-apache-bullseye, 9.3-php7.4-apache-bullseye, 9.3.18-php7.4-apache, 9.3-php7.4-apache, 9.3.18-php7.4, 9.3-php7.4
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 549bb3a430559f2293417f76f0decf1352ee934e
+Directory: 9.3/php7.4/apache-bullseye
+
+Tags: 9.3.18-php7.4-fpm-bullseye, 9.3-php7.4-fpm-bullseye, 9.3.18-php7.4-fpm, 9.3-php7.4-fpm
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 549bb3a430559f2293417f76f0decf1352ee934e
+Directory: 9.3/php7.4/fpm-bullseye
+
+Tags: 9.3.18-php7.4-apache-buster, 9.3-php7.4-apache-buster
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 549bb3a430559f2293417f76f0decf1352ee934e
+Directory: 9.3/php7.4/apache-buster
+
+Tags: 9.3.18-php7.4-fpm-buster, 9.3-php7.4-fpm-buster
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 549bb3a430559f2293417f76f0decf1352ee934e
+Directory: 9.3/php7.4/fpm-buster
+
+Tags: 9.3.18-php7.4-fpm-alpine3.16, 9.3-php7.4-fpm-alpine3.16, 9.3.18-php7.4-fpm-alpine, 9.3-php7.4-fpm-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 549bb3a430559f2293417f76f0decf1352ee934e
+Directory: 9.3/php7.4/fpm-alpine3.16
+
+Tags: 9.3.18-php7.4-fpm-alpine3.15, 9.3-php7.4-fpm-alpine3.15
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 549bb3a430559f2293417f76f0decf1352ee934e
+Directory: 9.3/php7.4/fpm-alpine3.15
+
+Tags: 7.90-php8.0-apache-bullseye, 7-php8.0-apache-bullseye, 7.90-php8.0-apache, 7-php8.0-apache, 7.90-php8.0, 7-php8.0
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: 3662c638fe1674f989f13a76745ad3b25855abe1
+Directory: 7/php8.0/apache-bullseye
+
+Tags: 7.90-php8.0-fpm-bullseye, 7-php8.0-fpm-bullseye, 7.90-php8.0-fpm, 7-php8.0-fpm
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: 3662c638fe1674f989f13a76745ad3b25855abe1
+Directory: 7/php8.0/fpm-bullseye
+
+Tags: 7.90-php8.0-apache-buster, 7-php8.0-apache-buster
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: 3662c638fe1674f989f13a76745ad3b25855abe1
+Directory: 7/php8.0/apache-buster
+
+Tags: 7.90-php8.0-fpm-buster, 7-php8.0-fpm-buster
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: 3662c638fe1674f989f13a76745ad3b25855abe1
+Directory: 7/php8.0/fpm-buster
+
+Tags: 7.90-php8.0-fpm-alpine3.16, 7-php8.0-fpm-alpine3.16, 7.90-php8.0-fpm-alpine, 7-php8.0-fpm-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 3662c638fe1674f989f13a76745ad3b25855abe1
+Directory: 7/php8.0/fpm-alpine3.16
+
+Tags: 7.90-php8.0-fpm-alpine3.15, 7-php8.0-fpm-alpine3.15
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 3662c638fe1674f989f13a76745ad3b25855abe1
+Directory: 7/php8.0/fpm-alpine3.15
+
+Tags: 7.90-php7.4-apache-bullseye, 7-php7.4-apache-bullseye, 7.90-php7.4-apache, 7-php7.4-apache, 7.90-php7.4, 7-php7.4, 7.90-apache-bullseye, 7-apache-bullseye, 7.90-apache, 7-apache, 7.90, 7
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: 6aecee0150b6216435ca09475eeecfab31c53c1e
+Directory: 7/php7.4/apache-bullseye
+
+Tags: 7.90-php7.4-fpm-bullseye, 7-php7.4-fpm-bullseye, 7.90-php7.4-fpm, 7-php7.4-fpm, 7.90-fpm-bullseye, 7-fpm-bullseye, 7.90-fpm, 7-fpm
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: 6aecee0150b6216435ca09475eeecfab31c53c1e
+Directory: 7/php7.4/fpm-bullseye
+
+Tags: 7.90-php7.4-apache-buster, 7-php7.4-apache-buster, 7.90-apache-buster, 7-apache-buster
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: 6aecee0150b6216435ca09475eeecfab31c53c1e
+Directory: 7/php7.4/apache-buster
+
+Tags: 7.90-php7.4-fpm-buster, 7-php7.4-fpm-buster, 7.90-fpm-buster, 7-fpm-buster
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: 6aecee0150b6216435ca09475eeecfab31c53c1e
+Directory: 7/php7.4/fpm-buster
+
+Tags: 7.90-php7.4-fpm-alpine3.16, 7-php7.4-fpm-alpine3.16, 7.90-php7.4-fpm-alpine, 7-php7.4-fpm-alpine, 7.90-fpm-alpine3.16, 7-fpm-alpine3.16, 7.90-fpm-alpine, 7-fpm-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 6aecee0150b6216435ca09475eeecfab31c53c1e
+Directory: 7/php7.4/fpm-alpine3.16
+
+Tags: 7.90-php7.4-fpm-alpine3.15, 7-php7.4-fpm-alpine3.15, 7.90-fpm-alpine3.15, 7-fpm-alpine3.15
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 6aecee0150b6216435ca09475eeecfab31c53c1e
+Directory: 7/php7.4/fpm-alpine3.15

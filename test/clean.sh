@@ -1,4 +1,12 @@
-#!/bin/bash
-set -e
+#!/usr/bin/env bash
+set -Eeuo pipefail
 
-docker images 'librarytest/*' | awk 'NR>1 { print $1":"$2 }' | xargs -r docker rmi
+docker image ls --digests --no-trunc --format '
+	{{- if ne .Tag "<none>" -}}
+		{{- .Repository -}} : {{- .Tag -}}
+	{{- else if ne .Digest "<none>" -}}
+		{{- .Repository -}} @ {{- .Digest -}}
+	{{- else -}}
+		{{- .ID -}}
+	{{- end -}}
+' 'librarytest/*' | xargs -rt docker image rm

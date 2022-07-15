@@ -1,0 +1,15 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope">
+  <configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:plone="http://namespaces.plone.org/plone">
+    <plone:CORSPolicy
+      allow_origin="http://example.com:4300,http://example.com:5300"
+      allow_methods="DELETE,PUT"
+      allow_credentials="false"
+      expose_headers="X-Example-Header"
+      allow_headers="X-Example-Header,X-Z-Header"
+      max_age="600"
+     />
+  </configure>
+</configure>

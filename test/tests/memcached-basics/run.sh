@@ -7,6 +7,10 @@ image="$1"
 
 # for "nc"
 clientImage='busybox'
+# ensure the clientImage is ready and available
+if ! docker image inspect "$clientImage" &> /dev/null; then
+	docker pull "$clientImage" > /dev/null
+fi
 
 cname="memcached-container-$RANDOM-$RANDOM"
 cid="$(docker run -d --name "$cname" "$image")"
@@ -23,7 +27,8 @@ memcached-command() {
 	} \
 		| docker run --rm -i \
 			--link "$cname":memcached \
-			"$clientImage" nc memcached 11211 \
+			"$clientImage" \
+			nc memcached 11211 \
 		| tr -d '\r'
 }
 

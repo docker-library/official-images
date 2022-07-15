@@ -1,20 +1,240 @@
-Maintainers: Haris Amin <aminharis7@gmail.com> (@hamin),
+Maintainers: Ted Kremenek <kremenek@apple.com> (@tkremenek),
+             Mishal Shah <mishal_shah@apple.com> (@shahmishal),
+             Tom Doron <tomer@apple.com> (@tomerd),
+             Haris Amin <aminharis7@gmail.com> (@hamin),
              Thomas Catterall <me@swizzlr.co> (@swizzlr)
-GitRepo: https://github.com/swiftdocker/docker-swift.git
+GitRepo: https://github.com/apple/swift-docker.git
+GitFetch: refs/heads/main
 
 
-Tags: 4.2, 4, latest
-GitCommit: 7fbe6bf4018c6853e4996c4f28a8da331ae0de2c
-Directory: 4.2
+Tags: 5.6.2, 5.6, 5.6.2-bionic, 5.6-bionic, bionic, latest
+GitCommit: a7a878a4f87f03d15f4db68e60b41ba867091230
+Directory: 5.6/ubuntu/18.04
 
-Tags: 4.1.3, 4.1
-GitCommit: 3fa417a500b6dc45f2588a2e1cf7d24c147a4581
-Directory: 4.1
+Tags: 5.6.2-slim, 5.6-slim, 5.6.2-bionic-slim, 5.6-bionic-slim, bionic-slim, slim
+GitCommit: a7a878a4f87f03d15f4db68e60b41ba867091230
+Directory: 5.6/ubuntu/18.04/slim
 
-Tags: 4.0.3, 4.0
-GitCommit: bc8cb3032ffd6a05d3eddf9cf885139277c11642
-Directory: 4.0
+Tags: 5.6.2-focal-slim, 5.6-focal-slim, focal-slim
+Architectures: amd64, arm64v8
+GitCommit: a7a878a4f87f03d15f4db68e60b41ba867091230
+Directory: 5.6/ubuntu/20.04/slim
 
-Tags: 3.1.1, 3.1, 3
-GitCommit: bc8cb3032ffd6a05d3eddf9cf885139277c11642
-Directory: 3.1
+Tags: 5.6.2-focal, 5.6-focal, focal
+Architectures: amd64, arm64v8
+GitCommit: a7a878a4f87f03d15f4db68e60b41ba867091230
+Directory: 5.6/ubuntu/20.04
+
+Tags: 5.6.2-amazonlinux2, 5.6-amazonlinux2, amazonlinux2
+Architectures: amd64, arm64v8
+GitCommit: a7a878a4f87f03d15f4db68e60b41ba867091230
+Directory: 5.6/amazonlinux/2
+
+Tags: 5.6.2-amazonlinux2-slim, 5.6-amazonlinux2-slim, amazonlinux2-slim
+Architectures: amd64, arm64v8
+GitCommit: a7a878a4f87f03d15f4db68e60b41ba867091230
+Directory: 5.6/amazonlinux/2/slim
+
+Tags: 5.6.2-centos7, 5.6-centos7, centos7
+GitCommit: a7a878a4f87f03d15f4db68e60b41ba867091230
+Directory: 5.6/centos/7
+
+Tags: 5.6.2-centos7-slim, 5.6-centos7-slim, centos7-slim
+GitCommit: a7a878a4f87f03d15f4db68e60b41ba867091230
+Directory: 5.6/centos/7/slim
+
+Tags: 5.5.3, 5.5, 5.5.3-bionic, 5.5-bionic
+GitCommit: 9394b31e064cf0d80eaab08b692a2886c7aea8fe
+Directory: 5.5/ubuntu/18.04
+
+Tags: 5.5.3-xenial, 5.5-xenial, xenial
+GitCommit: 9394b31e064cf0d80eaab08b692a2886c7aea8fe
+Directory: 5.5/ubuntu/16.04
+
+Tags: 5.5.3-slim, 5.5-slim, 5.5.3-bionic-slim, 5.5-bionic-slim
+GitCommit: 9394b31e064cf0d80eaab08b692a2886c7aea8fe
+Directory: 5.5/ubuntu/18.04/slim
+
+Tags: 5.5.3-xenial-slim, 5.5-xenial-slim
+GitCommit: 9394b31e064cf0d80eaab08b692a2886c7aea8fe
+Directory: 5.5/ubuntu/16.04/slim
+
+Tags: 5.5.3-focal-slim, 5.5-focal-slim
+GitCommit: 9394b31e064cf0d80eaab08b692a2886c7aea8fe
+Directory: 5.5/ubuntu/20.04/slim
+
+Tags: 5.5.3-focal, 5.5-focal
+GitCommit: 9394b31e064cf0d80eaab08b692a2886c7aea8fe
+Directory: 5.5/ubuntu/20.04
+
+Tags: 5.5.3-amazonlinux2, 5.5-amazonlinux2
+GitCommit: 9394b31e064cf0d80eaab08b692a2886c7aea8fe
+Directory: 5.5/amazonlinux/2
+
+Tags: 5.5.3-amazonlinux2-slim, 5.5-amazonlinux2-slim
+GitCommit: 9394b31e064cf0d80eaab08b692a2886c7aea8fe
+Directory: 5.5/amazonlinux/2/slim
+
+Tags: 5.5.3-centos7, 5.5-centos7
+GitCommit: 9394b31e064cf0d80eaab08b692a2886c7aea8fe
+Directory: 5.5/centos/7
+
+Tags: 5.5.3-centos7-slim, 5.5-centos7-slim
+GitCommit: 9394b31e064cf0d80eaab08b692a2886c7aea8fe
+Directory: 5.5/centos/7/slim
+
+Tags: 5.4.3, 5.4, 5.4.3-bionic, 5.4-bionic
+GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
+Directory: 5.4/ubuntu/18.04
+
+Tags: 5.4.3-xenial, 5.4-xenial
+GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
+Directory: 5.4/ubuntu/16.04
+
+Tags: 5.4.3-slim, 5.4-slim, 5.4.3-bionic-slim, 5.4-bionic-slim
+GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
+Directory: 5.4/ubuntu/18.04/slim
+
+Tags: 5.4.3-xenial-slim, 5.4-xenial-slim
+GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
+Directory: 5.4/ubuntu/16.04/slim
+
+Tags: 5.4.3-focal-slim, 5.4-focal-slim
+GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
+Directory: 5.4/ubuntu/20.04/slim
+
+Tags: 5.4.3-focal, 5.4-focal
+GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
+Directory: 5.4/ubuntu/20.04
+
+Tags: 5.4.3-amazonlinux2, 5.4-amazonlinux2
+GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
+Directory: 5.4/amazonlinux/2
+
+Tags: 5.4.3-amazonlinux2-slim, 5.4-amazonlinux2-slim
+GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
+Directory: 5.4/amazonlinux/2/slim
+
+Tags: 5.4.3-centos7, 5.4-centos7
+GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
+Directory: 5.4/centos/7
+
+Tags: 5.4.3-centos7-slim, 5.4-centos7-slim
+GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
+Directory: 5.4/centos/7/slim
+
+Tags: 5.3.3, 5.3, 5.3.3-bionic, 5.3-bionic
+GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
+Directory: 5.3/ubuntu/18.04
+
+Tags: 5.3.3-xenial, 5.3-xenial
+GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
+Directory: 5.3/ubuntu/16.04
+
+Tags: 5.3.3-slim, 5.3-slim, 5.3.3-bionic-slim, 5.3-bionic-slim
+GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
+Directory: 5.3/ubuntu/18.04/slim
+
+Tags: 5.3.3-xenial-slim, 5.3-xenial-slim
+GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
+Directory: 5.3/ubuntu/16.04/slim
+
+Tags: 5.3.3-focal-slim, 5.3-focal-slim
+GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
+Directory: 5.3/ubuntu/20.04/slim
+
+Tags: 5.3.3-focal, 5.3-focal
+GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
+Directory: 5.3/ubuntu/20.04
+
+Tags: 5.3.3-amazonlinux2, 5.3-amazonlinux2
+GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
+Directory: 5.3/amazonlinux/2
+
+Tags: 5.3.3-amazonlinux2-slim, 5.3-amazonlinux2-slim
+GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
+Directory: 5.3/amazonlinux/2/slim
+
+Tags: 5.3.3-centos7, 5.3-centos7
+GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
+Directory: 5.3/centos/7
+
+Tags: 5.3.3-centos7-slim, 5.3-centos7-slim
+GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
+Directory: 5.3/centos/7/slim
+
+Tags: 5.2.5, 5.2, 5.2.5-bionic, 5.2-bionic
+GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
+Directory: 5.2/ubuntu/18.04
+
+Tags: 5.2.5-xenial, 5.2-xenial
+GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
+Directory: 5.2/ubuntu/16.04
+
+Tags: 5.2.5-slim, 5.2-slim, 5.2.5-bionic-slim, 5.2-bionic-slim
+GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
+Directory: 5.2/ubuntu/18.04/slim
+
+Tags: 5.2.5-xenial-slim, 5.2-xenial-slim
+GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
+Directory: 5.2/ubuntu/16.04/slim
+
+Tags: 5.2.5-focal-slim, 5.2-focal-slim
+GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
+Directory: 5.2/ubuntu/20.04/slim
+
+Tags: 5.2.5-focal, 5.2-focal
+GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
+Directory: 5.2/ubuntu/20.04
+
+Tags: 5.2.5-amazonlinux2, 5.2-amazonlinux2
+GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
+Directory: 5.2/amazonlinux/2
+
+Tags: 5.2.5-amazonlinux2-slim, 5.2-amazonlinux2-slim
+GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
+Directory: 5.2/amazonlinux/2/slim
+
+Tags: 5.2.5-centos7, 5.2-centos7
+GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
+Directory: 5.2/centos/7
+
+Tags: 5.2.5-centos7-slim, 5.2-centos7-slim
+GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
+Directory: 5.2/centos/7/slim
+
+Tags: 5.1.5, 5.1, 5.1.5-bionic, 5.1-bionic
+GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
+Directory: 5.1/ubuntu/18.04
+
+Tags: 5.1.5-xenial, 5.1-xenial
+GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
+Directory: 5.1/ubuntu/16.04
+
+Tags: 5.1.5-slim, 5.1-slim, 5.1.5-bionic-sim, 5.1-bionic-slim
+GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
+Directory: 5.1/ubuntu/18.04/slim
+
+Tags: 5.1.5-xenial-slim, 5.1-xenial-slim
+GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
+Directory: 5.1/ubuntu/16.04/slim
+
+Tags: 5.0.3, 5.0, 5.0.3-bionic, 5.0-bionic
+GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
+Directory: 5.0/ubuntu/18.04
+
+Tags: 5.0.3-xenial, 5.0-xenial
+GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
+Directory: 5.0/ubuntu/16.04
+
+Tags: 5.0.3-slim, 5.0-slim, 5.0.3-bionic-slim, 5.0-bionic-slim
+GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
+Directory: 5.0/ubuntu/18.04/slim
+
+Tags: 5.0.3-xenial-slim, 5.0-xenial-slim
+GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
+Directory: 5.0/ubuntu/16.04/slim
+
+Tags: 4.2.4, 4.2, 4
+GitCommit: 2d2c2fb89fe6ecfd8885157eb1666ed2686503a0
+Directory: 4.2/ubuntu/16.04

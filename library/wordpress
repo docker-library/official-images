@@ -1,87 +1,65 @@
-# this file is generated via https://github.com/docker-library/wordpress/blob/96a8124c468049e097beec9aa4008bda26671d7e/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/wordpress/blob/891b7108294a629e6cc16c2f4bf643d9475894cc/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/wordpress.git
 
-Tags: 4.9.8-php5.6-apache, 4.9-php5.6-apache, 4-php5.6-apache, php5.6-apache, 4.9.8-php5.6, 4.9-php5.6, 4-php5.6, php5.6
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 913115b209407ae0ed9d38a13e8e5d8b909b431f
-Directory: php5.6/apache
+Tags: 6.0.1-apache, 6.0-apache, 6-apache, apache, 6.0.1, 6.0, 6, latest, 6.0.1-php7.4-apache, 6.0-php7.4-apache, 6-php7.4-apache, php7.4-apache, 6.0.1-php7.4, 6.0-php7.4, 6-php7.4, php7.4
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: 193647657b9c00b68b63ba9ecf306c915764f8f5
+Directory: latest/php7.4/apache
 
-Tags: 4.9.8-php5.6-fpm, 4.9-php5.6-fpm, 4-php5.6-fpm, php5.6-fpm
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 913115b209407ae0ed9d38a13e8e5d8b909b431f
-Directory: php5.6/fpm
+Tags: 6.0.1-fpm, 6.0-fpm, 6-fpm, fpm, 6.0.1-php7.4-fpm, 6.0-php7.4-fpm, 6-php7.4-fpm, php7.4-fpm
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: 193647657b9c00b68b63ba9ecf306c915764f8f5
+Directory: latest/php7.4/fpm
 
-Tags: 4.9.8-php5.6-fpm-alpine, 4.9-php5.6-fpm-alpine, 4-php5.6-fpm-alpine, php5.6-fpm-alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: 913115b209407ae0ed9d38a13e8e5d8b909b431f
-Directory: php5.6/fpm-alpine
+Tags: 6.0.1-fpm-alpine, 6.0-fpm-alpine, 6-fpm-alpine, fpm-alpine, 6.0.1-php7.4-fpm-alpine, 6.0-php7.4-fpm-alpine, 6-php7.4-fpm-alpine, php7.4-fpm-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 193647657b9c00b68b63ba9ecf306c915764f8f5
+Directory: latest/php7.4/fpm-alpine
 
-Tags: 4.9.8-php7.0-apache, 4.9-php7.0-apache, 4-php7.0-apache, php7.0-apache, 4.9.8-php7.0, 4.9-php7.0, 4-php7.0, php7.0
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 913115b209407ae0ed9d38a13e8e5d8b909b431f
-Directory: php7.0/apache
+Tags: 6.0.1-php8.0-apache, 6.0-php8.0-apache, 6-php8.0-apache, php8.0-apache, 6.0.1-php8.0, 6.0-php8.0, 6-php8.0, php8.0
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: 193647657b9c00b68b63ba9ecf306c915764f8f5
+Directory: latest/php8.0/apache
 
-Tags: 4.9.8-php7.0-fpm, 4.9-php7.0-fpm, 4-php7.0-fpm, php7.0-fpm
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 913115b209407ae0ed9d38a13e8e5d8b909b431f
-Directory: php7.0/fpm
+Tags: 6.0.1-php8.0-fpm, 6.0-php8.0-fpm, 6-php8.0-fpm, php8.0-fpm
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: 193647657b9c00b68b63ba9ecf306c915764f8f5
+Directory: latest/php8.0/fpm
 
-Tags: 4.9.8-php7.0-fpm-alpine, 4.9-php7.0-fpm-alpine, 4-php7.0-fpm-alpine, php7.0-fpm-alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: 913115b209407ae0ed9d38a13e8e5d8b909b431f
-Directory: php7.0/fpm-alpine
+Tags: 6.0.1-php8.0-fpm-alpine, 6.0-php8.0-fpm-alpine, 6-php8.0-fpm-alpine, php8.0-fpm-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 193647657b9c00b68b63ba9ecf306c915764f8f5
+Directory: latest/php8.0/fpm-alpine
 
-Tags: 4.9.8-php7.1-apache, 4.9-php7.1-apache, 4-php7.1-apache, php7.1-apache, 4.9.8-php7.1, 4.9-php7.1, 4-php7.1, php7.1
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 913115b209407ae0ed9d38a13e8e5d8b909b431f
-Directory: php7.1/apache
+Tags: 6.0.1-php8.1-apache, 6.0-php8.1-apache, 6-php8.1-apache, php8.1-apache, 6.0.1-php8.1, 6.0-php8.1, 6-php8.1, php8.1
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: 193647657b9c00b68b63ba9ecf306c915764f8f5
+Directory: latest/php8.1/apache
 
-Tags: 4.9.8-php7.1-fpm, 4.9-php7.1-fpm, 4-php7.1-fpm, php7.1-fpm
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 913115b209407ae0ed9d38a13e8e5d8b909b431f
-Directory: php7.1/fpm
+Tags: 6.0.1-php8.1-fpm, 6.0-php8.1-fpm, 6-php8.1-fpm, php8.1-fpm
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: 193647657b9c00b68b63ba9ecf306c915764f8f5
+Directory: latest/php8.1/fpm
 
-Tags: 4.9.8-php7.1-fpm-alpine, 4.9-php7.1-fpm-alpine, 4-php7.1-fpm-alpine, php7.1-fpm-alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: 913115b209407ae0ed9d38a13e8e5d8b909b431f
-Directory: php7.1/fpm-alpine
+Tags: 6.0.1-php8.1-fpm-alpine, 6.0-php8.1-fpm-alpine, 6-php8.1-fpm-alpine, php8.1-fpm-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 193647657b9c00b68b63ba9ecf306c915764f8f5
+Directory: latest/php8.1/fpm-alpine
 
-Tags: 4.9.8-apache, 4.9-apache, 4-apache, apache, 4.9.8, 4.9, 4, latest, 4.9.8-php7.2-apache, 4.9-php7.2-apache, 4-php7.2-apache, php7.2-apache, 4.9.8-php7.2, 4.9-php7.2, 4-php7.2, php7.2
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le
-GitCommit: 913115b209407ae0ed9d38a13e8e5d8b909b431f
-Directory: php7.2/apache
+Tags: cli-2.6.0, cli-2.6, cli-2, cli, cli-2.6.0-php7.4, cli-2.6-php7.4, cli-2-php7.4, cli-php7.4
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 376f01affcaacac50d8416b5f7f4abb34d6b60d2
+Directory: cli/php7.4/alpine
 
-Tags: 4.9.8-fpm, 4.9-fpm, 4-fpm, fpm, 4.9.8-php7.2-fpm, 4.9-php7.2-fpm, 4-php7.2-fpm, php7.2-fpm
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le
-GitCommit: 913115b209407ae0ed9d38a13e8e5d8b909b431f
-Directory: php7.2/fpm
+Tags: cli-2.6.0-php8.0, cli-2.6-php8.0, cli-2-php8.0, cli-php8.0
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 376f01affcaacac50d8416b5f7f4abb34d6b60d2
+Directory: cli/php8.0/alpine
 
-Tags: 4.9.8-fpm-alpine, 4.9-fpm-alpine, 4-fpm-alpine, fpm-alpine, 4.9.8-php7.2-fpm-alpine, 4.9-php7.2-fpm-alpine, 4-php7.2-fpm-alpine, php7.2-fpm-alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le
-GitCommit: 913115b209407ae0ed9d38a13e8e5d8b909b431f
-Directory: php7.2/fpm-alpine
-
-# Now, wp-cli variants (which do _not_ include WordPress, so no WordPress version number -- only wp-cli version)
-
-Tags: cli-2.0.1-php5.6, cli-2.0-php5.6, cli-2-php5.6, cli-php5.6
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: c5dcf1a2d8d894a5b1ed1c7218e444dc342bd7b4
-Directory: php5.6/cli
-
-Tags: cli-2.0.1-php7.0, cli-2.0-php7.0, cli-2-php7.0, cli-php7.0
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: c5dcf1a2d8d894a5b1ed1c7218e444dc342bd7b4
-Directory: php7.0/cli
-
-Tags: cli-2.0.1-php7.1, cli-2.0-php7.1, cli-2-php7.1, cli-php7.1
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: c5dcf1a2d8d894a5b1ed1c7218e444dc342bd7b4
-Directory: php7.1/cli
-
-Tags: cli-2.0.1, cli-2.0, cli-2, cli, cli-2.0.1-php7.2, cli-2.0-php7.2, cli-2-php7.2, cli-php7.2
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le
-GitCommit: c5dcf1a2d8d894a5b1ed1c7218e444dc342bd7b4
-Directory: php7.2/cli
+Tags: cli-2.6.0-php8.1, cli-2.6-php8.1, cli-2-php8.1, cli-php8.1
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 376f01affcaacac50d8416b5f7f4abb34d6b60d2
+Directory: cli/php8.1/alpine

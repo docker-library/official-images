@@ -1,21 +1,29 @@
-# this file is generated via https://github.com/docker-library/mysql/blob/ff627942605ce08a32fa527993337df0e9856760/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/mysql/blob/9ed73fdd2f2fd77591d0020e13c37602a0600eb8/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/mysql.git
 
-Tags: 8.0.13, 8.0, 8, latest
-GitCommit: 223f0be1213bbd8647b841243a3114e8b34022f4
+Tags: 8.0.29, 8.0, 8, latest, 8.0.29-oracle, 8.0-oracle, 8-oracle, oracle
+Architectures: amd64, arm64v8
+GitCommit: 48f07e3da4f62de1adb876e9d657e7283ed12a0e
 Directory: 8.0
+File: Dockerfile.oracle
 
-Tags: 5.7.24, 5.7, 5
-GitCommit: b7c899673a214df4c8027a498c64eec7145ba479
+Tags: 8.0.29-debian, 8.0-debian, 8-debian, debian
+Architectures: amd64
+GitCommit: 6cb73371396bdfcc048a701fa4a4c9e3eee4fde4
+Directory: 8.0
+File: Dockerfile.debian
+
+Tags: 5.7.38, 5.7, 5, 5.7.38-oracle, 5.7-oracle, 5-oracle
+Architectures: amd64
+GitCommit: 48f07e3da4f62de1adb876e9d657e7283ed12a0e
 Directory: 5.7
+File: Dockerfile.oracle
 
-Tags: 5.6.42, 5.6
-GitCommit: 37aee3a187904f07d41ce5fa3cc0fb43c08ffaf5
-Directory: 5.6
-
-Tags: 5.5.62, 5.5
-GitCommit: 7ca585ee4356dd2c912708f24d877967dab51cdd
-Directory: 5.5
+Tags: 5.7.38-debian, 5.7-debian, 5-debian
+Architectures: amd64
+GitCommit: b22945da0ed9f152485cc68ff7565204e8d37db4
+Directory: 5.7
+File: Dockerfile.debian

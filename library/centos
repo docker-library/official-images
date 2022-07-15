@@ -1,68 +1,16 @@
 Maintainers: The CentOS Project <cloud-ops@centos.org> (@CentOS)
 GitRepo: https://github.com/CentOS/sig-cloud-instance-images.git
 Directory: docker
-Constraints: !aufs
 
-Tags: latest, centos7, 7
-GitFetch: refs/heads/CentOS-7
-GitCommit: 72c01dc74ef482ce318167c5c10646be65ac682e
+Tags: centos7, 7, centos7.9.2009, 7.9.2009
+GitFetch: refs/heads/CentOS-7-x86_64
+GitCommit: b2d195220e1c5b181427c3172829c23ab9cd27eb
 arm32v7-GitFetch: refs/heads/CentOS-7armhfp
-arm32v7-GitCommit: 9d87a3c0b1f3436bc9a1bb043b761443c4eac909
-arm64v8-GitFetch: refs/heads/CentOS-7arm64
-arm64v8-GitCommit: 3f2d79108da41d1994d96e3a0536dc97da5f7cd7
-ppc64le-GitFetch: refs/heads/CentOS-7ppc64le
-ppc64le-GitCommit: ef97acb679ae4ee00e9515e48f3353df1f5005db
-i386-GitFetch: refs/heads/CentOS-7i386
-i386-GitCommit: 544a072ae2bb6eb378cf3ba587b24127629e9505
+arm32v7-GitCommit: 8022ae6d18ddf031b1b3a80549eeb46d1deb6dcd
+arm64v8-GitFetch: refs/heads/CentOS-7-aarch64
+arm64v8-GitCommit: 02ea5808a8a155bad28677dd5857c8d382027e14
+ppc64le-GitFetch: refs/heads/CentOS-7-ppc64le
+ppc64le-GitCommit: a8e4f3da8300d18da4c0e5256d64763965e66810
+i386-GitFetch: refs/heads/CentOS-7-i386
+i386-GitCommit: 206003c215684a869a686cf9ea5f9697e577c546
 Architectures: amd64, arm64v8, arm32v7, ppc64le, i386
-
-Tags: centos6, 6
-GitFetch: refs/heads/CentOS-6
-GitCommit: 23b05f6a35520ebf338e4df918e4952830da068b
-i386-GitFetch: refs/heads/CentOS-6i386
-i386-GitCommit: 53cd22704a89c6ed59d43e2e70e63316026af4f7
-Architectures: amd64, i386
-
-Tags: centos7.5.1804, 7.5.1804
-GitFetch: refs/heads/CentOS-7.5.1804
-GitCommit: 0cea32a0018ac2d874960d9378a9745bf92affd2
-
-Tags: centos7.4.1708, 7.4.1708
-GitFetch: refs/heads/CentOS-7.4.1708
-GitCommit: 66add29c188e42d4d855f4d4acdb2b73d547edb6
-
-Tags: centos7.3.1611, 7.3.1611
-GitFetch: refs/heads/CentOS-7.3.1611
-GitCommit: 5bbaef9f60ab9e3eeb61acec631c2d91f8714fff
-
-Tags: centos7.2.1511, 7.2.1511
-GitFetch: refs/heads/CentOS-7.2.1511
-GitCommit: a3c59bd4e98a7f9c063d993955c8ec19c5b1ceff
-
-Tags: centos7.1.1503, 7.1.1503
-GitFetch: refs/heads/CentOS-7.1.1503
-GitCommit: bc561dfdd671d612dbb9f92e7e17dd8009befc44
-
-Tags: centos7.0.1406, 7.0.1406
-GitFetch: refs/heads/CentOS-7.0.1406
-GitCommit: f1d1e0bd83baef08e257da50e6fb446e4dd1b90c
-
-Tags: centos6.10, 6.10
-GitFetch: refs/heads/CentOS-6.10
-GitCommit: da050e2fc6c28d8d72d8bf78c49537247b5ddf76
-
-Tags: centos6.9, 6.9
-GitFetch: refs/heads/CentOS-6.9
-GitCommit: 4f329fe087b0152df26344cecee9ba30b03b1a7b
-
-Tags: centos6.8, 6.8
-GitFetch: refs/heads/CentOS-6.8
-GitCommit: f32666d2af356ed6835942ed753a4970e18bca94
-
-Tags: centos6.7, 6.7
-GitFetch: refs/heads/CentOS-6.7
-GitCommit: d0b72df83f49da844f88aabebe3826372f675370
-
-Tags: centos6.6, 6.6
-GitFetch: refs/heads/CentOS-6.6
-GitCommit: 8911843d9a6cc71aadd81e491f94618aded94f30

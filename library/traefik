@@ -1,20 +1,33 @@
-Maintainers: Emile Vauge <emile@vauge.com> (@emilevauge), Vincent Demeester <vincent@sbr.pm> (@vdemeester), Ludovic Fernandez <ludovic@containo.us> (@ldez), Julien Salleyron <julien@containo.us> (@juliens), Nicolas Mengin <nicolas@containo.us> (@nmengin), Michael Matur <michael@containo.us> (@mmatur), Damien Duportal <damien@containo.us> (@dduportal)
-GitRepo: https://github.com/containous/traefik-library-image.git
+Maintainers: Ludovic Fernandez <ludovic@traefik.io> (@ldez), Julien Salleyron <julien@traefik.io> (@juliens), Romain Tribotté <romain.tribotte@traefik.io> (@rtribotte), Michael Matur <michael@traefik.io> (@mmatur), Kevin Pollet <kevin.pollet@traefik.io> (@kevinpollet), Tom Moulard <tom.moulard@traefik.io> (@tommoulard)
 
-Tags: v1.7.3, 1.7.3, v1.7, 1.7, maroilles, latest
-Architectures: amd64, arm64v8, arm32v6
-GitCommit: b5cc6bd196fbf6740acb0db6665ac420193c90b4
-amd64-Directory: scratch/amd64
-arm32v6-Directory: scratch/arm
-arm64v8-Directory: scratch/arm64
+Tags: v2.8.1-windowsservercore-1809, 2.8.1-windowsservercore-1809, v2.8-windowsservercore-1809, 2.8-windowsservercore-1809, vacherin-windowsservercore-1809, windowsservercore-1809
+Architectures: windows-amd64
+GitRepo: https://github.com/traefik/traefik-library-image.git
+GitCommit: a88952be53ca873807f0bde453fa8e687b806fb3
+Directory: windows/1809
+Constraints: windowsservercore-1809
 
-Tags: v1.7.3-alpine, 1.7.3-alpine, v1.7-alpine, 1.7-alpine, maroilles-alpine, alpine
-Architectures: amd64, arm64v8, arm32v6
-GitCommit: b5cc6bd196fbf6740acb0db6665ac420193c90b4
+Tags: v2.8.1, 2.8.1, v2.8, 2.8, vacherin, latest
+Architectures: amd64, arm32v6, arm64v8, s390x
+GitRepo: https://github.com/traefik/traefik-library-image.git
+GitCommit: a88952be53ca873807f0bde453fa8e687b806fb3
 Directory: alpine
 
-Tags: v1.7.3-nanoserver, 1.7.3-nanoserver, v1.7-nanoserver, 1.7-nanoserver, maroilles-nanoserver, v1.7.3-nanoserver-sac2016, 1.7.3-nanoserver-sac2016, v1.7-nanoserver-sac2016, 1.7-nanoserver-sac2016, maroilles-nanoserver-sac2016, nanoserver, nanoserver-sac2016
+Tags: v1.7.34-windowsservercore-1809, 1.7.34-windowsservercore-1809, v1.7-windowsservercore-1809, 1.7-windowsservercore-1809, maroilles-windowsservercore-1809
 Architectures: windows-amd64
-GitCommit: b5cc6bd196fbf6740acb0db6665ac420193c90b4
-Directory: windows
-Constraints: nanoserver-sac2016
+GitRepo: https://github.com/traefik/traefik-library-image.git
+GitCommit: 4434758cf14bbd1ec9511b3f2a37b0a6ce846db6
+Directory: windows/1809
+Constraints: windowsservercore-1809
+
+Tags: v1.7.34-alpine, 1.7.34-alpine, v1.7-alpine, 1.7-alpine, maroilles-alpine
+Architectures: amd64, arm32v6, arm64v8
+GitRepo: https://github.com/traefik/traefik-library-image.git
+GitCommit: 4434758cf14bbd1ec9511b3f2a37b0a6ce846db6
+Directory: alpine
+
+Tags: v1.7.34, 1.7.34, v1.7, 1.7, maroilles
+Architectures: amd64, arm32v6, arm64v8
+GitRepo: https://github.com/traefik/traefik-library-image.git
+GitCommit: 4434758cf14bbd1ec9511b3f2a37b0a6ce846db6
+Directory: scratch

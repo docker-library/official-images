@@ -1,140 +1,155 @@
-# this file is generated via https://github.com/docker-library/buildpack-deps/blob/89ef755062d82d098069a216e8924b6b13e815a0/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/buildpack-deps/blob/4f766db54f5179aca1a841e4036d6d6746ac79d9/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/buildpack-deps.git
 
+Tags: bookworm-curl, testing-curl
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: 84e7e46026131a108a6480e5ed2969e8acf2d4e2
+Directory: debian/bookworm/curl
+
+Tags: bookworm-scm, testing-scm
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: 84e7e46026131a108a6480e5ed2969e8acf2d4e2
+Directory: debian/bookworm/scm
+
+Tags: bookworm, testing
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: 84e7e46026131a108a6480e5ed2969e8acf2d4e2
+Directory: debian/bookworm
+
+Tags: bullseye-curl, stable-curl, curl
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: 98a5ab81d47a106c458cdf90733df0ee8beea06c
+Directory: debian/bullseye/curl
+
+Tags: bullseye-scm, stable-scm, scm
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: 65d69325ad741cea6dee20781c1faaab2e003d87
+Directory: debian/bullseye/scm
+
+Tags: bullseye, stable, latest
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: 65d69325ad741cea6dee20781c1faaab2e003d87
+Directory: debian/bullseye
+
+Tags: buster-curl, oldstable-curl
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: 98a5ab81d47a106c458cdf90733df0ee8beea06c
+Directory: debian/buster/curl
+
+Tags: buster-scm, oldstable-scm
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: 65d69325ad741cea6dee20781c1faaab2e003d87
+Directory: debian/buster/scm
+
+Tags: buster, oldstable
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: 65d69325ad741cea6dee20781c1faaab2e003d87
+Directory: debian/buster
+
+Tags: sid-curl, unstable-curl
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, riscv64, s390x
+GitCommit: 98a5ab81d47a106c458cdf90733df0ee8beea06c
+Directory: debian/sid/curl
+
+Tags: sid-scm, unstable-scm
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, riscv64, s390x
+GitCommit: 65d69325ad741cea6dee20781c1faaab2e003d87
+Directory: debian/sid/scm
+
+Tags: sid, unstable
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, riscv64, s390x
+GitCommit: 65d69325ad741cea6dee20781c1faaab2e003d87
+Directory: debian/sid
+
 Tags: bionic-curl, 18.04-curl
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: b0fc01aa5e3aed6820d8fed6f3301e0542fbeb36
-Directory: bionic/curl
+GitCommit: 98a5ab81d47a106c458cdf90733df0ee8beea06c
+Directory: ubuntu/bionic/curl
 
 Tags: bionic-scm, 18.04-scm
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 0db0cf15f1c507b17e7edc6dfbe301b8e357568f
-Directory: bionic/scm
+GitCommit: 65d69325ad741cea6dee20781c1faaab2e003d87
+Directory: ubuntu/bionic/scm
 
 Tags: bionic, 18.04
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 0db0cf15f1c507b17e7edc6dfbe301b8e357568f
-Directory: bionic
+GitCommit: 98a5ab81d47a106c458cdf90733df0ee8beea06c
+Directory: ubuntu/bionic
 
-Tags: buster-curl, testing-curl
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: b0fc01aa5e3aed6820d8fed6f3301e0542fbeb36
-Directory: buster/curl
+Tags: focal-curl, 20.04-curl
+Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
+GitCommit: 98a5ab81d47a106c458cdf90733df0ee8beea06c
+Directory: ubuntu/focal/curl
 
-Tags: buster-scm, testing-scm
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 99a1c33fda559272e9322b02a5d778bbd04154e7
-Directory: buster/scm
+Tags: focal-scm, 20.04-scm
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 65d69325ad741cea6dee20781c1faaab2e003d87
+Directory: ubuntu/focal/scm
 
-Tags: buster, testing
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: d7da72aaf3bb93fecf5fcb7c6ff154cb0c55d1d1
-Directory: buster
+Tags: focal, 20.04
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 98a5ab81d47a106c458cdf90733df0ee8beea06c
+Directory: ubuntu/focal
 
-Tags: cosmic-curl, 18.10-curl
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: a3bdba8b3675c0f820f2ce7bd88e79e4aac2fb8c
-Directory: cosmic/curl
+Tags: impish-curl, 21.10-curl
+Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
+GitCommit: fae040f3db68991f178f0a9631a03ca9837f5647
+Directory: ubuntu/impish/curl
 
-Tags: cosmic-scm, 18.10-scm
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: a3bdba8b3675c0f820f2ce7bd88e79e4aac2fb8c
-Directory: cosmic/scm
+Tags: impish-scm, 21.10-scm
+Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
+GitCommit: fae040f3db68991f178f0a9631a03ca9837f5647
+Directory: ubuntu/impish/scm
 
-Tags: cosmic, 18.10
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: a3bdba8b3675c0f820f2ce7bd88e79e4aac2fb8c
-Directory: cosmic
+Tags: impish, 21.10
+Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
+GitCommit: fae040f3db68991f178f0a9631a03ca9837f5647
+Directory: ubuntu/impish
 
-Tags: jessie-curl, oldstable-curl
-Architectures: amd64, arm32v5, arm32v7, i386
-GitCommit: b0fc01aa5e3aed6820d8fed6f3301e0542fbeb36
-Directory: jessie/curl
+Tags: jammy-curl, 22.04-curl
+Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
+GitCommit: e2fc735283ba4e96efc3e4acf2b74bc3eccbf327
+Directory: ubuntu/jammy/curl
 
-Tags: jessie-scm, oldstable-scm
-Architectures: amd64, arm32v5, arm32v7, i386
-GitCommit: 1845b3f918f69b4c97912b0d4d68a5658458e84f
-Directory: jessie/scm
+Tags: jammy-scm, 22.04-scm
+Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
+GitCommit: e2fc735283ba4e96efc3e4acf2b74bc3eccbf327
+Directory: ubuntu/jammy/scm
 
-Tags: jessie, oldstable
-Architectures: amd64, arm32v5, arm32v7, i386
-GitCommit: d7da72aaf3bb93fecf5fcb7c6ff154cb0c55d1d1
-Directory: jessie
+Tags: jammy, 22.04
+Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
+GitCommit: e2fc735283ba4e96efc3e4acf2b74bc3eccbf327
+Directory: ubuntu/jammy
 
-Tags: sid-curl, unstable-curl
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: b0fc01aa5e3aed6820d8fed6f3301e0542fbeb36
-Directory: sid/curl
+Tags: kinetic-curl, 22.10-curl
+Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
+GitCommit: c96f4f3e1d5bc19fba5c652f57af0a35bb929718
+Directory: ubuntu/kinetic/curl
 
-Tags: sid-scm, unstable-scm
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 99a1c33fda559272e9322b02a5d778bbd04154e7
-Directory: sid/scm
+Tags: kinetic-scm, 22.10-scm
+Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
+GitCommit: c96f4f3e1d5bc19fba5c652f57af0a35bb929718
+Directory: ubuntu/kinetic/scm
 
-Tags: sid, unstable
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: d7da72aaf3bb93fecf5fcb7c6ff154cb0c55d1d1
-Directory: sid
-
-Tags: stretch-curl, stable-curl, curl
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: b0fc01aa5e3aed6820d8fed6f3301e0542fbeb36
-Directory: stretch/curl
-
-Tags: stretch-scm, stable-scm, scm
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 1845b3f918f69b4c97912b0d4d68a5658458e84f
-Directory: stretch/scm
-
-Tags: stretch, stable, latest
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: d7da72aaf3bb93fecf5fcb7c6ff154cb0c55d1d1
-Directory: stretch
-
-Tags: trusty-curl, 14.04-curl
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le
-GitCommit: b0fc01aa5e3aed6820d8fed6f3301e0542fbeb36
-Directory: trusty/curl
-
-Tags: trusty-scm, 14.04-scm
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le
-GitCommit: 1845b3f918f69b4c97912b0d4d68a5658458e84f
-Directory: trusty/scm
-
-Tags: trusty, 14.04
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le
-GitCommit: d7da72aaf3bb93fecf5fcb7c6ff154cb0c55d1d1
-Directory: trusty
-
-Tags: wheezy-curl, oldoldstable-curl
-Architectures: amd64, arm32v5, arm32v7, i386
-GitCommit: b0fc01aa5e3aed6820d8fed6f3301e0542fbeb36
-Directory: wheezy/curl
-
-Tags: wheezy-scm, oldoldstable-scm
-Architectures: amd64, arm32v5, arm32v7, i386
-GitCommit: 1845b3f918f69b4c97912b0d4d68a5658458e84f
-Directory: wheezy/scm
-
-Tags: wheezy, oldoldstable
-Architectures: amd64, arm32v5, arm32v7, i386
-GitCommit: d7da72aaf3bb93fecf5fcb7c6ff154cb0c55d1d1
-Directory: wheezy
+Tags: kinetic, 22.10
+Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
+GitCommit: c96f4f3e1d5bc19fba5c652f57af0a35bb929718
+Directory: ubuntu/kinetic
 
 Tags: xenial-curl, 16.04-curl
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: b0fc01aa5e3aed6820d8fed6f3301e0542fbeb36
-Directory: xenial/curl
+GitCommit: 93d2a6f64abe6787b7dd25c7d5322af1fa2e3f55
+Directory: ubuntu/xenial/curl
 
 Tags: xenial-scm, 16.04-scm
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 2da658b9a1b91fa61d63ffad2ea52685cac6c702
-Directory: xenial/scm
+GitCommit: 65d69325ad741cea6dee20781c1faaab2e003d87
+Directory: ubuntu/xenial/scm
 
 Tags: xenial, 16.04
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: d7da72aaf3bb93fecf5fcb7c6ff154cb0c55d1d1
-Directory: xenial
+GitCommit: 98a5ab81d47a106c458cdf90733df0ee8beea06c
+Directory: ubuntu/xenial

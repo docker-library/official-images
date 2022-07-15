@@ -6,7 +6,11 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 serverImage="$1"
 
 # Use a client image with curl for testing
-clientImage='buildpack-deps:stretch-curl'
+clientImage='buildpack-deps:buster-curl'
+# ensure the clientImage is ready and available
+if ! docker image inspect "$clientImage" &> /dev/null; then
+	docker pull "$clientImage" > /dev/null
+fi
 
 # Create an instance of the container-under-test
 cid="$(docker run -d "$serverImage")"
@@ -19,7 +23,9 @@ _request() {
 	local url="${1#/}"
 	shift
 
-	docker run --rm --link "$cid":redmine "$clientImage" \
+	docker run --rm \
+		--link "$cid":redmine \
+		"$clientImage" \
 		curl -fs -X"$method" "$@" "http://redmine:3000/$url"
 }
 
@@ -28,7 +34,7 @@ _request() {
 . "$dir/../../retry.sh" --tries 40 '_request GET / --output /dev/null'
 
 # Check that / include the text "Redmine" somewhere
-_request GET '/' |tac|tac| grep -q Redmine
+_request GET '/' | grep Redmine > /dev/null
 
 # Check that /account/register include the text "Password" somewhere
-_request GET '/account/register' |tac|tac| grep -q Password
+_request GET '/account/register' | grep Password > /dev/null

@@ -1,0 +1,170 @@
+name: Munge PR
+
+on:
+  pull_request_target:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+defaults:
+  run:
+    shell: 'bash -Eeuo pipefail -x {0}'
+
+env:
+  # https://github.com/docker-library/bashbrew/issues/10
+  GIT_LFS_SKIP_SMUDGE: 1
+
+jobs:
+
+  gather:
+    name: Gather Metadata
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          # ideally this would be "github.event.pull_request.merge_commit_sha" but according to https://docs.github.com/en/free-pro-team@latest/rest/reference/pulls#get-a-pull-request if "mergeable" is null (meaning there's a background job in-progress to check mergeability), that value is undefined...
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+      - id: gather
+        name: Affected Images
+        run: |
+          (set +x; echo "::stop-commands::$(echo -n ${{ github.token }} | sha256sum | head -c 64)")
+          git fetch --quiet https://github.com/docker-library/official-images.git master
+          images="$(git diff --no-renames --name-only FETCH_HEAD...HEAD -- library/)"
+          if [ -n "$images" ]; then
+            new="$(git diff --no-renames --name-only --diff-filter=A FETCH_HEAD...HEAD -- $images)"
+            deleted="$(git diff --no-renames --name-only --diff-filter=D FETCH_HEAD...HEAD -- $images)"
+          else
+            new=
+            deleted=
+          fi
+          export images new deleted
+          images="$(jq -cn '
+            (env.images | rtrimstr("\n") | split("\n")) as $images
+            | (env.new | rtrimstr("\n") | split("\n")) as $new
+            | (env.deleted | rtrimstr("\n") | split("\n")) as $deleted
+            | {
+              images: $images,
+              count: ($images | length),
+              new: $new,
+              deleted: $deleted,
+            }
+          ')"
+          jq . <<<"$images"
+          set +x
+          echo "::$(echo -n ${{ github.token }} | sha256sum | head -c 64)::"
+          echo "::set-output name=images::$images"
+    outputs:
+      images: '${{ steps.gather.outputs.images }}'
+
+  apply-labels:
+    name: Apply Labels
+    runs-on: ubuntu-latest
+    needs: gather
+    if: fromJSON(needs.gather.outputs.images).count > 0
+    steps:
+      - name: Apply Labels
+        uses: actions/github-script@v5
+        env:
+          IMAGES: ${{ needs.gather.outputs.images }}
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const data = JSON.parse(process.env.IMAGES);
+            var labels = data.images;
+            if (data.new.length > 0) {
+              labels.push('new-image');
+            }
+            console.log(labels);
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.pull_request.number,
+              labels: labels,
+            });
+
+  diff:
+    name: Diff Comment
+    runs-on: ubuntu-latest
+    needs: gather
+    if: fromJSON(needs.gather.outputs.images).count > 0
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          # again, this would ideally be "github.event.pull_request.merge_commit_sha" but we might not have that yet when this runs, so we compromise by checkout out the latest code from the target branch (so we get the latest "diff-pr.sh" script to run)
+          ref: ${{ github.event.pull_request.base.ref }}
+          fetch-depth: 0
+      - name: Prepare Environment
+        run: |
+          # this mimics "test-pr.sh", but without running repo-local scripts (to avoid CVE-2020-15228 via the scripts being updated to write nasty things to $GITHUB_ENV)
+          bashbrewVersion="$(< bashbrew-version)"
+          docker build --pull --tag oisupport/bashbrew:base "https://github.com/docker-library/bashbrew.git#v$bashbrewVersion"
+          docker build --tag oisupport/bashbrew:diff-pr .
+      - name: Gather Maintainers
+        env:
+          IMAGES: ${{ needs.gather.outputs.images }}
+        run: |
+          files="$(jq <<<"$IMAGES" -r '.images | map(@sh) | join(" ")')"
+          eval "set -- $files"
+          for f; do
+            if [ -s "$f" ]; then
+              docker run --rm --read-only --tmpfs /tmp oisupport/bashbrew:diff-pr \
+                bashbrew cat --format '  - `{{ $.RepoName }}`:{{ range .Manifest.Global.Maintainers }} @{{ .Handle }}{{ end }}' "$f"
+            fi
+          done | tee "$GITHUB_WORKSPACE/oi-pr.maint"
+      - name: Generate Diff
+        env:
+          GITHUB_PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          docker run --rm --read-only --tmpfs /tmp oisupport/bashbrew:diff-pr ./diff-pr.sh "$GITHUB_PR_NUMBER" | tee "$GITHUB_WORKSPACE/oi-pr.diff"
+      - name: Comment
+        uses: actions/github-script@v5
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const commentText = 'Diff for ' + context.payload.pull_request.head.sha + ':';
+
+            const fs = require('fs');
+            const diff = fs.readFileSync(process.env.GITHUB_WORKSPACE + '/oi-pr.diff').toString().trimEnd();
+            var body = "<details>\n<summary>" + commentText + "</summary>\n\n```diff\n" + diff + "\n```\n\n</details>";
+            const maint = fs.readFileSync(process.env.GITHUB_WORKSPACE + '/oi-pr.maint').toString().trimEnd();
+            if (maint.length > 0) {
+              body += "\n\nRelevant Maintainers:\n\n" + maint;
+            }
+            fs.writeFileSync(process.env.GITHUB_STEP_SUMMARY, body);
+
+            needNewComment = true;
+            console.log('Reviewing existing comments...');
+            for await (const { data: comments } of github.paginate.iterator(
+              github.rest.issues.listComments,
+              {
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.payload.pull_request.number,
+              }
+            )) {
+              for (const comment of comments) {
+                if (comment.user.login === 'github-actions[bot]') {
+                  if (needNewComment && comment.body.includes(commentText)) {
+                    needNewComment = false;
+                  } else {
+                    console.log('Deleting comment: ' + comment.id);
+                    await github.rest.issues.deleteComment({
+                      owner: context.repo.owner,
+                      repo: context.repo.repo,
+                      comment_id: comment.id,
+                    });
+                  }
+                }
+              }
+            }
+            if (needNewComment) {
+              console.log('Creating new comment...');
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.payload.pull_request.number,
+                body: body,
+              });
+            }

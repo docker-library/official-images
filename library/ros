@@ -2,110 +2,6 @@ Maintainers: Tully Foote <tfoote+buildfarm@osrfoundation.org> (@tfoote)
 GitRepo: https://github.com/osrf/docker_images.git
 
 ################################################################################
-# Release: indigo
-
-########################################
-# Distro: ubuntu:trusty
-
-Tags: indigo-ros-core, indigo-ros-core-trusty
-Architectures: amd64, arm32v7
-GitCommit: 49d22242e02e9c541a9e85b657e1785617b6f470
-Directory: ros/indigo/ubuntu/trusty/ros-core
-
-Tags: indigo-ros-base, indigo-ros-base-trusty, indigo
-Architectures: amd64, arm32v7
-GitCommit: 49d22242e02e9c541a9e85b657e1785617b6f470
-Directory: ros/indigo/ubuntu/trusty/ros-base
-
-Tags: indigo-robot, indigo-robot-trusty
-Architectures: amd64, arm32v7
-GitCommit: 49d22242e02e9c541a9e85b657e1785617b6f470
-Directory: ros/indigo/ubuntu/trusty/robot
-
-Tags: indigo-perception, indigo-perception-trusty
-Architectures: amd64, arm32v7
-GitCommit: 49d22242e02e9c541a9e85b657e1785617b6f470
-Directory: ros/indigo/ubuntu/trusty/perception
-
-
-################################################################################
-# Release: kinetic
-
-########################################
-# Distro: ubuntu:xenial
-
-Tags: kinetic-ros-core, kinetic-ros-core-xenial
-Architectures: amd64, arm32v7, arm64v8
-GitCommit: 49d22242e02e9c541a9e85b657e1785617b6f470
-Directory: ros/kinetic/ubuntu/xenial/ros-core
-
-Tags: kinetic-ros-base, kinetic-ros-base-xenial, kinetic
-Architectures: amd64, arm32v7, arm64v8
-GitCommit: 49d22242e02e9c541a9e85b657e1785617b6f470
-Directory: ros/kinetic/ubuntu/xenial/ros-base
-
-Tags: kinetic-robot, kinetic-robot-xenial
-Architectures: amd64, arm32v7, arm64v8
-GitCommit: 49d22242e02e9c541a9e85b657e1785617b6f470
-Directory: ros/kinetic/ubuntu/xenial/robot
-
-Tags: kinetic-perception, kinetic-perception-xenial
-Architectures: amd64, arm32v7, arm64v8
-GitCommit: 49d22242e02e9c541a9e85b657e1785617b6f470
-Directory: ros/kinetic/ubuntu/xenial/perception
-
-
-################################################################################
-# Release: lunar
-
-########################################
-# Distro: ubuntu:xenial
-
-Tags: lunar-ros-core, lunar-ros-core-xenial
-Architectures: amd64, arm32v7, arm64v8
-GitCommit: 49d22242e02e9c541a9e85b657e1785617b6f470
-Directory: ros/lunar/ubuntu/xenial/ros-core
-
-Tags: lunar-ros-base, lunar-ros-base-xenial, lunar
-Architectures: amd64, arm32v7, arm64v8
-GitCommit: 49d22242e02e9c541a9e85b657e1785617b6f470
-Directory: ros/lunar/ubuntu/xenial/ros-base
-
-Tags: lunar-robot, lunar-robot-xenial
-Architectures: amd64, arm32v7, arm64v8
-GitCommit: 49d22242e02e9c541a9e85b657e1785617b6f470
-Directory: ros/lunar/ubuntu/xenial/robot
-
-Tags: lunar-perception, lunar-perception-xenial
-Architectures: amd64, arm32v7, arm64v8
-GitCommit: 49d22242e02e9c541a9e85b657e1785617b6f470
-Directory: ros/lunar/ubuntu/xenial/perception
-
-########################################
-# Distro: debian:stretch
-
-Tags: lunar-ros-core-stretch
-Architectures: amd64, arm64v8
-GitCommit: 49d22242e02e9c541a9e85b657e1785617b6f470
-Directory: ros/lunar/debian/stretch/ros-core
-
-Tags: lunar-ros-base-stretch
-Architectures: amd64, arm64v8
-GitCommit: 49d22242e02e9c541a9e85b657e1785617b6f470
-Directory: ros/lunar/debian/stretch/ros-base
-
-Tags: lunar-robot-stretch
-Architectures: amd64, arm64v8
-GitCommit: 49d22242e02e9c541a9e85b657e1785617b6f470
-Directory: ros/lunar/debian/stretch/robot
-
-Tags: lunar-perception-stretch
-Architectures: amd64, arm64v8
-GitCommit: 49d22242e02e9c541a9e85b657e1785617b6f470
-Directory: ros/lunar/debian/stretch/perception
-
-
-################################################################################
 # Release: melodic
 
 ########################################
@@ -113,44 +9,159 @@ Directory: ros/lunar/debian/stretch/perception
 
 Tags: melodic-ros-core, melodic-ros-core-bionic
 Architectures: amd64, arm32v7, arm64v8
-GitCommit: 49d22242e02e9c541a9e85b657e1785617b6f470
+GitCommit: 3f4fbca923d80f834f3a89b5960bad5582652519
 Directory: ros/melodic/ubuntu/bionic/ros-core
 
-Tags: melodic-ros-base, melodic-ros-base-bionic, melodic, latest
+Tags: melodic-ros-base, melodic-ros-base-bionic, melodic
 Architectures: amd64, arm32v7, arm64v8
-GitCommit: 49d22242e02e9c541a9e85b657e1785617b6f470
+GitCommit: df19ab7d5993d3b78a908362cdcd1479a8e78b35
 Directory: ros/melodic/ubuntu/bionic/ros-base
 
 Tags: melodic-robot, melodic-robot-bionic
 Architectures: amd64, arm32v7, arm64v8
-GitCommit: 49d22242e02e9c541a9e85b657e1785617b6f470
+GitCommit: df19ab7d5993d3b78a908362cdcd1479a8e78b35
 Directory: ros/melodic/ubuntu/bionic/robot
 
 Tags: melodic-perception, melodic-perception-bionic
 Architectures: amd64, arm32v7, arm64v8
-GitCommit: 49d22242e02e9c541a9e85b657e1785617b6f470
+GitCommit: df19ab7d5993d3b78a908362cdcd1479a8e78b35
 Directory: ros/melodic/ubuntu/bionic/perception
 
+
+################################################################################
+# Release: noetic
+
 ########################################
-# Distro: debian:stretch
+# Distro: ubuntu:focal
 
-Tags: melodic-ros-core-stretch
-Architectures: amd64, arm64v8
-GitCommit: 49d22242e02e9c541a9e85b657e1785617b6f470
-Directory: ros/melodic/debian/stretch/ros-core
+Tags: noetic-ros-core, noetic-ros-core-focal
+Architectures: amd64, arm32v7, arm64v8
+GitCommit: 3f4fbca923d80f834f3a89b5960bad5582652519
+Directory: ros/noetic/ubuntu/focal/ros-core
 
-Tags: melodic-ros-base-stretch
-Architectures: amd64, arm64v8
-GitCommit: 49d22242e02e9c541a9e85b657e1785617b6f470
-Directory: ros/melodic/debian/stretch/ros-base
+Tags: noetic-ros-base, noetic-ros-base-focal, noetic
+Architectures: amd64, arm32v7, arm64v8
+GitCommit: df19ab7d5993d3b78a908362cdcd1479a8e78b35
+Directory: ros/noetic/ubuntu/focal/ros-base
 
-Tags: melodic-robot-stretch
-Architectures: amd64, arm64v8
-GitCommit: 49d22242e02e9c541a9e85b657e1785617b6f470
-Directory: ros/melodic/debian/stretch/robot
+Tags: noetic-robot, noetic-robot-focal
+Architectures: amd64, arm32v7, arm64v8
+GitCommit: df19ab7d5993d3b78a908362cdcd1479a8e78b35
+Directory: ros/noetic/ubuntu/focal/robot
 
-Tags: melodic-perception-stretch
+Tags: noetic-perception, noetic-perception-focal
+Architectures: amd64, arm32v7, arm64v8
+GitCommit: df19ab7d5993d3b78a908362cdcd1479a8e78b35
+Directory: ros/noetic/ubuntu/focal/perception
+
+########################################
+# Distro: debian:buster
+
+Tags: noetic-ros-core-buster
 Architectures: amd64, arm64v8
-GitCommit: 49d22242e02e9c541a9e85b657e1785617b6f470
-Directory: ros/melodic/debian/stretch/perception
+GitCommit: 3f4fbca923d80f834f3a89b5960bad5582652519
+Directory: ros/noetic/debian/buster/ros-core
+
+Tags: noetic-ros-base-buster
+Architectures: amd64, arm64v8
+GitCommit: df19ab7d5993d3b78a908362cdcd1479a8e78b35
+Directory: ros/noetic/debian/buster/ros-base
+
+Tags: noetic-robot-buster
+Architectures: amd64, arm64v8
+GitCommit: df19ab7d5993d3b78a908362cdcd1479a8e78b35
+Directory: ros/noetic/debian/buster/robot
+
+Tags: noetic-perception-buster
+Architectures: amd64, arm64v8
+GitCommit: df19ab7d5993d3b78a908362cdcd1479a8e78b35
+Directory: ros/noetic/debian/buster/perception
+
+
+################################################################################
+# Release: foxy
+
+########################################
+# Distro: ubuntu:focal
+
+Tags: foxy-ros-core, foxy-ros-core-focal
+Architectures: amd64, arm64v8
+GitCommit: 3f4fbca923d80f834f3a89b5960bad5582652519
+Directory: ros/foxy/ubuntu/focal/ros-core
+
+Tags: foxy-ros-base, foxy-ros-base-focal, foxy
+Architectures: amd64, arm64v8
+GitCommit: df19ab7d5993d3b78a908362cdcd1479a8e78b35
+Directory: ros/foxy/ubuntu/focal/ros-base
+
+Tags: foxy-ros1-bridge, foxy-ros1-bridge-focal
+Architectures: amd64, arm64v8
+GitCommit: 3f4fbca923d80f834f3a89b5960bad5582652519
+Directory: ros/foxy/ubuntu/focal/ros1-bridge
+
+
+################################################################################
+# Release: galactic
+
+########################################
+# Distro: ubuntu:focal
+
+Tags: galactic-ros-core, galactic-ros-core-focal
+Architectures: amd64, arm64v8
+GitCommit: 3f4fbca923d80f834f3a89b5960bad5582652519
+Directory: ros/galactic/ubuntu/focal/ros-core
+
+Tags: galactic-ros-base, galactic-ros-base-focal, galactic
+Architectures: amd64, arm64v8
+GitCommit: 6511d8fc0754616550b7f5ea31a40084c2462938
+Directory: ros/galactic/ubuntu/focal/ros-base
+
+Tags: galactic-ros1-bridge, galactic-ros1-bridge-focal
+Architectures: amd64, arm64v8
+GitCommit: 3f4fbca923d80f834f3a89b5960bad5582652519
+Directory: ros/galactic/ubuntu/focal/ros1-bridge
+
+
+################################################################################
+# Release: humble
+
+########################################
+# Distro: ubuntu:jammy
+
+Tags: humble-ros-core, humble-ros-core-jammy
+Architectures: amd64, arm64v8
+GitCommit: 3f4fbca923d80f834f3a89b5960bad5582652519
+Directory: ros/humble/ubuntu/jammy/ros-core
+
+Tags: humble-ros-base, humble-ros-base-jammy, humble, latest
+Architectures: amd64, arm64v8
+GitCommit: 20e3ba685bb353a3c00be9ba01c1b7a6823c9472
+Directory: ros/humble/ubuntu/jammy/ros-base
+
+Tags: humble-perception, humble-perception-jammy
+Architectures: amd64, arm64v8
+GitCommit: 20d40c96b426b8956dec203e236abff2ec29b188
+Directory: ros/humble/ubuntu/jammy/perception
+
+
+################################################################################
+# Release: rolling
+
+########################################
+# Distro: ubuntu:jammy
+
+Tags: rolling-ros-core, rolling-ros-core-jammy
+Architectures: amd64, arm64v8
+GitCommit: 3f4fbca923d80f834f3a89b5960bad5582652519
+Directory: ros/rolling/ubuntu/jammy/ros-core
+
+Tags: rolling-ros-base, rolling-ros-base-jammy, rolling
+Architectures: amd64, arm64v8
+GitCommit: 20d40c96b426b8956dec203e236abff2ec29b188
+Directory: ros/rolling/ubuntu/jammy/ros-base
+
+Tags: rolling-perception, rolling-perception-jammy
+Architectures: amd64, arm64v8
+GitCommit: 20d40c96b426b8956dec203e236abff2ec29b188
+Directory: ros/rolling/ubuntu/jammy/perception
 

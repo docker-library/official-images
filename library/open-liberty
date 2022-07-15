@@ -1,70 +1,111 @@
-Maintainers: Alasdair Nottingham <alasdair.nottingham@gmail.com> (@NottyCode)
+Maintainers: Chris Potter <crpotter@us.ibm.com> (@crpotter),
+             Wendy Raschke <wraschke@us.ibm.com> (@wraschke)
 GitRepo: https://github.com/OpenLiberty/ci.docker.git
-GitCommit: 0b035649595dba866fe6bdc159f26a6ec7ae4f40
-#GitRepo: https://github.com/naumanna/ci.docker-1.git
-#GitCommit: ec05627544413f2f5c2a26a050d10624be2cb576
-#GitFetch: refs/heads/18.0.0.3
+GitFetch: refs/heads/main
+GitCommit: 7c1b79af97021cd58162dc7292737b9422e68693
 Architectures: amd64, i386, ppc64le, s390x
 
-Tags: webProfile8, webProfile8-java8-ibm
-Directory: library/webProfile8/java8/ibmjava
+Tags: beta
+Directory: releases/latest/beta
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk8
 
-Tags: webProfile8-java8-ibmsfj
-Directory: library/webProfile8/java8/ibmsfj
-Architectures: amd64
+Tags: beta-java11
+Directory: releases/latest/beta
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk11
 
-Tags: javaee8, javaee8-java8-ibm, latest
-Directory: library/javaee8/java8/ibmjava
+Tags: beta-java17
+Directory: releases/latest/beta
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk17
 
-Tags: javaee8-java8-ibmsfj
-Directory: library/javaee8/java8/ibmsfj
-Architectures: amd64
+Tags: kernel-slim, kernel-slim-java8-openj9
+Directory: releases/latest/kernel-slim
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk8
 
-Tags: microProfile1, microProfile1-java8-ibm
-Directory: library/microProfile1/java8/ibmjava
+Tags: kernel-slim-java11-openj9
+Directory: releases/latest/kernel-slim
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk11
 
-Tags: microProfile1-java8-ibmsfj
-Directory: library/microProfile1/java8/ibmsfj
-Architectures: amd64
+Tags: kernel-slim-java17-openj9
+Directory: releases/latest/kernel-slim
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk17
 
-Tags: microProfile2, microProfile2-java8-ibm
-Directory: library/microProfile2/java8/ibmjava
+Tags: full, full-java8-openj9, latest
+Directory: releases/latest/full
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk8
 
-Tags: microProfile2-java8-ibmsfj
-Directory: library/microProfile2/java8/ibmsfj
-Architectures: amd64
+Tags: full-java11-openj9
+Directory: releases/latest/full
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk11
 
-Tags: springBoot2, springBoot2-java8-ibm
-Directory: library/springBoot2/java8/ibmjava
+Tags: full-java17-openj9
+Directory: releases/latest/full
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk17
 
-Tags: springBoot2-java8-ibmsfj
-Directory: library/springBoot2/java8/ibmsfj
-Architectures: amd64
+Tags: 22.0.0.6-kernel-slim-java8-openj9
+Directory: releases/22.0.0.6/kernel-slim
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk8
 
-Tags: kernel, kernel-java8-ibm
-Directory: library/kernel/java8/ibmjava
+Tags: 22.0.0.6-kernel-slim-java11-openj9
+Directory: releases/22.0.0.6/kernel-slim
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk11
 
-Tags: kernel-java8-ibmsfj
-Directory: library/kernel/java8/ibmsfj
-Architectures: amd64
+Tags: 22.0.0.6-kernel-slim-java17-openj9
+Directory: releases/22.0.0.6/kernel-slim
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk17
 
-Tags: webProfile7, webProfile7-java8-ibm
-Directory: library/webProfile7/java8/ibmjava
+Tags: 22.0.0.6-full-java8-openj9
+Directory: releases/22.0.0.6/full
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk8
 
-Tags: webProfile7-java8-ibmsfj
-Directory: library/webProfile7/java8/ibmsfj
-Architectures: amd64
+Tags: 22.0.0.6-full-java11-openj9
+Directory: releases/22.0.0.6/full
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk11
 
-Tags: javaee7, javaee7-java8-ibm
-Directory: library/javaee7/java8/ibmjava
+Tags: 22.0.0.6-full-java17-openj9
+Directory: releases/22.0.0.6/full
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk17
 
-Tags: javaee7-java8-ibmsfj
-Directory: library/javaee7/java8/ibmsfj
-Architectures: amd64
+Tags: 22.0.0.3-kernel-slim-java8-openj9
+Directory: releases/22.0.0.3/kernel-slim
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk8
 
-Tags: springBoot1, springBoot1-java8-ibm
-Directory: library/springBoot1/java8/ibmjava
+Tags: 22.0.0.3-kernel-slim-java11-openj9
+Directory: releases/22.0.0.3/kernel-slim
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk11
 
-Tags: springBoot1-java8-ibmsfj
-Directory: library/springBoot1/java8/ibmsfj
-Architectures: amd64
+Tags: 22.0.0.3-kernel-slim-java17-openj9
+Directory: releases/22.0.0.3/kernel-slim
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk17
+
+Tags: 22.0.0.3-full-java8-openj9
+Directory: releases/22.0.0.3/full
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk8
+
+Tags: 22.0.0.3-full-java11-openj9
+Directory: releases/22.0.0.3/full
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk11
+
+Tags: 22.0.0.3-full-java17-openj9
+Directory: releases/22.0.0.3/full
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk17

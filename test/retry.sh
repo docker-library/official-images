@@ -29,7 +29,7 @@ while ! eval "$@" &> /dev/null; do
 	if [ $tries -le 0 ]; then
 		echo >&2 "${image:-the container} failed to accept connections in a reasonable amount of time!"
 		[ "$cid" ] && ( set -x && docker logs "$cid" ) >&2 || true
-		eval "$@" # to hopefully get a useful error message
+		( set -x && eval "$@" ) >&2 || true # to hopefully get a useful error message
 		false
 	fi
 	if [ "$cid" ] && [ "$(docker inspect -f '{{.State.Running}}' "$cid" 2>/dev/null)" != 'true' ]; then
