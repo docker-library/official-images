@@ -5,7 +5,7 @@
   (print))
 
 (import subprocess sys)
-(subprocess.check_call [sys.executable "-m" "pip" "install" "-q" "sh"])
+(subprocess.check_call [sys.executable "-m" "pip" "install" "-q" "sh==1.14.2"])
 (import platform)
 
 (comment Windows is not supported by sh (sad day))
