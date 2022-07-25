@@ -30,6 +30,6 @@ export PIP_DISABLE_PIP_VERSION_CHECK=1
 export PIP_NO_PYTHON_VERSION_WARNING=1
 # https://pypi.org/project/hy/#history
 # https://pypi.org/project/hyrule/#history
-pip install -q 'hy==1.0a4' 'hyrule==0.1'
+pip install -q 'hy==0.24.0' 'hyrule==0.2'
 
 hy ./container.hy
