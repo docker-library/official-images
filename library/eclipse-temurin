@@ -5,28 +5,28 @@ GitRepo: https://github.com/adoptium/containers.git
 GitFetch: refs/heads/main
 
 #------------------------------v8 images---------------------------------
-Tags: 8u332-b09-jdk-alpine, 8-jdk-alpine, 8-alpine
+Tags: 8u342-b07-jdk-alpine, 8-jdk-alpine, 8-alpine
 Architectures: amd64
-GitCommit: d3042b5fe84b9063b5a37df201533c64985d9c6e
+GitCommit: 28a1007d9f6b07c7a11da3d78f25e59e366006de
 Directory: 8/jdk/alpine
 File: Dockerfile.releases.full
 
-Tags: 8u332-b09-jdk-focal, 8-jdk-focal, 8-focal
+Tags: 8u342-b07-jdk-focal, 8-jdk-focal, 8-focal
 Architectures: amd64, arm32v7, arm64v8, ppc64le
-GitCommit: df60032f19531a9c7effc22c3c994f9428277700
+GitCommit: 28a1007d9f6b07c7a11da3d78f25e59e366006de
 Directory: 8/jdk/ubuntu/focal
 File: Dockerfile.releases.full
 
-Tags: 8u332-b09-jdk-jammy, 8-jdk-jammy, 8-jammy
-SharedTags: 8u332-b09-jdk, 8-jdk, 8
+Tags: 8u342-b07-jdk-jammy, 8-jdk-jammy, 8-jammy
+SharedTags: 8u342-b07-jdk, 8-jdk, 8
 Architectures: amd64, arm32v7, arm64v8, ppc64le
-GitCommit: df60032f19531a9c7effc22c3c994f9428277700
+GitCommit: 28a1007d9f6b07c7a11da3d78f25e59e366006de
 Directory: 8/jdk/ubuntu/jammy
 File: Dockerfile.releases.full
 
-Tags: 8u332-b09-jdk-centos7, 8-jdk-centos7, 8-centos7
+Tags: 8u342-b07-jdk-centos7, 8-jdk-centos7, 8-centos7
 Architectures: amd64, arm64v8, ppc64le
-GitCommit: 087b411c6bb456e4c2a417aa358e6ff81d5775c4
+GitCommit: 28a1007d9f6b07c7a11da3d78f25e59e366006de
 Directory: 8/jdk/centos
 File: Dockerfile.releases.full
 
@@ -62,28 +62,28 @@ Directory: 8/jdk/windows/nanoserver-1809
 File: Dockerfile.releases.full
 Constraints: nanoserver-1809, windowsservercore-1809
 
-Tags: 8u332-b09-jre-alpine, 8-jre-alpine
+Tags: 8u342-b07-jre-alpine, 8-jre-alpine
 Architectures: amd64
-GitCommit: d3042b5fe84b9063b5a37df201533c64985d9c6e
+GitCommit: 28a1007d9f6b07c7a11da3d78f25e59e366006de
 Directory: 8/jre/alpine
 File: Dockerfile.releases.full
 
-Tags: 8u332-b09-jre-focal, 8-jre-focal
+Tags: 8u342-b07-jre-focal, 8-jre-focal
 Architectures: amd64, arm32v7, arm64v8, ppc64le
-GitCommit: df60032f19531a9c7effc22c3c994f9428277700
+GitCommit: 28a1007d9f6b07c7a11da3d78f25e59e366006de
 Directory: 8/jre/ubuntu/focal
 File: Dockerfile.releases.full
 
-Tags: 8u332-b09-jre-jammy, 8-jre-jammy
-SharedTags: 8u332-b09-jre, 8-jre
+Tags: 8u342-b07-jre-jammy, 8-jre-jammy
+SharedTags: 8u342-b07-jre, 8-jre
 Architectures: amd64, arm32v7, arm64v8, ppc64le
-GitCommit: df60032f19531a9c7effc22c3c994f9428277700
+GitCommit: 28a1007d9f6b07c7a11da3d78f25e59e366006de
 Directory: 8/jre/ubuntu/jammy
 File: Dockerfile.releases.full
 
-Tags: 8u332-b09-jre-centos7, 8-jre-centos7
+Tags: 8u342-b07-jre-centos7, 8-jre-centos7
 Architectures: amd64, arm64v8, ppc64le
-GitCommit: 087b411c6bb456e4c2a417aa358e6ff81d5775c4
+GitCommit: 28a1007d9f6b07c7a11da3d78f25e59e366006de
 Directory: 8/jre/centos
 File: Dockerfile.releases.full
 
