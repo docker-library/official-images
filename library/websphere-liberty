@@ -2,7 +2,7 @@ Maintainers: Chris Potter <crpotter@us.ibm.com> (@crpotter),
              Wendy Raschke <wraschke@us.ibm.com> (@wraschke)
 GitRepo: https://github.com/WASdev/ci.docker.git
 GitFetch: refs/heads/main
-GitCommit: 7758d6e29c97d78166429dacee4d8c7b77799e86
+GitCommit: c6c6d8be148ee2cb4b9d64affa3c34dadcd1e634
 Architectures: amd64, ppc64le, s390x
 
 Tags: kernel
@@ -30,6 +30,34 @@ File: Dockerfile.ubuntu.openjdk11
 
 Tags: full-java17-openj9
 Directory: ga/latest/full
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk17
+
+Tags: 22.0.0.8-kernel-java8-ibmjava
+Directory: ga/22.0.0.8/kernel
+File: Dockerfile.ubuntu.ibmjava8
+
+Tags: 22.0.0.8-kernel-java11-openj9
+Directory: ga/22.0.0.8/kernel
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk11
+
+Tags: 22.0.0.8-kernel-java17-openj9
+Directory: ga/22.0.0.8/kernel
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk17
+
+Tags: 22.0.0.8-full-java8-ibmjava
+Directory: ga/22.0.0.8/full
+File: Dockerfile.ubuntu.ibmjava8
+
+Tags: 22.0.0.8-full-java11-openj9
+Directory: ga/22.0.0.8/full
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk11
+
+Tags: 22.0.0.8-full-java17-openj9
+Directory: ga/22.0.0.8/full
 Architectures: amd64, ppc64le, s390x
 File: Dockerfile.ubuntu.openjdk17
 
