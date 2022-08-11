@@ -5,116 +5,116 @@ GitRepo: https://github.com/adoptium/containers.git
 GitFetch: refs/heads/main
 
 #------------------------------v8 images---------------------------------
-Tags: 8u342-b07-jdk-alpine, 8-jdk-alpine, 8-alpine
+Tags: 8u345-b01-jdk-alpine, 8-jdk-alpine, 8-alpine
 Architectures: amd64
-GitCommit: da5d1b01783c266fd6ea878068adb9bdd414d234
+GitCommit: a48ce1c120fb4ac0df2bc090c921b6095b021526
 Directory: 8/jdk/alpine
 File: Dockerfile.releases.full
 
-Tags: 8u342-b07-jdk-focal, 8-jdk-focal, 8-focal
+Tags: 8u345-b01-jdk-focal, 8-jdk-focal, 8-focal
 Architectures: amd64, arm32v7, arm64v8, ppc64le
-GitCommit: da5d1b01783c266fd6ea878068adb9bdd414d234
+GitCommit: a48ce1c120fb4ac0df2bc090c921b6095b021526
 Directory: 8/jdk/ubuntu/focal
 File: Dockerfile.releases.full
 
-Tags: 8u342-b07-jdk-jammy, 8-jdk-jammy, 8-jammy
-SharedTags: 8u342-b07-jdk, 8-jdk, 8
+Tags: 8u345-b01-jdk-jammy, 8-jdk-jammy, 8-jammy
+SharedTags: 8u345-b01-jdk, 8-jdk, 8
 Architectures: amd64, arm32v7, arm64v8, ppc64le
-GitCommit: da5d1b01783c266fd6ea878068adb9bdd414d234
+GitCommit: a48ce1c120fb4ac0df2bc090c921b6095b021526
 Directory: 8/jdk/ubuntu/jammy
 File: Dockerfile.releases.full
 
-Tags: 8u342-b07-jdk-centos7, 8-jdk-centos7, 8-centos7
+Tags: 8u345-b01-jdk-centos7, 8-jdk-centos7, 8-centos7
 Architectures: amd64, arm64v8, ppc64le
-GitCommit: da5d1b01783c266fd6ea878068adb9bdd414d234
+GitCommit: a48ce1c120fb4ac0df2bc090c921b6095b021526
 Directory: 8/jdk/centos
 File: Dockerfile.releases.full
 
-Tags: 8u342-b07.1-jdk-windowsservercore-ltsc2022, 8-jdk-windowsservercore-ltsc2022, 8-windowsservercore-ltsc2022
-SharedTags: 8u342-b07.1-jdk-windowsservercore, 8-jdk-windowsservercore, 8-windowsservercore, 8u342-b07.1-jdk, 8-jdk, 8
+Tags: 8u345-b01-jdk-windowsservercore-ltsc2022, 8-jdk-windowsservercore-ltsc2022, 8-windowsservercore-ltsc2022
+SharedTags: 8u345-b01-jdk-windowsservercore, 8-jdk-windowsservercore, 8-windowsservercore, 8u345-b01-jdk, 8-jdk, 8
 Architectures: windows-amd64
-GitCommit: da5d1b01783c266fd6ea878068adb9bdd414d234
+GitCommit: a48ce1c120fb4ac0df2bc090c921b6095b021526
 Directory: 8/jdk/windows/windowsservercore-ltsc2022
 File: Dockerfile.releases.full
 Constraints: windowsservercore-ltsc2022
 
-Tags: 8u342-b07.1-jdk-nanoserver-ltsc2022, 8-jdk-nanoserver-ltsc2022, 8-nanoserver-ltsc2022
-SharedTags: 8u342-b07.1-jdk-nanoserver, 8-jdk-nanoserver, 8-nanoserver
+Tags: 8u345-b01-jdk-nanoserver-ltsc2022, 8-jdk-nanoserver-ltsc2022, 8-nanoserver-ltsc2022
+SharedTags: 8u345-b01-jdk-nanoserver, 8-jdk-nanoserver, 8-nanoserver
 Architectures: windows-amd64
-GitCommit: da5d1b01783c266fd6ea878068adb9bdd414d234
+GitCommit: a48ce1c120fb4ac0df2bc090c921b6095b021526
 Directory: 8/jdk/windows/nanoserver-ltsc2022
 File: Dockerfile.releases.full
 Constraints: nanoserver-ltsc2022, windowsservercore-ltsc2022
 
-Tags: 8u342-b07.1-jdk-windowsservercore-1809, 8-jdk-windowsservercore-1809, 8-windowsservercore-1809
-SharedTags: 8u342-b07.1-jdk-windowsservercore, 8-jdk-windowsservercore, 8-windowsservercore, 8u342-b07.1-jdk, 8-jdk, 8
+Tags: 8u345-b01-jdk-windowsservercore-1809, 8-jdk-windowsservercore-1809, 8-windowsservercore-1809
+SharedTags: 8u345-b01-jdk-windowsservercore, 8-jdk-windowsservercore, 8-windowsservercore, 8u345-b01-jdk, 8-jdk, 8
 Architectures: windows-amd64
-GitCommit: da5d1b01783c266fd6ea878068adb9bdd414d234
+GitCommit: a48ce1c120fb4ac0df2bc090c921b6095b021526
 Directory: 8/jdk/windows/windowsservercore-1809
 File: Dockerfile.releases.full
 Constraints: windowsservercore-1809
 
-Tags: 8u342-b07.1-jdk-nanoserver-1809, 8-jdk-nanoserver-1809, 8-nanoserver-1809
-SharedTags: 8u342-b07.1-jdk-nanoserver, 8-jdk-nanoserver, 8-nanoserver
+Tags: 8u345-b01-jdk-nanoserver-1809, 8-jdk-nanoserver-1809, 8-nanoserver-1809
+SharedTags: 8u345-b01-jdk-nanoserver, 8-jdk-nanoserver, 8-nanoserver
 Architectures: windows-amd64
-GitCommit: da5d1b01783c266fd6ea878068adb9bdd414d234
+GitCommit: a48ce1c120fb4ac0df2bc090c921b6095b021526
 Directory: 8/jdk/windows/nanoserver-1809
 File: Dockerfile.releases.full
 Constraints: nanoserver-1809, windowsservercore-1809
 
-Tags: 8u342-b07-jre-alpine, 8-jre-alpine
+Tags: 8u345-b01-jre-alpine, 8-jre-alpine
 Architectures: amd64
-GitCommit: da5d1b01783c266fd6ea878068adb9bdd414d234
+GitCommit: a48ce1c120fb4ac0df2bc090c921b6095b021526
 Directory: 8/jre/alpine
 File: Dockerfile.releases.full
 
-Tags: 8u342-b07-jre-focal, 8-jre-focal
+Tags: 8u345-b01-jre-focal, 8-jre-focal
 Architectures: amd64, arm32v7, arm64v8, ppc64le
-GitCommit: da5d1b01783c266fd6ea878068adb9bdd414d234
+GitCommit: a48ce1c120fb4ac0df2bc090c921b6095b021526
 Directory: 8/jre/ubuntu/focal
 File: Dockerfile.releases.full
 
-Tags: 8u342-b07-jre-jammy, 8-jre-jammy
-SharedTags: 8u342-b07-jre, 8-jre
+Tags: 8u345-b01-jre-jammy, 8-jre-jammy
+SharedTags: 8u345-b01-jre, 8-jre
 Architectures: amd64, arm32v7, arm64v8, ppc64le
-GitCommit: da5d1b01783c266fd6ea878068adb9bdd414d234
+GitCommit: a48ce1c120fb4ac0df2bc090c921b6095b021526
 Directory: 8/jre/ubuntu/jammy
 File: Dockerfile.releases.full
 
-Tags: 8u342-b07-jre-centos7, 8-jre-centos7
+Tags: 8u345-b01-jre-centos7, 8-jre-centos7
 Architectures: amd64, arm64v8, ppc64le
-GitCommit: da5d1b01783c266fd6ea878068adb9bdd414d234
+GitCommit: a48ce1c120fb4ac0df2bc090c921b6095b021526
 Directory: 8/jre/centos
 File: Dockerfile.releases.full
 
-Tags: 8u342-b07.1-jre-windowsservercore-ltsc2022, 8-jre-windowsservercore-ltsc2022
-SharedTags: 8u342-b07.1-jre-windowsservercore, 8-jre-windowsservercore, 8u342-b07.1-jre, 8-jre
+Tags: 8u345-b01-jre-windowsservercore-ltsc2022, 8-jre-windowsservercore-ltsc2022
+SharedTags: 8u345-b01-jre-windowsservercore, 8-jre-windowsservercore, 8u345-b01-jre, 8-jre
 Architectures: windows-amd64
-GitCommit: da5d1b01783c266fd6ea878068adb9bdd414d234
+GitCommit: a48ce1c120fb4ac0df2bc090c921b6095b021526
 Directory: 8/jre/windows/windowsservercore-ltsc2022
 File: Dockerfile.releases.full
 Constraints: windowsservercore-ltsc2022
 
-Tags: 8u342-b07.1-jre-nanoserver-ltsc2022, 8-jre-nanoserver-ltsc2022
-SharedTags: 8u342-b07.1-jre-nanoserver, 8-jre-nanoserver
+Tags: 8u345-b01-jre-nanoserver-ltsc2022, 8-jre-nanoserver-ltsc2022
+SharedTags: 8u345-b01-jre-nanoserver, 8-jre-nanoserver
 Architectures: windows-amd64
-GitCommit: da5d1b01783c266fd6ea878068adb9bdd414d234
+GitCommit: a48ce1c120fb4ac0df2bc090c921b6095b021526
 Directory: 8/jre/windows/nanoserver-ltsc2022
 File: Dockerfile.releases.full
 Constraints: nanoserver-ltsc2022, windowsservercore-ltsc2022
 
-Tags: 8u342-b07.1-jre-windowsservercore-1809, 8-jre-windowsservercore-1809
-SharedTags: 8u342-b07.1-jre-windowsservercore, 8-jre-windowsservercore, 8u342-b07.1-jre, 8-jre
+Tags: 8u345-b01-jre-windowsservercore-1809, 8-jre-windowsservercore-1809
+SharedTags: 8u345-b01-jre-windowsservercore, 8-jre-windowsservercore, 8u345-b01-jre, 8-jre
 Architectures: windows-amd64
-GitCommit: da5d1b01783c266fd6ea878068adb9bdd414d234
+GitCommit: a48ce1c120fb4ac0df2bc090c921b6095b021526
 Directory: 8/jre/windows/windowsservercore-1809
 File: Dockerfile.releases.full
 Constraints: windowsservercore-1809
 
-Tags: 8u342-b07.1-jre-nanoserver-1809, 8-jre-nanoserver-1809
-SharedTags: 8u342-b07.1-jre-nanoserver, 8-jre-nanoserver
+Tags: 8u345-b01-jre-nanoserver-1809, 8-jre-nanoserver-1809
+SharedTags: 8u345-b01-jre-nanoserver, 8-jre-nanoserver
 Architectures: windows-amd64
-GitCommit: da5d1b01783c266fd6ea878068adb9bdd414d234
+GitCommit: a48ce1c120fb4ac0df2bc090c921b6095b021526
 Directory: 8/jre/windows/nanoserver-1809
 File: Dockerfile.releases.full
 Constraints: nanoserver-1809, windowsservercore-1809
@@ -123,26 +123,26 @@ Constraints: nanoserver-1809, windowsservercore-1809
 #------------------------------v11 images---------------------------------
 Tags: 11.0.16_8-jdk-alpine, 11-jdk-alpine, 11-alpine
 Architectures: amd64
-GitCommit: d4449a4eb69b35e93c21dc69fedc4a15e78d458a
+GitCommit: a48ce1c120fb4ac0df2bc090c921b6095b021526
 Directory: 11/jdk/alpine
 File: Dockerfile.releases.full
 
 Tags: 11.0.16_8-jdk-focal, 11-jdk-focal, 11-focal
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: d4449a4eb69b35e93c21dc69fedc4a15e78d458a
+GitCommit: a48ce1c120fb4ac0df2bc090c921b6095b021526
 Directory: 11/jdk/ubuntu/focal
 File: Dockerfile.releases.full
 
 Tags: 11.0.16_8-jdk-jammy, 11-jdk-jammy, 11-jammy
 SharedTags: 11.0.16_8-jdk, 11-jdk, 11
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: d4449a4eb69b35e93c21dc69fedc4a15e78d458a
+GitCommit: a48ce1c120fb4ac0df2bc090c921b6095b021526
 Directory: 11/jdk/ubuntu/jammy
 File: Dockerfile.releases.full
 
 Tags: 11.0.16_8-jdk-centos7, 11-jdk-centos7, 11-centos7
 Architectures: amd64, arm64v8, ppc64le
-GitCommit: d4449a4eb69b35e93c21dc69fedc4a15e78d458a
+GitCommit: a48ce1c120fb4ac0df2bc090c921b6095b021526
 Directory: 11/jdk/centos
 File: Dockerfile.releases.full
 
@@ -180,26 +180,26 @@ Constraints: nanoserver-1809, windowsservercore-1809
 
 Tags: 11.0.16_8-jre-alpine, 11-jre-alpine
 Architectures: amd64
-GitCommit: d4449a4eb69b35e93c21dc69fedc4a15e78d458a
+GitCommit: a48ce1c120fb4ac0df2bc090c921b6095b021526
 Directory: 11/jre/alpine
 File: Dockerfile.releases.full
 
 Tags: 11.0.16_8-jre-focal, 11-jre-focal
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: d4449a4eb69b35e93c21dc69fedc4a15e78d458a
+GitCommit: a48ce1c120fb4ac0df2bc090c921b6095b021526
 Directory: 11/jre/ubuntu/focal
 File: Dockerfile.releases.full
 
 Tags: 11.0.16_8-jre-jammy, 11-jre-jammy
 SharedTags: 11.0.16_8-jre, 11-jre
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: d4449a4eb69b35e93c21dc69fedc4a15e78d458a
+GitCommit: a48ce1c120fb4ac0df2bc090c921b6095b021526
 Directory: 11/jre/ubuntu/jammy
 File: Dockerfile.releases.full
 
 Tags: 11.0.16_8-jre-centos7, 11-jre-centos7
 Architectures: amd64, arm64v8, ppc64le
-GitCommit: d4449a4eb69b35e93c21dc69fedc4a15e78d458a
+GitCommit: a48ce1c120fb4ac0df2bc090c921b6095b021526
 Directory: 11/jre/centos
 File: Dockerfile.releases.full
 
@@ -239,26 +239,26 @@ Constraints: nanoserver-1809, windowsservercore-1809
 #------------------------------v17 images---------------------------------
 Tags: 17.0.4_8-jdk-alpine, 17-jdk-alpine, 17-alpine
 Architectures: amd64
-GitCommit: d4449a4eb69b35e93c21dc69fedc4a15e78d458a
+GitCommit: a48ce1c120fb4ac0df2bc090c921b6095b021526
 Directory: 17/jdk/alpine
 File: Dockerfile.releases.full
 
 Tags: 17.0.4_8-jdk-focal, 17-jdk-focal, 17-focal
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: d4449a4eb69b35e93c21dc69fedc4a15e78d458a
+GitCommit: a48ce1c120fb4ac0df2bc090c921b6095b021526
 Directory: 17/jdk/ubuntu/focal
 File: Dockerfile.releases.full
 
 Tags: 17.0.4_8-jdk-jammy, 17-jdk-jammy, 17-jammy
 SharedTags: 17.0.4_8-jdk, 17-jdk, 17
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: d4449a4eb69b35e93c21dc69fedc4a15e78d458a
+GitCommit: a48ce1c120fb4ac0df2bc090c921b6095b021526
 Directory: 17/jdk/ubuntu/jammy
 File: Dockerfile.releases.full
 
 Tags: 17.0.4_8-jdk-centos7, 17-jdk-centos7, 17-centos7
 Architectures: amd64, arm64v8, ppc64le
-GitCommit: d4449a4eb69b35e93c21dc69fedc4a15e78d458a
+GitCommit: a48ce1c120fb4ac0df2bc090c921b6095b021526
 Directory: 17/jdk/centos
 File: Dockerfile.releases.full
 
@@ -296,26 +296,26 @@ Constraints: nanoserver-1809, windowsservercore-1809
 
 Tags: 17.0.4_8-jre-alpine, 17-jre-alpine
 Architectures: amd64
-GitCommit: d4449a4eb69b35e93c21dc69fedc4a15e78d458a
+GitCommit: a48ce1c120fb4ac0df2bc090c921b6095b021526
 Directory: 17/jre/alpine
 File: Dockerfile.releases.full
 
 Tags: 17.0.4_8-jre-focal, 17-jre-focal
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: d4449a4eb69b35e93c21dc69fedc4a15e78d458a
+GitCommit: a48ce1c120fb4ac0df2bc090c921b6095b021526
 Directory: 17/jre/ubuntu/focal
 File: Dockerfile.releases.full
 
 Tags: 17.0.4_8-jre-jammy, 17-jre-jammy
 SharedTags: 17.0.4_8-jre, 17-jre
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: d4449a4eb69b35e93c21dc69fedc4a15e78d458a
+GitCommit: a48ce1c120fb4ac0df2bc090c921b6095b021526
 Directory: 17/jre/ubuntu/jammy
 File: Dockerfile.releases.full
 
 Tags: 17.0.4_8-jre-centos7, 17-jre-centos7
 Architectures: amd64, arm64v8, ppc64le
-GitCommit: d4449a4eb69b35e93c21dc69fedc4a15e78d458a
+GitCommit: a48ce1c120fb4ac0df2bc090c921b6095b021526
 Directory: 17/jre/centos
 File: Dockerfile.releases.full
 
@@ -355,26 +355,26 @@ Constraints: nanoserver-1809, windowsservercore-1809
 #------------------------------v18 images---------------------------------
 Tags: 18.0.2_9-jdk-alpine, 18-jdk-alpine, 18-alpine
 Architectures: amd64
-GitCommit: da5d1b01783c266fd6ea878068adb9bdd414d234
+GitCommit: a48ce1c120fb4ac0df2bc090c921b6095b021526
 Directory: 18/jdk/alpine
 File: Dockerfile.releases.full
 
 Tags: 18.0.2_9-jdk-focal, 18-jdk-focal, 18-focal
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: da5d1b01783c266fd6ea878068adb9bdd414d234
+GitCommit: a48ce1c120fb4ac0df2bc090c921b6095b021526
 Directory: 18/jdk/ubuntu/focal
 File: Dockerfile.releases.full
 
 Tags: 18.0.2_9-jdk-jammy, 18-jdk-jammy, 18-jammy
 SharedTags: 18.0.2_9-jdk, 18-jdk, 18, latest
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: da5d1b01783c266fd6ea878068adb9bdd414d234
+GitCommit: a48ce1c120fb4ac0df2bc090c921b6095b021526
 Directory: 18/jdk/ubuntu/jammy
 File: Dockerfile.releases.full
 
 Tags: 18.0.2_9-jdk-centos7, 18-jdk-centos7, 18-centos7
 Architectures: amd64, arm64v8, ppc64le
-GitCommit: da5d1b01783c266fd6ea878068adb9bdd414d234
+GitCommit: a48ce1c120fb4ac0df2bc090c921b6095b021526
 Directory: 18/jdk/centos
 File: Dockerfile.releases.full
 
@@ -412,26 +412,26 @@ Constraints: nanoserver-1809, windowsservercore-1809
 
 Tags: 18.0.2_9-jre-alpine, 18-jre-alpine
 Architectures: amd64
-GitCommit: da5d1b01783c266fd6ea878068adb9bdd414d234
+GitCommit: a48ce1c120fb4ac0df2bc090c921b6095b021526
 Directory: 18/jre/alpine
 File: Dockerfile.releases.full
 
 Tags: 18.0.2_9-jre-focal, 18-jre-focal
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: da5d1b01783c266fd6ea878068adb9bdd414d234
+GitCommit: a48ce1c120fb4ac0df2bc090c921b6095b021526
 Directory: 18/jre/ubuntu/focal
 File: Dockerfile.releases.full
 
 Tags: 18.0.2_9-jre-jammy, 18-jre-jammy
 SharedTags: 18.0.2_9-jre, 18-jre
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: da5d1b01783c266fd6ea878068adb9bdd414d234
+GitCommit: a48ce1c120fb4ac0df2bc090c921b6095b021526
 Directory: 18/jre/ubuntu/jammy
 File: Dockerfile.releases.full
 
 Tags: 18.0.2_9-jre-centos7, 18-jre-centos7
 Architectures: amd64, arm64v8, ppc64le
-GitCommit: da5d1b01783c266fd6ea878068adb9bdd414d234
+GitCommit: a48ce1c120fb4ac0df2bc090c921b6095b021526
 Directory: 18/jre/centos
 File: Dockerfile.releases.full
 
