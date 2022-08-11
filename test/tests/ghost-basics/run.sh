@@ -12,9 +12,40 @@ if ! docker image inspect "$clientImage" &> /dev/null; then
 	docker pull "$clientImage" > /dev/null
 fi
 
+mysqlImage='mysql:8.0'
+# ensure the mysqlImage is ready and available
+if ! docker image inspect "$mysqlImage" &> /dev/null; then
+	docker pull "$mysqlImage" > /dev/null
+fi
+mysqlUser="user-$RANDOM"
+mysqlPassword="password-$RANDOM"
+mysqlDatabase="database-$RANDOM"
+
 # Create an instance of the container-under-test
-cid="$(docker run -d "$serverImage")"
-trap "docker rm -vf $cid > /dev/null" EXIT
+mysqlCid="$(
+	docker run -d \
+		-e MYSQL_RANDOM_ROOT_PASSWORD=1 \
+		-e MYSQL_USER="$mysqlUser" \
+		-e MYSQL_PASSWORD="$mysqlPassword" \
+		-e MYSQL_DATABASE="$mysqlDatabase" \
+		"$mysqlImage"
+)"
+trap "docker rm -vf $mysqlCid > /dev/null" EXIT
+
+# "Unknown database error" / "ECONNREFUSED" (and Ghost just crashing hard)
+. "$dir/../../retry.sh" --tries 30 'docker exec -i -e MYSQL_PWD="$mysqlPassword" "$mysqlCid" mysql -h127.0.0.1 -u"$mysqlUser" --silent "$mysqlDatabase" <<<"SELECT 1"'
+
+cid="$(
+	docker run -d \
+		--link "$mysqlCid":dbhost \
+		-e database__client=mysql \
+		-e database__connection__host=dbhost \
+		-e database__connection__user="$mysqlUser" \
+		-e database__connection__password="$mysqlPassword" \
+		-e database__connection__database="$mysqlDatabase" \
+		"$serverImage"
+)"
+trap "docker rm -vf $cid $mysqlCid > /dev/null" EXIT
 
 _request() {
 	local method="$1"
