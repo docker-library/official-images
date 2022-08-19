@@ -1,6 +1,6 @@
 Maintainers: Brandon Pfeifer <bpfeifer@influxdata.com> (@bnpfeife)
 GitRepo: https://github.com/influxdata/influxdata-docker
-GitCommit: e251756aaf0c2e5469713628e80675e4d2a0cb13
+GitCommit: d0e95946e90479b865f3ac3c072f6c888222bf9c
 
 Tags: 1.8, 1.8.10
 Architectures: amd64, arm32v7, arm64v8
@@ -45,14 +45,6 @@ Directory: influxdb/1.10/meta
 Tags: 1.10-meta-alpine, 1.10.0-meta-alpine
 Directory: influxdb/1.10/meta/alpine
 
-Tags: 2.1, 2.1.1
-Architectures: amd64, arm64v8
-Directory: influxdb/2.1
-
-Tags: 2.1-alpine, 2.1.1-alpine
-Architectures: amd64, arm64v8
-Directory: influxdb/2.1/alpine
-
 Tags: 2.2, 2.2.0
 Architectures: amd64, arm64v8
 Directory: influxdb/2.2
@@ -61,10 +53,18 @@ Tags: 2.2-alpine, 2.2.0-alpine
 Architectures: amd64, arm64v8
 Directory: influxdb/2.2/alpine
 
-Tags: 2.3, 2.3.0, latest
+Tags: 2.3, 2.3.0
 Architectures: amd64, arm64v8
 Directory: influxdb/2.3
 
-Tags: 2.3-alpine, 2.3.0-alpine, alpine
+Tags: 2.3-alpine, 2.3.0-alpine
+Architectures: amd64, arm64v8
+Directory: influxdb/2.3/alpine
+
+Tags: 2.4, 2.4.0, latest
+Architectures: amd64, arm64v8
+Directory: influxdb/2.4
+
+Tags: 2.4-alpine, 2.4.0-alpine, alpine
 Architectures: amd64, arm64v8
 Directory: influxdb/2.3/alpine
