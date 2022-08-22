@@ -18,9 +18,19 @@ if docker run --rm --entrypoint sh "$image" -c 'command -v mongosh > /dev/null';
 	upsertFunc='function upsert(coll, doc) { return coll.initializeUnorderedBulkOp().find({ _id: doc._id }).upsert().replaceOne(doc).execute() }' # https://www.mongodb.com/docs/manual/reference/method/Bulk.find.upsert/#insert-for-bulk.find.replaceone--
 fi
 
+oldEntrypoint=1
+if ! docker run --rm --entrypoint grep "$image" -qF 'MONGO_' /usr/local/bin/docker-entrypoint.sh; then
+	# https://github.com/docker-library/mongo/pull/553 👀
+	oldEntrypoint=
+fi
+
 testDir="$(readlink -f "$(dirname "$BASH_SOURCE")")"
 testName="$(basename "$testDir")" # "mongo-basics" or "mongo-auth-basics" or "mongo-tls-auth"
 if [[ "$testName" == *auth* ]]; then
+	if [ -z "$oldEntrypoint" ]; then
+		echo >&2 'warning: skipping test; auth functionality removed'
+		exit 0
+	fi
 	rootUser="root-$RANDOM"
 	rootPass="root-$RANDOM-$RANDOM-password"
 	mongodRunArgs+=(
@@ -84,6 +94,11 @@ if [[ "$testName" == *tls* ]]; then
 			--sslCAFile /certs/ca.crt
 		)
 	fi
+fi
+
+if [ -z "$oldEntrypoint" ] && [ "${#mongodCmdArgs[@]}" -gt 0 ]; then
+	# https://github.com/docker-library/mongo/pull/553#discussion_r951715815
+	mongodCmdArgs=( --bind_ip_all "${mongodCmdArgs[@]}" )
 fi
 
 cid="$(docker run "${mongodRunArgs[@]}" "$image" "${mongodCmdArgs[@]}")"
