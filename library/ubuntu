@@ -1,57 +1,250 @@
-# see https://partner-images.canonical.com/core/
+# see https://partner-images.canonical.com/oci/
 # see also https://wiki.ubuntu.com/Releases#Current
 
-Maintainers: Tianon Gravi <tianon@debian.org> (@tianon), Michael Hudson-Doyle <michael.hudson@ubuntu.com> (@mwhudson)
-GitRepo: https://github.com/tianon/docker-brew-ubuntu-core.git
-GitCommit: 669a7da67dd3f2a0fe3131df2134ce1682b4d589
-# https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-amd64
-amd64-GitFetch: refs/heads/dist-amd64
-amd64-GitCommit: 570d5970a8b18bc772ad2c3eb1ce8fd0887d991a
-# https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-arm32v7
-arm32v7-GitFetch: refs/heads/dist-arm32v7
-arm32v7-GitCommit: ac66de83cc2f2312bc73edc549ea472542904126
-# https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-arm64v8
-arm64v8-GitFetch: refs/heads/dist-arm64v8
-arm64v8-GitCommit: ccdcd5d4a1f938cda92e7cb3999fca58188c333f
-# https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-i386
-i386-GitFetch: refs/heads/dist-i386
-i386-GitCommit: f5d9eb38715af54eb96bc68f0b3a240d676400f9
-# https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-ppc64le
-ppc64le-GitFetch: refs/heads/dist-ppc64le
-ppc64le-GitCommit: 06e3fd240a6c2783695356ba4773f1688143c600
-# https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-riscv64
-riscv64-GitFetch: refs/heads/dist-riscv64
-riscv64-GitCommit: a7dffe6da7341dbc01c1c373b99493aa2f4f3fb5
-# https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-s390x
-s390x-GitFetch: refs/heads/dist-s390x
-s390x-GitCommit: ff6467ff309d1e8c1834f45dc088ab9bf71d019b
-
-# 20220801 (bionic)
-Tags: 18.04, bionic-20220801, bionic
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: bionic
-
-# 20220801 (focal)
-Tags: 20.04, focal-20220801, focal
-Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
-Directory: focal
-
-# 20220801 (jammy)
-Tags: 22.04, jammy-20220801, jammy, latest, rolling
-Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
-Directory: jammy
-
-# 20220801 (kinetic)
-Tags: 22.10, kinetic-20220801, kinetic, devel
-Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
-Directory: kinetic
+Maintainers: Tomáš Virtus <tomas.virtus@canonical.com> (@woky), Michael Hudson-Doyle <michael.hudson@ubuntu.com> (@mwhudson)
+GitRepo: https://git.launchpad.net/virtustom-cloud-images2/+oci/ubuntu-base
 
 # 20191217 (trusty)
-Tags: 14.04, trusty-20191217, trusty
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le
-Directory: trusty
+Tags: trusty-20191217-amd64
+SharedTags: 14.04, trusty-20191217, trusty
+Architectures: amd64
+GitFetch: refs/heads/docker-library-14.04-trusty-20191217-amd64
+GitCommit: 7de6d05ce822853d8ad4ad391fa88274b31d9ce4
+
+# 20191217 (trusty)
+Tags: trusty-20191217-arm64
+SharedTags: 14.04, trusty-20191217, trusty
+Architectures: arm64v8
+GitFetch: refs/heads/docker-library-14.04-trusty-20191217-arm64
+GitCommit: e53ca58e98e17402772560d76b553f5beae50871
+
+# 20191217 (trusty)
+Tags: trusty-20191217-armhf
+SharedTags: 14.04, trusty-20191217, trusty
+Architectures: arm32v7
+GitFetch: refs/heads/docker-library-14.04-trusty-20191217-armhf
+GitCommit: e5fdacd5b472c78e6b75fce7b0a3af143d7c4bd3
+
+# 20191217 (trusty)
+Tags: trusty-20191217-i386
+SharedTags: 14.04, trusty-20191217, trusty
+Architectures: i386
+GitFetch: refs/heads/docker-library-14.04-trusty-20191217-i386
+GitCommit: 1f302c19196fc8aefc9b5c1dfeda9d749f43802b
+
+# 20191217 (trusty)
+Tags: trusty-20191217-ppc64el
+SharedTags: 14.04, trusty-20191217, trusty
+Architectures: ppc64le
+GitFetch: refs/heads/docker-library-14.04-trusty-20191217-ppc64el
+GitCommit: d9b3082951ea9ff87b29347124e8d11838d26f9d
 
 # 20210804 (xenial)
-Tags: 16.04, xenial-20210804, xenial
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: xenial
+Tags: xenial-20210804-amd64
+SharedTags: 16.04, xenial-20210804, xenial
+Architectures: amd64
+GitFetch: refs/heads/docker-library-16.04-xenial-20210804-amd64
+GitCommit: 013746076d28ba1c3754b89657c01f8eb69791a8
+
+# 20210804 (xenial)
+Tags: xenial-20210804-arm64
+SharedTags: 16.04, xenial-20210804, xenial
+Architectures: arm64v8
+GitFetch: refs/heads/docker-library-16.04-xenial-20210804-arm64
+GitCommit: 4bb43d52f37e1411b97788890192b853b710abfb
+
+# 20210804 (xenial)
+Tags: xenial-20210804-armhf
+SharedTags: 16.04, xenial-20210804, xenial
+Architectures: arm32v7
+GitFetch: refs/heads/docker-library-16.04-xenial-20210804-armhf
+GitCommit: fa9436dcfc1e26ebbf0fc7e4dd6363ed035a62d0
+
+# 20210804 (xenial)
+Tags: xenial-20210804-i386
+SharedTags: 16.04, xenial-20210804, xenial
+Architectures: i386
+GitFetch: refs/heads/docker-library-16.04-xenial-20210804-i386
+GitCommit: 540db732ee0a1a54995501788cc1b8c892c50a92
+
+# 20210804 (xenial)
+Tags: xenial-20210804-ppc64el
+SharedTags: 16.04, xenial-20210804, xenial
+Architectures: ppc64le
+GitFetch: refs/heads/docker-library-16.04-xenial-20210804-ppc64el
+GitCommit: dc5ea815abc1c95b53f765f2d32cf26926723db8
+
+# 20210804 (xenial)
+Tags: xenial-20210804-s390x
+SharedTags: 16.04, xenial-20210804, xenial
+Architectures: s390x
+GitFetch: refs/heads/docker-library-16.04-xenial-20210804-s390x
+GitCommit: ad20726ba8d13d30b8dfa04dcbfb47839cecfb8b
+
+# 20220801 (bionic)
+Tags: bionic-20220801-amd64
+SharedTags: 18.04, bionic-20220801, bionic
+Architectures: amd64
+GitFetch: refs/heads/docker-library-18.04-bionic-20220801-amd64
+GitCommit: 26dc1624284c47b4e2d209925675ab53f7a0ae60
+
+# 20220801 (bionic)
+Tags: bionic-20220801-arm64
+SharedTags: 18.04, bionic-20220801, bionic
+Architectures: arm64v8
+GitFetch: refs/heads/docker-library-18.04-bionic-20220801-arm64
+GitCommit: b4543631e9815f5097a059316c97f8d3f2ce0f6c
+
+# 20220801 (bionic)
+Tags: bionic-20220801-armhf
+SharedTags: 18.04, bionic-20220801, bionic
+Architectures: arm32v7
+GitFetch: refs/heads/docker-library-18.04-bionic-20220801-armhf
+GitCommit: 8af01fc3a5b88dde17df1a7220ceacbb773b667b
+
+# 20220801 (bionic)
+Tags: bionic-20220801-i386
+SharedTags: 18.04, bionic-20220801, bionic
+Architectures: i386
+GitFetch: refs/heads/docker-library-18.04-bionic-20220801-i386
+GitCommit: f12a62520eae9253f15a16e1bfa120030fed66e0
+
+# 20220801 (bionic)
+Tags: bionic-20220801-ppc64el
+SharedTags: 18.04, bionic-20220801, bionic
+Architectures: ppc64le
+GitFetch: refs/heads/docker-library-18.04-bionic-20220801-ppc64el
+GitCommit: a3e012198c7324d3622b32a245da38e40848bad1
+
+# 20220801 (bionic)
+Tags: bionic-20220801-s390x
+SharedTags: 18.04, bionic-20220801, bionic
+Architectures: s390x
+GitFetch: refs/heads/docker-library-18.04-bionic-20220801-s390x
+GitCommit: 0a3562375a794181c6ef3f69ec35ebf869b0882b
+
+# 20220801 (focal)
+Tags: focal-20220801-amd64
+SharedTags: 20.04, focal-20220801, focal
+Architectures: amd64
+GitFetch: refs/heads/docker-library-20.04-focal-20220801-amd64
+GitCommit: 7099ef2a18ebb29ed25867f7114dd447df654e9c
+
+# 20220801 (focal)
+Tags: focal-20220801-arm64
+SharedTags: 20.04, focal-20220801, focal
+Architectures: arm64v8
+GitFetch: refs/heads/docker-library-20.04-focal-20220801-arm64
+GitCommit: f07f3f071d8fa3f7c4d9e95055fdd5d9948363f6
+
+# 20220801 (focal)
+Tags: focal-20220801-armhf
+SharedTags: 20.04, focal-20220801, focal
+Architectures: arm32v7
+GitFetch: refs/heads/docker-library-20.04-focal-20220801-armhf
+GitCommit: d8929a4aad0864b9bbdaabe32dd4a6b03637669b
+
+# 20220801 (focal)
+Tags: focal-20220801-ppc64el
+SharedTags: 20.04, focal-20220801, focal
+Architectures: ppc64le
+GitFetch: refs/heads/docker-library-20.04-focal-20220801-ppc64el
+GitCommit: 90e77c777640c2e13294f13475ff7b6ca54fa4f0
+
+# 20220801 (focal)
+Tags: focal-20220801-riscv64
+SharedTags: 20.04, focal-20220801, focal
+Architectures: riscv64
+GitFetch: refs/heads/docker-library-20.04-focal-20220801-riscv64
+GitCommit: b59b98515ff3e3e48555d70ffc21622a44ee7cc2
+
+# 20220801 (focal)
+Tags: focal-20220801-s390x
+SharedTags: 20.04, focal-20220801, focal
+Architectures: s390x
+GitFetch: refs/heads/docker-library-20.04-focal-20220801-s390x
+GitCommit: 0ea4209e3f9797b3f2959f88f7988764a9646232
+
+# 20220801 (jammy)
+Tags: jammy-20220801-amd64
+SharedTags: 22.04, jammy-20220801, jammy, latest, rolling
+Architectures: amd64
+GitFetch: refs/heads/docker-library-22.04-jammy-20220801-amd64
+GitCommit: 723727361127f61fa018e833b9bf63ec9aae5e6f
+
+# 20220801 (jammy)
+Tags: jammy-20220801-arm64
+SharedTags: 22.04, jammy-20220801, jammy, latest, rolling
+Architectures: arm64v8
+GitFetch: refs/heads/docker-library-22.04-jammy-20220801-arm64
+GitCommit: fe20c988ed6899320366d4838f69324c7db833b8
+
+# 20220801 (jammy)
+Tags: jammy-20220801-armhf
+SharedTags: 22.04, jammy-20220801, jammy, latest, rolling
+Architectures: arm32v7
+GitFetch: refs/heads/docker-library-22.04-jammy-20220801-armhf
+GitCommit: a742f5edba67b89905b2382056691e763502923f
+
+# 20220801 (jammy)
+Tags: jammy-20220801-ppc64el
+SharedTags: 22.04, jammy-20220801, jammy, latest, rolling
+Architectures: ppc64le
+GitFetch: refs/heads/docker-library-22.04-jammy-20220801-ppc64el
+GitCommit: eb2660d80fb9bf8601c816406396ed607b5fe200
+
+# 20220801 (jammy)
+Tags: jammy-20220801-riscv64
+SharedTags: 22.04, jammy-20220801, jammy, latest, rolling
+Architectures: riscv64
+GitFetch: refs/heads/docker-library-22.04-jammy-20220801-riscv64
+GitCommit: d6a006f3f4a3dd1332cd48e332be402dc3d5d964
+
+# 20220801 (jammy)
+Tags: jammy-20220801-s390x
+SharedTags: 22.04, jammy-20220801, jammy, latest, rolling
+Architectures: s390x
+GitFetch: refs/heads/docker-library-22.04-jammy-20220801-s390x
+GitCommit: 4222cafaf09b857cec17e3ae255102d304e79961
+
+# 20220801 (kinetic)
+Tags: kinetic-20220801-amd64
+SharedTags: 22.10, kinetic-20220801, kinetic, devel
+Architectures: amd64
+GitFetch: refs/heads/docker-library-22.10-kinetic-20220801-amd64
+GitCommit: 159e2c036ba650d185174c6c0b07df804736c185
+
+# 20220801 (kinetic)
+Tags: kinetic-20220801-arm64
+SharedTags: 22.10, kinetic-20220801, kinetic, devel
+Architectures: arm64v8
+GitFetch: refs/heads/docker-library-22.10-kinetic-20220801-arm64
+GitCommit: 47eeba68f0a9f8a93e182a88fa6c9c171550760d
+
+# 20220801 (kinetic)
+Tags: kinetic-20220801-armhf
+SharedTags: 22.10, kinetic-20220801, kinetic, devel
+Architectures: arm32v7
+GitFetch: refs/heads/docker-library-22.10-kinetic-20220801-armhf
+GitCommit: 655caf3b923694349961a708734817428efedf40
+
+# 20220801 (kinetic)
+Tags: kinetic-20220801-ppc64el
+SharedTags: 22.10, kinetic-20220801, kinetic, devel
+Architectures: ppc64le
+GitFetch: refs/heads/docker-library-22.10-kinetic-20220801-ppc64el
+GitCommit: 7f6f9d30dab44ee8431011db387712e46934edd1
+
+# 20220801 (kinetic)
+Tags: kinetic-20220801-riscv64
+SharedTags: 22.10, kinetic-20220801, kinetic, devel
+Architectures: riscv64
+GitFetch: refs/heads/docker-library-22.10-kinetic-20220801-riscv64
+GitCommit: 1890ad3499f77e3c7f0619e620574142efdb5e29
+
+# 20220801 (kinetic)
+Tags: kinetic-20220801-s390x
+SharedTags: 22.10, kinetic-20220801, kinetic, devel
+Architectures: s390x
+GitFetch: refs/heads/docker-library-22.10-kinetic-20220801-s390x
+GitCommit: d28ac4601a9456606a7462c7e5a975f567b30960
