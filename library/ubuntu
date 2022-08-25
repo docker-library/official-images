@@ -1,57 +1,62 @@
 # see https://partner-images.canonical.com/core/
 # see also https://wiki.ubuntu.com/Releases#Current
 
-Maintainers: Tianon Gravi <tianon@debian.org> (@tianon), Michael Hudson-Doyle <michael.hudson@ubuntu.com> (@mwhudson)
-GitRepo: https://github.com/tianon/docker-brew-ubuntu-core.git
-GitCommit: 669a7da67dd3f2a0fe3131df2134ce1682b4d589
-# https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-amd64
+Maintainers: Tomáš Virtus <tomas.virtus@canonical.com> (@woky), Michael Hudson-Doyle <michael.hudson@ubuntu.com> (@mwhudson)
+GitRepo: https://git.launchpad.net/virtustom-cloud-images2/+oci/ubuntu-base
+GitCommit: 078672decdc3c998d16a6b4a165ce9662c525757
+# https://git.launchpad.net/virtustom-cloud-images2/+oci/ubuntu-base/tree/?h=dist-amd64
 amd64-GitFetch: refs/heads/dist-amd64
-amd64-GitCommit: 570d5970a8b18bc772ad2c3eb1ce8fd0887d991a
-# https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-arm32v7
+amd64-GitCommit: 42e5d62d6b23646f4f865eb6a2bd5bedbf8776ac
+# https://git.launchpad.net/virtustom-cloud-images2/+oci/ubuntu-base/tree/?h=dist-arm32v7
 arm32v7-GitFetch: refs/heads/dist-arm32v7
-arm32v7-GitCommit: ac66de83cc2f2312bc73edc549ea472542904126
-# https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-arm64v8
+arm32v7-GitCommit: 2e7c994baf9a3827d691db5f14a8800132939bb4
+# https://git.launchpad.net/virtustom-cloud-images2/+oci/ubuntu-base/tree/?h=dist-arm64v8
 arm64v8-GitFetch: refs/heads/dist-arm64v8
-arm64v8-GitCommit: ccdcd5d4a1f938cda92e7cb3999fca58188c333f
-# https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-i386
+arm64v8-GitCommit: 199f4b30bd9be2617447d4f27b91c17173de784a
+# https://git.launchpad.net/virtustom-cloud-images2/+oci/ubuntu-base/tree/?h=dist-i386
 i386-GitFetch: refs/heads/dist-i386
-i386-GitCommit: f5d9eb38715af54eb96bc68f0b3a240d676400f9
-# https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-ppc64le
+i386-GitCommit: 054f45b08fb75652a829f97cc1b0583b3cc9815e
+# https://git.launchpad.net/virtustom-cloud-images2/+oci/ubuntu-base/tree/?h=dist-ppc64le
 ppc64le-GitFetch: refs/heads/dist-ppc64le
-ppc64le-GitCommit: 06e3fd240a6c2783695356ba4773f1688143c600
-# https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-riscv64
+ppc64le-GitCommit: 898a4ecad4af726d2add8e361e862d3c6162654f
+# https://git.launchpad.net/virtustom-cloud-images2/+oci/ubuntu-base/tree/?h=dist-riscv64
 riscv64-GitFetch: refs/heads/dist-riscv64
-riscv64-GitCommit: a7dffe6da7341dbc01c1c373b99493aa2f4f3fb5
-# https://github.com/tianon/docker-brew-ubuntu-core/tree/dist-s390x
+riscv64-GitCommit: 7a30e7d71d6c67c666046b2df14b25d2b3d487cf
+# https://git.launchpad.net/virtustom-cloud-images2/+oci/ubuntu-base/tree/?h=dist-s390x
 s390x-GitFetch: refs/heads/dist-s390x
-s390x-GitCommit: ff6467ff309d1e8c1834f45dc088ab9bf71d019b
+s390x-GitCommit: 0c2b7f1b541dbedea2a51109555cfdb6789fa7bd
 
-# 20220801 (bionic)
-Tags: 18.04, bionic-20220801, bionic
+# 20220815 (bionic)
+Tags: 18.04, bionic-20220815, bionic
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: bionic
 
-# 20220801 (focal)
-Tags: 20.04, focal-20220801, focal
+# 20220815 (focal)
+Tags: 20.04, focal-20220815, focal
 Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
 Directory: focal
 
-# 20220801 (jammy)
-Tags: 22.04, jammy-20220801, jammy, latest, rolling
+# 20210723 (groovy)
+Tags: 20.10, groovy-20210723, groovy
+Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
+Directory: groovy
+
+# 20220113 (hirsute)
+Tags: 21.04, hirsute-20220113, hirsute
+Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
+Directory: hirsute
+
+# 20220705 (impish)
+Tags: 21.10, impish-20220705, impish
+Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
+Directory: impish
+
+# 20220815 (jammy)
+Tags: 22.04, jammy-20220815, jammy, latest, rolling
 Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
 Directory: jammy
 
-# 20220801 (kinetic)
-Tags: 22.10, kinetic-20220801, kinetic, devel
+# 20220815 (kinetic)
+Tags: 22.10, kinetic-20220815, kinetic, devel
 Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
 Directory: kinetic
-
-# 20191217 (trusty)
-Tags: 14.04, trusty-20191217, trusty
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le
-Directory: trusty
-
-# 20210804 (xenial)
-Tags: 16.04, xenial-20210804, xenial
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: xenial
