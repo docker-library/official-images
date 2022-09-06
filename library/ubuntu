@@ -1,33 +1,33 @@
-# see https://partner-images.canonical.com/core/
+# see https://partner-images.canonical.com/oci/
 # see also https://wiki.ubuntu.com/Releases#Current
 
-Maintainers: Tomáš Virtus <tomas.virtus@canonical.com> (@woky), Michael Hudson-Doyle <michael.hudson@ubuntu.com> (@mwhudson)
+Maintainers: Tomáš Virtus <tomas.virtus@canonical.com> (@woky), Tianon Gravi <tianon@debian.org> (@tianon), Michael Hudson-Doyle <michael.hudson@ubuntu.com> (@mwhudson)
 GitRepo: https://git.launchpad.net/cloud-images/+oci/ubuntu-base
 GitCommit: 42f91a1d38193121ecc9c3bf95a19c4ceed38f58
 # https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-amd64
 amd64-GitFetch: refs/heads/dist-amd64
-amd64-GitCommit: 0b99ba2f4ec4dbe55b72c6b1c81eed4393b33346
+amd64-GitCommit: 67c49edefdf22f85b968f789723c71373e89f47d
 # https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-arm32v7
 arm32v7-GitFetch: refs/heads/dist-arm32v7
-arm32v7-GitCommit: c1c74b7c7d3a868121c8ae5148524a720a08bcfb
+arm32v7-GitCommit: 9fd8dd8b63b291898b04b6e2d75a764973ad2c87
 # https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-arm64v8
 arm64v8-GitFetch: refs/heads/dist-arm64v8
-arm64v8-GitCommit: 61d299eb91851e63d5f9b83deb2363f7520a904b
+arm64v8-GitCommit: 5794a1d22cc57a5dc3dc239db3e1bd0dd0e23d90
 # https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-i386
 i386-GitFetch: refs/heads/dist-i386
-i386-GitCommit: 593ab9e382c2142a2e86be9935a67ab6cbddb49d
+i386-GitCommit: 4e4a1f81dc8e4486b7b34c3fdf8bd0a555d7d545
 # https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-ppc64le
 ppc64le-GitFetch: refs/heads/dist-ppc64le
-ppc64le-GitCommit: 593875aba76071397a2e2b5cc2c79ac3f129afbd
+ppc64le-GitCommit: 92acf4ac029c532a59f1df67650a647eec1cf05d
 # https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-riscv64
 riscv64-GitFetch: refs/heads/dist-riscv64
 riscv64-GitCommit: 0fb69a7b05d5a35fc6a2893d1fddc4945f6a8589
 # https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-s390x
 s390x-GitFetch: refs/heads/dist-s390x
-s390x-GitCommit: 1802deb23dd5dbe15f52d9283a79d19fe966207b
+s390x-GitCommit: 09bab0f6d892ef80872e7305f9075f122a6eb0c8
 
-# 20220829 (bionic)
-Tags: 18.04, bionic-20220829, bionic
+# 20220902 (bionic)
+Tags: 18.04, bionic-20220902, bionic
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: bionic
 
