@@ -4,227 +4,207 @@ Maintainers: Greg Wilkins <gregw@webtide.com> (@gregw),
              Joakim Erdfelt <joakim@webtide.com> (@joakime)
 GitRepo: https://github.com/eclipse/jetty.docker.git
 
-Tags: 9.4.48-jre8-slim-openjdk, 9.4-jre8-slim-openjdk, 9-jre8-slim-openjdk
-Architectures: amd64, arm64v8
-Directory: openjdk/9.4/jre8-slim
-GitCommit: c4346b6881f54541a36aeddaf77c71004cc0d32a
+Tags: 9.4.49-jre8-alpine, 9.4-jre8-alpine, 9-jre8-alpine, 9.4.49-jre8-alpine-eclipse-temurin, 9.4-jre8-alpine-eclipse-temurin, 9-jre8-alpine-eclipse-temurin
+Architectures: amd64
+Directory: eclipse-temurin/9.4/jre8-alpine
+GitCommit: 18d727edb0be2a1b9e30ca266437eaa3b1b5df03
 
-Tags: 9.4.48-jre8-openjdk, 9.4-jre8-openjdk, 9-jre8-openjdk
+Tags: 9.4.49-jre8, 9.4-jre8, 9-jre8, 9.4.49-jre8-eclipse-temurin, 9.4-jre8-eclipse-temurin, 9-jre8-eclipse-temurin
 Architectures: amd64, arm64v8
-Directory: openjdk/9.4/jre8
-GitCommit: c4346b6881f54541a36aeddaf77c71004cc0d32a
+Directory: eclipse-temurin/9.4/jre8
+GitCommit: 18d727edb0be2a1b9e30ca266437eaa3b1b5df03
 
-Tags: 9.4.48-jre11-slim-openjdk, 9.4-jre11-slim-openjdk, 9-jre11-slim-openjdk
+Tags: 9.4.49-jre17-alpine, 9.4-jre17-alpine, 9-jre17-alpine, 9.4.49-jre17-alpine-eclipse-temurin, 9.4-jre17-alpine-eclipse-temurin, 9-jre17-alpine-eclipse-temurin
+Architectures: amd64
+Directory: eclipse-temurin/9.4/jre17-alpine
+GitCommit: 18d727edb0be2a1b9e30ca266437eaa3b1b5df03
+
+Tags: 9.4.49-jre17, 9.4-jre17, 9-jre17, 9.4.49-jre17-eclipse-temurin, 9.4-jre17-eclipse-temurin, 9-jre17-eclipse-temurin
 Architectures: amd64, arm64v8
-Directory: openjdk/9.4/jre11-slim
-GitCommit: c4346b6881f54541a36aeddaf77c71004cc0d32a
+Directory: eclipse-temurin/9.4/jre17
+GitCommit: 18d727edb0be2a1b9e30ca266437eaa3b1b5df03
 
-Tags: 9.4.48-jre11-openjdk, 9.4-jre11-openjdk, 9-jre11-openjdk
+Tags: 9.4.49-jre11-alpine, 9.4-jre11-alpine, 9-jre11-alpine, 9.4.49-jre11-alpine-eclipse-temurin, 9.4-jre11-alpine-eclipse-temurin, 9-jre11-alpine-eclipse-temurin
+Architectures: amd64
+Directory: eclipse-temurin/9.4/jre11-alpine
+GitCommit: 18d727edb0be2a1b9e30ca266437eaa3b1b5df03
+
+Tags: 9.4.49-jre11, 9.4-jre11, 9-jre11, 9.4.49-jre11-eclipse-temurin, 9.4-jre11-eclipse-temurin, 9-jre11-eclipse-temurin
 Architectures: amd64, arm64v8
-Directory: openjdk/9.4/jre11
-GitCommit: c4346b6881f54541a36aeddaf77c71004cc0d32a
+Directory: eclipse-temurin/9.4/jre11
+GitCommit: 18d727edb0be2a1b9e30ca266437eaa3b1b5df03
 
-Tags: 9.4.48-jdk-8-slim-openjdk, 9.4-jdk-8-slim-openjdk, 9-jdk-8-slim-openjdk
-Architectures: amd64, arm64v8
-Directory: openjdk/9.4/jdk-8-slim
-GitCommit: c4346b6881f54541a36aeddaf77c71004cc0d32a
-
-Tags: 9.4.48-jdk8-openjdk, 9.4-jdk8-openjdk, 9-jdk8-openjdk
-Architectures: amd64, arm64v8
-Directory: openjdk/9.4/jdk8
-GitCommit: c4346b6881f54541a36aeddaf77c71004cc0d32a
-
-Tags: 9.4.48-jdk11-slim-openjdk, 9.4-jdk11-slim-openjdk, 9-jdk11-slim-openjdk
-Architectures: amd64, arm64v8
-Directory: openjdk/9.4/jdk11-slim
-GitCommit: c4346b6881f54541a36aeddaf77c71004cc0d32a
-
-Tags: 9.4.48-jdk11-openjdk, 9.4-jdk11-openjdk, 9-jdk11-openjdk
-Architectures: amd64, arm64v8
-Directory: openjdk/9.4/jdk11
-GitCommit: c4346b6881f54541a36aeddaf77c71004cc0d32a
-
-Tags: 9.3.30-jre8-openjdk, 9.3-jre8-openjdk, 9.3
-Architectures: amd64, arm64v8
-Directory: openjdk/9.3/jre8
-GitCommit: 9b0e3ee09fdb1c466f8b39f93bc57bdaa33d4ba0
-
-Tags: 9.2.30-jre8-openjdk, 9.2-jre8-openjdk, 9.2
-Architectures: amd64, arm64v8
-Directory: openjdk/9.2/jre8
-GitCommit: 9b0e3ee09fdb1c466f8b39f93bc57bdaa33d4ba0
-
-Tags: 11.0.11-jre11-slim-openjdk, 11.0-jre11-slim-openjdk, 11-jre11-slim-openjdk
-Architectures: amd64, arm64v8
-Directory: openjdk/11.0/jre11-slim
-GitCommit: c4346b6881f54541a36aeddaf77c71004cc0d32a
-
-Tags: 11.0.11-jre11-openjdk, 11.0-jre11-openjdk, 11-jre11-openjdk
-Architectures: amd64, arm64v8
-Directory: openjdk/11.0/jre11
-GitCommit: c4346b6881f54541a36aeddaf77c71004cc0d32a
-
-Tags: 11.0.11-jdk11-slim-openjdk, 11.0-jdk11-slim-openjdk, 11-jdk11-slim-openjdk
-Architectures: amd64, arm64v8
-Directory: openjdk/11.0/jdk11-slim
-GitCommit: c4346b6881f54541a36aeddaf77c71004cc0d32a
-
-Tags: 11.0.11-jdk11-openjdk, 11.0-jdk11-openjdk, 11-jdk11-openjdk
-Architectures: amd64, arm64v8
-Directory: openjdk/11.0/jdk11
-GitCommit: c4346b6881f54541a36aeddaf77c71004cc0d32a
-
-Tags: 10.0.11-jre11-slim-openjdk, 10.0-jre11-slim-openjdk, 10-jre11-slim-openjdk
-Architectures: amd64, arm64v8
-Directory: openjdk/10.0/jre11-slim
-GitCommit: c4346b6881f54541a36aeddaf77c71004cc0d32a
-
-Tags: 10.0.11-jre11-openjdk, 10.0-jre11-openjdk, 10-jre11-openjdk
-Architectures: amd64, arm64v8
-Directory: openjdk/10.0/jre11
-GitCommit: c4346b6881f54541a36aeddaf77c71004cc0d32a
-
-Tags: 10.0.11-jdk11-slim-openjdk, 10.0-jdk11-slim-openjdk, 10-jdk11-slim-openjdk
-Architectures: amd64, arm64v8
-Directory: openjdk/10.0/jdk11-slim
-GitCommit: c4346b6881f54541a36aeddaf77c71004cc0d32a
-
-Tags: 10.0.11-jdk11-openjdk, 10.0-jdk11-openjdk, 10-jdk11-openjdk
-Architectures: amd64, arm64v8
-Directory: openjdk/10.0/jdk11
-GitCommit: c4346b6881f54541a36aeddaf77c71004cc0d32a
-
-Tags: 9.4.48-jdk8, 9.4-jdk8, 9-jdk8, 9.4.48-jdk8-eclipse-temurin, 9.4-jdk8-eclipse-temurin, 9-jdk8-eclipse-temurin
+Tags: 9.4.49-jdk8, 9.4-jdk8, 9-jdk8, 9.4.49-jdk8-eclipse-temurin, 9.4-jdk8-eclipse-temurin, 9-jdk8-eclipse-temurin
 Architectures: amd64, arm64v8
 Directory: eclipse-temurin/9.4/jdk8
-GitCommit: c4346b6881f54541a36aeddaf77c71004cc0d32a
+GitCommit: 18d727edb0be2a1b9e30ca266437eaa3b1b5df03
 
-Tags: 9.4.48-jdk17-alpine, 9.4-jdk17-alpine, 9-jdk17-alpine, 9.4.48-jdk17-alpine-eclipse-temurin, 9.4-jdk17-alpine-eclipse-temurin, 9-jdk17-alpine-eclipse-temurin
+Tags: 9.4.49-jdk17-alpine, 9.4-jdk17-alpine, 9-jdk17-alpine, 9.4.49-jdk17-alpine-eclipse-temurin, 9.4-jdk17-alpine-eclipse-temurin, 9-jdk17-alpine-eclipse-temurin
 Architectures: amd64
 Directory: eclipse-temurin/9.4/jdk17-alpine
-GitCommit: c4346b6881f54541a36aeddaf77c71004cc0d32a
+GitCommit: 18d727edb0be2a1b9e30ca266437eaa3b1b5df03
 
-Tags: 9.4.48, 9.4, 9, 9.4.48-jdk17, 9.4-jdk17, 9-jdk17, 9.4.48-eclipse-temurin, 9.4-eclipse-temurin, 9-eclipse-temurin, 9.4.48-jdk17-eclipse-temurin, 9.4-jdk17-eclipse-temurin, 9-jdk17-eclipse-temurin
+Tags: 9.4.49, 9.4, 9, 9.4.49-jdk17, 9.4-jdk17, 9-jdk17, 9.4.49-eclipse-temurin, 9.4-eclipse-temurin, 9-eclipse-temurin, 9.4.49-jdk17-eclipse-temurin, 9.4-jdk17-eclipse-temurin, 9-jdk17-eclipse-temurin
 Architectures: amd64, arm64v8
 Directory: eclipse-temurin/9.4/jdk17
-GitCommit: c4346b6881f54541a36aeddaf77c71004cc0d32a
+GitCommit: 18d727edb0be2a1b9e30ca266437eaa3b1b5df03
 
-Tags: 9.4.48-jdk11-alpine, 9.4-jdk11-alpine, 9-jdk11-alpine, 9.4.48-jdk11-alpine-eclipse-temurin, 9.4-jdk11-alpine-eclipse-temurin, 9-jdk11-alpine-eclipse-temurin
+Tags: 9.4.49-jdk11-alpine, 9.4-jdk11-alpine, 9-jdk11-alpine, 9.4.49-jdk11-alpine-eclipse-temurin, 9.4-jdk11-alpine-eclipse-temurin, 9-jdk11-alpine-eclipse-temurin
 Architectures: amd64
 Directory: eclipse-temurin/9.4/jdk11-alpine
-GitCommit: c4346b6881f54541a36aeddaf77c71004cc0d32a
+GitCommit: 18d727edb0be2a1b9e30ca266437eaa3b1b5df03
 
-Tags: 9.4.48-jdk11, 9.4-jdk11, 9-jdk11, 9.4.48-jdk11-eclipse-temurin, 9.4-jdk11-eclipse-temurin, 9-jdk11-eclipse-temurin
+Tags: 9.4.49-jdk11, 9.4-jdk11, 9-jdk11, 9.4.49-jdk11-eclipse-temurin, 9.4-jdk11-eclipse-temurin, 9-jdk11-eclipse-temurin
 Architectures: amd64, arm64v8
 Directory: eclipse-temurin/9.4/jdk11
-GitCommit: c4346b6881f54541a36aeddaf77c71004cc0d32a
+GitCommit: 18d727edb0be2a1b9e30ca266437eaa3b1b5df03
 
-Tags: 11.0.11-jdk17-alpine, 11.0-jdk17-alpine, 11-jdk17-alpine, 11.0.11-jdk17-alpine-eclipse-temurin, 11.0-jdk17-alpine-eclipse-temurin, 11-jdk17-alpine-eclipse-temurin
+Tags: 11.0.12-jre17-alpine, 11.0-jre17-alpine, 11-jre17-alpine, 11.0.12-jre17-alpine-eclipse-temurin, 11.0-jre17-alpine-eclipse-temurin, 11-jre17-alpine-eclipse-temurin
+Architectures: amd64
+Directory: eclipse-temurin/11.0/jre17-alpine
+GitCommit: 18d727edb0be2a1b9e30ca266437eaa3b1b5df03
+
+Tags: 11.0.12-jre17, 11.0-jre17, 11-jre17, 11.0.12-jre17-eclipse-temurin, 11.0-jre17-eclipse-temurin, 11-jre17-eclipse-temurin
+Architectures: amd64, arm64v8
+Directory: eclipse-temurin/11.0/jre17
+GitCommit: 18d727edb0be2a1b9e30ca266437eaa3b1b5df03
+
+Tags: 11.0.12-jre11-alpine, 11.0-jre11-alpine, 11-jre11-alpine, 11.0.12-jre11-alpine-eclipse-temurin, 11.0-jre11-alpine-eclipse-temurin, 11-jre11-alpine-eclipse-temurin
+Architectures: amd64
+Directory: eclipse-temurin/11.0/jre11-alpine
+GitCommit: 18d727edb0be2a1b9e30ca266437eaa3b1b5df03
+
+Tags: 11.0.12-jre11, 11.0-jre11, 11-jre11, 11.0.12-jre11-eclipse-temurin, 11.0-jre11-eclipse-temurin, 11-jre11-eclipse-temurin
+Architectures: amd64, arm64v8
+Directory: eclipse-temurin/11.0/jre11
+GitCommit: 18d727edb0be2a1b9e30ca266437eaa3b1b5df03
+
+Tags: 11.0.12-jdk17-alpine, 11.0-jdk17-alpine, 11-jdk17-alpine, 11.0.12-jdk17-alpine-eclipse-temurin, 11.0-jdk17-alpine-eclipse-temurin, 11-jdk17-alpine-eclipse-temurin
 Architectures: amd64
 Directory: eclipse-temurin/11.0/jdk17-alpine
-GitCommit: c4346b6881f54541a36aeddaf77c71004cc0d32a
+GitCommit: 18d727edb0be2a1b9e30ca266437eaa3b1b5df03
 
-Tags: 11.0.11, 11.0, 11, 11.0.11-jdk17, 11.0-jdk17, 11-jdk17, 11.0.11-eclipse-temurin, 11.0-eclipse-temurin, 11-eclipse-temurin, 11.0.11-jdk17-eclipse-temurin, 11.0-jdk17-eclipse-temurin, 11-jdk17-eclipse-temurin, latest, jdk17
+Tags: 11.0.12, 11.0, 11, 11.0.12-jdk17, 11.0-jdk17, 11-jdk17, 11.0.12-eclipse-temurin, 11.0-eclipse-temurin, 11-eclipse-temurin, 11.0.12-jdk17-eclipse-temurin, 11.0-jdk17-eclipse-temurin, 11-jdk17-eclipse-temurin, latest, jdk17
 Architectures: amd64, arm64v8
 Directory: eclipse-temurin/11.0/jdk17
-GitCommit: c4346b6881f54541a36aeddaf77c71004cc0d32a
+GitCommit: 18d727edb0be2a1b9e30ca266437eaa3b1b5df03
 
-Tags: 11.0.11-jdk11-alpine, 11.0-jdk11-alpine, 11-jdk11-alpine, 11.0.11-jdk11-alpine-eclipse-temurin, 11.0-jdk11-alpine-eclipse-temurin, 11-jdk11-alpine-eclipse-temurin
+Tags: 11.0.12-jdk11-alpine, 11.0-jdk11-alpine, 11-jdk11-alpine, 11.0.12-jdk11-alpine-eclipse-temurin, 11.0-jdk11-alpine-eclipse-temurin, 11-jdk11-alpine-eclipse-temurin
 Architectures: amd64
 Directory: eclipse-temurin/11.0/jdk11-alpine
-GitCommit: c4346b6881f54541a36aeddaf77c71004cc0d32a
+GitCommit: 18d727edb0be2a1b9e30ca266437eaa3b1b5df03
 
-Tags: 11.0.11-jdk11, 11.0-jdk11, 11-jdk11, 11.0.11-jdk11-eclipse-temurin, 11.0-jdk11-eclipse-temurin, 11-jdk11-eclipse-temurin
+Tags: 11.0.12-jdk11, 11.0-jdk11, 11-jdk11, 11.0.12-jdk11-eclipse-temurin, 11.0-jdk11-eclipse-temurin, 11-jdk11-eclipse-temurin
 Architectures: amd64, arm64v8
 Directory: eclipse-temurin/11.0/jdk11
-GitCommit: c4346b6881f54541a36aeddaf77c71004cc0d32a
+GitCommit: 18d727edb0be2a1b9e30ca266437eaa3b1b5df03
 
-Tags: 10.0.11-jdk17-alpine, 10.0-jdk17-alpine, 10-jdk17-alpine, 10.0.11-jdk17-alpine-eclipse-temurin, 10.0-jdk17-alpine-eclipse-temurin, 10-jdk17-alpine-eclipse-temurin
+Tags: 10.0.12-jre17-alpine, 10.0-jre17-alpine, 10-jre17-alpine, 10.0.12-jre17-alpine-eclipse-temurin, 10.0-jre17-alpine-eclipse-temurin, 10-jre17-alpine-eclipse-temurin
+Architectures: amd64
+Directory: eclipse-temurin/10.0/jre17-alpine
+GitCommit: 18d727edb0be2a1b9e30ca266437eaa3b1b5df03
+
+Tags: 10.0.12-jre17, 10.0-jre17, 10-jre17, 10.0.12-jre17-eclipse-temurin, 10.0-jre17-eclipse-temurin, 10-jre17-eclipse-temurin
+Architectures: amd64, arm64v8
+Directory: eclipse-temurin/10.0/jre17
+GitCommit: 18d727edb0be2a1b9e30ca266437eaa3b1b5df03
+
+Tags: 10.0.12-jre11-alpine, 10.0-jre11-alpine, 10-jre11-alpine, 10.0.12-jre11-alpine-eclipse-temurin, 10.0-jre11-alpine-eclipse-temurin, 10-jre11-alpine-eclipse-temurin
+Architectures: amd64
+Directory: eclipse-temurin/10.0/jre11-alpine
+GitCommit: 18d727edb0be2a1b9e30ca266437eaa3b1b5df03
+
+Tags: 10.0.12-jre11, 10.0-jre11, 10-jre11, 10.0.12-jre11-eclipse-temurin, 10.0-jre11-eclipse-temurin, 10-jre11-eclipse-temurin
+Architectures: amd64, arm64v8
+Directory: eclipse-temurin/10.0/jre11
+GitCommit: 18d727edb0be2a1b9e30ca266437eaa3b1b5df03
+
+Tags: 10.0.12-jdk17-alpine, 10.0-jdk17-alpine, 10-jdk17-alpine, 10.0.12-jdk17-alpine-eclipse-temurin, 10.0-jdk17-alpine-eclipse-temurin, 10-jdk17-alpine-eclipse-temurin
 Architectures: amd64
 Directory: eclipse-temurin/10.0/jdk17-alpine
-GitCommit: c4346b6881f54541a36aeddaf77c71004cc0d32a
+GitCommit: 18d727edb0be2a1b9e30ca266437eaa3b1b5df03
 
-Tags: 10.0.11, 10.0, 10, 10.0.11-jdk17, 10.0-jdk17, 10-jdk17, 10.0.11-eclipse-temurin, 10.0-eclipse-temurin, 10-eclipse-temurin, 10.0.11-jdk17-eclipse-temurin, 10.0-jdk17-eclipse-temurin, 10-jdk17-eclipse-temurin
+Tags: 10.0.12, 10.0, 10, 10.0.12-jdk17, 10.0-jdk17, 10-jdk17, 10.0.12-eclipse-temurin, 10.0-eclipse-temurin, 10-eclipse-temurin, 10.0.12-jdk17-eclipse-temurin, 10.0-jdk17-eclipse-temurin, 10-jdk17-eclipse-temurin
 Architectures: amd64, arm64v8
 Directory: eclipse-temurin/10.0/jdk17
-GitCommit: c4346b6881f54541a36aeddaf77c71004cc0d32a
+GitCommit: 18d727edb0be2a1b9e30ca266437eaa3b1b5df03
 
-Tags: 10.0.11-jdk11-alpine, 10.0-jdk11-alpine, 10-jdk11-alpine, 10.0.11-jdk11-alpine-eclipse-temurin, 10.0-jdk11-alpine-eclipse-temurin, 10-jdk11-alpine-eclipse-temurin
+Tags: 10.0.12-jdk11-alpine, 10.0-jdk11-alpine, 10-jdk11-alpine, 10.0.12-jdk11-alpine-eclipse-temurin, 10.0-jdk11-alpine-eclipse-temurin, 10-jdk11-alpine-eclipse-temurin
 Architectures: amd64
 Directory: eclipse-temurin/10.0/jdk11-alpine
-GitCommit: c4346b6881f54541a36aeddaf77c71004cc0d32a
+GitCommit: 18d727edb0be2a1b9e30ca266437eaa3b1b5df03
 
-Tags: 10.0.11-jdk11, 10.0-jdk11, 10-jdk11, 10.0.11-jdk11-eclipse-temurin, 10.0-jdk11-eclipse-temurin, 10-jdk11-eclipse-temurin
+Tags: 10.0.12-jdk11, 10.0-jdk11, 10-jdk11, 10.0.12-jdk11-eclipse-temurin, 10.0-jdk11-eclipse-temurin, 10-jdk11-eclipse-temurin
 Architectures: amd64, arm64v8
 Directory: eclipse-temurin/10.0/jdk11
-GitCommit: c4346b6881f54541a36aeddaf77c71004cc0d32a
+GitCommit: 18d727edb0be2a1b9e30ca266437eaa3b1b5df03
 
-Tags: 9.4.48-jdk8-alpine-amazoncorretto, 9.4-jdk8-alpine-amazoncorretto, 9-jdk8-alpine-amazoncorretto
+Tags: 9.4.49-jdk8-alpine-amazoncorretto, 9.4-jdk8-alpine-amazoncorretto, 9-jdk8-alpine-amazoncorretto
 Architectures: amd64
 Directory: amazoncorretto/9.4/jdk8-alpine
-GitCommit: c4346b6881f54541a36aeddaf77c71004cc0d32a
+GitCommit: 18d727edb0be2a1b9e30ca266437eaa3b1b5df03
 
-Tags: 9.4.48-jdk8-amazoncorretto, 9.4-jdk8-amazoncorretto, 9-jdk8-amazoncorretto
+Tags: 9.4.49-jdk8-amazoncorretto, 9.4-jdk8-amazoncorretto, 9-jdk8-amazoncorretto
 Architectures: amd64, arm64v8
 Directory: amazoncorretto/9.4/jdk8
-GitCommit: c4346b6881f54541a36aeddaf77c71004cc0d32a
+GitCommit: 18d727edb0be2a1b9e30ca266437eaa3b1b5df03
 
-Tags: 9.4.48-jdk17-alpine-amazoncorretto, 9.4-jdk17-alpine-amazoncorretto, 9-jdk17-alpine-amazoncorretto
+Tags: 9.4.49-jdk17-alpine-amazoncorretto, 9.4-jdk17-alpine-amazoncorretto, 9-jdk17-alpine-amazoncorretto
 Architectures: amd64
 Directory: amazoncorretto/9.4/jdk17-alpine
-GitCommit: c4346b6881f54541a36aeddaf77c71004cc0d32a
+GitCommit: 18d727edb0be2a1b9e30ca266437eaa3b1b5df03
 
-Tags: 9.4.48-amazoncorretto, 9.4-amazoncorretto, 9-amazoncorretto, 9.4.48-jdk17-amazoncorretto, 9.4-jdk17-amazoncorretto, 9-jdk17-amazoncorretto
+Tags: 9.4.49-amazoncorretto, 9.4-amazoncorretto, 9-amazoncorretto, 9.4.49-jdk17-amazoncorretto, 9.4-jdk17-amazoncorretto, 9-jdk17-amazoncorretto
 Architectures: amd64, arm64v8
 Directory: amazoncorretto/9.4/jdk17
-GitCommit: c4346b6881f54541a36aeddaf77c71004cc0d32a
+GitCommit: 18d727edb0be2a1b9e30ca266437eaa3b1b5df03
 
-Tags: 9.4.48-jdk11-alpine-amazoncorretto, 9.4-jdk11-alpine-amazoncorretto, 9-jdk11-alpine-amazoncorretto
+Tags: 9.4.49-jdk11-alpine-amazoncorretto, 9.4-jdk11-alpine-amazoncorretto, 9-jdk11-alpine-amazoncorretto
 Architectures: amd64
 Directory: amazoncorretto/9.4/jdk11-alpine
-GitCommit: c4346b6881f54541a36aeddaf77c71004cc0d32a
+GitCommit: 18d727edb0be2a1b9e30ca266437eaa3b1b5df03
 
-Tags: 9.4.48-jdk11-amazoncorretto, 9.4-jdk11-amazoncorretto, 9-jdk11-amazoncorretto
+Tags: 9.4.49-jdk11-amazoncorretto, 9.4-jdk11-amazoncorretto, 9-jdk11-amazoncorretto
 Architectures: amd64, arm64v8
 Directory: amazoncorretto/9.4/jdk11
-GitCommit: c4346b6881f54541a36aeddaf77c71004cc0d32a
+GitCommit: 18d727edb0be2a1b9e30ca266437eaa3b1b5df03
 
-Tags: 11.0.11-jdk17-alpine-amazoncorretto, 11.0-jdk17-alpine-amazoncorretto, 11-jdk17-alpine-amazoncorretto
+Tags: 11.0.12-jdk17-alpine-amazoncorretto, 11.0-jdk17-alpine-amazoncorretto, 11-jdk17-alpine-amazoncorretto
 Architectures: amd64
 Directory: amazoncorretto/11.0/jdk17-alpine
-GitCommit: c4346b6881f54541a36aeddaf77c71004cc0d32a
+GitCommit: 18d727edb0be2a1b9e30ca266437eaa3b1b5df03
 
-Tags: 11.0.11-amazoncorretto, 11.0-amazoncorretto, 11-amazoncorretto, 11.0.11-jdk17-amazoncorretto, 11.0-jdk17-amazoncorretto, 11-jdk17-amazoncorretto
+Tags: 11.0.12-amazoncorretto, 11.0-amazoncorretto, 11-amazoncorretto, 11.0.12-jdk17-amazoncorretto, 11.0-jdk17-amazoncorretto, 11-jdk17-amazoncorretto
 Architectures: amd64, arm64v8
 Directory: amazoncorretto/11.0/jdk17
-GitCommit: c4346b6881f54541a36aeddaf77c71004cc0d32a
+GitCommit: 18d727edb0be2a1b9e30ca266437eaa3b1b5df03
 
-Tags: 11.0.11-jdk11-alpine-amazoncorretto, 11.0-jdk11-alpine-amazoncorretto, 11-jdk11-alpine-amazoncorretto
+Tags: 11.0.12-jdk11-alpine-amazoncorretto, 11.0-jdk11-alpine-amazoncorretto, 11-jdk11-alpine-amazoncorretto
 Architectures: amd64
 Directory: amazoncorretto/11.0/jdk11-alpine
-GitCommit: c4346b6881f54541a36aeddaf77c71004cc0d32a
+GitCommit: 18d727edb0be2a1b9e30ca266437eaa3b1b5df03
 
-Tags: 11.0.11-jdk11-amazoncorretto, 11.0-jdk11-amazoncorretto, 11-jdk11-amazoncorretto
+Tags: 11.0.12-jdk11-amazoncorretto, 11.0-jdk11-amazoncorretto, 11-jdk11-amazoncorretto
 Architectures: amd64, arm64v8
 Directory: amazoncorretto/11.0/jdk11
-GitCommit: c4346b6881f54541a36aeddaf77c71004cc0d32a
+GitCommit: 18d727edb0be2a1b9e30ca266437eaa3b1b5df03
 
-Tags: 10.0.11-jdk17-alpine-amazoncorretto, 10.0-jdk17-alpine-amazoncorretto, 10-jdk17-alpine-amazoncorretto
+Tags: 10.0.12-jdk17-alpine-amazoncorretto, 10.0-jdk17-alpine-amazoncorretto, 10-jdk17-alpine-amazoncorretto
 Architectures: amd64
 Directory: amazoncorretto/10.0/jdk17-alpine
-GitCommit: c4346b6881f54541a36aeddaf77c71004cc0d32a
+GitCommit: 18d727edb0be2a1b9e30ca266437eaa3b1b5df03
 
-Tags: 10.0.11-amazoncorretto, 10.0-amazoncorretto, 10-amazoncorretto, 10.0.11-jdk17-amazoncorretto, 10.0-jdk17-amazoncorretto, 10-jdk17-amazoncorretto
+Tags: 10.0.12-amazoncorretto, 10.0-amazoncorretto, 10-amazoncorretto, 10.0.12-jdk17-amazoncorretto, 10.0-jdk17-amazoncorretto, 10-jdk17-amazoncorretto
 Architectures: amd64, arm64v8
 Directory: amazoncorretto/10.0/jdk17
-GitCommit: c4346b6881f54541a36aeddaf77c71004cc0d32a
+GitCommit: 18d727edb0be2a1b9e30ca266437eaa3b1b5df03
 
-Tags: 10.0.11-jdk11-alpine-amazoncorretto, 10.0-jdk11-alpine-amazoncorretto, 10-jdk11-alpine-amazoncorretto
+Tags: 10.0.12-jdk11-alpine-amazoncorretto, 10.0-jdk11-alpine-amazoncorretto, 10-jdk11-alpine-amazoncorretto
 Architectures: amd64
 Directory: amazoncorretto/10.0/jdk11-alpine
-GitCommit: c4346b6881f54541a36aeddaf77c71004cc0d32a
+GitCommit: 18d727edb0be2a1b9e30ca266437eaa3b1b5df03
 
-Tags: 10.0.11-jdk11-amazoncorretto, 10.0-jdk11-amazoncorretto, 10-jdk11-amazoncorretto
+Tags: 10.0.12-jdk11-amazoncorretto, 10.0-jdk11-amazoncorretto, 10-jdk11-amazoncorretto
 Architectures: amd64, arm64v8
 Directory: amazoncorretto/10.0/jdk11
-GitCommit: c4346b6881f54541a36aeddaf77c71004cc0d32a
+GitCommit: 18d727edb0be2a1b9e30ca266437eaa3b1b5df03
