@@ -57,7 +57,7 @@ _request() {
 	docker run --rm \
 		--link "$cid":ghost \
 		"$clientImage" \
-		curl -fs -X"$method" "$@" "http://ghost:2368/$url"
+		curl -fs --max-time 15 -X"$method" "$@" "http://ghost:2368/${url#/}"
 }
 
 # Make sure that Ghost is listening and ready
