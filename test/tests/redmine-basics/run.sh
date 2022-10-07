@@ -34,7 +34,7 @@ _request() {
 . "$dir/../../retry.sh" --tries 40 '_request GET / --output /dev/null'
 
 # Check that / include the text "Redmine" somewhere
-_request GET '/' |tac|tac| grep -q Redmine
+_request GET '/' | grep Redmine > /dev/null
 
 # Check that /account/register include the text "Password" somewhere
-_request GET '/account/register' |tac|tac| grep -q Password
+_request GET '/account/register' | grep Password > /dev/null

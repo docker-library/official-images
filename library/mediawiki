@@ -1,36 +1,37 @@
 Maintainers: David Barratt <dbarratt@wikimedia.org> (@davidbarratt),
-             Kunal Mehta <legoktm@wikimedia.org> (@legoktm),
+             Kunal Mehta <legoktm@debian.org> (@legoktm),
              addshore <addshorewiki@gmail.com> (@addshore)
 GitRepo: https://github.com/wikimedia/mediawiki-docker.git
-GitCommit: dc240fc8771ce74bc2c420eb1283d718ebf1abe0
+GitCommit: 5d098737ac1b1eb8a30a5b8277cd7f3f93a467ea
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le
 
-Tags: 1.35.2, 1.35, lts, stable, latest
+Tags: 1.38.4, 1.38, stable, latest
+Directory: 1.38/apache
+
+Tags: 1.38.4-fpm, 1.38-fpm, stable-fpm
+Directory: 1.38/fpm
+
+Tags: 1.38.4-fpm-alpine, 1.38-fpm-alpine, stable-fpm-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le
+Directory: 1.38/fpm-alpine
+
+Tags: 1.37.6, 1.37, legacy
+Directory: 1.37/apache
+
+Tags: 1.37.6-fpm, 1.37-fpm, legacy-fpm
+Directory: 1.37/fpm
+
+Tags: 1.37.6-fpm-alpine, 1.37-fpm-alpine, legacy-fpm-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le
+Directory: 1.37/fpm-alpine
+
+Tags: 1.35.8, 1.35, lts, legacylts
 Directory: 1.35/apache
 
-Tags: 1.35.2-fpm, 1.35-fpm, lts-fpm, stable-fpm
+Tags: 1.35.8-fpm, 1.35-fpm, lts-fpm, legacylts-fpm
 Directory: 1.35/fpm
 
-Tags: 1.35.2-fpm-alpine, 1.35-fpm-alpine, lts-fpm-alpine, stable-fpm-alpine
+Tags: 1.35.8-fpm-alpine, 1.35-fpm-alpine, lts-fpm-alpine, legacylts-fpm-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le
 Directory: 1.35/fpm-alpine
 
-Tags: 1.34.4, 1.34, legacy
-Directory: 1.34/apache
-
-Tags: 1.34.4-fpm, 1.34-fpm, legacy-fpm
-Directory: 1.34/fpm
-
-Tags: 1.34.4-fpm-alpine, 1.34-fpm-alpine, legacy-fpm-alpline
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le
-Directory: 1.34/fpm-alpine
-
-Tags: 1.31.14, 1.31, legacylts
-Directory: 1.31/apache
-
-Tags: 1.31.14-fpm, 1.31-fpm, legacylts-fpm
-Directory: 1.31/fpm
-
-Tags: 1.31.14-fpm-alpine, 1.31-fpm-alpine, legacylts-fpm-alpine
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le
-Directory: 1.31/fpm-alpine

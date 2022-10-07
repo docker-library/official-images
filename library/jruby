@@ -3,36 +3,49 @@ Maintainers: JRuby Admin <admin@jruby.org> (@jruby),
              Thomas E Enebo <tom.enebo@gmail.com> (@enebo)
 GitRepo: https://github.com/jruby/docker-jruby.git
 GitFetch: refs/heads/master
-GitCommit: 623057f3dd0bd15d75fc1bf9b55882c4c10aa38c
+GitCommit: e59f0ca935a241f76de96d45565431982c9095b6
 
-Tags: latest, 9, 9.2, 9.2.17, 9.2-jre, 9.2-jre8, 9.2.17-jre, 9.2.17-jre8, 9.2.17.0, 9.2.17.0-jre, 9.2.17.0-jre8
-Architectures: amd64
-Directory: 9000/jre8
+Tags: latest, 9, 9.3, 9.3.8, 9.3-jre, 9.3-jre8, 9.3.8-jre, 9.3.8-jre8, 9.3.8.0, 9.3.8.0-jre, 9.3.8.0-jre8
+Architectures: amd64, arm64v8
+Directory: 9.3/jre8
 
-Tags: 9-jdk, 9-jdk8, 9.2-jdk, 9.2-jdk8, 9.2.17-jdk, 9.2.17-jdk8, 9.2.17.0-jdk, 9.2.17.0-jdk8
-Architectures: amd64
-Directory: 9000/jdk8
+Tags: 9-jdk, 9-jdk8, 9.3-jdk, 9.3-jdk8, 9.3.8-jdk, 9.3.8-jdk8, 9.3.8.0-jdk, 9.3.8.0-jdk8
+Architectures: amd64, arm64v8
+Directory: 9.3/jdk8
 
-Tags: 9.2-jre11, 9.2.17-jre11, 9.2.17.0-jre11
-Architectures: amd64
-Directory: 9000/jre11
+Tags: 9.3-jre11, 9.3.8-jre11, 9.3.8.0-jre11
+Architectures: amd64, arm64v8
+Directory: 9.3/jre11
 
-Tags: 9.2-jdk11, 9.2.17-jdk11, 9.2.17.0-jdk11
-Architectures: amd64
-Directory: 9000/jdk11
+Tags: 9.3-jdk11, 9.3.8-jdk11, 9.3.8.0-jdk11
+Architectures: amd64, arm64v8
+Directory: 9.3/jdk11
 
-Tags: 9-onbuild, 9.2-onbuild, 9.2.17-onbuild, 9.2.17.0-onbuild
-Architectures: amd64
-Directory: 9000/onbuild-jdk8
+Tags: 9.3-jdk17, 9.3.8-jdk17, 9.3.8.0-jdk17
+Architectures: amd64, arm64v8
+Directory: 9.3/jdk17
 
-Tags: 9.1, 9.1.17, 9.1.17.0, 9.1-jre, 9.1.17-jre, 9.1.17.0-jre
+Tags: 9.2, 9.2.21, 9.2-jre, 9.2-jre8, 9.2.21-jre, 9.2.21-jre8, 9.2.21.0, 9.2.21.0-jre, 9.2.21.0-jre8
 Architectures: amd64
-Directory: 9000/jre
-GitCommit: 8bc3fe27670a851953345182fe12f14f5e708383
-GitFetch: refs/heads/9.1
+Directory: 9.2/jre8
 
-Tags: 9.1-jdk, 9.1.17-jdk, 9.1.17.0-jdk
+Tags: 9.2-jdk, 9.2-jdk8, 9.2.21-jdk, 9.2.21-jdk8, 9.2.21.0-jdk, 9.2.21.0-jdk8
 Architectures: amd64
-Directory: 9000/jdk
-GitCommit: 8bc3fe27670a851953345182fe12f14f5e708383
-GitFetch: refs/heads/9.1
+Directory: 9.2/jdk8
+
+Tags: 9.2-jre11, 9.2.21-jre11, 9.2.21.0-jre11
+Architectures: amd64
+Directory: 9.2/jre11
+
+Tags: 9.2-jdk11, 9.2.21-jdk11, 9.2.21.0-jdk11
+Architectures: amd64
+Directory: 9.2/jdk11
+
+Tags: 9.2-jdk17, 9.2.21-jdk17, 9.2.21.0-jdk17
+Architectures: amd64
+Directory: 9.2/jdk17
+
+Tags: 9.2-onbuild, 9.2.21-onbuild, 9.2.21.0-onbuild
+Architectures: amd64
+Directory: 9.2/onbuild-jdk8
+

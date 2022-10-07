@@ -1,57 +1,111 @@
 Maintainers: Keegan Witt <keeganwitt@gmail.com> (@keeganwitt)
 GitRepo: https://github.com/keeganwitt/docker-gradle.git
-GitCommit: 605a08fb025ad34e8e9d5d2391427886e64fc9f7
 
 
-# Hotspot
+# Gradle 7.x
 
-Tags: 7.0.0-jdk8, 7.0.0-jdk8-hotspot, 7.0-jdk8, 7.0-jdk8-hotspot, jdk8, jdk8-hotspot, 7.0.0-jdk, 7.0.0-jdk-hotspot, 7.0-jdk, 7.0-jdk-hotspot, jdk, jdk-hotspot, 7.0.0, 7.0.0-hotspot, 7.0, 7.0-hotspot, latest, hotspot
+Tags: 7.5.1-jdk8, 7.5-jdk8, 7-jdk8, jdk8, 7.5.1-jdk8-jammy, 7.5-jdk8-jammy, 7-jdk8-jammy, jdk8-jammy
+Architectures: amd64, arm32v7, arm64v8, ppc64le
+GitCommit: 147f2cc0dc21b87f0845a2e95993f30aa5f32224
+Directory: jdk8
+
+Tags: 7.5.1-jdk8-focal, 7.5-jdk8-focal, 7-jdk8-focal, jdk8-focal
+Architectures: amd64, arm32v7, arm64v8, ppc64le
+GitCommit: 147f2cc0dc21b87f0845a2e95993f30aa5f32224
+Directory: jdk8-focal
+
+Tags: 7.5.1-jdk11, 7.5-jdk11, 7-jdk11, jdk11, 7.5.1-jdk11-jammy, 7.5-jdk11-jammy, 7-jdk11-jammy, jdk11-jammy
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-Directory: hotspot/jdk8
+GitCommit: 147f2cc0dc21b87f0845a2e95993f30aa5f32224
+Directory: jdk11
 
-Tags: 7.0.0-jre8, 7.0.0-jre8-hotspot, 7.0-jre8, 7.0-jre8-hotspot, jre8, jre8-hotspot, 7.0.0-jre, 7.0.0-jre-hotspot, 7.0-jre, 7.0-jre-hotspot, jre, jre-hotspot
+Tags: 7.5.1-jdk11-focal, 7.5-jdk11-focal, 7-jdk11-focal, jdk11-focal
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-Directory: hotspot/jre8
+GitCommit: 147f2cc0dc21b87f0845a2e95993f30aa5f32224
+Directory: jdk11-focal
 
-Tags: 7.0.0-jdk11, 7.0.0-jdk11-hotspot, 7.0-jdk11, 7.0-jdk11-hotspot, jdk11, jdk11-hotspot
+Tags: 7.5.1-jdk11-alpine, 7.5-jdk11-alpine, 7-jdk11-alpine, jdk11-alpine
+Architectures: amd64
+GitCommit: 147f2cc0dc21b87f0845a2e95993f30aa5f32224
+Directory: jdk11-alpine
+
+Tags: 7.5.1-jdk17, 7.5-jdk17, 7-jdk17, jdk17, 7.5.1-jdk, 7.5-jdk, 7-jdk, jdk, 7.5.1, 7.5, 7, latest, 7.5.1-jdk17-jammy, 7.5-jdk17-jammy, 7-jdk17-jammy, jdk17-jammy, 7.5.1-jdk-jammy, 7.5-jdk-jammy, 7-jdk-jammy, jdk-jammy, 7.5.1-jammy, 7.5-jammy, 7-jammy, jammy
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-Directory: hotspot/jdk11
+GitCommit: 147f2cc0dc21b87f0845a2e95993f30aa5f32224
+Directory: jdk17
 
-Tags: 7.0.0-jre11, 7.0.0-jre11-hotspot, 7.0-jre11, 7.0-jre11-hotspot, jre11, jre11-hotspot
+Tags: 7.5.1-jdk17-focal, 7.5-jdk17-focal, 7-jdk17-focal, jdk17-focal, 7.5.1-jdk-focal, 7.5-jdk-focal, 7-jdk-focal, jdk-focal, 7.5.1-focal, 7.5-focal, 7-focal, focal
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-Directory: hotspot/jre11
+GitCommit: 147f2cc0dc21b87f0845a2e95993f30aa5f32224
+Directory: jdk17-focal
 
-Tags: 7.0.0-jdk16, 7.0.0-jdk16-hotspot, 7.0-jdk16, 7.0-jdk16-hotspot, jdk16, jdk16-hotspot
+Tags: 7.5.1-jdk17-alpine, 7.5-jdk17-alpine, 7-jdk17-alpine, jdk17-alpine, 7.5.1-jdk-alpine, 7.5-jdk-alpine, 7-jdk-alpine, jdk-alpine, 7.5.1-alpine, 7.5-alpine, 7-alpine, alpine
+Architectures: amd64
+GitCommit: 147f2cc0dc21b87f0845a2e95993f30aa5f32224
+Directory: jdk17-alpine
+
+Tags: 7.5.1-jdk18, 7.5-jdk18, 7-jdk18, jdk18, 7.5.1-jdk18-jammy, 7.5-jdk18-jammy, 7-jdk18-jammy, jdk18-jammy
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-Directory: hotspot/jdk16
+GitCommit: 147f2cc0dc21b87f0845a2e95993f30aa5f32224
+Directory: jdk18
 
-Tags: 7.0.0-jre16, 7.0.0-jre16-hotspot, 7.0-jre16, 7.0-jre16-hotspot, jre16, jre16-hotspot
+Tags: 7.5.1-jdk18-focal, 7.5-jdk18-focal, 7-jdk18-focal, jdk18-focal
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-Directory: hotspot/jre16
+GitCommit: 147f2cc0dc21b87f0845a2e95993f30aa5f32224
+Directory: jdk18-focal
+
+Tags: 7.5.1-jdk18-alpine, 7.5-jdk18-alpine, 7-jdk18-alpine, jdk18-alpine
+Architectures: amd64
+GitCommit: 147f2cc0dc21b87f0845a2e95993f30aa5f32224
+Directory: jdk18-alpine
 
 
-# OpenJ9
+# Gradle 6.x
 
-Tags: 7.0.0-jdk8-openj9, 7.0-jdk8-openj9, jdk8-openj9, 7.0.0-jdk-openj9, 7.0-jdk-openj9, jdk-openj9, 7.0.0-openj9, 7.0-openj9, openj9
-Architectures: amd64, arm64v8, ppc64le, s390x
-Directory: openj9/jdk8
+Tags: 6.9.2-jdk8, 6.9-jdk8, 6-jdk8, 6.9.2-jdk8-jammy, 6.9-jdk8-jammy, 6-jdk8-jammy
+GitFetch: refs/heads/6
+Architectures: amd64, arm32v7, arm64v8, ppc64le
+GitCommit: 61f288b37cad7c239861c2183bbd8c16301467a8
+Directory: jdk8
 
-Tags: 7.0.0-jre8-openj9, 7.0-jre8-openj9, jre8-openj9, 7.0.0-jre-openj9, 7.0-jre-openj9, jre-openj9
-Architectures: amd64, arm64v8, ppc64le, s390x
-Directory: openj9/jre8
+Tags: 6.9.2-jdk8-focal, 6.9-jdk8-focal, 6-jdk8-focal
+GitFetch: refs/heads/6
+Architectures: amd64, arm32v7, arm64v8, ppc64le
+GitCommit: 61f288b37cad7c239861c2183bbd8c16301467a8
+Directory: jdk8-focal
 
-Tags: 7.0.0-jdk11-openj9, 7.0-jdk11-openj9, jdk11-openj9
-Architectures: amd64, arm64v8, ppc64le, s390x
-Directory: openj9/jdk11
+Tags: 6.9.2-jdk11, 6.9-jdk11, 6-jdk11, 6.9.2-jdk11-jammy, 6.9-jdk11-jammy, 6-jdk11-jammy
+GitFetch: refs/heads/6
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 61f288b37cad7c239861c2183bbd8c16301467a8
+Directory: jdk11
 
-Tags: 7.0.0-jre11-openj9, 7.0-jre11-openj9, jre11-openj9
-Architectures: amd64, arm64v8, ppc64le, s390x
-Directory: openj9/jre11
+Tags: 6.9.2-jdk11-focal, 6.9-jdk11-focal, 6-jdk11-focal
+GitFetch: refs/heads/6
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 61f288b37cad7c239861c2183bbd8c16301467a8
+Directory: jdk11-focal
 
-Tags: 7.0.0-jdk16-openj9, 7.0-jdk16-openj9, jdk16-openj9
-Architectures: amd64, arm64v8, ppc64le, s390x
-Directory: openj9/jdk16
+Tags: 6.9.2-jdk11-alpine, 6.9-jdk11-alpine, 6-jdk11-alpine
+GitFetch: refs/heads/6
+Architectures: amd64
+GitCommit: 61f288b37cad7c239861c2183bbd8c16301467a8
+Directory: jdk11-alpine
 
-Tags: 7.0.0-jre16-openj9, 7.0-jre16-openj9, jre16-openj9
-Architectures: amd64, arm64v8, ppc64le, s390x
-Directory: openj9/jre16
+Tags: 6.9.2-jdk17, 6.9-jdk17, 6-jdk17, 6.9.2-jdk, 6.9-jdk, 6-jdk, 6.9.2, 6.9, 6, 6.9.2-jdk17-jammy, 6.9-jdk17-jammy, 6-jdk17-jammy, 6.9.2-jdk-jammy, 6.9-jdk-jammy, 6-jdk-jammy, 6.9.2-jammy, 6.9-jammy, 6-jammy
+GitFetch: refs/heads/6
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 61f288b37cad7c239861c2183bbd8c16301467a8
+Directory: jdk17
+
+Tags: 6.9.2-jdk17-focal, 6.9-jdk17-focal, 6-jdk17-focal, 6.9.2-jdk-focal, 6.9-jdk-focal, 6-jdk-focal, 6.9.2-focal, 6.9-focal, 6-focal
+GitFetch: refs/heads/6
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 61f288b37cad7c239861c2183bbd8c16301467a8
+Directory: jdk17-focal
+
+Tags: 6.9.2-jdk17-alpine, 6.9-jdk17-alpine, 6-jdk17-alpine, 6.9.2-jdk-alpine, 6.9-jdk-alpine, 6-jdk-alpine, 6.9.2-alpine, 6.9-alpine, 6-alpine
+GitFetch: refs/heads/6
+Architectures: amd64
+GitCommit: 61f288b37cad7c239861c2183bbd8c16301467a8
+Directory: jdk17-alpine

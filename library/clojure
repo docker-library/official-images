@@ -1,116 +1,201 @@
 Maintainers: Paul Lam <paul@quantisan.com> (@Quantisan),
-             Wes Morgan <wesmorgan@icloud.com> (@cap10morgan)
-Architectures: amd64, arm64v8
+             Wes Morgan <wes@wesmorgan.me> (@cap10morgan)
+Architectures: arm64v8, amd64
 GitRepo: https://github.com/Quantisan/docker-clojure.git
-GitCommit: 5a8063dd656e676f754bf746b053ed5bc5963c28
+GitCommit: e9590770dda68d7357a5e892c122288d88b130b4
+
 
 Tags: latest
-Directory: target/openjdk-11-slim-buster/latest
+Directory: target/eclipse-temurin-17-jdk-jammy/latest
 
-Tags: openjdk-8, openjdk-8-lein, openjdk-8-lein-2.9.5, openjdk-8-buster, openjdk-8-lein-buster, openjdk-8-lein-2.9.5-buster
+Tags: temurin-8-boot-2.8.3-alpine, temurin-8-boot-alpine
 Architectures: amd64
-Directory: target/openjdk-8-buster/lein
+Directory: target/eclipse-temurin-8-jdk-alpine/boot
 
-Tags: openjdk-8-slim-buster, openjdk-8-lein-slim-buster, openjdk-8-lein-2.9.5-slim-buster
+Tags: temurin-8-boot-2.8.3-bullseye, temurin-8-boot-bullseye
+Directory: target/debian-bullseye-8/boot
+
+Tags: temurin-8-boot-2.8.3-bullseye-slim, temurin-8-boot-bullseye-slim
+Directory: target/debian-bullseye-slim-8/boot
+
+Tags: temurin-8-boot-2.8.3-focal, temurin-8-boot-focal
+Directory: target/eclipse-temurin-8-jdk-focal/boot
+
+Tags: temurin-8-boot, temurin-8-boot-2.8.3, temurin-8-boot-2.8.3-jammy, temurin-8-boot-jammy
+Directory: target/eclipse-temurin-8-jdk-jammy/boot
+
+Tags: temurin-8-lein-2.9.10-alpine, temurin-8-lein-alpine
 Architectures: amd64
-Directory: target/openjdk-8-slim-buster/lein
+Directory: target/eclipse-temurin-8-jdk-alpine/lein
 
-Tags: openjdk-8-boot, openjdk-8-boot-2.8.3, openjdk-8-boot-buster, openjdk-8-boot-2.8.3-buster
+Tags: temurin-8-lein-2.9.10-bullseye, temurin-8-lein-bullseye
+Directory: target/debian-bullseye-8/lein
+
+Tags: temurin-8-lein-2.9.10-bullseye-slim, temurin-8-lein-bullseye-slim
+Directory: target/debian-bullseye-slim-8/lein
+
+Tags: temurin-8-lein-2.9.10-focal, temurin-8-lein-focal
+Directory: target/eclipse-temurin-8-jdk-focal/lein
+
+Tags: temurin-8-lein, temurin-8-lein-2.9.10, temurin-8-lein-2.9.10-jammy, temurin-8-lein-jammy
+Directory: target/eclipse-temurin-8-jdk-jammy/lein
+
+Tags: temurin-8-alpine, temurin-8-tools-deps-1.11.1.1165-alpine, temurin-8-tools-deps-alpine
 Architectures: amd64
-Directory: target/openjdk-8-buster/boot
+Directory: target/eclipse-temurin-8-jdk-alpine/tools-deps
 
-Tags: openjdk-8-boot-slim-buster, openjdk-8-boot-2.8.3-slim-buster
+Tags: temurin-8-bullseye, temurin-8-tools-deps-1.11.1.1165-bullseye, temurin-8-tools-deps-bullseye
+Directory: target/debian-bullseye-8/tools-deps
+
+Tags: temurin-8-bullseye-slim, temurin-8-tools-deps-1.11.1.1165-bullseye-slim, temurin-8-tools-deps-bullseye-slim
+Directory: target/debian-bullseye-slim-8/tools-deps
+
+Tags: temurin-8-focal, temurin-8-tools-deps-1.11.1.1165-focal, temurin-8-tools-deps-focal
+Directory: target/eclipse-temurin-8-jdk-focal/tools-deps
+
+Tags: temurin-8-jammy, temurin-8-tools-deps, temurin-8-tools-deps-1.11.1.1165, temurin-8-tools-deps-1.11.1.1165-jammy, temurin-8-tools-deps-jammy
+Directory: target/eclipse-temurin-8-jdk-jammy/tools-deps
+
+Tags: temurin-11-boot-2.8.3-alpine, temurin-11-boot-alpine
 Architectures: amd64
-Directory: target/openjdk-8-slim-buster/boot
+Directory: target/eclipse-temurin-11-jdk-alpine/boot
 
-Tags: openjdk-8-tools-deps, openjdk-8-tools-deps-1.10.3.822, openjdk-8-tools-deps-buster, openjdk-8-tools-deps-1.10.3.822-buster
+Tags: temurin-11-boot-2.8.3-bullseye, temurin-11-boot-bullseye
+Directory: target/debian-bullseye-11/boot
+
+Tags: temurin-11-boot-2.8.3-bullseye-slim, temurin-11-boot-bullseye-slim
+Directory: target/debian-bullseye-slim-11/boot
+
+Tags: temurin-11-boot-2.8.3-focal, temurin-11-boot-focal
+Directory: target/eclipse-temurin-11-jdk-focal/boot
+
+Tags: temurin-11-boot, temurin-11-boot-2.8.3, temurin-11-boot-2.8.3-jammy, temurin-11-boot-jammy
+Directory: target/eclipse-temurin-11-jdk-jammy/boot
+
+Tags: temurin-11-lein-2.9.10-alpine, temurin-11-lein-alpine
 Architectures: amd64
-Directory: target/openjdk-8-buster/tools-deps
+Directory: target/eclipse-temurin-11-jdk-alpine/lein
 
-Tags: openjdk-8-tools-deps-slim-buster, openjdk-8-tools-deps-1.10.3.822-slim-buster
+Tags: temurin-11-lein-2.9.10-bullseye, temurin-11-lein-bullseye
+Directory: target/debian-bullseye-11/lein
+
+Tags: temurin-11-lein-2.9.10-bullseye-slim, temurin-11-lein-bullseye-slim
+Directory: target/debian-bullseye-slim-11/lein
+
+Tags: temurin-11-lein-2.9.10-focal, temurin-11-lein-focal
+Directory: target/eclipse-temurin-11-jdk-focal/lein
+
+Tags: temurin-11-lein, temurin-11-lein-2.9.10, temurin-11-lein-2.9.10-jammy, temurin-11-lein-jammy
+Directory: target/eclipse-temurin-11-jdk-jammy/lein
+
+Tags: temurin-11-alpine, temurin-11-tools-deps-1.11.1.1165-alpine, temurin-11-tools-deps-alpine
 Architectures: amd64
-Directory: target/openjdk-8-slim-buster/tools-deps
+Directory: target/eclipse-temurin-11-jdk-alpine/tools-deps
 
-Tags: openjdk-11, openjdk-11-lein, openjdk-11-lein-2.9.5, lein, lein-2.9.5, openjdk-11-buster, openjdk-11-lein-buster, openjdk-11-lein-2.9.5-buster, lein-buster, lein-2.9.5-buster
-Directory: target/openjdk-11-buster/lein
+Tags: temurin-11-bullseye, temurin-11-tools-deps-1.11.1.1165-bullseye, temurin-11-tools-deps-bullseye
+Directory: target/debian-bullseye-11/tools-deps
 
-Tags: openjdk-11-lein-slim-buster, openjdk-11-slim-buster, openjdk-11-lein-2.9.5-slim-buster, slim-buster, lein-slim-buster, lein-2.9.5-slim-buster
-Directory: target/openjdk-11-slim-buster/lein
+Tags: temurin-11-bullseye-slim, temurin-11-tools-deps-1.11.1.1165-bullseye-slim, temurin-11-tools-deps-bullseye-slim
+Directory: target/debian-bullseye-slim-11/tools-deps
 
-Tags: openjdk-11-boot, openjdk-11-boot-2.8.3, boot, boot-2.8.3, openjdk-11-boot-buster, openjdk-11-boot-2.8.3-buster, boot-buster, boot-2.8.3-buster
-Directory: target/openjdk-11-buster/boot
+Tags: temurin-11-focal, temurin-11-tools-deps-1.11.1.1165-focal, temurin-11-tools-deps-focal
+Directory: target/eclipse-temurin-11-jdk-focal/tools-deps
 
-Tags: openjdk-11-boot-slim-buster, openjdk-11-boot-2.8.3-slim-buster, boot-slim-buster, boot-2.8.3-slim-buster
-Directory: target/openjdk-11-slim-buster/boot
+Tags: temurin-11-jammy, temurin-11-tools-deps, temurin-11-tools-deps-1.11.1.1165, temurin-11-tools-deps-1.11.1.1165-jammy, temurin-11-tools-deps-jammy
+Directory: target/eclipse-temurin-11-jdk-jammy/tools-deps
 
-Tags: openjdk-11-tools-deps, openjdk-11-tools-deps-1.10.3.822, tools-deps, tools-deps-1.10.3.822, openjdk-11-tools-deps-buster, openjdk-11-tools-deps-1.10.3.822-buster, tools-deps-buster, tools-deps-1.10.3.822-buster
-Directory: target/openjdk-11-buster/tools-deps
-
-Tags: openjdk-11-tools-deps-slim-buster, openjdk-11-tools-deps-1.10.3.822-slim-buster, tools-deps-1.10.3.822-slim-buster, tools-deps-slim-buster
-Directory: target/openjdk-11-slim-buster/tools-deps
-
-Tags: openjdk-15, openjdk-15-lein, openjdk-15-lein-2.9.5, openjdk-15-slim-buster, openjdk-15-lein-slim-buster, openjdk-15-lein-2.9.5-slim-buster
-Directory: target/openjdk-15-slim-buster/lein
-
-Tags: openjdk-15-buster, openjdk-15-lein-buster, openjdk-15-lein-2.9.5-buster
-Directory: target/openjdk-15-buster/lein
-
-Tags: openjdk-15-boot, openjdk-15-boot-2.8.3, openjdk-15-boot-slim-buster, openjdk-15-boot-2.8.3-slim-buster
-Directory: target/openjdk-15-slim-buster/boot
-
-Tags: openjdk-15-boot-buster, openjdk-15-boot-2.8.3-buster
-Directory: target/openjdk-15-buster/boot
-
-Tags: openjdk-15-tools-deps, openjdk-15-tools-deps-1.10.3.822, openjdk-15-tools-deps-slim-buster, openjdk-15-tools-deps-1.10.3.822-slim-buster
-Directory: target/openjdk-15-slim-buster/tools-deps
-
-Tags: openjdk-15-tools-deps-buster, openjdk-15-tools-deps-1.10.3.822-buster
-Directory: target/openjdk-15-buster/tools-deps
-
-Tags: openjdk-16, openjdk-16-lein, openjdk-16-lein-2.9.5, openjdk-16-slim-buster, openjdk-16-lein-slim-buster, openjdk-16-lein-2.9.5-slim-buster
-Directory: target/openjdk-16-slim-buster/lein
-
-Tags: openjdk-16-buster, openjdk-16-lein-buster, openjdk-16-lein-2.9.5-buster
-Directory: target/openjdk-16-buster/lein
-
-Tags: openjdk-16-boot, openjdk-16-boot-2.8.3, openjdk-16-boot-slim-buster, openjdk-16-boot-2.8.3-slim-buster
-Directory: target/openjdk-16-slim-buster/boot
-
-Tags: openjdk-16-boot-buster, openjdk-16-boot-2.8.3-buster
-Directory: target/openjdk-16-buster/boot
-
-Tags: openjdk-16-tools-deps, openjdk-16-tools-deps-1.10.3.822, openjdk-16-tools-deps-slim-buster, openjdk-16-tools-deps-1.10.3.822-slim-buster
-Directory: target/openjdk-16-slim-buster/tools-deps
-
-Tags: openjdk-16-tools-deps-buster, openjdk-16-tools-deps-1.10.3.822-buster
-Directory: target/openjdk-16-buster/tools-deps
-
-Tags: openjdk-17, openjdk-17-lein, openjdk-17-lein-2.9.5, openjdk-17-slim-buster, openjdk-17-lein-slim-buster, openjdk-17-lein-2.9.5-slim-buster
-Directory: target/openjdk-17-slim-buster/lein
-
-Tags: openjdk-17-buster, openjdk-17-lein-buster, openjdk-17-lein-2.9.5-buster
-Directory: target/openjdk-17-buster/lein
-
-Tags: openjdk-17-boot, openjdk-17-boot-2.8.3, openjdk-17-boot-slim-buster, openjdk-17-boot-2.8.3-slim-buster
-Directory: target/openjdk-17-slim-buster/boot
-
-Tags: openjdk-17-boot-buster, openjdk-17-boot-2.8.3-buster
-Directory: target/openjdk-17-buster/boot
-
-Tags: openjdk-17-tools-deps, openjdk-17-tools-deps-1.10.3.822, openjdk-17-tools-deps-slim-buster, openjdk-17-tools-deps-1.10.3.822-slim-buster
-Directory: target/openjdk-17-slim-buster/tools-deps
-
-Tags: openjdk-17-tools-deps-buster, openjdk-17-tools-deps-1.10.3.822-buster
-Directory: target/openjdk-17-buster/tools-deps
-
-Tags: openjdk-17-alpine, openjdk-17-lein-alpine, openjdk-17-lein-2.9.5-alpine
+Tags: boot-2.8.3-alpine, boot-alpine, temurin-17-boot-2.8.3-alpine, temurin-17-boot-alpine
 Architectures: amd64
-Directory: target/openjdk-17-alpine/lein
+Directory: target/eclipse-temurin-17-jdk-alpine/boot
 
-Tags: openjdk-17-boot-alpine, openjdk-17-boot-2.8.3-alpine
-Architectures: amd64
-Directory: target/openjdk-17-alpine/boot
+Tags: temurin-17-boot-2.8.3-bullseye, temurin-17-boot-bullseye
+Directory: target/debian-bullseye-17/boot
 
-Tags: openjdk-17-tools-deps-alpine, openjdk-17-tools-deps-1.10.3.822-alpine
+Tags: temurin-17-boot-2.8.3-bullseye-slim, temurin-17-boot-bullseye-slim
+Directory: target/debian-bullseye-slim-17/boot
+
+Tags: boot-2.8.3-focal, boot-focal, temurin-17-boot-2.8.3-focal, temurin-17-boot-focal
+Directory: target/eclipse-temurin-17-jdk-focal/boot
+
+Tags: boot, boot-2.8.3, boot-2.8.3-jammy, boot-jammy, temurin-17-boot, temurin-17-boot-2.8.3, temurin-17-boot-2.8.3-jammy, temurin-17-boot-jammy
+Directory: target/eclipse-temurin-17-jdk-jammy/boot
+
+Tags: lein-2.9.10-alpine, lein-alpine, temurin-17-lein-2.9.10-alpine, temurin-17-lein-alpine
 Architectures: amd64
-Directory: target/openjdk-17-alpine/tools-deps
+Directory: target/eclipse-temurin-17-jdk-alpine/lein
+
+Tags: temurin-17-lein-2.9.10-bullseye, temurin-17-lein-bullseye
+Directory: target/debian-bullseye-17/lein
+
+Tags: temurin-17-lein-2.9.10-bullseye-slim, temurin-17-lein-bullseye-slim
+Directory: target/debian-bullseye-slim-17/lein
+
+Tags: lein-2.9.10-focal, lein-focal, temurin-17-lein-2.9.10-focal, temurin-17-lein-focal
+Directory: target/eclipse-temurin-17-jdk-focal/lein
+
+Tags: lein, lein-2.9.10, lein-2.9.10-jammy, lein-jammy, temurin-17-lein, temurin-17-lein-2.9.10, temurin-17-lein-2.9.10-jammy, temurin-17-lein-jammy
+Directory: target/eclipse-temurin-17-jdk-jammy/lein
+
+Tags: temurin-17-alpine, temurin-17-tools-deps-1.11.1.1165-alpine, temurin-17-tools-deps-alpine, tools-deps-1.11.1.1165-alpine, tools-deps-alpine
+Architectures: amd64
+Directory: target/eclipse-temurin-17-jdk-alpine/tools-deps
+
+Tags: temurin-17-bullseye, temurin-17-tools-deps-1.11.1.1165-bullseye, temurin-17-tools-deps-bullseye
+Directory: target/debian-bullseye-17/tools-deps
+
+Tags: temurin-17-bullseye-slim, temurin-17-tools-deps-1.11.1.1165-bullseye-slim, temurin-17-tools-deps-bullseye-slim
+Directory: target/debian-bullseye-slim-17/tools-deps
+
+Tags: temurin-17-focal, temurin-17-tools-deps-1.11.1.1165-focal, temurin-17-tools-deps-focal, tools-deps-1.11.1.1165-focal, tools-deps-focal
+Directory: target/eclipse-temurin-17-jdk-focal/tools-deps
+
+Tags: temurin-17-jammy, temurin-17-tools-deps, temurin-17-tools-deps-1.11.1.1165, temurin-17-tools-deps-1.11.1.1165-jammy, temurin-17-tools-deps-jammy, tools-deps, tools-deps-1.11.1.1165, tools-deps-1.11.1.1165-jammy, tools-deps-jammy
+Directory: target/eclipse-temurin-17-jdk-jammy/tools-deps
+
+Tags: temurin-19-boot-2.8.3-alpine, temurin-19-boot-alpine
+Architectures: amd64
+Directory: target/eclipse-temurin-19-jdk-alpine/boot
+
+Tags: temurin-19-boot-2.8.3-bullseye, temurin-19-boot-bullseye
+Directory: target/debian-bullseye-19/boot
+
+Tags: temurin-19-boot-2.8.3-bullseye-slim, temurin-19-boot-bullseye-slim
+Directory: target/debian-bullseye-slim-19/boot
+
+Tags: temurin-19-boot-2.8.3-focal, temurin-19-boot-focal
+Directory: target/eclipse-temurin-19-jdk-focal/boot
+
+Tags: temurin-19-boot, temurin-19-boot-2.8.3, temurin-19-boot-2.8.3-jammy, temurin-19-boot-jammy
+Directory: target/eclipse-temurin-19-jdk-jammy/boot
+
+Tags: temurin-19-lein-2.9.10-alpine, temurin-19-lein-alpine
+Architectures: amd64
+Directory: target/eclipse-temurin-19-jdk-alpine/lein
+
+Tags: temurin-19-lein-2.9.10-bullseye, temurin-19-lein-bullseye
+Directory: target/debian-bullseye-19/lein
+
+Tags: temurin-19-lein-2.9.10-bullseye-slim, temurin-19-lein-bullseye-slim
+Directory: target/debian-bullseye-slim-19/lein
+
+Tags: temurin-19-lein-2.9.10-focal, temurin-19-lein-focal
+Directory: target/eclipse-temurin-19-jdk-focal/lein
+
+Tags: temurin-19-lein, temurin-19-lein-2.9.10, temurin-19-lein-2.9.10-jammy, temurin-19-lein-jammy
+Directory: target/eclipse-temurin-19-jdk-jammy/lein
+
+Tags: temurin-19-alpine, temurin-19-tools-deps-1.11.1.1165-alpine, temurin-19-tools-deps-alpine
+Architectures: amd64
+Directory: target/eclipse-temurin-19-jdk-alpine/tools-deps
+
+Tags: temurin-19-bullseye, temurin-19-tools-deps-1.11.1.1165-bullseye, temurin-19-tools-deps-bullseye
+Directory: target/debian-bullseye-19/tools-deps
+
+Tags: temurin-19-bullseye-slim, temurin-19-tools-deps-1.11.1.1165-bullseye-slim, temurin-19-tools-deps-bullseye-slim
+Directory: target/debian-bullseye-slim-19/tools-deps
+
+Tags: temurin-19-focal, temurin-19-tools-deps-1.11.1.1165-focal, temurin-19-tools-deps-focal
+Directory: target/eclipse-temurin-19-jdk-focal/tools-deps
+
+Tags: temurin-19-jammy, temurin-19-tools-deps, temurin-19-tools-deps-1.11.1.1165, temurin-19-tools-deps-1.11.1.1165-jammy, temurin-19-tools-deps-jammy
+Directory: target/eclipse-temurin-19-jdk-jammy/tools-deps

@@ -1,55 +1,34 @@
-# this file is generated via https://github.com/apache/flink-docker/blob/f47f4a2e257279c4c28667e3ceff12bc5eb70afb/generate-stackbrew-library.sh
+# this file is generated via https://github.com/apache/flink-docker/blob/187238c6b444457d9b57279715fa16b37fe59e45/generate-stackbrew-library.sh
 
-Maintainers: Patrick Lucas <me@patricklucas.com> (@patricklucas),
-             Ismaël Mejía <iemejia@gmail.com> (@iemejia)
+Maintainers: The Apache Flink Project <dev@flink.apache.org> (@ApacheFlink)
 GitRepo: https://github.com/apache/flink-docker.git
 
-Tags: 1.12.2-scala_2.11-java8, 1.12-scala_2.11-java8, scala_2.11-java8, 1.12.2-scala_2.11, 1.12-scala_2.11, scala_2.11
-Architectures: amd64
-GitCommit: d9f24a0501b5ddd014a38e7262863e19d152086b
-Directory: ./1.12/scala_2.11-java8-debian
+Tags: 1.15.2-scala_2.12-java8, 1.15-scala_2.12-java8, scala_2.12-java8, 1.15.2-java8, 1.15-java8, java8
+Architectures: amd64,arm64v8
+GitCommit: 4794f9425513fb4c0b55ec1efd629e8eb7e5d8c5
+Directory: ./1.15/scala_2.12-java8-ubuntu
 
-Tags: 1.12.2-scala_2.11-java11, 1.12-scala_2.11-java11, scala_2.11-java11
-Architectures: amd64
-GitCommit: d9f24a0501b5ddd014a38e7262863e19d152086b
-Directory: ./1.12/scala_2.11-java11-debian
+Tags: 1.15.2-scala_2.12-java11, 1.15-scala_2.12-java11, scala_2.12-java11, 1.15.2-scala_2.12, 1.15-scala_2.12, scala_2.12, 1.15.2-java11, 1.15-java11, java11, 1.15.2, 1.15, latest
+Architectures: amd64,arm64v8
+GitCommit: 4794f9425513fb4c0b55ec1efd629e8eb7e5d8c5
+Directory: ./1.15/scala_2.12-java11-ubuntu
 
-Tags: 1.12.2-scala_2.12-java8, 1.12-scala_2.12-java8, scala_2.12-java8, 1.12.2-scala_2.12, 1.12-scala_2.12, scala_2.12, 1.12.2-java8, 1.12-java8, java8, 1.12.2, 1.12, latest
-Architectures: amd64
-GitCommit: d9f24a0501b5ddd014a38e7262863e19d152086b
-Directory: ./1.12/scala_2.12-java8-debian
+Tags: 1.14.6-scala_2.12-java8, 1.14-scala_2.12-java8, 1.14.6-scala_2.12, 1.14-scala_2.12, 1.14.6-java8, 1.14-java8, 1.14.6, 1.14
+Architectures: amd64,arm64v8
+GitCommit: ac2ab461244d8329144e1a5069ac2ce714201e69
+Directory: ./1.14/scala_2.12-java8-ubuntu
 
-Tags: 1.12.2-scala_2.12-java11, 1.12-scala_2.12-java11, scala_2.12-java11, 1.12.2-java11, 1.12-java11, java11
-Architectures: amd64
-GitCommit: d9f24a0501b5ddd014a38e7262863e19d152086b
-Directory: ./1.12/scala_2.12-java11-debian
+Tags: 1.14.6-scala_2.12-java11, 1.14-scala_2.12-java11, 1.14.6-java11, 1.14-java11
+Architectures: amd64,arm64v8
+GitCommit: ac2ab461244d8329144e1a5069ac2ce714201e69
+Directory: ./1.14/scala_2.12-java11-ubuntu
 
-Tags: 1.11.3-scala_2.11-java8, 1.11-scala_2.11-java8, 1.11.3-scala_2.11, 1.11-scala_2.11
-Architectures: amd64
-GitCommit: 7035f03679b11352f2fdecd9f6a9bb0ec8bc2022
-Directory: ./1.11/scala_2.11-java8-debian
+Tags: 1.14.6-scala_2.11-java8, 1.14-scala_2.11-java8, 1.14.6-scala_2.11, 1.14-scala_2.11
+Architectures: amd64,arm64v8
+GitCommit: ac2ab461244d8329144e1a5069ac2ce714201e69
+Directory: ./1.14/scala_2.11-java8-ubuntu
 
-Tags: 1.11.3-scala_2.11-java11, 1.11-scala_2.11-java11
-Architectures: amd64
-GitCommit: 7035f03679b11352f2fdecd9f6a9bb0ec8bc2022
-Directory: ./1.11/scala_2.11-java11-debian
-
-Tags: 1.11.3-scala_2.12-java8, 1.11-scala_2.12-java8, 1.11.3-scala_2.12, 1.11-scala_2.12, 1.11.3-java8, 1.11-java8, 1.11.3, 1.11
-Architectures: amd64
-GitCommit: 7035f03679b11352f2fdecd9f6a9bb0ec8bc2022
-Directory: ./1.11/scala_2.12-java8-debian
-
-Tags: 1.11.3-scala_2.12-java11, 1.11-scala_2.12-java11, 1.11.3-java11, 1.11-java11
-Architectures: amd64
-GitCommit: 7035f03679b11352f2fdecd9f6a9bb0ec8bc2022
-Directory: ./1.11/scala_2.12-java11-debian
-
-Tags: 1.10.3-scala_2.11, 1.10-scala_2.11
-Architectures: amd64
-GitCommit: 2a89b61a261f803f8785fd5dd882b7f50ec33fce
-Directory: ./1.10/scala_2.11-debian
-
-Tags: 1.10.3-scala_2.12, 1.10-scala_2.12, 1.10.3, 1.10
-Architectures: amd64
-GitCommit: 2a89b61a261f803f8785fd5dd882b7f50ec33fce
-Directory: ./1.10/scala_2.12-debian
+Tags: 1.14.6-scala_2.11-java11, 1.14-scala_2.11-java11
+Architectures: amd64,arm64v8
+GitCommit: ac2ab461244d8329144e1a5069ac2ce714201e69
+Directory: ./1.14/scala_2.11-java11-ubuntu

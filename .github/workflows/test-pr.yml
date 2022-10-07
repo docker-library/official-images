@@ -10,6 +10,14 @@ defaults:
 env:
   # https://github.com/docker-library/bashbrew/issues/10
   GIT_LFS_SKIP_SMUDGE: 1
+  
+# cancel existing runs if user makes another push
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+permissions:
+  contents: read
 
 jobs:
 
@@ -33,6 +41,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       strategy: ${{ steps.generate-jobs.outputs.strategy }}
+      length: ${{ steps.generate-jobs.outputs.length }}
     steps:
       - uses: actions/checkout@v2
         with:
@@ -44,10 +53,13 @@ jobs:
           strategy="$(.github/workflows/generate.sh ~/bashbrew)"
           jq . <<<"$strategy" # sanity check / debugging aid
           echo "::set-output name=strategy::$strategy"
+          length="$(jq <<<"$strategy" -r '.matrix.include | length')"
+          echo "::set-output name=length::$length"
 
   test:
     needs: generate-jobs
-    strategy: ${{ fromJson(needs.generate-jobs.outputs.strategy) }}
+    strategy: ${{ fromJSON(needs.generate-jobs.outputs.strategy) }}
+    if: needs.generate-jobs.outputs.length > 0
     name: ${{ matrix.name }}
     runs-on: ${{ matrix.os }}
     steps:

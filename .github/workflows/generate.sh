@@ -1,11 +1,16 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
+
+#
+# NOTE: this is *not* a good example for integrating these tests into your own repository!
+# If you want that, check out https://github.com/docker-library/golang/blob/3f2c52653043f067156ce4f41182c2a758c4c857/.github/workflows/ci.yml instead.
+#
   
 bashbrewDir="$1"; shift
 
 if [ "$#" -eq 0 ]; then
 	git fetch --quiet https://github.com/docker-library/official-images.git master
-	changes="$(git diff --numstat FETCH_HEAD...HEAD -- library/ | cut -d$'\t' -f3-)"
+	changes="$(git diff --no-renames --name-only --diff-filter='d' FETCH_HEAD...HEAD -- library/)"
 	repos="$(xargs -rn1 basename <<<"$changes")"
 	set -- $repos
 fi

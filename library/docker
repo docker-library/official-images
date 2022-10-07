@@ -1,45 +1,73 @@
-# this file is generated via https://github.com/docker-library/docker/blob/12d1c2763b54d29137ec448a3e4ad1a9aefae1a0/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/docker/blob/f23a2bea97f6d7ec563bc316302fb8edf620ec5b/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <tianon@dockerproject.org> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/docker.git
 
-Tags: 20.10.6, 20.10, 20, latest
-Architectures: amd64, arm32v6, arm32v7, arm64v8
-GitCommit: f6a0c427f0354dcf5870c430c72c8f1d6b4e6d5e
-Directory: 20.10
+Tags: 22.06.0-beta.0-cli, 22.06-rc-cli, rc-cli, 22.06.0-beta.0-cli-alpine3.16
+Architectures: amd64, arm64v8
+GitCommit: 9d962f884ebf8e098b772f47938bc8486c6b6f7b
+Directory: 22.06-rc/cli
 
-Tags: 20.10.6-dind, 20.10-dind, 20-dind, dind
-Architectures: amd64, arm32v6, arm32v7, arm64v8
-GitCommit: 094faa88f437cafef7aeb0cc36e75b59046cc4b9
+Tags: 22.06.0-beta.0-dind, 22.06-rc-dind, rc-dind, 22.06.0-beta.0-dind-alpine3.16, 22.06.0-beta.0, 22.06-rc, rc, 22.06.0-beta.0-alpine3.16
+Architectures: amd64, arm64v8
+GitCommit: 1f37025ef2b9b70706d8e11cc3552830e4524758
+Directory: 22.06-rc/dind
+
+Tags: 22.06.0-beta.0-dind-rootless, 22.06-rc-dind-rootless, rc-dind-rootless
+Architectures: amd64, arm64v8
+GitCommit: 1f37025ef2b9b70706d8e11cc3552830e4524758
+Directory: 22.06-rc/dind-rootless
+
+Tags: 22.06.0-beta.0-git, 22.06-rc-git, rc-git
+Architectures: amd64, arm64v8
+GitCommit: f23a2bea97f6d7ec563bc316302fb8edf620ec5b
+Directory: 22.06-rc/git
+
+Tags: 22.06.0-beta.0-windowsservercore-ltsc2022, 22.06-rc-windowsservercore-ltsc2022, rc-windowsservercore-ltsc2022
+SharedTags: 22.06.0-beta.0-windowsservercore, 22.06-rc-windowsservercore, rc-windowsservercore
+Architectures: windows-amd64
+GitCommit: 4c1b73e7046422ca1339b76935c2e2f4251b9c20
+Directory: 22.06-rc/windows/windowsservercore-ltsc2022
+Constraints: windowsservercore-ltsc2022
+
+Tags: 22.06.0-beta.0-windowsservercore-1809, 22.06-rc-windowsservercore-1809, rc-windowsservercore-1809
+SharedTags: 22.06.0-beta.0-windowsservercore, 22.06-rc-windowsservercore, rc-windowsservercore
+Architectures: windows-amd64
+GitCommit: 4c1b73e7046422ca1339b76935c2e2f4251b9c20
+Directory: 22.06-rc/windows/windowsservercore-1809
+Constraints: windowsservercore-1809
+
+Tags: 20.10.18-cli, 20.10-cli, 20-cli, cli, 20.10.18-cli-alpine3.16, 20.10.18, 20.10, 20, latest, 20.10.18-alpine3.16
+Architectures: amd64, arm64v8
+GitCommit: 2fc53e853187b5f5ba0c4696189ce7abc6b62a1d
+Directory: 20.10/cli
+
+Tags: 20.10.18-dind, 20.10-dind, 20-dind, dind, 20.10.18-dind-alpine3.16
+Architectures: amd64, arm64v8
+GitCommit: c13cbee1cfd9d7582f7b2e9f958cf24e39b64715
 Directory: 20.10/dind
 
-Tags: 20.10.6-dind-rootless, 20.10-dind-rootless, 20-dind-rootless, dind-rootless
-Architectures: amd64
-GitCommit: f6a0c427f0354dcf5870c430c72c8f1d6b4e6d5e
+Tags: 20.10.18-dind-rootless, 20.10-dind-rootless, 20-dind-rootless, dind-rootless
+Architectures: amd64, arm64v8
+GitCommit: c13cbee1cfd9d7582f7b2e9f958cf24e39b64715
 Directory: 20.10/dind-rootless
 
-Tags: 20.10.6-git, 20.10-git, 20-git, git
-Architectures: amd64, arm32v6, arm32v7, arm64v8
-GitCommit: 387e351394bfad74bceebf8303c6c8e39c3d4ed4
+Tags: 20.10.18-git, 20.10-git, 20-git, git
+Architectures: amd64, arm64v8
+GitCommit: f23a2bea97f6d7ec563bc316302fb8edf620ec5b
 Directory: 20.10/git
 
-Tags: 19.03.15, 19.03, 19
-Architectures: amd64, arm32v6, arm32v7, arm64v8
-GitCommit: 835c371c516ebdf67adc0c76bbfb38bf9d3e586c
-Directory: 19.03
+Tags: 20.10.18-windowsservercore-ltsc2022, 20.10-windowsservercore-ltsc2022, 20-windowsservercore-ltsc2022, windowsservercore-ltsc2022
+SharedTags: 20.10.18-windowsservercore, 20.10-windowsservercore, 20-windowsservercore, windowsservercore
+Architectures: windows-amd64
+GitCommit: c13cbee1cfd9d7582f7b2e9f958cf24e39b64715
+Directory: 20.10/windows/windowsservercore-ltsc2022
+Constraints: windowsservercore-ltsc2022
 
-Tags: 19.03.15-dind, 19.03-dind, 19-dind
-Architectures: amd64, arm32v6, arm32v7, arm64v8
-GitCommit: b1d2628005e12e79079c025c3653cba248d6f264
-Directory: 19.03/dind
-
-Tags: 19.03.15-dind-rootless, 19.03-dind-rootless, 19-dind-rootless
-Architectures: amd64
-GitCommit: 835c371c516ebdf67adc0c76bbfb38bf9d3e586c
-Directory: 19.03/dind-rootless
-
-Tags: 19.03.15-git, 19.03-git, 19-git
-Architectures: amd64, arm32v6, arm32v7, arm64v8
-GitCommit: 12d1c2763b54d29137ec448a3e4ad1a9aefae1a0
-Directory: 19.03/git
+Tags: 20.10.18-windowsservercore-1809, 20.10-windowsservercore-1809, 20-windowsservercore-1809, windowsservercore-1809
+SharedTags: 20.10.18-windowsservercore, 20.10-windowsservercore, 20-windowsservercore, windowsservercore
+Architectures: windows-amd64
+GitCommit: c13cbee1cfd9d7582f7b2e9f958cf24e39b64715
+Directory: 20.10/windows/windowsservercore-1809
+Constraints: windowsservercore-1809

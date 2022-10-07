@@ -19,20 +19,21 @@ _is_naughty() {
 	case "$BASHBREW_ARCH=$from" in
 		# a few images that no longer exist (and are thus not permissible)
 		# https://techcommunity.microsoft.com/t5/Containers/Removing-the-latest-Tag-An-Update-on-MCR/ba-p/393045
-		*=mcr.microsoft.com/windows/*:latest \
-		) return 0 ;;
+		*=mcr.microsoft.com/windows/*:latest) return 0 ;;
+
+
 		# https://docs.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/base-image-lifecycle
-		# "11/12/2019"
-		*=mcr.microsoft.com/windows/*:1803* \
-		) return 0 ;;
-		# https://docs.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/base-image-lifecycle
-		# "04/09/2019"
-		*=mcr.microsoft.com/windows/*:1709* \
-		) return 0 ;;
-		# https://docs.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/base-image-lifecycle
-		# "10/09/2018"
-		*=mcr.microsoft.com/windows/nanoserver:sac2016 \
-		) return 0 ;;
+		#*=mcr.microsoft.com/windows/*:ltsc2022) return 0 ;; # "10/13/2026"
+		#*=mcr.microsoft.com/windows/*:20H2*)    return 0 ;; # "05/10/2022" *technically*, but its use is discouraged here given the existence of ltsc2022
+		*=mcr.microsoft.com/windows/*:2004*)    return 0 ;; # "12/14/2021"
+		*=mcr.microsoft.com/windows/*:1909*)    return 0 ;; # "05/11/2021"
+		*=mcr.microsoft.com/windows/*:1903*)    return 0 ;; # "12/08/2020"
+		#*=mcr.microsoft.com/windows/*:1809*)    return 0 ;; # "01/09/2024"
+		*=mcr.microsoft.com/windows/*:1803*)    return 0 ;; # "11/12/2019"
+		*=mcr.microsoft.com/windows/*:1709*)    return 0 ;; # "04/09/2019"
+		*=mcr.microsoft.com/windows/*:ltsc2016) return 0 ;; # "01/11/2022"
+		*=mcr.microsoft.com/windows/*:sac2016)  return 0 ;; # "10/09/2018"
+		*=mcr.microsoft.com/windows/*:1607*)    return 0 ;; # "10/09/2018"
 
 		# a few explicitly permissible exceptions to Santa's naughty list
 		*=scratch \
