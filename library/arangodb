@@ -3,9 +3,16 @@ GitRepo: https://github.com/arangodb/arangodb-docker
 GitFetch: refs/heads/official
 
 Tags: 3.8, 3.8.7
+Architectures: amd64
 GitCommit: 0e1a717e606a4fd6fa406fdb26bf5cc61486d0e5
 Directory: alpine/3.8.7
 
-Tags: 3.9, 3.9.3, latest
+Tags: 3.9, 3.9.3
+Architectures: amd64
 GitCommit: 66deb6fc6518f7d81a2e6087b2397447e240f8c4
 Directory: alpine/3.9.3
+
+Tags: 3.10, 3.10.0, latest
+Architectures: amd64, arm64v8
+GitCommit: 31df6aaffd35f1e221d59cc1802eeb71db058c9d
+Directory: alpine/3.10.0
