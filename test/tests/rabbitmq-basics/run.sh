@@ -9,7 +9,7 @@ serverImage="$1"
 
 clientImage="$("$dir/../image-name.sh" librarytest/rabbitmq-basics "$serverImage")"
 "$dir/../docker-build.sh" "$dir" "$clientImage" <<EOD
-FROM python:3.7-alpine
+FROM python:3.10-alpine
 # ensure pip does not complain about a new version being available
 ENV PIP_DISABLE_PIP_VERSION_CHECK=1
 RUN pip install pika==1.1.0

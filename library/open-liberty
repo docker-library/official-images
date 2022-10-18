@@ -2,7 +2,7 @@ Maintainers: Chris Potter <crpotter@us.ibm.com> (@crpotter),
              Wendy Raschke <wraschke@us.ibm.com> (@wraschke)
 GitRepo: https://github.com/OpenLiberty/ci.docker.git
 GitFetch: refs/heads/main
-GitCommit: 016d9edc6f35cb3b9b98b8e03e084269c6d02ab4
+GitCommit: e9f25fc8c0b6c54e9f41c0b3637b63e7145f27fe
 Architectures: amd64, i386, ppc64le, s390x
 
 Tags: beta
@@ -50,33 +50,63 @@ Directory: releases/latest/full
 Architectures: amd64, ppc64le, s390x
 File: Dockerfile.ubuntu.openjdk17
 
-Tags: 22.0.0.8-kernel-slim-java8-openj9
-Directory: releases/22.0.0.8/kernel-slim
+Tags: 22.0.0.10-kernel-slim-java8-openj9
+Directory: releases/22.0.0.10/kernel-slim
 Architectures: amd64, ppc64le, s390x
 File: Dockerfile.ubuntu.openjdk8
 
-Tags: 22.0.0.8-kernel-slim-java11-openj9
-Directory: releases/22.0.0.8/kernel-slim
+Tags: 22.0.0.10-kernel-slim-java11-openj9
+Directory: releases/22.0.0.10/kernel-slim
 Architectures: amd64, ppc64le, s390x
 File: Dockerfile.ubuntu.openjdk11
 
-Tags: 22.0.0.8-kernel-slim-java17-openj9
-Directory: releases/22.0.0.8/kernel-slim
+Tags: 22.0.0.10-kernel-slim-java17-openj9
+Directory: releases/22.0.0.10/kernel-slim
 Architectures: amd64, ppc64le, s390x
 File: Dockerfile.ubuntu.openjdk17
 
-Tags: 22.0.0.8-full-java8-openj9
-Directory: releases/22.0.0.8/full
+Tags: 22.0.0.10-full-java8-openj9
+Directory: releases/22.0.0.10/full
 Architectures: amd64, ppc64le, s390x
 File: Dockerfile.ubuntu.openjdk8
 
-Tags: 22.0.0.8-full-java11-openj9
-Directory: releases/22.0.0.8/full
+Tags: 22.0.0.10-full-java11-openj9
+Directory: releases/22.0.0.10/full
 Architectures: amd64, ppc64le, s390x
 File: Dockerfile.ubuntu.openjdk11
 
-Tags: 22.0.0.8-full-java17-openj9
-Directory: releases/22.0.0.8/full
+Tags: 22.0.0.10-full-java17-openj9
+Directory: releases/22.0.0.10/full
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk17
+
+Tags: 22.0.0.9-kernel-slim-java8-openj9
+Directory: releases/22.0.0.9/kernel-slim
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk8
+
+Tags: 22.0.0.9-kernel-slim-java11-openj9
+Directory: releases/22.0.0.9/kernel-slim
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk11
+
+Tags: 22.0.0.9-kernel-slim-java17-openj9
+Directory: releases/22.0.0.9/kernel-slim
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk17
+
+Tags: 22.0.0.9-full-java8-openj9
+Directory: releases/22.0.0.9/full
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk8
+
+Tags: 22.0.0.9-full-java11-openj9
+Directory: releases/22.0.0.9/full
+Architectures: amd64, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk11
+
+Tags: 22.0.0.9-full-java17-openj9
+Directory: releases/22.0.0.9/full
 Architectures: amd64, ppc64le, s390x
 File: Dockerfile.ubuntu.openjdk17
 
@@ -107,35 +137,5 @@ File: Dockerfile.ubuntu.openjdk11
 
 Tags: 22.0.0.6-full-java17-openj9
 Directory: releases/22.0.0.6/full
-Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.openjdk17
-
-Tags: 22.0.0.3-kernel-slim-java8-openj9
-Directory: releases/22.0.0.3/kernel-slim
-Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.openjdk8
-
-Tags: 22.0.0.3-kernel-slim-java11-openj9
-Directory: releases/22.0.0.3/kernel-slim
-Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.openjdk11
-
-Tags: 22.0.0.3-kernel-slim-java17-openj9
-Directory: releases/22.0.0.3/kernel-slim
-Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.openjdk17
-
-Tags: 22.0.0.3-full-java8-openj9
-Directory: releases/22.0.0.3/full
-Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.openjdk8
-
-Tags: 22.0.0.3-full-java11-openj9
-Directory: releases/22.0.0.3/full
-Architectures: amd64, ppc64le, s390x
-File: Dockerfile.ubuntu.openjdk11
-
-Tags: 22.0.0.3-full-java17-openj9
-Directory: releases/22.0.0.3/full
 Architectures: amd64, ppc64le, s390x
 File: Dockerfile.ubuntu.openjdk17
