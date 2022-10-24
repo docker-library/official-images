@@ -30,7 +30,8 @@ jobs:
           fetch-depth: 0
       - name: Check for Common Issues
         run: |
-          git clone --depth 1 https://github.com/docker-library/bashbrew.git -b master ~/bashbrew
+          bashbrewVersion="$(< bashbrew-version)"
+          git clone --depth 1 https://github.com/docker-library/bashbrew.git -b "v$bashbrewVersion" ~/bashbrew
           ~/bashbrew/bashbrew.sh --version > /dev/null
           export PATH="$HOME/bashbrew/bin:$PATH"
           bashbrew --version
@@ -49,7 +50,8 @@ jobs:
       - id: generate-jobs
         name: Generate Jobs
         run: |
-          git clone --depth 1 https://github.com/docker-library/bashbrew.git -b master ~/bashbrew
+          bashbrewVersion="$(< bashbrew-version)"
+          git clone --depth 1 https://github.com/docker-library/bashbrew.git -b "v$bashbrewVersion" ~/bashbrew
           strategy="$(.github/workflows/generate.sh ~/bashbrew)"
           jq . <<<"$strategy" # sanity check / debugging aid
           echo "::set-output name=strategy::$strategy"
