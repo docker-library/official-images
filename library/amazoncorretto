@@ -8,11 +8,19 @@ Maintainers: Amazon Corretto Team <corretto-team@amazon.com> (@corretto),
              Victor Rudometov <vicrud@amazon.com> (@Rudometov)
 GitRepo: https://github.com/corretto/corretto-docker.git
 GitFetch: refs/heads/main
-GitCommit: 24e5c2ee21dbd8c94b89e6a06f946723d29e5b04
+GitCommit: 7996710c56ef95dba20bb0d5784b0e941dfdaa5b
 
 Tags: 8, 8u352, 8u352-al2, 8-al2-full, 8-al2-jdk, latest
 Architectures: amd64, arm64v8
 Directory: 8/jdk/al2
+
+Tags: 8-al2022-RC, 8u352-al2022-RC, 8-al2022-jdk
+Architectures: amd64, arm64v8
+Directory: 8/jdk/al2022
+
+Tags: 8-al2022-RC-jre, 8u352-al2022-RC-jre
+Architectures: amd64, arm64v8
+Directory: 8/jdk/al2022
 
 Tags: 8-alpine3.13, 8u352-alpine3.13, 8-alpine3.13-full, 8-alpine3.13-jdk
 Architectures: amd64
@@ -50,6 +58,18 @@ Tags: 11, 11.0.17, 11.0.17-al2, 11-al2-full, 11-al2-jdk
 Architectures: amd64, arm64v8
 Directory: 11/jdk/al2
 
+Tags: 11-al2022-RC, 11.0.17-al2022-RC, 11-al2022-jdk
+Architectures: amd64, arm64v8
+Directory: 11/jdk/al2022
+
+Tags: 11-al2022-RC-headless, 11.0.17-al2022-RC-headless
+Architectures: amd64, arm64v8
+Directory: 11/headless/al2022
+
+Tags: 11-al2022-RC-headful, 11.0.17-al2022-RC-headful
+Architectures: amd64, arm64v8
+Directory: 11/headful/al2022
+
 Tags: 11-alpine3.13, 11.0.17-alpine3.13, 11-alpine3.13-full, 11-alpine3.13-jdk
 Architectures: amd64
 Directory: 11/jdk/alpine/3.13
@@ -69,6 +89,18 @@ Directory: 11/jdk/alpine/3.16
 Tags: 17, 17.0.5, 17.0.5-al2, 17-al2-full, 17-al2-jdk
 Architectures: amd64, arm64v8
 Directory: 17/jdk/al2
+
+Tags: 17-al2022-RC, 17.0.5-al2022-RC, 17-al2022-jdk
+Architectures: amd64, arm64v8
+Directory: 17/jdk/al2022
+
+Tags: 17-al2022-RC-headless, 17.0.5-al2022-RC-headless
+Architectures: amd64, arm64v8
+Directory: 17/headless/al2022
+
+Tags: 17-al2022-RC-headful, 17.0.5-al2022-RC-headful
+Architectures: amd64, arm64v8
+Directory: 17/headful/al2022
 
 Tags: 17-alpine3.13, 17.0.5-alpine3.13, 17-alpine3.13-full, 17-alpine3.13-jdk
 Architectures: amd64
