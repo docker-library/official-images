@@ -1,50 +1,34 @@
-# This file is generated using https://github.com/almalinux/docker-images/blob/bfb6735278c3e8e2a25714bcd5431a534ece5a2c/gen_docker_official_library
+# This file is generated using https://github.com/almalinux/docker-images/blob/6e66d3da6b8311a44414dce101bc9a8c1fed7783/gen_docker_official_library
 Maintainers: The AlmaLinux OS Foundation <cloud-infra@almalinux.org> (@AlmaLinux)
 GitRepo: https://github.com/AlmaLinux/docker-images.git
 
-Tags: 8.5, 8.5-20220510
-GitFetch: refs/heads/al-8.5.4-20220510
-GitCommit: cc33e53ccd8b33288eb3fbce9fd3bc308272c162
+Tags: latest, 8, 8.7, 8.7-20221110
+GitFetch: refs/heads/al8-20221110-amd64
+GitCommit: 8ab8e4aa3c25e7836bf777dae31545da8fd477f1
 amd64-File: Dockerfile-x86_64-default
+arm64v8-GitFetch: refs/heads/al8-20221110-arm64v8
+arm64v8-GitCommit: db37ab6e872dae196d1b9fd98c1e8ecce0f94349
 arm64v8-File: Dockerfile-aarch64-default
+ppc64le-GitFetch: refs/heads/al8-20221110-ppc64le
+ppc64le-GitCommit: b71757f2c8293cef6559d8cf5e24e0a57cdb44f0
 ppc64le-File: Dockerfile-ppc64le-default
-Architectures: amd64, arm64v8, ppc64le
-
-Tags: 8.5-minimal, 8.5-minimal-20220510
-GitFetch: refs/heads/al-8.5.4-20220510
-GitCommit: cc33e53ccd8b33288eb3fbce9fd3bc308272c162
-amd64-File: Dockerfile-x86_64-minimal
-arm64v8-File: Dockerfile-aarch64-minimal
-ppc64le-File: Dockerfile-ppc64le-minimal
-Architectures: amd64, arm64v8, ppc64le
-
-Tags: latest, 8, 8.6, 8.6-20221101
-GitFetch: refs/heads/al8-20221101-amd64
-GitCommit: 03cdf71dcf08b0563a6be20b91d0d6e0ee686cda
-amd64-File: Dockerfile-x86_64-default
-arm64v8-GitFetch: refs/heads/al8-20221101-arm64v8
-arm64v8-GitCommit: 376f653625e4c1aa32fc0e13720d2fbb7466832b
-arm64v8-File: Dockerfile-aarch64-default
-ppc64le-GitFetch: refs/heads/al8-20221101-ppc64le
-ppc64le-GitCommit: 3652deb3f54b24a58f102b427522bd77f1620d5f
-ppc64le-File: Dockerfile-ppc64le-default
-s390x-GitFetch: refs/heads/al8-20221101-s390x
-s390x-GitCommit: 6995ae59937816982949cf5980b43eb4df02dc4c
+s390x-GitFetch: refs/heads/al8-20221110-s390x
+s390x-GitCommit: 3f46e5a6a984d5b8291ee25a95ed5f1020ac5532
 s390x-File: Dockerfile-s390x-default
 Architectures: amd64, arm64v8, ppc64le, s390x
 
-Tags: minimal, 8-minimal, 8.6-minimal, 8.6-minimal-20221101
-GitFetch: refs/heads/al8-20221101-amd64
-GitCommit: 03cdf71dcf08b0563a6be20b91d0d6e0ee686cda
+Tags: minimal, 8-minimal, 8.7-minimal, 8.7-minimal-20221110
+GitFetch: refs/heads/al8-20221110-amd64
+GitCommit: 8ab8e4aa3c25e7836bf777dae31545da8fd477f1
 amd64-File: Dockerfile-x86_64-minimal
-arm64v8-GitFetch: refs/heads/al8-20221101-arm64v8
-arm64v8-GitCommit: 376f653625e4c1aa32fc0e13720d2fbb7466832b
+arm64v8-GitFetch: refs/heads/al8-20221110-arm64v8
+arm64v8-GitCommit: db37ab6e872dae196d1b9fd98c1e8ecce0f94349
 arm64v8-File: Dockerfile-aarch64-minimal
-ppc64le-GitFetch: refs/heads/al8-20221101-ppc64le
-ppc64le-GitCommit: 3652deb3f54b24a58f102b427522bd77f1620d5f
+ppc64le-GitFetch: refs/heads/al8-20221110-ppc64le
+ppc64le-GitCommit: b71757f2c8293cef6559d8cf5e24e0a57cdb44f0
 ppc64le-File: Dockerfile-ppc64le-minimal
-s390x-GitFetch: refs/heads/al8-20221101-s390x
-s390x-GitCommit: 6995ae59937816982949cf5980b43eb4df02dc4c
+s390x-GitFetch: refs/heads/al8-20221110-s390x
+s390x-GitCommit: 3f46e5a6a984d5b8291ee25a95ed5f1020ac5532
 s390x-File: Dockerfile-s390x-minimal
 Architectures: amd64, arm64v8, ppc64le, s390x
 
