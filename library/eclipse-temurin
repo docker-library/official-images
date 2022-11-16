@@ -31,6 +31,12 @@ GitCommit: fa65b46d19f4db0e1c8736c3d7b2a8392dd58b1b
 Directory: 8/jdk/centos
 File: Dockerfile.releases.full
 
+Tags: 8u352-b08-jdk-ubi9-minimal, 8-jdk-ubi9-minimal, 8-ubi9-minimal
+Architectures: amd64, arm64v8, ppc64le
+GitCommit: 910222e9f290871048016f4e0afd0c203d4a80d5
+Directory: 8/jdk/ubi/ubi9-minimal
+File: Dockerfile.releases.full
+
 Tags: 8u352-b08-jdk-windowsservercore-ltsc2022, 8-jdk-windowsservercore-ltsc2022, 8-windowsservercore-ltsc2022
 SharedTags: 8u352-b08-jdk-windowsservercore, 8-jdk-windowsservercore, 8-windowsservercore, 8u352-b08-jdk, 8-jdk, 8
 Architectures: windows-amd64
@@ -88,6 +94,12 @@ GitCommit: fa65b46d19f4db0e1c8736c3d7b2a8392dd58b1b
 Directory: 8/jre/centos
 File: Dockerfile.releases.full
 
+Tags: 8u352-b08-jre-ubi9-minimal, 8-jre-ubi9-minimal
+Architectures: amd64, arm64v8, ppc64le
+GitCommit: 910222e9f290871048016f4e0afd0c203d4a80d5
+Directory: 8/jre/ubi/ubi9-minimal
+File: Dockerfile.releases.full
+
 Tags: 8u352-b08-jre-windowsservercore-ltsc2022, 8-jre-windowsservercore-ltsc2022
 SharedTags: 8u352-b08-jre-windowsservercore, 8-jre-windowsservercore, 8u352-b08-jre, 8-jre
 Architectures: windows-amd64
@@ -122,7 +134,6 @@ Constraints: nanoserver-1809, windowsservercore-1809
 
 
 #------------------------------v11 images---------------------------------
-
 Tags: 11.0.17_8-jdk-alpine, 11-jdk-alpine, 11-alpine
 Architectures: amd64
 GitCommit: fa65b46d19f4db0e1c8736c3d7b2a8392dd58b1b
@@ -146,6 +157,12 @@ Tags: 11.0.17_8-jdk-centos7, 11-jdk-centos7, 11-centos7
 Architectures: amd64, arm64v8, ppc64le
 GitCommit: fa65b46d19f4db0e1c8736c3d7b2a8392dd58b1b
 Directory: 11/jdk/centos
+File: Dockerfile.releases.full
+
+Tags: 11.0.17_8-jdk-ubi9-minimal, 11-jdk-ubi9-minimal, 11-ubi9-minimal
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: 910222e9f290871048016f4e0afd0c203d4a80d5
+Directory: 11/jdk/ubi/ubi9-minimal
 File: Dockerfile.releases.full
 
 Tags: 11.0.17_8-jdk-windowsservercore-ltsc2022, 11-jdk-windowsservercore-ltsc2022, 11-windowsservercore-ltsc2022
@@ -203,6 +220,12 @@ Tags: 11.0.17_8-jre-centos7, 11-jre-centos7
 Architectures: amd64, arm64v8, ppc64le
 GitCommit: fa65b46d19f4db0e1c8736c3d7b2a8392dd58b1b
 Directory: 11/jre/centos
+File: Dockerfile.releases.full
+
+Tags: 11.0.17_8-jre-ubi9-minimal, 11-jre-ubi9-minimal
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: 910222e9f290871048016f4e0afd0c203d4a80d5
+Directory: 11/jre/ubi/ubi9-minimal
 File: Dockerfile.releases.full
 
 Tags: 11.0.17_8-jre-windowsservercore-ltsc2022, 11-jre-windowsservercore-ltsc2022
@@ -264,6 +287,12 @@ GitCommit: d3c9617e83eb706aff74c095fd531fe31e359674
 Directory: 17/jdk/centos
 File: Dockerfile.releases.full
 
+Tags: 17.0.5_8-jdk-ubi9-minimal, 17-jdk-ubi9-minimal, 17-ubi9-minimal
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: 910222e9f290871048016f4e0afd0c203d4a80d5
+Directory: 17/jdk/ubi/ubi9-minimal
+File: Dockerfile.releases.full
+
 Tags: 17.0.5_8-jdk-windowsservercore-ltsc2022, 17-jdk-windowsservercore-ltsc2022, 17-windowsservercore-ltsc2022
 SharedTags: 17.0.5_8-jdk-windowsservercore, 17-jdk-windowsservercore, 17-windowsservercore, 17.0.5_8-jdk, 17-jdk, 17
 Architectures: windows-amd64
@@ -319,6 +348,12 @@ Tags: 17.0.5_8-jre-centos7, 17-jre-centos7
 Architectures: amd64, arm64v8, ppc64le
 GitCommit: d3c9617e83eb706aff74c095fd531fe31e359674
 Directory: 17/jre/centos
+File: Dockerfile.releases.full
+
+Tags: 17.0.5_8-jre-ubi9-minimal, 17-jre-ubi9-minimal
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: 910222e9f290871048016f4e0afd0c203d4a80d5
+Directory: 17/jre/ubi/ubi9-minimal
 File: Dockerfile.releases.full
 
 Tags: 17.0.5_8-jre-windowsservercore-ltsc2022, 17-jre-windowsservercore-ltsc2022
@@ -380,6 +415,12 @@ GitCommit: e37c219c8f2aef0c0028a627b1e372a046138dea
 Directory: 19/jdk/centos
 File: Dockerfile.releases.full
 
+Tags: 19.0.1_10-jdk-ubi9-minimal, 19-jdk-ubi9-minimal, 19-ubi9-minimal
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: 910222e9f290871048016f4e0afd0c203d4a80d5
+Directory: 19/jdk/ubi/ubi9-minimal
+File: Dockerfile.releases.full
+
 Tags: 19.0.1_10-jdk-windowsservercore-ltsc2022, 19-jdk-windowsservercore-ltsc2022, 19-windowsservercore-ltsc2022
 SharedTags: 19.0.1_10-jdk-windowsservercore, 19-jdk-windowsservercore, 19-windowsservercore, 19.0.1_10-jdk, 19-jdk, 19, latest
 Architectures: windows-amd64
@@ -437,6 +478,12 @@ GitCommit: e37c219c8f2aef0c0028a627b1e372a046138dea
 Directory: 19/jre/centos
 File: Dockerfile.releases.full
 
+Tags: 19.0.1_10-jre-ubi9-minimal, 19-jre-ubi9-minimal
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: 910222e9f290871048016f4e0afd0c203d4a80d5
+Directory: 19/jre/ubi/ubi9-minimal
+File: Dockerfile.releases.full
+
 Tags: 19.0.1_10-jre-windowsservercore-ltsc2022, 19-jre-windowsservercore-ltsc2022
 SharedTags: 19.0.1_10-jre-windowsservercore, 19-jre-windowsservercore, 19.0.1_10-jre, 19-jre
 Architectures: windows-amd64
@@ -468,3 +515,4 @@ GitCommit: e37c219c8f2aef0c0028a627b1e372a046138dea
 Directory: 19/jre/windows/nanoserver-1809
 File: Dockerfile.releases.full
 Constraints: nanoserver-1809, windowsservercore-1809
+
