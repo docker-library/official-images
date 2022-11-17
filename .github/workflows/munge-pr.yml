@@ -21,7 +21,7 @@ jobs:
     name: Gather Metadata
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           # ideally this would be "github.event.pull_request.merge_commit_sha" but according to https://docs.github.com/en/free-pro-team@latest/rest/reference/pulls#get-a-pull-request if "mergeable" is null (meaning there's a background job in-progress to check mergeability), that value is undefined...
           ref: ${{ github.event.pull_request.head.sha }}
@@ -90,16 +90,17 @@ jobs:
     needs: gather
     if: fromJSON(needs.gather.outputs.images).count > 0
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           # again, this would ideally be "github.event.pull_request.merge_commit_sha" but we might not have that yet when this runs, so we compromise by checkout out the latest code from the target branch (so we get the latest "diff-pr.sh" script to run)
           ref: ${{ github.event.pull_request.base.ref }}
           fetch-depth: 0
+      - uses: ./.github/workflows/.bashbrew
+        with:
+          build: 'docker'
       - name: Prepare Environment
         run: |
-          # this mimics "test-pr.sh", but without running repo-local scripts (to avoid CVE-2020-15228 via the scripts being updated to write nasty things to $GITHUB_ENV)
-          bashbrewVersion="$(< bashbrew-version)"
-          docker build --pull --tag oisupport/bashbrew:base "https://github.com/docker-library/bashbrew.git#v$bashbrewVersion"
+          # this avoids running repo-local scripts (to avoid CVE-2020-15228 via the scripts being updated to write nasty things to $GITHUB_ENV)
           docker build --tag oisupport/bashbrew:diff-pr .
       - name: Gather Maintainers
         env:
