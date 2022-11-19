@@ -1,4 +1,4 @@
-# FYI, this base image is built via test-pr.sh (from https://github.com/docker-library/bashbrew/tree/master/Dockerfile)
+# FYI, this base image is built via ".github/workflows/.bashbrew/action.yml" (from https://github.com/docker-library/bashbrew/tree/master/Dockerfile)
 FROM oisupport/bashbrew:base
 
 RUN set -eux; \
