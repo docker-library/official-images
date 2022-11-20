@@ -2,30 +2,39 @@ Maintainers: The Rocky Linux Foundation <infrastructure@rockylinux.org> (@rocky-
              Neil Hanlon <neil@resf.org> (@neilhanlon)
 GitRepo: https://github.com/rocky-linux/sig-cloud-instance-images.git
 
-Tags: 9.0.20220720, 9, 9.0
-GitFetch: refs/heads/Rocky-9.0.20220720-Base-x86_64
-GitCommit: e3f3c1cbc89d705fad4cb99e5786a4dc7178116c
-arm64v8-GitFetch: refs/heads/Rocky-9.0.20220720-Base-aarch64
-arm64v8-GitCommit: 78129b594f5318c80fd24b0b0d25dfb35125c9d6
+Tags: 9.1.20221123, 9.1, 9
+GitFetch: refs/heads/Rocky-9.1.20221123-Base-x86_64
+GitCommit: 257855c56aac1cb7417b20fd58e5e8f60b276e07
+arm64v8-GitFetch: refs/heads/Rocky-9.1.20221123-Base-aarch64
+arm64v8-GitCommit: 2610f225cce6316f2796b480178d550cd8629525
+s390x-GitFetch: refs/heads/Rocky-9.1.20221123-Base-s390x
+s390x-GitCommit: 0d7baaa2b72be3a5cadaca63e7dcee03c2771247
+ppc64le-GitFetch: refs/heads/Rocky-9.1.20221123-Base-ppc64le
+ppc64le-GitCommit: 82b28b01dbaff41e8702a1ac1f83937f35ba9355
+Architectures: amd64, arm64v8, ppc64le, s390x
+
+Tags: 9.1.20221123-minimal, 9.1-minimal, 9-minimal
+GitFetch: refs/heads/Rocky-9.1.20221123-Minimal-x86_64
+GitCommit: eca5fa31f75936f9a069d8968be0da9f779adfce
+arm64v8-GitFetch: refs/heads/Rocky-9.1.20221123-Minimal-aarch64
+arm64v8-GitCommit: 48f86388e5f8f47afb4187363c4a3c2a1419a6c2
+s390x-GitFetch: refs/heads/Rocky-9.1.20221123-Minimal-s390x
+s390x-GitCommit: f4efc0167cee000aa09b2dd7c7f2d7b99799ff21
+ppc64le-GitFetch: refs/heads/Rocky-9.1.20221123-Minimal-ppc64le
+ppc64le-GitCommit: ffa8070ba243e007c599090442247abdcba4afce
+Architectures: amd64, arm64v8, ppc64le, s390x
+
+Tags: 8.7.20221219, 8.7, 8
+GitFetch: refs/heads/Rocky-8.7.20221219-Base-x86_64
+GitCommit: 15e9cb0790bed8b6cba7b5cb2ecf3ebab6a0e6ae
+arm64v8-GitFetch: refs/heads/Rocky-8.7.20221219-Base-aarch64
+arm64v8-GitCommit: f67799fa9535a3eaff73b6f11b1ca6a734be7649
 Architectures: amd64, arm64v8
 
-Tags: 9.0.20220720-minimal, 9-minimal, 9.0-minimal 
-GitFetch: refs/heads/Rocky-9.0.20220720-Minimal-x86_64
-GitCommit: ac4d852f696bb2cc96c55f4a54b1fb7d41f5df4f
-arm64v8-GitFetch: refs/heads/Rocky-9.0.20220720-Minimal-aarch64
-arm64v8-GitCommit: bbea3587002f91144f3195b8b0372f05257fd6f5
+Tags: 8.7.20221219-minimal, 8.7-minimal, 8-minimal
+GitFetch: refs/heads/Rocky-8.7.20221219-Minimal-x86_64
+GitCommit: 263f85f3cc1dfaa1824aeecfe3aee681adafe33f
+arm64v8-GitFetch: refs/heads/Rocky-8.7.20221219-Minimal-aarch64
+arm64v8-GitCommit: 62b435aa0c81ec8512b31187169126b9453425b0
 Architectures: amd64, arm64v8
 
-Tags: 8.6.20227707, 8.6, 8
-GitFetch: refs/heads/Rocky-8.6.20220707-Base-x86_64
-GitCommit: 09dbe262451ff0e93fe50df95f6811b234d3d509
-arm64v8-GitFetch: refs/heads/Rocky-8.6.20220707-Base-aarch64
-arm64v8-GitCommit: 411d541689cc277f778ce5a0aa260d5a82dd83f3
-Architectures: amd64, arm64v8
-
-Tags: 8.6.20220707-minimal, 8-minimal, 8.6-minimal
-GitFetch: refs/heads/Rocky-8.6.20220707-Minimal-x86_64
-GitCommit: ef6b5ec9cbad530e1ba673e44dcef9d4c5d5df6a
-arm64v8-GitFetch: refs/heads/Rocky-8.6.20220707-Minimal-aarch64
-arm64v8-GitCommit: 5ba5163c86e3a4ef12601ab1ed7ad7580f9c302b
-Architectures: amd64, arm64v8
