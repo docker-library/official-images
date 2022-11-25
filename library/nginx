@@ -1,7 +1,7 @@
 # this file is generated via https://github.com/nginxinc/docker-nginx/blob/1dca42f99b3f032d862a1d35e8a5b951d629dc98/generate-stackbrew-library.sh
 
 Maintainers: NGINX Docker Maintainers <docker-maint@nginx.com> (@nginxinc)
-GitRepo: https://github.com/nginxinc/docker-nginx.git
+GitRepo: https://github.com/thresheek/docker-nginx.git
 
 Tags: 1.23.2, mainline, 1, 1.23, latest
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
@@ -10,21 +10,24 @@ Directory: mainline/debian
 
 Tags: 1.23.2-perl, mainline-perl, 1-perl, 1.23-perl, perl
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: fef51235521d1cdf8b05d8cb1378a526d2abf421
+GitFetch: refs/heads/steps
+GitCommit: e926d0df79fe7c66942b3cf4db8a29b932f64e0e
 Directory: mainline/debian-perl
 
 Tags: 1.23.2-alpine, mainline-alpine, 1-alpine, 1.23-alpine, alpine
 Architectures: arm64v8, arm32v6, arm32v7, ppc64le, s390x, i386, amd64
-GitCommit: fef51235521d1cdf8b05d8cb1378a526d2abf421
+GitFetch: refs/heads/steps
+GitCommit: e926d0df79fe7c66942b3cf4db8a29b932f64e0e
 Directory: mainline/alpine
 
 Tags: 1.23.2-alpine-perl, mainline-alpine-perl, 1-alpine-perl, 1.23-alpine-perl, alpine-perl
 Architectures: arm64v8, arm32v6, arm32v7, ppc64le, s390x, i386, amd64
-GitCommit: fef51235521d1cdf8b05d8cb1378a526d2abf421
+GitFetch: refs/heads/steps
+GitCommit: e926d0df79fe7c66942b3cf4db8a29b932f64e0e
 Directory: mainline/alpine-perl
 
 Tags: 1.23.2-alpine-slim, mainline-alpine-slim, 1-alpine-slim, 1.23-alpine-slim, alpine-slim
-Architectures: arm64v8, amd64
+Architectures: arm64v8, arm32v6, arm32v7, ppc64le, s390x, i386, amd64
 GitCommit: fef51235521d1cdf8b05d8cb1378a526d2abf421
 Directory: mainline/alpine-slim
 
@@ -35,20 +38,24 @@ Directory: stable/debian
 
 Tags: 1.22.1-perl, stable-perl, 1.22-perl
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: fef51235521d1cdf8b05d8cb1378a526d2abf421
+GitFetch: refs/heads/steps
+GitCommit: e926d0df79fe7c66942b3cf4db8a29b932f64e0e
 Directory: stable/debian-perl
 
 Tags: 1.22.1-alpine, stable-alpine, 1.22-alpine
 Architectures: arm64v8, arm32v6, arm32v7, ppc64le, s390x, i386, amd64
-GitCommit: fef51235521d1cdf8b05d8cb1378a526d2abf421
+GitFetch: refs/heads/steps
+GitCommit: e926d0df79fe7c66942b3cf4db8a29b932f64e0e
 Directory: stable/alpine
 
 Tags: 1.22.1-alpine-perl, stable-alpine-perl, 1.22-alpine-perl
 Architectures: arm64v8, arm32v6, arm32v7, ppc64le, s390x, i386, amd64
-GitCommit: fef51235521d1cdf8b05d8cb1378a526d2abf421
+GitFetch: refs/heads/steps
+GitCommit: e926d0df79fe7c66942b3cf4db8a29b932f64e0e
 Directory: stable/alpine-perl
 
 Tags: 1.22.1-alpine-slim, stable-alpine-slim, 1.22-alpine-slim
-Architectures: arm64v8, amd64
+Architectures: arm64v8, arm32v6, arm32v7, ppc64le, s390x, i386, amd64
+GitFetch: refs/heads/steps
 GitCommit: fef51235521d1cdf8b05d8cb1378a526d2abf421
 Directory: stable/alpine-slim
