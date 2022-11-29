@@ -13,49 +13,66 @@ if [ "$#" -eq 0 ]; then
 	set -- '--all'
 fi
 
+externalPinsDir="$(dirname "$BASH_SOURCE")/.external-pins"
+declare -A externalPinsArchesCache=(
+	#[img:tag]='["arch","arch",...]' # (json array of strings)
+)
 _is_naughty() {
 	local from="$1"; shift
 
-	case "$BASHBREW_ARCH=$from" in
-		# a few images that no longer exist (and are thus not permissible)
-		# https://techcommunity.microsoft.com/t5/Containers/Removing-the-latest-Tag-An-Update-on-MCR/ba-p/393045
-		*=mcr.microsoft.com/windows/*:latest) return 0 ;;
+	case "$from" in
+		# "scratch" isn't a real image and is always permissible (on non-Windows)
+		scratch)
+			case "$BASHBREW_ARCH" in
+				windows-*) return 0 ;; # can't use "FROM scratch" on Windows
+				*)         return 1 ;; # can use "FROM scratch" everywhere else
+			esac
+			;;
 
+		# https://github.com/docker-library/official-images/pull/4916#issuecomment-427437270
+		  docker.elastic.co/elasticsearch/elasticsearch:*@sha256:* \
+		| docker.elastic.co/kibana/kibana:*@sha256:* \
+		| docker.elastic.co/logstash/logstash:*@sha256:* \
+		) ;; # *technically* we should only whitelist these for "elasticsearch", "kibana", and "logstash" respectively, but the chances of other folks trying to use them in their images (*and* doing so without us noticing) seems low
 
-		# https://docs.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/base-image-lifecycle
-		#*=mcr.microsoft.com/windows/*:ltsc2022) return 0 ;; # "10/13/2026"
-		#*=mcr.microsoft.com/windows/*:20H2*)    return 0 ;; # "05/10/2022" *technically*, but its use is discouraged here given the existence of ltsc2022
-		*=mcr.microsoft.com/windows/*:2004*)    return 0 ;; # "12/14/2021"
-		*=mcr.microsoft.com/windows/*:1909*)    return 0 ;; # "05/11/2021"
-		*=mcr.microsoft.com/windows/*:1903*)    return 0 ;; # "12/08/2020"
-		#*=mcr.microsoft.com/windows/*:1809*)    return 0 ;; # "01/09/2024"
-		*=mcr.microsoft.com/windows/*:1803*)    return 0 ;; # "11/12/2019"
-		*=mcr.microsoft.com/windows/*:1709*)    return 0 ;; # "04/09/2019"
-		*=mcr.microsoft.com/windows/*:ltsc2016) return 0 ;; # "01/11/2022"
-		*=mcr.microsoft.com/windows/*:sac2016)  return 0 ;; # "10/09/2018"
-		*=mcr.microsoft.com/windows/*:1607*)    return 0 ;; # "10/09/2018"
-
-		# a few explicitly permissible exceptions to Santa's naughty list
-		*=scratch \
-		| amd64=docker.elastic.co/elasticsearch/elasticsearch:* \
-		| amd64=docker.elastic.co/kibana/kibana:* \
-		| amd64=docker.elastic.co/logstash/logstash:* \
-		| arm64v8=docker.elastic.co/elasticsearch/elasticsearch:* \
-		| arm64v8=docker.elastic.co/kibana/kibana:* \
-		| arm64v8=docker.elastic.co/logstash/logstash:* \
-		| windows-*=mcr.microsoft.com/windows/nanoserver:* \
-		| windows-*=mcr.microsoft.com/windows/servercore:* \
-		) return 1 ;;
-
-		# "x/y" and not an approved exception
-		*/*) return 0 ;;
+		*/*)
+			# must be external, let's check our pins for acceptability
+			if [ -s "$externalPinsDir/$from" ]; then
+				local digest
+				digest="$(< "$externalPinsDir/$from")"
+				from+="@$digest"
+			else
+				# not pinned, must not be acceptable
+				return 0
+			fi
+			;;
 	esac
 
-	# must be some other official image AND support our current architecture
-	local archSupported
-	if archSupported="$(bashbrew cat --format '{{ .TagEntry.HasArchitecture arch | ternary arch "" }}' "$from")" && [ -n "$archSupported" ]; then
-		return 1
-	fi
+	case "$from" in
+		*/*@sha256:*)
+			if [ -z "${externalPinsArchesCache["$from"]:-}" ]; then
+				local remoteArches
+				if remoteArches="$(bashbrew remote arches --json "$from" | jq -c '.arches | keys')"; then
+					externalPinsArchesCache["$from"]="$remoteArches"
+				else
+					echo >&2 "warning: failed to query supported architectures of '$from'"
+					externalPinsArchesCache["$from"]='[]'
+				fi
+			fi
+			if jq <<<"${externalPinsArchesCache["$from"]}" -e 'index(env.BASHBREW_ARCH)' > /dev/null; then
+				# hooray, a supported architecture!
+				return 1
+			fi
+			;;
+
+		*)
+			# must be some other official image AND support our current architecture
+			local archSupported
+			if archSupported="$(bashbrew cat --format '{{ .TagEntry.HasArchitecture arch | ternary arch "" }}' "$from")" && [ -n "$archSupported" ]; then
+				return 1
+			fi
+			;;
+	esac
 
 	return 0
 }
