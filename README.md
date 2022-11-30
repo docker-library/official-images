@@ -119,11 +119,7 @@ When taking over an existing repository, please ensure that the entire Git histo
 
 Rebuilding the same `Dockerfile` should result in the same version of the image being packaged, even if the second build happens several versions later, or the build should fail outright, such that an inadvertent rebuild of a `Dockerfile` tagged as `0.1.0` doesn't end up containing `0.2.3`. For example, if using `apt` to install the main program for the image, be sure to pin it to a specific version (ex: `... apt-get install -y my-package=0.1.0 ...`). For dependent packages installed by `apt` there is not usually a need to pin them to a version.
 
-No official images can be derived from, or depend on, non-official images with the following notable exceptions:
-
--	[`FROM scratch`](https://hub.docker.com/_/scratch/)
--	[`FROM mcr.microsoft.com/windows/servercore`](https://hub.docker.com/r/microsoft/windowsservercore/)
--	[`FROM mcr.microsoft.com/windows/nanoserver`](https://hub.docker.com/r/microsoft/nanoserver/)
+No official images can be derived from, or depend on, non-official images (allowing the non-image [`scratch`](https://hub.docker.com/_/scratch/) and the intentionally limited exceptions pinned in [`.external-pins`](.external-pins) -- see also [`.external-pins/list.sh`](.external-pins/list.sh)).
 
 #### Consistency
 
