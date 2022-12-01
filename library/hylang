@@ -1,6 +1,6 @@
 Maintainers: Paul Tagliamonte <paultag@hylang.org> (@paultag), Hy Docker Team (@hylang/docker)
 GitRepo: https://github.com/hylang/docker-hylang.git
-GitCommit: 0d762b448e7daeaeddda1d1b8bfb71d3cea233bb
+GitCommit: a6ec2b0ee39a53c4dd08ee174f067ac1cf944872
 Directory: dockerfiles-generated
 
 Tags: 0.25.0-python3.11-bullseye, 0.25-python3.11-bullseye, 0-python3.11-bullseye, python3.11-bullseye, 0.25.0-bullseye, 0.25-bullseye, 0-bullseye, bullseye
@@ -12,13 +12,13 @@ Tags: 0.25.0-python3.11-buster, 0.25-python3.11-buster, 0-python3.11-buster, pyt
 Architectures: amd64, arm32v7, arm64v8, i386
 File: Dockerfile.python3.11-buster
 
+Tags: 0.25.0-python3.11-alpine3.17, 0.25-python3.11-alpine3.17, 0-python3.11-alpine3.17, python3.11-alpine3.17, 0.25.0-alpine3.17, 0.25-alpine3.17, 0-alpine3.17, alpine3.17
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+File: Dockerfile.python3.11-alpine3.17
+
 Tags: 0.25.0-python3.11-alpine3.16, 0.25-python3.11-alpine3.16, 0-python3.11-alpine3.16, python3.11-alpine3.16, 0.25.0-alpine3.16, 0.25-alpine3.16, 0-alpine3.16, alpine3.16, 0.25.0-python3.11-alpine, 0.25-python3.11-alpine, 0-python3.11-alpine, python3.11-alpine, 0.25.0-alpine, 0.25-alpine, 0-alpine, alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 File: Dockerfile.python3.11-alpine3.16
-
-Tags: 0.25.0-python3.11-alpine3.15, 0.25-python3.11-alpine3.15, 0-python3.11-alpine3.15, python3.11-alpine3.15, 0.25.0-alpine3.15, 0.25-alpine3.15, 0-alpine3.15, alpine3.15
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-File: Dockerfile.python3.11-alpine3.15
 
 Tags: 0.25.0-python3.10-bullseye, 0.25-python3.10-bullseye, 0-python3.10-bullseye, python3.10-bullseye
 SharedTags: 0.25.0-python3.10, 0.25-python3.10, 0-python3.10, python3.10
@@ -29,13 +29,13 @@ Tags: 0.25.0-python3.10-buster, 0.25-python3.10-buster, 0-python3.10-buster, pyt
 Architectures: amd64, arm32v7, arm64v8, i386
 File: Dockerfile.python3.10-buster
 
+Tags: 0.25.0-python3.10-alpine3.17, 0.25-python3.10-alpine3.17, 0-python3.10-alpine3.17, python3.10-alpine3.17
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+File: Dockerfile.python3.10-alpine3.17
+
 Tags: 0.25.0-python3.10-alpine3.16, 0.25-python3.10-alpine3.16, 0-python3.10-alpine3.16, python3.10-alpine3.16, 0.25.0-python3.10-alpine, 0.25-python3.10-alpine, 0-python3.10-alpine, python3.10-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 File: Dockerfile.python3.10-alpine3.16
-
-Tags: 0.25.0-python3.10-alpine3.15, 0.25-python3.10-alpine3.15, 0-python3.10-alpine3.15, python3.10-alpine3.15
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-File: Dockerfile.python3.10-alpine3.15
 
 Tags: 0.25.0-python3.9-bullseye, 0.25-python3.9-bullseye, 0-python3.9-bullseye, python3.9-bullseye
 SharedTags: 0.25.0-python3.9, 0.25-python3.9, 0-python3.9, python3.9
@@ -46,13 +46,13 @@ Tags: 0.25.0-python3.9-buster, 0.25-python3.9-buster, 0-python3.9-buster, python
 Architectures: amd64, arm32v7, arm64v8, i386
 File: Dockerfile.python3.9-buster
 
+Tags: 0.25.0-python3.9-alpine3.17, 0.25-python3.9-alpine3.17, 0-python3.9-alpine3.17, python3.9-alpine3.17
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+File: Dockerfile.python3.9-alpine3.17
+
 Tags: 0.25.0-python3.9-alpine3.16, 0.25-python3.9-alpine3.16, 0-python3.9-alpine3.16, python3.9-alpine3.16, 0.25.0-python3.9-alpine, 0.25-python3.9-alpine, 0-python3.9-alpine, python3.9-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 File: Dockerfile.python3.9-alpine3.16
-
-Tags: 0.25.0-python3.9-alpine3.15, 0.25-python3.9-alpine3.15, 0-python3.9-alpine3.15, python3.9-alpine3.15
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-File: Dockerfile.python3.9-alpine3.15
 
 Tags: 0.25.0-python3.8-bullseye, 0.25-python3.8-bullseye, 0-python3.8-bullseye, python3.8-bullseye
 SharedTags: 0.25.0-python3.8, 0.25-python3.8, 0-python3.8, python3.8
@@ -63,13 +63,13 @@ Tags: 0.25.0-python3.8-buster, 0.25-python3.8-buster, 0-python3.8-buster, python
 Architectures: amd64, arm32v7, arm64v8, i386
 File: Dockerfile.python3.8-buster
 
+Tags: 0.25.0-python3.8-alpine3.17, 0.25-python3.8-alpine3.17, 0-python3.8-alpine3.17, python3.8-alpine3.17
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+File: Dockerfile.python3.8-alpine3.17
+
 Tags: 0.25.0-python3.8-alpine3.16, 0.25-python3.8-alpine3.16, 0-python3.8-alpine3.16, python3.8-alpine3.16, 0.25.0-python3.8-alpine, 0.25-python3.8-alpine, 0-python3.8-alpine, python3.8-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 File: Dockerfile.python3.8-alpine3.16
-
-Tags: 0.25.0-python3.8-alpine3.15, 0.25-python3.8-alpine3.15, 0-python3.8-alpine3.15, python3.8-alpine3.15
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-File: Dockerfile.python3.8-alpine3.15
 
 Tags: 0.25.0-python3.7-bullseye, 0.25-python3.7-bullseye, 0-python3.7-bullseye, python3.7-bullseye
 SharedTags: 0.25.0-python3.7, 0.25-python3.7, 0-python3.7, python3.7
@@ -80,13 +80,13 @@ Tags: 0.25.0-python3.7-buster, 0.25-python3.7-buster, 0-python3.7-buster, python
 Architectures: amd64, arm32v7, arm64v8, i386
 File: Dockerfile.python3.7-buster
 
+Tags: 0.25.0-python3.7-alpine3.17, 0.25-python3.7-alpine3.17, 0-python3.7-alpine3.17, python3.7-alpine3.17
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+File: Dockerfile.python3.7-alpine3.17
+
 Tags: 0.25.0-python3.7-alpine3.16, 0.25-python3.7-alpine3.16, 0-python3.7-alpine3.16, python3.7-alpine3.16, 0.25.0-python3.7-alpine, 0.25-python3.7-alpine, 0-python3.7-alpine, python3.7-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 File: Dockerfile.python3.7-alpine3.16
-
-Tags: 0.25.0-python3.7-alpine3.15, 0.25-python3.7-alpine3.15, 0-python3.7-alpine3.15, python3.7-alpine3.15
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-File: Dockerfile.python3.7-alpine3.15
 
 Tags: 0.25.0-pypy3.9-bullseye, 0.25-pypy3.9-bullseye, 0-pypy3.9-bullseye, pypy3.9-bullseye
 SharedTags: 0.25.0-pypy3.9, 0.25-pypy3.9, 0-pypy3.9, pypy3.9
