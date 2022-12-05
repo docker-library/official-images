@@ -7,7 +7,7 @@ GitRepo: https://github.com/docker-library/mongo.git
 Tags: 6.0.3-focal, 6.0-focal, 6-focal, focal
 SharedTags: 6.0.3, 6.0, 6, latest
 Architectures: amd64, arm64v8
-GitCommit: b828cbca8f06a7c2bc88c7700bb781c6ca13479f
+GitCommit: f3cb1cb4108fbcbc2fca61ab53ab4e93cc0f67f1
 Directory: 6.0
 
 Tags: 6.0.3-windowsservercore-ltsc2022, 6.0-windowsservercore-ltsc2022, 6-windowsservercore-ltsc2022, windowsservercore-ltsc2022
@@ -41,7 +41,7 @@ Constraints: nanoserver-1809, windowsservercore-1809
 Tags: 5.0.14-focal, 5.0-focal, 5-focal
 SharedTags: 5.0.14, 5.0, 5
 Architectures: amd64, arm64v8
-GitCommit: d27f80ddeafa162ab0a2f73a733c52f5e54bf817
+GitCommit: f3cb1cb4108fbcbc2fca61ab53ab4e93cc0f67f1
 Directory: 5.0
 
 Tags: 5.0.14-windowsservercore-ltsc2022, 5.0-windowsservercore-ltsc2022, 5-windowsservercore-ltsc2022
@@ -75,7 +75,7 @@ Constraints: nanoserver-1809, windowsservercore-1809
 Tags: 4.4.18-focal, 4.4-focal, 4-focal
 SharedTags: 4.4.18, 4.4, 4
 Architectures: amd64, arm64v8
-GitCommit: 065527f98244e16f3cc252c1ed369244cc5ebc30
+GitCommit: f3cb1cb4108fbcbc2fca61ab53ab4e93cc0f67f1
 Directory: 4.4
 
 Tags: 4.4.18-windowsservercore-ltsc2022, 4.4-windowsservercore-ltsc2022, 4-windowsservercore-ltsc2022
@@ -109,7 +109,7 @@ Constraints: nanoserver-1809, windowsservercore-1809
 Tags: 4.2.23-bionic, 4.2-bionic
 SharedTags: 4.2.23, 4.2
 Architectures: amd64, arm64v8
-GitCommit: c830e47022955d24bad50f1237ef7b713792bf9e
+GitCommit: f3cb1cb4108fbcbc2fca61ab53ab4e93cc0f67f1
 Directory: 4.2
 
 Tags: 4.2.23-windowsservercore-ltsc2022, 4.2-windowsservercore-ltsc2022
@@ -138,38 +138,4 @@ SharedTags: 4.2.23-nanoserver, 4.2-nanoserver
 Architectures: windows-amd64
 GitCommit: c830e47022955d24bad50f1237ef7b713792bf9e
 Directory: 4.2/windows/nanoserver-1809
-Constraints: nanoserver-1809, windowsservercore-1809
-
-Tags: 4.0.28-xenial, 4.0-xenial
-SharedTags: 4.0.28, 4.0
-Architectures: amd64, arm64v8
-GitCommit: 9631e54a2885018f440e8da2840c21793c156f94
-Directory: 4.0
-
-Tags: 4.0.28-windowsservercore-ltsc2022, 4.0-windowsservercore-ltsc2022
-SharedTags: 4.0.28-windowsservercore, 4.0-windowsservercore, 4.0.28, 4.0
-Architectures: windows-amd64
-GitCommit: 06b403b869fc79cf176561a47e5ccebf97a42bad
-Directory: 4.0/windows/windowsservercore-ltsc2022
-Constraints: windowsservercore-ltsc2022
-
-Tags: 4.0.28-windowsservercore-1809, 4.0-windowsservercore-1809
-SharedTags: 4.0.28-windowsservercore, 4.0-windowsservercore, 4.0.28, 4.0
-Architectures: windows-amd64
-GitCommit: 06b403b869fc79cf176561a47e5ccebf97a42bad
-Directory: 4.0/windows/windowsservercore-1809
-Constraints: windowsservercore-1809
-
-Tags: 4.0.28-nanoserver-ltsc2022, 4.0-nanoserver-ltsc2022
-SharedTags: 4.0.28-nanoserver, 4.0-nanoserver
-Architectures: windows-amd64
-GitCommit: 6f8fe0cc9b34501014d98834e386889facf6e392
-Directory: 4.0/windows/nanoserver-ltsc2022
-Constraints: nanoserver-ltsc2022, windowsservercore-ltsc2022
-
-Tags: 4.0.28-nanoserver-1809, 4.0-nanoserver-1809
-SharedTags: 4.0.28-nanoserver, 4.0-nanoserver
-Architectures: windows-amd64
-GitCommit: 6f8fe0cc9b34501014d98834e386889facf6e392
-Directory: 4.0/windows/nanoserver-1809
 Constraints: nanoserver-1809, windowsservercore-1809
