@@ -106,6 +106,12 @@ imageTests+=(
 	[logstash]='
 		logstash-basics
 	'
+	[matomo:apache]='
+		matomo-apache-run
+	'
+	[matomo:fpm]='
+		matomo-fpm-run
+	'
 	[memcached]='
 		memcached-basics
 	'
