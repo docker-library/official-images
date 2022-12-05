@@ -190,6 +190,12 @@ imageTests+=(
 		plone-zeoclient
 		plone-zeosite
 	'
+	[postfixadmin:apache]='
+		postfixadmin-apache-run
+	'
+	[postfixadmin:fpm]='
+		postfixadmin-fpm-run
+	'
 	[postgres]='
 		postgres-basics
 		postgres-initdb
