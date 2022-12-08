@@ -5,6 +5,55 @@ Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Johan Euphrosine <proppy@google.com> (@proppy)
 GitRepo: https://github.com/docker-library/golang.git
 
+Tags: 1.20rc1-bullseye, 1.20-rc-bullseye
+SharedTags: 1.20rc1, 1.20-rc
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: b922c120a56fea4f0d0e48a3273558b2bf45b019
+Directory: 1.20-rc/bullseye
+
+Tags: 1.20rc1-buster, 1.20-rc-buster
+Architectures: amd64, arm32v7, arm64v8, i386
+GitCommit: b922c120a56fea4f0d0e48a3273558b2bf45b019
+Directory: 1.20-rc/buster
+
+Tags: 1.20rc1-alpine3.17, 1.20-rc-alpine3.17, 1.20rc1-alpine, 1.20-rc-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: b922c120a56fea4f0d0e48a3273558b2bf45b019
+Directory: 1.20-rc/alpine3.17
+
+Tags: 1.20rc1-alpine3.16, 1.20-rc-alpine3.16
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: b922c120a56fea4f0d0e48a3273558b2bf45b019
+Directory: 1.20-rc/alpine3.16
+
+Tags: 1.20rc1-windowsservercore-ltsc2022, 1.20-rc-windowsservercore-ltsc2022
+SharedTags: 1.20rc1-windowsservercore, 1.20-rc-windowsservercore, 1.20rc1, 1.20-rc
+Architectures: windows-amd64
+GitCommit: b922c120a56fea4f0d0e48a3273558b2bf45b019
+Directory: 1.20-rc/windows/windowsservercore-ltsc2022
+Constraints: windowsservercore-ltsc2022
+
+Tags: 1.20rc1-windowsservercore-1809, 1.20-rc-windowsservercore-1809
+SharedTags: 1.20rc1-windowsservercore, 1.20-rc-windowsservercore, 1.20rc1, 1.20-rc
+Architectures: windows-amd64
+GitCommit: b922c120a56fea4f0d0e48a3273558b2bf45b019
+Directory: 1.20-rc/windows/windowsservercore-1809
+Constraints: windowsservercore-1809
+
+Tags: 1.20rc1-nanoserver-ltsc2022, 1.20-rc-nanoserver-ltsc2022
+SharedTags: 1.20rc1-nanoserver, 1.20-rc-nanoserver
+Architectures: windows-amd64
+GitCommit: b922c120a56fea4f0d0e48a3273558b2bf45b019
+Directory: 1.20-rc/windows/nanoserver-ltsc2022
+Constraints: nanoserver-ltsc2022, windowsservercore-ltsc2022
+
+Tags: 1.20rc1-nanoserver-1809, 1.20-rc-nanoserver-1809
+SharedTags: 1.20rc1-nanoserver, 1.20-rc-nanoserver
+Architectures: windows-amd64
+GitCommit: b922c120a56fea4f0d0e48a3273558b2bf45b019
+Directory: 1.20-rc/windows/nanoserver-1809
+Constraints: nanoserver-1809, windowsservercore-1809
+
 Tags: 1.19.4-bullseye, 1.19-bullseye, 1-bullseye, bullseye
 SharedTags: 1.19.4, 1.19, 1, latest
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
