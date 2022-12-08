@@ -21,7 +21,7 @@ dbuser='postgres'
 dbpass="silver-$RANDOM-$RANDOM"
 dbdatabase='silverpeas'
 
-# run a PostgresSQL container
+# run a PostgreSQL container
 dbname="postgresql-container-$RANDOM-$RANDOM"
 docker run -d \
 	--name "$dbname" \
