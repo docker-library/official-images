@@ -18,7 +18,7 @@ for img; do
 
 	digest="$(bashbrew remote arches --json "$img" | jq -r '.desc.digest')"
 
-	imgFile="$dir/${img/:/___}" # see ".external-pins/list.sh"
+	imgFile="$("$dir/file.sh" "$img")"
 	imgDir="$(dirname "$imgFile")"
 	mkdir -p "$imgDir"
 	echo "$digest" | tee "$imgFile"
