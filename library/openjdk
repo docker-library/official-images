@@ -4,6 +4,58 @@ Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/openjdk.git
 
+Tags: 21-ea-1-jdk-oraclelinux8, 21-ea-1-oraclelinux8, 21-ea-jdk-oraclelinux8, 21-ea-oraclelinux8, 21-jdk-oraclelinux8, 21-oraclelinux8, 21-ea-1-jdk-oracle, 21-ea-1-oracle, 21-ea-jdk-oracle, 21-ea-oracle, 21-jdk-oracle, 21-oracle
+SharedTags: 21-ea-1-jdk, 21-ea-1, 21-ea-jdk, 21-ea, 21-jdk, 21
+Architectures: amd64, arm64v8
+GitCommit: 1265d56673ed4e5248f0e0db23ded21ea95d1ec5
+Directory: 21/jdk/oraclelinux8
+
+Tags: 21-ea-1-jdk-oraclelinux7, 21-ea-1-oraclelinux7, 21-ea-jdk-oraclelinux7, 21-ea-oraclelinux7, 21-jdk-oraclelinux7, 21-oraclelinux7
+Architectures: amd64, arm64v8
+GitCommit: 1265d56673ed4e5248f0e0db23ded21ea95d1ec5
+Directory: 21/jdk/oraclelinux7
+
+Tags: 21-ea-1-jdk-bullseye, 21-ea-1-bullseye, 21-ea-jdk-bullseye, 21-ea-bullseye, 21-jdk-bullseye, 21-bullseye
+Architectures: amd64, arm64v8
+GitCommit: 1265d56673ed4e5248f0e0db23ded21ea95d1ec5
+Directory: 21/jdk/bullseye
+
+Tags: 21-ea-1-jdk-slim-bullseye, 21-ea-1-slim-bullseye, 21-ea-jdk-slim-bullseye, 21-ea-slim-bullseye, 21-jdk-slim-bullseye, 21-slim-bullseye, 21-ea-1-jdk-slim, 21-ea-1-slim, 21-ea-jdk-slim, 21-ea-slim, 21-jdk-slim, 21-slim
+Architectures: amd64, arm64v8
+GitCommit: 1265d56673ed4e5248f0e0db23ded21ea95d1ec5
+Directory: 21/jdk/slim-bullseye
+
+Tags: 21-ea-1-jdk-buster, 21-ea-1-buster, 21-ea-jdk-buster, 21-ea-buster, 21-jdk-buster, 21-buster
+Architectures: amd64, arm64v8
+GitCommit: 1265d56673ed4e5248f0e0db23ded21ea95d1ec5
+Directory: 21/jdk/buster
+
+Tags: 21-ea-1-jdk-slim-buster, 21-ea-1-slim-buster, 21-ea-jdk-slim-buster, 21-ea-slim-buster, 21-jdk-slim-buster, 21-slim-buster
+Architectures: amd64, arm64v8
+GitCommit: 1265d56673ed4e5248f0e0db23ded21ea95d1ec5
+Directory: 21/jdk/slim-buster
+
+Tags: 21-ea-1-jdk-windowsservercore-ltsc2022, 21-ea-1-windowsservercore-ltsc2022, 21-ea-jdk-windowsservercore-ltsc2022, 21-ea-windowsservercore-ltsc2022, 21-jdk-windowsservercore-ltsc2022, 21-windowsservercore-ltsc2022
+SharedTags: 21-ea-1-jdk-windowsservercore, 21-ea-1-windowsservercore, 21-ea-jdk-windowsservercore, 21-ea-windowsservercore, 21-jdk-windowsservercore, 21-windowsservercore, 21-ea-1-jdk, 21-ea-1, 21-ea-jdk, 21-ea, 21-jdk, 21
+Architectures: windows-amd64
+GitCommit: 1265d56673ed4e5248f0e0db23ded21ea95d1ec5
+Directory: 21/jdk/windows/windowsservercore-ltsc2022
+Constraints: windowsservercore-ltsc2022
+
+Tags: 21-ea-1-jdk-windowsservercore-1809, 21-ea-1-windowsservercore-1809, 21-ea-jdk-windowsservercore-1809, 21-ea-windowsservercore-1809, 21-jdk-windowsservercore-1809, 21-windowsservercore-1809
+SharedTags: 21-ea-1-jdk-windowsservercore, 21-ea-1-windowsservercore, 21-ea-jdk-windowsservercore, 21-ea-windowsservercore, 21-jdk-windowsservercore, 21-windowsservercore, 21-ea-1-jdk, 21-ea-1, 21-ea-jdk, 21-ea, 21-jdk, 21
+Architectures: windows-amd64
+GitCommit: 1265d56673ed4e5248f0e0db23ded21ea95d1ec5
+Directory: 21/jdk/windows/windowsservercore-1809
+Constraints: windowsservercore-1809
+
+Tags: 21-ea-1-jdk-nanoserver-1809, 21-ea-1-nanoserver-1809, 21-ea-jdk-nanoserver-1809, 21-ea-nanoserver-1809, 21-jdk-nanoserver-1809, 21-nanoserver-1809
+SharedTags: 21-ea-1-jdk-nanoserver, 21-ea-1-nanoserver, 21-ea-jdk-nanoserver, 21-ea-nanoserver, 21-jdk-nanoserver, 21-nanoserver
+Architectures: windows-amd64
+GitCommit: 1265d56673ed4e5248f0e0db23ded21ea95d1ec5
+Directory: 21/jdk/windows/nanoserver-1809
+Constraints: nanoserver-1809, windowsservercore-1809
+
 Tags: 20-ea-27-jdk-oraclelinux8, 20-ea-27-oraclelinux8, 20-ea-jdk-oraclelinux8, 20-ea-oraclelinux8, 20-jdk-oraclelinux8, 20-oraclelinux8, 20-ea-27-jdk-oracle, 20-ea-27-oracle, 20-ea-jdk-oracle, 20-ea-oracle, 20-jdk-oracle, 20-oracle
 SharedTags: 20-ea-27-jdk, 20-ea-27, 20-ea-jdk, 20-ea, 20-jdk, 20
 Architectures: amd64, arm64v8
