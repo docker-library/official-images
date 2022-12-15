@@ -3,7 +3,7 @@ set -eo pipefail
 
 dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
-dbImage='postgres:11-alpine'
+dbImage='postgres:13-alpine'
 # ensure the dbImage is ready and available
 if ! docker image inspect "$dbImage" &> /dev/null; then
 	docker pull "$dbImage" > /dev/null

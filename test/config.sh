@@ -106,6 +106,12 @@ imageTests+=(
 	[logstash]='
 		logstash-basics
 	'
+	[matomo:apache]='
+		matomo-apache-run
+	'
+	[matomo:fpm]='
+		matomo-fpm-run
+	'
 	[memcached]='
 		memcached-basics
 	'
@@ -189,6 +195,12 @@ imageTests+=(
 		plone-versions
 		plone-zeoclient
 		plone-zeosite
+	'
+	[postfixadmin:apache]='
+		postfixadmin-apache-run
+	'
+	[postfixadmin:fpm]='
+		postfixadmin-fpm-run
 	'
 	[postgres]='
 		postgres-basics

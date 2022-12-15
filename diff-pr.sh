@@ -249,6 +249,35 @@ copy-tar() {
 	done
 }
 
+# a "bashbrew cat" template that gives us the last / "least specific" tags for the arguments
+# (in other words, this is "bashbrew list --uniq" but last instead of first)
+templateLastTags='
+	{{- range .TagEntries -}}
+		{{- $.RepoName -}}
+		{{- ":" -}}
+		{{- .Tags | last -}}
+		{{- "\n" -}}
+	{{- end -}}
+'
+
+_metadata-files() {
+	bashbrew list "$@" 2>>temp/_bashbrew.err | sort -uV > temp/_bashbrew-list || :
+
+	"$diffDir/_bashbrew-cat-sorted.sh" "$@" 2>>temp/_bashbrew.err > temp/_bashbrew-cat || :
+
+	bashbrew list --uniq "$@" \
+		| sort -V \
+		| xargs -r bashbrew list --uniq --build-order 2>>temp/_bashbrew.err \
+		| xargs -r bashbrew cat --format "$templateLastTags" 2>>temp/_bashbrew.err \
+		> temp/_bashbrew-list-build-order || :
+
+	script="$(bashbrew cat --format "$template" "$@")"
+	mkdir tar
+	( eval "$script" | tar -xiC tar )
+	copy-tar tar temp
+	rm -rf tar
+}
+
 mkdir temp
 git -C temp init --quiet
 git -C temp config user.name 'Bogus'
@@ -257,15 +286,7 @@ git -C temp config user.email 'bogus@bogus'
 # handle "new-image" PRs gracefully
 for img; do touch "$BASHBREW_LIBRARY/$img"; [ -s "$BASHBREW_LIBRARY/$img" ] || echo 'Maintainers: New Image! :D (@docker-library-bot)' > "$BASHBREW_LIBRARY/$img"; done
 
-bashbrew list "$@" 2>>temp/_bashbrew.err | sort -uV > temp/_bashbrew-list || :
-"$diffDir/_bashbrew-cat-sorted.sh" "$@" 2>>temp/_bashbrew.err > temp/_bashbrew-cat || :
-for image; do
-	script="$(bashbrew cat --format "$template" "$image")"
-	mkdir tar
-	( eval "$script" | tar -xiC tar )
-	copy-tar tar temp
-	rm -rf tar
-done
+_metadata-files "$@"
 git -C temp add . || :
 git -C temp commit --quiet --allow-empty -m 'initial' || :
 
@@ -276,13 +297,8 @@ git -C oi checkout --quiet pull
 for img; do touch "$BASHBREW_LIBRARY/$img"; [ -s "$BASHBREW_LIBRARY/$img" ] || echo 'Maintainers: Deleted Image D: (@docker-library-bot)' > "$BASHBREW_LIBRARY/$img"; done
 
 git -C temp rm --quiet -rf . || :
-bashbrew list "$@" 2>>temp/_bashbrew.err | sort -uV > temp/_bashbrew-list || :
-"$diffDir/_bashbrew-cat-sorted.sh" "$@" 2>>temp/_bashbrew.err > temp/_bashbrew-cat || :
-script="$(bashbrew cat --format "$template" "$@")"
-mkdir tar
-( eval "$script" | tar -xiC tar )
-copy-tar tar temp
-rm -rf tar
+
+_metadata-files "$@"
 git -C temp add .
 
 git -C temp diff \
