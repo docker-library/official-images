@@ -1,20 +1,20 @@
 Maintainers: XWiki Core Dev Team <committers@xwiki.org> (@xwiki)
 GitRepo: https://github.com/xwiki-contrib/docker-xwiki.git
 
-Tags: 14, 14.10, 14.10.1, 14-mysql-tomcat, 14.10-mysql-tomcat, 14.10.1-mysql-tomcat, mysql-tomcat, stable-mysql-tomcat, stable-mysql, stable, latest
+Tags: 14, 14.10, 14.10.2, 14-mysql-tomcat, 14.10-mysql-tomcat, 14.10.1-mysql-tomcat, mysql-tomcat, stable-mysql-tomcat, stable-mysql, stable, latest, lts-mysql-tomcat, lts-mysql, lts
 Architectures: amd64, arm64v8
 Directory: 14/mysql-tomcat
-GitCommit: cb87e8e016aaa420d362adaf08813028ce95fd96
+GitCommit: f89ecde9170d6a2880deaf2a61c1d0cef4ca08df
 
-Tags: 14-postgres-tomcat, 14.10-postgres-tomcat, 14.10.1-postgres-tomcat, postgres-tomcat, stable-postgres-tomcat, stable-postgres
+Tags: 14-postgres-tomcat, 14.10-postgres-tomcat, 14.10.2-postgres-tomcat, postgres-tomcat, stable-postgres-tomcat, stable-postgres, lts-postgres-tomcat, lts-postgres
 Architectures: amd64, arm64v8
 Directory: 14/postgres-tomcat
-GitCommit: cb87e8e016aaa420d362adaf08813028ce95fd96
+GitCommit: f89ecde9170d6a2880deaf2a61c1d0cef4ca08df
 
-Tags: 14-mariadb-tomcat, 14.10-mariadb-tomcat, 14.10.1-mariadb-tomcat, mariadb-tomcat, stable-mariadb-tomcat, stable-mariadb
+Tags: 14-mariadb-tomcat, 14.10-mariadb-tomcat, 14.10.2-mariadb-tomcat, mariadb-tomcat, stable-mariadb-tomcat, stable-mariadb, lts-mariadb-tomcat, lts-mariadb
 Architectures: amd64, arm64v8
 Directory: 14/mariadb-tomcat
-GitCommit: cb87e8e016aaa420d362adaf08813028ce95fd96
+GitCommit: f89ecde9170d6a2880deaf2a61c1d0cef4ca08df
 
 # Mid-year "LTS" (done by XWiki SAS developers and not official). To be removed when the next official LTS is released.
 Tags: 14.4, 14.4.7, 14.4-mysql-tomcat, 14.4.7-mysql-tomcat
@@ -32,17 +32,19 @@ Architectures: amd64, arm64v8
 Directory:  14.4/mariadb-tomcat
 GitCommit: 2afb800f554f08f7ada9b1ab09f9140fca737177
 
-Tags: 13, 13.10, 13.10.10, 13-mysql-tomcat, 13.10-mysql-tomcat, 13.10.10-mysql-tomcat, lts-mysql-tomcat, lts-mysql, lts
+# Old LTS: we're keeping the tag as a final release will need to be done.
+
+Tags: 13, 13.10, 13.10.10, 13-mysql-tomcat, 13.10-mysql-tomcat, 13.10.10-mysql-tomcat
 Architectures: amd64, arm64v8
 Directory: 13/mysql-tomcat
 GitCommit: 1d402b9c3ee38faece2fac98ac75c65ab5b7a340
 
-Tags: 13-postgres-tomcat, 13.10-postgres-tomcat, 13.10.10-postgres-tomcat, lts-postgres-tomcat, lts-postgres
+Tags: 13-postgres-tomcat, 13.10-postgres-tomcat, 13.10.10-postgres-tomcat
 Architectures: amd64, arm64v8
 Directory: 13/postgres-tomcat
 GitCommit: 1d402b9c3ee38faece2fac98ac75c65ab5b7a340
 
-Tags: 13-mariadb-tomcat, 13.10-mariadb-tomcat, 13.10.10-mariadb-tomcat, lts-mariadb-tomcat, lts-mariadb
+Tags: 13-mariadb-tomcat, 13.10-mariadb-tomcat, 13.10.10-mariadb-tomcat
 Architectures: amd64, arm64v8
 Directory: 13/mariadb-tomcat
 GitCommit: 1d402b9c3ee38faece2fac98ac75c65ab5b7a340
