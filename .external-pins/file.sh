@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
 
+# given an image (name:tag), return the appropriate filename
+
 dir="$(dirname "$BASH_SOURCE")"
 
 for img; do
