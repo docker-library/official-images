@@ -79,10 +79,15 @@ else
 		"$diffDir" HEAD:refs/heads/pull
 fi
 
+externalPins=
 if [ "$#" -eq 0 ]; then
+	externalPins="$(git -C oi/.external-pins diff --no-renames --name-only HEAD...pull -- '*/**')"
+
 	images="$(git -C oi/library diff --no-renames --name-only HEAD...pull -- .)"
-	[ -n "$images" ] || exit 0
-	images="$(xargs -n1 basename <<<"$images")"
+	if [ -z "$images" ] && [ -z "$externalPins" ]; then
+		exit 0
+	fi
+	images="$(xargs -rn1 basename <<<"$images")"
 	set -- $images
 fi
 
@@ -261,21 +266,45 @@ templateLastTags='
 '
 
 _metadata-files() {
-	bashbrew list "$@" 2>>temp/_bashbrew.err | sort -uV > temp/_bashbrew-list || :
+	if [ "$#" -gt 0 ]; then
+		bashbrew list "$@" 2>>temp/_bashbrew.err | sort -uV > temp/_bashbrew-list || :
 
-	"$diffDir/_bashbrew-cat-sorted.sh" "$@" 2>>temp/_bashbrew.err > temp/_bashbrew-cat || :
+		"$diffDir/_bashbrew-cat-sorted.sh" "$@" 2>>temp/_bashbrew.err > temp/_bashbrew-cat || :
 
-	bashbrew list --uniq "$@" \
-		| sort -V \
-		| xargs -r bashbrew list --uniq --build-order 2>>temp/_bashbrew.err \
-		| xargs -r bashbrew cat --format "$templateLastTags" 2>>temp/_bashbrew.err \
-		> temp/_bashbrew-list-build-order || :
+		bashbrew list --uniq "$@" \
+			| sort -V \
+			| xargs -r bashbrew list --uniq --build-order 2>>temp/_bashbrew.err \
+			| xargs -r bashbrew cat --format "$templateLastTags" 2>>temp/_bashbrew.err \
+			> temp/_bashbrew-list-build-order || :
 
-	script="$(bashbrew cat --format "$template" "$@")"
-	mkdir tar
-	( eval "$script" | tar -xiC tar )
-	copy-tar tar temp
-	rm -rf tar
+		script="$(bashbrew cat --format "$template" "$@")"
+		mkdir tar
+		( eval "$script" | tar -xiC tar )
+		copy-tar tar temp
+		rm -rf tar
+	fi
+
+	if [ -n "$externalPins" ] && command -v crane &> /dev/null && command -v jq &> /dev/null; then
+		local file
+		for file in $externalPins; do
+			[ -e "oi/$file" ] || continue
+			local pin digest dir
+			pin="$("$diffDir/.external-pins/tag.sh" "$file")"
+			digest="$(< "oi/$file")"
+			dir="temp/$file"
+			mkdir -p "$dir"
+			bashbrew remote arches --json "$pin@$digest" | jq -S . > "$dir/bashbrew.json"
+			local manifests manifest
+			manifests="$(jq -r '[ .arches[][].digest | @sh ] | join(" ")' "$dir/bashbrew.json")"
+			eval "manifests=( $manifests )"
+			for manifest in "${manifests[@]}"; do
+				crane manifest "$pin@$manifest" | jq -S . > "$dir/manifest-${manifest//:/_}.json"
+				local config
+				config="$(jq -r '.config.digest' "$dir/manifest-${manifest//:/_}.json")"
+				crane blob "$pin@$config" | jq -S . > "$dir/manifest-${manifest//:/_}-config.json"
+			done
+		done
+	fi
 }
 
 mkdir temp
