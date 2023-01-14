@@ -31,6 +31,15 @@ jobs:
         run: |
           (set +x; echo "::stop-commands::$(echo -n ${{ github.token }} | sha256sum | head -c 64)")
           git fetch --quiet https://github.com/docker-library/official-images.git master
+          externalPins="$(git diff --no-renames --name-only FETCH_HEAD...HEAD -- '.external-pins/*/**')"
+          externalPinTags="$(
+            if [ -n "$externalPins" ]; then
+              # doing backflips to run "tag.sh" from master instead of from the PR
+              git show FETCH_HEAD:.external-pins/tag.sh > ~/master-external-pins-tag.sh
+              chmod +x ~/master-external-pins-tag.sh
+              ~/master-external-pins-tag.sh $externalPins
+            fi
+          )"
           images="$(git diff --no-renames --name-only FETCH_HEAD...HEAD -- library/)"
           if [ -n "$images" ]; then
             new="$(git diff --no-renames --name-only --diff-filter=A FETCH_HEAD...HEAD -- $images)"
@@ -39,22 +48,28 @@ jobs:
             new=
             deleted=
           fi
-          export images new deleted
+          export images new deleted externalPins externalPinTags
           images="$(jq -cn '
             (env.images | rtrimstr("\n") | split("\n")) as $images
             | (env.new | rtrimstr("\n") | split("\n")) as $new
             | (env.deleted | rtrimstr("\n") | split("\n")) as $deleted
+            | (env.externalPins | rtrimstr("\n") | split("\n")) as $externalPins
+            | (env.externalPinTags | rtrimstr("\n") | split("\n")) as $externalPinTags
             | {
               images: $images,
               count: ($images | length),
               new: $new,
               deleted: $deleted,
+              externalPins: $externalPins,
+              externalPinTags: $externalPinTags,
+              externalPinsCount: ($externalPins | length),
             }
+            | .imagesAndExternalPinsCount = (.count + .externalPinsCount) # man, I *really* do not love GitHub Actions expressions...
           ')"
           jq . <<<"$images"
           set +x
           echo "::$(echo -n ${{ github.token }} | sha256sum | head -c 64)::"
-          echo "::set-output name=images::$images"
+          echo "images=$images" >> "$GITHUB_OUTPUT"
     outputs:
       images: '${{ steps.gather.outputs.images }}'
 
@@ -62,17 +77,20 @@ jobs:
     name: Apply Labels
     runs-on: ubuntu-latest
     needs: gather
-    if: fromJSON(needs.gather.outputs.images).count > 0
+    if: fromJSON(needs.gather.outputs.images).imagesAndExternalPinsCount > 0
     steps:
       - name: Apply Labels
-        uses: actions/github-script@v5
+        uses: actions/github-script@v6
         env:
           IMAGES: ${{ needs.gather.outputs.images }}
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const data = JSON.parse(process.env.IMAGES);
-            var labels = data.images;
+            var labels = [
+              ...data.images, // "library/debian", ...
+              ...new Set(data.externalPinTags.map(x => 'external/' + x.replace(/:.+$/, ''))), // "external/mcr.microsoft.com/windows/servercore", ...
+            ];
             if (data.new.length > 0) {
               labels.push('new-image');
             }
@@ -88,7 +106,7 @@ jobs:
     name: Diff Comment
     runs-on: ubuntu-latest
     needs: gather
-    if: fromJSON(needs.gather.outputs.images).count > 0
+    if: fromJSON(needs.gather.outputs.images).imagesAndExternalPinsCount > 0
     steps:
       - uses: actions/checkout@v3
         with:
@@ -120,7 +138,7 @@ jobs:
         run: |
           docker run --rm --read-only --tmpfs /tmp oisupport/bashbrew:diff-pr ./diff-pr.sh "$GITHUB_PR_NUMBER" | tee "$GITHUB_WORKSPACE/oi-pr.diff"
       - name: Comment
-        uses: actions/github-script@v5
+        uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
