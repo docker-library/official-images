@@ -17,15 +17,11 @@ tryJdks=(
 	"${image%%:*}:jdk-slim"
 	"${image%%:*}:jdk"
 	"${image%%:*}:latest"
-	'openjdk:8-jdk-slim'
+	'eclipse-temurin:8-jdk'
 )
 jdk=
 for potentialJdk in "${tryJdks[@]}"; do
-	if docker image inspect "$potentialJdk" &> /dev/null; then
-		jdk="$potentialJdk"
-		break
-	fi
-	if docker pull --quiet "$potentialJdk" &> /dev/null; then
+	if docker run --rm --pull=missing "$potentialJdk" javac -help &> /dev/null; then
 		jdk="$potentialJdk"
 		break
 	fi
@@ -40,7 +36,7 @@ fi
 
 # if possible, use "--release" in case $jdk and $image have mismatching Java versions
 javac='javac'
-if docker run --rm "$jdk" java --help 2>&1 | grep -q -- '--release'; then
+if docker run --rm "$jdk" javac --help 2>&1 | grep -q -- '--release'; then
 	javac='javac --release 8'
 fi
 
