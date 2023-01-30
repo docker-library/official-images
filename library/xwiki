@@ -1,6 +1,22 @@
 Maintainers: XWiki Core Dev Team <committers@xwiki.org> (@xwiki)
 GitRepo: https://github.com/xwiki-contrib/docker-xwiki.git
 
+Tags: 15, 15.0, 15.0.0, 15-mysql-tomcat, 15.0-mysql-tomcat, 15.0.0-mysql-tomcat, mysql-tomcat, stable-mysql-tomcat, stable-mysql, stable, latest, lts-mysql-tomcat, lts-mysql, lts
+Architectures: amd64, arm64v8
+Directory: 15/mysql-tomcat
+GitCommit: 767d3b77e022cf4565b8308d66589d419a93591b
+
+Tags: 15-postgres-tomcat, 15.0-postgres-tomcat, 15.0.0-postgres-tomcat, postgres-tomcat, stable-postgres-tomcat, stable-postgres, lts-postgres-tomcat, lts-postgres
+Architectures: amd64, arm64v8
+Directory: 15/postgres-tomcat
+GitCommit: 767d3b77e022cf4565b8308d66589d419a93591b
+
+Tags: 15-mariadb-tomcat, 15.0-mariadb-tomcat, 15.0.0-mariadb-tomcat, mariadb-tomcat, stable-mariadb-tomcat, stable-mariadb, lts-mariadb-tomcat, lts-mariadb
+Architectures: amd64, arm64v8
+Directory: 15/mariadb-tomcat
+GitCommit: 767d3b77e022cf4565b8308d66589d419a93591b
+
+# LTS
 Tags: 14, 14.10, 14.10.3, 14-mysql-tomcat, 14.10-mysql-tomcat, 14.10.3-mysql-tomcat, mysql-tomcat, stable-mysql-tomcat, stable-mysql, stable, latest, lts-mysql-tomcat, lts-mysql, lts
 Architectures: amd64, arm64v8
 Directory: 14/mysql-tomcat
@@ -31,20 +47,3 @@ Tags: 14.4-mariadb-tomcat, 14.4.7-mariadb-tomcat
 Architectures: amd64, arm64v8
 Directory:  14.4/mariadb-tomcat
 GitCommit: 2afb800f554f08f7ada9b1ab09f9140fca737177
-
-# Old LTS: Remove on the next edit of this file as it's only needed once to build the last tag for the old 13.10.x LTS
-
-Tags: 13, 13.10, 13.10.11, 13-mysql-tomcat, 13.10-mysql-tomcat, 13.10.11-mysql-tomcat
-Architectures: amd64, arm64v8
-Directory: 13/mysql-tomcat
-GitCommit: cd1487dfd967742d686a60f48f07e984b8f263a3
-
-Tags: 13-postgres-tomcat, 13.10-postgres-tomcat, 13.10.11-postgres-tomcat
-Architectures: amd64, arm64v8
-Directory: 13/postgres-tomcat
-GitCommit: cd1487dfd967742d686a60f48f07e984b8f263a3
-
-Tags: 13-mariadb-tomcat, 13.10-mariadb-tomcat, 13.10.11-mariadb-tomcat
-Architectures: amd64, arm64v8
-Directory: 13/mariadb-tomcat
-GitCommit: cd1487dfd967742d686a60f48f07e984b8f263a3
