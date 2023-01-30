@@ -34,7 +34,7 @@ _artisan() {
 _migrate_done() {
 	local status
 	status="$(_artisan migrate:status)"
-	if grep -q ' Yes ' <<<"$status" && ! grep -q ' No ' <<<"$status"; then
+	if grep -q ' Ran' <<<"$status" && ! grep -q ' Pending' <<<"$status"; then
 		return 0
 	fi
 	return 1
