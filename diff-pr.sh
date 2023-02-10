@@ -295,7 +295,17 @@ _metadata-files() {
 			mkdir -p "$dir"
 			bashbrew remote arches --json "$pin@$digest" | jq -S . > "$dir/bashbrew.json"
 			local manifests manifest
-			manifests="$(jq -r '[ .arches[][].digest | @sh ] | join(" ")' "$dir/bashbrew.json")"
+			manifests="$(jq -r '
+				[ (
+					.arches
+					| if has(env.BASHBREW_ARCH) then
+						.[env.BASHBREW_ARCH]
+					else
+						.[keys_unsorted | first]
+					end
+				)[].digest | @sh ]
+				| join(" ")
+			' "$dir/bashbrew.json")"
 			eval "manifests=( $manifests )"
 			for manifest in "${manifests[@]}"; do
 				crane manifest "$pin@$manifest" | jq -S . > "$dir/manifest-${manifest//:/_}.json"
