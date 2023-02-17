@@ -16,7 +16,7 @@ fi
 
 imgs="$(bashbrew list --repos "$@" | sort -u)"
 for img in $imgs; do
-	bashbrew fetch --all "$img" # force `git fetch`
+	bashbrew fetch "$img" # force `git fetch`
 	commits="$(
 		bashbrew cat --format '
 			{{- range $e := .Entries -}}
