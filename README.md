@@ -410,12 +410,13 @@ The first entry is the "global" metadata for the image. The only required field 
 	GitFetch: refs/heads/2.0-pre-release
 	GitCommit: beefdeadbeefdeadbeefdeadbeefdeadbeefdead
 	Directory: 2
+	File: Dockerfile-to-use
 
 Bashbrew will fetch code out of the Git repository (`GitRepo`) at the commit specified (`GitCommit`). If the commit referenced is not available by fetching `master` of the associated `GitRepo`, it becomes necessary to supply a value for `GitFetch` in order to tell Bashbrew what ref to fetch in order to get the commit necessary.
 
 The built image will be tagged as `<manifest-filename>:<tag>` (ie, `library/golang` with a `Tags` value of `1.6, 1, latest` will create tags of `golang:1.6`, `golang:1`, and `golang:latest`).
 
-Optionally, if `Directory` is present, Bashbrew will look for the `Dockerfile` inside the specified subdirectory instead of at the root (and `Directory` will be used as the ["context" for the build](https://docs.docker.com/reference/builder/) instead of the top-level of the repository).
+Optionally, if `Directory` is present, Bashbrew will look for the `Dockerfile` inside the specified subdirectory instead of at the root (and `Directory` will be used as the ["context" for the build](https://docs.docker.com/reference/builder/) instead of the top-level of the repository). If `File` is present, the specified filename instead of `Dockerfile` will be used.
 
 See the [multi-arch section](#multiple-architectures) for details on how to specify a different `GitRepo`, `GitFetch`, `GitCommit`, or `Directory` for a specific architecture.
 
