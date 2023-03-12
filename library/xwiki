@@ -1,50 +1,33 @@
 Maintainers: XWiki Core Dev Team <committers@xwiki.org> (@xwiki)
 GitRepo: https://github.com/xwiki-contrib/docker-xwiki.git
 
-Tags: 14, 14.10, 14.10.2, 14-mysql-tomcat, 14.10-mysql-tomcat, 14.10.1-mysql-tomcat, mysql-tomcat, stable-mysql-tomcat, stable-mysql, stable, latest, lts-mysql-tomcat, lts-mysql, lts
+Tags: 15, 15.1, 15.1.0, 15-mysql-tomcat, 15.1-mysql-tomcat, 15.1.0-mysql-tomcat, mysql-tomcat, stable-mysql-tomcat, stable-mysql, stable, latest
+Architectures: amd64, arm64v8
+Directory: 15/mysql-tomcat
+GitCommit: ae71330a113a1b983353d44a2af4866dca077b15
+
+Tags: 15-postgres-tomcat, 15.1-postgres-tomcat, 15.1.0-postgres-tomcat, postgres-tomcat, stable-postgres-tomcat, stable-postgres
+Architectures: amd64, arm64v8
+Directory: 15/postgres-tomcat
+GitCommit: ae71330a113a1b983353d44a2af4866dca077b15
+
+Tags: 15-mariadb-tomcat, 15.1-mariadb-tomcat, 15.1.0-mariadb-tomcat, mariadb-tomcat, stable-mariadb-tomcat, stable-mariadb
+Architectures: amd64, arm64v8
+Directory: 15/mariadb-tomcat
+GitCommit: ae71330a113a1b983353d44a2af4866dca077b15
+
+# LTS
+Tags: 14, 14.10, 14.10.6, 14-mysql-tomcat, 14.10-mysql-tomcat, 14.10.6-mysql-tomcat, lts-mysql-tomcat, lts-mysql, lts
 Architectures: amd64, arm64v8
 Directory: 14/mysql-tomcat
-GitCommit: f89ecde9170d6a2880deaf2a61c1d0cef4ca08df
+GitCommit: ae71330a113a1b983353d44a2af4866dca077b15
 
-Tags: 14-postgres-tomcat, 14.10-postgres-tomcat, 14.10.2-postgres-tomcat, postgres-tomcat, stable-postgres-tomcat, stable-postgres, lts-postgres-tomcat, lts-postgres
+Tags: 14-postgres-tomcat, 14.10-postgres-tomcat, 14.10.6-postgres-tomcat, lts-postgres-tomcat, lts-postgres
 Architectures: amd64, arm64v8
 Directory: 14/postgres-tomcat
-GitCommit: f89ecde9170d6a2880deaf2a61c1d0cef4ca08df
+GitCommit: ae71330a113a1b983353d44a2af4866dca077b15
 
-Tags: 14-mariadb-tomcat, 14.10-mariadb-tomcat, 14.10.2-mariadb-tomcat, mariadb-tomcat, stable-mariadb-tomcat, stable-mariadb, lts-mariadb-tomcat, lts-mariadb
+Tags: 14-mariadb-tomcat, 14.10-mariadb-tomcat, 14.10.6-mariadb-tomcat, lts-mariadb-tomcat, lts-mariadb
 Architectures: amd64, arm64v8
 Directory: 14/mariadb-tomcat
-GitCommit: f89ecde9170d6a2880deaf2a61c1d0cef4ca08df
-
-# Mid-year "LTS" (done by XWiki SAS developers and not official). To be removed when the next official LTS is released.
-Tags: 14.4, 14.4.7, 14.4-mysql-tomcat, 14.4.7-mysql-tomcat
-Architectures: amd64, arm64v8
-Directory: 14.4/mysql-tomcat
-GitCommit: 2afb800f554f08f7ada9b1ab09f9140fca737177
-
-Tags: 14.4-postgres-tomcat, 14.4.7-postgres-tomcat
-Architectures: amd64, arm64v8
-Directory: 14.4/postgres-tomcat
-GitCommit: 2afb800f554f08f7ada9b1ab09f9140fca737177
-
-Tags: 14.4-mariadb-tomcat, 14.4.7-mariadb-tomcat
-Architectures: amd64, arm64v8
-Directory:  14.4/mariadb-tomcat
-GitCommit: 2afb800f554f08f7ada9b1ab09f9140fca737177
-
-# Old LTS: we're keeping the tag as a final release will need to be done.
-
-Tags: 13, 13.10, 13.10.10, 13-mysql-tomcat, 13.10-mysql-tomcat, 13.10.10-mysql-tomcat
-Architectures: amd64, arm64v8
-Directory: 13/mysql-tomcat
-GitCommit: 1d402b9c3ee38faece2fac98ac75c65ab5b7a340
-
-Tags: 13-postgres-tomcat, 13.10-postgres-tomcat, 13.10.10-postgres-tomcat
-Architectures: amd64, arm64v8
-Directory: 13/postgres-tomcat
-GitCommit: 1d402b9c3ee38faece2fac98ac75c65ab5b7a340
-
-Tags: 13-mariadb-tomcat, 13.10-mariadb-tomcat, 13.10.10-mariadb-tomcat
-Architectures: amd64, arm64v8
-Directory: 13/mariadb-tomcat
-GitCommit: 1d402b9c3ee38faece2fac98ac75c65ab5b7a340
+GitCommit: ae71330a113a1b983353d44a2af4866dca077b15
