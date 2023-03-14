@@ -36,6 +36,7 @@ _expected_constraints() {
 	fi
 
 	case "$from" in
+	  mcr.microsoft.com/dotnet/sdk*) return ;;
 		*microsoft*) _windows_constraint "$from" ;;
 	esac
 

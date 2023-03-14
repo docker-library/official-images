@@ -344,4 +344,7 @@ globalExcludeTests+=(
 	[mongo:windowsservercore_mongo-auth-basics]=1
 	[mongo:windowsservercore_mongo-tls-basics]=1
 	[mongo:windowsservercore_mongo-tls-auth]=1
+
+	# https://github.com/docker-library/official-images/pull/14248#issuecomment-1471837306
+  [qodana_override-cmd]=1
 )
