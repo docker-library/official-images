@@ -1,8 +1,9 @@
-# this file is generated via https://github.com/docker-library/python/blob/2829b7eded87eaa8b678e850059439c46d5c6eae/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/python/blob/3239fa479d4f3010db822a2e562cdfcbd553d200/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/python.git
+Builder: buildkit
 
 Tags: 3.12.0a6-bullseye, 3.12-rc-bullseye
 SharedTags: 3.12.0a6, 3.12-rc
@@ -41,6 +42,7 @@ Architectures: windows-amd64
 GitCommit: 8442e048835d470610de219443b41d477d330e86
 Directory: 3.12-rc/windows/windowsservercore-ltsc2022
 Constraints: windowsservercore-ltsc2022
+Builder: classic
 
 Tags: 3.12.0a6-windowsservercore-1809, 3.12-rc-windowsservercore-1809
 SharedTags: 3.12.0a6-windowsservercore, 3.12-rc-windowsservercore, 3.12.0a6, 3.12-rc
@@ -48,6 +50,7 @@ Architectures: windows-amd64
 GitCommit: 8442e048835d470610de219443b41d477d330e86
 Directory: 3.12-rc/windows/windowsservercore-1809
 Constraints: windowsservercore-1809
+Builder: classic
 
 Tags: 3.11.2-bullseye, 3.11-bullseye, 3-bullseye, bullseye
 SharedTags: 3.11.2, 3.11, 3, latest
@@ -86,6 +89,7 @@ Architectures: windows-amd64
 GitCommit: e664abbb9af1ee6aae5778d70a5df79d86d9ec57
 Directory: 3.11/windows/windowsservercore-ltsc2022
 Constraints: windowsservercore-ltsc2022
+Builder: classic
 
 Tags: 3.11.2-windowsservercore-1809, 3.11-windowsservercore-1809, 3-windowsservercore-1809, windowsservercore-1809
 SharedTags: 3.11.2-windowsservercore, 3.11-windowsservercore, 3-windowsservercore, windowsservercore, 3.11.2, 3.11, 3, latest
@@ -93,6 +97,7 @@ Architectures: windows-amd64
 GitCommit: e664abbb9af1ee6aae5778d70a5df79d86d9ec57
 Directory: 3.11/windows/windowsservercore-1809
 Constraints: windowsservercore-1809
+Builder: classic
 
 Tags: 3.10.10-bullseye, 3.10-bullseye
 SharedTags: 3.10.10, 3.10
@@ -131,6 +136,7 @@ Architectures: windows-amd64
 GitCommit: a3533b1c48d968e784516470d18f3c24975df3d8
 Directory: 3.10/windows/windowsservercore-ltsc2022
 Constraints: windowsservercore-ltsc2022
+Builder: classic
 
 Tags: 3.10.10-windowsservercore-1809, 3.10-windowsservercore-1809
 SharedTags: 3.10.10-windowsservercore, 3.10-windowsservercore, 3.10.10, 3.10
@@ -138,6 +144,7 @@ Architectures: windows-amd64
 GitCommit: a3533b1c48d968e784516470d18f3c24975df3d8
 Directory: 3.10/windows/windowsservercore-1809
 Constraints: windowsservercore-1809
+Builder: classic
 
 Tags: 3.9.16-bullseye, 3.9-bullseye
 SharedTags: 3.9.16, 3.9
