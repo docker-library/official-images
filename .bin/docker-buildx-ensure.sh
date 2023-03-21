@@ -38,9 +38,13 @@ read -r -d '' buildkitdConfig <<-EOF || :
 
 	[worker.oci]
 		platforms = [ "$platform" ]
+		gc = false # we want to do GC manually
 
+	# this should be unused (for now?), but included for completeness/safety
 	[worker.containerd]
 		platforms = [ "$platform" ]
+		namespace = "buildkit-$builderName"
+		gc = false
 
 	[registry."docker.io"]
 		mirrors = $hubMirrors
