@@ -26,7 +26,7 @@ platform="$(bashbrew cat --format '{{ ociPlatform arch }}' <(echo 'Maintainers: 
 
 hubMirrors="$(docker info --format '{{ json .RegistryConfig.Mirrors }}' | jq -c '
 	[ env.DOCKERHUB_PUBLIC_PROXY // empty, .[] ]
-	| map(rtrimstr("/"))
+	| map(select(startswith("https://")) | ltrimstr("https://") | rtrimstr("/") | select(contains("/") | not))
 	| reduce .[] as $item ( # "unique" but order-preserving (we want DOCKERHUB_PUBLIC_PROXY first followed by everything else set in the dockerd mirrors config without duplication)
 		[];
 		if index($item) then . else . + [ $item ] end
