@@ -26,6 +26,19 @@ GitRepo: https://github.com/traefik/traefik-library-image.git
 GitCommit: 3397f06715d1f6684444c135a1b86b4f8c44d599
 Directory: alpine
 
+Tags: v2.10.0-rc1-windowsservercore-1809, 2.10.0-rc1-windowsservercore-1809, v2.10-windowsservercore-1809, 2.10-windowsservercore-1809, saintmarcelin-windowsservercore-1809
+Architectures: windows-amd64
+GitRepo: https://github.com/traefik/traefik-library-image.git
+GitCommit: 5288f2536e6a30aecac3e7685748639257d0ddcb
+Directory: windows/1809
+Constraints: windowsservercore-1809
+
+Tags: v2.10.0-rc1, 2.10.0-rc1, v2.10, 2.10, saintmarcelin
+Architectures: amd64, arm32v6, arm64v8, s390x
+GitRepo: https://github.com/traefik/traefik-library-image.git
+GitCommit: 5288f2536e6a30aecac3e7685748639257d0ddcb
+Directory: alpine
+
 Tags: v1.7.34-windowsservercore-1809, 1.7.34-windowsservercore-1809, v1.7-windowsservercore-1809, 1.7-windowsservercore-1809, maroilles-windowsservercore-1809
 Architectures: windows-amd64
 GitRepo: https://github.com/traefik/traefik-library-image.git
