@@ -12,6 +12,7 @@ if not isWindows:
         import gdbm
     else:
         import dbm.gnu
+        import dbm.ndbm
 
 import bz2
 assert(bz2.decompress(bz2.compress(b'IT WORKS IT WORKS IT WORKS')) == b'IT WORKS IT WORKS IT WORKS')

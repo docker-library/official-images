@@ -153,6 +153,31 @@ jobs:
             }
             fs.writeFileSync(process.env.GITHUB_STEP_SUMMARY, body);
 
+            // https://docs.github.com/en/graphql/reference/mutations#minimizecomment
+            const minimizeql = `
+              mutation($comment: ID!) {
+                minimizeComment(input: { classifier: OUTDATED, clientMutationId: "doi-munge-pr", subjectId: $comment }) {
+                  clientMutationId
+                  minimizedComment {
+                    isMinimized
+                    minimizedReason
+                  }
+                }
+              }
+            `;
+            // https://docs.github.com/en/graphql/reference/mutations#unminimizecomment
+            const unminimizeql = `
+              mutation($comment: ID!) {
+                unminimizeComment(input: { clientMutationId: "doi-munge-pr", subjectId: $comment }) {
+                  clientMutationId
+                  unminimizedComment {
+                    isMinimized
+                    minimizedReason
+                  }
+                }
+              }
+            `;
+
             needNewComment = true;
             console.log('Reviewing existing comments...');
             for await (const { data: comments } of github.paginate.iterator(
@@ -167,13 +192,13 @@ jobs:
                 if (comment.user.login === 'github-actions[bot]') {
                   if (needNewComment && comment.body.includes(commentText)) {
                     needNewComment = false;
+                    console.log('Unhiding comment: ' + comment.id + ' (' + comment.node_id + ')');
+                    const result = await github.graphql(unminimizeql, { comment: comment.node_id });
+                    console.log('- result: ' + JSON.stringify(result));
                   } else {
-                    console.log('Deleting comment: ' + comment.id);
-                    await github.rest.issues.deleteComment({
-                      owner: context.repo.owner,
-                      repo: context.repo.repo,
-                      comment_id: comment.id,
-                    });
+                    console.log('Hiding comment: ' + comment.id + ' (' + comment.node_id + ')');
+                    const result = await github.graphql(minimizeql, { comment: comment.node_id });
+                    console.log('- result: ' + JSON.stringify(result));
                   }
                 }
               }

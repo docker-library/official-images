@@ -3,16 +3,11 @@ set -Eeuo pipefail
 
 fileSizeThresholdMB='2'
 
-: "${BASHBREW_CACHE:=$HOME/.cache/bashbrew}"
-export BASHBREW_CACHE BASHBREW_ARCH=
+export BASHBREW_ARCH=
 
-if [ ! -d "$BASHBREW_CACHE/git" ]; then
-	# initialize the "bashbrew cache"
-	bashbrew --arch amd64 from --uniq --apply-constraints hello-world:linux > /dev/null
-fi
-
+gitCache="$(bashbrew cat --format '{{ gitCache }}' <(echo 'Maintainers: empty hack (@example)'))"
 _git() {
-	git -C "$BASHBREW_CACHE/git" "$@"
+	git -C "$gitCache" "$@"
 }
 
 if [ "$#" -eq 0 ]; then
@@ -21,12 +16,11 @@ fi
 
 imgs="$(bashbrew list --repos "$@" | sort -u)"
 for img in $imgs; do
+	bashbrew fetch "$img" # force `git fetch`
 	commits="$(
 		bashbrew cat --format '
 			{{- range $e := .Entries -}}
 				{{- range $a := .Architectures -}}
-					{{- /* force `git fetch` */ -}}
-					{{- $froms := $.ArchDockerFroms $a $e -}}
 					{
 						{{- json "GitRepo" }}:{{ json ($e.ArchGitRepo $a) -}},
 						{{- json "GitFetch" }}:{{ json ($e.ArchGitFetch $a) -}},

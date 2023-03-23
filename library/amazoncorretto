@@ -8,7 +8,7 @@ Maintainers: Amazon Corretto Team <corretto-team@amazon.com> (@corretto),
              Victor Rudometov <vicrud@amazon.com> (@Rudometov)
 GitRepo: https://github.com/corretto/corretto-docker.git
 GitFetch: refs/heads/main
-GitCommit: 67924db8205a880aa9508d8a364ee98915f303f8
+GitCommit: d07db4edeaa4051c4b96fd14d897fa50ac0f8971
 
 Tags: 8, 8u362, 8u362-al2, 8-al2-full, 8-al2-jdk, latest
 Architectures: amd64, arm64v8
@@ -137,3 +137,23 @@ Directory: 19/jdk/alpine/3.16
 Tags: 19-alpine3.17, 19.0.2-alpine3.17, 19-alpine3.17-full, 19-alpine3.17-jdk, 19-alpine, 19.0.2-alpine, 19-alpine-full, 19-alpine-jdk
 Architectures: amd64
 Directory: 19/jdk/alpine/3.17
+
+Tags: 20, 20.0.0, 20.0.0-al2, 20-al2-full, 20-al2-jdk
+Architectures: amd64, arm64v8
+Directory: 20/jdk/al2
+
+Tags: 20-alpine3.14, 20.0.0-alpine3.14, 20-alpine3.14-full, 20-alpine3.14-jdk
+Architectures: amd64
+Directory: 20/jdk/alpine/3.14
+
+Tags: 20-alpine3.15, 20.0.0-alpine3.15, 20-alpine3.15-full, 20-alpine3.15-jdk
+Architectures: amd64
+Directory: 20/jdk/alpine/3.15
+
+Tags: 20-alpine3.16, 20.0.0-alpine3.16, 20-alpine3.16-full, 20-alpine3.16-jdk
+Architectures: amd64
+Directory: 20/jdk/alpine/3.16
+
+Tags: 20-alpine3.17, 20.0.0-alpine3.17, 20-alpine3.17-full, 20-alpine3.17-jdk, 20-alpine, 20.0.0-alpine, 20-alpine-full, 20-alpine-jdk
+Architectures: amd64
+Directory: 20/jdk/alpine/3.17
