@@ -18,16 +18,10 @@ _resolve_external_pins() {
 		[ "$wc" -eq 1 ]
 
 		local file digest
-		if [ -n "${BASHBREW_ARCH:-}" ]; then
-			digest="$("$oiDir/.buildkit-build-contexts.sh" "$image")"
-			image="${digest#*=docker-image://}"
-			[ "$image" != "$digest" ]
-		else
-			file="$("$oiDir/.external-pins/file.sh" "$image")"
-			digest="$(< "$file")"
-			[ -n "$digest" ]
-			image+="@$digest"
-		fi
+		file="$("$oiDir/.external-pins/file.sh" "$image")"
+		digest="$(< "$file")"
+		[ -n "$digest" ]
+		image+="@$digest"
 
 		echo "$image"
 	done
