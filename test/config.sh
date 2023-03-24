@@ -265,6 +265,9 @@ imageTests+=(
 	[tomcat]='
 		tomcat-hello-world
 	'
+	[tox]='
+		tox-basics
+	'
 	[varnish]='
 		varnish
 	'
