@@ -1,42 +1,45 @@
-# this file is generated via https://github.com/docker-library/docker/blob/f23a2bea97f6d7ec563bc316302fb8edf620ec5b/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/docker/blob/3315a0f42f915e906ba57e8d3788b5a646c2c5fd/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <tianon@dockerproject.org> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/docker.git
+Builder: buildkit
 
-Tags: 23.0.1-cli, 23.0-cli, 23-cli, cli, 23.0.1-cli-alpine3.17
+Tags: 23.0.2-cli, 23.0-cli, 23-cli, cli, 23.0.2-cli-alpine3.17
 Architectures: amd64, arm64v8
-GitCommit: 561e8f7f0ace0ef7cf85d24ec50c77865c397109
+GitCommit: 47f0e5da49022e03f76c1bcaf911f640996d8288
 Directory: 23.0/cli
 
-Tags: 23.0.1-dind, 23.0-dind, 23-dind, dind, 23.0.1-dind-alpine3.17, 23.0.1, 23.0, 23, latest, 23.0.1-alpine3.17
+Tags: 23.0.2-dind, 23.0-dind, 23-dind, dind, 23.0.2-dind-alpine3.17, 23.0.2, 23.0, 23, latest, 23.0.2-alpine3.17
 Architectures: amd64, arm64v8
-GitCommit: 94129ecd12de7acbc9d5a15d25d535ee091770b1
+GitCommit: 47f0e5da49022e03f76c1bcaf911f640996d8288
 Directory: 23.0/dind
 
-Tags: 23.0.1-dind-rootless, 23.0-dind-rootless, 23-dind-rootless, dind-rootless
+Tags: 23.0.2-dind-rootless, 23.0-dind-rootless, 23-dind-rootless, dind-rootless
 Architectures: amd64, arm64v8
-GitCommit: 9a3b24b5b115d368c1aecf92dfadacc7cf49da12
+GitCommit: 47f0e5da49022e03f76c1bcaf911f640996d8288
 Directory: 23.0/dind-rootless
 
-Tags: 23.0.1-git, 23.0-git, 23-git, git
+Tags: 23.0.2-git, 23.0-git, 23-git, git
 Architectures: amd64, arm64v8
 GitCommit: 849b56e6c81dc509da780121352f844e8f26bb7a
 Directory: 23.0/git
 
-Tags: 23.0.1-windowsservercore-ltsc2022, 23.0-windowsservercore-ltsc2022, 23-windowsservercore-ltsc2022, windowsservercore-ltsc2022
-SharedTags: 23.0.1-windowsservercore, 23.0-windowsservercore, 23-windowsservercore, windowsservercore
+Tags: 23.0.2-windowsservercore-ltsc2022, 23.0-windowsservercore-ltsc2022, 23-windowsservercore-ltsc2022, windowsservercore-ltsc2022
+SharedTags: 23.0.2-windowsservercore, 23.0-windowsservercore, 23-windowsservercore, windowsservercore
 Architectures: windows-amd64
-GitCommit: 561e8f7f0ace0ef7cf85d24ec50c77865c397109
+GitCommit: 47f0e5da49022e03f76c1bcaf911f640996d8288
 Directory: 23.0/windows/windowsservercore-ltsc2022
 Constraints: windowsservercore-ltsc2022
+Builder: classic
 
-Tags: 23.0.1-windowsservercore-1809, 23.0-windowsservercore-1809, 23-windowsservercore-1809, windowsservercore-1809
-SharedTags: 23.0.1-windowsservercore, 23.0-windowsservercore, 23-windowsservercore, windowsservercore
+Tags: 23.0.2-windowsservercore-1809, 23.0-windowsservercore-1809, 23-windowsservercore-1809, windowsservercore-1809
+SharedTags: 23.0.2-windowsservercore, 23.0-windowsservercore, 23-windowsservercore, windowsservercore
 Architectures: windows-amd64
-GitCommit: 561e8f7f0ace0ef7cf85d24ec50c77865c397109
+GitCommit: 47f0e5da49022e03f76c1bcaf911f640996d8288
 Directory: 23.0/windows/windowsservercore-1809
 Constraints: windowsservercore-1809
+Builder: classic
 
 Tags: 20.10.23-cli, 20.10-cli, 20-cli, 20.10.23-cli-alpine3.17, 20.10.23, 20.10, 20, 20.10.23-alpine3.17
 Architectures: amd64, arm64v8
@@ -64,6 +67,7 @@ Architectures: windows-amd64
 GitCommit: 124e0288010e8b2774e56e58202a3941ac0234ff
 Directory: 20.10/windows/windowsservercore-ltsc2022
 Constraints: windowsservercore-ltsc2022
+Builder: classic
 
 Tags: 20.10.23-windowsservercore-1809, 20.10-windowsservercore-1809, 20-windowsservercore-1809
 SharedTags: 20.10.23-windowsservercore, 20.10-windowsservercore, 20-windowsservercore
@@ -71,3 +75,4 @@ Architectures: windows-amd64
 GitCommit: 124e0288010e8b2774e56e58202a3941ac0234ff
 Directory: 20.10/windows/windowsservercore-1809
 Constraints: windowsservercore-1809
+Builder: classic
