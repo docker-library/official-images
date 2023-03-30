@@ -2,36 +2,36 @@ Maintainers: David Barratt <dbarratt@wikimedia.org> (@davidbarratt),
              Kunal Mehta <legoktm@debian.org> (@legoktm),
              addshore <addshorewiki@gmail.com> (@addshore)
 GitRepo: https://github.com/wikimedia/mediawiki-docker.git
-GitCommit: afad53fa36180bf0821adc49d020ec40127bcdc0
+GitCommit: aa07f326d2719366125551213a2a9be8801aa773
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le
 
-Tags: 1.38.2, 1.38, stable, latest
+Tags: 1.39.2, 1.39, stable, lts, latest
+Directory: 1.39/apache
+
+Tags: 1.39.2-fpm, 1.39-fpm, stable-fpm, lts-fpm
+Directory: 1.39/fpm
+
+Tags: 1.39.2-fpm-alpine, 1.39-fpm-alpine, stable-fpm-alpine, lts-fpm-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le
+Directory: 1.39/fpm-alpine
+
+Tags: 1.38.5, 1.38, legacy
 Directory: 1.38/apache
 
-Tags: 1.38.2-fpm, 1.38-fpm, stable-fpm
+Tags: 1.38.5-fpm, 1.38-fpm, legacy-fpm
 Directory: 1.38/fpm
 
-Tags: 1.38.2-fpm-alpine, 1.38-fpm-alpine, stable-fpm-alpine
+Tags: 1.38.5-fpm-alpine, 1.38-fpm-alpine, legacy-fpm-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le
 Directory: 1.38/fpm-alpine
 
-Tags: 1.37.3, 1.37, legacy
-Directory: 1.37/apache
-
-Tags: 1.37.3-fpm, 1.37-fpm, legacy-fpm
-Directory: 1.37/fpm
-
-Tags: 1.37.3-fpm-alpine, 1.37-fpm-alpine, legacy-fpm-alpine
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le
-Directory: 1.37/fpm-alpine
-
-Tags: 1.35.7, 1.35, lts, legacylts
+Tags: 1.35.9, 1.35, legacylts
 Directory: 1.35/apache
 
-Tags: 1.35.7-fpm, 1.35-fpm, lts-fpm, legacylts-fpm
+Tags: 1.35.9-fpm, 1.35-fpm, legacylts-fpm
 Directory: 1.35/fpm
 
-Tags: 1.35.7-fpm-alpine, 1.35-fpm-alpine, lts-fpm-alpine, legacylts-fpm-alpine
+Tags: 1.35.9-fpm-alpine, 1.35-fpm-alpine, legacylts-fpm-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le
 Directory: 1.35/fpm-alpine
 

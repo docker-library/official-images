@@ -1,44 +1,54 @@
-# this file is generated via https://github.com/nginxinc/docker-nginx/blob/3e472aef70a13fd52ebac3a6b7902c7ea8e7f7ce/generate-stackbrew-library.sh
+# this file is generated via https://github.com/nginxinc/docker-nginx/blob/beac75efbd331ef54c5409c410fbb4832ba09a3d/generate-stackbrew-library.sh
 
 Maintainers: NGINX Docker Maintainers <docker-maint@nginx.com> (@nginxinc)
 GitRepo: https://github.com/nginxinc/docker-nginx.git
 
-Tags: 1.23.1, mainline, 1, 1.23, latest
+Tags: 1.23.4, mainline, 1, 1.23, latest, 1.23.4-bullseye, mainline-bullseye, 1-bullseye, 1.23-bullseye, bullseye
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: f3d86e99ba2db5d9918ede7b094fcad7b9128cd8
+GitCommit: 73a5acae6945b75b433cafd0c9318e4378e72cbb
 Directory: mainline/debian
 
-Tags: 1.23.1-perl, mainline-perl, 1-perl, 1.23-perl, perl
+Tags: 1.23.4-perl, mainline-perl, 1-perl, 1.23-perl, perl, 1.23.4-bullseye-perl, mainline-bullseye-perl, 1-bullseye-perl, 1.23-bullseye-perl, bullseye-perl
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: f3d86e99ba2db5d9918ede7b094fcad7b9128cd8
+GitCommit: 73a5acae6945b75b433cafd0c9318e4378e72cbb
 Directory: mainline/debian-perl
 
-Tags: 1.23.1-alpine, mainline-alpine, 1-alpine, 1.23-alpine, alpine
+Tags: 1.23.4-alpine, mainline-alpine, 1-alpine, 1.23-alpine, alpine, 1.23.4-alpine3.17, mainline-alpine3.17, 1-alpine3.17, 1.23-alpine3.17, alpine3.17
 Architectures: arm64v8, arm32v6, arm32v7, ppc64le, s390x, i386, amd64
-GitCommit: f3d86e99ba2db5d9918ede7b094fcad7b9128cd8
+GitCommit: 73a5acae6945b75b433cafd0c9318e4378e72cbb
 Directory: mainline/alpine
 
-Tags: 1.23.1-alpine-perl, mainline-alpine-perl, 1-alpine-perl, 1.23-alpine-perl, alpine-perl
+Tags: 1.23.4-alpine-perl, mainline-alpine-perl, 1-alpine-perl, 1.23-alpine-perl, alpine-perl, 1.23.4-alpine3.17-perl, mainline-alpine3.17-perl, 1-alpine3.17-perl, 1.23-alpine3.17-perl, alpine3.17-perl
 Architectures: arm64v8, arm32v6, arm32v7, ppc64le, s390x, i386, amd64
-GitCommit: f3d86e99ba2db5d9918ede7b094fcad7b9128cd8
+GitCommit: 73a5acae6945b75b433cafd0c9318e4378e72cbb
 Directory: mainline/alpine-perl
 
-Tags: 1.22.0, stable, 1.22
+Tags: 1.23.4-alpine-slim, mainline-alpine-slim, 1-alpine-slim, 1.23-alpine-slim, alpine-slim, 1.23.4-alpine3.17-slim, mainline-alpine3.17-slim, 1-alpine3.17-slim, 1.23-alpine3.17-slim, alpine3.17-slim
+Architectures: arm64v8, arm32v6, arm32v7, ppc64le, s390x, i386, amd64
+GitCommit: 73a5acae6945b75b433cafd0c9318e4378e72cbb
+Directory: mainline/alpine-slim
+
+Tags: 1.22.1, stable, 1.22, 1.22.1-bullseye, stable-bullseye, 1.22-bullseye
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: f3d86e99ba2db5d9918ede7b094fcad7b9128cd8
+GitCommit: 7f1ef355dea083761951da16ab02ea2c37addbdd
 Directory: stable/debian
 
-Tags: 1.22.0-perl, stable-perl, 1.22-perl
+Tags: 1.22.1-perl, stable-perl, 1.22-perl, 1.22.1-bullseye-perl, stable-bullseye-perl, 1.22-bullseye-perl
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: f3d86e99ba2db5d9918ede7b094fcad7b9128cd8
+GitCommit: 761fffeba0d867d6e80d38998073e0eaa456bb02
 Directory: stable/debian-perl
 
-Tags: 1.22.0-alpine, stable-alpine, 1.22-alpine
+Tags: 1.22.1-alpine, stable-alpine, 1.22-alpine, 1.22.1-alpine3.17, stable-alpine3.17, 1.22-alpine3.17
 Architectures: arm64v8, arm32v6, arm32v7, ppc64le, s390x, i386, amd64
-GitCommit: f3d86e99ba2db5d9918ede7b094fcad7b9128cd8
+GitCommit: 7f1ef355dea083761951da16ab02ea2c37addbdd
 Directory: stable/alpine
 
-Tags: 1.22.0-alpine-perl, stable-alpine-perl, 1.22-alpine-perl
+Tags: 1.22.1-alpine-perl, stable-alpine-perl, 1.22-alpine-perl, 1.22.1-alpine3.17-perl, stable-alpine3.17-perl, 1.22-alpine3.17-perl
 Architectures: arm64v8, arm32v6, arm32v7, ppc64le, s390x, i386, amd64
-GitCommit: f3d86e99ba2db5d9918ede7b094fcad7b9128cd8
+GitCommit: 7f1ef355dea083761951da16ab02ea2c37addbdd
 Directory: stable/alpine-perl
+
+Tags: 1.22.1-alpine-slim, stable-alpine-slim, 1.22-alpine-slim, 1.22.1-alpine3.17-slim, stable-alpine3.17-slim, 1.22-alpine3.17-slim
+Architectures: arm64v8, arm32v6, arm32v7, ppc64le, s390x, i386, amd64
+GitCommit: 7f1ef355dea083761951da16ab02ea2c37addbdd
+Directory: stable/alpine-slim
