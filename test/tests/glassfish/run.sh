@@ -23,5 +23,5 @@ waitForLogLine 60 '^\s+Eclipse GlassFish\s+[\.0-9]+';
 echo "GlassFish started as ${containerId}"
 
 docker stop "${containerId}" &
-waitForLogLine 30 '^\s+Completed shutdown of GlassFish runtime';
+waitForLogLine 30 '^\s*Completed shutdown of GlassFish runtime';
 echo "GlassFish stopped OK!"
