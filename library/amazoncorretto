@@ -8,152 +8,132 @@ Maintainers: Amazon Corretto Team <corretto-team@amazon.com> (@corretto),
              Victor Rudometov <vicrud@amazon.com> (@Rudometov)
 GitRepo: https://github.com/corretto/corretto-docker.git
 GitFetch: refs/heads/main
-GitCommit: 564b34f09563bf5ad704aff7db5eb9a403013cf2
+GitCommit: ef6f5a60332e35d72fee88ce86e195f62efa6ab4
 
-Tags: 8, 8u362, 8u362-al2, 8-al2-full, 8-al2-jdk, latest
+Tags: 8, 8u372, 8u372-al2, 8-al2-full, 8-al2-jdk, latest
 Architectures: amd64, arm64v8
 Directory: 8/jdk/al2
 
-Tags: 8-al2023, 8u362-al2023, 8-al2023-jdk
+Tags: 8-al2023, 8u372-al2023, 8-al2023-jdk
 Architectures: amd64, arm64v8
 Directory: 8/jdk/al2023
 
-Tags: 8-al2023-jre, 8u362-al2023-jre
+Tags: 8-al2023-jre, 8u372-al2023-jre
 Architectures: amd64, arm64v8
 Directory: 8/jdk/al2023
 
-Tags: 8-alpine3.14, 8u362-alpine3.14, 8-alpine3.14-full, 8-alpine3.14-jdk
-Architectures: amd64
+Tags: 8-alpine3.14, 8u372-alpine3.14, 8-alpine3.14-full, 8-alpine3.14-jdk
+Architectures: amd64, arm64v8
 Directory: 8/jdk/alpine/3.14
 
-Tags: 8-alpine3.14-jre, 8u362-alpine3.14-jre
-Architectures: amd64
+Tags: 8-alpine3.14-jre, 8u372-alpine3.14-jre
+Architectures: amd64, arm64v8
 Directory: 8/jre/alpine/3.14
 
-Tags: 8-alpine3.15, 8u362-alpine3.15, 8-alpine3.15-full, 8-alpine3.15-jdk
-Architectures: amd64
+Tags: 8-alpine3.15, 8u372-alpine3.15, 8-alpine3.15-full, 8-alpine3.15-jdk
+Architectures: amd64, arm64v8
 Directory: 8/jdk/alpine/3.15
 
-Tags: 8-alpine3.15-jre, 8u362-alpine3.15-jre
-Architectures: amd64
+Tags: 8-alpine3.15-jre, 8u372-alpine3.15-jre
+Architectures: amd64, arm64v8
 Directory: 8/jre/alpine/3.15
 
-Tags: 8-alpine3.16, 8u362-alpine3.16, 8-alpine3.16-full, 8-alpine3.16-jdk
-Architectures: amd64
+Tags: 8-alpine3.16, 8u372-alpine3.16, 8-alpine3.16-full, 8-alpine3.16-jdk
+Architectures: amd64, arm64v8
 Directory: 8/jdk/alpine/3.16
 
-Tags: 8-alpine3.16-jre, 8u362-alpine3.16-jre
-Architectures: amd64
+Tags: 8-alpine3.16-jre, 8u372-alpine3.16-jre
+Architectures: amd64, arm64v8
 Directory: 8/jre/alpine/3.16
 
-Tags: 8-alpine3.17, 8u362-alpine3.17, 8-alpine3.17-full, 8-alpine3.17-jdk, 8-alpine, 8u362-alpine, 8-alpine-full, 8-alpine-jdk
-Architectures: amd64
+Tags: 8-alpine3.17, 8u372-alpine3.17, 8-alpine3.17-full, 8-alpine3.17-jdk, 8-alpine, 8u372-alpine, 8-alpine-full, 8-alpine-jdk
+Architectures: amd64, arm64v8
 Directory: 8/jdk/alpine/3.17
 
-Tags: 8-alpine3.17-jre, 8u362-alpine3.17-jre, 8-alpine-jre, 8u362-alpine-jre
-Architectures: amd64
+Tags: 8-alpine3.17-jre, 8u372-alpine3.17-jre, 8-alpine-jre, 8u372-alpine-jre
+Architectures: amd64, arm64v8
 Directory: 8/jre/alpine/3.17
 
-Tags: 11, 11.0.18, 11.0.18-al2, 11-al2-full, 11-al2-jdk
+Tags: 11, 11.0.19, 11.0.19-al2, 11-al2-full, 11-al2-jdk
 Architectures: amd64, arm64v8
 Directory: 11/jdk/al2
 
-Tags: 11-al2023, 11.0.18-al2023, 11-al2023-jdk
+Tags: 11-al2023, 11.0.19-al2023, 11-al2023-jdk
 Architectures: amd64, arm64v8
 Directory: 11/jdk/al2023
 
-Tags: 11-al2023-headless, 11.0.18-al2023-headless
+Tags: 11-al2023-headless, 11.0.19-al2023-headless
 Architectures: amd64, arm64v8
 Directory: 11/headless/al2023
 
-Tags: 11-al2023-headful, 11.0.18-al2023-headful
+Tags: 11-al2023-headful, 11.0.19-al2023-headful
 Architectures: amd64, arm64v8
 Directory: 11/headful/al2023
 
-Tags: 11-alpine3.14, 11.0.18-alpine3.14, 11-alpine3.14-full, 11-alpine3.14-jdk
-Architectures: amd64
+Tags: 11-alpine3.14, 11.0.19-alpine3.14, 11-alpine3.14-full, 11-alpine3.14-jdk
+Architectures: amd64, arm64v8
 Directory: 11/jdk/alpine/3.14
 
-Tags: 11-alpine3.15, 11.0.18-alpine3.15, 11-alpine3.15-full, 11-alpine3.15-jdk
-Architectures: amd64
+Tags: 11-alpine3.15, 11.0.19-alpine3.15, 11-alpine3.15-full, 11-alpine3.15-jdk
+Architectures: amd64, arm64v8
 Directory: 11/jdk/alpine/3.15
 
-Tags: 11-alpine3.16, 11.0.18-alpine3.16, 11-alpine3.16-full, 11-alpine3.16-jdk
-Architectures: amd64
+Tags: 11-alpine3.16, 11.0.19-alpine3.16, 11-alpine3.16-full, 11-alpine3.16-jdk
+Architectures: amd64, arm64v8
 Directory: 11/jdk/alpine/3.16
 
-Tags: 11-alpine3.17, 11.0.18-alpine3.17, 11-alpine3.17-full, 11-alpine3.17-jdk, 11-alpine, 11.0.18-alpine, 11-alpine-full, 11-alpine-jdk
-Architectures: amd64
+Tags: 11-alpine3.17, 11.0.19-alpine3.17, 11-alpine3.17-full, 11-alpine3.17-jdk, 11-alpine, 11.0.19-alpine, 11-alpine-full, 11-alpine-jdk
+Architectures: amd64, arm64v8
 Directory: 11/jdk/alpine/3.17
 
-Tags: 17, 17.0.6, 17.0.6-al2, 17-al2-full, 17-al2-jdk
+Tags: 17, 17.0.7, 17.0.7-al2, 17-al2-full, 17-al2-jdk
 Architectures: amd64, arm64v8
 Directory: 17/jdk/al2
 
-Tags: 17-al2023, 17.0.6-al2023, 17-al2023-jdk
+Tags: 17-al2023, 17.0.7-al2023, 17-al2023-jdk
 Architectures: amd64, arm64v8
 Directory: 17/jdk/al2023
 
-Tags: 17-al2023-headless, 17.0.6-al2023-headless
+Tags: 17-al2023-headless, 17.0.7-al2023-headless
 Architectures: amd64, arm64v8
 Directory: 17/headless/al2023
 
-Tags: 17-al2023-headful, 17.0.6-al2023-headful
+Tags: 17-al2023-headful, 17.0.7-al2023-headful
 Architectures: amd64, arm64v8
 Directory: 17/headful/al2023
 
-Tags: 17-alpine3.14, 17.0.6-alpine3.14, 17-alpine3.14-full, 17-alpine3.14-jdk
-Architectures: amd64
+Tags: 17-alpine3.14, 17.0.7-alpine3.14, 17-alpine3.14-full, 17-alpine3.14-jdk
+Architectures: amd64, arm64v8
 Directory: 17/jdk/alpine/3.14
 
-Tags: 17-alpine3.15, 17.0.6-alpine3.15, 17-alpine3.15-full, 17-alpine3.15-jdk
-Architectures: amd64
+Tags: 17-alpine3.15, 17.0.7-alpine3.15, 17-alpine3.15-full, 17-alpine3.15-jdk
+Architectures: amd64, arm64v8
 Directory: 17/jdk/alpine/3.15
 
-Tags: 17-alpine3.16, 17.0.6-alpine3.16, 17-alpine3.16-full, 17-alpine3.16-jdk
-Architectures: amd64
+Tags: 17-alpine3.16, 17.0.7-alpine3.16, 17-alpine3.16-full, 17-alpine3.16-jdk
+Architectures: amd64, arm64v8
 Directory: 17/jdk/alpine/3.16
 
-Tags: 17-alpine3.17, 17.0.6-alpine3.17, 17-alpine3.17-full, 17-alpine3.17-jdk, 17-alpine, 17.0.6-alpine, 17-alpine-full, 17-alpine-jdk
-Architectures: amd64
+Tags: 17-alpine3.17, 17.0.7-alpine3.17, 17-alpine3.17-full, 17-alpine3.17-jdk, 17-alpine, 17.0.7-alpine, 17-alpine-full, 17-alpine-jdk
+Architectures: amd64, arm64v8
 Directory: 17/jdk/alpine/3.17
 
-Tags: 19, 19.0.2, 19.0.2-al2, 19-al2-full, 19-al2-jdk
-Architectures: amd64, arm64v8
-Directory: 19/jdk/al2
-
-Tags: 19-alpine3.14, 19.0.2-alpine3.14, 19-alpine3.14-full, 19-alpine3.14-jdk
-Architectures: amd64
-Directory: 19/jdk/alpine/3.14
-
-Tags: 19-alpine3.15, 19.0.2-alpine3.15, 19-alpine3.15-full, 19-alpine3.15-jdk
-Architectures: amd64
-Directory: 19/jdk/alpine/3.15
-
-Tags: 19-alpine3.16, 19.0.2-alpine3.16, 19-alpine3.16-full, 19-alpine3.16-jdk
-Architectures: amd64
-Directory: 19/jdk/alpine/3.16
-
-Tags: 19-alpine3.17, 19.0.2-alpine3.17, 19-alpine3.17-full, 19-alpine3.17-jdk, 19-alpine, 19.0.2-alpine, 19-alpine-full, 19-alpine-jdk
-Architectures: amd64
-Directory: 19/jdk/alpine/3.17
-
-Tags: 20, 20.0.0, 20.0.0-al2, 20-al2-full, 20-al2-jdk
+Tags: 20, 20.0.1, 20.0.1-al2, 20-al2-full, 20-al2-jdk
 Architectures: amd64, arm64v8
 Directory: 20/jdk/al2
 
-Tags: 20-alpine3.14, 20.0.0-alpine3.14, 20-alpine3.14-full, 20-alpine3.14-jdk
-Architectures: amd64
+Tags: 20-alpine3.14, 20.0.1-alpine3.14, 20-alpine3.14-full, 20-alpine3.14-jdk
+Architectures: amd64, arm64v8
 Directory: 20/jdk/alpine/3.14
 
-Tags: 20-alpine3.15, 20.0.0-alpine3.15, 20-alpine3.15-full, 20-alpine3.15-jdk
-Architectures: amd64
+Tags: 20-alpine3.15, 20.0.1-alpine3.15, 20-alpine3.15-full, 20-alpine3.15-jdk
+Architectures: amd64, arm64v8
 Directory: 20/jdk/alpine/3.15
 
-Tags: 20-alpine3.16, 20.0.0-alpine3.16, 20-alpine3.16-full, 20-alpine3.16-jdk
-Architectures: amd64
+Tags: 20-alpine3.16, 20.0.1-alpine3.16, 20-alpine3.16-full, 20-alpine3.16-jdk
+Architectures: amd64, arm64v8
 Directory: 20/jdk/alpine/3.16
 
-Tags: 20-alpine3.17, 20.0.0-alpine3.17, 20-alpine3.17-full, 20-alpine3.17-jdk, 20-alpine, 20.0.0-alpine, 20-alpine-full, 20-alpine-jdk
-Architectures: amd64
+Tags: 20-alpine3.17, 20.0.1-alpine3.17, 20-alpine3.17-full, 20-alpine3.17-jdk, 20-alpine, 20.0.1-alpine, 20-alpine-full, 20-alpine-jdk
+Architectures: amd64, arm64v8
 Directory: 20/jdk/alpine/3.17
