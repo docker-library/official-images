@@ -1,4 +1,4 @@
-# this file is generated via https://github.com/docker-library/docker/blob/3315a0f42f915e906ba57e8d3788b5a646c2c5fd/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/docker/blob/a3ca225e9c0e568cf87a7b60c951b939c3964c91/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <tianon@dockerproject.org> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
@@ -12,7 +12,7 @@ Directory: 24-rc/cli
 
 Tags: 24.0.0-rc.4-dind, 24-rc-dind, rc-dind, 24.0.0-rc.4-dind-alpine3.18, 24.0.0-rc.4, 24-rc, rc, 24.0.0-rc.4-alpine3.18
 Architectures: amd64, arm64v8
-GitCommit: 38d8c1da029024c9f6cbfb306bdaf8461b3b5914
+GitCommit: a3ca225e9c0e568cf87a7b60c951b939c3964c91
 Directory: 24-rc/dind
 
 Tags: 24.0.0-rc.4-dind-rootless, 24-rc-dind-rootless, rc-dind-rootless
@@ -48,7 +48,7 @@ Directory: 23.0/cli
 
 Tags: 23.0.6-dind, 23.0-dind, 23-dind, dind, 23.0.6-dind-alpine3.18, 23.0.6, 23.0, 23, latest, 23.0.6-alpine3.18
 Architectures: amd64, arm64v8
-GitCommit: 3f698e446071ef052c3bd70fe0322493dbfd5103
+GitCommit: a3ca225e9c0e568cf87a7b60c951b939c3964c91
 Directory: 23.0/dind
 
 Tags: 23.0.6-dind-rootless, 23.0-dind-rootless, 23-dind-rootless, dind-rootless
@@ -74,41 +74,5 @@ SharedTags: 23.0.6-windowsservercore, 23.0-windowsservercore, 23-windowsserverco
 Architectures: windows-amd64
 GitCommit: 3f698e446071ef052c3bd70fe0322493dbfd5103
 Directory: 23.0/windows/windowsservercore-1809
-Constraints: windowsservercore-1809
-Builder: classic
-
-Tags: 20.10.24-cli, 20.10-cli, 20-cli, 20.10.24-cli-alpine3.18, 20.10.24, 20.10, 20, 20.10.24-alpine3.18
-Architectures: amd64, arm64v8
-GitCommit: 1e7a4c385eee982a26601ba6279ae6e6b52ea8d8
-Directory: 20.10/cli
-
-Tags: 20.10.24-dind, 20.10-dind, 20-dind, 20.10.24-dind-alpine3.18
-Architectures: amd64, arm64v8
-GitCommit: d71ed6659319c2608be2290c581787d2d4779ef2
-Directory: 20.10/dind
-
-Tags: 20.10.24-dind-rootless, 20.10-dind-rootless, 20-dind-rootless
-Architectures: amd64, arm64v8
-GitCommit: d71ed6659319c2608be2290c581787d2d4779ef2
-Directory: 20.10/dind-rootless
-
-Tags: 20.10.24-git, 20.10-git, 20-git
-Architectures: amd64, arm64v8
-GitCommit: f23a2bea97f6d7ec563bc316302fb8edf620ec5b
-Directory: 20.10/git
-
-Tags: 20.10.24-windowsservercore-ltsc2022, 20.10-windowsservercore-ltsc2022, 20-windowsservercore-ltsc2022
-SharedTags: 20.10.24-windowsservercore, 20.10-windowsservercore, 20-windowsservercore
-Architectures: windows-amd64
-GitCommit: 7bdd5e0d531739e1e329c939bd6d24baaffd4570
-Directory: 20.10/windows/windowsservercore-ltsc2022
-Constraints: windowsservercore-ltsc2022
-Builder: classic
-
-Tags: 20.10.24-windowsservercore-1809, 20.10-windowsservercore-1809, 20-windowsservercore-1809
-SharedTags: 20.10.24-windowsservercore, 20.10-windowsservercore, 20-windowsservercore
-Architectures: windows-amd64
-GitCommit: 7bdd5e0d531739e1e329c939bd6d24baaffd4570
-Directory: 20.10/windows/windowsservercore-1809
 Constraints: windowsservercore-1809
 Builder: classic
