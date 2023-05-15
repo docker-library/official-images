@@ -7,28 +7,28 @@ GitCommit: fa42be9027eccb928a1f0f43d95ffd9a45d36737
 Builder: oci-import
 File: index.json
 
-# 20230308 (bionic)
-Tags: 18.04, bionic-20230308, bionic
+# 20230412 (bionic)
+Tags: 18.04, bionic-20230412, bionic
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: oci
-# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-bionic-amd64-20230308-0bf56b6b
-amd64-GitFetch: refs/tags/dist-bionic-amd64-20230308-0bf56b6b
-amd64-GitCommit: 0bf56b6beeb478aee688350c27d41e732048c9af
-# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-bionic-arm32v7-20230308-dd17a08c
-arm32v7-GitFetch: refs/tags/dist-bionic-arm32v7-20230308-dd17a08c
-arm32v7-GitCommit: dd17a08c5f8b6f710f7568351c0b3b8d346a2ad3
-# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-bionic-arm64v8-20230308-2358b6c1
-arm64v8-GitFetch: refs/tags/dist-bionic-arm64v8-20230308-2358b6c1
-arm64v8-GitCommit: 2358b6c129d88ba1791e88949535f7f47acbf98f
-# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-bionic-i386-20230308-a404c826
-i386-GitFetch: refs/tags/dist-bionic-i386-20230308-a404c826
-i386-GitCommit: a404c82694f4d3ec7b55facdc299300b286b7427
-# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-bionic-ppc64le-20230308-378836f7
-ppc64le-GitFetch: refs/tags/dist-bionic-ppc64le-20230308-378836f7
-ppc64le-GitCommit: 378836f76b33bb133cafb73be9bc0bf2862a5648
-# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-bionic-s390x-20230308-87700a2b
-s390x-GitFetch: refs/tags/dist-bionic-s390x-20230308-87700a2b
-s390x-GitCommit: 87700a2bd7d30749e226f3649e24329f10b5437d
+# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-bionic-amd64-20230412-46786f36
+amd64-GitFetch: refs/tags/dist-bionic-amd64-20230412-46786f36
+amd64-GitCommit: 46786f36bc92dd9662f9a1e7530b4859f6cd4625
+# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-bionic-arm32v7-20230412-3c33434d
+arm32v7-GitFetch: refs/tags/dist-bionic-arm32v7-20230412-3c33434d
+arm32v7-GitCommit: 3c33434d780b56d39b5c314207b94c43857be707
+# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-bionic-arm64v8-20230412-8927f04f
+arm64v8-GitFetch: refs/tags/dist-bionic-arm64v8-20230412-8927f04f
+arm64v8-GitCommit: 8927f04f362457a2d2ceb2dca1fef543de78b6c7
+# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-bionic-i386-20230412-4cd9d2cf
+i386-GitFetch: refs/tags/dist-bionic-i386-20230412-4cd9d2cf
+i386-GitCommit: 4cd9d2cf18b132f8fd17289dc2d2d80db9a0399f
+# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-bionic-ppc64le-20230412-10130918
+ppc64le-GitFetch: refs/tags/dist-bionic-ppc64le-20230412-10130918
+ppc64le-GitCommit: 101309186a4a3066f37a0eafe95e94408671837f
+# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-bionic-s390x-20230412-3ec8bb2c
+s390x-GitFetch: refs/tags/dist-bionic-s390x-20230412-3ec8bb2c
+s390x-GitCommit: 3ec8bb2c16bfe8b2986524a601196d2f8902e08b
 
 # 20230412 (focal)
 Tags: 20.04, focal-20230412, focal
@@ -109,3 +109,23 @@ ppc64le-GitCommit: 5c0e416c4ad23b433bbb3a3581ef7ad7c8c84fe4
 # https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-lunar-s390x-20230420-139ea5e6
 s390x-GitFetch: refs/tags/dist-lunar-s390x-20230420-139ea5e6
 s390x-GitCommit: 139ea5e6224677729e61f92722468e16dee16900
+
+# 20230511.1 (mantic)
+Tags: 23.10, mantic-20230511.1, mantic, devel
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+Directory: oci
+# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-mantic-amd64-20230511.1-82ff77c8
+amd64-GitFetch: refs/tags/dist-mantic-amd64-20230511.1-82ff77c8
+amd64-GitCommit: 82ff77c875ff4cf8f6b008afec7747175459e253
+# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-mantic-arm32v7-20230511.1-fdc4c852
+arm32v7-GitFetch: refs/tags/dist-mantic-arm32v7-20230511.1-fdc4c852
+arm32v7-GitCommit: fdc4c852cbd29faf9ce5a272795642cad0959ff9
+# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-mantic-arm64v8-20230511.1-2d3238c6
+arm64v8-GitFetch: refs/tags/dist-mantic-arm64v8-20230511.1-2d3238c6
+arm64v8-GitCommit: 2d3238c600bf6e1b8b81bf44a9878c3e278c30d1
+# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-mantic-ppc64le-20230511.1-7f22f3be
+ppc64le-GitFetch: refs/tags/dist-mantic-ppc64le-20230511.1-7f22f3be
+ppc64le-GitCommit: 7f22f3be4e8a5858385b84c90561f392494773c2
+# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-mantic-s390x-20230511.1-68c40621
+s390x-GitFetch: refs/tags/dist-mantic-s390x-20230511.1-68c40621
+s390x-GitCommit: 68c40621da660aee1e4e91be2283babab674ac96
