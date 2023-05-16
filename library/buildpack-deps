@@ -6,7 +6,7 @@ GitRepo: https://github.com/docker-library/buildpack-deps.git
 
 Tags: bookworm-curl, testing-curl
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 93d6db0797f91ab674535553b7e0e762941a02d0
+GitCommit: 3e18c3af1f5dce6a48abf036857f9097b6bd79cc
 Directory: debian/bookworm/curl
 
 Tags: bookworm-scm, testing-scm
@@ -51,7 +51,7 @@ Directory: debian/buster
 
 Tags: sid-curl, unstable-curl
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, riscv64, s390x
-GitCommit: 93d6db0797f91ab674535553b7e0e762941a02d0
+GitCommit: 3e18c3af1f5dce6a48abf036857f9097b6bd79cc
 Directory: debian/sid/curl
 
 Tags: sid-scm, unstable-scm
@@ -111,7 +111,7 @@ Directory: ubuntu/jammy
 
 Tags: kinetic-curl, 22.10-curl
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 93d6db0797f91ab674535553b7e0e762941a02d0
+GitCommit: 3e18c3af1f5dce6a48abf036857f9097b6bd79cc
 Directory: ubuntu/kinetic/curl
 
 Tags: kinetic-scm, 22.10-scm
@@ -126,7 +126,7 @@ Directory: ubuntu/kinetic
 
 Tags: lunar-curl, 23.04-curl
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 93d6db0797f91ab674535553b7e0e762941a02d0
+GitCommit: 3e18c3af1f5dce6a48abf036857f9097b6bd79cc
 Directory: ubuntu/lunar/curl
 
 Tags: lunar-scm, 23.04-scm
@@ -138,3 +138,18 @@ Tags: lunar, 23.04
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
 GitCommit: 31e15bc4a2352c20998e5da6bd8aaa727fd19d06
 Directory: ubuntu/lunar
+
+Tags: mantic-curl, 23.10-curl
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: ba367c3a52946cee45274b62f7f8b27e07807289
+Directory: ubuntu/mantic/curl
+
+Tags: mantic-scm, 23.10-scm
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: ba367c3a52946cee45274b62f7f8b27e07807289
+Directory: ubuntu/mantic/scm
+
+Tags: mantic, 23.10
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: ba367c3a52946cee45274b62f7f8b27e07807289
+Directory: ubuntu/mantic
