@@ -3,11 +3,41 @@
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon)
 GitRepo: https://github.com/tianon/docker-brew-cirros.git
 GitFetch: refs/heads/dist
-GitCommit: 84bfc9d0e4cc631d043410d602bf5f8876ed6575
-Architectures: amd64, arm32v5, arm64v8, ppc64le
+GitCommit: e8833253f108046f977fbcecd7f02170bd20d357
+Architectures: amd64, arm32v7, arm64v8, ppc64le
 amd64-Directory: arches/amd64
-arm32v5-Directory: arches/arm32v5
+arm32v7-Directory: arches/arm32v7
 arm64v8-Directory: arches/arm64v8
 ppc64le-Directory: arches/ppc64le
 
-Tags: 0.6.1, 0.6, 0, latest
+Tags: 0.6.2, 0.6, 0, latest
+
+# (hopefully) temporary backfill:
+
+Tags: 0.6.1
+GitFetch: refs/heads/dist-0.6.1
+GitCommit: ddf8fe17964242f32980c92879414cf74f8cbbff
+Architectures: amd64, arm32v7, arm64v8, ppc64le
+amd64-Directory: arches/amd64
+arm32v7-Directory: arches/arm32v7
+arm64v8-Directory: arches/arm64v8
+ppc64le-Directory: arches/ppc64le
+
+Tags: 0.6.0
+GitFetch: refs/heads/dist-0.6.0
+GitCommit: 9e8006aaa29017ce2ee85e5373772f39f1f10ac9
+Architectures: amd64, arm32v7, arm64v8, ppc64le
+amd64-Directory: arches/amd64
+arm32v7-Directory: arches/arm32v7
+arm64v8-Directory: arches/arm64v8
+ppc64le-Directory: arches/ppc64le
+
+Tags: 0.5.3, 0.5
+GitFetch: refs/heads/dist-0.5.3
+GitCommit: 36e8b0fd2c270f14631d1767f668a4db83890efb
+Architectures: amd64, arm32v5, arm64v8, i386, ppc64le
+amd64-Directory: arches/amd64
+arm32v5-Directory: arches/arm32v5
+arm64v8-Directory: arches/arm64v8
+i386-Directory: arches/i386
+ppc64le-Directory: arches/ppc64le
