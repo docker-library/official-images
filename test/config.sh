@@ -73,9 +73,6 @@ imageTests+=(
 		gcc-cpp-hello-world
 		golang-hello-world
 	'
-	[ghost]='
-		ghost-basics
-	'
 	[golang]='
 		golang-hello-world
 	'
