@@ -76,6 +76,9 @@ imageTests+=(
 	[ghost]='
 		ghost-basics
 	'
+	[glassfish]='
+		glassfish
+	'
 	[golang]='
 		golang-hello-world
 	'
