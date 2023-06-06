@@ -1,99 +1,64 @@
-# this file is generated via https://github.com/docker-library/julia/blob/2c7701975e4779324a0554216ef7a496619e4e07/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/julia/blob/e7b78511fdae10bb6bb32737be3e8503c8a1b87a/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/julia.git
 
-Tags: 1.9.0-rc1-bullseye, 1.9-rc-bullseye, rc-bullseye
-SharedTags: 1.9.0-rc1, 1.9-rc, rc
+Tags: 1.9.0-bullseye, 1.9-bullseye, 1-bullseye, bullseye
+SharedTags: 1.9.0, 1.9, 1, latest
 Architectures: amd64, arm64v8, i386, ppc64le
-GitCommit: 27810a26dadc68dc659819fb93204833671c7b0e
-Directory: 1.9-rc/bullseye
+GitCommit: e7b78511fdae10bb6bb32737be3e8503c8a1b87a
+Directory: 1.9/bullseye
 
-Tags: 1.9.0-rc1-buster, 1.9-rc-buster, rc-buster
+Tags: 1.9.0-buster, 1.9-buster, 1-buster, buster
 Architectures: amd64, arm64v8, i386
-GitCommit: 27810a26dadc68dc659819fb93204833671c7b0e
-Directory: 1.9-rc/buster
+GitCommit: e7b78511fdae10bb6bb32737be3e8503c8a1b87a
+Directory: 1.9/buster
 
-Tags: 1.9.0-rc1-alpine3.17, 1.9-rc-alpine3.17, rc-alpine3.17, 1.9.0-rc1-alpine, 1.9-rc-alpine, rc-alpine
+Tags: 1.9.0-alpine3.18, 1.9-alpine3.18, 1-alpine3.18, alpine3.18, 1.9.0-alpine, 1.9-alpine, 1-alpine, alpine
 Architectures: amd64
-GitCommit: 27810a26dadc68dc659819fb93204833671c7b0e
-Directory: 1.9-rc/alpine3.17
+GitCommit: 1486d832edaa15eee0703c413aace5d70efd8704
+Directory: 1.9/alpine3.18
 
-Tags: 1.9.0-rc1-alpine3.16, 1.9-rc-alpine3.16, rc-alpine3.16
+Tags: 1.9.0-alpine3.17, 1.9-alpine3.17, 1-alpine3.17, alpine3.17
 Architectures: amd64
-GitCommit: 27810a26dadc68dc659819fb93204833671c7b0e
-Directory: 1.9-rc/alpine3.16
+GitCommit: e7b78511fdae10bb6bb32737be3e8503c8a1b87a
+Directory: 1.9/alpine3.17
 
-Tags: 1.9.0-rc1-windowsservercore-ltsc2022, 1.9-rc-windowsservercore-ltsc2022, rc-windowsservercore-ltsc2022
-SharedTags: 1.9.0-rc1, 1.9-rc, rc, 1.9.0-rc1-windowsservercore, 1.9-rc-windowsservercore, rc-windowsservercore
+Tags: 1.9.0-windowsservercore-ltsc2022, 1.9-windowsservercore-ltsc2022, 1-windowsservercore-ltsc2022, windowsservercore-ltsc2022
+SharedTags: 1.9.0, 1.9, 1, latest, 1.9.0-windowsservercore, 1.9-windowsservercore, 1-windowsservercore, windowsservercore
 Architectures: windows-amd64
-GitCommit: 27810a26dadc68dc659819fb93204833671c7b0e
-Directory: 1.9-rc/windows/windowsservercore-ltsc2022
+GitCommit: e7b78511fdae10bb6bb32737be3e8503c8a1b87a
+Directory: 1.9/windows/windowsservercore-ltsc2022
 Constraints: windowsservercore-ltsc2022
 
-Tags: 1.9.0-rc1-windowsservercore-1809, 1.9-rc-windowsservercore-1809, rc-windowsservercore-1809
-SharedTags: 1.9.0-rc1, 1.9-rc, rc, 1.9.0-rc1-windowsservercore, 1.9-rc-windowsservercore, rc-windowsservercore
+Tags: 1.9.0-windowsservercore-1809, 1.9-windowsservercore-1809, 1-windowsservercore-1809, windowsservercore-1809
+SharedTags: 1.9.0, 1.9, 1, latest, 1.9.0-windowsservercore, 1.9-windowsservercore, 1-windowsservercore, windowsservercore
 Architectures: windows-amd64
-GitCommit: 27810a26dadc68dc659819fb93204833671c7b0e
-Directory: 1.9-rc/windows/windowsservercore-1809
-Constraints: windowsservercore-1809
-
-Tags: 1.8.5-bullseye, 1.8-bullseye, 1-bullseye, bullseye
-SharedTags: 1.8.5, 1.8, 1, latest
-Architectures: amd64, arm64v8, i386, ppc64le
-GitCommit: ed8e24a5db952a25f517a900830cdac481e3fd44
-Directory: 1.8/bullseye
-
-Tags: 1.8.5-buster, 1.8-buster, 1-buster, buster
-Architectures: amd64, arm64v8, i386
-GitCommit: ed8e24a5db952a25f517a900830cdac481e3fd44
-Directory: 1.8/buster
-
-Tags: 1.8.5-alpine3.17, 1.8-alpine3.17, 1-alpine3.17, alpine3.17, 1.8.5-alpine, 1.8-alpine, 1-alpine, alpine
-Architectures: amd64
-GitCommit: 1f6b00c80fa154c1a93ca25bc51e5a70f081530c
-Directory: 1.8/alpine3.17
-
-Tags: 1.8.5-alpine3.16, 1.8-alpine3.16, 1-alpine3.16, alpine3.16
-Architectures: amd64
-GitCommit: 1f6b00c80fa154c1a93ca25bc51e5a70f081530c
-Directory: 1.8/alpine3.16
-
-Tags: 1.8.5-windowsservercore-ltsc2022, 1.8-windowsservercore-ltsc2022, 1-windowsservercore-ltsc2022, windowsservercore-ltsc2022
-SharedTags: 1.8.5, 1.8, 1, latest, 1.8.5-windowsservercore, 1.8-windowsservercore, 1-windowsservercore, windowsservercore
-Architectures: windows-amd64
-GitCommit: 1f6b00c80fa154c1a93ca25bc51e5a70f081530c
-Directory: 1.8/windows/windowsservercore-ltsc2022
-Constraints: windowsservercore-ltsc2022
-
-Tags: 1.8.5-windowsservercore-1809, 1.8-windowsservercore-1809, 1-windowsservercore-1809, windowsservercore-1809
-SharedTags: 1.8.5, 1.8, 1, latest, 1.8.5-windowsservercore, 1.8-windowsservercore, 1-windowsservercore, windowsservercore
-Architectures: windows-amd64
-GitCommit: 1f6b00c80fa154c1a93ca25bc51e5a70f081530c
-Directory: 1.8/windows/windowsservercore-1809
+GitCommit: e7b78511fdae10bb6bb32737be3e8503c8a1b87a
+Directory: 1.9/windows/windowsservercore-1809
 Constraints: windowsservercore-1809
 
 Tags: 1.6.7-bullseye, 1.6-bullseye
 SharedTags: 1.6.7, 1.6
 Architectures: amd64, arm32v7, arm64v8, i386
-GitCommit: a7e28ee0b611690e7c81b37edbc04c64e38c9aa8
+GitCommit: 67a1817cca70fb1a601ecb38517c44e1e9982292
 Directory: 1.6/bullseye
 
 Tags: 1.6.7-buster, 1.6-buster
 Architectures: amd64, arm32v7, arm64v8, i386
-GitCommit: a7e28ee0b611690e7c81b37edbc04c64e38c9aa8
+GitCommit: 67a1817cca70fb1a601ecb38517c44e1e9982292
 Directory: 1.6/buster
 
-Tags: 1.6.7-alpine3.17, 1.6-alpine3.17, 1.6.7-alpine, 1.6-alpine
+Tags: 1.6.7-alpine3.18, 1.6-alpine3.18, 1.6.7-alpine, 1.6-alpine
 Architectures: amd64
-GitCommit: 1d8e89b70dd373eceea2879c87e03cc20cafec1a
-Directory: 1.6/alpine3.17
+GitCommit: 1486d832edaa15eee0703c413aace5d70efd8704
+Directory: 1.6/alpine3.18
 
-Tags: 1.6.7-alpine3.16, 1.6-alpine3.16
+Tags: 1.6.7-alpine3.17, 1.6-alpine3.17
 Architectures: amd64
-GitCommit: a7e28ee0b611690e7c81b37edbc04c64e38c9aa8
-Directory: 1.6/alpine3.16
+GitCommit: 67a1817cca70fb1a601ecb38517c44e1e9982292
+Directory: 1.6/alpine3.17
 
 Tags: 1.6.7-windowsservercore-ltsc2022, 1.6-windowsservercore-ltsc2022
 SharedTags: 1.6.7, 1.6, 1.6.7-windowsservercore, 1.6-windowsservercore

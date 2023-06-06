@@ -1,38 +1,98 @@
-# this file is generated via https://github.com/erlef/docker-elixir/blob/450c4ddf500c6b59bdcf3b3689e4f071c53c5fa5/generate-stackbrew-library.sh
+# this file is generated via https://github.com/erlef/docker-elixir/blob/d3d6c1b3294454ca2977d637bd5307bac319ac3d/generate-stackbrew-library.sh
 
 Maintainers: . <c0b@users.noreply.github.com> (@c0b),
              Tristan Sloughter <t@crashfast.com> (@tsloughter)
 GitRepo: https://github.com/erlef/docker-elixir.git
 
-Tags: 1.14.3, 1.14, latest
+Tags: 1.15.0-rc.1, 1.15.0-rc, 1.15
 Architectures: amd64, arm32v7, arm64v8, i386, s390x, ppc64le
-GitCommit: b108e93389b820554ad9f1e8e07001ed8186d230
+GitCommit: 53bfba817d03abb306b454e2a78ea6b0b133ac25
+Directory: 1.15
+
+Tags: 1.15.0-rc.1-slim, 1.15.0-rc-slim, 1.15-slim
+Architectures: amd64, arm32v7, arm64v8, i386, s390x, ppc64le
+GitCommit: 53bfba817d03abb306b454e2a78ea6b0b133ac25
+Directory: 1.15/slim
+
+Tags: 1.15.0-rc.1-alpine, 1.15.0-rc-alpine, 1.15-alpine
+Architectures: amd64, arm32v7, arm64v8, i386, s390x, ppc64le
+GitCommit: 53bfba817d03abb306b454e2a78ea6b0b133ac25
+Directory: 1.15/alpine
+
+Tags: 1.15.0-rc.1-otp-24, 1.15.0-rc-otp-24, 1.15-otp-24
+Architectures: amd64, arm32v7, arm64v8, i386, s390x, ppc64le
+GitCommit: 53bfba817d03abb306b454e2a78ea6b0b133ac25
+Directory: 1.15/otp-24
+
+Tags: 1.15.0-rc.1-otp-24-alpine, 1.15.0-rc-otp-24-alpine, 1.15-otp-24-alpine
+Architectures: amd64, arm32v7, arm64v8, i386, s390x, ppc64le
+GitCommit: 53bfba817d03abb306b454e2a78ea6b0b133ac25
+Directory: 1.15/otp-24-alpine
+
+Tags: 1.15.0-rc.1-otp-24-slim, 1.15.0-rc-otp-24-slim, 1.15-otp-24-slim
+Architectures: amd64, arm32v7, arm64v8, i386, s390x, ppc64le
+GitCommit: 53bfba817d03abb306b454e2a78ea6b0b133ac25
+Directory: 1.15/otp-24-slim
+
+Tags: 1.15.0-rc.1-otp-25, 1.15.0-rc-otp-25, 1.15-otp-25
+Architectures: amd64, arm32v7, arm64v8, i386, s390x, ppc64le
+GitCommit: 53bfba817d03abb306b454e2a78ea6b0b133ac25
+Directory: 1.15/otp-25
+
+Tags: 1.15.0-rc.1-otp-25-alpine, 1.15.0-rc-otp-25-alpine, 1.15-otp-25-alpine
+Architectures: amd64, arm32v7, arm64v8, i386, s390x, ppc64le
+GitCommit: 53bfba817d03abb306b454e2a78ea6b0b133ac25
+Directory: 1.15/otp-25-alpine
+
+Tags: 1.15.0-rc.1-otp-25-slim, 1.15.0-rc-otp-25-slim, 1.15-otp-25-slim
+Architectures: amd64, arm32v7, arm64v8, i386, s390x, ppc64le
+GitCommit: 53bfba817d03abb306b454e2a78ea6b0b133ac25
+Directory: 1.15/otp-25-slim
+
+Tags: 1.14.5, 1.14, latest
+Architectures: amd64, arm32v7, arm64v8, i386, s390x, ppc64le
+GitCommit: b8a45e284e0032a25e993ff60a8c6ea733848ad1
 Directory: 1.14
 
-Tags: 1.14.3-slim, 1.14-slim, slim
+Tags: 1.14.5-slim, 1.14-slim, slim
 Architectures: amd64, arm32v7, arm64v8, i386, s390x, ppc64le
-GitCommit: b108e93389b820554ad9f1e8e07001ed8186d230
+GitCommit: b8a45e284e0032a25e993ff60a8c6ea733848ad1
 Directory: 1.14/slim
 
-Tags: 1.14.3-alpine, 1.14-alpine, alpine
+Tags: 1.14.5-alpine, 1.14-alpine, alpine
 Architectures: amd64, arm32v7, arm64v8, i386, s390x, ppc64le
-GitCommit: b108e93389b820554ad9f1e8e07001ed8186d230
+GitCommit: b8a45e284e0032a25e993ff60a8c6ea733848ad1
 Directory: 1.14/alpine
 
-Tags: 1.14.3-otp-24, 1.14-otp-24, otp-24
+Tags: 1.14.5-otp-24, 1.14-otp-24, otp-24
 Architectures: amd64, arm32v7, arm64v8, i386, s390x, ppc64le
-GitCommit: b108e93389b820554ad9f1e8e07001ed8186d230
+GitCommit: af8772135e126d906a96b347d83af796c55bd181
 Directory: 1.14/otp-24
 
-Tags: 1.14.3-otp-24-alpine, 1.14-otp-24-alpine, otp-24-alpine
+Tags: 1.14.5-otp-24-alpine, 1.14-otp-24-alpine, otp-24-alpine
 Architectures: amd64, arm32v7, arm64v8, i386, s390x, ppc64le
-GitCommit: b108e93389b820554ad9f1e8e07001ed8186d230
+GitCommit: af8772135e126d906a96b347d83af796c55bd181
 Directory: 1.14/otp-24-alpine
 
-Tags: 1.14.3-otp-24-slim, 1.14-otp-24-slim, otp-24-slim
+Tags: 1.14.5-otp-24-slim, 1.14-otp-24-slim, otp-24-slim
 Architectures: amd64, arm32v7, arm64v8, i386, s390x, ppc64le
-GitCommit: b108e93389b820554ad9f1e8e07001ed8186d230
+GitCommit: af8772135e126d906a96b347d83af796c55bd181
 Directory: 1.14/otp-24-slim
+
+Tags: 1.14.5-otp-25, 1.14-otp-25, otp-25
+Architectures: amd64, arm32v7, arm64v8, i386, s390x, ppc64le
+GitCommit: af8772135e126d906a96b347d83af796c55bd181
+Directory: 1.14/otp-25
+
+Tags: 1.14.5-otp-25-alpine, 1.14-otp-25-alpine, otp-25-alpine
+Architectures: amd64, arm32v7, arm64v8, i386, s390x, ppc64le
+GitCommit: af8772135e126d906a96b347d83af796c55bd181
+Directory: 1.14/otp-25-alpine
+
+Tags: 1.14.5-otp-25-slim, 1.14-otp-25-slim, otp-25-slim
+Architectures: amd64, arm32v7, arm64v8, i386, s390x, ppc64le
+GitCommit: af8772135e126d906a96b347d83af796c55bd181
+Directory: 1.14/otp-25-slim
 
 Tags: 1.13.4, 1.13
 Architectures: amd64, arm32v7, arm64v8, i386, s390x, ppc64le
@@ -48,6 +108,11 @@ Tags: 1.13.4-alpine, 1.13-alpine
 Architectures: amd64, arm32v7, arm64v8, i386, s390x, ppc64le
 GitCommit: 328f4c09d39b06502a90fa0c5bb30d6972593fac
 Directory: 1.13/alpine
+
+Tags: 1.13.4-otp-23-slim, 1.13-otp-23-slim
+Architectures: amd64, arm32v7, arm64v8, i386
+GitCommit: 2bc3fd2b7218d6958c766c42b86e259949b56b95
+Directory: 1.13/otp-23-slim
 
 Tags: 1.13.4-otp-25, 1.13-otp-25
 Architectures: amd64, arm32v7, arm64v8, i386, s390x, ppc64le
