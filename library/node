@@ -1,4 +1,4 @@
-# this file is generated via https://github.com/nodejs/docker-node/blob/422651d3df5593c99d36ee0acc5eb9a44bc319a7/stackbrew.js
+# this file is generated via https://github.com/nodejs/docker-node/blob/cde9414cb2db0be1a911e9070c6c117de7be705a/stackbrew.js
 
 Maintainers: The Node.js Docker Team <https://github.com/nodejs/docker-node> (@nodejs)
 GitRepo: https://github.com/nodejs/docker-node.git
@@ -14,12 +14,22 @@ Architectures: amd64, arm32v6, arm32v7, arm64v8, ppc64le, s390x
 GitCommit: cf175362b1011bd85052a0034a4d3f8dae45345f
 Directory: 20/alpine3.18
 
-Tags: 20, 20-bullseye, 20.3, 20.3-bullseye, 20.3.0, 20.3.0-bullseye, bullseye, current, current-bullseye, latest
+Tags: 20, 20-bookworm, 20.3, 20.3-bookworm, 20.3.0, 20.3.0-bookworm, bookworm, current, current-bookworm, latest
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 92f7975318fe8d49e83653bf93a27e4af4a4872c
+Directory: 20/bookworm
+
+Tags: 20-bookworm-slim, 20-slim, 20.3-bookworm-slim, 20.3-slim, 20.3.0-bookworm-slim, 20.3.0-slim, bookworm-slim, current-bookworm-slim, current-slim, slim
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 92f7975318fe8d49e83653bf93a27e4af4a4872c
+Directory: 20/bookworm-slim
+
+Tags: 20-bullseye, 20.3-bullseye, 20.3.0-bullseye, bullseye, current-bullseye
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
 GitCommit: cf175362b1011bd85052a0034a4d3f8dae45345f
 Directory: 20/bullseye
 
-Tags: 20-bullseye-slim, 20-slim, 20.3-bullseye-slim, 20.3-slim, 20.3.0-bullseye-slim, 20.3.0-slim, bullseye-slim, current-bullseye-slim, current-slim, slim
+Tags: 20-bullseye-slim, 20.3-bullseye-slim, 20.3.0-bullseye-slim, bullseye-slim, current-bullseye-slim
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
 GitCommit: cf175362b1011bd85052a0034a4d3f8dae45345f
 Directory: 20/bullseye-slim
@@ -44,12 +54,22 @@ Architectures: amd64, arm32v6, arm32v7, arm64v8, ppc64le, s390x
 GitCommit: d951a7ff95eac09985446409589d6ea75ac42f96
 Directory: 18/alpine3.18
 
-Tags: 18, 18-bullseye, 18.16, 18.16-bullseye, 18.16.0, 18.16.0-bullseye, hydrogen, hydrogen-bullseye, lts, lts-bullseye, lts-hydrogen
+Tags: 18, 18-bookworm, 18.16, 18.16-bookworm, 18.16.0, 18.16.0-bookworm, hydrogen, hydrogen-bookworm, lts, lts-bookworm, lts-hydrogen
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 92f7975318fe8d49e83653bf93a27e4af4a4872c
+Directory: 18/bookworm
+
+Tags: 18-bookworm-slim, 18-slim, 18.16-bookworm-slim, 18.16-slim, 18.16.0-bookworm-slim, 18.16.0-slim, hydrogen-bookworm-slim, hydrogen-slim, lts-bookworm-slim, lts-slim
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 92f7975318fe8d49e83653bf93a27e4af4a4872c
+Directory: 18/bookworm-slim
+
+Tags: 18-bullseye, 18.16-bullseye, 18.16.0-bullseye, hydrogen-bullseye, lts-bullseye
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
 GitCommit: 4c95f887f7863eccc17d66729cd24ecc230209a2
 Directory: 18/bullseye
 
-Tags: 18-bullseye-slim, 18-slim, 18.16-bullseye-slim, 18.16-slim, 18.16.0-bullseye-slim, 18.16.0-slim, hydrogen-bullseye-slim, hydrogen-slim, lts-bullseye-slim, lts-slim
+Tags: 18-bullseye-slim, 18.16-bullseye-slim, 18.16.0-bullseye-slim, hydrogen-bullseye-slim, lts-bullseye-slim
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
 GitCommit: 4c95f887f7863eccc17d66729cd24ecc230209a2
 Directory: 18/bullseye-slim
@@ -73,6 +93,16 @@ Tags: 16-alpine, 16-alpine3.18, 16.20-alpine, 16.20-alpine3.18, 16.20.0-alpine, 
 Architectures: amd64, arm32v6, arm32v7, arm64v8, ppc64le, s390x
 GitCommit: d951a7ff95eac09985446409589d6ea75ac42f96
 Directory: 16/alpine3.18
+
+Tags: 16-bookworm, 16.20-bookworm, 16.20.0-bookworm, gallium-bookworm
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 92f7975318fe8d49e83653bf93a27e4af4a4872c
+Directory: 16/bookworm
+
+Tags: 16-bookworm-slim, 16.20-bookworm-slim, 16.20.0-bookworm-slim, gallium-bookworm-slim
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 92f7975318fe8d49e83653bf93a27e4af4a4872c
+Directory: 16/bookworm-slim
 
 Tags: 16-bullseye, 16.20-bullseye, 16.20.0-bullseye, gallium-bullseye
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
