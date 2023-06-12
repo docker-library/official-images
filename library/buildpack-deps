@@ -4,47 +4,47 @@ Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/buildpack-deps.git
 
-Tags: bookworm-curl, testing-curl
+Tags: bookworm-curl, stable-curl, curl
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: 3e18c3af1f5dce6a48abf036857f9097b6bd79cc
 Directory: debian/bookworm/curl
 
-Tags: bookworm-scm, testing-scm
+Tags: bookworm-scm, stable-scm, scm
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: 84e7e46026131a108a6480e5ed2969e8acf2d4e2
 Directory: debian/bookworm/scm
 
-Tags: bookworm, testing
+Tags: bookworm, stable, latest
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: 84e7e46026131a108a6480e5ed2969e8acf2d4e2
 Directory: debian/bookworm
 
-Tags: bullseye-curl, stable-curl, curl
+Tags: bullseye-curl, oldstable-curl
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: 93d6db0797f91ab674535553b7e0e762941a02d0
 Directory: debian/bullseye/curl
 
-Tags: bullseye-scm, stable-scm, scm
+Tags: bullseye-scm, oldstable-scm
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: 65d69325ad741cea6dee20781c1faaab2e003d87
 Directory: debian/bullseye/scm
 
-Tags: bullseye, stable, latest
+Tags: bullseye, oldstable
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: 65d69325ad741cea6dee20781c1faaab2e003d87
 Directory: debian/bullseye
 
-Tags: buster-curl, oldstable-curl
+Tags: buster-curl, oldoldstable-curl
 Architectures: amd64, arm32v7, arm64v8, i386
 GitCommit: 93d6db0797f91ab674535553b7e0e762941a02d0
 Directory: debian/buster/curl
 
-Tags: buster-scm, oldstable-scm
+Tags: buster-scm, oldoldstable-scm
 Architectures: amd64, arm32v7, arm64v8, i386
 GitCommit: 65d69325ad741cea6dee20781c1faaab2e003d87
 Directory: debian/buster/scm
 
-Tags: buster, oldstable
+Tags: buster, oldoldstable
 Architectures: amd64, arm32v7, arm64v8, i386
 GitCommit: 65d69325ad741cea6dee20781c1faaab2e003d87
 Directory: debian/buster
