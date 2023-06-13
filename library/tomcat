@@ -4,15 +4,25 @@ Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/tomcat.git
 
-Tags: 11.0.0-M6-jdk17-temurin-jammy, 11.0.0-jdk17-temurin-jammy, 11.0-jdk17-temurin-jammy, 11.0.0-M6-jdk17-temurin, 11.0.0-jdk17-temurin, 11.0-jdk17-temurin, 11.0.0-M6-jdk17, 11.0.0-jdk17, 11.0-jdk17, 11.0.0-M6, 11.0.0, 11.0
-Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 67e71978df0c16df45ab4364a10d9239fc7869d3
-Directory: 11.0/jdk17/temurin-jammy
+Tags: 11.0.0-M7-jdk21-openjdk-bookworm, 11.0.0-jdk21-openjdk-bookworm, 11.0-jdk21-openjdk-bookworm, 11.0.0-M7-jdk21-openjdk, 11.0.0-jdk21-openjdk, 11.0-jdk21-openjdk
+Architectures: amd64, arm64v8
+GitCommit: 16a2137a26ae88227d8bac176182235ad69c82b3
+Directory: 11.0/jdk21/openjdk-bookworm
 
-Tags: 11.0.0-M6-jre17-temurin-jammy, 11.0.0-jre17-temurin-jammy, 11.0-jre17-temurin-jammy, 11.0.0-M6-jre17-temurin, 11.0.0-jre17-temurin, 11.0-jre17-temurin, 11.0.0-M6-jre17, 11.0.0-jre17, 11.0-jre17
-Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 67e71978df0c16df45ab4364a10d9239fc7869d3
-Directory: 11.0/jre17/temurin-jammy
+Tags: 11.0.0-M7-jdk21-openjdk-slim-bookworm, 11.0.0-jdk21-openjdk-slim-bookworm, 11.0-jdk21-openjdk-slim-bookworm, 11.0.0-M7-jdk21-openjdk-slim, 11.0.0-jdk21-openjdk-slim, 11.0-jdk21-openjdk-slim
+Architectures: amd64, arm64v8
+GitCommit: 16a2137a26ae88227d8bac176182235ad69c82b3
+Directory: 11.0/jdk21/openjdk-slim-bookworm
+
+Tags: 10.1.10-jdk21-openjdk-bookworm, 10.1-jdk21-openjdk-bookworm, 10-jdk21-openjdk-bookworm, jdk21-openjdk-bookworm, 10.1.10-jdk21-openjdk, 10.1-jdk21-openjdk, 10-jdk21-openjdk, jdk21-openjdk
+Architectures: amd64, arm64v8
+GitCommit: 16a2137a26ae88227d8bac176182235ad69c82b3
+Directory: 10.1/jdk21/openjdk-bookworm
+
+Tags: 10.1.10-jdk21-openjdk-slim-bookworm, 10.1-jdk21-openjdk-slim-bookworm, 10-jdk21-openjdk-slim-bookworm, jdk21-openjdk-slim-bookworm, 10.1.10-jdk21-openjdk-slim, 10.1-jdk21-openjdk-slim, 10-jdk21-openjdk-slim, jdk21-openjdk-slim
+Architectures: amd64, arm64v8
+GitCommit: 16a2137a26ae88227d8bac176182235ad69c82b3
+Directory: 10.1/jdk21/openjdk-slim-bookworm
 
 Tags: 10.1.10-jdk17-temurin-jammy, 10.1-jdk17-temurin-jammy, 10-jdk17-temurin-jammy, jdk17-temurin-jammy, 10.1.10-jdk17-temurin, 10.1-jdk17-temurin, 10-jdk17-temurin, jdk17-temurin, 10.1.10-jdk17, 10.1-jdk17, 10-jdk17, jdk17, 10.1.10, 10.1, 10, latest
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
@@ -33,6 +43,26 @@ Tags: 10.1.10-jre11-temurin-jammy, 10.1-jre11-temurin-jammy, 10-jre11-temurin-ja
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
 GitCommit: cec66ee6d87cce2308d454b47bb7addbb9ace087
 Directory: 10.1/jre11/temurin-jammy
+
+Tags: 9.0.76-jdk21-openjdk-bookworm, 9.0-jdk21-openjdk-bookworm, 9-jdk21-openjdk-bookworm, 9.0.76-jdk21-openjdk, 9.0-jdk21-openjdk, 9-jdk21-openjdk
+Architectures: amd64, arm64v8
+GitCommit: 16a2137a26ae88227d8bac176182235ad69c82b3
+Directory: 9.0/jdk21/openjdk-bookworm
+
+Tags: 9.0.76-jdk21-openjdk-bullseye, 9.0-jdk21-openjdk-bullseye, 9-jdk21-openjdk-bullseye
+Architectures: amd64, arm64v8
+GitCommit: 16a2137a26ae88227d8bac176182235ad69c82b3
+Directory: 9.0/jdk21/openjdk-bullseye
+
+Tags: 9.0.76-jdk21-openjdk-slim-bookworm, 9.0-jdk21-openjdk-slim-bookworm, 9-jdk21-openjdk-slim-bookworm, 9.0.76-jdk21-openjdk-slim, 9.0-jdk21-openjdk-slim, 9-jdk21-openjdk-slim
+Architectures: amd64, arm64v8
+GitCommit: 16a2137a26ae88227d8bac176182235ad69c82b3
+Directory: 9.0/jdk21/openjdk-slim-bookworm
+
+Tags: 9.0.76-jdk21-openjdk-slim-bullseye, 9.0-jdk21-openjdk-slim-bullseye, 9-jdk21-openjdk-slim-bullseye
+Architectures: amd64, arm64v8
+GitCommit: 16a2137a26ae88227d8bac176182235ad69c82b3
+Directory: 9.0/jdk21/openjdk-slim-bullseye
 
 Tags: 9.0.76-jdk17-temurin-jammy, 9.0-jdk17-temurin-jammy, 9-jdk17-temurin-jammy, 9.0.76-jdk17-temurin, 9.0-jdk17-temurin, 9-jdk17-temurin, 9.0.76-jdk17, 9.0-jdk17, 9-jdk17, 9.0.76, 9.0, 9
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
@@ -108,6 +138,26 @@ Tags: 9.0.76-jdk8-corretto-al2, 9.0-jdk8-corretto-al2, 9-jdk8-corretto-al2, 9.0.
 Architectures: amd64, arm64v8
 GitCommit: 1c6875e85a440757bf983b3beb6234f23cc06e8c
 Directory: 9.0/jdk8/corretto-al2
+
+Tags: 8.5.90-jdk21-openjdk-bookworm, 8.5-jdk21-openjdk-bookworm, 8-jdk21-openjdk-bookworm, 8.5.90-jdk21-openjdk, 8.5-jdk21-openjdk, 8-jdk21-openjdk
+Architectures: amd64, arm64v8
+GitCommit: 16a2137a26ae88227d8bac176182235ad69c82b3
+Directory: 8.5/jdk21/openjdk-bookworm
+
+Tags: 8.5.90-jdk21-openjdk-bullseye, 8.5-jdk21-openjdk-bullseye, 8-jdk21-openjdk-bullseye
+Architectures: amd64, arm64v8
+GitCommit: 16a2137a26ae88227d8bac176182235ad69c82b3
+Directory: 8.5/jdk21/openjdk-bullseye
+
+Tags: 8.5.90-jdk21-openjdk-slim-bookworm, 8.5-jdk21-openjdk-slim-bookworm, 8-jdk21-openjdk-slim-bookworm, 8.5.90-jdk21-openjdk-slim, 8.5-jdk21-openjdk-slim, 8-jdk21-openjdk-slim
+Architectures: amd64, arm64v8
+GitCommit: 16a2137a26ae88227d8bac176182235ad69c82b3
+Directory: 8.5/jdk21/openjdk-slim-bookworm
+
+Tags: 8.5.90-jdk21-openjdk-slim-bullseye, 8.5-jdk21-openjdk-slim-bullseye, 8-jdk21-openjdk-slim-bullseye
+Architectures: amd64, arm64v8
+GitCommit: 16a2137a26ae88227d8bac176182235ad69c82b3
+Directory: 8.5/jdk21/openjdk-slim-bullseye
 
 Tags: 8.5.90-jdk17-temurin-jammy, 8.5-jdk17-temurin-jammy, 8-jdk17-temurin-jammy, 8.5.90-jdk17-temurin, 8.5-jdk17-temurin, 8-jdk17-temurin, 8.5.90-jdk17, 8.5-jdk17, 8-jdk17, 8.5.90, 8.5, 8
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
