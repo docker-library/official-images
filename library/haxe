@@ -1,60 +1,60 @@
 Maintainers: Andy Li <andy@onthewings.net> (@andyli)
 GitRepo: https://github.com/HaxeFoundation/docker-library-haxe.git
 
-Tags: 4.3.0-bullseye, 4.3-bullseye
-SharedTags: 4.3.0, 4.3, latest
+Tags: 4.3.1-bullseye, 4.3-bullseye
+SharedTags: 4.3.1, 4.3, latest
 Architectures: amd64, arm32v7, arm64v8
-GitCommit: b7dc5df413422e48c732117dd583b58d4289c74e
+GitCommit: 4e55b2953c28c448f92aaf265168c1bf85b4867f
 Directory: 4.3/bullseye
 
-Tags: 4.3.0-buster, 4.3-buster
+Tags: 4.3.1-buster, 4.3-buster
 Architectures: amd64, arm32v7, arm64v8
-GitCommit: b7dc5df413422e48c732117dd583b58d4289c74e
+GitCommit: 4e55b2953c28c448f92aaf265168c1bf85b4867f
 Directory: 4.3/buster
 
-Tags: 4.3.0-windowsservercore-ltsc2022, 4.3-windowsservercore-ltsc2022
-SharedTags: 4.3.0-windowsservercore, 4.3-windowsservercore, 4.3.0, 4.3, latest
+Tags: 4.3.1-windowsservercore-ltsc2022, 4.3-windowsservercore-ltsc2022
+SharedTags: 4.3.1-windowsservercore, 4.3-windowsservercore, 4.3.1, 4.3, latest
 Architectures: windows-amd64
-GitCommit: 59159f1cd1c4a769afc77b1a559c2a187f7d4fc9
+GitCommit: 1a4e5d4fbf207a4ed5a10db34e31826f4fc46c82
 Directory: 4.3/windowsservercore-ltsc2022
 Constraints: windowsservercore-ltsc2022
 
-Tags: 4.3.0-windowsservercore-1809, 4.3-windowsservercore-1809
-SharedTags: 4.3.0-windowsservercore, 4.3-windowsservercore, 4.3.0, 4.3, latest
+Tags: 4.3.1-windowsservercore-1809, 4.3-windowsservercore-1809
+SharedTags: 4.3.1-windowsservercore, 4.3-windowsservercore, 4.3.1, 4.3, latest
 Architectures: windows-amd64
-GitCommit: 59159f1cd1c4a769afc77b1a559c2a187f7d4fc9
+GitCommit: 1a4e5d4fbf207a4ed5a10db34e31826f4fc46c82
 Directory: 4.3/windowsservercore-1809
 Constraints: windowsservercore-1809
 
-Tags: 4.3.0-alpine3.17, 4.3-alpine3.17, 4.3.0-alpine, 4.3-alpine
+Tags: 4.3.1-alpine3.18, 4.3-alpine3.18, 4.3.1-alpine, 4.3-alpine
 Architectures: amd64, arm64v8
-GitCommit: 59159f1cd1c4a769afc77b1a559c2a187f7d4fc9
+GitCommit: b7003bc3280e69dc057ef0e6e8dfb8fd44ce4741
+Directory: 4.3/alpine3.18
+
+Tags: 4.3.1-alpine3.17, 4.3-alpine3.17
+Architectures: amd64, arm64v8
+GitCommit: 1a4e5d4fbf207a4ed5a10db34e31826f4fc46c82
 Directory: 4.3/alpine3.17
 
-Tags: 4.3.0-alpine3.16, 4.3-alpine3.16
+Tags: 4.3.1-alpine3.16, 4.3-alpine3.16
 Architectures: amd64, arm64v8
-GitCommit: 59159f1cd1c4a769afc77b1a559c2a187f7d4fc9
+GitCommit: 1a4e5d4fbf207a4ed5a10db34e31826f4fc46c82
 Directory: 4.3/alpine3.16
 
-Tags: 4.3.0-alpine3.15, 4.3-alpine3.15
+Tags: 4.3.1-alpine3.15, 4.3-alpine3.15
 Architectures: amd64, arm64v8
-GitCommit: 59159f1cd1c4a769afc77b1a559c2a187f7d4fc9
+GitCommit: 1a4e5d4fbf207a4ed5a10db34e31826f4fc46c82
 Directory: 4.3/alpine3.15
-
-Tags: 4.3.0-alpine3.14, 4.3-alpine3.14
-Architectures: amd64, arm64v8
-GitCommit: 59159f1cd1c4a769afc77b1a559c2a187f7d4fc9
-Directory: 4.3/alpine3.14
 
 Tags: 4.2.5-bullseye, 4.2-bullseye
 SharedTags: 4.2.5, 4.2
 Architectures: amd64, arm32v7, arm64v8
-GitCommit: 59159f1cd1c4a769afc77b1a559c2a187f7d4fc9
+GitCommit: 4e55b2953c28c448f92aaf265168c1bf85b4867f
 Directory: 4.2/bullseye
 
 Tags: 4.2.5-buster, 4.2-buster
 Architectures: amd64, arm32v7, arm64v8
-GitCommit: 59159f1cd1c4a769afc77b1a559c2a187f7d4fc9
+GitCommit: 4e55b2953c28c448f92aaf265168c1bf85b4867f
 Directory: 4.2/buster
 
 Tags: 4.2.5-windowsservercore-ltsc2022, 4.2-windowsservercore-ltsc2022
@@ -71,7 +71,12 @@ GitCommit: c0367972017a7b87845bf33477e29b1fe64ccc4a
 Directory: 4.2/windowsservercore-1809
 Constraints: windowsservercore-1809
 
-Tags: 4.2.5-alpine3.17, 4.2-alpine3.17, 4.2.5-alpine, 4.2-alpine
+Tags: 4.2.5-alpine3.18, 4.2-alpine3.18, 4.2.5-alpine, 4.2-alpine
+Architectures: amd64, arm64v8
+GitCommit: b7003bc3280e69dc057ef0e6e8dfb8fd44ce4741
+Directory: 4.2/alpine3.18
+
+Tags: 4.2.5-alpine3.17, 4.2-alpine3.17
 Architectures: amd64, arm64v8
 GitCommit: 40bf9156af6f198cd7a57dbfd452e24dc1ceb94e
 Directory: 4.2/alpine3.17
@@ -86,20 +91,15 @@ Architectures: amd64, arm64v8
 GitCommit: 83789c10dc601064a234fd559206d1ec252228d7
 Directory: 4.2/alpine3.15
 
-Tags: 4.2.5-alpine3.14, 4.2-alpine3.14
-Architectures: amd64, arm64v8
-GitCommit: 83789c10dc601064a234fd559206d1ec252228d7
-Directory: 4.2/alpine3.14
-
 Tags: 4.1.5-bullseye, 4.1-bullseye
 SharedTags: 4.1.5, 4.1
 Architectures: amd64, arm32v7, arm64v8
-GitCommit: 59159f1cd1c4a769afc77b1a559c2a187f7d4fc9
+GitCommit: 4e55b2953c28c448f92aaf265168c1bf85b4867f
 Directory: 4.1/bullseye
 
 Tags: 4.1.5-buster, 4.1-buster
 Architectures: amd64, arm32v7, arm64v8
-GitCommit: 59159f1cd1c4a769afc77b1a559c2a187f7d4fc9
+GitCommit: 4e55b2953c28c448f92aaf265168c1bf85b4867f
 Directory: 4.1/buster
 
 Tags: 4.1.5-windowsservercore-ltsc2022, 4.1-windowsservercore-ltsc2022
@@ -116,7 +116,12 @@ GitCommit: c0367972017a7b87845bf33477e29b1fe64ccc4a
 Directory: 4.1/windowsservercore-1809
 Constraints: windowsservercore-1809
 
-Tags: 4.1.5-alpine3.17, 4.1-alpine3.17, 4.1.5-alpine, 4.1-alpine
+Tags: 4.1.5-alpine3.18, 4.1-alpine3.18, 4.1.5-alpine, 4.1-alpine
+Architectures: amd64, arm64v8
+GitCommit: b7003bc3280e69dc057ef0e6e8dfb8fd44ce4741
+Directory: 4.1/alpine3.18
+
+Tags: 4.1.5-alpine3.17, 4.1-alpine3.17
 Architectures: amd64, arm64v8
 GitCommit: 40bf9156af6f198cd7a57dbfd452e24dc1ceb94e
 Directory: 4.1/alpine3.17
@@ -131,20 +136,15 @@ Architectures: amd64, arm64v8
 GitCommit: b0098b4b730d0d9ff21dbf3d543464228d6b7e99
 Directory: 4.1/alpine3.15
 
-Tags: 4.1.5-alpine3.14, 4.1-alpine3.14
-Architectures: amd64, arm64v8
-GitCommit: 71afcb74d885cfbcf9bff439d7aba47a79b541b1
-Directory: 4.1/alpine3.14
-
 Tags: 4.0.5-bullseye, 4.0-bullseye
 SharedTags: 4.0.5, 4.0
 Architectures: amd64, arm32v7, arm64v8
-GitCommit: 59159f1cd1c4a769afc77b1a559c2a187f7d4fc9
+GitCommit: 4e55b2953c28c448f92aaf265168c1bf85b4867f
 Directory: 4.0/bullseye
 
 Tags: 4.0.5-buster, 4.0-buster
 Architectures: amd64, arm32v7, arm64v8
-GitCommit: 59159f1cd1c4a769afc77b1a559c2a187f7d4fc9
+GitCommit: 4e55b2953c28c448f92aaf265168c1bf85b4867f
 Directory: 4.0/buster
 
 Tags: 4.0.5-windowsservercore-ltsc2022, 4.0-windowsservercore-ltsc2022
@@ -161,7 +161,12 @@ GitCommit: c0367972017a7b87845bf33477e29b1fe64ccc4a
 Directory: 4.0/windowsservercore-1809
 Constraints: windowsservercore-1809
 
-Tags: 4.0.5-alpine3.17, 4.0-alpine3.17, 4.0.5-alpine, 4.0-alpine
+Tags: 4.0.5-alpine3.18, 4.0-alpine3.18, 4.0.5-alpine, 4.0-alpine
+Architectures: amd64, arm64v8
+GitCommit: b7003bc3280e69dc057ef0e6e8dfb8fd44ce4741
+Directory: 4.0/alpine3.18
+
+Tags: 4.0.5-alpine3.17, 4.0-alpine3.17
 Architectures: amd64, arm64v8
 GitCommit: 40bf9156af6f198cd7a57dbfd452e24dc1ceb94e
 Directory: 4.0/alpine3.17
@@ -176,15 +181,10 @@ Architectures: amd64, arm64v8
 GitCommit: b0098b4b730d0d9ff21dbf3d543464228d6b7e99
 Directory: 4.0/alpine3.15
 
-Tags: 4.0.5-alpine3.14, 4.0-alpine3.14
-Architectures: amd64, arm64v8
-GitCommit: 71afcb74d885cfbcf9bff439d7aba47a79b541b1
-Directory: 4.0/alpine3.14
-
 Tags: 3.4.7-buster, 3.4-buster
 SharedTags: 3.4.7, 3.4
 Architectures: amd64, arm32v7, arm64v8
-GitCommit: 59159f1cd1c4a769afc77b1a559c2a187f7d4fc9
+GitCommit: 4e55b2953c28c448f92aaf265168c1bf85b4867f
 Directory: 3.4/buster
 
 Tags: 3.4.7-windowsservercore-ltsc2022, 3.4-windowsservercore-ltsc2022
@@ -204,7 +204,7 @@ Constraints: windowsservercore-1809
 Tags: 3.3.0-rc.1-buster, 3.3.0-buster, 3.3-buster
 SharedTags: 3.3.0-rc.1, 3.3.0, 3.3
 Architectures: amd64, arm32v7, arm64v8
-GitCommit: 59159f1cd1c4a769afc77b1a559c2a187f7d4fc9
+GitCommit: 4e55b2953c28c448f92aaf265168c1bf85b4867f
 Directory: 3.3/buster
 
 Tags: 3.3.0-rc.1-windowsservercore-ltsc2022, 3.3.0-windowsservercore-ltsc2022, 3.3-windowsservercore-ltsc2022
@@ -224,7 +224,7 @@ Constraints: windowsservercore-1809
 Tags: 3.2.1-buster, 3.2-buster
 SharedTags: 3.2.1, 3.2
 Architectures: amd64, arm32v7, arm64v8
-GitCommit: 59159f1cd1c4a769afc77b1a559c2a187f7d4fc9
+GitCommit: 4e55b2953c28c448f92aaf265168c1bf85b4867f
 Directory: 3.2/buster
 
 Tags: 3.2.1-windowsservercore-ltsc2022, 3.2-windowsservercore-ltsc2022
