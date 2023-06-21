@@ -5,15 +5,64 @@ Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Johan Euphrosine <proppy@google.com> (@proppy)
 GitRepo: https://github.com/docker-library/golang.git
 
+Tags: 1.21rc2-bookworm, 1.21-rc-bookworm
+SharedTags: 1.21rc2, 1.21-rc
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: 72bc141d781ae54ef20f71aa1105449cb6c2edc4
+Directory: 1.21-rc/bookworm
+
+Tags: 1.21rc2-bullseye, 1.21-rc-bullseye
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: 72bc141d781ae54ef20f71aa1105449cb6c2edc4
+Directory: 1.21-rc/bullseye
+
+Tags: 1.21rc2-alpine3.18, 1.21-rc-alpine3.18, 1.21rc2-alpine, 1.21-rc-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 1ab26fd7f52d0cd35223b82e79774a4a3aa24a1b
+Directory: 1.21-rc/alpine3.18
+
+Tags: 1.21rc2-alpine3.17, 1.21-rc-alpine3.17
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 1ab26fd7f52d0cd35223b82e79774a4a3aa24a1b
+Directory: 1.21-rc/alpine3.17
+
+Tags: 1.21rc2-windowsservercore-ltsc2022, 1.21-rc-windowsservercore-ltsc2022
+SharedTags: 1.21rc2-windowsservercore, 1.21-rc-windowsservercore, 1.21rc2, 1.21-rc
+Architectures: windows-amd64
+GitCommit: 1ab26fd7f52d0cd35223b82e79774a4a3aa24a1b
+Directory: 1.21-rc/windows/windowsservercore-ltsc2022
+Constraints: windowsservercore-ltsc2022
+
+Tags: 1.21rc2-windowsservercore-1809, 1.21-rc-windowsservercore-1809
+SharedTags: 1.21rc2-windowsservercore, 1.21-rc-windowsservercore, 1.21rc2, 1.21-rc
+Architectures: windows-amd64
+GitCommit: 1ab26fd7f52d0cd35223b82e79774a4a3aa24a1b
+Directory: 1.21-rc/windows/windowsservercore-1809
+Constraints: windowsservercore-1809
+
+Tags: 1.21rc2-nanoserver-ltsc2022, 1.21-rc-nanoserver-ltsc2022
+SharedTags: 1.21rc2-nanoserver, 1.21-rc-nanoserver
+Architectures: windows-amd64
+GitCommit: 1ab26fd7f52d0cd35223b82e79774a4a3aa24a1b
+Directory: 1.21-rc/windows/nanoserver-ltsc2022
+Constraints: nanoserver-ltsc2022, windowsservercore-ltsc2022
+
+Tags: 1.21rc2-nanoserver-1809, 1.21-rc-nanoserver-1809
+SharedTags: 1.21rc2-nanoserver, 1.21-rc-nanoserver
+Architectures: windows-amd64
+GitCommit: 1ab26fd7f52d0cd35223b82e79774a4a3aa24a1b
+Directory: 1.21-rc/windows/nanoserver-1809
+Constraints: nanoserver-1809, windowsservercore-1809
+
 Tags: 1.20.5-bookworm, 1.20-bookworm, 1-bookworm, bookworm
 SharedTags: 1.20.5, 1.20, 1, latest
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: cd607138e461368506a6ba50be2163a09b93dab5
+GitCommit: 72bc141d781ae54ef20f71aa1105449cb6c2edc4
 Directory: 1.20/bookworm
 
 Tags: 1.20.5-bullseye, 1.20-bullseye, 1-bullseye, bullseye
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 29b2d53bcf3365a9fe72612ae24b884546185be6
+GitCommit: 72bc141d781ae54ef20f71aa1105449cb6c2edc4
 Directory: 1.20/bullseye
 
 Tags: 1.20.5-alpine3.18, 1.20-alpine3.18, 1-alpine3.18, alpine3.18, 1.20.5-alpine, 1.20-alpine, 1-alpine, alpine
@@ -57,12 +106,12 @@ Constraints: nanoserver-1809, windowsservercore-1809
 Tags: 1.19.10-bookworm, 1.19-bookworm
 SharedTags: 1.19.10, 1.19
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: cd607138e461368506a6ba50be2163a09b93dab5
+GitCommit: 72bc141d781ae54ef20f71aa1105449cb6c2edc4
 Directory: 1.19/bookworm
 
 Tags: 1.19.10-bullseye, 1.19-bullseye
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: e16be5c5a93bd4a2d26ede8cb753ad3578203286
+GitCommit: 72bc141d781ae54ef20f71aa1105449cb6c2edc4
 Directory: 1.19/bullseye
 
 Tags: 1.19.10-alpine3.18, 1.19-alpine3.18, 1.19.10-alpine, 1.19-alpine
