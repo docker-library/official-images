@@ -1,6 +1,6 @@
 Maintainers: Paul Tagliamonte <paultag@hylang.org> (@paultag), Hy Docker Team (@hylang/docker)
 GitRepo: https://github.com/hylang/docker-hylang.git
-GitCommit: caa057b76095481360b23cad8774d208bd524694
+GitCommit: 2faaf55bb024adce50ca1071c8686f0ec46fa12b
 Directory: dockerfiles-generated
 
 Tags: 0.26.0-python3.11-bookworm, 0.26-python3.11-bookworm, 0-python3.11-bookworm, python3.11-bookworm, 0.26.0-bookworm, 0.26-bookworm, 0-bookworm, bookworm
@@ -88,44 +88,32 @@ Tags: 0.26.0-python3.7-alpine3.17, 0.26-python3.7-alpine3.17, 0-python3.7-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 File: Dockerfile.python3.7-alpine3.17
 
-Tags: 0.26.0-pypy3.9-bookworm, 0.26-pypy3.9-bookworm, 0-pypy3.9-bookworm, pypy3.9-bookworm, 0.26.0-pypy-bookworm, 0.26-pypy-bookworm, 0-pypy-bookworm, pypy-bookworm
-SharedTags: 0.26.0-pypy3.9, 0.26-pypy3.9, 0-pypy3.9, pypy3.9, 0.26.0-pypy, 0.26-pypy, 0-pypy, pypy
+Tags: 0.26.0-pypy3.10-bookworm, 0.26-pypy3.10-bookworm, 0-pypy3.10-bookworm, pypy3.10-bookworm, 0.26.0-pypy-bookworm, 0.26-pypy-bookworm, 0-pypy-bookworm, pypy-bookworm
+SharedTags: 0.26.0-pypy3.10, 0.26-pypy3.10, 0-pypy3.10, pypy3.10, 0.26.0-pypy, 0.26-pypy, 0-pypy, pypy
+Architectures: amd64, arm64v8, i386
+File: Dockerfile.pypy3.10-bookworm
+
+Tags: 0.26.0-pypy3.10-bullseye, 0.26-pypy3.10-bullseye, 0-pypy3.10-bullseye, pypy3.10-bullseye, 0.26.0-pypy-bullseye, 0.26-pypy-bullseye, 0-pypy-bullseye, pypy-bullseye
+Architectures: amd64, arm64v8, i386
+File: Dockerfile.pypy3.10-bullseye
+
+Tags: 0.26.0-pypy3.9-bookworm, 0.26-pypy3.9-bookworm, 0-pypy3.9-bookworm, pypy3.9-bookworm
+SharedTags: 0.26.0-pypy3.9, 0.26-pypy3.9, 0-pypy3.9, pypy3.9
 Architectures: amd64, arm64v8, i386
 File: Dockerfile.pypy3.9-bookworm
 
-Tags: 0.26.0-pypy3.9-bullseye, 0.26-pypy3.9-bullseye, 0-pypy3.9-bullseye, pypy3.9-bullseye, 0.26.0-pypy-bullseye, 0.26-pypy-bullseye, 0-pypy-bullseye, pypy-bullseye
+Tags: 0.26.0-pypy3.9-bullseye, 0.26-pypy3.9-bullseye, 0-pypy3.9-bullseye, pypy3.9-bullseye
 Architectures: amd64, arm64v8, i386
 File: Dockerfile.pypy3.9-bullseye
 
-Tags: 0.26.0-pypy3.9-windowsservercore-ltsc2022, 0.26-pypy3.9-windowsservercore-ltsc2022, 0-pypy3.9-windowsservercore-ltsc2022, pypy3.9-windowsservercore-ltsc2022, 0.26.0-pypy-windowsservercore-ltsc2022, 0.26-pypy-windowsservercore-ltsc2022, 0-pypy-windowsservercore-ltsc2022, pypy-windowsservercore-ltsc2022
-SharedTags: 0.26.0-pypy3.9, 0.26-pypy3.9, 0-pypy3.9, pypy3.9, 0.26.0-pypy, 0.26-pypy, 0-pypy, pypy
+Tags: 0.26.0-pypy3.9-windowsservercore-ltsc2022, 0.26-pypy3.9-windowsservercore-ltsc2022, 0-pypy3.9-windowsservercore-ltsc2022, pypy3.9-windowsservercore-ltsc2022
+SharedTags: 0.26.0-pypy3.9, 0.26-pypy3.9, 0-pypy3.9, pypy3.9
 Architectures: windows-amd64
 Constraints: windowsservercore-ltsc2022
 File: Dockerfile.pypy3.9-windowsservercore-ltsc2022
 
-Tags: 0.26.0-pypy3.9-windowsservercore-1809, 0.26-pypy3.9-windowsservercore-1809, 0-pypy3.9-windowsservercore-1809, pypy3.9-windowsservercore-1809, 0.26.0-pypy-windowsservercore-1809, 0.26-pypy-windowsservercore-1809, 0-pypy-windowsservercore-1809, pypy-windowsservercore-1809
-SharedTags: 0.26.0-pypy3.9, 0.26-pypy3.9, 0-pypy3.9, pypy3.9, 0.26.0-pypy, 0.26-pypy, 0-pypy, pypy
+Tags: 0.26.0-pypy3.9-windowsservercore-1809, 0.26-pypy3.9-windowsservercore-1809, 0-pypy3.9-windowsservercore-1809, pypy3.9-windowsservercore-1809
+SharedTags: 0.26.0-pypy3.9, 0.26-pypy3.9, 0-pypy3.9, pypy3.9
 Architectures: windows-amd64
 Constraints: windowsservercore-1809
 File: Dockerfile.pypy3.9-windowsservercore-1809
-
-Tags: 0.26.0-pypy3.8-bookworm, 0.26-pypy3.8-bookworm, 0-pypy3.8-bookworm, pypy3.8-bookworm
-SharedTags: 0.26.0-pypy3.8, 0.26-pypy3.8, 0-pypy3.8, pypy3.8
-Architectures: amd64, arm64v8, i386
-File: Dockerfile.pypy3.8-bookworm
-
-Tags: 0.26.0-pypy3.8-bullseye, 0.26-pypy3.8-bullseye, 0-pypy3.8-bullseye, pypy3.8-bullseye
-Architectures: amd64, arm64v8, i386
-File: Dockerfile.pypy3.8-bullseye
-
-Tags: 0.26.0-pypy3.8-windowsservercore-ltsc2022, 0.26-pypy3.8-windowsservercore-ltsc2022, 0-pypy3.8-windowsservercore-ltsc2022, pypy3.8-windowsservercore-ltsc2022
-SharedTags: 0.26.0-pypy3.8, 0.26-pypy3.8, 0-pypy3.8, pypy3.8
-Architectures: windows-amd64
-Constraints: windowsservercore-ltsc2022
-File: Dockerfile.pypy3.8-windowsservercore-ltsc2022
-
-Tags: 0.26.0-pypy3.8-windowsservercore-1809, 0.26-pypy3.8-windowsservercore-1809, 0-pypy3.8-windowsservercore-1809, pypy3.8-windowsservercore-1809
-SharedTags: 0.26.0-pypy3.8, 0.26-pypy3.8, 0-pypy3.8, pypy3.8
-Architectures: windows-amd64
-Constraints: windowsservercore-1809
-File: Dockerfile.pypy3.8-windowsservercore-1809
