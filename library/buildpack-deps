@@ -4,54 +4,54 @@ Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/buildpack-deps.git
 
-Tags: bookworm-curl, testing-curl
+Tags: bookworm-curl, stable-curl, curl
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 84e7e46026131a108a6480e5ed2969e8acf2d4e2
+GitCommit: 3e18c3af1f5dce6a48abf036857f9097b6bd79cc
 Directory: debian/bookworm/curl
 
-Tags: bookworm-scm, testing-scm
+Tags: bookworm-scm, stable-scm, scm
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: 84e7e46026131a108a6480e5ed2969e8acf2d4e2
 Directory: debian/bookworm/scm
 
-Tags: bookworm, testing
+Tags: bookworm, stable, latest
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: 84e7e46026131a108a6480e5ed2969e8acf2d4e2
 Directory: debian/bookworm
 
-Tags: bullseye-curl, stable-curl, curl
+Tags: bullseye-curl, oldstable-curl
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 98a5ab81d47a106c458cdf90733df0ee8beea06c
+GitCommit: 93d6db0797f91ab674535553b7e0e762941a02d0
 Directory: debian/bullseye/curl
 
-Tags: bullseye-scm, stable-scm, scm
+Tags: bullseye-scm, oldstable-scm
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: 65d69325ad741cea6dee20781c1faaab2e003d87
 Directory: debian/bullseye/scm
 
-Tags: bullseye, stable, latest
+Tags: bullseye, oldstable
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: 65d69325ad741cea6dee20781c1faaab2e003d87
 Directory: debian/bullseye
 
-Tags: buster-curl, oldstable-curl
+Tags: buster-curl, oldoldstable-curl
 Architectures: amd64, arm32v7, arm64v8, i386
-GitCommit: 98a5ab81d47a106c458cdf90733df0ee8beea06c
+GitCommit: 93d6db0797f91ab674535553b7e0e762941a02d0
 Directory: debian/buster/curl
 
-Tags: buster-scm, oldstable-scm
+Tags: buster-scm, oldoldstable-scm
 Architectures: amd64, arm32v7, arm64v8, i386
 GitCommit: 65d69325ad741cea6dee20781c1faaab2e003d87
 Directory: debian/buster/scm
 
-Tags: buster, oldstable
+Tags: buster, oldoldstable
 Architectures: amd64, arm32v7, arm64v8, i386
 GitCommit: 65d69325ad741cea6dee20781c1faaab2e003d87
 Directory: debian/buster
 
 Tags: sid-curl, unstable-curl
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, riscv64, s390x
-GitCommit: 98a5ab81d47a106c458cdf90733df0ee8beea06c
+GitCommit: 3e18c3af1f5dce6a48abf036857f9097b6bd79cc
 Directory: debian/sid/curl
 
 Tags: sid-scm, unstable-scm
@@ -64,24 +64,9 @@ Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, riscv6
 GitCommit: 65d69325ad741cea6dee20781c1faaab2e003d87
 Directory: debian/sid
 
-Tags: bionic-curl, 18.04-curl
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 98a5ab81d47a106c458cdf90733df0ee8beea06c
-Directory: ubuntu/bionic/curl
-
-Tags: bionic-scm, 18.04-scm
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 65d69325ad741cea6dee20781c1faaab2e003d87
-Directory: ubuntu/bionic/scm
-
-Tags: bionic, 18.04
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 98a5ab81d47a106c458cdf90733df0ee8beea06c
-Directory: ubuntu/bionic
-
 Tags: focal-curl, 20.04-curl
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 98a5ab81d47a106c458cdf90733df0ee8beea06c
+GitCommit: 93d6db0797f91ab674535553b7e0e762941a02d0
 Directory: ubuntu/focal/curl
 
 Tags: focal-scm, 20.04-scm
@@ -96,7 +81,7 @@ Directory: ubuntu/focal
 
 Tags: jammy-curl, 22.04-curl
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: e2fc735283ba4e96efc3e4acf2b74bc3eccbf327
+GitCommit: 93d6db0797f91ab674535553b7e0e762941a02d0
 Directory: ubuntu/jammy/curl
 
 Tags: jammy-scm, 22.04-scm
@@ -111,7 +96,7 @@ Directory: ubuntu/jammy
 
 Tags: kinetic-curl, 22.10-curl
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: c96f4f3e1d5bc19fba5c652f57af0a35bb929718
+GitCommit: 3e18c3af1f5dce6a48abf036857f9097b6bd79cc
 Directory: ubuntu/kinetic/curl
 
 Tags: kinetic-scm, 22.10-scm
@@ -126,7 +111,7 @@ Directory: ubuntu/kinetic
 
 Tags: lunar-curl, 23.04-curl
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 31e15bc4a2352c20998e5da6bd8aaa727fd19d06
+GitCommit: 3e18c3af1f5dce6a48abf036857f9097b6bd79cc
 Directory: ubuntu/lunar/curl
 
 Tags: lunar-scm, 23.04-scm
@@ -138,3 +123,18 @@ Tags: lunar, 23.04
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
 GitCommit: 31e15bc4a2352c20998e5da6bd8aaa727fd19d06
 Directory: ubuntu/lunar
+
+Tags: mantic-curl, 23.10-curl
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: ba367c3a52946cee45274b62f7f8b27e07807289
+Directory: ubuntu/mantic/curl
+
+Tags: mantic-scm, 23.10-scm
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: ba367c3a52946cee45274b62f7f8b27e07807289
+Directory: ubuntu/mantic/scm
+
+Tags: mantic, 23.10
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: ba367c3a52946cee45274b62f7f8b27e07807289
+Directory: ubuntu/mantic

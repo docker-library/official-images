@@ -1,34 +1,26 @@
-# Old point releases are included in this library file so that users
-# are not forced to upgrade to the latest point releases in order to
-# get security fixes to the base image. See
-# https://github.com/docker-library/official-images/issues/1864 for a
-# discussion of this point.
-
 Maintainers: Jenny Owen <jenny.owen@neo4j.com> (@jennyowen),
              Bledi Feshti <bledi.feshti@neo4j.com> (@bfeshti),
              Eric Sporre <eric.sporre@neo4j.com> (@ericsporre)
 GitRepo: https://github.com/neo4j/docker-neo4j-publish.git
 
 
-Tags: 5.5.0, 5.5.0-community, 5.5, 5, 5-community, community, latest
+Tags: 5.9.0, 5.9.0-community, 5.9, 5.9-community, 5, 5-community, community, latest
 Architectures: amd64, arm64v8
-GitCommit: f977a1ceaca22a13affc861b09995a88a2f2145f
-Directory: 5.5.0/community
+GitCommit: 9d7a9047bb1b1b736c01e50bf5d38c0a4d3d1697
+Directory: 5.9.0/community
 
-Tags: 5.5.0-enterprise, 5.5-enterprise, 5-enterprise, enterprise
+Tags: 5.9.0-enterprise, 5.9-enterprise, 5-enterprise, enterprise
 Architectures: amd64, arm64v8
-GitCommit: f977a1ceaca22a13affc861b09995a88a2f2145f
-Directory: 5.5.0/enterprise
+GitCommit: 9d7a9047bb1b1b736c01e50bf5d38c0a4d3d1697
+Directory: 5.9.0/enterprise
 
 
-Tags: 4.4.18, 4.4.18-community, 4.4, 4.4-community
+Tags: 4.4.21, 4.4.21-community, 4.4, 4.4-community
 Architectures: amd64, arm64v8
-GitCommit: eb3d953b8df45a5945d340b59e2c98e5b0cbb908
-Directory: 4.4.18/community
+GitCommit: 9dea28f9da8f5792752853a1be16309950d03204
+Directory: 4.4.21/community
 
-Tags: 4.4.18-enterprise, 4.4-enterprise
+Tags: 4.4.21-enterprise, 4.4-enterprise
 Architectures: amd64, arm64v8
-GitCommit: eb3d953b8df45a5945d340b59e2c98e5b0cbb908
-Directory: 4.4.18/enterprise
-
-
+GitCommit: 9dea28f9da8f5792752853a1be16309950d03204
+Directory: 4.4.21/enterprise
