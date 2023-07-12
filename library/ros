@@ -2,33 +2,6 @@ Maintainers: Tully Foote <tfoote+buildfarm@osrfoundation.org> (@tfoote)
 GitRepo: https://github.com/osrf/docker_images.git
 
 ################################################################################
-# Release: melodic
-
-########################################
-# Distro: ubuntu:bionic
-
-Tags: melodic-ros-core, melodic-ros-core-bionic
-Architectures: amd64, arm32v7, arm64v8
-GitCommit: 3f4fbca923d80f834f3a89b5960bad5582652519
-Directory: ros/melodic/ubuntu/bionic/ros-core
-
-Tags: melodic-ros-base, melodic-ros-base-bionic, melodic
-Architectures: amd64, arm32v7, arm64v8
-GitCommit: df19ab7d5993d3b78a908362cdcd1479a8e78b35
-Directory: ros/melodic/ubuntu/bionic/ros-base
-
-Tags: melodic-robot, melodic-robot-bionic
-Architectures: amd64, arm32v7, arm64v8
-GitCommit: df19ab7d5993d3b78a908362cdcd1479a8e78b35
-Directory: ros/melodic/ubuntu/bionic/robot
-
-Tags: melodic-perception, melodic-perception-bionic
-Architectures: amd64, arm32v7, arm64v8
-GitCommit: df19ab7d5993d3b78a908362cdcd1479a8e78b35
-Directory: ros/melodic/ubuntu/bionic/perception
-
-
-################################################################################
 # Release: noetic
 
 ########################################
@@ -54,51 +27,6 @@ Architectures: amd64, arm32v7, arm64v8
 GitCommit: df19ab7d5993d3b78a908362cdcd1479a8e78b35
 Directory: ros/noetic/ubuntu/focal/perception
 
-########################################
-# Distro: debian:buster
-
-Tags: noetic-ros-core-buster
-Architectures: amd64, arm64v8
-GitCommit: 3f4fbca923d80f834f3a89b5960bad5582652519
-Directory: ros/noetic/debian/buster/ros-core
-
-Tags: noetic-ros-base-buster
-Architectures: amd64, arm64v8
-GitCommit: df19ab7d5993d3b78a908362cdcd1479a8e78b35
-Directory: ros/noetic/debian/buster/ros-base
-
-Tags: noetic-robot-buster
-Architectures: amd64, arm64v8
-GitCommit: df19ab7d5993d3b78a908362cdcd1479a8e78b35
-Directory: ros/noetic/debian/buster/robot
-
-Tags: noetic-perception-buster
-Architectures: amd64, arm64v8
-GitCommit: df19ab7d5993d3b78a908362cdcd1479a8e78b35
-Directory: ros/noetic/debian/buster/perception
-
-
-################################################################################
-# Release: foxy
-
-########################################
-# Distro: ubuntu:focal
-
-Tags: foxy-ros-core, foxy-ros-core-focal
-Architectures: amd64, arm64v8
-GitCommit: 3f4fbca923d80f834f3a89b5960bad5582652519
-Directory: ros/foxy/ubuntu/focal/ros-core
-
-Tags: foxy-ros-base, foxy-ros-base-focal, foxy
-Architectures: amd64, arm64v8
-GitCommit: df19ab7d5993d3b78a908362cdcd1479a8e78b35
-Directory: ros/foxy/ubuntu/focal/ros-base
-
-Tags: foxy-ros1-bridge, foxy-ros1-bridge-focal
-Architectures: amd64, arm64v8
-GitCommit: c40ef6e5116c88f44e9ef3694614c1e8a60725a0
-Directory: ros/foxy/ubuntu/focal/ros1-bridge
-
 
 ################################################################################
 # Release: humble
@@ -123,6 +51,28 @@ Directory: ros/humble/ubuntu/jammy/perception
 
 
 ################################################################################
+# Release: iron
+
+########################################
+# Distro: ubuntu:jammy
+
+Tags: iron-ros-core, iron-ros-core-jammy
+Architectures: amd64, arm64v8
+GitCommit: bca53bf4c09d771be3ff735da4157203b53ebc2b
+Directory: ros/iron/ubuntu/jammy/ros-core
+
+Tags: iron-ros-base, iron-ros-base-jammy, iron
+Architectures: amd64, arm64v8
+GitCommit: bca53bf4c09d771be3ff735da4157203b53ebc2b
+Directory: ros/iron/ubuntu/jammy/ros-base
+
+Tags: iron-perception, iron-perception-jammy
+Architectures: amd64, arm64v8
+GitCommit: bca53bf4c09d771be3ff735da4157203b53ebc2b
+Directory: ros/iron/ubuntu/jammy/perception
+
+
+################################################################################
 # Release: rolling
 
 ########################################
@@ -130,16 +80,16 @@ Directory: ros/humble/ubuntu/jammy/perception
 
 Tags: rolling-ros-core, rolling-ros-core-jammy
 Architectures: amd64, arm64v8
-GitCommit: 3f4fbca923d80f834f3a89b5960bad5582652519
+GitCommit: 73c1bf4c30e97d5d3d7c2aaddc8137cae2411409
 Directory: ros/rolling/ubuntu/jammy/ros-core
 
 Tags: rolling-ros-base, rolling-ros-base-jammy, rolling
 Architectures: amd64, arm64v8
-GitCommit: 20d40c96b426b8956dec203e236abff2ec29b188
+GitCommit: 73c1bf4c30e97d5d3d7c2aaddc8137cae2411409
 Directory: ros/rolling/ubuntu/jammy/ros-base
 
 Tags: rolling-perception, rolling-perception-jammy
 Architectures: amd64, arm64v8
-GitCommit: 20d40c96b426b8956dec203e236abff2ec29b188
+GitCommit: 73c1bf4c30e97d5d3d7c2aaddc8137cae2411409
 Directory: ros/rolling/ubuntu/jammy/perception
 
