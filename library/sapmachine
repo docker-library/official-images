@@ -1,62 +1,110 @@
 Maintainers: Christoph Langer <sapmachine@sap.com> (@realclanger), Christian Halstrick <sapmachine@sap.com> (@chalstrick)
 GitRepo: https://github.com/SAP/SapMachine-infrastructure.git
 
-Tags: jre-headless-ubuntu-11, jre-headless-ubuntu-11.0.20
+Tags: jre-headless-ubuntu-11, jre-headless-ubuntu-jammy-11, jre-headless-ubuntu-22.04-11, jre-headless-ubuntu-11.0.20, jre-headless-ubuntu-jammy-11.0.20, jre-headless-ubuntu-22.04-11.0.20
 Architectures: amd64, arm64v8, ppc64le
 GitCommit: 03a69c14ccf4cdb173bb67823d779770bcb44d72
 Directory: dockerfiles/official/11/ubuntu/jre-headless
 
-Tags: jre-ubuntu-11, jre-ubuntu-11.0.20
+Tags: jre-ubuntu-11, jre-ubuntu-jammy-11, jre-ubuntu-22.04-11, jre-ubuntu-11.0.20, jre-ubuntu-jammy-11.0.20, jre-ubuntu-22.04-11.0.20
 Architectures: amd64, arm64v8, ppc64le
 GitCommit: 03a69c14ccf4cdb173bb67823d779770bcb44d72
 Directory: dockerfiles/official/11/ubuntu/jre
 
-Tags: jdk-headless-ubuntu-11, jdk-headless-ubuntu-11.0.20
+Tags: jdk-headless-ubuntu-11, jdk-headless-ubuntu-jammy-11, jdk-headless-ubuntu-22.04-11, jdk-headless-ubuntu-11.0.20, jdk-headless-ubuntu-jammy-11.0.20, jdk-headless-ubuntu-22.04-11.0.20
 Architectures: amd64, arm64v8, ppc64le
 GitCommit: 03a69c14ccf4cdb173bb67823d779770bcb44d72
 Directory: dockerfiles/official/11/ubuntu/jdk-headless
 
-Tags: jdk-ubuntu-11, jdk-ubuntu-11.0.20, 11, 11.0.20
+Tags: jdk-ubuntu-11, jdk-ubuntu-jammy-11, jdk-ubuntu-22.04-11, jdk-ubuntu-11.0.20, jdk-ubuntu-jammy-11.0.20, jdk-ubuntu-22.04-11.0.20, 11, ubuntu-jammy-11, ubuntu-22.04-11, 11.0.20, ubuntu-jammy-11.0.20, ubuntu-22.04-11.0.20
 Architectures: amd64, arm64v8, ppc64le
 GitCommit: 03a69c14ccf4cdb173bb67823d779770bcb44d72
 Directory: dockerfiles/official/11/ubuntu/jdk
 
-Tags: jre-headless-ubuntu-17, jre-headless-ubuntu-17.0.8, jre-headless-ubuntu-lts
+Tags: distroless-debian11-11, distroless-debian11-11.0.20
+GitCommit: 73a9d7a55bd5aaf2c0d52f02bcff92d182470123
+Directory: dockerfiles/official/11/distroless/debian11/latest
+
+Tags: distroless-debian11-nonroot-11, distroless-debian11-nonroot-11.0.20
+GitCommit: 73a9d7a55bd5aaf2c0d52f02bcff92d182470123
+Directory: dockerfiles/official/11/distroless/debian11/nonroot
+
+Tags: distroless-debian11-debug-11, distroless-debian11-debug-11.0.20
+GitCommit: 73a9d7a55bd5aaf2c0d52f02bcff92d182470123
+Directory: dockerfiles/official/11/distroless/debian11/debug
+
+Tags: distroless-debian11-debug-nonroot-11, distroless-debian11-debug-nonroot-11.0.20
+GitCommit: 73a9d7a55bd5aaf2c0d52f02bcff92d182470123
+Directory: dockerfiles/official/11/distroless/debian11/debug-nonroot
+
+Tags: jre-headless-ubuntu-17, jre-headless-ubuntu-jammy-17, jre-headless-ubuntu-22.04-17, jre-headless-ubuntu-17.0.8, jre-headless-ubuntu-jammy-17.0.8, jre-headless-ubuntu-22.04-17.0.8, jre-headless-ubuntu-lts, jre-headless-ubuntu-jammy-lts, jre-headless-ubuntu-22.04-lts
 Architectures: amd64, arm64v8, ppc64le
 GitCommit: 2d4f3b8850a40a6ab8ea0322f05cc05ed19d0f4e
 Directory: dockerfiles/official/17/ubuntu/jre-headless
 
-Tags: jre-ubuntu-17, jre-ubuntu-17.0.8, jre-ubuntu-lts
+Tags: jre-ubuntu-17, jre-ubuntu-jammy-17, jre-ubuntu-22.04-17, jre-ubuntu-17.0.8, jre-ubuntu-jammy-17.0.8, jre-ubuntu-22.04-17.0.8, jre-ubuntu-lts, jre-ubuntu-jammy-lts, jre-ubuntu-22.04-lts
 Architectures: amd64, arm64v8, ppc64le
 GitCommit: 2d4f3b8850a40a6ab8ea0322f05cc05ed19d0f4e
 Directory: dockerfiles/official/17/ubuntu/jre
 
-Tags: jdk-headless-ubuntu-17, jdk-headless-ubuntu-17.0.8, jdk-headless-ubuntu-lts
+Tags: jdk-headless-ubuntu-17, jdk-headless-ubuntu-jammy-17, jdk-headless-ubuntu-22.04-17, jdk-headless-ubuntu-17.0.8, jdk-headless-ubuntu-jammy-17.0.8, jdk-headless-ubuntu-22.04-17.0.8, jdk-headless-ubuntu-lts, jdk-headless-ubuntu-jammy-lts, jdk-headless-ubuntu-22.04-lts
 Architectures: amd64, arm64v8, ppc64le
 GitCommit: 2d4f3b8850a40a6ab8ea0322f05cc05ed19d0f4e
 Directory: dockerfiles/official/17/ubuntu/jdk-headless
 
-Tags: jdk-ubuntu-17, jdk-ubuntu-17.0.8, jdk-ubuntu-lts, 17, 17.0.8, lts
+Tags: jdk-ubuntu-17, jdk-ubuntu-jammy-17, jdk-ubuntu-22.04-17, jdk-ubuntu-17.0.8, jdk-ubuntu-jammy-17.0.8, jdk-ubuntu-22.04-17.0.8, jdk-ubuntu-lts, jdk-ubuntu-jammy-lts, jdk-ubuntu-22.04-lts, 17, ubuntu-jammy-17, ubuntu-22.04-17, 17.0.8, ubuntu-jammy-17.0.8, ubuntu-22.04-17.0.8, lts, ubuntu-jammy-lts, ubuntu-22.04-lts
 Architectures: amd64, arm64v8, ppc64le
 GitCommit: 2d4f3b8850a40a6ab8ea0322f05cc05ed19d0f4e
 Directory: dockerfiles/official/17/ubuntu/jdk
 
-Tags: jre-headless-ubuntu-20, jre-headless-ubuntu-20.0.2, jre-headless-ubuntu
+Tags: distroless-debian11-17, distroless-debian11-17.0.8, distroless-debian11-lts
+GitCommit: adeaa4fe71491b7806fb52f6a56b52720e4d85ea
+Directory: dockerfiles/official/17/distroless/debian11/latest
+
+Tags: distroless-debian11-nonroot-17, distroless-debian11-nonroot-17.0.8, distroless-debian11-nonroot-lts
+GitCommit: adeaa4fe71491b7806fb52f6a56b52720e4d85ea
+Directory: dockerfiles/official/17/distroless/debian11/nonroot
+
+Tags: distroless-debian11-debug-17, distroless-debian11-debug-17.0.8, distroless-debian11-debug-lts
+GitCommit: adeaa4fe71491b7806fb52f6a56b52720e4d85ea
+Directory: dockerfiles/official/17/distroless/debian11/debug
+
+Tags: distroless-debian11-debug-nonroot-17, distroless-debian11-debug-nonroot-17.0.8, distroless-debian11-debug-nonroot-lts
+GitCommit: adeaa4fe71491b7806fb52f6a56b52720e4d85ea
+Directory: dockerfiles/official/17/distroless/debian11/debug-nonroot
+
+Tags: jre-headless-ubuntu-20, jre-headless-ubuntu-jammy-20, jre-headless-ubuntu-22.04-20, jre-headless-ubuntu-20.0.2, jre-headless-ubuntu-jammy-20.0.2, jre-headless-ubuntu-22.04-20.0.2, jre-headless-ubuntu, jre-headless-ubuntu-jammy, jre-headless-ubuntu-jammy-22.04
 Architectures: amd64, arm64v8, ppc64le
 GitCommit: d8d71766093af433437a77900cba0839781f54c1
 Directory: dockerfiles/official/20/ubuntu/jre-headless
 
-Tags: jre-ubuntu-20, jre-ubuntu-20.0.2, jre-ubuntu
+Tags: jre-ubuntu-20, jre-ubuntu-jammy-20, jre-ubuntu-22.04-20, jre-ubuntu-20.0.2, jre-ubuntu-jammy-20.0.2, jre-ubuntu-22.04-20.0.2, jre-ubuntu, jre-ubuntu-jammy, jre-ubuntu-jammy-22.04
 Architectures: amd64, arm64v8, ppc64le
 GitCommit: d8d71766093af433437a77900cba0839781f54c1
 Directory: dockerfiles/official/20/ubuntu/jre
 
-Tags: jdk-headless-ubuntu-20, jdk-headless-ubuntu-20.0.2, jdk-headless-ubuntu
+Tags: jdk-headless-ubuntu-20, jdk-headless-ubuntu-jammy-20, jdk-headless-ubuntu-22.04-20, jdk-headless-ubuntu-20.0.2, jdk-headless-ubuntu-jammy-20.0.2, jdk-headless-ubuntu-22.04-20.0.2, jdk-headless-ubuntu, jdk-headless-ubuntu-jammy, jdk-headless-ubuntu-jammy-22.04
 Architectures: amd64, arm64v8, ppc64le
 GitCommit: d8d71766093af433437a77900cba0839781f54c1
 Directory: dockerfiles/official/20/ubuntu/jdk-headless
 
-Tags: jdk-ubuntu-20, jdk-ubuntu-20.0.2, jdk-ubuntu, 20, 20.0.2, latest
+Tags: jdk-ubuntu-20, jdk-ubuntu-jammy-20, jdk-ubuntu-22.04-20, jdk-ubuntu-20.0.2, jdk-ubuntu-jammy-20.0.2, jdk-ubuntu-22.04-20.0.2, jdk-ubuntu, jdk-ubuntu-jammy, jdk-ubuntu-jammy-22.04, 20, ubuntu-jammy-20, ubuntu-22.04-20, 20.0.2, ubuntu-jammy-20.0.2, ubuntu-22.04-20.0.2, latest, ubuntu-jammy, ubuntu-22.04
 Architectures: amd64, arm64v8, ppc64le
 GitCommit: d8d71766093af433437a77900cba0839781f54c1
 Directory: dockerfiles/official/20/ubuntu/jdk
+
+Tags: distroless-debian11-20, distroless-debian11-20.0.2, distroless-debian11
+GitCommit: f1f01e2162de29982a73bec4596ced047a5e566c
+Directory: dockerfiles/official/20/distroless/debian11/latest
+
+Tags: distroless-debian11-nonroot-20, distroless-debian11-nonroot-20.0.2, distroless-debian11-nonroot
+GitCommit: f1f01e2162de29982a73bec4596ced047a5e566c
+Directory: dockerfiles/official/20/distroless/debian11/nonroot
+
+Tags: distroless-debian11-debug-20, distroless-debian11-debug-20.0.2, distroless-debian11-debug
+GitCommit: f1f01e2162de29982a73bec4596ced047a5e566c
+Directory: dockerfiles/official/20/distroless/debian11/debug
+
+Tags: distroless-debian11-debug-nonroot-20, distroless-debian11-debug-nonroot-20.0.2, distroless-debian11-debug-nonroot
+GitCommit: f1f01e2162de29982a73bec4596ced047a5e566c
+Directory: dockerfiles/official/20/distroless/debian11/debug-nonroot
