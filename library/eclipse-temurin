@@ -262,128 +262,128 @@ Constraints: nanoserver-1809, windowsservercore-1809
 
 
 #------------------------------v17 images---------------------------------
-Tags: 17.0.7_7-jdk-alpine, 17-jdk-alpine, 17-alpine
+Tags: 17.0.8_7-jdk-alpine, 17-jdk-alpine, 17-alpine
 Architectures: amd64
-GitCommit: 15919f7dd6a903f0f966f484461954dcf7e28620
+GitCommit: 2eabe3e4525f57d9d4e85af796fca2a2748fe907
 Directory: 17/jdk/alpine
 File: Dockerfile.releases.full
 
-Tags: 17.0.7_7-jdk-focal, 17-jdk-focal, 17-focal
+Tags: 17.0.8_7-jdk-focal, 17-jdk-focal, 17-focal
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 920efae8fe37e2b8f2b288b5f7f9e67134ecad1d
+GitCommit: 2eabe3e4525f57d9d4e85af796fca2a2748fe907
 Directory: 17/jdk/ubuntu/focal
 File: Dockerfile.releases.full
 
-Tags: 17.0.7_7-jdk-jammy, 17-jdk-jammy, 17-jammy
-SharedTags: 17.0.7_7-jdk, 17-jdk, 17
+Tags: 17.0.8_7-jdk-jammy, 17-jdk-jammy, 17-jammy
+SharedTags: 17.0.8_7-jdk, 17-jdk, 17
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 920efae8fe37e2b8f2b288b5f7f9e67134ecad1d
+GitCommit: 2eabe3e4525f57d9d4e85af796fca2a2748fe907
 Directory: 17/jdk/ubuntu/jammy
 File: Dockerfile.releases.full
 
-Tags: 17.0.7_7-jdk-centos7, 17-jdk-centos7, 17-centos7
+Tags: 17.0.8_7-jdk-centos7, 17-jdk-centos7, 17-centos7
 Architectures: amd64, arm64v8, ppc64le
-GitCommit: 920efae8fe37e2b8f2b288b5f7f9e67134ecad1d
+GitCommit: 2eabe3e4525f57d9d4e85af796fca2a2748fe907
 Directory: 17/jdk/centos
 File: Dockerfile.releases.full
 
-Tags: 17.0.7_7-jdk-ubi9-minimal, 17-jdk-ubi9-minimal, 17-ubi9-minimal
+Tags: 17.0.8_7-jdk-ubi9-minimal, 17-jdk-ubi9-minimal, 17-ubi9-minimal
 Architectures: amd64, arm64v8, ppc64le, s390x
-GitCommit: 920efae8fe37e2b8f2b288b5f7f9e67134ecad1d
+GitCommit: 2eabe3e4525f57d9d4e85af796fca2a2748fe907
 Directory: 17/jdk/ubi/ubi9-minimal
 File: Dockerfile.releases.full
 
-Tags: 17.0.7_7-jdk-windowsservercore-ltsc2022, 17-jdk-windowsservercore-ltsc2022, 17-windowsservercore-ltsc2022
-SharedTags: 17.0.7_7-jdk-windowsservercore, 17-jdk-windowsservercore, 17-windowsservercore, 17.0.7_7-jdk, 17-jdk, 17
+Tags: 17.0.8_7-jdk-windowsservercore-ltsc2022, 17-jdk-windowsservercore-ltsc2022, 17-windowsservercore-ltsc2022
+SharedTags: 17.0.8_7-jdk-windowsservercore, 17-jdk-windowsservercore, 17-windowsservercore, 17.0.8_7-jdk, 17-jdk, 17
 Architectures: windows-amd64
-GitCommit: 920efae8fe37e2b8f2b288b5f7f9e67134ecad1d
+GitCommit: 2eabe3e4525f57d9d4e85af796fca2a2748fe907
 Directory: 17/jdk/windows/windowsservercore-ltsc2022
 File: Dockerfile.releases.full
 Constraints: windowsservercore-ltsc2022
 
-Tags: 17.0.7_7-jdk-nanoserver-ltsc2022, 17-jdk-nanoserver-ltsc2022, 17-nanoserver-ltsc2022
-SharedTags: 17.0.7_7-jdk-nanoserver, 17-jdk-nanoserver, 17-nanoserver
+Tags: 17.0.8_7-jdk-nanoserver-ltsc2022, 17-jdk-nanoserver-ltsc2022, 17-nanoserver-ltsc2022
+SharedTags: 17.0.8_7-jdk-nanoserver, 17-jdk-nanoserver, 17-nanoserver
 Architectures: windows-amd64
-GitCommit: 920efae8fe37e2b8f2b288b5f7f9e67134ecad1d
+GitCommit: 2eabe3e4525f57d9d4e85af796fca2a2748fe907
 Directory: 17/jdk/windows/nanoserver-ltsc2022
 File: Dockerfile.releases.full
 Constraints: nanoserver-ltsc2022, windowsservercore-ltsc2022
 
-Tags: 17.0.7_7-jdk-windowsservercore-1809, 17-jdk-windowsservercore-1809, 17-windowsservercore-1809
-SharedTags: 17.0.7_7-jdk-windowsservercore, 17-jdk-windowsservercore, 17-windowsservercore, 17.0.7_7-jdk, 17-jdk, 17
+Tags: 17.0.8_7-jdk-windowsservercore-1809, 17-jdk-windowsservercore-1809, 17-windowsservercore-1809
+SharedTags: 17.0.8_7-jdk-windowsservercore, 17-jdk-windowsservercore, 17-windowsservercore, 17.0.8_7-jdk, 17-jdk, 17
 Architectures: windows-amd64
-GitCommit: 920efae8fe37e2b8f2b288b5f7f9e67134ecad1d
+GitCommit: 2eabe3e4525f57d9d4e85af796fca2a2748fe907
 Directory: 17/jdk/windows/windowsservercore-1809
 File: Dockerfile.releases.full
 Constraints: windowsservercore-1809
 
-Tags: 17.0.7_7-jdk-nanoserver-1809, 17-jdk-nanoserver-1809, 17-nanoserver-1809
-SharedTags: 17.0.7_7-jdk-nanoserver, 17-jdk-nanoserver, 17-nanoserver
+Tags: 17.0.8_7-jdk-nanoserver-1809, 17-jdk-nanoserver-1809, 17-nanoserver-1809
+SharedTags: 17.0.8_7-jdk-nanoserver, 17-jdk-nanoserver, 17-nanoserver
 Architectures: windows-amd64
-GitCommit: 920efae8fe37e2b8f2b288b5f7f9e67134ecad1d
+GitCommit: 2eabe3e4525f57d9d4e85af796fca2a2748fe907
 Directory: 17/jdk/windows/nanoserver-1809
 File: Dockerfile.releases.full
 Constraints: nanoserver-1809, windowsservercore-1809
 
-Tags: 17.0.7_7-jre-alpine, 17-jre-alpine
+Tags: 17.0.8_7-jre-alpine, 17-jre-alpine
 Architectures: amd64
-GitCommit: 15919f7dd6a903f0f966f484461954dcf7e28620
+GitCommit: 2eabe3e4525f57d9d4e85af796fca2a2748fe907
 Directory: 17/jre/alpine
 File: Dockerfile.releases.full
 
-Tags: 17.0.7_7-jre-focal, 17-jre-focal
+Tags: 17.0.8_7-jre-focal, 17-jre-focal
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 920efae8fe37e2b8f2b288b5f7f9e67134ecad1d
+GitCommit: 2eabe3e4525f57d9d4e85af796fca2a2748fe907
 Directory: 17/jre/ubuntu/focal
 File: Dockerfile.releases.full
 
-Tags: 17.0.7_7-jre-jammy, 17-jre-jammy
-SharedTags: 17.0.7_7-jre, 17-jre
+Tags: 17.0.8_7-jre-jammy, 17-jre-jammy
+SharedTags: 17.0.8_7-jre, 17-jre
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 920efae8fe37e2b8f2b288b5f7f9e67134ecad1d
+GitCommit: 2eabe3e4525f57d9d4e85af796fca2a2748fe907
 Directory: 17/jre/ubuntu/jammy
 File: Dockerfile.releases.full
 
-Tags: 17.0.7_7-jre-centos7, 17-jre-centos7
+Tags: 17.0.8_7-jre-centos7, 17-jre-centos7
 Architectures: amd64, arm64v8, ppc64le
-GitCommit: 920efae8fe37e2b8f2b288b5f7f9e67134ecad1d
+GitCommit: 2eabe3e4525f57d9d4e85af796fca2a2748fe907
 Directory: 17/jre/centos
 File: Dockerfile.releases.full
 
-Tags: 17.0.7_7-jre-ubi9-minimal, 17-jre-ubi9-minimal
+Tags: 17.0.8_7-jre-ubi9-minimal, 17-jre-ubi9-minimal
 Architectures: amd64, arm64v8, ppc64le, s390x
-GitCommit: 920efae8fe37e2b8f2b288b5f7f9e67134ecad1d
+GitCommit: 2eabe3e4525f57d9d4e85af796fca2a2748fe907
 Directory: 17/jre/ubi/ubi9-minimal
 File: Dockerfile.releases.full
 
-Tags: 17.0.7_7-jre-windowsservercore-ltsc2022, 17-jre-windowsservercore-ltsc2022
-SharedTags: 17.0.7_7-jre-windowsservercore, 17-jre-windowsservercore, 17.0.7_7-jre, 17-jre
+Tags: 17.0.8_7-jre-windowsservercore-ltsc2022, 17-jre-windowsservercore-ltsc2022
+SharedTags: 17.0.8_7-jre-windowsservercore, 17-jre-windowsservercore, 17.0.8_7-jre, 17-jre
 Architectures: windows-amd64
-GitCommit: 920efae8fe37e2b8f2b288b5f7f9e67134ecad1d
+GitCommit: 2eabe3e4525f57d9d4e85af796fca2a2748fe907
 Directory: 17/jre/windows/windowsservercore-ltsc2022
 File: Dockerfile.releases.full
 Constraints: windowsservercore-ltsc2022
 
-Tags: 17.0.7_7-jre-nanoserver-ltsc2022, 17-jre-nanoserver-ltsc2022
-SharedTags: 17.0.7_7-jre-nanoserver, 17-jre-nanoserver
+Tags: 17.0.8_7-jre-nanoserver-ltsc2022, 17-jre-nanoserver-ltsc2022
+SharedTags: 17.0.8_7-jre-nanoserver, 17-jre-nanoserver
 Architectures: windows-amd64
-GitCommit: 920efae8fe37e2b8f2b288b5f7f9e67134ecad1d
+GitCommit: 2eabe3e4525f57d9d4e85af796fca2a2748fe907
 Directory: 17/jre/windows/nanoserver-ltsc2022
 File: Dockerfile.releases.full
 Constraints: nanoserver-ltsc2022, windowsservercore-ltsc2022
 
-Tags: 17.0.7_7-jre-windowsservercore-1809, 17-jre-windowsservercore-1809
-SharedTags: 17.0.7_7-jre-windowsservercore, 17-jre-windowsservercore, 17.0.7_7-jre, 17-jre
+Tags: 17.0.8_7-jre-windowsservercore-1809, 17-jre-windowsservercore-1809
+SharedTags: 17.0.8_7-jre-windowsservercore, 17-jre-windowsservercore, 17.0.8_7-jre, 17-jre
 Architectures: windows-amd64
-GitCommit: 920efae8fe37e2b8f2b288b5f7f9e67134ecad1d
+GitCommit: 2eabe3e4525f57d9d4e85af796fca2a2748fe907
 Directory: 17/jre/windows/windowsservercore-1809
 File: Dockerfile.releases.full
 Constraints: windowsservercore-1809
 
-Tags: 17.0.7_7-jre-nanoserver-1809, 17-jre-nanoserver-1809
-SharedTags: 17.0.7_7-jre-nanoserver, 17-jre-nanoserver
+Tags: 17.0.8_7-jre-nanoserver-1809, 17-jre-nanoserver-1809
+SharedTags: 17.0.8_7-jre-nanoserver, 17-jre-nanoserver
 Architectures: windows-amd64
-GitCommit: 920efae8fe37e2b8f2b288b5f7f9e67134ecad1d
+GitCommit: 2eabe3e4525f57d9d4e85af796fca2a2748fe907
 Directory: 17/jre/windows/nanoserver-1809
 File: Dockerfile.releases.full
 Constraints: nanoserver-1809, windowsservercore-1809
