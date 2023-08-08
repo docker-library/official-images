@@ -23,9 +23,10 @@ COPY dir/index.jsp /var/lib/jetty/webapps/ROOT/
 EOD
 
 if [[ $image == *"12."* ]]; then
-	CMD="sh -c \"java -jar $JETTY_HOME/start.jar --add-to-start=ee10-deploy,ee10-jsp ; /docker-entrypoint.sh\"" ;
+	cid="$(docker run -d "$serverImage" sh -c 'java -jar $JETTY_HOME/start.jar --add-to-start=ee10-deploy,ee10-jsp ; /docker-entrypoint.sh')"
+else
+	cid="$(docker run -d "$serverImage")"
 fi
-cid="$(docker run -d "$serverImage" "$CMD")"
 trap "docker rm -vf $cid > /dev/null" EXIT
 
 _request() {
