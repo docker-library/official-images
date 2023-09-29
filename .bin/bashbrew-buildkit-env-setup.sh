@@ -62,7 +62,8 @@ _bashbrew_buildkit_env_setup() {
 			vars="$(_jq_setenv <<<"$vars" BUILDX_BUILDER "$buildxBuilder")"
 
 			local sbomTag
-			sbomTag="$(grep <<<"$externalPins" -m1 '^docker/buildkit-syft-scanner:')"
+			# https://hub.docker.com/r/docker/scout-sbom-indexer/tags
+			sbomTag="$(grep <<<"$externalPins" -m1 '^docker/scout-sbom-indexer:')"
 			sbomTag="$(_resolve_external_pins "$sbomTag")"
 			vars="$(_jq_setenv <<<"$vars" BASHBREW_BUILDKIT_SBOM_GENERATOR "$sbomTag")"
 			;;
