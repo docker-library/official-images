@@ -1,13 +1,16 @@
 Maintainers: Lucien Volmar <lucien@aerospike.com> (@volmarl),
              Michael Coberly <mcoberly@aerospike.com> (@mcoberly2),
-             Phuc Vinh <pvinh@aerospike.com> (@pvinh-spike)
+             Phuc Vinh <pvinh@aerospike.com> (@pvinh-spike),
+             Kevin Porter <kporter@aerospike.com> (@kportertx)
 
-Tags: ee-5.6.0.4
-Architectures: amd64
-GitRepo: https://github.com/aerospike/aerospike-server-enterprise.docker.git
-GitCommit: cd7a7c799c10a0dcdc21042167de92b5e8eff0b6
-
-Tags: ce-5.6.0.4
-Architectures: amd64
+Tags: ee-6.4.0.4, ee-6.4.0.4_1
+Architectures: amd64, arm64v8
 GitRepo: https://github.com/aerospike/aerospike-server.docker.git
-GitCommit: 5e88be62310d19610685224e89c5aed9afc0d8a2
+GitCommit: 5e912d28d7309d62449f0b490342a99a427a1e3e
+Directory: enterprise/debian12
+
+Tags: ce-6.4.0.4, ce-6.4.0.4_1
+Architectures: amd64, arm64v8
+GitRepo: https://github.com/aerospike/aerospike-server.docker.git
+GitCommit: 5e912d28d7309d62449f0b490342a99a427a1e3e
+Directory: community/debian12

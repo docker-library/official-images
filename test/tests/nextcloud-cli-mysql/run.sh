@@ -3,7 +3,7 @@ set -eo pipefail
 
 dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
-dbImage='mariadb:10.3'
+dbImage='mariadb:10.6'
 # ensure the dbImage is ready and available
 if ! docker image inspect "$dbImage" &> /dev/null; then
 	docker pull "$dbImage" > /dev/null
@@ -37,7 +37,7 @@ _occ() {
 }
 
 # Give some time to install
-. "$dir/../../retry.sh" --tries 30 '_occ app:list' > /dev/null
+. "$dir/../../retry.sh" --tries 10 --sleep 5 '_occ app:list' > /dev/null
 
 # Check if NextCloud is installed
 _occ status | grep -iq 'installed: true'

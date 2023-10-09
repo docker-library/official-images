@@ -1,152 +1,164 @@
 Maintainers: Carlos Sanchez <carlos@apache.org> (@carlossg)
+Builder: buildkit
 GitRepo: https://github.com/carlossg/docker-maven.git
+GitFetch: refs/heads/main
 
-Tags: 3.8.1-jdk-11, 3.8-jdk-11, 3-jdk-11
-Architectures: amd64, arm64v8
-GitCommit: bdffb5117c33476d554325d8efe5866306004b99
-Directory: openjdk-11
-
-Tags: 3.8.1-jdk-11-openj9, 3.8-jdk-11-openj9, 3-jdk-11-openj9
-Architectures: amd64, arm64v8, ppc64le, s390x
-GitCommit: bdffb5117c33476d554325d8efe5866306004b99
-Directory: adoptopenjdk-11-openj9
-
-Tags: 3.8.1-jdk-11-slim, 3.8-jdk-11-slim, 3-jdk-11-slim
-Architectures: amd64, arm64v8
-GitCommit: bdffb5117c33476d554325d8efe5866306004b99
-Directory: openjdk-11-slim
-
-Tags: 3.8.1-jdk-8, 3.8-jdk-8, 3-jdk-8
-Architectures: amd64
-GitCommit: bdffb5117c33476d554325d8efe5866306004b99
-Directory: openjdk-8
-
-Tags: 3.8.1-jdk-8-openj9, 3.8-jdk-8-openj9, 3-jdk-8-openj9
-Architectures: amd64, arm64v8, ppc64le, s390x
-GitCommit: bdffb5117c33476d554325d8efe5866306004b99
-Directory: adoptopenjdk-8-openj9
-
-Tags: 3.8.1-jdk-8-slim, 3.8-jdk-8-slim, 3-jdk-8-slim
-Architectures: amd64
-GitCommit: bdffb5117c33476d554325d8efe5866306004b99
-Directory: openjdk-8-slim
-
-Tags: 3.8.1-openjdk-11, 3.8-openjdk-11, 3-openjdk-11
-Architectures: amd64, arm64v8
-GitCommit: bdffb5117c33476d554325d8efe5866306004b99
-Directory: openjdk-11
-
-Tags: 3.8.1-openjdk-11-slim, 3.8-openjdk-11-slim, 3-openjdk-11-slim
-Architectures: amd64, arm64v8
-GitCommit: bdffb5117c33476d554325d8efe5866306004b99
-Directory: openjdk-11-slim
-
-Tags: 3.8.1-openjdk-15, 3.8-openjdk-15, 3-openjdk-15
-Architectures: amd64, arm64v8
-GitCommit: bdffb5117c33476d554325d8efe5866306004b99
-Directory: openjdk-15
-
-Tags: 3.8.1-openjdk-15-slim, 3.8-openjdk-15-slim, 3-openjdk-15-slim
-Architectures: amd64, arm64v8
-GitCommit: bdffb5117c33476d554325d8efe5866306004b99
-Directory: openjdk-15-slim
-
-Tags: 3.8.1-openjdk-16, 3.8.1, 3.8.1-openjdk, 3.8-openjdk-16, 3.8, 3.8-openjdk, 3-openjdk-16, 3, latest, 3-openjdk, openjdk
-Architectures: amd64, arm64v8
-GitCommit: bdffb5117c33476d554325d8efe5866306004b99
-Directory: openjdk-16
-
-Tags: 3.8.1-openjdk-16-slim, 3.8-openjdk-16-slim, 3-openjdk-16-slim
-Architectures: amd64, arm64v8
-GitCommit: bdffb5117c33476d554325d8efe5866306004b99
-Directory: openjdk-16-slim
-
-Tags: 3.8.1-openjdk-17, 3.8-openjdk-17, 3-openjdk-17
-Architectures: amd64, arm64v8
-GitCommit: bdffb5117c33476d554325d8efe5866306004b99
-Directory: openjdk-17
-
-Tags: 3.8.1-openjdk-17-slim, 3.8-openjdk-17-slim, 3-openjdk-17-slim
-Architectures: amd64, arm64v8
-GitCommit: bdffb5117c33476d554325d8efe5866306004b99
-Directory: openjdk-17-slim
-
-Tags: 3.8.1-openjdk-8, 3.8-openjdk-8, 3-openjdk-8
-Architectures: amd64
-GitCommit: bdffb5117c33476d554325d8efe5866306004b99
-Directory: openjdk-8
-
-Tags: 3.8.1-openjdk-8-slim, 3.8-openjdk-8-slim, 3-openjdk-8-slim
-Architectures: amd64
-GitCommit: bdffb5117c33476d554325d8efe5866306004b99
-Directory: openjdk-8-slim
-
-Tags: 3.8.1-adoptopenjdk-11, 3.8-adoptopenjdk-11, 3-adoptopenjdk-11
+Tags: 3.9.4-eclipse-temurin-11, 3.9-eclipse-temurin-11, 3-eclipse-temurin-11
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: bdffb5117c33476d554325d8efe5866306004b99
-Directory: adoptopenjdk-11
+GitCommit: 04ab123ebc6b70fad75cfb7a08cc24b0c921c637
+Directory: eclipse-temurin-11
 
-Tags: 3.8.1-adoptopenjdk-11-openj9, 3.8-adoptopenjdk-11-openj9, 3-adoptopenjdk-11-openj9
-Architectures: amd64, arm64v8, ppc64le, s390x
-GitCommit: bdffb5117c33476d554325d8efe5866306004b99
-Directory: adoptopenjdk-11-openj9
+Tags: 3.9.4-eclipse-temurin-11-alpine, 3.9-eclipse-temurin-11-alpine, 3-eclipse-temurin-11-alpine
+Architectures: amd64
+GitCommit: d7319e0caa2961b402073e8054bc63e8dc48d969
+Directory: eclipse-temurin-11-alpine
 
-Tags: 3.8.1-adoptopenjdk-15, 3.8.1-adoptopenjdk, 3.8-adoptopenjdk-15, 3.8-adoptopenjdk, 3-adoptopenjdk-15, 3-adoptopenjdk, adoptopenjdk
+Tags: 3.9.4-eclipse-temurin-11-focal, 3.9-eclipse-temurin-11-focal, 3-eclipse-temurin-11-focal
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: bdffb5117c33476d554325d8efe5866306004b99
-Directory: adoptopenjdk-15
+GitCommit: d7319e0caa2961b402073e8054bc63e8dc48d969
+Directory: eclipse-temurin-11-focal
 
-Tags: 3.8.1-adoptopenjdk-15-openj9, 3.8-adoptopenjdk-15-openj9, 3-adoptopenjdk-15-openj9
-Architectures: amd64, arm64v8, ppc64le, s390x
-GitCommit: bdffb5117c33476d554325d8efe5866306004b99
-Directory: adoptopenjdk-15-openj9
-
-Tags: 3.8.1-adoptopenjdk-16, 3.8-adoptopenjdk-16, 3-adoptopenjdk-16
+Tags: 3.9.4-eclipse-temurin-17, 3.9-eclipse-temurin-17, 3-eclipse-temurin-17
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: b1a19f5406f0d01cd8fe689efbb838474c48db4f
-Directory: adoptopenjdk-16
+GitCommit: d7319e0caa2961b402073e8054bc63e8dc48d969
+Directory: eclipse-temurin-17
 
-Tags: 3.8.1-adoptopenjdk-16-openj9, 3.8-adoptopenjdk-16-openj9, 3-adoptopenjdk-16-openj9
-Architectures: amd64, arm64v8, ppc64le, s390x
-GitCommit: b1a19f5406f0d01cd8fe689efbb838474c48db4f
-Directory: adoptopenjdk-16-openj9
+Tags: 3.9.4-eclipse-temurin-17-alpine, 3.9-eclipse-temurin-17-alpine, 3-eclipse-temurin-17-alpine
+Architectures: amd64
+GitCommit: d7319e0caa2961b402073e8054bc63e8dc48d969
+Directory: eclipse-temurin-17-alpine
 
-Tags: 3.8.1-adoptopenjdk-8, 3.8-adoptopenjdk-8, 3-adoptopenjdk-8
+Tags: 3.9.4-eclipse-temurin-17-focal, 3.9-eclipse-temurin-17-focal, 3-eclipse-temurin-17-focal
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: d7319e0caa2961b402073e8054bc63e8dc48d969
+Directory: eclipse-temurin-17-focal
+
+Tags: 3.9.4-eclipse-temurin-20, 3.9.4, 3.9.4-eclipse-temurin, 3.9-eclipse-temurin-20, 3.9, 3.9-eclipse-temurin, 3-eclipse-temurin-20, 3, latest, 3-eclipse-temurin, eclipse-temurin
+Architectures: amd64, arm64v8
+GitCommit: d7319e0caa2961b402073e8054bc63e8dc48d969
+Directory: eclipse-temurin-20
+
+Tags: 3.9.4-eclipse-temurin-20-alpine, 3.9-eclipse-temurin-20-alpine, 3-eclipse-temurin-20-alpine
+Architectures: amd64
+GitCommit: d7319e0caa2961b402073e8054bc63e8dc48d969
+Directory: eclipse-temurin-20-alpine
+
+Tags: 3.9.4-eclipse-temurin-8, 3.9-eclipse-temurin-8, 3-eclipse-temurin-8
+Architectures: amd64, arm32v7, arm64v8, ppc64le
+GitCommit: d7319e0caa2961b402073e8054bc63e8dc48d969
+Directory: eclipse-temurin-8
+
+Tags: 3.9.4-eclipse-temurin-8-alpine, 3.9-eclipse-temurin-8-alpine, 3-eclipse-temurin-8-alpine
+Architectures: amd64
+GitCommit: d7319e0caa2961b402073e8054bc63e8dc48d969
+Directory: eclipse-temurin-8-alpine
+
+Tags: 3.9.4-eclipse-temurin-8-focal, 3.9-eclipse-temurin-8-focal, 3-eclipse-temurin-8-focal
+Architectures: amd64, arm32v7, arm64v8, ppc64le
+GitCommit: d7319e0caa2961b402073e8054bc63e8dc48d969
+Directory: eclipse-temurin-8-focal
+
+Tags: 3.9.4-ibmjava-8, 3.9.4-ibmjava, 3.9-ibmjava-8, 3.9-ibmjava, 3-ibmjava-8, 3-ibmjava, ibmjava
 Architectures: amd64, ppc64le, s390x
-GitCommit: bdffb5117c33476d554325d8efe5866306004b99
-Directory: adoptopenjdk-8
-
-Tags: 3.8.1-adoptopenjdk-8-openj9, 3.8-adoptopenjdk-8-openj9, 3-adoptopenjdk-8-openj9
-Architectures: amd64, arm64v8, ppc64le, s390x
-GitCommit: bdffb5117c33476d554325d8efe5866306004b99
-Directory: adoptopenjdk-8-openj9
-
-Tags: 3.8.1-ibmjava-8, 3.8.1-ibmjava, 3.8-ibmjava-8, 3.8-ibmjava, 3-ibmjava-8, 3-ibmjava, ibmjava
-Architectures: amd64, i386, ppc64le, s390x
-GitCommit: bdffb5117c33476d554325d8efe5866306004b99
+GitCommit: d7319e0caa2961b402073e8054bc63e8dc48d969
 Directory: ibmjava-8
 
-Tags: 3.8.1-ibmjava-8-alpine, 3.8.1-ibmjava-alpine, 3.8-ibmjava-8-alpine, 3.8-ibmjava-alpine, 3-ibmjava-8-alpine, ibmjava-alpine
-Architectures: amd64
-GitCommit: bdffb5117c33476d554325d8efe5866306004b99
-Directory: ibmjava-8-alpine
+Tags: 3.9.4-ibm-semeru-11-focal, 3.9-ibm-semeru-11-focal, 3-ibm-semeru-11-focal
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: d7319e0caa2961b402073e8054bc63e8dc48d969
+Directory: ibm-semeru-11-focal
 
-Tags: 3.8.1-amazoncorretto-11, 3.8.1-amazoncorretto, 3.8-amazoncorretto-11, 3.8-amazoncorretto, 3-amazoncorretto-11, 3-amazoncorretto, amazoncorretto
+Tags: 3.9.4-ibm-semeru-17-focal, 3.9-ibm-semeru-17-focal, 3-ibm-semeru-17-focal
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: d7319e0caa2961b402073e8054bc63e8dc48d969
+Directory: ibm-semeru-17-focal
+
+Tags: 3.9.4-amazoncorretto-11, 3.9.4-amazoncorretto, 3.9-amazoncorretto-11, 3.9-amazoncorretto, 3-amazoncorretto-11, 3-amazoncorretto, amazoncorretto
 Architectures: amd64, arm64v8
-GitCommit: bdffb5117c33476d554325d8efe5866306004b99
+GitCommit: d7319e0caa2961b402073e8054bc63e8dc48d969
 Directory: amazoncorretto-11
 
-Tags: 3.8.1-amazoncorretto-15, 3.8-amazoncorretto-15, 3-amazoncorretto-15
+Tags: 3.9.4-amazoncorretto-11-al2023, 3.9-amazoncorretto-11-al2023, 3-amazoncorretto-11-al2023
 Architectures: amd64, arm64v8
-GitCommit: bdffb5117c33476d554325d8efe5866306004b99
-Directory: amazoncorretto-15
+GitCommit: 70289540a9c5078ffa8cdde7ab6432248f942d54
+Directory: amazoncorretto-11-al2023
 
-Tags: 3.8.1-amazoncorretto-16, 3.8-amazoncorretto-16, 3-amazoncorretto-16
+Tags: 3.9.4-amazoncorretto-11-debian, 3.9.4-amazoncorretto-11-debian-bookworm, 3.9-amazoncorretto-11-debian, 3.9-amazoncorretto-11-debian-bookworm, 3-amazoncorretto-11-debian, 3-amazoncorretto-11-debian-bookworm
 Architectures: amd64, arm64v8
-GitCommit: b6352962a604bfffb21a535e0999c0292b68c1db
-Directory: amazoncorretto-16
+GitCommit: d7319e0caa2961b402073e8054bc63e8dc48d969
+Directory: amazoncorretto-11-debian
 
-Tags: 3.8.1-amazoncorretto-8, 3.8-amazoncorretto-8, 3-amazoncorretto-8
+Tags: 3.9.4-amazoncorretto-17, 3.9-amazoncorretto-17, 3-amazoncorretto-17
 Architectures: amd64, arm64v8
-GitCommit: bdffb5117c33476d554325d8efe5866306004b99
+GitCommit: d7319e0caa2961b402073e8054bc63e8dc48d969
+Directory: amazoncorretto-17
+
+Tags: 3.9.4-amazoncorretto-17-al2023, 3.9-amazoncorretto-17-al2023, 3-amazoncorretto-17-al2023
+Architectures: amd64, arm64v8
+GitCommit: 70289540a9c5078ffa8cdde7ab6432248f942d54
+Directory: amazoncorretto-17-al2023
+
+Tags: 3.9.4-amazoncorretto-17-debian, 3.9.4-amazoncorretto-17-debian-bookworm, 3.9-amazoncorretto-17-debian, 3.9-amazoncorretto-17-debian-bookworm, 3-amazoncorretto-17-debian, 3-amazoncorretto-17-debian-bookworm
+Architectures: amd64, arm64v8
+GitCommit: d7319e0caa2961b402073e8054bc63e8dc48d969
+Directory: amazoncorretto-17-debian
+
+Tags: 3.9.4-amazoncorretto-20, 3.9-amazoncorretto-20, 3-amazoncorretto-20
+Architectures: amd64, arm64v8
+GitCommit: d7319e0caa2961b402073e8054bc63e8dc48d969
+Directory: amazoncorretto-20
+
+Tags: 3.9.4-amazoncorretto-20-al2023, 3.9-amazoncorretto-20-al2023, 3-amazoncorretto-20-al2023
+Architectures: amd64, arm64v8
+GitCommit: 70289540a9c5078ffa8cdde7ab6432248f942d54
+Directory: amazoncorretto-20-al2023
+
+Tags: 3.9.4-amazoncorretto-20-debian, 3.9.4-amazoncorretto-20-debian-bookworm, 3.9-amazoncorretto-20-debian, 3.9-amazoncorretto-20-debian-bookworm, 3-amazoncorretto-20-debian, 3-amazoncorretto-20-debian-bookworm
+Architectures: amd64, arm64v8
+GitCommit: d7319e0caa2961b402073e8054bc63e8dc48d969
+Directory: amazoncorretto-20-debian
+
+Tags: 3.9.4-amazoncorretto-21, 3.9-amazoncorretto-21, 3-amazoncorretto-21
+Architectures: amd64, arm64v8
+GitCommit: 7741c2848c3ea3ad6b4180d94b90d669d419c893
+Directory: amazoncorretto-21
+
+Tags: 3.9.4-amazoncorretto-21-al2023, 3.9-amazoncorretto-21-al2023, 3-amazoncorretto-21-al2023
+Architectures: amd64, arm64v8
+GitCommit: 3a94e25bc22f4589addf7e50361a3e0c1af1c306
+Directory: amazoncorretto-21-al2023
+
+Tags: 3.9.4-amazoncorretto-21-debian, 3.9.4-amazoncorretto-21-debian-bookworm, 3.9-amazoncorretto-21-debian, 3.9-amazoncorretto-21-debian-bookworm, 3-amazoncorretto-21-debian, 3-amazoncorretto-21-debian-bookworm
+Architectures: amd64, arm64v8
+GitCommit: 61b5d8d7e9e5706522ff154315db185816d35891
+Directory: amazoncorretto-21-debian
+
+Tags: 3.9.4-amazoncorretto-8, 3.9-amazoncorretto-8, 3-amazoncorretto-8
+Architectures: amd64, arm64v8
+GitCommit: d7319e0caa2961b402073e8054bc63e8dc48d969
 Directory: amazoncorretto-8
+
+Tags: 3.9.4-amazoncorretto-8-al2023, 3.9-amazoncorretto-8-al2023, 3-amazoncorretto-8-al2023
+Architectures: amd64, arm64v8
+GitCommit: 70289540a9c5078ffa8cdde7ab6432248f942d54
+Directory: amazoncorretto-8-al2023
+
+Tags: 3.9.4-amazoncorretto-8-debian, 3.9.4-amazoncorretto-8-debian-bookworm, 3.9-amazoncorretto-8-debian, 3.9-amazoncorretto-8-debian-bookworm, 3-amazoncorretto-8-debian, 3-amazoncorretto-8-debian-bookworm
+Architectures: amd64, arm64v8
+GitCommit: d7319e0caa2961b402073e8054bc63e8dc48d969
+Directory: amazoncorretto-8-debian
+
+Tags: 3.9.4-sapmachine-11, 3.9-sapmachine-11, 3-sapmachine-11
+Architectures: amd64, arm64v8, ppc64le
+GitCommit: d7319e0caa2961b402073e8054bc63e8dc48d969
+Directory: sapmachine-11
+
+Tags: 3.9.4-sapmachine-17, 3.9.4-sapmachine, 3.9-sapmachine-17, 3.9-sapmachine, 3-sapmachine-17, 3-sapmachine, sapmachine
+Architectures: amd64, arm64v8, ppc64le
+GitCommit: d7319e0caa2961b402073e8054bc63e8dc48d969
+Directory: sapmachine-17
+
+Tags: 3.9.4-sapmachine-21, 3.9-sapmachine-21, 3-sapmachine-21
+Architectures: amd64, arm64v8, ppc64le
+GitCommit: c6ea9b77dab964547324ce49b61ea542fc55f5b5
+Directory: sapmachine-21

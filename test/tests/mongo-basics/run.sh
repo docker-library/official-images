@@ -6,7 +6,17 @@ image="$1"
 cname="mongo-container-$RANDOM-$RANDOM"
 mongodRunArgs=( -d --name "$cname" --cap-add SYS_NICE ) # SYS_NICE is for NUMA (needed for MongoDB 3.6 on NUMA-enabled hosts)
 mongodCmdArgs=()
+
+mongo='mongo'
 mongoArgs=( --host mongo )
+countFunc='function count(coll) { return coll.count() }' # count(db.test)
+upsertFunc='function upsert(coll, doc) { return coll.save(doc) }' # upsert(db.test, { _id: 'foo', bar: 'baz' })
+if docker run --rm --entrypoint sh "$image" -c 'command -v mongosh > /dev/null'; then
+	mongo='mongosh'
+	# https://www.mongodb.com/docs/mongodb-shell/reference/compatibility/#std-label-compatibility
+	countFunc='function count(coll) { return coll.countDocuments() }' # https://www.mongodb.com/docs/manual/reference/method/db.collection.countDocuments/
+	upsertFunc='function upsert(coll, doc) { return coll.initializeUnorderedBulkOp().find({ _id: doc._id }).upsert().replaceOne(doc).execute() }' # https://www.mongodb.com/docs/manual/reference/method/Bulk.find.upsert/#insert-for-bulk.find.replaceone--
+fi
 
 testDir="$(readlink -f "$(dirname "$BASH_SOURCE")")"
 testName="$(basename "$testDir")" # "mongo-basics" or "mongo-auth-basics" or "mongo-tls-auth"
@@ -26,7 +36,7 @@ fi
 if [[ "$testName" == *tls* ]]; then
 	tlsImage="$("$testDir/../image-name.sh" librarytest/mongo-tls "$image")"
 	"$testDir/../docker-build.sh" "$testDir" "$tlsImage" <<-EOD
-		FROM alpine:3.11 AS certs
+		FROM alpine:3.17 AS certs
 		RUN apk add --no-cache openssl
 		RUN set -eux; \
 			mkdir /certs; \
@@ -82,13 +92,22 @@ trap "docker rm -vf $cid > /dev/null" EXIT
 mongo() {
 	docker run --rm -i --cap-add SYS_NICE \
 		--link "$cname":mongo \
-		--entrypoint mongo \
+		--entrypoint "$mongo" \
 		"$image" \
 		"${mongoArgs[@]}" "$@"
 }
 
 mongo_eval() {
-	mongo --quiet --eval "$@"
+	local eval="$1"; shift
+	mongo --quiet --eval "$countFunc; $upsertFunc; $eval" "$@"
+}
+mongo_eval_67788() {
+	# workaround for https://jira.mongodb.org/browse/SERVER-67788
+	local -
+	shopt -s extglob
+	local out
+	out="$(mongo_eval "$@")"
+	echo "${out##+([^0-9]*$'\n')}"
 }
 
 . "$testDir/../../retry.sh" "mongo_eval 'quit(db.stats().ok ? 0 : 1);'"
@@ -108,21 +127,21 @@ while ! mongo_eval 'quit(db.stats().ok ? 0 : 1);' &> /dev/null; do
 done
 fi
 
-[ "$(mongo_eval 'db.test.count();')" = 0 ]
-mongo_eval 'db.test.save({ _id: 1, a: 2, b: 3, c: "hello" });' > /dev/null
-[ "$(mongo_eval 'db.test.count();')" = 1 ]
-mongo_eval 'db.test.save({ _id: 1, a: 3, b: 4, c: "hello" });' > /dev/null
-[ "$(mongo_eval 'db.test.count();')" = 1 ]
-[ "$(mongo_eval 'db.test.findOne().a;')" = 3 ]
+[ "$(mongo_eval_67788 'count(db.test);')" = 0 ]
+mongo_eval 'upsert(db.test, { _id: 1, a: 2, b: 3, c: "hello" });' > /dev/null
+[ "$(mongo_eval_67788 'count(db.test);')" = 1 ]
+mongo_eval 'upsert(db.test, { _id: 1, a: 3, b: 4, c: "hello" });' > /dev/null
+[ "$(mongo_eval_67788 'count(db.test);')" = 1 ]
+[ "$(mongo_eval_67788 'db.test.findOne().a;')" = 3 ]
 
-[ "$(mongo_eval 'db.test2.count();')" = 0 ]
-mongo_eval 'db.test2.save({ _id: "abc" });' > /dev/null
-[ "$(mongo_eval 'db.test2.count();')" = 1 ]
-[ "$(mongo_eval 'db.test.count();')" = 1 ]
+[ "$(mongo_eval_67788 'count(db.test2);')" = 0 ]
+mongo_eval 'upsert(db.test2, { _id: "abc" });' > /dev/null
+[ "$(mongo_eval_67788 'count(db.test2);')" = 1 ]
+[ "$(mongo_eval_67788 'count(db.test);')" = 1 ]
 mongo_eval 'db.test2.drop();' > /dev/null
-[ "$(mongo_eval 'db.test2.count();')" = 0 ]
-[ "$(mongo_eval 'db.test.count();')" = 1 ]
-[ "$(mongo_eval 'db.test.count();' database-that-does-not-exist)" = 0 ]
+[ "$(mongo_eval_67788 'count(db.test2);')" = 0 ]
+[ "$(mongo_eval_67788 'count(db.test);')" = 1 ]
+[ "$(mongo_eval_67788 'count(db.test);' database-that-does-not-exist)" = 0 ]
 
 mongo_eval 'db.dropDatabase();' > /dev/null
-[ "$(mongo_eval 'db.test.count();')" = 0 ]
+[ "$(mongo_eval_67788 'count(db.test);')" = 0 ]

@@ -10,6 +10,14 @@ defaults:
 env:
   # https://github.com/docker-library/bashbrew/issues/10
   GIT_LFS_SKIP_SMUDGE: 1
+  
+# cancel existing runs if user makes another push
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+permissions:
+  contents: read
 
 jobs:
 
@@ -17,37 +25,37 @@ jobs:
     name: Naughty
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
+      - uses: ./.github/workflows/.bashbrew
       - name: Check for Common Issues
-        run: |
-          git clone --depth 1 https://github.com/docker-library/bashbrew.git -b master ~/bashbrew
-          ~/bashbrew/bashbrew.sh --version > /dev/null
-          export PATH="$HOME/bashbrew/bin:$PATH"
-          bashbrew --version
-          .github/workflows/naughty.sh
+        run: .github/workflows/naughty.sh
 
   generate-jobs:
     name: Generate Jobs
     runs-on: ubuntu-latest
     outputs:
       strategy: ${{ steps.generate-jobs.outputs.strategy }}
+      length: ${{ steps.generate-jobs.outputs.length }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
+      - uses: ./.github/workflows/.bashbrew
       - id: generate-jobs
         name: Generate Jobs
         run: |
-          git clone --depth 1 https://github.com/docker-library/bashbrew.git -b master ~/bashbrew
-          strategy="$(.github/workflows/generate.sh ~/bashbrew)"
+          strategy="$(.github/workflows/generate.sh)"
+          echo "strategy=$strategy" >> "$GITHUB_OUTPUT"
           jq . <<<"$strategy" # sanity check / debugging aid
-          echo "::set-output name=strategy::$strategy"
+          length="$(jq <<<"$strategy" -r '.matrix.include | length')"
+          echo "length=$length" >> "$GITHUB_OUTPUT"
 
   test:
     needs: generate-jobs
-    strategy: ${{ fromJson(needs.generate-jobs.outputs.strategy) }}
+    strategy: ${{ fromJSON(needs.generate-jobs.outputs.strategy) }}
+    if: needs.generate-jobs.outputs.length > 0
     name: ${{ matrix.name }}
     runs-on: ${{ matrix.os }}
     steps:
@@ -59,7 +67,8 @@ jobs:
           echo 'MSYS=winsymlinks:nativestrict' >> "$GITHUB_ENV"
           # https://github.com/docker-library/bashbrew/blob/a40a54d4d81b9fd2e39b4d7ba3fe203e8b022a67/scripts/github-actions/generate.sh#L146-L149
         if: runner.os == 'Windows'
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+      - uses: ./.github/workflows/.bashbrew
       - name: Prepare Environment
         run: ${{ matrix.runs.prepare }}
       - name: Pull Dependencies

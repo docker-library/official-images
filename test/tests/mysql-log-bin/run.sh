@@ -19,8 +19,9 @@ trap "docker rm -vf $cid > /dev/null" EXIT
 mysql() {
 	docker run --rm -i \
 		--link "$cname":mysql \
-		--entrypoint mysql \
+		--entrypoint sh \
 		"$image" \
+		-euc 'if command -v mariadb > /dev/null; then exec mariadb "$@"; else exec mysql "$@"; fi' -- \
 		-uroot \
 		-hmysql \
 		--silent \

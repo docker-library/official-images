@@ -1,443 +1,137 @@
 Maintainers: Peter Martini <PeterCMartini@GMail.com> (@PeterMartini),
              Zak B. Elep <zakame@cpan.org> (@zakame)
 GitRepo: https://github.com/perl/docker-perl.git
-GitCommit: 311f05366d91427d289740dd15fb9401dc4347ef
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: d2d8aab002a6637612ed920fd6bacf21db9025a1
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 
-Tags: 5.34.0, 5.34, 5, latest, 5.34.0-buster, 5.34-buster, 5-buster, buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: 5.034.000-main-buster
+Tags: 5.38.0, 5.38, 5, latest, stable, 5.38.0-bookworm, 5.38-bookworm, 5-bookworm, bookworm, stable-bookworm
+Directory: 5.038.000-main-bookworm
 
-Tags: 5.34.0-slim, 5.34-slim, 5-slim, slim, 5.34.0-slim-buster, 5.34-slim-buster, 5-slim-buster, slim-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: 5.034.000-slim-buster
+Tags: 5.38.0-bullseye, 5.38-bullseye, 5-bullseye, bullseye, stable-bullseye
+Directory: 5.038.000-main-bullseye
 
-Tags: 5.34.0-threaded, 5.34-threaded, 5-threaded, threaded, 5.34.0-threaded-buster, 5.34-threaded-buster, 5-threaded-buster, threaded-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: 5.034.000-main,threaded-buster
-
-Tags: 5.34.0-slim-threaded, 5.34-slim-threaded, 5-slim-threaded, slim-threaded, 5.34.0-slim-threaded-buster, 5.34-slim-threaded-buster, 5-slim-threaded-buster, slim-threaded-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: 5.034.000-slim,threaded-buster
-
-Tags: 5.32.1, 5.32, 5.32.1-buster, 5.32-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: 5.032.001-main-buster
-
-Tags: 5.32.1-stretch, 5.32-stretch, 5-stretch, stretch
+Tags: 5.38.0-buster, 5.38-buster, 5-buster, buster, stable-buster
 Architectures: amd64, arm32v7, arm64v8, i386
-Directory: 5.032.001-main-stretch
+Directory: 5.038.000-main-buster
 
-Tags: 5.32.1-slim, 5.32-slim, 5.32.1-slim-buster, 5.32-slim-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: 5.032.001-slim-buster
+Tags: 5.38.0-slim, 5.38-slim, 5-slim, slim, stable-slim, 5.38.0-slim-bookworm, 5.38-slim-bookworm, 5-slim-bookworm, slim-bookworm, stable-slim-bookworm
+Directory: 5.038.000-slim-bookworm
 
-Tags: 5.32.1-slim-stretch, 5.32-slim-stretch, 5-slim-stretch, slim-stretch
+Tags: 5.38.0-slim-bullseye, 5.38-slim-bullseye, 5-slim-bullseye, slim-bullseye, stable-slim-bullseye
+Directory: 5.038.000-slim-bullseye
+
+Tags: 5.38.0-slim-buster, 5.38-slim-buster, 5-slim-buster, slim-buster, stable-slim-buster
 Architectures: amd64, arm32v7, arm64v8, i386
-Directory: 5.032.001-slim-stretch
+Directory: 5.038.000-slim-buster
 
-Tags: 5.32.1-threaded, 5.32-threaded, 5.32.1-threaded-buster, 5.32-threaded-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: 5.032.001-main,threaded-buster
+Tags: 5.38.0-threaded, 5.38-threaded, 5-threaded, threaded, stable-threaded, 5.38.0-threaded-bookworm, 5.38-threaded-bookworm, 5-threaded-bookworm, threaded-bookworm, stable-threaded-bookworm
+Directory: 5.038.000-main,threaded-bookworm
 
-Tags: 5.32.1-threaded-stretch, 5.32-threaded-stretch, 5-threaded-stretch, threaded-stretch
+Tags: 5.38.0-threaded-bullseye, 5.38-threaded-bullseye, 5-threaded-bullseye, threaded-bullseye, stable-threaded-bullseye
+Directory: 5.038.000-main,threaded-bullseye
+
+Tags: 5.38.0-threaded-buster, 5.38-threaded-buster, 5-threaded-buster, threaded-buster, stable-threaded-buster
 Architectures: amd64, arm32v7, arm64v8, i386
-Directory: 5.032.001-main,threaded-stretch
+Directory: 5.038.000-main,threaded-buster
 
-Tags: 5.32.1-slim-threaded, 5.32-slim-threaded, 5.32.1-slim-threaded-buster, 5.32-slim-threaded-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: 5.032.001-slim,threaded-buster
+Tags: 5.38.0-slim-threaded, 5.38-slim-threaded, 5-slim-threaded, slim-threaded, stable-slim-threaded, 5.38.0-slim-threaded-bookworm, 5.38-slim-threaded-bookworm, 5-slim-threaded-bookworm, slim-threaded-bookworm, stable-slim-threaded-bookworm
+Directory: 5.038.000-slim,threaded-bookworm
 
-Tags: 5.32.1-slim-threaded-stretch, 5.32-slim-threaded-stretch, 5-slim-threaded-stretch, slim-threaded-stretch
+Tags: 5.38.0-slim-threaded-bullseye, 5.38-slim-threaded-bullseye, 5-slim-threaded-bullseye, slim-threaded-bullseye, stable-slim-threaded-bullseye
+Directory: 5.038.000-slim,threaded-bullseye
+
+Tags: 5.38.0-slim-threaded-buster, 5.38-slim-threaded-buster, 5-slim-threaded-buster, slim-threaded-buster, stable-slim-threaded-buster
 Architectures: amd64, arm32v7, arm64v8, i386
-Directory: 5.032.001-slim,threaded-stretch
+Directory: 5.038.000-slim,threaded-buster
 
-Tags: 5.30.3, 5.30, 5.30.3-buster, 5.30-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: 5.030.003-main-buster
+Tags: 5.36.1, 5.36, 5.36.1-bookworm, 5.36-bookworm
+Directory: 5.036.001-main-bookworm
 
-Tags: 5.30.3-stretch, 5.30-stretch
+Tags: 5.36.1-bullseye, 5.36-bullseye
+Directory: 5.036.001-main-bullseye
+
+Tags: 5.36.1-buster, 5.36-buster
 Architectures: amd64, arm32v7, arm64v8, i386
-Directory: 5.030.003-main-stretch
+Directory: 5.036.001-main-buster
 
-Tags: 5.30.3-slim, 5.30-slim, 5.30.3-slim-buster, 5.30-slim-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: 5.030.003-slim-buster
+Tags: 5.36.1-slim, 5.36-slim, 5.36.1-slim-bookworm, 5.36-slim-bookworm
+Directory: 5.036.001-slim-bookworm
 
-Tags: 5.30.3-slim-stretch, 5.30-slim-stretch
+Tags: 5.36.1-slim-bullseye, 5.36-slim-bullseye
+Directory: 5.036.001-slim-bullseye
+
+Tags: 5.36.1-slim-buster, 5.36-slim-buster
 Architectures: amd64, arm32v7, arm64v8, i386
-Directory: 5.030.003-slim-stretch
+Directory: 5.036.001-slim-buster
 
-Tags: 5.30.3-threaded, 5.30-threaded, 5.30.3-threaded-buster, 5.30-threaded-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: 5.030.003-main,threaded-buster
+Tags: 5.36.1-threaded, 5.36-threaded, 5.36.1-threaded-bookworm, 5.36-threaded-bookworm
+Directory: 5.036.001-main,threaded-bookworm
 
-Tags: 5.30.3-threaded-stretch, 5.30-threaded-stretch
+Tags: 5.36.1-threaded-bullseye, 5.36-threaded-bullseye
+Directory: 5.036.001-main,threaded-bullseye
+
+Tags: 5.36.1-threaded-buster, 5.36-threaded-buster
 Architectures: amd64, arm32v7, arm64v8, i386
-Directory: 5.030.003-main,threaded-stretch
+Directory: 5.036.001-main,threaded-buster
 
-Tags: 5.30.3-slim-threaded, 5.30-slim-threaded, 5.30.3-slim-threaded-buster, 5.30-slim-threaded-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: 5.030.003-slim,threaded-buster
+Tags: 5.36.1-slim-threaded, 5.36-slim-threaded, 5.36.1-slim-threaded-bookworm, 5.36-slim-threaded-bookworm
+Directory: 5.036.001-slim,threaded-bookworm
 
-Tags: 5.30.3-slim-threaded-stretch, 5.30-slim-threaded-stretch
+Tags: 5.36.1-slim-threaded-bullseye, 5.36-slim-threaded-bullseye
+Directory: 5.036.001-slim,threaded-bullseye
+
+Tags: 5.36.1-slim-threaded-buster, 5.36-slim-threaded-buster
 Architectures: amd64, arm32v7, arm64v8, i386
-Directory: 5.030.003-slim,threaded-stretch
+Directory: 5.036.001-slim,threaded-buster
 
-#
-# THE FOLLOWING (EOL) TAGS ARE INTENDED AS A ONE-TIME BACKFILL/REBUILD
-#
-#   (they will be removed after they are successfully rebuilt)
-#
+Tags: 5.34.1, 5.34, 5.34.1-bullseye, 5.34-bullseye
+Directory: 5.034.001-main-bullseye
 
-Tags: 5.28.3-buster, 5.28-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.028.003-main-buster
-
-Tags: 5.28.3-stretch, 5.28-stretch
+Tags: 5.34.1-buster, 5.34-buster
 Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.028.003-main-stretch
+Directory: 5.034.001-main-buster
 
-Tags: 5.28.3-slim-buster, 5.28-slim-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.028.003-slim-buster
+Tags: 5.34.1-slim, 5.34-slim, 5.34.1-slim-bullseye, 5.34-slim-bullseye
+Directory: 5.034.001-slim-bullseye
 
-Tags: 5.28.3-slim-stretch, 5.28-slim-stretch
+Tags: 5.34.1-slim-buster, 5.34-slim-buster
 Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.028.003-slim-stretch
+Directory: 5.034.001-slim-buster
 
-Tags: 5.28.3-threaded-buster, 5.28-threaded-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.028.003-main,threaded-buster
+Tags: 5.34.1-threaded, 5.34-threaded, 5.34.1-threaded-bullseye, 5.34-threaded-bullseye
+Directory: 5.034.001-main,threaded-bullseye
 
-Tags: 5.28.3-threaded-stretch, 5.28-threaded-stretch
+Tags: 5.34.1-threaded-buster, 5.34-threaded-buster
 Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.028.003-main,threaded-stretch
+Directory: 5.034.001-main,threaded-buster
 
-Tags: 5.28.3-slim-threaded-buster, 5.28-slim-threaded-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.028.003-slim,threaded-buster
+Tags: 5.34.1-slim-threaded, 5.34-slim-threaded, 5.34.1-slim-threaded-bullseye, 5.34-slim-threaded-bullseye
+Directory: 5.034.001-slim,threaded-bullseye
 
-Tags: 5.28.3-slim-threaded-stretch, 5.28-slim-threaded-stretch
+Tags: 5.34.1-slim-threaded-buster, 5.34-slim-threaded-buster
 Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.028.003-slim,threaded-stretch
+Directory: 5.034.001-slim,threaded-buster
 
-Tags: 5.26.3-buster, 5.26-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.026.003-main-buster
+Tags: 5.39.3, 5.39, devel, 5.39.3-bookworm, 5.39-bookworm, devel-bookworm
+Directory: 5.039.003-main-bookworm
 
-Tags: 5.26.3-stretch, 5.26-stretch
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.026.003-main-stretch
+Tags: 5.39.3-bullseye, 5.39-bullseye, devel-bullseye
+Directory: 5.039.003-main-bullseye
 
-Tags: 5.26.3-slim-buster, 5.26-slim-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.026.003-slim-buster
+Tags: 5.39.3-slim, 5.39-slim, devel-slim, 5.39.3-slim-bookworm, 5.39-slim-bookworm, devel-slim-bookworm
+Directory: 5.039.003-slim-bookworm
 
-Tags: 5.26.3-slim-stretch, 5.26-slim-stretch
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.026.003-slim-stretch
+Tags: 5.39.3-slim-bullseye, 5.39-slim-bullseye, devel-slim-bullseye
+Directory: 5.039.003-slim-bullseye
 
-Tags: 5.26.3-threaded-buster, 5.26-threaded-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.026.003-main,threaded-buster
+Tags: 5.39.3-threaded, 5.39-threaded, devel-threaded, 5.39.3-threaded-bookworm, 5.39-threaded-bookworm, devel-threaded-bookworm
+Directory: 5.039.003-main,threaded-bookworm
 
-Tags: 5.26.3-threaded-stretch, 5.26-threaded-stretch
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.026.003-main,threaded-stretch
+Tags: 5.39.3-threaded-bullseye, 5.39-threaded-bullseye, devel-threaded-bullseye
+Directory: 5.039.003-main,threaded-bullseye
 
-Tags: 5.26.3-slim-threaded-buster, 5.26-slim-threaded-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.026.003-slim,threaded-buster
+Tags: 5.39.3-slim-threaded, 5.39-slim-threaded, devel-slim-threaded, 5.39.3-slim-threaded-bookworm, 5.39-slim-threaded-bookworm, devel-slim-threaded-bookworm
+Directory: 5.039.003-slim,threaded-bookworm
 
-Tags: 5.26.3-slim-threaded-stretch, 5.26-slim-threaded-stretch
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.026.003-slim,threaded-stretch
-
-Tags: 5.24.4-buster, 5.24-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.024.004-main-buster
-
-Tags: 5.24.4-stretch, 5.24-stretch
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.024.004-main-stretch
-
-Tags: 5.24.4-slim-buster, 5.24-slim-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.024.004-slim-buster
-
-Tags: 5.24.4-slim-stretch, 5.24-slim-stretch
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.024.004-slim-stretch
-
-Tags: 5.24.4-threaded-buster, 5.24-threaded-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.024.004-main,threaded-buster
-
-Tags: 5.24.4-threaded-stretch, 5.24-threaded-stretch
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.024.004-main,threaded-stretch
-
-Tags: 5.24.4-slim-threaded-buster, 5.24-slim-threaded-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.024.004-slim,threaded-buster
-
-Tags: 5.24.4-slim-threaded-stretch, 5.24-slim-threaded-stretch
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.024.004-slim,threaded-stretch
-
-Tags: 5.22.4-buster, 5.22-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.022.004-main-buster
-
-Tags: 5.22.4-stretch, 5.22-stretch
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.022.004-main-stretch
-
-Tags: 5.22.4-slim-buster, 5.22-slim-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.022.004-slim-buster
-
-Tags: 5.22.4-slim-stretch, 5.22-slim-stretch
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.022.004-slim-stretch
-
-Tags: 5.22.4-threaded-buster, 5.22-threaded-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.022.004-main,threaded-buster
-
-Tags: 5.22.4-threaded-stretch, 5.22-threaded-stretch
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.022.004-main,threaded-stretch
-
-Tags: 5.22.4-slim-threaded-buster, 5.22-slim-threaded-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.022.004-slim,threaded-buster
-
-Tags: 5.22.4-slim-threaded-stretch, 5.22-slim-threaded-stretch
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.022.004-slim,threaded-stretch
-
-Tags: 5.20.3-buster, 5.20-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.020.003-main-buster
-
-Tags: 5.20.3-stretch, 5.20-stretch
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.020.003-main-stretch
-
-Tags: 5.20.3-slim-buster, 5.20-slim-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.020.003-slim-buster
-
-Tags: 5.20.3-slim-stretch, 5.20-slim-stretch
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.020.003-slim-stretch
-
-Tags: 5.20.3-threaded-buster, 5.20-threaded-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.020.003-main,threaded-buster
-
-Tags: 5.20.3-threaded-stretch, 5.20-threaded-stretch
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.020.003-main,threaded-stretch
-
-Tags: 5.20.3-slim-threaded-buster, 5.20-slim-threaded-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.020.003-slim,threaded-buster
-
-Tags: 5.20.3-slim-threaded-stretch, 5.20-slim-threaded-stretch
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.020.003-slim,threaded-stretch
-
-Tags: 5.18.4-buster, 5.18-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.018.004-main-buster
-
-Tags: 5.18.4-stretch, 5.18-stretch
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.018.004-main-stretch
-
-Tags: 5.18.4-slim-buster, 5.18-slim-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.018.004-slim-buster
-
-Tags: 5.18.4-slim-stretch, 5.18-slim-stretch
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.018.004-slim-stretch
-
-Tags: 5.18.4-threaded-buster, 5.18-threaded-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.018.004-main,threaded-buster
-
-Tags: 5.18.4-threaded-stretch, 5.18-threaded-stretch
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.018.004-main,threaded-stretch
-
-Tags: 5.18.4-slim-threaded-buster, 5.18-slim-threaded-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.018.004-slim,threaded-buster
-
-Tags: 5.18.4-slim-threaded-stretch, 5.18-slim-threaded-stretch
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.018.004-slim,threaded-stretch
-
-Tags: 5.16.3-buster, 5.16-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.016.003-main-buster
-
-Tags: 5.16.3-stretch, 5.16-stretch
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.016.003-main-stretch
-
-Tags: 5.16.3-slim-buster, 5.16-slim-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.016.003-slim-buster
-
-Tags: 5.16.3-slim-stretch, 5.16-slim-stretch
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.016.003-slim-stretch
-
-Tags: 5.16.3-threaded-buster, 5.16-threaded-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.016.003-main,threaded-buster
-
-Tags: 5.16.3-threaded-stretch, 5.16-threaded-stretch
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.016.003-main,threaded-stretch
-
-Tags: 5.16.3-slim-threaded-buster, 5.16-slim-threaded-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.016.003-slim,threaded-buster
-
-Tags: 5.16.3-slim-threaded-stretch, 5.16-slim-threaded-stretch
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.016.003-slim,threaded-stretch
-
-Tags: 5.14.4-buster, 5.14-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.014.004-main-buster
-
-Tags: 5.14.4-stretch, 5.14-stretch
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.014.004-main-stretch
-
-Tags: 5.14.4-slim-buster, 5.14-slim-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.014.004-slim-buster
-
-Tags: 5.14.4-slim-stretch, 5.14-slim-stretch
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.014.004-slim-stretch
-
-Tags: 5.14.4-threaded-buster, 5.14-threaded-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.014.004-main,threaded-buster
-
-Tags: 5.14.4-threaded-stretch, 5.14-threaded-stretch
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.014.004-main,threaded-stretch
-
-Tags: 5.14.4-slim-threaded-buster, 5.14-slim-threaded-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.014.004-slim,threaded-buster
-
-Tags: 5.14.4-slim-threaded-stretch, 5.14-slim-threaded-stretch
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.014.004-slim,threaded-stretch
-
-Tags: 5.12.5-buster, 5.12-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.012.005-main-buster
-
-Tags: 5.12.5-stretch, 5.12-stretch
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.012.005-main-stretch
-
-Tags: 5.12.5-slim-buster, 5.12-slim-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.012.005-slim-buster
-
-Tags: 5.12.5-slim-stretch, 5.12-slim-stretch
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.012.005-slim-stretch
-
-Tags: 5.12.5-threaded-buster, 5.12-threaded-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.012.005-main,threaded-buster
-
-Tags: 5.12.5-threaded-stretch, 5.12-threaded-stretch
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.012.005-main,threaded-stretch
-
-Tags: 5.12.5-slim-threaded-buster, 5.12-slim-threaded-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.012.005-slim,threaded-buster
-
-Tags: 5.12.5-slim-threaded-stretch, 5.12-slim-threaded-stretch
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.012.005-slim,threaded-stretch
-
-Tags: 5.10.1-buster, 5.10-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.010.001-main-buster
-
-Tags: 5.10.1-stretch, 5.10-stretch
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.010.001-main-stretch
-
-Tags: 5.10.1-slim-buster, 5.10-slim-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.010.001-slim-buster
-
-Tags: 5.10.1-slim-stretch, 5.10-slim-stretch
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.010.001-slim-stretch
-
-Tags: 5.10.1-threaded-buster, 5.10-threaded-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.010.001-main,threaded-buster
-
-Tags: 5.10.1-threaded-stretch, 5.10-threaded-stretch
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.010.001-main,threaded-stretch
-
-Tags: 5.10.1-slim-threaded-buster, 5.10-slim-threaded-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.010.001-slim,threaded-buster
-
-Tags: 5.10.1-slim-threaded-stretch, 5.10-slim-threaded-stretch
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.010.001-slim,threaded-stretch
-
-Tags: 5.8.9-buster, 5.8-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.008.009-main-buster
-
-Tags: 5.8.9-stretch, 5.8-stretch
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.008.009-main-stretch
-
-Tags: 5.8.9-slim-buster, 5.8-slim-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.008.009-slim-buster
-
-Tags: 5.8.9-slim-stretch, 5.8-slim-stretch
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.008.009-slim-stretch
-
-Tags: 5.8.9-threaded-buster, 5.8-threaded-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.008.009-main,threaded-buster
-
-Tags: 5.8.9-threaded-stretch, 5.8-threaded-stretch
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.008.009-main,threaded-stretch
-
-Tags: 5.8.9-slim-threaded-buster, 5.8-slim-threaded-buster
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-Directory: eol/5.008.009-slim,threaded-buster
-
-Tags: 5.8.9-slim-threaded-stretch, 5.8-slim-threaded-stretch
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: eol/5.008.009-slim,threaded-stretch
+Tags: 5.39.3-slim-threaded-bullseye, 5.39-slim-threaded-bullseye, devel-slim-threaded-bullseye
+Directory: 5.039.003-slim,threaded-bullseye
