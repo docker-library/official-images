@@ -389,105 +389,106 @@ File: Dockerfile.releases.full
 Constraints: nanoserver-1809, windowsservercore-1809
 
 
-#------------------------------v20 images---------------------------------
-Tags: 20.0.2_9-jdk-alpine, 20-jdk-alpine, 20-alpine
-Architectures: amd64
-GitCommit: f308aa1a9dc0ac8775662e4c4d71840088ab076c
-Directory: 20/jdk/alpine
-File: Dockerfile.releases.full
-
-Tags: 20.0.2_9-jdk-jammy, 20-jdk-jammy, 20-jammy
-SharedTags: 20.0.2_9-jdk, 20-jdk, 20, latest
+#------------------------------v21 images---------------------------------
+Tags: 21_35-jdk-alpine, 21-jdk-alpine, 21-alpine
 Architectures: amd64, arm64v8
-GitCommit: f308aa1a9dc0ac8775662e4c4d71840088ab076c
-Directory: 20/jdk/ubuntu/jammy
+GitCommit: 7360285847f9a281dfb23682be1351482a5ebe58
+Directory: 21/jdk/alpine
 File: Dockerfile.releases.full
 
-Tags: 20.0.2_9-jdk-ubi9-minimal, 20-jdk-ubi9-minimal, 20-ubi9-minimal
+Tags: 21_35-jdk-jammy, 21-jdk-jammy, 21-jammy
+SharedTags: 21_35-jdk, 21-jdk, 21, latest
 Architectures: amd64, arm64v8
-GitCommit: f308aa1a9dc0ac8775662e4c4d71840088ab076c
-Directory: 20/jdk/ubi/ubi9-minimal
+GitCommit: 7360285847f9a281dfb23682be1351482a5ebe58
+Directory: 21/jdk/ubuntu/jammy
 File: Dockerfile.releases.full
 
-Tags: 20.0.2_9-jdk-windowsservercore-ltsc2022, 20-jdk-windowsservercore-ltsc2022, 20-windowsservercore-ltsc2022
-SharedTags: 20.0.2_9-jdk-windowsservercore, 20-jdk-windowsservercore, 20-windowsservercore, 20.0.2_9-jdk, 20-jdk, 20, latest
+Tags: 21_35-jdk-ubi9-minimal, 21-jdk-ubi9-minimal, 21-ubi9-minimal
+Architectures: amd64, arm64v8
+GitCommit: 7360285847f9a281dfb23682be1351482a5ebe58
+Directory: 21/jdk/ubi/ubi9-minimal
+File: Dockerfile.releases.full
+
+Tags: 21_35-jdk-windowsservercore-ltsc2022, 21-jdk-windowsservercore-ltsc2022, 21-windowsservercore-ltsc2022
+SharedTags: 21_35-jdk-windowsservercore, 21-jdk-windowsservercore, 21-windowsservercore, 21_35-jdk, 21-jdk, 21, latest
 Architectures: windows-amd64
-GitCommit: 22734cf4688ad791769df55353dfb15bba9abca5
-Directory: 20/jdk/windows/windowsservercore-ltsc2022
+GitCommit: 7360285847f9a281dfb23682be1351482a5ebe58
+Directory: 21/jdk/windows/windowsservercore-ltsc2022
 File: Dockerfile.releases.full
 Constraints: windowsservercore-ltsc2022
 
-Tags: 20.0.2_9-jdk-nanoserver-ltsc2022, 20-jdk-nanoserver-ltsc2022, 20-nanoserver-ltsc2022
-SharedTags: 20.0.2_9-jdk-nanoserver, 20-jdk-nanoserver, 20-nanoserver
+Tags: 21_35-jdk-nanoserver-ltsc2022, 21-jdk-nanoserver-ltsc2022, 21-nanoserver-ltsc2022
+SharedTags: 21_35-jdk-nanoserver, 21-jdk-nanoserver, 21-nanoserver
 Architectures: windows-amd64
-GitCommit: 22734cf4688ad791769df55353dfb15bba9abca5
-Directory: 20/jdk/windows/nanoserver-ltsc2022
+GitCommit: 7360285847f9a281dfb23682be1351482a5ebe58
+Directory: 21/jdk/windows/nanoserver-ltsc2022
 File: Dockerfile.releases.full
 Constraints: nanoserver-ltsc2022, windowsservercore-ltsc2022
 
-Tags: 20.0.2_9-jdk-windowsservercore-1809, 20-jdk-windowsservercore-1809, 20-windowsservercore-1809
-SharedTags: 20.0.2_9-jdk-windowsservercore, 20-jdk-windowsservercore, 20-windowsservercore, 20.0.2_9-jdk, 20-jdk, 20, latest
+Tags: 21_35-jdk-windowsservercore-1809, 21-jdk-windowsservercore-1809, 21-windowsservercore-1809
+SharedTags: 21_35-jdk-windowsservercore, 21-jdk-windowsservercore, 21-windowsservercore, 21_35-jdk, 21-jdk, 21, latest
 Architectures: windows-amd64
-GitCommit: 22734cf4688ad791769df55353dfb15bba9abca5
-Directory: 20/jdk/windows/windowsservercore-1809
+GitCommit: 7360285847f9a281dfb23682be1351482a5ebe58
+Directory: 21/jdk/windows/windowsservercore-1809
 File: Dockerfile.releases.full
 Constraints: windowsservercore-1809
 
-Tags: 20.0.2_9-jdk-nanoserver-1809, 20-jdk-nanoserver-1809, 20-nanoserver-1809
-SharedTags: 20.0.2_9-jdk-nanoserver, 20-jdk-nanoserver, 20-nanoserver
+Tags: 21_35-jdk-nanoserver-1809, 21-jdk-nanoserver-1809, 21-nanoserver-1809
+SharedTags: 21_35-jdk-nanoserver, 21-jdk-nanoserver, 21-nanoserver
 Architectures: windows-amd64
-GitCommit: 22734cf4688ad791769df55353dfb15bba9abca5
-Directory: 20/jdk/windows/nanoserver-1809
+GitCommit: 7360285847f9a281dfb23682be1351482a5ebe58
+Directory: 21/jdk/windows/nanoserver-1809
 File: Dockerfile.releases.full
 Constraints: nanoserver-1809, windowsservercore-1809
 
-Tags: 20.0.2_9-jre-alpine, 20-jre-alpine
-Architectures: amd64
-GitCommit: f308aa1a9dc0ac8775662e4c4d71840088ab076c
-Directory: 20/jre/alpine
-File: Dockerfile.releases.full
-
-Tags: 20.0.2_9-jre-jammy, 20-jre-jammy
-SharedTags: 20.0.2_9-jre, 20-jre
+Tags: 21_35-jre-alpine, 21-jre-alpine
 Architectures: amd64, arm64v8
-GitCommit: f308aa1a9dc0ac8775662e4c4d71840088ab076c
-Directory: 20/jre/ubuntu/jammy
+GitCommit: 7360285847f9a281dfb23682be1351482a5ebe58
+Directory: 21/jre/alpine
 File: Dockerfile.releases.full
 
-Tags: 20.0.2_9-jre-ubi9-minimal, 20-jre-ubi9-minimal
+Tags: 21_35-jre-jammy, 21-jre-jammy
+SharedTags: 21_35-jre, 21-jre
 Architectures: amd64, arm64v8
-GitCommit: f308aa1a9dc0ac8775662e4c4d71840088ab076c
-Directory: 20/jre/ubi/ubi9-minimal
+GitCommit: 7360285847f9a281dfb23682be1351482a5ebe58
+Directory: 21/jre/ubuntu/jammy
 File: Dockerfile.releases.full
 
-Tags: 20.0.2_9-jre-windowsservercore-ltsc2022, 20-jre-windowsservercore-ltsc2022
-SharedTags: 20.0.2_9-jre-windowsservercore, 20-jre-windowsservercore, 20.0.2_9-jre, 20-jre
+Tags: 21_35-jre-ubi9-minimal, 21-jre-ubi9-minimal
+Architectures: amd64, arm64v8
+GitCommit: 7360285847f9a281dfb23682be1351482a5ebe58
+Directory: 21/jre/ubi/ubi9-minimal
+File: Dockerfile.releases.full
+
+Tags: 21_35-jre-windowsservercore-ltsc2022, 21-jre-windowsservercore-ltsc2022
+SharedTags: 21_35-jre-windowsservercore, 21-jre-windowsservercore, 21_35-jre, 21-jre
 Architectures: windows-amd64
-GitCommit: 22734cf4688ad791769df55353dfb15bba9abca5
-Directory: 20/jre/windows/windowsservercore-ltsc2022
+GitCommit: 7360285847f9a281dfb23682be1351482a5ebe58
+Directory: 21/jre/windows/windowsservercore-ltsc2022
 File: Dockerfile.releases.full
 Constraints: windowsservercore-ltsc2022
 
-Tags: 20.0.2_9-jre-nanoserver-ltsc2022, 20-jre-nanoserver-ltsc2022
-SharedTags: 20.0.2_9-jre-nanoserver, 20-jre-nanoserver
+Tags: 21_35-jre-nanoserver-ltsc2022, 21-jre-nanoserver-ltsc2022
+SharedTags: 21_35-jre-nanoserver, 21-jre-nanoserver
 Architectures: windows-amd64
-GitCommit: 22734cf4688ad791769df55353dfb15bba9abca5
-Directory: 20/jre/windows/nanoserver-ltsc2022
+GitCommit: 7360285847f9a281dfb23682be1351482a5ebe58
+Directory: 21/jre/windows/nanoserver-ltsc2022
 File: Dockerfile.releases.full
 Constraints: nanoserver-ltsc2022, windowsservercore-ltsc2022
 
-Tags: 20.0.2_9-jre-windowsservercore-1809, 20-jre-windowsservercore-1809
-SharedTags: 20.0.2_9-jre-windowsservercore, 20-jre-windowsservercore, 20.0.2_9-jre, 20-jre
+Tags: 21_35-jre-windowsservercore-1809, 21-jre-windowsservercore-1809
+SharedTags: 21_35-jre-windowsservercore, 21-jre-windowsservercore, 21_35-jre, 21-jre
 Architectures: windows-amd64
-GitCommit: 22734cf4688ad791769df55353dfb15bba9abca5
-Directory: 20/jre/windows/windowsservercore-1809
+GitCommit: 7360285847f9a281dfb23682be1351482a5ebe58
+Directory: 21/jre/windows/windowsservercore-1809
 File: Dockerfile.releases.full
 Constraints: windowsservercore-1809
 
-Tags: 20.0.2_9-jre-nanoserver-1809, 20-jre-nanoserver-1809
-SharedTags: 20.0.2_9-jre-nanoserver, 20-jre-nanoserver
+Tags: 21_35-jre-nanoserver-1809, 21-jre-nanoserver-1809
+SharedTags: 21_35-jre-nanoserver, 21-jre-nanoserver
 Architectures: windows-amd64
-GitCommit: 22734cf4688ad791769df55353dfb15bba9abca5
-Directory: 20/jre/windows/nanoserver-1809
+GitCommit: 7360285847f9a281dfb23682be1351482a5ebe58
+Directory: 21/jre/windows/nanoserver-1809
 File: Dockerfile.releases.full
 Constraints: nanoserver-1809, windowsservercore-1809
+
