@@ -4,232 +4,222 @@ Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/tomcat.git
 
-Tags: 11.0.0-M11-jdk21-openjdk-bookworm, 11.0.0-jdk21-openjdk-bookworm, 11.0-jdk21-openjdk-bookworm, 11.0.0-M11-jdk21-openjdk, 11.0.0-jdk21-openjdk, 11.0-jdk21-openjdk
+Tags: 11.0.0-M12-jdk21-temurin-jammy, 11.0.0-jdk21-temurin-jammy, 11.0-jdk21-temurin-jammy, 11.0.0-M12-jdk21-temurin, 11.0.0-jdk21-temurin, 11.0-jdk21-temurin, 11.0.0-M12-jdk21, 11.0.0-jdk21, 11.0-jdk21, 11.0.0-M12, 11.0.0, 11.0
 Architectures: amd64, arm64v8
-GitCommit: b512285a7e12128f0da031b6b24f1a4c026e3306
-Directory: 11.0/jdk21/openjdk-bookworm
+GitCommit: a05ba2589539f88093aa53fc94cead6a17c97aa6
+Directory: 11.0/jdk21/temurin-jammy
 
-Tags: 11.0.0-M11-jdk21-openjdk-slim-bookworm, 11.0.0-jdk21-openjdk-slim-bookworm, 11.0-jdk21-openjdk-slim-bookworm, 11.0.0-M11-jdk21-openjdk-slim, 11.0.0-jdk21-openjdk-slim, 11.0-jdk21-openjdk-slim
+Tags: 11.0.0-M12-jre21-temurin-jammy, 11.0.0-jre21-temurin-jammy, 11.0-jre21-temurin-jammy, 11.0.0-M12-jre21-temurin, 11.0.0-jre21-temurin, 11.0-jre21-temurin, 11.0.0-M12-jre21, 11.0.0-jre21, 11.0-jre21
 Architectures: amd64, arm64v8
-GitCommit: b512285a7e12128f0da031b6b24f1a4c026e3306
-Directory: 11.0/jdk21/openjdk-slim-bookworm
+GitCommit: a05ba2589539f88093aa53fc94cead6a17c97aa6
+Directory: 11.0/jre21/temurin-jammy
 
-Tags: 10.1.13-jdk21-openjdk-bookworm, 10.1-jdk21-openjdk-bookworm, 10-jdk21-openjdk-bookworm, jdk21-openjdk-bookworm, 10.1.13-jdk21-openjdk, 10.1-jdk21-openjdk, 10-jdk21-openjdk, jdk21-openjdk
+Tags: 10.1.14-jdk21-temurin-jammy, 10.1-jdk21-temurin-jammy, 10-jdk21-temurin-jammy, jdk21-temurin-jammy, 10.1.14-jdk21-temurin, 10.1-jdk21-temurin, 10-jdk21-temurin, jdk21-temurin, 10.1.14-jdk21, 10.1-jdk21, 10-jdk21, jdk21, 10.1.14, 10.1, 10, latest
 Architectures: amd64, arm64v8
-GitCommit: 4505ae69aa030beba88a68fe410866ee375a8fc0
-Directory: 10.1/jdk21/openjdk-bookworm
+GitCommit: 2fa4e03c16759c4578b3dcb6ce97d7265ed777ba
+Directory: 10.1/jdk21/temurin-jammy
 
-Tags: 10.1.13-jdk21-openjdk-slim-bookworm, 10.1-jdk21-openjdk-slim-bookworm, 10-jdk21-openjdk-slim-bookworm, jdk21-openjdk-slim-bookworm, 10.1.13-jdk21-openjdk-slim, 10.1-jdk21-openjdk-slim, 10-jdk21-openjdk-slim, jdk21-openjdk-slim
+Tags: 10.1.14-jre21-temurin-jammy, 10.1-jre21-temurin-jammy, 10-jre21-temurin-jammy, jre21-temurin-jammy, 10.1.14-jre21-temurin, 10.1-jre21-temurin, 10-jre21-temurin, jre21-temurin, 10.1.14-jre21, 10.1-jre21, 10-jre21, jre21
 Architectures: amd64, arm64v8
-GitCommit: 4505ae69aa030beba88a68fe410866ee375a8fc0
-Directory: 10.1/jdk21/openjdk-slim-bookworm
+GitCommit: 2fa4e03c16759c4578b3dcb6ce97d7265ed777ba
+Directory: 10.1/jre21/temurin-jammy
 
-Tags: 10.1.13-jdk17-temurin-jammy, 10.1-jdk17-temurin-jammy, 10-jdk17-temurin-jammy, jdk17-temurin-jammy, 10.1.13-jdk17-temurin, 10.1-jdk17-temurin, 10-jdk17-temurin, jdk17-temurin, 10.1.13-jdk17, 10.1-jdk17, 10-jdk17, jdk17, 10.1.13, 10.1, 10, latest
+Tags: 10.1.14-jdk17-temurin-jammy, 10.1-jdk17-temurin-jammy, 10-jdk17-temurin-jammy, jdk17-temurin-jammy, 10.1.14-jdk17-temurin, 10.1-jdk17-temurin, 10-jdk17-temurin, jdk17-temurin, 10.1.14-jdk17, 10.1-jdk17, 10-jdk17, jdk17
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 4505ae69aa030beba88a68fe410866ee375a8fc0
+GitCommit: db586de2afc6dccc248d2f108654e954d50da15c
 Directory: 10.1/jdk17/temurin-jammy
 
-Tags: 10.1.13-jre17-temurin-jammy, 10.1-jre17-temurin-jammy, 10-jre17-temurin-jammy, jre17-temurin-jammy, 10.1.13-jre17-temurin, 10.1-jre17-temurin, 10-jre17-temurin, jre17-temurin, 10.1.13-jre17, 10.1-jre17, 10-jre17, jre17
+Tags: 10.1.14-jre17-temurin-jammy, 10.1-jre17-temurin-jammy, 10-jre17-temurin-jammy, jre17-temurin-jammy, 10.1.14-jre17-temurin, 10.1-jre17-temurin, 10-jre17-temurin, jre17-temurin, 10.1.14-jre17, 10.1-jre17, 10-jre17, jre17
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 4505ae69aa030beba88a68fe410866ee375a8fc0
+GitCommit: db586de2afc6dccc248d2f108654e954d50da15c
 Directory: 10.1/jre17/temurin-jammy
 
-Tags: 10.1.13-jdk11-temurin-jammy, 10.1-jdk11-temurin-jammy, 10-jdk11-temurin-jammy, jdk11-temurin-jammy, 10.1.13-jdk11-temurin, 10.1-jdk11-temurin, 10-jdk11-temurin, jdk11-temurin, 10.1.13-jdk11, 10.1-jdk11, 10-jdk11, jdk11
+Tags: 10.1.14-jdk11-temurin-jammy, 10.1-jdk11-temurin-jammy, 10-jdk11-temurin-jammy, jdk11-temurin-jammy, 10.1.14-jdk11-temurin, 10.1-jdk11-temurin, 10-jdk11-temurin, jdk11-temurin, 10.1.14-jdk11, 10.1-jdk11, 10-jdk11, jdk11
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 4505ae69aa030beba88a68fe410866ee375a8fc0
+GitCommit: db586de2afc6dccc248d2f108654e954d50da15c
 Directory: 10.1/jdk11/temurin-jammy
 
-Tags: 10.1.13-jre11-temurin-jammy, 10.1-jre11-temurin-jammy, 10-jre11-temurin-jammy, jre11-temurin-jammy, 10.1.13-jre11-temurin, 10.1-jre11-temurin, 10-jre11-temurin, jre11-temurin, 10.1.13-jre11, 10.1-jre11, 10-jre11, jre11
+Tags: 10.1.14-jre11-temurin-jammy, 10.1-jre11-temurin-jammy, 10-jre11-temurin-jammy, jre11-temurin-jammy, 10.1.14-jre11-temurin, 10.1-jre11-temurin, 10-jre11-temurin, jre11-temurin, 10.1.14-jre11, 10.1-jre11, 10-jre11, jre11
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 4505ae69aa030beba88a68fe410866ee375a8fc0
+GitCommit: db586de2afc6dccc248d2f108654e954d50da15c
 Directory: 10.1/jre11/temurin-jammy
 
-Tags: 9.0.80-jdk21-openjdk-bookworm, 9.0-jdk21-openjdk-bookworm, 9-jdk21-openjdk-bookworm, 9.0.80-jdk21-openjdk, 9.0-jdk21-openjdk, 9-jdk21-openjdk
+Tags: 9.0.81-jdk21-temurin-jammy, 9.0-jdk21-temurin-jammy, 9-jdk21-temurin-jammy, 9.0.81-jdk21-temurin, 9.0-jdk21-temurin, 9-jdk21-temurin, 9.0.81-jdk21, 9.0-jdk21, 9-jdk21, 9.0.81, 9.0, 9
 Architectures: amd64, arm64v8
-GitCommit: ad1ce61765fcc0421e91cf8ee0370c79eeaa7d79
-Directory: 9.0/jdk21/openjdk-bookworm
+GitCommit: c6f2ca4467405fb3743452b648f63cae1c516791
+Directory: 9.0/jdk21/temurin-jammy
 
-Tags: 9.0.80-jdk21-openjdk-bullseye, 9.0-jdk21-openjdk-bullseye, 9-jdk21-openjdk-bullseye
+Tags: 9.0.81-jre21-temurin-jammy, 9.0-jre21-temurin-jammy, 9-jre21-temurin-jammy, 9.0.81-jre21-temurin, 9.0-jre21-temurin, 9-jre21-temurin, 9.0.81-jre21, 9.0-jre21, 9-jre21
 Architectures: amd64, arm64v8
-GitCommit: ad1ce61765fcc0421e91cf8ee0370c79eeaa7d79
-Directory: 9.0/jdk21/openjdk-bullseye
+GitCommit: c6f2ca4467405fb3743452b648f63cae1c516791
+Directory: 9.0/jre21/temurin-jammy
 
-Tags: 9.0.80-jdk21-openjdk-slim-bookworm, 9.0-jdk21-openjdk-slim-bookworm, 9-jdk21-openjdk-slim-bookworm, 9.0.80-jdk21-openjdk-slim, 9.0-jdk21-openjdk-slim, 9-jdk21-openjdk-slim
+Tags: 9.0.81-jdk21-corretto-al2, 9.0-jdk21-corretto-al2, 9-jdk21-corretto-al2, 9.0.81-jdk21-corretto, 9.0-jdk21-corretto, 9-jdk21-corretto
 Architectures: amd64, arm64v8
-GitCommit: ad1ce61765fcc0421e91cf8ee0370c79eeaa7d79
-Directory: 9.0/jdk21/openjdk-slim-bookworm
+GitCommit: f9bbf1387bda2a3aa1aa1021f607250b40621408
+Directory: 9.0/jdk21/corretto-al2
 
-Tags: 9.0.80-jdk21-openjdk-slim-bullseye, 9.0-jdk21-openjdk-slim-bullseye, 9-jdk21-openjdk-slim-bullseye
-Architectures: amd64, arm64v8
-GitCommit: ad1ce61765fcc0421e91cf8ee0370c79eeaa7d79
-Directory: 9.0/jdk21/openjdk-slim-bullseye
-
-Tags: 9.0.80-jdk17-temurin-jammy, 9.0-jdk17-temurin-jammy, 9-jdk17-temurin-jammy, 9.0.80-jdk17-temurin, 9.0-jdk17-temurin, 9-jdk17-temurin, 9.0.80-jdk17, 9.0-jdk17, 9-jdk17, 9.0.80, 9.0, 9
+Tags: 9.0.81-jdk17-temurin-jammy, 9.0-jdk17-temurin-jammy, 9-jdk17-temurin-jammy, 9.0.81-jdk17-temurin, 9.0-jdk17-temurin, 9-jdk17-temurin, 9.0.81-jdk17, 9.0-jdk17, 9-jdk17
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: ad1ce61765fcc0421e91cf8ee0370c79eeaa7d79
+GitCommit: f9bbf1387bda2a3aa1aa1021f607250b40621408
 Directory: 9.0/jdk17/temurin-jammy
 
-Tags: 9.0.80-jre17-temurin-jammy, 9.0-jre17-temurin-jammy, 9-jre17-temurin-jammy, 9.0.80-jre17-temurin, 9.0-jre17-temurin, 9-jre17-temurin, 9.0.80-jre17, 9.0-jre17, 9-jre17
+Tags: 9.0.81-jre17-temurin-jammy, 9.0-jre17-temurin-jammy, 9-jre17-temurin-jammy, 9.0.81-jre17-temurin, 9.0-jre17-temurin, 9-jre17-temurin, 9.0.81-jre17, 9.0-jre17, 9-jre17
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: ad1ce61765fcc0421e91cf8ee0370c79eeaa7d79
+GitCommit: f9bbf1387bda2a3aa1aa1021f607250b40621408
 Directory: 9.0/jre17/temurin-jammy
 
-Tags: 9.0.80-jdk17-temurin-focal, 9.0-jdk17-temurin-focal, 9-jdk17-temurin-focal
+Tags: 9.0.81-jdk17-temurin-focal, 9.0-jdk17-temurin-focal, 9-jdk17-temurin-focal
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: ad1ce61765fcc0421e91cf8ee0370c79eeaa7d79
+GitCommit: f9bbf1387bda2a3aa1aa1021f607250b40621408
 Directory: 9.0/jdk17/temurin-focal
 
-Tags: 9.0.80-jre17-temurin-focal, 9.0-jre17-temurin-focal, 9-jre17-temurin-focal
+Tags: 9.0.81-jre17-temurin-focal, 9.0-jre17-temurin-focal, 9-jre17-temurin-focal
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: ad1ce61765fcc0421e91cf8ee0370c79eeaa7d79
+GitCommit: f9bbf1387bda2a3aa1aa1021f607250b40621408
 Directory: 9.0/jre17/temurin-focal
 
-Tags: 9.0.80-jdk17-corretto-al2, 9.0-jdk17-corretto-al2, 9-jdk17-corretto-al2, 9.0.80-jdk17-corretto, 9.0-jdk17-corretto, 9-jdk17-corretto
+Tags: 9.0.81-jdk17-corretto-al2, 9.0-jdk17-corretto-al2, 9-jdk17-corretto-al2, 9.0.81-jdk17-corretto, 9.0-jdk17-corretto, 9-jdk17-corretto
 Architectures: amd64, arm64v8
-GitCommit: ad1ce61765fcc0421e91cf8ee0370c79eeaa7d79
+GitCommit: f9bbf1387bda2a3aa1aa1021f607250b40621408
 Directory: 9.0/jdk17/corretto-al2
 
-Tags: 9.0.80-jdk11-temurin-jammy, 9.0-jdk11-temurin-jammy, 9-jdk11-temurin-jammy, 9.0.80-jdk11-temurin, 9.0-jdk11-temurin, 9-jdk11-temurin, 9.0.80-jdk11, 9.0-jdk11, 9-jdk11
+Tags: 9.0.81-jdk11-temurin-jammy, 9.0-jdk11-temurin-jammy, 9-jdk11-temurin-jammy, 9.0.81-jdk11-temurin, 9.0-jdk11-temurin, 9-jdk11-temurin, 9.0.81-jdk11, 9.0-jdk11, 9-jdk11
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: ad1ce61765fcc0421e91cf8ee0370c79eeaa7d79
+GitCommit: f9bbf1387bda2a3aa1aa1021f607250b40621408
 Directory: 9.0/jdk11/temurin-jammy
 
-Tags: 9.0.80-jre11-temurin-jammy, 9.0-jre11-temurin-jammy, 9-jre11-temurin-jammy, 9.0.80-jre11-temurin, 9.0-jre11-temurin, 9-jre11-temurin, 9.0.80-jre11, 9.0-jre11, 9-jre11
+Tags: 9.0.81-jre11-temurin-jammy, 9.0-jre11-temurin-jammy, 9-jre11-temurin-jammy, 9.0.81-jre11-temurin, 9.0-jre11-temurin, 9-jre11-temurin, 9.0.81-jre11, 9.0-jre11, 9-jre11
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: ad1ce61765fcc0421e91cf8ee0370c79eeaa7d79
+GitCommit: f9bbf1387bda2a3aa1aa1021f607250b40621408
 Directory: 9.0/jre11/temurin-jammy
 
-Tags: 9.0.80-jdk11-temurin-focal, 9.0-jdk11-temurin-focal, 9-jdk11-temurin-focal
+Tags: 9.0.81-jdk11-temurin-focal, 9.0-jdk11-temurin-focal, 9-jdk11-temurin-focal
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: ad1ce61765fcc0421e91cf8ee0370c79eeaa7d79
+GitCommit: f9bbf1387bda2a3aa1aa1021f607250b40621408
 Directory: 9.0/jdk11/temurin-focal
 
-Tags: 9.0.80-jre11-temurin-focal, 9.0-jre11-temurin-focal, 9-jre11-temurin-focal
+Tags: 9.0.81-jre11-temurin-focal, 9.0-jre11-temurin-focal, 9-jre11-temurin-focal
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: ad1ce61765fcc0421e91cf8ee0370c79eeaa7d79
+GitCommit: f9bbf1387bda2a3aa1aa1021f607250b40621408
 Directory: 9.0/jre11/temurin-focal
 
-Tags: 9.0.80-jdk11-corretto-al2, 9.0-jdk11-corretto-al2, 9-jdk11-corretto-al2, 9.0.80-jdk11-corretto, 9.0-jdk11-corretto, 9-jdk11-corretto
+Tags: 9.0.81-jdk11-corretto-al2, 9.0-jdk11-corretto-al2, 9-jdk11-corretto-al2, 9.0.81-jdk11-corretto, 9.0-jdk11-corretto, 9-jdk11-corretto
 Architectures: amd64, arm64v8
-GitCommit: ad1ce61765fcc0421e91cf8ee0370c79eeaa7d79
+GitCommit: f9bbf1387bda2a3aa1aa1021f607250b40621408
 Directory: 9.0/jdk11/corretto-al2
 
-Tags: 9.0.80-jdk8-temurin-jammy, 9.0-jdk8-temurin-jammy, 9-jdk8-temurin-jammy, 9.0.80-jdk8-temurin, 9.0-jdk8-temurin, 9-jdk8-temurin, 9.0.80-jdk8, 9.0-jdk8, 9-jdk8
+Tags: 9.0.81-jdk8-temurin-jammy, 9.0-jdk8-temurin-jammy, 9-jdk8-temurin-jammy, 9.0.81-jdk8-temurin, 9.0-jdk8-temurin, 9-jdk8-temurin, 9.0.81-jdk8, 9.0-jdk8, 9-jdk8
 Architectures: amd64, arm32v7, arm64v8, ppc64le
-GitCommit: ad1ce61765fcc0421e91cf8ee0370c79eeaa7d79
+GitCommit: f9bbf1387bda2a3aa1aa1021f607250b40621408
 Directory: 9.0/jdk8/temurin-jammy
 
-Tags: 9.0.80-jre8-temurin-jammy, 9.0-jre8-temurin-jammy, 9-jre8-temurin-jammy, 9.0.80-jre8-temurin, 9.0-jre8-temurin, 9-jre8-temurin, 9.0.80-jre8, 9.0-jre8, 9-jre8
+Tags: 9.0.81-jre8-temurin-jammy, 9.0-jre8-temurin-jammy, 9-jre8-temurin-jammy, 9.0.81-jre8-temurin, 9.0-jre8-temurin, 9-jre8-temurin, 9.0.81-jre8, 9.0-jre8, 9-jre8
 Architectures: amd64, arm32v7, arm64v8, ppc64le
-GitCommit: ad1ce61765fcc0421e91cf8ee0370c79eeaa7d79
+GitCommit: f9bbf1387bda2a3aa1aa1021f607250b40621408
 Directory: 9.0/jre8/temurin-jammy
 
-Tags: 9.0.80-jdk8-temurin-focal, 9.0-jdk8-temurin-focal, 9-jdk8-temurin-focal
+Tags: 9.0.81-jdk8-temurin-focal, 9.0-jdk8-temurin-focal, 9-jdk8-temurin-focal
 Architectures: amd64, arm32v7, arm64v8, ppc64le
-GitCommit: ad1ce61765fcc0421e91cf8ee0370c79eeaa7d79
+GitCommit: f9bbf1387bda2a3aa1aa1021f607250b40621408
 Directory: 9.0/jdk8/temurin-focal
 
-Tags: 9.0.80-jre8-temurin-focal, 9.0-jre8-temurin-focal, 9-jre8-temurin-focal
+Tags: 9.0.81-jre8-temurin-focal, 9.0-jre8-temurin-focal, 9-jre8-temurin-focal
 Architectures: amd64, arm32v7, arm64v8, ppc64le
-GitCommit: ad1ce61765fcc0421e91cf8ee0370c79eeaa7d79
+GitCommit: f9bbf1387bda2a3aa1aa1021f607250b40621408
 Directory: 9.0/jre8/temurin-focal
 
-Tags: 9.0.80-jdk8-corretto-al2, 9.0-jdk8-corretto-al2, 9-jdk8-corretto-al2, 9.0.80-jdk8-corretto, 9.0-jdk8-corretto, 9-jdk8-corretto
+Tags: 9.0.81-jdk8-corretto-al2, 9.0-jdk8-corretto-al2, 9-jdk8-corretto-al2, 9.0.81-jdk8-corretto, 9.0-jdk8-corretto, 9-jdk8-corretto
 Architectures: amd64, arm64v8
-GitCommit: ad1ce61765fcc0421e91cf8ee0370c79eeaa7d79
+GitCommit: f9bbf1387bda2a3aa1aa1021f607250b40621408
 Directory: 9.0/jdk8/corretto-al2
 
-Tags: 8.5.93-jdk21-openjdk-bookworm, 8.5-jdk21-openjdk-bookworm, 8-jdk21-openjdk-bookworm, 8.5.93-jdk21-openjdk, 8.5-jdk21-openjdk, 8-jdk21-openjdk
+Tags: 8.5.94-jdk21-temurin-jammy, 8.5-jdk21-temurin-jammy, 8-jdk21-temurin-jammy, 8.5.94-jdk21-temurin, 8.5-jdk21-temurin, 8-jdk21-temurin, 8.5.94-jdk21, 8.5-jdk21, 8-jdk21, 8.5.94, 8.5, 8
 Architectures: amd64, arm64v8
-GitCommit: faaf983ea7148aa8697d9adb6b24d1d0f9e5e1a7
-Directory: 8.5/jdk21/openjdk-bookworm
+GitCommit: 2b0adfec11340b151c2b2385c7dc6de27677e10b
+Directory: 8.5/jdk21/temurin-jammy
 
-Tags: 8.5.93-jdk21-openjdk-bullseye, 8.5-jdk21-openjdk-bullseye, 8-jdk21-openjdk-bullseye
+Tags: 8.5.94-jre21-temurin-jammy, 8.5-jre21-temurin-jammy, 8-jre21-temurin-jammy, 8.5.94-jre21-temurin, 8.5-jre21-temurin, 8-jre21-temurin, 8.5.94-jre21, 8.5-jre21, 8-jre21
 Architectures: amd64, arm64v8
-GitCommit: faaf983ea7148aa8697d9adb6b24d1d0f9e5e1a7
-Directory: 8.5/jdk21/openjdk-bullseye
+GitCommit: 2b0adfec11340b151c2b2385c7dc6de27677e10b
+Directory: 8.5/jre21/temurin-jammy
 
-Tags: 8.5.93-jdk21-openjdk-slim-bookworm, 8.5-jdk21-openjdk-slim-bookworm, 8-jdk21-openjdk-slim-bookworm, 8.5.93-jdk21-openjdk-slim, 8.5-jdk21-openjdk-slim, 8-jdk21-openjdk-slim
+Tags: 8.5.94-jdk21-corretto-al2, 8.5-jdk21-corretto-al2, 8-jdk21-corretto-al2, 8.5.94-jdk21-corretto, 8.5-jdk21-corretto, 8-jdk21-corretto
 Architectures: amd64, arm64v8
-GitCommit: faaf983ea7148aa8697d9adb6b24d1d0f9e5e1a7
-Directory: 8.5/jdk21/openjdk-slim-bookworm
+GitCommit: 3e4ccf4f0918276c3a9a43156f070c6a9b16254c
+Directory: 8.5/jdk21/corretto-al2
 
-Tags: 8.5.93-jdk21-openjdk-slim-bullseye, 8.5-jdk21-openjdk-slim-bullseye, 8-jdk21-openjdk-slim-bullseye
-Architectures: amd64, arm64v8
-GitCommit: faaf983ea7148aa8697d9adb6b24d1d0f9e5e1a7
-Directory: 8.5/jdk21/openjdk-slim-bullseye
-
-Tags: 8.5.93-jdk17-temurin-jammy, 8.5-jdk17-temurin-jammy, 8-jdk17-temurin-jammy, 8.5.93-jdk17-temurin, 8.5-jdk17-temurin, 8-jdk17-temurin, 8.5.93-jdk17, 8.5-jdk17, 8-jdk17, 8.5.93, 8.5, 8
+Tags: 8.5.94-jdk17-temurin-jammy, 8.5-jdk17-temurin-jammy, 8-jdk17-temurin-jammy, 8.5.94-jdk17-temurin, 8.5-jdk17-temurin, 8-jdk17-temurin, 8.5.94-jdk17, 8.5-jdk17, 8-jdk17
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: faaf983ea7148aa8697d9adb6b24d1d0f9e5e1a7
+GitCommit: 3e4ccf4f0918276c3a9a43156f070c6a9b16254c
 Directory: 8.5/jdk17/temurin-jammy
 
-Tags: 8.5.93-jre17-temurin-jammy, 8.5-jre17-temurin-jammy, 8-jre17-temurin-jammy, 8.5.93-jre17-temurin, 8.5-jre17-temurin, 8-jre17-temurin, 8.5.93-jre17, 8.5-jre17, 8-jre17
+Tags: 8.5.94-jre17-temurin-jammy, 8.5-jre17-temurin-jammy, 8-jre17-temurin-jammy, 8.5.94-jre17-temurin, 8.5-jre17-temurin, 8-jre17-temurin, 8.5.94-jre17, 8.5-jre17, 8-jre17
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: faaf983ea7148aa8697d9adb6b24d1d0f9e5e1a7
+GitCommit: 3e4ccf4f0918276c3a9a43156f070c6a9b16254c
 Directory: 8.5/jre17/temurin-jammy
 
-Tags: 8.5.93-jdk17-temurin-focal, 8.5-jdk17-temurin-focal, 8-jdk17-temurin-focal
+Tags: 8.5.94-jdk17-temurin-focal, 8.5-jdk17-temurin-focal, 8-jdk17-temurin-focal
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: faaf983ea7148aa8697d9adb6b24d1d0f9e5e1a7
+GitCommit: 3e4ccf4f0918276c3a9a43156f070c6a9b16254c
 Directory: 8.5/jdk17/temurin-focal
 
-Tags: 8.5.93-jre17-temurin-focal, 8.5-jre17-temurin-focal, 8-jre17-temurin-focal
+Tags: 8.5.94-jre17-temurin-focal, 8.5-jre17-temurin-focal, 8-jre17-temurin-focal
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: faaf983ea7148aa8697d9adb6b24d1d0f9e5e1a7
+GitCommit: 3e4ccf4f0918276c3a9a43156f070c6a9b16254c
 Directory: 8.5/jre17/temurin-focal
 
-Tags: 8.5.93-jdk17-corretto-al2, 8.5-jdk17-corretto-al2, 8-jdk17-corretto-al2, 8.5.93-jdk17-corretto, 8.5-jdk17-corretto, 8-jdk17-corretto
+Tags: 8.5.94-jdk17-corretto-al2, 8.5-jdk17-corretto-al2, 8-jdk17-corretto-al2, 8.5.94-jdk17-corretto, 8.5-jdk17-corretto, 8-jdk17-corretto
 Architectures: amd64, arm64v8
-GitCommit: faaf983ea7148aa8697d9adb6b24d1d0f9e5e1a7
+GitCommit: 3e4ccf4f0918276c3a9a43156f070c6a9b16254c
 Directory: 8.5/jdk17/corretto-al2
 
-Tags: 8.5.93-jdk11-temurin-jammy, 8.5-jdk11-temurin-jammy, 8-jdk11-temurin-jammy, 8.5.93-jdk11-temurin, 8.5-jdk11-temurin, 8-jdk11-temurin, 8.5.93-jdk11, 8.5-jdk11, 8-jdk11
+Tags: 8.5.94-jdk11-temurin-jammy, 8.5-jdk11-temurin-jammy, 8-jdk11-temurin-jammy, 8.5.94-jdk11-temurin, 8.5-jdk11-temurin, 8-jdk11-temurin, 8.5.94-jdk11, 8.5-jdk11, 8-jdk11
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: faaf983ea7148aa8697d9adb6b24d1d0f9e5e1a7
+GitCommit: 3e4ccf4f0918276c3a9a43156f070c6a9b16254c
 Directory: 8.5/jdk11/temurin-jammy
 
-Tags: 8.5.93-jre11-temurin-jammy, 8.5-jre11-temurin-jammy, 8-jre11-temurin-jammy, 8.5.93-jre11-temurin, 8.5-jre11-temurin, 8-jre11-temurin, 8.5.93-jre11, 8.5-jre11, 8-jre11
+Tags: 8.5.94-jre11-temurin-jammy, 8.5-jre11-temurin-jammy, 8-jre11-temurin-jammy, 8.5.94-jre11-temurin, 8.5-jre11-temurin, 8-jre11-temurin, 8.5.94-jre11, 8.5-jre11, 8-jre11
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: faaf983ea7148aa8697d9adb6b24d1d0f9e5e1a7
+GitCommit: 3e4ccf4f0918276c3a9a43156f070c6a9b16254c
 Directory: 8.5/jre11/temurin-jammy
 
-Tags: 8.5.93-jdk11-temurin-focal, 8.5-jdk11-temurin-focal, 8-jdk11-temurin-focal
+Tags: 8.5.94-jdk11-temurin-focal, 8.5-jdk11-temurin-focal, 8-jdk11-temurin-focal
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: faaf983ea7148aa8697d9adb6b24d1d0f9e5e1a7
+GitCommit: 3e4ccf4f0918276c3a9a43156f070c6a9b16254c
 Directory: 8.5/jdk11/temurin-focal
 
-Tags: 8.5.93-jre11-temurin-focal, 8.5-jre11-temurin-focal, 8-jre11-temurin-focal
+Tags: 8.5.94-jre11-temurin-focal, 8.5-jre11-temurin-focal, 8-jre11-temurin-focal
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: faaf983ea7148aa8697d9adb6b24d1d0f9e5e1a7
+GitCommit: 3e4ccf4f0918276c3a9a43156f070c6a9b16254c
 Directory: 8.5/jre11/temurin-focal
 
-Tags: 8.5.93-jdk11-corretto-al2, 8.5-jdk11-corretto-al2, 8-jdk11-corretto-al2, 8.5.93-jdk11-corretto, 8.5-jdk11-corretto, 8-jdk11-corretto
+Tags: 8.5.94-jdk11-corretto-al2, 8.5-jdk11-corretto-al2, 8-jdk11-corretto-al2, 8.5.94-jdk11-corretto, 8.5-jdk11-corretto, 8-jdk11-corretto
 Architectures: amd64, arm64v8
-GitCommit: faaf983ea7148aa8697d9adb6b24d1d0f9e5e1a7
+GitCommit: 3e4ccf4f0918276c3a9a43156f070c6a9b16254c
 Directory: 8.5/jdk11/corretto-al2
 
-Tags: 8.5.93-jdk8-temurin-jammy, 8.5-jdk8-temurin-jammy, 8-jdk8-temurin-jammy, 8.5.93-jdk8-temurin, 8.5-jdk8-temurin, 8-jdk8-temurin, 8.5.93-jdk8, 8.5-jdk8, 8-jdk8
+Tags: 8.5.94-jdk8-temurin-jammy, 8.5-jdk8-temurin-jammy, 8-jdk8-temurin-jammy, 8.5.94-jdk8-temurin, 8.5-jdk8-temurin, 8-jdk8-temurin, 8.5.94-jdk8, 8.5-jdk8, 8-jdk8
 Architectures: amd64, arm32v7, arm64v8, ppc64le
-GitCommit: faaf983ea7148aa8697d9adb6b24d1d0f9e5e1a7
+GitCommit: 3e4ccf4f0918276c3a9a43156f070c6a9b16254c
 Directory: 8.5/jdk8/temurin-jammy
 
-Tags: 8.5.93-jre8-temurin-jammy, 8.5-jre8-temurin-jammy, 8-jre8-temurin-jammy, 8.5.93-jre8-temurin, 8.5-jre8-temurin, 8-jre8-temurin, 8.5.93-jre8, 8.5-jre8, 8-jre8
+Tags: 8.5.94-jre8-temurin-jammy, 8.5-jre8-temurin-jammy, 8-jre8-temurin-jammy, 8.5.94-jre8-temurin, 8.5-jre8-temurin, 8-jre8-temurin, 8.5.94-jre8, 8.5-jre8, 8-jre8
 Architectures: amd64, arm32v7, arm64v8, ppc64le
-GitCommit: faaf983ea7148aa8697d9adb6b24d1d0f9e5e1a7
+GitCommit: 3e4ccf4f0918276c3a9a43156f070c6a9b16254c
 Directory: 8.5/jre8/temurin-jammy
 
-Tags: 8.5.93-jdk8-temurin-focal, 8.5-jdk8-temurin-focal, 8-jdk8-temurin-focal
+Tags: 8.5.94-jdk8-temurin-focal, 8.5-jdk8-temurin-focal, 8-jdk8-temurin-focal
 Architectures: amd64, arm32v7, arm64v8, ppc64le
-GitCommit: faaf983ea7148aa8697d9adb6b24d1d0f9e5e1a7
+GitCommit: 3e4ccf4f0918276c3a9a43156f070c6a9b16254c
 Directory: 8.5/jdk8/temurin-focal
 
-Tags: 8.5.93-jre8-temurin-focal, 8.5-jre8-temurin-focal, 8-jre8-temurin-focal
+Tags: 8.5.94-jre8-temurin-focal, 8.5-jre8-temurin-focal, 8-jre8-temurin-focal
 Architectures: amd64, arm32v7, arm64v8, ppc64le
-GitCommit: faaf983ea7148aa8697d9adb6b24d1d0f9e5e1a7
+GitCommit: 3e4ccf4f0918276c3a9a43156f070c6a9b16254c
 Directory: 8.5/jre8/temurin-focal
 
-Tags: 8.5.93-jdk8-corretto-al2, 8.5-jdk8-corretto-al2, 8-jdk8-corretto-al2, 8.5.93-jdk8-corretto, 8.5-jdk8-corretto, 8-jdk8-corretto
+Tags: 8.5.94-jdk8-corretto-al2, 8.5-jdk8-corretto-al2, 8-jdk8-corretto-al2, 8.5.94-jdk8-corretto, 8.5-jdk8-corretto, 8-jdk8-corretto
 Architectures: amd64, arm64v8
-GitCommit: faaf983ea7148aa8697d9adb6b24d1d0f9e5e1a7
+GitCommit: 3e4ccf4f0918276c3a9a43156f070c6a9b16254c
 Directory: 8.5/jdk8/corretto-al2
