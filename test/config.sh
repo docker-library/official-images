@@ -2,7 +2,6 @@
 
 globalTests+=(
 	utc
-	cve-2014--shellshock
 	no-hard-coded-passwords
 	override-cmd
 )
@@ -18,20 +17,18 @@ imageTests[:onbuild]+='
 testAlias+=(
 	[amazoncorretto]='openjdk'
 	[adoptopenjdk]='openjdk'
+	[eclipse-temurin]='openjdk'
 	[sapmachine]='openjdk'
-	[iojs]='node'
+	[ibm-semeru-runtimes]='openjdk'
+
 	[jruby]='ruby'
 	[pypy]='python'
 
 	[ubuntu]='debian'
-	[ubuntu-debootstrap]='debian'
 
 	[mariadb]='mysql'
 	[percona]='mysql'
 	[percona:psmdb]='mongo'
-
-	[hola-mundo]='hello-world'
-	[hello-seattle]='hello-world'
 )
 
 imageTests+=(
@@ -41,8 +38,6 @@ imageTests+=(
 	'
 	[cassandra]='
 		cassandra-basics
-	'
-	[celery]='
 	'
 	[clojure]='
 	'
@@ -54,6 +49,9 @@ imageTests+=(
 	[convertigo]='
 		convertigo-hello-world
 	'
+	[dart]='
+		dart-hello-world
+	'
 	[debian]='
 		debian-apt-get
 	'
@@ -61,22 +59,14 @@ imageTests+=(
 		docker-dind
 		docker-registry-push-pull
 	'
-	[django]='
-	'
 	[eclipse-mosquitto]='
 		eclipse-mosquitto-basics
-	'
-	[elasticsearch]='
-		elasticsearch-basics
 	'
 	[elixir]='
 		elixir-hello-world
 	'
 	[erlang]='
 		erlang-hello-world
-	'
-	[fsharp]='
-		fsharp-hello-world
 	'
 	[gcc]='
 		gcc-c-hello-world
@@ -116,6 +106,12 @@ imageTests+=(
 	[logstash]='
 		logstash-basics
 	'
+	[matomo:apache]='
+		matomo-apache-run
+	'
+	[matomo:fpm]='
+		matomo-fpm-run
+	'
 	[memcached]='
 		memcached-basics
 	'
@@ -127,6 +123,8 @@ imageTests+=(
 	'
 	[monica]='
 		monica-cli
+		monica-cli-mysql8
+		monica-cli-mariadb10
 	'
 	[monica:apache]='
 		monica-apache-run
@@ -148,9 +146,7 @@ imageTests+=(
 		mysql-log-bin
 	'
 	[nextcloud]='
-		nextcloud-cli-mysql
-		nextcloud-cli-postgres
-		nextcloud-cli-sqlite
+		nextcloud-cli
 	'
 	[nextcloud:apache]='
 		nextcloud-apache-run
@@ -179,6 +175,7 @@ imageTests+=(
 	'
 	[perl]='
 		perl-hello-world
+		perl-cpanm
 	'
 	[php]='
 		php-ext-install
@@ -199,6 +196,12 @@ imageTests+=(
 		plone-zeoclient
 		plone-zeosite
 	'
+	[postfixadmin:apache]='
+		postfixadmin-apache-run
+	'
+	[postfixadmin:fpm]='
+		postfixadmin-fpm-run
+	'
 	[postgres]='
 		postgres-basics
 		postgres-initdb
@@ -206,6 +209,7 @@ imageTests+=(
 	[python]='
 		python-hy
 		python-imports
+		python-no-pyc
 		python-pip-requests-ssl
 		python-sqlite3
 		python-stack-size
@@ -215,8 +219,6 @@ imageTests+=(
 		rabbitmq-tls
 	'
 	[r-base]='
-	'
-	[rails]='
 	'
 	[rapidoid]='
 		rapidoid-hello-world
@@ -243,6 +245,7 @@ imageTests+=(
 		ruby-bundler
 		ruby-nonroot
 		ruby-binstubs
+		ruby-native-extension
 	'
 	[rust]='
 		rust-hello-world
@@ -261,6 +264,9 @@ imageTests+=(
 	'
 	[tomcat]='
 		tomcat-hello-world
+	'
+	[varnish]='
+		varnish
 	'
 	[wordpress:apache]='
 		wordpress-apache-run
@@ -284,8 +290,6 @@ globalExcludeTests+=(
 	[nats-streaming_utc]=1
 	[nats_no-hard-coded-passwords]=1
 	[nats_utc]=1
-	[swarm_no-hard-coded-passwords]=1
-	[swarm_utc]=1
 	[traefik_no-hard-coded-passwords]=1
 	[traefik_utc]=1
 
@@ -317,10 +321,8 @@ globalExcludeTests+=(
 	[percona:psmdb_percona-rocksdb]=1
 
 	# windows!
-	[:nanoserver_cve-2014--shellshock]=1
 	[:nanoserver_no-hard-coded-passwords]=1
 	[:nanoserver_utc]=1
-	[:windowsservercore_cve-2014--shellshock]=1
 	[:windowsservercore_no-hard-coded-passwords]=1
 	[:windowsservercore_utc]=1
 
@@ -334,6 +336,10 @@ globalExcludeTests+=(
 	[traefik:windowsservercore_override-cmd]=1
 
 	# TODO adjust MongoDB tests to use docker networks instead of links so they can work on Windows (and consider using PowerShell to generate appropriate certificates for TLS tests instead of openssl)
+	[mongo:nanoserver_mongo-basics]=1
+	[mongo:nanoserver_mongo-auth-basics]=1
+	[mongo:nanoserver_mongo-tls-basics]=1
+	[mongo:nanoserver_mongo-tls-auth]=1
 	[mongo:windowsservercore_mongo-basics]=1
 	[mongo:windowsservercore_mongo-auth-basics]=1
 	[mongo:windowsservercore_mongo-tls-basics]=1

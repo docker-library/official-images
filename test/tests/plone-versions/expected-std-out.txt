@@ -1,6 +1,7 @@
 
 [buildout]
 extends = develop.cfg
+find-links += 
 develop += src/eea.facetednavigation
 eggs += eea.facetednavigation
 zcml += eea.facetednavigation-meta

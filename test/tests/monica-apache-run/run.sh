@@ -5,10 +5,10 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
 image="$1"
 
-mysqlImage='mysql:5.7'
-# ensure the mysqlImage is ready and available
-if ! docker image inspect "$mysqlImage" &> /dev/null; then
-	docker pull "$mysqlImage" > /dev/null
+dbImage='mysql:8.0'
+# ensure the dbImage is ready and available
+if ! docker image inspect "$dbImage" &> /dev/null; then
+	docker pull "$dbImage" > /dev/null
 fi
 
 # Create an instance of the container-under-test
@@ -17,7 +17,7 @@ mysqlCid="$(docker run -d \
 	-e MYSQL_DATABASE=monica \
 	-e MYSQL_USER=homestead \
 	-e MYSQL_PASSWORD=secret \
-	"$mysqlImage")"
+	"$dbImage")"
 trap "docker rm -vf $mysqlCid > /dev/null" EXIT
 
 cid="$(docker run -d \
@@ -41,5 +41,4 @@ _request() {
 . "$dir/../../retry.sh" --tries 30 '_request GET / --output /dev/null'
 
 # Check that we can request / and that it contains the pattern "Welcome" somewhere
-_request GET '/' |tac|tac| grep -iq "Welcome"
-# (without "|tac|tac|" we get "broken pipe" since "grep" closes the pipe before "curl" is done reading it)
+_request GET '/' | grep -i "Welcome" > /dev/null

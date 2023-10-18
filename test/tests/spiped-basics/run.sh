@@ -55,4 +55,4 @@ _request() {
 . "$dir/../../retry.sh" '[ "$(_request GET / --output /dev/null || echo $?)" != 7 ]'
 
 # Check that we can request / (which is proxying example.com)
-_request GET http '/' |tac|tac| grep -q '<h1>Example Domain</h1>'
+_request GET http '/' | grep '<h1>Example Domain</h1>' > /dev/null

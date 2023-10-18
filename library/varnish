@@ -1,13 +1,28 @@
-# this file was generated using https://github.com/varnish/docker-varnish/blob/c0846f15b04cd499a1df1fb62f0693b41a84e636/populate.sh
-Maintainers: Guillaume Quintard <guillaume@varni.sh> (@gquintard)
+# this file was generated using https://github.com/varnish/docker-varnish/blob/61eab19ea5d87528d2c6a109dce7e355ac9965fc/populate.sh
+Maintainers: Guillaume Quintard <guillaume.quintard@gmail.com> (@gquintard)
 GitRepo: https://github.com/varnish/docker-varnish.git
 
-Tags: 6.0, 6.0.7-1, 6.0.7, stable
-Architectures: amd64
-Directory: stable/debian
-GitCommit: c0846f15b04cd499a1df1fb62f0693b41a84e636
-
-Tags: 6.5, 6.5.1-1, 6.5.1, 6, latest, fresh
-Architectures: amd64
+Tags: fresh, 7.4.1, 7.4, latest
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: fresh/debian
-GitCommit: f26947e3a1d7ab5e3e76114d58e54f0ddee13534
+GitCommit: 61eab19ea5d87528d2c6a109dce7e355ac9965fc
+
+Tags: fresh-alpine, 7.4.1-alpine, 7.4-alpine, alpine
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+Directory: fresh/alpine
+GitCommit: 61eab19ea5d87528d2c6a109dce7e355ac9965fc
+
+Tags: old, 7.3.0, 7.3
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+Directory: old/debian
+GitCommit: b9c04df300b4a9138c61debe495fbe56021f7550
+
+Tags: old-alpine, 7.3.0-alpine, 7.3-alpine
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+Directory: old/alpine
+GitCommit: b9c04df300b4a9138c61debe495fbe56021f7550
+
+Tags: stable, 6.0.11, 6.0
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+Directory: stable/debian
+GitCommit: f3be41ac5e4224615e1437334ffc16418e3e89f3

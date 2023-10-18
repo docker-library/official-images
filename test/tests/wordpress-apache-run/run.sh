@@ -42,5 +42,4 @@ _request() {
 
 # Check that we can request / and that it contains the word "setup" somewhere
 # <form id="setup" method="post" action="?step=1"><label class='screen-reader-text' for='language'>Select a default language</label>
-_request GET '/' |tac|tac| grep -iq setup
-# (without "|tac|tac|" we get "broken pipe" since "grep" closes the pipe before "curl" is done reading it)
+_request GET '/' | grep -i setup > /dev/null

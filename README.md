@@ -38,7 +38,7 @@
 
 The Docker Official Images are curated images [hosted on Docker Hub](https://hub.docker.com/u/library). The main tenets are:
 
-- Focus on [Free](https://www.fsf.org/) and [Open-Source](https://opensource.org/) Software
+- Focus on [Free](https://www.debian.org/social_contract#guidelines) and [Open-Source](https://opensource.org/) Software
 
 - Support [multiple architectures](#architectures-other-than-amd64)
 
@@ -71,6 +71,7 @@ Some images have been ported for other architectures, and many of these are offi
 	-	IBM POWER8 (`ppc64le`): https://hub.docker.com/u/ppc64le/
 	-	IBM z Systems (`s390x`): https://hub.docker.com/u/s390x/
 	-	MIPS64 LE (`mips64le`): https://hub.docker.com/u/mips64le/
+	-	RISC-V 64-bit (`riscv64`): https://hub.docker.com/u/riscv64/
 	-	x86/i686 (`i386`): https://hub.docker.com/u/i386/
 
 As of 2017-09-12, these other architectures are included under the non-prefixed images via ["manifest lists"](https://docs.docker.com/registry/spec/manifest-v2-2/#manifest-list) (also known as ["indexes" in the OCI image specification](https://github.com/opencontainers/image-spec/blob/v1.0.0/image-index.md)), such that, for example, `docker run hello-world` should run as-is on all supported platforms.
@@ -85,7 +86,7 @@ Yes! We have [a dedicated FAQ repository](https://github.com/docker-library/faq)
 
 ## Contributing to the standard library
 
-Thank you for your interest in the Docker official images project! We strive to make these instructions as simple and straightforward as possible, but if you find yourself lost, don't hesitate to seek us out on Freenode IRC in channel `#docker-library` or by creating a GitHub issue here.
+Thank you for your interest in the Docker official images project! We strive to make these instructions as simple and straightforward as possible, but if you find yourself lost, don't hesitate to seek us out on [Libera.Chat IRC](https://libera.chat) in channel `#docker-library` or by creating a GitHub issue here.
 
 Be sure to familiarize yourself with [Official Repositories on Docker Hub](https://docs.docker.com/docker-hub/official_repos/) and the [Best practices for writing Dockerfiles](https://docs.docker.com/articles/dockerfile_best-practices/) in the Docker documentation. These will be the foundation of the review process performed by the official images maintainers. If you'd like the review process to go more smoothly, please ensure that your `Dockerfile`s adhere to all the points mentioned there, as well as [below](README.md#review-guidelines), before submitting a pull request.
 
@@ -118,11 +119,7 @@ When taking over an existing repository, please ensure that the entire Git histo
 
 Rebuilding the same `Dockerfile` should result in the same version of the image being packaged, even if the second build happens several versions later, or the build should fail outright, such that an inadvertent rebuild of a `Dockerfile` tagged as `0.1.0` doesn't end up containing `0.2.3`. For example, if using `apt` to install the main program for the image, be sure to pin it to a specific version (ex: `... apt-get install -y my-package=0.1.0 ...`). For dependent packages installed by `apt` there is not usually a need to pin them to a version.
 
-No official images can be derived from, or depend on, non-official images with the following notable exceptions:
-
--	[`FROM scratch`](https://hub.docker.com/_/scratch/)
--	[`FROM mcr.microsoft.com/windows/servercore`](https://hub.docker.com/r/microsoft/windowsservercore/)
--	[`FROM mcr.microsoft.com/windows/nanoserver`](https://hub.docker.com/r/microsoft/nanoserver/)
+No official images can be derived from, or depend on, non-official images (allowing the non-image [`scratch`](https://hub.docker.com/_/scratch/) and the intentionally limited exceptions pinned in [`.external-pins`](.external-pins) -- see also [`.external-pins/list.sh`](.external-pins/list.sh)).
 
 #### Consistency
 
@@ -168,7 +165,7 @@ All official images should provide a consistent interface. A beginning user shou
 3.	If the image only contains the main executable and its linked libraries (ie no shell) then it is fine to use the executable as the `ENTRYPOINT`, since that is the only thing that can run:
 
 	```Dockerfile
-	ENTRYPOINT ["swarm"]
+	ENTRYPOINT ["fully-static-binary"]
 	CMD ["--help"]
 	```
 
@@ -200,7 +197,7 @@ RUN set -eux; \
   wget -O /usr/local/bin/tini "https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini"; \
   wget -O /usr/local/bin/tini.asc "https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini.asc"; \
   export GNUPGHOME="$(mktemp -d)"; \
-  gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$TINI_SIGN_KEY"; \
+  gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$TINI_SIGN_KEY"; \
   gpg --batch --verify /usr/local/bin/tini.asc /usr/local/bin/tini; \
   command -v gpgconf && gpgconf --kill all || :; \
   rm -r "$GNUPGHOME" /usr/local/bin/tini.asc; \
@@ -228,7 +225,7 @@ The `Dockerfile` should be written to help mitigate interception attacks during 
 
 The purpose in recommending the use of https for downloading needed artifacts is that it ensures that the download is from a trusted source which also happens to make interception much more difficult.
 
-The purpose in recommending PGP signature verification is to ensure that only an authorized user published the given artifact. When importing PGP keys, please use the [high-availability server pool](https://sks-keyservers.net/overview-of-pools.php#pool_ha) from sks-keyservers (`ha.pool.sks-keyservers.net`). While there are often transient failures with servers in this pool, the build servers have a proxy that greatly improves reliability (see the FAQ section on [keys and verification](https://github.com/docker-library/faq/#openpgp--gnupg-keys-and-verification)).
+The purpose in recommending PGP signature verification is to ensure that only an authorized user published the given artifact. When importing PGP keys, please use the [the `keys.openpgp.org` service](https://keys.openpgp.org/about) when possible (preferring `keyserver.ubuntu.com` otherwise). See also the FAQ section on [keys and verification](https://github.com/docker-library/faq/#openpgp--gnupg-keys-and-verification).
 
 The purpose in recommending checksum verification is to verify that the artifact is as expected. This ensures that when remote content changes, the Dockerfile also will change and provide a natural `docker build` cache bust. As a bonus, this also prevents accidentally downloading newer-than-expected artifacts on poorly versioned files.
 
@@ -243,7 +240,7 @@ Below are some examples:
 	    curl -fL "https://www.python.org/ftp/python/$PYTHON_VERSION/Python-$PYTHON_VERSION.tar.xz.asc" -o python.tar.xz.asc; \
 	    export GNUPGHOME="$(mktemp -d)"; \
 	# gpg: key F73C700D: public key "Larry Hastings <larry@hastings.org>" imported
-	    gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys 97FC712E4C024BBEA48A61ED3A5CA953F73C700D; \
+	    gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 97FC712E4C024BBEA48A61ED3A5CA953F73C700D; \
 	    gpg --batch --verify python.tar.xz.asc python.tar.xz; \
 	    rm -r "$GNUPGHOME" python.tar.xz.asc; \
 	    echo "$PYTHON_DOWNLOAD_SHA512 *python.tar.xz" | sha512sum --strict --check; \
@@ -256,7 +253,7 @@ Below are some examples:
 	RUN set -eux; \
 	    key='A4A9406876FCBD3C456770C88C718D3B5072E1F5'; \
 	    export GNUPGHOME="$(mktemp -d)"; \
-	    gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; \
+	    gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; \
 	    gpg --batch --armor --export "$key" > /etc/apt/trusted.gpg.d/mysql.gpg.asc; \
 	    gpgconf --kill all; \
 	    rm -rf "$GNUPGHOME"; \
@@ -278,7 +275,7 @@ Below are some examples:
 	ENV RUBY_DOWNLOAD_SHA256 (sha256-value-here)
 	RUN set -eux; \
 	    curl -fL -o ruby.tar.gz "https://cache.ruby-lang.org/pub/ruby/$RUBY_MAJOR/ruby-$RUBY_VERSION.tar.gz"; \
-	    echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.gz" | sha256sum -c --strict --check; \
+	    echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.gz" | sha256sum --strict --check; \
 	    # install
 	```
 
@@ -304,14 +301,14 @@ Official Repositories that require additional privileges should specify the mini
 
 For image updates which constitute a security fix, there are a few things we recommend to help ensure your update is merged, built, and released as quickly as possible:
 
-1.	[Contact us](MAINTAINERS) a few days in advance to give us a heads up and a timing estimate (so we can schedule time for the incoming update appropriately).
+1.	[Send an email to `doi@docker.com`](mailto:doi@docker.com) a few (business) days in advance to give us a heads up and a timing estimate (so we can schedule time for the incoming update appropriately).
 2.	Include `[security]` in the title of your pull request (for example, `[security] Update FooBar to 1.2.5, 1.3.7, 2.0.1`).
 3.	Keep the pull request free of changes that are unrelated to the security fix -- we'll still be doing review of the update, but it will be expedited so this will help us help you.
 4.	Be active and responsive to comments on the pull request after it's opened (as usual, but even more so if the timing of the release is of importance).
 
 #### Multiple Architectures
 
-Each repo can specify multiple architectures for any and all tags. If no architecture is specified, images are built in Linux on `amd64` (aka x86-64). To specify more or different architectures, use the `Architectures` field (comma-delimited list, whitespace is trimmed). Valid architectures are found in [Bashbrew's `oci-platform.go` file](https://github.com/docker-library/bashbrew/blob/v0.1.0/vendor/github.com/docker-library/go-dockerlibrary/architecture/oci-platform.go#L14-L26):
+Each repo can specify multiple architectures for any and all tags. If no architecture is specified, images are built in Linux on `amd64` (aka x86-64). To specify more or different architectures, use the `Architectures` field (comma-delimited list, whitespace is trimmed). Valid architectures are found in [Bashbrew's `oci-platform.go` file](https://github.com/docker-library/bashbrew/blob/v0.1.2/architecture/oci-platform.go#L14-L27):
 
 -	`amd64`
 -	`arm32v6`
@@ -320,14 +317,17 @@ Each repo can specify multiple architectures for any and all tags. If no archite
 -	`i386`
 -	`mips64le`
 -	`ppc64le`
+-	`riscv64`
 -	`s390x`
 -	`windows-amd64`
 
 The `Architectures` of any given tag must be a strict subset of the `Architectures` of the tag it is `FROM`.
 
-We strongly recommend that most images create a single `Dockerfile` per entry in the library file that can be used for multiple architectures. This means that each supported architecture will have the same `FROM` line (e.g. `FROM debian:jessie`). See [`golang`](https://github.com/docker-library/official-images/blob/master/library/golang), [`docker`](https://github.com/docker-library/official-images/blob/master/library/docker), [`haproxy`](https://github.com/docker-library/official-images/blob/master/library/haproxy), and [`php`](https://github.com/docker-library/official-images/blob/master/library/php) for examples of library files using one `Dockerfile` per entry and see their respective git repos for example `Dockerfile`s.
+Images must have a single `Dockerfile` per entry in the library file that can be used for multiple architectures. This means that each supported architecture will have the same `FROM` line (e.g. `FROM debian:buster`). See [`golang`](https://github.com/docker-library/official-images/blob/master/library/golang), [`docker`](https://github.com/docker-library/official-images/blob/master/library/docker), [`haproxy`](https://github.com/docker-library/official-images/blob/master/library/haproxy), and [`php`](https://github.com/docker-library/official-images/blob/master/library/php) for examples of library files using one `Dockerfile` per entry and see their respective git repos for example `Dockerfile`s.
 
-For images that are `FROM scratch` like `debian` it will be necessary to have a different `Dockerfile` and build context in order to `ADD` architecture specific binaries. Since these images use the same `Tags`, they need to be in the same entry. Use the architecture specific fields for `GitRepo`, `GitFetch`, `GitCommit`, and `Directory`, which are the architecture concatenated with hyphen (`-`) and the field (e.g. `arm32v7-GitCommit`). Any architecture that does not have an architecture-specific field will use the default field (e.g. no `arm32v7-Directory` means `Directory` will be used for `arm32v7`). See the [`debian`](https://github.com/docker-library/official-images/blob/master/library/debian) or [`ubuntu`](https://github.com/docker-library/official-images/blob/master/library/ubuntu) files in the library for examples. The following is an example for [`hello-world`](https://github.com/docker-library/official-images/blob/master/library/hello-world):
+If different parts of the Dockerfile only happen in one architecture or another, use control flow (e.g.`if`/`case`) along with `dpkg --print-architecture` or `apk -print-arch` to detect the userspace architecture. Only use `uname` for architecture detection when more accurate tools cannot be installed. See [golang](https://github.com/docker-library/golang/blob/b879b60a7d94128c8fb5aea763cf31772495511d/1.16/buster/Dockerfile#L24-L68) for an example where some architectures require building binaries from the upstream source packages and some merely download the binary release.
+
+For base images like `debian` it will be necessary to have a different `Dockerfile` and build context in order to `ADD` architecture specific binaries and this is a valid exception to the above. Since these images use the same `Tags`, they need to be in the same entry. Use the architecture specific fields for `GitRepo`, `GitFetch`, `GitCommit`, and `Directory`, which are the architecture concatenated with hyphen (`-`) and the field (e.g. `arm32v7-GitCommit`). Any architecture that does not have an architecture-specific field will use the default field (e.g. no `arm32v7-Directory` means `Directory` will be used for `arm32v7`). See the [`debian`](https://github.com/docker-library/official-images/blob/master/library/debian) or [`ubuntu`](https://github.com/docker-library/official-images/blob/master/library/ubuntu) files in the library for examples. The following is an example for [`hello-world`](https://github.com/docker-library/official-images/blob/master/library/hello-world):
 
 ```
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
@@ -368,7 +368,7 @@ Proposing a new official image should not be undertaken lightly. We expect and r
 
 ## Library definition files
 
-The library definition files are plain text files found in the [`library/` directory of the `official-images` repository](https://github.com/docker-library/official-images/tree/master/library). Each library file controls the current "supported" set of image tags that appear on the Docker Hub description. Tags that are removed from a library file do not get removed from the Docker Hub, so that old versions can continue to be available for use, but are not maintained by upstream or the maintainer of the official image. Tags in the library file are only built through an update to that library file or as a result of its base image being updated (ie, an image `FROM debian:jessie` would be rebuilt when `debian:jessie` is built). Only what is in the library file will be rebuilt when a base has updates.
+The library definition files are plain text files found in the [`library/` directory of the `official-images` repository](https://github.com/docker-library/official-images/tree/master/library). Each library file controls the current "supported" set of image tags that appear on the Docker Hub description. Tags that are removed from a library file do not get removed from the Docker Hub, so that old versions can continue to be available for use, but are not maintained by upstream or the maintainer of the official image. Tags in the library file are only built through an update to that library file or as a result of its base image being updated (ie, an image `FROM debian:buster` would be rebuilt when `debian:buster` is built). Only what is in the library file will be rebuilt when a base has updates.
 
 Given this policy, it is worth clarifying a few cases: backfilled versions, release candidates, and continuous integration builds. When a new repository is proposed, it is common to include some older unsupported versions in the initial pull request with the agreement to remove them right after acceptance. Don't confuse this with a comprehensive historical archive which is not the intention. Another common case where the term "supported" is stretched a bit is with release candidates. A release candidate is really just a naming convention for what are expected to be shorter-lived releases, so they are totally acceptable and encouraged. Unlike a release candidate, continuous integration builds which have a fully automated release cycle based on code commits or a regular schedule are not appropriate.
 
@@ -410,12 +410,13 @@ The first entry is the "global" metadata for the image. The only required field 
 	GitFetch: refs/heads/2.0-pre-release
 	GitCommit: beefdeadbeefdeadbeefdeadbeefdeadbeefdead
 	Directory: 2
+	File: Dockerfile-to-use
 
 Bashbrew will fetch code out of the Git repository (`GitRepo`) at the commit specified (`GitCommit`). If the commit referenced is not available by fetching `master` of the associated `GitRepo`, it becomes necessary to supply a value for `GitFetch` in order to tell Bashbrew what ref to fetch in order to get the commit necessary.
 
 The built image will be tagged as `<manifest-filename>:<tag>` (ie, `library/golang` with a `Tags` value of `1.6, 1, latest` will create tags of `golang:1.6`, `golang:1`, and `golang:latest`).
 
-Optionally, if `Directory` is present, Bashbrew will look for the `Dockerfile` inside the specified subdirectory instead of at the root (and `Directory` will be used as the ["context" for the build](https://docs.docker.com/reference/builder/) instead of the top-level of the repository).
+Optionally, if `Directory` is present, Bashbrew will look for the `Dockerfile` inside the specified subdirectory instead of at the root (and `Directory` will be used as the ["context" for the build](https://docs.docker.com/reference/builder/) instead of the top-level of the repository). If `File` is present, the specified filename instead of `Dockerfile` will be used.
 
 See the [multi-arch section](#multiple-architectures) for details on how to specify a different `GitRepo`, `GitFetch`, `GitCommit`, or `Directory` for a specific architecture.
 

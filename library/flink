@@ -1,55 +1,33 @@
-# this file is generated via https://github.com/apache/flink-docker/blob/f47f4a2e257279c4c28667e3ceff12bc5eb70afb/generate-stackbrew-library.sh
-
-Maintainers: Patrick Lucas <me@patricklucas.com> (@patricklucas),
-             Ismaël Mejía <iemejia@gmail.com> (@iemejia)
+# this file is generated via https://github.com/apache/flink-docker/blob/187238c6b444457d9b57279715fa16b37fe59e45/generate-stackbrew-library.sh
+Maintainers: The Apache Flink Project <dev@flink.apache.org> (@ApacheFlink)
 GitRepo: https://github.com/apache/flink-docker.git
 
-Tags: 1.10.3-scala_2.11, 1.10-scala_2.11
-Architectures: amd64
-GitCommit: 2a89b61a261f803f8785fd5dd882b7f50ec33fce
-Directory: ./1.10/scala_2.11-debian
+Tags: 1.17.1-scala_2.12-java8, 1.17-scala_2.12-java8, scala_2.12-java8, 1.17.1-java8, 1.17-java8, java8
+Architectures: amd64,arm64v8
+GitCommit: abc36dd88483a221c0f5495c742bd95c349e9ac2
+Directory: ./1.17/scala_2.12-java8-ubuntu
 
-Tags: 1.10.3-scala_2.12, 1.10-scala_2.12, 1.10.3, 1.10
-Architectures: amd64
-GitCommit: 2a89b61a261f803f8785fd5dd882b7f50ec33fce
-Directory: ./1.10/scala_2.12-debian
+Tags: 1.17.1-scala_2.12-java11, 1.17-scala_2.12-java11, scala_2.12-java11, 1.17.1-scala_2.12, 1.17-scala_2.12, scala_2.12, 1.17.1-java11, 1.17-java11, java11, 1.17.1, 1.17, latest
+Architectures: amd64,arm64v8
+GitCommit: abc36dd88483a221c0f5495c742bd95c349e9ac2
+Directory: ./1.17/scala_2.12-java11-ubuntu
 
-Tags: 1.11.3-scala_2.11-java11, 1.11-scala_2.11-java11
-Architectures: amd64
-GitCommit: 7035f03679b11352f2fdecd9f6a9bb0ec8bc2022
-Directory: ./1.11/scala_2.11-java11-debian
+Tags: 1.16.2-scala_2.12-java8, 1.16-scala_2.12-java8, 1.16.2-java8, 1.16-java8
+Architectures: amd64,arm64v8
+GitCommit: 45c6d230407d89aa83b0d170dd056d6868cf808e
+Directory: ./1.16/scala_2.12-java8-ubuntu
 
-Tags: 1.11.3-scala_2.11-java8, 1.11-scala_2.11-java8, 1.11.3-scala_2.11, 1.11-scala_2.11
-Architectures: amd64
-GitCommit: 7035f03679b11352f2fdecd9f6a9bb0ec8bc2022
-Directory: ./1.11/scala_2.11-java8-debian
+Tags: 1.16.2-scala_2.12-java11, 1.16-scala_2.12-java11, 1.16.2-scala_2.12, 1.16-scala_2.12, 1.16.2-java11, 1.16-java11, 1.16.2, 1.16
+Architectures: amd64,arm64v8
+GitCommit: 45c6d230407d89aa83b0d170dd056d6868cf808e
+Directory: ./1.16/scala_2.12-java11-ubuntu
 
-Tags: 1.11.3-scala_2.12-java11, 1.11-scala_2.12-java11, 1.11.3-java11, 1.11-java11
-Architectures: amd64
-GitCommit: 7035f03679b11352f2fdecd9f6a9bb0ec8bc2022
-Directory: ./1.11/scala_2.12-java11-debian
+Tags: 1.15.4-scala_2.12-java8, 1.15-scala_2.12-java8, 1.15.4-java8, 1.15-java8
+Architectures: amd64,arm64v8
+GitCommit: c9754889a57fad2d8fff2a1975f076a0caebb28c
+Directory: ./1.15/scala_2.12-java8-ubuntu
 
-Tags: 1.11.3-scala_2.12-java8, 1.11-scala_2.12-java8, 1.11.3-scala_2.12, 1.11-scala_2.12, 1.11.3-java8, 1.11-java8, 1.11.3, 1.11
-Architectures: amd64
-GitCommit: 7035f03679b11352f2fdecd9f6a9bb0ec8bc2022
-Directory: ./1.11/scala_2.12-java8-debian
-
-Tags: 1.12.1-scala_2.11-java11, 1.12-scala_2.11-java11, scala_2.11-java11
-Architectures: amd64
-GitCommit: adc8432ea3ae7fa111172c2b3d3e6a923b9af4dd
-Directory: ./1.12/scala_2.11-java11-debian
-
-Tags: 1.12.1-scala_2.11-java8, 1.12-scala_2.11-java8, scala_2.11-java8, 1.12.1-scala_2.11, 1.12-scala_2.11, scala_2.11
-Architectures: amd64
-GitCommit: adc8432ea3ae7fa111172c2b3d3e6a923b9af4dd
-Directory: ./1.12/scala_2.11-java8-debian
-
-Tags: 1.12.1-scala_2.12-java11, 1.12-scala_2.12-java11, scala_2.12-java11, 1.12.1-java11, 1.12-java11, java11
-Architectures: amd64
-GitCommit: adc8432ea3ae7fa111172c2b3d3e6a923b9af4dd
-Directory: ./1.12/scala_2.12-java11-debian
-
-Tags: 1.12.1-scala_2.12-java8, 1.12-scala_2.12-java8, scala_2.12-java8, 1.12.1-scala_2.12, 1.12-scala_2.12, scala_2.12, 1.12.1-java8, 1.12-java8, java8, 1.12.1, 1.12, latest
-Architectures: amd64
-GitCommit: adc8432ea3ae7fa111172c2b3d3e6a923b9af4dd
-Directory: ./1.12/scala_2.12-java8-debian
+Tags: 1.15.4-scala_2.12-java11, 1.15-scala_2.12-java11, 1.15.4-scala_2.12, 1.15-scala_2.12, 1.15.4-java11, 1.15-java11, 1.15.4, 1.15
+Architectures: amd64,arm64v8
+GitCommit: c9754889a57fad2d8fff2a1975f076a0caebb28c
+Directory: ./1.15/scala_2.12-java11-ubuntu

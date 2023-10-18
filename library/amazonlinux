@@ -1,32 +1,33 @@
 Maintainers: Amazon Linux <amazon-linux@amazon.com> (@amazonlinux),
-             iliana destroyer of worlds (@iliana),
              Frédérick Lefebvre (@fred-lefebvre),
-             Samuel Karp (@samuelkarp),
              Stewart Smith (@stewartsmith),
-             Jamie Anderson (@jamieand)
+             Christopher Miller (@mysteriouspants),
+             Sumit Tomer (@sktomer),
+             Tanu Rampal (@trampal),
+             Sam Thornton (@mrthornazon),
+             Preston Carpenter (@timidger),
+             Joseph Howell-Burke (@jhowell-burke),
+             Miriam Clark (@mgclark001),
+             Ade Adetayo (@dadetayo),
+             Colin McCoy (@cmccoypdx)
 GitRepo: https://github.com/amazonlinux/container-images.git
-GitCommit: 3ee6a0ae683a64b606f1f2c5b577fd43f4022d2c
+GitCommit: cc7a1876866f4056fa73a789a5b758358151c189
 
-Tags: 2.0.20210126.0, 2, latest
+Tags: 2023, latest, 2023.2.20231011.0
+Architectures: amd64, arm64v8
+amd64-GitFetch: refs/heads/al2023
+amd64-GitCommit: af8bdafe241daebe9bd3ef2b864084a60ff022af
+arm64v8-GitFetch: refs/heads/al2023-arm64
+arm64v8-GitCommit: 7f794b5a5fd2edfaf5f9acd623cf21cd5c7b16f3
+
+Tags: 2, 2.0.20230926.0
 Architectures: amd64, arm64v8
 amd64-GitFetch: refs/heads/amzn2
-amd64-GitCommit: 97f94de53b2fb9e592ca0b306e734b148f8de01e
+amd64-GitCommit: 293ef6f41163e4d22700ffda8e8c032593e13215
 arm64v8-GitFetch: refs/heads/amzn2-arm64
-arm64v8-GitCommit: cee4b21853f954bdc3dda26abbd32935d7408f0f
+arm64v8-GitCommit: ef5e6e6ed98e10c02b4d9f47df6903bc26043a96
 
-Tags: 2.0.20210126.0-with-sources, 2-with-sources, with-sources
-Architectures: amd64, arm64v8
-amd64-GitFetch: refs/heads/amzn2-with-sources
-amd64-GitCommit: 14a690152e4a514dda18221da3af1d45af57f73d
-arm64v8-GitFetch: refs/heads/amzn2-arm64-with-sources
-arm64v8-GitCommit: 47b4ba56fd768b3ff9e55ff3795766c7fa0630a0
-
-Tags: 2018.03.0.20210126.1, 2018.03, 1
+Tags: 1, 2018.03, 2018.03.0.20231002.0
 Architectures: amd64
 amd64-GitFetch: refs/heads/2018.03
-amd64-GitCommit: f9dc295dd8167320beb2d696fe63c449d5bc7d78
-
-Tags: 2018.03.0.20210126.1-with-sources, 2018.03-with-sources, 1-with-sources
-Architectures: amd64
-amd64-GitFetch: refs/heads/2018.03-with-sources
-amd64-GitCommit: 7907a3f05938c8249d9e5077f2ffb80ef248f7f7
+amd64-GitCommit: a71cd32b94ea6e1f8a5fad33f9614695e34ae1a8

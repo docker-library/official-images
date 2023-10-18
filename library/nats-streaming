@@ -1,30 +1,26 @@
-Maintainers: Ivan Kozlovic <ivan@synadia.com> (@kozlovic)
+Maintainers: Ivan Kozlovic <ivan@synadia.com> (@kozlovic),
+             Phil Pennock <pdp@synadia.com> (@philpennock)
 GitRepo: https://github.com/nats-io/nats-streaming-docker.git
-GitCommit: 70a87b9e248c9a04e9b6c320164522217b7a5269
+GitFetch: refs/heads/main
+GitCommit: d8dd9e2f5f7943f6a4d08de304f2bce513cc6735
 
-Tags: 0.20.0-alpine3.12, 0.20-alpine3.12, alpine3.12, 0.20.0-alpine, 0.20-alpine, alpine
+Tags: 0.25.5-alpine3.18, 0.25-alpine3.18, alpine3.18, 0.25.5-alpine, 0.25-alpine, alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8
-Directory: 0.20.0/alpine3.12
+Directory: 0.25.5/alpine3.18
 
-Tags: 0.20.0-scratch, 0.20-scratch, scratch, 0.20.0-linux, 0.20-linux, linux
-SharedTags: 0.20.0, 0.20, latest
+Tags: 0.25.5-scratch, 0.25-scratch, scratch, 0.25.5-linux, 0.25-linux, linux
+SharedTags: 0.25.5, 0.25, latest
 Architectures: amd64, arm32v6, arm32v7, arm64v8
-Directory: 0.20.0/scratch
+Directory: 0.25.5/scratch
 
-Tags: 0.20.0-windowsservercore-1809, 0.20-windowsservercore-1809, windowsservercore-1809
-SharedTags: 0.20.0-windowsservercore, 0.20-windowsservercore, windowsservercore
+Tags: 0.25.5-windowsservercore-1809, 0.25-windowsservercore-1809, windowsservercore-1809
+SharedTags: 0.25.5-windowsservercore, 0.25-windowsservercore, windowsservercore
 Architectures: windows-amd64
-Directory: 0.20.0/windowsservercore-1809
+Directory: 0.25.5/windowsservercore-1809
 Constraints: windowsservercore-1809
 
-Tags: 0.20.0-nanoserver-1809, 0.20-nanoserver-1809, nanoserver-1809
-SharedTags: 0.20.0-nanoserver, 0.20-nanoserver, nanoserver, 0.20.0, 0.20, latest
+Tags: 0.25.5-nanoserver-1809, 0.25-nanoserver-1809, nanoserver-1809
+SharedTags: 0.25.5-nanoserver, 0.25-nanoserver, nanoserver, 0.25.5, 0.25, latest
 Architectures: windows-amd64
-Directory: 0.20.0/nanoserver-1809
+Directory: 0.25.5/nanoserver-1809
 Constraints: nanoserver-1809, windowsservercore-1809
-
-Tags: 0.20.0-windowsservercore-ltsc2016, 0.20-windowsservercore-ltsc2016, windowsservercore-ltsc2016
-SharedTags: 0.20.0-windowsservercore, 0.20-windowsservercore, windowsservercore
-Architectures: windows-amd64
-Directory: 0.20.0/windowsservercore-ltsc2016
-Constraints: windowsservercore-ltsc2016
