@@ -1,5 +1,5 @@
 import subprocess, sys
-subprocess.check_call([sys.executable, '-m', 'pip', 'install', '--root-user-action', 'ignore', 'requests'])
+subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'ignore', 'requests'])
 
 import requests
 r = requests.get('https://google.com')
