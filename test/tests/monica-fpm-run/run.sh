@@ -8,9 +8,9 @@ image="$1"
 # Build a client image with cgi-fcgi for testing
 clientImage="librarytest/monica-fpm-run:fcgi-client"
 docker build -t "$clientImage" - > /dev/null <<'EOF'
-FROM debian:stretch-slim
+FROM debian:buster-slim
 
-RUN set -x && apt-get update && apt-get install -y libfcgi0ldbl && rm -rf /var/lib/apt/lists/*
+RUN set -x && apt-get update && apt-get install -y --no-install-recommends libfcgi-bin && rm -rf /var/lib/apt/lists/*
 
 ENTRYPOINT ["cgi-fcgi"]
 EOF
@@ -25,7 +25,7 @@ fi
 mysqlCid="$(docker run -d \
 	-e MYSQL_RANDOM_ROOT_PASSWORD=true \
 	-e MYSQL_DATABASE=monica \
-	-e MYSQL_USER=homestead \
+	-e MYSQL_USER=monica \
 	-e MYSQL_PASSWORD=secret \
 	"$dbImage")"
 trap "docker rm -vf $mysqlCid > /dev/null" EXIT
@@ -33,6 +33,10 @@ trap "docker rm -vf $mysqlCid > /dev/null" EXIT
 cid="$(docker run -d \
 	--link "$mysqlCid":mysql \
 	-e DB_HOST=mysql \
+	-e DB_CONNECTION=mysql \
+	-e DB_DATABASE=monica \
+	-e DB_USERNAME=monica \
+	-e DB_PASSWORD=secret \
 	"$image")"
 trap "docker rm -vf $cid $mysqlCid > /dev/null" EXIT
 
@@ -60,5 +64,5 @@ fcgi-request() {
 # Make sure that PHP-FPM is listening and ready
 . "$dir/../../retry.sh" --tries 30 'fcgi-request GET /index.php' > /dev/null 2>&1
 
-# Check that we can request /register and that it contains the pattern "Welcome" somewhere
-fcgi-request GET '/index.php' register | grep -i "Welcome" > /dev/null
+# Check that we can request /register and that it contains the pattern "Monica" somewhere
+fcgi-request GET '/index.php' register | grep -i "Monica" > /dev/null
