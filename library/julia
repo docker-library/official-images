@@ -7,22 +7,22 @@ GitRepo: https://github.com/docker-library/julia.git
 Tags: 1.10.0-rc1-bookworm, 1.10-rc-bookworm, rc-bookworm
 SharedTags: 1.10.0-rc1, 1.10-rc, rc
 Architectures: amd64, arm64v8, i386
-GitCommit: 9e6b1ddf368d41e5d8c4f146bd1f4580b771018a
+GitCommit: ff6d8f64752b64aff292e12162340e3707487f17
 Directory: 1.10-rc/bookworm
 
 Tags: 1.10.0-rc1-bullseye, 1.10-rc-bullseye, rc-bullseye
 Architectures: amd64, arm64v8, i386
-GitCommit: 9e6b1ddf368d41e5d8c4f146bd1f4580b771018a
+GitCommit: ff6d8f64752b64aff292e12162340e3707487f17
 Directory: 1.10-rc/bullseye
 
 Tags: 1.10.0-rc1-alpine3.18, 1.10-rc-alpine3.18, rc-alpine3.18, 1.10.0-rc1-alpine, 1.10-rc-alpine, rc-alpine
 Architectures: amd64
-GitCommit: 9e6b1ddf368d41e5d8c4f146bd1f4580b771018a
+GitCommit: ff6d8f64752b64aff292e12162340e3707487f17
 Directory: 1.10-rc/alpine3.18
 
 Tags: 1.10.0-rc1-alpine3.17, 1.10-rc-alpine3.17, rc-alpine3.17
 Architectures: amd64
-GitCommit: 9e6b1ddf368d41e5d8c4f146bd1f4580b771018a
+GitCommit: ff6d8f64752b64aff292e12162340e3707487f17
 Directory: 1.10-rc/alpine3.17
 
 Tags: 1.10.0-rc1-windowsservercore-ltsc2022, 1.10-rc-windowsservercore-ltsc2022, rc-windowsservercore-ltsc2022
@@ -41,39 +41,39 @@ Directory: 1.10-rc/windows/windowsservercore-1809
 Constraints: windowsservercore-1809
 Builder: classic
 
-Tags: 1.9.3-bookworm, 1.9-bookworm, 1-bookworm, bookworm
-SharedTags: 1.9.3, 1.9, 1, latest
+Tags: 1.9.4-bookworm, 1.9-bookworm, 1-bookworm, bookworm
+SharedTags: 1.9.4, 1.9, 1, latest
 Architectures: amd64, arm64v8, i386, ppc64le
-GitCommit: d50ed8b3f1ef3c76d9be2647c7151ab0a539d2a8
+GitCommit: 154363df0b038fb8a5e74bb97bbed3fb8faea7ca
 Directory: 1.9/bookworm
 
-Tags: 1.9.3-bullseye, 1.9-bullseye, 1-bullseye, bullseye
+Tags: 1.9.4-bullseye, 1.9-bullseye, 1-bullseye, bullseye
 Architectures: amd64, arm64v8, i386, ppc64le
-GitCommit: d50ed8b3f1ef3c76d9be2647c7151ab0a539d2a8
+GitCommit: 154363df0b038fb8a5e74bb97bbed3fb8faea7ca
 Directory: 1.9/bullseye
 
-Tags: 1.9.3-alpine3.18, 1.9-alpine3.18, 1-alpine3.18, alpine3.18, 1.9.3-alpine, 1.9-alpine, 1-alpine, alpine
+Tags: 1.9.4-alpine3.18, 1.9-alpine3.18, 1-alpine3.18, alpine3.18, 1.9.4-alpine, 1.9-alpine, 1-alpine, alpine
 Architectures: amd64
-GitCommit: d50ed8b3f1ef3c76d9be2647c7151ab0a539d2a8
+GitCommit: 154363df0b038fb8a5e74bb97bbed3fb8faea7ca
 Directory: 1.9/alpine3.18
 
-Tags: 1.9.3-alpine3.17, 1.9-alpine3.17, 1-alpine3.17, alpine3.17
+Tags: 1.9.4-alpine3.17, 1.9-alpine3.17, 1-alpine3.17, alpine3.17
 Architectures: amd64
-GitCommit: d50ed8b3f1ef3c76d9be2647c7151ab0a539d2a8
+GitCommit: 154363df0b038fb8a5e74bb97bbed3fb8faea7ca
 Directory: 1.9/alpine3.17
 
-Tags: 1.9.3-windowsservercore-ltsc2022, 1.9-windowsservercore-ltsc2022, 1-windowsservercore-ltsc2022, windowsservercore-ltsc2022
-SharedTags: 1.9.3, 1.9, 1, latest, 1.9.3-windowsservercore, 1.9-windowsservercore, 1-windowsservercore, windowsservercore
+Tags: 1.9.4-windowsservercore-ltsc2022, 1.9-windowsservercore-ltsc2022, 1-windowsservercore-ltsc2022, windowsservercore-ltsc2022
+SharedTags: 1.9.4, 1.9, 1, latest, 1.9.4-windowsservercore, 1.9-windowsservercore, 1-windowsservercore, windowsservercore
 Architectures: windows-amd64
-GitCommit: d50ed8b3f1ef3c76d9be2647c7151ab0a539d2a8
+GitCommit: 154363df0b038fb8a5e74bb97bbed3fb8faea7ca
 Directory: 1.9/windows/windowsservercore-ltsc2022
 Constraints: windowsservercore-ltsc2022
 Builder: classic
 
-Tags: 1.9.3-windowsservercore-1809, 1.9-windowsservercore-1809, 1-windowsservercore-1809, windowsservercore-1809
-SharedTags: 1.9.3, 1.9, 1, latest, 1.9.3-windowsservercore, 1.9-windowsservercore, 1-windowsservercore, windowsservercore
+Tags: 1.9.4-windowsservercore-1809, 1.9-windowsservercore-1809, 1-windowsservercore-1809, windowsservercore-1809
+SharedTags: 1.9.4, 1.9, 1, latest, 1.9.4-windowsservercore, 1.9-windowsservercore, 1-windowsservercore, windowsservercore
 Architectures: windows-amd64
-GitCommit: d50ed8b3f1ef3c76d9be2647c7151ab0a539d2a8
+GitCommit: 154363df0b038fb8a5e74bb97bbed3fb8faea7ca
 Directory: 1.9/windows/windowsservercore-1809
 Constraints: windowsservercore-1809
 Builder: classic
@@ -81,22 +81,22 @@ Builder: classic
 Tags: 1.6.7-bookworm, 1.6-bookworm
 SharedTags: 1.6.7, 1.6
 Architectures: amd64, arm32v7, arm64v8, i386
-GitCommit: cf90acdd6a92c4e20c68312209e0764a96758d2c
+GitCommit: ff6d8f64752b64aff292e12162340e3707487f17
 Directory: 1.6/bookworm
 
 Tags: 1.6.7-bullseye, 1.6-bullseye
 Architectures: amd64, arm32v7, arm64v8, i386
-GitCommit: 67a1817cca70fb1a601ecb38517c44e1e9982292
+GitCommit: ff6d8f64752b64aff292e12162340e3707487f17
 Directory: 1.6/bullseye
 
 Tags: 1.6.7-alpine3.18, 1.6-alpine3.18, 1.6.7-alpine, 1.6-alpine
 Architectures: amd64
-GitCommit: 1486d832edaa15eee0703c413aace5d70efd8704
+GitCommit: ff6d8f64752b64aff292e12162340e3707487f17
 Directory: 1.6/alpine3.18
 
 Tags: 1.6.7-alpine3.17, 1.6-alpine3.17
 Architectures: amd64
-GitCommit: 67a1817cca70fb1a601ecb38517c44e1e9982292
+GitCommit: ff6d8f64752b64aff292e12162340e3707487f17
 Directory: 1.6/alpine3.17
 
 Tags: 1.6.7-windowsservercore-ltsc2022, 1.6-windowsservercore-ltsc2022
