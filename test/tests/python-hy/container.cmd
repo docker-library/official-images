@@ -28,7 +28,7 @@ rem or that a new version will no longer work with this python version
 set PIP_NO_PYTHON_VERSION_WARNING=1
 rem https://pypi.org/project/hy/#history
 rem https://pypi.org/project/hyrule/#history
-pip install -q "hy==1.0a4" "hyrule==0.1" || exit /b %errorlevel%
+pip install -q "hy==1.0a4" "hyrule==0.1" "sh==1.14.2" > NUL || exit /b %errorlevel%
 
 hy ./container.hy || exit /b %errorlevel%
 

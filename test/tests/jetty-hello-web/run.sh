@@ -21,7 +21,12 @@ serverImage="$("$dir/../image-name.sh" librarytest/jetty-hello-web "$image")"
 FROM $image
 COPY dir/index.jsp /var/lib/jetty/webapps/ROOT/
 EOD
-cid="$(docker run -d "$serverImage")"
+
+if [[ $image == *"12."* ]]; then
+	cid="$(docker run -d "$serverImage" sh -c 'java -jar $JETTY_HOME/start.jar --add-to-start=ee10-deploy,ee10-jsp ; /docker-entrypoint.sh')"
+else
+	cid="$(docker run -d "$serverImage")"
+fi
 trap "docker rm -vf $cid > /dev/null" EXIT
 
 _request() {

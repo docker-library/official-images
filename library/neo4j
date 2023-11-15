@@ -1,34 +1,36 @@
-# Old point releases are included in this library file so that users
-# are not forced to upgrade to the latest point releases in order to
-# get security fixes to the base image. See
-# https://github.com/docker-library/official-images/issues/1864 for a
-# discussion of this point.
-
 Maintainers: Jenny Owen <jenny.owen@neo4j.com> (@jennyowen),
-             Bledi Feshti <bledi.feshti@neo4j.com> (@bfeshti),
+             Gustav Lindroth <gustav.lindroth@neo4j.com> (@glindroth),
              Eric Sporre <eric.sporre@neo4j.com> (@ericsporre)
 GitRepo: https://github.com/neo4j/docker-neo4j-publish.git
 
-
-Tags: 5.5.0, 5.5.0-community, 5.5, 5, 5-community, community, latest
+Tags: 5.13.0-community-bullseye, 5.13-community-bullseye, 5-community-bullseye, 5.13.0-community, 5.13-community, 5-community, 5.13.0-bullseye, 5.13-bullseye, 5-bullseye, 5.13.0, 5.13, 5, community-bullseye, community, bullseye, latest
 Architectures: amd64, arm64v8
-GitCommit: f977a1ceaca22a13affc861b09995a88a2f2145f
-Directory: 5.5.0/community
+GitCommit: 63788eb70d504c77dee3cc478ee140eb4e056e6a
+Directory: 5.13.0/bullseye/community
 
-Tags: 5.5.0-enterprise, 5.5-enterprise, 5-enterprise, enterprise
+Tags: 5.13.0-enterprise-bullseye, 5.13-enterprise-bullseye, 5-enterprise-bullseye, 5.13.0-enterprise, 5.13-enterprise, 5-enterprise, enterprise-bullseye, enterprise
 Architectures: amd64, arm64v8
-GitCommit: f977a1ceaca22a13affc861b09995a88a2f2145f
-Directory: 5.5.0/enterprise
+GitCommit: 63788eb70d504c77dee3cc478ee140eb4e056e6a
+Directory: 5.13.0/bullseye/enterprise
 
-
-Tags: 4.4.18, 4.4.18-community, 4.4, 4.4-community
+Tags: 5.13.0-community-ubi8, 5.13-community-ubi8, 5-community-ubi8, 5.13.0-ubi8, 5.13-ubi8, 5-ubi8, community-ubi8, ubi8
 Architectures: amd64, arm64v8
-GitCommit: eb3d953b8df45a5945d340b59e2c98e5b0cbb908
-Directory: 4.4.18/community
+GitCommit: 63788eb70d504c77dee3cc478ee140eb4e056e6a
+Directory: 5.13.0/ubi8/community
 
-Tags: 4.4.18-enterprise, 4.4-enterprise
+Tags: 5.13.0-enterprise-ubi8, 5.13-enterprise-ubi8, 5-enterprise-ubi8, enterprise-ubi8
 Architectures: amd64, arm64v8
-GitCommit: eb3d953b8df45a5945d340b59e2c98e5b0cbb908
-Directory: 4.4.18/enterprise
+GitCommit: 63788eb70d504c77dee3cc478ee140eb4e056e6a
+Directory: 5.13.0/ubi8/enterprise
 
 
+
+Tags: 4.4.27, 4.4.27-community, 4.4, 4.4-community
+Architectures: amd64, arm64v8
+GitCommit: 6c15231abd6294f0a736b4a46f59d258dea7f672
+Directory: 4.4.27/bullseye/community
+
+Tags: 4.4.27-enterprise, 4.4-enterprise
+Architectures: amd64, arm64v8
+GitCommit: 6c15231abd6294f0a736b4a46f59d258dea7f672
+Directory: 4.4.27/bullseye/enterprise

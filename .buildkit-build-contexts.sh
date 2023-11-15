@@ -40,6 +40,10 @@ for img; do
 	digests="$(jq <<<"$json" -r '.arches[env.BASHBREW_ARCH] // [] | map(.digest | @sh) | join(" ")')"
 	eval "digests=( $digests )"
 
+	if [ "${#digests[@]}" -gt 1 ]; then
+		echo >&2 "warning: '$lookup' has ${#digests[@]} images for '$BASHBREW_ARCH'; returning only the first"
+	fi
+
 	for digest in "${digests[@]}"; do
 		echo "$img=docker-image://${lookup%@*}@$digest"
 		continue 2

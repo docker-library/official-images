@@ -4,10 +4,10 @@ GitCommit: 5c8a1c296acd6e90487cd261d16cf85fd6bcb73f
 GitFetch: refs/heads/master
 # https://github.com/oracle/container-images/tree/dist-amd64
 amd64-GitFetch: refs/heads/dist-amd64
-amd64-GitCommit: 985b5fe156c098018f87cae55f448d16cd4bee5f
+amd64-GitCommit: 79225496d9d81baf338f4aa1bf5eab753292be2d
 # https://github.com/oracle/container-images/tree/dist-arm64v8
 arm64v8-GitFetch: refs/heads/dist-arm64v8
-arm64v8-GitCommit: 71f7331702ae8f33c5613596e5c6ab064a4f27f7
+arm64v8-GitCommit: 7d95c80b570fa22bafb12c7f44d5da7bf29e35ef
 
 Tags: 9
 Architectures: amd64, arm64v8
@@ -17,13 +17,17 @@ Tags: 9-slim
 Architectures: amd64, arm64v8
 Directory: 9-slim
 
-Tags: 8.7, 8
+Tags: 8.8, 8
 Architectures: amd64, arm64v8
 Directory: 8
 
 Tags: 8-slim
 Architectures: amd64, arm64v8
 Directory: 8-slim
+
+Tags: 8-slim-fips
+Architectures: amd64, arm64v8
+Directory: 8-slim-fips
 
 Tags: 7.9, 7
 Architectures: amd64, arm64v8
@@ -32,3 +36,7 @@ Directory: 7
 Tags: 7-slim
 Architectures: amd64, arm64v8
 Directory: 7-slim
+
+Tags: 7-slim-fips
+Architectures: amd64, arm64v8
+Directory: 7-slim-fips

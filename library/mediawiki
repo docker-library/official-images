@@ -1,37 +1,38 @@
-Maintainers: David Barratt <dbarratt@wikimedia.org> (@davidbarratt),
-             Kunal Mehta <legoktm@debian.org> (@legoktm),
-             addshore <addshorewiki@gmail.com> (@addshore)
+Maintainers: Kunal Mehta <legoktm@debian.org> (@legoktm),
+             addshore <addshorewiki@gmail.com> (@addshore),
+             Christian Heusel <christian@heusel.eu> (@christian-heusel)
 GitRepo: https://github.com/wikimedia/mediawiki-docker.git
-GitCommit: aa07f326d2719366125551213a2a9be8801aa773
+GitFetch: refs/heads/main
+GitCommit: fdf347f62615dad789d0e703fc2f6d628c43d4e1
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le
 
-Tags: 1.39.2, 1.39, stable, lts, latest
+Tags: 1.40.1, 1.40, stable, latest
+Directory: 1.40/apache
+
+Tags: 1.40.1-fpm, 1.40-fpm, stable-fpm
+Directory: 1.40/fpm
+
+Tags: 1.40.1-fpm-alpine, 1.40-fpm-alpine, stable-fpm-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le
+Directory: 1.40/fpm-alpine
+
+Tags: 1.39.5, 1.39, lts, legacy
 Directory: 1.39/apache
 
-Tags: 1.39.2-fpm, 1.39-fpm, stable-fpm, lts-fpm
+Tags: 1.39.5-fpm, 1.39-fpm, legacy-fpm, lts-fpm
 Directory: 1.39/fpm
 
-Tags: 1.39.2-fpm-alpine, 1.39-fpm-alpine, stable-fpm-alpine, lts-fpm-alpine
+Tags: 1.39.5-fpm-alpine, 1.39-fpm-alpine, legacy-fpm-alpine, lts-fpm-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le
 Directory: 1.39/fpm-alpine
 
-Tags: 1.38.5, 1.38, legacy
-Directory: 1.38/apache
-
-Tags: 1.38.5-fpm, 1.38-fpm, legacy-fpm
-Directory: 1.38/fpm
-
-Tags: 1.38.5-fpm-alpine, 1.38-fpm-alpine, legacy-fpm-alpine
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le
-Directory: 1.38/fpm-alpine
-
-Tags: 1.35.9, 1.35, legacylts
+Tags: 1.35.13, 1.35, legacylts
 Directory: 1.35/apache
 
-Tags: 1.35.9-fpm, 1.35-fpm, legacylts-fpm
+Tags: 1.35.13-fpm, 1.35-fpm, legacylts-fpm
 Directory: 1.35/fpm
 
-Tags: 1.35.9-fpm-alpine, 1.35-fpm-alpine, legacylts-fpm-alpine
+Tags: 1.35.13-fpm-alpine, 1.35-fpm-alpine, legacylts-fpm-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le
 Directory: 1.35/fpm-alpine
 
