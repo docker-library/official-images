@@ -52,8 +52,9 @@ _bashbrew_buildkit_env_setup() {
 	vars="$(_jq_setenv <<<"$vars" BASHBREW_BUILDKIT_SYNTAX "$dockerfileTag")"
 
 	case "${BASHBREW_ARCH:-}" in
-		nope) # amd64 | arm64v8) # TODO re-enable this once we figure out how to handle "docker build --tag X" + "FROM X" correctly all-local
-			BASHBREW_BUILDKIT_IMAGE="$(grep <<<"$externalPins" -m1 '^moby/buildkit:')"
+		windows-amd64) ;; # https://github.com/microsoft/Windows-Containers/issues/34
+		*)
+			BASHBREW_BUILDKIT_IMAGE="$(grep <<<"$externalPins" -m1 '^tianon/buildkit:')"
 			BASHBREW_BUILDKIT_IMAGE="$(_resolve_external_pins "$BASHBREW_BUILDKIT_IMAGE")"
 			export BASHBREW_BUILDKIT_IMAGE
 
