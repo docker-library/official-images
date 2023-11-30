@@ -53,6 +53,7 @@ _bashbrew_buildkit_env_setup() {
 
 	case "${BASHBREW_ARCH:-}" in
 		windows-amd64) ;; # https://github.com/microsoft/Windows-Containers/issues/34
+		'') ;; # if BASHBREW_ARCH isn't set explicitly, we shouldn't do more here
 		*)
 			BASHBREW_BUILDKIT_IMAGE="$(grep <<<"$externalPins" -m1 '^tianon/buildkit:')"
 			BASHBREW_BUILDKIT_IMAGE="$(_resolve_external_pins "$BASHBREW_BUILDKIT_IMAGE")"
