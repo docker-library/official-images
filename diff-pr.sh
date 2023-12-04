@@ -335,7 +335,7 @@ _metadata-files() {
 
 		"$diffDir/_bashbrew-cat-sorted.sh" "$@" 2>>temp/_bashbrew.err > temp/_bashbrew-cat || :
 
-		bashbrew list --uniq "$@" \
+		bashbrew cat --format "$templateLastTags" "$@" \
 			| sort -V \
 			| xargs -r bashbrew list --uniq --build-order 2>>temp/_bashbrew.err \
 			| xargs -r bashbrew cat --format "$templateLastTags" 2>>temp/_bashbrew.err \
