@@ -1,20 +1,25 @@
-Maintainers: openEuler CloudNative SIG <cloudnative@openeuler.org>,
-             Martin Grigorov (@martin-g)
-#GitRepo: https://gitee.com/openeuler/openeuler-docker-images
-GitRepo: https://github.com/martin-g/openeuler-docker-images
-GitCommit: 9f859e3a335081bee04519ec6e52cd8578f55522
+Maintainers: openEuler CloudNative SIG <cloudnative@openeuler.org> (@openeuler-mirror),
+             Martin Grigorov <mgrigorov@openeuler.sh> (@martin-g)
+GitRepo: https://github.com/openeuler-mirror/docker-official-image
+GitCommit: 2e2f34fe91a8cc5b01ad449335efbe567126a2d0
+GitFetch: refs/heads/main
+
+Tags: 23.09
+Architectures: amd64, arm64v8
+amd64-File: Dockerfile-23.09-x86_64
+arm64v8-File: Dockerfile-23.09-aarch64
 
 Tags: 22.03-lts
 Architectures: amd64, arm64v8
 amd64-File: Dockerfile-22.03-lts-x86_64
-arm64-File: Dockerfile-22.03-lts-aarch64
+arm64v8-File: Dockerfile-22.03-lts-aarch64
 
 Tags: 22.03-lts-sp1
 Architectures: amd64, arm64v8
 amd64-File: Dockerfile-22.03-lts-sp1-x86_64
-arm64-File: Dockerfile-22.03-lts-sp1-aarch64
+arm64v8-File: Dockerfile-22.03-lts-sp1-aarch64
 
 Tags: 22.03-lts-sp2
 Architectures: amd64, arm64v8
 amd64-File: Dockerfile-22.03-lts-sp2-x86_64
-arm64-File: Dockerfile-22.03-lts-sp2-aarch64
+arm64v8-File: Dockerfile-22.03-lts-sp2-aarch64
