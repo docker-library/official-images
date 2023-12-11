@@ -102,6 +102,8 @@ template='
 	{{- "\n" -}}
 	{{- range $.Entries -}}
 		{{- $arch := .HasArchitecture arch | ternary arch (.Architectures | first) -}}
+		{{- /* cannot replace ArchDockerFroms with bashbrew fetch or the arch selector logic has to be duplicated 🥹*/ -}}
+		{{- $froms := $.ArchDockerFroms $arch . -}}
 		{{- $outDir := join "_" $.RepoName (.Tags | last) -}}
 		git -C "{{ gitCache }}" archive --format=tar
 		{{- " " -}}
@@ -341,7 +343,6 @@ _metadata-files() {
 			| xargs -r bashbrew cat --format "$templateLastTags" 2>>temp/_bashbrew.err \
 			> temp/_bashbrew-list-build-order || :
 
-		bashbrew fetch --arch-filter "$@"
 		script="$(bashbrew cat --format "$template" "$@")"
 		mkdir tar
 		( eval "$script" | tar -xiC tar )
