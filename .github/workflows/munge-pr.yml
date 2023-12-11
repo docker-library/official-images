@@ -145,7 +145,9 @@ jobs:
             const commentText = 'Diff for ' + context.payload.pull_request.head.sha + ':';
 
             const fs = require('fs');
-            const diff = fs.readFileSync(process.env.GITHUB_WORKSPACE + '/oi-pr.diff').toString().trimEnd();
+            var diff = fs.readFileSync(process.env.GITHUB_WORKSPACE + '/oi-pr.diff').toString().trimEnd();
+            // GitHub has limitation 2^16 of body length
+            diff = diff.length < 60000 ? diff : diff.substring(0, 60000) + '\n=== TRUNCATED ===';
             var body = "<details>\n<summary>" + commentText + "</summary>\n\n```diff\n" + diff + "\n```\n\n</details>";
             const maint = fs.readFileSync(process.env.GITHUB_WORKSPACE + '/oi-pr.maint').toString().trimEnd();
             if (maint.length > 0) {
