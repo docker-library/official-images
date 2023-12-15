@@ -343,6 +343,9 @@ _metadata-files() {
 			| xargs -r bashbrew cat --format "$templateLastTags" 2>>temp/_bashbrew.err \
 			> temp/_bashbrew-list-build-order || :
 
+		# oci images can't be fetched with ArchDockerFroms
+		# todo: use each first arch instead of current arch
+		bashbrew fetch --arch-filter "$@"
 		script="$(bashbrew cat --format "$template" "$@")"
 		mkdir tar
 		( eval "$script" | tar -xiC tar )
