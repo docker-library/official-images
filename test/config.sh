@@ -220,10 +220,6 @@ imageTests+=(
 	'
 	[r-base]='
 	'
-	[rapidoid]='
-		rapidoid-hello-world
-		rapidoid-load-balancer
-	'
 	[redis]='
 		redis-basics
 		redis-basics-tls
