@@ -3,36 +3,50 @@ Maintainers: Kunal Mehta <legoktm@debian.org> (@legoktm),
              Christian Heusel <christian@heusel.eu> (@christian-heusel)
 GitRepo: https://github.com/wikimedia/mediawiki-docker.git
 GitFetch: refs/heads/main
-GitCommit: fdf347f62615dad789d0e703fc2f6d628c43d4e1
+GitCommit: af2e5dad4343047bc948044477e55fa8d8af11d3
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le
 
-Tags: 1.40.1, 1.40, stable, latest
+# current stable version
+Tags: 1.41.0, 1.41, stable, latest
+Directory: 1.41/apache
+
+Tags: 1.41.0-fpm, 1.41-fpm, stable-fpm
+Directory: 1.41/fpm
+
+Tags: 1.41.0-fpm-alpine, 1.41-fpm-alpine, stable-fpm-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le
+Directory: 1.41/fpm-alpine
+
+# current legacy version
+Tags: 1.40.2, 1.40, legacy
 Directory: 1.40/apache
 
-Tags: 1.40.1-fpm, 1.40-fpm, stable-fpm
+Tags: 1.40.2-fpm, 1.40-fpm, legacy-fpm
 Directory: 1.40/fpm
 
-Tags: 1.40.1-fpm-alpine, 1.40-fpm-alpine, stable-fpm-alpine
+Tags: 1.40.2-fpm-alpine, 1.40-fpm-alpine, legacy-fpm-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le
 Directory: 1.40/fpm-alpine
 
-Tags: 1.39.5, 1.39, lts, legacy
+# current lts version
+Tags: 1.39.6, 1.39, lts
 Directory: 1.39/apache
 
-Tags: 1.39.5-fpm, 1.39-fpm, legacy-fpm, lts-fpm
+Tags: 1.39.6-fpm, 1.39-fpm, lts-fpm
 Directory: 1.39/fpm
 
-Tags: 1.39.5-fpm-alpine, 1.39-fpm-alpine, legacy-fpm-alpine, lts-fpm-alpine
+Tags: 1.39.6-fpm-alpine, 1.39-fpm-alpine, lts-fpm-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le
 Directory: 1.39/fpm-alpine
 
-Tags: 1.35.13, 1.35, legacylts
+# legacy lts version
+Tags: 1.35.14, 1.35, legacylts
 Directory: 1.35/apache
 
-Tags: 1.35.13-fpm, 1.35-fpm, legacylts-fpm
+Tags: 1.35.14-fpm, 1.35-fpm, legacylts-fpm
 Directory: 1.35/fpm
 
-Tags: 1.35.13-fpm-alpine, 1.35-fpm-alpine, legacylts-fpm-alpine
+Tags: 1.35.14-fpm-alpine, 1.35-fpm-alpine, legacylts-fpm-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le
 Directory: 1.35/fpm-alpine
 
