@@ -23,12 +23,6 @@ _is_naughty() {
 			esac
 			;;
 
-		# https://github.com/docker-library/official-images/pull/4916#issuecomment-427437270
-		  docker.elastic.co/elasticsearch/elasticsearch:*@sha256:* \
-		| docker.elastic.co/kibana/kibana:*@sha256:* \
-		| docker.elastic.co/logstash/logstash:*@sha256:* \
-		) ;; # *technically* we should only whitelist these for "elasticsearch", "kibana", and "logstash" respectively, but the chances of other folks trying to use them in their images (*and* doing so without us noticing) seems low
-
 		*/*)
 			# must be external, let's check our pins for acceptability
 			local externalPinFile="$externalPinsDir/${from/:/___}" # see ".external-pins/list.sh"
