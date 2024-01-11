@@ -29,6 +29,18 @@ if badTags="$(bashbrew list "$@" | grep -E ':.+latest.*|:.*latest.+')" && [ -n "
 	(( ++numNaughty ))
 fi
 
+naughtySharedTags="$(./naughty-sharedtags.sh "$@")"
+if [ -n "$naughtySharedTags" ]; then
+	echo >&2
+	echo >&2 "Invalid 'SharedTags' combinations detected:"
+	echo >&2
+	echo >&2 "$naughtySharedTags"
+	echo >&2
+	echo >&2 'Read https://github.com/docker-library/faq#whats-the-difference-between-shared-and-simple-tags for more details.'
+	echo >&2
+	(( ++numNaughty ))
+fi
+
 naughtyFrom="$(./naughty-from.sh "$@")"
 if [ -n "$naughtyFrom" ]; then
 	echo >&2
