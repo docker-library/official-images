@@ -20,7 +20,13 @@ fi
 # Create an instance of the container-under-test
 mongoCid="$(docker run -d "$mongoImage")"
 trap "docker rm -vf $mongoCid > /dev/null" EXIT
-cid="$(docker run -d --link "$mongoCid":mongo "$serverImage")"
+cid="$(docker run \
+	--detach \
+	--link "$mongoCid":mongo \
+	--env ME_CONFIG_BASICAUTH_USERNAME="test-user" \
+	--env ME_CONFIG_BASICAUTH_PASSWORD="test-password" \
+	"$serverImage"
+)"
 trap "docker rm -vf $cid $mongoCid > /dev/null" EXIT
 
 _request() {
@@ -35,7 +41,7 @@ _request() {
 }
 
 # make sure that mongo-express is listening and ready
-. "$dir/../../retry.sh" '_request GET / --output /dev/null'
+. "$dir/../../retry.sh" '_request GET / --output /dev/null --user test-user:test-password'
 
 # if we evetually got a "200 OK" response from mongo-express, it should be ~working fine!
 # (since it fails to even start if it can't connect to MongoDB, etc)
