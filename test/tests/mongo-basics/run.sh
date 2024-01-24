@@ -36,7 +36,7 @@ fi
 if [[ "$testName" == *tls* ]]; then
 	tlsImage="$("$testDir/../image-name.sh" librarytest/mongo-tls "$image")"
 	"$testDir/../docker-build.sh" "$testDir" "$tlsImage" <<-EOD
-		FROM alpine:3.17 AS certs
+		FROM alpine:3.19 AS certs
 		RUN apk add --no-cache openssl
 		RUN set -eux; \
 			mkdir /certs; \
