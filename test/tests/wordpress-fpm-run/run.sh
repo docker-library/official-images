@@ -8,7 +8,7 @@ image="$1"
 # Build a client image with cgi-fcgi for testing
 clientImage='librarytest/wordpress-fpm-run:fcgi-client'
 docker build -t "$clientImage" - > /dev/null <<'EOF'
-FROM debian:buster-slim
+FROM debian:bookworm-slim
 
 RUN set -x && apt-get update && apt-get install -y --no-install-recommends libfcgi-bin && rm -rf /var/lib/apt/lists/*
 
