@@ -5,45 +5,45 @@ Maintainers: Tianon Gravi <tianon@dockerproject.org> (@tianon),
 GitRepo: https://github.com/docker-library/docker.git
 Builder: buildkit
 
-Tags: 25.0.0-cli, 25.0-cli, 25-cli, cli, 25.0.0-cli-alpine3.19
+Tags: 25.0.1-cli, 25.0-cli, 25-cli, cli, 25.0.1-cli-alpine3.19
 Architectures: amd64, arm32v6, arm32v7, arm64v8
-GitCommit: 0eb94892bd344857b35b73fb22ec73a746cb54c6
+GitCommit: a64ca2f07e32838fb1c7e0848952998fe6eab8a4
 Directory: 25/cli
 
-Tags: 25.0.0-dind, 25.0-dind, 25-dind, dind, 25.0.0-dind-alpine3.19, 25.0.0, 25.0, 25, latest, 25.0.0-alpine3.19
+Tags: 25.0.1-dind, 25.0-dind, 25-dind, dind, 25.0.1-dind-alpine3.19, 25.0.1, 25.0, 25, latest, 25.0.1-alpine3.19
 Architectures: amd64, arm32v6, arm32v7, arm64v8
-GitCommit: d3e33ac3bc1eab5d436b7ab2981ba539ebbb7275
+GitCommit: d470c3a52f360272daa549c03abc327a40337846
 Directory: 25/dind
 
-Tags: 25.0.0-dind-rootless, 25.0-dind-rootless, 25-dind-rootless, dind-rootless
+Tags: 25.0.1-dind-rootless, 25.0-dind-rootless, 25-dind-rootless, dind-rootless
 Architectures: amd64, arm64v8
-GitCommit: d3e33ac3bc1eab5d436b7ab2981ba539ebbb7275
+GitCommit: d470c3a52f360272daa549c03abc327a40337846
 Directory: 25/dind-rootless
 
-Tags: 25.0.0-git, 25.0-git, 25-git, git
+Tags: 25.0.1-git, 25.0-git, 25-git, git
 Architectures: amd64, arm32v6, arm32v7, arm64v8
 GitCommit: d3e33ac3bc1eab5d436b7ab2981ba539ebbb7275
 Directory: 25/git
 
-Tags: 25.0.0-windowsservercore-ltsc2022, 25.0-windowsservercore-ltsc2022, 25-windowsservercore-ltsc2022, windowsservercore-ltsc2022
-SharedTags: 25.0.0-windowsservercore, 25.0-windowsservercore, 25-windowsservercore, windowsservercore
+Tags: 25.0.1-windowsservercore-ltsc2022, 25.0-windowsservercore-ltsc2022, 25-windowsservercore-ltsc2022, windowsservercore-ltsc2022
+SharedTags: 25.0.1-windowsservercore, 25.0-windowsservercore, 25-windowsservercore, windowsservercore
 Architectures: windows-amd64
-GitCommit: 0eb94892bd344857b35b73fb22ec73a746cb54c6
+GitCommit: a64ca2f07e32838fb1c7e0848952998fe6eab8a4
 Directory: 25/windows/windowsservercore-ltsc2022
 Constraints: windowsservercore-ltsc2022
 Builder: classic
 
-Tags: 25.0.0-windowsservercore-1809, 25.0-windowsservercore-1809, 25-windowsservercore-1809, windowsservercore-1809
-SharedTags: 25.0.0-windowsservercore, 25.0-windowsservercore, 25-windowsservercore, windowsservercore
+Tags: 25.0.1-windowsservercore-1809, 25.0-windowsservercore-1809, 25-windowsservercore-1809, windowsservercore-1809
+SharedTags: 25.0.1-windowsservercore, 25.0-windowsservercore, 25-windowsservercore, windowsservercore
 Architectures: windows-amd64
-GitCommit: 0eb94892bd344857b35b73fb22ec73a746cb54c6
+GitCommit: a64ca2f07e32838fb1c7e0848952998fe6eab8a4
 Directory: 25/windows/windowsservercore-1809
 Constraints: windowsservercore-1809
 Builder: classic
 
 Tags: 24.0.7-cli, 24.0-cli, 24-cli, 24.0.7-cli-alpine3.19
 Architectures: amd64, arm32v6, arm32v7, arm64v8
-GitCommit: 928bc5d8411ab77082a420711042d8ba9806392c
+GitCommit: 5c21a7d75ecbb6c6c41d60374b8026d6e64546fb
 Directory: 24/cli
 
 Tags: 24.0.7-dind, 24.0-dind, 24-dind, 24.0.7-dind-alpine3.19, 24.0.7, 24.0, 24, 24.0.7-alpine3.19
@@ -64,7 +64,7 @@ Directory: 24/git
 Tags: 24.0.7-windowsservercore-ltsc2022, 24.0-windowsservercore-ltsc2022, 24-windowsservercore-ltsc2022
 SharedTags: 24.0.7-windowsservercore, 24.0-windowsservercore, 24-windowsservercore
 Architectures: windows-amd64
-GitCommit: 928bc5d8411ab77082a420711042d8ba9806392c
+GitCommit: 5c21a7d75ecbb6c6c41d60374b8026d6e64546fb
 Directory: 24/windows/windowsservercore-ltsc2022
 Constraints: windowsservercore-ltsc2022
 Builder: classic
@@ -72,7 +72,7 @@ Builder: classic
 Tags: 24.0.7-windowsservercore-1809, 24.0-windowsservercore-1809, 24-windowsservercore-1809
 SharedTags: 24.0.7-windowsservercore, 24.0-windowsservercore, 24-windowsservercore
 Architectures: windows-amd64
-GitCommit: 928bc5d8411ab77082a420711042d8ba9806392c
+GitCommit: 5c21a7d75ecbb6c6c41d60374b8026d6e64546fb
 Directory: 24/windows/windowsservercore-1809
 Constraints: windowsservercore-1809
 Builder: classic
