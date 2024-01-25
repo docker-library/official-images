@@ -29,11 +29,20 @@ GitRepo: https://github.com/openeuler-mirror/docker-official-image.git
 #arm64v8-GitCommit: be000f02309378563d4528bbbd306bcb53076086
 #arm64v8-File: Dockerfile-22.03-lts-sp1-aarch64
 
-Tags: 22.03-lts-sp2
+#Tags: 22.03-lts-sp2
+#Architectures: amd64, arm64v8
+#GitFetch: refs/heads/22.03-lts-sp2-x86_64
+#GitCommit: 1d922153a397dcaa37785fea43bcbcc6b7dfbb0a
+#amd64-File: Dockerfile-22.03-lts-sp2-x86_64
+#arm64v8-GitFetch: refs/heads/22.03-lts-sp2-aarch64
+#arm64v8-GitCommit: 7957d7717e5116d9418ea0a0725282ac4c8a90c6
+#arm64v8-File: Dockerfile-22.03-lts-sp2-aarch64
+
+Tags: 22.03-lts-sp3
 Architectures: amd64, arm64v8
-GitFetch: refs/heads/22.03-lts-sp2-x86_64
-GitCommit: 1d922153a397dcaa37785fea43bcbcc6b7dfbb0a
-amd64-File: Dockerfile-22.03-lts-sp2-x86_64
-arm64v8-GitFetch: refs/heads/22.03-lts-sp2-aarch64
-arm64v8-GitCommit: 7957d7717e5116d9418ea0a0725282ac4c8a90c6
-arm64v8-File: Dockerfile-22.03-lts-sp2-aarch64
+GitFetch: refs/heads/22.03-lts-sp3-x86_64
+GitCommit: 66d6ab5de1fe2f0852b8755ea74206e1e5d9bcad
+amd64-File: Dockerfile-22.03-lts-sp3-x86_64
+arm64v8-GitFetch: refs/heads/22.03-lts-sp3-aarch64
+arm64v8-GitCommit: 98798444936eb425b61b37c0c8c2472471ff4b24
+arm64v8-File: Dockerfile-22.03-lts-sp3-aarch64
