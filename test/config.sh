@@ -20,7 +20,7 @@ testAlias+=(
 	[eclipse-temurin]='openjdk'
 	[sapmachine]='openjdk'
 	[ibm-semeru-runtimes]='openjdk'
-	[azul-zulu-openjdk]='openjdk'
+	[azul-zulu]='openjdk'
 
 	[jruby]='ruby'
 	[pypy]='python'
@@ -304,11 +304,11 @@ globalExcludeTests+=(
 	[openjdk:nanoserver_java-uimanager-font]=1
 
 	# skip tests for distroless
-	[azul-zulu-openjdk:distroless_utc]=1
-	[azul-zulu-openjdk:distroless_no-hard-coded-passwords]=1
-	[azul-zulu-openjdk:distroless_java-hello-world]=1
-	[azul-zulu-openjdk:distroless_java-uimanager-font]=1
-	[azul-zulu-openjdk:distroless_java-ca-certificates]=1
+	[azul-zulu:distroless_utc]=1
+	[azul-zulu:distroless_no-hard-coded-passwords]=1
+	[azul-zulu:distroless_java-hello-world]=1
+	[azul-zulu:distroless_java-uimanager-font]=1
+	[azul-zulu:distroless_java-ca-certificates]=1
 
 	# the Swift slim images are not expected to be able to run the swift-hello-world test because it involves compiling Swift code. The slim images are for running an already built binary.
 	# https://github.com/docker-library/official-images/pull/6302#issuecomment-512181863
