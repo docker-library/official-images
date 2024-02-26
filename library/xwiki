@@ -2,20 +2,20 @@ Maintainers: XWiki Core Dev Team <committers@xwiki.org> (@xwiki)
 GitRepo: https://github.com/xwiki-contrib/docker-xwiki.git
 
 # Stable
-Tags: 16, 16.0, 16.0.0, 16-mysql-tomcat, 16.0-mysql-tomcat, 16.0.0-mysql-tomcat, mysql-tomcat, stable-mysql-tomcat, stable-mysql, stable, latest
+Tags: 16, 16.1, 16.1.0, 16-mysql-tomcat, 16.1-mysql-tomcat, 16.1.0-mysql-tomcat, mysql-tomcat, stable-mysql-tomcat, stable-mysql, stable, latest
 Architectures: amd64, arm64v8
 Directory: 16/mysql-tomcat
-GitCommit: cfd12b26da4688edebf4f3b3fe7b26781306bbee
+GitCommit: 63c594039edd6a0a4207c77e8b1f48d08fa785b2
 
-Tags: 16-postgres-tomcat, 16.0-postgres-tomcat, 16.0.0-postgres-tomcat, postgres-tomcat, stable-postgres-tomcat, stable-postgres
+Tags: 16-postgres-tomcat, 16.1-postgres-tomcat, 16.1.0-postgres-tomcat, postgres-tomcat, stable-postgres-tomcat, stable-postgres
 Architectures: amd64, arm64v8
 Directory: 16/postgres-tomcat
-GitCommit: cfd12b26da4688edebf4f3b3fe7b26781306bbee
+GitCommit: 63c594039edd6a0a4207c77e8b1f48d08fa785b2
 
-Tags: 16-mariadb-tomcat, 16.0-mariadb-tomcat, 16.0.0-mariadb-tomcat, mariadb-tomcat, stable-mariadb-tomcat, stable-mariadb
+Tags: 16-mariadb-tomcat, 16.1-mariadb-tomcat, 16.1.0-mariadb-tomcat, mariadb-tomcat, stable-mariadb-tomcat, stable-mariadb
 Architectures: amd64, arm64v8
 Directory: 16/mariadb-tomcat
-GitCommit: cfd12b26da4688edebf4f3b3fe7b26781306bbee
+GitCommit: 63c594039edd6a0a4207c77e8b1f48d08fa785b2
 
 # LTS
 Tags: 15, 15.10, 15.10.6, 15-mysql-tomcat, 15.10-mysql-tomcat, 15.10.6-mysql-tomcat, lts-mysql-tomcat, lts-mysql, lts
@@ -48,16 +48,6 @@ Tags: 14-mariadb-tomcat, 14.10-mariadb-tomcat, 14.10.21-mariadb-tomcat
 Architectures: amd64, arm64v8
 Directory: 14/mariadb-tomcat
 GitCommit: ffbda2123e322160254f342751bce9b978412e5f
-
-# Mid-year "LTS" (done by XWiki SAS developers and not official). To be removed when the next official LTS is released.
-Tags: 15.5, 15.5.5, 15.5-mysql-tomcat, 15.5.5-mysql-tomcat
-Architectures: amd64, arm64v8
-Directory: 15.5/mysql-tomcat
-GitCommit: 5b661e7ccc59f956a881dd00f2bc14755db9eea8
-
-Tags: 15.5-postgres-tomcat, 15.5.5-postgres-tomcat
-Architectures: amd64, arm64v8
-Directory: 15.5/postgres-tomcat
 GitCommit: 5b661e7ccc59f956a881dd00f2bc14755db9eea8
 
 Tags: 15.5-mariadb-tomcat, 15.5.5-mariadb-tomcat
