@@ -55,7 +55,7 @@ if [[ "$testName" == *tls* ]]; then
 			openssl verify -CAfile /certs/ca.crt /certs/cert.crt
 
 		FROM $image
-		# gotta be :0 because percona's mongo doesn't have a mongodb group and estesp slayed tianon with https://github.com/moby/moby/pull/34263/files#diff-f157a3a45b3e5d85aadff73bff1f5a7cR170-R171
+		# gotta be :0 because percona's mongo doesn't have a mongodb group and estesp slayed tianon with https://github.com/moby/moby/commit/a1183dda578f531ef65766611f9e16a0636e3a17#diff-2d1cd0cbc407f38960e628655d0f29f3bf49219da7be0d1f60d2ba42a8b10bfcR170-R171
 		COPY --from=certs --chown=mongodb:0 /certs /certs
 		RUN cat /certs/cert.crt /certs/private.key > /certs/both.pem # yeah, what
 	EOD
@@ -63,27 +63,16 @@ if [[ "$testName" == *tls* ]]; then
 	mongodRunArgs+=(
 		--hostname mongo
 	)
-	# test for 4.2+ (where "s/ssl/tls/" was applied to all related options/flags)
-	# see https://docs.mongodb.com/manual/tutorial/configure-ssl/#procedures-using-net-ssl-settings
-	if docker run --rm "$image" mongod --help 2>&1 | grep -q -- ' --tlsMode '; then
-		mongodCmdArgs+=(
-			--tlsMode requireTLS
-			--tlsCertificateKeyFile /certs/both.pem
-		)
-		mongoArgs+=(
-			--tls
-			--tlsCAFile /certs/ca.crt
-		)
-	else
-		mongodCmdArgs+=(
-			--sslMode requireSSL
-			--sslPEMKeyFile /certs/both.pem
-		)
-		mongoArgs+=(
-			--ssl
-			--sslCAFile /certs/ca.crt
-		)
-	fi
+	mongodCmdArgs+=(
+		--tlsMode requireTLS
+		--tlsCAFile /certs/ca.crt # https://jira.mongodb.org/browse/SERVER-72839
+		--tlsCertificateKeyFile /certs/both.pem
+		--tlsAllowConnectionsWithoutCertificates # likely unintended consequence of https://jira.mongodb.org/browse/SERVER-72839 is that we now have to set *either* --tlsCAFile or "tlsUseSystemCA" but the catch is that the latter can *only* be set via the config file and setting the former changes the default behavior to require mutual TLS 🙃
+	)
+	mongoArgs+=(
+		--tls
+		--tlsCAFile /certs/ca.crt
+	)
 fi
 
 cid="$(docker run "${mongodRunArgs[@]}" "$image" "${mongodCmdArgs[@]}")"
