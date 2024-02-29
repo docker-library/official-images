@@ -5,6 +5,37 @@ Maintainers: Tianon Gravi <tianon@dockerproject.org> (@tianon),
 GitRepo: https://github.com/docker-library/docker.git
 Builder: buildkit
 
+Tags: 26.0.0-rc1-cli, 26-rc-cli, rc-cli, 26.0.0-rc1-cli-alpine3.19
+Architectures: amd64, arm32v6, arm32v7, arm64v8
+GitCommit: cc424ac96c2c90487f0c6b4cf044fada91dcc6a2
+Directory: 26-rc/cli
+
+Tags: 26.0.0-rc1-dind, 26-rc-dind, rc-dind, 26.0.0-rc1-dind-alpine3.19, 26.0.0-rc1, 26-rc, rc, 26.0.0-rc1-alpine3.19
+Architectures: amd64, arm32v6, arm32v7, arm64v8
+GitCommit: cc424ac96c2c90487f0c6b4cf044fada91dcc6a2
+Directory: 26-rc/dind
+
+Tags: 26.0.0-rc1-dind-rootless, 26-rc-dind-rootless, rc-dind-rootless
+Architectures: amd64, arm64v8
+GitCommit: cc424ac96c2c90487f0c6b4cf044fada91dcc6a2
+Directory: 26-rc/dind-rootless
+
+Tags: 26.0.0-rc1-windowsservercore-ltsc2022, 26-rc-windowsservercore-ltsc2022, rc-windowsservercore-ltsc2022
+SharedTags: 26.0.0-rc1-windowsservercore, 26-rc-windowsservercore, rc-windowsservercore
+Architectures: windows-amd64
+GitCommit: cc424ac96c2c90487f0c6b4cf044fada91dcc6a2
+Directory: 26-rc/windows/windowsservercore-ltsc2022
+Constraints: windowsservercore-ltsc2022
+Builder: classic
+
+Tags: 26.0.0-rc1-windowsservercore-1809, 26-rc-windowsservercore-1809, rc-windowsservercore-1809
+SharedTags: 26.0.0-rc1-windowsservercore, 26-rc-windowsservercore, rc-windowsservercore
+Architectures: windows-amd64
+GitCommit: cc424ac96c2c90487f0c6b4cf044fada91dcc6a2
+Directory: 26-rc/windows/windowsservercore-1809
+Constraints: windowsservercore-1809
+Builder: classic
+
 Tags: 25.0.3-cli, 25.0-cli, 25-cli, cli, 25.0.3-cli-alpine3.19
 Architectures: amd64, arm32v6, arm32v7, arm64v8
 GitCommit: c0a2a6d85dab907b5a9349f7a25eb7eadbbfa4ea
