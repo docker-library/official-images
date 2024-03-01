@@ -4,7 +4,7 @@ Maintainers: Derek Collison <derek@synadia.com> (@derekcollison),
              Neil Twigg <neil@synadia.com> (@neilalexander),
              Phil Pennock <pdp@synadia.com> (@philpennock)
 GitRepo: https://github.com/nats-io/nats-docker.git
-GitCommit: c6270b7aabfd921822f677a190607d7da07976a0
+GitCommit: f4a594182c4b1534b2b1d446e1c597ab4ef4b7cb
 GitFetch: refs/heads/main
 
 Tags: 2.10.11-alpine3.19, 2.10-alpine3.19, 2-alpine3.19, alpine3.19, 2.10.11-alpine, 2.10-alpine, 2-alpine, alpine
@@ -28,23 +28,23 @@ Architectures: windows-amd64
 Directory: 2.10.x/nanoserver-1809
 Constraints: nanoserver-1809, windowsservercore-1809
 
-Tags: 2.9.24-alpine3.18, 2.9-alpine3.18, 2.9.24-alpine, 2.9-alpine
+Tags: 2.9.25-alpine3.18, 2.9-alpine3.18, 2.9.25-alpine, 2.9-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8
 Directory: 2.9.x/alpine3.18
 
-Tags: 2.9.24-scratch, 2.9-scratch, 2.9.24-linux, 2.9-linux
-SharedTags: 2.9.24, 2.9
+Tags: 2.9.25-scratch, 2.9-scratch, 2.9.25-linux, 2.9-linux
+SharedTags: 2.9.25, 2.9
 Architectures: amd64, arm32v6, arm32v7, arm64v8
 Directory: 2.9.x/scratch
 
-Tags: 2.9.24-windowsservercore-1809, 2.9-windowsservercore-1809
-SharedTags: 2.9.24-windowsservercore, 2.9-windowsservercore
+Tags: 2.9.25-windowsservercore-1809, 2.9-windowsservercore-1809
+SharedTags: 2.9.25-windowsservercore, 2.9-windowsservercore
 Architectures: windows-amd64
 Directory: 2.9.x/windowsservercore-1809
 Constraints: windowsservercore-1809
 
-Tags: 2.9.24-nanoserver-1809, 2.9-nanoserver-1809
-SharedTags: 2.9.24-nanoserver, 2.9-nanoserver
+Tags: 2.9.25-nanoserver-1809, 2.9-nanoserver-1809
+SharedTags: 2.9.25-nanoserver, 2.9-nanoserver
 Architectures: windows-amd64
 Directory: 2.9.x/nanoserver-1809
 Constraints: nanoserver-1809, windowsservercore-1809
