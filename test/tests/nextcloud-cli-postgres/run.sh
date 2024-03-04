@@ -18,7 +18,7 @@ dbUsr="test-$RANDOM-db"
 dbCid="$(docker run -d \
 	-e POSTGRES_USER="$dbUsr" \
 	-e POSTGRES_PASSWORD="$dbPass" \
-	-e POSTGRES_DB='postgres' \
+	-e POSTGRES_DB="$dbName" \
 	"$dbImage")"
 trap "docker rm -vf $dbCid > /dev/null" EXIT
 # NEXTCLOUD_ADMIN_USER has to be set to something that does not require escaping: https://github.com/docker-library/official-images/pull/6252#issuecomment-520095703
