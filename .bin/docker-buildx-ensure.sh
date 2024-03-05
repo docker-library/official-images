@@ -51,14 +51,26 @@ read -r -d '' buildkitdConfig <<-EOF || :
 EOF
 
 # https://docs.docker.com/engine/reference/commandline/buildx_create/
-docker buildx create \
-	--name "$builderName" \
-	--node "$builderName" \
-	--config <(printf '%s' "$buildkitdConfig") \
-	--platform "$platform" \
-	--driver docker-container \
-	--driver-opt image="$BASHBREW_BUILDKIT_IMAGE" \
+args=(
+	--name "$builderName"
+	--node "$builderName"
+	--platform "$platform"
+	--driver docker-container
+	--driver-opt image="$BASHBREW_BUILDKIT_IMAGE"
 	--bootstrap
+
+	# https://github.com/docker/buildx/issues/484#issuecomment-749352728
+	--driver-opt env.BUILDKIT_STEP_LOG_MAX_SIZE=-1
+	--driver-opt env.BUILDKIT_STEP_LOG_MAX_SPEED=-1
+
+	# https://github.com/docker/buildx/pull/1271
+	#--driver-opt 'restart-policy=always'
+	# ("ERROR: failed to initialize builder ...: invalid driver option restart-policy for docker-container driver" until we thread the needle of newer buildx to all our nodes 🙃)
+
+	# NOTE: --config has to be in the command invocation (because of "<(...)" creating a temporary file descriptor that otherwise won't last until we run the command)
+)
+docker buildx create "${args[@]}" \
+	--config <(printf '%s' "$buildkitdConfig") \
 
 # 👀
 docker update --restart=always "$container"
