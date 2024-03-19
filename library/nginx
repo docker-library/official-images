@@ -1,4 +1,4 @@
-# this file is generated via https://github.com/nginxinc/docker-nginx/blob/0cfc9381f01c6cd455e014ad738b5bcdffe8024c/generate-stackbrew-library.sh
+# this file is generated via https://github.com/nginxinc/docker-nginx/blob/9cb278860bdcea48abc0bc770a29ead3fc9a1fe6/generate-stackbrew-library.sh
 
 Maintainers: NGINX Docker Maintainers <docker-maint@nginx.com> (@nginxinc)
 GitRepo: https://github.com/nginxinc/docker-nginx.git
@@ -12,6 +12,11 @@ Tags: 1.25.4-perl, mainline-perl, 1-perl, 1.25-perl, perl, 1.25.4-bookworm-perl,
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: 1f227619c1f1baa0bed8bed844ea614437ff14fb
 Directory: mainline/debian-perl
+
+Tags: 1.25.4-otel, mainline-otel, 1-otel, 1.25-otel, otel, 1.25.4-bookworm-otel, mainline-bookworm-otel, 1-bookworm-otel, 1.25-bookworm-otel, bookworm-otel
+Architectures: amd64, arm64v8
+GitCommit: 9cb278860bdcea48abc0bc770a29ead3fc9a1fe6
+Directory: mainline/debian-otel
 
 Tags: 1.25.4-alpine, mainline-alpine, 1-alpine, 1.25-alpine, alpine, 1.25.4-alpine3.18, mainline-alpine3.18, 1-alpine3.18, 1.25-alpine3.18, alpine3.18
 Architectures: arm64v8, arm32v6, arm32v7, ppc64le, s390x, i386, amd64
@@ -27,6 +32,11 @@ Tags: 1.25.4-alpine-slim, mainline-alpine-slim, 1-alpine-slim, 1.25-alpine-slim,
 Architectures: arm64v8, arm32v6, arm32v7, ppc64le, s390x, i386, amd64
 GitCommit: 1f227619c1f1baa0bed8bed844ea614437ff14fb
 Directory: mainline/alpine-slim
+
+Tags: 1.25.4-alpine-otel, mainline-alpine-otel, 1-alpine-otel, 1.25-alpine-otel, alpine-otel, 1.25.4-alpine3.18-otel, mainline-alpine3.18-otel, 1-alpine3.18-otel, 1.25-alpine3.18-otel, alpine3.18-otel
+Architectures: amd64, arm64v8
+GitCommit: 9cb278860bdcea48abc0bc770a29ead3fc9a1fe6
+Directory: mainline/alpine-otel
 
 Tags: 1.24.0, stable, 1.24, 1.24.0-bullseye, stable-bullseye, 1.24-bullseye
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
