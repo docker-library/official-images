@@ -1,28 +1,56 @@
-# this file was generated using https://github.com/varnish/docker-varnish/blob/185f6f8ec644d59c896861944a1385c09e2abfbe/populate.sh
+# this file was generated using https://github.com/varnish/docker-varnish/blob/b6f026f3ac812208ea3339c81ef338717947da2a/populate.sh
 Maintainers: Guillaume Quintard <guillaume.quintard@gmail.com> (@gquintard)
 GitRepo: https://github.com/varnish/docker-varnish.git
 
-Tags: fresh, 7.4.2, 7.4, latest
+Tags: fresh, 7.5.0, 7.5, latest
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: fresh/debian
 GitCommit: 0cbc46e59728598b7bb0f537206ce00af6dd9203
 
-Tags: fresh-alpine, 7.4.2-alpine, 7.4-alpine, alpine
+Tags: fresh-alpine, 7.5.0-alpine, 7.5-alpine, alpine
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: fresh/alpine
 GitCommit: 0cbc46e59728598b7bb0f537206ce00af6dd9203
 
-Tags: old, 7.3.1, 7.3
+Tags: old, 7.4.3, 7.4
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: old/debian
 GitCommit: 185f6f8ec644d59c896861944a1385c09e2abfbe
 
-Tags: old-alpine, 7.3.1-alpine, 7.3-alpine
+Tags: old-alpine, 7.4.3-alpine, 7.4-alpine
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: old/alpine
 GitCommit: 185f6f8ec644d59c896861944a1385c09e2abfbe
 
-Tags: stable, 6.0.12, 6.0
+Tags: stable, 6.0.13, 6.0
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 Directory: stable/debian
 GitCommit: 185f6f8ec644d59c896861944a1385c09e2abfbe
+
+# manual fix: fix tags that got erased
+
+Tags: 7.4.2
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+Directory: fresh/debian
+GitCommit: 0c295b528f28a98650fb2580eab6d34b30b165c4
+
+Tags: 7.4.2-alpine
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+Directory: fresh/alpine
+GitCommit: 5644d31e8fa5bc78e764e8604ffa17c47528f5e3
+
+Tags: 7.3.1, 7.3
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+Directory: old/debian
+GitCommit: 0c295b528f28a98650fb2580eab6d34b30b165c4
+
+Tags: 7.3.1-alpine, 7.3-alpine
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+Directory: old/alpine
+GitCommit: 5644d31e8fa5bc78e764e8604ffa17c47528f5e3
+
+Tags: 6.0.12
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+Directory: stable/debian
+GitCommit: 0c295b528f28a98650fb2580eab6d34b30b165c4
+
