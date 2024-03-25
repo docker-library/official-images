@@ -103,6 +103,15 @@ imageTests+=(
 		julia-hello-world
 		julia-downloads
 	'
+	[joomla]='
+		joomla-cli-mariadb
+	'
+	[joomla:apache]='
+		joomla-apache-run
+	'
+	[joomla:fpm]='
+		joomla-fpm-run
+	'
 	[logstash]='
 		logstash-basics
 	'
