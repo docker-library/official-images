@@ -73,9 +73,36 @@ Architectures: amd64, arm32v7, arm64v8, i386
 Directory: buster/slim
 
 # experimental -- Experimental packages - not released; use at your own risk.
-Tags: experimental, experimental-20240311
+Tags: experimental, experimental-20240330
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, riscv64, s390x
 Directory: experimental
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-amd64-CVE-2024-3094
+amd64-GitFetch: refs/heads/dist-amd64-CVE-2024-3094
+amd64-GitCommit: d67672a8f10361509e937a8aefc6b77dfc43dc78
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm32v5-CVE-2024-3094
+arm32v5-GitFetch: refs/heads/dist-arm32v5-CVE-2024-3094
+arm32v5-GitCommit: 29041191084b40412661bb11609105beacbb767c
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm32v7-CVE-2024-3094
+arm32v7-GitFetch: refs/heads/dist-arm32v7-CVE-2024-3094
+arm32v7-GitCommit: 83639d7084df310d7f22d0c7f3c76998dbe7f37f
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm64v8-CVE-2024-3094
+arm64v8-GitFetch: refs/heads/dist-arm64v8-CVE-2024-3094
+arm64v8-GitCommit: d1683dc7e84e01c294790304079448c507d57e86
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-i386-CVE-2024-3094
+i386-GitFetch: refs/heads/dist-i386-CVE-2024-3094
+i386-GitCommit: 265a890f337b4391360d4613e004b2513c5386b1
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-mips64le-CVE-2024-3094
+mips64le-GitFetch: refs/heads/dist-mips64le-CVE-2024-3094
+mips64le-GitCommit: 7f39f105210946df04b8b6d3f8525f5478873ed0
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-ppc64le-CVE-2024-3094
+ppc64le-GitFetch: refs/heads/dist-ppc64le-CVE-2024-3094
+ppc64le-GitCommit: 2e37b65c0213ba01ac61e93983b29725a4a41c00
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-riscv64-CVE-2024-3094
+riscv64-GitFetch: refs/heads/dist-riscv64-CVE-2024-3094
+riscv64-GitCommit: 61b5040befa15341905822ca432020c6e48629c6
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-s390x-CVE-2024-3094
+s390x-GitFetch: refs/heads/dist-s390x-CVE-2024-3094
+s390x-GitCommit: 11ede399182439d48e0d09ad3d722de8c58aec44
 
 # oldoldstable -- Debian 10.13 Released 10 September 2022
 Tags: oldoldstable, oldoldstable-20240311
@@ -104,18 +131,99 @@ Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 Directory: oldstable/slim
 
 # rc-buggy -- Experimental packages - not released; use at your own risk.
-Tags: rc-buggy, rc-buggy-20240311
+Tags: rc-buggy, rc-buggy-20240330
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, riscv64, s390x
 Directory: rc-buggy
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-amd64-CVE-2024-3094
+amd64-GitFetch: refs/heads/dist-amd64-CVE-2024-3094
+amd64-GitCommit: d67672a8f10361509e937a8aefc6b77dfc43dc78
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm32v5-CVE-2024-3094
+arm32v5-GitFetch: refs/heads/dist-arm32v5-CVE-2024-3094
+arm32v5-GitCommit: 29041191084b40412661bb11609105beacbb767c
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm32v7-CVE-2024-3094
+arm32v7-GitFetch: refs/heads/dist-arm32v7-CVE-2024-3094
+arm32v7-GitCommit: 83639d7084df310d7f22d0c7f3c76998dbe7f37f
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm64v8-CVE-2024-3094
+arm64v8-GitFetch: refs/heads/dist-arm64v8-CVE-2024-3094
+arm64v8-GitCommit: d1683dc7e84e01c294790304079448c507d57e86
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-i386-CVE-2024-3094
+i386-GitFetch: refs/heads/dist-i386-CVE-2024-3094
+i386-GitCommit: 265a890f337b4391360d4613e004b2513c5386b1
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-mips64le-CVE-2024-3094
+mips64le-GitFetch: refs/heads/dist-mips64le-CVE-2024-3094
+mips64le-GitCommit: 7f39f105210946df04b8b6d3f8525f5478873ed0
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-ppc64le-CVE-2024-3094
+ppc64le-GitFetch: refs/heads/dist-ppc64le-CVE-2024-3094
+ppc64le-GitCommit: 2e37b65c0213ba01ac61e93983b29725a4a41c00
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-riscv64-CVE-2024-3094
+riscv64-GitFetch: refs/heads/dist-riscv64-CVE-2024-3094
+riscv64-GitCommit: 61b5040befa15341905822ca432020c6e48629c6
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-s390x-CVE-2024-3094
+s390x-GitFetch: refs/heads/dist-s390x-CVE-2024-3094
+s390x-GitCommit: 11ede399182439d48e0d09ad3d722de8c58aec44
 
 # sid -- Debian x.y Unstable - Not Released
-Tags: sid, sid-20240311
+Tags: sid, sid-20240330
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, riscv64, s390x
 Directory: sid
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-amd64-CVE-2024-3094
+amd64-GitFetch: refs/heads/dist-amd64-CVE-2024-3094
+amd64-GitCommit: d67672a8f10361509e937a8aefc6b77dfc43dc78
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm32v5-CVE-2024-3094
+arm32v5-GitFetch: refs/heads/dist-arm32v5-CVE-2024-3094
+arm32v5-GitCommit: 29041191084b40412661bb11609105beacbb767c
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm32v7-CVE-2024-3094
+arm32v7-GitFetch: refs/heads/dist-arm32v7-CVE-2024-3094
+arm32v7-GitCommit: 83639d7084df310d7f22d0c7f3c76998dbe7f37f
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm64v8-CVE-2024-3094
+arm64v8-GitFetch: refs/heads/dist-arm64v8-CVE-2024-3094
+arm64v8-GitCommit: d1683dc7e84e01c294790304079448c507d57e86
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-i386-CVE-2024-3094
+i386-GitFetch: refs/heads/dist-i386-CVE-2024-3094
+i386-GitCommit: 265a890f337b4391360d4613e004b2513c5386b1
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-mips64le-CVE-2024-3094
+mips64le-GitFetch: refs/heads/dist-mips64le-CVE-2024-3094
+mips64le-GitCommit: 7f39f105210946df04b8b6d3f8525f5478873ed0
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-ppc64le-CVE-2024-3094
+ppc64le-GitFetch: refs/heads/dist-ppc64le-CVE-2024-3094
+ppc64le-GitCommit: 2e37b65c0213ba01ac61e93983b29725a4a41c00
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-riscv64-CVE-2024-3094
+riscv64-GitFetch: refs/heads/dist-riscv64-CVE-2024-3094
+riscv64-GitCommit: 61b5040befa15341905822ca432020c6e48629c6
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-s390x-CVE-2024-3094
+s390x-GitFetch: refs/heads/dist-s390x-CVE-2024-3094
+s390x-GitCommit: 11ede399182439d48e0d09ad3d722de8c58aec44
 
-Tags: sid-slim, sid-20240311-slim
+Tags: sid-slim, sid-20240330-slim
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, riscv64, s390x
 Directory: sid/slim
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-amd64-CVE-2024-3094
+amd64-GitFetch: refs/heads/dist-amd64-CVE-2024-3094
+amd64-GitCommit: d67672a8f10361509e937a8aefc6b77dfc43dc78
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm32v5-CVE-2024-3094
+arm32v5-GitFetch: refs/heads/dist-arm32v5-CVE-2024-3094
+arm32v5-GitCommit: 29041191084b40412661bb11609105beacbb767c
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm32v7-CVE-2024-3094
+arm32v7-GitFetch: refs/heads/dist-arm32v7-CVE-2024-3094
+arm32v7-GitCommit: 83639d7084df310d7f22d0c7f3c76998dbe7f37f
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm64v8-CVE-2024-3094
+arm64v8-GitFetch: refs/heads/dist-arm64v8-CVE-2024-3094
+arm64v8-GitCommit: d1683dc7e84e01c294790304079448c507d57e86
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-i386-CVE-2024-3094
+i386-GitFetch: refs/heads/dist-i386-CVE-2024-3094
+i386-GitCommit: 265a890f337b4391360d4613e004b2513c5386b1
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-mips64le-CVE-2024-3094
+mips64le-GitFetch: refs/heads/dist-mips64le-CVE-2024-3094
+mips64le-GitCommit: 7f39f105210946df04b8b6d3f8525f5478873ed0
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-ppc64le-CVE-2024-3094
+ppc64le-GitFetch: refs/heads/dist-ppc64le-CVE-2024-3094
+ppc64le-GitCommit: 2e37b65c0213ba01ac61e93983b29725a4a41c00
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-riscv64-CVE-2024-3094
+riscv64-GitFetch: refs/heads/dist-riscv64-CVE-2024-3094
+riscv64-GitCommit: 61b5040befa15341905822ca432020c6e48629c6
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-s390x-CVE-2024-3094
+s390x-GitFetch: refs/heads/dist-s390x-CVE-2024-3094
+s390x-GitCommit: 11ede399182439d48e0d09ad3d722de8c58aec44
 
 # stable -- Debian 12.5 Released 10 February 2024
 Tags: stable, stable-20240311
@@ -131,36 +239,252 @@ Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 Directory: stable/slim
 
 # testing -- Debian x.y Testing distribution - Not Released
-Tags: testing, testing-20240311
+Tags: testing, testing-20240330
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 Directory: testing
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-amd64-CVE-2024-3094
+amd64-GitFetch: refs/heads/dist-amd64-CVE-2024-3094
+amd64-GitCommit: d67672a8f10361509e937a8aefc6b77dfc43dc78
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm32v5-CVE-2024-3094
+arm32v5-GitFetch: refs/heads/dist-arm32v5-CVE-2024-3094
+arm32v5-GitCommit: 29041191084b40412661bb11609105beacbb767c
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm32v7-CVE-2024-3094
+arm32v7-GitFetch: refs/heads/dist-arm32v7-CVE-2024-3094
+arm32v7-GitCommit: 83639d7084df310d7f22d0c7f3c76998dbe7f37f
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm64v8-CVE-2024-3094
+arm64v8-GitFetch: refs/heads/dist-arm64v8-CVE-2024-3094
+arm64v8-GitCommit: d1683dc7e84e01c294790304079448c507d57e86
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-i386-CVE-2024-3094
+i386-GitFetch: refs/heads/dist-i386-CVE-2024-3094
+i386-GitCommit: 265a890f337b4391360d4613e004b2513c5386b1
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-mips64le-CVE-2024-3094
+mips64le-GitFetch: refs/heads/dist-mips64le-CVE-2024-3094
+mips64le-GitCommit: 7f39f105210946df04b8b6d3f8525f5478873ed0
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-ppc64le-CVE-2024-3094
+ppc64le-GitFetch: refs/heads/dist-ppc64le-CVE-2024-3094
+ppc64le-GitCommit: 2e37b65c0213ba01ac61e93983b29725a4a41c00
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-riscv64-CVE-2024-3094
+riscv64-GitFetch: refs/heads/dist-riscv64-CVE-2024-3094
+riscv64-GitCommit: 61b5040befa15341905822ca432020c6e48629c6
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-s390x-CVE-2024-3094
+s390x-GitFetch: refs/heads/dist-s390x-CVE-2024-3094
+s390x-GitCommit: 11ede399182439d48e0d09ad3d722de8c58aec44
 
 Tags: testing-backports
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 Directory: testing/backports
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-amd64-CVE-2024-3094
+amd64-GitFetch: refs/heads/dist-amd64-CVE-2024-3094
+amd64-GitCommit: d67672a8f10361509e937a8aefc6b77dfc43dc78
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm32v5-CVE-2024-3094
+arm32v5-GitFetch: refs/heads/dist-arm32v5-CVE-2024-3094
+arm32v5-GitCommit: 29041191084b40412661bb11609105beacbb767c
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm32v7-CVE-2024-3094
+arm32v7-GitFetch: refs/heads/dist-arm32v7-CVE-2024-3094
+arm32v7-GitCommit: 83639d7084df310d7f22d0c7f3c76998dbe7f37f
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm64v8-CVE-2024-3094
+arm64v8-GitFetch: refs/heads/dist-arm64v8-CVE-2024-3094
+arm64v8-GitCommit: d1683dc7e84e01c294790304079448c507d57e86
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-i386-CVE-2024-3094
+i386-GitFetch: refs/heads/dist-i386-CVE-2024-3094
+i386-GitCommit: 265a890f337b4391360d4613e004b2513c5386b1
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-mips64le-CVE-2024-3094
+mips64le-GitFetch: refs/heads/dist-mips64le-CVE-2024-3094
+mips64le-GitCommit: 7f39f105210946df04b8b6d3f8525f5478873ed0
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-ppc64le-CVE-2024-3094
+ppc64le-GitFetch: refs/heads/dist-ppc64le-CVE-2024-3094
+ppc64le-GitCommit: 2e37b65c0213ba01ac61e93983b29725a4a41c00
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-riscv64-CVE-2024-3094
+riscv64-GitFetch: refs/heads/dist-riscv64-CVE-2024-3094
+riscv64-GitCommit: 61b5040befa15341905822ca432020c6e48629c6
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-s390x-CVE-2024-3094
+s390x-GitFetch: refs/heads/dist-s390x-CVE-2024-3094
+s390x-GitCommit: 11ede399182439d48e0d09ad3d722de8c58aec44
 
-Tags: testing-slim, testing-20240311-slim
+Tags: testing-slim, testing-20240330-slim
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 Directory: testing/slim
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-amd64-CVE-2024-3094
+amd64-GitFetch: refs/heads/dist-amd64-CVE-2024-3094
+amd64-GitCommit: d67672a8f10361509e937a8aefc6b77dfc43dc78
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm32v5-CVE-2024-3094
+arm32v5-GitFetch: refs/heads/dist-arm32v5-CVE-2024-3094
+arm32v5-GitCommit: 29041191084b40412661bb11609105beacbb767c
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm32v7-CVE-2024-3094
+arm32v7-GitFetch: refs/heads/dist-arm32v7-CVE-2024-3094
+arm32v7-GitCommit: 83639d7084df310d7f22d0c7f3c76998dbe7f37f
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm64v8-CVE-2024-3094
+arm64v8-GitFetch: refs/heads/dist-arm64v8-CVE-2024-3094
+arm64v8-GitCommit: d1683dc7e84e01c294790304079448c507d57e86
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-i386-CVE-2024-3094
+i386-GitFetch: refs/heads/dist-i386-CVE-2024-3094
+i386-GitCommit: 265a890f337b4391360d4613e004b2513c5386b1
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-mips64le-CVE-2024-3094
+mips64le-GitFetch: refs/heads/dist-mips64le-CVE-2024-3094
+mips64le-GitCommit: 7f39f105210946df04b8b6d3f8525f5478873ed0
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-ppc64le-CVE-2024-3094
+ppc64le-GitFetch: refs/heads/dist-ppc64le-CVE-2024-3094
+ppc64le-GitCommit: 2e37b65c0213ba01ac61e93983b29725a4a41c00
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-riscv64-CVE-2024-3094
+riscv64-GitFetch: refs/heads/dist-riscv64-CVE-2024-3094
+riscv64-GitCommit: 61b5040befa15341905822ca432020c6e48629c6
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-s390x-CVE-2024-3094
+s390x-GitFetch: refs/heads/dist-s390x-CVE-2024-3094
+s390x-GitCommit: 11ede399182439d48e0d09ad3d722de8c58aec44
 
 # trixie -- Debian x.y Testing distribution - Not Released
-Tags: trixie, trixie-20240311
+Tags: trixie, trixie-20240330
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 Directory: trixie
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-amd64-CVE-2024-3094
+amd64-GitFetch: refs/heads/dist-amd64-CVE-2024-3094
+amd64-GitCommit: d67672a8f10361509e937a8aefc6b77dfc43dc78
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm32v5-CVE-2024-3094
+arm32v5-GitFetch: refs/heads/dist-arm32v5-CVE-2024-3094
+arm32v5-GitCommit: 29041191084b40412661bb11609105beacbb767c
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm32v7-CVE-2024-3094
+arm32v7-GitFetch: refs/heads/dist-arm32v7-CVE-2024-3094
+arm32v7-GitCommit: 83639d7084df310d7f22d0c7f3c76998dbe7f37f
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm64v8-CVE-2024-3094
+arm64v8-GitFetch: refs/heads/dist-arm64v8-CVE-2024-3094
+arm64v8-GitCommit: d1683dc7e84e01c294790304079448c507d57e86
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-i386-CVE-2024-3094
+i386-GitFetch: refs/heads/dist-i386-CVE-2024-3094
+i386-GitCommit: 265a890f337b4391360d4613e004b2513c5386b1
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-mips64le-CVE-2024-3094
+mips64le-GitFetch: refs/heads/dist-mips64le-CVE-2024-3094
+mips64le-GitCommit: 7f39f105210946df04b8b6d3f8525f5478873ed0
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-ppc64le-CVE-2024-3094
+ppc64le-GitFetch: refs/heads/dist-ppc64le-CVE-2024-3094
+ppc64le-GitCommit: 2e37b65c0213ba01ac61e93983b29725a4a41c00
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-riscv64-CVE-2024-3094
+riscv64-GitFetch: refs/heads/dist-riscv64-CVE-2024-3094
+riscv64-GitCommit: 61b5040befa15341905822ca432020c6e48629c6
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-s390x-CVE-2024-3094
+s390x-GitFetch: refs/heads/dist-s390x-CVE-2024-3094
+s390x-GitCommit: 11ede399182439d48e0d09ad3d722de8c58aec44
 
 Tags: trixie-backports
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 Directory: trixie/backports
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-amd64-CVE-2024-3094
+amd64-GitFetch: refs/heads/dist-amd64-CVE-2024-3094
+amd64-GitCommit: d67672a8f10361509e937a8aefc6b77dfc43dc78
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm32v5-CVE-2024-3094
+arm32v5-GitFetch: refs/heads/dist-arm32v5-CVE-2024-3094
+arm32v5-GitCommit: 29041191084b40412661bb11609105beacbb767c
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm32v7-CVE-2024-3094
+arm32v7-GitFetch: refs/heads/dist-arm32v7-CVE-2024-3094
+arm32v7-GitCommit: 83639d7084df310d7f22d0c7f3c76998dbe7f37f
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm64v8-CVE-2024-3094
+arm64v8-GitFetch: refs/heads/dist-arm64v8-CVE-2024-3094
+arm64v8-GitCommit: d1683dc7e84e01c294790304079448c507d57e86
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-i386-CVE-2024-3094
+i386-GitFetch: refs/heads/dist-i386-CVE-2024-3094
+i386-GitCommit: 265a890f337b4391360d4613e004b2513c5386b1
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-mips64le-CVE-2024-3094
+mips64le-GitFetch: refs/heads/dist-mips64le-CVE-2024-3094
+mips64le-GitCommit: 7f39f105210946df04b8b6d3f8525f5478873ed0
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-ppc64le-CVE-2024-3094
+ppc64le-GitFetch: refs/heads/dist-ppc64le-CVE-2024-3094
+ppc64le-GitCommit: 2e37b65c0213ba01ac61e93983b29725a4a41c00
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-riscv64-CVE-2024-3094
+riscv64-GitFetch: refs/heads/dist-riscv64-CVE-2024-3094
+riscv64-GitCommit: 61b5040befa15341905822ca432020c6e48629c6
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-s390x-CVE-2024-3094
+s390x-GitFetch: refs/heads/dist-s390x-CVE-2024-3094
+s390x-GitCommit: 11ede399182439d48e0d09ad3d722de8c58aec44
 
-Tags: trixie-slim, trixie-20240311-slim
+Tags: trixie-slim, trixie-20240330-slim
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 Directory: trixie/slim
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-amd64-CVE-2024-3094
+amd64-GitFetch: refs/heads/dist-amd64-CVE-2024-3094
+amd64-GitCommit: d67672a8f10361509e937a8aefc6b77dfc43dc78
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm32v5-CVE-2024-3094
+arm32v5-GitFetch: refs/heads/dist-arm32v5-CVE-2024-3094
+arm32v5-GitCommit: 29041191084b40412661bb11609105beacbb767c
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm32v7-CVE-2024-3094
+arm32v7-GitFetch: refs/heads/dist-arm32v7-CVE-2024-3094
+arm32v7-GitCommit: 83639d7084df310d7f22d0c7f3c76998dbe7f37f
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm64v8-CVE-2024-3094
+arm64v8-GitFetch: refs/heads/dist-arm64v8-CVE-2024-3094
+arm64v8-GitCommit: d1683dc7e84e01c294790304079448c507d57e86
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-i386-CVE-2024-3094
+i386-GitFetch: refs/heads/dist-i386-CVE-2024-3094
+i386-GitCommit: 265a890f337b4391360d4613e004b2513c5386b1
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-mips64le-CVE-2024-3094
+mips64le-GitFetch: refs/heads/dist-mips64le-CVE-2024-3094
+mips64le-GitCommit: 7f39f105210946df04b8b6d3f8525f5478873ed0
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-ppc64le-CVE-2024-3094
+ppc64le-GitFetch: refs/heads/dist-ppc64le-CVE-2024-3094
+ppc64le-GitCommit: 2e37b65c0213ba01ac61e93983b29725a4a41c00
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-riscv64-CVE-2024-3094
+riscv64-GitFetch: refs/heads/dist-riscv64-CVE-2024-3094
+riscv64-GitCommit: 61b5040befa15341905822ca432020c6e48629c6
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-s390x-CVE-2024-3094
+s390x-GitFetch: refs/heads/dist-s390x-CVE-2024-3094
+s390x-GitCommit: 11ede399182439d48e0d09ad3d722de8c58aec44
 
 # unstable -- Debian x.y Unstable - Not Released
-Tags: unstable, unstable-20240311
+Tags: unstable, unstable-20240330
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, riscv64, s390x
 Directory: unstable
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-amd64-CVE-2024-3094
+amd64-GitFetch: refs/heads/dist-amd64-CVE-2024-3094
+amd64-GitCommit: d67672a8f10361509e937a8aefc6b77dfc43dc78
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm32v5-CVE-2024-3094
+arm32v5-GitFetch: refs/heads/dist-arm32v5-CVE-2024-3094
+arm32v5-GitCommit: 29041191084b40412661bb11609105beacbb767c
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm32v7-CVE-2024-3094
+arm32v7-GitFetch: refs/heads/dist-arm32v7-CVE-2024-3094
+arm32v7-GitCommit: 83639d7084df310d7f22d0c7f3c76998dbe7f37f
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm64v8-CVE-2024-3094
+arm64v8-GitFetch: refs/heads/dist-arm64v8-CVE-2024-3094
+arm64v8-GitCommit: d1683dc7e84e01c294790304079448c507d57e86
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-i386-CVE-2024-3094
+i386-GitFetch: refs/heads/dist-i386-CVE-2024-3094
+i386-GitCommit: 265a890f337b4391360d4613e004b2513c5386b1
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-mips64le-CVE-2024-3094
+mips64le-GitFetch: refs/heads/dist-mips64le-CVE-2024-3094
+mips64le-GitCommit: 7f39f105210946df04b8b6d3f8525f5478873ed0
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-ppc64le-CVE-2024-3094
+ppc64le-GitFetch: refs/heads/dist-ppc64le-CVE-2024-3094
+ppc64le-GitCommit: 2e37b65c0213ba01ac61e93983b29725a4a41c00
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-riscv64-CVE-2024-3094
+riscv64-GitFetch: refs/heads/dist-riscv64-CVE-2024-3094
+riscv64-GitCommit: 61b5040befa15341905822ca432020c6e48629c6
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-s390x-CVE-2024-3094
+s390x-GitFetch: refs/heads/dist-s390x-CVE-2024-3094
+s390x-GitCommit: 11ede399182439d48e0d09ad3d722de8c58aec44
 
-Tags: unstable-slim, unstable-20240311-slim
+Tags: unstable-slim, unstable-20240330-slim
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, riscv64, s390x
 Directory: unstable/slim
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-amd64-CVE-2024-3094
+amd64-GitFetch: refs/heads/dist-amd64-CVE-2024-3094
+amd64-GitCommit: d67672a8f10361509e937a8aefc6b77dfc43dc78
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm32v5-CVE-2024-3094
+arm32v5-GitFetch: refs/heads/dist-arm32v5-CVE-2024-3094
+arm32v5-GitCommit: 29041191084b40412661bb11609105beacbb767c
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm32v7-CVE-2024-3094
+arm32v7-GitFetch: refs/heads/dist-arm32v7-CVE-2024-3094
+arm32v7-GitCommit: 83639d7084df310d7f22d0c7f3c76998dbe7f37f
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm64v8-CVE-2024-3094
+arm64v8-GitFetch: refs/heads/dist-arm64v8-CVE-2024-3094
+arm64v8-GitCommit: d1683dc7e84e01c294790304079448c507d57e86
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-i386-CVE-2024-3094
+i386-GitFetch: refs/heads/dist-i386-CVE-2024-3094
+i386-GitCommit: 265a890f337b4391360d4613e004b2513c5386b1
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-mips64le-CVE-2024-3094
+mips64le-GitFetch: refs/heads/dist-mips64le-CVE-2024-3094
+mips64le-GitCommit: 7f39f105210946df04b8b6d3f8525f5478873ed0
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-ppc64le-CVE-2024-3094
+ppc64le-GitFetch: refs/heads/dist-ppc64le-CVE-2024-3094
+ppc64le-GitCommit: 2e37b65c0213ba01ac61e93983b29725a4a41c00
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-riscv64-CVE-2024-3094
+riscv64-GitFetch: refs/heads/dist-riscv64-CVE-2024-3094
+riscv64-GitCommit: 61b5040befa15341905822ca432020c6e48629c6
+# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-s390x-CVE-2024-3094
+s390x-GitFetch: refs/heads/dist-s390x-CVE-2024-3094
+s390x-GitCommit: 11ede399182439d48e0d09ad3d722de8c58aec44
