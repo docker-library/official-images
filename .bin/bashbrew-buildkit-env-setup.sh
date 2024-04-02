@@ -52,8 +52,10 @@ _bashbrew_buildkit_env_setup() {
 	vars="$(_jq_setenv <<<"$vars" BASHBREW_BUILDKIT_SYNTAX "$dockerfileTag")"
 
 	case "${BASHBREW_ARCH:-}" in
-		nope) # amd64 | arm64v8) # TODO re-enable this once we figure out how to handle "docker build --tag X" + "FROM X" correctly all-local
-			BASHBREW_BUILDKIT_IMAGE="$(grep <<<"$externalPins" -m1 '^moby/buildkit:')"
+		windows-amd64) ;; # https://github.com/microsoft/Windows-Containers/issues/34
+		'') ;; # if BASHBREW_ARCH isn't set explicitly, we shouldn't do more here
+		*)
+			BASHBREW_BUILDKIT_IMAGE="$(grep <<<"$externalPins" -m1 '^tianon/buildkit:')"
 			BASHBREW_BUILDKIT_IMAGE="$(_resolve_external_pins "$BASHBREW_BUILDKIT_IMAGE")"
 			export BASHBREW_BUILDKIT_IMAGE
 
@@ -62,7 +64,8 @@ _bashbrew_buildkit_env_setup() {
 			vars="$(_jq_setenv <<<"$vars" BUILDX_BUILDER "$buildxBuilder")"
 
 			local sbomTag
-			sbomTag="$(grep <<<"$externalPins" -m1 '^docker/buildkit-syft-scanner:')"
+			# https://hub.docker.com/r/docker/scout-sbom-indexer/tags
+			sbomTag="$(grep <<<"$externalPins" -m1 '^docker/scout-sbom-indexer:')"
 			sbomTag="$(_resolve_external_pins "$sbomTag")"
 			vars="$(_jq_setenv <<<"$vars" BASHBREW_BUILDKIT_SBOM_GENERATOR "$sbomTag")"
 			;;
