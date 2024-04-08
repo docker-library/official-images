@@ -1,0 +1,11 @@
+*  @docker-library/maintainers
+
+# give Laurent a bit more responsibility / authority on images where he's comfortable and knowledgeable 🎉
+/library/express-gateway  @LaurentGoderre  @docker-library/maintainers
+/library/ghost            @LaurentGoderre  @docker-library/maintainers
+/library/mongo-express    @LaurentGoderre  @docker-library/maintainers
+/library/node             @LaurentGoderre  @docker-library/maintainers
+/library/httpd            @LaurentGoderre  @docker-library/maintainers
+
+# make sure we check with Laurent before we update our SBOM indexer (he follows and is involved in those releases more closely than the rest of us) 👀
+/.external-pins/docker/scout-sbom-indexer*  @LaurentGoderre

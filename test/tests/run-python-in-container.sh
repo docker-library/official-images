@@ -25,6 +25,7 @@ case "$1" in
 		source "$runDir/run-in-container.sh" \
 			--docker-arg --env=PIP_DISABLE_PIP_VERSION_CHECK=1 \
 			--docker-arg --env=PIP_NO_PYTHON_VERSION_WARNING=1 \
+			--docker-arg --env=PIP_ROOT_USER_ACTION=ignore \
 			"$testDir" "$1" "$python" container.py
 		;;
 
@@ -34,6 +35,7 @@ case "$1" in
 		source "$runDir/run-in-container.sh" \
 			--docker-arg --env=PIP_DISABLE_PIP_VERSION_CHECK=1 \
 			--docker-arg --env=PIP_NO_PYTHON_VERSION_WARNING=1 \
+			--docker-arg --env=PIP_ROOT_USER_ACTION=ignore \
 			"$testDir" "$1" sh -ec '
 				for c in pypy3 pypy python3 python; do
 					if [ -x "/usr/local/bin/$c" ]; then
