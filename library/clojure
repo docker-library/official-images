@@ -2,7 +2,7 @@ Maintainers: Paul Lam <paul@quantisan.com> (@Quantisan),
              Wes Morgan <wes@wesmorgan.me> (@cap10morgan)
 Architectures: arm64v8, amd64
 GitRepo: https://github.com/Quantisan/docker-clojure.git
-GitCommit: 31b7d3f1003eeafd155bc504e78f8a515655ea48
+GitCommit: 513d5b7ce920767aa872ef8c3a411757b53fd448
 
 
 Tags: latest
@@ -231,3 +231,41 @@ Directory: target/debian-bullseye-slim-21/tools-deps
 
 Tags: temurin-21-jammy, temurin-21-tools-deps-1.11.1.1435-jammy, temurin-21-tools-deps-jammy
 Directory: target/eclipse-temurin-21-jdk-jammy/tools-deps
+
+Tags: temurin-22-lein-2.11.2-alpine, temurin-22-lein-alpine
+Architectures: amd64
+Directory: target/eclipse-temurin-22-jdk-alpine/lein
+
+Tags: temurin-22-lein, temurin-22-lein-2.11.2, temurin-22-lein-2.11.2-bookworm, temurin-22-lein-bookworm
+Directory: target/debian-bookworm-22/lein
+
+Tags: temurin-22-lein-2.11.2-bookworm-slim, temurin-22-lein-bookworm-slim
+Directory: target/debian-bookworm-slim-22/lein
+
+Tags: temurin-22-lein-2.11.2-bullseye, temurin-22-lein-bullseye
+Directory: target/debian-bullseye-22/lein
+
+Tags: temurin-22-lein-2.11.2-bullseye-slim, temurin-22-lein-bullseye-slim
+Directory: target/debian-bullseye-slim-22/lein
+
+Tags: temurin-22-lein-2.11.2-jammy, temurin-22-lein-jammy
+Directory: target/eclipse-temurin-22-jdk-jammy/lein
+
+Tags: temurin-22-alpine, temurin-22-tools-deps-1.11.1.1435-alpine, temurin-22-tools-deps-alpine
+Architectures: amd64
+Directory: target/eclipse-temurin-22-jdk-alpine/tools-deps
+
+Tags: temurin-22-bookworm, temurin-22-tools-deps, temurin-22-tools-deps-1.11.1.1435, temurin-22-tools-deps-1.11.1.1435-bookworm, temurin-22-tools-deps-bookworm
+Directory: target/debian-bookworm-22/tools-deps
+
+Tags: temurin-22-bookworm-slim, temurin-22-tools-deps-1.11.1.1435-bookworm-slim, temurin-22-tools-deps-bookworm-slim
+Directory: target/debian-bookworm-slim-22/tools-deps
+
+Tags: temurin-22-bullseye, temurin-22-tools-deps-1.11.1.1435-bullseye, temurin-22-tools-deps-bullseye
+Directory: target/debian-bullseye-22/tools-deps
+
+Tags: temurin-22-bullseye-slim, temurin-22-tools-deps-1.11.1.1435-bullseye-slim, temurin-22-tools-deps-bullseye-slim
+Directory: target/debian-bullseye-slim-22/tools-deps
+
+Tags: temurin-22-jammy, temurin-22-tools-deps-1.11.1.1435-jammy, temurin-22-tools-deps-jammy
+Directory: target/eclipse-temurin-22-jdk-jammy/tools-deps
