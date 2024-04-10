@@ -4,29 +4,39 @@ Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/julia.git
 
-Tags: 1.11.0-alpha2-bookworm, 1.11-rc-bookworm, rc-bookworm
-SharedTags: 1.11.0-alpha2, 1.11-rc, rc
+Tags: 1.11.0-beta1-bookworm, 1.11-rc-bookworm, rc-bookworm
+SharedTags: 1.11.0-beta1, 1.11-rc, rc
 Architectures: amd64, arm64v8, i386, ppc64le
-GitCommit: e6bc76709c9a6536707d07b75b42c4702d7e7843
+GitCommit: 3089b4afeb152cdb1dbc163f58ef916efc3e3e7c
 Directory: 1.11-rc/bookworm
 
-Tags: 1.11.0-alpha2-bullseye, 1.11-rc-bullseye, rc-bullseye
+Tags: 1.11.0-beta1-bullseye, 1.11-rc-bullseye, rc-bullseye
 Architectures: amd64, arm64v8, i386, ppc64le
-GitCommit: e6bc76709c9a6536707d07b75b42c4702d7e7843
+GitCommit: 3089b4afeb152cdb1dbc163f58ef916efc3e3e7c
 Directory: 1.11-rc/bullseye
 
-Tags: 1.11.0-alpha2-windowsservercore-ltsc2022, 1.11-rc-windowsservercore-ltsc2022, rc-windowsservercore-ltsc2022
-SharedTags: 1.11.0-alpha2, 1.11-rc, rc, 1.11.0-alpha2-windowsservercore, 1.11-rc-windowsservercore, rc-windowsservercore
+Tags: 1.11.0-beta1-alpine3.19, 1.11-rc-alpine3.19, rc-alpine3.19, 1.11.0-beta1-alpine, 1.11-rc-alpine, rc-alpine
+Architectures: amd64
+GitCommit: 3089b4afeb152cdb1dbc163f58ef916efc3e3e7c
+Directory: 1.11-rc/alpine3.19
+
+Tags: 1.11.0-beta1-alpine3.18, 1.11-rc-alpine3.18, rc-alpine3.18
+Architectures: amd64
+GitCommit: 3089b4afeb152cdb1dbc163f58ef916efc3e3e7c
+Directory: 1.11-rc/alpine3.18
+
+Tags: 1.11.0-beta1-windowsservercore-ltsc2022, 1.11-rc-windowsservercore-ltsc2022, rc-windowsservercore-ltsc2022
+SharedTags: 1.11.0-beta1, 1.11-rc, rc, 1.11.0-beta1-windowsservercore, 1.11-rc-windowsservercore, rc-windowsservercore
 Architectures: windows-amd64
-GitCommit: e6bc76709c9a6536707d07b75b42c4702d7e7843
+GitCommit: 3089b4afeb152cdb1dbc163f58ef916efc3e3e7c
 Directory: 1.11-rc/windows/windowsservercore-ltsc2022
 Constraints: windowsservercore-ltsc2022
 Builder: classic
 
-Tags: 1.11.0-alpha2-windowsservercore-1809, 1.11-rc-windowsservercore-1809, rc-windowsservercore-1809
-SharedTags: 1.11.0-alpha2, 1.11-rc, rc, 1.11.0-alpha2-windowsservercore, 1.11-rc-windowsservercore, rc-windowsservercore
+Tags: 1.11.0-beta1-windowsservercore-1809, 1.11-rc-windowsservercore-1809, rc-windowsservercore-1809
+SharedTags: 1.11.0-beta1, 1.11-rc, rc, 1.11.0-beta1-windowsservercore, 1.11-rc-windowsservercore, rc-windowsservercore
 Architectures: windows-amd64
-GitCommit: e6bc76709c9a6536707d07b75b42c4702d7e7843
+GitCommit: 3089b4afeb152cdb1dbc163f58ef916efc3e3e7c
 Directory: 1.11-rc/windows/windowsservercore-1809
 Constraints: windowsservercore-1809
 Builder: classic
