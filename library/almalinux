@@ -1,64 +1,39 @@
-# This file is generated using https://github.com/almalinux/docker-images/blob/b27b2d450d0db9bd0495c92a1b79c4cfa29d35bd/gen_docker_official_library
+# This file was generated on https://github.com/AlmaLinux/container-images/actions/runs/8635583348
 Maintainers: The AlmaLinux OS Foundation <cloud-infra@almalinux.org> (@AlmaLinux)
-GitRepo: https://github.com/AlmaLinux/docker-images.git
+GitRepo: https://github.com/AlmaLinux/container-images.git
 
-
-Tags: 8, 8.9, 8.9-20231124
-GitFetch: refs/heads/al8-20231124-amd64
-GitCommit: b5c3f2dea7120eee009287009173081dfc079e86
-amd64-File: Dockerfile-x86_64-default
-arm64v8-GitFetch: refs/heads/al8-20231124-arm64v8
-arm64v8-GitCommit: a0cdbfe387a83d220492cf4ead1eb83f61daba7f
-arm64v8-File: Dockerfile-aarch64-default
-ppc64le-GitFetch: refs/heads/al8-20231124-ppc64le
-ppc64le-GitCommit: 4ab296c31875230f538c4f2bc4fd4c3192711f8b
-ppc64le-File: Dockerfile-ppc64le-default
-s390x-GitFetch: refs/heads/al8-20231124-s390x
-s390x-GitCommit: 53124a4e70a9a3d4a5aaa99c4b38fec1db1e5d8a
-s390x-File: Dockerfile-s390x-default
+Tags: 8, 8.9, 8.9-20240410
+GitFetch: refs/heads/8
+GitCommit: 7aee1db985cc9ebb0347f2f4875f301fa4b09ab7
+amd64-Directory: default/amd64/
+arm64v8-Directory: default/arm64/
+ppc64le-Directory: default/ppc64le/
+s390x-Directory: default/s390x/
 Architectures: amd64, arm64v8, ppc64le, s390x
 
-Tags: 8-minimal, 8.9-minimal, 8.9-minimal-20231124
-GitFetch: refs/heads/al8-20231124-amd64
-GitCommit: b5c3f2dea7120eee009287009173081dfc079e86
-amd64-File: Dockerfile-x86_64-minimal
-arm64v8-GitFetch: refs/heads/al8-20231124-arm64v8
-arm64v8-GitCommit: a0cdbfe387a83d220492cf4ead1eb83f61daba7f
-arm64v8-File: Dockerfile-aarch64-minimal
-ppc64le-GitFetch: refs/heads/al8-20231124-ppc64le
-ppc64le-GitCommit: 4ab296c31875230f538c4f2bc4fd4c3192711f8b
-ppc64le-File: Dockerfile-ppc64le-minimal
-s390x-GitFetch: refs/heads/al8-20231124-s390x
-s390x-GitCommit: 53124a4e70a9a3d4a5aaa99c4b38fec1db1e5d8a
-s390x-File: Dockerfile-s390x-minimal
+Tags: 8-minimal, 8.9-minimal, 8.9-minimal-20240410
+GitFetch: refs/heads/8
+GitCommit: 265e51205d22917cbc7c60839c131dea85296705
+amd64-Directory: minimal/amd64/
+arm64v8-Directory: minimal/arm64/
+ppc64le-Directory: minimal/ppc64le/
+s390x-Directory: minimal/s390x/
 Architectures: amd64, arm64v8, ppc64le, s390x
 
-Tags: latest, 9, 9.3, 9.3-20231124
-GitFetch: refs/heads/al9-20231124-amd64
-GitCommit: 5b541a65dc5a6b837e19aec8936bed61b7a8a2bd
-amd64-File: Dockerfile-x86_64-default
-arm64v8-GitFetch: refs/heads/al9-20231124-arm64v8
-arm64v8-GitCommit: f0a97e1ad55d625658c9cb38592f01aea1fa47d9
-arm64v8-File: Dockerfile-aarch64-default
-ppc64le-GitFetch: refs/heads/al9-20231124-ppc64le
-ppc64le-GitCommit: 356dc2b97d1a3b52b4ae5ca42b5220f8c8e19ec3
-ppc64le-File: Dockerfile-ppc64le-default
-s390x-GitFetch: refs/heads/al9-20231124-s390x
-s390x-GitCommit: 1bf4026ff85b2ed8da83f38cfaa834aa472c323f
-s390x-File: Dockerfile-s390x-default
+Tags: latest, 9, 9.3, 9.3-20240410
+GitFetch: refs/heads/9
+GitCommit: 81d7017ae90da3bcddd6dc89663d2a5d3b2891b8
+amd64-Directory: default/amd64/
+arm64v8-Directory: default/arm64/
+ppc64le-Directory: default/ppc64le/
+s390x-Directory: default/s390x/
 Architectures: amd64, arm64v8, ppc64le, s390x
 
-Tags: minimal, 9-minimal,  9.3-minimal, 9.3-minimal-20231124
-GitFetch: refs/heads/al9-20231124-amd64
-GitCommit: 5b541a65dc5a6b837e19aec8936bed61b7a8a2bd
-amd64-File: Dockerfile-x86_64-minimal
-arm64v8-GitFetch: refs/heads/al9-20231124-arm64v8
-arm64v8-GitCommit: f0a97e1ad55d625658c9cb38592f01aea1fa47d9
-arm64v8-File: Dockerfile-aarch64-minimal
-ppc64le-GitFetch: refs/heads/al9-20231124-ppc64le
-ppc64le-GitCommit: 356dc2b97d1a3b52b4ae5ca42b5220f8c8e19ec3
-ppc64le-File: Dockerfile-ppc64le-minimal
-s390x-GitFetch: refs/heads/al9-20231124-s390x
-s390x-GitCommit: 1bf4026ff85b2ed8da83f38cfaa834aa472c323f
-s390x-File: Dockerfile-s390x-minimal
+Tags: minimal, 9-minimal, 9.3-minimal, 9.3-minimal-20240410
+GitFetch: refs/heads/9
+GitCommit: 8812c340f41fa91678d1e71c3494a8811458425a
+amd64-Directory: minimal/amd64/
+arm64v8-Directory: minimal/arm64/
+ppc64le-Directory: minimal/ppc64le/
+s390x-Directory: minimal/s390x/
 Architectures: amd64, arm64v8, ppc64le, s390x
