@@ -52,7 +52,7 @@ WORKDIR /container
 EOD
 
 # if testDir contains dotted-environment-variables we need to add an environment variable to the docker run command
-if [ $testDir == *"dotted-environment-variables"* ]; then
+if [[ "$testDir" == *"dotted-environment-variables"* ]]; then
   docker run --rm -e "variable.with.a.dot=a.dotted.value" "$newImage" java -cp . container
 else
   docker run --rm "$newImage" java -cp . container
