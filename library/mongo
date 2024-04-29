@@ -4,71 +4,37 @@ Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/mongo.git
 
-Tags: 7.0.9-rc1-jammy, 7.0-rc-jammy
-SharedTags: 7.0.9-rc1, 7.0-rc
+Tags: 7.0.9-jammy, 7.0-jammy, 7-jammy, jammy
+SharedTags: 7.0.9, 7.0, 7, latest
 Architectures: amd64, arm64v8
-GitCommit: fbfba91eec75ee6dfa1644b519af518d9a6a71df
-Directory: 7.0-rc
-
-Tags: 7.0.9-rc1-windowsservercore-ltsc2022, 7.0-rc-windowsservercore-ltsc2022
-SharedTags: 7.0.9-rc1-windowsservercore, 7.0-rc-windowsservercore, 7.0.9-rc1, 7.0-rc
-Architectures: windows-amd64
-GitCommit: fbfba91eec75ee6dfa1644b519af518d9a6a71df
-Directory: 7.0-rc/windows/windowsservercore-ltsc2022
-Constraints: windowsservercore-ltsc2022
-
-Tags: 7.0.9-rc1-windowsservercore-1809, 7.0-rc-windowsservercore-1809
-SharedTags: 7.0.9-rc1-windowsservercore, 7.0-rc-windowsservercore, 7.0.9-rc1, 7.0-rc
-Architectures: windows-amd64
-GitCommit: fbfba91eec75ee6dfa1644b519af518d9a6a71df
-Directory: 7.0-rc/windows/windowsservercore-1809
-Constraints: windowsservercore-1809
-
-Tags: 7.0.9-rc1-nanoserver-ltsc2022, 7.0-rc-nanoserver-ltsc2022
-SharedTags: 7.0.9-rc1-nanoserver, 7.0-rc-nanoserver
-Architectures: windows-amd64
-GitCommit: fbfba91eec75ee6dfa1644b519af518d9a6a71df
-Directory: 7.0-rc/windows/nanoserver-ltsc2022
-Constraints: nanoserver-ltsc2022, windowsservercore-ltsc2022
-
-Tags: 7.0.9-rc1-nanoserver-1809, 7.0-rc-nanoserver-1809
-SharedTags: 7.0.9-rc1-nanoserver, 7.0-rc-nanoserver
-Architectures: windows-amd64
-GitCommit: fbfba91eec75ee6dfa1644b519af518d9a6a71df
-Directory: 7.0-rc/windows/nanoserver-1809
-Constraints: nanoserver-1809, windowsservercore-1809
-
-Tags: 7.0.8-jammy, 7.0-jammy, 7-jammy, jammy
-SharedTags: 7.0.8, 7.0, 7, latest
-Architectures: amd64, arm64v8
-GitCommit: 0d68481b0a65cf33346265e5c70700b037af0a34
+GitCommit: 9370d3f2e36d4134f29e513346b4c4c19e927a6f
 Directory: 7.0
 
-Tags: 7.0.8-windowsservercore-ltsc2022, 7.0-windowsservercore-ltsc2022, 7-windowsservercore-ltsc2022, windowsservercore-ltsc2022
-SharedTags: 7.0.8-windowsservercore, 7.0-windowsservercore, 7-windowsservercore, windowsservercore, 7.0.8, 7.0, 7, latest
+Tags: 7.0.9-windowsservercore-ltsc2022, 7.0-windowsservercore-ltsc2022, 7-windowsservercore-ltsc2022, windowsservercore-ltsc2022
+SharedTags: 7.0.9-windowsservercore, 7.0-windowsservercore, 7-windowsservercore, windowsservercore, 7.0.9, 7.0, 7, latest
 Architectures: windows-amd64
-GitCommit: 0d68481b0a65cf33346265e5c70700b037af0a34
+GitCommit: 9370d3f2e36d4134f29e513346b4c4c19e927a6f
 Directory: 7.0/windows/windowsservercore-ltsc2022
 Constraints: windowsservercore-ltsc2022
 
-Tags: 7.0.8-windowsservercore-1809, 7.0-windowsservercore-1809, 7-windowsservercore-1809, windowsservercore-1809
-SharedTags: 7.0.8-windowsservercore, 7.0-windowsservercore, 7-windowsservercore, windowsservercore, 7.0.8, 7.0, 7, latest
+Tags: 7.0.9-windowsservercore-1809, 7.0-windowsservercore-1809, 7-windowsservercore-1809, windowsservercore-1809
+SharedTags: 7.0.9-windowsservercore, 7.0-windowsservercore, 7-windowsservercore, windowsservercore, 7.0.9, 7.0, 7, latest
 Architectures: windows-amd64
-GitCommit: 0d68481b0a65cf33346265e5c70700b037af0a34
+GitCommit: 9370d3f2e36d4134f29e513346b4c4c19e927a6f
 Directory: 7.0/windows/windowsservercore-1809
 Constraints: windowsservercore-1809
 
-Tags: 7.0.8-nanoserver-ltsc2022, 7.0-nanoserver-ltsc2022, 7-nanoserver-ltsc2022, nanoserver-ltsc2022
-SharedTags: 7.0.8-nanoserver, 7.0-nanoserver, 7-nanoserver, nanoserver
+Tags: 7.0.9-nanoserver-ltsc2022, 7.0-nanoserver-ltsc2022, 7-nanoserver-ltsc2022, nanoserver-ltsc2022
+SharedTags: 7.0.9-nanoserver, 7.0-nanoserver, 7-nanoserver, nanoserver
 Architectures: windows-amd64
-GitCommit: 0d68481b0a65cf33346265e5c70700b037af0a34
+GitCommit: 9370d3f2e36d4134f29e513346b4c4c19e927a6f
 Directory: 7.0/windows/nanoserver-ltsc2022
 Constraints: nanoserver-ltsc2022, windowsservercore-ltsc2022
 
-Tags: 7.0.8-nanoserver-1809, 7.0-nanoserver-1809, 7-nanoserver-1809, nanoserver-1809
-SharedTags: 7.0.8-nanoserver, 7.0-nanoserver, 7-nanoserver, nanoserver
+Tags: 7.0.9-nanoserver-1809, 7.0-nanoserver-1809, 7-nanoserver-1809, nanoserver-1809
+SharedTags: 7.0.9-nanoserver, 7.0-nanoserver, 7-nanoserver, nanoserver
 Architectures: windows-amd64
-GitCommit: 0d68481b0a65cf33346265e5c70700b037af0a34
+GitCommit: 9370d3f2e36d4134f29e513346b4c4c19e927a6f
 Directory: 7.0/windows/nanoserver-1809
 Constraints: nanoserver-1809, windowsservercore-1809
 
