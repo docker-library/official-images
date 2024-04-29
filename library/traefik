@@ -1,40 +1,47 @@
 Maintainers: Ludovic Fernandez <ludovic@traefik.io> (@ldez), Julien Salleyron <julien@traefik.io> (@juliens), Romain Tribotté <romain.tribotte@traefik.io> (@rtribotte), Michael Matur <michael@traefik.io> (@mmatur), Kevin Pollet <kevin.pollet@traefik.io> (@kevinpollet), Tom Moulard <tom.moulard@traefik.io> (@tommoulard)
 
-Tags: v3.0.0-rc5-windowsservercore-ltsc2022, 3.0.0-rc5-windowsservercore-ltsc2022, v3.0-windowsservercore-ltsc2022, 3.0-windowsservercore-ltsc2022, beaufort-windowsservercore-ltsc2022
+Tags: v3.0.0-windowsservercore-ltsc2022, 3.0.0-windowsservercore-ltsc2022, v3.0-windowsservercore-ltsc2022, 3.0-windowsservercore-ltsc2022, beaufort-windowsservercore-ltsc2022, windowsservercore-ltsc2022
 Architectures: windows-amd64
 GitRepo: https://github.com/traefik/traefik-library-image.git
-GitCommit: cce1a942f7cd68bfa4566dca0973303185190d26
+GitCommit: eb153677fb43d1956c1c17725e74d9a7ae16b659
 Directory: windows/servercore-ltsc2022
 Constraints: windowsservercore-ltsc2022
 
-Tags: v3.0.0-rc5-windowsservercore-1809, 3.0.0-rc5-windowsservercore-1809, v3.0-windowsservercore-1809, 3.0-windowsservercore-1809, beaufort-windowsservercore-1809
+Tags: v3.0.0-windowsservercore-1809, 3.0.0-windowsservercore-1809, v3.0-windowsservercore-1809, 3.0-windowsservercore-1809, beaufort-windowsservercore-1809, windowsservercore-1809
 Architectures: windows-amd64
 GitRepo: https://github.com/traefik/traefik-library-image.git
-GitCommit: cce1a942f7cd68bfa4566dca0973303185190d26
+GitCommit: eb153677fb43d1956c1c17725e74d9a7ae16b659
 Directory: windows/1809
 Constraints: windowsservercore-1809
 
-Tags: v3.0.0-rc5, 3.0.0-rc5, v3.0, 3.0, beaufort
+Tags: v3.0.0, 3.0.0, v3.0, 3.0, beaufort, latest
 Architectures: amd64, arm32v6, arm64v8, ppc64le, s390x
 GitRepo: https://github.com/traefik/traefik-library-image.git
-GitCommit: cce1a942f7cd68bfa4566dca0973303185190d26
+GitCommit: eb153677fb43d1956c1c17725e74d9a7ae16b659
 Directory: alpine
 
-Tags: v2.11.2-windowsservercore-ltsc2022, 2.11.2-windowsservercore-ltsc2022, v2.11-windowsservercore-ltsc2022, 2.11-windowsservercore-ltsc2022, mimolette-windowsservercore-ltsc2022, windowsservercore-ltsc2022
+Tags: v3.0.0-nanoserver-ltsc2022, 3.0.0-nanoserver-ltsc2022, v3.0-nanoserver-ltsc2022, 3.0-nanoserver-ltsc2022, beaufort-nanoserver-ltsc2022, nanoserver-ltsc2022
+Architectures: windows-amd64
+GitRepo: https://github.com/traefik/traefik-library-image.git
+GitCommit: 9e921bd38d6f64eca79a681f5d945b99f279a7f4
+Directory: windows/nanoserver-ltsc2022
+Constraints: nanoserver-ltsc2022, windowsservercore-ltsc2022
+
+Tags: v2.11.2-windowsservercore-ltsc2022, 2.11.2-windowsservercore-ltsc2022, v2.11-windowsservercore-ltsc2022, 2.11-windowsservercore-ltsc2022, mimolette-windowsservercore-ltsc2022
 Architectures: windows-amd64
 GitRepo: https://github.com/traefik/traefik-library-image.git
 GitCommit: 20b8a58e55e1874939af980a52ba353c4fad32c5
 Directory: windows/servercore-ltsc2022
 Constraints: windowsservercore-ltsc2022
 
-Tags: v2.11.2-windowsservercore-1809, 2.11.2-windowsservercore-1809, v2.11-windowsservercore-1809, 2.11-windowsservercore-1809, mimolette-windowsservercore-1809, windowsservercore-1809
+Tags: v2.11.2-windowsservercore-1809, 2.11.2-windowsservercore-1809, v2.11-windowsservercore-1809, 2.11-windowsservercore-1809, mimolette-windowsservercore-1809
 Architectures: windows-amd64
 GitRepo: https://github.com/traefik/traefik-library-image.git
 GitCommit: 20b8a58e55e1874939af980a52ba353c4fad32c5
 Directory: windows/1809
 Constraints: windowsservercore-1809
 
-Tags: v2.11.2, 2.11.2, v2.11, 2.11, mimolette, latest
+Tags: v2.11.2, 2.11.2, v2.11, 2.11, mimolette
 Architectures: amd64, arm32v6, arm64v8, ppc64le, s390x
 GitRepo: https://github.com/traefik/traefik-library-image.git
 GitCommit: 20b8a58e55e1874939af980a52ba353c4fad32c5
