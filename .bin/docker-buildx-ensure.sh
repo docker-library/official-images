@@ -38,17 +38,19 @@ read -r -d '' buildkitdConfig <<-EOF || :
 
 	[worker.oci]
 		platforms = [ "$platform" ]
-		gc = false # we want to do GC manually
 
 	# this should be unused (for now?), but included for completeness/safety
 	[worker.containerd]
 		platforms = [ "$platform" ]
 		namespace = "buildkit-$builderName"
-		gc = false
 
 	[registry."docker.io"]
 		mirrors = $hubMirrors
 EOF
+
+# Ideally, we would also disable BuildKit's garbage collection here too, especially because we happen to be able to know exactly the set of built images for whom cache should be kept (and everything else is ripe for deletion).
+# In practice however, this is far too cumbersome to manage correctly, especially as we have had to dramatically change the way we perform these builds over time such that this is no longer reasonable.
+# As such, we now rely on BuildKit's default policies instead: https://docs.docker.com/build/cache/garbage-collection/#default-policies
 
 # https://docs.docker.com/engine/reference/commandline/buildx_create/
 args=(
