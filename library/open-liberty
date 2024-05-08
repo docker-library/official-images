@@ -4,7 +4,7 @@ Maintainers: Gkerta Seferi <Gkerta.Seferi@ibm.com> (@gseferi),
              Wendy Raschke <wraschke@us.ibm.com> (@wraschke)
 GitRepo: https://github.com/OpenLiberty/ci.docker.git
 GitFetch: refs/heads/main
-GitCommit: 3fa1f1a1610c2aa670e6c1c26bececa1031b2b92
+GitCommit: a6fd7e10a5e53d952b524102a7d01dd16b93424a
 Architectures: amd64, i386, ppc64le, s390x
 
 Tags: beta
@@ -79,6 +79,36 @@ File: Dockerfile.ubuntu.openjdk11
 
 Tags: 24.0.0.3-full-java17-openj9
 Directory: releases/24.0.0.3/full
+Architectures: amd64, arm64v8, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk17
+
+Tags: 24.0.0.4-kernel-slim-java8-openj9
+Directory: releases/24.0.0.4/kernel-slim
+Architectures: amd64, arm64v8, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk8
+
+Tags: 24.0.0.4-kernel-slim-java11-openj9
+Directory: releases/24.0.0.4/kernel-slim
+Architectures: amd64, arm64v8, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk11
+
+Tags: 24.0.0.4-kernel-slim-java17-openj9
+Directory: releases/24.0.0.4/kernel-slim
+Architectures: amd64, arm64v8, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk17
+
+Tags: 24.0.0.4-full-java8-openj9
+Directory: releases/24.0.0.4/full
+Architectures: amd64, arm64v8, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk8
+
+Tags: 24.0.0.4-full-java11-openj9
+Directory: releases/24.0.0.4/full
+Architectures: amd64, arm64v8, ppc64le, s390x
+File: Dockerfile.ubuntu.openjdk11
+
+Tags: 24.0.0.4-full-java17-openj9
+Directory: releases/24.0.0.4/full
 Architectures: amd64, arm64v8, ppc64le, s390x
 File: Dockerfile.ubuntu.openjdk17
 

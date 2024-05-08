@@ -1,193 +1,164 @@
 Maintainers: Alex Soto <asotobu@gmail.com> (@lordofthejars), Otavio Santana <otaviojava@apache.org> (@otaviojava), Jonathan Gallimore <jgallimore@apache.org> (@jgallimore), Rod Jenkins <rodj@rodandmichelle.com> (@scriptmonkey)
 GitRepo: https://github.com/tomitribe/docker-tomee.git
-GitCommit: 3e4e2b546fbba84a4559743a1d35ddab7de3fae0
+GitCommit: 47f8011e6567dfc4317d7f5b84e9aafb14f5963d
 Architectures: amd64, arm64v8
 
-Tags: 8.0.16-jre17-Temurin-ubuntu-webprofile, 8.0.16-Temurin-ubuntu-webprofile, 8.0.16-jre17-ubuntu-webprofile, 8.0.16-ubuntu-webprofile, 8.0.16-jre17-Temurin-webprofile, 8.0.16-Temurin-webprofile, 8.0.16-jre17-webprofile, 8.0.16-webprofile, 8.0.16-jre17-Temurin-ubuntu, 8.0.16-Temurin-ubuntu, 8.0.16-jre17-ubuntu, 8.0.16-ubuntu, 8.0.16-jre17-Temurin, 8.0.16-Temurin, 8.0.16-jre17, 8.0.16, 8.0-jre17-Temurin-ubuntu-webprofile, 8.0-Temurin-ubuntu-webprofile, 8.0-jre17-ubuntu-webprofile, 8.0-ubuntu-webprofile, 8.0-jre17-Temurin-webprofile, 8.0-Temurin-webprofile, 8.0-jre17-webprofile, 8.0-webprofile, 8.0-jre17-Temurin-ubuntu, 8.0-Temurin-ubuntu, 8.0-jre17-ubuntu, 8.0-ubuntu, 8.0-jre17-Temurin, 8.0-Temurin, 8.0-jre17, 8.0, 8-jre17-Temurin-ubuntu-webprofile, 8-Temurin-ubuntu-webprofile, 8-jre17-ubuntu-webprofile, 8-ubuntu-webprofile, 8-jre17-Temurin-webprofile, 8-Temurin-webprofile, 8-jre17-webprofile, 8-webprofile, 8-jre17-Temurin-ubuntu, 8-Temurin-ubuntu, 8-jre17-ubuntu, 8-ubuntu, 8-jre17-Temurin, 8-Temurin, 8-jre17, 8, jre17-Temurin-ubuntu-webprofile, Temurin-ubuntu-webprofile, jre17-ubuntu-webprofile, ubuntu-webprofile, jre17-Temurin-webprofile, Temurin-webprofile, jre17-webprofile, webprofile, jre17-Temurin-ubuntu, Temurin-ubuntu, jre17-ubuntu, ubuntu, jre17-Temurin, Temurin, jre17, latest
-Directory: TomEE-8.0/jre17/Temurin/ubuntu/webprofile
-
-Tags: 8.0.16-jre17-Temurin-ubuntu-microprofile, 8.0.16-Temurin-ubuntu-microprofile, 8.0.16-jre17-ubuntu-microprofile, 8.0.16-ubuntu-microprofile, 8.0.16-jre17-Temurin-microprofile, 8.0.16-Temurin-microprofile, 8.0.16-jre17-microprofile, 8.0.16-microprofile, 8.0-jre17-Temurin-ubuntu-microprofile, 8.0-Temurin-ubuntu-microprofile, 8.0-jre17-ubuntu-microprofile, 8.0-ubuntu-microprofile, 8.0-jre17-Temurin-microprofile, 8.0-Temurin-microprofile, 8.0-jre17-microprofile, 8.0-microprofile, 8-jre17-Temurin-ubuntu-microprofile, 8-Temurin-ubuntu-microprofile, 8-jre17-ubuntu-microprofile, 8-ubuntu-microprofile, 8-jre17-Temurin-microprofile, 8-Temurin-microprofile, 8-jre17-microprofile, 8-microprofile, jre17-Temurin-ubuntu-microprofile, Temurin-ubuntu-microprofile, jre17-ubuntu-microprofile, ubuntu-microprofile, jre17-Temurin-microprofile, Temurin-microprofile, jre17-microprofile, microprofile
-Directory: TomEE-8.0/jre17/Temurin/ubuntu/microprofile
-
-Tags: 8.0.16-jre17-Temurin-ubuntu-plume, 8.0.16-Temurin-ubuntu-plume, 8.0.16-jre17-ubuntu-plume, 8.0.16-ubuntu-plume, 8.0.16-jre17-Temurin-plume, 8.0.16-Temurin-plume, 8.0.16-jre17-plume, 8.0.16-plume, 8.0-jre17-Temurin-ubuntu-plume, 8.0-Temurin-ubuntu-plume, 8.0-jre17-ubuntu-plume, 8.0-ubuntu-plume, 8.0-jre17-Temurin-plume, 8.0-Temurin-plume, 8.0-jre17-plume, 8.0-plume, 8-jre17-Temurin-ubuntu-plume, 8-Temurin-ubuntu-plume, 8-jre17-ubuntu-plume, 8-ubuntu-plume, 8-jre17-Temurin-plume, 8-Temurin-plume, 8-jre17-plume, 8-plume, jre17-Temurin-ubuntu-plume, Temurin-ubuntu-plume, jre17-ubuntu-plume, ubuntu-plume, jre17-Temurin-plume, Temurin-plume, jre17-plume, plume
-Directory: TomEE-8.0/jre17/Temurin/ubuntu/plume
-
-Tags: 8.0.16-jre17-Temurin-ubuntu-plus, 8.0.16-Temurin-ubuntu-plus, 8.0.16-jre17-ubuntu-plus, 8.0.16-ubuntu-plus, 8.0.16-jre17-Temurin-plus, 8.0.16-Temurin-plus, 8.0.16-jre17-plus, 8.0.16-plus, 8.0-jre17-Temurin-ubuntu-plus, 8.0-Temurin-ubuntu-plus, 8.0-jre17-ubuntu-plus, 8.0-ubuntu-plus, 8.0-jre17-Temurin-plus, 8.0-Temurin-plus, 8.0-jre17-plus, 8.0-plus, 8-jre17-Temurin-ubuntu-plus, 8-Temurin-ubuntu-plus, 8-jre17-ubuntu-plus, 8-ubuntu-plus, 8-jre17-Temurin-plus, 8-Temurin-plus, 8-jre17-plus, 8-plus, jre17-Temurin-ubuntu-plus, Temurin-ubuntu-plus, jre17-ubuntu-plus, ubuntu-plus, jre17-Temurin-plus, Temurin-plus, jre17-plus, plus
-Directory: TomEE-8.0/jre17/Temurin/ubuntu/plus
-
-Tags: 8.0.16-jre17-Temurin-alpine-webprofile, 8.0.16-Temurin-alpine-webprofile, 8.0.16-jre17-alpine-webprofile, 8.0.16-alpine-webprofile, 8.0.16-jre17-Temurin-alpine, 8.0.16-Temurin-alpine, 8.0.16-jre17-alpine, 8.0.16-alpine, 8.0-jre17-Temurin-alpine-webprofile, 8.0-Temurin-alpine-webprofile, 8.0-jre17-alpine-webprofile, 8.0-alpine-webprofile, 8.0-jre17-Temurin-alpine, 8.0-Temurin-alpine, 8.0-jre17-alpine, 8.0-alpine, 8-jre17-Temurin-alpine-webprofile, 8-Temurin-alpine-webprofile, 8-jre17-alpine-webprofile, 8-alpine-webprofile, 8-jre17-Temurin-alpine, 8-Temurin-alpine, 8-jre17-alpine, 8-alpine, jre17-Temurin-alpine-webprofile, Temurin-alpine-webprofile, jre17-alpine-webprofile, alpine-webprofile, jre17-Temurin-alpine, Temurin-alpine, jre17-alpine, alpine
-Architectures: amd64
-Directory: TomEE-8.0/jre17/Temurin/alpine/webprofile
-
-Tags: 8.0.16-jre17-Temurin-alpine-microprofile, 8.0.16-Temurin-alpine-microprofile, 8.0.16-jre17-alpine-microprofile, 8.0.16-alpine-microprofile, 8.0-jre17-Temurin-alpine-microprofile, 8.0-Temurin-alpine-microprofile, 8.0-jre17-alpine-microprofile, 8.0-alpine-microprofile, 8-jre17-Temurin-alpine-microprofile, 8-Temurin-alpine-microprofile, 8-jre17-alpine-microprofile, 8-alpine-microprofile, jre17-Temurin-alpine-microprofile, Temurin-alpine-microprofile, jre17-alpine-microprofile, alpine-microprofile
-Architectures: amd64
-Directory: TomEE-8.0/jre17/Temurin/alpine/microprofile
-
-Tags: 8.0.16-jre17-Temurin-alpine-plume, 8.0.16-Temurin-alpine-plume, 8.0.16-jre17-alpine-plume, 8.0.16-alpine-plume, 8.0-jre17-Temurin-alpine-plume, 8.0-Temurin-alpine-plume, 8.0-jre17-alpine-plume, 8.0-alpine-plume, 8-jre17-Temurin-alpine-plume, 8-Temurin-alpine-plume, 8-jre17-alpine-plume, 8-alpine-plume, jre17-Temurin-alpine-plume, Temurin-alpine-plume, jre17-alpine-plume, alpine-plume
-Architectures: amd64
-Directory: TomEE-8.0/jre17/Temurin/alpine/plume
-
-Tags: 8.0.16-jre17-Temurin-alpine-plus, 8.0.16-Temurin-alpine-plus, 8.0.16-jre17-alpine-plus, 8.0.16-alpine-plus, 8.0-jre17-Temurin-alpine-plus, 8.0-Temurin-alpine-plus, 8.0-jre17-alpine-plus, 8.0-alpine-plus, 8-jre17-Temurin-alpine-plus, 8-Temurin-alpine-plus, 8-jre17-alpine-plus, 8-alpine-plus, jre17-Temurin-alpine-plus, Temurin-alpine-plus, jre17-alpine-plus, alpine-plus
-Architectures: amd64
-Directory: TomEE-8.0/jre17/Temurin/alpine/plus
-
-Tags: 8.0.16-jre11-Temurin-ubuntu-webprofile, 8.0.16-jre11-ubuntu-webprofile, 8.0.16-jre11-Temurin-webprofile, 8.0.16-jre11-webprofile, 8.0.16-jre11-Temurin-ubuntu, 8.0.16-jre11-ubuntu, 8.0.16-jre11-Temurin, 8.0.16-jre11, 8.0-jre11-Temurin-ubuntu-webprofile, 8.0-jre11-ubuntu-webprofile, 8.0-jre11-Temurin-webprofile, 8.0-jre11-webprofile, 8.0-jre11-Temurin-ubuntu, 8.0-jre11-ubuntu, 8.0-jre11-Temurin, 8.0-jre11, 8-jre11-Temurin-ubuntu-webprofile, 8-jre11-ubuntu-webprofile, 8-jre11-Temurin-webprofile, 8-jre11-webprofile, 8-jre11-Temurin-ubuntu, 8-jre11-ubuntu, 8-jre11-Temurin, 8-jre11, jre11-Temurin-ubuntu-webprofile, jre11-ubuntu-webprofile, jre11-Temurin-webprofile, jre11-webprofile, jre11-Temurin-ubuntu, jre11-ubuntu, jre11-Temurin, jre11
-Directory: TomEE-8.0/jre11/Temurin/ubuntu/webprofile
-
-Tags: 8.0.16-jre11-Temurin-ubuntu-microprofile, 8.0.16-jre11-ubuntu-microprofile, 8.0.16-jre11-Temurin-microprofile, 8.0.16-jre11-microprofile, 8.0-jre11-Temurin-ubuntu-microprofile, 8.0-jre11-ubuntu-microprofile, 8.0-jre11-Temurin-microprofile, 8.0-jre11-microprofile, 8-jre11-Temurin-ubuntu-microprofile, 8-jre11-ubuntu-microprofile, 8-jre11-Temurin-microprofile, 8-jre11-microprofile, jre11-Temurin-ubuntu-microprofile, jre11-ubuntu-microprofile, jre11-Temurin-microprofile, jre11-microprofile
-Directory: TomEE-8.0/jre11/Temurin/ubuntu/microprofile
-
-Tags: 8.0.16-jre11-Temurin-ubuntu-plume, 8.0.16-jre11-ubuntu-plume, 8.0.16-jre11-Temurin-plume, 8.0.16-jre11-plume, 8.0-jre11-Temurin-ubuntu-plume, 8.0-jre11-ubuntu-plume, 8.0-jre11-Temurin-plume, 8.0-jre11-plume, 8-jre11-Temurin-ubuntu-plume, 8-jre11-ubuntu-plume, 8-jre11-Temurin-plume, 8-jre11-plume, jre11-Temurin-ubuntu-plume, jre11-ubuntu-plume, jre11-Temurin-plume, jre11-plume
-Directory: TomEE-8.0/jre11/Temurin/ubuntu/plume
-
-Tags: 8.0.16-jre11-Temurin-ubuntu-plus, 8.0.16-jre11-ubuntu-plus, 8.0.16-jre11-Temurin-plus, 8.0.16-jre11-plus, 8.0-jre11-Temurin-ubuntu-plus, 8.0-jre11-ubuntu-plus, 8.0-jre11-Temurin-plus, 8.0-jre11-plus, 8-jre11-Temurin-ubuntu-plus, 8-jre11-ubuntu-plus, 8-jre11-Temurin-plus, 8-jre11-plus, jre11-Temurin-ubuntu-plus, jre11-ubuntu-plus, jre11-Temurin-plus, jre11-plus
-Directory: TomEE-8.0/jre11/Temurin/ubuntu/plus
-
-Tags: 8.0.16-jre11-Temurin-alpine-webprofile, 8.0.16-jre11-alpine-webprofile, 8.0.16-jre11-Temurin-alpine, 8.0.16-jre11-alpine, 8.0-jre11-Temurin-alpine-webprofile, 8.0-jre11-alpine-webprofile, 8.0-jre11-Temurin-alpine, 8.0-jre11-alpine, 8-jre11-Temurin-alpine-webprofile, 8-jre11-alpine-webprofile, 8-jre11-Temurin-alpine, 8-jre11-alpine, jre11-Temurin-alpine-webprofile, jre11-alpine-webprofile, jre11-Temurin-alpine, jre11-alpine
-Architectures: amd64
-Directory: TomEE-8.0/jre11/Temurin/alpine/webprofile
-
-Tags: 8.0.16-jre11-Temurin-alpine-microprofile, 8.0.16-jre11-alpine-microprofile, 8.0-jre11-Temurin-alpine-microprofile, 8.0-jre11-alpine-microprofile, 8-jre11-Temurin-alpine-microprofile, 8-jre11-alpine-microprofile, jre11-Temurin-alpine-microprofile, jre11-alpine-microprofile
-Architectures: amd64
-Directory: TomEE-8.0/jre11/Temurin/alpine/microprofile
-
-Tags: 8.0.16-jre11-Temurin-alpine-plume, 8.0.16-jre11-alpine-plume, 8.0-jre11-Temurin-alpine-plume, 8.0-jre11-alpine-plume, 8-jre11-Temurin-alpine-plume, 8-jre11-alpine-plume, jre11-Temurin-alpine-plume, jre11-alpine-plume
-Architectures: amd64
-Directory: TomEE-8.0/jre11/Temurin/alpine/plume
-
-Tags: 8.0.16-jre11-Temurin-alpine-plus, 8.0.16-jre11-alpine-plus, 8.0-jre11-Temurin-alpine-plus, 8.0-jre11-alpine-plus, 8-jre11-Temurin-alpine-plus, 8-jre11-alpine-plus, jre11-Temurin-alpine-plus, jre11-alpine-plus
-Architectures: amd64
-Directory: TomEE-8.0/jre11/Temurin/alpine/plus
-
-Tags: 8.0.16-jre8-Temurin-ubuntu-webprofile, 8.0.16-jre8-ubuntu-webprofile, 8.0.16-jre8-Temurin-webprofile, 8.0.16-jre8-webprofile, 8.0.16-jre8-Temurin-ubuntu, 8.0.16-jre8-ubuntu, 8.0.16-jre8-Temurin, 8.0.16-jre8, 8.0-jre8-Temurin-ubuntu-webprofile, 8.0-jre8-ubuntu-webprofile, 8.0-jre8-Temurin-webprofile, 8.0-jre8-webprofile, 8.0-jre8-Temurin-ubuntu, 8.0-jre8-ubuntu, 8.0-jre8-Temurin, 8.0-jre8, 8-jre8-Temurin-ubuntu-webprofile, 8-jre8-ubuntu-webprofile, 8-jre8-Temurin-webprofile, 8-jre8-webprofile, 8-jre8-Temurin-ubuntu, 8-jre8-ubuntu, 8-jre8-Temurin, 8-jre8, jre8-Temurin-ubuntu-webprofile, jre8-ubuntu-webprofile, jre8-Temurin-webprofile, jre8-webprofile, jre8-Temurin-ubuntu, jre8-ubuntu, jre8-Temurin, jre8
-Directory: TomEE-8.0/jre8/Temurin/ubuntu/webprofile
-
-Tags: 8.0.16-jre8-Temurin-ubuntu-microprofile, 8.0.16-jre8-ubuntu-microprofile, 8.0.16-jre8-Temurin-microprofile, 8.0.16-jre8-microprofile, 8.0-jre8-Temurin-ubuntu-microprofile, 8.0-jre8-ubuntu-microprofile, 8.0-jre8-Temurin-microprofile, 8.0-jre8-microprofile, 8-jre8-Temurin-ubuntu-microprofile, 8-jre8-ubuntu-microprofile, 8-jre8-Temurin-microprofile, 8-jre8-microprofile, jre8-Temurin-ubuntu-microprofile, jre8-ubuntu-microprofile, jre8-Temurin-microprofile, jre8-microprofile
-Directory: TomEE-8.0/jre8/Temurin/ubuntu/microprofile
-
-Tags: 8.0.16-jre8-Temurin-ubuntu-plume, 8.0.16-jre8-ubuntu-plume, 8.0.16-jre8-Temurin-plume, 8.0.16-jre8-plume, 8.0-jre8-Temurin-ubuntu-plume, 8.0-jre8-ubuntu-plume, 8.0-jre8-Temurin-plume, 8.0-jre8-plume, 8-jre8-Temurin-ubuntu-plume, 8-jre8-ubuntu-plume, 8-jre8-Temurin-plume, 8-jre8-plume, jre8-Temurin-ubuntu-plume, jre8-ubuntu-plume, jre8-Temurin-plume, jre8-plume
-Directory: TomEE-8.0/jre8/Temurin/ubuntu/plume
-
-Tags: 8.0.16-jre8-Temurin-ubuntu-plus, 8.0.16-jre8-ubuntu-plus, 8.0.16-jre8-Temurin-plus, 8.0.16-jre8-plus, 8.0-jre8-Temurin-ubuntu-plus, 8.0-jre8-ubuntu-plus, 8.0-jre8-Temurin-plus, 8.0-jre8-plus, 8-jre8-Temurin-ubuntu-plus, 8-jre8-ubuntu-plus, 8-jre8-Temurin-plus, 8-jre8-plus, jre8-Temurin-ubuntu-plus, jre8-ubuntu-plus, jre8-Temurin-plus, jre8-plus
-Directory: TomEE-8.0/jre8/Temurin/ubuntu/plus
-
-Tags: 8.0.16-jre8-Temurin-alpine-webprofile, 8.0.16-jre8-alpine-webprofile, 8.0.16-jre8-Temurin-alpine, 8.0.16-jre8-alpine, 8.0-jre8-Temurin-alpine-webprofile, 8.0-jre8-alpine-webprofile, 8.0-jre8-Temurin-alpine, 8.0-jre8-alpine, 8-jre8-Temurin-alpine-webprofile, 8-jre8-alpine-webprofile, 8-jre8-Temurin-alpine, 8-jre8-alpine, jre8-Temurin-alpine-webprofile, jre8-alpine-webprofile, jre8-Temurin-alpine, jre8-alpine
-Architectures: amd64
-Directory: TomEE-8.0/jre8/Temurin/alpine/webprofile
-
-Tags: 8.0.16-jre8-Temurin-alpine-microprofile, 8.0.16-jre8-alpine-microprofile, 8.0-jre8-Temurin-alpine-microprofile, 8.0-jre8-alpine-microprofile, 8-jre8-Temurin-alpine-microprofile, 8-jre8-alpine-microprofile, jre8-Temurin-alpine-microprofile, jre8-alpine-microprofile
-Architectures: amd64
-Directory: TomEE-8.0/jre8/Temurin/alpine/microprofile
-
-Tags: 8.0.16-jre8-Temurin-alpine-plume, 8.0.16-jre8-alpine-plume, 8.0-jre8-Temurin-alpine-plume, 8.0-jre8-alpine-plume, 8-jre8-Temurin-alpine-plume, 8-jre8-alpine-plume, jre8-Temurin-alpine-plume, jre8-alpine-plume
-Architectures: amd64
-Directory: TomEE-8.0/jre8/Temurin/alpine/plume
-
-Tags: 8.0.16-jre8-Temurin-alpine-plus, 8.0.16-jre8-alpine-plus, 8.0-jre8-Temurin-alpine-plus, 8.0-jre8-alpine-plus, 8-jre8-Temurin-alpine-plus, 8-jre8-alpine-plus, jre8-Temurin-alpine-plus, jre8-alpine-plus
-Architectures: amd64
-Directory: TomEE-8.0/jre8/Temurin/alpine/plus
-
-Tags: 8.0.16-jre17-Semeru-ubuntu-webprofile, 8.0.16-Semeru-ubuntu-webprofile, 8.0.16-jre17-Semeru-webprofile, 8.0.16-Semeru-webprofile, 8.0.16-jre17-Semeru-ubuntu, 8.0.16-Semeru-ubuntu, 8.0.16-jre17-Semeru, 8.0.16-Semeru, 8.0-jre17-Semeru-ubuntu-webprofile, 8.0-Semeru-ubuntu-webprofile, 8.0-jre17-Semeru-webprofile, 8.0-Semeru-webprofile, 8.0-jre17-Semeru-ubuntu, 8.0-Semeru-ubuntu, 8.0-jre17-Semeru, 8.0-Semeru, 8-jre17-Semeru-ubuntu-webprofile, 8-Semeru-ubuntu-webprofile, 8-jre17-Semeru-webprofile, 8-Semeru-webprofile, 8-jre17-Semeru-ubuntu, 8-Semeru-ubuntu, 8-jre17-Semeru, 8-Semeru, jre17-Semeru-ubuntu-webprofile, Semeru-ubuntu-webprofile, jre17-Semeru-webprofile, Semeru-webprofile, jre17-Semeru-ubuntu, Semeru-ubuntu, jre17-Semeru, Semeru
-Directory: TomEE-8.0/jre17/Semeru/ubuntu/webprofile
-
-Tags: 8.0.16-jre17-Semeru-ubuntu-microprofile, 8.0.16-Semeru-ubuntu-microprofile, 8.0.16-jre17-Semeru-microprofile, 8.0.16-Semeru-microprofile, 8.0-jre17-Semeru-ubuntu-microprofile, 8.0-Semeru-ubuntu-microprofile, 8.0-jre17-Semeru-microprofile, 8.0-Semeru-microprofile, 8-jre17-Semeru-ubuntu-microprofile, 8-Semeru-ubuntu-microprofile, 8-jre17-Semeru-microprofile, 8-Semeru-microprofile, jre17-Semeru-ubuntu-microprofile, Semeru-ubuntu-microprofile, jre17-Semeru-microprofile, Semeru-microprofile
-Directory: TomEE-8.0/jre17/Semeru/ubuntu/microprofile
-
-Tags: 8.0.16-jre17-Semeru-ubuntu-plume, 8.0.16-Semeru-ubuntu-plume, 8.0.16-jre17-Semeru-plume, 8.0.16-Semeru-plume, 8.0-jre17-Semeru-ubuntu-plume, 8.0-Semeru-ubuntu-plume, 8.0-jre17-Semeru-plume, 8.0-Semeru-plume, 8-jre17-Semeru-ubuntu-plume, 8-Semeru-ubuntu-plume, 8-jre17-Semeru-plume, 8-Semeru-plume, jre17-Semeru-ubuntu-plume, Semeru-ubuntu-plume, jre17-Semeru-plume, Semeru-plume
-Directory: TomEE-8.0/jre17/Semeru/ubuntu/plume
-
-Tags: 8.0.16-jre17-Semeru-ubuntu-plus, 8.0.16-Semeru-ubuntu-plus, 8.0.16-jre17-Semeru-plus, 8.0.16-Semeru-plus, 8.0-jre17-Semeru-ubuntu-plus, 8.0-Semeru-ubuntu-plus, 8.0-jre17-Semeru-plus, 8.0-Semeru-plus, 8-jre17-Semeru-ubuntu-plus, 8-Semeru-ubuntu-plus, 8-jre17-Semeru-plus, 8-Semeru-plus, jre17-Semeru-ubuntu-plus, Semeru-ubuntu-plus, jre17-Semeru-plus, Semeru-plus
-Directory: TomEE-8.0/jre17/Semeru/ubuntu/plus
-
-Tags: 8.0.16-jre11-Semeru-ubuntu-webprofile, 8.0.16-jre11-Semeru-webprofile, 8.0.16-jre11-Semeru-ubuntu, 8.0.16-jre11-Semeru, 8.0-jre11-Semeru-ubuntu-webprofile, 8.0-jre11-Semeru-webprofile, 8.0-jre11-Semeru-ubuntu, 8.0-jre11-Semeru, 8-jre11-Semeru-ubuntu-webprofile, 8-jre11-Semeru-webprofile, 8-jre11-Semeru-ubuntu, 8-jre11-Semeru, jre11-Semeru-ubuntu-webprofile, jre11-Semeru-webprofile, jre11-Semeru-ubuntu, jre11-Semeru
-Directory: TomEE-8.0/jre11/Semeru/ubuntu/webprofile
-
-Tags: 8.0.16-jre11-Semeru-ubuntu-microprofile, 8.0.16-jre11-Semeru-microprofile, 8.0-jre11-Semeru-ubuntu-microprofile, 8.0-jre11-Semeru-microprofile, 8-jre11-Semeru-ubuntu-microprofile, 8-jre11-Semeru-microprofile, jre11-Semeru-ubuntu-microprofile, jre11-Semeru-microprofile
-Directory: TomEE-8.0/jre11/Semeru/ubuntu/microprofile
-
-Tags: 8.0.16-jre11-Semeru-ubuntu-plume, 8.0.16-jre11-Semeru-plume, 8.0-jre11-Semeru-ubuntu-plume, 8.0-jre11-Semeru-plume, 8-jre11-Semeru-ubuntu-plume, 8-jre11-Semeru-plume, jre11-Semeru-ubuntu-plume, jre11-Semeru-plume
-Directory: TomEE-8.0/jre11/Semeru/ubuntu/plume
-
-Tags: 8.0.16-jre11-Semeru-ubuntu-plus, 8.0.16-jre11-Semeru-plus, 8.0-jre11-Semeru-ubuntu-plus, 8.0-jre11-Semeru-plus, 8-jre11-Semeru-ubuntu-plus, 8-jre11-Semeru-plus, jre11-Semeru-ubuntu-plus, jre11-Semeru-plus
-Directory: TomEE-8.0/jre11/Semeru/ubuntu/plus
-
-Tags: 9.1.2-jre17-Temurin-ubuntu-webprofile, 9.1.2-Temurin-ubuntu-webprofile, 9.1.2-jre17-ubuntu-webprofile, 9.1.2-ubuntu-webprofile, 9.1.2-jre17-Temurin-webprofile, 9.1.2-Temurin-webprofile, 9.1.2-jre17-webprofile, 9.1.2-webprofile, 9.1.2-jre17-Temurin-ubuntu, 9.1.2-Temurin-ubuntu, 9.1.2-jre17-ubuntu, 9.1.2-ubuntu, 9.1.2-jre17-Temurin, 9.1.2-Temurin, 9.1.2-jre17, 9.1.2, 9.1-jre17-Temurin-ubuntu-webprofile, 9.1-Temurin-ubuntu-webprofile, 9.1-jre17-ubuntu-webprofile, 9.1-ubuntu-webprofile, 9.1-jre17-Temurin-webprofile, 9.1-Temurin-webprofile, 9.1-jre17-webprofile, 9.1-webprofile, 9.1-jre17-Temurin-ubuntu, 9.1-Temurin-ubuntu, 9.1-jre17-ubuntu, 9.1-ubuntu, 9.1-jre17-Temurin, 9.1-Temurin, 9.1-jre17, 9.1, 9-jre17-Temurin-ubuntu-webprofile, 9-Temurin-ubuntu-webprofile, 9-jre17-ubuntu-webprofile, 9-ubuntu-webprofile, 9-jre17-Temurin-webprofile, 9-Temurin-webprofile, 9-jre17-webprofile, 9-webprofile, 9-jre17-Temurin-ubuntu, 9-Temurin-ubuntu, 9-jre17-ubuntu, 9-ubuntu, 9-jre17-Temurin, 9-Temurin, 9-jre17, 9
-Directory: TomEE-9.1/jre17/Temurin/ubuntu/webprofile
-
-Tags: 9.1.2-jre17-Temurin-ubuntu-microprofile, 9.1.2-Temurin-ubuntu-microprofile, 9.1.2-jre17-ubuntu-microprofile, 9.1.2-ubuntu-microprofile, 9.1.2-jre17-Temurin-microprofile, 9.1.2-Temurin-microprofile, 9.1.2-jre17-microprofile, 9.1.2-microprofile, 9.1-jre17-Temurin-ubuntu-microprofile, 9.1-Temurin-ubuntu-microprofile, 9.1-jre17-ubuntu-microprofile, 9.1-ubuntu-microprofile, 9.1-jre17-Temurin-microprofile, 9.1-Temurin-microprofile, 9.1-jre17-microprofile, 9.1-microprofile, 9-jre17-Temurin-ubuntu-microprofile, 9-Temurin-ubuntu-microprofile, 9-jre17-ubuntu-microprofile, 9-ubuntu-microprofile, 9-jre17-Temurin-microprofile, 9-Temurin-microprofile, 9-jre17-microprofile, 9-microprofile
-Directory: TomEE-9.1/jre17/Temurin/ubuntu/microprofile
-
-Tags: 9.1.2-jre17-Temurin-ubuntu-plume, 9.1.2-Temurin-ubuntu-plume, 9.1.2-jre17-ubuntu-plume, 9.1.2-ubuntu-plume, 9.1.2-jre17-Temurin-plume, 9.1.2-Temurin-plume, 9.1.2-jre17-plume, 9.1.2-plume, 9.1-jre17-Temurin-ubuntu-plume, 9.1-Temurin-ubuntu-plume, 9.1-jre17-ubuntu-plume, 9.1-ubuntu-plume, 9.1-jre17-Temurin-plume, 9.1-Temurin-plume, 9.1-jre17-plume, 9.1-plume, 9-jre17-Temurin-ubuntu-plume, 9-Temurin-ubuntu-plume, 9-jre17-ubuntu-plume, 9-ubuntu-plume, 9-jre17-Temurin-plume, 9-Temurin-plume, 9-jre17-plume, 9-plume
-Directory: TomEE-9.1/jre17/Temurin/ubuntu/plume
-
-Tags: 9.1.2-jre17-Temurin-ubuntu-plus, 9.1.2-Temurin-ubuntu-plus, 9.1.2-jre17-ubuntu-plus, 9.1.2-ubuntu-plus, 9.1.2-jre17-Temurin-plus, 9.1.2-Temurin-plus, 9.1.2-jre17-plus, 9.1.2-plus, 9.1-jre17-Temurin-ubuntu-plus, 9.1-Temurin-ubuntu-plus, 9.1-jre17-ubuntu-plus, 9.1-ubuntu-plus, 9.1-jre17-Temurin-plus, 9.1-Temurin-plus, 9.1-jre17-plus, 9.1-plus, 9-jre17-Temurin-ubuntu-plus, 9-Temurin-ubuntu-plus, 9-jre17-ubuntu-plus, 9-ubuntu-plus, 9-jre17-Temurin-plus, 9-Temurin-plus, 9-jre17-plus, 9-plus
-Directory: TomEE-9.1/jre17/Temurin/ubuntu/plus
-
-Tags: 9.1.2-jre17-Temurin-alpine-webprofile, 9.1.2-Temurin-alpine-webprofile, 9.1.2-jre17-alpine-webprofile, 9.1.2-alpine-webprofile, 9.1.2-jre17-Temurin-alpine, 9.1.2-Temurin-alpine, 9.1.2-jre17-alpine, 9.1.2-alpine, 9.1-jre17-Temurin-alpine-webprofile, 9.1-Temurin-alpine-webprofile, 9.1-jre17-alpine-webprofile, 9.1-alpine-webprofile, 9.1-jre17-Temurin-alpine, 9.1-Temurin-alpine, 9.1-jre17-alpine, 9.1-alpine, 9-jre17-Temurin-alpine-webprofile, 9-Temurin-alpine-webprofile, 9-jre17-alpine-webprofile, 9-alpine-webprofile, 9-jre17-Temurin-alpine, 9-Temurin-alpine, 9-jre17-alpine, 9-alpine
-Architectures: amd64
-Directory: TomEE-9.1/jre17/Temurin/alpine/webprofile
-
-Tags: 9.1.2-jre17-Temurin-alpine-microprofile, 9.1.2-Temurin-alpine-microprofile, 9.1.2-jre17-alpine-microprofile, 9.1.2-alpine-microprofile, 9.1-jre17-Temurin-alpine-microprofile, 9.1-Temurin-alpine-microprofile, 9.1-jre17-alpine-microprofile, 9.1-alpine-microprofile, 9-jre17-Temurin-alpine-microprofile, 9-Temurin-alpine-microprofile, 9-jre17-alpine-microprofile, 9-alpine-microprofile
-Architectures: amd64
-Directory: TomEE-9.1/jre17/Temurin/alpine/microprofile
-
-Tags: 9.1.2-jre17-Temurin-alpine-plume, 9.1.2-Temurin-alpine-plume, 9.1.2-jre17-alpine-plume, 9.1.2-alpine-plume, 9.1-jre17-Temurin-alpine-plume, 9.1-Temurin-alpine-plume, 9.1-jre17-alpine-plume, 9.1-alpine-plume, 9-jre17-Temurin-alpine-plume, 9-Temurin-alpine-plume, 9-jre17-alpine-plume, 9-alpine-plume
-Architectures: amd64
-Directory: TomEE-9.1/jre17/Temurin/alpine/plume
-
-Tags: 9.1.2-jre17-Temurin-alpine-plus, 9.1.2-Temurin-alpine-plus, 9.1.2-jre17-alpine-plus, 9.1.2-alpine-plus, 9.1-jre17-Temurin-alpine-plus, 9.1-Temurin-alpine-plus, 9.1-jre17-alpine-plus, 9.1-alpine-plus, 9-jre17-Temurin-alpine-plus, 9-Temurin-alpine-plus, 9-jre17-alpine-plus, 9-alpine-plus
-Architectures: amd64
-Directory: TomEE-9.1/jre17/Temurin/alpine/plus
-
-Tags: 9.1.2-jre11-Temurin-ubuntu-webprofile, 9.1.2-jre11-ubuntu-webprofile, 9.1.2-jre11-Temurin-webprofile, 9.1.2-jre11-webprofile, 9.1.2-jre11-Temurin-ubuntu, 9.1.2-jre11-ubuntu, 9.1.2-jre11-Temurin, 9.1.2-jre11, 9.1-jre11-Temurin-ubuntu-webprofile, 9.1-jre11-ubuntu-webprofile, 9.1-jre11-Temurin-webprofile, 9.1-jre11-webprofile, 9.1-jre11-Temurin-ubuntu, 9.1-jre11-ubuntu, 9.1-jre11-Temurin, 9.1-jre11, 9-jre11-Temurin-ubuntu-webprofile, 9-jre11-ubuntu-webprofile, 9-jre11-Temurin-webprofile, 9-jre11-webprofile, 9-jre11-Temurin-ubuntu, 9-jre11-ubuntu, 9-jre11-Temurin, 9-jre11
-Directory: TomEE-9.1/jre11/Temurin/ubuntu/webprofile
-
-Tags: 9.1.2-jre11-Temurin-ubuntu-microprofile, 9.1.2-jre11-ubuntu-microprofile, 9.1.2-jre11-Temurin-microprofile, 9.1.2-jre11-microprofile, 9.1-jre11-Temurin-ubuntu-microprofile, 9.1-jre11-ubuntu-microprofile, 9.1-jre11-Temurin-microprofile, 9.1-jre11-microprofile, 9-jre11-Temurin-ubuntu-microprofile, 9-jre11-ubuntu-microprofile, 9-jre11-Temurin-microprofile, 9-jre11-microprofile
+Tags: 9.1.3-jre11-Temurin-ubuntu-microprofile, 9.1.3-Temurin-ubuntu-microprofile, 9.1.3-jre11-ubuntu-microprofile, 9.1.3-ubuntu-microprofile, 9.1.3-jre11-Temurin-microprofile, 9.1.3-Temurin-microprofile, 9.1.3-jre11-microprofile, 9.1.3-microprofile, 9.1.3-jre11-Temurin-ubuntu, 9.1.3-Temurin-ubuntu, 9.1.3-jre11-ubuntu, 9.1.3-ubuntu, 9.1.3-jre11-Temurin, 9.1.3-Temurin, 9.1.3-jre11, 9.1.3, 9.1-jre11-Temurin-ubuntu-microprofile, 9.1-Temurin-ubuntu-microprofile, 9.1-jre11-ubuntu-microprofile, 9.1-ubuntu-microprofile, 9.1-jre11-Temurin-microprofile, 9.1-Temurin-microprofile, 9.1-jre11-microprofile, 9.1-microprofile, 9.1-jre11-Temurin-ubuntu, 9.1-Temurin-ubuntu, 9.1-jre11-ubuntu, 9.1-ubuntu, 9.1-jre11-Temurin, 9.1-Temurin, 9.1-jre11, 9.1, 9-jre11-Temurin-ubuntu-microprofile, 9-Temurin-ubuntu-microprofile, 9-jre11-ubuntu-microprofile, 9-ubuntu-microprofile, 9-jre11-Temurin-microprofile, 9-Temurin-microprofile, 9-jre11-microprofile, 9-microprofile, 9-jre11-Temurin-ubuntu, 9-Temurin-ubuntu, 9-jre11-ubuntu, 9-ubuntu, 9-jre11-Temurin, 9-Temurin, 9-jre11, 9, jre11-Temurin-ubuntu-microprofile, Temurin-ubuntu-microprofile, jre11-ubuntu-microprofile, ubuntu-microprofile, jre11-Temurin-microprofile, Temurin-microprofile, jre11-microprofile, microprofile, jre11-Temurin-ubuntu, Temurin-ubuntu, jre11-ubuntu, ubuntu, jre11-Temurin, Temurin, jre11, latest
 Directory: TomEE-9.1/jre11/Temurin/ubuntu/microprofile
 
-Tags: 9.1.2-jre11-Temurin-ubuntu-plume, 9.1.2-jre11-ubuntu-plume, 9.1.2-jre11-Temurin-plume, 9.1.2-jre11-plume, 9.1-jre11-Temurin-ubuntu-plume, 9.1-jre11-ubuntu-plume, 9.1-jre11-Temurin-plume, 9.1-jre11-plume, 9-jre11-Temurin-ubuntu-plume, 9-jre11-ubuntu-plume, 9-jre11-Temurin-plume, 9-jre11-plume
+Tags: 9.1.3-jre11-Temurin-ubuntu-plume, 9.1.3-Temurin-ubuntu-plume, 9.1.3-jre11-ubuntu-plume, 9.1.3-ubuntu-plume, 9.1.3-jre11-Temurin-plume, 9.1.3-Temurin-plume, 9.1.3-jre11-plume, 9.1.3-plume, 9.1-jre11-Temurin-ubuntu-plume, 9.1-Temurin-ubuntu-plume, 9.1-jre11-ubuntu-plume, 9.1-ubuntu-plume, 9.1-jre11-Temurin-plume, 9.1-Temurin-plume, 9.1-jre11-plume, 9.1-plume, 9-jre11-Temurin-ubuntu-plume, 9-Temurin-ubuntu-plume, 9-jre11-ubuntu-plume, 9-ubuntu-plume, 9-jre11-Temurin-plume, 9-Temurin-plume, 9-jre11-plume, 9-plume, jre11-Temurin-ubuntu-plume, Temurin-ubuntu-plume, jre11-ubuntu-plume, ubuntu-plume, jre11-Temurin-plume, Temurin-plume, jre11-plume, plume
 Directory: TomEE-9.1/jre11/Temurin/ubuntu/plume
 
-Tags: 9.1.2-jre11-Temurin-ubuntu-plus, 9.1.2-jre11-ubuntu-plus, 9.1.2-jre11-Temurin-plus, 9.1.2-jre11-plus, 9.1-jre11-Temurin-ubuntu-plus, 9.1-jre11-ubuntu-plus, 9.1-jre11-Temurin-plus, 9.1-jre11-plus, 9-jre11-Temurin-ubuntu-plus, 9-jre11-ubuntu-plus, 9-jre11-Temurin-plus, 9-jre11-plus
+Tags: 9.1.3-jre11-Temurin-ubuntu-plus, 9.1.3-Temurin-ubuntu-plus, 9.1.3-jre11-ubuntu-plus, 9.1.3-ubuntu-plus, 9.1.3-jre11-Temurin-plus, 9.1.3-Temurin-plus, 9.1.3-jre11-plus, 9.1.3-plus, 9.1-jre11-Temurin-ubuntu-plus, 9.1-Temurin-ubuntu-plus, 9.1-jre11-ubuntu-plus, 9.1-ubuntu-plus, 9.1-jre11-Temurin-plus, 9.1-Temurin-plus, 9.1-jre11-plus, 9.1-plus, 9-jre11-Temurin-ubuntu-plus, 9-Temurin-ubuntu-plus, 9-jre11-ubuntu-plus, 9-ubuntu-plus, 9-jre11-Temurin-plus, 9-Temurin-plus, 9-jre11-plus, 9-plus, jre11-Temurin-ubuntu-plus, Temurin-ubuntu-plus, jre11-ubuntu-plus, ubuntu-plus, jre11-Temurin-plus, Temurin-plus, jre11-plus, plus
 Directory: TomEE-9.1/jre11/Temurin/ubuntu/plus
 
-Tags: 9.1.2-jre11-Temurin-alpine-webprofile, 9.1.2-jre11-alpine-webprofile, 9.1.2-jre11-Temurin-alpine, 9.1.2-jre11-alpine, 9.1-jre11-Temurin-alpine-webprofile, 9.1-jre11-alpine-webprofile, 9.1-jre11-Temurin-alpine, 9.1-jre11-alpine, 9-jre11-Temurin-alpine-webprofile, 9-jre11-alpine-webprofile, 9-jre11-Temurin-alpine, 9-jre11-alpine
-Architectures: amd64
-Directory: TomEE-9.1/jre11/Temurin/alpine/webprofile
+Tags: 9.1.3-jre11-Temurin-ubuntu-webprofile, 9.1.3-Temurin-ubuntu-webprofile, 9.1.3-jre11-ubuntu-webprofile, 9.1.3-ubuntu-webprofile, 9.1.3-jre11-Temurin-webprofile, 9.1.3-Temurin-webprofile, 9.1.3-jre11-webprofile, 9.1.3-webprofile, 9.1-jre11-Temurin-ubuntu-webprofile, 9.1-Temurin-ubuntu-webprofile, 9.1-jre11-ubuntu-webprofile, 9.1-ubuntu-webprofile, 9.1-jre11-Temurin-webprofile, 9.1-Temurin-webprofile, 9.1-jre11-webprofile, 9.1-webprofile, 9-jre11-Temurin-ubuntu-webprofile, 9-Temurin-ubuntu-webprofile, 9-jre11-ubuntu-webprofile, 9-ubuntu-webprofile, 9-jre11-Temurin-webprofile, 9-Temurin-webprofile, 9-jre11-webprofile, 9-webprofile, jre11-Temurin-ubuntu-webprofile, Temurin-ubuntu-webprofile, jre11-ubuntu-webprofile, ubuntu-webprofile, jre11-Temurin-webprofile, Temurin-webprofile, jre11-webprofile, webprofile
+Directory: TomEE-9.1/jre11/Temurin/ubuntu/webprofile
 
-Tags: 9.1.2-jre11-Temurin-alpine-microprofile, 9.1.2-jre11-alpine-microprofile, 9.1-jre11-Temurin-alpine-microprofile, 9.1-jre11-alpine-microprofile, 9-jre11-Temurin-alpine-microprofile, 9-jre11-alpine-microprofile
+Tags: 9.1.3-jre11-Temurin-alpine-microprofile, 9.1.3-Temurin-alpine-microprofile, 9.1.3-jre11-alpine-microprofile, 9.1.3-alpine-microprofile, 9.1.3-jre11-Temurin-alpine, 9.1.3-Temurin-alpine, 9.1.3-jre11-alpine, 9.1.3-alpine, 9.1-jre11-Temurin-alpine-microprofile, 9.1-Temurin-alpine-microprofile, 9.1-jre11-alpine-microprofile, 9.1-alpine-microprofile, 9.1-jre11-Temurin-alpine, 9.1-Temurin-alpine, 9.1-jre11-alpine, 9.1-alpine, 9-jre11-Temurin-alpine-microprofile, 9-Temurin-alpine-microprofile, 9-jre11-alpine-microprofile, 9-alpine-microprofile, 9-jre11-Temurin-alpine, 9-Temurin-alpine, 9-jre11-alpine, 9-alpine, jre11-Temurin-alpine-microprofile, Temurin-alpine-microprofile, jre11-alpine-microprofile, alpine-microprofile, jre11-Temurin-alpine, Temurin-alpine, jre11-alpine, alpine
 Architectures: amd64
 Directory: TomEE-9.1/jre11/Temurin/alpine/microprofile
 
-Tags: 9.1.2-jre11-Temurin-alpine-plume, 9.1.2-jre11-alpine-plume, 9.1-jre11-Temurin-alpine-plume, 9.1-jre11-alpine-plume, 9-jre11-Temurin-alpine-plume, 9-jre11-alpine-plume
+Tags: 9.1.3-jre11-Temurin-alpine-plume, 9.1.3-Temurin-alpine-plume, 9.1.3-jre11-alpine-plume, 9.1.3-alpine-plume, 9.1-jre11-Temurin-alpine-plume, 9.1-Temurin-alpine-plume, 9.1-jre11-alpine-plume, 9.1-alpine-plume, 9-jre11-Temurin-alpine-plume, 9-Temurin-alpine-plume, 9-jre11-alpine-plume, 9-alpine-plume, jre11-Temurin-alpine-plume, Temurin-alpine-plume, jre11-alpine-plume, alpine-plume
 Architectures: amd64
 Directory: TomEE-9.1/jre11/Temurin/alpine/plume
 
-Tags: 9.1.2-jre11-Temurin-alpine-plus, 9.1.2-jre11-alpine-plus, 9.1-jre11-Temurin-alpine-plus, 9.1-jre11-alpine-plus, 9-jre11-Temurin-alpine-plus, 9-jre11-alpine-plus
+Tags: 9.1.3-jre11-Temurin-alpine-plus, 9.1.3-Temurin-alpine-plus, 9.1.3-jre11-alpine-plus, 9.1.3-alpine-plus, 9.1-jre11-Temurin-alpine-plus, 9.1-Temurin-alpine-plus, 9.1-jre11-alpine-plus, 9.1-alpine-plus, 9-jre11-Temurin-alpine-plus, 9-Temurin-alpine-plus, 9-jre11-alpine-plus, 9-alpine-plus, jre11-Temurin-alpine-plus, Temurin-alpine-plus, jre11-alpine-plus, alpine-plus
 Architectures: amd64
 Directory: TomEE-9.1/jre11/Temurin/alpine/plus
 
-Tags: 9.1.2-jre17-Semeru-ubuntu-webprofile, 9.1.2-Semeru-ubuntu-webprofile, 9.1.2-jre17-Semeru-webprofile, 9.1.2-Semeru-webprofile, 9.1.2-jre17-Semeru-ubuntu, 9.1.2-Semeru-ubuntu, 9.1.2-jre17-Semeru, 9.1.2-Semeru, 9.1-jre17-Semeru-ubuntu-webprofile, 9.1-Semeru-ubuntu-webprofile, 9.1-jre17-Semeru-webprofile, 9.1-Semeru-webprofile, 9.1-jre17-Semeru-ubuntu, 9.1-Semeru-ubuntu, 9.1-jre17-Semeru, 9.1-Semeru, 9-jre17-Semeru-ubuntu-webprofile, 9-Semeru-ubuntu-webprofile, 9-jre17-Semeru-webprofile, 9-Semeru-webprofile, 9-jre17-Semeru-ubuntu, 9-Semeru-ubuntu, 9-jre17-Semeru, 9-Semeru
-Directory: TomEE-9.1/jre17/Semeru/ubuntu/webprofile
+Tags: 9.1.3-jre11-Temurin-alpine-webprofile, 9.1.3-Temurin-alpine-webprofile, 9.1.3-jre11-alpine-webprofile, 9.1.3-alpine-webprofile, 9.1-jre11-Temurin-alpine-webprofile, 9.1-Temurin-alpine-webprofile, 9.1-jre11-alpine-webprofile, 9.1-alpine-webprofile, 9-jre11-Temurin-alpine-webprofile, 9-Temurin-alpine-webprofile, 9-jre11-alpine-webprofile, 9-alpine-webprofile, jre11-Temurin-alpine-webprofile, Temurin-alpine-webprofile, jre11-alpine-webprofile, alpine-webprofile
+Architectures: amd64
+Directory: TomEE-9.1/jre11/Temurin/alpine/webprofile
 
-Tags: 9.1.2-jre17-Semeru-ubuntu-microprofile, 9.1.2-Semeru-ubuntu-microprofile, 9.1.2-jre17-Semeru-microprofile, 9.1.2-Semeru-microprofile, 9.1-jre17-Semeru-ubuntu-microprofile, 9.1-Semeru-ubuntu-microprofile, 9.1-jre17-Semeru-microprofile, 9.1-Semeru-microprofile, 9-jre17-Semeru-ubuntu-microprofile, 9-Semeru-ubuntu-microprofile, 9-jre17-Semeru-microprofile, 9-Semeru-microprofile
-Directory: TomEE-9.1/jre17/Semeru/ubuntu/microprofile
-
-Tags: 9.1.2-jre17-Semeru-ubuntu-plume, 9.1.2-Semeru-ubuntu-plume, 9.1.2-jre17-Semeru-plume, 9.1.2-Semeru-plume, 9.1-jre17-Semeru-ubuntu-plume, 9.1-Semeru-ubuntu-plume, 9.1-jre17-Semeru-plume, 9.1-Semeru-plume, 9-jre17-Semeru-ubuntu-plume, 9-Semeru-ubuntu-plume, 9-jre17-Semeru-plume, 9-Semeru-plume
-Directory: TomEE-9.1/jre17/Semeru/ubuntu/plume
-
-Tags: 9.1.2-jre17-Semeru-ubuntu-plus, 9.1.2-Semeru-ubuntu-plus, 9.1.2-jre17-Semeru-plus, 9.1.2-Semeru-plus, 9.1-jre17-Semeru-ubuntu-plus, 9.1-Semeru-ubuntu-plus, 9.1-jre17-Semeru-plus, 9.1-Semeru-plus, 9-jre17-Semeru-ubuntu-plus, 9-Semeru-ubuntu-plus, 9-jre17-Semeru-plus, 9-Semeru-plus
-Directory: TomEE-9.1/jre17/Semeru/ubuntu/plus
-
-Tags: 9.1.2-jre11-Semeru-ubuntu-webprofile, 9.1.2-jre11-Semeru-webprofile, 9.1.2-jre11-Semeru-ubuntu, 9.1.2-jre11-Semeru, 9.1-jre11-Semeru-ubuntu-webprofile, 9.1-jre11-Semeru-webprofile, 9.1-jre11-Semeru-ubuntu, 9.1-jre11-Semeru, 9-jre11-Semeru-ubuntu-webprofile, 9-jre11-Semeru-webprofile, 9-jre11-Semeru-ubuntu, 9-jre11-Semeru
-Directory: TomEE-9.1/jre11/Semeru/ubuntu/webprofile
-
-Tags: 9.1.2-jre11-Semeru-ubuntu-microprofile, 9.1.2-jre11-Semeru-microprofile, 9.1-jre11-Semeru-ubuntu-microprofile, 9.1-jre11-Semeru-microprofile, 9-jre11-Semeru-ubuntu-microprofile, 9-jre11-Semeru-microprofile
+Tags: 9.1.3-jre11-Semeru-ubuntu-microprofile, 9.1.3-Semeru-ubuntu-microprofile, 9.1.3-jre11-Semeru-microprofile, 9.1.3-Semeru-microprofile, 9.1.3-jre11-Semeru-ubuntu, 9.1.3-Semeru-ubuntu, 9.1.3-jre11-Semeru, 9.1.3-Semeru, 9.1-jre11-Semeru-ubuntu-microprofile, 9.1-Semeru-ubuntu-microprofile, 9.1-jre11-Semeru-microprofile, 9.1-Semeru-microprofile, 9.1-jre11-Semeru-ubuntu, 9.1-Semeru-ubuntu, 9.1-jre11-Semeru, 9.1-Semeru, 9-jre11-Semeru-ubuntu-microprofile, 9-Semeru-ubuntu-microprofile, 9-jre11-Semeru-microprofile, 9-Semeru-microprofile, 9-jre11-Semeru-ubuntu, 9-Semeru-ubuntu, 9-jre11-Semeru, 9-Semeru, jre11-Semeru-ubuntu-microprofile, Semeru-ubuntu-microprofile, jre11-Semeru-microprofile, Semeru-microprofile, jre11-Semeru-ubuntu, Semeru-ubuntu, jre11-Semeru, Semeru
 Directory: TomEE-9.1/jre11/Semeru/ubuntu/microprofile
 
-Tags: 9.1.2-jre11-Semeru-ubuntu-plume, 9.1.2-jre11-Semeru-plume, 9.1-jre11-Semeru-ubuntu-plume, 9.1-jre11-Semeru-plume, 9-jre11-Semeru-ubuntu-plume, 9-jre11-Semeru-plume
+Tags: 9.1.3-jre11-Semeru-ubuntu-plume, 9.1.3-Semeru-ubuntu-plume, 9.1.3-jre11-Semeru-plume, 9.1.3-Semeru-plume, 9.1-jre11-Semeru-ubuntu-plume, 9.1-Semeru-ubuntu-plume, 9.1-jre11-Semeru-plume, 9.1-Semeru-plume, 9-jre11-Semeru-ubuntu-plume, 9-Semeru-ubuntu-plume, 9-jre11-Semeru-plume, 9-Semeru-plume, jre11-Semeru-ubuntu-plume, Semeru-ubuntu-plume, jre11-Semeru-plume, Semeru-plume
 Directory: TomEE-9.1/jre11/Semeru/ubuntu/plume
 
-Tags: 9.1.2-jre11-Semeru-ubuntu-plus, 9.1.2-jre11-Semeru-plus, 9.1-jre11-Semeru-ubuntu-plus, 9.1-jre11-Semeru-plus, 9-jre11-Semeru-ubuntu-plus, 9-jre11-Semeru-plus
+Tags: 9.1.3-jre11-Semeru-ubuntu-plus, 9.1.3-Semeru-ubuntu-plus, 9.1.3-jre11-Semeru-plus, 9.1.3-Semeru-plus, 9.1-jre11-Semeru-ubuntu-plus, 9.1-Semeru-ubuntu-plus, 9.1-jre11-Semeru-plus, 9.1-Semeru-plus, 9-jre11-Semeru-ubuntu-plus, 9-Semeru-ubuntu-plus, 9-jre11-Semeru-plus, 9-Semeru-plus, jre11-Semeru-ubuntu-plus, Semeru-ubuntu-plus, jre11-Semeru-plus, Semeru-plus
 Directory: TomEE-9.1/jre11/Semeru/ubuntu/plus
 
+Tags: 9.1.3-jre11-Semeru-ubuntu-webprofile, 9.1.3-Semeru-ubuntu-webprofile, 9.1.3-jre11-Semeru-webprofile, 9.1.3-Semeru-webprofile, 9.1-jre11-Semeru-ubuntu-webprofile, 9.1-Semeru-ubuntu-webprofile, 9.1-jre11-Semeru-webprofile, 9.1-Semeru-webprofile, 9-jre11-Semeru-ubuntu-webprofile, 9-Semeru-ubuntu-webprofile, 9-jre11-Semeru-webprofile, 9-Semeru-webprofile, jre11-Semeru-ubuntu-webprofile, Semeru-ubuntu-webprofile, jre11-Semeru-webprofile, Semeru-webprofile
+Directory: TomEE-9.1/jre11/Semeru/ubuntu/webprofile
+
+Tags: 9.1.3-jre17-Temurin-ubuntu-microprofile, 9.1.3-jre17-ubuntu-microprofile, 9.1.3-jre17-Temurin-microprofile, 9.1.3-jre17-microprofile, 9.1.3-jre17-Temurin-ubuntu, 9.1.3-jre17-ubuntu, 9.1.3-jre17-Temurin, 9.1.3-jre17, 9.1-jre17-Temurin-ubuntu-microprofile, 9.1-jre17-ubuntu-microprofile, 9.1-jre17-Temurin-microprofile, 9.1-jre17-microprofile, 9.1-jre17-Temurin-ubuntu, 9.1-jre17-ubuntu, 9.1-jre17-Temurin, 9.1-jre17, 9-jre17-Temurin-ubuntu-microprofile, 9-jre17-ubuntu-microprofile, 9-jre17-Temurin-microprofile, 9-jre17-microprofile, 9-jre17-Temurin-ubuntu, 9-jre17-ubuntu, 9-jre17-Temurin, 9-jre17, jre17-Temurin-ubuntu-microprofile, jre17-ubuntu-microprofile, jre17-Temurin-microprofile, jre17-microprofile, jre17-Temurin-ubuntu, jre17-ubuntu, jre17-Temurin, jre17
+Directory: TomEE-9.1/jre17/Temurin/ubuntu/microprofile
+
+Tags: 9.1.3-jre17-Temurin-ubuntu-plume, 9.1.3-jre17-ubuntu-plume, 9.1.3-jre17-Temurin-plume, 9.1.3-jre17-plume, 9.1-jre17-Temurin-ubuntu-plume, 9.1-jre17-ubuntu-plume, 9.1-jre17-Temurin-plume, 9.1-jre17-plume, 9-jre17-Temurin-ubuntu-plume, 9-jre17-ubuntu-plume, 9-jre17-Temurin-plume, 9-jre17-plume, jre17-Temurin-ubuntu-plume, jre17-ubuntu-plume, jre17-Temurin-plume, jre17-plume
+Directory: TomEE-9.1/jre17/Temurin/ubuntu/plume
+
+Tags: 9.1.3-jre17-Temurin-ubuntu-plus, 9.1.3-jre17-ubuntu-plus, 9.1.3-jre17-Temurin-plus, 9.1.3-jre17-plus, 9.1-jre17-Temurin-ubuntu-plus, 9.1-jre17-ubuntu-plus, 9.1-jre17-Temurin-plus, 9.1-jre17-plus, 9-jre17-Temurin-ubuntu-plus, 9-jre17-ubuntu-plus, 9-jre17-Temurin-plus, 9-jre17-plus, jre17-Temurin-ubuntu-plus, jre17-ubuntu-plus, jre17-Temurin-plus, jre17-plus
+Directory: TomEE-9.1/jre17/Temurin/ubuntu/plus
+
+Tags: 9.1.3-jre17-Temurin-ubuntu-webprofile, 9.1.3-jre17-ubuntu-webprofile, 9.1.3-jre17-Temurin-webprofile, 9.1.3-jre17-webprofile, 9.1-jre17-Temurin-ubuntu-webprofile, 9.1-jre17-ubuntu-webprofile, 9.1-jre17-Temurin-webprofile, 9.1-jre17-webprofile, 9-jre17-Temurin-ubuntu-webprofile, 9-jre17-ubuntu-webprofile, 9-jre17-Temurin-webprofile, 9-jre17-webprofile, jre17-Temurin-ubuntu-webprofile, jre17-ubuntu-webprofile, jre17-Temurin-webprofile, jre17-webprofile
+Directory: TomEE-9.1/jre17/Temurin/ubuntu/webprofile
+
+Tags: 9.1.3-jre17-Temurin-alpine-microprofile, 9.1.3-jre17-alpine-microprofile, 9.1.3-jre17-Temurin-alpine, 9.1.3-jre17-alpine, 9.1-jre17-Temurin-alpine-microprofile, 9.1-jre17-alpine-microprofile, 9.1-jre17-Temurin-alpine, 9.1-jre17-alpine, 9-jre17-Temurin-alpine-microprofile, 9-jre17-alpine-microprofile, 9-jre17-Temurin-alpine, 9-jre17-alpine, jre17-Temurin-alpine-microprofile, jre17-alpine-microprofile, jre17-Temurin-alpine, jre17-alpine
+Architectures: amd64
+Directory: TomEE-9.1/jre17/Temurin/alpine/microprofile
+
+Tags: 9.1.3-jre17-Temurin-alpine-plume, 9.1.3-jre17-alpine-plume, 9.1-jre17-Temurin-alpine-plume, 9.1-jre17-alpine-plume, 9-jre17-Temurin-alpine-plume, 9-jre17-alpine-plume, jre17-Temurin-alpine-plume, jre17-alpine-plume
+Architectures: amd64
+Directory: TomEE-9.1/jre17/Temurin/alpine/plume
+
+Tags: 9.1.3-jre17-Temurin-alpine-plus, 9.1.3-jre17-alpine-plus, 9.1-jre17-Temurin-alpine-plus, 9.1-jre17-alpine-plus, 9-jre17-Temurin-alpine-plus, 9-jre17-alpine-plus, jre17-Temurin-alpine-plus, jre17-alpine-plus
+Architectures: amd64
+Directory: TomEE-9.1/jre17/Temurin/alpine/plus
+
+Tags: 9.1.3-jre17-Temurin-alpine-webprofile, 9.1.3-jre17-alpine-webprofile, 9.1-jre17-Temurin-alpine-webprofile, 9.1-jre17-alpine-webprofile, 9-jre17-Temurin-alpine-webprofile, 9-jre17-alpine-webprofile, jre17-Temurin-alpine-webprofile, jre17-alpine-webprofile
+Architectures: amd64
+Directory: TomEE-9.1/jre17/Temurin/alpine/webprofile
+
+Tags: 9.1.3-jre17-Semeru-ubuntu-microprofile, 9.1.3-jre17-Semeru-microprofile, 9.1.3-jre17-Semeru-ubuntu, 9.1.3-jre17-Semeru, 9.1-jre17-Semeru-ubuntu-microprofile, 9.1-jre17-Semeru-microprofile, 9.1-jre17-Semeru-ubuntu, 9.1-jre17-Semeru, 9-jre17-Semeru-ubuntu-microprofile, 9-jre17-Semeru-microprofile, 9-jre17-Semeru-ubuntu, 9-jre17-Semeru, jre17-Semeru-ubuntu-microprofile, jre17-Semeru-microprofile, jre17-Semeru-ubuntu, jre17-Semeru
+Directory: TomEE-9.1/jre17/Semeru/ubuntu/microprofile
+
+Tags: 9.1.3-jre17-Semeru-ubuntu-plume, 9.1.3-jre17-Semeru-plume, 9.1-jre17-Semeru-ubuntu-plume, 9.1-jre17-Semeru-plume, 9-jre17-Semeru-ubuntu-plume, 9-jre17-Semeru-plume, jre17-Semeru-ubuntu-plume, jre17-Semeru-plume
+Directory: TomEE-9.1/jre17/Semeru/ubuntu/plume
+
+Tags: 9.1.3-jre17-Semeru-ubuntu-plus, 9.1.3-jre17-Semeru-plus, 9.1-jre17-Semeru-ubuntu-plus, 9.1-jre17-Semeru-plus, 9-jre17-Semeru-ubuntu-plus, 9-jre17-Semeru-plus, jre17-Semeru-ubuntu-plus, jre17-Semeru-plus
+Directory: TomEE-9.1/jre17/Semeru/ubuntu/plus
+
+Tags: 9.1.3-jre17-Semeru-ubuntu-webprofile, 9.1.3-jre17-Semeru-webprofile, 9.1-jre17-Semeru-ubuntu-webprofile, 9.1-jre17-Semeru-webprofile, 9-jre17-Semeru-ubuntu-webprofile, 9-jre17-Semeru-webprofile, jre17-Semeru-ubuntu-webprofile, jre17-Semeru-webprofile
+Directory: TomEE-9.1/jre17/Semeru/ubuntu/webprofile
+
+Tags: 10.0.0-M1-jre11-Temurin-ubuntu-microprofile, 10.0.0-M1-Temurin-ubuntu-microprofile, 10.0.0-M1-jre11-ubuntu-microprofile, 10.0.0-M1-ubuntu-microprofile, 10.0.0-M1-jre11-Temurin-microprofile, 10.0.0-M1-Temurin-microprofile, 10.0.0-M1-jre11-microprofile, 10.0.0-M1-microprofile, 10.0.0-M1-jre11-Temurin-ubuntu, 10.0.0-M1-Temurin-ubuntu, 10.0.0-M1-jre11-ubuntu, 10.0.0-M1-ubuntu, 10.0.0-M1-jre11-Temurin, 10.0.0-M1-Temurin, 10.0.0-M1-jre11, 10.0.0-M1, 10.0-jre11-Temurin-ubuntu-microprofile, 10.0-Temurin-ubuntu-microprofile, 10.0-jre11-ubuntu-microprofile, 10.0-ubuntu-microprofile, 10.0-jre11-Temurin-microprofile, 10.0-Temurin-microprofile, 10.0-jre11-microprofile, 10.0-microprofile, 10.0-jre11-Temurin-ubuntu, 10.0-Temurin-ubuntu, 10.0-jre11-ubuntu, 10.0-ubuntu, 10.0-jre11-Temurin, 10.0-Temurin, 10.0-jre11, 10.0, 10-jre11-Temurin-ubuntu-microprofile, 10-Temurin-ubuntu-microprofile, 10-jre11-ubuntu-microprofile, 10-ubuntu-microprofile, 10-jre11-Temurin-microprofile, 10-Temurin-microprofile, 10-jre11-microprofile, 10-microprofile, 10-jre11-Temurin-ubuntu, 10-Temurin-ubuntu, 10-jre11-ubuntu, 10-ubuntu, 10-jre11-Temurin, 10-Temurin, 10-jre11, 10
+Directory: TomEE-10.0/jre11/Temurin/ubuntu/microprofile
+
+Tags: 10.0.0-M1-jre11-Temurin-ubuntu-plume, 10.0.0-M1-Temurin-ubuntu-plume, 10.0.0-M1-jre11-ubuntu-plume, 10.0.0-M1-ubuntu-plume, 10.0.0-M1-jre11-Temurin-plume, 10.0.0-M1-Temurin-plume, 10.0.0-M1-jre11-plume, 10.0.0-M1-plume, 10.0-jre11-Temurin-ubuntu-plume, 10.0-Temurin-ubuntu-plume, 10.0-jre11-ubuntu-plume, 10.0-ubuntu-plume, 10.0-jre11-Temurin-plume, 10.0-Temurin-plume, 10.0-jre11-plume, 10.0-plume, 10-jre11-Temurin-ubuntu-plume, 10-Temurin-ubuntu-plume, 10-jre11-ubuntu-plume, 10-ubuntu-plume, 10-jre11-Temurin-plume, 10-Temurin-plume, 10-jre11-plume, 10-plume
+Directory: TomEE-10.0/jre11/Temurin/ubuntu/plume
+
+Tags: 10.0.0-M1-jre11-Temurin-ubuntu-plus, 10.0.0-M1-Temurin-ubuntu-plus, 10.0.0-M1-jre11-ubuntu-plus, 10.0.0-M1-ubuntu-plus, 10.0.0-M1-jre11-Temurin-plus, 10.0.0-M1-Temurin-plus, 10.0.0-M1-jre11-plus, 10.0.0-M1-plus, 10.0-jre11-Temurin-ubuntu-plus, 10.0-Temurin-ubuntu-plus, 10.0-jre11-ubuntu-plus, 10.0-ubuntu-plus, 10.0-jre11-Temurin-plus, 10.0-Temurin-plus, 10.0-jre11-plus, 10.0-plus, 10-jre11-Temurin-ubuntu-plus, 10-Temurin-ubuntu-plus, 10-jre11-ubuntu-plus, 10-ubuntu-plus, 10-jre11-Temurin-plus, 10-Temurin-plus, 10-jre11-plus, 10-plus
+Directory: TomEE-10.0/jre11/Temurin/ubuntu/plus
+
+Tags: 10.0.0-M1-jre11-Temurin-ubuntu-webprofile, 10.0.0-M1-Temurin-ubuntu-webprofile, 10.0.0-M1-jre11-ubuntu-webprofile, 10.0.0-M1-ubuntu-webprofile, 10.0.0-M1-jre11-Temurin-webprofile, 10.0.0-M1-Temurin-webprofile, 10.0.0-M1-jre11-webprofile, 10.0.0-M1-webprofile, 10.0-jre11-Temurin-ubuntu-webprofile, 10.0-Temurin-ubuntu-webprofile, 10.0-jre11-ubuntu-webprofile, 10.0-ubuntu-webprofile, 10.0-jre11-Temurin-webprofile, 10.0-Temurin-webprofile, 10.0-jre11-webprofile, 10.0-webprofile, 10-jre11-Temurin-ubuntu-webprofile, 10-Temurin-ubuntu-webprofile, 10-jre11-ubuntu-webprofile, 10-ubuntu-webprofile, 10-jre11-Temurin-webprofile, 10-Temurin-webprofile, 10-jre11-webprofile, 10-webprofile
+Directory: TomEE-10.0/jre11/Temurin/ubuntu/webprofile
+
+Tags: 10.0.0-M1-jre11-Temurin-alpine-microprofile, 10.0.0-M1-Temurin-alpine-microprofile, 10.0.0-M1-jre11-alpine-microprofile, 10.0.0-M1-alpine-microprofile, 10.0.0-M1-jre11-Temurin-alpine, 10.0.0-M1-Temurin-alpine, 10.0.0-M1-jre11-alpine, 10.0.0-M1-alpine, 10.0-jre11-Temurin-alpine-microprofile, 10.0-Temurin-alpine-microprofile, 10.0-jre11-alpine-microprofile, 10.0-alpine-microprofile, 10.0-jre11-Temurin-alpine, 10.0-Temurin-alpine, 10.0-jre11-alpine, 10.0-alpine, 10-jre11-Temurin-alpine-microprofile, 10-Temurin-alpine-microprofile, 10-jre11-alpine-microprofile, 10-alpine-microprofile, 10-jre11-Temurin-alpine, 10-Temurin-alpine, 10-jre11-alpine, 10-alpine
+Architectures: amd64
+Directory: TomEE-10.0/jre11/Temurin/alpine/microprofile
+
+Tags: 10.0.0-M1-jre11-Temurin-alpine-plume, 10.0.0-M1-Temurin-alpine-plume, 10.0.0-M1-jre11-alpine-plume, 10.0.0-M1-alpine-plume, 10.0-jre11-Temurin-alpine-plume, 10.0-Temurin-alpine-plume, 10.0-jre11-alpine-plume, 10.0-alpine-plume, 10-jre11-Temurin-alpine-plume, 10-Temurin-alpine-plume, 10-jre11-alpine-plume, 10-alpine-plume
+Architectures: amd64
+Directory: TomEE-10.0/jre11/Temurin/alpine/plume
+
+Tags: 10.0.0-M1-jre11-Temurin-alpine-plus, 10.0.0-M1-Temurin-alpine-plus, 10.0.0-M1-jre11-alpine-plus, 10.0.0-M1-alpine-plus, 10.0-jre11-Temurin-alpine-plus, 10.0-Temurin-alpine-plus, 10.0-jre11-alpine-plus, 10.0-alpine-plus, 10-jre11-Temurin-alpine-plus, 10-Temurin-alpine-plus, 10-jre11-alpine-plus, 10-alpine-plus
+Architectures: amd64
+Directory: TomEE-10.0/jre11/Temurin/alpine/plus
+
+Tags: 10.0.0-M1-jre11-Temurin-alpine-webprofile, 10.0.0-M1-Temurin-alpine-webprofile, 10.0.0-M1-jre11-alpine-webprofile, 10.0.0-M1-alpine-webprofile, 10.0-jre11-Temurin-alpine-webprofile, 10.0-Temurin-alpine-webprofile, 10.0-jre11-alpine-webprofile, 10.0-alpine-webprofile, 10-jre11-Temurin-alpine-webprofile, 10-Temurin-alpine-webprofile, 10-jre11-alpine-webprofile, 10-alpine-webprofile
+Architectures: amd64
+Directory: TomEE-10.0/jre11/Temurin/alpine/webprofile
+
+Tags: 10.0.0-M1-jre11-Semeru-ubuntu-microprofile, 10.0.0-M1-Semeru-ubuntu-microprofile, 10.0.0-M1-jre11-Semeru-microprofile, 10.0.0-M1-Semeru-microprofile, 10.0.0-M1-jre11-Semeru-ubuntu, 10.0.0-M1-Semeru-ubuntu, 10.0.0-M1-jre11-Semeru, 10.0.0-M1-Semeru, 10.0-jre11-Semeru-ubuntu-microprofile, 10.0-Semeru-ubuntu-microprofile, 10.0-jre11-Semeru-microprofile, 10.0-Semeru-microprofile, 10.0-jre11-Semeru-ubuntu, 10.0-Semeru-ubuntu, 10.0-jre11-Semeru, 10.0-Semeru, 10-jre11-Semeru-ubuntu-microprofile, 10-Semeru-ubuntu-microprofile, 10-jre11-Semeru-microprofile, 10-Semeru-microprofile, 10-jre11-Semeru-ubuntu, 10-Semeru-ubuntu, 10-jre11-Semeru, 10-Semeru
+Directory: TomEE-10.0/jre11/Semeru/ubuntu/microprofile
+
+Tags: 10.0.0-M1-jre11-Semeru-ubuntu-plume, 10.0.0-M1-Semeru-ubuntu-plume, 10.0.0-M1-jre11-Semeru-plume, 10.0.0-M1-Semeru-plume, 10.0-jre11-Semeru-ubuntu-plume, 10.0-Semeru-ubuntu-plume, 10.0-jre11-Semeru-plume, 10.0-Semeru-plume, 10-jre11-Semeru-ubuntu-plume, 10-Semeru-ubuntu-plume, 10-jre11-Semeru-plume, 10-Semeru-plume
+Directory: TomEE-10.0/jre11/Semeru/ubuntu/plume
+
+Tags: 10.0.0-M1-jre11-Semeru-ubuntu-plus, 10.0.0-M1-Semeru-ubuntu-plus, 10.0.0-M1-jre11-Semeru-plus, 10.0.0-M1-Semeru-plus, 10.0-jre11-Semeru-ubuntu-plus, 10.0-Semeru-ubuntu-plus, 10.0-jre11-Semeru-plus, 10.0-Semeru-plus, 10-jre11-Semeru-ubuntu-plus, 10-Semeru-ubuntu-plus, 10-jre11-Semeru-plus, 10-Semeru-plus
+Directory: TomEE-10.0/jre11/Semeru/ubuntu/plus
+
+Tags: 10.0.0-M1-jre11-Semeru-ubuntu-webprofile, 10.0.0-M1-Semeru-ubuntu-webprofile, 10.0.0-M1-jre11-Semeru-webprofile, 10.0.0-M1-Semeru-webprofile, 10.0-jre11-Semeru-ubuntu-webprofile, 10.0-Semeru-ubuntu-webprofile, 10.0-jre11-Semeru-webprofile, 10.0-Semeru-webprofile, 10-jre11-Semeru-ubuntu-webprofile, 10-Semeru-ubuntu-webprofile, 10-jre11-Semeru-webprofile, 10-Semeru-webprofile
+Directory: TomEE-10.0/jre11/Semeru/ubuntu/webprofile
+
+Tags: 10.0.0-M1-jre17-Temurin-ubuntu-microprofile, 10.0.0-M1-jre17-ubuntu-microprofile, 10.0.0-M1-jre17-Temurin-microprofile, 10.0.0-M1-jre17-microprofile, 10.0.0-M1-jre17-Temurin-ubuntu, 10.0.0-M1-jre17-ubuntu, 10.0.0-M1-jre17-Temurin, 10.0.0-M1-jre17, 10.0-jre17-Temurin-ubuntu-microprofile, 10.0-jre17-ubuntu-microprofile, 10.0-jre17-Temurin-microprofile, 10.0-jre17-microprofile, 10.0-jre17-Temurin-ubuntu, 10.0-jre17-ubuntu, 10.0-jre17-Temurin, 10.0-jre17, 10-jre17-Temurin-ubuntu-microprofile, 10-jre17-ubuntu-microprofile, 10-jre17-Temurin-microprofile, 10-jre17-microprofile, 10-jre17-Temurin-ubuntu, 10-jre17-ubuntu, 10-jre17-Temurin, 10-jre17
+Directory: TomEE-10.0/jre17/Temurin/ubuntu/microprofile
+
+Tags: 10.0.0-M1-jre17-Temurin-ubuntu-plume, 10.0.0-M1-jre17-ubuntu-plume, 10.0.0-M1-jre17-Temurin-plume, 10.0.0-M1-jre17-plume, 10.0-jre17-Temurin-ubuntu-plume, 10.0-jre17-ubuntu-plume, 10.0-jre17-Temurin-plume, 10.0-jre17-plume, 10-jre17-Temurin-ubuntu-plume, 10-jre17-ubuntu-plume, 10-jre17-Temurin-plume, 10-jre17-plume
+Directory: TomEE-10.0/jre17/Temurin/ubuntu/plume
+
+Tags: 10.0.0-M1-jre17-Temurin-ubuntu-plus, 10.0.0-M1-jre17-ubuntu-plus, 10.0.0-M1-jre17-Temurin-plus, 10.0.0-M1-jre17-plus, 10.0-jre17-Temurin-ubuntu-plus, 10.0-jre17-ubuntu-plus, 10.0-jre17-Temurin-plus, 10.0-jre17-plus, 10-jre17-Temurin-ubuntu-plus, 10-jre17-ubuntu-plus, 10-jre17-Temurin-plus, 10-jre17-plus
+Directory: TomEE-10.0/jre17/Temurin/ubuntu/plus
+
+Tags: 10.0.0-M1-jre17-Temurin-ubuntu-webprofile, 10.0.0-M1-jre17-ubuntu-webprofile, 10.0.0-M1-jre17-Temurin-webprofile, 10.0.0-M1-jre17-webprofile, 10.0-jre17-Temurin-ubuntu-webprofile, 10.0-jre17-ubuntu-webprofile, 10.0-jre17-Temurin-webprofile, 10.0-jre17-webprofile, 10-jre17-Temurin-ubuntu-webprofile, 10-jre17-ubuntu-webprofile, 10-jre17-Temurin-webprofile, 10-jre17-webprofile
+Directory: TomEE-10.0/jre17/Temurin/ubuntu/webprofile
+
+Tags: 10.0.0-M1-jre17-Temurin-alpine-microprofile, 10.0.0-M1-jre17-alpine-microprofile, 10.0.0-M1-jre17-Temurin-alpine, 10.0.0-M1-jre17-alpine, 10.0-jre17-Temurin-alpine-microprofile, 10.0-jre17-alpine-microprofile, 10.0-jre17-Temurin-alpine, 10.0-jre17-alpine, 10-jre17-Temurin-alpine-microprofile, 10-jre17-alpine-microprofile, 10-jre17-Temurin-alpine, 10-jre17-alpine
+Architectures: amd64
+Directory: TomEE-10.0/jre17/Temurin/alpine/microprofile
+
+Tags: 10.0.0-M1-jre17-Temurin-alpine-plume, 10.0.0-M1-jre17-alpine-plume, 10.0-jre17-Temurin-alpine-plume, 10.0-jre17-alpine-plume, 10-jre17-Temurin-alpine-plume, 10-jre17-alpine-plume
+Architectures: amd64
+Directory: TomEE-10.0/jre17/Temurin/alpine/plume
+
+Tags: 10.0.0-M1-jre17-Temurin-alpine-plus, 10.0.0-M1-jre17-alpine-plus, 10.0-jre17-Temurin-alpine-plus, 10.0-jre17-alpine-plus, 10-jre17-Temurin-alpine-plus, 10-jre17-alpine-plus
+Architectures: amd64
+Directory: TomEE-10.0/jre17/Temurin/alpine/plus
+
+Tags: 10.0.0-M1-jre17-Temurin-alpine-webprofile, 10.0.0-M1-jre17-alpine-webprofile, 10.0-jre17-Temurin-alpine-webprofile, 10.0-jre17-alpine-webprofile, 10-jre17-Temurin-alpine-webprofile, 10-jre17-alpine-webprofile
+Architectures: amd64
+Directory: TomEE-10.0/jre17/Temurin/alpine/webprofile
+
+Tags: 10.0.0-M1-jre17-Semeru-ubuntu-microprofile, 10.0.0-M1-jre17-Semeru-microprofile, 10.0.0-M1-jre17-Semeru-ubuntu, 10.0.0-M1-jre17-Semeru, 10.0-jre17-Semeru-ubuntu-microprofile, 10.0-jre17-Semeru-microprofile, 10.0-jre17-Semeru-ubuntu, 10.0-jre17-Semeru, 10-jre17-Semeru-ubuntu-microprofile, 10-jre17-Semeru-microprofile, 10-jre17-Semeru-ubuntu, 10-jre17-Semeru
+Directory: TomEE-10.0/jre17/Semeru/ubuntu/microprofile
+
+Tags: 10.0.0-M1-jre17-Semeru-ubuntu-plume, 10.0.0-M1-jre17-Semeru-plume, 10.0-jre17-Semeru-ubuntu-plume, 10.0-jre17-Semeru-plume, 10-jre17-Semeru-ubuntu-plume, 10-jre17-Semeru-plume
+Directory: TomEE-10.0/jre17/Semeru/ubuntu/plume
+
+Tags: 10.0.0-M1-jre17-Semeru-ubuntu-plus, 10.0.0-M1-jre17-Semeru-plus, 10.0-jre17-Semeru-ubuntu-plus, 10.0-jre17-Semeru-plus, 10-jre17-Semeru-ubuntu-plus, 10-jre17-Semeru-plus
+Directory: TomEE-10.0/jre17/Semeru/ubuntu/plus
+
+Tags: 10.0.0-M1-jre17-Semeru-ubuntu-webprofile, 10.0.0-M1-jre17-Semeru-webprofile, 10.0-jre17-Semeru-ubuntu-webprofile, 10.0-jre17-Semeru-webprofile, 10-jre17-Semeru-ubuntu-webprofile, 10-jre17-Semeru-webprofile
+Directory: TomEE-10.0/jre17/Semeru/ubuntu/webprofile
