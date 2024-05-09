@@ -1,52 +1,52 @@
 # this file is generated with gomplate:
 # template: https://github.com/caddyserver/caddy-docker/blob/e05f66898af9a0a694af637db2724f91d9d82ed7/stackbrew.tmpl
-# config context: https://github.com/caddyserver/caddy-docker/blob/bb842e2f2671cff715a207d200b1328cb770c9f2/stackbrew-config.yaml
+# config context: https://github.com/caddyserver/caddy-docker/blob/efcb9dd09f5ed76555fe65cb641225838250486e/stackbrew-config.yaml
 Maintainers: Dave Henderson (@hairyhenderson),
              Francis Lavoie (@francislavoie)
 
-Tags: 2.8.0-beta.1-alpine, 2.8-alpine
-SharedTags: 2.8.0-beta.1, 2.8
+Tags: 2.8.0-beta.2-alpine, 2.8-alpine
+SharedTags: 2.8.0-beta.2, 2.8
 GitRepo: https://github.com/caddyserver/caddy-docker.git
 Directory: 2.8/alpine
-GitCommit: bb842e2f2671cff715a207d200b1328cb770c9f2
+GitCommit: efcb9dd09f5ed76555fe65cb641225838250486e
 Architectures: amd64, arm64v8, arm32v6, arm32v7, ppc64le, s390x
 
-Tags: 2.8.0-beta.1-builder-alpine, 2.8-builder-alpine
-SharedTags: 2.8.0-beta.1-builder, 2.8-builder
+Tags: 2.8.0-beta.2-builder-alpine, 2.8-builder-alpine
+SharedTags: 2.8.0-beta.2-builder, 2.8-builder
 GitRepo: https://github.com/caddyserver/caddy-docker.git
 Directory: 2.8/builder
-GitCommit: dff8340ae685a6a952b7fb08590d18462748537c
+GitCommit: efcb9dd09f5ed76555fe65cb641225838250486e
 Architectures: amd64, arm64v8, arm32v6, arm32v7, ppc64le, s390x
 
-Tags: 2.8.0-beta.1-windowsservercore-1809, 2.8-windowsservercore-1809
-SharedTags: 2.8.0-beta.1-windowsservercore, 2.8-windowsservercore, 2.8.0-beta.1, 2.8
+Tags: 2.8.0-beta.2-windowsservercore-1809, 2.8-windowsservercore-1809
+SharedTags: 2.8.0-beta.2-windowsservercore, 2.8-windowsservercore, 2.8.0-beta.2, 2.8
 GitRepo: https://github.com/caddyserver/caddy-docker.git
 Directory: 2.8/windows/1809
-GitCommit: bb842e2f2671cff715a207d200b1328cb770c9f2
+GitCommit: efcb9dd09f5ed76555fe65cb641225838250486e
 Architectures: windows-amd64
 Constraints: windowsservercore-1809
 
-Tags: 2.8.0-beta.1-windowsservercore-ltsc2022, 2.8-windowsservercore-ltsc2022
-SharedTags: 2.8.0-beta.1-windowsservercore, 2.8-windowsservercore, 2.8.0-beta.1, 2.8
+Tags: 2.8.0-beta.2-windowsservercore-ltsc2022, 2.8-windowsservercore-ltsc2022
+SharedTags: 2.8.0-beta.2-windowsservercore, 2.8-windowsservercore, 2.8.0-beta.2, 2.8
 GitRepo: https://github.com/caddyserver/caddy-docker.git
 Directory: 2.8/windows/ltsc2022
-GitCommit: bb842e2f2671cff715a207d200b1328cb770c9f2
+GitCommit: efcb9dd09f5ed76555fe65cb641225838250486e
 Architectures: windows-amd64
 Constraints: windowsservercore-ltsc2022
 
-Tags: 2.8.0-beta.1-builder-windowsservercore-1809, 2.8-builder-windowsservercore-1809
-SharedTags: 2.8.0-beta.1-builder, 2.8-builder
+Tags: 2.8.0-beta.2-builder-windowsservercore-1809, 2.8-builder-windowsservercore-1809
+SharedTags: 2.8.0-beta.2-builder, 2.8-builder
 GitRepo: https://github.com/caddyserver/caddy-docker.git
 Directory: 2.8/windows-builder/1809
-GitCommit: 98e68dd0425220e66e6c7425905489e35fefef67
+GitCommit: efcb9dd09f5ed76555fe65cb641225838250486e
 Architectures: windows-amd64
 Constraints: windowsservercore-1809
 
-Tags: 2.8.0-beta.1-builder-windowsservercore-ltsc2022, 2.8-builder-windowsservercore-ltsc2022
-SharedTags: 2.8.0-beta.1-builder, 2.8-builder
+Tags: 2.8.0-beta.2-builder-windowsservercore-ltsc2022, 2.8-builder-windowsservercore-ltsc2022
+SharedTags: 2.8.0-beta.2-builder, 2.8-builder
 GitRepo: https://github.com/caddyserver/caddy-docker.git
 Directory: 2.8/windows-builder/ltsc2022
-GitCommit: 98e68dd0425220e66e6c7425905489e35fefef67
+GitCommit: efcb9dd09f5ed76555fe65cb641225838250486e
 Architectures: windows-amd64
 Constraints: windowsservercore-ltsc2022
 
@@ -61,7 +61,7 @@ Tags: 2.7.6-builder-alpine, 2.7-builder-alpine, 2-builder-alpine, builder-alpine
 SharedTags: 2.7.6-builder, 2.7-builder, 2-builder, builder
 GitRepo: https://github.com/caddyserver/caddy-docker.git
 Directory: 2.7/builder
-GitCommit: dff8340ae685a6a952b7fb08590d18462748537c
+GitCommit: efcb9dd09f5ed76555fe65cb641225838250486e
 Architectures: amd64, arm64v8, arm32v6, arm32v7, ppc64le, s390x
 
 Tags: 2.7.6-windowsservercore-1809, 2.7-windowsservercore-1809, 2-windowsservercore-1809, windowsservercore-1809
@@ -84,7 +84,7 @@ Tags: 2.7.6-builder-windowsservercore-1809, 2.7-builder-windowsservercore-1809, 
 SharedTags: 2.7.6-builder, 2.7-builder, 2-builder, builder
 GitRepo: https://github.com/caddyserver/caddy-docker.git
 Directory: 2.7/windows-builder/1809
-GitCommit: dff8340ae685a6a952b7fb08590d18462748537c
+GitCommit: efcb9dd09f5ed76555fe65cb641225838250486e
 Architectures: windows-amd64
 Constraints: windowsservercore-1809
 
@@ -92,7 +92,7 @@ Tags: 2.7.6-builder-windowsservercore-ltsc2022, 2.7-builder-windowsservercore-lt
 SharedTags: 2.7.6-builder, 2.7-builder, 2-builder, builder
 GitRepo: https://github.com/caddyserver/caddy-docker.git
 Directory: 2.7/windows-builder/ltsc2022
-GitCommit: dff8340ae685a6a952b7fb08590d18462748537c
+GitCommit: efcb9dd09f5ed76555fe65cb641225838250486e
 Architectures: windows-amd64
 Constraints: windowsservercore-ltsc2022
 
