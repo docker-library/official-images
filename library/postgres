@@ -4,6 +4,26 @@ Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/postgres.git
 
+Tags: 17beta1, 17beta1-bookworm
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: 41402ac3d12b84453127eaac54b45b300bf30d9a
+Directory: 17/bookworm
+
+Tags: 17beta1-bullseye
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: 41402ac3d12b84453127eaac54b45b300bf30d9a
+Directory: 17/bullseye
+
+Tags: 17beta1-alpine3.20, 17beta1-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
+GitCommit: 3a7be2f3213ce6e0f13f6a01b927d86aa53d9539
+Directory: 17/alpine3.20
+
+Tags: 17beta1-alpine3.19
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 3a7be2f3213ce6e0f13f6a01b927d86aa53d9539
+Directory: 17/alpine3.19
+
 Tags: 16.3, 16, latest, 16.3-bookworm, 16-bookworm, bookworm
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: d08757ccb56ee047efd76c41dbc148e2e2c4f68f
@@ -16,12 +36,12 @@ Directory: 16/bullseye
 
 Tags: 16.3-alpine3.20, 16-alpine3.20, alpine3.20, 16.3-alpine, 16-alpine, alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: 930acaf01ff536090a3bb304cf823a8cc777b658
+GitCommit: 3a7be2f3213ce6e0f13f6a01b927d86aa53d9539
 Directory: 16/alpine3.20
 
 Tags: 16.3-alpine3.19, 16-alpine3.19, alpine3.19
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: d08757ccb56ee047efd76c41dbc148e2e2c4f68f
+GitCommit: 3a7be2f3213ce6e0f13f6a01b927d86aa53d9539
 Directory: 16/alpine3.19
 
 Tags: 15.7, 15, 15.7-bookworm, 15-bookworm
@@ -36,12 +56,12 @@ Directory: 15/bullseye
 
 Tags: 15.7-alpine3.20, 15-alpine3.20, 15.7-alpine, 15-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: 930acaf01ff536090a3bb304cf823a8cc777b658
+GitCommit: 3a7be2f3213ce6e0f13f6a01b927d86aa53d9539
 Directory: 15/alpine3.20
 
 Tags: 15.7-alpine3.19, 15-alpine3.19
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 8a0b96710d917d1c3b32a5fe5b66687ad83827da
+GitCommit: 3a7be2f3213ce6e0f13f6a01b927d86aa53d9539
 Directory: 15/alpine3.19
 
 Tags: 14.12, 14, 14.12-bookworm, 14-bookworm
@@ -56,12 +76,12 @@ Directory: 14/bullseye
 
 Tags: 14.12-alpine3.20, 14-alpine3.20, 14.12-alpine, 14-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: 930acaf01ff536090a3bb304cf823a8cc777b658
+GitCommit: 3a7be2f3213ce6e0f13f6a01b927d86aa53d9539
 Directory: 14/alpine3.20
 
 Tags: 14.12-alpine3.19, 14-alpine3.19
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 662dbe5225f4d404364bdcf5e49dd5d88357ed31
+GitCommit: 3a7be2f3213ce6e0f13f6a01b927d86aa53d9539
 Directory: 14/alpine3.19
 
 Tags: 13.15, 13, 13.15-bookworm, 13-bookworm
@@ -76,12 +96,12 @@ Directory: 13/bullseye
 
 Tags: 13.15-alpine3.20, 13-alpine3.20, 13.15-alpine, 13-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: 930acaf01ff536090a3bb304cf823a8cc777b658
+GitCommit: 3a7be2f3213ce6e0f13f6a01b927d86aa53d9539
 Directory: 13/alpine3.20
 
 Tags: 13.15-alpine3.19, 13-alpine3.19
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: f3ab8c6db63e2986453e0a4fae2c5f372dd4f05e
+GitCommit: 3a7be2f3213ce6e0f13f6a01b927d86aa53d9539
 Directory: 13/alpine3.19
 
 Tags: 12.19, 12, 12.19-bookworm, 12-bookworm
@@ -96,10 +116,10 @@ Directory: 12/bullseye
 
 Tags: 12.19-alpine3.20, 12-alpine3.20, 12.19-alpine, 12-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: 930acaf01ff536090a3bb304cf823a8cc777b658
+GitCommit: 3a7be2f3213ce6e0f13f6a01b927d86aa53d9539
 Directory: 12/alpine3.20
 
 Tags: 12.19-alpine3.19, 12-alpine3.19
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: ccf4f2289a1e59ddf74a5d1e6eb7693b7f464b54
+GitCommit: 3a7be2f3213ce6e0f13f6a01b927d86aa53d9539
 Directory: 12/alpine3.19
