@@ -249,7 +249,17 @@ copy-tar() {
 					if ($i ~ /^--from=/) {
 						next
 					}
-					if ($i !~ /^--chown=/) {
+					# COPY and ADD options
+					if ($i ~ /^--(chown|chmod|link|parents|exclude)=/) {
+						continue
+					}
+					# additional ADD options
+					if ($i ~ /^--(keep-git-dir|checksum)=/) {
+						continue
+					}
+					print $i
+					while (i < NF) {
+						i++
 						print $i
 					}
 				}
