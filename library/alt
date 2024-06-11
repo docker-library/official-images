@@ -1,7 +1,7 @@
 Maintainers: ALT Linux Team Cloud <alt-cloud@altlinux.org> (@alt-cloud),
              Alexey Shabalin <shaba@altlinux.org> (@shaba),
              Gleb Fotengauer-Malinovskiy <glebfm@altlinux.org> (@glebfm),
-             Mikhail Gordeev <obirvalger@altlunux.org> (@obirvalger)
+             Nadezhda Fedorova <fedor@altlunux.org> (@FNDenisovna)
 GitRepo: https://github.com/alt-cloud/docker-brew-alt.git
 
 Tags: p10, latest
@@ -16,6 +16,14 @@ Tags: sisyphus
 Architectures: amd64, i386, arm64v8
 GitFetch: refs/heads/sisyphus
 GitCommit: fc69e420b7b8c5b62cd3d8b13562f122ecdcc2d7
+amd64-Directory: x86_64/
+arm64v8-Directory: aarch64/
+i386-Directory: i586/
+
+Tags: p11
+Architectures: amd64, i386, arm64v8
+GitFetch: refs/heads/p11
+GitCommit: 342757f6f3ca8c82bb6a4169ceef071ff3a8a879
 amd64-Directory: x86_64/
 arm64v8-Directory: aarch64/
 i386-Directory: i586/
