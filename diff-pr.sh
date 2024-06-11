@@ -257,9 +257,7 @@ copy-tar() {
 					if ($i ~ /^--(keep-git-dir|checksum)=/) {
 						continue
 					}
-					print $i
-					while (i < NF) {
-						i++
+					for ( ; i < NF; i++) {
 						print $i
 					}
 				}
