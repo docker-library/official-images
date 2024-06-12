@@ -4,6 +4,58 @@ Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/openjdk.git
 
+Tags: 24-ea-1-jdk-oraclelinux9, 24-ea-1-oraclelinux9, 24-ea-jdk-oraclelinux9, 24-ea-oraclelinux9, 24-jdk-oraclelinux9, 24-oraclelinux9, 24-ea-1-jdk-oracle, 24-ea-1-oracle, 24-ea-jdk-oracle, 24-ea-oracle, 24-jdk-oracle, 24-oracle
+SharedTags: 24-ea-1-jdk, 24-ea-1, 24-ea-jdk, 24-ea, 24-jdk, 24
+Architectures: amd64, arm64v8
+GitCommit: e655fc6aa19ab37eb541ed05646b5e79747d39f4
+Directory: 24/jdk/oraclelinux9
+
+Tags: 24-ea-1-jdk-oraclelinux8, 24-ea-1-oraclelinux8, 24-ea-jdk-oraclelinux8, 24-ea-oraclelinux8, 24-jdk-oraclelinux8, 24-oraclelinux8
+Architectures: amd64, arm64v8
+GitCommit: e655fc6aa19ab37eb541ed05646b5e79747d39f4
+Directory: 24/jdk/oraclelinux8
+
+Tags: 24-ea-1-jdk-bookworm, 24-ea-1-bookworm, 24-ea-jdk-bookworm, 24-ea-bookworm, 24-jdk-bookworm, 24-bookworm
+Architectures: amd64, arm64v8
+GitCommit: e655fc6aa19ab37eb541ed05646b5e79747d39f4
+Directory: 24/jdk/bookworm
+
+Tags: 24-ea-1-jdk-slim-bookworm, 24-ea-1-slim-bookworm, 24-ea-jdk-slim-bookworm, 24-ea-slim-bookworm, 24-jdk-slim-bookworm, 24-slim-bookworm, 24-ea-1-jdk-slim, 24-ea-1-slim, 24-ea-jdk-slim, 24-ea-slim, 24-jdk-slim, 24-slim
+Architectures: amd64, arm64v8
+GitCommit: e655fc6aa19ab37eb541ed05646b5e79747d39f4
+Directory: 24/jdk/slim-bookworm
+
+Tags: 24-ea-1-jdk-bullseye, 24-ea-1-bullseye, 24-ea-jdk-bullseye, 24-ea-bullseye, 24-jdk-bullseye, 24-bullseye
+Architectures: amd64, arm64v8
+GitCommit: e655fc6aa19ab37eb541ed05646b5e79747d39f4
+Directory: 24/jdk/bullseye
+
+Tags: 24-ea-1-jdk-slim-bullseye, 24-ea-1-slim-bullseye, 24-ea-jdk-slim-bullseye, 24-ea-slim-bullseye, 24-jdk-slim-bullseye, 24-slim-bullseye
+Architectures: amd64, arm64v8
+GitCommit: e655fc6aa19ab37eb541ed05646b5e79747d39f4
+Directory: 24/jdk/slim-bullseye
+
+Tags: 24-ea-1-jdk-windowsservercore-ltsc2022, 24-ea-1-windowsservercore-ltsc2022, 24-ea-jdk-windowsservercore-ltsc2022, 24-ea-windowsservercore-ltsc2022, 24-jdk-windowsservercore-ltsc2022, 24-windowsservercore-ltsc2022
+SharedTags: 24-ea-1-jdk-windowsservercore, 24-ea-1-windowsservercore, 24-ea-jdk-windowsservercore, 24-ea-windowsservercore, 24-jdk-windowsservercore, 24-windowsservercore, 24-ea-1-jdk, 24-ea-1, 24-ea-jdk, 24-ea, 24-jdk, 24
+Architectures: windows-amd64
+GitCommit: e655fc6aa19ab37eb541ed05646b5e79747d39f4
+Directory: 24/jdk/windows/windowsservercore-ltsc2022
+Constraints: windowsservercore-ltsc2022
+
+Tags: 24-ea-1-jdk-windowsservercore-1809, 24-ea-1-windowsservercore-1809, 24-ea-jdk-windowsservercore-1809, 24-ea-windowsservercore-1809, 24-jdk-windowsservercore-1809, 24-windowsservercore-1809
+SharedTags: 24-ea-1-jdk-windowsservercore, 24-ea-1-windowsservercore, 24-ea-jdk-windowsservercore, 24-ea-windowsservercore, 24-jdk-windowsservercore, 24-windowsservercore, 24-ea-1-jdk, 24-ea-1, 24-ea-jdk, 24-ea, 24-jdk, 24
+Architectures: windows-amd64
+GitCommit: e655fc6aa19ab37eb541ed05646b5e79747d39f4
+Directory: 24/jdk/windows/windowsservercore-1809
+Constraints: windowsservercore-1809
+
+Tags: 24-ea-1-jdk-nanoserver-1809, 24-ea-1-nanoserver-1809, 24-ea-jdk-nanoserver-1809, 24-ea-nanoserver-1809, 24-jdk-nanoserver-1809, 24-nanoserver-1809
+SharedTags: 24-ea-1-jdk-nanoserver, 24-ea-1-nanoserver, 24-ea-jdk-nanoserver, 24-ea-nanoserver, 24-jdk-nanoserver, 24-nanoserver
+Architectures: windows-amd64
+GitCommit: e655fc6aa19ab37eb541ed05646b5e79747d39f4
+Directory: 24/jdk/windows/nanoserver-1809
+Constraints: nanoserver-1809, windowsservercore-1809
+
 Tags: 23-ea-26-jdk-oraclelinux9, 23-ea-26-oraclelinux9, 23-ea-jdk-oraclelinux9, 23-ea-oraclelinux9, 23-jdk-oraclelinux9, 23-oraclelinux9, 23-ea-26-jdk-oracle, 23-ea-26-oracle, 23-ea-jdk-oracle, 23-ea-oracle, 23-jdk-oracle, 23-oracle
 SharedTags: 23-ea-26-jdk, 23-ea-26, 23-ea-jdk, 23-ea, 23-jdk, 23
 Architectures: amd64, arm64v8
