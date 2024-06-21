@@ -1,14 +1,6 @@
 Maintainers: Yaroslav Halchenko <debian@onerussian.com> (@yarikoptic)
 GitRepo: https://github.com/neurodebian/dockerfiles.git
-GitCommit: 1da9308291ad33a33447519ec1835bb3e37acebc
-
-Tags: bionic, nd18.04
-Architectures: amd64, arm64v8
-Directory: dockerfiles/bionic
-
-Tags: bionic-non-free, nd18.04-non-free
-Architectures: amd64, arm64v8
-Directory: dockerfiles/bionic-non-free
+GitCommit: a0af1d460705d7efc9d6de9483f1ce4aa48ad152
 
 Tags: focal, nd20.04
 Architectures: amd64, arm64v8
@@ -26,6 +18,14 @@ Tags: jammy-non-free, nd22.04-non-free
 Architectures: amd64, arm64v8
 Directory: dockerfiles/jammy-non-free
 
+Tags: noble, nd24.04
+Architectures: amd64, arm64v8
+Directory: dockerfiles/noble
+
+Tags: noble-non-free, nd24.04-non-free
+Architectures: amd64, arm64v8
+Directory: dockerfiles/noble-non-free
+
 Tags: buster, nd100
 Architectures: amd64, arm64v8, i386
 Directory: dockerfiles/buster
@@ -34,21 +34,29 @@ Tags: buster-non-free, nd100-non-free
 Architectures: amd64, arm64v8, i386
 Directory: dockerfiles/buster-non-free
 
-Tags: bullseye, nd110, latest
+Tags: bullseye, nd110
 Architectures: amd64, arm64v8, i386
 Directory: dockerfiles/bullseye
 
-Tags: bullseye-non-free, nd110-non-free, non-free
+Tags: bullseye-non-free, nd110-non-free
 Architectures: amd64, arm64v8, i386
 Directory: dockerfiles/bullseye-non-free
 
-Tags: bookworm, nd120
+Tags: bookworm, nd120, latest
 Architectures: amd64, arm64v8, i386
 Directory: dockerfiles/bookworm
 
-Tags: bookworm-non-free, nd120-non-free
+Tags: bookworm-non-free, nd120-non-free, non-free
 Architectures: amd64, arm64v8, i386
 Directory: dockerfiles/bookworm-non-free
+
+Tags: trixie, nd130
+Architectures: amd64, arm64v8, i386
+Directory: dockerfiles/trixie
+
+Tags: trixie-non-free, nd130-non-free
+Architectures: amd64, arm64v8, i386
+Directory: dockerfiles/trixie-non-free
 
 Tags: sid, nd
 Architectures: amd64, arm64v8, i386
