@@ -6,6 +6,59 @@ Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
 GitRepo: https://github.com/docker-library/golang.git
 Builder: buildkit
 
+Tags: 1.23rc1-bookworm, 1.23-rc-bookworm
+SharedTags: 1.23rc1, 1.23-rc
+Architectures: amd64, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: d59b341d37b5b2314cad111c54170ebf54f1ca4e
+Directory: 1.23-rc/bookworm
+
+Tags: 1.23rc1-bullseye, 1.23-rc-bullseye
+Architectures: amd64, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: d59b341d37b5b2314cad111c54170ebf54f1ca4e
+Directory: 1.23-rc/bullseye
+
+Tags: 1.23rc1-alpine3.20, 1.23-rc-alpine3.20, 1.23rc1-alpine, 1.23-rc-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
+GitCommit: d59b341d37b5b2314cad111c54170ebf54f1ca4e
+Directory: 1.23-rc/alpine3.20
+
+Tags: 1.23rc1-alpine3.19, 1.23-rc-alpine3.19
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: d59b341d37b5b2314cad111c54170ebf54f1ca4e
+Directory: 1.23-rc/alpine3.19
+
+Tags: 1.23rc1-windowsservercore-ltsc2022, 1.23-rc-windowsservercore-ltsc2022
+SharedTags: 1.23rc1-windowsservercore, 1.23-rc-windowsservercore, 1.23rc1, 1.23-rc
+Architectures: windows-amd64
+GitCommit: d59b341d37b5b2314cad111c54170ebf54f1ca4e
+Directory: 1.23-rc/windows/windowsservercore-ltsc2022
+Builder: classic
+Constraints: windowsservercore-ltsc2022
+
+Tags: 1.23rc1-windowsservercore-1809, 1.23-rc-windowsservercore-1809
+SharedTags: 1.23rc1-windowsservercore, 1.23-rc-windowsservercore, 1.23rc1, 1.23-rc
+Architectures: windows-amd64
+GitCommit: d59b341d37b5b2314cad111c54170ebf54f1ca4e
+Directory: 1.23-rc/windows/windowsservercore-1809
+Builder: classic
+Constraints: windowsservercore-1809
+
+Tags: 1.23rc1-nanoserver-ltsc2022, 1.23-rc-nanoserver-ltsc2022
+SharedTags: 1.23rc1-nanoserver, 1.23-rc-nanoserver
+Architectures: windows-amd64
+GitCommit: d59b341d37b5b2314cad111c54170ebf54f1ca4e
+Directory: 1.23-rc/windows/nanoserver-ltsc2022
+Builder: classic
+Constraints: nanoserver-ltsc2022, windowsservercore-ltsc2022
+
+Tags: 1.23rc1-nanoserver-1809, 1.23-rc-nanoserver-1809
+SharedTags: 1.23rc1-nanoserver, 1.23-rc-nanoserver
+Architectures: windows-amd64
+GitCommit: d59b341d37b5b2314cad111c54170ebf54f1ca4e
+Directory: 1.23-rc/windows/nanoserver-1809
+Builder: classic
+Constraints: nanoserver-1809, windowsservercore-1809
+
 Tags: 1.22.4-bookworm, 1.22-bookworm, 1-bookworm, bookworm
 SharedTags: 1.22.4, 1.22, 1, latest
 Architectures: amd64, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
