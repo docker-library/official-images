@@ -345,7 +345,12 @@ _metadata-files() {
 
 		"$diffDir/_bashbrew-cat-sorted.sh" "$@" 2>>temp/_bashbrew.err > temp/_bashbrew-cat || :
 
-		bashbrew cat --format "$templateLastTags" "$@" \
+		# piping "bashbrew list" first so that .TagEntries is filled up (keeping "templateLastTags" simpler)
+		# sorting that by version number so it's ~stable
+		# then doing --build-order on that, which is a "stable sort"
+		# then redoing that list back into "templateLastTags" so we get the tags we want listed (not the tags "--uniq" chooses)
+		bashbrew list --uniq "$@" \
+			| xargs -r bashbrew cat --format "$templateLastTags" \
 			| sort -V \
 			| xargs -r bashbrew list --uniq --build-order 2>>temp/_bashbrew.err \
 			| xargs -r bashbrew cat --format "$templateLastTags" 2>>temp/_bashbrew.err \
@@ -359,6 +364,9 @@ _metadata-files() {
 		( eval "$script" | tar -xiC tar )
 		copy-tar tar temp
 		rm -rf tar
+
+		# TODO we should *also* validate that our lists ended up non-empty 😬
+		cat >&2 temp/_bashbrew.err
 	fi
 
 	if [ -n "$externalPins" ] && command -v crane &> /dev/null; then
