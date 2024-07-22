@@ -223,108 +223,118 @@ Constraints: nanoserver-1809, windowsservercore-1809
 
 
 #------------------------------v17 images---------------------------------
-Tags: 17.0.11_9-jdk-alpine, 17-jdk-alpine, 17-alpine
+Tags: 17.0.12_7-jdk-alpine, 17-jdk-alpine, 17-alpine
 Architectures: amd64
-GitCommit: 057e5aa7581e96b8a2334290e750b329d62abfdf
+GitCommit: f7ce125dc28d8c0d065d94829e63094daa018ca3
 Directory: 17/jdk/alpine
 
-Tags: 17.0.11_9-jdk-focal, 17-jdk-focal, 17-focal
+Tags: 17.0.12_7-jdk-focal, 17-jdk-focal, 17-focal
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 057e5aa7581e96b8a2334290e750b329d62abfdf
+GitCommit: f7ce125dc28d8c0d065d94829e63094daa018ca3
 Directory: 17/jdk/ubuntu/focal
 
-Tags: 17.0.11_9-jdk-jammy, 17-jdk-jammy, 17-jammy
-SharedTags: 17.0.11_9-jdk, 17-jdk, 17
+Tags: 17.0.12_7-jdk-jammy, 17-jdk-jammy, 17-jammy
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 057e5aa7581e96b8a2334290e750b329d62abfdf
+GitCommit: f7ce125dc28d8c0d065d94829e63094daa018ca3
 Directory: 17/jdk/ubuntu/jammy
 
-Tags: 17.0.11_9-jdk-ubi9-minimal, 17-jdk-ubi9-minimal, 17-ubi9-minimal
+Tags: 17.0.12_7-jdk-noble, 17-jdk-noble, 17-noble
+SharedTags: 17.0.12_7-jdk, 17-jdk, 17
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: f7ce125dc28d8c0d065d94829e63094daa018ca3
+Directory: 17/jdk/ubuntu/noble
+
+Tags: 17.0.12_7-jdk-ubi9-minimal, 17-jdk-ubi9-minimal, 17-ubi9-minimal
 Architectures: amd64, arm64v8, ppc64le, s390x
-GitCommit: 057e5aa7581e96b8a2334290e750b329d62abfdf
+GitCommit: f7ce125dc28d8c0d065d94829e63094daa018ca3
 Directory: 17/jdk/ubi/ubi9-minimal
 
-Tags: 17.0.11_9-jdk-windowsservercore-ltsc2022, 17-jdk-windowsservercore-ltsc2022, 17-windowsservercore-ltsc2022
-SharedTags: 17.0.11_9-jdk-windowsservercore, 17-jdk-windowsservercore, 17-windowsservercore, 17.0.11_9-jdk, 17-jdk, 17
+Tags: 17.0.12_7-jdk-windowsservercore-ltsc2022, 17-jdk-windowsservercore-ltsc2022, 17-windowsservercore-ltsc2022
+SharedTags: 17.0.12_7-jdk-windowsservercore, 17-jdk-windowsservercore, 17-windowsservercore, 17.0.12_7-jdk, 17-jdk, 17
 Architectures: windows-amd64
-GitCommit: 057e5aa7581e96b8a2334290e750b329d62abfdf
+GitCommit: f7ce125dc28d8c0d065d94829e63094daa018ca3
 Directory: 17/jdk/windows/windowsservercore-ltsc2022
 Builder: classic
 Constraints: windowsservercore-ltsc2022
 
-Tags: 17.0.11_9-jdk-nanoserver-ltsc2022, 17-jdk-nanoserver-ltsc2022, 17-nanoserver-ltsc2022
-SharedTags: 17.0.11_9-jdk-nanoserver, 17-jdk-nanoserver, 17-nanoserver
+Tags: 17.0.12_7-jdk-nanoserver-ltsc2022, 17-jdk-nanoserver-ltsc2022, 17-nanoserver-ltsc2022
+SharedTags: 17.0.12_7-jdk-nanoserver, 17-jdk-nanoserver, 17-nanoserver
 Architectures: windows-amd64
-GitCommit: 057e5aa7581e96b8a2334290e750b329d62abfdf
+GitCommit: f7ce125dc28d8c0d065d94829e63094daa018ca3
 Directory: 17/jdk/windows/nanoserver-ltsc2022
 Builder: classic
 Constraints: nanoserver-ltsc2022, windowsservercore-ltsc2022
 
-Tags: 17.0.11_9-jdk-windowsservercore-1809, 17-jdk-windowsservercore-1809, 17-windowsservercore-1809
-SharedTags: 17.0.11_9-jdk-windowsservercore, 17-jdk-windowsservercore, 17-windowsservercore, 17.0.11_9-jdk, 17-jdk, 17
+Tags: 17.0.12_7-jdk-windowsservercore-1809, 17-jdk-windowsservercore-1809, 17-windowsservercore-1809
+SharedTags: 17.0.12_7-jdk-windowsservercore, 17-jdk-windowsservercore, 17-windowsservercore, 17.0.12_7-jdk, 17-jdk, 17
 Architectures: windows-amd64
-GitCommit: 057e5aa7581e96b8a2334290e750b329d62abfdf
+GitCommit: f7ce125dc28d8c0d065d94829e63094daa018ca3
 Directory: 17/jdk/windows/windowsservercore-1809
 Builder: classic
 Constraints: windowsservercore-1809
 
-Tags: 17.0.11_9-jdk-nanoserver-1809, 17-jdk-nanoserver-1809, 17-nanoserver-1809
-SharedTags: 17.0.11_9-jdk-nanoserver, 17-jdk-nanoserver, 17-nanoserver
+Tags: 17.0.12_7-jdk-nanoserver-1809, 17-jdk-nanoserver-1809, 17-nanoserver-1809
+SharedTags: 17.0.12_7-jdk-nanoserver, 17-jdk-nanoserver, 17-nanoserver
 Architectures: windows-amd64
-GitCommit: 057e5aa7581e96b8a2334290e750b329d62abfdf
+GitCommit: f7ce125dc28d8c0d065d94829e63094daa018ca3
 Directory: 17/jdk/windows/nanoserver-1809
 Builder: classic
 Constraints: nanoserver-1809, windowsservercore-1809
 
-Tags: 17.0.11_9-jre-alpine, 17-jre-alpine
+Tags: 17.0.12_7-jre-alpine, 17-jre-alpine
 Architectures: amd64
-GitCommit: 057e5aa7581e96b8a2334290e750b329d62abfdf
+GitCommit: f7ce125dc28d8c0d065d94829e63094daa018ca3
 Directory: 17/jre/alpine
 
-Tags: 17.0.11_9-jre-focal, 17-jre-focal
+Tags: 17.0.12_7-jre-focal, 17-jre-focal
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 057e5aa7581e96b8a2334290e750b329d62abfdf
+GitCommit: f7ce125dc28d8c0d065d94829e63094daa018ca3
 Directory: 17/jre/ubuntu/focal
 
-Tags: 17.0.11_9-jre-jammy, 17-jre-jammy
-SharedTags: 17.0.11_9-jre, 17-jre
+Tags: 17.0.12_7-jre-jammy, 17-jre-jammy
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 057e5aa7581e96b8a2334290e750b329d62abfdf
+GitCommit: f7ce125dc28d8c0d065d94829e63094daa018ca3
 Directory: 17/jre/ubuntu/jammy
 
-Tags: 17.0.11_9-jre-ubi9-minimal, 17-jre-ubi9-minimal
+Tags: 17.0.12_7-jre-noble, 17-jre-noble
+SharedTags: 17.0.12_7-jre, 17-jre
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: f7ce125dc28d8c0d065d94829e63094daa018ca3
+Directory: 17/jre/ubuntu/noble
+
+Tags: 17.0.12_7-jre-ubi9-minimal, 17-jre-ubi9-minimal
 Architectures: amd64, arm64v8, ppc64le, s390x
-GitCommit: 057e5aa7581e96b8a2334290e750b329d62abfdf
+GitCommit: f7ce125dc28d8c0d065d94829e63094daa018ca3
 Directory: 17/jre/ubi/ubi9-minimal
 
-Tags: 17.0.11_9-jre-windowsservercore-ltsc2022, 17-jre-windowsservercore-ltsc2022
-SharedTags: 17.0.11_9-jre-windowsservercore, 17-jre-windowsservercore, 17.0.11_9-jre, 17-jre
+Tags: 17.0.12_7-jre-windowsservercore-ltsc2022, 17-jre-windowsservercore-ltsc2022
+SharedTags: 17.0.12_7-jre-windowsservercore, 17-jre-windowsservercore, 17.0.12_7-jre, 17-jre
 Architectures: windows-amd64
-GitCommit: 057e5aa7581e96b8a2334290e750b329d62abfdf
+GitCommit: f7ce125dc28d8c0d065d94829e63094daa018ca3
 Directory: 17/jre/windows/windowsservercore-ltsc2022
 Builder: classic
 Constraints: windowsservercore-ltsc2022
 
-Tags: 17.0.11_9-jre-nanoserver-ltsc2022, 17-jre-nanoserver-ltsc2022
-SharedTags: 17.0.11_9-jre-nanoserver, 17-jre-nanoserver
+Tags: 17.0.12_7-jre-nanoserver-ltsc2022, 17-jre-nanoserver-ltsc2022
+SharedTags: 17.0.12_7-jre-nanoserver, 17-jre-nanoserver
 Architectures: windows-amd64
-GitCommit: 057e5aa7581e96b8a2334290e750b329d62abfdf
+GitCommit: f7ce125dc28d8c0d065d94829e63094daa018ca3
 Directory: 17/jre/windows/nanoserver-ltsc2022
 Builder: classic
 Constraints: nanoserver-ltsc2022, windowsservercore-ltsc2022
 
-Tags: 17.0.11_9-jre-windowsservercore-1809, 17-jre-windowsservercore-1809
-SharedTags: 17.0.11_9-jre-windowsservercore, 17-jre-windowsservercore, 17.0.11_9-jre, 17-jre
+Tags: 17.0.12_7-jre-windowsservercore-1809, 17-jre-windowsservercore-1809
+SharedTags: 17.0.12_7-jre-windowsservercore, 17-jre-windowsservercore, 17.0.12_7-jre, 17-jre
 Architectures: windows-amd64
-GitCommit: 057e5aa7581e96b8a2334290e750b329d62abfdf
+GitCommit: f7ce125dc28d8c0d065d94829e63094daa018ca3
 Directory: 17/jre/windows/windowsservercore-1809
 Builder: classic
 Constraints: windowsservercore-1809
 
-Tags: 17.0.11_9-jre-nanoserver-1809, 17-jre-nanoserver-1809
-SharedTags: 17.0.11_9-jre-nanoserver, 17-jre-nanoserver
+Tags: 17.0.12_7-jre-nanoserver-1809, 17-jre-nanoserver-1809
+SharedTags: 17.0.12_7-jre-nanoserver, 17-jre-nanoserver
 Architectures: windows-amd64
-GitCommit: 057e5aa7581e96b8a2334290e750b329d62abfdf
+GitCommit: f7ce125dc28d8c0d065d94829e63094daa018ca3
 Directory: 17/jre/windows/nanoserver-1809
 Builder: classic
 Constraints: nanoserver-1809, windowsservercore-1809
