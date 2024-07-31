@@ -68,6 +68,12 @@ _bashbrew_buildkit_env_setup() {
 			sbomTag="$(grep <<<"$externalPins" -m1 '^docker/scout-sbom-indexer:')"
 			sbomTag="$(_resolve_external_pins "$sbomTag")"
 			vars="$(_jq_setenv <<<"$vars" BASHBREW_BUILDKIT_SBOM_GENERATOR "$sbomTag")"
+
+			local signerTag
+			# https://hub.docker.com/r/docker/image-signer-verifier/tags
+			signerTag="$(grep <<<"$externalPins" -m1 '^docker/image-signer-verifier:')"
+			signerTag="$(_resolve_external_pins "$signerTag")"
+			vars="$(_jq_setenv <<<"$vars" BASHBREW_IMAGE_SIGNER "$signerTag")"
 			;;
 	esac
 
