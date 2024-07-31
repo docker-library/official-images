@@ -74,6 +74,11 @@ _bashbrew_buildkit_env_setup() {
 			signerTag="$(grep <<<"$externalPins" -m1 '^docker/image-signer-verifier:')"
 			signerTag="$(_resolve_external_pins "$signerTag")"
 			vars="$(_jq_setenv <<<"$vars" BASHBREW_IMAGE_SIGNER "$signerTag")"
+
+			vars="$(_jq_setenv <<<"$vars" BASHBREW_TUF_META "docker/tuf-metadata:latest")"
+			vars="$(_jq_setenv <<<"$vars" BASHBREW_TUF_TARGETS "docker/tuf-targets")"
+
+			vars="$(_jq_setenv <<<"$vars" BASHBREW_SIGNING_POLICY "docker-official-images-full")"
 			;;
 	esac
 
