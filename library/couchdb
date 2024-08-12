@@ -14,13 +14,16 @@ Tags: 3.2.3, 3.2
 Architectures: amd64
 Directory: 3.2.3
 
-Tags: 3.1.2, 3.1
-Architectures: amd64, arm64v8
-Directory: 3.1.2
-
-Tags: 2.3.1, 2.3, 2
-Architectures: amd64, arm64v8
-Directory: 2.3.1
+# 2.3 and 3.1 are FROM debian:buster (EOL)
+# https://github.com/docker-library/official-images/pull/17091#issuecomment-2201099734
+#
+#Tags: 3.1.2, 3.1
+#Architectures: amd64, arm64v8
+#Directory: 3.1.2
+#
+#Tags: 2.3.1, 2.3, 2
+#Architectures: amd64, arm64v8
+#Directory: 2.3.1
 
 # 1.x is no longer supported by the Apache CouchDB team.
 #
