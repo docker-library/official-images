@@ -9,83 +9,92 @@ File: index.json
 
 # 20240530 (focal)
 Tags: 20.04, focal-20240530, focal
-Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-Directory: oci
-# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-focal-amd64-20240530-f351639c
-amd64-GitFetch: refs/tags/dist-focal-amd64-20240530-f351639c
-amd64-GitCommit: f351639c499dcde9b2d9e3aeb2b0344c4a01fc1e
-# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-focal-arm32v7-20240530-21baaf51
-arm32v7-GitFetch: refs/tags/dist-focal-arm32v7-20240530-21baaf51
-arm32v7-GitCommit: 21baaf519ae0a1e31b05bba90e54006cfb75dac4
-# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-focal-arm64v8-20240530-ab38bd2f
-arm64v8-GitFetch: refs/tags/dist-focal-arm64v8-20240530-ab38bd2f
-arm64v8-GitCommit: ab38bd2f5fc6c745ba0732935126acedf7c17c0f
-# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-focal-ppc64le-20240530-8253a0d3
-ppc64le-GitFetch: refs/tags/dist-focal-ppc64le-20240530-8253a0d3
-ppc64le-GitCommit: 8253a0d37295da483910b125f915b3e3956ca496
-# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-focal-s390x-20240530-4ee78698
-s390x-GitFetch: refs/tags/dist-focal-s390x-20240530-4ee78698
-s390x-GitCommit: 4ee78698cc4fa3d53c5c9824da2fc792136740d8
-
-# 20240627.1 (jammy)
-Tags: 22.04, jammy-20240627.1, jammy
-Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-Directory: oci
-# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-jammy-amd64-20240627.1-0d60927a
-amd64-GitFetch: refs/tags/dist-jammy-amd64-20240627.1-0d60927a
-amd64-GitCommit: 0d60927a24b045adcfbdb9a80b7db3bf6bd9fd9b
-# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-jammy-arm32v7-20240627.1-5b6a7c17
-arm32v7-GitFetch: refs/tags/dist-jammy-arm32v7-20240627.1-5b6a7c17
-arm32v7-GitCommit: 5b6a7c17f78799227b503f29df01fa7fe1e56c9b
-# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-jammy-arm64v8-20240627.1-d47abe04
-arm64v8-GitFetch: refs/tags/dist-jammy-arm64v8-20240627.1-d47abe04
-arm64v8-GitCommit: d47abe04c6c13635d4628f1cbfd1d63c9f94ed35
-# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-jammy-ppc64le-20240627.1-7d7362be
-ppc64le-GitFetch: refs/tags/dist-jammy-ppc64le-20240627.1-7d7362be
-ppc64le-GitCommit: 7d7362be4225ab4bbaee41d8ea83d685db0bde84
-# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-jammy-s390x-20240627.1-9391c7d3
-s390x-GitFetch: refs/tags/dist-jammy-s390x-20240627.1-9391c7d3
-s390x-GitCommit: 9391c7d3240a49e6c76843ccf3342a2c9f4da90f
-
-# 20240605 (noble)
-Tags: 24.04, noble-20240605, noble, latest, rolling
-Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-Directory: oci
-# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-noble-amd64-20240605-baf9888c
-amd64-GitFetch: refs/tags/dist-noble-amd64-20240605-baf9888c
-amd64-GitCommit: baf9888c79d71a0ae98d4ef87c838ca3c91f2245
-# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-noble-arm32v7-20240605-05dad465
-arm32v7-GitFetch: refs/tags/dist-noble-arm32v7-20240605-05dad465
-arm32v7-GitCommit: 05dad46570beff8c9a4968abe58a503684b87116
-# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-noble-arm64v8-20240605-a6b32414
-arm64v8-GitFetch: refs/tags/dist-noble-arm64v8-20240605-a6b32414
-arm64v8-GitCommit: a6b324145242f634eb224b25ca7387fa2449c414
-# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-noble-ppc64le-20240605-54f9f186
-ppc64le-GitFetch: refs/tags/dist-noble-ppc64le-20240605-54f9f186
-ppc64le-GitCommit: 54f9f186c9af571f1d874614b0a17512166b60aa
-# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-noble-s390x-20240605-17a304a2
-s390x-GitFetch: refs/tags/dist-noble-s390x-20240605-17a304a2
-s390x-GitCommit: 17a304a2f858f7401179b7bd7bb15340e8ee2d51
-
-# 20240617 (oracular)
-Tags: 24.10, oracular-20240617, oracular, devel
 Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
 Directory: oci
-# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-oracular-amd64-20240617-43acaa26
-amd64-GitFetch: refs/tags/dist-oracular-amd64-20240617-43acaa26
-amd64-GitCommit: 43acaa26848f20fe7885f00637b5342967c8ae23
-# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-oracular-arm32v7-20240617-d1cb9fc4
-arm32v7-GitFetch: refs/tags/dist-oracular-arm32v7-20240617-d1cb9fc4
-arm32v7-GitCommit: d1cb9fc46917d0af125b08e92a014ad2986d59e8
-# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-oracular-arm64v8-20240617-e426dff0
-arm64v8-GitFetch: refs/tags/dist-oracular-arm64v8-20240617-e426dff0
-arm64v8-GitCommit: e426dff000932a97beb2202ab8ac64a928bfc597
-# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-oracular-ppc64le-20240617-7f1e93e9
-ppc64le-GitFetch: refs/tags/dist-oracular-ppc64le-20240617-7f1e93e9
-ppc64le-GitCommit: 7f1e93e982b0c6a769d67120daabdb43f828f58f
-# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-oracular-riscv64-20240617-4cf6497f
-riscv64-GitFetch: refs/tags/dist-oracular-riscv64-20240617-4cf6497f
-riscv64-GitCommit: 4cf6497f31557724298f55baeeb312534e308486
-# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-oracular-s390x-20240617-499ce1a7
-s390x-GitFetch: refs/tags/dist-oracular-s390x-20240617-499ce1a7
-s390x-GitCommit: 499ce1a75f253d893454c2af1f7209788128f415
+# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-focal-amd64-20240530-9699eddd
+amd64-GitFetch: refs/tags/dist-focal-amd64-20240530-9699eddd
+amd64-GitCommit: 9699eddd402d702628046e17ab86ccc5ffb51adc
+# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-focal-arm32v7-20240530-3d3355b7
+arm32v7-GitFetch: refs/tags/dist-focal-arm32v7-20240530-3d3355b7
+arm32v7-GitCommit: 3d3355b763a102269523c0020a21f650b7d858d3
+# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-focal-arm64v8-20240530-1f176f17
+arm64v8-GitFetch: refs/tags/dist-focal-arm64v8-20240530-1f176f17
+arm64v8-GitCommit: 1f176f17ceab7d58fafdcd0971ae7288c2390106
+# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-focal-ppc64le-20240530-827b272f
+ppc64le-GitFetch: refs/tags/dist-focal-ppc64le-20240530-827b272f
+ppc64le-GitCommit: 827b272f6bac95e1eb7488d4da3ae24a627aa258
+# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-focal-riscv64-20240530-ac4a9b74
+riscv64-GitFetch: refs/tags/dist-focal-riscv64-20240530-ac4a9b74
+riscv64-GitCommit: ac4a9b7483ace251eb0d690944b720e6f869b6e1
+# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-focal-s390x-20240530-5a9a5178
+s390x-GitFetch: refs/tags/dist-focal-s390x-20240530-5a9a5178
+s390x-GitCommit: 5a9a5178e1d3266c77aec02f24f0c3327ff232e3
+
+# 20240808 (jammy)
+Tags: 22.04, jammy-20240808, jammy
+Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
+Directory: oci
+# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-jammy-amd64-20240808-4cf8c608
+amd64-GitFetch: refs/tags/dist-jammy-amd64-20240808-4cf8c608
+amd64-GitCommit: 4cf8c608d2549bbd10cdce612c814dc60899ebde
+# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-jammy-arm32v7-20240808-339e0012
+arm32v7-GitFetch: refs/tags/dist-jammy-arm32v7-20240808-339e0012
+arm32v7-GitCommit: 339e00120378c8cf2b5fbe7c1b04399c933afcbb
+# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-jammy-arm64v8-20240808-72abb87b
+arm64v8-GitFetch: refs/tags/dist-jammy-arm64v8-20240808-72abb87b
+arm64v8-GitCommit: 72abb87bb65814d21ed334fa000fa7d55de9f210
+# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-jammy-ppc64le-20240808-f2cc00f0
+ppc64le-GitFetch: refs/tags/dist-jammy-ppc64le-20240808-f2cc00f0
+ppc64le-GitCommit: f2cc00f0a5a42e3c6bcc15f82e672b604eae3243
+# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-jammy-riscv64-20240808-854a0baf
+riscv64-GitFetch: refs/tags/dist-jammy-riscv64-20240808-854a0baf
+riscv64-GitCommit: 854a0baf652ab8596916f35262ede56cc980d3db
+# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-jammy-s390x-20240808-eae06905
+s390x-GitFetch: refs/tags/dist-jammy-s390x-20240808-eae06905
+s390x-GitCommit: eae0690540ac9772e32ca0a4fa9e539b87d3d709
+
+# 20240801 (noble)
+Tags: 24.04, noble-20240801, noble, latest, rolling
+Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
+Directory: oci
+# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-noble-amd64-20240801-b0b2956a
+amd64-GitFetch: refs/tags/dist-noble-amd64-20240801-b0b2956a
+amd64-GitCommit: b0b2956a333896413ad26c7ad96520ffe4d0ea89
+# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-noble-arm32v7-20240801-b5430c81
+arm32v7-GitFetch: refs/tags/dist-noble-arm32v7-20240801-b5430c81
+arm32v7-GitCommit: b5430c81950f79eb8a9a2f33da56924c839088c2
+# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-noble-arm64v8-20240801-bad0877b
+arm64v8-GitFetch: refs/tags/dist-noble-arm64v8-20240801-bad0877b
+arm64v8-GitCommit: bad0877baa53f5ffd34ced4b4ca3d3d60f8422ed
+# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-noble-ppc64le-20240801-41cba6cc
+ppc64le-GitFetch: refs/tags/dist-noble-ppc64le-20240801-41cba6cc
+ppc64le-GitCommit: 41cba6ccd75f36bcaa18c65bdf6db8a3ba0b7f12
+# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-noble-riscv64-20240801-da35f9f1
+riscv64-GitFetch: refs/tags/dist-noble-riscv64-20240801-da35f9f1
+riscv64-GitCommit: da35f9f18e4a15b0d866c6a14606984cad923d1b
+# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-noble-s390x-20240801-679e5d1c
+s390x-GitFetch: refs/tags/dist-noble-s390x-20240801-679e5d1c
+s390x-GitCommit: 679e5d1c48c4c91d30056b18d5b4f1d983c65adb
+
+# 20240811.1 (oracular)
+Tags: 24.10, oracular-20240811.1, oracular, devel
+Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
+Directory: oci
+# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-oracular-amd64-20240811.1-bee83f33
+amd64-GitFetch: refs/tags/dist-oracular-amd64-20240811.1-bee83f33
+amd64-GitCommit: bee83f33ff87f39261ce0ef49970c4313c2772f6
+# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-oracular-arm32v7-20240811.1-caa73649
+arm32v7-GitFetch: refs/tags/dist-oracular-arm32v7-20240811.1-caa73649
+arm32v7-GitCommit: caa736496cde1b36fffd6236922b3ef391e74af6
+# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-oracular-arm64v8-20240811.1-17f1ab67
+arm64v8-GitFetch: refs/tags/dist-oracular-arm64v8-20240811.1-17f1ab67
+arm64v8-GitCommit: 17f1ab677f15c0aa9aae6347340614846ebdee3e
+# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-oracular-ppc64le-20240811.1-96d9112a
+ppc64le-GitFetch: refs/tags/dist-oracular-ppc64le-20240811.1-96d9112a
+ppc64le-GitCommit: 96d9112a794e0e3d65e0fe0e31f2d2ae60cf4fec
+# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-oracular-riscv64-20240811.1-312a80fd
+riscv64-GitFetch: refs/tags/dist-oracular-riscv64-20240811.1-312a80fd
+riscv64-GitCommit: 312a80fde3ddb6fb8e00dcbace0285a5040b93ec
+# https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/?h=dist-oracular-s390x-20240811.1-95f4bce3
+s390x-GitFetch: refs/tags/dist-oracular-s390x-20240811.1-95f4bce3
+s390x-GitCommit: 95f4bce3c4112829d7fd29bfe764bde698e3a274
