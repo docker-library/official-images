@@ -17,8 +17,9 @@ fi
 # Hy is complicated, and uses Python's internal AST representation directly, and thus Hy releases usually lag behind a little on major Python releases (and we don't want that to gum up our tests)
 # see https://github.com/hylang/hy/issues/1111 for example breakage
 # also, it doesn't always support older (still supported) Python versions; https://github.com/hylang/hy/pull/2176 (3.6 support removal)
-if ! "$python" -c 'import sys; exit((sys.version_info[0] == 3 and (sys.version_info[1] >= 11 or sys.version_info[1] <= 6)) or sys.version_info[0] > 3 or sys.version_info[0] == 2)'; then
-	echo >&2 'skipping Hy test -- not allowed on Python 3.11+ (yet!), or on Python 3.6 or lower'
+# see "Programming Language" tags on https://pypi.org/project/hy/ for the current support range (see also version numbers below)
+if ! "$python" -c 'import sys; exit(not(sys.version_info[0] == 3 and 8 <= sys.version_info[1] <= 12))'; then
+	echo >&2 'skipping Hy test -- not allowed on Python less than 3.8 or greater than 3.12 (yet!)'
 	# cheaters gunna cheat
 	cat expected-std-out.txt
 	exit
@@ -34,7 +35,7 @@ fi
 
 	# https://pypi.org/project/hy/#history
 	# https://pypi.org/project/hyrule/#history
-	pip install -q 'hy==0.24.0' 'hyrule==0.2' > /dev/null
+	pip install -q 'hy==0.29.0' 'hyrule==0.6.0' > /dev/null
 )
 
 hy ./container.hy
