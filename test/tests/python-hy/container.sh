@@ -18,8 +18,9 @@ fi
 # see https://github.com/hylang/hy/issues/1111 for example breakage
 # also, it doesn't always support older (still supported) Python versions; https://github.com/hylang/hy/pull/2176 (3.6 support removal)
 # see "Programming Language" tags on https://pypi.org/project/hy/ for the current support range (see also version numbers below)
-if ! "$python" -c 'import sys; exit(not(sys.version_info[0] == 3 and 8 <= sys.version_info[1] <= 12))'; then
-	echo >&2 'skipping Hy test -- not allowed on Python less than 3.8 or greater than 3.12 (yet!)'
+# TODO allow 3.12 again once https://github.com/hylang/hy/issues/2598 / https://github.com/hylang/hy/pull/2599 is in a release (likely 0.29.1 or 0.30.0)
+if ! "$python" -c 'import sys; exit(not(sys.version_info[0] == 3 and 8 <= sys.version_info[1] <= 11))'; then
+	echo >&2 'skipping Hy test -- not allowed on Python less than 3.8 or greater than 3.11 (yet!)'
 	# cheaters gunna cheat
 	cat expected-std-out.txt
 	exit
