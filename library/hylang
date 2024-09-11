@@ -1,6 +1,6 @@
 Maintainers: Paul Tagliamonte <paultag@hylang.org> (@paultag), Hy Docker Team (@hylang/docker)
 GitRepo: https://github.com/hylang/docker-hylang.git
-GitCommit: 72b605d4755c0e13098e59442882ee8e6a708227
+GitCommit: d6966ea489cddb0e9c2151acbc9170ea03739911
 Directory: dockerfiles-generated
 
 Tags: 0.29.0-python3.12-bookworm, 0.29-python3.12-bookworm, 0-python3.12-bookworm, python3.12-bookworm, 0.29.0-bookworm, 0.29-bookworm, 0-bookworm, bookworm
@@ -49,18 +49,6 @@ Tags: 0.29.0-python3.11-alpine3.19, 0.29-python3.11-alpine3.19, 0-python3.11-alp
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 File: Dockerfile.python3.11-alpine3.19
 
-Tags: 0.29.0-python3.11-windowsservercore-ltsc2022, 0.29-python3.11-windowsservercore-ltsc2022, 0-python3.11-windowsservercore-ltsc2022, python3.11-windowsservercore-ltsc2022
-SharedTags: 0.29.0-python3.11, 0.29-python3.11, 0-python3.11, python3.11
-Architectures: windows-amd64
-Constraints: windowsservercore-ltsc2022
-File: Dockerfile.python3.11-windowsservercore-ltsc2022
-
-Tags: 0.29.0-python3.11-windowsservercore-1809, 0.29-python3.11-windowsservercore-1809, 0-python3.11-windowsservercore-1809, python3.11-windowsservercore-1809
-SharedTags: 0.29.0-python3.11, 0.29-python3.11, 0-python3.11, python3.11
-Architectures: windows-amd64
-Constraints: windowsservercore-1809
-File: Dockerfile.python3.11-windowsservercore-1809
-
 Tags: 0.29.0-python3.10-bookworm, 0.29-python3.10-bookworm, 0-python3.10-bookworm, python3.10-bookworm
 SharedTags: 0.29.0-python3.10, 0.29-python3.10, 0-python3.10, python3.10
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
@@ -84,7 +72,7 @@ Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 File: Dockerfile.python3.9-bookworm
 
 Tags: 0.29.0-python3.9-bullseye, 0.29-python3.9-bullseye, 0-python3.9-bullseye, python3.9-bullseye
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 File: Dockerfile.python3.9-bullseye
 
 Tags: 0.29.0-python3.9-alpine3.20, 0.29-python3.9-alpine3.20, 0-python3.9-alpine3.20, python3.9-alpine3.20, 0.29.0-python3.9-alpine, 0.29-python3.9-alpine, 0-python3.9-alpine, python3.9-alpine
@@ -101,7 +89,7 @@ Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 File: Dockerfile.python3.8-bookworm
 
 Tags: 0.29.0-python3.8-bullseye, 0.29-python3.8-bullseye, 0-python3.8-bullseye, python3.8-bullseye
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 File: Dockerfile.python3.8-bullseye
 
 Tags: 0.29.0-python3.8-alpine3.20, 0.29-python3.8-alpine3.20, 0-python3.8-alpine3.20, python3.8-alpine3.20, 0.29.0-python3.8-alpine, 0.29-python3.8-alpine, 0-python3.8-alpine, python3.8-alpine
