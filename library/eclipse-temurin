@@ -468,110 +468,84 @@ Builder: classic
 Constraints: nanoserver-1809, windowsservercore-1809
 
 
-#------------------------------v22 images---------------------------------
-Tags: 22.0.2_9-jdk-alpine, 22-jdk-alpine, 22-alpine
+#------------------------------v23 images---------------------------------
+Tags: 23_37-jdk-alpine, 23-jdk-alpine, 23-alpine
 Architectures: amd64, arm64v8
-GitCommit: 07677395574f5d3462c3b6fdf5f6c4a0a350b683
-Directory: 22/jdk/alpine
+GitCommit: 32e1e858b1160ce613b23ee2a7291079d8dd6139
+Directory: 23/jdk/alpine
 
-Tags: 22.0.2_9-jdk-jammy, 22-jdk-jammy, 22-jammy
-Architectures: amd64, arm64v8, ppc64le, s390x
-GitCommit: 07677395574f5d3462c3b6fdf5f6c4a0a350b683
-Directory: 22/jdk/ubuntu/jammy
-
-Tags: 22.0.2_9-jdk-noble, 22-jdk-noble, 22-noble
-SharedTags: 22.0.2_9-jdk, 22-jdk, 22
+Tags: 23_37-jdk-noble, 23-jdk-noble, 23-noble
+SharedTags: 23_37-jdk, 23-jdk, 23
 Architectures: amd64, arm64v8, ppc64le, riscv64, s390x
-GitCommit: 07677395574f5d3462c3b6fdf5f6c4a0a350b683
-Directory: 22/jdk/ubuntu/noble
+GitCommit: 32e1e858b1160ce613b23ee2a7291079d8dd6139
+Directory: 23/jdk/ubuntu/noble
 
-Tags: 22.0.2_9-jdk-ubi9-minimal, 22-jdk-ubi9-minimal, 22-ubi9-minimal
+Tags: 23_37-jdk-ubi9-minimal, 23-jdk-ubi9-minimal, 23-ubi9-minimal
 Architectures: amd64, arm64v8, ppc64le, s390x
-GitCommit: 07677395574f5d3462c3b6fdf5f6c4a0a350b683
-Directory: 22/jdk/ubi/ubi9-minimal
+GitCommit: 32e1e858b1160ce613b23ee2a7291079d8dd6139
+Directory: 23/jdk/ubi/ubi9-minimal
 
-Tags: 22.0.2_9-jdk-windowsservercore-ltsc2022, 22-jdk-windowsservercore-ltsc2022, 22-windowsservercore-ltsc2022
-SharedTags: 22.0.2_9-jdk-windowsservercore, 22-jdk-windowsservercore, 22-windowsservercore, 22.0.2_9-jdk, 22-jdk, 22
+Tags: 23_37-jdk-windowsservercore-ltsc2022, 23-jdk-windowsservercore-ltsc2022, 23-windowsservercore-ltsc2022
+SharedTags: 23_37-jdk-windowsservercore, 23-jdk-windowsservercore, 23-windowsservercore, 23_37-jdk, 23-jdk, 23
 Architectures: windows-amd64
-GitCommit: 07677395574f5d3462c3b6fdf5f6c4a0a350b683
-Directory: 22/jdk/windows/windowsservercore-ltsc2022
+GitCommit: 32e1e858b1160ce613b23ee2a7291079d8dd6139
+Directory: 23/jdk/windows/windowsservercore-ltsc2022
 Builder: classic
 Constraints: windowsservercore-ltsc2022
 
-Tags: 22.0.2_9-jdk-nanoserver-ltsc2022, 22-jdk-nanoserver-ltsc2022, 22-nanoserver-ltsc2022
-SharedTags: 22.0.2_9-jdk-nanoserver, 22-jdk-nanoserver, 22-nanoserver
+Tags: 23_37-jdk-nanoserver-ltsc2022, 23-jdk-nanoserver-ltsc2022, 23-nanoserver-ltsc2022
+SharedTags: 23_37-jdk-nanoserver, 23-jdk-nanoserver, 23-nanoserver
 Architectures: windows-amd64
-GitCommit: 07677395574f5d3462c3b6fdf5f6c4a0a350b683
-Directory: 22/jdk/windows/nanoserver-ltsc2022
+GitCommit: 32e1e858b1160ce613b23ee2a7291079d8dd6139
+Directory: 23/jdk/windows/nanoserver-ltsc2022
 Builder: classic
 Constraints: nanoserver-ltsc2022, windowsservercore-ltsc2022
 
-Tags: 22.0.2_9-jdk-windowsservercore-1809, 22-jdk-windowsservercore-1809, 22-windowsservercore-1809
-SharedTags: 22.0.2_9-jdk-windowsservercore, 22-jdk-windowsservercore, 22-windowsservercore, 22.0.2_9-jdk, 22-jdk, 22
+Tags: 23_37-jdk-windowsservercore-1809, 23-jdk-windowsservercore-1809, 23-windowsservercore-1809
+SharedTags: 23_37-jdk-windowsservercore, 23-jdk-windowsservercore, 23-windowsservercore, 23_37-jdk, 23-jdk, 23
 Architectures: windows-amd64
-GitCommit: 07677395574f5d3462c3b6fdf5f6c4a0a350b683
-Directory: 22/jdk/windows/windowsservercore-1809
+GitCommit: 32e1e858b1160ce613b23ee2a7291079d8dd6139
+Directory: 23/jdk/windows/windowsservercore-1809
 Builder: classic
 Constraints: windowsservercore-1809
 
-Tags: 22.0.2_9-jdk-nanoserver-1809, 22-jdk-nanoserver-1809, 22-nanoserver-1809
-SharedTags: 22.0.2_9-jdk-nanoserver, 22-jdk-nanoserver, 22-nanoserver
-Architectures: windows-amd64
-GitCommit: 07677395574f5d3462c3b6fdf5f6c4a0a350b683
-Directory: 22/jdk/windows/nanoserver-1809
-Builder: classic
-Constraints: nanoserver-1809, windowsservercore-1809
-
-Tags: 22.0.2_9-jre-alpine, 22-jre-alpine
+Tags: 23_37-jre-alpine, 23-jre-alpine
 Architectures: amd64, arm64v8
-GitCommit: 07677395574f5d3462c3b6fdf5f6c4a0a350b683
-Directory: 22/jre/alpine
+GitCommit: 32e1e858b1160ce613b23ee2a7291079d8dd6139
+Directory: 23/jre/alpine
 
-Tags: 22.0.2_9-jre-jammy, 22-jre-jammy
-Architectures: amd64, arm64v8, ppc64le, s390x
-GitCommit: 07677395574f5d3462c3b6fdf5f6c4a0a350b683
-Directory: 22/jre/ubuntu/jammy
-
-Tags: 22.0.2_9-jre-noble, 22-jre-noble
-SharedTags: 22.0.2_9-jre, 22-jre
+Tags: 23_37-jre-noble, 23-jre-noble
+SharedTags: 23_37-jre, 23-jre
 Architectures: amd64, arm64v8, ppc64le, riscv64, s390x
-GitCommit: 07677395574f5d3462c3b6fdf5f6c4a0a350b683
-Directory: 22/jre/ubuntu/noble
+GitCommit: 32e1e858b1160ce613b23ee2a7291079d8dd6139
+Directory: 23/jre/ubuntu/noble
 
-Tags: 22.0.2_9-jre-ubi9-minimal, 22-jre-ubi9-minimal
+Tags: 23_37-jre-ubi9-minimal, 23-jre-ubi9-minimal
 Architectures: amd64, arm64v8, ppc64le, s390x
-GitCommit: 07677395574f5d3462c3b6fdf5f6c4a0a350b683
-Directory: 22/jre/ubi/ubi9-minimal
+GitCommit: 32e1e858b1160ce613b23ee2a7291079d8dd6139
+Directory: 23/jre/ubi/ubi9-minimal
 
-Tags: 22.0.2_9-jre-windowsservercore-ltsc2022, 22-jre-windowsservercore-ltsc2022
-SharedTags: 22.0.2_9-jre-windowsservercore, 22-jre-windowsservercore, 22.0.2_9-jre, 22-jre
+Tags: 23_37-jre-windowsservercore-ltsc2022, 23-jre-windowsservercore-ltsc2022
+SharedTags: 23_37-jre-windowsservercore, 23-jre-windowsservercore, 23_37-jre, 23-jre
 Architectures: windows-amd64
-GitCommit: 07677395574f5d3462c3b6fdf5f6c4a0a350b683
-Directory: 22/jre/windows/windowsservercore-ltsc2022
+GitCommit: 32e1e858b1160ce613b23ee2a7291079d8dd6139
+Directory: 23/jre/windows/windowsservercore-ltsc2022
 Builder: classic
 Constraints: windowsservercore-ltsc2022
 
-Tags: 22.0.2_9-jre-nanoserver-ltsc2022, 22-jre-nanoserver-ltsc2022
-SharedTags: 22.0.2_9-jre-nanoserver, 22-jre-nanoserver
+Tags: 23_37-jre-nanoserver-ltsc2022, 23-jre-nanoserver-ltsc2022
+SharedTags: 23_37-jre-nanoserver, 23-jre-nanoserver
 Architectures: windows-amd64
-GitCommit: 07677395574f5d3462c3b6fdf5f6c4a0a350b683
-Directory: 22/jre/windows/nanoserver-ltsc2022
+GitCommit: 32e1e858b1160ce613b23ee2a7291079d8dd6139
+Directory: 23/jre/windows/nanoserver-ltsc2022
 Builder: classic
 Constraints: nanoserver-ltsc2022, windowsservercore-ltsc2022
 
-Tags: 22.0.2_9-jre-windowsservercore-1809, 22-jre-windowsservercore-1809
-SharedTags: 22.0.2_9-jre-windowsservercore, 22-jre-windowsservercore, 22.0.2_9-jre, 22-jre
+Tags: 23_37-jre-windowsservercore-1809, 23-jre-windowsservercore-1809
+SharedTags: 23_37-jre-windowsservercore, 23-jre-windowsservercore, 23_37-jre, 23-jre
 Architectures: windows-amd64
-GitCommit: 07677395574f5d3462c3b6fdf5f6c4a0a350b683
-Directory: 22/jre/windows/windowsservercore-1809
+GitCommit: 32e1e858b1160ce613b23ee2a7291079d8dd6139
+Directory: 23/jre/windows/windowsservercore-1809
 Builder: classic
 Constraints: windowsservercore-1809
-
-Tags: 22.0.2_9-jre-nanoserver-1809, 22-jre-nanoserver-1809
-SharedTags: 22.0.2_9-jre-nanoserver, 22-jre-nanoserver
-Architectures: windows-amd64
-GitCommit: 07677395574f5d3462c3b6fdf5f6c4a0a350b683
-Directory: 22/jre/windows/nanoserver-1809
-Builder: classic
-Constraints: nanoserver-1809, windowsservercore-1809
 
