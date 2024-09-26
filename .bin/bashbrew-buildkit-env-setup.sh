@@ -47,7 +47,7 @@ _bashbrew_buildkit_env_setup() {
 	local vars='{}'
 
 	local dockerfileTag
-	dockerfileTag="$(grep <<<"$externalPins" -m1 '^docker/dockerfile:')"
+	dockerfileTag="$(grep <<<"$externalPins" -m1 '^tianon/buildkit:')"
 	dockerfileTag="$(_resolve_external_pins "$dockerfileTag")"
 	vars="$(_jq_setenv <<<"$vars" BASHBREW_BUILDKIT_SYNTAX "$dockerfileTag")"
 
