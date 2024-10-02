@@ -20,6 +20,7 @@ testAlias+=(
 	[eclipse-temurin]='openjdk'
 	[sapmachine]='openjdk'
 	[ibm-semeru-runtimes]='openjdk'
+	[alibaba-dragonwell]='openjdk'
 
 	[jruby]='ruby'
 	[pypy]='python'
