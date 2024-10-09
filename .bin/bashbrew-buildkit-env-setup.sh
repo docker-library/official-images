@@ -63,11 +63,13 @@ _bashbrew_buildkit_env_setup() {
 			buildxBuilder="$("$binDir/docker-buildx-ensure.sh")" # reminder: this script *requires* BASHBREW_ARCH (to avoid "accidental amd64" mistakes)
 			vars="$(_jq_setenv <<<"$vars" BUILDX_BUILDER "$buildxBuilder")"
 
-			local sbomTag
+			local sbomGenerator
 			# https://hub.docker.com/r/docker/scout-sbom-indexer/tags
-			sbomTag="$(grep <<<"$externalPins" -m1 '^docker/scout-sbom-indexer:')"
-			sbomTag="$(_resolve_external_pins "$sbomTag")"
-			vars="$(_jq_setenv <<<"$vars" BASHBREW_BUILDKIT_SBOM_GENERATOR "$sbomTag")"
+			sbomGenerator="$(grep <<<"$externalPins" -m1 '^docker/scout-sbom-indexer:')"
+			sbomGenerator="$(_resolve_external_pins "$sbomGenerator")"
+			# https://github.com/moby/buildkit/pull/5372 - "EXTRA_SCANNERS" is an optional parameter to the Scout SBOM Indexer
+			sbomGenerator+=',"EXTRA_SCANNERS=php-composer-lock,erlang-otp-application,lua-rock-cataloger,swipl-pack-cataloger,opam-cataloger"'
+			vars="$(_jq_setenv <<<"$vars" BASHBREW_BUILDKIT_SBOM_GENERATOR "$sbomGenerator")"
 			;;
 	esac
 
