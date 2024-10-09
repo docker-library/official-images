@@ -67,7 +67,8 @@ _bashbrew_buildkit_env_setup() {
 			# https://hub.docker.com/r/docker/scout-sbom-indexer/tags
 			sbomTag="$(grep <<<"$externalPins" -m1 '^docker/scout-sbom-indexer:')"
 			sbomTag="$(_resolve_external_pins "$sbomTag")"
-			vars="$(_jq_setenv <<<"$vars" BASHBREW_BUILDKIT_SBOM_GENERATOR "$sbomTag")"
+			scanners="php-composer-lock,erlang-otp-application,lua-rock-cataloger,swipl-pack-cataloger,opam-cataloger"
+			vars="$(_jq_setenv <<<"$vars" BASHBREW_BUILDKIT_SBOM_GENERATOR "$sbomTag,\"EXTRA_SCANNERS=$scanners\"")"
 			;;
 	esac
 
