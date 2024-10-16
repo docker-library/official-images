@@ -4,21 +4,6 @@ Maintainers: Friendica <info@friendi.ca> (@friendica), Philipp Holzer <admin@phi
 GitRepo: https://github.com/friendica/docker.git
 GitFetch: refs/heads/stable
 
-Tags: 2024.03-apache, 2024.03
-Architectures: amd64, arm32v7, arm64v8, i386
-GitCommit: e9e6de1547a2333a126c377907b5ba201846abd2
-Directory: 2024.03/apache
-
-Tags: 2024.03-fpm
-Architectures: amd64, arm32v7, arm64v8, i386
-GitCommit: e9e6de1547a2333a126c377907b5ba201846abd2
-Directory: 2024.03/fpm
-
-Tags: 2024.03-fpm-alpine
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: e9e6de1547a2333a126c377907b5ba201846abd2
-Directory: 2024.03/fpm-alpine
-
 Tags: 2024.08-apache, apache, stable-apache, 2024.08, latest, stable
 Architectures: amd64, arm32v7, arm64v8, i386
 GitCommit: bbb87e370743fee6fd9430ea129cf96750e22990
@@ -48,3 +33,18 @@ Tags: 2024.09-dev-fpm-alpine, dev-fpm-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
 GitCommit: 86849005e22069208e9cf4e21336f524c0642cbf
 Directory: 2024.09-dev/fpm-alpine
+
+Tags: 2024.09-rc-apache, rc-apache, 2024.09-rc, rc
+Architectures: amd64, arm32v7, arm64v8, i386
+GitCommit: b11c97b69b6fa77128a2703571d2faa308f102dc
+Directory: 2024.09-rc/apache
+
+Tags: 2024.09-rc-fpm, rc-fpm
+Architectures: amd64, arm32v7, arm64v8, i386
+GitCommit: b11c97b69b6fa77128a2703571d2faa308f102dc
+Directory: 2024.09-rc/fpm
+
+Tags: 2024.09-rc-fpm-alpine, rc-fpm-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
+GitCommit: b11c97b69b6fa77128a2703571d2faa308f102dc
+Directory: 2024.09-rc/fpm-alpine
