@@ -1,425 +1,285 @@
-# this file is generated via https://github.com/docker-library/php/blob/b2ba91997e735e6b98eca7df618e3d890cfd7372/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/php/blob/9c50f6a789b0337345934eee0d46e74d1e6dc8e2/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/php.git
 
-Tags: 8.4.0beta5-cli-bookworm, 8.4-rc-cli-bookworm, 8.4.0beta5-bookworm, 8.4-rc-bookworm, 8.4.0beta5-cli, 8.4-rc-cli, 8.4.0beta5, 8.4-rc
+Tags: 8.4.0RC3-cli-bookworm, 8.4-rc-cli-bookworm, 8.4.0RC3-bookworm, 8.4-rc-bookworm, 8.4.0RC3-cli, 8.4-rc-cli, 8.4.0RC3, 8.4-rc
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 905c1a01a1f233afce5233665b0916249b492b8e
+GitCommit: 6b636b96c06be449514a5033037bf653d8a86967
 Directory: 8.4-rc/bookworm/cli
 
-Tags: 8.4.0beta5-apache-bookworm, 8.4-rc-apache-bookworm, 8.4.0beta5-apache, 8.4-rc-apache
+Tags: 8.4.0RC3-apache-bookworm, 8.4-rc-apache-bookworm, 8.4.0RC3-apache, 8.4-rc-apache
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 905c1a01a1f233afce5233665b0916249b492b8e
+GitCommit: 6b636b96c06be449514a5033037bf653d8a86967
 Directory: 8.4-rc/bookworm/apache
 
-Tags: 8.4.0beta5-fpm-bookworm, 8.4-rc-fpm-bookworm, 8.4.0beta5-fpm, 8.4-rc-fpm
+Tags: 8.4.0RC3-fpm-bookworm, 8.4-rc-fpm-bookworm, 8.4.0RC3-fpm, 8.4-rc-fpm
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 905c1a01a1f233afce5233665b0916249b492b8e
+GitCommit: 6b636b96c06be449514a5033037bf653d8a86967
 Directory: 8.4-rc/bookworm/fpm
 
-Tags: 8.4.0beta5-zts-bookworm, 8.4-rc-zts-bookworm, 8.4.0beta5-zts, 8.4-rc-zts
+Tags: 8.4.0RC3-zts-bookworm, 8.4-rc-zts-bookworm, 8.4.0RC3-zts, 8.4-rc-zts
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 905c1a01a1f233afce5233665b0916249b492b8e
+GitCommit: 6b636b96c06be449514a5033037bf653d8a86967
 Directory: 8.4-rc/bookworm/zts
 
-Tags: 8.4.0beta5-cli-bullseye, 8.4-rc-cli-bullseye, 8.4.0beta5-bullseye, 8.4-rc-bullseye
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 905c1a01a1f233afce5233665b0916249b492b8e
+Tags: 8.4.0RC3-cli-bullseye, 8.4-rc-cli-bullseye, 8.4.0RC3-bullseye, 8.4-rc-bullseye
+Architectures: amd64, arm32v7, arm64v8, i386
+GitCommit: 6b636b96c06be449514a5033037bf653d8a86967
 Directory: 8.4-rc/bullseye/cli
 
-Tags: 8.4.0beta5-apache-bullseye, 8.4-rc-apache-bullseye
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 905c1a01a1f233afce5233665b0916249b492b8e
+Tags: 8.4.0RC3-apache-bullseye, 8.4-rc-apache-bullseye
+Architectures: amd64, arm32v7, arm64v8, i386
+GitCommit: 6b636b96c06be449514a5033037bf653d8a86967
 Directory: 8.4-rc/bullseye/apache
 
-Tags: 8.4.0beta5-fpm-bullseye, 8.4-rc-fpm-bullseye
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 905c1a01a1f233afce5233665b0916249b492b8e
+Tags: 8.4.0RC3-fpm-bullseye, 8.4-rc-fpm-bullseye
+Architectures: amd64, arm32v7, arm64v8, i386
+GitCommit: 6b636b96c06be449514a5033037bf653d8a86967
 Directory: 8.4-rc/bullseye/fpm
 
-Tags: 8.4.0beta5-zts-bullseye, 8.4-rc-zts-bullseye
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 905c1a01a1f233afce5233665b0916249b492b8e
+Tags: 8.4.0RC3-zts-bullseye, 8.4-rc-zts-bullseye
+Architectures: amd64, arm32v7, arm64v8, i386
+GitCommit: 6b636b96c06be449514a5033037bf653d8a86967
 Directory: 8.4-rc/bullseye/zts
 
-Tags: 8.4.0beta5-cli-alpine3.20, 8.4-rc-cli-alpine3.20, 8.4.0beta5-alpine3.20, 8.4-rc-alpine3.20, 8.4.0beta5-cli-alpine, 8.4-rc-cli-alpine, 8.4.0beta5-alpine, 8.4-rc-alpine
+Tags: 8.4.0RC3-cli-alpine3.20, 8.4-rc-cli-alpine3.20, 8.4.0RC3-alpine3.20, 8.4-rc-alpine3.20, 8.4.0RC3-cli-alpine, 8.4-rc-cli-alpine, 8.4.0RC3-alpine, 8.4-rc-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: 905c1a01a1f233afce5233665b0916249b492b8e
+GitCommit: 6b636b96c06be449514a5033037bf653d8a86967
 Directory: 8.4-rc/alpine3.20/cli
 
-Tags: 8.4.0beta5-fpm-alpine3.20, 8.4-rc-fpm-alpine3.20, 8.4.0beta5-fpm-alpine, 8.4-rc-fpm-alpine
+Tags: 8.4.0RC3-fpm-alpine3.20, 8.4-rc-fpm-alpine3.20, 8.4.0RC3-fpm-alpine, 8.4-rc-fpm-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: 905c1a01a1f233afce5233665b0916249b492b8e
+GitCommit: 6b636b96c06be449514a5033037bf653d8a86967
 Directory: 8.4-rc/alpine3.20/fpm
 
-Tags: 8.4.0beta5-zts-alpine3.20, 8.4-rc-zts-alpine3.20, 8.4.0beta5-zts-alpine, 8.4-rc-zts-alpine
+Tags: 8.4.0RC3-zts-alpine3.20, 8.4-rc-zts-alpine3.20, 8.4.0RC3-zts-alpine, 8.4-rc-zts-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: 905c1a01a1f233afce5233665b0916249b492b8e
+GitCommit: 6b636b96c06be449514a5033037bf653d8a86967
 Directory: 8.4-rc/alpine3.20/zts
 
-Tags: 8.4.0beta5-cli-alpine3.19, 8.4-rc-cli-alpine3.19, 8.4.0beta5-alpine3.19, 8.4-rc-alpine3.19
+Tags: 8.4.0RC3-cli-alpine3.19, 8.4-rc-cli-alpine3.19, 8.4.0RC3-alpine3.19, 8.4-rc-alpine3.19
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 905c1a01a1f233afce5233665b0916249b492b8e
+GitCommit: 6b636b96c06be449514a5033037bf653d8a86967
 Directory: 8.4-rc/alpine3.19/cli
 
-Tags: 8.4.0beta5-fpm-alpine3.19, 8.4-rc-fpm-alpine3.19
+Tags: 8.4.0RC3-fpm-alpine3.19, 8.4-rc-fpm-alpine3.19
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 905c1a01a1f233afce5233665b0916249b492b8e
+GitCommit: 6b636b96c06be449514a5033037bf653d8a86967
 Directory: 8.4-rc/alpine3.19/fpm
 
-Tags: 8.4.0beta5-zts-alpine3.19, 8.4-rc-zts-alpine3.19
+Tags: 8.4.0RC3-zts-alpine3.19, 8.4-rc-zts-alpine3.19
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 905c1a01a1f233afce5233665b0916249b492b8e
+GitCommit: 6b636b96c06be449514a5033037bf653d8a86967
 Directory: 8.4-rc/alpine3.19/zts
 
-Tags: 8.3.12RC1-cli-bookworm, 8.3-rc-cli-bookworm, 8.3.12RC1-bookworm, 8.3-rc-bookworm, 8.3.12RC1-cli, 8.3-rc-cli, 8.3.12RC1, 8.3-rc
+Tags: 8.3.13-cli-bookworm, 8.3-cli-bookworm, 8-cli-bookworm, cli-bookworm, 8.3.13-bookworm, 8.3-bookworm, 8-bookworm, bookworm, 8.3.13-cli, 8.3-cli, 8-cli, cli, 8.3.13, 8.3, 8, latest
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: c65f39b945ecae45cb48fcc3b3ec8e33954367c3
-Directory: 8.3-rc/bookworm/cli
-
-Tags: 8.3.12RC1-apache-bookworm, 8.3-rc-apache-bookworm, 8.3.12RC1-apache, 8.3-rc-apache
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: c65f39b945ecae45cb48fcc3b3ec8e33954367c3
-Directory: 8.3-rc/bookworm/apache
-
-Tags: 8.3.12RC1-fpm-bookworm, 8.3-rc-fpm-bookworm, 8.3.12RC1-fpm, 8.3-rc-fpm
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: c65f39b945ecae45cb48fcc3b3ec8e33954367c3
-Directory: 8.3-rc/bookworm/fpm
-
-Tags: 8.3.12RC1-zts-bookworm, 8.3-rc-zts-bookworm, 8.3.12RC1-zts, 8.3-rc-zts
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: c65f39b945ecae45cb48fcc3b3ec8e33954367c3
-Directory: 8.3-rc/bookworm/zts
-
-Tags: 8.3.12RC1-cli-bullseye, 8.3-rc-cli-bullseye, 8.3.12RC1-bullseye, 8.3-rc-bullseye
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: c65f39b945ecae45cb48fcc3b3ec8e33954367c3
-Directory: 8.3-rc/bullseye/cli
-
-Tags: 8.3.12RC1-apache-bullseye, 8.3-rc-apache-bullseye
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: c65f39b945ecae45cb48fcc3b3ec8e33954367c3
-Directory: 8.3-rc/bullseye/apache
-
-Tags: 8.3.12RC1-fpm-bullseye, 8.3-rc-fpm-bullseye
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: c65f39b945ecae45cb48fcc3b3ec8e33954367c3
-Directory: 8.3-rc/bullseye/fpm
-
-Tags: 8.3.12RC1-zts-bullseye, 8.3-rc-zts-bullseye
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: c65f39b945ecae45cb48fcc3b3ec8e33954367c3
-Directory: 8.3-rc/bullseye/zts
-
-Tags: 8.3.12RC1-cli-alpine3.20, 8.3-rc-cli-alpine3.20, 8.3.12RC1-alpine3.20, 8.3-rc-alpine3.20, 8.3.12RC1-cli-alpine, 8.3-rc-cli-alpine, 8.3.12RC1-alpine, 8.3-rc-alpine
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: c65f39b945ecae45cb48fcc3b3ec8e33954367c3
-Directory: 8.3-rc/alpine3.20/cli
-
-Tags: 8.3.12RC1-fpm-alpine3.20, 8.3-rc-fpm-alpine3.20, 8.3.12RC1-fpm-alpine, 8.3-rc-fpm-alpine
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: c65f39b945ecae45cb48fcc3b3ec8e33954367c3
-Directory: 8.3-rc/alpine3.20/fpm
-
-Tags: 8.3.12RC1-zts-alpine3.20, 8.3-rc-zts-alpine3.20, 8.3.12RC1-zts-alpine, 8.3-rc-zts-alpine
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: c65f39b945ecae45cb48fcc3b3ec8e33954367c3
-Directory: 8.3-rc/alpine3.20/zts
-
-Tags: 8.3.12RC1-cli-alpine3.19, 8.3-rc-cli-alpine3.19, 8.3.12RC1-alpine3.19, 8.3-rc-alpine3.19
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: c65f39b945ecae45cb48fcc3b3ec8e33954367c3
-Directory: 8.3-rc/alpine3.19/cli
-
-Tags: 8.3.12RC1-fpm-alpine3.19, 8.3-rc-fpm-alpine3.19
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: c65f39b945ecae45cb48fcc3b3ec8e33954367c3
-Directory: 8.3-rc/alpine3.19/fpm
-
-Tags: 8.3.12RC1-zts-alpine3.19, 8.3-rc-zts-alpine3.19
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: c65f39b945ecae45cb48fcc3b3ec8e33954367c3
-Directory: 8.3-rc/alpine3.19/zts
-
-Tags: 8.3.11-cli-bookworm, 8.3-cli-bookworm, 8-cli-bookworm, cli-bookworm, 8.3.11-bookworm, 8.3-bookworm, 8-bookworm, bookworm, 8.3.11-cli, 8.3-cli, 8-cli, cli, 8.3.11, 8.3, 8, latest
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 12c155ba57dc4ab67e60fa2a702e38a22f210f35
+GitCommit: 910674b44ecb630c9831d3bdf4f82aa2adb6bfe5
 Directory: 8.3/bookworm/cli
 
-Tags: 8.3.11-apache-bookworm, 8.3-apache-bookworm, 8-apache-bookworm, apache-bookworm, 8.3.11-apache, 8.3-apache, 8-apache, apache
+Tags: 8.3.13-apache-bookworm, 8.3-apache-bookworm, 8-apache-bookworm, apache-bookworm, 8.3.13-apache, 8.3-apache, 8-apache, apache
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 12c155ba57dc4ab67e60fa2a702e38a22f210f35
+GitCommit: 910674b44ecb630c9831d3bdf4f82aa2adb6bfe5
 Directory: 8.3/bookworm/apache
 
-Tags: 8.3.11-fpm-bookworm, 8.3-fpm-bookworm, 8-fpm-bookworm, fpm-bookworm, 8.3.11-fpm, 8.3-fpm, 8-fpm, fpm
+Tags: 8.3.13-fpm-bookworm, 8.3-fpm-bookworm, 8-fpm-bookworm, fpm-bookworm, 8.3.13-fpm, 8.3-fpm, 8-fpm, fpm
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 12c155ba57dc4ab67e60fa2a702e38a22f210f35
+GitCommit: 910674b44ecb630c9831d3bdf4f82aa2adb6bfe5
 Directory: 8.3/bookworm/fpm
 
-Tags: 8.3.11-zts-bookworm, 8.3-zts-bookworm, 8-zts-bookworm, zts-bookworm, 8.3.11-zts, 8.3-zts, 8-zts, zts
+Tags: 8.3.13-zts-bookworm, 8.3-zts-bookworm, 8-zts-bookworm, zts-bookworm, 8.3.13-zts, 8.3-zts, 8-zts, zts
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 12c155ba57dc4ab67e60fa2a702e38a22f210f35
+GitCommit: 910674b44ecb630c9831d3bdf4f82aa2adb6bfe5
 Directory: 8.3/bookworm/zts
 
-Tags: 8.3.11-cli-bullseye, 8.3-cli-bullseye, 8-cli-bullseye, cli-bullseye, 8.3.11-bullseye, 8.3-bullseye, 8-bullseye, bullseye
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 12c155ba57dc4ab67e60fa2a702e38a22f210f35
+Tags: 8.3.13-cli-bullseye, 8.3-cli-bullseye, 8-cli-bullseye, cli-bullseye, 8.3.13-bullseye, 8.3-bullseye, 8-bullseye, bullseye
+Architectures: amd64, arm32v7, arm64v8, i386
+GitCommit: 910674b44ecb630c9831d3bdf4f82aa2adb6bfe5
 Directory: 8.3/bullseye/cli
 
-Tags: 8.3.11-apache-bullseye, 8.3-apache-bullseye, 8-apache-bullseye, apache-bullseye
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 12c155ba57dc4ab67e60fa2a702e38a22f210f35
+Tags: 8.3.13-apache-bullseye, 8.3-apache-bullseye, 8-apache-bullseye, apache-bullseye
+Architectures: amd64, arm32v7, arm64v8, i386
+GitCommit: 910674b44ecb630c9831d3bdf4f82aa2adb6bfe5
 Directory: 8.3/bullseye/apache
 
-Tags: 8.3.11-fpm-bullseye, 8.3-fpm-bullseye, 8-fpm-bullseye, fpm-bullseye
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 12c155ba57dc4ab67e60fa2a702e38a22f210f35
+Tags: 8.3.13-fpm-bullseye, 8.3-fpm-bullseye, 8-fpm-bullseye, fpm-bullseye
+Architectures: amd64, arm32v7, arm64v8, i386
+GitCommit: 910674b44ecb630c9831d3bdf4f82aa2adb6bfe5
 Directory: 8.3/bullseye/fpm
 
-Tags: 8.3.11-zts-bullseye, 8.3-zts-bullseye, 8-zts-bullseye, zts-bullseye
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 12c155ba57dc4ab67e60fa2a702e38a22f210f35
+Tags: 8.3.13-zts-bullseye, 8.3-zts-bullseye, 8-zts-bullseye, zts-bullseye
+Architectures: amd64, arm32v7, arm64v8, i386
+GitCommit: 910674b44ecb630c9831d3bdf4f82aa2adb6bfe5
 Directory: 8.3/bullseye/zts
 
-Tags: 8.3.11-cli-alpine3.20, 8.3-cli-alpine3.20, 8-cli-alpine3.20, cli-alpine3.20, 8.3.11-alpine3.20, 8.3-alpine3.20, 8-alpine3.20, alpine3.20, 8.3.11-cli-alpine, 8.3-cli-alpine, 8-cli-alpine, cli-alpine, 8.3.11-alpine, 8.3-alpine, 8-alpine, alpine
+Tags: 8.3.13-cli-alpine3.20, 8.3-cli-alpine3.20, 8-cli-alpine3.20, cli-alpine3.20, 8.3.13-alpine3.20, 8.3-alpine3.20, 8-alpine3.20, alpine3.20, 8.3.13-cli-alpine, 8.3-cli-alpine, 8-cli-alpine, cli-alpine, 8.3.13-alpine, 8.3-alpine, 8-alpine, alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: 12c155ba57dc4ab67e60fa2a702e38a22f210f35
+GitCommit: 910674b44ecb630c9831d3bdf4f82aa2adb6bfe5
 Directory: 8.3/alpine3.20/cli
 
-Tags: 8.3.11-fpm-alpine3.20, 8.3-fpm-alpine3.20, 8-fpm-alpine3.20, fpm-alpine3.20, 8.3.11-fpm-alpine, 8.3-fpm-alpine, 8-fpm-alpine, fpm-alpine
+Tags: 8.3.13-fpm-alpine3.20, 8.3-fpm-alpine3.20, 8-fpm-alpine3.20, fpm-alpine3.20, 8.3.13-fpm-alpine, 8.3-fpm-alpine, 8-fpm-alpine, fpm-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: 12c155ba57dc4ab67e60fa2a702e38a22f210f35
+GitCommit: 910674b44ecb630c9831d3bdf4f82aa2adb6bfe5
 Directory: 8.3/alpine3.20/fpm
 
-Tags: 8.3.11-zts-alpine3.20, 8.3-zts-alpine3.20, 8-zts-alpine3.20, zts-alpine3.20, 8.3.11-zts-alpine, 8.3-zts-alpine, 8-zts-alpine, zts-alpine
+Tags: 8.3.13-zts-alpine3.20, 8.3-zts-alpine3.20, 8-zts-alpine3.20, zts-alpine3.20, 8.3.13-zts-alpine, 8.3-zts-alpine, 8-zts-alpine, zts-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: 12c155ba57dc4ab67e60fa2a702e38a22f210f35
+GitCommit: 910674b44ecb630c9831d3bdf4f82aa2adb6bfe5
 Directory: 8.3/alpine3.20/zts
 
-Tags: 8.3.11-cli-alpine3.19, 8.3-cli-alpine3.19, 8-cli-alpine3.19, cli-alpine3.19, 8.3.11-alpine3.19, 8.3-alpine3.19, 8-alpine3.19, alpine3.19
+Tags: 8.3.13-cli-alpine3.19, 8.3-cli-alpine3.19, 8-cli-alpine3.19, cli-alpine3.19, 8.3.13-alpine3.19, 8.3-alpine3.19, 8-alpine3.19, alpine3.19
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 12c155ba57dc4ab67e60fa2a702e38a22f210f35
+GitCommit: 910674b44ecb630c9831d3bdf4f82aa2adb6bfe5
 Directory: 8.3/alpine3.19/cli
 
-Tags: 8.3.11-fpm-alpine3.19, 8.3-fpm-alpine3.19, 8-fpm-alpine3.19, fpm-alpine3.19
+Tags: 8.3.13-fpm-alpine3.19, 8.3-fpm-alpine3.19, 8-fpm-alpine3.19, fpm-alpine3.19
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 12c155ba57dc4ab67e60fa2a702e38a22f210f35
+GitCommit: 910674b44ecb630c9831d3bdf4f82aa2adb6bfe5
 Directory: 8.3/alpine3.19/fpm
 
-Tags: 8.3.11-zts-alpine3.19, 8.3-zts-alpine3.19, 8-zts-alpine3.19, zts-alpine3.19
+Tags: 8.3.13-zts-alpine3.19, 8.3-zts-alpine3.19, 8-zts-alpine3.19, zts-alpine3.19
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 12c155ba57dc4ab67e60fa2a702e38a22f210f35
+GitCommit: 910674b44ecb630c9831d3bdf4f82aa2adb6bfe5
 Directory: 8.3/alpine3.19/zts
 
-Tags: 8.2.24RC1-cli-bookworm, 8.2-rc-cli-bookworm, 8.2.24RC1-bookworm, 8.2-rc-bookworm, 8.2.24RC1-cli, 8.2-rc-cli, 8.2.24RC1, 8.2-rc
+Tags: 8.2.25-cli-bookworm, 8.2-cli-bookworm, 8.2.25-bookworm, 8.2-bookworm, 8.2.25-cli, 8.2-cli, 8.2.25, 8.2
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 97f95ebb364610948f8db0815516f7ac302499f6
-Directory: 8.2-rc/bookworm/cli
-
-Tags: 8.2.24RC1-apache-bookworm, 8.2-rc-apache-bookworm, 8.2.24RC1-apache, 8.2-rc-apache
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 97f95ebb364610948f8db0815516f7ac302499f6
-Directory: 8.2-rc/bookworm/apache
-
-Tags: 8.2.24RC1-fpm-bookworm, 8.2-rc-fpm-bookworm, 8.2.24RC1-fpm, 8.2-rc-fpm
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 97f95ebb364610948f8db0815516f7ac302499f6
-Directory: 8.2-rc/bookworm/fpm
-
-Tags: 8.2.24RC1-zts-bookworm, 8.2-rc-zts-bookworm, 8.2.24RC1-zts, 8.2-rc-zts
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 97f95ebb364610948f8db0815516f7ac302499f6
-Directory: 8.2-rc/bookworm/zts
-
-Tags: 8.2.24RC1-cli-bullseye, 8.2-rc-cli-bullseye, 8.2.24RC1-bullseye, 8.2-rc-bullseye
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 97f95ebb364610948f8db0815516f7ac302499f6
-Directory: 8.2-rc/bullseye/cli
-
-Tags: 8.2.24RC1-apache-bullseye, 8.2-rc-apache-bullseye
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 97f95ebb364610948f8db0815516f7ac302499f6
-Directory: 8.2-rc/bullseye/apache
-
-Tags: 8.2.24RC1-fpm-bullseye, 8.2-rc-fpm-bullseye
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 97f95ebb364610948f8db0815516f7ac302499f6
-Directory: 8.2-rc/bullseye/fpm
-
-Tags: 8.2.24RC1-zts-bullseye, 8.2-rc-zts-bullseye
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 97f95ebb364610948f8db0815516f7ac302499f6
-Directory: 8.2-rc/bullseye/zts
-
-Tags: 8.2.24RC1-cli-alpine3.20, 8.2-rc-cli-alpine3.20, 8.2.24RC1-alpine3.20, 8.2-rc-alpine3.20, 8.2.24RC1-cli-alpine, 8.2-rc-cli-alpine, 8.2.24RC1-alpine, 8.2-rc-alpine
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: 97f95ebb364610948f8db0815516f7ac302499f6
-Directory: 8.2-rc/alpine3.20/cli
-
-Tags: 8.2.24RC1-fpm-alpine3.20, 8.2-rc-fpm-alpine3.20, 8.2.24RC1-fpm-alpine, 8.2-rc-fpm-alpine
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: 97f95ebb364610948f8db0815516f7ac302499f6
-Directory: 8.2-rc/alpine3.20/fpm
-
-Tags: 8.2.24RC1-zts-alpine3.20, 8.2-rc-zts-alpine3.20, 8.2.24RC1-zts-alpine, 8.2-rc-zts-alpine
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: 97f95ebb364610948f8db0815516f7ac302499f6
-Directory: 8.2-rc/alpine3.20/zts
-
-Tags: 8.2.24RC1-cli-alpine3.19, 8.2-rc-cli-alpine3.19, 8.2.24RC1-alpine3.19, 8.2-rc-alpine3.19
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 97f95ebb364610948f8db0815516f7ac302499f6
-Directory: 8.2-rc/alpine3.19/cli
-
-Tags: 8.2.24RC1-fpm-alpine3.19, 8.2-rc-fpm-alpine3.19
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 97f95ebb364610948f8db0815516f7ac302499f6
-Directory: 8.2-rc/alpine3.19/fpm
-
-Tags: 8.2.24RC1-zts-alpine3.19, 8.2-rc-zts-alpine3.19
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 97f95ebb364610948f8db0815516f7ac302499f6
-Directory: 8.2-rc/alpine3.19/zts
-
-Tags: 8.2.23-cli-bookworm, 8.2-cli-bookworm, 8.2.23-bookworm, 8.2-bookworm, 8.2.23-cli, 8.2-cli, 8.2.23, 8.2
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 95de622eb3e96f5991e3c345553e4ca0a1e56ed9
+GitCommit: fb757d2c29dbbb30b09981e47a1761cc859842fc
 Directory: 8.2/bookworm/cli
 
-Tags: 8.2.23-apache-bookworm, 8.2-apache-bookworm, 8.2.23-apache, 8.2-apache
+Tags: 8.2.25-apache-bookworm, 8.2-apache-bookworm, 8.2.25-apache, 8.2-apache
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 95de622eb3e96f5991e3c345553e4ca0a1e56ed9
+GitCommit: fb757d2c29dbbb30b09981e47a1761cc859842fc
 Directory: 8.2/bookworm/apache
 
-Tags: 8.2.23-fpm-bookworm, 8.2-fpm-bookworm, 8.2.23-fpm, 8.2-fpm
+Tags: 8.2.25-fpm-bookworm, 8.2-fpm-bookworm, 8.2.25-fpm, 8.2-fpm
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 95de622eb3e96f5991e3c345553e4ca0a1e56ed9
+GitCommit: fb757d2c29dbbb30b09981e47a1761cc859842fc
 Directory: 8.2/bookworm/fpm
 
-Tags: 8.2.23-zts-bookworm, 8.2-zts-bookworm, 8.2.23-zts, 8.2-zts
+Tags: 8.2.25-zts-bookworm, 8.2-zts-bookworm, 8.2.25-zts, 8.2-zts
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 95de622eb3e96f5991e3c345553e4ca0a1e56ed9
+GitCommit: fb757d2c29dbbb30b09981e47a1761cc859842fc
 Directory: 8.2/bookworm/zts
 
-Tags: 8.2.23-cli-bullseye, 8.2-cli-bullseye, 8.2.23-bullseye, 8.2-bullseye
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 95de622eb3e96f5991e3c345553e4ca0a1e56ed9
+Tags: 8.2.25-cli-bullseye, 8.2-cli-bullseye, 8.2.25-bullseye, 8.2-bullseye
+Architectures: amd64, arm32v7, arm64v8, i386
+GitCommit: fb757d2c29dbbb30b09981e47a1761cc859842fc
 Directory: 8.2/bullseye/cli
 
-Tags: 8.2.23-apache-bullseye, 8.2-apache-bullseye
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 95de622eb3e96f5991e3c345553e4ca0a1e56ed9
+Tags: 8.2.25-apache-bullseye, 8.2-apache-bullseye
+Architectures: amd64, arm32v7, arm64v8, i386
+GitCommit: fb757d2c29dbbb30b09981e47a1761cc859842fc
 Directory: 8.2/bullseye/apache
 
-Tags: 8.2.23-fpm-bullseye, 8.2-fpm-bullseye
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 95de622eb3e96f5991e3c345553e4ca0a1e56ed9
+Tags: 8.2.25-fpm-bullseye, 8.2-fpm-bullseye
+Architectures: amd64, arm32v7, arm64v8, i386
+GitCommit: fb757d2c29dbbb30b09981e47a1761cc859842fc
 Directory: 8.2/bullseye/fpm
 
-Tags: 8.2.23-zts-bullseye, 8.2-zts-bullseye
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 95de622eb3e96f5991e3c345553e4ca0a1e56ed9
+Tags: 8.2.25-zts-bullseye, 8.2-zts-bullseye
+Architectures: amd64, arm32v7, arm64v8, i386
+GitCommit: fb757d2c29dbbb30b09981e47a1761cc859842fc
 Directory: 8.2/bullseye/zts
 
-Tags: 8.2.23-cli-alpine3.20, 8.2-cli-alpine3.20, 8.2.23-alpine3.20, 8.2-alpine3.20, 8.2.23-cli-alpine, 8.2-cli-alpine, 8.2.23-alpine, 8.2-alpine
+Tags: 8.2.25-cli-alpine3.20, 8.2-cli-alpine3.20, 8.2.25-alpine3.20, 8.2-alpine3.20, 8.2.25-cli-alpine, 8.2-cli-alpine, 8.2.25-alpine, 8.2-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: 95de622eb3e96f5991e3c345553e4ca0a1e56ed9
+GitCommit: fb757d2c29dbbb30b09981e47a1761cc859842fc
 Directory: 8.2/alpine3.20/cli
 
-Tags: 8.2.23-fpm-alpine3.20, 8.2-fpm-alpine3.20, 8.2.23-fpm-alpine, 8.2-fpm-alpine
+Tags: 8.2.25-fpm-alpine3.20, 8.2-fpm-alpine3.20, 8.2.25-fpm-alpine, 8.2-fpm-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: 95de622eb3e96f5991e3c345553e4ca0a1e56ed9
+GitCommit: fb757d2c29dbbb30b09981e47a1761cc859842fc
 Directory: 8.2/alpine3.20/fpm
 
-Tags: 8.2.23-zts-alpine3.20, 8.2-zts-alpine3.20, 8.2.23-zts-alpine, 8.2-zts-alpine
+Tags: 8.2.25-zts-alpine3.20, 8.2-zts-alpine3.20, 8.2.25-zts-alpine, 8.2-zts-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: 95de622eb3e96f5991e3c345553e4ca0a1e56ed9
+GitCommit: fb757d2c29dbbb30b09981e47a1761cc859842fc
 Directory: 8.2/alpine3.20/zts
 
-Tags: 8.2.23-cli-alpine3.19, 8.2-cli-alpine3.19, 8.2.23-alpine3.19, 8.2-alpine3.19
+Tags: 8.2.25-cli-alpine3.19, 8.2-cli-alpine3.19, 8.2.25-alpine3.19, 8.2-alpine3.19
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 95de622eb3e96f5991e3c345553e4ca0a1e56ed9
+GitCommit: fb757d2c29dbbb30b09981e47a1761cc859842fc
 Directory: 8.2/alpine3.19/cli
 
-Tags: 8.2.23-fpm-alpine3.19, 8.2-fpm-alpine3.19
+Tags: 8.2.25-fpm-alpine3.19, 8.2-fpm-alpine3.19
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 95de622eb3e96f5991e3c345553e4ca0a1e56ed9
+GitCommit: fb757d2c29dbbb30b09981e47a1761cc859842fc
 Directory: 8.2/alpine3.19/fpm
 
-Tags: 8.2.23-zts-alpine3.19, 8.2-zts-alpine3.19
+Tags: 8.2.25-zts-alpine3.19, 8.2-zts-alpine3.19
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 95de622eb3e96f5991e3c345553e4ca0a1e56ed9
+GitCommit: fb757d2c29dbbb30b09981e47a1761cc859842fc
 Directory: 8.2/alpine3.19/zts
 
-Tags: 8.1.29-cli-bookworm, 8.1-cli-bookworm, 8.1.29-bookworm, 8.1-bookworm, 8.1.29-cli, 8.1-cli, 8.1.29, 8.1
+Tags: 8.1.30-cli-bookworm, 8.1-cli-bookworm, 8.1.30-bookworm, 8.1-bookworm, 8.1.30-cli, 8.1-cli, 8.1.30, 8.1
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 52062af5056d0cd91fa5ded64fad8f9c82847b49
+GitCommit: 9a1e55bb514473362d21e8b4de02f1f43c040582
 Directory: 8.1/bookworm/cli
 
-Tags: 8.1.29-apache-bookworm, 8.1-apache-bookworm, 8.1.29-apache, 8.1-apache
+Tags: 8.1.30-apache-bookworm, 8.1-apache-bookworm, 8.1.30-apache, 8.1-apache
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 52062af5056d0cd91fa5ded64fad8f9c82847b49
+GitCommit: 9a1e55bb514473362d21e8b4de02f1f43c040582
 Directory: 8.1/bookworm/apache
 
-Tags: 8.1.29-fpm-bookworm, 8.1-fpm-bookworm, 8.1.29-fpm, 8.1-fpm
+Tags: 8.1.30-fpm-bookworm, 8.1-fpm-bookworm, 8.1.30-fpm, 8.1-fpm
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 52062af5056d0cd91fa5ded64fad8f9c82847b49
+GitCommit: 9a1e55bb514473362d21e8b4de02f1f43c040582
 Directory: 8.1/bookworm/fpm
 
-Tags: 8.1.29-zts-bookworm, 8.1-zts-bookworm, 8.1.29-zts, 8.1-zts
+Tags: 8.1.30-zts-bookworm, 8.1-zts-bookworm, 8.1.30-zts, 8.1-zts
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 52062af5056d0cd91fa5ded64fad8f9c82847b49
+GitCommit: 9a1e55bb514473362d21e8b4de02f1f43c040582
 Directory: 8.1/bookworm/zts
 
-Tags: 8.1.29-cli-bullseye, 8.1-cli-bullseye, 8.1.29-bullseye, 8.1-bullseye
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 52062af5056d0cd91fa5ded64fad8f9c82847b49
+Tags: 8.1.30-cli-bullseye, 8.1-cli-bullseye, 8.1.30-bullseye, 8.1-bullseye
+Architectures: amd64, arm32v7, arm64v8, i386
+GitCommit: 9a1e55bb514473362d21e8b4de02f1f43c040582
 Directory: 8.1/bullseye/cli
 
-Tags: 8.1.29-apache-bullseye, 8.1-apache-bullseye
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 52062af5056d0cd91fa5ded64fad8f9c82847b49
+Tags: 8.1.30-apache-bullseye, 8.1-apache-bullseye
+Architectures: amd64, arm32v7, arm64v8, i386
+GitCommit: 9a1e55bb514473362d21e8b4de02f1f43c040582
 Directory: 8.1/bullseye/apache
 
-Tags: 8.1.29-fpm-bullseye, 8.1-fpm-bullseye
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 52062af5056d0cd91fa5ded64fad8f9c82847b49
+Tags: 8.1.30-fpm-bullseye, 8.1-fpm-bullseye
+Architectures: amd64, arm32v7, arm64v8, i386
+GitCommit: 9a1e55bb514473362d21e8b4de02f1f43c040582
 Directory: 8.1/bullseye/fpm
 
-Tags: 8.1.29-zts-bullseye, 8.1-zts-bullseye
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 52062af5056d0cd91fa5ded64fad8f9c82847b49
+Tags: 8.1.30-zts-bullseye, 8.1-zts-bullseye
+Architectures: amd64, arm32v7, arm64v8, i386
+GitCommit: 9a1e55bb514473362d21e8b4de02f1f43c040582
 Directory: 8.1/bullseye/zts
 
-Tags: 8.1.29-cli-alpine3.20, 8.1-cli-alpine3.20, 8.1.29-alpine3.20, 8.1-alpine3.20, 8.1.29-cli-alpine, 8.1-cli-alpine, 8.1.29-alpine, 8.1-alpine
+Tags: 8.1.30-cli-alpine3.20, 8.1-cli-alpine3.20, 8.1.30-alpine3.20, 8.1-alpine3.20, 8.1.30-cli-alpine, 8.1-cli-alpine, 8.1.30-alpine, 8.1-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: 52062af5056d0cd91fa5ded64fad8f9c82847b49
+GitCommit: 9a1e55bb514473362d21e8b4de02f1f43c040582
 Directory: 8.1/alpine3.20/cli
 
-Tags: 8.1.29-fpm-alpine3.20, 8.1-fpm-alpine3.20, 8.1.29-fpm-alpine, 8.1-fpm-alpine
+Tags: 8.1.30-fpm-alpine3.20, 8.1-fpm-alpine3.20, 8.1.30-fpm-alpine, 8.1-fpm-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: 52062af5056d0cd91fa5ded64fad8f9c82847b49
+GitCommit: 9a1e55bb514473362d21e8b4de02f1f43c040582
 Directory: 8.1/alpine3.20/fpm
 
-Tags: 8.1.29-zts-alpine3.20, 8.1-zts-alpine3.20, 8.1.29-zts-alpine, 8.1-zts-alpine
+Tags: 8.1.30-zts-alpine3.20, 8.1-zts-alpine3.20, 8.1.30-zts-alpine, 8.1-zts-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: 52062af5056d0cd91fa5ded64fad8f9c82847b49
+GitCommit: 9a1e55bb514473362d21e8b4de02f1f43c040582
 Directory: 8.1/alpine3.20/zts
 
-Tags: 8.1.29-cli-alpine3.19, 8.1-cli-alpine3.19, 8.1.29-alpine3.19, 8.1-alpine3.19
+Tags: 8.1.30-cli-alpine3.19, 8.1-cli-alpine3.19, 8.1.30-alpine3.19, 8.1-alpine3.19
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 52062af5056d0cd91fa5ded64fad8f9c82847b49
+GitCommit: 9a1e55bb514473362d21e8b4de02f1f43c040582
 Directory: 8.1/alpine3.19/cli
 
-Tags: 8.1.29-fpm-alpine3.19, 8.1-fpm-alpine3.19
+Tags: 8.1.30-fpm-alpine3.19, 8.1-fpm-alpine3.19
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 52062af5056d0cd91fa5ded64fad8f9c82847b49
+GitCommit: 9a1e55bb514473362d21e8b4de02f1f43c040582
 Directory: 8.1/alpine3.19/fpm
 
-Tags: 8.1.29-zts-alpine3.19, 8.1-zts-alpine3.19
+Tags: 8.1.30-zts-alpine3.19, 8.1-zts-alpine3.19
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 52062af5056d0cd91fa5ded64fad8f9c82847b49
+GitCommit: 9a1e55bb514473362d21e8b4de02f1f43c040582
 Directory: 8.1/alpine3.19/zts
