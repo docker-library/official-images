@@ -3,6 +3,11 @@ GitRepo: https://github.com/elastic/dockerfiles.git
 Directory: elasticsearch
 Builder: buildkit
 
+Tags: 8.16.0
+Architectures: amd64, arm64v8
+GitFetch: refs/heads/8.16
+GitCommit: fee99c955058383955d074689a499ffa0ebcf245
+
 Tags: 8.15.3
 Architectures: amd64, arm64v8
 GitFetch: refs/heads/8.15
