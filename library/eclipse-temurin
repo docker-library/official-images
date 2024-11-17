@@ -1,9 +1,13 @@
 # Eclipse Temurin OpenJDK images provided by the Eclipse Foundation.
+# Get the latest changes
+git fetch --all
+# Checkout the main.c branch
+git checkout main.c
+./dockerhub_doc_config_update.sh
+:
 
-Maintainers: George Adams <george.adams@microsoft.com> (@gdams),
-             Stewart Addison <sxa@redhat.com> (@sxa)
 GitRepo: https://github.com/adoptium/containers.git
-GitFetch: refs/heads/main
+GitFetch: refs/heads/main.c
 Builder: buildkit
 
 #------------------------------v8 images---------------------------------
