@@ -1,10 +1,20 @@
-# this file is generated via https://github.com/MariaDB/mariadb-docker/blob/58570c6f1988c033d052ea1442675f637d881706/generate-stackbrew-library.sh
+# this file is generated via https://github.com/MariaDB/mariadb-docker/blob/967a7459f834bf7119d596b9192c65f3f50ec98c/generate-stackbrew-library.sh
 
 Maintainers: Daniel Black <daniel@mariadb.org> (@grooverdan),
              Daniel Bartholomew <dbart@mariadb.com> (@dbart),
              Faustin Lammler <faustin@mariadb.org> (@fauust)
 GitRepo: https://github.com/MariaDB/mariadb-docker.git
 Builder: buildkit
+
+Tags: 11.7.1-ubi9-rc, main-ubi9-rc, 11.7.1-ubi-rc, main-ubi-rc
+Architectures: amd64, arm64v8, s390x, ppc64le
+GitCommit: 179af10557a5c3025e6d9346a024c2a1ba190a3b
+Directory: main-ubi
+
+Tags: 11.7.1-noble-rc, main-noble-rc, 11.7.1-rc, main-rc
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: 179af10557a5c3025e6d9346a024c2a1ba190a3b
+Directory: main
 
 Tags: 11.6.2-ubi9, 11.6-ubi9, 11-ubi9, 11.6.2-ubi, 11.6-ubi, 11-ubi
 Architectures: amd64, arm64v8, s390x, ppc64le
