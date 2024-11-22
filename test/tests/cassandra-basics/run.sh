@@ -47,7 +47,8 @@ cqlsh() {
 }
 
 # Make sure our container is listening
-. "$dir/../../retry.sh" 'cqlsh < /dev/null'
+. "$dir/../../retry.sh" --tries 20 'cqlsh < /dev/null'
+# (cassandra takes a long time to start up, especially on GHA)
 
 # https://wiki.apache.org/cassandra/GettingStarted#Step_4:_Using_cqlsh
 

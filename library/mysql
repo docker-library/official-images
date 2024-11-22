@@ -1,23 +1,29 @@
-# this file is generated via https://github.com/docker-library/mysql/blob/9f0f4a14ab251e22545f8ccaa2fff0c3e5206d09/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/mysql/blob/6faf41e2e9d9d0a2b97d83449830ca75cbee17f9/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/mysql.git
 
-Tags: 8.4.0, 8.4, 8, lts, latest, 8.4.0-oraclelinux9, 8.4-oraclelinux9, 8-oraclelinux9, lts-oraclelinux9, oraclelinux9, 8.4.0-oracle, 8.4-oracle, 8-oracle, lts-oracle, oracle
+Tags: 9.1.0, 9.1, 9, innovation, latest, 9.1.0-oraclelinux9, 9.1-oraclelinux9, 9-oraclelinux9, innovation-oraclelinux9, oraclelinux9, 9.1.0-oracle, 9.1-oracle, 9-oracle, innovation-oracle, oracle
 Architectures: amd64, arm64v8
-GitCommit: a15b34a032f48089ee7b02d307d8f89a96b3bb76
+GitCommit: b7333451d7be9f066e43f9612e6bbe3751e548f1
+Directory: innovation
+File: Dockerfile.oracle
+
+Tags: 8.4.3, 8.4, 8, lts, 8.4.3-oraclelinux9, 8.4-oraclelinux9, 8-oraclelinux9, lts-oraclelinux9, 8.4.3-oracle, 8.4-oracle, 8-oracle, lts-oracle
+Architectures: amd64, arm64v8
+GitCommit: 8a0100a365707fa3e59d5b23defc64b9314c4bc7
 Directory: 8.4
 File: Dockerfile.oracle
 
-Tags: 8.0.37, 8.0, 8.0.37-oraclelinux9, 8.0-oraclelinux9, 8.0.37-oracle, 8.0-oracle
+Tags: 8.0.40, 8.0, 8.0.40-oraclelinux9, 8.0-oraclelinux9, 8.0.40-oracle, 8.0-oracle
 Architectures: amd64, arm64v8
-GitCommit: a15b34a032f48089ee7b02d307d8f89a96b3bb76
+GitCommit: 090eb25ac69bca920fc5320484bc35aac92a8143
 Directory: 8.0
 File: Dockerfile.oracle
 
-Tags: 8.0.37-bookworm, 8.0-bookworm, 8.0.37-debian, 8.0-debian
+Tags: 8.0.40-bookworm, 8.0-bookworm, 8.0.40-debian, 8.0-debian
 Architectures: amd64
-GitCommit: 5fe2b708e9734809d7f6554c131f0371d517bb22
+GitCommit: 090eb25ac69bca920fc5320484bc35aac92a8143
 Directory: 8.0
 File: Dockerfile.debian

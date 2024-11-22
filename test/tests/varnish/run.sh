@@ -32,6 +32,7 @@ sidecar() {
 		"$@" > /dev/null
 }
 
+set -x
 sidecar varnishlog -d
 sidecar varnishncsa -d
 sidecar varnishstat -1
