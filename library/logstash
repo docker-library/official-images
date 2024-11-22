@@ -3,12 +3,17 @@ GitRepo: https://github.com/elastic/dockerfiles.git
 Directory: logstash
 Builder: buildkit
 
-Tags: 8.13.0
+Tags: 8.16.1
 Architectures: amd64, arm64v8
-GitFetch: refs/heads/8.13
-GitCommit: 4269a02cf8a56844db30e5e74b23087840ee6fcb
+GitFetch: refs/heads/8.16
+GitCommit: 905b04aed7c279576c093de38e3dfa9d11c45d04
 
-Tags: 7.17.21
+Tags: 8.15.4
+Architectures: amd64, arm64v8
+GitFetch: refs/heads/8.15
+GitCommit: 2ead1ff2522226005f77bb65ebb2c7a09e18700a
+
+Tags: 7.17.25
 Architectures: amd64, arm64v8
 GitFetch: refs/heads/7.17
-GitCommit: 948af89c718b515fa24fa06f6a6890ed32e3b120
+GitCommit: 9a2cb64607abe3574f8f1d0fa8b9680798f0e6d9
