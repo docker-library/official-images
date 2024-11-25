@@ -4,6 +4,40 @@ Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/mongo.git
 
+Tags: 8.0.4-rc0-noble, 8.0-rc-noble
+SharedTags: 8.0.4-rc0, 8.0-rc
+Architectures: amd64, arm64v8
+GitCommit: 25072a0ca59d0cc65dbf948b53b6c438de53d646
+Directory: 8.0-rc
+
+Tags: 8.0.4-rc0-windowsservercore-ltsc2022, 8.0-rc-windowsservercore-ltsc2022
+SharedTags: 8.0.4-rc0-windowsservercore, 8.0-rc-windowsservercore, 8.0.4-rc0, 8.0-rc
+Architectures: windows-amd64
+GitCommit: 25072a0ca59d0cc65dbf948b53b6c438de53d646
+Directory: 8.0-rc/windows/windowsservercore-ltsc2022
+Constraints: windowsservercore-ltsc2022
+
+Tags: 8.0.4-rc0-windowsservercore-1809, 8.0-rc-windowsservercore-1809
+SharedTags: 8.0.4-rc0-windowsservercore, 8.0-rc-windowsservercore, 8.0.4-rc0, 8.0-rc
+Architectures: windows-amd64
+GitCommit: 25072a0ca59d0cc65dbf948b53b6c438de53d646
+Directory: 8.0-rc/windows/windowsservercore-1809
+Constraints: windowsservercore-1809
+
+Tags: 8.0.4-rc0-nanoserver-ltsc2022, 8.0-rc-nanoserver-ltsc2022
+SharedTags: 8.0.4-rc0-nanoserver, 8.0-rc-nanoserver
+Architectures: windows-amd64
+GitCommit: 25072a0ca59d0cc65dbf948b53b6c438de53d646
+Directory: 8.0-rc/windows/nanoserver-ltsc2022
+Constraints: nanoserver-ltsc2022, windowsservercore-ltsc2022
+
+Tags: 8.0.4-rc0-nanoserver-1809, 8.0-rc-nanoserver-1809
+SharedTags: 8.0.4-rc0-nanoserver, 8.0-rc-nanoserver
+Architectures: windows-amd64
+GitCommit: 25072a0ca59d0cc65dbf948b53b6c438de53d646
+Directory: 8.0-rc/windows/nanoserver-1809
+Constraints: nanoserver-1809, windowsservercore-1809
+
 Tags: 8.0.3-noble, 8.0-noble, 8-noble, noble
 SharedTags: 8.0.3, 8.0, 8, latest
 Architectures: amd64, arm64v8
