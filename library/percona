@@ -7,39 +7,22 @@ GitRepo: https://github.com/percona/percona-docker.git
 GitFetch: refs/heads/main
 Architectures: amd64
 
-# Each of these has been failing for some period of time with no fix/mitigation forthcoming.  We're happy to see them re-enabled if they are fixed/updated.
-# https://github.com/docker-library/official-images/pull/17310#issuecomment-2276258871
-#Tags: 8.0.36-28-centos, 8.0-centos, 8-centos, 8.0.36-28, 8.0, 8, ps-8.0.36-28, ps-8.0, ps-8
-#GitCommit: 02252c71b5fcf2d2235f7ec0d81940d4f2c45b64
-#Directory: percona-server-8.0
-#File: Dockerfile
-#
-#Tags: 5.7.44-centos, 5.7-centos, 5-centos, centos, 5.7.44, 5.7, 5, ps-5.7.44, ps-5.7, ps-5
-#GitCommit: b89efa5f100edacc0ef660cef37975acfaf67326
-#Directory: percona-server-5.7
-#File: Dockerfile-dockerhub
-#
-#Tags: 5.6.51-2-centos, 5.6-centos, 5.6.51-2, 5.6, ps-5.6.51-2, ps-5.6
-#GitCommit: 4510d49bcce5cfce58a42c198d55399b144add83
-#Directory: percona-server-5.6
-#File: Dockerfile-dockerhub
-#
-#Tags: psmdb-6.0.6, psmdb-6.0
-#GitCommit: 80ab68b2d84c7c17c8cbc07edb35e35399fd0a54
-#Directory: percona-server-mongodb-6.0
-#File: Dockerfile
-#
-#Tags: psmdb-5.0.18, psmdb-5.0
-#GitCommit: 80ab68b2d84c7c17c8cbc07edb35e35399fd0a54
-#Directory: percona-server-mongodb-5.0
-#File: Dockerfile
-#
-#Tags: psmdb-4.4.22, psmdb-4.4
-#GitCommit: 80ab68b2d84c7c17c8cbc07edb35e35399fd0a54
-#Directory: percona-server-mongodb-4.4
-#File: Dockerfile
-#
-#Tags: psmdb-4.2.24, psmdb-4.2
-#GitCommit: 80ab68b2d84c7c17c8cbc07edb35e35399fd0a54
-#Directory: percona-server-mongodb-4.2
-#File: Dockerfile
+Tags: 8.0.39-30-centos, 8.0-centos, 8-centos, 8.0.39-30, 8.0, 8, ps-8.0.39-30, ps-8.0, ps-8
+GitCommit: 5640bc536e5ce7d1559fc4f28868fda941bbaf1d
+Directory: percona-server-8.0
+File: Dockerfile-dockerhub
+
+Tags: psmdb-7.0.15, psmdb-7.0
+GitCommit: 5640bc536e5ce7d1559fc4f28868fda941bbaf1d
+Directory: percona-server-mongodb-7.0
+File: Dockerfile-dockerhub
+
+Tags: psmdb-6.0.19, psmdb-6.0
+GitCommit: 5640bc536e5ce7d1559fc4f28868fda941bbaf1d
+Directory: percona-server-mongodb-6.0
+File: Dockerfile-dockerhub
+
+Tags: psmdb-5.0.29, psmdb-5.0
+GitCommit: 5640bc536e5ce7d1559fc4f28868fda941bbaf1d
+Directory: percona-server-mongodb-5.0
+File: Dockerfile-dockerhub
