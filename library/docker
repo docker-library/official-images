@@ -5,64 +5,33 @@ Maintainers: Tianon Gravi <tianon@dockerproject.org> (@tianon),
 GitRepo: https://github.com/docker-library/docker.git
 Builder: buildkit
 
-Tags: 27.4.0-rc.4-cli, 27-rc-cli, rc-cli, 27.4.0-rc.4-cli-alpine3.20
+Tags: 27.4.0-cli, 27.4-cli, 27-cli, cli, 27.4.0-cli-alpine3.21
 Architectures: amd64, arm32v6, arm32v7, arm64v8
-GitCommit: 98c68d85db7c3aaf52fa9d640c40e462b19b9172
-Directory: 27-rc/cli
-
-Tags: 27.4.0-rc.4-dind, 27-rc-dind, rc-dind, 27.4.0-rc.4-dind-alpine3.20, 27.4.0-rc.4, 27-rc, rc, 27.4.0-rc.4-alpine3.20
-Architectures: amd64, arm32v6, arm32v7, arm64v8
-GitCommit: 98c68d85db7c3aaf52fa9d640c40e462b19b9172
-Directory: 27-rc/dind
-
-Tags: 27.4.0-rc.4-dind-rootless, 27-rc-dind-rootless, rc-dind-rootless
-Architectures: amd64, arm64v8
-GitCommit: 98c68d85db7c3aaf52fa9d640c40e462b19b9172
-Directory: 27-rc/dind-rootless
-
-Tags: 27.4.0-rc.4-windowsservercore-ltsc2022, 27-rc-windowsservercore-ltsc2022, rc-windowsservercore-ltsc2022
-SharedTags: 27.4.0-rc.4-windowsservercore, 27-rc-windowsservercore, rc-windowsservercore
-Architectures: windows-amd64
-GitCommit: 98c68d85db7c3aaf52fa9d640c40e462b19b9172
-Directory: 27-rc/windows/windowsservercore-ltsc2022
-Constraints: windowsservercore-ltsc2022
-Builder: classic
-
-Tags: 27.4.0-rc.4-windowsservercore-1809, 27-rc-windowsservercore-1809, rc-windowsservercore-1809
-SharedTags: 27.4.0-rc.4-windowsservercore, 27-rc-windowsservercore, rc-windowsservercore
-Architectures: windows-amd64
-GitCommit: 98c68d85db7c3aaf52fa9d640c40e462b19b9172
-Directory: 27-rc/windows/windowsservercore-1809
-Constraints: windowsservercore-1809
-Builder: classic
-
-Tags: 27.3.1-cli, 27.3-cli, 27-cli, cli, 27.3.1-cli-alpine3.20
-Architectures: amd64, arm32v6, arm32v7, arm64v8
-GitCommit: f6a3252fdd888f9e8171611f27593b09be239c0c
+GitCommit: 1cf4cea6a7e7b7fb5ab094ccec24c13f7c959fc6
 Directory: 27/cli
 
-Tags: 27.3.1-dind, 27.3-dind, 27-dind, dind, 27.3.1-dind-alpine3.20, 27.3.1, 27.3, 27, latest, 27.3.1-alpine3.20
+Tags: 27.4.0-dind, 27.4-dind, 27-dind, dind, 27.4.0-dind-alpine3.21, 27.4.0, 27.4, 27, latest, 27.4.0-alpine3.21
 Architectures: amd64, arm32v6, arm32v7, arm64v8
-GitCommit: 97331ed1dd7c07dd5aa852e01aa5deff5d2aed09
+GitCommit: 1cf4cea6a7e7b7fb5ab094ccec24c13f7c959fc6
 Directory: 27/dind
 
-Tags: 27.3.1-dind-rootless, 27.3-dind-rootless, 27-dind-rootless, dind-rootless
+Tags: 27.4.0-dind-rootless, 27.4-dind-rootless, 27-dind-rootless, dind-rootless
 Architectures: amd64, arm64v8
-GitCommit: 97331ed1dd7c07dd5aa852e01aa5deff5d2aed09
+GitCommit: 1cf4cea6a7e7b7fb5ab094ccec24c13f7c959fc6
 Directory: 27/dind-rootless
 
-Tags: 27.3.1-windowsservercore-ltsc2022, 27.3-windowsservercore-ltsc2022, 27-windowsservercore-ltsc2022, windowsservercore-ltsc2022
-SharedTags: 27.3.1-windowsservercore, 27.3-windowsservercore, 27-windowsservercore, windowsservercore
+Tags: 27.4.0-windowsservercore-ltsc2022, 27.4-windowsservercore-ltsc2022, 27-windowsservercore-ltsc2022, windowsservercore-ltsc2022
+SharedTags: 27.4.0-windowsservercore, 27.4-windowsservercore, 27-windowsservercore, windowsservercore
 Architectures: windows-amd64
-GitCommit: f6a3252fdd888f9e8171611f27593b09be239c0c
+GitCommit: 1cf4cea6a7e7b7fb5ab094ccec24c13f7c959fc6
 Directory: 27/windows/windowsservercore-ltsc2022
 Constraints: windowsservercore-ltsc2022
 Builder: classic
 
-Tags: 27.3.1-windowsservercore-1809, 27.3-windowsservercore-1809, 27-windowsservercore-1809, windowsservercore-1809
-SharedTags: 27.3.1-windowsservercore, 27.3-windowsservercore, 27-windowsservercore, windowsservercore
+Tags: 27.4.0-windowsservercore-1809, 27.4-windowsservercore-1809, 27-windowsservercore-1809, windowsservercore-1809
+SharedTags: 27.4.0-windowsservercore, 27.4-windowsservercore, 27-windowsservercore, windowsservercore
 Architectures: windows-amd64
-GitCommit: f6a3252fdd888f9e8171611f27593b09be239c0c
+GitCommit: 1cf4cea6a7e7b7fb5ab094ccec24c13f7c959fc6
 Directory: 27/windows/windowsservercore-1809
 Constraints: windowsservercore-1809
 Builder: classic
