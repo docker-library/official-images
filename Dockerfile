@@ -24,7 +24,7 @@ ENV BASHBREW_LIBRARY $DIR/library
 # crane for diff-pr.sh
 # https://gcr.io/go-containerregistry/crane:latest
 # https://explore.ggcr.dev/?image=gcr.io/go-containerregistry/crane:latest
-COPY --from=gcr.io/go-containerregistry/crane@sha256:d0e5cc313e7388a573bb4cfb980a935bb740c5787df7d90f7066b8e8146455ed /ko-app/crane /usr/local/bin/
+COPY --from=gcr.io/go-containerregistry/crane@sha256:fc86bcad43a000c2a1ca926a1e167db26c053cebc3fa5d14285c72773fb8c11d /ko-app/crane /usr/local/bin/
 
 WORKDIR $DIR
 COPY . $DIR
