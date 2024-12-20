@@ -1,218 +1,158 @@
-# this file is generated via https://github.com/docker-library/drupal/blob/feb527c881ab12fd6e42949ddd080a0afeda4714/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/drupal/blob/92792f87f2b0cfd7c37ac953137ad4b37e835605/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/drupal.git
 
-Tags: 11.1.0-rc1-php8.3-apache-bookworm, 11.1-rc-php8.3-apache-bookworm, 11.1.0-rc1-php8.3-apache, 11.1-rc-php8.3-apache, 11.1.0-rc1-php8.3, 11.1-rc-php8.3, 11.1.0-rc1-apache-bookworm, 11.1-rc-apache-bookworm, 11.1.0-rc1-apache, 11.1-rc-apache, 11.1.0-rc1, 11.1-rc
+Tags: 11.1.0-php8.3-apache-bookworm, 11.1-php8.3-apache-bookworm, 11-php8.3-apache-bookworm, php8.3-apache-bookworm, 11.1.0-php8.3-apache, 11.1-php8.3-apache, 11-php8.3-apache, php8.3-apache, 11.1.0-php8.3, 11.1-php8.3, 11-php8.3, php8.3, 11.1.0-apache-bookworm, 11.1-apache-bookworm, 11-apache-bookworm, apache-bookworm, 11.1.0-apache, 11.1-apache, 11-apache, apache, 11.1.0, 11.1, 11, latest
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 561a5f6557e485370c336becc01e9bdb7ef582ac
-Directory: 11.1-rc/php8.3/apache-bookworm
+GitCommit: dfb409af0becc76411b367ff2107209d7a1f3611
+Directory: 11.1/php8.3/apache-bookworm
 
-Tags: 11.1.0-rc1-php8.3-fpm-bookworm, 11.1-rc-php8.3-fpm-bookworm, 11.1.0-rc1-php8.3-fpm, 11.1-rc-php8.3-fpm, 11.1.0-rc1-fpm-bookworm, 11.1-rc-fpm-bookworm, 11.1.0-rc1-fpm, 11.1-rc-fpm
+Tags: 11.1.0-php8.3-fpm-bookworm, 11.1-php8.3-fpm-bookworm, 11-php8.3-fpm-bookworm, php8.3-fpm-bookworm, 11.1.0-php8.3-fpm, 11.1-php8.3-fpm, 11-php8.3-fpm, php8.3-fpm, 11.1.0-fpm-bookworm, 11.1-fpm-bookworm, 11-fpm-bookworm, fpm-bookworm, 11.1.0-fpm, 11.1-fpm, 11-fpm, fpm
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 561a5f6557e485370c336becc01e9bdb7ef582ac
-Directory: 11.1-rc/php8.3/fpm-bookworm
+GitCommit: dfb409af0becc76411b367ff2107209d7a1f3611
+Directory: 11.1/php8.3/fpm-bookworm
 
-Tags: 11.1.0-rc1-php8.3-apache-bullseye, 11.1-rc-php8.3-apache-bullseye, 11.1.0-rc1-apache-bullseye, 11.1-rc-apache-bullseye
+Tags: 11.1.0-php8.3-apache-bullseye, 11.1-php8.3-apache-bullseye, 11-php8.3-apache-bullseye, php8.3-apache-bullseye, 11.1.0-apache-bullseye, 11.1-apache-bullseye, 11-apache-bullseye, apache-bullseye
 Architectures: amd64, arm32v7, arm64v8, i386
-GitCommit: 561a5f6557e485370c336becc01e9bdb7ef582ac
-Directory: 11.1-rc/php8.3/apache-bullseye
+GitCommit: dfb409af0becc76411b367ff2107209d7a1f3611
+Directory: 11.1/php8.3/apache-bullseye
 
-Tags: 11.1.0-rc1-php8.3-fpm-bullseye, 11.1-rc-php8.3-fpm-bullseye, 11.1.0-rc1-fpm-bullseye, 11.1-rc-fpm-bullseye
+Tags: 11.1.0-php8.3-fpm-bullseye, 11.1-php8.3-fpm-bullseye, 11-php8.3-fpm-bullseye, php8.3-fpm-bullseye, 11.1.0-fpm-bullseye, 11.1-fpm-bullseye, 11-fpm-bullseye, fpm-bullseye
 Architectures: amd64, arm32v7, arm64v8, i386
-GitCommit: 561a5f6557e485370c336becc01e9bdb7ef582ac
-Directory: 11.1-rc/php8.3/fpm-bullseye
+GitCommit: dfb409af0becc76411b367ff2107209d7a1f3611
+Directory: 11.1/php8.3/fpm-bullseye
 
-Tags: 11.1.0-rc1-php8.3-fpm-alpine3.21, 11.1-rc-php8.3-fpm-alpine3.21, 11.1.0-rc1-php8.3-fpm-alpine, 11.1-rc-php8.3-fpm-alpine, 11.1.0-rc1-fpm-alpine3.21, 11.1-rc-fpm-alpine3.21, 11.1.0-rc1-fpm-alpine, 11.1-rc-fpm-alpine
+Tags: 11.1.0-php8.3-fpm-alpine3.21, 11.1-php8.3-fpm-alpine3.21, 11-php8.3-fpm-alpine3.21, php8.3-fpm-alpine3.21, 11.1.0-php8.3-fpm-alpine, 11.1-php8.3-fpm-alpine, 11-php8.3-fpm-alpine, php8.3-fpm-alpine, 11.1.0-fpm-alpine3.21, 11.1-fpm-alpine3.21, 11-fpm-alpine3.21, fpm-alpine3.21, 11.1.0-fpm-alpine, 11.1-fpm-alpine, 11-fpm-alpine, fpm-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: 561a5f6557e485370c336becc01e9bdb7ef582ac
-Directory: 11.1-rc/php8.3/fpm-alpine3.21
+GitCommit: dfb409af0becc76411b367ff2107209d7a1f3611
+Directory: 11.1/php8.3/fpm-alpine3.21
 
-Tags: 11.1.0-rc1-php8.3-fpm-alpine3.20, 11.1-rc-php8.3-fpm-alpine3.20, 11.1.0-rc1-fpm-alpine3.20, 11.1-rc-fpm-alpine3.20
+Tags: 11.1.0-php8.3-fpm-alpine3.20, 11.1-php8.3-fpm-alpine3.20, 11-php8.3-fpm-alpine3.20, php8.3-fpm-alpine3.20, 11.1.0-fpm-alpine3.20, 11.1-fpm-alpine3.20, 11-fpm-alpine3.20, fpm-alpine3.20
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: 561a5f6557e485370c336becc01e9bdb7ef582ac
-Directory: 11.1-rc/php8.3/fpm-alpine3.20
+GitCommit: dfb409af0becc76411b367ff2107209d7a1f3611
+Directory: 11.1/php8.3/fpm-alpine3.20
 
-Tags: 11.0.9-php8.3-apache-bookworm, 11.0-php8.3-apache-bookworm, 11-php8.3-apache-bookworm, php8.3-apache-bookworm, 11.0.9-php8.3-apache, 11.0-php8.3-apache, 11-php8.3-apache, php8.3-apache, 11.0.9-php8.3, 11.0-php8.3, 11-php8.3, php8.3, 11.0.9-apache-bookworm, 11.0-apache-bookworm, 11-apache-bookworm, apache-bookworm, 11.0.9-apache, 11.0-apache, 11-apache, apache, 11.0.9, 11.0, 11, latest
+Tags: 11.0.9-php8.3-apache-bookworm, 11.0-php8.3-apache-bookworm, 11.0.9-php8.3-apache, 11.0-php8.3-apache, 11.0.9-php8.3, 11.0-php8.3, 11.0.9-apache-bookworm, 11.0-apache-bookworm, 11.0.9-apache, 11.0-apache, 11.0.9, 11.0
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: 03cc0efe94152e5d07f00a1c77d83f2c99ce2dac
 Directory: 11.0/php8.3/apache-bookworm
 
-Tags: 11.0.9-php8.3-fpm-bookworm, 11.0-php8.3-fpm-bookworm, 11-php8.3-fpm-bookworm, php8.3-fpm-bookworm, 11.0.9-php8.3-fpm, 11.0-php8.3-fpm, 11-php8.3-fpm, php8.3-fpm, 11.0.9-fpm-bookworm, 11.0-fpm-bookworm, 11-fpm-bookworm, fpm-bookworm, 11.0.9-fpm, 11.0-fpm, 11-fpm, fpm
+Tags: 11.0.9-php8.3-fpm-bookworm, 11.0-php8.3-fpm-bookworm, 11.0.9-php8.3-fpm, 11.0-php8.3-fpm, 11.0.9-fpm-bookworm, 11.0-fpm-bookworm, 11.0.9-fpm, 11.0-fpm
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: 03cc0efe94152e5d07f00a1c77d83f2c99ce2dac
 Directory: 11.0/php8.3/fpm-bookworm
 
-Tags: 11.0.9-php8.3-apache-bullseye, 11.0-php8.3-apache-bullseye, 11-php8.3-apache-bullseye, php8.3-apache-bullseye, 11.0.9-apache-bullseye, 11.0-apache-bullseye, 11-apache-bullseye, apache-bullseye
+Tags: 11.0.9-php8.3-apache-bullseye, 11.0-php8.3-apache-bullseye, 11.0.9-apache-bullseye, 11.0-apache-bullseye
 Architectures: amd64, arm32v7, arm64v8, i386
 GitCommit: 03cc0efe94152e5d07f00a1c77d83f2c99ce2dac
 Directory: 11.0/php8.3/apache-bullseye
 
-Tags: 11.0.9-php8.3-fpm-bullseye, 11.0-php8.3-fpm-bullseye, 11-php8.3-fpm-bullseye, php8.3-fpm-bullseye, 11.0.9-fpm-bullseye, 11.0-fpm-bullseye, 11-fpm-bullseye, fpm-bullseye
+Tags: 11.0.9-php8.3-fpm-bullseye, 11.0-php8.3-fpm-bullseye, 11.0.9-fpm-bullseye, 11.0-fpm-bullseye
 Architectures: amd64, arm32v7, arm64v8, i386
 GitCommit: 03cc0efe94152e5d07f00a1c77d83f2c99ce2dac
 Directory: 11.0/php8.3/fpm-bullseye
 
-Tags: 11.0.9-php8.3-fpm-alpine3.21, 11.0-php8.3-fpm-alpine3.21, 11-php8.3-fpm-alpine3.21, php8.3-fpm-alpine3.21, 11.0.9-php8.3-fpm-alpine, 11.0-php8.3-fpm-alpine, 11-php8.3-fpm-alpine, php8.3-fpm-alpine, 11.0.9-fpm-alpine3.21, 11.0-fpm-alpine3.21, 11-fpm-alpine3.21, fpm-alpine3.21, 11.0.9-fpm-alpine, 11.0-fpm-alpine, 11-fpm-alpine, fpm-alpine
+Tags: 11.0.9-php8.3-fpm-alpine3.21, 11.0-php8.3-fpm-alpine3.21, 11.0.9-php8.3-fpm-alpine, 11.0-php8.3-fpm-alpine, 11.0.9-fpm-alpine3.21, 11.0-fpm-alpine3.21, 11.0.9-fpm-alpine, 11.0-fpm-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
 GitCommit: a90d8ccae757671775d2bfdf3668a2c97318ba4c
 Directory: 11.0/php8.3/fpm-alpine3.21
 
-Tags: 11.0.9-php8.3-fpm-alpine3.20, 11.0-php8.3-fpm-alpine3.20, 11-php8.3-fpm-alpine3.20, php8.3-fpm-alpine3.20, 11.0.9-fpm-alpine3.20, 11.0-fpm-alpine3.20, 11-fpm-alpine3.20, fpm-alpine3.20
+Tags: 11.0.9-php8.3-fpm-alpine3.20, 11.0-php8.3-fpm-alpine3.20, 11.0.9-fpm-alpine3.20, 11.0-fpm-alpine3.20
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
 GitCommit: 03cc0efe94152e5d07f00a1c77d83f2c99ce2dac
 Directory: 11.0/php8.3/fpm-alpine3.20
 
-Tags: 10.4.0-rc1-php8.3-apache-bookworm, 10.4-rc-php8.3-apache-bookworm, 10.4.0-rc1-php8.3-apache, 10.4-rc-php8.3-apache, 10.4.0-rc1-php8.3, 10.4-rc-php8.3, 10.4.0-rc1-apache-bookworm, 10.4-rc-apache-bookworm, 10.4.0-rc1-apache, 10.4-rc-apache, 10.4.0-rc1, 10.4-rc
+Tags: 10.4.0-php8.3-apache-bookworm, 10.4-php8.3-apache-bookworm, 10-php8.3-apache-bookworm, 10.4.0-php8.3-apache, 10.4-php8.3-apache, 10-php8.3-apache, 10.4.0-php8.3, 10.4-php8.3, 10-php8.3, 10.4.0-apache-bookworm, 10.4-apache-bookworm, 10-apache-bookworm, 10.4.0-apache, 10.4-apache, 10-apache, 10.4.0, 10.4, 10
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 561a5f6557e485370c336becc01e9bdb7ef582ac
-Directory: 10.4-rc/php8.3/apache-bookworm
+GitCommit: 838c143cc9489388388709cade992d935b20e2bf
+Directory: 10.4/php8.3/apache-bookworm
 
-Tags: 10.4.0-rc1-php8.3-fpm-bookworm, 10.4-rc-php8.3-fpm-bookworm, 10.4.0-rc1-php8.3-fpm, 10.4-rc-php8.3-fpm, 10.4.0-rc1-fpm-bookworm, 10.4-rc-fpm-bookworm, 10.4.0-rc1-fpm, 10.4-rc-fpm
+Tags: 10.4.0-php8.3-fpm-bookworm, 10.4-php8.3-fpm-bookworm, 10-php8.3-fpm-bookworm, 10.4.0-php8.3-fpm, 10.4-php8.3-fpm, 10-php8.3-fpm, 10.4.0-fpm-bookworm, 10.4-fpm-bookworm, 10-fpm-bookworm, 10.4.0-fpm, 10.4-fpm, 10-fpm
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 561a5f6557e485370c336becc01e9bdb7ef582ac
-Directory: 10.4-rc/php8.3/fpm-bookworm
+GitCommit: 838c143cc9489388388709cade992d935b20e2bf
+Directory: 10.4/php8.3/fpm-bookworm
 
-Tags: 10.4.0-rc1-php8.3-apache-bullseye, 10.4-rc-php8.3-apache-bullseye, 10.4.0-rc1-apache-bullseye, 10.4-rc-apache-bullseye
+Tags: 10.4.0-php8.3-apache-bullseye, 10.4-php8.3-apache-bullseye, 10-php8.3-apache-bullseye, 10.4.0-apache-bullseye, 10.4-apache-bullseye, 10-apache-bullseye
 Architectures: amd64, arm32v7, arm64v8, i386
-GitCommit: 561a5f6557e485370c336becc01e9bdb7ef582ac
-Directory: 10.4-rc/php8.3/apache-bullseye
+GitCommit: 838c143cc9489388388709cade992d935b20e2bf
+Directory: 10.4/php8.3/apache-bullseye
 
-Tags: 10.4.0-rc1-php8.3-fpm-bullseye, 10.4-rc-php8.3-fpm-bullseye, 10.4.0-rc1-fpm-bullseye, 10.4-rc-fpm-bullseye
+Tags: 10.4.0-php8.3-fpm-bullseye, 10.4-php8.3-fpm-bullseye, 10-php8.3-fpm-bullseye, 10.4.0-fpm-bullseye, 10.4-fpm-bullseye, 10-fpm-bullseye
 Architectures: amd64, arm32v7, arm64v8, i386
-GitCommit: 561a5f6557e485370c336becc01e9bdb7ef582ac
-Directory: 10.4-rc/php8.3/fpm-bullseye
+GitCommit: 838c143cc9489388388709cade992d935b20e2bf
+Directory: 10.4/php8.3/fpm-bullseye
 
-Tags: 10.4.0-rc1-php8.3-fpm-alpine3.21, 10.4-rc-php8.3-fpm-alpine3.21, 10.4.0-rc1-php8.3-fpm-alpine, 10.4-rc-php8.3-fpm-alpine, 10.4.0-rc1-fpm-alpine3.21, 10.4-rc-fpm-alpine3.21, 10.4.0-rc1-fpm-alpine, 10.4-rc-fpm-alpine
+Tags: 10.4.0-php8.3-fpm-alpine3.21, 10.4-php8.3-fpm-alpine3.21, 10-php8.3-fpm-alpine3.21, 10.4.0-php8.3-fpm-alpine, 10.4-php8.3-fpm-alpine, 10-php8.3-fpm-alpine, 10.4.0-fpm-alpine3.21, 10.4-fpm-alpine3.21, 10-fpm-alpine3.21, 10.4.0-fpm-alpine, 10.4-fpm-alpine, 10-fpm-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: 561a5f6557e485370c336becc01e9bdb7ef582ac
-Directory: 10.4-rc/php8.3/fpm-alpine3.21
+GitCommit: 838c143cc9489388388709cade992d935b20e2bf
+Directory: 10.4/php8.3/fpm-alpine3.21
 
-Tags: 10.4.0-rc1-php8.3-fpm-alpine3.20, 10.4-rc-php8.3-fpm-alpine3.20, 10.4.0-rc1-fpm-alpine3.20, 10.4-rc-fpm-alpine3.20
+Tags: 10.4.0-php8.3-fpm-alpine3.20, 10.4-php8.3-fpm-alpine3.20, 10-php8.3-fpm-alpine3.20, 10.4.0-fpm-alpine3.20, 10.4-fpm-alpine3.20, 10-fpm-alpine3.20
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: 561a5f6557e485370c336becc01e9bdb7ef582ac
-Directory: 10.4-rc/php8.3/fpm-alpine3.20
+GitCommit: 838c143cc9489388388709cade992d935b20e2bf
+Directory: 10.4/php8.3/fpm-alpine3.20
 
-Tags: 10.3.10-php8.3-apache-bookworm, 10.3-php8.3-apache-bookworm, 10-php8.3-apache-bookworm, 10.3.10-php8.3-apache, 10.3-php8.3-apache, 10-php8.3-apache, 10.3.10-php8.3, 10.3-php8.3, 10-php8.3
+Tags: 10.3.10-php8.3-apache-bookworm, 10.3-php8.3-apache-bookworm, 10.3.10-php8.3-apache, 10.3-php8.3-apache, 10.3.10-php8.3, 10.3-php8.3
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: 535f3b38ad110a03bc484475e19c692789d55ef8
 Directory: 10.3/php8.3/apache-bookworm
 
-Tags: 10.3.10-php8.3-fpm-bookworm, 10.3-php8.3-fpm-bookworm, 10-php8.3-fpm-bookworm, 10.3.10-php8.3-fpm, 10.3-php8.3-fpm, 10-php8.3-fpm
+Tags: 10.3.10-php8.3-fpm-bookworm, 10.3-php8.3-fpm-bookworm, 10.3.10-php8.3-fpm, 10.3-php8.3-fpm
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: 535f3b38ad110a03bc484475e19c692789d55ef8
 Directory: 10.3/php8.3/fpm-bookworm
 
-Tags: 10.3.10-php8.3-apache-bullseye, 10.3-php8.3-apache-bullseye, 10-php8.3-apache-bullseye
+Tags: 10.3.10-php8.3-apache-bullseye, 10.3-php8.3-apache-bullseye
 Architectures: amd64, arm32v7, arm64v8, i386
 GitCommit: 535f3b38ad110a03bc484475e19c692789d55ef8
 Directory: 10.3/php8.3/apache-bullseye
 
-Tags: 10.3.10-php8.3-fpm-bullseye, 10.3-php8.3-fpm-bullseye, 10-php8.3-fpm-bullseye
+Tags: 10.3.10-php8.3-fpm-bullseye, 10.3-php8.3-fpm-bullseye
 Architectures: amd64, arm32v7, arm64v8, i386
 GitCommit: 535f3b38ad110a03bc484475e19c692789d55ef8
 Directory: 10.3/php8.3/fpm-bullseye
 
-Tags: 10.3.10-php8.3-fpm-alpine3.21, 10.3-php8.3-fpm-alpine3.21, 10-php8.3-fpm-alpine3.21, 10.3.10-php8.3-fpm-alpine, 10.3-php8.3-fpm-alpine, 10-php8.3-fpm-alpine
+Tags: 10.3.10-php8.3-fpm-alpine3.21, 10.3-php8.3-fpm-alpine3.21, 10.3.10-php8.3-fpm-alpine, 10.3-php8.3-fpm-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
 GitCommit: a90d8ccae757671775d2bfdf3668a2c97318ba4c
 Directory: 10.3/php8.3/fpm-alpine3.21
 
-Tags: 10.3.10-php8.3-fpm-alpine3.20, 10.3-php8.3-fpm-alpine3.20, 10-php8.3-fpm-alpine3.20
+Tags: 10.3.10-php8.3-fpm-alpine3.20, 10.3-php8.3-fpm-alpine3.20
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
 GitCommit: 535f3b38ad110a03bc484475e19c692789d55ef8
 Directory: 10.3/php8.3/fpm-alpine3.20
 
-Tags: 10.3.10-php8.2-apache-bookworm, 10.3-php8.2-apache-bookworm, 10-php8.2-apache-bookworm, 10.3.10-php8.2-apache, 10.3-php8.2-apache, 10-php8.2-apache, 10.3.10-php8.2, 10.3-php8.2, 10-php8.2, 10.3.10-apache-bookworm, 10.3-apache-bookworm, 10-apache-bookworm, 10.3.10-apache, 10.3-apache, 10-apache, 10.3.10, 10.3, 10
+Tags: 10.3.10-php8.2-apache-bookworm, 10.3-php8.2-apache-bookworm, 10.3.10-php8.2-apache, 10.3-php8.2-apache, 10.3.10-php8.2, 10.3-php8.2, 10.3.10-apache-bookworm, 10.3-apache-bookworm, 10.3.10-apache, 10.3-apache, 10.3.10, 10.3
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: 535f3b38ad110a03bc484475e19c692789d55ef8
 Directory: 10.3/php8.2/apache-bookworm
 
-Tags: 10.3.10-php8.2-fpm-bookworm, 10.3-php8.2-fpm-bookworm, 10-php8.2-fpm-bookworm, 10.3.10-php8.2-fpm, 10.3-php8.2-fpm, 10-php8.2-fpm, 10.3.10-fpm-bookworm, 10.3-fpm-bookworm, 10-fpm-bookworm, 10.3.10-fpm, 10.3-fpm, 10-fpm
+Tags: 10.3.10-php8.2-fpm-bookworm, 10.3-php8.2-fpm-bookworm, 10.3.10-php8.2-fpm, 10.3-php8.2-fpm, 10.3.10-fpm-bookworm, 10.3-fpm-bookworm, 10.3.10-fpm, 10.3-fpm
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: 535f3b38ad110a03bc484475e19c692789d55ef8
 Directory: 10.3/php8.2/fpm-bookworm
 
-Tags: 10.3.10-php8.2-apache-bullseye, 10.3-php8.2-apache-bullseye, 10-php8.2-apache-bullseye, 10.3.10-apache-bullseye, 10.3-apache-bullseye, 10-apache-bullseye
+Tags: 10.3.10-php8.2-apache-bullseye, 10.3-php8.2-apache-bullseye, 10.3.10-apache-bullseye, 10.3-apache-bullseye
 Architectures: amd64, arm32v7, arm64v8, i386
 GitCommit: 535f3b38ad110a03bc484475e19c692789d55ef8
 Directory: 10.3/php8.2/apache-bullseye
 
-Tags: 10.3.10-php8.2-fpm-bullseye, 10.3-php8.2-fpm-bullseye, 10-php8.2-fpm-bullseye, 10.3.10-fpm-bullseye, 10.3-fpm-bullseye, 10-fpm-bullseye
+Tags: 10.3.10-php8.2-fpm-bullseye, 10.3-php8.2-fpm-bullseye, 10.3.10-fpm-bullseye, 10.3-fpm-bullseye
 Architectures: amd64, arm32v7, arm64v8, i386
 GitCommit: 535f3b38ad110a03bc484475e19c692789d55ef8
 Directory: 10.3/php8.2/fpm-bullseye
 
-Tags: 10.3.10-php8.2-fpm-alpine3.21, 10.3-php8.2-fpm-alpine3.21, 10-php8.2-fpm-alpine3.21, 10.3.10-php8.2-fpm-alpine, 10.3-php8.2-fpm-alpine, 10-php8.2-fpm-alpine, 10.3.10-fpm-alpine3.21, 10.3-fpm-alpine3.21, 10-fpm-alpine3.21, 10.3.10-fpm-alpine, 10.3-fpm-alpine, 10-fpm-alpine
+Tags: 10.3.10-php8.2-fpm-alpine3.21, 10.3-php8.2-fpm-alpine3.21, 10.3.10-php8.2-fpm-alpine, 10.3-php8.2-fpm-alpine, 10.3.10-fpm-alpine3.21, 10.3-fpm-alpine3.21, 10.3.10-fpm-alpine, 10.3-fpm-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
 GitCommit: a90d8ccae757671775d2bfdf3668a2c97318ba4c
 Directory: 10.3/php8.2/fpm-alpine3.21
 
-Tags: 10.3.10-php8.2-fpm-alpine3.20, 10.3-php8.2-fpm-alpine3.20, 10-php8.2-fpm-alpine3.20, 10.3.10-fpm-alpine3.20, 10.3-fpm-alpine3.20, 10-fpm-alpine3.20
+Tags: 10.3.10-php8.2-fpm-alpine3.20, 10.3-php8.2-fpm-alpine3.20, 10.3.10-fpm-alpine3.20, 10.3-fpm-alpine3.20
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
 GitCommit: 535f3b38ad110a03bc484475e19c692789d55ef8
 Directory: 10.3/php8.2/fpm-alpine3.20
-
-Tags: 10.2.12-php8.3-apache-bookworm, 10.2-php8.3-apache-bookworm, 10.2.12-php8.3-apache, 10.2-php8.3-apache, 10.2.12-php8.3, 10.2-php8.3
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 7f0454debc2ed9bbc87f711faf726835be932cf0
-Directory: 10.2/php8.3/apache-bookworm
-
-Tags: 10.2.12-php8.3-fpm-bookworm, 10.2-php8.3-fpm-bookworm, 10.2.12-php8.3-fpm, 10.2-php8.3-fpm
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 7f0454debc2ed9bbc87f711faf726835be932cf0
-Directory: 10.2/php8.3/fpm-bookworm
-
-Tags: 10.2.12-php8.3-apache-bullseye, 10.2-php8.3-apache-bullseye
-Architectures: amd64, arm32v7, arm64v8, i386
-GitCommit: 7f0454debc2ed9bbc87f711faf726835be932cf0
-Directory: 10.2/php8.3/apache-bullseye
-
-Tags: 10.2.12-php8.3-fpm-bullseye, 10.2-php8.3-fpm-bullseye
-Architectures: amd64, arm32v7, arm64v8, i386
-GitCommit: 7f0454debc2ed9bbc87f711faf726835be932cf0
-Directory: 10.2/php8.3/fpm-bullseye
-
-Tags: 10.2.12-php8.3-fpm-alpine3.21, 10.2-php8.3-fpm-alpine3.21, 10.2.12-php8.3-fpm-alpine, 10.2-php8.3-fpm-alpine
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: a90d8ccae757671775d2bfdf3668a2c97318ba4c
-Directory: 10.2/php8.3/fpm-alpine3.21
-
-Tags: 10.2.12-php8.3-fpm-alpine3.20, 10.2-php8.3-fpm-alpine3.20
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: 7f0454debc2ed9bbc87f711faf726835be932cf0
-Directory: 10.2/php8.3/fpm-alpine3.20
-
-Tags: 10.2.12-php8.2-apache-bookworm, 10.2-php8.2-apache-bookworm, 10.2.12-php8.2-apache, 10.2-php8.2-apache, 10.2.12-php8.2, 10.2-php8.2, 10.2.12-apache-bookworm, 10.2-apache-bookworm, 10.2.12-apache, 10.2-apache, 10.2.12, 10.2
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 7f0454debc2ed9bbc87f711faf726835be932cf0
-Directory: 10.2/php8.2/apache-bookworm
-
-Tags: 10.2.12-php8.2-fpm-bookworm, 10.2-php8.2-fpm-bookworm, 10.2.12-php8.2-fpm, 10.2-php8.2-fpm, 10.2.12-fpm-bookworm, 10.2-fpm-bookworm, 10.2.12-fpm, 10.2-fpm
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 7f0454debc2ed9bbc87f711faf726835be932cf0
-Directory: 10.2/php8.2/fpm-bookworm
-
-Tags: 10.2.12-php8.2-apache-bullseye, 10.2-php8.2-apache-bullseye, 10.2.12-apache-bullseye, 10.2-apache-bullseye
-Architectures: amd64, arm32v7, arm64v8, i386
-GitCommit: 7f0454debc2ed9bbc87f711faf726835be932cf0
-Directory: 10.2/php8.2/apache-bullseye
-
-Tags: 10.2.12-php8.2-fpm-bullseye, 10.2-php8.2-fpm-bullseye, 10.2.12-fpm-bullseye, 10.2-fpm-bullseye
-Architectures: amd64, arm32v7, arm64v8, i386
-GitCommit: 7f0454debc2ed9bbc87f711faf726835be932cf0
-Directory: 10.2/php8.2/fpm-bullseye
-
-Tags: 10.2.12-php8.2-fpm-alpine3.21, 10.2-php8.2-fpm-alpine3.21, 10.2.12-php8.2-fpm-alpine, 10.2-php8.2-fpm-alpine, 10.2.12-fpm-alpine3.21, 10.2-fpm-alpine3.21, 10.2.12-fpm-alpine, 10.2-fpm-alpine
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: a90d8ccae757671775d2bfdf3668a2c97318ba4c
-Directory: 10.2/php8.2/fpm-alpine3.21
-
-Tags: 10.2.12-php8.2-fpm-alpine3.20, 10.2-php8.2-fpm-alpine3.20, 10.2.12-fpm-alpine3.20, 10.2-fpm-alpine3.20
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: 7f0454debc2ed9bbc87f711faf726835be932cf0
-Directory: 10.2/php8.2/fpm-alpine3.20
 
 Tags: 7.103-php8.2-apache-bookworm, 7-php8.2-apache-bookworm, 7.103-php8.2-apache, 7-php8.2-apache, 7.103-php8.2, 7-php8.2
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
