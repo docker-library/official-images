@@ -3,38 +3,38 @@ Maintainers: Kunal Mehta <legoktm@debian.org> (@legoktm),
              Christian Heusel <christian@heusel.eu> (@christian-heusel)
 GitRepo: https://github.com/wikimedia/mediawiki-docker.git
 GitFetch: refs/heads/main
-GitCommit: 597ec9bc8565eefd398bc6831130fff2443b6c8a
+GitCommit: 1be3b2bf0efd0f09e4cf2e706b2ecd92f3680fab
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le
 
-# current stable version
-Tags: 1.42.4, 1.42, stable, latest
+# current stable & lts version
+Tags: 1.43.0, 1.43, latest, stable, lts
+Directory: 1.43/apache
+
+Tags: 1.43.0-fpm, 1.43-fpm, stable-fpm, lts-fpm
+Directory: 1.43/fpm
+
+Tags: 1.43.0-fpm-alpine, 1.43-fpm-alpine, stable-fpm-alpine, lts-fpm-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le
+Directory: 1.43/fpm-alpine
+
+# current legacy versions
+Tags: 1.42.4, 1.42, legacy
 Directory: 1.42/apache
 
-Tags: 1.42.4-fpm, 1.42-fpm, stable-fpm
+Tags: 1.42.4-fpm, 1.42-fpm, legacy-fpm
 Directory: 1.42/fpm
 
-Tags: 1.42.4-fpm-alpine, 1.42-fpm-alpine, stable-fpm-alpine
+Tags: 1.42.4-fpm-alpine, 1.42-fpm-alpine, legacy-fpm-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le
 Directory: 1.42/fpm-alpine
 
-# current legacy versions
-Tags: 1.41.5, 1.41, legacy
-Directory: 1.41/apache
-
-Tags: 1.41.5-fpm, 1.41-fpm, legacy-fpm
-Directory: 1.41/fpm
-
-Tags: 1.41.5-fpm-alpine, 1.41-fpm-alpine, legacy-fpm-alpine
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le
-Directory: 1.41/fpm-alpine
-
-# current lts version
-Tags: 1.39.11, 1.39, lts
+# current legacy lts version
+Tags: 1.39.11, 1.39
 Directory: 1.39/apache
 
-Tags: 1.39.11-fpm, 1.39-fpm, lts-fpm
+Tags: 1.39.11-fpm, 1.39-fpm
 Directory: 1.39/fpm
 
-Tags: 1.39.11-fpm-alpine, 1.39-fpm-alpine, lts-fpm-alpine
+Tags: 1.39.11-fpm-alpine, 1.39-fpm-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le
 Directory: 1.39/fpm-alpine
