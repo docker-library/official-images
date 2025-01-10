@@ -18,7 +18,12 @@ env:
 # limit to one run at a time per pull request
 # no cancel-in-progress so that the running diff comment can finish before the next since the old diff could be helpful for review
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  # this should use "github.ref", but:
+  # "For pull requests events except pull_request_target, it is refs/pull/<pr_number>/merge. pull_request_target events have the ref from the base branch." 🙃
+  # https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/accessing-contextual-information-about-workflow-runs#github-context
+  #group: ${{ github.workflow }}-${{ github.ref }}
+  # https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows#pull_request_target
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
   cancel-in-progress: false
 
 jobs:
