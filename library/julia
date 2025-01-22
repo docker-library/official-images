@@ -4,39 +4,37 @@ Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/julia.git
 
-Tags: 1.11.2-bookworm, 1.11-bookworm, 1-bookworm, bookworm
-SharedTags: 1.11.2, 1.11, 1, latest
+Tags: 1.11.3-bookworm, 1.11-bookworm, 1-bookworm, bookworm
+SharedTags: 1.11.3, 1.11, 1, latest
 Architectures: amd64, arm64v8, i386, ppc64le
-GitCommit: 4f01bdd0f40fb73588ec2fb1425939f0b942eaaf
+GitCommit: 01eb09062a73c9d6f19a791065f1965a8a44208c
 Directory: 1.11/bookworm
 
-Tags: 1.11.2-bullseye, 1.11-bullseye, 1-bullseye, bullseye
+Tags: 1.11.3-bullseye, 1.11-bullseye, 1-bullseye, bullseye
 Architectures: amd64, arm64v8, i386
-GitCommit: 4f01bdd0f40fb73588ec2fb1425939f0b942eaaf
+GitCommit: 01eb09062a73c9d6f19a791065f1965a8a44208c
 Directory: 1.11/bullseye
 
-Tags: 1.11.2-alpine3.21, 1.11-alpine3.21, 1-alpine3.21, alpine3.21, 1.11.2-alpine, 1.11-alpine, 1-alpine, alpine
-Architectures: amd64
-GitCommit: c763e6dd2005540877917987840d0128b819de91
-Directory: 1.11/alpine3.21
-
-Tags: 1.11.2-alpine3.20, 1.11-alpine3.20, 1-alpine3.20, alpine3.20
-Architectures: amd64
-GitCommit: 4f01bdd0f40fb73588ec2fb1425939f0b942eaaf
-Directory: 1.11/alpine3.20
-
-Tags: 1.11.2-windowsservercore-ltsc2022, 1.11-windowsservercore-ltsc2022, 1-windowsservercore-ltsc2022, windowsservercore-ltsc2022
-SharedTags: 1.11.2, 1.11, 1, latest, 1.11.2-windowsservercore, 1.11-windowsservercore, 1-windowsservercore, windowsservercore
+Tags: 1.11.3-windowsservercore-ltsc2025, 1.11-windowsservercore-ltsc2025, 1-windowsservercore-ltsc2025, windowsservercore-ltsc2025
+SharedTags: 1.11.3, 1.11, 1, latest, 1.11.3-windowsservercore, 1.11-windowsservercore, 1-windowsservercore, windowsservercore
 Architectures: windows-amd64
-GitCommit: 4f01bdd0f40fb73588ec2fb1425939f0b942eaaf
+GitCommit: 01eb09062a73c9d6f19a791065f1965a8a44208c
+Directory: 1.11/windows/windowsservercore-ltsc2025
+Constraints: windowsservercore-ltsc2025
+Builder: classic
+
+Tags: 1.11.3-windowsservercore-ltsc2022, 1.11-windowsservercore-ltsc2022, 1-windowsservercore-ltsc2022, windowsservercore-ltsc2022
+SharedTags: 1.11.3, 1.11, 1, latest, 1.11.3-windowsservercore, 1.11-windowsservercore, 1-windowsservercore, windowsservercore
+Architectures: windows-amd64
+GitCommit: 01eb09062a73c9d6f19a791065f1965a8a44208c
 Directory: 1.11/windows/windowsservercore-ltsc2022
 Constraints: windowsservercore-ltsc2022
 Builder: classic
 
-Tags: 1.11.2-windowsservercore-1809, 1.11-windowsservercore-1809, 1-windowsservercore-1809, windowsservercore-1809
-SharedTags: 1.11.2, 1.11, 1, latest, 1.11.2-windowsservercore, 1.11-windowsservercore, 1-windowsservercore, windowsservercore
+Tags: 1.11.3-windowsservercore-1809, 1.11-windowsservercore-1809, 1-windowsservercore-1809, windowsservercore-1809
+SharedTags: 1.11.3, 1.11, 1, latest, 1.11.3-windowsservercore, 1.11-windowsservercore, 1-windowsservercore, windowsservercore
 Architectures: windows-amd64
-GitCommit: 4f01bdd0f40fb73588ec2fb1425939f0b942eaaf
+GitCommit: 01eb09062a73c9d6f19a791065f1965a8a44208c
 Directory: 1.11/windows/windowsservercore-1809
 Constraints: windowsservercore-1809
 Builder: classic
@@ -51,6 +49,14 @@ Tags: 1.10.7-bullseye, 1.10-bullseye
 Architectures: amd64, arm64v8, i386
 GitCommit: 20763c0a7c195e9a57eb7903ff60e8b6a811e4fe
 Directory: 1.10/bullseye
+
+Tags: 1.10.7-windowsservercore-ltsc2025, 1.10-windowsservercore-ltsc2025
+SharedTags: 1.10.7, 1.10, 1.10.7-windowsservercore, 1.10-windowsservercore
+Architectures: windows-amd64
+GitCommit: cd2ed5528e361cc8c49316645554bd5963c82cf6
+Directory: 1.10/windows/windowsservercore-ltsc2025
+Constraints: windowsservercore-ltsc2025
+Builder: classic
 
 Tags: 1.10.7-windowsservercore-ltsc2022, 1.10-windowsservercore-ltsc2022
 SharedTags: 1.10.7, 1.10, 1.10.7-windowsservercore, 1.10-windowsservercore
