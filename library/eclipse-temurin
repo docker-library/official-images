@@ -7,31 +7,52 @@ GitFetch: refs/heads/main
 Builder: buildkit
 
 #------------------------------v8 images---------------------------------
-Tags: 8u432-b06-jdk-alpine, 8-jdk-alpine, 8-alpine
+Tags: 8u432-b06-jdk-alpine-3.20, 8-jdk-alpine-3.20, 8-alpine-3.20
 Architectures: amd64
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
-Directory: 8/jdk/alpine
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
+Directory: 8/jdk/alpine/3.20
+
+Tags: 8u432-b06-jdk-alpine-3.21, 8-jdk-alpine-3.21, 8-alpine-3.21, 8u432-b06-jdk-alpine, 8-jdk-alpine, 8-alpine
+Architectures: amd64
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
+Directory: 8/jdk/alpine/3.21
 
 Tags: 8u432-b06-jdk-focal, 8-jdk-focal, 8-focal
 Architectures: amd64, arm32v7, arm64v8, ppc64le
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
 Directory: 8/jdk/ubuntu/focal
 
 Tags: 8u432-b06-jdk-jammy, 8-jdk-jammy, 8-jammy
 Architectures: amd64, arm32v7, arm64v8, ppc64le
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
 Directory: 8/jdk/ubuntu/jammy
 
 Tags: 8u432-b06-jdk-noble, 8-jdk-noble, 8-noble
 SharedTags: 8u432-b06-jdk, 8-jdk, 8
 Architectures: amd64, arm32v7, arm64v8, ppc64le
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
 Directory: 8/jdk/ubuntu/noble
 
 Tags: 8u432-b06-jdk-ubi9-minimal, 8-jdk-ubi9-minimal, 8-ubi9-minimal
 Architectures: amd64, arm64v8, ppc64le
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
 Directory: 8/jdk/ubi/ubi9-minimal
+
+Tags: 8u432-b06-jdk-windowsservercore-ltsc2025, 8-jdk-windowsservercore-ltsc2025, 8-windowsservercore-ltsc2025
+SharedTags: 8u432-b06-jdk-windowsservercore, 8-jdk-windowsservercore, 8-windowsservercore, 8u432-b06-jdk, 8-jdk, 8
+Architectures: windows-amd64
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
+Directory: 8/jdk/windows/windowsservercore-ltsc2025
+Builder: classic
+Constraints: windowsservercore-ltsc2025
+
+Tags: 8u432-b06-jdk-nanoserver-ltsc2025, 8-jdk-nanoserver-ltsc2025, 8-nanoserver-ltsc2025
+SharedTags: 8u432-b06-jdk-nanoserver, 8-jdk-nanoserver, 8-nanoserver
+Architectures: windows-amd64
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
+Directory: 8/jdk/windows/nanoserver-ltsc2025
+Builder: classic
+Constraints: nanoserver-ltsc2025, windowsservercore-ltsc2025
 
 Tags: 8u432-b06-jdk-windowsservercore-ltsc2022, 8-jdk-windowsservercore-ltsc2022, 8-windowsservercore-ltsc2022
 SharedTags: 8u432-b06-jdk-windowsservercore, 8-jdk-windowsservercore, 8-windowsservercore, 8u432-b06-jdk, 8-jdk, 8
@@ -65,31 +86,52 @@ Directory: 8/jdk/windows/nanoserver-1809
 Builder: classic
 Constraints: nanoserver-1809, windowsservercore-1809
 
-Tags: 8u432-b06-jre-alpine, 8-jre-alpine
+Tags: 8u432-b06-jre-alpine-3.20, 8-jre-alpine-3.20
 Architectures: amd64
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
-Directory: 8/jre/alpine
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
+Directory: 8/jre/alpine/3.20
+
+Tags: 8u432-b06-jre-alpine-3.21, 8-jre-alpine-3.21, 8u432-b06-jre-alpine, 8-jre-alpine
+Architectures: amd64
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
+Directory: 8/jre/alpine/3.21
 
 Tags: 8u432-b06-jre-focal, 8-jre-focal
 Architectures: amd64, arm32v7, arm64v8, ppc64le
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
 Directory: 8/jre/ubuntu/focal
 
 Tags: 8u432-b06-jre-jammy, 8-jre-jammy
 Architectures: amd64, arm32v7, arm64v8, ppc64le
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
 Directory: 8/jre/ubuntu/jammy
 
 Tags: 8u432-b06-jre-noble, 8-jre-noble
 SharedTags: 8u432-b06-jre, 8-jre
 Architectures: amd64, arm32v7, arm64v8, ppc64le
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
 Directory: 8/jre/ubuntu/noble
 
 Tags: 8u432-b06-jre-ubi9-minimal, 8-jre-ubi9-minimal
 Architectures: amd64, arm64v8, ppc64le
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
 Directory: 8/jre/ubi/ubi9-minimal
+
+Tags: 8u432-b06-jre-windowsservercore-ltsc2025, 8-jre-windowsservercore-ltsc2025
+SharedTags: 8u432-b06-jre-windowsservercore, 8-jre-windowsservercore, 8u432-b06-jre, 8-jre
+Architectures: windows-amd64
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
+Directory: 8/jre/windows/windowsservercore-ltsc2025
+Builder: classic
+Constraints: windowsservercore-ltsc2025
+
+Tags: 8u432-b06-jre-nanoserver-ltsc2025, 8-jre-nanoserver-ltsc2025
+SharedTags: 8u432-b06-jre-nanoserver, 8-jre-nanoserver
+Architectures: windows-amd64
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
+Directory: 8/jre/windows/nanoserver-ltsc2025
+Builder: classic
+Constraints: nanoserver-ltsc2025, windowsservercore-ltsc2025
 
 Tags: 8u432-b06-jre-windowsservercore-ltsc2022, 8-jre-windowsservercore-ltsc2022
 SharedTags: 8u432-b06-jre-windowsservercore, 8-jre-windowsservercore, 8u432-b06-jre, 8-jre
@@ -125,31 +167,52 @@ Constraints: nanoserver-1809, windowsservercore-1809
 
 
 #------------------------------v11 images---------------------------------
-Tags: 11.0.25_9-jdk-alpine, 11-jdk-alpine, 11-alpine
+Tags: 11.0.25_9-jdk-alpine-3.20, 11-jdk-alpine-3.20, 11-alpine-3.20
 Architectures: amd64
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
-Directory: 11/jdk/alpine
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
+Directory: 11/jdk/alpine/3.20
+
+Tags: 11.0.25_9-jdk-alpine-3.21, 11-jdk-alpine-3.21, 11-alpine-3.21, 11.0.25_9-jdk-alpine, 11-jdk-alpine, 11-alpine
+Architectures: amd64
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
+Directory: 11/jdk/alpine/3.21
 
 Tags: 11.0.25_9-jdk-focal, 11-jdk-focal, 11-focal
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
 Directory: 11/jdk/ubuntu/focal
 
 Tags: 11.0.25_9-jdk-jammy, 11-jdk-jammy, 11-jammy
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
 Directory: 11/jdk/ubuntu/jammy
 
 Tags: 11.0.25_9-jdk-noble, 11-jdk-noble, 11-noble
 SharedTags: 11.0.25_9-jdk, 11-jdk, 11
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
 Directory: 11/jdk/ubuntu/noble
 
 Tags: 11.0.25_9-jdk-ubi9-minimal, 11-jdk-ubi9-minimal, 11-ubi9-minimal
 Architectures: amd64, arm64v8, ppc64le, s390x
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
 Directory: 11/jdk/ubi/ubi9-minimal
+
+Tags: 11.0.25_9-jdk-windowsservercore-ltsc2025, 11-jdk-windowsservercore-ltsc2025, 11-windowsservercore-ltsc2025
+SharedTags: 11.0.25_9-jdk-windowsservercore, 11-jdk-windowsservercore, 11-windowsservercore, 11.0.25_9-jdk, 11-jdk, 11
+Architectures: windows-amd64
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
+Directory: 11/jdk/windows/windowsservercore-ltsc2025
+Builder: classic
+Constraints: windowsservercore-ltsc2025
+
+Tags: 11.0.25_9-jdk-nanoserver-ltsc2025, 11-jdk-nanoserver-ltsc2025, 11-nanoserver-ltsc2025
+SharedTags: 11.0.25_9-jdk-nanoserver, 11-jdk-nanoserver, 11-nanoserver
+Architectures: windows-amd64
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
+Directory: 11/jdk/windows/nanoserver-ltsc2025
+Builder: classic
+Constraints: nanoserver-ltsc2025, windowsservercore-ltsc2025
 
 Tags: 11.0.25_9-jdk-windowsservercore-ltsc2022, 11-jdk-windowsservercore-ltsc2022, 11-windowsservercore-ltsc2022
 SharedTags: 11.0.25_9-jdk-windowsservercore, 11-jdk-windowsservercore, 11-windowsservercore, 11.0.25_9-jdk, 11-jdk, 11
@@ -183,31 +246,52 @@ Directory: 11/jdk/windows/nanoserver-1809
 Builder: classic
 Constraints: nanoserver-1809, windowsservercore-1809
 
-Tags: 11.0.25_9-jre-alpine, 11-jre-alpine
+Tags: 11.0.25_9-jre-alpine-3.20, 11-jre-alpine-3.20
 Architectures: amd64
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
-Directory: 11/jre/alpine
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
+Directory: 11/jre/alpine/3.20
+
+Tags: 11.0.25_9-jre-alpine-3.21, 11-jre-alpine-3.21, 11.0.25_9-jre-alpine, 11-jre-alpine
+Architectures: amd64
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
+Directory: 11/jre/alpine/3.21
 
 Tags: 11.0.25_9-jre-focal, 11-jre-focal
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
 Directory: 11/jre/ubuntu/focal
 
 Tags: 11.0.25_9-jre-jammy, 11-jre-jammy
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
 Directory: 11/jre/ubuntu/jammy
 
 Tags: 11.0.25_9-jre-noble, 11-jre-noble
 SharedTags: 11.0.25_9-jre, 11-jre
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
 Directory: 11/jre/ubuntu/noble
 
 Tags: 11.0.25_9-jre-ubi9-minimal, 11-jre-ubi9-minimal
 Architectures: amd64, arm64v8, ppc64le, s390x
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
 Directory: 11/jre/ubi/ubi9-minimal
+
+Tags: 11.0.25_9-jre-windowsservercore-ltsc2025, 11-jre-windowsservercore-ltsc2025
+SharedTags: 11.0.25_9-jre-windowsservercore, 11-jre-windowsservercore, 11.0.25_9-jre, 11-jre
+Architectures: windows-amd64
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
+Directory: 11/jre/windows/windowsservercore-ltsc2025
+Builder: classic
+Constraints: windowsservercore-ltsc2025
+
+Tags: 11.0.25_9-jre-nanoserver-ltsc2025, 11-jre-nanoserver-ltsc2025
+SharedTags: 11.0.25_9-jre-nanoserver, 11-jre-nanoserver
+Architectures: windows-amd64
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
+Directory: 11/jre/windows/nanoserver-ltsc2025
+Builder: classic
+Constraints: nanoserver-ltsc2025, windowsservercore-ltsc2025
 
 Tags: 11.0.25_9-jre-windowsservercore-ltsc2022, 11-jre-windowsservercore-ltsc2022
 SharedTags: 11.0.25_9-jre-windowsservercore, 11-jre-windowsservercore, 11.0.25_9-jre, 11-jre
@@ -243,31 +327,52 @@ Constraints: nanoserver-1809, windowsservercore-1809
 
 
 #------------------------------v17 images---------------------------------
-Tags: 17.0.13_11-jdk-alpine, 17-jdk-alpine, 17-alpine
+Tags: 17.0.13_11-jdk-alpine-3.20, 17-jdk-alpine-3.20, 17-alpine-3.20
 Architectures: amd64
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
-Directory: 17/jdk/alpine
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
+Directory: 17/jdk/alpine/3.20
+
+Tags: 17.0.13_11-jdk-alpine-3.21, 17-jdk-alpine-3.21, 17-alpine-3.21, 17.0.13_11-jdk-alpine, 17-jdk-alpine, 17-alpine
+Architectures: amd64
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
+Directory: 17/jdk/alpine/3.21
 
 Tags: 17.0.13_11-jdk-focal, 17-jdk-focal, 17-focal
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
 Directory: 17/jdk/ubuntu/focal
 
 Tags: 17.0.13_11-jdk-jammy, 17-jdk-jammy, 17-jammy
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
 Directory: 17/jdk/ubuntu/jammy
 
 Tags: 17.0.13_11-jdk-noble, 17-jdk-noble, 17-noble
 SharedTags: 17.0.13_11-jdk, 17-jdk, 17
 Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
 Directory: 17/jdk/ubuntu/noble
 
 Tags: 17.0.13_11-jdk-ubi9-minimal, 17-jdk-ubi9-minimal, 17-ubi9-minimal
 Architectures: amd64, arm64v8, ppc64le, s390x
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
 Directory: 17/jdk/ubi/ubi9-minimal
+
+Tags: 17.0.13_11-jdk-windowsservercore-ltsc2025, 17-jdk-windowsservercore-ltsc2025, 17-windowsservercore-ltsc2025
+SharedTags: 17.0.13_11-jdk-windowsservercore, 17-jdk-windowsservercore, 17-windowsservercore, 17.0.13_11-jdk, 17-jdk, 17
+Architectures: windows-amd64
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
+Directory: 17/jdk/windows/windowsservercore-ltsc2025
+Builder: classic
+Constraints: windowsservercore-ltsc2025
+
+Tags: 17.0.13_11-jdk-nanoserver-ltsc2025, 17-jdk-nanoserver-ltsc2025, 17-nanoserver-ltsc2025
+SharedTags: 17.0.13_11-jdk-nanoserver, 17-jdk-nanoserver, 17-nanoserver
+Architectures: windows-amd64
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
+Directory: 17/jdk/windows/nanoserver-ltsc2025
+Builder: classic
+Constraints: nanoserver-ltsc2025, windowsservercore-ltsc2025
 
 Tags: 17.0.13_11-jdk-windowsservercore-ltsc2022, 17-jdk-windowsservercore-ltsc2022, 17-windowsservercore-ltsc2022
 SharedTags: 17.0.13_11-jdk-windowsservercore, 17-jdk-windowsservercore, 17-windowsservercore, 17.0.13_11-jdk, 17-jdk, 17
@@ -301,31 +406,52 @@ Directory: 17/jdk/windows/nanoserver-1809
 Builder: classic
 Constraints: nanoserver-1809, windowsservercore-1809
 
-Tags: 17.0.13_11-jre-alpine, 17-jre-alpine
+Tags: 17.0.13_11-jre-alpine-3.20, 17-jre-alpine-3.20
 Architectures: amd64
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
-Directory: 17/jre/alpine
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
+Directory: 17/jre/alpine/3.20
+
+Tags: 17.0.13_11-jre-alpine-3.21, 17-jre-alpine-3.21, 17.0.13_11-jre-alpine, 17-jre-alpine
+Architectures: amd64
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
+Directory: 17/jre/alpine/3.21
 
 Tags: 17.0.13_11-jre-focal, 17-jre-focal
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
 Directory: 17/jre/ubuntu/focal
 
 Tags: 17.0.13_11-jre-jammy, 17-jre-jammy
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
 Directory: 17/jre/ubuntu/jammy
 
 Tags: 17.0.13_11-jre-noble, 17-jre-noble
 SharedTags: 17.0.13_11-jre, 17-jre
 Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
 Directory: 17/jre/ubuntu/noble
 
 Tags: 17.0.13_11-jre-ubi9-minimal, 17-jre-ubi9-minimal
 Architectures: amd64, arm64v8, ppc64le, s390x
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
 Directory: 17/jre/ubi/ubi9-minimal
+
+Tags: 17.0.13_11-jre-windowsservercore-ltsc2025, 17-jre-windowsservercore-ltsc2025
+SharedTags: 17.0.13_11-jre-windowsservercore, 17-jre-windowsservercore, 17.0.13_11-jre, 17-jre
+Architectures: windows-amd64
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
+Directory: 17/jre/windows/windowsservercore-ltsc2025
+Builder: classic
+Constraints: windowsservercore-ltsc2025
+
+Tags: 17.0.13_11-jre-nanoserver-ltsc2025, 17-jre-nanoserver-ltsc2025
+SharedTags: 17.0.13_11-jre-nanoserver, 17-jre-nanoserver
+Architectures: windows-amd64
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
+Directory: 17/jre/windows/nanoserver-ltsc2025
+Builder: classic
+Constraints: nanoserver-ltsc2025, windowsservercore-ltsc2025
 
 Tags: 17.0.13_11-jre-windowsservercore-ltsc2022, 17-jre-windowsservercore-ltsc2022
 SharedTags: 17.0.13_11-jre-windowsservercore, 17-jre-windowsservercore, 17.0.13_11-jre, 17-jre
@@ -361,26 +487,47 @@ Constraints: nanoserver-1809, windowsservercore-1809
 
 
 #------------------------------v21 images---------------------------------
-Tags: 21.0.5_11-jdk-alpine, 21-jdk-alpine, 21-alpine
+Tags: 21.0.5_11-jdk-alpine-3.20, 21-jdk-alpine-3.20, 21-alpine-3.20
 Architectures: amd64, arm64v8
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
-Directory: 21/jdk/alpine
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
+Directory: 21/jdk/alpine/3.20
+
+Tags: 21.0.5_11-jdk-alpine-3.21, 21-jdk-alpine-3.21, 21-alpine-3.21, 21.0.5_11-jdk-alpine, 21-jdk-alpine, 21-alpine
+Architectures: amd64, arm64v8
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
+Directory: 21/jdk/alpine/3.21
 
 Tags: 21.0.5_11-jdk-jammy, 21-jdk-jammy, 21-jammy
 Architectures: amd64, arm64v8, ppc64le, s390x
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
 Directory: 21/jdk/ubuntu/jammy
 
 Tags: 21.0.5_11-jdk-noble, 21-jdk-noble, 21-noble
 SharedTags: 21.0.5_11-jdk, 21-jdk, 21, latest
 Architectures: amd64, arm64v8, ppc64le, riscv64, s390x
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
 Directory: 21/jdk/ubuntu/noble
 
 Tags: 21.0.5_11-jdk-ubi9-minimal, 21-jdk-ubi9-minimal, 21-ubi9-minimal
 Architectures: amd64, arm64v8, ppc64le, s390x
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
 Directory: 21/jdk/ubi/ubi9-minimal
+
+Tags: 21.0.5_11-jdk-windowsservercore-ltsc2025, 21-jdk-windowsservercore-ltsc2025, 21-windowsservercore-ltsc2025
+SharedTags: 21.0.5_11-jdk-windowsservercore, 21-jdk-windowsservercore, 21-windowsservercore, 21.0.5_11-jdk, 21-jdk, 21, latest
+Architectures: windows-amd64
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
+Directory: 21/jdk/windows/windowsservercore-ltsc2025
+Builder: classic
+Constraints: windowsservercore-ltsc2025
+
+Tags: 21.0.5_11-jdk-nanoserver-ltsc2025, 21-jdk-nanoserver-ltsc2025, 21-nanoserver-ltsc2025
+SharedTags: 21.0.5_11-jdk-nanoserver, 21-jdk-nanoserver, 21-nanoserver
+Architectures: windows-amd64
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
+Directory: 21/jdk/windows/nanoserver-ltsc2025
+Builder: classic
+Constraints: nanoserver-ltsc2025, windowsservercore-ltsc2025
 
 Tags: 21.0.5_11-jdk-windowsservercore-ltsc2022, 21-jdk-windowsservercore-ltsc2022, 21-windowsservercore-ltsc2022
 SharedTags: 21.0.5_11-jdk-windowsservercore, 21-jdk-windowsservercore, 21-windowsservercore, 21.0.5_11-jdk, 21-jdk, 21, latest
@@ -414,26 +561,47 @@ Directory: 21/jdk/windows/nanoserver-1809
 Builder: classic
 Constraints: nanoserver-1809, windowsservercore-1809
 
-Tags: 21.0.5_11-jre-alpine, 21-jre-alpine
+Tags: 21.0.5_11-jre-alpine-3.20, 21-jre-alpine-3.20
 Architectures: amd64, arm64v8
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
-Directory: 21/jre/alpine
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
+Directory: 21/jre/alpine/3.20
+
+Tags: 21.0.5_11-jre-alpine-3.21, 21-jre-alpine-3.21, 21.0.5_11-jre-alpine, 21-jre-alpine
+Architectures: amd64, arm64v8
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
+Directory: 21/jre/alpine/3.21
 
 Tags: 21.0.5_11-jre-jammy, 21-jre-jammy
 Architectures: amd64, arm64v8, ppc64le, s390x
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
 Directory: 21/jre/ubuntu/jammy
 
 Tags: 21.0.5_11-jre-noble, 21-jre-noble
 SharedTags: 21.0.5_11-jre, 21-jre
 Architectures: amd64, arm64v8, ppc64le, riscv64, s390x
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
 Directory: 21/jre/ubuntu/noble
 
 Tags: 21.0.5_11-jre-ubi9-minimal, 21-jre-ubi9-minimal
 Architectures: amd64, arm64v8, ppc64le, s390x
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
 Directory: 21/jre/ubi/ubi9-minimal
+
+Tags: 21.0.5_11-jre-windowsservercore-ltsc2025, 21-jre-windowsservercore-ltsc2025
+SharedTags: 21.0.5_11-jre-windowsservercore, 21-jre-windowsservercore, 21.0.5_11-jre, 21-jre
+Architectures: windows-amd64
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
+Directory: 21/jre/windows/windowsservercore-ltsc2025
+Builder: classic
+Constraints: windowsservercore-ltsc2025
+
+Tags: 21.0.5_11-jre-nanoserver-ltsc2025, 21-jre-nanoserver-ltsc2025
+SharedTags: 21.0.5_11-jre-nanoserver, 21-jre-nanoserver
+Architectures: windows-amd64
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
+Directory: 21/jre/windows/nanoserver-ltsc2025
+Builder: classic
+Constraints: nanoserver-ltsc2025, windowsservercore-ltsc2025
 
 Tags: 21.0.5_11-jre-windowsservercore-ltsc2022, 21-jre-windowsservercore-ltsc2022
 SharedTags: 21.0.5_11-jre-windowsservercore, 21-jre-windowsservercore, 21.0.5_11-jre, 21-jre
@@ -469,21 +637,42 @@ Constraints: nanoserver-1809, windowsservercore-1809
 
 
 #------------------------------v23 images---------------------------------
-Tags: 23.0.1_11-jdk-alpine, 23-jdk-alpine, 23-alpine
+Tags: 23.0.1_11-jdk-alpine-3.20, 23-jdk-alpine-3.20, 23-alpine-3.20
 Architectures: amd64, arm64v8
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
-Directory: 23/jdk/alpine
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
+Directory: 23/jdk/alpine/3.20
+
+Tags: 23.0.1_11-jdk-alpine-3.21, 23-jdk-alpine-3.21, 23-alpine-3.21, 23.0.1_11-jdk-alpine, 23-jdk-alpine, 23-alpine
+Architectures: amd64, arm64v8
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
+Directory: 23/jdk/alpine/3.21
 
 Tags: 23.0.1_11-jdk-noble, 23-jdk-noble, 23-noble
 SharedTags: 23.0.1_11-jdk, 23-jdk, 23
 Architectures: amd64, arm64v8, ppc64le, riscv64, s390x
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
 Directory: 23/jdk/ubuntu/noble
 
 Tags: 23.0.1_11-jdk-ubi9-minimal, 23-jdk-ubi9-minimal, 23-ubi9-minimal
 Architectures: amd64, arm64v8, ppc64le, s390x
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
 Directory: 23/jdk/ubi/ubi9-minimal
+
+Tags: 23.0.1_11-jdk-windowsservercore-ltsc2025, 23-jdk-windowsservercore-ltsc2025, 23-windowsservercore-ltsc2025
+SharedTags: 23.0.1_11-jdk-windowsservercore, 23-jdk-windowsservercore, 23-windowsservercore, 23.0.1_11-jdk, 23-jdk, 23
+Architectures: windows-amd64
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
+Directory: 23/jdk/windows/windowsservercore-ltsc2025
+Builder: classic
+Constraints: windowsservercore-ltsc2025
+
+Tags: 23.0.1_11-jdk-nanoserver-ltsc2025, 23-jdk-nanoserver-ltsc2025, 23-nanoserver-ltsc2025
+SharedTags: 23.0.1_11-jdk-nanoserver, 23-jdk-nanoserver, 23-nanoserver
+Architectures: windows-amd64
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
+Directory: 23/jdk/windows/nanoserver-ltsc2025
+Builder: classic
+Constraints: nanoserver-ltsc2025, windowsservercore-ltsc2025
 
 Tags: 23.0.1_11-jdk-windowsservercore-ltsc2022, 23-jdk-windowsservercore-ltsc2022, 23-windowsservercore-ltsc2022
 SharedTags: 23.0.1_11-jdk-windowsservercore, 23-jdk-windowsservercore, 23-windowsservercore, 23.0.1_11-jdk, 23-jdk, 23
@@ -517,21 +706,42 @@ Directory: 23/jdk/windows/nanoserver-1809
 Builder: classic
 Constraints: nanoserver-1809, windowsservercore-1809
 
-Tags: 23.0.1_11-jre-alpine, 23-jre-alpine
+Tags: 23.0.1_11-jre-alpine-3.20, 23-jre-alpine-3.20
 Architectures: amd64, arm64v8
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
-Directory: 23/jre/alpine
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
+Directory: 23/jre/alpine/3.20
+
+Tags: 23.0.1_11-jre-alpine-3.21, 23-jre-alpine-3.21, 23.0.1_11-jre-alpine, 23-jre-alpine
+Architectures: amd64, arm64v8
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
+Directory: 23/jre/alpine/3.21
 
 Tags: 23.0.1_11-jre-noble, 23-jre-noble
 SharedTags: 23.0.1_11-jre, 23-jre
 Architectures: amd64, arm64v8, ppc64le, riscv64, s390x
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
 Directory: 23/jre/ubuntu/noble
 
 Tags: 23.0.1_11-jre-ubi9-minimal, 23-jre-ubi9-minimal
 Architectures: amd64, arm64v8, ppc64le, s390x
-GitCommit: d7a5038edcd8ab08b0babaeae09d0c097453a023
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
 Directory: 23/jre/ubi/ubi9-minimal
+
+Tags: 23.0.1_11-jre-windowsservercore-ltsc2025, 23-jre-windowsservercore-ltsc2025
+SharedTags: 23.0.1_11-jre-windowsservercore, 23-jre-windowsservercore, 23.0.1_11-jre, 23-jre
+Architectures: windows-amd64
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
+Directory: 23/jre/windows/windowsservercore-ltsc2025
+Builder: classic
+Constraints: windowsservercore-ltsc2025
+
+Tags: 23.0.1_11-jre-nanoserver-ltsc2025, 23-jre-nanoserver-ltsc2025
+SharedTags: 23.0.1_11-jre-nanoserver, 23-jre-nanoserver
+Architectures: windows-amd64
+GitCommit: a48d4a514dd752611cea7d0b6a3e9da4282550f8
+Directory: 23/jre/windows/nanoserver-ltsc2025
+Builder: classic
+Constraints: nanoserver-ltsc2025, windowsservercore-ltsc2025
 
 Tags: 23.0.1_11-jre-windowsservercore-ltsc2022, 23-jre-windowsservercore-ltsc2022
 SharedTags: 23.0.1_11-jre-windowsservercore, 23-jre-windowsservercore, 23.0.1_11-jre, 23-jre
