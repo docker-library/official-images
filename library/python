@@ -36,6 +36,14 @@ Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: 0bb5f4bc94265f7e9a0d116e1974e2926476baf0
 Directory: 3.14-rc/alpine3.20
 
+Tags: 3.14.0a4-windowsservercore-ltsc2025, 3.14-rc-windowsservercore-ltsc2025
+SharedTags: 3.14.0a4-windowsservercore, 3.14-rc-windowsservercore, 3.14.0a4, 3.14-rc
+Architectures: windows-amd64
+GitCommit: 3a0299db7160774f6927c944acc9485730b13015
+Directory: 3.14-rc/windows/windowsservercore-ltsc2025
+Constraints: windowsservercore-ltsc2025
+Builder: classic
+
 Tags: 3.14.0a4-windowsservercore-ltsc2022, 3.14-rc-windowsservercore-ltsc2022
 SharedTags: 3.14.0a4-windowsservercore, 3.14-rc-windowsservercore, 3.14.0a4, 3.14-rc
 Architectures: windows-amd64
@@ -83,6 +91,14 @@ Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: da7ef3c71d3ecd87a43018a372b3e3590d88dd98
 Directory: 3.13/alpine3.20
 
+Tags: 3.13.1-windowsservercore-ltsc2025, 3.13-windowsservercore-ltsc2025, 3-windowsservercore-ltsc2025, windowsservercore-ltsc2025
+SharedTags: 3.13.1-windowsservercore, 3.13-windowsservercore, 3-windowsservercore, windowsservercore, 3.13.1, 3.13, 3, latest
+Architectures: windows-amd64
+GitCommit: 3a0299db7160774f6927c944acc9485730b13015
+Directory: 3.13/windows/windowsservercore-ltsc2025
+Constraints: windowsservercore-ltsc2025
+Builder: classic
+
 Tags: 3.13.1-windowsservercore-ltsc2022, 3.13-windowsservercore-ltsc2022, 3-windowsservercore-ltsc2022, windowsservercore-ltsc2022
 SharedTags: 3.13.1-windowsservercore, 3.13-windowsservercore, 3-windowsservercore, windowsservercore, 3.13.1, 3.13, 3, latest
 Architectures: windows-amd64
@@ -129,6 +145,14 @@ Tags: 3.12.8-alpine3.20, 3.12-alpine3.20
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 GitCommit: 23c83c5a82646e123df33d056f7dfbe1d78cfc8b
 Directory: 3.12/alpine3.20
+
+Tags: 3.12.8-windowsservercore-ltsc2025, 3.12-windowsservercore-ltsc2025
+SharedTags: 3.12.8-windowsservercore, 3.12-windowsservercore, 3.12.8, 3.12
+Architectures: windows-amd64
+GitCommit: 3a0299db7160774f6927c944acc9485730b13015
+Directory: 3.12/windows/windowsservercore-ltsc2025
+Constraints: windowsservercore-ltsc2025
+Builder: classic
 
 Tags: 3.12.8-windowsservercore-ltsc2022, 3.12-windowsservercore-ltsc2022
 SharedTags: 3.12.8-windowsservercore, 3.12-windowsservercore, 3.12.8, 3.12
