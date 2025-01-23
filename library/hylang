@@ -1,6 +1,6 @@
 Maintainers: Paul Tagliamonte <paultag@hylang.org> (@paultag), Hy Docker Team (@hylang/docker)
 GitRepo: https://github.com/hylang/docker-hylang.git
-GitCommit: 9e230dfec618cc0bea3d6c282a1a1b1ad23a7566
+GitCommit: 6672ad2ce79b2cb434a9f087a7af6df664de9ecd
 Directory: dockerfiles-generated
 
 Tags: 1.0.0-python3.13-bookworm, 1.0-python3.13-bookworm, 1-python3.13-bookworm, python3.13-bookworm, 1.0.0-bookworm, 1.0-bookworm, 1-bookworm, bookworm
@@ -19,6 +19,12 @@ File: Dockerfile.python3.13-alpine3.21
 Tags: 1.0.0-python3.13-alpine3.20, 1.0-python3.13-alpine3.20, 1-python3.13-alpine3.20, python3.13-alpine3.20, 1.0.0-alpine3.20, 1.0-alpine3.20, 1-alpine3.20, alpine3.20
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 File: Dockerfile.python3.13-alpine3.20
+
+Tags: 1.0.0-python3.13-windowsservercore-ltsc2025, 1.0-python3.13-windowsservercore-ltsc2025, 1-python3.13-windowsservercore-ltsc2025, python3.13-windowsservercore-ltsc2025, 1.0.0-windowsservercore-ltsc2025, 1.0-windowsservercore-ltsc2025, 1-windowsservercore-ltsc2025, windowsservercore-ltsc2025
+SharedTags: 1.0.0-python3.13, 1.0-python3.13, 1-python3.13, python3.13, 1.0.0, 1.0, 1, latest
+Architectures: windows-amd64
+Constraints: windowsservercore-ltsc2025
+File: Dockerfile.python3.13-windowsservercore-ltsc2025
 
 Tags: 1.0.0-python3.13-windowsservercore-ltsc2022, 1.0-python3.13-windowsservercore-ltsc2022, 1-python3.13-windowsservercore-ltsc2022, python3.13-windowsservercore-ltsc2022, 1.0.0-windowsservercore-ltsc2022, 1.0-windowsservercore-ltsc2022, 1-windowsservercore-ltsc2022, windowsservercore-ltsc2022
 SharedTags: 1.0.0-python3.13, 1.0-python3.13, 1-python3.13, python3.13, 1.0.0, 1.0, 1, latest
@@ -48,6 +54,12 @@ File: Dockerfile.python3.12-alpine3.21
 Tags: 1.0.0-python3.12-alpine3.20, 1.0-python3.12-alpine3.20, 1-python3.12-alpine3.20, python3.12-alpine3.20
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 File: Dockerfile.python3.12-alpine3.20
+
+Tags: 1.0.0-python3.12-windowsservercore-ltsc2025, 1.0-python3.12-windowsservercore-ltsc2025, 1-python3.12-windowsservercore-ltsc2025, python3.12-windowsservercore-ltsc2025
+SharedTags: 1.0.0-python3.12, 1.0-python3.12, 1-python3.12, python3.12
+Architectures: windows-amd64
+Constraints: windowsservercore-ltsc2025
+File: Dockerfile.python3.12-windowsservercore-ltsc2025
 
 Tags: 1.0.0-python3.12-windowsservercore-ltsc2022, 1.0-python3.12-windowsservercore-ltsc2022, 1-python3.12-windowsservercore-ltsc2022, python3.12-windowsservercore-ltsc2022
 SharedTags: 1.0.0-python3.12, 1.0-python3.12, 1-python3.12, python3.12
@@ -120,6 +132,12 @@ File: Dockerfile.pypy3.10-bookworm
 Tags: 1.0.0-pypy3.10-bullseye, 1.0-pypy3.10-bullseye, 1-pypy3.10-bullseye, pypy3.10-bullseye, 1.0.0-pypy-bullseye, 1.0-pypy-bullseye, 1-pypy-bullseye, pypy-bullseye
 Architectures: amd64, arm64v8, i386
 File: Dockerfile.pypy3.10-bullseye
+
+Tags: 1.0.0-pypy3.10-windowsservercore-ltsc2025, 1.0-pypy3.10-windowsservercore-ltsc2025, 1-pypy3.10-windowsservercore-ltsc2025, pypy3.10-windowsservercore-ltsc2025, 1.0.0-pypy-windowsservercore-ltsc2025, 1.0-pypy-windowsservercore-ltsc2025, 1-pypy-windowsservercore-ltsc2025, pypy-windowsservercore-ltsc2025
+SharedTags: 1.0.0-pypy3.10, 1.0-pypy3.10, 1-pypy3.10, pypy3.10, 1.0.0-pypy, 1.0-pypy, 1-pypy, pypy
+Architectures: windows-amd64
+Constraints: windowsservercore-ltsc2025
+File: Dockerfile.pypy3.10-windowsservercore-ltsc2025
 
 Tags: 1.0.0-pypy3.10-windowsservercore-ltsc2022, 1.0-pypy3.10-windowsservercore-ltsc2022, 1-pypy3.10-windowsservercore-ltsc2022, pypy3.10-windowsservercore-ltsc2022, 1.0.0-pypy-windowsservercore-ltsc2022, 1.0-pypy-windowsservercore-ltsc2022, 1-pypy-windowsservercore-ltsc2022, pypy-windowsservercore-ltsc2022
 SharedTags: 1.0.0-pypy3.10, 1.0-pypy3.10, 1-pypy3.10, pypy3.10, 1.0.0-pypy, 1.0-pypy, 1-pypy, pypy
