@@ -14,10 +14,15 @@ tryJdks=(
 	# try progressively less specific versions to try and find something that can compile an appropriate ".class" object for use in $image (working our way out from "Java 8" because that's going to be the most compatible)
 	"${image%%:*}:8-jdk-slim"
 	"${image%%:*}:8-jdk"
+	"${image%%:*}:8"
+	"${image%%:*}:11-jdk-slim"
+	"${image%%:*}:11-jdk"
+	"${image%%:*}:11"
 	"${image%%:*}:jdk-slim"
 	"${image%%:*}:jdk"
 	"${image%%:*}:latest"
 	'eclipse-temurin:8-jdk'
+	'eclipse-temurin:11-jdk'
 )
 jdk=
 for potentialJdk in "${tryJdks[@]}"; do
