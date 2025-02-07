@@ -5,6 +5,45 @@ Maintainers: Tianon Gravi <tianon@dockerproject.org> (@tianon),
 GitRepo: https://github.com/docker-library/docker.git
 Builder: buildkit
 
+Tags: 28.0.0-rc.1-cli, 28-rc-cli, rc-cli, 28.0.0-rc.1-cli-alpine3.21
+Architectures: amd64, arm32v6, arm32v7, arm64v8
+GitCommit: b329937b7efdb0ef4a6724a461529e36770aecb6
+Directory: 28-rc/cli
+
+Tags: 28.0.0-rc.1-dind, 28-rc-dind, rc-dind, 28.0.0-rc.1-dind-alpine3.21, 28.0.0-rc.1, 28-rc, rc, 28.0.0-rc.1-alpine3.21
+Architectures: amd64, arm32v6, arm32v7, arm64v8
+GitCommit: b329937b7efdb0ef4a6724a461529e36770aecb6
+Directory: 28-rc/dind
+
+Tags: 28.0.0-rc.1-dind-rootless, 28-rc-dind-rootless, rc-dind-rootless
+Architectures: amd64, arm64v8
+GitCommit: b329937b7efdb0ef4a6724a461529e36770aecb6
+Directory: 28-rc/dind-rootless
+
+Tags: 28.0.0-rc.1-windowsservercore-ltsc2025, 28-rc-windowsservercore-ltsc2025, rc-windowsservercore-ltsc2025
+SharedTags: 28.0.0-rc.1-windowsservercore, 28-rc-windowsservercore, rc-windowsservercore
+Architectures: windows-amd64
+GitCommit: b329937b7efdb0ef4a6724a461529e36770aecb6
+Directory: 28-rc/windows/windowsservercore-ltsc2025
+Constraints: windowsservercore-ltsc2025
+Builder: classic
+
+Tags: 28.0.0-rc.1-windowsservercore-ltsc2022, 28-rc-windowsservercore-ltsc2022, rc-windowsservercore-ltsc2022
+SharedTags: 28.0.0-rc.1-windowsservercore, 28-rc-windowsservercore, rc-windowsservercore
+Architectures: windows-amd64
+GitCommit: b329937b7efdb0ef4a6724a461529e36770aecb6
+Directory: 28-rc/windows/windowsservercore-ltsc2022
+Constraints: windowsservercore-ltsc2022
+Builder: classic
+
+Tags: 28.0.0-rc.1-windowsservercore-1809, 28-rc-windowsservercore-1809, rc-windowsservercore-1809
+SharedTags: 28.0.0-rc.1-windowsservercore, 28-rc-windowsservercore, rc-windowsservercore
+Architectures: windows-amd64
+GitCommit: b329937b7efdb0ef4a6724a461529e36770aecb6
+Directory: 28-rc/windows/windowsservercore-1809
+Constraints: windowsservercore-1809
+Builder: classic
+
 Tags: 27.5.1-cli, 27.5-cli, 27-cli, cli, 27.5.1-cli-alpine3.21
 Architectures: amd64, arm32v6, arm32v7, arm64v8
 GitCommit: 9af9a06de75a33816897ae7285fcb5104c5d9f83
