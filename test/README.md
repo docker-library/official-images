@@ -8,7 +8,7 @@ $ ./run.sh
 usage: run.sh [-t test ...] image:tag [...]
    ie: run.sh debian:bookworm
        run.sh -t utc python:3
-       run.sh -t utc python:3 -t python-hy
+       run.sh -t utc python:3 -t python-imports
 
 This script processes the specified Docker images to test their running
 environments.
@@ -25,24 +25,24 @@ testing debian:bookworm
 	'debian-apt-get' [4/4]...passed
 ```
 
-Try to run just the `python-hy` test against the `debian:bookworm` image: (which doesn't contain Python)
+Try to run just the `python-imports` test against the `debian:bookworm` image: (which doesn't contain Python)
 
 ```console
-$ ./run.sh -t python-hy debian:bookworm
+$ ./run.sh -t python-imports debian:bookworm
 testing debian:bookworm
 	image has no tests...skipping
 ```
 
-Run the `utc` and `python-hy` tests against `python:3`, `pypy:3`, and `debian:bookworm`:
+Run the `utc` and `python-imports` tests against `python:3`, `pypy:3`, and `debian:bookworm`:
 
 ```console
-$ ./run.sh -t utc -t python-hy python:3 pypy:3 debian:bookworm
+$ ./run.sh -t utc -t python-imports python:3 pypy:3 debian:bookworm
 testing python:3
 	'utc' [1/2]...passed
-	'python-hy' [2/2]...passed
+	'python-imports' [2/2]...passed
 testing pypy:3
 	'utc' [1/2]...passed
-	'python-hy' [2/2]...passed
+	'python-imports' [2/2]...passed
 testing debian:bookworm
 	'utc' [1/1]...passed
 ```
@@ -107,18 +107,14 @@ total 8
 -rw-rw-r-- 1 tianon tianon 167 Mar 11 13:24 container.hy
 -rw-rw-r-- 1 tianon tianon   5 Mar 11 13:24 expected-std-out.txt
 lrwxrwxrwx 1 tianon tianon  25 Mar 11 13:25 run.sh -> ../run-hy-in-container.sh
-$ ls -l tests/python-hy/
+$ ls -l tests/python-imports/
 total 4
-lrwxrwxrwx 1 tianon tianon 25 Mar 11 13:25 container.hy -> ../hylang-sh/container.hy
--rw-rw-r-- 1 tianon tianon 56 Mar 11 13:24 container.sh
-lrwxrwxrwx 1 tianon tianon 33 Mar 11 13:25 expected-std-out.txt -> ../hylang-sh/expected-std-out.txt
-lrwxrwxrwx 1 tianon tianon 27 Feb  5 16:52 run.sh -> ../run-bash-in-container.sh
-$ cat tests/python-hy/container.sh
-#!/bin/bash
-set -e
+-rw-r--r-- 1 tianon tianon 1096 Aug 29 16:14 container.py
+lrwxrwxrwx 1 tianon tianon   29 Dec 15  2016 run.sh -> ../run-python-in-container.sh
+$ head -n3 tests/python-imports/container.py
+import platform, sys
 
-pip install -q hy
-hy ./container.hy
+isWindows = platform.system() == 'Windows'
 ```
 
 ## Configuring the Test Suite
@@ -161,7 +157,7 @@ This array defines the list of explicit tests for each image. For example, the `
 ```bash
 imageTests+=(
 	[python]='
-		python-hy
+		python-imports
 		python-pip-requests-ssl
 	'
 	[mysql]='

@@ -207,7 +207,6 @@ imageTests+=(
 		postgres-initdb
 	'
 	[python]='
-		python-hy
 		python-imports
 		python-no-pyc
 		python-pip-requests-ssl
