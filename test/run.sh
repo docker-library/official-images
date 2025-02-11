@@ -11,7 +11,7 @@ usage() {
 usage: $self [-t test ...] image:tag [...]
    ie: $self debian:bookworm
        $self -t utc python:3
-       $self -t utc python:3 -t python-hy
+       $self -t utc python:3 -t python-imports
 
 This script processes the specified Docker images to test their running
 environments.
