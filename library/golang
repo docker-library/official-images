@@ -1,4 +1,4 @@
-# this file is generated via https://github.com/docker-library/golang/blob/04edff02d63505fdac6f0c8b1857b25529713441/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/golang/blob/e3086cb731933f5a15c07553943a7120c82d70b8/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit),
@@ -143,3 +143,24 @@ GitCommit: 63766bb47bd5e6718d7d75fbd821a36704d219f8
 Directory: 1.23/windows/nanoserver-1809
 Builder: classic
 Constraints: nanoserver-1809, windowsservercore-1809
+
+Tags: tip-20250209-bookworm, tip-bookworm
+SharedTags: tip-20250209, tip
+Architectures: amd64, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: 5a29b9e587f019aa33410a8fefb67af33e15b63c
+Directory: tip/bookworm
+
+Tags: tip-20250209-bullseye, tip-bullseye
+Architectures: amd64, arm32v7, arm64v8, i386
+GitCommit: 5a29b9e587f019aa33410a8fefb67af33e15b63c
+Directory: tip/bullseye
+
+Tags: tip-20250209-alpine3.21, tip-alpine3.21, tip-20250209-alpine, tip-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
+GitCommit: 5a29b9e587f019aa33410a8fefb67af33e15b63c
+Directory: tip/alpine3.21
+
+Tags: tip-20250209-alpine3.20, tip-alpine3.20
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
+GitCommit: 5a29b9e587f019aa33410a8fefb67af33e15b63c
+Directory: tip/alpine3.20
