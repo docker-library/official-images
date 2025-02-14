@@ -5,8 +5,7 @@ set -Eeuo pipefail
 
 images="$(
 	bashbrew list --repos --uniq "$@" \
-		| sort -uV \
-		| xargs -r bashbrew list --repos --uniq --build-order
+		| sort -uV
 )"
 set -- $images
 
@@ -34,7 +33,6 @@ for img; do
 
 	bashbrew list --uniq "$img" \
 		| sort -V \
-		| xargs -r bashbrew list --uniq --build-order \
 		| xargs -r bashbrew cat --format '
 			{{- range $e := .TagEntries -}}
 				{{- printf "\n%s\n" ($e.ClearDefaults $.Manifest.Global) -}}

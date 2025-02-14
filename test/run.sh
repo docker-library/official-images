@@ -9,9 +9,9 @@ usage() {
 	cat <<EOUSAGE
 
 usage: $self [-t test ...] image:tag [...]
-   ie: $self debian:buster
+   ie: $self debian:bookworm
        $self -t utc python:3
-       $self -t utc python:3 -t python-hy
+       $self -t utc python:3 -t python-imports
 
 This script processes the specified Docker images to test their running
 environments.
@@ -123,7 +123,7 @@ for dockerImage in "$@"; do
 			variant='alpine'
 			;;
 		slim-*|*-slim-*)
-			# "slim-jessie" is still "slim"
+			# "slim-bookworm" is still "slim"
 			variant='slim'
 			;;
 		psmdb-*)

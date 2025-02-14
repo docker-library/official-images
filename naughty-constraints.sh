@@ -1,13 +1,7 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
 
-: "${BASHBREW_CACHE:=$HOME/.cache/bashbrew}"
-export BASHBREW_CACHE BASHBREW_ARCH=
-
-if [ ! -d "$BASHBREW_CACHE/git" ]; then
-	# initialize the "bashbrew cache"
-	bashbrew --arch amd64 from --uniq --apply-constraints hello-world:linux > /dev/null
-fi
+export BASHBREW_ARCH=
 
 if [ "$#" -eq 0 ]; then
 	set -- '--all'

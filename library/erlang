@@ -1,89 +1,64 @@
-# this file is generated via https://github.com/erlang/docker-erlang-otp/blob/a96c0cf57e39093282214ede8d7e3f285c05e716/generate-stackbrew-library.sh
+# this file is generated via https://github.com/erlang/docker-erlang-otp/blob/82ec2b71064d2a985479be96a90a30539299c9cf/generate-stackbrew-library.sh
 
 Maintainers: Mr C0B <denc716@gmail.com> (@c0b)
 GitRepo: https://github.com/erlang/docker-erlang-otp.git
 
-Tags: 25.1.2.0, 25.1.2, 25.1, 25, latest
+Tags: 27.2.1.0, 27.2.1, 27.2, 27, latest
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 03fc50239a39d6d7a93cf99c403bfbebed203e14
+GitCommit: 838581dc4f97bfd511e255b29edc5fe2f8b243dd
+Directory: 27
+
+Tags: 27.2.1.0-slim, 27.2.1-slim, 27.2-slim, 27-slim, slim
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: 838581dc4f97bfd511e255b29edc5fe2f8b243dd
+Directory: 27/slim
+
+Tags: 27.2.1.0-alpine, 27.2.1-alpine, 27.2-alpine, 27-alpine, alpine
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 838581dc4f97bfd511e255b29edc5fe2f8b243dd
+Directory: 27/alpine
+
+Tags: 26.2.5.6, 26.2.5, 26.2, 26
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: 0032babeb928e3465a91b0deb4f7b8a33930e3be
+Directory: 26
+
+Tags: 26.2.5.6-slim, 26.2.5-slim, 26.2-slim, 26-slim
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: 0032babeb928e3465a91b0deb4f7b8a33930e3be
+Directory: 26/slim
+
+Tags: 26.2.5.6-alpine, 26.2.5-alpine, 26.2-alpine, 26-alpine
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
+GitCommit: 31b38022c405588392cfb37ff4ccb0cff92873ea
+Directory: 26/alpine
+
+Tags: 25.3.2.16, 25.3.2, 25.3, 25
+Architectures: amd64, arm32v7, arm64v8, i386
+GitCommit: 0032babeb928e3465a91b0deb4f7b8a33930e3be
 Directory: 25
 
-Tags: 25.1.2.0-slim, 25.1.2-slim, 25.1-slim, 25-slim, slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 03fc50239a39d6d7a93cf99c403bfbebed203e14
+Tags: 25.3.2.16-slim, 25.3.2-slim, 25.3-slim, 25-slim
+Architectures: amd64, arm32v7, arm64v8, i386
+GitCommit: 0032babeb928e3465a91b0deb4f7b8a33930e3be
 Directory: 25/slim
 
-Tags: 25.1.2.0-alpine, 25.1.2-alpine, 25.1-alpine, 25-alpine, alpine
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 03fc50239a39d6d7a93cf99c403bfbebed203e14
+Tags: 25.3.2.16-alpine, 25.3.2-alpine, 25.3-alpine, 25-alpine
+Architectures: amd64, arm32v7, arm64v8, i386
+GitCommit: 31b38022c405588392cfb37ff4ccb0cff92873ea
 Directory: 25/alpine
 
-Tags: 24.3.4.6, 24.3.4, 24.3, 24
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: ae880ebdea91a9a7ce87634f8750526d3ee3a851
+Tags: 24.3.4.17, 24.3.4, 24.3, 24
+Architectures: amd64, arm32v7, arm64v8, i386
+GitCommit: c7e3d58244259ec45bd0b84df7287096d9833d19
 Directory: 24
 
-Tags: 24.3.4.6-slim, 24.3.4-slim, 24.3-slim, 24-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: ae880ebdea91a9a7ce87634f8750526d3ee3a851
+Tags: 24.3.4.17-slim, 24.3.4-slim, 24.3-slim, 24-slim
+Architectures: amd64, arm32v7, arm64v8, i386
+GitCommit: c7e3d58244259ec45bd0b84df7287096d9833d19
 Directory: 24/slim
 
-Tags: 24.3.4.6-alpine, 24.3.4-alpine, 24.3-alpine, 24-alpine
-Architectures: amd64, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: ae880ebdea91a9a7ce87634f8750526d3ee3a851
+Tags: 24.3.4.17-alpine, 24.3.4-alpine, 24.3-alpine, 24-alpine
+Architectures: amd64, arm32v7, arm64v8, i386
+GitCommit: 31b38022c405588392cfb37ff4ccb0cff92873ea
 Directory: 24/alpine
-
-Tags: 23.3.4.18, 23.3.4, 23.3, 23
-Architectures: amd64, arm32v7, arm64v8, i386
-GitCommit: ba3db36fd4ce972f32c91d9043dc2acb5a07063f
-Directory: 23
-
-Tags: 23.3.4.18-slim, 23.3.4-slim, 23.3-slim, 23-slim
-Architectures: amd64, arm32v7, arm64v8, i386
-GitCommit: ba3db36fd4ce972f32c91d9043dc2acb5a07063f
-Directory: 23/slim
-
-Tags: 23.3.4.18-alpine, 23.3.4-alpine, 23.3-alpine, 23-alpine
-Architectures: amd64, arm32v7, arm64v8, i386
-GitCommit: ba3db36fd4ce972f32c91d9043dc2acb5a07063f
-Directory: 23/alpine
-
-Tags: 22.3.4.26, 22.3.4, 22.3, 22
-Architectures: amd64, arm32v7, arm64v8, i386
-GitCommit: 65d8b721f96b98d2daa032cd7431ff64d5e8154a
-Directory: 22
-
-Tags: 22.3.4.26-slim, 22.3.4-slim, 22.3-slim, 22-slim
-Architectures: amd64, arm32v7, arm64v8, i386
-GitCommit: 65d8b721f96b98d2daa032cd7431ff64d5e8154a
-Directory: 22/slim
-
-Tags: 22.3.4.26-alpine, 22.3.4-alpine, 22.3-alpine, 22-alpine
-Architectures: amd64, arm32v7, arm64v8, i386
-GitCommit: 65d8b721f96b98d2daa032cd7431ff64d5e8154a
-Directory: 22/alpine
-
-Tags: 21.3.8.24, 21.3.8, 21.3, 21
-Architectures: amd64, arm32v7, arm64v8, i386
-GitCommit: fd21a3bf876b240b413d2cd4543d832dca466c5c
-Directory: 21
-
-Tags: 21.3.8.24-slim, 21.3.8-slim, 21.3-slim, 21-slim
-Architectures: amd64, arm32v7, arm64v8, i386
-GitCommit: fd21a3bf876b240b413d2cd4543d832dca466c5c
-Directory: 21/slim
-
-Tags: 21.3.8.24-alpine, 21.3.8-alpine, 21.3-alpine, 21-alpine
-Architectures: amd64, arm32v7, arm64v8, i386
-GitCommit: 563db88eea30a7ae5bc5aea6643b6b186a555c35
-Directory: 21/alpine
-
-Tags: 20.3.8.26, 20.3.8, 20.3, 20
-Architectures: amd64, arm32v7, arm64v8, i386
-GitCommit: fd21a3bf876b240b413d2cd4543d832dca466c5c
-Directory: 20
-
-Tags: 20.3.8.26-slim, 20.3.8-slim, 20.3-slim, 20-slim
-Architectures: amd64, arm32v7, arm64v8, i386
-GitCommit: fd21a3bf876b240b413d2cd4543d832dca466c5c
-Directory: 20/slim

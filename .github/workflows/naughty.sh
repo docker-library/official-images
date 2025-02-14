@@ -17,6 +17,8 @@ export BASHBREW_LIBRARY="$PWD/library"
 
 bashbrew from --uniq "$@" > /dev/null
 
+numNaughty=0
+
 if badTags="$(bashbrew list "$@" | grep -E ':.+latest.*|:.*latest.+')" && [ -n "$badTags" ]; then
 	echo >&2
 	echo >&2 "Incorrectly formatted 'latest' tags detected:"
@@ -24,7 +26,19 @@ if badTags="$(bashbrew list "$@" | grep -E ':.+latest.*|:.*latest.+')" && [ -n "
 	echo >&2
 	echo >&2 'Read https://github.com/docker-library/official-images#tags-and-aliases for more details.'
 	echo >&2
-	exit 1
+	(( ++numNaughty ))
+fi
+
+naughtySharedTags="$(./naughty-sharedtags.sh "$@")"
+if [ -n "$naughtySharedTags" ]; then
+	echo >&2
+	echo >&2 "Invalid 'SharedTags' combinations detected:"
+	echo >&2
+	echo >&2 "$naughtySharedTags"
+	echo >&2
+	echo >&2 'Read https://github.com/docker-library/faq#whats-the-difference-between-shared-and-simple-tags for more details.'
+	echo >&2
+	(( ++numNaughty ))
 fi
 
 naughtyFrom="$(./naughty-from.sh "$@")"
@@ -36,7 +50,7 @@ if [ -n "$naughtyFrom" ]; then
 	echo >&2
 	echo >&2 'Read https://github.com/docker-library/official-images#multiple-architectures for more details.'
 	echo >&2
-	exit 1
+	(( ++numNaughty ))
 fi
 
 naughtyConstraints="$(./naughty-constraints.sh "$@")"
@@ -46,7 +60,7 @@ if [ -n "$naughtyConstraints" ]; then
 	echo >&2
 	echo >&2 "$naughtyConstraints"
 	echo >&2
-	exit 1
+	(( ++numNaughty ))
 fi
 
 naughtyCommits="$(./naughty-commits.sh "$@")"
@@ -56,5 +70,7 @@ if [ -n "$naughtyCommits" ]; then
 	echo >&2
 	echo >&2 "$naughtyCommits"
 	echo >&2
-	exit 1
+	(( ++numNaughty ))
 fi
+
+exit "$numNaughty"

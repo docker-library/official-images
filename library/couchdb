@@ -1,22 +1,33 @@
 # see https://couchdb.apache.org/
 # also the announce@couchdb.apache.org mailing list
 
-Maintainers: Joan Touzet <wohali@apache.org> (@wohali)
+Maintainers: Joan Touzet <wohali@apache.org> (@wohali), Jan Lehnardt <jan@apache.org> (@janl), Nick Vatamaniuc (@nickva)
 GitRepo: https://github.com/apache/couchdb-docker
 GitFetch: refs/heads/main
-GitCommit: 9af532fbd94692c0de3ff277418cc46ff4d90bad
+GitCommit: 734c61f2a9421637ff58be225665477be52dd4b7
 
-Tags: latest, 3.2.2, 3.2, 3
-Architectures: amd64, arm64v8, ppc64le
-Directory: 3.2.2
+Tags: latest, 3.4.2, 3.4, 3
+Architectures: amd64, arm64v8, s390x
+Directory: 3.4.2
 
-Tags: 3.1.2, 3.1
-Architectures: amd64, arm64v8
-Directory: 3.1.2
+Tags: 3.4.2-nouveau, 3.4-nouveau, 3-nouveau
+Architectures: amd64, arm64v8, s390x
+Directory: 3.4.2-nouveau
 
-Tags: 2.3.1, 2.3, 2
-Architectures: amd64, arm64v8
-Directory: 2.3.1
+Tags: 3.3.3, 3.3
+Architectures: amd64, arm64v8, ppc64le, s390x
+Directory: 3.3.3
+
+# 2.3 and 3.1 are FROM debian:buster (EOL)
+# https://github.com/docker-library/official-images/pull/17091#issuecomment-2201099734
+#
+#Tags: 3.1.2, 3.1
+#Architectures: amd64, arm64v8
+#Directory: 3.1.2
+#
+#Tags: 2.3.1, 2.3, 2
+#Architectures: amd64, arm64v8
+#Directory: 2.3.1
 
 # 1.x is no longer supported by the Apache CouchDB team.
 #

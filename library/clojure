@@ -2,196 +2,222 @@ Maintainers: Paul Lam <paul@quantisan.com> (@Quantisan),
              Wes Morgan <wes@wesmorgan.me> (@cap10morgan)
 Architectures: arm64v8, amd64
 GitRepo: https://github.com/Quantisan/docker-clojure.git
-GitCommit: bf400a5faf0f5cd9c9f4e859bd12fa50091499a3
+GitCommit: 318a8d7072128dc030e48162613f18596bf44e35
 
 
 Tags: latest
-Directory: target/eclipse-temurin-17-jdk-jammy/latest
+Directory: target/debian-bookworm-21/latest
 
-Tags: temurin-8-boot-2.8.3-bullseye, temurin-8-boot-bullseye
-Directory: target/debian-bullseye-8/boot
-
-Tags: temurin-8-boot-2.8.3-bullseye-slim, temurin-8-boot-bullseye-slim
-Directory: target/debian-bullseye-slim-8/boot
-
-Tags: temurin-8-boot-2.8.3-focal, temurin-8-boot-focal
-Directory: target/eclipse-temurin-8-jdk-focal/boot
-
-Tags: temurin-8-boot, temurin-8-boot-2.8.3, temurin-8-boot-2.8.3-jammy, temurin-8-boot-jammy
-Directory: target/eclipse-temurin-8-jdk-jammy/boot
-
-Tags: temurin-8-lein-2.9.10-alpine, temurin-8-lein-alpine
+Tags: temurin-8-lein-2.11.2-alpine, temurin-8-lein-alpine
 Architectures: amd64
 Directory: target/eclipse-temurin-8-jdk-alpine/lein
 
-Tags: temurin-8-lein-2.9.10-bullseye, temurin-8-lein-bullseye
+Tags: temurin-8-lein-2.11.2-bookworm, temurin-8-lein-bookworm
+Directory: target/debian-bookworm-8/lein
+
+Tags: temurin-8-lein-2.11.2-bookworm-slim, temurin-8-lein-bookworm-slim
+Directory: target/debian-bookworm-slim-8/lein
+
+Tags: temurin-8-lein-2.11.2-bullseye, temurin-8-lein-bullseye
 Directory: target/debian-bullseye-8/lein
 
-Tags: temurin-8-lein-2.9.10-bullseye-slim, temurin-8-lein-bullseye-slim
+Tags: temurin-8-lein-2.11.2-bullseye-slim, temurin-8-lein-bullseye-slim
 Directory: target/debian-bullseye-slim-8/lein
 
-Tags: temurin-8-lein-2.9.10-focal, temurin-8-lein-focal
-Directory: target/eclipse-temurin-8-jdk-focal/lein
-
-Tags: temurin-8-lein, temurin-8-lein-2.9.10, temurin-8-lein-2.9.10-jammy, temurin-8-lein-jammy
+Tags: temurin-8-lein, temurin-8-lein-2.11.2, temurin-8-lein-2.11.2-jammy, temurin-8-lein-jammy
 Directory: target/eclipse-temurin-8-jdk-jammy/lein
 
-Tags: temurin-8-alpine, temurin-8-tools-deps-1.11.1.1200-alpine, temurin-8-tools-deps-alpine
+Tags: temurin-8-lein-2.11.2-noble, temurin-8-lein-noble
+Directory: target/eclipse-temurin-8-jdk-noble/lein
+
+Tags: temurin-8-alpine, temurin-8-tools-deps-1.12.0.1501-alpine, temurin-8-tools-deps-alpine
 Architectures: amd64
 Directory: target/eclipse-temurin-8-jdk-alpine/tools-deps
 
-Tags: temurin-8-bullseye, temurin-8-tools-deps-1.11.1.1200-bullseye, temurin-8-tools-deps-bullseye
+Tags: temurin-8-bookworm, temurin-8-tools-deps-1.12.0.1501-bookworm, temurin-8-tools-deps-bookworm
+Directory: target/debian-bookworm-8/tools-deps
+
+Tags: temurin-8-bookworm-slim, temurin-8-tools-deps-1.12.0.1501-bookworm-slim, temurin-8-tools-deps-bookworm-slim
+Directory: target/debian-bookworm-slim-8/tools-deps
+
+Tags: temurin-8-bullseye, temurin-8-tools-deps-1.12.0.1501-bullseye, temurin-8-tools-deps-bullseye
 Directory: target/debian-bullseye-8/tools-deps
 
-Tags: temurin-8-bullseye-slim, temurin-8-tools-deps-1.11.1.1200-bullseye-slim, temurin-8-tools-deps-bullseye-slim
+Tags: temurin-8-bullseye-slim, temurin-8-tools-deps-1.12.0.1501-bullseye-slim, temurin-8-tools-deps-bullseye-slim
 Directory: target/debian-bullseye-slim-8/tools-deps
 
-Tags: temurin-8-focal, temurin-8-tools-deps-1.11.1.1200-focal, temurin-8-tools-deps-focal
-Directory: target/eclipse-temurin-8-jdk-focal/tools-deps
-
-Tags: temurin-8-jammy, temurin-8-tools-deps, temurin-8-tools-deps-1.11.1.1200, temurin-8-tools-deps-1.11.1.1200-jammy, temurin-8-tools-deps-jammy
+Tags: temurin-8-jammy, temurin-8-tools-deps, temurin-8-tools-deps-1.12.0.1501, temurin-8-tools-deps-1.12.0.1501-jammy, temurin-8-tools-deps-jammy
 Directory: target/eclipse-temurin-8-jdk-jammy/tools-deps
 
-Tags: temurin-11-boot-2.8.3-alpine, temurin-11-boot-alpine
-Architectures: amd64
-Directory: target/eclipse-temurin-11-jdk-alpine/boot
+Tags: temurin-8-noble, temurin-8-tools-deps-1.12.0.1501-noble, temurin-8-tools-deps-noble
+Directory: target/eclipse-temurin-8-jdk-noble/tools-deps
 
-Tags: temurin-11-boot-2.8.3-bullseye, temurin-11-boot-bullseye
-Directory: target/debian-bullseye-11/boot
-
-Tags: temurin-11-boot-2.8.3-bullseye-slim, temurin-11-boot-bullseye-slim
-Directory: target/debian-bullseye-slim-11/boot
-
-Tags: temurin-11-boot-2.8.3-focal, temurin-11-boot-focal
-Directory: target/eclipse-temurin-11-jdk-focal/boot
-
-Tags: temurin-11-boot, temurin-11-boot-2.8.3, temurin-11-boot-2.8.3-jammy, temurin-11-boot-jammy
-Directory: target/eclipse-temurin-11-jdk-jammy/boot
-
-Tags: temurin-11-lein-2.9.10-alpine, temurin-11-lein-alpine
+Tags: temurin-11-lein-2.11.2-alpine, temurin-11-lein-alpine
 Architectures: amd64
 Directory: target/eclipse-temurin-11-jdk-alpine/lein
 
-Tags: temurin-11-lein-2.9.10-bullseye, temurin-11-lein-bullseye
+Tags: temurin-11-lein-2.11.2-bookworm, temurin-11-lein-bookworm
+Directory: target/debian-bookworm-11/lein
+
+Tags: temurin-11-lein-2.11.2-bookworm-slim, temurin-11-lein-bookworm-slim
+Directory: target/debian-bookworm-slim-11/lein
+
+Tags: temurin-11-lein-2.11.2-bullseye, temurin-11-lein-bullseye
 Directory: target/debian-bullseye-11/lein
 
-Tags: temurin-11-lein-2.9.10-bullseye-slim, temurin-11-lein-bullseye-slim
+Tags: temurin-11-lein-2.11.2-bullseye-slim, temurin-11-lein-bullseye-slim
 Directory: target/debian-bullseye-slim-11/lein
 
-Tags: temurin-11-lein-2.9.10-focal, temurin-11-lein-focal
-Directory: target/eclipse-temurin-11-jdk-focal/lein
-
-Tags: temurin-11-lein, temurin-11-lein-2.9.10, temurin-11-lein-2.9.10-jammy, temurin-11-lein-jammy
+Tags: temurin-11-lein, temurin-11-lein-2.11.2, temurin-11-lein-2.11.2-jammy, temurin-11-lein-jammy
 Directory: target/eclipse-temurin-11-jdk-jammy/lein
 
-Tags: temurin-11-alpine, temurin-11-tools-deps-1.11.1.1200-alpine, temurin-11-tools-deps-alpine
+Tags: temurin-11-lein-2.11.2-noble, temurin-11-lein-noble
+Directory: target/eclipse-temurin-11-jdk-noble/lein
+
+Tags: temurin-11-alpine, temurin-11-tools-deps-1.12.0.1501-alpine, temurin-11-tools-deps-alpine
 Architectures: amd64
 Directory: target/eclipse-temurin-11-jdk-alpine/tools-deps
 
-Tags: temurin-11-bullseye, temurin-11-tools-deps-1.11.1.1200-bullseye, temurin-11-tools-deps-bullseye
+Tags: temurin-11-bookworm, temurin-11-tools-deps-1.12.0.1501-bookworm, temurin-11-tools-deps-bookworm
+Directory: target/debian-bookworm-11/tools-deps
+
+Tags: temurin-11-bookworm-slim, temurin-11-tools-deps-1.12.0.1501-bookworm-slim, temurin-11-tools-deps-bookworm-slim
+Directory: target/debian-bookworm-slim-11/tools-deps
+
+Tags: temurin-11-bullseye, temurin-11-tools-deps-1.12.0.1501-bullseye, temurin-11-tools-deps-bullseye
 Directory: target/debian-bullseye-11/tools-deps
 
-Tags: temurin-11-bullseye-slim, temurin-11-tools-deps-1.11.1.1200-bullseye-slim, temurin-11-tools-deps-bullseye-slim
+Tags: temurin-11-bullseye-slim, temurin-11-tools-deps-1.12.0.1501-bullseye-slim, temurin-11-tools-deps-bullseye-slim
 Directory: target/debian-bullseye-slim-11/tools-deps
 
-Tags: temurin-11-focal, temurin-11-tools-deps-1.11.1.1200-focal, temurin-11-tools-deps-focal
-Directory: target/eclipse-temurin-11-jdk-focal/tools-deps
-
-Tags: temurin-11-jammy, temurin-11-tools-deps, temurin-11-tools-deps-1.11.1.1200, temurin-11-tools-deps-1.11.1.1200-jammy, temurin-11-tools-deps-jammy
+Tags: temurin-11-jammy, temurin-11-tools-deps, temurin-11-tools-deps-1.12.0.1501, temurin-11-tools-deps-1.12.0.1501-jammy, temurin-11-tools-deps-jammy
 Directory: target/eclipse-temurin-11-jdk-jammy/tools-deps
 
-Tags: boot-2.8.3-alpine, boot-alpine, temurin-17-boot-2.8.3-alpine, temurin-17-boot-alpine
-Architectures: amd64
-Directory: target/eclipse-temurin-17-jdk-alpine/boot
+Tags: temurin-11-noble, temurin-11-tools-deps-1.12.0.1501-noble, temurin-11-tools-deps-noble
+Directory: target/eclipse-temurin-11-jdk-noble/tools-deps
 
-Tags: temurin-17-boot-2.8.3-bullseye, temurin-17-boot-bullseye
-Directory: target/debian-bullseye-17/boot
-
-Tags: temurin-17-boot-2.8.3-bullseye-slim, temurin-17-boot-bullseye-slim
-Directory: target/debian-bullseye-slim-17/boot
-
-Tags: boot-2.8.3-focal, boot-focal, temurin-17-boot-2.8.3-focal, temurin-17-boot-focal
-Directory: target/eclipse-temurin-17-jdk-focal/boot
-
-Tags: boot, boot-2.8.3, boot-2.8.3-jammy, boot-jammy, temurin-17-boot, temurin-17-boot-2.8.3, temurin-17-boot-2.8.3-jammy, temurin-17-boot-jammy
-Directory: target/eclipse-temurin-17-jdk-jammy/boot
-
-Tags: lein-2.9.10-alpine, lein-alpine, temurin-17-lein-2.9.10-alpine, temurin-17-lein-alpine
+Tags: temurin-17-lein-2.11.2-alpine, temurin-17-lein-alpine
 Architectures: amd64
 Directory: target/eclipse-temurin-17-jdk-alpine/lein
 
-Tags: temurin-17-lein-2.9.10-bullseye, temurin-17-lein-bullseye
+Tags: temurin-17-lein-2.11.2-bookworm, temurin-17-lein-bookworm
+Directory: target/debian-bookworm-17/lein
+
+Tags: temurin-17-lein-2.11.2-bookworm-slim, temurin-17-lein-bookworm-slim
+Directory: target/debian-bookworm-slim-17/lein
+
+Tags: temurin-17-lein-2.11.2-bullseye, temurin-17-lein-bullseye
 Directory: target/debian-bullseye-17/lein
 
-Tags: temurin-17-lein-2.9.10-bullseye-slim, temurin-17-lein-bullseye-slim
+Tags: temurin-17-lein-2.11.2-bullseye-slim, temurin-17-lein-bullseye-slim
 Directory: target/debian-bullseye-slim-17/lein
 
-Tags: lein-2.9.10-focal, lein-focal, temurin-17-lein-2.9.10-focal, temurin-17-lein-focal
-Directory: target/eclipse-temurin-17-jdk-focal/lein
-
-Tags: lein, lein-2.9.10, lein-2.9.10-jammy, lein-jammy, temurin-17-lein, temurin-17-lein-2.9.10, temurin-17-lein-2.9.10-jammy, temurin-17-lein-jammy
+Tags: temurin-17-lein, temurin-17-lein-2.11.2, temurin-17-lein-2.11.2-jammy, temurin-17-lein-jammy
 Directory: target/eclipse-temurin-17-jdk-jammy/lein
 
-Tags: temurin-17-alpine, temurin-17-tools-deps-1.11.1.1200-alpine, temurin-17-tools-deps-alpine, tools-deps-1.11.1.1200-alpine, tools-deps-alpine
+Tags: temurin-17-lein-2.11.2-noble, temurin-17-lein-noble
+Directory: target/eclipse-temurin-17-jdk-noble/lein
+
+Tags: temurin-17-alpine, temurin-17-tools-deps-1.12.0.1501-alpine, temurin-17-tools-deps-alpine
 Architectures: amd64
 Directory: target/eclipse-temurin-17-jdk-alpine/tools-deps
 
-Tags: temurin-17-bullseye, temurin-17-tools-deps-1.11.1.1200-bullseye, temurin-17-tools-deps-bullseye
+Tags: temurin-17-bookworm, temurin-17-tools-deps-1.12.0.1501-bookworm, temurin-17-tools-deps-bookworm
+Directory: target/debian-bookworm-17/tools-deps
+
+Tags: temurin-17-bookworm-slim, temurin-17-tools-deps-1.12.0.1501-bookworm-slim, temurin-17-tools-deps-bookworm-slim
+Directory: target/debian-bookworm-slim-17/tools-deps
+
+Tags: temurin-17-bullseye, temurin-17-tools-deps-1.12.0.1501-bullseye, temurin-17-tools-deps-bullseye
 Directory: target/debian-bullseye-17/tools-deps
 
-Tags: temurin-17-bullseye-slim, temurin-17-tools-deps-1.11.1.1200-bullseye-slim, temurin-17-tools-deps-bullseye-slim
+Tags: temurin-17-bullseye-slim, temurin-17-tools-deps-1.12.0.1501-bullseye-slim, temurin-17-tools-deps-bullseye-slim
 Directory: target/debian-bullseye-slim-17/tools-deps
 
-Tags: temurin-17-focal, temurin-17-tools-deps-1.11.1.1200-focal, temurin-17-tools-deps-focal, tools-deps-1.11.1.1200-focal, tools-deps-focal
-Directory: target/eclipse-temurin-17-jdk-focal/tools-deps
-
-Tags: temurin-17-jammy, temurin-17-tools-deps, temurin-17-tools-deps-1.11.1.1200, temurin-17-tools-deps-1.11.1.1200-jammy, temurin-17-tools-deps-jammy, tools-deps, tools-deps-1.11.1.1200, tools-deps-1.11.1.1200-jammy, tools-deps-jammy
+Tags: temurin-17-jammy, temurin-17-tools-deps, temurin-17-tools-deps-1.12.0.1501, temurin-17-tools-deps-1.12.0.1501-jammy, temurin-17-tools-deps-jammy
 Directory: target/eclipse-temurin-17-jdk-jammy/tools-deps
 
-Tags: temurin-19-boot-2.8.3-alpine, temurin-19-boot-alpine
+Tags: temurin-17-noble, temurin-17-tools-deps-1.12.0.1501-noble, temurin-17-tools-deps-noble
+Directory: target/eclipse-temurin-17-jdk-noble/tools-deps
+
+Tags: temurin-21-lein-2.11.2-alpine, temurin-21-lein-alpine
 Architectures: amd64
-Directory: target/eclipse-temurin-19-jdk-alpine/boot
+Directory: target/eclipse-temurin-21-jdk-alpine/lein
 
-Tags: temurin-19-boot-2.8.3-bullseye, temurin-19-boot-bullseye
-Directory: target/debian-bullseye-19/boot
+Tags: lein, lein-2.11.2, lein-2.11.2-bookworm, lein-bookworm, temurin-21-lein, temurin-21-lein-2.11.2, temurin-21-lein-2.11.2-bookworm, temurin-21-lein-bookworm
+Directory: target/debian-bookworm-21/lein
 
-Tags: temurin-19-boot-2.8.3-bullseye-slim, temurin-19-boot-bullseye-slim
-Directory: target/debian-bullseye-slim-19/boot
+Tags: lein-2.11.2-bookworm-slim, lein-bookworm-slim, temurin-21-lein-2.11.2-bookworm-slim, temurin-21-lein-bookworm-slim
+Directory: target/debian-bookworm-slim-21/lein
 
-Tags: temurin-19-boot-2.8.3-focal, temurin-19-boot-focal
-Directory: target/eclipse-temurin-19-jdk-focal/boot
+Tags: lein-2.11.2-bullseye, lein-bullseye, temurin-21-lein-2.11.2-bullseye, temurin-21-lein-bullseye
+Directory: target/debian-bullseye-21/lein
 
-Tags: temurin-19-boot, temurin-19-boot-2.8.3, temurin-19-boot-2.8.3-jammy, temurin-19-boot-jammy
-Directory: target/eclipse-temurin-19-jdk-jammy/boot
+Tags: lein-2.11.2-bullseye-slim, lein-bullseye-slim, temurin-21-lein-2.11.2-bullseye-slim, temurin-21-lein-bullseye-slim
+Directory: target/debian-bullseye-slim-21/lein
 
-Tags: temurin-19-lein-2.9.10-alpine, temurin-19-lein-alpine
+Tags: temurin-21-lein-2.11.2-jammy, temurin-21-lein-jammy
+Directory: target/eclipse-temurin-21-jdk-jammy/lein
+
+Tags: temurin-21-lein-2.11.2-noble, temurin-21-lein-noble
+Directory: target/eclipse-temurin-21-jdk-noble/lein
+
+Tags: temurin-21-alpine, temurin-21-tools-deps-1.12.0.1501-alpine, temurin-21-tools-deps-alpine
 Architectures: amd64
-Directory: target/eclipse-temurin-19-jdk-alpine/lein
+Directory: target/eclipse-temurin-21-jdk-alpine/tools-deps
 
-Tags: temurin-19-lein-2.9.10-bullseye, temurin-19-lein-bullseye
-Directory: target/debian-bullseye-19/lein
+Tags: temurin-21-bookworm, temurin-21-tools-deps, temurin-21-tools-deps-1.12.0.1501, temurin-21-tools-deps-1.12.0.1501-bookworm, temurin-21-tools-deps-bookworm, tools-deps, tools-deps-1.12.0.1501, tools-deps-1.12.0.1501-bookworm, tools-deps-bookworm
+Directory: target/debian-bookworm-21/tools-deps
 
-Tags: temurin-19-lein-2.9.10-bullseye-slim, temurin-19-lein-bullseye-slim
-Directory: target/debian-bullseye-slim-19/lein
+Tags: temurin-21-bookworm-slim, temurin-21-tools-deps-1.12.0.1501-bookworm-slim, temurin-21-tools-deps-bookworm-slim, tools-deps-1.12.0.1501-bookworm-slim, tools-deps-bookworm-slim
+Directory: target/debian-bookworm-slim-21/tools-deps
 
-Tags: temurin-19-lein-2.9.10-focal, temurin-19-lein-focal
-Directory: target/eclipse-temurin-19-jdk-focal/lein
+Tags: temurin-21-bullseye, temurin-21-tools-deps-1.12.0.1501-bullseye, temurin-21-tools-deps-bullseye, tools-deps-1.12.0.1501-bullseye, tools-deps-bullseye
+Directory: target/debian-bullseye-21/tools-deps
 
-Tags: temurin-19-lein, temurin-19-lein-2.9.10, temurin-19-lein-2.9.10-jammy, temurin-19-lein-jammy
-Directory: target/eclipse-temurin-19-jdk-jammy/lein
+Tags: temurin-21-bullseye-slim, temurin-21-tools-deps-1.12.0.1501-bullseye-slim, temurin-21-tools-deps-bullseye-slim, tools-deps-1.12.0.1501-bullseye-slim, tools-deps-bullseye-slim
+Directory: target/debian-bullseye-slim-21/tools-deps
 
-Tags: temurin-19-alpine, temurin-19-tools-deps-1.11.1.1200-alpine, temurin-19-tools-deps-alpine
+Tags: temurin-21-jammy, temurin-21-tools-deps-1.12.0.1501-jammy, temurin-21-tools-deps-jammy
+Directory: target/eclipse-temurin-21-jdk-jammy/tools-deps
+
+Tags: temurin-21-noble, temurin-21-tools-deps-1.12.0.1501-noble, temurin-21-tools-deps-noble
+Directory: target/eclipse-temurin-21-jdk-noble/tools-deps
+
+Tags: temurin-23-lein-2.11.2-alpine, temurin-23-lein-alpine
 Architectures: amd64
-Directory: target/eclipse-temurin-19-jdk-alpine/tools-deps
+Directory: target/eclipse-temurin-23-jdk-alpine/lein
 
-Tags: temurin-19-bullseye, temurin-19-tools-deps-1.11.1.1200-bullseye, temurin-19-tools-deps-bullseye
-Directory: target/debian-bullseye-19/tools-deps
+Tags: temurin-23-lein, temurin-23-lein-2.11.2, temurin-23-lein-2.11.2-bookworm, temurin-23-lein-bookworm
+Directory: target/debian-bookworm-23/lein
 
-Tags: temurin-19-bullseye-slim, temurin-19-tools-deps-1.11.1.1200-bullseye-slim, temurin-19-tools-deps-bullseye-slim
-Directory: target/debian-bullseye-slim-19/tools-deps
+Tags: temurin-23-lein-2.11.2-bookworm-slim, temurin-23-lein-bookworm-slim
+Directory: target/debian-bookworm-slim-23/lein
 
-Tags: temurin-19-focal, temurin-19-tools-deps-1.11.1.1200-focal, temurin-19-tools-deps-focal
-Directory: target/eclipse-temurin-19-jdk-focal/tools-deps
+Tags: temurin-23-lein-2.11.2-bullseye, temurin-23-lein-bullseye
+Directory: target/debian-bullseye-23/lein
 
-Tags: temurin-19-jammy, temurin-19-tools-deps, temurin-19-tools-deps-1.11.1.1200, temurin-19-tools-deps-1.11.1.1200-jammy, temurin-19-tools-deps-jammy
-Directory: target/eclipse-temurin-19-jdk-jammy/tools-deps
+Tags: temurin-23-lein-2.11.2-bullseye-slim, temurin-23-lein-bullseye-slim
+Directory: target/debian-bullseye-slim-23/lein
+
+Tags: temurin-23-lein-2.11.2-noble, temurin-23-lein-noble
+Directory: target/eclipse-temurin-23-jdk-noble/lein
+
+Tags: temurin-23-alpine, temurin-23-tools-deps-1.12.0.1501-alpine, temurin-23-tools-deps-alpine
+Architectures: amd64
+Directory: target/eclipse-temurin-23-jdk-alpine/tools-deps
+
+Tags: temurin-23-bookworm, temurin-23-tools-deps, temurin-23-tools-deps-1.12.0.1501, temurin-23-tools-deps-1.12.0.1501-bookworm, temurin-23-tools-deps-bookworm
+Directory: target/debian-bookworm-23/tools-deps
+
+Tags: temurin-23-bookworm-slim, temurin-23-tools-deps-1.12.0.1501-bookworm-slim, temurin-23-tools-deps-bookworm-slim
+Directory: target/debian-bookworm-slim-23/tools-deps
+
+Tags: temurin-23-bullseye, temurin-23-tools-deps-1.12.0.1501-bullseye, temurin-23-tools-deps-bullseye
+Directory: target/debian-bullseye-23/tools-deps
+
+Tags: temurin-23-bullseye-slim, temurin-23-tools-deps-1.12.0.1501-bullseye-slim, temurin-23-tools-deps-bullseye-slim
+Directory: target/debian-bullseye-slim-23/tools-deps
+
+Tags: temurin-23-noble, temurin-23-tools-deps-1.12.0.1501-noble, temurin-23-tools-deps-noble
+Directory: target/eclipse-temurin-23-jdk-noble/tools-deps

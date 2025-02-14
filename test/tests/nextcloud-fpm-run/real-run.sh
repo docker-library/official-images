@@ -8,7 +8,7 @@ image="$1"
 # Build a client image with cgi-fcgi for testing
 clientImage='librarytest/nextcloud-fpm-run:fcgi-client'
 docker build -t "$clientImage" - > /dev/null <<'EOF'
-FROM debian:buster-slim
+FROM debian:bookworm-slim
 
 RUN set -x && apt-get update && apt-get install -y --no-install-recommends libfcgi-bin && rm -rf /var/lib/apt/lists/*
 
@@ -41,7 +41,7 @@ fcgi-request() {
 }
 
 # Make sure that PHP-FPM is listening and ready
-. "$dir/../../retry.sh" --tries 30 'fcgi-request GET /index.php' > /dev/null 2>&1
+. "$dir/../../retry.sh" --tries 10 --sleep 5 'fcgi-request GET /index.php' > /dev/null 2>&1
 
 # Check that we can request / and that it contains the pattern "Install" somewhere
 # <input type="submit" class="primary" value="Install" data-finishing="Installing …">

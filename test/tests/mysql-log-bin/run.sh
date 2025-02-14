@@ -6,9 +6,10 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 image="$1"
 
 cname="mysql-container-$RANDOM-$RANDOM"
+rootpass="secret$RANDOM-$RANDOM"
 cid="$(
 	docker run -d \
-		-e MYSQL_ALLOW_EMPTY_PASSWORD=1 \
+		-e MYSQL_ROOT_PASSWORD="$rootpass" \
 		--name "$cname" \
 		"$image" \
 		--log-bin="foo-$RANDOM" \
@@ -19,9 +20,11 @@ trap "docker rm -vf $cid > /dev/null" EXIT
 mysql() {
 	docker run --rm -i \
 		--link "$cname":mysql \
-		--entrypoint mysql \
+		--entrypoint sh \
 		"$image" \
+		-euc 'if command -v mariadb > /dev/null; then exec mariadb "$@"; else exec mysql "$@"; fi' -- \
 		-uroot \
+		-p"$rootpass" \
 		-hmysql \
 		--silent \
 		"$@"

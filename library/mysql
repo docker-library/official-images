@@ -1,29 +1,29 @@
-# this file is generated via https://github.com/docker-library/mysql/blob/9ed73fdd2f2fd77591d0020e13c37602a0600eb8/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/mysql/blob/6faf41e2e9d9d0a2b97d83449830ca75cbee17f9/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/mysql.git
 
-Tags: 8.0.31, 8.0, 8, latest, 8.0.31-oracle, 8.0-oracle, 8-oracle, oracle
+Tags: 9.2.0, 9.2, 9, innovation, latest, 9.2.0-oraclelinux9, 9.2-oraclelinux9, 9-oraclelinux9, innovation-oraclelinux9, oraclelinux9, 9.2.0-oracle, 9.2-oracle, 9-oracle, innovation-oracle, oracle
 Architectures: amd64, arm64v8
-GitCommit: e0d43b2a29867c5b7d5c01a8fea30a086861df2b
+GitCommit: df3a5c483a5e8c3c4d1eae61678fa5372c403bf0
+Directory: innovation
+File: Dockerfile.oracle
+
+Tags: 8.4.4, 8.4, 8, lts, 8.4.4-oraclelinux9, 8.4-oraclelinux9, 8-oraclelinux9, lts-oraclelinux9, 8.4.4-oracle, 8.4-oracle, 8-oracle, lts-oracle
+Architectures: amd64, arm64v8
+GitCommit: 42386a0efb57a032d707e822086feea263088ad9
+Directory: 8.4
+File: Dockerfile.oracle
+
+Tags: 8.0.41, 8.0, 8.0.41-oraclelinux9, 8.0-oraclelinux9, 8.0.41-oracle, 8.0-oracle
+Architectures: amd64, arm64v8
+GitCommit: 6978e12b0d46abf24015045bd22a0cf11b19c150
 Directory: 8.0
 File: Dockerfile.oracle
 
-Tags: 8.0.31-debian, 8.0-debian, 8-debian, debian
+Tags: 8.0.41-bookworm, 8.0-bookworm, 8.0.41-debian, 8.0-debian
 Architectures: amd64
-GitCommit: e0d43b2a29867c5b7d5c01a8fea30a086861df2b
+GitCommit: 6978e12b0d46abf24015045bd22a0cf11b19c150
 Directory: 8.0
-File: Dockerfile.debian
-
-Tags: 5.7.40, 5.7, 5, 5.7.40-oracle, 5.7-oracle, 5-oracle
-Architectures: amd64
-GitCommit: e0d43b2a29867c5b7d5c01a8fea30a086861df2b
-Directory: 5.7
-File: Dockerfile.oracle
-
-Tags: 5.7.40-debian, 5.7-debian, 5-debian
-Architectures: amd64
-GitCommit: e0d43b2a29867c5b7d5c01a8fea30a086861df2b
-Directory: 5.7
 File: Dockerfile.debian

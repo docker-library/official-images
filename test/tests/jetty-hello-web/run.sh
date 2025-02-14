@@ -9,7 +9,7 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 image="$1"
 
 # Use a client image with curl for testing
-clientImage='buildpack-deps:buster-curl'
+clientImage='buildpack-deps:bookworm-curl'
 # ensure the clientImage is ready and available
 if ! docker image inspect "$clientImage" &> /dev/null; then
 	docker pull "$clientImage" > /dev/null
@@ -21,7 +21,12 @@ serverImage="$("$dir/../image-name.sh" librarytest/jetty-hello-web "$image")"
 FROM $image
 COPY dir/index.jsp /var/lib/jetty/webapps/ROOT/
 EOD
-cid="$(docker run -d "$serverImage")"
+
+if [[ $image == *"12."* ]]; then
+	cid="$(docker run -d "$serverImage" sh -c 'java -jar $JETTY_HOME/start.jar --add-to-start=ee10-deploy,ee10-jsp ; /docker-entrypoint.sh')"
+else
+	cid="$(docker run -d "$serverImage")"
+fi
 trap "docker rm -vf $cid > /dev/null" EXIT
 
 _request() {

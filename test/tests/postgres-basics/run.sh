@@ -42,3 +42,7 @@ echo 'DELETE FROM test WHERE a = 1' | psql
 [ "$(echo 'SELECT COUNT(*) FROM test' | psql)" = 1 ]
 [ "$(echo 'SELECT c FROM test' | psql)" = 'goodbye!' ]
 echo 'DROP TABLE test' | psql
+
+# test jit support to ensure llvm lib is correct
+# SET jit = on; is required for postgres 11; on 12+ it is on by default
+[ "$(echo 'SET jit = on; SELECT pg_jit_available();' | psql)" = 't' ]

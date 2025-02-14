@@ -1,161 +1,143 @@
 # IBM Semeru Runtimes official Docker images.
 
-Maintainers: Surya Narkedimilli <snarkedi@in.ibm.com> (@narkedi)
+Maintainers: Jayashree Gopi <jayasg12@in.ibm.com> (@jayasg12)
 GitRepo: https://github.com/ibmruntimes/semeru-containers.git
 GitFetch: refs/heads/ibm
 
 #-----------------------------openj9 v8 images---------------------------------
-Tags: open-8u352-b08-jdk-focal, open-8-jdk-focal
+Tags: open-8u432-b06-jdk-focal, open-8-jdk-focal
 Architectures: amd64, ppc64le, s390x, arm64v8
-GitCommit: 5be6c185f78d72f254a9874c87c72ea4560c9160
+GitCommit: b13bc45629a8e3892f61159b4fb8737c20df85d2
 Directory: 8/jdk/ubuntu/focal
 File: Dockerfile.open.releases.full
 
-Tags: open-8u352-b08-jdk-jammy, open-8-jdk-jammy
-SharedTags: open-8u352-b08-jdk, open-8-jdk
-Architectures: amd64, s390x, arm64v8
-GitCommit: 5be6c185f78d72f254a9874c87c72ea4560c9160
+Tags: open-8u432-b06-jdk-jammy, open-8-jdk-jammy
+SharedTags: open-8u432-b06-jdk, open-8-jdk
+Architectures: amd64, ppc64le, s390x, arm64v8
+GitCommit: b13bc45629a8e3892f61159b4fb8737c20df85d2
 Directory: 8/jdk/ubuntu/jammy
 File: Dockerfile.open.releases.full
 
-Tags: open-8u352-b08-jdk-centos7, open-8-jdk-centos7
-Architectures: amd64, ppc64le, arm64v8
-GitCommit: 5be6c185f78d72f254a9874c87c72ea4560c9160
-Directory: 8/jdk/centos
-File: Dockerfile.open.releases.full
-
-Tags: open-8u352-b08-jre-focal, open-8-jre-focal
+Tags: open-8u432-b06-jre-focal, open-8-jre-focal
 Architectures: amd64, ppc64le, s390x, arm64v8
-GitCommit: 5be6c185f78d72f254a9874c87c72ea4560c9160
+GitCommit: b13bc45629a8e3892f61159b4fb8737c20df85d2
 Directory: 8/jre/ubuntu/focal
 File: Dockerfile.open.releases.full
 
-Tags: open-8u352-b08-jre-jammy, open-8-jre-jammy
-SharedTags: open-8u352-b08-jre, open-8-jre
-Architectures: amd64, s390x, arm64v8
-GitCommit: 5be6c185f78d72f254a9874c87c72ea4560c9160
+Tags: open-8u432-b06-jre-jammy, open-8-jre-jammy
+SharedTags: open-8u432-b06-jre, open-8-jre
+Architectures: amd64, ppc64le, s390x, arm64v8
+GitCommit: b13bc45629a8e3892f61159b4fb8737c20df85d2
 Directory: 8/jre/ubuntu/jammy
 File: Dockerfile.open.releases.full
 
-Tags: open-8u352-b08-jre-centos7, open-8-jre-centos7
-Architectures: amd64, ppc64le, arm64v8
-GitCommit: 5be6c185f78d72f254a9874c87c72ea4560c9160
-Directory: 8/jre/centos
-File: Dockerfile.open.releases.full
-
 #-----------------------------openj9 v11 images---------------------------------
-Tags: open-11.0.17_8-jdk-focal, open-11-jdk-focal
+Tags: open-11.0.25_9-jdk-focal, open-11-jdk-focal
 Architectures: amd64, ppc64le, s390x, arm64v8
-GitCommit: 5be6c185f78d72f254a9874c87c72ea4560c9160
+GitCommit: b13bc45629a8e3892f61159b4fb8737c20df85d2
 Directory: 11/jdk/ubuntu/focal
 File: Dockerfile.open.releases.full
 
-Tags: open-11.0.17_8-jdk-jammy, open-11-jdk-jammy
-SharedTags: open-11.0.17_8-jdk, open-11-jdk
-Architectures: amd64, s390x, arm64v8
-GitCommit: 5be6c185f78d72f254a9874c87c72ea4560c9160
+Tags: open-11.0.25_9-jdk-jammy, open-11-jdk-jammy
+SharedTags: open-11.0.25_9-jdk, open-11-jdk
+Architectures: amd64, ppc64le, s390x, arm64v8
+GitCommit: b13bc45629a8e3892f61159b4fb8737c20df85d2
 Directory: 11/jdk/ubuntu/jammy
 File: Dockerfile.open.releases.full
 
-Tags: open-11.0.17_8-jdk-centos7, open-11-jdk-centos7
-Architectures: amd64, ppc64le, arm64v8
-GitCommit: 5be6c185f78d72f254a9874c87c72ea4560c9160
-Directory: 11/jdk/centos
-File: Dockerfile.open.releases.full
-
-Tags: open-11.0.17_8-jre-focal, open-11-jre-focal
+Tags: open-11.0.25_9-jre-focal, open-11-jre-focal
 Architectures: amd64, ppc64le, s390x, arm64v8
-GitCommit: 5be6c185f78d72f254a9874c87c72ea4560c9160
+GitCommit: b13bc45629a8e3892f61159b4fb8737c20df85d2
 Directory: 11/jre/ubuntu/focal
 File: Dockerfile.open.releases.full
 
-Tags: open-11.0.17_8-jre-jammy, open-11-jre-jammy
-SharedTags: open-11.0.17_8-jre, open-11-jre
-Architectures: amd64, s390x, arm64v8
-GitCommit: 5be6c185f78d72f254a9874c87c72ea4560c9160
+Tags: open-11.0.25_9-jre-jammy, open-11-jre-jammy
+SharedTags: open-11.0.25_9-jre, open-11-jre
+Architectures: amd64, ppc64le, s390x, arm64v8
+GitCommit: b13bc45629a8e3892f61159b4fb8737c20df85d2
 Directory: 11/jre/ubuntu/jammy
 File: Dockerfile.open.releases.full
 
-Tags: open-11.0.17_8-jre-centos7, open-11-jre-centos7
-Architectures: amd64, ppc64le, arm64v8
-GitCommit: 5be6c185f78d72f254a9874c87c72ea4560c9160
-Directory: 11/jre/centos
-File: Dockerfile.open.releases.full
 
 #-----------------------------openj9 v17 images---------------------------------
-Tags: open-17.0.5_8-jdk-focal, open-17-jdk-focal
+Tags: open-17.0.13_11-jdk-focal, open-17-jdk-focal
 Architectures: amd64, ppc64le, s390x, arm64v8
-GitCommit: 5be6c185f78d72f254a9874c87c72ea4560c9160
+GitCommit: b13bc45629a8e3892f61159b4fb8737c20df85d2
 Directory: 17/jdk/ubuntu/focal
 File: Dockerfile.open.releases.full
 
-Tags: open-17.0.5_8-jdk-jammy, open-17-jdk-jammy
-SharedTags: open-17.0.5_8-jdk, open-17-jdk
-Architectures: amd64, s390x, arm64v8
-GitCommit: 5be6c185f78d72f254a9874c87c72ea4560c9160
+Tags: open-17.0.13_11-jdk-jammy, open-17-jdk-jammy
+SharedTags: open-17.0.13_11-jdk, open-17-jdk
+Architectures: amd64, ppc64le, s390x, arm64v8
+GitCommit: b13bc45629a8e3892f61159b4fb8737c20df85d2
 Directory: 17/jdk/ubuntu/jammy
 File: Dockerfile.open.releases.full
 
-Tags: open-17.0.5_8-jdk-centos7, open-17-jdk-centos7
-Architectures: amd64, ppc64le, arm64v8
-GitCommit: 5be6c185f78d72f254a9874c87c72ea4560c9160
-Directory: 17/jdk/centos
-File: Dockerfile.open.releases.full
-
-Tags: open-17.0.5_8-jre-focal, open-17-jre-focal
+Tags: open-17.0.13_11-jre-focal, open-17-jre-focal
 Architectures: amd64, ppc64le, s390x, arm64v8
-GitCommit: 5be6c185f78d72f254a9874c87c72ea4560c9160
+GitCommit: b13bc45629a8e3892f61159b4fb8737c20df85d2
 Directory: 17/jre/ubuntu/focal
 File: Dockerfile.open.releases.full
 
-Tags: open-17.0.5_8-jre-jammy, open-17-jre-jammy
-SharedTags: open-17.0.5_8-jre, open-17-jre
-Architectures: amd64, s390x, arm64v8
-GitCommit: 5be6c185f78d72f254a9874c87c72ea4560c9160
+Tags: open-17.0.13_11-jre-jammy, open-17-jre-jammy
+SharedTags: open-17.0.13_11-jre, open-17-jre
+Architectures: amd64, ppc64le, s390x, arm64v8
+GitCommit: b13bc45629a8e3892f61159b4fb8737c20df85d2
 Directory: 17/jre/ubuntu/jammy
 File: Dockerfile.open.releases.full
 
-Tags: open-17.0.5_8-jre-centos7, open-17-jre-centos7
-Architectures: amd64, ppc64le, arm64v8
-GitCommit: 5be6c185f78d72f254a9874c87c72ea4560c9160
-Directory: 17/jre/centos
-File: Dockerfile.open.releases.full
 
-#-----------------------------openj9 v18 images---------------------------------
-Tags: open-18.0.2_9-jdk-focal, open-18-jdk-focal
+#-----------------------------openj9 v21 images---------------------------------
+Tags: open-21.0.5_11-jdk-focal, open-21-jdk-focal
 Architectures: amd64, ppc64le, s390x, arm64v8
-GitCommit: 5be6c185f78d72f254a9874c87c72ea4560c9160
-Directory: 18/jdk/ubuntu/focal
+GitCommit: b13bc45629a8e3892f61159b4fb8737c20df85d2
+Directory: 21/jdk/ubuntu/focal
 File: Dockerfile.open.releases.full
 
-Tags: open-18.0.2_9-jdk-jammy, open-18-jdk-jammy
-SharedTags: open-18.0.2_9-jdk, open-18-jdk
-Architectures: amd64, s390x, arm64v8
-GitCommit: 5be6c185f78d72f254a9874c87c72ea4560c9160
-Directory: 18/jdk/ubuntu/jammy
-File: Dockerfile.open.releases.full
-
-Tags: open-18.0.2_9-jdk-centos7, open-18-jdk-centos7
-Architectures: amd64, ppc64le, arm64v8
-GitCommit: 5be6c185f78d72f254a9874c87c72ea4560c9160
-Directory: 18/jdk/centos
-File: Dockerfile.open.releases.full
-
-Tags: open-18.0.2_9-jre-focal, open-18-jre-focal
+Tags: open-21.0.5_11-jdk-jammy, open-21-jdk-jammy
+SharedTags: open-21.0.5_11-jdk, open-21-jdk
 Architectures: amd64, ppc64le, s390x, arm64v8
-GitCommit: 5be6c185f78d72f254a9874c87c72ea4560c9160
-Directory: 18/jre/ubuntu/focal
+GitCommit: b13bc45629a8e3892f61159b4fb8737c20df85d2
+Directory: 21/jdk/ubuntu/jammy
 File: Dockerfile.open.releases.full
 
-Tags: open-18.0.2_9-jre-jammy, open-18-jre-jammy
-SharedTags: open-18.0.2_9-jre, open-18-jre
-Architectures: amd64, s390x, arm64v8
-GitCommit: 5be6c185f78d72f254a9874c87c72ea4560c9160
-Directory: 18/jre/ubuntu/jammy
+Tags: open-21.0.5_11-jre-focal, open-21-jre-focal
+Architectures: amd64, ppc64le, s390x, arm64v8
+GitCommit: b13bc45629a8e3892f61159b4fb8737c20df85d2
+Directory: 21/jre/ubuntu/focal
 File: Dockerfile.open.releases.full
 
-Tags: open-18.0.2_9-jre-centos7, open-18-jre-centos7
-Architectures: amd64, ppc64le, arm64v8
-GitCommit: 5be6c185f78d72f254a9874c87c72ea4560c9160
-Directory: 18/jre/centos
+Tags: open-21.0.5_11-jre-jammy, open-21-jre-jammy
+SharedTags: open-21.0.5_11-jre, open-21-jre
+Architectures: amd64, ppc64le, s390x, arm64v8
+GitCommit: b13bc45629a8e3892f61159b4fb8737c20df85d2
+Directory: 21/jre/ubuntu/jammy
+File: Dockerfile.open.releases.full
+
+
+#-----------------------------openj9 v23 images---------------------------------
+Tags: open-23.0.1_11-jdk-focal, open-23-jdk-focal
+Architectures: amd64, ppc64le, s390x, arm64v8
+GitCommit: b13bc45629a8e3892f61159b4fb8737c20df85d2
+Directory: 23/jdk/ubuntu/focal
+File: Dockerfile.open.releases.full
+
+Tags: open-23.0.1_11-jdk-jammy, open-23-jdk-jammy
+SharedTags: open-23.0.1_11-jdk, open-23-jdk
+Architectures: amd64, ppc64le, s390x, arm64v8
+GitCommit: b13bc45629a8e3892f61159b4fb8737c20df85d2
+Directory: 23/jdk/ubuntu/jammy
+File: Dockerfile.open.releases.full
+
+Tags: open-23.0.1_11-jre-focal, open-23-jre-focal
+Architectures: amd64, ppc64le, s390x, arm64v8
+GitCommit: b13bc45629a8e3892f61159b4fb8737c20df85d2
+Directory: 23/jre/ubuntu/focal
+File: Dockerfile.open.releases.full
+
+Tags: open-23.0.1_11-jre-jammy, open-23-jre-jammy
+SharedTags: open-23.0.1_11-jre, open-23-jre
+Architectures: amd64, ppc64le, s390x, arm64v8
+GitCommit: b13bc45629a8e3892f61159b4fb8737c20df85d2
+Directory: 23/jre/ubuntu/jammy
 File: Dockerfile.open.releases.full

@@ -1,15 +1,19 @@
-# this file is generated via https://github.com/docker-library/kibana/blob/094d900939e2a66300d48cbf2f3a8e0fc1d51abc/generate-stackbrew-library.sh
+Maintainers: Jon Budzenski (@jbudz)
+GitRepo: https://github.com/elastic/dockerfiles.git
+Directory: kibana
+Builder: buildkit
 
-Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
-             Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
-GitRepo: https://github.com/docker-library/kibana.git
-
-Tags: 8.5.1
+Tags: 8.16.4
 Architectures: amd64, arm64v8
-GitCommit: c0ce5b8c237e4faecb1a3f078467054abb2c7b95
-Directory: 8
+GitFetch: refs/heads/8.16
+GitCommit: 02f6f08d48291a4cc48b03e3f14ac64ecab9fe5c
 
-Tags: 7.17.7
+Tags: 7.17.27
 Architectures: amd64, arm64v8
-GitCommit: 38a693842d361744c409b655bfa2c1d4a4f90278
-Directory: 7
+GitFetch: refs/heads/7.17
+GitCommit: a39d490136e8095519b2e4b148ee5e2e8d046fc9
+
+Tags: 8.17.2
+Architectures: amd64, arm64v8
+GitFetch: refs/heads/8.17
+GitCommit: 1f8deb29470634b84cd411a659d174575659d344

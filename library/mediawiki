@@ -1,37 +1,40 @@
-Maintainers: David Barratt <dbarratt@wikimedia.org> (@davidbarratt),
-             Kunal Mehta <legoktm@debian.org> (@legoktm),
-             addshore <addshorewiki@gmail.com> (@addshore)
+Maintainers: Kunal Mehta <legoktm@debian.org> (@legoktm),
+             addshore <addshorewiki@gmail.com> (@addshore),
+             Christian Heusel <christian@heusel.eu> (@christian-heusel)
 GitRepo: https://github.com/wikimedia/mediawiki-docker.git
-GitCommit: 5d098737ac1b1eb8a30a5b8277cd7f3f93a467ea
+GitFetch: refs/heads/main
+GitCommit: aa20b593fa1190fa37dcf8a0ccedab375539ee81
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le
 
-Tags: 1.38.4, 1.38, stable, latest
-Directory: 1.38/apache
+# current stable & lts version
+Tags: 1.43.0, 1.43, latest, stable, lts
+Directory: 1.43/apache
 
-Tags: 1.38.4-fpm, 1.38-fpm, stable-fpm
-Directory: 1.38/fpm
+Tags: 1.43.0-fpm, 1.43-fpm, stable-fpm, lts-fpm
+Directory: 1.43/fpm
 
-Tags: 1.38.4-fpm-alpine, 1.38-fpm-alpine, stable-fpm-alpine
+Tags: 1.43.0-fpm-alpine, 1.43-fpm-alpine, stable-fpm-alpine, lts-fpm-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le
-Directory: 1.38/fpm-alpine
+Directory: 1.43/fpm-alpine
 
-Tags: 1.37.6, 1.37, legacy
-Directory: 1.37/apache
+# current legacy versions
+Tags: 1.42.5, 1.42, legacy
+Directory: 1.42/apache
 
-Tags: 1.37.6-fpm, 1.37-fpm, legacy-fpm
-Directory: 1.37/fpm
+Tags: 1.42.5-fpm, 1.42-fpm, legacy-fpm
+Directory: 1.42/fpm
 
-Tags: 1.37.6-fpm-alpine, 1.37-fpm-alpine, legacy-fpm-alpine
+Tags: 1.42.5-fpm-alpine, 1.42-fpm-alpine, legacy-fpm-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le
-Directory: 1.37/fpm-alpine
+Directory: 1.42/fpm-alpine
 
-Tags: 1.35.8, 1.35, lts, legacylts
-Directory: 1.35/apache
+# current legacy lts version
+Tags: 1.39.11, 1.39
+Directory: 1.39/apache
 
-Tags: 1.35.8-fpm, 1.35-fpm, lts-fpm, legacylts-fpm
-Directory: 1.35/fpm
+Tags: 1.39.11-fpm, 1.39-fpm
+Directory: 1.39/fpm
 
-Tags: 1.35.8-fpm-alpine, 1.35-fpm-alpine, lts-fpm-alpine, legacylts-fpm-alpine
+Tags: 1.39.11-fpm-alpine, 1.39-fpm-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le
-Directory: 1.35/fpm-alpine
-
+Directory: 1.39/fpm-alpine

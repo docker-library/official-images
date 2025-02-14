@@ -119,11 +119,7 @@ When taking over an existing repository, please ensure that the entire Git histo
 
 Rebuilding the same `Dockerfile` should result in the same version of the image being packaged, even if the second build happens several versions later, or the build should fail outright, such that an inadvertent rebuild of a `Dockerfile` tagged as `0.1.0` doesn't end up containing `0.2.3`. For example, if using `apt` to install the main program for the image, be sure to pin it to a specific version (ex: `... apt-get install -y my-package=0.1.0 ...`). For dependent packages installed by `apt` there is not usually a need to pin them to a version.
 
-No official images can be derived from, or depend on, non-official images with the following notable exceptions:
-
--	[`FROM scratch`](https://hub.docker.com/_/scratch/)
--	[`FROM mcr.microsoft.com/windows/servercore`](https://hub.docker.com/r/microsoft/windowsservercore/)
--	[`FROM mcr.microsoft.com/windows/nanoserver`](https://hub.docker.com/r/microsoft/nanoserver/)
+No official images can be derived from, or depend on, non-official images (allowing the non-image [`scratch`](https://hub.docker.com/_/scratch/) and the intentionally limited exceptions pinned in [`.external-pins`](.external-pins) -- see also [`.external-pins/list.sh`](.external-pins/list.sh)).
 
 #### Consistency
 
@@ -264,7 +260,7 @@ Below are some examples:
 	    apt-key list > /dev/null
 
 	RUN set -eux; \
-	    echo "deb http://repo.mysql.com/apt/debian/ stretch mysql-${MYSQL_MAJOR}" > /etc/apt/sources.list.d/mysql.list; \
+	    echo "deb http://repo.mysql.com/apt/debian/ bookworm mysql-${MYSQL_MAJOR}" > /etc/apt/sources.list.d/mysql.list; \
 	    apt-get update; \
 	    apt-get install -y mysql-community-client="${MYSQL_VERSION}" mysql-community-server-core="${MYSQL_VERSION}"; \
 	    rm -rf /var/lib/apt/lists/*; \
@@ -305,7 +301,7 @@ Official Repositories that require additional privileges should specify the mini
 
 For image updates which constitute a security fix, there are a few things we recommend to help ensure your update is merged, built, and released as quickly as possible:
 
-1.	[Send an email to `doi-security@infosiftr.com`](mailto:doi-security@infosiftr.com) a few (business) days in advance to give us a heads up and a timing estimate (so we can schedule time for the incoming update appropriately).
+1.	[Send an email to `doi@docker.com`](mailto:doi@docker.com) a few (business) days in advance to give us a heads up and a timing estimate (so we can schedule time for the incoming update appropriately).
 2.	Include `[security]` in the title of your pull request (for example, `[security] Update FooBar to 1.2.5, 1.3.7, 2.0.1`).
 3.	Keep the pull request free of changes that are unrelated to the security fix -- we'll still be doing review of the update, but it will be expedited so this will help us help you.
 4.	Be active and responsive to comments on the pull request after it's opened (as usual, but even more so if the timing of the release is of importance).
@@ -327,9 +323,9 @@ Each repo can specify multiple architectures for any and all tags. If no archite
 
 The `Architectures` of any given tag must be a strict subset of the `Architectures` of the tag it is `FROM`.
 
-Images must have a single `Dockerfile` per entry in the library file that can be used for multiple architectures. This means that each supported architecture will have the same `FROM` line (e.g. `FROM debian:buster`). See [`golang`](https://github.com/docker-library/official-images/blob/master/library/golang), [`docker`](https://github.com/docker-library/official-images/blob/master/library/docker), [`haproxy`](https://github.com/docker-library/official-images/blob/master/library/haproxy), and [`php`](https://github.com/docker-library/official-images/blob/master/library/php) for examples of library files using one `Dockerfile` per entry and see their respective git repos for example `Dockerfile`s.
+Images must have a single `Dockerfile` per entry in the library file that can be used for multiple architectures. This means that each supported architecture will have the same `FROM` line (e.g. `FROM debian:bookworm`). See [`golang`](https://github.com/docker-library/official-images/blob/master/library/golang), [`docker`](https://github.com/docker-library/official-images/blob/master/library/docker), [`haproxy`](https://github.com/docker-library/official-images/blob/master/library/haproxy), and [`php`](https://github.com/docker-library/official-images/blob/master/library/php) for examples of library files using one `Dockerfile` per entry and see their respective git repos for example `Dockerfile`s.
 
-If different parts of the Dockerfile only happen in one architecture or another, use control flow (e.g.`if`/`case`) along with `dpkg --print-architecture` or `apk -print-arch` to detect the userspace architecture. Only use `uname` for architecture detection when more accurate tools cannot be installed. See [golang](https://github.com/docker-library/golang/blob/b879b60a7d94128c8fb5aea763cf31772495511d/1.16/buster/Dockerfile#L24-L68) for an example where some architectures require building binaries from the upstream source packages and some merely download the binary release.
+If different parts of the Dockerfile only happen in one architecture or another, use control flow (e.g.`if`/`case`) along with `dpkg --print-architecture` or `apk -print-arch` to detect the userspace architecture. Only use `uname` for architecture detection when more accurate tools cannot be installed. See [golang](https://github.com/docker-library/golang/blob/72bc141d781ae54ef20f71aa1105449cb6c2edc4/1.20/bookworm/Dockerfile#L26-L63) for an example where some architectures require building binaries from the upstream source packages and some merely download the binary release.
 
 For base images like `debian` it will be necessary to have a different `Dockerfile` and build context in order to `ADD` architecture specific binaries and this is a valid exception to the above. Since these images use the same `Tags`, they need to be in the same entry. Use the architecture specific fields for `GitRepo`, `GitFetch`, `GitCommit`, and `Directory`, which are the architecture concatenated with hyphen (`-`) and the field (e.g. `arm32v7-GitCommit`). Any architecture that does not have an architecture-specific field will use the default field (e.g. no `arm32v7-Directory` means `Directory` will be used for `arm32v7`). See the [`debian`](https://github.com/docker-library/official-images/blob/master/library/debian) or [`ubuntu`](https://github.com/docker-library/official-images/blob/master/library/ubuntu) files in the library for examples. The following is an example for [`hello-world`](https://github.com/docker-library/official-images/blob/master/library/hello-world):
 
@@ -372,7 +368,7 @@ Proposing a new official image should not be undertaken lightly. We expect and r
 
 ## Library definition files
 
-The library definition files are plain text files found in the [`library/` directory of the `official-images` repository](https://github.com/docker-library/official-images/tree/master/library). Each library file controls the current "supported" set of image tags that appear on the Docker Hub description. Tags that are removed from a library file do not get removed from the Docker Hub, so that old versions can continue to be available for use, but are not maintained by upstream or the maintainer of the official image. Tags in the library file are only built through an update to that library file or as a result of its base image being updated (ie, an image `FROM debian:buster` would be rebuilt when `debian:buster` is built). Only what is in the library file will be rebuilt when a base has updates.
+The library definition files are plain text files found in the [`library/` directory of the `official-images` repository](https://github.com/docker-library/official-images/tree/master/library). Each library file controls the current "supported" set of image tags that appear on the Docker Hub description. Tags that are removed from a library file do not get removed from the Docker Hub, so that old versions can continue to be available for use, but are not maintained by upstream or the maintainer of the official image. Tags in the library file are only built through an update to that library file or as a result of its base image being updated (ie, an image `FROM debian:bookworm` would be rebuilt when `debian:bookworm` is built). Only what is in the library file will be rebuilt when a base has updates.
 
 Given this policy, it is worth clarifying a few cases: backfilled versions, release candidates, and continuous integration builds. When a new repository is proposed, it is common to include some older unsupported versions in the initial pull request with the agreement to remove them right after acceptance. Don't confuse this with a comprehensive historical archive which is not the intention. Another common case where the term "supported" is stretched a bit is with release candidates. A release candidate is really just a naming convention for what are expected to be shorter-lived releases, so they are totally acceptable and encouraged. Unlike a release candidate, continuous integration builds which have a fully automated release cycle based on code commits or a regular schedule are not appropriate.
 
@@ -414,12 +410,13 @@ The first entry is the "global" metadata for the image. The only required field 
 	GitFetch: refs/heads/2.0-pre-release
 	GitCommit: beefdeadbeefdeadbeefdeadbeefdeadbeefdead
 	Directory: 2
+	File: Dockerfile-to-use
 
 Bashbrew will fetch code out of the Git repository (`GitRepo`) at the commit specified (`GitCommit`). If the commit referenced is not available by fetching `master` of the associated `GitRepo`, it becomes necessary to supply a value for `GitFetch` in order to tell Bashbrew what ref to fetch in order to get the commit necessary.
 
 The built image will be tagged as `<manifest-filename>:<tag>` (ie, `library/golang` with a `Tags` value of `1.6, 1, latest` will create tags of `golang:1.6`, `golang:1`, and `golang:latest`).
 
-Optionally, if `Directory` is present, Bashbrew will look for the `Dockerfile` inside the specified subdirectory instead of at the root (and `Directory` will be used as the ["context" for the build](https://docs.docker.com/reference/builder/) instead of the top-level of the repository).
+Optionally, if `Directory` is present, Bashbrew will look for the `Dockerfile` inside the specified subdirectory instead of at the root (and `Directory` will be used as the ["context" for the build](https://docs.docker.com/reference/builder/) instead of the top-level of the repository). If `File` is present, the specified filename instead of `Dockerfile` will be used.
 
 See the [multi-arch section](#multiple-architectures) for details on how to specify a different `GitRepo`, `GitFetch`, `GitCommit`, or `Directory` for a specific architecture.
 

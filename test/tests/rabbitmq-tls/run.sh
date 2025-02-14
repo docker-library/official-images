@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
 
+cname="rabbitmq-container-$RANDOM-$RANDOM"
 dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
-
 serverImage="$("$dir/../image-name.sh" librarytest/rabbitmq-tls-server "$1")"
+
 "$dir/../docker-build.sh" "$dir" "$serverImage" <<EOD
 FROM $1
 RUN set -eux; \
@@ -13,10 +14,10 @@ RUN set -eux; \
 		-key /certs/ca-private.key \
 		-out /certs/ca.crt \
 		-days $(( 365 * 30 )) \
-		-subj '/CN=lolca'; \
+		-subj '/CN=$cname-CA'; \
 	openssl genrsa -out /certs/private.key 4096; \
 	openssl req -new -key /certs/private.key \
-		-out /certs/cert.csr -subj '/CN=lolcert'; \
+		-out /certs/cert.csr -subj '/CN=$cname'; \
 	openssl x509 -req -in /certs/cert.csr \
 		-CA /certs/ca.crt -CAkey /certs/ca-private.key -CAcreateserial \
 		-out /certs/cert.crt -days $(( 365 * 30 )); \
@@ -25,17 +26,17 @@ RUN set -eux; \
 	chmod 0400 /certs/combined.pem; \
 	chown -R rabbitmq:rabbitmq /certs
 
-COPY --chown=rabbitmq:rabbitmq dir/*.conf /etc/rabbitmq/
+COPY --chown=rabbitmq:rabbitmq dir/*.conf* /etc/rabbitmq/
 EOD
 
 testImage="$("$dir/../image-name.sh" librarytest/rabbitmq-tls-test "$1")"
 "$dir/../docker-build.sh" "$dir" "$testImage" <<'EOD'
-FROM alpine:3.14
+FROM alpine:3.19
 RUN apk add --no-cache bash coreutils drill openssl procps
 # https://github.com/drwetter/testssl.sh/releases
-ENV TESTSSL_VERSION 3.0.5
+ENV TESTSSL_VERSION 3.0.8
 RUN set -eux; \
-	wget -O testssl.tgz "https://github.com/drwetter/testssl.sh/archive/${TESTSSL_VERSION}.tar.gz"; \
+	wget -O testssl.tgz "https://github.com/drwetter/testssl.sh/archive/v${TESTSSL_VERSION}.tar.gz"; \
 	tar -xvf testssl.tgz -C /opt; \
 	rm testssl.tgz; \
 	ln -sv "/opt/testssl.sh-$TESTSSL_VERSION/testssl.sh" /usr/local/bin/; \
@@ -44,7 +45,6 @@ EOD
 
 export ERLANG_COOKIE="rabbitmq-erlang-cookie-$RANDOM-$RANDOM"
 
-cname="rabbitmq-container-$RANDOM-$RANDOM"
 cid="$(docker run -d --name "$cname" --hostname "$cname" -e ERLANG_COOKIE "$serverImage")"
 trap "docker rm -vf $cid > /dev/null" EXIT
 
