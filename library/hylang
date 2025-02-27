@@ -1,6 +1,6 @@
 Maintainers: Paul Tagliamonte <paultag@hylang.org> (@paultag), Hy Docker Team (@hylang/docker)
 GitRepo: https://github.com/hylang/docker-hylang.git
-GitCommit: 6672ad2ce79b2cb434a9f087a7af6df664de9ecd
+GitCommit: 8458707110807b2d16e60bf127c9746509fbadc5
 Directory: dockerfiles-generated
 
 Tags: 1.0.0-python3.13-bookworm, 1.0-python3.13-bookworm, 1-python3.13-bookworm, python3.13-bookworm, 1.0.0-bookworm, 1.0-bookworm, 1-bookworm, bookworm
@@ -123,6 +123,29 @@ File: Dockerfile.python3.9-alpine3.21
 Tags: 1.0.0-python3.9-alpine3.20, 1.0-python3.9-alpine3.20, 1-python3.9-alpine3.20, python3.9-alpine3.20
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
 File: Dockerfile.python3.9-alpine3.20
+
+Tags: 1.0.0-pypy3.11-bookworm, 1.0-pypy3.11-bookworm, 1-pypy3.11-bookworm, pypy3.11-bookworm
+SharedTags: 1.0.0-pypy3.11, 1.0-pypy3.11, 1-pypy3.11, pypy3.11
+Architectures: amd64, arm64v8, i386
+File: Dockerfile.pypy3.11-bookworm
+
+Tags: 1.0.0-pypy3.11-windowsservercore-ltsc2025, 1.0-pypy3.11-windowsservercore-ltsc2025, 1-pypy3.11-windowsservercore-ltsc2025, pypy3.11-windowsservercore-ltsc2025
+SharedTags: 1.0.0-pypy3.11, 1.0-pypy3.11, 1-pypy3.11, pypy3.11
+Architectures: windows-amd64
+Constraints: windowsservercore-ltsc2025
+File: Dockerfile.pypy3.11-windowsservercore-ltsc2025
+
+Tags: 1.0.0-pypy3.11-windowsservercore-ltsc2022, 1.0-pypy3.11-windowsservercore-ltsc2022, 1-pypy3.11-windowsservercore-ltsc2022, pypy3.11-windowsservercore-ltsc2022
+SharedTags: 1.0.0-pypy3.11, 1.0-pypy3.11, 1-pypy3.11, pypy3.11
+Architectures: windows-amd64
+Constraints: windowsservercore-ltsc2022
+File: Dockerfile.pypy3.11-windowsservercore-ltsc2022
+
+Tags: 1.0.0-pypy3.11-windowsservercore-1809, 1.0-pypy3.11-windowsservercore-1809, 1-pypy3.11-windowsservercore-1809, pypy3.11-windowsservercore-1809
+SharedTags: 1.0.0-pypy3.11, 1.0-pypy3.11, 1-pypy3.11, pypy3.11
+Architectures: windows-amd64
+Constraints: windowsservercore-1809
+File: Dockerfile.pypy3.11-windowsservercore-1809
 
 Tags: 1.0.0-pypy3.10-bookworm, 1.0-pypy3.10-bookworm, 1-pypy3.10-bookworm, pypy3.10-bookworm, 1.0.0-pypy-bookworm, 1.0-pypy-bookworm, 1-pypy-bookworm, pypy-bookworm
 SharedTags: 1.0.0-pypy3.10, 1.0-pypy3.10, 1-pypy3.10, pypy3.10, 1.0.0-pypy, 1.0-pypy, 1-pypy, pypy
