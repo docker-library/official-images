@@ -1,6 +1,6 @@
 Maintainers: Yaroslav Halchenko <debian@onerussian.com> (@yarikoptic)
 GitRepo: https://github.com/neurodebian/dockerfiles.git
-GitCommit: a0af1d460705d7efc9d6de9483f1ce4aa48ad152
+GitCommit: 89ca52860d80889fd878392a29150e46d9d91a71
 
 Tags: focal, nd20.04
 Architectures: amd64, arm64v8
@@ -42,18 +42,22 @@ Tags: bookworm-non-free, nd120-non-free, non-free
 Architectures: amd64, arm64v8, i386
 Directory: dockerfiles/bookworm-non-free
 
-Tags: trixie, nd130
-Architectures: amd64, arm64v8, i386
-Directory: dockerfiles/trixie
-
-Tags: trixie-non-free, nd130-non-free
-Architectures: amd64, arm64v8, i386
-Directory: dockerfiles/trixie-non-free
-
-Tags: sid, nd
-Architectures: amd64, arm64v8, i386
-Directory: dockerfiles/sid
-
-Tags: sid-non-free, nd-non-free
-Architectures: amd64, arm64v8, i386
-Directory: dockerfiles/sid-non-free
+#
+# https://github.com/neurodebian/dockerfiles/issues/18
+# https://github.com/neurodebian/neurodebian/issues/97
+#
+#Tags: trixie, nd130
+#Architectures: amd64, arm64v8, i386
+#Directory: dockerfiles/trixie
+#
+#Tags: trixie-non-free, nd130-non-free
+#Architectures: amd64, arm64v8, i386
+#Directory: dockerfiles/trixie-non-free
+#
+#Tags: sid, nd
+#Architectures: amd64, arm64v8, i386
+#Directory: dockerfiles/sid
+#
+#Tags: sid-non-free, nd-non-free
+#Architectures: amd64, arm64v8, i386
+#Directory: dockerfiles/sid-non-free
