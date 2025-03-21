@@ -3,7 +3,29 @@ Maintainers: Carmine Vassallo <carmine.vassallo@sonarsource.com> (@carminevassal
              Davi Koscianski Vidal <davi.koscianski-vidal@sonarsource.com> (@davividal)
 GitRepo: https://github.com/SonarSource/docker-sonarqube.git
 Architectures: amd64, arm64v8
-GitCommit: 2194a60cf0dbf5de11789389fddafb8002bd7d8a
+GitCommit: 500fa5278eef556c2404f51191e3d4b1b93ddbce
+Builder: buildkit
+
+Tags: 2025.1.1-developer, 2025.1-developer, 2025-lta-developer, developer
+Architectures: amd64, arm64v8
+Directory: 2025.1/developer
+
+Tags: 2025.1.1-enterprise, 2025.1-enterprise, 2025-lta-enterprise, enterprise
+Architectures: amd64, arm64v8
+Directory: 2025.1/enterprise
+
+Tags: 2025.1.1-datacenter-app, 2025.1-datacenter-app, 2025-lta-datacenter-app, datacenter-app
+Architectures: amd64, arm64v8
+Directory: 2025.1/datacenter/app
+
+Tags: 2025.1.1-datacenter-search, 2025.1-datacenter-search, 2025-lta-datacenter-search, datacenter-search
+Architectures: amd64, arm64v8
+Directory: 2025.1/datacenter/search
+
+Tags: 25.3.0.104237-community, community, latest
+GitCommit: 65d32aee3047ae2d7bff433d278b5e1622134a37
+Architectures: amd64, arm64v8
+Directory: community-build
 
 Tags: 9.9.8-community, 9.9-community, 9-community, lts, lts-community
 Architectures: amd64, arm64v8
@@ -13,34 +35,14 @@ Tags: 9.9.8-developer, 9.9-developer, 9-developer, lts-developer
 Architectures: amd64, arm64v8
 Directory: 9/developer
 
-Tags: 9.9.8-enterprise, 9.9-enterprise, 9-enterprise, lts-enterprise
+Tags: 9.9.9-enterprise, 9.9-enterprise, 9-enterprise, lts-enterprise
 Architectures: amd64, arm64v8
 Directory: 9/enterprise
 
-Tags: 9.9.8-datacenter-app, 9.9-datacenter-app, 9-datacenter-app, lts-datacenter-app
+Tags: 9.9.9-datacenter-app, 9.9-datacenter-app, 9-datacenter-app, lts-datacenter-app
 Architectures: amd64, arm64v8
 Directory: 9/datacenter/app
 
-Tags: 9.9.8-datacenter-search, 9.9-datacenter-search, 9-datacenter-search, lts-datacenter-search
+Tags: 9.9.9-datacenter-search, 9.9-datacenter-search, 9-datacenter-search, lts-datacenter-search
 Architectures: amd64, arm64v8
 Directory: 9/datacenter/search
-
-Tags: 10.8.1-developer, 10.8-developer, 10-developer, developer
-Architectures: amd64, arm64v8
-Directory: 10/developer
-
-Tags: 10.8.1-enterprise, 10.8-enterprise, 10-enterprise, enterprise
-Architectures: amd64, arm64v8
-Directory: 10/enterprise
-
-Tags: 10.8.1-datacenter-app, 10.8-datacenter-app, 10-datacenter-app, datacenter-app
-Architectures: amd64, arm64v8
-Directory: 10/datacenter/app
-
-Tags: 10.8.1-datacenter-search, 10.8-datacenter-search, 10-datacenter-search, datacenter-search
-Architectures: amd64, arm64v8
-Directory: 10/datacenter/search
-
-Tags: 25.1.0.102122-community, community, latest
-Architectures: amd64, arm64v8
-Directory: community-build
