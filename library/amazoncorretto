@@ -15,7 +15,7 @@ Maintainers: Amazon Corretto Team <corretto-team@amazon.com> (@corretto),
              Satyen Subramaniam <satyenme@amazon.com> (@satyenme)
 GitRepo: https://github.com/corretto/corretto-docker.git
 GitFetch: refs/heads/main
-GitCommit: 89bc34902ac1a084562a2c6e7b02190eff3613bb
+GitCommit: 4abdc06bc5a7f4942a8ff94b9da0b95044ffaf68
 
 Tags: 8, 8u442, 8u442-al2, 8-al2-full, 8-al2-jdk, 8-al2-generic, 8u442-al2-generic, 8-al2-generic-jdk, latest
 Architectures: amd64, arm64v8
@@ -212,3 +212,31 @@ Directory: 23/jdk/alpine/3.20
 Tags: 23-alpine3.21, 23.0.2-alpine3.21, 23-alpine3.21-full, 23-alpine3.21-jdk, 23-alpine, 23.0.2-alpine, 23-alpine-full, 23-alpine-jdk
 Architectures: amd64, arm64v8
 Directory: 23/jdk/alpine/3.21
+
+Tags: 24-al2023, 24.0.0-al2023, 24-al2023-jdk, 24, 24-jdk
+Architectures: amd64, arm64v8
+Directory: 24/jdk/al2023
+
+Tags: 24-al2023-headless, 24.0.0-al2023-headless, 24-headless
+Architectures: amd64, arm64v8
+Directory: 24/headless/al2023
+
+Tags: 24-al2023-headful, 24.0.0-al2023-headful, 24-headful
+Architectures: amd64, arm64v8
+Directory: 24/headful/al2023
+
+Tags: 24-alpine3.18, 24.0.0-alpine3.18, 24-alpine3.18-full, 24-alpine3.18-jdk
+Architectures: amd64, arm64v8
+Directory: 24/jdk/alpine/3.18
+
+Tags: 24-alpine3.19, 24.0.0-alpine3.19, 24-alpine3.19-full, 24-alpine3.19-jdk
+Architectures: amd64, arm64v8
+Directory: 24/jdk/alpine/3.19
+
+Tags: 24-alpine3.20, 24.0.0-alpine3.20, 24-alpine3.20-full, 24-alpine3.20-jdk
+Architectures: amd64, arm64v8
+Directory: 24/jdk/alpine/3.20
+
+Tags: 24-alpine3.21, 24.0.0-alpine3.21, 24-alpine3.21-full, 24-alpine3.21-jdk, 24-alpine, 24.0.0-alpine, 24-alpine-full, 24-alpine-jdk
+Architectures: amd64, arm64v8
+Directory: 24/jdk/alpine/3.21
