@@ -6,67 +6,123 @@ Maintainers: Ted Kremenek <kremenek@apple.com> (@tkremenek),
 GitRepo: https://github.com/apple/swift-docker.git
 GitFetch: refs/heads/main
 
-Tags: 6.0.3, 6.0, 6.0.3-noble, 6.0-noble, noble, latest
+Tags: 6.1.0, 6.1, 6.1.0-noble, 6.1-noble, noble, latest
+Architectures: amd64, arm64v8
+GitCommit: fad056fa5f65f926323f0ff61129cb4e6b1eec11
+Directory: 6.1/ubuntu/24.04
+
+Tags: 6.1.0-slim, 6.1-slim, 6.1.0-noble-slim, 6.1-noble-slim, noble-slim, slim
+Architectures: amd64, arm64v8
+GitCommit: fad056fa5f65f926323f0ff61129cb4e6b1eec11
+Directory: 6.1/ubuntu/24.04/slim
+
+Tags: 6.1.0-jammy, 6.1-jammy, jammy
+Architectures: amd64, arm64v8
+GitCommit: fad056fa5f65f926323f0ff61129cb4e6b1eec11
+Directory: 6.1/ubuntu/22.04
+
+Tags: 6.1.0-jammy-slim, 6.1-jammy-slim, jammy-slim
+Architectures: amd64, arm64v8
+GitCommit: fad056fa5f65f926323f0ff61129cb4e6b1eec11
+Directory: 6.1/ubuntu/22.04/slim
+
+Tags: 6.1.0-focal-slim, 6.1-focal-slim, focal-slim
+Architectures: amd64, arm64v8
+GitCommit: fad056fa5f65f926323f0ff61129cb4e6b1eec11
+Directory: 6.1/ubuntu/20.04/slim
+
+Tags: 6.1.0-focal, 6.1-focal, focal
+Architectures: amd64, arm64v8
+GitCommit: fad056fa5f65f926323f0ff61129cb4e6b1eec11
+Directory: 6.1/ubuntu/20.04
+
+Tags: 6.1.0-bookworm, 6.1-bookworm, bookworm
+Architectures: amd64, arm64v8
+GitCommit: fad056fa5f65f926323f0ff61129cb4e6b1eec11
+Directory: 6.1/debian/12
+
+Tags: 6.1.0-amazonlinux2, 6.1-amazonlinux2, amazonlinux2
+Architectures: amd64, arm64v8
+GitCommit: fad056fa5f65f926323f0ff61129cb4e6b1eec11
+Directory: 6.1/amazonlinux/2
+
+Tags: 6.1.0-amazonlinux2-slim, 6.1-amazonlinux2-slim, amazonlinux2-slim
+Architectures: amd64, arm64v8
+GitCommit: fad056fa5f65f926323f0ff61129cb4e6b1eec11
+Directory: 6.1/amazonlinux/2/slim
+
+Tags: 6.1.0-rhel-ubi9, 6.1-rhel-ubi9, rhel-ubi9
+Architectures: amd64, arm64v8
+GitCommit: fad056fa5f65f926323f0ff61129cb4e6b1eec11
+Directory: 6.1/rhel-ubi/9
+
+Tags: 6.1.0-rhel-ubi9-slim, 6.1-rhel-ubi9-slim, rhel-ubi9-slim
+Architectures: amd64, arm64v8
+GitCommit: fad056fa5f65f926323f0ff61129cb4e6b1eec11
+Directory: 6.1/rhel-ubi/9/slim
+
+Tags: 6.1.0-windowsservercore-ltsc2022, 6.1-windowsservercore-ltsc2022, windowsservercore-ltsc2022
+Architectures: windows-amd64
+GitCommit: fad056fa5f65f926323f0ff61129cb4e6b1eec11
+Directory: 6.1/windows/LTSC2022
+Constraints: windowsservercore-ltsc2022
+
+Tags: 6.0.3, 6.0, 6.0.3-noble, 6.0-noble
 Architectures: amd64, arm64v8
 GitCommit: f44060cdf224436060d2df98a5c3f63f2600de63
 Directory: 6.0/ubuntu/24.04
 
-Tags: 6.0.3-slim, 6.0-slim, 6.0.3-noble-slim, 6.0-noble-slim, noble-slim, slim
+Tags: 6.0.3-slim, 6.0-slim, 6.0.3-noble-slim, 6.0-noble-slim
 Architectures: amd64, arm64v8
 GitCommit: f44060cdf224436060d2df98a5c3f63f2600de63
 Directory: 6.0/ubuntu/24.04/slim
 
-Tags: 6.0.3-jammy, 6.0-jammy, jammy
+Tags: 6.0.3-jammy, 6.0-jammy
 Architectures: amd64, arm64v8
 GitCommit: f44060cdf224436060d2df98a5c3f63f2600de63
 Directory: 6.0/ubuntu/22.04
 
-Tags: 6.0.3-jammy-slim, 6.0-jammy-slim, jammy-slim
+Tags: 6.0.3-jammy-slim, 6.0-jammy-slim
 Architectures: amd64, arm64v8
 GitCommit: f44060cdf224436060d2df98a5c3f63f2600de63
 Directory: 6.0/ubuntu/22.04/slim
 
-Tags: 6.0.3-focal-slim, 6.0-focal-slim, focal-slim
+Tags: 6.0.3-focal-slim, 6.0-focal-slim
 Architectures: amd64, arm64v8
 GitCommit: f44060cdf224436060d2df98a5c3f63f2600de63
 Directory: 6.0/ubuntu/20.04/slim
 
-Tags: 6.0.3-focal, 6.0-focal, focal
+Tags: 6.0.3-focal, 6.0-focal
 Architectures: amd64, arm64v8
 GitCommit: f44060cdf224436060d2df98a5c3f63f2600de63
 Directory: 6.0/ubuntu/20.04
 
-Tags: 6.0.3-bookworm, 6.0-bookworm, bookworm
+Tags: 6.0.3-bookworm, 6.0-bookworm
 Architectures: amd64, arm64v8
 GitCommit: f44060cdf224436060d2df98a5c3f63f2600de63
 Directory: 6.0/debian/12
 
-Tags: 6.0.3-fedora39, 6.0-fedora39, fedora39
-Architectures: amd64, arm64v8
-GitCommit: f44060cdf224436060d2df98a5c3f63f2600de63
-Directory: 6.0/fedora/39
-
-Tags: 6.0.3-amazonlinux2, 6.0-amazonlinux2, amazonlinux2
+Tags: 6.0.3-amazonlinux2, 6.0-amazonlinux2
 Architectures: amd64, arm64v8
 GitCommit: f44060cdf224436060d2df98a5c3f63f2600de63
 Directory: 6.0/amazonlinux/2
 
-Tags: 6.0.3-amazonlinux2-slim, 6.0-amazonlinux2-slim, amazonlinux2-slim
+Tags: 6.0.3-amazonlinux2-slim, 6.0-amazonlinux2-slim
 Architectures: amd64, arm64v8
 GitCommit: f44060cdf224436060d2df98a5c3f63f2600de63
 Directory: 6.0/amazonlinux/2/slim
 
-Tags: 6.0.3-rhel-ubi9, 6.0-rhel-ubi9, rhel-ubi9
+Tags: 6.0.3-rhel-ubi9, 6.0-rhel-ubi9
 Architectures: amd64, arm64v8
 GitCommit: f44060cdf224436060d2df98a5c3f63f2600de63
 Directory: 6.0/rhel-ubi/9
 
-Tags: 6.0.3-rhel-ubi9-slim, 6.0-rhel-ubi9-slim, rhel-ubi9-slim
+Tags: 6.0.3-rhel-ubi9-slim, 6.0-rhel-ubi9-slim
 Architectures: amd64, arm64v8
 GitCommit: f44060cdf224436060d2df98a5c3f63f2600de63
 Directory: 6.0/rhel-ubi/9/slim
 
-Tags: 6.0.3-windowsservercore-ltsc2022, 6.0-windowsservercore-ltsc2022, windowsservercore-ltsc2022
+Tags: 6.0.3-windowsservercore-ltsc2022, 6.0-windowsservercore-ltsc2022
 Architectures: windows-amd64
 GitCommit: f44060cdf224436060d2df98a5c3f63f2600de63
 Directory: 6.0/windows/LTSC2022
@@ -106,11 +162,6 @@ Tags: 5.10.1-bookworm, 5.10-bookworm
 Architectures: amd64, arm64v8
 GitCommit: 53c4d44e4b556d7bab6ff94c80e5bd0444cdc17d
 Directory: 5.10/debian/12
-
-Tags: 5.10.1-fedora39, 5.10-fedora39
-Architectures: amd64, arm64v8
-GitCommit: 53c4d44e4b556d7bab6ff94c80e5bd0444cdc17d
-Directory: 5.10/fedora/39
 
 Tags: 5.10.1-amazonlinux2, 5.10-amazonlinux2
 Architectures: amd64, arm64v8
@@ -183,43 +234,3 @@ Architectures: windows-amd64
 GitCommit: 51f0941d5f6d92af9df8aa89fa75841f5036c127
 Directory: 5.9/windows/LTSC2022
 Constraints: windowsservercore-ltsc2022
-
-Tags: 5.8.1, 5.8, 5.8.1-jammy, 5.8-jammy
-Architectures: amd64, arm64v8
-GitCommit: 0190ac8d812bfcfab0ee39d600116ab5e3243f48
-Directory: 5.8/ubuntu/22.04
-
-Tags: 5.8.1-slim, 5.8-slim, 5.8.1-jammy-slim, 5.8-jammy-slim
-Architectures: amd64, arm64v8
-GitCommit: 0190ac8d812bfcfab0ee39d600116ab5e3243f48
-Directory: 5.8/ubuntu/22.04/slim
-
-Tags: 5.8.1-focal-slim, 5.8-focal-slim
-Architectures: amd64, arm64v8
-GitCommit: 0190ac8d812bfcfab0ee39d600116ab5e3243f48
-Directory: 5.8/ubuntu/20.04/slim
-
-Tags: 5.8.1-focal, 5.8-focal
-Architectures: amd64, arm64v8
-GitCommit: 0190ac8d812bfcfab0ee39d600116ab5e3243f48
-Directory: 5.8/ubuntu/20.04
-
-Tags: 5.8.1-amazonlinux2, 5.8-amazonlinux2
-Architectures: amd64, arm64v8
-GitCommit: 0190ac8d812bfcfab0ee39d600116ab5e3243f48
-Directory: 5.8/amazonlinux/2
-
-Tags: 5.8.1-amazonlinux2-slim, 5.8-amazonlinux2-slim
-Architectures: amd64, arm64v8
-GitCommit: 0190ac8d812bfcfab0ee39d600116ab5e3243f48
-Directory: 5.8/amazonlinux/2/slim
-
-Tags: 5.8.1-rhel-ubi9, 5.8-rhel-ubi9
-Architectures: amd64, arm64v8
-GitCommit: 0190ac8d812bfcfab0ee39d600116ab5e3243f48
-Directory: 5.8/rhel-ubi/9
-
-Tags: 5.8.1-rhel-ubi9-slim, 5.8-rhel-ubi9-slim
-Architectures: amd64, arm64v8
-GitCommit: 0190ac8d812bfcfab0ee39d600116ab5e3243f48
-Directory: 5.8/rhel-ubi/9/slim
