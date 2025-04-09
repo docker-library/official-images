@@ -5,9 +5,14 @@ Maintainers: Misha f. Shiryaev <felixoid@clickhouse.com> (@Felixoid),
              Alexander Sapin <alesapin@clickhouse.com> (@alesapin)
 GitRepo: https://github.com/ClickHouse/docker-library.git
 GitFetch: refs/heads/main
-GitCommit: 3bcf01164f68ee4add1bf97aedf405c2956c88d3
+GitCommit: 7f2f20f9efbf129d00085d4a6f4e8e93c29b5064
 
-Tags: latest, jammy, 25.2, 25.2-jammy, 25.2.2, 25.2.2-jammy, 25.2.2.39, 25.2.2.39-jammy
+Tags: latest, jammy, lts, lts-jammy, 25.3, 25.3-jammy, 25.3.2, 25.3.2-jammy, 25.3.2.39, 25.3.2.39-jammy
+Architectures: amd64, arm64v8
+Directory: server/25.3.2.39
+File: Dockerfile.ubuntu
+
+Tags: 25.2, 25.2-jammy, 25.2.2, 25.2.2-jammy, 25.2.2.39, 25.2.2.39-jammy
 Architectures: amd64, arm64v8
 Directory: server/25.2.2.39
 File: Dockerfile.ubuntu
@@ -17,17 +22,7 @@ Architectures: amd64, arm64v8
 Directory: server/25.1.8.25
 File: Dockerfile.ubuntu
 
-Tags: 24.12, 24.12-jammy, 24.12.6, 24.12.6-jammy, 24.12.6.70, 24.12.6.70-jammy
-Architectures: amd64, arm64v8
-Directory: server/24.12.6.70
-File: Dockerfile.ubuntu
-
-Tags: lts, lts-focal, 24.8, 24.8-focal, 24.8.14, 24.8.14-focal, 24.8.14.39, 24.8.14.39-focal
+Tags: 24.8, 24.8-focal, 24.8.14, 24.8.14-focal, 24.8.14.39, 24.8.14.39-focal
 Architectures: amd64, arm64v8
 Directory: server/24.8.14.39
-File: Dockerfile.ubuntu
-
-Tags: 24.3, 24.3-focal, 24.3.18, 24.3.18-focal, 24.3.18.7, 24.3.18.7-focal
-Architectures: amd64, arm64v8
-Directory: server/24.3.18.7
 File: Dockerfile.ubuntu
