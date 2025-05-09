@@ -15,7 +15,7 @@ Maintainers: Amazon Corretto Team <corretto-team@amazon.com> (@corretto),
              Satyen Subramaniam <satyenme@amazon.com> (@satyenme)
 GitRepo: https://github.com/corretto/corretto-docker.git
 GitFetch: refs/heads/main
-GitCommit: 5863f873696768f24eb1640f9598b777d0c712d4
+GitCommit: 90f5eeb1cfe4c83eb0bc36e4c79b62700b5a45a9
 
 Tags: 8, 8u452, 8u452-al2, 8-al2-full, 8-al2-jdk, 8-al2-generic, 8u452-al2-generic, 8-al2-generic-jdk, latest
 Architectures: amd64, arm64v8
@@ -36,14 +36,6 @@ Directory: 8/jre/al2
 Tags: 8-al2-native-jdk, 8u452-al2-native-jdk
 Architectures: amd64, arm64v8
 Directory: 8/jdk/al2
-
-Tags: 8-alpine3.18, 8u452-alpine3.18, 8-alpine3.18-full, 8-alpine3.18-jdk
-Architectures: amd64, arm64v8
-Directory: 8/jdk/alpine/3.18
-
-Tags: 8-alpine3.18-jre, 8u452-alpine3.18-jre
-Architectures: amd64, arm64v8
-Directory: 8/jre/alpine/3.18
 
 Tags: 8-alpine3.19, 8u452-alpine3.19, 8-alpine3.19-full, 8-alpine3.19-jdk
 Architectures: amd64, arm64v8
@@ -93,10 +85,6 @@ Tags: 11-al2-native-jdk, 11.0.27-al2-native-jdk
 Architectures: amd64, arm64v8
 Directory: 11/jdk/al2
 
-Tags: 11-alpine3.18, 11.0.27-alpine3.18, 11-alpine3.18-full, 11-alpine3.18-jdk
-Architectures: amd64, arm64v8
-Directory: 11/jdk/alpine/3.18
-
 Tags: 11-alpine3.19, 11.0.27-alpine3.19, 11-alpine3.19-full, 11-alpine3.19-jdk
 Architectures: amd64, arm64v8
 Directory: 11/jdk/alpine/3.19
@@ -137,10 +125,6 @@ Tags: 17-al2-native-jdk, 17.0.15-al2-native-jdk
 Architectures: amd64, arm64v8
 Directory: 17/jdk/al2
 
-Tags: 17-alpine3.18, 17.0.15-alpine3.18, 17-alpine3.18-full, 17-alpine3.18-jdk
-Architectures: amd64, arm64v8
-Directory: 17/jdk/alpine/3.18
-
 Tags: 17-alpine3.19, 17.0.15-alpine3.19, 17-alpine3.19-full, 17-alpine3.19-jdk
 Architectures: amd64, arm64v8
 Directory: 17/jdk/alpine/3.19
@@ -169,10 +153,6 @@ Tags: 21-al2023-headful, 21.0.7-al2023-headful
 Architectures: amd64, arm64v8
 Directory: 21/headful/al2023
 
-Tags: 21-alpine3.18, 21.0.7-alpine3.18, 21-alpine3.18-full, 21-alpine3.18-jdk
-Architectures: amd64, arm64v8
-Directory: 21/jdk/alpine/3.18
-
 Tags: 21-alpine3.19, 21.0.7-alpine3.19, 21-alpine3.19-full, 21-alpine3.19-jdk
 Architectures: amd64, arm64v8
 Directory: 21/jdk/alpine/3.19
@@ -196,10 +176,6 @@ Directory: 24/headless/al2023
 Tags: 24-al2023-headful, 24.0.1-al2023-headful, 24-headful
 Architectures: amd64, arm64v8
 Directory: 24/headful/al2023
-
-Tags: 24-alpine3.18, 24.0.1-alpine3.18, 24-alpine3.18-full, 24-alpine3.18-jdk
-Architectures: amd64, arm64v8
-Directory: 24/jdk/alpine/3.18
 
 Tags: 24-alpine3.19, 24.0.1-alpine3.19, 24-alpine3.19-full, 24-alpine3.19-jdk
 Architectures: amd64, arm64v8
