@@ -5,14 +5,53 @@ Maintainers: Tianon Gravi <tianon@dockerproject.org> (@tianon),
 GitRepo: https://github.com/docker-library/docker.git
 Builder: buildkit
 
+Tags: 28.2.0-rc.2-cli, 28-rc-cli, rc-cli, 28.2.0-rc.2-cli-alpine3.21
+Architectures: amd64, arm32v6, arm32v7, arm64v8
+GitCommit: e3927bb31eb6732adf3837a3e99200fb63b55f66
+Directory: 28-rc/cli
+
+Tags: 28.2.0-rc.2-dind, 28-rc-dind, rc-dind, 28.2.0-rc.2-dind-alpine3.21, 28.2.0-rc.2, 28-rc, rc, 28.2.0-rc.2-alpine3.21
+Architectures: amd64, arm32v6, arm32v7, arm64v8
+GitCommit: e3927bb31eb6732adf3837a3e99200fb63b55f66
+Directory: 28-rc/dind
+
+Tags: 28.2.0-rc.2-dind-rootless, 28-rc-dind-rootless, rc-dind-rootless
+Architectures: amd64, arm64v8
+GitCommit: e3927bb31eb6732adf3837a3e99200fb63b55f66
+Directory: 28-rc/dind-rootless
+
+Tags: 28.2.0-rc.2-windowsservercore-ltsc2025, 28-rc-windowsservercore-ltsc2025, rc-windowsservercore-ltsc2025
+SharedTags: 28.2.0-rc.2-windowsservercore, 28-rc-windowsservercore, rc-windowsservercore
+Architectures: windows-amd64
+GitCommit: e3927bb31eb6732adf3837a3e99200fb63b55f66
+Directory: 28-rc/windows/windowsservercore-ltsc2025
+Constraints: windowsservercore-ltsc2025
+Builder: classic
+
+Tags: 28.2.0-rc.2-windowsservercore-ltsc2022, 28-rc-windowsservercore-ltsc2022, rc-windowsservercore-ltsc2022
+SharedTags: 28.2.0-rc.2-windowsservercore, 28-rc-windowsservercore, rc-windowsservercore
+Architectures: windows-amd64
+GitCommit: e3927bb31eb6732adf3837a3e99200fb63b55f66
+Directory: 28-rc/windows/windowsservercore-ltsc2022
+Constraints: windowsservercore-ltsc2022
+Builder: classic
+
+Tags: 28.2.0-rc.2-windowsservercore-1809, 28-rc-windowsservercore-1809, rc-windowsservercore-1809
+SharedTags: 28.2.0-rc.2-windowsservercore, 28-rc-windowsservercore, rc-windowsservercore
+Architectures: windows-amd64
+GitCommit: e3927bb31eb6732adf3837a3e99200fb63b55f66
+Directory: 28-rc/windows/windowsservercore-1809
+Constraints: windowsservercore-1809
+Builder: classic
+
 Tags: 28.1.1-cli, 28.1-cli, 28-cli, cli, 28.1.1-cli-alpine3.21
 Architectures: amd64, arm32v6, arm32v7, arm64v8
-GitCommit: 84fa8e735cf571bd16f439e8431ad23913dd19f4
+GitCommit: fd9ffd927316fe34adddaa0e1fccd65307b09e2c
 Directory: 28/cli
 
 Tags: 28.1.1-dind, 28.1-dind, 28-dind, dind, 28.1.1-dind-alpine3.21, 28.1.1, 28.1, 28, latest, 28.1.1-alpine3.21
 Architectures: amd64, arm32v6, arm32v7, arm64v8
-GitCommit: 84fa8e735cf571bd16f439e8431ad23913dd19f4
+GitCommit: 52c8bfa9869c9c5605c6c03dc9a82cfe426ace77
 Directory: 28/dind
 
 Tags: 28.1.1-dind-rootless, 28.1-dind-rootless, 28-dind-rootless, dind-rootless
@@ -23,7 +62,7 @@ Directory: 28/dind-rootless
 Tags: 28.1.1-windowsservercore-ltsc2025, 28.1-windowsservercore-ltsc2025, 28-windowsservercore-ltsc2025, windowsservercore-ltsc2025
 SharedTags: 28.1.1-windowsservercore, 28.1-windowsservercore, 28-windowsservercore, windowsservercore
 Architectures: windows-amd64
-GitCommit: 84fa8e735cf571bd16f439e8431ad23913dd19f4
+GitCommit: fd9ffd927316fe34adddaa0e1fccd65307b09e2c
 Directory: 28/windows/windowsservercore-ltsc2025
 Constraints: windowsservercore-ltsc2025
 Builder: classic
@@ -31,7 +70,7 @@ Builder: classic
 Tags: 28.1.1-windowsservercore-ltsc2022, 28.1-windowsservercore-ltsc2022, 28-windowsservercore-ltsc2022, windowsservercore-ltsc2022
 SharedTags: 28.1.1-windowsservercore, 28.1-windowsservercore, 28-windowsservercore, windowsservercore
 Architectures: windows-amd64
-GitCommit: 84fa8e735cf571bd16f439e8431ad23913dd19f4
+GitCommit: fd9ffd927316fe34adddaa0e1fccd65307b09e2c
 Directory: 28/windows/windowsservercore-ltsc2022
 Constraints: windowsservercore-ltsc2022
 Builder: classic
@@ -39,7 +78,7 @@ Builder: classic
 Tags: 28.1.1-windowsservercore-1809, 28.1-windowsservercore-1809, 28-windowsservercore-1809, windowsservercore-1809
 SharedTags: 28.1.1-windowsservercore, 28.1-windowsservercore, 28-windowsservercore, windowsservercore
 Architectures: windows-amd64
-GitCommit: 84fa8e735cf571bd16f439e8431ad23913dd19f4
+GitCommit: fd9ffd927316fe34adddaa0e1fccd65307b09e2c
 Directory: 28/windows/windowsservercore-1809
 Constraints: windowsservercore-1809
 Builder: classic
