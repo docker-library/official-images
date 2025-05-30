@@ -1,6 +1,6 @@
 Maintainers: Paul Tagliamonte <paultag@hylang.org> (@paultag), Hy Docker Team (@hylang/docker)
 GitRepo: https://github.com/hylang/docker-hylang.git
-GitCommit: 4e68cc28d92c1344289ea9e26cef509f06eae0c1
+GitCommit: b09c944967289a2c9bc1fc135dca7937e92eeef1
 Directory: dockerfiles-generated
 
 Tags: 1.1.0-python3.13-bookworm, 1.1-python3.13-bookworm, 1-python3.13-bookworm, python3.13-bookworm, 1.1.0-bookworm, 1.1-bookworm, 1-bookworm, bookworm
@@ -32,12 +32,6 @@ Architectures: windows-amd64
 Constraints: windowsservercore-ltsc2022
 File: Dockerfile.python3.13-windowsservercore-ltsc2022
 
-Tags: 1.1.0-python3.13-windowsservercore-1809, 1.1-python3.13-windowsservercore-1809, 1-python3.13-windowsservercore-1809, python3.13-windowsservercore-1809, 1.1.0-windowsservercore-1809, 1.1-windowsservercore-1809, 1-windowsservercore-1809, windowsservercore-1809
-SharedTags: 1.1.0-python3.13, 1.1-python3.13, 1-python3.13, python3.13, 1.1.0, 1.1, 1, latest
-Architectures: windows-amd64
-Constraints: windowsservercore-1809
-File: Dockerfile.python3.13-windowsservercore-1809
-
 Tags: 1.1.0-python3.12-bookworm, 1.1-python3.12-bookworm, 1-python3.12-bookworm, python3.12-bookworm
 SharedTags: 1.1.0-python3.12, 1.1-python3.12, 1-python3.12, python3.12
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
@@ -66,12 +60,6 @@ SharedTags: 1.1.0-python3.12, 1.1-python3.12, 1-python3.12, python3.12
 Architectures: windows-amd64
 Constraints: windowsservercore-ltsc2022
 File: Dockerfile.python3.12-windowsservercore-ltsc2022
-
-Tags: 1.1.0-python3.12-windowsservercore-1809, 1.1-python3.12-windowsservercore-1809, 1-python3.12-windowsservercore-1809, python3.12-windowsservercore-1809
-SharedTags: 1.1.0-python3.12, 1.1-python3.12, 1-python3.12, python3.12
-Architectures: windows-amd64
-Constraints: windowsservercore-1809
-File: Dockerfile.python3.12-windowsservercore-1809
 
 Tags: 1.1.0-python3.11-bookworm, 1.1-python3.11-bookworm, 1-python3.11-bookworm, python3.11-bookworm
 SharedTags: 1.1.0-python3.11, 1.1-python3.11, 1-python3.11, python3.11
@@ -153,12 +141,6 @@ Architectures: windows-amd64
 Constraints: windowsservercore-ltsc2022
 File: Dockerfile.python3.14-rc-windowsservercore-ltsc2022
 
-Tags: 1.1.0-python3.14-rc-windowsservercore-1809, 1.1-python3.14-rc-windowsservercore-1809, 1-python3.14-rc-windowsservercore-1809, python3.14-rc-windowsservercore-1809
-SharedTags: 1.1.0-python3.14-rc, 1.1-python3.14-rc, 1-python3.14-rc, python3.14-rc
-Architectures: windows-amd64
-Constraints: windowsservercore-1809
-File: Dockerfile.python3.14-rc-windowsservercore-1809
-
 Tags: 1.1.0-pypy3.11-bookworm, 1.1-pypy3.11-bookworm, 1-pypy3.11-bookworm, pypy3.11-bookworm
 SharedTags: 1.1.0-pypy3.11, 1.1-pypy3.11, 1-pypy3.11, pypy3.11
 Architectures: amd64, arm64v8, i386
@@ -175,12 +157,6 @@ SharedTags: 1.1.0-pypy3.11, 1.1-pypy3.11, 1-pypy3.11, pypy3.11
 Architectures: windows-amd64
 Constraints: windowsservercore-ltsc2022
 File: Dockerfile.pypy3.11-windowsservercore-ltsc2022
-
-Tags: 1.1.0-pypy3.11-windowsservercore-1809, 1.1-pypy3.11-windowsservercore-1809, 1-pypy3.11-windowsservercore-1809, pypy3.11-windowsservercore-1809
-SharedTags: 1.1.0-pypy3.11, 1.1-pypy3.11, 1-pypy3.11, pypy3.11
-Architectures: windows-amd64
-Constraints: windowsservercore-1809
-File: Dockerfile.pypy3.11-windowsservercore-1809
 
 Tags: 1.1.0-pypy3.10-bookworm, 1.1-pypy3.10-bookworm, 1-pypy3.10-bookworm, pypy3.10-bookworm, 1.1.0-pypy-bookworm, 1.1-pypy-bookworm, 1-pypy-bookworm, pypy-bookworm
 SharedTags: 1.1.0-pypy3.10, 1.1-pypy3.10, 1-pypy3.10, pypy3.10, 1.1.0-pypy, 1.1-pypy, 1-pypy, pypy
@@ -202,9 +178,3 @@ SharedTags: 1.1.0-pypy3.10, 1.1-pypy3.10, 1-pypy3.10, pypy3.10, 1.1.0-pypy, 1.1-
 Architectures: windows-amd64
 Constraints: windowsservercore-ltsc2022
 File: Dockerfile.pypy3.10-windowsservercore-ltsc2022
-
-Tags: 1.1.0-pypy3.10-windowsservercore-1809, 1.1-pypy3.10-windowsservercore-1809, 1-pypy3.10-windowsservercore-1809, pypy3.10-windowsservercore-1809, 1.1.0-pypy-windowsservercore-1809, 1.1-pypy-windowsservercore-1809, 1-pypy-windowsservercore-1809, pypy-windowsservercore-1809
-SharedTags: 1.1.0-pypy3.10, 1.1-pypy3.10, 1-pypy3.10, pypy3.10, 1.1.0-pypy, 1.1-pypy, 1-pypy, pypy
-Architectures: windows-amd64
-Constraints: windowsservercore-1809
-File: Dockerfile.pypy3.10-windowsservercore-1809
