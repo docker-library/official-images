@@ -44,5 +44,5 @@ echo 'DELETE FROM test WHERE a = 1' | psql
 echo 'DROP TABLE test' | psql
 
 # test jit support to ensure llvm lib is correct
-# SET jit = on; is required for postgres 11; on 12+ it is on by default
-[ "$(echo 'SET jit = on; SELECT pg_jit_available();' | psql)" = 't' ]
+# SET jit = on; is required for postgres 11; on 12+ it is on by default; allow unavailable jit on 18+ if not installed
+[ "$(echo 'SET jit = on; SELECT pg_jit_available();' | psql)" = 't' ] || [ $(psql --version | sed -rn 's/psql \(PostgreSQL\) ([0-9]+).+/\1/p') -ge 18 ]
