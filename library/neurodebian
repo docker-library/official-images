@@ -2,14 +2,6 @@ Maintainers: Yaroslav Halchenko <debian@onerussian.com> (@yarikoptic)
 GitRepo: https://github.com/neurodebian/dockerfiles.git
 GitCommit: 89ca52860d80889fd878392a29150e46d9d91a71
 
-Tags: focal, nd20.04
-Architectures: amd64, arm64v8
-Directory: dockerfiles/focal
-
-Tags: focal-non-free, nd20.04-non-free
-Architectures: amd64, arm64v8
-Directory: dockerfiles/focal-non-free
-
 Tags: jammy, nd22.04
 Architectures: amd64, arm64v8
 Directory: dockerfiles/jammy
@@ -18,13 +10,16 @@ Tags: jammy-non-free, nd22.04-non-free
 Architectures: amd64, arm64v8
 Directory: dockerfiles/jammy-non-free
 
-Tags: noble, nd24.04
-Architectures: amd64, arm64v8
-Directory: dockerfiles/noble
-
-Tags: noble-non-free, nd24.04-non-free
-Architectures: amd64, arm64v8
-Directory: dockerfiles/noble-non-free
+#
+# https://github.com/neurodebian/neurodebian/issues/97#issuecomment-2936348850
+#
+#Tags: noble, nd24.04
+#Architectures: amd64, arm64v8
+#Directory: dockerfiles/noble
+#
+#Tags: noble-non-free, nd24.04-non-free
+#Architectures: amd64, arm64v8
+#Directory: dockerfiles/noble-non-free
 
 Tags: bullseye, nd110
 Architectures: amd64, arm64v8, i386
