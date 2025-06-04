@@ -31,11 +31,15 @@ GitFetch: refs/tags/3.4.2
 Directory: ubuntu
 Architectures: amd64, arm64v8
 
-Tags: 2.8.5-alpine, 2.8-alpine, 2.8.5, 2.8, 2
-GitCommit: cdf93ae2106f998a2245a3eee6814b1ae68781af
-GitFetch: refs/tags/2.8.5
-Directory: alpine
-Architectures: amd64
+#
+# Alpine 3.18 is EOL
+# https://github.com/docker-library/official-images/issues/19034
+#
+#Tags: 2.8.5-alpine, 2.8-alpine, 2.8.5, 2.8, 2
+#GitCommit: cdf93ae2106f998a2245a3eee6814b1ae68781af
+#GitFetch: refs/tags/2.8.5
+#Directory: alpine
+#Architectures: amd64
 
 Tags: 2.8.5-ubuntu, 2.8-ubuntu
 GitCommit: cdf93ae2106f998a2245a3eee6814b1ae68781af
