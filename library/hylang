@@ -1,6 +1,6 @@
 Maintainers: Paul Tagliamonte <paultag@hylang.org> (@paultag), Hy Docker Team (@hylang/docker)
 GitRepo: https://github.com/hylang/docker-hylang.git
-GitCommit: 5c986c271e3c6c67e1b6cf38b74b0fa24482fc86
+GitCommit: 9ed6ce9a2ebd814e1881fde9c92aa2f99ff6cb47
 Directory: dockerfiles-generated
 
 Tags: 1.1.0-python3.13-bookworm, 1.1-python3.13-bookworm, 1-python3.13-bookworm, python3.13-bookworm, 1.1.0-bookworm, 1.1-bookworm, 1-bookworm, bookworm
@@ -48,18 +48,6 @@ File: Dockerfile.python3.12-alpine3.22
 Tags: 1.1.0-python3.12-alpine3.21, 1.1-python3.12-alpine3.21, 1-python3.12-alpine3.21, python3.12-alpine3.21
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
 File: Dockerfile.python3.12-alpine3.21
-
-Tags: 1.1.0-python3.12-windowsservercore-ltsc2025, 1.1-python3.12-windowsservercore-ltsc2025, 1-python3.12-windowsservercore-ltsc2025, python3.12-windowsservercore-ltsc2025
-SharedTags: 1.1.0-python3.12, 1.1-python3.12, 1-python3.12, python3.12
-Architectures: windows-amd64
-Constraints: windowsservercore-ltsc2025
-File: Dockerfile.python3.12-windowsservercore-ltsc2025
-
-Tags: 1.1.0-python3.12-windowsservercore-ltsc2022, 1.1-python3.12-windowsservercore-ltsc2022, 1-python3.12-windowsservercore-ltsc2022, python3.12-windowsservercore-ltsc2022
-SharedTags: 1.1.0-python3.12, 1.1-python3.12, 1-python3.12, python3.12
-Architectures: windows-amd64
-Constraints: windowsservercore-ltsc2022
-File: Dockerfile.python3.12-windowsservercore-ltsc2022
 
 Tags: 1.1.0-python3.11-bookworm, 1.1-python3.11-bookworm, 1-python3.11-bookworm, python3.11-bookworm
 SharedTags: 1.1.0-python3.11, 1.1-python3.11, 1-python3.11, python3.11
