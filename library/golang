@@ -6,108 +6,108 @@ Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
 GitRepo: https://github.com/docker-library/golang.git
 Builder: buildkit
 
-Tags: 1.24.3-bookworm, 1.24-bookworm, 1-bookworm, bookworm
-SharedTags: 1.24.3, 1.24, 1, latest
+Tags: 1.24.4-bookworm, 1.24-bookworm, 1-bookworm, bookworm
+SharedTags: 1.24.4, 1.24, 1, latest
 Architectures: amd64, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 6f5593131e9bccda9a4e83f858427d4d0d16b58d
+GitCommit: 205cf586b0d0c7200e0fd642feaf738ddb382da0
 Directory: 1.24/bookworm
 
-Tags: 1.24.3-bullseye, 1.24-bullseye, 1-bullseye, bullseye
+Tags: 1.24.4-bullseye, 1.24-bullseye, 1-bullseye, bullseye
 Architectures: amd64, arm32v7, arm64v8, i386
-GitCommit: 6f5593131e9bccda9a4e83f858427d4d0d16b58d
+GitCommit: 205cf586b0d0c7200e0fd642feaf738ddb382da0
 Directory: 1.24/bullseye
 
-Tags: 1.24.3-alpine3.22, 1.24-alpine3.22, 1-alpine3.22, alpine3.22, 1.24.3-alpine, 1.24-alpine, 1-alpine, alpine
+Tags: 1.24.4-alpine3.22, 1.24-alpine3.22, 1-alpine3.22, alpine3.22, 1.24.4-alpine, 1.24-alpine, 1-alpine, alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: 7162cd9bb639c8bc2c34b29dd8657b9a4a2ebb85
+GitCommit: 205cf586b0d0c7200e0fd642feaf738ddb382da0
 Directory: 1.24/alpine3.22
 
-Tags: 1.24.3-alpine3.21, 1.24-alpine3.21, 1-alpine3.21, alpine3.21
+Tags: 1.24.4-alpine3.21, 1.24-alpine3.21, 1-alpine3.21, alpine3.21
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: 6f5593131e9bccda9a4e83f858427d4d0d16b58d
+GitCommit: 205cf586b0d0c7200e0fd642feaf738ddb382da0
 Directory: 1.24/alpine3.21
 
-Tags: 1.24.3-windowsservercore-ltsc2025, 1.24-windowsservercore-ltsc2025, 1-windowsservercore-ltsc2025, windowsservercore-ltsc2025
-SharedTags: 1.24.3-windowsservercore, 1.24-windowsservercore, 1-windowsservercore, windowsservercore, 1.24.3, 1.24, 1, latest
+Tags: 1.24.4-windowsservercore-ltsc2025, 1.24-windowsservercore-ltsc2025, 1-windowsservercore-ltsc2025, windowsservercore-ltsc2025
+SharedTags: 1.24.4-windowsservercore, 1.24-windowsservercore, 1-windowsservercore, windowsservercore, 1.24.4, 1.24, 1, latest
 Architectures: windows-amd64
-GitCommit: 6f5593131e9bccda9a4e83f858427d4d0d16b58d
+GitCommit: 205cf586b0d0c7200e0fd642feaf738ddb382da0
 Directory: 1.24/windows/windowsservercore-ltsc2025
 Builder: classic
 Constraints: windowsservercore-ltsc2025
 
-Tags: 1.24.3-windowsservercore-ltsc2022, 1.24-windowsservercore-ltsc2022, 1-windowsservercore-ltsc2022, windowsservercore-ltsc2022
-SharedTags: 1.24.3-windowsservercore, 1.24-windowsservercore, 1-windowsservercore, windowsservercore, 1.24.3, 1.24, 1, latest
+Tags: 1.24.4-windowsservercore-ltsc2022, 1.24-windowsservercore-ltsc2022, 1-windowsservercore-ltsc2022, windowsservercore-ltsc2022
+SharedTags: 1.24.4-windowsservercore, 1.24-windowsservercore, 1-windowsservercore, windowsservercore, 1.24.4, 1.24, 1, latest
 Architectures: windows-amd64
-GitCommit: 6f5593131e9bccda9a4e83f858427d4d0d16b58d
+GitCommit: 205cf586b0d0c7200e0fd642feaf738ddb382da0
 Directory: 1.24/windows/windowsservercore-ltsc2022
 Builder: classic
 Constraints: windowsservercore-ltsc2022
 
-Tags: 1.24.3-nanoserver-ltsc2025, 1.24-nanoserver-ltsc2025, 1-nanoserver-ltsc2025, nanoserver-ltsc2025
-SharedTags: 1.24.3-nanoserver, 1.24-nanoserver, 1-nanoserver, nanoserver
+Tags: 1.24.4-nanoserver-ltsc2025, 1.24-nanoserver-ltsc2025, 1-nanoserver-ltsc2025, nanoserver-ltsc2025
+SharedTags: 1.24.4-nanoserver, 1.24-nanoserver, 1-nanoserver, nanoserver
 Architectures: windows-amd64
-GitCommit: 6f5593131e9bccda9a4e83f858427d4d0d16b58d
+GitCommit: 205cf586b0d0c7200e0fd642feaf738ddb382da0
 Directory: 1.24/windows/nanoserver-ltsc2025
 Builder: classic
 Constraints: nanoserver-ltsc2025, windowsservercore-ltsc2025
 
-Tags: 1.24.3-nanoserver-ltsc2022, 1.24-nanoserver-ltsc2022, 1-nanoserver-ltsc2022, nanoserver-ltsc2022
-SharedTags: 1.24.3-nanoserver, 1.24-nanoserver, 1-nanoserver, nanoserver
+Tags: 1.24.4-nanoserver-ltsc2022, 1.24-nanoserver-ltsc2022, 1-nanoserver-ltsc2022, nanoserver-ltsc2022
+SharedTags: 1.24.4-nanoserver, 1.24-nanoserver, 1-nanoserver, nanoserver
 Architectures: windows-amd64
-GitCommit: 6f5593131e9bccda9a4e83f858427d4d0d16b58d
+GitCommit: 205cf586b0d0c7200e0fd642feaf738ddb382da0
 Directory: 1.24/windows/nanoserver-ltsc2022
 Builder: classic
 Constraints: nanoserver-ltsc2022, windowsservercore-ltsc2022
 
-Tags: 1.23.9-bookworm, 1.23-bookworm
-SharedTags: 1.23.9, 1.23
+Tags: 1.23.10-bookworm, 1.23-bookworm
+SharedTags: 1.23.10, 1.23
 Architectures: amd64, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 93f44df27b2ca87cc4342447e0179fe0b8f7d226
+GitCommit: 696a3e93441e4e8ec740f0bff37a96a0983749e5
 Directory: 1.23/bookworm
 
-Tags: 1.23.9-bullseye, 1.23-bullseye
+Tags: 1.23.10-bullseye, 1.23-bullseye
 Architectures: amd64, arm32v7, arm64v8, i386
-GitCommit: 93f44df27b2ca87cc4342447e0179fe0b8f7d226
+GitCommit: 696a3e93441e4e8ec740f0bff37a96a0983749e5
 Directory: 1.23/bullseye
 
-Tags: 1.23.9-alpine3.22, 1.23-alpine3.22, 1.23.9-alpine, 1.23-alpine
+Tags: 1.23.10-alpine3.22, 1.23-alpine3.22, 1.23.10-alpine, 1.23-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: 7162cd9bb639c8bc2c34b29dd8657b9a4a2ebb85
+GitCommit: 696a3e93441e4e8ec740f0bff37a96a0983749e5
 Directory: 1.23/alpine3.22
 
-Tags: 1.23.9-alpine3.21, 1.23-alpine3.21
+Tags: 1.23.10-alpine3.21, 1.23-alpine3.21
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: 93f44df27b2ca87cc4342447e0179fe0b8f7d226
+GitCommit: 696a3e93441e4e8ec740f0bff37a96a0983749e5
 Directory: 1.23/alpine3.21
 
-Tags: 1.23.9-windowsservercore-ltsc2025, 1.23-windowsservercore-ltsc2025
-SharedTags: 1.23.9-windowsservercore, 1.23-windowsservercore, 1.23.9, 1.23
+Tags: 1.23.10-windowsservercore-ltsc2025, 1.23-windowsservercore-ltsc2025
+SharedTags: 1.23.10-windowsservercore, 1.23-windowsservercore, 1.23.10, 1.23
 Architectures: windows-amd64
-GitCommit: 93f44df27b2ca87cc4342447e0179fe0b8f7d226
+GitCommit: 696a3e93441e4e8ec740f0bff37a96a0983749e5
 Directory: 1.23/windows/windowsservercore-ltsc2025
 Builder: classic
 Constraints: windowsservercore-ltsc2025
 
-Tags: 1.23.9-windowsservercore-ltsc2022, 1.23-windowsservercore-ltsc2022
-SharedTags: 1.23.9-windowsservercore, 1.23-windowsservercore, 1.23.9, 1.23
+Tags: 1.23.10-windowsservercore-ltsc2022, 1.23-windowsservercore-ltsc2022
+SharedTags: 1.23.10-windowsservercore, 1.23-windowsservercore, 1.23.10, 1.23
 Architectures: windows-amd64
-GitCommit: 93f44df27b2ca87cc4342447e0179fe0b8f7d226
+GitCommit: 696a3e93441e4e8ec740f0bff37a96a0983749e5
 Directory: 1.23/windows/windowsservercore-ltsc2022
 Builder: classic
 Constraints: windowsservercore-ltsc2022
 
-Tags: 1.23.9-nanoserver-ltsc2025, 1.23-nanoserver-ltsc2025
-SharedTags: 1.23.9-nanoserver, 1.23-nanoserver
+Tags: 1.23.10-nanoserver-ltsc2025, 1.23-nanoserver-ltsc2025
+SharedTags: 1.23.10-nanoserver, 1.23-nanoserver
 Architectures: windows-amd64
-GitCommit: 93f44df27b2ca87cc4342447e0179fe0b8f7d226
+GitCommit: 696a3e93441e4e8ec740f0bff37a96a0983749e5
 Directory: 1.23/windows/nanoserver-ltsc2025
 Builder: classic
 Constraints: nanoserver-ltsc2025, windowsservercore-ltsc2025
 
-Tags: 1.23.9-nanoserver-ltsc2022, 1.23-nanoserver-ltsc2022
-SharedTags: 1.23.9-nanoserver, 1.23-nanoserver
+Tags: 1.23.10-nanoserver-ltsc2022, 1.23-nanoserver-ltsc2022
+SharedTags: 1.23.10-nanoserver, 1.23-nanoserver
 Architectures: windows-amd64
-GitCommit: 93f44df27b2ca87cc4342447e0179fe0b8f7d226
+GitCommit: 696a3e93441e4e8ec740f0bff37a96a0983749e5
 Directory: 1.23/windows/nanoserver-ltsc2022
 Builder: classic
 Constraints: nanoserver-ltsc2022, windowsservercore-ltsc2022
