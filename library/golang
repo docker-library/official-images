@@ -6,6 +6,43 @@ Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
 GitRepo: https://github.com/docker-library/golang.git
 Builder: buildkit
 
+Tags: 1.25rc1-bookworm, 1.25-rc-bookworm
+SharedTags: 1.25rc1, 1.25-rc
+Architectures: amd64, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: 37f4c078c0906f4c2226072dcbb81e6e9bc439dc
+Directory: 1.25-rc/bookworm
+
+Tags: 1.25rc1-bullseye, 1.25-rc-bullseye
+Architectures: amd64, arm32v7, arm64v8, i386
+GitCommit: 37f4c078c0906f4c2226072dcbb81e6e9bc439dc
+Directory: 1.25-rc/bullseye
+
+Tags: 1.25rc1-alpine3.22, 1.25-rc-alpine3.22, 1.25rc1-alpine, 1.25-rc-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
+GitCommit: 37f4c078c0906f4c2226072dcbb81e6e9bc439dc
+Directory: 1.25-rc/alpine3.22
+
+Tags: 1.25rc1-alpine3.21, 1.25-rc-alpine3.21
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
+GitCommit: 37f4c078c0906f4c2226072dcbb81e6e9bc439dc
+Directory: 1.25-rc/alpine3.21
+
+Tags: 1.25rc1-windowsservercore-ltsc2025, 1.25-rc-windowsservercore-ltsc2025
+SharedTags: 1.25rc1-windowsservercore, 1.25-rc-windowsservercore, 1.25rc1, 1.25-rc
+Architectures: windows-amd64
+GitCommit: 37f4c078c0906f4c2226072dcbb81e6e9bc439dc
+Directory: 1.25-rc/windows/windowsservercore-ltsc2025
+Builder: classic
+Constraints: windowsservercore-ltsc2025
+
+Tags: 1.25rc1-windowsservercore-ltsc2022, 1.25-rc-windowsservercore-ltsc2022
+SharedTags: 1.25rc1-windowsservercore, 1.25-rc-windowsservercore, 1.25rc1, 1.25-rc
+Architectures: windows-amd64
+GitCommit: 37f4c078c0906f4c2226072dcbb81e6e9bc439dc
+Directory: 1.25-rc/windows/windowsservercore-ltsc2022
+Builder: classic
+Constraints: windowsservercore-ltsc2022
+
 Tags: 1.24.4-bookworm, 1.24-bookworm, 1-bookworm, bookworm
 SharedTags: 1.24.4, 1.24, 1, latest
 Architectures: amd64, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
