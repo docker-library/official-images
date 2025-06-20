@@ -3,40 +3,48 @@ Maintainers: Carmine Vassallo <carmine.vassallo@sonarsource.com> (@carminevassal
              Davi Koscianski Vidal <davi.koscianski-vidal@sonarsource.com> (@davividal)
 GitRepo: https://github.com/SonarSource/docker-sonarqube.git
 Architectures: amd64, arm64v8
-GitCommit: f36d73cab148e76cd0dae6c650f0273676522240
+GitCommit: 0330278146e14fdbde39328ab2c9e10a66f9fbe8
 Builder: buildkit
 
-Tags: 2025.3.0-developer, 2025.3-developer, developer
+Tags: 2025.3.1-developer, 2025.3-developer, developer
 Architectures: amd64, arm64v8
-Directory: 2025/developer
+Directory: commercial-editions/developer
 
-Tags: 2025.3.0-enterprise, 2025.3-enterprise, enterprise
+Tags: 2025.3.1-enterprise, 2025.3-enterprise, enterprise
 Architectures: amd64, arm64v8
-Directory: 2025/enterprise
+Directory: commercial-editions/enterprise
 
-Tags: 2025.3.0-datacenter-app, 2025.3-datacenter-app, datacenter-app
+Tags: 2025.3.1-datacenter-app, 2025.3-datacenter-app, datacenter-app
 Architectures: amd64, arm64v8
-Directory: 2025/datacenter/app
+Directory: commercial-editions/datacenter/app
 
-Tags: 2025.3.0-datacenter-search, 2025.3-datacenter-search, datacenter-search
+Tags: 2025.3.1-datacenter-search, 2025.3-datacenter-search, datacenter-search
 Architectures: amd64, arm64v8
-Directory: 2025/datacenter/search
+Directory: commercial-editions/datacenter/search
 
 Tags: 2025.1.2-developer, 2025.1-developer, 2025-lta-developer
+GitFetch: refs/heads/release/2025.1
+GitCommit: 31fac30f5087cc490c9cd266e2279729a2fbdd7c
 Architectures: amd64, arm64v8
-Directory: 2025.1/developer
+Directory: commercial-editions/developer
 
 Tags: 2025.1.2-enterprise, 2025.1-enterprise, 2025-lta-enterprise
+GitFetch: refs/heads/release/2025.1
+GitCommit: 31fac30f5087cc490c9cd266e2279729a2fbdd7c
 Architectures: amd64, arm64v8
-Directory: 2025.1/enterprise
+Directory: commercial-editions/enterprise
 
 Tags: 2025.1.2-datacenter-app, 2025.1-datacenter-app, 2025-lta-datacenter-app
+GitFetch: refs/heads/release/2025.1
+GitCommit: 31fac30f5087cc490c9cd266e2279729a2fbdd7c
 Architectures: amd64, arm64v8
-Directory: 2025.1/datacenter/app
+Directory: commercial-editions/datacenter/app
 
 Tags: 2025.1.2-datacenter-search, 2025.1-datacenter-search, 2025-lta-datacenter-search
+GitFetch: refs/heads/release/2025.1
+GitCommit: 31fac30f5087cc490c9cd266e2279729a2fbdd7c
 Architectures: amd64, arm64v8
-Directory: 2025.1/datacenter/search
+Directory: commercial-editions/datacenter/search
 
 Tags: 25.6.0.109173-community, community, latest
 GitCommit: 13051010fbfba3fe366f6ca2ede1b8551fa4c251
