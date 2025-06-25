@@ -5,64 +5,33 @@ Maintainers: Tianon Gravi <tianon@dockerproject.org> (@tianon),
 GitRepo: https://github.com/docker-library/docker.git
 Builder: buildkit
 
-Tags: 28.3.0-rc.2-cli, 28-rc-cli, rc-cli, 28.3.0-rc.2-cli-alpine3.22
+Tags: 28.3.0-cli, 28.3-cli, 28-cli, cli, 28.3.0-cli-alpine3.22
 Architectures: amd64, arm32v6, arm32v7, arm64v8
-GitCommit: e28be6fd6d4874a91cc287d7aa60b823d6a77a6b
-Directory: 28-rc/cli
-
-Tags: 28.3.0-rc.2-dind, 28-rc-dind, rc-dind, 28.3.0-rc.2-dind-alpine3.22, 28.3.0-rc.2, 28-rc, rc, 28.3.0-rc.2-alpine3.22
-Architectures: amd64, arm32v6, arm32v7, arm64v8
-GitCommit: eadb5343017e3b976c259cedf1af39b1cc6909f1
-Directory: 28-rc/dind
-
-Tags: 28.3.0-rc.2-dind-rootless, 28-rc-dind-rootless, rc-dind-rootless
-Architectures: amd64, arm64v8
-GitCommit: eadb5343017e3b976c259cedf1af39b1cc6909f1
-Directory: 28-rc/dind-rootless
-
-Tags: 28.3.0-rc.2-windowsservercore-ltsc2025, 28-rc-windowsservercore-ltsc2025, rc-windowsservercore-ltsc2025
-SharedTags: 28.3.0-rc.2-windowsservercore, 28-rc-windowsservercore, rc-windowsservercore
-Architectures: windows-amd64
-GitCommit: e28be6fd6d4874a91cc287d7aa60b823d6a77a6b
-Directory: 28-rc/windows/windowsservercore-ltsc2025
-Constraints: windowsservercore-ltsc2025
-Builder: classic
-
-Tags: 28.3.0-rc.2-windowsservercore-ltsc2022, 28-rc-windowsservercore-ltsc2022, rc-windowsservercore-ltsc2022
-SharedTags: 28.3.0-rc.2-windowsservercore, 28-rc-windowsservercore, rc-windowsservercore
-Architectures: windows-amd64
-GitCommit: e28be6fd6d4874a91cc287d7aa60b823d6a77a6b
-Directory: 28-rc/windows/windowsservercore-ltsc2022
-Constraints: windowsservercore-ltsc2022
-Builder: classic
-
-Tags: 28.2.2-cli, 28.2-cli, 28-cli, cli, 28.2.2-cli-alpine3.22
-Architectures: amd64, arm32v6, arm32v7, arm64v8
-GitCommit: 2a67c3c8af5f43744b23408390280243830613d8
+GitCommit: 6aa52b1fc58b28a25a377b620928f2be8efe2f67
 Directory: 28/cli
 
-Tags: 28.2.2-dind, 28.2-dind, 28-dind, dind, 28.2.2-dind-alpine3.22, 28.2.2, 28.2, 28, latest, 28.2.2-alpine3.22
+Tags: 28.3.0-dind, 28.3-dind, 28-dind, dind, 28.3.0-dind-alpine3.22, 28.3.0, 28.3, 28, latest, 28.3.0-alpine3.22
 Architectures: amd64, arm32v6, arm32v7, arm64v8
-GitCommit: e9f3fbf07fb73d5266464f898f71510f25fa3266
+GitCommit: 6aa52b1fc58b28a25a377b620928f2be8efe2f67
 Directory: 28/dind
 
-Tags: 28.2.2-dind-rootless, 28.2-dind-rootless, 28-dind-rootless, dind-rootless
+Tags: 28.3.0-dind-rootless, 28.3-dind-rootless, 28-dind-rootless, dind-rootless
 Architectures: amd64, arm64v8
-GitCommit: ac216a48589a02162b04badf29b22a09ca5c9043
+GitCommit: 6aa52b1fc58b28a25a377b620928f2be8efe2f67
 Directory: 28/dind-rootless
 
-Tags: 28.2.2-windowsservercore-ltsc2025, 28.2-windowsservercore-ltsc2025, 28-windowsservercore-ltsc2025, windowsservercore-ltsc2025
-SharedTags: 28.2.2-windowsservercore, 28.2-windowsservercore, 28-windowsservercore, windowsservercore
+Tags: 28.3.0-windowsservercore-ltsc2025, 28.3-windowsservercore-ltsc2025, 28-windowsservercore-ltsc2025, windowsservercore-ltsc2025
+SharedTags: 28.3.0-windowsservercore, 28.3-windowsservercore, 28-windowsservercore, windowsservercore
 Architectures: windows-amd64
-GitCommit: 2a67c3c8af5f43744b23408390280243830613d8
+GitCommit: 6aa52b1fc58b28a25a377b620928f2be8efe2f67
 Directory: 28/windows/windowsservercore-ltsc2025
 Constraints: windowsservercore-ltsc2025
 Builder: classic
 
-Tags: 28.2.2-windowsservercore-ltsc2022, 28.2-windowsservercore-ltsc2022, 28-windowsservercore-ltsc2022, windowsservercore-ltsc2022
-SharedTags: 28.2.2-windowsservercore, 28.2-windowsservercore, 28-windowsservercore, windowsservercore
+Tags: 28.3.0-windowsservercore-ltsc2022, 28.3-windowsservercore-ltsc2022, 28-windowsservercore-ltsc2022, windowsservercore-ltsc2022
+SharedTags: 28.3.0-windowsservercore, 28.3-windowsservercore, 28-windowsservercore, windowsservercore
 Architectures: windows-amd64
-GitCommit: 2a67c3c8af5f43744b23408390280243830613d8
+GitCommit: 6aa52b1fc58b28a25a377b620928f2be8efe2f67
 Directory: 28/windows/windowsservercore-ltsc2022
 Constraints: windowsservercore-ltsc2022
 Builder: classic
