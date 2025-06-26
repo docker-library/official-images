@@ -1,5 +1,25 @@
 Maintainers: Julien Salleyron <julien@traefik.io> (@juliens), Romain Tribotté <romain.tribotte@traefik.io> (@rtribotte), Michael Matur <michael@traefik.io> (@mmatur), Kevin Pollet <kevin.pollet@traefik.io> (@kevinpollet), Tom Moulard <tom.moulard@traefik.io> (@tommoulard)
 
+Tags: v3.5.0-rc1-windowsservercore-ltsc2022, 3.5.0-rc1-windowsservercore-ltsc2022, chabichou-windowsservercore-ltsc2022
+Architectures: windows-amd64
+GitRepo: https://github.com/traefik/traefik-library-image.git
+GitCommit: 3d170dece52062e6a27ddc1f4b553b3d92a7c756
+Directory: v3.5/windows/servercore-ltsc2022
+Constraints: windowsservercore-ltsc2022
+
+Tags: v3.5.0-rc1-nanoserver-ltsc2022, 3.5.0-rc1-nanoserver-ltsc2022, chabichou-nanoserver-ltsc2022
+Architectures: windows-amd64
+GitRepo: https://github.com/traefik/traefik-library-image.git
+GitCommit: 3d170dece52062e6a27ddc1f4b553b3d92a7c756
+Directory: v3.5/windows/nanoserver-ltsc2022
+Constraints: nanoserver-ltsc2022, windowsservercore-ltsc2022
+
+Tags: v3.5.0-rc1, 3.5.0-rc1, chabichou
+Architectures: amd64, arm32v6, arm64v8, ppc64le, riscv64, s390x
+GitRepo: https://github.com/traefik/traefik-library-image.git
+GitCommit: 3d170dece52062e6a27ddc1f4b553b3d92a7c756
+Directory: v3.5/alpine
+
 Tags: v3.4.3-windowsservercore-ltsc2022, 3.4.3-windowsservercore-ltsc2022, v3.4-windowsservercore-ltsc2022, 3.4-windowsservercore-ltsc2022, v3-windowsservercore-ltsc2022, 3-windowsservercore-ltsc2022, chaource-windowsservercore-ltsc2022, windowsservercore-ltsc2022
 Architectures: windows-amd64
 GitRepo: https://github.com/traefik/traefik-library-image.git
