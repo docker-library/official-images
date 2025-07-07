@@ -1,100 +1,65 @@
-# this file is generated via https://github.com/docker-library/pypy/blob/474a49f18214cf245a7ec6b82a461579ccdd99c4/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/pypy/blob/f599c8fccd54b168e5e6ade76a036bdd29c60c4a/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/pypy.git
 
-Tags: 3.11-7.3.19-bookworm, 3.11-7.3-bookworm, 3.11-7-bookworm, 3.11-bookworm
-SharedTags: 3.11-7.3.19, 3.11-7.3, 3.11-7, 3.11
+Tags: 3.11-7.3.20-bookworm, 3.11-7.3-bookworm, 3.11-7-bookworm, 3.11-bookworm, 3-7.3.20-bookworm, 3-7.3-bookworm, 3-7-bookworm, 3-bookworm, bookworm
+SharedTags: 3.11-7.3.20, 3.11-7.3, 3.11-7, 3.11, 3-7.3.20, 3-7.3, 3-7, 3, latest
 Architectures: amd64, arm64v8, i386
-GitCommit: 36a974d67789b4535820e4673345c79740c1a4e2
+GitCommit: b32ca0567b9856e21c607610254748a24439a956
 Directory: 3.11/bookworm
 
-Tags: 3.11-7.3.19-slim, 3.11-7.3-slim, 3.11-7-slim, 3.11-slim, 3.11-7.3.19-slim-bookworm, 3.11-7.3-slim-bookworm, 3.11-7-slim-bookworm, 3.11-slim-bookworm
+Tags: 3.11-7.3.20-slim, 3.11-7.3-slim, 3.11-7-slim, 3.11-slim, 3-7.3.20-slim, 3-7.3-slim, 3-7-slim, 3-slim, slim, 3.11-7.3.20-slim-bookworm, 3.11-7.3-slim-bookworm, 3.11-7-slim-bookworm, 3.11-slim-bookworm, 3-7.3.20-slim-bookworm, 3-7.3-slim-bookworm, 3-7-slim-bookworm, 3-slim-bookworm, slim-bookworm
 Architectures: amd64, arm64v8, i386
-GitCommit: 36a974d67789b4535820e4673345c79740c1a4e2
+GitCommit: b32ca0567b9856e21c607610254748a24439a956
 Directory: 3.11/slim-bookworm
 
-Tags: 3.11-7.3.19-windowsservercore-ltsc2025, 3.11-7.3-windowsservercore-ltsc2025, 3.11-7-windowsservercore-ltsc2025, 3.11-windowsservercore-ltsc2025
-SharedTags: 3.11-7.3.19, 3.11-7.3, 3.11-7, 3.11, 3.11-7.3.19-windowsservercore, 3.11-7.3-windowsservercore, 3.11-7-windowsservercore, 3.11-windowsservercore
+Tags: 3.11-7.3.20-windowsservercore-ltsc2025, 3.11-7.3-windowsservercore-ltsc2025, 3.11-7-windowsservercore-ltsc2025, 3.11-windowsservercore-ltsc2025, 3-7.3.20-windowsservercore-ltsc2025, 3-7.3-windowsservercore-ltsc2025, 3-7-windowsservercore-ltsc2025, 3-windowsservercore-ltsc2025, windowsservercore-ltsc2025
+SharedTags: 3.11-7.3.20, 3.11-7.3, 3.11-7, 3.11, 3-7.3.20, 3-7.3, 3-7, 3, latest, 3.11-7.3.20-windowsservercore, 3.11-7.3-windowsservercore, 3.11-7-windowsservercore, 3.11-windowsservercore, 3-7.3.20-windowsservercore, 3-7.3-windowsservercore, 3-7-windowsservercore, 3-windowsservercore, windowsservercore
 Architectures: windows-amd64
-GitCommit: 36a974d67789b4535820e4673345c79740c1a4e2
+GitCommit: b32ca0567b9856e21c607610254748a24439a956
 Directory: 3.11/windows/windowsservercore-ltsc2025
 Constraints: windowsservercore-ltsc2025
 
-Tags: 3.11-7.3.19-windowsservercore-ltsc2022, 3.11-7.3-windowsservercore-ltsc2022, 3.11-7-windowsservercore-ltsc2022, 3.11-windowsservercore-ltsc2022
-SharedTags: 3.11-7.3.19, 3.11-7.3, 3.11-7, 3.11, 3.11-7.3.19-windowsservercore, 3.11-7.3-windowsservercore, 3.11-7-windowsservercore, 3.11-windowsservercore
+Tags: 3.11-7.3.20-windowsservercore-ltsc2022, 3.11-7.3-windowsservercore-ltsc2022, 3.11-7-windowsservercore-ltsc2022, 3.11-windowsservercore-ltsc2022, 3-7.3.20-windowsservercore-ltsc2022, 3-7.3-windowsservercore-ltsc2022, 3-7-windowsservercore-ltsc2022, 3-windowsservercore-ltsc2022, windowsservercore-ltsc2022
+SharedTags: 3.11-7.3.20, 3.11-7.3, 3.11-7, 3.11, 3-7.3.20, 3-7.3, 3-7, 3, latest, 3.11-7.3.20-windowsservercore, 3.11-7.3-windowsservercore, 3.11-7-windowsservercore, 3.11-windowsservercore, 3-7.3.20-windowsservercore, 3-7.3-windowsservercore, 3-7-windowsservercore, 3-windowsservercore, windowsservercore
 Architectures: windows-amd64
-GitCommit: 36a974d67789b4535820e4673345c79740c1a4e2
+GitCommit: b32ca0567b9856e21c607610254748a24439a956
 Directory: 3.11/windows/windowsservercore-ltsc2022
 Constraints: windowsservercore-ltsc2022
 
-Tags: 3.10-7.3.19-bookworm, 3.10-7.3-bookworm, 3.10-7-bookworm, 3.10-bookworm, 3-7.3.19-bookworm, 3-7.3-bookworm, 3-7-bookworm, 3-bookworm, bookworm
-SharedTags: 3.10-7.3.19, 3.10-7.3, 3.10-7, 3.10, 3-7.3.19, 3-7.3, 3-7, 3, latest
+Tags: 2.7-7.3.20-bookworm, 2.7-7.3-bookworm, 2.7-7-bookworm, 2.7-bookworm, 2-7.3.20-bookworm, 2-7.3-bookworm, 2-7-bookworm, 2-bookworm
+SharedTags: 2.7-7.3.20, 2.7-7.3, 2.7-7, 2.7, 2-7.3.20, 2-7.3, 2-7, 2
 Architectures: amd64, arm64v8, i386
-GitCommit: 36a974d67789b4535820e4673345c79740c1a4e2
-Directory: 3.10/bookworm
-
-Tags: 3.10-7.3.19-slim, 3.10-7.3-slim, 3.10-7-slim, 3.10-slim, 3-7.3.19-slim, 3-7.3-slim, 3-7-slim, 3-slim, slim, 3.10-7.3.19-slim-bookworm, 3.10-7.3-slim-bookworm, 3.10-7-slim-bookworm, 3.10-slim-bookworm, 3-7.3.19-slim-bookworm, 3-7.3-slim-bookworm, 3-7-slim-bookworm, 3-slim-bookworm, slim-bookworm
-Architectures: amd64, arm64v8, i386
-GitCommit: 36a974d67789b4535820e4673345c79740c1a4e2
-Directory: 3.10/slim-bookworm
-
-Tags: 3.10-7.3.19-bullseye, 3.10-7.3-bullseye, 3.10-7-bullseye, 3.10-bullseye, 3-7.3.19-bullseye, 3-7.3-bullseye, 3-7-bullseye, 3-bullseye, bullseye
-Architectures: amd64, arm64v8, i386
-GitCommit: 36a974d67789b4535820e4673345c79740c1a4e2
-Directory: 3.10/bullseye
-
-Tags: 3.10-7.3.19-slim-bullseye, 3.10-7.3-slim-bullseye, 3.10-7-slim-bullseye, 3.10-slim-bullseye, 3-7.3.19-slim-bullseye, 3-7.3-slim-bullseye, 3-7-slim-bullseye, 3-slim-bullseye, slim-bullseye
-Architectures: amd64, arm64v8, i386
-GitCommit: 36a974d67789b4535820e4673345c79740c1a4e2
-Directory: 3.10/slim-bullseye
-
-Tags: 3.10-7.3.19-windowsservercore-ltsc2025, 3.10-7.3-windowsservercore-ltsc2025, 3.10-7-windowsservercore-ltsc2025, 3.10-windowsservercore-ltsc2025, 3-7.3.19-windowsservercore-ltsc2025, 3-7.3-windowsservercore-ltsc2025, 3-7-windowsservercore-ltsc2025, 3-windowsservercore-ltsc2025, windowsservercore-ltsc2025
-SharedTags: 3.10-7.3.19, 3.10-7.3, 3.10-7, 3.10, 3-7.3.19, 3-7.3, 3-7, 3, latest, 3.10-7.3.19-windowsservercore, 3.10-7.3-windowsservercore, 3.10-7-windowsservercore, 3.10-windowsservercore, 3-7.3.19-windowsservercore, 3-7.3-windowsservercore, 3-7-windowsservercore, 3-windowsservercore, windowsservercore
-Architectures: windows-amd64
-GitCommit: 36a974d67789b4535820e4673345c79740c1a4e2
-Directory: 3.10/windows/windowsservercore-ltsc2025
-Constraints: windowsservercore-ltsc2025
-
-Tags: 3.10-7.3.19-windowsservercore-ltsc2022, 3.10-7.3-windowsservercore-ltsc2022, 3.10-7-windowsservercore-ltsc2022, 3.10-windowsservercore-ltsc2022, 3-7.3.19-windowsservercore-ltsc2022, 3-7.3-windowsservercore-ltsc2022, 3-7-windowsservercore-ltsc2022, 3-windowsservercore-ltsc2022, windowsservercore-ltsc2022
-SharedTags: 3.10-7.3.19, 3.10-7.3, 3.10-7, 3.10, 3-7.3.19, 3-7.3, 3-7, 3, latest, 3.10-7.3.19-windowsservercore, 3.10-7.3-windowsservercore, 3.10-7-windowsservercore, 3.10-windowsservercore, 3-7.3.19-windowsservercore, 3-7.3-windowsservercore, 3-7-windowsservercore, 3-windowsservercore, windowsservercore
-Architectures: windows-amd64
-GitCommit: 36a974d67789b4535820e4673345c79740c1a4e2
-Directory: 3.10/windows/windowsservercore-ltsc2022
-Constraints: windowsservercore-ltsc2022
-
-Tags: 2.7-7.3.19-bookworm, 2.7-7.3-bookworm, 2.7-7-bookworm, 2.7-bookworm, 2-7.3.19-bookworm, 2-7.3-bookworm, 2-7-bookworm, 2-bookworm
-SharedTags: 2.7-7.3.19, 2.7-7.3, 2.7-7, 2.7, 2-7.3.19, 2-7.3, 2-7, 2
-Architectures: amd64, arm64v8, i386
-GitCommit: 36a974d67789b4535820e4673345c79740c1a4e2
+GitCommit: 29ecc5a68bdd0a4643ca2b5495956f541a3ceb72
 Directory: 2.7/bookworm
 
-Tags: 2.7-7.3.19-slim, 2.7-7.3-slim, 2.7-7-slim, 2.7-slim, 2-7.3.19-slim, 2-7.3-slim, 2-7-slim, 2-slim, 2.7-7.3.19-slim-bookworm, 2.7-7.3-slim-bookworm, 2.7-7-slim-bookworm, 2.7-slim-bookworm, 2-7.3.19-slim-bookworm, 2-7.3-slim-bookworm, 2-7-slim-bookworm, 2-slim-bookworm
+Tags: 2.7-7.3.20-slim, 2.7-7.3-slim, 2.7-7-slim, 2.7-slim, 2-7.3.20-slim, 2-7.3-slim, 2-7-slim, 2-slim, 2.7-7.3.20-slim-bookworm, 2.7-7.3-slim-bookworm, 2.7-7-slim-bookworm, 2.7-slim-bookworm, 2-7.3.20-slim-bookworm, 2-7.3-slim-bookworm, 2-7-slim-bookworm, 2-slim-bookworm
 Architectures: amd64, arm64v8, i386
-GitCommit: 36a974d67789b4535820e4673345c79740c1a4e2
+GitCommit: 29ecc5a68bdd0a4643ca2b5495956f541a3ceb72
 Directory: 2.7/slim-bookworm
 
-Tags: 2.7-7.3.19-bullseye, 2.7-7.3-bullseye, 2.7-7-bullseye, 2.7-bullseye, 2-7.3.19-bullseye, 2-7.3-bullseye, 2-7-bullseye, 2-bullseye
+Tags: 2.7-7.3.20-bullseye, 2.7-7.3-bullseye, 2.7-7-bullseye, 2.7-bullseye, 2-7.3.20-bullseye, 2-7.3-bullseye, 2-7-bullseye, 2-bullseye
 Architectures: amd64, arm64v8, i386
-GitCommit: 36a974d67789b4535820e4673345c79740c1a4e2
+GitCommit: 29ecc5a68bdd0a4643ca2b5495956f541a3ceb72
 Directory: 2.7/bullseye
 
-Tags: 2.7-7.3.19-slim-bullseye, 2.7-7.3-slim-bullseye, 2.7-7-slim-bullseye, 2.7-slim-bullseye, 2-7.3.19-slim-bullseye, 2-7.3-slim-bullseye, 2-7-slim-bullseye, 2-slim-bullseye
+Tags: 2.7-7.3.20-slim-bullseye, 2.7-7.3-slim-bullseye, 2.7-7-slim-bullseye, 2.7-slim-bullseye, 2-7.3.20-slim-bullseye, 2-7.3-slim-bullseye, 2-7-slim-bullseye, 2-slim-bullseye
 Architectures: amd64, arm64v8, i386
-GitCommit: 36a974d67789b4535820e4673345c79740c1a4e2
+GitCommit: 29ecc5a68bdd0a4643ca2b5495956f541a3ceb72
 Directory: 2.7/slim-bullseye
 
-Tags: 2.7-7.3.19-windowsservercore-ltsc2025, 2.7-7.3-windowsservercore-ltsc2025, 2.7-7-windowsservercore-ltsc2025, 2.7-windowsservercore-ltsc2025, 2-7.3.19-windowsservercore-ltsc2025, 2-7.3-windowsservercore-ltsc2025, 2-7-windowsservercore-ltsc2025, 2-windowsservercore-ltsc2025
-SharedTags: 2.7-7.3.19, 2.7-7.3, 2.7-7, 2.7, 2-7.3.19, 2-7.3, 2-7, 2, 2.7-7.3.19-windowsservercore, 2.7-7.3-windowsservercore, 2.7-7-windowsservercore, 2.7-windowsservercore, 2-7.3.19-windowsservercore, 2-7.3-windowsservercore, 2-7-windowsservercore, 2-windowsservercore
+Tags: 2.7-7.3.20-windowsservercore-ltsc2025, 2.7-7.3-windowsservercore-ltsc2025, 2.7-7-windowsservercore-ltsc2025, 2.7-windowsservercore-ltsc2025, 2-7.3.20-windowsservercore-ltsc2025, 2-7.3-windowsservercore-ltsc2025, 2-7-windowsservercore-ltsc2025, 2-windowsservercore-ltsc2025
+SharedTags: 2.7-7.3.20, 2.7-7.3, 2.7-7, 2.7, 2-7.3.20, 2-7.3, 2-7, 2, 2.7-7.3.20-windowsservercore, 2.7-7.3-windowsservercore, 2.7-7-windowsservercore, 2.7-windowsservercore, 2-7.3.20-windowsservercore, 2-7.3-windowsservercore, 2-7-windowsservercore, 2-windowsservercore
 Architectures: windows-amd64
-GitCommit: 36a974d67789b4535820e4673345c79740c1a4e2
+GitCommit: 29ecc5a68bdd0a4643ca2b5495956f541a3ceb72
 Directory: 2.7/windows/windowsservercore-ltsc2025
 Constraints: windowsservercore-ltsc2025
 
-Tags: 2.7-7.3.19-windowsservercore-ltsc2022, 2.7-7.3-windowsservercore-ltsc2022, 2.7-7-windowsservercore-ltsc2022, 2.7-windowsservercore-ltsc2022, 2-7.3.19-windowsservercore-ltsc2022, 2-7.3-windowsservercore-ltsc2022, 2-7-windowsservercore-ltsc2022, 2-windowsservercore-ltsc2022
-SharedTags: 2.7-7.3.19, 2.7-7.3, 2.7-7, 2.7, 2-7.3.19, 2-7.3, 2-7, 2, 2.7-7.3.19-windowsservercore, 2.7-7.3-windowsservercore, 2.7-7-windowsservercore, 2.7-windowsservercore, 2-7.3.19-windowsservercore, 2-7.3-windowsservercore, 2-7-windowsservercore, 2-windowsservercore
+Tags: 2.7-7.3.20-windowsservercore-ltsc2022, 2.7-7.3-windowsservercore-ltsc2022, 2.7-7-windowsservercore-ltsc2022, 2.7-windowsservercore-ltsc2022, 2-7.3.20-windowsservercore-ltsc2022, 2-7.3-windowsservercore-ltsc2022, 2-7-windowsservercore-ltsc2022, 2-windowsservercore-ltsc2022
+SharedTags: 2.7-7.3.20, 2.7-7.3, 2.7-7, 2.7, 2-7.3.20, 2-7.3, 2-7, 2, 2.7-7.3.20-windowsservercore, 2.7-7.3-windowsservercore, 2.7-7-windowsservercore, 2.7-windowsservercore, 2-7.3.20-windowsservercore, 2-7.3-windowsservercore, 2-7-windowsservercore, 2-windowsservercore
 Architectures: windows-amd64
-GitCommit: 36a974d67789b4535820e4673345c79740c1a4e2
+GitCommit: 29ecc5a68bdd0a4643ca2b5495956f541a3ceb72
 Directory: 2.7/windows/windowsservercore-ltsc2022
 Constraints: windowsservercore-ltsc2022
