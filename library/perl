@@ -1,34 +1,62 @@
 Maintainers: Peter Martini <PeterCMartini@GMail.com> (@PeterMartini),
              Zak B. Elep <zakame@cpan.org> (@zakame)
 GitRepo: https://github.com/perl/docker-perl.git
-GitCommit: 876d8d6e4273ac9361142cd488f4717d880668de
+GitCommit: 48e62db61271f8c56271082a23a960adae235596
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 
-Tags: 5.40.2, 5.40, 5, latest, stable, 5.40.2-bookworm, 5.40-bookworm, 5-bookworm, bookworm, stable-bookworm
+Tags: 5.42.0, 5.42, 5, latest, stable, 5.42.0-bookworm, 5.42-bookworm, 5-bookworm, bookworm, stable-bookworm
+Directory: 5.042.000-main-bookworm
+
+Tags: 5.42.0-bullseye, 5.42-bullseye, 5-bullseye, bullseye, stable-bullseye
+Architectures: amd64, arm32v7, arm64v8, i386
+Directory: 5.042.000-main-bullseye
+
+Tags: 5.42.0-slim, 5.42-slim, 5-slim, slim, stable-slim, 5.42.0-slim-bookworm, 5.42-slim-bookworm, 5-slim-bookworm, slim-bookworm, stable-slim-bookworm
+Directory: 5.042.000-slim-bookworm
+
+Tags: 5.42.0-slim-bullseye, 5.42-slim-bullseye, 5-slim-bullseye, slim-bullseye, stable-slim-bullseye
+Architectures: amd64, arm32v7, arm64v8, i386
+Directory: 5.042.000-slim-bullseye
+
+Tags: 5.42.0-threaded, 5.42-threaded, 5-threaded, threaded, stable-threaded, 5.42.0-threaded-bookworm, 5.42-threaded-bookworm, 5-threaded-bookworm, threaded-bookworm, stable-threaded-bookworm
+Directory: 5.042.000-main,threaded-bookworm
+
+Tags: 5.42.0-threaded-bullseye, 5.42-threaded-bullseye, 5-threaded-bullseye, threaded-bullseye, stable-threaded-bullseye
+Architectures: amd64, arm32v7, arm64v8, i386
+Directory: 5.042.000-main,threaded-bullseye
+
+Tags: 5.42.0-slim-threaded, 5.42-slim-threaded, 5-slim-threaded, slim-threaded, stable-slim-threaded, 5.42.0-slim-threaded-bookworm, 5.42-slim-threaded-bookworm, 5-slim-threaded-bookworm, slim-threaded-bookworm, stable-slim-threaded-bookworm
+Directory: 5.042.000-slim,threaded-bookworm
+
+Tags: 5.42.0-slim-threaded-bullseye, 5.42-slim-threaded-bullseye, 5-slim-threaded-bullseye, slim-threaded-bullseye, stable-slim-threaded-bullseye
+Architectures: amd64, arm32v7, arm64v8, i386
+Directory: 5.042.000-slim,threaded-bullseye
+
+Tags: 5.40.2, 5.40, 5.40.2-bookworm, 5.40-bookworm
 Directory: 5.040.002-main-bookworm
 
-Tags: 5.40.2-bullseye, 5.40-bullseye, 5-bullseye, bullseye, stable-bullseye
+Tags: 5.40.2-bullseye, 5.40-bullseye
 Architectures: amd64, arm32v7, arm64v8, i386
 Directory: 5.040.002-main-bullseye
 
-Tags: 5.40.2-slim, 5.40-slim, 5-slim, slim, stable-slim, 5.40.2-slim-bookworm, 5.40-slim-bookworm, 5-slim-bookworm, slim-bookworm, stable-slim-bookworm
+Tags: 5.40.2-slim, 5.40-slim, 5.40.2-slim-bookworm, 5.40-slim-bookworm
 Directory: 5.040.002-slim-bookworm
 
-Tags: 5.40.2-slim-bullseye, 5.40-slim-bullseye, 5-slim-bullseye, slim-bullseye, stable-slim-bullseye
+Tags: 5.40.2-slim-bullseye, 5.40-slim-bullseye
 Architectures: amd64, arm32v7, arm64v8, i386
 Directory: 5.040.002-slim-bullseye
 
-Tags: 5.40.2-threaded, 5.40-threaded, 5-threaded, threaded, stable-threaded, 5.40.2-threaded-bookworm, 5.40-threaded-bookworm, 5-threaded-bookworm, threaded-bookworm, stable-threaded-bookworm
+Tags: 5.40.2-threaded, 5.40-threaded, 5.40.2-threaded-bookworm, 5.40-threaded-bookworm
 Directory: 5.040.002-main,threaded-bookworm
 
-Tags: 5.40.2-threaded-bullseye, 5.40-threaded-bullseye, 5-threaded-bullseye, threaded-bullseye, stable-threaded-bullseye
+Tags: 5.40.2-threaded-bullseye, 5.40-threaded-bullseye
 Architectures: amd64, arm32v7, arm64v8, i386
 Directory: 5.040.002-main,threaded-bullseye
 
-Tags: 5.40.2-slim-threaded, 5.40-slim-threaded, 5-slim-threaded, slim-threaded, stable-slim-threaded, 5.40.2-slim-threaded-bookworm, 5.40-slim-threaded-bookworm, 5-slim-threaded-bookworm, slim-threaded-bookworm, stable-slim-threaded-bookworm
+Tags: 5.40.2-slim-threaded, 5.40-slim-threaded, 5.40.2-slim-threaded-bookworm, 5.40-slim-threaded-bookworm
 Directory: 5.040.002-slim,threaded-bookworm
 
-Tags: 5.40.2-slim-threaded-bullseye, 5.40-slim-threaded-bullseye, 5-slim-threaded-bullseye, slim-threaded-bullseye, stable-slim-threaded-bullseye
+Tags: 5.40.2-slim-threaded-bullseye, 5.40-slim-threaded-bullseye
 Architectures: amd64, arm32v7, arm64v8, i386
 Directory: 5.040.002-slim,threaded-bullseye
 
@@ -59,34 +87,6 @@ Directory: 5.038.004-slim,threaded-bookworm
 Tags: 5.38.4-slim-threaded-bullseye, 5.38-slim-threaded-bullseye
 Architectures: amd64, arm32v7, arm64v8, i386
 Directory: 5.038.004-slim,threaded-bullseye
-
-Tags: 5.36.3, 5.36, 5.36.3-bookworm, 5.36-bookworm
-Directory: 5.036.003-main-bookworm
-
-Tags: 5.36.3-bullseye, 5.36-bullseye
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: 5.036.003-main-bullseye
-
-Tags: 5.36.3-slim, 5.36-slim, 5.36.3-slim-bookworm, 5.36-slim-bookworm
-Directory: 5.036.003-slim-bookworm
-
-Tags: 5.36.3-slim-bullseye, 5.36-slim-bullseye
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: 5.036.003-slim-bullseye
-
-Tags: 5.36.3-threaded, 5.36-threaded, 5.36.3-threaded-bookworm, 5.36-threaded-bookworm
-Directory: 5.036.003-main,threaded-bookworm
-
-Tags: 5.36.3-threaded-bullseye, 5.36-threaded-bullseye
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: 5.036.003-main,threaded-bullseye
-
-Tags: 5.36.3-slim-threaded, 5.36-slim-threaded, 5.36.3-slim-threaded-bookworm, 5.36-slim-threaded-bookworm
-Directory: 5.036.003-slim,threaded-bookworm
-
-Tags: 5.36.3-slim-threaded-bullseye, 5.36-slim-threaded-bullseye
-Architectures: amd64, arm32v7, arm64v8, i386
-Directory: 5.036.003-slim,threaded-bullseye
 
 Tags: 5.41.13, 5.41, devel, 5.41.13-bookworm, 5.41-bookworm, devel-bookworm
 Directory: 5.041.013-main-bookworm
