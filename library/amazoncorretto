@@ -15,7 +15,7 @@ Maintainers: Amazon Corretto Team <corretto-team@amazon.com> (@corretto),
              Satyen Subramaniam <satyenme@amazon.com> (@satyenme)
 GitRepo: https://github.com/corretto/corretto-docker.git
 GitFetch: refs/heads/main
-GitCommit: 9779e929a0687e116895673021cec25cb82c9733
+GitCommit: 6535c12e178b5e884d6de047dad2af85613c4911
 
 Tags: 8, 8u462, 8u462-al2, 8-al2-full, 8-al2-jdk, 8-al2-generic, 8u462-al2-generic, 8-al2-generic-jdk, latest
 Architectures: amd64, arm64v8
@@ -53,13 +53,21 @@ Tags: 8-alpine3.20-jre, 8u462-alpine3.20-jre
 Architectures: amd64, arm64v8
 Directory: 8/jre/alpine/3.20
 
-Tags: 8-alpine3.21, 8u462-alpine3.21, 8-alpine3.21-full, 8-alpine3.21-jdk, 8-alpine, 8u462-alpine, 8-alpine-full, 8-alpine-jdk
+Tags: 8-alpine3.21, 8u462-alpine3.21, 8-alpine3.21-full, 8-alpine3.21-jdk
 Architectures: amd64, arm64v8
 Directory: 8/jdk/alpine/3.21
 
-Tags: 8-alpine3.21-jre, 8u462-alpine3.21-jre, 8-alpine-jre, 8u462-alpine-jre
+Tags: 8-alpine3.21-jre, 8u462-alpine3.21-jre
 Architectures: amd64, arm64v8
 Directory: 8/jre/alpine/3.21
+
+Tags: 8-alpine3.22, 8u462-alpine3.22, 8-alpine3.22-full, 8-alpine3.22-jdk, 8-alpine, 8u462-alpine, 8-alpine-full, 8-alpine-jdk
+Architectures: amd64, arm64v8
+Directory: 8/jdk/alpine/3.22
+
+Tags: 8-alpine3.22-jre, 8u462-alpine3.22-jre, 8-alpine-jre, 8u462-alpine-jre
+Architectures: amd64, arm64v8
+Directory: 8/jre/alpine/3.22
 
 Tags: 11, 11.0.28, 11.0.28-al2, 11-al2-full, 11-al2-jdk, 11-al2-generic, 11.0.28-al2-generic, 11-al2-generic-jdk
 Architectures: amd64, arm64v8
@@ -93,9 +101,13 @@ Tags: 11-alpine3.20, 11.0.28-alpine3.20, 11-alpine3.20-full, 11-alpine3.20-jdk
 Architectures: amd64, arm64v8
 Directory: 11/jdk/alpine/3.20
 
-Tags: 11-alpine3.21, 11.0.28-alpine3.21, 11-alpine3.21-full, 11-alpine3.21-jdk, 11-alpine, 11.0.28-alpine, 11-alpine-full, 11-alpine-jdk
+Tags: 11-alpine3.21, 11.0.28-alpine3.21, 11-alpine3.21-full, 11-alpine3.21-jdk
 Architectures: amd64, arm64v8
 Directory: 11/jdk/alpine/3.21
+
+Tags: 11-alpine3.22, 11.0.28-alpine3.22, 11-alpine3.22-full, 11-alpine3.22-jdk, 11-alpine, 11.0.28-alpine, 11-alpine-full, 11-alpine-jdk
+Architectures: amd64, arm64v8
+Directory: 11/jdk/alpine/3.22
 
 Tags: 17, 17.0.16, 17.0.16-al2, 17-al2-full, 17-al2-jdk, 17-al2-generic, 17.0.16-al2-generic, 17-al2-generic-jdk
 Architectures: amd64, arm64v8
@@ -133,9 +145,13 @@ Tags: 17-alpine3.20, 17.0.16-alpine3.20, 17-alpine3.20-full, 17-alpine3.20-jdk
 Architectures: amd64, arm64v8
 Directory: 17/jdk/alpine/3.20
 
-Tags: 17-alpine3.21, 17.0.16-alpine3.21, 17-alpine3.21-full, 17-alpine3.21-jdk, 17-alpine, 17.0.16-alpine, 17-alpine-full, 17-alpine-jdk
+Tags: 17-alpine3.21, 17.0.16-alpine3.21, 17-alpine3.21-full, 17-alpine3.21-jdk
 Architectures: amd64, arm64v8
 Directory: 17/jdk/alpine/3.21
+
+Tags: 17-alpine3.22, 17.0.16-alpine3.22, 17-alpine3.22-full, 17-alpine3.22-jdk, 17-alpine, 17.0.16-alpine, 17-alpine-full, 17-alpine-jdk
+Architectures: amd64, arm64v8
+Directory: 17/jdk/alpine/3.22
 
 Tags: 21, 21.0.8, 21.0.8-al2, 21-al2-full, 21-al2-jdk, 21-al2-generic, 21.0.8-al2-generic, 21-al2-generic-jdk
 Architectures: amd64, arm64v8
@@ -161,9 +177,13 @@ Tags: 21-alpine3.20, 21.0.8-alpine3.20, 21-alpine3.20-full, 21-alpine3.20-jdk
 Architectures: amd64, arm64v8
 Directory: 21/jdk/alpine/3.20
 
-Tags: 21-alpine3.21, 21.0.8-alpine3.21, 21-alpine3.21-full, 21-alpine3.21-jdk, 21-alpine, 21.0.8-alpine, 21-alpine-full, 21-alpine-jdk
+Tags: 21-alpine3.21, 21.0.8-alpine3.21, 21-alpine3.21-full, 21-alpine3.21-jdk
 Architectures: amd64, arm64v8
 Directory: 21/jdk/alpine/3.21
+
+Tags: 21-alpine3.22, 21.0.8-alpine3.22, 21-alpine3.22-full, 21-alpine3.22-jdk, 21-alpine, 21.0.8-alpine, 21-alpine-full, 21-alpine-jdk
+Architectures: amd64, arm64v8
+Directory: 21/jdk/alpine/3.22
 
 Tags: 24-al2023, 24.0.2-al2023, 24-al2023-jdk, 24, 24-jdk
 Architectures: amd64, arm64v8
@@ -185,6 +205,10 @@ Tags: 24-alpine3.20, 24.0.2-alpine3.20, 24-alpine3.20-full, 24-alpine3.20-jdk
 Architectures: amd64, arm64v8
 Directory: 24/jdk/alpine/3.20
 
-Tags: 24-alpine3.21, 24.0.2-alpine3.21, 24-alpine3.21-full, 24-alpine3.21-jdk, 24-alpine, 24.0.2-alpine, 24-alpine-full, 24-alpine-jdk
+Tags: 24-alpine3.21, 24.0.2-alpine3.21, 24-alpine3.21-full, 24-alpine3.21-jdk
 Architectures: amd64, arm64v8
 Directory: 24/jdk/alpine/3.21
+
+Tags: 24-alpine3.22, 24.0.2-alpine3.22, 24-alpine3.22-full, 24-alpine3.22-jdk, 24-alpine, 24.0.2-alpine, 24-alpine-full, 24-alpine-jdk
+Architectures: amd64, arm64v8
+Directory: 24/jdk/alpine/3.22
