@@ -4,16 +4,16 @@ Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/julia.git
 
-Tags: 1.12.0-rc1-bookworm, 1.12-rc-bookworm, rc-bookworm
+Tags: 1.12.0-rc1-trixie, 1.12-rc-trixie, rc-trixie
 SharedTags: 1.12.0-rc1, 1.12-rc, rc
+Architectures: amd64, arm64v8, i386
+GitCommit: 25081b47fd632d8a7140a3fede2da1db2d96aee5
+Directory: 1.12-rc/trixie
+
+Tags: 1.12.0-rc1-bookworm, 1.12-rc-bookworm, rc-bookworm
 Architectures: amd64, arm64v8, i386
 GitCommit: ae32a8143b0792d4b9859822e8c8b2f8cf29455a
 Directory: 1.12-rc/bookworm
-
-Tags: 1.12.0-rc1-bullseye, 1.12-rc-bullseye, rc-bullseye
-Architectures: amd64, arm64v8, i386
-GitCommit: ae32a8143b0792d4b9859822e8c8b2f8cf29455a
-Directory: 1.12-rc/bullseye
 
 Tags: 1.12.0-rc1-alpine3.22, 1.12-rc-alpine3.22, rc-alpine3.22, 1.12.0-rc1-alpine, 1.12-rc-alpine, rc-alpine
 Architectures: amd64
@@ -41,16 +41,16 @@ Directory: 1.12-rc/windows/windowsservercore-ltsc2022
 Constraints: windowsservercore-ltsc2022
 Builder: classic
 
-Tags: 1.11.6-bookworm, 1.11-bookworm, 1-bookworm, bookworm
+Tags: 1.11.6-trixie, 1.11-trixie, 1-trixie, trixie
 SharedTags: 1.11.6, 1.11, 1, latest
+Architectures: amd64, arm64v8, i386, ppc64le
+GitCommit: 25081b47fd632d8a7140a3fede2da1db2d96aee5
+Directory: 1.11/trixie
+
+Tags: 1.11.6-bookworm, 1.11-bookworm, 1-bookworm, bookworm
 Architectures: amd64, arm64v8, i386, ppc64le
 GitCommit: 7237d625608943c4717366d9bde4e014771ffefc
 Directory: 1.11/bookworm
-
-Tags: 1.11.6-bullseye, 1.11-bullseye, 1-bullseye, bullseye
-Architectures: amd64, arm64v8, i386
-GitCommit: 7237d625608943c4717366d9bde4e014771ffefc
-Directory: 1.11/bullseye
 
 Tags: 1.11.6-alpine3.22, 1.11-alpine3.22, 1-alpine3.22, alpine3.22, 1.11.6-alpine, 1.11-alpine, 1-alpine, alpine
 Architectures: amd64
@@ -78,16 +78,16 @@ Directory: 1.11/windows/windowsservercore-ltsc2022
 Constraints: windowsservercore-ltsc2022
 Builder: classic
 
-Tags: 1.10.10-bookworm, 1.10-bookworm
+Tags: 1.10.10-trixie, 1.10-trixie
 SharedTags: 1.10.10, 1.10
+Architectures: amd64, arm64v8, i386, ppc64le
+GitCommit: 25081b47fd632d8a7140a3fede2da1db2d96aee5
+Directory: 1.10/trixie
+
+Tags: 1.10.10-bookworm, 1.10-bookworm
 Architectures: amd64, arm64v8, i386, ppc64le
 GitCommit: 36ec8a84fe6a3ac59872725f20e892e472b45227
 Directory: 1.10/bookworm
-
-Tags: 1.10.10-bullseye, 1.10-bullseye
-Architectures: amd64, arm64v8, i386
-GitCommit: 36ec8a84fe6a3ac59872725f20e892e472b45227
-Directory: 1.10/bullseye
 
 Tags: 1.10.10-alpine3.22, 1.10-alpine3.22, 1.10.10-alpine, 1.10-alpine
 Architectures: amd64
