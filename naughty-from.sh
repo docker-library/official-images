@@ -11,8 +11,30 @@ externalPinsDir="$(dirname "$BASH_SOURCE")/.external-pins"
 declare -A externalPinsArchesCache=(
 	#[img:tag]='["arch","arch",...]' # (json array of strings)
 )
+
+# custom error message (for why Ubuntu 25.10+ does not support riscv64)
+message=''
+
 _is_naughty() {
 	local from="$1"; shift
+
+	# DOI cannot support riscv64 on Ubuntu 25.10+ since it uses RVA23 and hardware does not exist yet
+	# > For Ubuntu 25.10 release we plan to raise the required RISC-V ISA profile family to RVA23
+	# https://bugs.launchpad.net/ubuntu/+source/ubuntu-release-upgrader/+bug/2111715
+	if [ "$BASHBREW_ARCH" = 'riscv64' ] && [[ "$from" == 'ubuntu:'* ]]; then
+		normalized="$(bashbrew list --uniq "$from")" # catch when latest changes
+		case "$normalized" in
+			ubuntu:22.04 | ubuntu:24.04 | ubuntu:25.04 | ubuntu:jammy* | ubuntu:noble* | ubuntu:plucky*)
+				# these are fine, let the rest of the tests try them
+				;;
+			*)
+				# ubuntu 25.10+, uses riscv64 with RVA23
+				# unsupported in DOI until hardware is acquired
+				message='DOI cannot support riscv64 on Ubuntu 25.10+ since it uses RVA23 and hardware does not exist yet'
+				return 0
+				;;
+		esac
+	fi
 
 	case "$from" in
 		# "scratch" isn't a real image and is always permissible (on non-Windows)
@@ -132,3 +154,7 @@ for naughtyFrom in "${naughtyFroms[@]:-}"; do
 		echo " - $img (FROM $from) [$arches]"
 	fi
 done
+
+if [ -n "$message" ]; then
+	echo " - $message"
+fi
