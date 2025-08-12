@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
 
-export BASHBREW_ARCH=
+export BASHBREW_ARCH= BASHBREW_NAMESPACE=
 
 if [ "$#" -eq 0 ]; then
 	set -- '--all'
