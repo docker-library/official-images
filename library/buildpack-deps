@@ -1,38 +1,53 @@
-# this file is generated via https://github.com/docker-library/buildpack-deps/blob/68bf121a88bb4e41797102920bf45cf5a64f0e2e/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/buildpack-deps/blob/a1e0227454ebf3b856cdf50e4bef4c6fc3bf2ffd/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/buildpack-deps.git
 
-Tags: bookworm-curl, stable-curl, curl
+Tags: bookworm-curl, oldstable-curl
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: 3e18c3af1f5dce6a48abf036857f9097b6bd79cc
 Directory: debian/bookworm/curl
 
-Tags: bookworm-scm, stable-scm, scm
+Tags: bookworm-scm, oldstable-scm
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: d0ecd4b7313e9bc6b00d9a4fe62ad5787bc197ae
 Directory: debian/bookworm/scm
 
-Tags: bookworm, stable, latest
+Tags: bookworm, oldstable
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 GitCommit: d0ecd4b7313e9bc6b00d9a4fe62ad5787bc197ae
 Directory: debian/bookworm
 
-Tags: bullseye-curl, oldstable-curl
+Tags: bullseye-curl, oldoldstable-curl
 Architectures: amd64, arm32v7, arm64v8, i386
 GitCommit: 93d6db0797f91ab674535553b7e0e762941a02d0
 Directory: debian/bullseye/curl
 
-Tags: bullseye-scm, oldstable-scm
+Tags: bullseye-scm, oldoldstable-scm
 Architectures: amd64, arm32v7, arm64v8, i386
 GitCommit: d0ecd4b7313e9bc6b00d9a4fe62ad5787bc197ae
 Directory: debian/bullseye/scm
 
-Tags: bullseye, oldstable
+Tags: bullseye, oldoldstable
 Architectures: amd64, arm32v7, arm64v8, i386
 GitCommit: d0ecd4b7313e9bc6b00d9a4fe62ad5787bc197ae
 Directory: debian/bullseye
+
+Tags: forky-curl, testing-curl
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
+GitCommit: 6fbd1fd6aa17031b10f11a97c31b9da1ac09db76
+Directory: debian/forky/curl
+
+Tags: forky-scm, testing-scm
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
+GitCommit: 6fbd1fd6aa17031b10f11a97c31b9da1ac09db76
+Directory: debian/forky/scm
+
+Tags: forky, testing
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
+GitCommit: 6fbd1fd6aa17031b10f11a97c31b9da1ac09db76
+Directory: debian/forky
 
 Tags: sid-curl, unstable-curl
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, riscv64, s390x
@@ -49,17 +64,17 @@ Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, riscv6
 GitCommit: 2b3a8b7d1f8875865034be3bab98ddd737e37d5e
 Directory: debian/sid
 
-Tags: trixie-curl, testing-curl
+Tags: trixie-curl, stable-curl, curl
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
 GitCommit: 1f4fe499c668d9a2e1578aa8db4f0b2d14482cf5
 Directory: debian/trixie/curl
 
-Tags: trixie-scm, testing-scm
+Tags: trixie-scm, stable-scm, scm
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
 GitCommit: 1f4fe499c668d9a2e1578aa8db4f0b2d14482cf5
 Directory: debian/trixie/scm
 
-Tags: trixie, testing
+Tags: trixie, stable, latest
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
 GitCommit: 1f4fe499c668d9a2e1578aa8db4f0b2d14482cf5
 Directory: debian/trixie
@@ -110,16 +125,16 @@ GitCommit: ab3ae04e943ecb240a9691dfa1de219b4a3e32a0
 Directory: ubuntu/plucky
 
 Tags: questing-curl, 25.10-curl
-Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
 GitCommit: 99e7dc24c50c0a7be371ea9e6aed6134ce4cbfeb
 Directory: ubuntu/questing/curl
 
 Tags: questing-scm, 25.10-scm
-Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
 GitCommit: 99e7dc24c50c0a7be371ea9e6aed6134ce4cbfeb
 Directory: ubuntu/questing/scm
 
 Tags: questing, 25.10
-Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
 GitCommit: 99e7dc24c50c0a7be371ea9e6aed6134ce4cbfeb
 Directory: ubuntu/questing
