@@ -1,16 +1,16 @@
 Maintainers: Paul Tagliamonte <paultag@hylang.org> (@paultag), Hy Docker Team (@hylang/docker)
 GitRepo: https://github.com/hylang/docker-hylang.git
-GitCommit: 840be50da77d4c04e45a3e2394c86d221483788f
+GitCommit: acbc9ad737da6849d27f6017d2e6ca926b58d582
 Directory: dockerfiles-generated
+
+Tags: 1.1.0-python3.13-trixie, 1.1-python3.13-trixie, 1-python3.13-trixie, python3.13-trixie, 1.1.0-trixie, 1.1-trixie, 1-trixie, trixie
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
+File: Dockerfile.python3.13-trixie
 
 Tags: 1.1.0-python3.13-bookworm, 1.1-python3.13-bookworm, 1-python3.13-bookworm, python3.13-bookworm, 1.1.0-bookworm, 1.1-bookworm, 1-bookworm, bookworm
 SharedTags: 1.1.0-python3.13, 1.1-python3.13, 1-python3.13, python3.13, 1.1.0, 1.1, 1, latest
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 File: Dockerfile.python3.13-bookworm
-
-Tags: 1.1.0-python3.13-bullseye, 1.1-python3.13-bullseye, 1-python3.13-bullseye, python3.13-bullseye, 1.1.0-bullseye, 1.1-bullseye, 1-bullseye, bullseye
-Architectures: amd64, arm32v7, arm64v8, i386
-File: Dockerfile.python3.13-bullseye
 
 Tags: 1.1.0-python3.13-alpine3.22, 1.1-python3.13-alpine3.22, 1-python3.13-alpine3.22, python3.13-alpine3.22, 1.1.0-alpine3.22, 1.1-alpine3.22, 1-alpine3.22, alpine3.22, 1.1.0-python3.13-alpine, 1.1-python3.13-alpine, 1-python3.13-alpine, python3.13-alpine, 1.1.0-alpine, 1.1-alpine, 1-alpine, alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
@@ -32,14 +32,14 @@ Architectures: windows-amd64
 Constraints: windowsservercore-ltsc2022
 File: Dockerfile.python3.13-windowsservercore-ltsc2022
 
+Tags: 1.1.0-python3.12-trixie, 1.1-python3.12-trixie, 1-python3.12-trixie, python3.12-trixie
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
+File: Dockerfile.python3.12-trixie
+
 Tags: 1.1.0-python3.12-bookworm, 1.1-python3.12-bookworm, 1-python3.12-bookworm, python3.12-bookworm
 SharedTags: 1.1.0-python3.12, 1.1-python3.12, 1-python3.12, python3.12
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 File: Dockerfile.python3.12-bookworm
-
-Tags: 1.1.0-python3.12-bullseye, 1.1-python3.12-bullseye, 1-python3.12-bullseye, python3.12-bullseye
-Architectures: amd64, arm32v7, arm64v8, i386
-File: Dockerfile.python3.12-bullseye
 
 Tags: 1.1.0-python3.12-alpine3.22, 1.1-python3.12-alpine3.22, 1-python3.12-alpine3.22, python3.12-alpine3.22, 1.1.0-python3.12-alpine, 1.1-python3.12-alpine, 1-python3.12-alpine, python3.12-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
@@ -49,14 +49,14 @@ Tags: 1.1.0-python3.12-alpine3.21, 1.1-python3.12-alpine3.21, 1-python3.12-alpin
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
 File: Dockerfile.python3.12-alpine3.21
 
+Tags: 1.1.0-python3.11-trixie, 1.1-python3.11-trixie, 1-python3.11-trixie, python3.11-trixie
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
+File: Dockerfile.python3.11-trixie
+
 Tags: 1.1.0-python3.11-bookworm, 1.1-python3.11-bookworm, 1-python3.11-bookworm, python3.11-bookworm
 SharedTags: 1.1.0-python3.11, 1.1-python3.11, 1-python3.11, python3.11
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 File: Dockerfile.python3.11-bookworm
-
-Tags: 1.1.0-python3.11-bullseye, 1.1-python3.11-bullseye, 1-python3.11-bullseye, python3.11-bullseye
-Architectures: amd64, arm32v7, arm64v8, i386
-File: Dockerfile.python3.11-bullseye
 
 Tags: 1.1.0-python3.11-alpine3.22, 1.1-python3.11-alpine3.22, 1-python3.11-alpine3.22, python3.11-alpine3.22, 1.1.0-python3.11-alpine, 1.1-python3.11-alpine, 1-python3.11-alpine, python3.11-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
@@ -66,14 +66,14 @@ Tags: 1.1.0-python3.11-alpine3.21, 1.1-python3.11-alpine3.21, 1-python3.11-alpin
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
 File: Dockerfile.python3.11-alpine3.21
 
+Tags: 1.1.0-python3.10-trixie, 1.1-python3.10-trixie, 1-python3.10-trixie, python3.10-trixie
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
+File: Dockerfile.python3.10-trixie
+
 Tags: 1.1.0-python3.10-bookworm, 1.1-python3.10-bookworm, 1-python3.10-bookworm, python3.10-bookworm
 SharedTags: 1.1.0-python3.10, 1.1-python3.10, 1-python3.10, python3.10
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 File: Dockerfile.python3.10-bookworm
-
-Tags: 1.1.0-python3.10-bullseye, 1.1-python3.10-bullseye, 1-python3.10-bullseye, python3.10-bullseye
-Architectures: amd64, arm32v7, arm64v8, i386
-File: Dockerfile.python3.10-bullseye
 
 Tags: 1.1.0-python3.10-alpine3.22, 1.1-python3.10-alpine3.22, 1-python3.10-alpine3.22, python3.10-alpine3.22, 1.1.0-python3.10-alpine, 1.1-python3.10-alpine, 1-python3.10-alpine, python3.10-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
@@ -83,14 +83,14 @@ Tags: 1.1.0-python3.10-alpine3.21, 1.1-python3.10-alpine3.21, 1-python3.10-alpin
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
 File: Dockerfile.python3.10-alpine3.21
 
+Tags: 1.1.0-python3.9-trixie, 1.1-python3.9-trixie, 1-python3.9-trixie, python3.9-trixie
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
+File: Dockerfile.python3.9-trixie
+
 Tags: 1.1.0-python3.9-bookworm, 1.1-python3.9-bookworm, 1-python3.9-bookworm, python3.9-bookworm
 SharedTags: 1.1.0-python3.9, 1.1-python3.9, 1-python3.9, python3.9
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
 File: Dockerfile.python3.9-bookworm
-
-Tags: 1.1.0-python3.9-bullseye, 1.1-python3.9-bullseye, 1-python3.9-bullseye, python3.9-bullseye
-Architectures: amd64, arm32v7, arm64v8, i386
-File: Dockerfile.python3.9-bullseye
 
 Tags: 1.1.0-python3.9-alpine3.22, 1.1-python3.9-alpine3.22, 1-python3.9-alpine3.22, python3.9-alpine3.22, 1.1.0-python3.9-alpine, 1.1-python3.9-alpine, 1-python3.9-alpine, python3.9-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
@@ -100,14 +100,14 @@ Tags: 1.1.0-python3.9-alpine3.21, 1.1-python3.9-alpine3.21, 1-python3.9-alpine3.
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
 File: Dockerfile.python3.9-alpine3.21
 
+Tags: 1.1.0-python3.14-rc-trixie, 1.1-python3.14-rc-trixie, 1-python3.14-rc-trixie, python3.14-rc-trixie
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
+File: Dockerfile.python3.14-rc-trixie
+
 Tags: 1.1.0-python3.14-rc-bookworm, 1.1-python3.14-rc-bookworm, 1-python3.14-rc-bookworm, python3.14-rc-bookworm
 SharedTags: 1.1.0-python3.14-rc, 1.1-python3.14-rc, 1-python3.14-rc, python3.14-rc
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 File: Dockerfile.python3.14-rc-bookworm
-
-Tags: 1.1.0-python3.14-rc-bullseye, 1.1-python3.14-rc-bullseye, 1-python3.14-rc-bullseye, python3.14-rc-bullseye
-Architectures: amd64, arm32v7, arm64v8, i386
-File: Dockerfile.python3.14-rc-bullseye
 
 Tags: 1.1.0-python3.14-rc-alpine3.22, 1.1-python3.14-rc-alpine3.22, 1-python3.14-rc-alpine3.22, python3.14-rc-alpine3.22, 1.1.0-python3.14-rc-alpine, 1.1-python3.14-rc-alpine, 1-python3.14-rc-alpine, python3.14-rc-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64
@@ -128,6 +128,10 @@ SharedTags: 1.1.0-python3.14-rc, 1.1-python3.14-rc, 1-python3.14-rc, python3.14-
 Architectures: windows-amd64
 Constraints: windowsservercore-ltsc2022
 File: Dockerfile.python3.14-rc-windowsservercore-ltsc2022
+
+Tags: 1.1.0-pypy3.11-trixie, 1.1-pypy3.11-trixie, 1-pypy3.11-trixie, pypy3.11-trixie, 1.1.0-pypy-trixie, 1.1-pypy-trixie, 1-pypy-trixie, pypy-trixie
+Architectures: amd64, arm64v8, i386
+File: Dockerfile.pypy3.11-trixie
 
 Tags: 1.1.0-pypy3.11-bookworm, 1.1-pypy3.11-bookworm, 1-pypy3.11-bookworm, pypy3.11-bookworm, 1.1.0-pypy-bookworm, 1.1-pypy-bookworm, 1-pypy-bookworm, pypy-bookworm
 SharedTags: 1.1.0-pypy3.11, 1.1-pypy3.11, 1-pypy3.11, pypy3.11, 1.1.0-pypy, 1.1-pypy, 1-pypy, pypy
