@@ -1,42 +1,44 @@
 Maintainers: Keegan Witt <keeganwitt@gmail.com> (@keeganwitt)
 GitRepo: https://github.com/groovy/docker-groovy.git
 
-Tags: 4.0.25-jdk8, 4.0-jdk8, jdk8, 4.0.25-jdk8-jammy, 4.0-jdk8-jammy, jdk8-jammy
+Tags: 4.0.27-jdk21, 4.0-jdk21, 4-jdk21, jdk21, 4.0.27-jdk21-noble, 4.0-jdk21-noble, 4-jdk21-noble, jdk21-noble, latest, 4.0.27-jdk, 4.0-jdk, 4-jdk, jdk, 4.0.27, 4.0, 4, 4.0.27-jdk-noble, 4.0-jdk-noble, 4-jdk-noble, jdk-noble, 4.0.27-noble, 4.0-noble, 4-noble, noble
+Architectures: amd64, arm64v8, ppc64le, riscv64, s390x
 GitFetch: refs/heads/master
-Architectures: amd64, arm32v7, arm64v8, ppc64le
-GitCommit: 0bf66b24590f71de06ad45107716beacd4a07c06
-Directory: jdk8
-
-Tags: 4.0.25-jdk11, 4.0-jdk11, jdk11, 4.0.25-jdk11-jammy, 4.0-jdk11-jammy, jdk11-jammy
-GitFetch: refs/heads/master
-Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 0bf66b24590f71de06ad45107716beacd4a07c06
-Directory: jdk11
-
-Tags: 4.0.25-jdk11-alpine, 4.0-jdk11-alpine, jdk11-alpine
-GitFetch: refs/heads/master
-Architectures: amd64
-GitCommit: 0bf66b24590f71de06ad45107716beacd4a07c06
-Directory: jdk11-alpine
-
-Tags: 4.0.25-jdk17, 4.0-jdk17, jdk17, 4.0.25-jdk, 4.0-jdk, 4.0.25, 4.0, 4, jdk, latest, 4.0.25-jdk17-jammy, 4.0-jdk17-jammy, jdk17-jammy, 4.0.25-jdk-jammy, 4.0-jdk-jammy, 4.0.25-jammy, 4.0-jammy, 4-jammy, jdk-jammy, jammy
-Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 0bf66b24590f71de06ad45107716beacd4a07c06
-Directory: jdk17
-
-Tags: 4.0.25-jdk17-alpine, 4.0-jdk17-alpine, jdk17-alpine, 4.0.25-jdk-alpine, 4.0-jdk-alpine, 4.0.25-alpine, 4.0-alpine, 4-alpine, jdk-alpine, alpine
-GitFetch: refs/heads/master
-Architectures: amd64
-GitCommit: 0bf66b24590f71de06ad45107716beacd4a07c06
-Directory: jdk17-alpine
-
-Tags: 4.0.25-jdk21, 4.0-jdk21, jdk21, 4.0.25-jdk21-jammy, 4.0-jdk21-jammy, jdk21-jammy
-Architectures: amd64, arm64v8
-GitCommit: 0bf66b24590f71de06ad45107716beacd4a07c06
+GitCommit: 5a3c63b31c157987812e0b7d7d510cf83490e259
 Directory: jdk21
 
-Tags: 4.0.25-jdk21-alpine, 4.0-jdk21-alpine, jdk21-alpine
-GitFetch: refs/heads/master
+Tags: 4.0.27-jdk21-alpine, 4.0-jdk21-alpine, 4-jdk21-alpine, jdk21-alpine, 4.0.27-jdk-alpine, 4.0-jdk-alpine, 4-jdk-alpine, jdk-alpine, 4.0.27-alpine, 4.0-alpine, 4-alpine, alpine
 Architectures: amd64, arm64v8
-GitCommit: 0bf66b24590f71de06ad45107716beacd4a07c06
+GitFetch: refs/heads/master
+GitCommit: 5a3c63b31c157987812e0b7d7d510cf83490e259
 Directory: jdk21-alpine
+
+Tags: 4.0.27-jdk17, 4.0-jdk17, 4-jdk17, jdk17, 4.0.27-jdk17-noble, 4.0-jdk17-noble, 4-jdk17-noble, jdk17-noble
+Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
+GitFetch: refs/heads/master
+GitCommit: 5a3c63b31c157987812e0b7d7d510cf83490e259
+Directory: jdk17
+
+Tags: 4.0.27-jdk17-alpine, 4.0-jdk17-alpine, 4-jdk17-alpine, jdk17-alpine
+Architectures: amd64
+GitFetch: refs/heads/master
+GitCommit: 5a3c63b31c157987812e0b7d7d510cf83490e259
+Directory: jdk17-alpine
+
+Tags: 4.0.27-jdk11, 4.0-jdk11, 4-jdk11, jdk11, 4.0.27-jdk11-jammy, 4.0-jdk11-jammy, 4-jdk11-jammy, jdk11-jammy, 4.0.27-jdk-jammy, 4.0-jdk-jammy, 4-jdk-jammy, jdk-jammy, 4.0.27-jammy, 4.0-jammy, 4-jammy, jammy
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitFetch: refs/heads/master
+GitCommit: 5a3c63b31c157987812e0b7d7d510cf83490e259
+Directory: jdk11
+
+Tags: 4.0.27-jdk11-alpine, 4.0-jdk11-alpine, 4-jdk11-alpine, jdk11-alpine
+Architectures: amd64
+GitFetch: refs/heads/master
+GitCommit: 5a3c63b31c157987812e0b7d7d510cf83490e259
+Directory: jdk11-alpine
+
+Tags: 4.0.27-jdk8, 4.0-jdk8, 4-jdk8, jdk8, 4.0.27-jdk8-jammy, 4.0-jdk8-jammy, 4-jdk8-jammy, jdk8-jammy
+Architectures: amd64, arm32v7, arm64v8, ppc64le
+GitFetch: refs/heads/master
+GitCommit: 5a3c63b31c157987812e0b7d7d510cf83490e259
+Directory: jdk8

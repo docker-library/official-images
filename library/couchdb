@@ -4,19 +4,23 @@
 Maintainers: Joan Touzet <wohali@apache.org> (@wohali), Jan Lehnardt <jan@apache.org> (@janl), Nick Vatamaniuc (@nickva)
 GitRepo: https://github.com/apache/couchdb-docker
 GitFetch: refs/heads/main
-GitCommit: 8a7dfc18fe8a9ba55a1c544ee3416f945dbb94ad
+GitCommit: 2660034027fec97097f88afcc6f8a4416c364b24
 
-Tags: latest, 3.4.3, 3.4, 3
+Tags: latest, 3.5.0, 3.5, 3
+Architectures: amd64, arm64v8, s390x
+Directory: 3.5.0
+
+Tags: 3.5.0-nouveau, 3.5-nouveau, 3-nouveau
+Architectures: amd64, arm64v8, s390x
+Directory: 3.5.0-nouveau
+
+Tags: 3.4.3, 3.4
 Architectures: amd64, arm64v8, s390x
 Directory: 3.4.3
 
-Tags: 3.4.3-nouveau, 3.4-nouveau, 3-nouveau
+Tags: 3.4.3-nouveau, 3.4-nouveau
 Architectures: amd64, arm64v8, s390x
 Directory: 3.4.3-nouveau
-
-Tags: 3.3.3, 3.3
-Architectures: amd64, arm64v8, ppc64le, s390x
-Directory: 3.3.3
 
 # 2.3 and 3.1 are FROM debian:buster (EOL)
 # https://github.com/docker-library/official-images/pull/17091#issuecomment-2201099734
