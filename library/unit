@@ -1,21 +1,23 @@
-# this file is generated via https://github.com/nginx/unit/blob/bda6a949b8a9f3f5ebe0e961ae52756ceb9dbb68/pkg/docker/Makefile
+# this file is generated via https://github.com/nginx/unit/blob/e89c9e743ec1585fa64206f8757e077e7dd5dbc9/pkg/docker/Makefile
 
-Maintainers: Unit Docker Maintainers <docker-maint@nginx.com> (@nginx)
+Maintainers: Unit Docker Maintainers <docker-maint@nginx.com> (@nginx),
+             Konstantin Pavlov (@thresheek),
+             Igor Ippolitov (@oxpa)
 GitRepo: https://github.com/nginx/unit.git
 
-Tags: 1.34.2-go1.24, go1.24, go1, go
+Tags: 1.34.2-go1.25, go1.25, go1, go
 Architectures: amd64, arm64v8
 GitFetch: refs/heads/packaging
-GitCommit: bda6a949b8a9f3f5ebe0e961ae52756ceb9dbb68
+GitCommit: e89c9e743ec1585fa64206f8757e077e7dd5dbc9
+Directory: pkg/docker
+File: Dockerfile.go1.25
+
+Tags: 1.34.2-go1.24, go1.24
+Architectures: amd64, arm64v8
+GitFetch: refs/heads/packaging
+GitCommit: e89c9e743ec1585fa64206f8757e077e7dd5dbc9
 Directory: pkg/docker
 File: Dockerfile.go1.24
-
-Tags: 1.34.2-go1.23, go1.23
-Architectures: amd64, arm64v8
-GitFetch: refs/heads/packaging
-GitCommit: bda6a949b8a9f3f5ebe0e961ae52756ceb9dbb68
-Directory: pkg/docker
-File: Dockerfile.go1.23
 
 Tags: 1.34.2-jsc11, jsc11, jsc
 Architectures: amd64, arm64v8

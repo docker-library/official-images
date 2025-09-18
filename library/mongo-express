@@ -5,22 +5,27 @@ Maintainers: Nick Cox <nickcox1008@gmail.com> (@knickers),
 GitRepo: https://github.com/mongo-express/mongo-express-docker.git
 GitCommit: 075234363b3c008c7c2e97de8a3639e23a75cfcd
 
-Tags: 1.0.2-20-alpine3.19, 1.0-20-alpine3.19, 1-20-alpine3.19
-Architectures: amd64, arm64v8
-GitCommit: 403467f350d819b404f3d5150be7776217e810b7
-Directory: 1.0/20-alpine3.19
-
-Tags: 1.0.2-20, 1.0-20, 1-20, 1.0.2-20-alpine3.18, 1.0-20-alpine3.18, 1-20-alpine3.18
-Architectures: amd64, arm64v8
-GitCommit: 403467f350d819b404f3d5150be7776217e810b7
-Directory: 1.0/20-alpine3.18
-
-Tags: 1.0.2-18-alpine3.19, 1.0-18-alpine3.19, 1-18-alpine3.19
-Architectures: amd64, arm64v8
-GitCommit: 403467f350d819b404f3d5150be7776217e810b7
-Directory: 1.0/18-alpine3.19
-
-Tags: 1.0.2, 1.0, 1, 1.0.2-18, 1.0-18, 1-18, 1.0.2-18-alpine3.18, 1.0-18-alpine3.18, 1-18-alpine3.18, latest
-Architectures: amd64, arm64v8
-GitCommit: 403467f350d819b404f3d5150be7776217e810b7
-Directory: 1.0/18-alpine3.18
+#
+# Alpine 3.18 is EOL: https://github.com/docker-library/official-images/issues/19034
+# Node.js 18 is EOL: https://github.com/docker-library/official-images/pull/19118
+# Node.js no longer supports Alpine 3.19: https://github.com/docker-library/official-images/pull/18045
+#
+#Tags: 1.0.2-20-alpine3.19, 1.0-20-alpine3.19, 1-20-alpine3.19
+#Architectures: amd64, arm64v8
+#GitCommit: 403467f350d819b404f3d5150be7776217e810b7
+#Directory: 1.0/20-alpine3.19
+#
+#Tags: 1.0.2-20, 1.0-20, 1-20, 1.0.2-20-alpine3.18, 1.0-20-alpine3.18, 1-20-alpine3.18
+#Architectures: amd64, arm64v8
+#GitCommit: 403467f350d819b404f3d5150be7776217e810b7
+#Directory: 1.0/20-alpine3.18
+#
+#Tags: 1.0.2-18-alpine3.19, 1.0-18-alpine3.19, 1-18-alpine3.19
+#Architectures: amd64, arm64v8
+#GitCommit: 403467f350d819b404f3d5150be7776217e810b7
+#Directory: 1.0/18-alpine3.19
+#
+#Tags: 1.0.2, 1.0, 1, 1.0.2-18, 1.0-18, 1-18, 1.0.2-18-alpine3.18, 1.0-18-alpine3.18, 1-18-alpine3.18, latest
+#Architectures: amd64, arm64v8
+#GitCommit: 403467f350d819b404f3d5150be7776217e810b7
+#Directory: 1.0/18-alpine3.18

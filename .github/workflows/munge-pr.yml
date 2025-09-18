@@ -88,6 +88,14 @@ jobs:
     name: Apply Labels
     runs-on: ubuntu-latest
     needs: gather
+    permissions:
+      contents: read
+      pull-requests: write
+      # "issues: write" is now needed to create new labels
+      # https://github.com/orgs/community/discussions/156181
+      # but documentation still shows that pull-requests write should be enough 😓
+      # https://docs.github.com/en/rest/issues/labels?apiVersion=2022-11-28#create-a-label
+      issues: write
     if: fromJSON(needs.gather.outputs.images).imagesAndExternalPinsCount > 0
     steps:
       - name: Apply Labels

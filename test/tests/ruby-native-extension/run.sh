@@ -37,7 +37,7 @@ docker run --interactive --rm --entrypoint sh "$buildDepsImage" -eu <<-'EOSH'
 		platform='ruby'
 	fi
 	gem install bcrypt \
-		--version 3.1.16 \
+		--version 3.1.20 \
 		--platform "$platform" \
 		--silent
 	ruby -e 'require "bcrypt"; print "it works\n"'
