@@ -24,7 +24,7 @@ if ! docker run --rm --entrypoint sh "$image" -c 'command -v gcc' > /dev/null; t
 				RUN set -eux; \
 					apt-get update; \
 					apt-get install -y --no-install-recommends gcc make libc6-dev; \
-					apt-get dist-clean
+					rm -rf /var/lib/apt/lists/*
 			EOD
 			;;
 	esac
