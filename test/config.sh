@@ -39,6 +39,11 @@ imageTests+=(
 	[cassandra]='
 		cassandra-basics
 	'
+	[clickhouse]='
+		clickhouse-basics
+		clickhouse-initdb
+    clickhouse-override-tcp-port
+  '
 	[clojure]='
 	'
 	[crate]='
