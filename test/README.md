@@ -1,5 +1,11 @@
 # Official Images Test Suite
 
+## What tests belong here?
+
+We have a lot of historical tests that violate this line, but our goal is to *only* maintain tests in this repository which apply to more than one image - for example, we have tests for Python that apply to both `python` *and* `pypy`.
+
+If you're using our test suite to test your image in your own CI, see [the "Alternate config files" section](#alternate-config-files) below for information about how to run both our tests and your own from our (admittedly naïve) test wrapper.
+
 ## Running Tests
 
 ```console
