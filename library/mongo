@@ -1,34 +1,142 @@
-# this file is generated via https://github.com/docker-library/mongo/blob/a60f8860a03af326ac305a8d15d0c5277589e4fb/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/mongo/blob/c71ac3a4c7784a1c004a05cdbfeedd73ebc6567a/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/mongo.git
 
-Tags: 8.0.15-noble, 8.0-noble, 8-noble, noble
-SharedTags: 8.0.15, 8.0, 8, latest
+Tags: 8.2.2-rc0-noble, 8.2-rc-noble
+SharedTags: 8.2.2-rc0, 8.2-rc
+Architectures: amd64, arm64v8
+GitCommit: 24e1e676f633788faf66ff5a539e608ee33d75ac
+Directory: 8.2-rc
+
+Tags: 8.2.2-rc0-windowsservercore-ltsc2025, 8.2-rc-windowsservercore-ltsc2025
+SharedTags: 8.2.2-rc0-windowsservercore, 8.2-rc-windowsservercore, 8.2.2-rc0, 8.2-rc
+Architectures: windows-amd64
+GitCommit: 24e1e676f633788faf66ff5a539e608ee33d75ac
+Directory: 8.2-rc/windows/windowsservercore-ltsc2025
+Constraints: windowsservercore-ltsc2025
+
+Tags: 8.2.2-rc0-windowsservercore-ltsc2022, 8.2-rc-windowsservercore-ltsc2022
+SharedTags: 8.2.2-rc0-windowsservercore, 8.2-rc-windowsservercore, 8.2.2-rc0, 8.2-rc
+Architectures: windows-amd64
+GitCommit: 24e1e676f633788faf66ff5a539e608ee33d75ac
+Directory: 8.2-rc/windows/windowsservercore-ltsc2022
+Constraints: windowsservercore-ltsc2022
+
+Tags: 8.2.2-rc0-nanoserver-ltsc2022, 8.2-rc-nanoserver-ltsc2022
+SharedTags: 8.2.2-rc0-nanoserver, 8.2-rc-nanoserver
+Architectures: windows-amd64
+GitCommit: 24e1e676f633788faf66ff5a539e608ee33d75ac
+Directory: 8.2-rc/windows/nanoserver-ltsc2022
+Constraints: nanoserver-ltsc2022, windowsservercore-ltsc2022
+
+Tags: 8.2.1-noble, 8.2-noble, 8-noble, noble
+SharedTags: 8.2.1, 8.2, 8, latest
+Architectures: amd64, arm64v8
+GitCommit: 930645872a8eb6651cb1a27bfda9e0500c58fbfd
+Directory: 8.2
+
+Tags: 8.2.1-windowsservercore-ltsc2025, 8.2-windowsservercore-ltsc2025, 8-windowsservercore-ltsc2025, windowsservercore-ltsc2025
+SharedTags: 8.2.1-windowsservercore, 8.2-windowsservercore, 8-windowsservercore, windowsservercore, 8.2.1, 8.2, 8, latest
+Architectures: windows-amd64
+GitCommit: 930645872a8eb6651cb1a27bfda9e0500c58fbfd
+Directory: 8.2/windows/windowsservercore-ltsc2025
+Constraints: windowsservercore-ltsc2025
+
+Tags: 8.2.1-windowsservercore-ltsc2022, 8.2-windowsservercore-ltsc2022, 8-windowsservercore-ltsc2022, windowsservercore-ltsc2022
+SharedTags: 8.2.1-windowsservercore, 8.2-windowsservercore, 8-windowsservercore, windowsservercore, 8.2.1, 8.2, 8, latest
+Architectures: windows-amd64
+GitCommit: 930645872a8eb6651cb1a27bfda9e0500c58fbfd
+Directory: 8.2/windows/windowsservercore-ltsc2022
+Constraints: windowsservercore-ltsc2022
+
+Tags: 8.2.1-nanoserver-ltsc2022, 8.2-nanoserver-ltsc2022, 8-nanoserver-ltsc2022, nanoserver-ltsc2022
+SharedTags: 8.2.1-nanoserver, 8.2-nanoserver, 8-nanoserver, nanoserver
+Architectures: windows-amd64
+GitCommit: 930645872a8eb6651cb1a27bfda9e0500c58fbfd
+Directory: 8.2/windows/nanoserver-ltsc2022
+Constraints: nanoserver-ltsc2022, windowsservercore-ltsc2022
+
+Tags: 8.0.16-rc1-noble, 8.0-rc-noble
+SharedTags: 8.0.16-rc1, 8.0-rc
+Architectures: amd64, arm64v8
+GitCommit: dda0354f39517b3a275a8c5d77ae48379a7fb3f4
+Directory: 8.0-rc
+
+Tags: 8.0.16-rc1-windowsservercore-ltsc2025, 8.0-rc-windowsservercore-ltsc2025
+SharedTags: 8.0.16-rc1-windowsservercore, 8.0-rc-windowsservercore, 8.0.16-rc1, 8.0-rc
+Architectures: windows-amd64
+GitCommit: dda0354f39517b3a275a8c5d77ae48379a7fb3f4
+Directory: 8.0-rc/windows/windowsservercore-ltsc2025
+Constraints: windowsservercore-ltsc2025
+
+Tags: 8.0.16-rc1-windowsservercore-ltsc2022, 8.0-rc-windowsservercore-ltsc2022
+SharedTags: 8.0.16-rc1-windowsservercore, 8.0-rc-windowsservercore, 8.0.16-rc1, 8.0-rc
+Architectures: windows-amd64
+GitCommit: dda0354f39517b3a275a8c5d77ae48379a7fb3f4
+Directory: 8.0-rc/windows/windowsservercore-ltsc2022
+Constraints: windowsservercore-ltsc2022
+
+Tags: 8.0.16-rc1-nanoserver-ltsc2022, 8.0-rc-nanoserver-ltsc2022
+SharedTags: 8.0.16-rc1-nanoserver, 8.0-rc-nanoserver
+Architectures: windows-amd64
+GitCommit: dda0354f39517b3a275a8c5d77ae48379a7fb3f4
+Directory: 8.0-rc/windows/nanoserver-ltsc2022
+Constraints: nanoserver-ltsc2022, windowsservercore-ltsc2022
+
+Tags: 8.0.15-noble, 8.0-noble
+SharedTags: 8.0.15, 8.0
 Architectures: amd64, arm64v8
 GitCommit: 12330e190aa0ba8cfd07004a7a74791b270a3206
 Directory: 8.0
 
-Tags: 8.0.15-windowsservercore-ltsc2025, 8.0-windowsservercore-ltsc2025, 8-windowsservercore-ltsc2025, windowsservercore-ltsc2025
-SharedTags: 8.0.15-windowsservercore, 8.0-windowsservercore, 8-windowsservercore, windowsservercore, 8.0.15, 8.0, 8, latest
+Tags: 8.0.15-windowsservercore-ltsc2025, 8.0-windowsservercore-ltsc2025
+SharedTags: 8.0.15-windowsservercore, 8.0-windowsservercore, 8.0.15, 8.0
 Architectures: windows-amd64
 GitCommit: c7ea10a79db9577890466804058872f34f21b3ab
 Directory: 8.0/windows/windowsservercore-ltsc2025
 Constraints: windowsservercore-ltsc2025
 
-Tags: 8.0.15-windowsservercore-ltsc2022, 8.0-windowsservercore-ltsc2022, 8-windowsservercore-ltsc2022, windowsservercore-ltsc2022
-SharedTags: 8.0.15-windowsservercore, 8.0-windowsservercore, 8-windowsservercore, windowsservercore, 8.0.15, 8.0, 8, latest
+Tags: 8.0.15-windowsservercore-ltsc2022, 8.0-windowsservercore-ltsc2022
+SharedTags: 8.0.15-windowsservercore, 8.0-windowsservercore, 8.0.15, 8.0
 Architectures: windows-amd64
 GitCommit: c7ea10a79db9577890466804058872f34f21b3ab
 Directory: 8.0/windows/windowsservercore-ltsc2022
 Constraints: windowsservercore-ltsc2022
 
-Tags: 8.0.15-nanoserver-ltsc2022, 8.0-nanoserver-ltsc2022, 8-nanoserver-ltsc2022, nanoserver-ltsc2022
-SharedTags: 8.0.15-nanoserver, 8.0-nanoserver, 8-nanoserver, nanoserver
+Tags: 8.0.15-nanoserver-ltsc2022, 8.0-nanoserver-ltsc2022
+SharedTags: 8.0.15-nanoserver, 8.0-nanoserver
 Architectures: windows-amd64
 GitCommit: c7ea10a79db9577890466804058872f34f21b3ab
 Directory: 8.0/windows/nanoserver-ltsc2022
+Constraints: nanoserver-ltsc2022, windowsservercore-ltsc2022
+
+Tags: 7.0.26-rc0-jammy, 7.0-rc-jammy
+SharedTags: 7.0.26-rc0, 7.0-rc
+Architectures: amd64, arm64v8
+GitCommit: bf7e9f267d083920987d5b3f8da1cfe89f378486
+Directory: 7.0-rc
+
+Tags: 7.0.26-rc0-windowsservercore-ltsc2025, 7.0-rc-windowsservercore-ltsc2025
+SharedTags: 7.0.26-rc0-windowsservercore, 7.0-rc-windowsservercore, 7.0.26-rc0, 7.0-rc
+Architectures: windows-amd64
+GitCommit: bf7e9f267d083920987d5b3f8da1cfe89f378486
+Directory: 7.0-rc/windows/windowsservercore-ltsc2025
+Constraints: windowsservercore-ltsc2025
+
+Tags: 7.0.26-rc0-windowsservercore-ltsc2022, 7.0-rc-windowsservercore-ltsc2022
+SharedTags: 7.0.26-rc0-windowsservercore, 7.0-rc-windowsservercore, 7.0.26-rc0, 7.0-rc
+Architectures: windows-amd64
+GitCommit: bf7e9f267d083920987d5b3f8da1cfe89f378486
+Directory: 7.0-rc/windows/windowsservercore-ltsc2022
+Constraints: windowsservercore-ltsc2022
+
+Tags: 7.0.26-rc0-nanoserver-ltsc2022, 7.0-rc-nanoserver-ltsc2022
+SharedTags: 7.0.26-rc0-nanoserver, 7.0-rc-nanoserver
+Architectures: windows-amd64
+GitCommit: bf7e9f267d083920987d5b3f8da1cfe89f378486
+Directory: 7.0-rc/windows/nanoserver-ltsc2022
 Constraints: nanoserver-ltsc2022, windowsservercore-ltsc2022
 
 Tags: 7.0.25-jammy, 7.0-jammy, 7-jammy
@@ -56,31 +164,4 @@ SharedTags: 7.0.25-nanoserver, 7.0-nanoserver, 7-nanoserver
 Architectures: windows-amd64
 GitCommit: d828bd4b9677891b7b4a5a2259d939f7a5cb3377
 Directory: 7.0/windows/nanoserver-ltsc2022
-Constraints: nanoserver-ltsc2022, windowsservercore-ltsc2022
-
-Tags: 6.0.26-jammy, 6.0-jammy, 6-jammy
-SharedTags: 6.0.26, 6.0, 6
-Architectures: amd64, arm64v8
-GitCommit: d9efcb7f46c4a17da2fdc9dbb4ef644f4f92053d
-Directory: 6.0
-
-Tags: 6.0.26-windowsservercore-ltsc2025, 6.0-windowsservercore-ltsc2025, 6-windowsservercore-ltsc2025
-SharedTags: 6.0.26-windowsservercore, 6.0-windowsservercore, 6-windowsservercore, 6.0.26, 6.0, 6
-Architectures: windows-amd64
-GitCommit: 0bd4b9bbe4bb9b85a56b851516a6c36a4629743b
-Directory: 6.0/windows/windowsservercore-ltsc2025
-Constraints: windowsservercore-ltsc2025
-
-Tags: 6.0.26-windowsservercore-ltsc2022, 6.0-windowsservercore-ltsc2022, 6-windowsservercore-ltsc2022
-SharedTags: 6.0.26-windowsservercore, 6.0-windowsservercore, 6-windowsservercore, 6.0.26, 6.0, 6
-Architectures: windows-amd64
-GitCommit: 0bd4b9bbe4bb9b85a56b851516a6c36a4629743b
-Directory: 6.0/windows/windowsservercore-ltsc2022
-Constraints: windowsservercore-ltsc2022
-
-Tags: 6.0.26-nanoserver-ltsc2022, 6.0-nanoserver-ltsc2022, 6-nanoserver-ltsc2022
-SharedTags: 6.0.26-nanoserver, 6.0-nanoserver, 6-nanoserver
-Architectures: windows-amd64
-GitCommit: 0bd4b9bbe4bb9b85a56b851516a6c36a4629743b
-Directory: 6.0/windows/nanoserver-ltsc2022
 Constraints: nanoserver-ltsc2022, windowsservercore-ltsc2022
