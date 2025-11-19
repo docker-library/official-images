@@ -1,3 +1,11 @@
 source 'https://rubygems.org'
-gem 'bundler-audit', '0.9.1'
+
+if Gem::Version.create(RUBY_VERSION) >= Gem::Version.create('3.2')
+	gem 'bundler-compose', '0.0.2'
+else
+	# TODO when jruby:9 is EOL, we can remove this conditional (and the matching conditional in "container.sh")
+	# (it's only necessary because jruby:9 is Ruby 3.1 and bundler-compose needs 3.2+)
+	gem 'bundler-audit', '0.9.1'
+end
+
 gem 'brakeman', '5.4.1'
