@@ -6,25 +6,25 @@ Maintainers: Daniel Black <daniel@mariadb.org> (@grooverdan),
 GitRepo: https://github.com/MariaDB/mariadb-docker.git
 Builder: buildkit
 
-Tags: 12.1.1-ubi10-rc, 12.1-ubi10-rc, 12.1.1-ubi-rc, 12.1-ubi-rc
+Tags: 12.2.1-ubi10-rc, 12.2-ubi10-rc, 12.2.1-ubi-rc, 12.2-ubi-rc
 Architectures: amd64, arm64v8, s390x, ppc64le
-GitCommit: 46c443c353dea7d232536a03df3b8a5b998cc78d
+GitCommit: 430ef0c93be28f7beca08980d3454b311988d42b
+Directory: 12.2-ubi
+
+Tags: 12.2.1-noble-rc, 12.2-noble-rc, 12.2.1-rc, 12.2-rc
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: 430ef0c93be28f7beca08980d3454b311988d42b
+Directory: 12.2
+
+Tags: 12.1.2-ubi10, 12.1-ubi10, 12-ubi10, 12.1.2-ubi, 12.1-ubi, 12-ubi
+Architectures: amd64, arm64v8, s390x, ppc64le
+GitCommit: a709b5a5bbe6580a3d2c97a8a841a2eac7f9c886
 Directory: 12.1-ubi
 
-Tags: 12.1.1-noble-rc, 12.1-noble-rc, 12.1.1-rc, 12.1-rc
+Tags: 12.1.2-noble, 12.1-noble, 12-noble, noble, 12.1.2, 12.1, 12, latest
 Architectures: amd64, arm64v8, ppc64le, s390x
-GitCommit: 46c443c353dea7d232536a03df3b8a5b998cc78d
+GitCommit: a709b5a5bbe6580a3d2c97a8a841a2eac7f9c886
 Directory: 12.1
-
-Tags: 12.0.2-ubi10, 12.0-ubi10, 12-ubi10, 12.0.2-ubi, 12.0-ubi, 12-ubi
-Architectures: amd64, arm64v8, s390x, ppc64le
-GitCommit: 46c443c353dea7d232536a03df3b8a5b998cc78d
-Directory: 12.0-ubi
-
-Tags: 12.0.2-noble, 12.0-noble, 12-noble, noble, 12.0.2, 12.0, 12, latest
-Architectures: amd64, arm64v8, ppc64le, s390x
-GitCommit: 46c443c353dea7d232536a03df3b8a5b998cc78d
-Directory: 12.0
 
 Tags: 11.8.5-ubi9, 11.8-ubi9, 11-ubi9, lts-ubi9, 11.8.5-ubi, 11.8-ubi, 11-ubi, lts-ubi
 Architectures: amd64, arm64v8, s390x, ppc64le
