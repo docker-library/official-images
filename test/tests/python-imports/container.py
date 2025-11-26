@@ -24,6 +24,11 @@ if not isCaveman:
     import lzma
     assert(lzma.decompress(lzma.compress(b'IT WORKS IT WORKS IT WORKS')) == b'IT WORKS IT WORKS IT WORKS')
 
+    if sys.version_info[1] >= 14:
+        # https://docs.python.org/3.14/library/compression.zstd.html
+        from compression import zstd
+        assert(zstd.decompress(zstd.compress(b'IT WORKS IT WORKS IT WORKS')) == b'IT WORKS IT WORKS IT WORKS')
+
     # https://github.com/docker-library/python/pull/954
     shouldHaveSetuptoolsAndWheel = sys.version_info[0] == 3 and sys.version_info[1] < 12
     import importlib.util

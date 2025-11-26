@@ -6,7 +6,7 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 serverImage="$1"
 
 # Use a client image with curl for testing
-clientImage='buildpack-deps:buster-curl'
+clientImage='buildpack-deps:trixie-curl'
 # ensure the clientImage is ready and available
 if ! docker image inspect "$clientImage" &> /dev/null; then
 	docker pull "$clientImage" > /dev/null
@@ -35,5 +35,5 @@ _request() {
 
 # Check that we can request / and that it contains the pattern "Install" somewhere
 # <input type="submit" class="primary" value="Install" data-finishing="Installing …">
-_request GET '/' | grep -i '"Install"' > /dev/null
+_request GET '/' | grep -i -F -- 'a safe home for all your data' > /dev/null
 # (https://github.com/nextcloud/server/blob/68b2463107774bed28ee9e77b44e7395d49dacee/core/templates/installation.php#L164)
