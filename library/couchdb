@@ -4,15 +4,15 @@
 Maintainers: Joan Touzet <wohali@apache.org> (@wohali), Jan Lehnardt <jan@apache.org> (@janl), Nick Vatamaniuc (@nickva)
 GitRepo: https://github.com/apache/couchdb-docker
 GitFetch: refs/heads/main
-GitCommit: 2660034027fec97097f88afcc6f8a4416c364b24
+GitCommit: 4c82ee090d6299c27616f30d93c9622f769431dd
 
-Tags: latest, 3.5.0, 3.5, 3
+Tags: latest, 3.5.1, 3.5, 3
 Architectures: amd64, arm64v8, s390x
-Directory: 3.5.0
+Directory: 3.5.1
 
-Tags: 3.5.0-nouveau, 3.5-nouveau, 3-nouveau
+Tags: 3.5.1-nouveau, 3.5-nouveau, 3-nouveau
 Architectures: amd64, arm64v8, s390x
-Directory: 3.5.0-nouveau
+Directory: 3.5.1-nouveau
 
 Tags: 3.4.3, 3.4
 Architectures: amd64, arm64v8, s390x
@@ -22,19 +22,6 @@ Tags: 3.4.3-nouveau, 3.4-nouveau
 Architectures: amd64, arm64v8, s390x
 Directory: 3.4.3-nouveau
 
-# 2.3 and 3.1 are FROM debian:buster (EOL)
-# https://github.com/docker-library/official-images/pull/17091#issuecomment-2201099734
-#
-#Tags: 3.1.2, 3.1
-#Architectures: amd64, arm64v8
-#Directory: 3.1.2
-#
-#Tags: 2.3.1, 2.3, 2
-#Architectures: amd64, arm64v8
-#Directory: 2.3.1
-
-# 1.x is no longer supported by the Apache CouchDB team.
-#
 # dev, dev-cluster versions must not be published officially per
 # ASF release policy, see:
 # http://www.apache.org/dev/release-distribution.html#unreleased
