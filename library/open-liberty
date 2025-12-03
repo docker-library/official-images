@@ -4,7 +4,7 @@ Maintainers: Gkerta Seferi <Gkerta.Seferi@ibm.com> (@gkertasef),
              Wendy Raschke <wraschke@us.ibm.com> (@wraschke)
 GitRepo: https://github.com/OpenLiberty/ci.docker.git
 GitFetch: refs/heads/main
-GitCommit: 7e898c31468055f564c290761b72794c50e57c74
+GitCommit: e7b5797468d5f4e461e3d5e7eb174f00de528865
 Architectures: amd64, i386, ppc64le, s390x
 
 Tags: beta
@@ -49,36 +49,6 @@ File: Dockerfile.ubuntu.openjdk11
 
 Tags: full-java17-openj9
 Directory: releases/latest/full
-Architectures: amd64, arm64v8, ppc64le, s390x
-File: Dockerfile.ubuntu.openjdk17
-
-Tags: 25.0.0.3-kernel-slim-java8-openj9
-Directory: releases/25.0.0.3/kernel-slim
-Architectures: amd64, arm64v8, ppc64le, s390x
-File: Dockerfile.ubuntu.openjdk8
-
-Tags: 25.0.0.3-kernel-slim-java11-openj9
-Directory: releases/25.0.0.3/kernel-slim
-Architectures: amd64, arm64v8, ppc64le, s390x
-File: Dockerfile.ubuntu.openjdk11
-
-Tags: 25.0.0.3-kernel-slim-java17-openj9
-Directory: releases/25.0.0.3/kernel-slim
-Architectures: amd64, arm64v8, ppc64le, s390x
-File: Dockerfile.ubuntu.openjdk17
-
-Tags: 25.0.0.3-full-java8-openj9
-Directory: releases/25.0.0.3/full
-Architectures: amd64, arm64v8, ppc64le, s390x
-File: Dockerfile.ubuntu.openjdk8
-
-Tags: 25.0.0.3-full-java11-openj9
-Directory: releases/25.0.0.3/full
-Architectures: amd64, arm64v8, ppc64le, s390x
-File: Dockerfile.ubuntu.openjdk11
-
-Tags: 25.0.0.3-full-java17-openj9
-Directory: releases/25.0.0.3/full
 Architectures: amd64, arm64v8, ppc64le, s390x
 File: Dockerfile.ubuntu.openjdk17
 
@@ -142,32 +112,32 @@ Directory: releases/25.0.0.9/full
 Architectures: amd64, arm64v8, ppc64le, s390x
 File: Dockerfile.ubuntu.openjdk17
 
-Tags: 25.0.0.11-kernel-slim-java8-openj9
-Directory: releases/25.0.0.11/kernel-slim
+Tags: 25.0.0.12-kernel-slim-java8-openj9
+Directory: releases/25.0.0.12/kernel-slim
 Architectures: amd64, arm64v8, ppc64le, s390x
 File: Dockerfile.ubuntu.openjdk8
 
-Tags: 25.0.0.11-kernel-slim-java11-openj9
-Directory: releases/25.0.0.11/kernel-slim
+Tags: 25.0.0.12-kernel-slim-java11-openj9
+Directory: releases/25.0.0.12/kernel-slim
 Architectures: amd64, arm64v8, ppc64le, s390x
 File: Dockerfile.ubuntu.openjdk11
 
-Tags: 25.0.0.11-kernel-slim-java17-openj9
-Directory: releases/25.0.0.11/kernel-slim
+Tags: 25.0.0.12-kernel-slim-java17-openj9
+Directory: releases/25.0.0.12/kernel-slim
 Architectures: amd64, arm64v8, ppc64le, s390x
 File: Dockerfile.ubuntu.openjdk17
 
-Tags: 25.0.0.11-full-java8-openj9
-Directory: releases/25.0.0.11/full
+Tags: 25.0.0.12-full-java8-openj9
+Directory: releases/25.0.0.12/full
 Architectures: amd64, arm64v8, ppc64le, s390x
 File: Dockerfile.ubuntu.openjdk8
 
-Tags: 25.0.0.11-full-java11-openj9
-Directory: releases/25.0.0.11/full
+Tags: 25.0.0.12-full-java11-openj9
+Directory: releases/25.0.0.12/full
 Architectures: amd64, arm64v8, ppc64le, s390x
 File: Dockerfile.ubuntu.openjdk11
 
-Tags: 25.0.0.11-full-java17-openj9
-Directory: releases/25.0.0.11/full
+Tags: 25.0.0.12-full-java17-openj9
+Directory: releases/25.0.0.12/full
 Architectures: amd64, arm64v8, ppc64le, s390x
 File: Dockerfile.ubuntu.openjdk17
