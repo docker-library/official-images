@@ -4,15 +4,15 @@ Maintainers: The Node.js Docker Team <https://github.com/nodejs/docker-node> (@n
 GitRepo: https://github.com/nodejs/docker-node.git
 GitFetch: refs/heads/main
 
-Tags: 25-alpine3.21, 25.2-alpine3.21, 25.2.1-alpine3.21, alpine3.21, current-alpine3.21
-Architectures: amd64, arm64v8, s390x
-GitCommit: 25e49232583710c7f70df7258d904861bec73b73
-Directory: 25/alpine3.21
-
-Tags: 25-alpine, 25-alpine3.22, 25.2-alpine, 25.2-alpine3.22, 25.2.1-alpine, 25.2.1-alpine3.22, alpine, alpine3.22, current-alpine, current-alpine3.22
+Tags: 25-alpine3.22, 25.2-alpine3.22, 25.2.1-alpine3.22, alpine3.22, current-alpine3.22
 Architectures: amd64, arm64v8, s390x
 GitCommit: 25e49232583710c7f70df7258d904861bec73b73
 Directory: 25/alpine3.22
+
+Tags: 25-alpine, 25-alpine3.23, 25.2-alpine, 25.2-alpine3.23, 25.2.1-alpine, 25.2.1-alpine3.23, alpine, alpine3.23, current-alpine, current-alpine3.23
+Architectures: amd64, arm64v8, s390x
+GitCommit: 8874b155122c3e130f8104f57bd56696dab77cb6
+Directory: 25/alpine3.23
 
 Tags: 25, 25-bookworm, 25.2, 25.2-bookworm, 25.2.1, 25.2.1-bookworm, bookworm, current, current-bookworm, latest
 Architectures: amd64, arm64v8, ppc64le, s390x
@@ -44,15 +44,15 @@ Architectures: amd64, arm64v8, ppc64le, s390x
 GitCommit: 25e49232583710c7f70df7258d904861bec73b73
 Directory: 25/trixie-slim
 
-Tags: 24-alpine3.21, 24.11-alpine3.21, 24.11.1-alpine3.21, krypton-alpine3.21, lts-alpine3.21
-Architectures: amd64, arm64v8, s390x
-GitCommit: a364e16a23fb97ea9768e5adbae36f1de63f44e9
-Directory: 24/alpine3.21
-
-Tags: 24-alpine, 24-alpine3.22, 24.11-alpine, 24.11-alpine3.22, 24.11.1-alpine, 24.11.1-alpine3.22, krypton-alpine, krypton-alpine3.22, lts-alpine, lts-alpine3.22
+Tags: 24-alpine3.22, 24.11-alpine3.22, 24.11.1-alpine3.22, krypton-alpine3.22, lts-alpine3.22
 Architectures: amd64, arm64v8, s390x
 GitCommit: a364e16a23fb97ea9768e5adbae36f1de63f44e9
 Directory: 24/alpine3.22
+
+Tags: 24-alpine, 24-alpine3.23, 24.11-alpine, 24.11-alpine3.23, 24.11.1-alpine, 24.11.1-alpine3.23, krypton-alpine, krypton-alpine3.23, lts-alpine, lts-alpine3.23
+Architectures: amd64, arm64v8, s390x
+GitCommit: 8874b155122c3e130f8104f57bd56696dab77cb6
+Directory: 24/alpine3.23
 
 Tags: 24, 24-bookworm, 24.11, 24.11-bookworm, 24.11.1, 24.11.1-bookworm, krypton, krypton-bookworm, lts, lts-bookworm, lts-krypton
 Architectures: amd64, arm64v8, ppc64le, s390x
@@ -84,15 +84,15 @@ Architectures: amd64, arm64v8, ppc64le, s390x
 GitCommit: a364e16a23fb97ea9768e5adbae36f1de63f44e9
 Directory: 24/trixie-slim
 
-Tags: 22-alpine3.21, 22.21-alpine3.21, 22.21.1-alpine3.21, jod-alpine3.21
-Architectures: amd64, arm32v6, arm32v7, arm64v8, s390x
-GitCommit: bf78d7603fbea92cd3652edb3b2edadd6f5a3fe8
-Directory: 22/alpine3.21
-
-Tags: 22-alpine, 22-alpine3.22, 22.21-alpine, 22.21-alpine3.22, 22.21.1-alpine, 22.21.1-alpine3.22, jod-alpine, jod-alpine3.22
+Tags: 22-alpine3.22, 22.21-alpine3.22, 22.21.1-alpine3.22, jod-alpine3.22
 Architectures: amd64, arm32v6, arm32v7, arm64v8, s390x
 GitCommit: bf78d7603fbea92cd3652edb3b2edadd6f5a3fe8
 Directory: 22/alpine3.22
+
+Tags: 22-alpine, 22-alpine3.23, 22.21-alpine, 22.21-alpine3.23, 22.21.1-alpine, 22.21.1-alpine3.23, jod-alpine, jod-alpine3.23
+Architectures: amd64, arm32v6, arm32v7, arm64v8, s390x
+GitCommit: 8874b155122c3e130f8104f57bd56696dab77cb6
+Directory: 22/alpine3.23
 
 Tags: 22, 22-bookworm, 22.21, 22.21-bookworm, 22.21.1, 22.21.1-bookworm, jod, jod-bookworm
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
@@ -124,15 +124,15 @@ Architectures: amd64, arm64v8, ppc64le, s390x
 GitCommit: bf78d7603fbea92cd3652edb3b2edadd6f5a3fe8
 Directory: 22/trixie-slim
 
-Tags: 20-alpine3.21, 20.19-alpine3.21, 20.19.6-alpine3.21, iron-alpine3.21
-Architectures: amd64, arm32v6, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: edcdc15af6dea5978e694a8efe90347925baafad
-Directory: 20/alpine3.21
-
-Tags: 20-alpine, 20-alpine3.22, 20.19-alpine, 20.19-alpine3.22, 20.19.6-alpine, 20.19.6-alpine3.22, iron-alpine, iron-alpine3.22
+Tags: 20-alpine3.22, 20.19-alpine3.22, 20.19.6-alpine3.22, iron-alpine3.22
 Architectures: amd64, arm32v6, arm32v7, arm64v8, ppc64le, s390x
 GitCommit: edcdc15af6dea5978e694a8efe90347925baafad
 Directory: 20/alpine3.22
+
+Tags: 20-alpine, 20-alpine3.23, 20.19-alpine, 20.19-alpine3.23, 20.19.6-alpine, 20.19.6-alpine3.23, iron-alpine, iron-alpine3.23
+Architectures: amd64, arm32v6, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 8874b155122c3e130f8104f57bd56696dab77cb6
+Directory: 20/alpine3.23
 
 Tags: 20, 20-bookworm, 20.19, 20.19-bookworm, 20.19.6, 20.19.6-bookworm, iron, iron-bookworm
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
