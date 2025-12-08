@@ -1,104 +1,250 @@
-Maintainers: Azul Team <azul_openjdk@azul.com> (@azul-publisher),
+Maintainers: Azul Devops Team <devops@azul.com> (@azul-publisher),
              Pavel Petroshenko <pavel@azul.com> (@ppetrosh),
              Anton Kozlov <akozlov@azul.com> (@AntonKozlov),
              Sergey Grinev <sergey.grinev@azul.com> (@sgrinev),
              Daniel Sentivany <dsentivany@azul.com> (@dsent9),
              Frank Delporte <fdelporte@azul.com> (@fdelporte),
              Geertjan Wielenga <gwielenga@azul.com> (@geertjanw)
-GitRepo: https://github.com/zulu-openjdk/zulu-openjdk
+GitRepo: https://github.com/AzulSystems/azul-zulu-images.git
+GitCommit: 66b353fefc9c672cd5e4c9cbae8b32b16c42616f
 
 
-#-----ubuntu-----
-
-Tags: 8-ubuntu, 8u382-ubuntu, 8u382-8.72.0.17-ubuntu
+Tags: 8.90-8.0.472-jdk-alpine3.22, 8-alpine3.22, 8-jdk-alpine3.22
 Architectures: amd64, arm64v8
-GitCommit: 63034147c1ec9aab2f3b6aeced311c500f4586d9
-Directory: ubuntu/8-latest
+Directory: 8/jdk/alpine
 
-Tags: 11-ubuntu, 11.0.20-ubuntu, 11.0.20-11.66.15-ubuntu
+Tags: 8.90-8.0.472-jdk-headless-alpine3.22, 8-headless-alpine3.22
 Architectures: amd64, arm64v8
-GitCommit: 63034147c1ec9aab2f3b6aeced311c500f4586d9
-Directory: ubuntu/11-latest
+Directory: 8/jdk-headless/alpine
 
-Tags: 17-ubuntu, 17.0.8-ubuntu, 17.0.8-17.44.15-ubuntu
+Tags: 8.90-8.0.472-jre-alpine3.22, 8-jre-alpine3.22
 Architectures: amd64, arm64v8
-GitCommit: 63034147c1ec9aab2f3b6aeced311c500f4586d9
-Directory: ubuntu/17-latest
+Directory: 8/jre/alpine
 
-Tags: 20-ubuntu, 20.0.2-ubuntu, 20.0.2-20.32.11-ubuntu
+Tags: 8.90-8.0.472-jre-headless-alpine3.22, 8-jre-headless-alpine3.22
 Architectures: amd64, arm64v8
-GitCommit: 63034147c1ec9aab2f3b6aeced311c500f4586d9
-Directory: ubuntu/20-latest
+Directory: 8/jre-headless/alpine
 
-#-----alpine-----
-
-Tags: 8-alpine, 8u382-alpine, 8u382-8.72.0.17-alpine
+Tags: 8.90-8.0.472-jdk-debian13.1, 8, 8-jdk, 8-jdk-debian13.1
 Architectures: amd64, arm64v8
-GitCommit: 63034147c1ec9aab2f3b6aeced311c500f4586d9
-Directory: alpine/8-latest
+Directory: 8/jdk/debian
 
-Tags: 11-alpine, 11.0.20-alpine, 11.0.20-11.66.15-alpine
+Tags: 8.90-8.0.472-jdk-headless-debian13.1, 8-headless, 8-headless-debian13.1
 Architectures: amd64, arm64v8
-GitCommit: 63034147c1ec9aab2f3b6aeced311c500f4586d9
-Directory: alpine/11-latest
+Directory: 8/jdk-headless/debian
 
-Tags: 17-alpine, 17.0.8-alpine, 17.0.8-17.44.15-alpine
+Tags: 8.90-8.0.472-jre-debian13.1, 8-jre, 8-jre-debian13.1
 Architectures: amd64, arm64v8
-GitCommit: 63034147c1ec9aab2f3b6aeced311c500f4586d9
-Directory: alpine/17-latest
+Directory: 8/jre/debian
 
-Tags: 20-alpine, 20.0.2-alpine, 20.0.2-20.32.11-alpine
+Tags: 8.90-8.0.472-jre-headless-debian13.1, 8-jre-headless, 8-jre-headless-debian13.1
 Architectures: amd64, arm64v8
-GitCommit: 63034147c1ec9aab2f3b6aeced311c500f4586d9
-Directory: alpine/20-latest
+Directory: 8/jre-headless/debian
 
-#-----debian-----
-
-Tags: 8-debian, 8u382-debian, 8u382-8.72.0.17-debian
+Tags: 8.90-8.0.472-jdk-rockylinux10.0, 8-rockylinux10.0, 8-jdk-rockylinux10.0
 Architectures: amd64, arm64v8
-GitCommit: 63034147c1ec9aab2f3b6aeced311c500f4586d9
-Directory: debian/8-latest
+Directory: 8/jdk/rockylinux
 
-Tags: 11-debian, 11.0.20-debian, 11.0.20-11.66.15-debian
+Tags: 8.90-8.0.472-jdk-headless-rockylinux10.0, 8-headless-rockylinux10.0
 Architectures: amd64, arm64v8
-GitCommit: 63034147c1ec9aab2f3b6aeced311c500f4586d9
-Directory: debian/11-latest
+Directory: 8/jdk-headless/rockylinux
 
-Tags: 17-debian, 17.0.8-debian, 17.0.8-17.44.15-debian
+Tags: 8.90-8.0.472-jre-rockylinux10.0, 8-jre-rockylinux10.0
 Architectures: amd64, arm64v8
-GitCommit: 63034147c1ec9aab2f3b6aeced311c500f4586d9
-Directory: debian/17-latest
+Directory: 8/jre/rockylinux
 
-Tags: 20-debian, 20.0.2-debian, 20.0.2-20.32.11-debian
+Tags: 8.90-8.0.472-jre-headless-rockylinux10.0, 8-jre-headless-rockylinux10.0
 Architectures: amd64, arm64v8
-GitCommit: 63034147c1ec9aab2f3b6aeced311c500f4586d9
-Directory: debian/20-latest
+Directory: 8/jre-headless/rockylinux
 
-#-----centos-----
-
-Tags: 8-centos, 8u382-centos, 8u382-8.72.0.17-centos
+Tags: 11.84-11.0.29-jdk-alpine3.22, 11-alpine3.22, 11-jdk-alpine3.22
 Architectures: amd64, arm64v8
-GitCommit: a84ae34861c5e41fbb2f7c62d11abe3a18071c9f
-Directory: centos/8-latest
+Directory: 11/jdk/alpine
 
-Tags: 11-centos, 11.0.20-centos, 11.0.20-11.66.15-centos
+Tags: 11.84-11.0.29-jdk-headless-alpine3.22, 11-headless-alpine3.22
 Architectures: amd64, arm64v8
-GitCommit: a84ae34861c5e41fbb2f7c62d11abe3a18071c9f
-Directory: centos/11-latest
+Directory: 11/jdk-headless/alpine
 
-Tags: 17-centos, 17.0.8-centos, 17.0.8-17.44.15-centos
+Tags: 11.84-11.0.29-jre-alpine3.22, 11-jre-alpine3.22
 Architectures: amd64, arm64v8
-GitCommit: a84ae34861c5e41fbb2f7c62d11abe3a18071c9f
-Directory: centos/17-latest
+Directory: 11/jre/alpine
 
-Tags: 20-centos, 20.0.2-centos, 20.0.2-20.32.11-centos
+Tags: 11.84-11.0.29-jre-headless-alpine3.22, 11-jre-headless-alpine3.22
 Architectures: amd64, arm64v8
-GitCommit: a84ae34861c5e41fbb2f7c62d11abe3a18071c9f
-Directory: centos/20-latest
+Directory: 11/jre-headless/alpine
 
-#-----distroless----
+Tags: 11.84-11.0.29-jdk-debian13.1, 11, 11-jdk, 11-jdk-debian13.1
+Architectures: amd64, arm64v8
+Directory: 11/jdk/debian
 
-Tags: 17-distroless, 17.0.8-distroless, 17.0.8-17.44.15-distroless
-Architectures: amd64
-GitCommit: a84ae34861c5e41fbb2f7c62d11abe3a18071c9f
-Directory: distroless/17-latest
+Tags: 11.84-11.0.29-jdk-headless-debian13.1, 11-headless, 11-headless-debian13.1
+Architectures: amd64, arm64v8
+Directory: 11/jdk-headless/debian
+
+Tags: 11.84-11.0.29-jre-debian13.1, 11-jre, 11-jre-debian13.1
+Architectures: amd64, arm64v8
+Directory: 11/jre/debian
+
+Tags: 11.84-11.0.29-jre-headless-debian13.1, 11-jre-headless, 11-jre-headless-debian13.1
+Architectures: amd64, arm64v8
+Directory: 11/jre-headless/debian
+
+Tags: 11.84-11.0.29-jdk-rockylinux10.0, 11-rockylinux10.0, 11-jdk-rockylinux10.0
+Architectures: amd64, arm64v8
+Directory: 11/jdk/rockylinux
+
+Tags: 11.84-11.0.29-jdk-headless-rockylinux10.0, 11-headless-rockylinux10.0
+Architectures: amd64, arm64v8
+Directory: 11/jdk-headless/rockylinux
+
+Tags: 11.84-11.0.29-jre-rockylinux10.0, 11-jre-rockylinux10.0
+Architectures: amd64, arm64v8
+Directory: 11/jre/rockylinux
+
+Tags: 11.84-11.0.29-jre-headless-rockylinux10.0, 11-jre-headless-rockylinux10.0
+Architectures: amd64, arm64v8
+Directory: 11/jre-headless/rockylinux
+
+Tags: 17.62-17.0.17-jdk-alpine3.22, 17-alpine3.22, 17-jdk-alpine3.22
+Architectures: amd64, arm64v8
+Directory: 17/jdk/alpine
+
+Tags: 17.62-17.0.17-jdk-headless-alpine3.22, 17-headless-alpine3.22
+Architectures: amd64, arm64v8
+Directory: 17/jdk-headless/alpine
+
+Tags: 17.62-17.0.17-jre-alpine3.22, 17-jre-alpine3.22
+Architectures: amd64, arm64v8
+Directory: 17/jre/alpine
+
+Tags: 17.62-17.0.17-jre-headless-alpine3.22, 17-jre-headless-alpine3.22
+Architectures: amd64, arm64v8
+Directory: 17/jre-headless/alpine
+
+Tags: 17.62-17.0.17-jdk-debian13.1, 17, 17-jdk, 17-jdk-debian13.1
+Architectures: amd64, arm64v8
+Directory: 17/jdk/debian
+
+Tags: 17.62-17.0.17-jdk-headless-debian13.1, 17-headless, 17-headless-debian13.1
+Architectures: amd64, arm64v8
+Directory: 17/jdk-headless/debian
+
+Tags: 17.62-17.0.17-jre-debian13.1, 17-jre, 17-jre-debian13.1
+Architectures: amd64, arm64v8
+Directory: 17/jre/debian
+
+Tags: 17.62-17.0.17-jre-headless-debian13.1, 17-jre-headless, 17-jre-headless-debian13.1
+Architectures: amd64, arm64v8
+Directory: 17/jre-headless/debian
+
+Tags: 17.62-17.0.17-jdk-rockylinux10.0, 17-rockylinux10.0, 17-jdk-rockylinux10.0
+Architectures: amd64, arm64v8
+Directory: 17/jdk/rockylinux
+
+Tags: 17.62-17.0.17-jdk-headless-rockylinux10.0, 17-headless-rockylinux10.0
+Architectures: amd64, arm64v8
+Directory: 17/jdk-headless/rockylinux
+
+Tags: 17.62-17.0.17-jre-rockylinux10.0, 17-jre-rockylinux10.0
+Architectures: amd64, arm64v8
+Directory: 17/jre/rockylinux
+
+Tags: 17.62-17.0.17-jre-headless-rockylinux10.0, 17-jre-headless-rockylinux10.0
+Architectures: amd64, arm64v8
+Directory: 17/jre-headless/rockylinux
+
+Tags: 21.46-21.0.9-jdk-alpine3.22, 21-alpine3.22, 21-jdk-alpine3.22
+Architectures: amd64, arm64v8
+Directory: 21/jdk/alpine
+
+Tags: 21.46-21.0.9-jdk-headless-alpine3.22, 21-headless-alpine3.22
+Architectures: amd64, arm64v8
+Directory: 21/jdk-headless/alpine
+
+Tags: 21.46-21.0.9-jre-alpine3.22, 21-jre-alpine3.22
+Architectures: amd64, arm64v8
+Directory: 21/jre/alpine
+
+Tags: 21.46-21.0.9-jre-headless-alpine3.22, 21-jre-headless-alpine3.22
+Architectures: amd64, arm64v8
+Directory: 21/jre-headless/alpine
+
+Tags: 21.46-21.0.9-jdk-debian13.1, 21, 21-jdk, 21-jdk-debian13.1
+Architectures: amd64, arm64v8
+Directory: 21/jdk/debian
+
+Tags: 21.46-21.0.9-jdk-headless-debian13.1, 21-headless, 21-headless-debian13.1
+Architectures: amd64, arm64v8
+Directory: 21/jdk-headless/debian
+
+Tags: 21.46-21.0.9-jre-debian13.1, 21-jre, 21-jre-debian13.1
+Architectures: amd64, arm64v8
+Directory: 21/jre/debian
+
+Tags: 21.46-21.0.9-jre-headless-debian13.1, 21-jre-headless, 21-jre-headless-debian13.1
+Architectures: amd64, arm64v8
+Directory: 21/jre-headless/debian
+
+Tags: 21.46-21.0.9-jdk-rockylinux10.0, 21-rockylinux10.0, 21-jdk-rockylinux10.0
+Architectures: amd64, arm64v8
+Directory: 21/jdk/rockylinux
+
+Tags: 21.46-21.0.9-jdk-headless-rockylinux10.0, 21-headless-rockylinux10.0
+Architectures: amd64, arm64v8
+Directory: 21/jdk-headless/rockylinux
+
+Tags: 21.46-21.0.9-jre-rockylinux10.0, 21-jre-rockylinux10.0
+Architectures: amd64, arm64v8
+Directory: 21/jre/rockylinux
+
+Tags: 21.46-21.0.9-jre-headless-rockylinux10.0, 21-jre-headless-rockylinux10.0
+Architectures: amd64, arm64v8
+Directory: 21/jre-headless/rockylinux
+
+Tags: 25.30-25.0.1-jdk-alpine3.22, 25-alpine3.22, 25-jdk-alpine3.22
+Architectures: amd64, arm64v8
+Directory: 25/jdk/alpine
+
+Tags: 25.30-25.0.1-jdk-headless-alpine3.22, 25-headless-alpine3.22
+Architectures: amd64, arm64v8
+Directory: 25/jdk-headless/alpine
+
+Tags: 25.30-25.0.1-jre-alpine3.22, 25-jre-alpine3.22
+Architectures: amd64, arm64v8
+Directory: 25/jre/alpine
+
+Tags: 25.30-25.0.1-jre-headless-alpine3.22, 25-jre-headless-alpine3.22
+Architectures: amd64, arm64v8
+Directory: 25/jre-headless/alpine
+
+Tags: 25.30-25.0.1-jdk-debian13.1, 25, 25-jdk, 25-jdk-debian13.1
+Architectures: amd64, arm64v8
+Directory: 25/jdk/debian
+
+Tags: 25.30-25.0.1-jdk-headless-debian13.1, 25-headless, 25-headless-debian13.1
+Architectures: amd64, arm64v8
+Directory: 25/jdk-headless/debian
+
+Tags: 25.30-25.0.1-jre-debian13.1, 25-jre, 25-jre-debian13.1
+Architectures: amd64, arm64v8
+Directory: 25/jre/debian
+
+Tags: 25.30-25.0.1-jre-headless-debian13.1, 25-jre-headless, 25-jre-headless-debian13.1
+Architectures: amd64, arm64v8
+Directory: 25/jre-headless/debian
+
+Tags: 25.30-25.0.1-jdk-rockylinux10.0, 25-rockylinux10.0, 25-jdk-rockylinux10.0
+Architectures: amd64, arm64v8
+Directory: 25/jdk/rockylinux
+
+Tags: 25.30-25.0.1-jdk-headless-rockylinux10.0, 25-headless-rockylinux10.0
+Architectures: amd64, arm64v8
+Directory: 25/jdk-headless/rockylinux
+
+Tags: 25.30-25.0.1-jre-rockylinux10.0, 25-jre-rockylinux10.0
+Architectures: amd64, arm64v8
+Directory: 25/jre/rockylinux
+
+Tags: 25.30-25.0.1-jre-headless-rockylinux10.0, 25-jre-headless-rockylinux10.0
+Architectures: amd64, arm64v8
+Directory: 25/jre-headless/rockylinux
