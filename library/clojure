@@ -2,16 +2,12 @@ Maintainers: Paul Lam <paul@quantisan.com> (@Quantisan),
              Wes Morgan <wes@wesmorgan.me> (@cap10morgan)
 Architectures: riscv64, arm64v8, ppc64le, amd64, s390x
 GitRepo: https://github.com/Quantisan/docker-clojure.git
-GitCommit: 6938e39125e2607ccc427065e6dfd11adf6e7527
+GitCommit: 9d737213b404697ed533b45dea80b34b000027c5
 
 
 Tags: latest
 Architectures: arm64v8, ppc64le, amd64, s390x
 Directory: target/debian-bookworm-25/latest
-
-Tags: temurin-8-lein-2.12.0-alpine, temurin-8-lein-alpine
-Architectures: amd64
-Directory: target/eclipse-temurin-8-jdk-alpine/lein
 
 Tags: temurin-8-lein-2.12.0-bookworm, temurin-8-lein-bookworm
 Architectures: arm64v8, ppc64le, amd64
@@ -45,39 +41,35 @@ Tags: temurin-8-lein-2.12.0-trixie-slim, temurin-8-lein-trixie-slim
 Architectures: arm64v8, ppc64le, amd64
 Directory: target/debian-trixie-slim-8/lein
 
-Tags: temurin-8-alpine, temurin-8-tools-deps-1.12.3.1577-alpine, temurin-8-tools-deps-alpine
-Architectures: amd64
-Directory: target/eclipse-temurin-8-jdk-alpine/tools-deps
-
-Tags: temurin-8-bookworm, temurin-8-tools-deps-1.12.3.1577-bookworm, temurin-8-tools-deps-bookworm
+Tags: temurin-8-bookworm, temurin-8-tools-deps-1.12.4.1582-bookworm, temurin-8-tools-deps-bookworm
 Architectures: arm64v8, ppc64le, amd64
 Directory: target/debian-bookworm-8/tools-deps
 
-Tags: temurin-8-bookworm-slim, temurin-8-tools-deps-1.12.3.1577-bookworm-slim, temurin-8-tools-deps-bookworm-slim
+Tags: temurin-8-bookworm-slim, temurin-8-tools-deps-1.12.4.1582-bookworm-slim, temurin-8-tools-deps-bookworm-slim
 Architectures: arm64v8, ppc64le, amd64
 Directory: target/debian-bookworm-slim-8/tools-deps
 
-Tags: temurin-8-bullseye, temurin-8-tools-deps-1.12.3.1577-bullseye, temurin-8-tools-deps-bullseye
+Tags: temurin-8-bullseye, temurin-8-tools-deps-1.12.4.1582-bullseye, temurin-8-tools-deps-bullseye
 Architectures: arm64v8, amd64
 Directory: target/debian-bullseye-8/tools-deps
 
-Tags: temurin-8-bullseye-slim, temurin-8-tools-deps-1.12.3.1577-bullseye-slim, temurin-8-tools-deps-bullseye-slim
+Tags: temurin-8-bullseye-slim, temurin-8-tools-deps-1.12.4.1582-bullseye-slim, temurin-8-tools-deps-bullseye-slim
 Architectures: arm64v8, amd64
 Directory: target/debian-bullseye-slim-8/tools-deps
 
-Tags: temurin-8-jammy, temurin-8-tools-deps-1.12.3.1577-jammy, temurin-8-tools-deps-jammy
+Tags: temurin-8-jammy, temurin-8-tools-deps-1.12.4.1582-jammy, temurin-8-tools-deps-jammy
 Architectures: arm64v8, ppc64le, amd64
 Directory: target/eclipse-temurin-8-jdk-jammy/tools-deps
 
-Tags: temurin-8-noble, temurin-8-tools-deps, temurin-8-tools-deps-1.12.3.1577, temurin-8-tools-deps-1.12.3.1577-noble, temurin-8-tools-deps-noble
+Tags: temurin-8-noble, temurin-8-tools-deps, temurin-8-tools-deps-1.12.4.1582, temurin-8-tools-deps-1.12.4.1582-noble, temurin-8-tools-deps-noble
 Architectures: arm64v8, ppc64le, amd64
 Directory: target/eclipse-temurin-8-jdk-noble/tools-deps
 
-Tags: temurin-8-tools-deps-1.12.3.1577-trixie, temurin-8-tools-deps-trixie, temurin-8-trixie
+Tags: temurin-8-tools-deps-1.12.4.1582-trixie, temurin-8-tools-deps-trixie, temurin-8-trixie
 Architectures: arm64v8, ppc64le, amd64
 Directory: target/debian-trixie-8/tools-deps
 
-Tags: temurin-8-tools-deps-1.12.3.1577-trixie-slim, temurin-8-tools-deps-trixie-slim, temurin-8-trixie-slim
+Tags: temurin-8-tools-deps-1.12.4.1582-trixie-slim, temurin-8-tools-deps-trixie-slim, temurin-8-trixie-slim
 Architectures: arm64v8, ppc64le, amd64
 Directory: target/debian-trixie-slim-8/tools-deps
 
@@ -117,39 +109,39 @@ Tags: temurin-11-lein-2.12.0-trixie-slim, temurin-11-lein-trixie-slim
 Architectures: arm64v8, ppc64le, amd64, s390x
 Directory: target/debian-trixie-slim-11/lein
 
-Tags: temurin-11-alpine, temurin-11-tools-deps-1.12.3.1577-alpine, temurin-11-tools-deps-alpine
+Tags: temurin-11-alpine, temurin-11-tools-deps-1.12.4.1582-alpine, temurin-11-tools-deps-alpine
 Architectures: amd64
 Directory: target/eclipse-temurin-11-jdk-alpine/tools-deps
 
-Tags: temurin-11-bookworm, temurin-11-tools-deps-1.12.3.1577-bookworm, temurin-11-tools-deps-bookworm
+Tags: temurin-11-bookworm, temurin-11-tools-deps-1.12.4.1582-bookworm, temurin-11-tools-deps-bookworm
 Architectures: arm64v8, ppc64le, amd64, s390x
 Directory: target/debian-bookworm-11/tools-deps
 
-Tags: temurin-11-bookworm-slim, temurin-11-tools-deps-1.12.3.1577-bookworm-slim, temurin-11-tools-deps-bookworm-slim
+Tags: temurin-11-bookworm-slim, temurin-11-tools-deps-1.12.4.1582-bookworm-slim, temurin-11-tools-deps-bookworm-slim
 Architectures: arm64v8, ppc64le, amd64, s390x
 Directory: target/debian-bookworm-slim-11/tools-deps
 
-Tags: temurin-11-bullseye, temurin-11-tools-deps-1.12.3.1577-bullseye, temurin-11-tools-deps-bullseye
+Tags: temurin-11-bullseye, temurin-11-tools-deps-1.12.4.1582-bullseye, temurin-11-tools-deps-bullseye
 Architectures: arm64v8, amd64
 Directory: target/debian-bullseye-11/tools-deps
 
-Tags: temurin-11-bullseye-slim, temurin-11-tools-deps-1.12.3.1577-bullseye-slim, temurin-11-tools-deps-bullseye-slim
+Tags: temurin-11-bullseye-slim, temurin-11-tools-deps-1.12.4.1582-bullseye-slim, temurin-11-tools-deps-bullseye-slim
 Architectures: arm64v8, amd64
 Directory: target/debian-bullseye-slim-11/tools-deps
 
-Tags: temurin-11-jammy, temurin-11-tools-deps-1.12.3.1577-jammy, temurin-11-tools-deps-jammy
+Tags: temurin-11-jammy, temurin-11-tools-deps-1.12.4.1582-jammy, temurin-11-tools-deps-jammy
 Architectures: arm64v8, ppc64le, amd64, s390x
 Directory: target/eclipse-temurin-11-jdk-jammy/tools-deps
 
-Tags: temurin-11-noble, temurin-11-tools-deps, temurin-11-tools-deps-1.12.3.1577, temurin-11-tools-deps-1.12.3.1577-noble, temurin-11-tools-deps-noble
+Tags: temurin-11-noble, temurin-11-tools-deps, temurin-11-tools-deps-1.12.4.1582, temurin-11-tools-deps-1.12.4.1582-noble, temurin-11-tools-deps-noble
 Architectures: arm64v8, ppc64le, amd64, s390x
 Directory: target/eclipse-temurin-11-jdk-noble/tools-deps
 
-Tags: temurin-11-tools-deps-1.12.3.1577-trixie, temurin-11-tools-deps-trixie, temurin-11-trixie
+Tags: temurin-11-tools-deps-1.12.4.1582-trixie, temurin-11-tools-deps-trixie, temurin-11-trixie
 Architectures: arm64v8, ppc64le, amd64, s390x
 Directory: target/debian-trixie-11/tools-deps
 
-Tags: temurin-11-tools-deps-1.12.3.1577-trixie-slim, temurin-11-tools-deps-trixie-slim, temurin-11-trixie-slim
+Tags: temurin-11-tools-deps-1.12.4.1582-trixie-slim, temurin-11-tools-deps-trixie-slim, temurin-11-trixie-slim
 Architectures: arm64v8, ppc64le, amd64, s390x
 Directory: target/debian-trixie-slim-11/tools-deps
 
@@ -186,37 +178,37 @@ Directory: target/debian-trixie-17/lein
 Tags: temurin-17-lein-2.12.0-trixie-slim, temurin-17-lein-trixie-slim
 Directory: target/debian-trixie-slim-17/lein
 
-Tags: temurin-17-alpine, temurin-17-tools-deps-1.12.3.1577-alpine, temurin-17-tools-deps-alpine
+Tags: temurin-17-alpine, temurin-17-tools-deps-1.12.4.1582-alpine, temurin-17-tools-deps-alpine
 Architectures: amd64
 Directory: target/eclipse-temurin-17-jdk-alpine/tools-deps
 
-Tags: temurin-17-bookworm, temurin-17-tools-deps-1.12.3.1577-bookworm, temurin-17-tools-deps-bookworm
+Tags: temurin-17-bookworm, temurin-17-tools-deps-1.12.4.1582-bookworm, temurin-17-tools-deps-bookworm
 Architectures: arm64v8, ppc64le, amd64, s390x
 Directory: target/debian-bookworm-17/tools-deps
 
-Tags: temurin-17-bookworm-slim, temurin-17-tools-deps-1.12.3.1577-bookworm-slim, temurin-17-tools-deps-bookworm-slim
+Tags: temurin-17-bookworm-slim, temurin-17-tools-deps-1.12.4.1582-bookworm-slim, temurin-17-tools-deps-bookworm-slim
 Architectures: arm64v8, ppc64le, amd64, s390x
 Directory: target/debian-bookworm-slim-17/tools-deps
 
-Tags: temurin-17-bullseye, temurin-17-tools-deps-1.12.3.1577-bullseye, temurin-17-tools-deps-bullseye
+Tags: temurin-17-bullseye, temurin-17-tools-deps-1.12.4.1582-bullseye, temurin-17-tools-deps-bullseye
 Architectures: arm64v8, amd64
 Directory: target/debian-bullseye-17/tools-deps
 
-Tags: temurin-17-bullseye-slim, temurin-17-tools-deps-1.12.3.1577-bullseye-slim, temurin-17-tools-deps-bullseye-slim
+Tags: temurin-17-bullseye-slim, temurin-17-tools-deps-1.12.4.1582-bullseye-slim, temurin-17-tools-deps-bullseye-slim
 Architectures: arm64v8, amd64
 Directory: target/debian-bullseye-slim-17/tools-deps
 
-Tags: temurin-17-jammy, temurin-17-tools-deps-1.12.3.1577-jammy, temurin-17-tools-deps-jammy
+Tags: temurin-17-jammy, temurin-17-tools-deps-1.12.4.1582-jammy, temurin-17-tools-deps-jammy
 Architectures: arm64v8, ppc64le, amd64, s390x
 Directory: target/eclipse-temurin-17-jdk-jammy/tools-deps
 
-Tags: temurin-17-noble, temurin-17-tools-deps, temurin-17-tools-deps-1.12.3.1577, temurin-17-tools-deps-1.12.3.1577-noble, temurin-17-tools-deps-noble
+Tags: temurin-17-noble, temurin-17-tools-deps, temurin-17-tools-deps-1.12.4.1582, temurin-17-tools-deps-1.12.4.1582-noble, temurin-17-tools-deps-noble
 Directory: target/eclipse-temurin-17-jdk-noble/tools-deps
 
-Tags: temurin-17-tools-deps-1.12.3.1577-trixie, temurin-17-tools-deps-trixie, temurin-17-trixie
+Tags: temurin-17-tools-deps-1.12.4.1582-trixie, temurin-17-tools-deps-trixie, temurin-17-trixie
 Directory: target/debian-trixie-17/tools-deps
 
-Tags: temurin-17-tools-deps-1.12.3.1577-trixie-slim, temurin-17-tools-deps-trixie-slim, temurin-17-trixie-slim
+Tags: temurin-17-tools-deps-1.12.4.1582-trixie-slim, temurin-17-tools-deps-trixie-slim, temurin-17-trixie-slim
 Directory: target/debian-trixie-slim-17/tools-deps
 
 Tags: temurin-21-lein-2.12.0-alpine, temurin-21-lein-alpine
@@ -252,37 +244,37 @@ Directory: target/debian-trixie-21/lein
 Tags: temurin-21-lein-2.12.0-trixie-slim, temurin-21-lein-trixie-slim
 Directory: target/debian-trixie-slim-21/lein
 
-Tags: temurin-21-alpine, temurin-21-tools-deps-1.12.3.1577-alpine, temurin-21-tools-deps-alpine
+Tags: temurin-21-alpine, temurin-21-tools-deps-1.12.4.1582-alpine, temurin-21-tools-deps-alpine
 Architectures: arm64v8, amd64
 Directory: target/eclipse-temurin-21-jdk-alpine/tools-deps
 
-Tags: temurin-21-bookworm, temurin-21-tools-deps, temurin-21-tools-deps-1.12.3.1577, temurin-21-tools-deps-1.12.3.1577-bookworm, temurin-21-tools-deps-bookworm
+Tags: temurin-21-bookworm, temurin-21-tools-deps, temurin-21-tools-deps-1.12.4.1582, temurin-21-tools-deps-1.12.4.1582-bookworm, temurin-21-tools-deps-bookworm
 Architectures: arm64v8, ppc64le, amd64, s390x
 Directory: target/debian-bookworm-21/tools-deps
 
-Tags: temurin-21-bookworm-slim, temurin-21-tools-deps-1.12.3.1577-bookworm-slim, temurin-21-tools-deps-bookworm-slim
+Tags: temurin-21-bookworm-slim, temurin-21-tools-deps-1.12.4.1582-bookworm-slim, temurin-21-tools-deps-bookworm-slim
 Architectures: arm64v8, ppc64le, amd64, s390x
 Directory: target/debian-bookworm-slim-21/tools-deps
 
-Tags: temurin-21-bullseye, temurin-21-tools-deps-1.12.3.1577-bullseye, temurin-21-tools-deps-bullseye
+Tags: temurin-21-bullseye, temurin-21-tools-deps-1.12.4.1582-bullseye, temurin-21-tools-deps-bullseye
 Architectures: arm64v8, amd64
 Directory: target/debian-bullseye-21/tools-deps
 
-Tags: temurin-21-bullseye-slim, temurin-21-tools-deps-1.12.3.1577-bullseye-slim, temurin-21-tools-deps-bullseye-slim
+Tags: temurin-21-bullseye-slim, temurin-21-tools-deps-1.12.4.1582-bullseye-slim, temurin-21-tools-deps-bullseye-slim
 Architectures: arm64v8, amd64
 Directory: target/debian-bullseye-slim-21/tools-deps
 
-Tags: temurin-21-jammy, temurin-21-tools-deps-1.12.3.1577-jammy, temurin-21-tools-deps-jammy
+Tags: temurin-21-jammy, temurin-21-tools-deps-1.12.4.1582-jammy, temurin-21-tools-deps-jammy
 Architectures: arm64v8, ppc64le, amd64, s390x
 Directory: target/eclipse-temurin-21-jdk-jammy/tools-deps
 
-Tags: temurin-21-noble, temurin-21-tools-deps-1.12.3.1577-noble, temurin-21-tools-deps-noble
+Tags: temurin-21-noble, temurin-21-tools-deps-1.12.4.1582-noble, temurin-21-tools-deps-noble
 Directory: target/eclipse-temurin-21-jdk-noble/tools-deps
 
-Tags: temurin-21-tools-deps-1.12.3.1577-trixie, temurin-21-tools-deps-trixie, temurin-21-trixie
+Tags: temurin-21-tools-deps-1.12.4.1582-trixie, temurin-21-tools-deps-trixie, temurin-21-trixie
 Directory: target/debian-trixie-21/tools-deps
 
-Tags: temurin-21-tools-deps-1.12.3.1577-trixie-slim, temurin-21-tools-deps-trixie-slim, temurin-21-trixie-slim
+Tags: temurin-21-tools-deps-1.12.4.1582-trixie-slim, temurin-21-tools-deps-trixie-slim, temurin-21-trixie-slim
 Directory: target/debian-trixie-slim-21/tools-deps
 
 Tags: temurin-25-lein-2.12.0-alpine, temurin-25-lein-alpine
@@ -314,31 +306,31 @@ Directory: target/debian-trixie-25/lein
 Tags: lein-2.12.0-trixie-slim, lein-trixie-slim, temurin-25-lein-2.12.0-trixie-slim, temurin-25-lein-trixie-slim
 Directory: target/debian-trixie-slim-25/lein
 
-Tags: temurin-25-alpine, temurin-25-tools-deps-1.12.3.1577-alpine, temurin-25-tools-deps-alpine
+Tags: temurin-25-alpine, temurin-25-tools-deps-1.12.4.1582-alpine, temurin-25-tools-deps-alpine
 Architectures: arm64v8, amd64
 Directory: target/eclipse-temurin-25-jdk-alpine/tools-deps
 
-Tags: temurin-25-bookworm, temurin-25-tools-deps, temurin-25-tools-deps-1.12.3.1577, temurin-25-tools-deps-1.12.3.1577-bookworm, temurin-25-tools-deps-bookworm, tools-deps, tools-deps-1.12.3.1577, tools-deps-1.12.3.1577-bookworm, tools-deps-bookworm
+Tags: temurin-25-bookworm, temurin-25-tools-deps, temurin-25-tools-deps-1.12.4.1582, temurin-25-tools-deps-1.12.4.1582-bookworm, temurin-25-tools-deps-bookworm, tools-deps, tools-deps-1.12.4.1582, tools-deps-1.12.4.1582-bookworm, tools-deps-bookworm
 Architectures: arm64v8, ppc64le, amd64, s390x
 Directory: target/debian-bookworm-25/tools-deps
 
-Tags: temurin-25-bookworm-slim, temurin-25-tools-deps-1.12.3.1577-bookworm-slim, temurin-25-tools-deps-bookworm-slim, tools-deps-1.12.3.1577-bookworm-slim, tools-deps-bookworm-slim
+Tags: temurin-25-bookworm-slim, temurin-25-tools-deps-1.12.4.1582-bookworm-slim, temurin-25-tools-deps-bookworm-slim, tools-deps-1.12.4.1582-bookworm-slim, tools-deps-bookworm-slim
 Architectures: arm64v8, ppc64le, amd64, s390x
 Directory: target/debian-bookworm-slim-25/tools-deps
 
-Tags: temurin-25-bullseye, temurin-25-tools-deps-1.12.3.1577-bullseye, temurin-25-tools-deps-bullseye, tools-deps-1.12.3.1577-bullseye, tools-deps-bullseye
+Tags: temurin-25-bullseye, temurin-25-tools-deps-1.12.4.1582-bullseye, temurin-25-tools-deps-bullseye, tools-deps-1.12.4.1582-bullseye, tools-deps-bullseye
 Architectures: arm64v8, amd64
 Directory: target/debian-bullseye-25/tools-deps
 
-Tags: temurin-25-bullseye-slim, temurin-25-tools-deps-1.12.3.1577-bullseye-slim, temurin-25-tools-deps-bullseye-slim, tools-deps-1.12.3.1577-bullseye-slim, tools-deps-bullseye-slim
+Tags: temurin-25-bullseye-slim, temurin-25-tools-deps-1.12.4.1582-bullseye-slim, temurin-25-tools-deps-bullseye-slim, tools-deps-1.12.4.1582-bullseye-slim, tools-deps-bullseye-slim
 Architectures: arm64v8, amd64
 Directory: target/debian-bullseye-slim-25/tools-deps
 
-Tags: temurin-25-noble, temurin-25-tools-deps-1.12.3.1577-noble, temurin-25-tools-deps-noble
+Tags: temurin-25-noble, temurin-25-tools-deps-1.12.4.1582-noble, temurin-25-tools-deps-noble
 Directory: target/eclipse-temurin-25-jdk-noble/tools-deps
 
-Tags: temurin-25-tools-deps-1.12.3.1577-trixie, temurin-25-tools-deps-trixie, temurin-25-trixie, tools-deps-1.12.3.1577-trixie, tools-deps-trixie
+Tags: temurin-25-tools-deps-1.12.4.1582-trixie, temurin-25-tools-deps-trixie, temurin-25-trixie, tools-deps-1.12.4.1582-trixie, tools-deps-trixie
 Directory: target/debian-trixie-25/tools-deps
 
-Tags: temurin-25-tools-deps-1.12.3.1577-trixie-slim, temurin-25-tools-deps-trixie-slim, temurin-25-trixie-slim, tools-deps-1.12.3.1577-trixie-slim, tools-deps-trixie-slim
+Tags: temurin-25-tools-deps-1.12.4.1582-trixie-slim, temurin-25-tools-deps-trixie-slim, temurin-25-trixie-slim, tools-deps-1.12.4.1582-trixie-slim, tools-deps-trixie-slim
 Directory: target/debian-trixie-slim-25/tools-deps
