@@ -12,7 +12,7 @@ if ! docker image inspect "$clientImage" &> /dev/null; then
 	docker pull "$clientImage" > /dev/null
 fi
 
-pgImage='postgres:12.3'
+pgImage='postgres:18'
 if ! docker image inspect "$pgImage" &> /dev/null; then
 	docker pull "$pgImage" > /dev/null
 fi
