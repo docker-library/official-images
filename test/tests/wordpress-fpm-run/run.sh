@@ -19,7 +19,7 @@ if ! error="$(docker build -t "$clientImage" - 2>&1 <<-'EOF'
 	exit 1
 fi
 
-mysqlImage='mysql:5.7'
+mysqlImage='mysql:lts'
 # ensure the mysqlImage is ready and available
 if ! docker image inspect "$mysqlImage" &> /dev/null; then
 	docker pull "$mysqlImage" > /dev/null
