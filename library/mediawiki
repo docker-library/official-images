@@ -3,7 +3,7 @@ Maintainers: Kunal Mehta <legoktm@debian.org> (@legoktm),
              Christian Heusel <christian@heusel.eu> (@christian-heusel)
 GitRepo: https://github.com/wikimedia/mediawiki-docker.git
 GitFetch: refs/heads/main
-GitCommit: a9728b8cc1a50a6c0549c82810295962cb99d77c
+GitCommit: c5d0194e8675dc98a46ad9379c0f684d527c11ca
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le
 
 # current stable version
@@ -38,14 +38,3 @@ Directory: 1.43/fpm
 Tags: 1.43.6-fpm-alpine, 1.43-fpm-alpine, lts-fpm-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le
 Directory: 1.43/fpm-alpine
-
-# current legacy lts version
-Tags: 1.39.17, 1.39
-Directory: 1.39/apache
-
-Tags: 1.39.17-fpm, 1.39-fpm
-Directory: 1.39/fpm
-
-Tags: 1.39.17-fpm-alpine, 1.39-fpm-alpine
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le
-Directory: 1.39/fpm-alpine
