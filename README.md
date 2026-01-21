@@ -74,7 +74,7 @@ Some images have been ported for other architectures, and many of these are offi
 	-	RISC-V 64-bit (`riscv64`): https://hub.docker.com/u/riscv64/
 	-	x86/i686 (`i386`): https://hub.docker.com/u/i386/
 
-These other architectures are included under the non-prefixed images via [OCI "image indexes"](https://github.com/opencontainers/image-spec/blob/v1.1.1/image-index.md)), such that, for example, `docker run hello-world` should run as-is on all supported platforms.
+These other architectures are included under the non-prefixed images via [OCI "image indexes"](https://github.com/opencontainers/image-spec/blob/v1.1.1/image-index.md), such that, for example, `docker run hello-world` should run as-is on all supported platforms.
 
 If you're curious about how these are built, head over to [our FAQ entry](https://github.com/docker-library/faq#an-images-source-changed-in-git-now-what) to see an explanation of the process or visit [meta-scripts](https://github.com/docker-library/meta-scripts) to see the build process source files.
 
