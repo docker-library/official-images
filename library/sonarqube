@@ -1,64 +1,69 @@
-Maintainers: Carmine Vassallo <carmine.vassallo@sonarsource.com> (@carminevassallo),
-             Jeremy Cotineau <jeremy.cotineau@sonarsource.com> (@jCOTINEAU),
-             Davi Koscianski Vidal <davi.koscianski-vidal@sonarsource.com> (@davividal)
+Maintainers: Carmine Vassallo <carmine.vassallo@sonarsource.com> (@carminevassallo)
 GitRepo: https://github.com/SonarSource/docker-sonarqube.git
 Architectures: amd64, arm64v8
-GitCommit: 2c5fde2923701623402dbec59369d4fa115f1adb
 Builder: buildkit
 
-Tags: 2025.2.0-developer, 2025.2-developer, developer
-Architectures: amd64, arm64v8
-Directory: 2025/developer
+Tags: 2025.6.1-developer, 2025.6-developer, developer
+Directory: commercial-editions/developer
+GitCommit: 25640e1874256746c8df7134fa5042f0721cc3f2
+GitFetch: refs/heads/release/2025.6
 
-Tags: 2025.2.0-enterprise, 2025.2-enterprise, enterprise
-Architectures: amd64, arm64v8
-Directory: 2025/enterprise
+Tags: 2025.6.1-enterprise, 2025.6-enterprise, enterprise
+Directory: commercial-editions/enterprise
+GitCommit: 25640e1874256746c8df7134fa5042f0721cc3f2
+GitFetch: refs/heads/release/2025.6
 
-Tags: 2025.2.0-datacenter-app, 2025.2-datacenter-app, datacenter-app
-Architectures: amd64, arm64v8
-Directory: 2025/datacenter/app
+Tags: 2025.6.1-datacenter-app, 2025.6-datacenter-app, datacenter-app
+Directory: commercial-editions/datacenter/app
+GitCommit: 25640e1874256746c8df7134fa5042f0721cc3f2
+GitFetch: refs/heads/release/2025.6
 
-Tags: 2025.2.0-datacenter-search, 2025.2-datacenter-search, datacenter-search
-Architectures: amd64, arm64v8
-Directory: 2025/datacenter/search
+Tags: 2025.6.1-datacenter-search, 2025.6-datacenter-search, datacenter-search
+Directory: commercial-editions/datacenter/search
+GitCommit: 25640e1874256746c8df7134fa5042f0721cc3f2
+GitFetch: refs/heads/release/2025.6
 
-Tags: 2025.1.1-developer, 2025.1-developer, 2025-lta-developer
-Architectures: amd64, arm64v8
-Directory: 2025.1/developer
+Tags: 2025.4.4-developer, 2025.4-developer, 2025.4-lta-developer
+Directory: commercial-editions/developer
+GitCommit: b366d18634f02e45e6dc4d28151db6704b0630c8
+GitFetch: refs/heads/release/2025.4
 
-Tags: 2025.1.1-enterprise, 2025.1-enterprise, 2025-lta-enterprise
-Architectures: amd64, arm64v8
-Directory: 2025.1/enterprise
+Tags: 2025.4.4-enterprise, 2025.4-enterprise, 2025.4-lta-enterprise
+Directory: commercial-editions/enterprise
+GitCommit: b366d18634f02e45e6dc4d28151db6704b0630c8
+GitFetch: refs/heads/release/2025.4
 
-Tags: 2025.1.1-datacenter-app, 2025.1-datacenter-app, 2025-lta-datacenter-app
-Architectures: amd64, arm64v8
-Directory: 2025.1/datacenter/app
+Tags: 2025.4.4-datacenter-app, 2025.4-datacenter-app, 2025.4-lta-datacenter-app
+Directory: commercial-editions/datacenter/app
+GitCommit: b366d18634f02e45e6dc4d28151db6704b0630c8
+GitFetch: refs/heads/release/2025.4
 
-Tags: 2025.1.1-datacenter-search, 2025.1-datacenter-search, 2025-lta-datacenter-search
-Architectures: amd64, arm64v8
-Directory: 2025.1/datacenter/search
+Tags: 2025.4.4-datacenter-search, 2025.4-datacenter-search, 2025.4-lta-datacenter-search
+Directory: commercial-editions/datacenter/search
+GitCommit: b366d18634f02e45e6dc4d28151db6704b0630c8
+GitFetch: refs/heads/release/2025.4
 
-Tags: 25.5.0.107428-community, community, latest
-GitCommit: 56846598574ea57af773ec32bc4c36c25d40f34c
-Architectures: amd64, arm64v8
+Tags: 2025.1.5-developer, 2025.1-developer, 2025-lta-developer
+Directory: commercial-editions/developer
+GitCommit: f4734dd45fbe00d4ce4393fec3e3b833a601173c
+GitFetch: refs/heads/release/2025.1
+
+Tags: 2025.1.5-enterprise, 2025.1-enterprise, 2025-lta-enterprise
+Directory: commercial-editions/enterprise
+GitCommit: f4734dd45fbe00d4ce4393fec3e3b833a601173c
+GitFetch: refs/heads/release/2025.1
+
+Tags: 2025.1.5-datacenter-app, 2025.1-datacenter-app, 2025-lta-datacenter-app
+Directory: commercial-editions/datacenter/app
+GitCommit: f4734dd45fbe00d4ce4393fec3e3b833a601173c
+GitFetch: refs/heads/release/2025.1
+
+Tags: 2025.1.5-datacenter-search, 2025.1-datacenter-search, 2025-lta-datacenter-search
+Directory: commercial-editions/datacenter/search
+GitCommit: f4734dd45fbe00d4ce4393fec3e3b833a601173c
+GitFetch: refs/heads/release/2025.1
+
+Tags: 26.1.0.118079-community, community, latest
 Directory: community-build
-
-Tags: 9.9.8-community, 9.9-community, 9-community, lts, lts-community
-Architectures: amd64, arm64v8
-Directory: 9/community
-
-Tags: 9.9.8-developer, 9.9-developer, 9-developer, lts-developer
-Architectures: amd64, arm64v8
-Directory: 9/developer
-
-Tags: 9.9.9-enterprise, 9.9-enterprise, 9-enterprise, lts-enterprise
-Architectures: amd64, arm64v8
-Directory: 9/enterprise
-
-Tags: 9.9.9-datacenter-app, 9.9-datacenter-app, 9-datacenter-app, lts-datacenter-app
-Architectures: amd64, arm64v8
-Directory: 9/datacenter/app
-
-Tags: 9.9.9-datacenter-search, 9.9-datacenter-search, 9-datacenter-search, lts-datacenter-search
-Architectures: amd64, arm64v8
-Directory: 9/datacenter/search
+GitCommit: 892abf9355a52edda737d58809abfd436073e518
+GitFetch: refs/heads/master

@@ -7,13 +7,17 @@ image="$1"
 
 # Build a client image with cgi-fcgi for testing
 clientImage='librarytest/matomo-fpm-run:fcgi-client'
-docker build -t "$clientImage" - > /dev/null <<'EOF'
-FROM debian:bookworm-slim
+if ! error="$(docker build -t "$clientImage" - 2>&1 <<-'EOF'
+	FROM debian:trixie-slim
 
-RUN set -x && apt-get update && apt-get install -y --no-install-recommends libfcgi-bin && rm -rf /var/lib/apt/lists/*
+	RUN set -x && apt-get update && apt-get install -y --no-install-recommends libfcgi-bin && apt-get dist-clean
 
-ENTRYPOINT ["cgi-fcgi"]
-EOF
+	ENTRYPOINT ["cgi-fcgi"]
+	EOF
+)"; then
+	echo "$error" >&2
+	exit 1
+fi
 
 # Create an instance of the container-under-test
 cid="$(docker run -d "$image")"

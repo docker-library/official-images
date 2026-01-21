@@ -1,12 +1,18 @@
 # Official Images Test Suite
 
+## What tests belong here?
+
+We have a lot of historical tests that violate this line, but our goal is to *only* maintain tests in this repository which apply to more than one image - for example, we have tests for Python that apply to both `python` *and* `pypy`.
+
+If you're using our test suite to test your image in your own CI, see [the "Alternate config files" section](#alternate-config-files) below for information about how to run both our tests and your own from our (admittedly naïve) test wrapper.
+
 ## Running Tests
 
 ```console
 $ ./run.sh
 
 usage: run.sh [-t test ...] image:tag [...]
-   ie: run.sh debian:bookworm
+   ie: run.sh debian:trixie
        run.sh -t utc python:3
        run.sh -t utc python:3 -t python-imports
 
@@ -14,36 +20,36 @@ This script processes the specified Docker images to test their running
 environments.
 ```
 
-Run all the tests that are applicable to the `debian:bookworm` image:
+Run all the tests that are applicable to the `debian:trixie` image:
 
 ```console
-$ ./run.sh debian:bookworm
-testing debian:bookworm
+$ ./run.sh debian:trixie
+testing debian:trixie
 	'utc' [1/4]...passed
 	'no-hard-coded-passwords' [2/4]...passed
 	'override-cmd' [3/4]...passed
 	'debian-apt-get' [4/4]...passed
 ```
 
-Try to run just the `python-imports` test against the `debian:bookworm` image: (which doesn't contain Python)
+Try to run just the `python-imports` test against the `debian:trixie` image: (which doesn't contain Python)
 
 ```console
-$ ./run.sh -t python-imports debian:bookworm
-testing debian:bookworm
+$ ./run.sh -t python-imports debian:trixie
+testing debian:trixie
 	image has no tests...skipping
 ```
 
-Run the `utc` and `python-imports` tests against `python:3`, `pypy:3`, and `debian:bookworm`:
+Run the `utc` and `python-imports` tests against `python:3`, `pypy:3`, and `debian:trixie`:
 
 ```console
-$ ./run.sh -t utc -t python-imports python:3 pypy:3 debian:bookworm
+$ ./run.sh -t utc -t python-imports python:3 pypy:3 debian:trixie
 testing python:3
 	'utc' [1/2]...passed
 	'python-imports' [2/2]...passed
 testing pypy:3
 	'utc' [1/2]...passed
 	'python-imports' [2/2]...passed
-testing debian:bookworm
+testing debian:trixie
 	'utc' [1/1]...passed
 ```
 

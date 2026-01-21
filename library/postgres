@@ -1,105 +1,105 @@
-# this file is generated via https://github.com/docker-library/postgres/blob/a37e929682e8de45a3304a5bf9d63210c2e0a680/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/postgres/blob/304578a4b447792df66768a25a54e2247b117e74/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/postgres.git
 
-Tags: 17.5, 17, latest, 17.5-bookworm, 17-bookworm, bookworm
+Tags: 18.1, 18, latest, 18.1-trixie, 18-trixie, trixie
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
+GitCommit: 2925b19f45ceeb8ab8488eec226f2736abf297e1
+Directory: 18/trixie
+
+Tags: 18.1-bookworm, 18-bookworm, bookworm
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 266748257c85f28eb01a276e84860013ade2eb14
+GitCommit: 2925b19f45ceeb8ab8488eec226f2736abf297e1
+Directory: 18/bookworm
+
+Tags: 18.1-alpine3.23, 18-alpine3.23, alpine3.23, 18.1-alpine, 18-alpine, alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
+GitCommit: 39623ba5d20db58a25c3010896baaf54b9aa6b6d
+Directory: 18/alpine3.23
+
+Tags: 18.1-alpine3.22, 18-alpine3.22, alpine3.22
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
+GitCommit: 2925b19f45ceeb8ab8488eec226f2736abf297e1
+Directory: 18/alpine3.22
+
+Tags: 17.7, 17, 17.7-trixie, 17-trixie
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
+GitCommit: 2925b19f45ceeb8ab8488eec226f2736abf297e1
+Directory: 17/trixie
+
+Tags: 17.7-bookworm, 17-bookworm
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+GitCommit: 2925b19f45ceeb8ab8488eec226f2736abf297e1
 Directory: 17/bookworm
 
-Tags: 17.5-bullseye, 17-bullseye, bullseye
-Architectures: amd64, arm32v7, arm64v8, i386
-GitCommit: 266748257c85f28eb01a276e84860013ade2eb14
-Directory: 17/bullseye
-
-Tags: 17.5-alpine3.21, 17-alpine3.21, alpine3.21, 17.5-alpine, 17-alpine, alpine
+Tags: 17.7-alpine3.23, 17-alpine3.23, 17.7-alpine, 17-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: b23470265cc9c4bc283a88bf6c5054e3fca87c16
-Directory: 17/alpine3.21
+GitCommit: 39623ba5d20db58a25c3010896baaf54b9aa6b6d
+Directory: 17/alpine3.23
 
-Tags: 17.5-alpine3.20, 17-alpine3.20, alpine3.20
+Tags: 17.7-alpine3.22, 17-alpine3.22
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: b23470265cc9c4bc283a88bf6c5054e3fca87c16
-Directory: 17/alpine3.20
+GitCommit: 2925b19f45ceeb8ab8488eec226f2736abf297e1
+Directory: 17/alpine3.22
 
-Tags: 16.9, 16, 16.9-bookworm, 16-bookworm
+Tags: 16.11, 16, 16.11-trixie, 16-trixie
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
+GitCommit: 2925b19f45ceeb8ab8488eec226f2736abf297e1
+Directory: 16/trixie
+
+Tags: 16.11-bookworm, 16-bookworm
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 266748257c85f28eb01a276e84860013ade2eb14
+GitCommit: 2925b19f45ceeb8ab8488eec226f2736abf297e1
 Directory: 16/bookworm
 
-Tags: 16.9-bullseye, 16-bullseye
-Architectures: amd64, arm32v7, arm64v8, i386
-GitCommit: 266748257c85f28eb01a276e84860013ade2eb14
-Directory: 16/bullseye
-
-Tags: 16.9-alpine3.21, 16-alpine3.21, 16.9-alpine, 16-alpine
+Tags: 16.11-alpine3.23, 16-alpine3.23, 16.11-alpine, 16-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: b23470265cc9c4bc283a88bf6c5054e3fca87c16
-Directory: 16/alpine3.21
+GitCommit: 39623ba5d20db58a25c3010896baaf54b9aa6b6d
+Directory: 16/alpine3.23
 
-Tags: 16.9-alpine3.20, 16-alpine3.20
+Tags: 16.11-alpine3.22, 16-alpine3.22
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: b23470265cc9c4bc283a88bf6c5054e3fca87c16
-Directory: 16/alpine3.20
+GitCommit: 2925b19f45ceeb8ab8488eec226f2736abf297e1
+Directory: 16/alpine3.22
 
-Tags: 15.13, 15, 15.13-bookworm, 15-bookworm
+Tags: 15.15, 15, 15.15-trixie, 15-trixie
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
+GitCommit: 2925b19f45ceeb8ab8488eec226f2736abf297e1
+Directory: 15/trixie
+
+Tags: 15.15-bookworm, 15-bookworm
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 266748257c85f28eb01a276e84860013ade2eb14
+GitCommit: 2925b19f45ceeb8ab8488eec226f2736abf297e1
 Directory: 15/bookworm
 
-Tags: 15.13-bullseye, 15-bullseye
-Architectures: amd64, arm32v7, arm64v8, i386
-GitCommit: 266748257c85f28eb01a276e84860013ade2eb14
-Directory: 15/bullseye
-
-Tags: 15.13-alpine3.21, 15-alpine3.21, 15.13-alpine, 15-alpine
+Tags: 15.15-alpine3.23, 15-alpine3.23, 15.15-alpine, 15-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: b23470265cc9c4bc283a88bf6c5054e3fca87c16
-Directory: 15/alpine3.21
+GitCommit: 39623ba5d20db58a25c3010896baaf54b9aa6b6d
+Directory: 15/alpine3.23
 
-Tags: 15.13-alpine3.20, 15-alpine3.20
+Tags: 15.15-alpine3.22, 15-alpine3.22
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: b23470265cc9c4bc283a88bf6c5054e3fca87c16
-Directory: 15/alpine3.20
+GitCommit: 2925b19f45ceeb8ab8488eec226f2736abf297e1
+Directory: 15/alpine3.22
 
-Tags: 14.18, 14, 14.18-bookworm, 14-bookworm
+Tags: 14.20, 14, 14.20-trixie, 14-trixie
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
+GitCommit: 2925b19f45ceeb8ab8488eec226f2736abf297e1
+Directory: 14/trixie
+
+Tags: 14.20-bookworm, 14-bookworm
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 266748257c85f28eb01a276e84860013ade2eb14
+GitCommit: 2925b19f45ceeb8ab8488eec226f2736abf297e1
 Directory: 14/bookworm
 
-Tags: 14.18-bullseye, 14-bullseye
-Architectures: amd64, arm32v7, arm64v8, i386
-GitCommit: 266748257c85f28eb01a276e84860013ade2eb14
-Directory: 14/bullseye
-
-Tags: 14.18-alpine3.21, 14-alpine3.21, 14.18-alpine, 14-alpine
+Tags: 14.20-alpine3.23, 14-alpine3.23, 14.20-alpine, 14-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: b23470265cc9c4bc283a88bf6c5054e3fca87c16
-Directory: 14/alpine3.21
+GitCommit: 39623ba5d20db58a25c3010896baaf54b9aa6b6d
+Directory: 14/alpine3.23
 
-Tags: 14.18-alpine3.20, 14-alpine3.20
+Tags: 14.20-alpine3.22, 14-alpine3.22
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: b23470265cc9c4bc283a88bf6c5054e3fca87c16
-Directory: 14/alpine3.20
-
-Tags: 13.21, 13, 13.21-bookworm, 13-bookworm
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-GitCommit: 266748257c85f28eb01a276e84860013ade2eb14
-Directory: 13/bookworm
-
-Tags: 13.21-bullseye, 13-bullseye
-Architectures: amd64, arm32v7, arm64v8, i386
-GitCommit: 266748257c85f28eb01a276e84860013ade2eb14
-Directory: 13/bullseye
-
-Tags: 13.21-alpine3.21, 13-alpine3.21, 13.21-alpine, 13-alpine
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: b23470265cc9c4bc283a88bf6c5054e3fca87c16
-Directory: 13/alpine3.21
-
-Tags: 13.21-alpine3.20, 13-alpine3.20
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: b23470265cc9c4bc283a88bf6c5054e3fca87c16
-Directory: 13/alpine3.20
+GitCommit: 2925b19f45ceeb8ab8488eec226f2736abf297e1
+Directory: 14/alpine3.22

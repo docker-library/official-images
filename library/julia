@@ -1,140 +1,77 @@
-# this file is generated via https://github.com/docker-library/julia/blob/620686166b77e9fbe62264060947c5ed12ffd3d0/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/julia/blob/632505b60c6b0d7158c173285717eb6e5424afdc/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/julia.git
+GitCommit: aeb025c8621d071a8bc347f58829d88947e31267
 
-Tags: 1.12.0-beta3-bookworm, 1.12-rc-bookworm, rc-bookworm
-SharedTags: 1.12.0-beta3, 1.12-rc, rc
-Architectures: amd64, arm64v8, i386
-GitCommit: 09ad25e2f355dd91cbd2f87978800fb90bf0a1c0
-Directory: 1.12-rc/bookworm
+Tags: 1.12.4-trixie, 1.12-trixie, 1-trixie, trixie
+SharedTags: 1.12.4, 1.12, 1, latest
+Directory: stable/trixie
+Architectures: amd64, i386, arm64v8
 
-Tags: 1.12.0-beta3-bullseye, 1.12-rc-bullseye, rc-bullseye
-Architectures: amd64, arm64v8, i386
-GitCommit: 09ad25e2f355dd91cbd2f87978800fb90bf0a1c0
-Directory: 1.12-rc/bullseye
+Tags: 1.12.4-bookworm, 1.12-bookworm, 1-bookworm, bookworm
+Directory: stable/bookworm
+Architectures: amd64, i386, arm64v8
 
-Tags: 1.12.0-beta3-alpine3.21, 1.12-rc-alpine3.21, rc-alpine3.21, 1.12.0-beta3-alpine, 1.12-rc-alpine, rc-alpine
-Architectures: amd64
-GitCommit: 09ad25e2f355dd91cbd2f87978800fb90bf0a1c0
-Directory: 1.12-rc/alpine3.21
-
-Tags: 1.12.0-beta3-alpine3.20, 1.12-rc-alpine3.20, rc-alpine3.20
-Architectures: amd64
-GitCommit: 09ad25e2f355dd91cbd2f87978800fb90bf0a1c0
-Directory: 1.12-rc/alpine3.20
-
-Tags: 1.12.0-beta3-windowsservercore-ltsc2025, 1.12-rc-windowsservercore-ltsc2025, rc-windowsservercore-ltsc2025
-SharedTags: 1.12.0-beta3, 1.12-rc, rc, 1.12.0-beta3-windowsservercore, 1.12-rc-windowsservercore, rc-windowsservercore
+Tags: 1.12.4-windowsservercore-ltsc2025, 1.12-windowsservercore-ltsc2025, 1-windowsservercore-ltsc2025, windowsservercore-ltsc2025
+SharedTags: 1.12.4-windowsservercore, 1.12-windowsservercore, 1-windowsservercore, windowsservercore, 1.12.4, 1.12, 1, latest
+Directory: stable/windows/servercore-ltsc2025
 Architectures: windows-amd64
-GitCommit: 09ad25e2f355dd91cbd2f87978800fb90bf0a1c0
-Directory: 1.12-rc/windows/windowsservercore-ltsc2025
 Constraints: windowsservercore-ltsc2025
-Builder: classic
 
-Tags: 1.12.0-beta3-windowsservercore-ltsc2022, 1.12-rc-windowsservercore-ltsc2022, rc-windowsservercore-ltsc2022
-SharedTags: 1.12.0-beta3, 1.12-rc, rc, 1.12.0-beta3-windowsservercore, 1.12-rc-windowsservercore, rc-windowsservercore
+Tags: 1.12.4-windowsservercore-ltsc2022, 1.12-windowsservercore-ltsc2022, 1-windowsservercore-ltsc2022, windowsservercore-ltsc2022
+SharedTags: 1.12.4-windowsservercore, 1.12-windowsservercore, 1-windowsservercore, windowsservercore, 1.12.4, 1.12, 1, latest
+Directory: stable/windows/servercore-ltsc2022
 Architectures: windows-amd64
-GitCommit: 09ad25e2f355dd91cbd2f87978800fb90bf0a1c0
-Directory: 1.12-rc/windows/windowsservercore-ltsc2022
 Constraints: windowsservercore-ltsc2022
-Builder: classic
 
-Tags: 1.12.0-beta3-windowsservercore-1809, 1.12-rc-windowsservercore-1809, rc-windowsservercore-1809
-SharedTags: 1.12.0-beta3, 1.12-rc, rc, 1.12.0-beta3-windowsservercore, 1.12-rc-windowsservercore, rc-windowsservercore
-Architectures: windows-amd64
-GitCommit: 09ad25e2f355dd91cbd2f87978800fb90bf0a1c0
-Directory: 1.12-rc/windows/windowsservercore-1809
-Constraints: windowsservercore-1809
-Builder: classic
+Tags: 1.10.10-trixie, 1.10-trixie
+SharedTags: 1.10.10, 1.10
+Directory: 1.10/trixie
+Architectures: amd64, i386, arm64v8, ppc64le
 
-Tags: 1.11.5-bookworm, 1.11-bookworm, 1-bookworm, bookworm
-SharedTags: 1.11.5, 1.11, 1, latest
-Architectures: amd64, arm64v8, i386, ppc64le
-GitCommit: bd1d1d4ea366ccbfd675e942aed13022abd76eb6
-Directory: 1.11/bookworm
-
-Tags: 1.11.5-bullseye, 1.11-bullseye, 1-bullseye, bullseye
-Architectures: amd64, arm64v8, i386
-GitCommit: bd1d1d4ea366ccbfd675e942aed13022abd76eb6
-Directory: 1.11/bullseye
-
-Tags: 1.11.5-alpine3.21, 1.11-alpine3.21, 1-alpine3.21, alpine3.21, 1.11.5-alpine, 1.11-alpine, 1-alpine, alpine
-Architectures: amd64
-GitCommit: bd1d1d4ea366ccbfd675e942aed13022abd76eb6
-Directory: 1.11/alpine3.21
-
-Tags: 1.11.5-alpine3.20, 1.11-alpine3.20, 1-alpine3.20, alpine3.20
-Architectures: amd64
-GitCommit: bd1d1d4ea366ccbfd675e942aed13022abd76eb6
-Directory: 1.11/alpine3.20
-
-Tags: 1.11.5-windowsservercore-ltsc2025, 1.11-windowsservercore-ltsc2025, 1-windowsservercore-ltsc2025, windowsservercore-ltsc2025
-SharedTags: 1.11.5, 1.11, 1, latest, 1.11.5-windowsservercore, 1.11-windowsservercore, 1-windowsservercore, windowsservercore
-Architectures: windows-amd64
-GitCommit: bd1d1d4ea366ccbfd675e942aed13022abd76eb6
-Directory: 1.11/windows/windowsservercore-ltsc2025
-Constraints: windowsservercore-ltsc2025
-Builder: classic
-
-Tags: 1.11.5-windowsservercore-ltsc2022, 1.11-windowsservercore-ltsc2022, 1-windowsservercore-ltsc2022, windowsservercore-ltsc2022
-SharedTags: 1.11.5, 1.11, 1, latest, 1.11.5-windowsservercore, 1.11-windowsservercore, 1-windowsservercore, windowsservercore
-Architectures: windows-amd64
-GitCommit: bd1d1d4ea366ccbfd675e942aed13022abd76eb6
-Directory: 1.11/windows/windowsservercore-ltsc2022
-Constraints: windowsservercore-ltsc2022
-Builder: classic
-
-Tags: 1.11.5-windowsservercore-1809, 1.11-windowsservercore-1809, 1-windowsservercore-1809, windowsservercore-1809
-SharedTags: 1.11.5, 1.11, 1, latest, 1.11.5-windowsservercore, 1.11-windowsservercore, 1-windowsservercore, windowsservercore
-Architectures: windows-amd64
-GitCommit: bd1d1d4ea366ccbfd675e942aed13022abd76eb6
-Directory: 1.11/windows/windowsservercore-1809
-Constraints: windowsservercore-1809
-Builder: classic
-
-Tags: 1.10.9-bookworm, 1.10-bookworm
-SharedTags: 1.10.9, 1.10
-Architectures: amd64, arm64v8, i386, ppc64le
-GitCommit: 6f34d11736ca81e111e3ce285d6d7e08a4742300
+Tags: 1.10.10-bookworm, 1.10-bookworm
 Directory: 1.10/bookworm
+Architectures: amd64, i386, arm64v8, ppc64le
 
-Tags: 1.10.9-bullseye, 1.10-bullseye
-Architectures: amd64, arm64v8, i386
-GitCommit: 6f34d11736ca81e111e3ce285d6d7e08a4742300
-Directory: 1.10/bullseye
-
-Tags: 1.10.9-alpine3.21, 1.10-alpine3.21, 1.10.9-alpine, 1.10-alpine
+Tags: 1.10.10-alpine3.23, 1.10-alpine3.23, 1.10.10-alpine, 1.10-alpine
+Directory: 1.10/alpine3.23
 Architectures: amd64
-GitCommit: 6f34d11736ca81e111e3ce285d6d7e08a4742300
-Directory: 1.10/alpine3.21
 
-Tags: 1.10.9-alpine3.20, 1.10-alpine3.20
+Tags: 1.10.10-alpine3.22, 1.10-alpine3.22
+Directory: 1.10/alpine3.22
 Architectures: amd64
-GitCommit: 6f34d11736ca81e111e3ce285d6d7e08a4742300
-Directory: 1.10/alpine3.20
 
-Tags: 1.10.9-windowsservercore-ltsc2025, 1.10-windowsservercore-ltsc2025
-SharedTags: 1.10.9, 1.10, 1.10.9-windowsservercore, 1.10-windowsservercore
+Tags: 1.10.10-windowsservercore-ltsc2025, 1.10-windowsservercore-ltsc2025
+SharedTags: 1.10.10-windowsservercore, 1.10-windowsservercore, 1.10.10, 1.10
+Directory: 1.10/windows/servercore-ltsc2025
 Architectures: windows-amd64
-GitCommit: 6f34d11736ca81e111e3ce285d6d7e08a4742300
-Directory: 1.10/windows/windowsservercore-ltsc2025
 Constraints: windowsservercore-ltsc2025
-Builder: classic
 
-Tags: 1.10.9-windowsservercore-ltsc2022, 1.10-windowsservercore-ltsc2022
-SharedTags: 1.10.9, 1.10, 1.10.9-windowsservercore, 1.10-windowsservercore
+Tags: 1.10.10-windowsservercore-ltsc2022, 1.10-windowsservercore-ltsc2022
+SharedTags: 1.10.10-windowsservercore, 1.10-windowsservercore, 1.10.10, 1.10
+Directory: 1.10/windows/servercore-ltsc2022
 Architectures: windows-amd64
-GitCommit: 6f34d11736ca81e111e3ce285d6d7e08a4742300
-Directory: 1.10/windows/windowsservercore-ltsc2022
 Constraints: windowsservercore-ltsc2022
-Builder: classic
 
-Tags: 1.10.9-windowsservercore-1809, 1.10-windowsservercore-1809
-SharedTags: 1.10.9, 1.10, 1.10.9-windowsservercore, 1.10-windowsservercore
+Tags: 1.13.0-beta1-trixie, 1.13-rc-trixie, rc-trixie
+SharedTags: 1.13.0-beta1, 1.13-rc, rc
+Directory: rc/trixie
+Architectures: amd64, i386, arm64v8
+
+Tags: 1.13.0-beta1-bookworm, 1.13-rc-bookworm, rc-bookworm
+Directory: rc/bookworm
+Architectures: amd64, i386, arm64v8
+
+Tags: 1.13.0-beta1-windowsservercore-ltsc2025, 1.13-rc-windowsservercore-ltsc2025, rc-windowsservercore-ltsc2025
+SharedTags: 1.13.0-beta1-windowsservercore, 1.13-rc-windowsservercore, rc-windowsservercore, 1.13.0-beta1, 1.13-rc, rc
+Directory: rc/windows/servercore-ltsc2025
 Architectures: windows-amd64
-GitCommit: 6f34d11736ca81e111e3ce285d6d7e08a4742300
-Directory: 1.10/windows/windowsservercore-1809
-Constraints: windowsservercore-1809
-Builder: classic
+Constraints: windowsservercore-ltsc2025
+
+Tags: 1.13.0-beta1-windowsservercore-ltsc2022, 1.13-rc-windowsservercore-ltsc2022, rc-windowsservercore-ltsc2022
+SharedTags: 1.13.0-beta1-windowsservercore, 1.13-rc-windowsservercore, rc-windowsservercore, 1.13.0-beta1, 1.13-rc, rc
+Directory: rc/windows/servercore-ltsc2022
+Architectures: windows-amd64
+Constraints: windowsservercore-ltsc2022

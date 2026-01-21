@@ -8,11 +8,34 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
 image="$1"
 
-clientImage='buildpack-deps:bookworm-curl'
+clientImage='buildpack-deps:trixie-curl'
 # ensure the clientImage is ready and available
 if ! docker image inspect "$clientImage" &> /dev/null; then
 	docker pull "$clientImage" > /dev/null
 fi
+_curl() {
+	local container="$1"; shift
+	local url="$1"; shift
+	docker run --rm --interactive \
+		--link "$container":container \
+		"$clientImage" \
+		curl \
+		-fsSL \
+		--connect-to '::container:' \
+		"http://container/${url%/}"
+}
+
+httpdImage='busybox'
+# ensure the httpdImage is ready and available
+if ! docker image inspect "$httpdImage" &> /dev/null; then
+	docker pull "$httpdImage" > /dev/null
+fi
+httpdText="hello from httpd $RANDOM $RANDOM $RANDOM"
+httpd="$(docker run -d --rm --init "$httpdImage" sh -euxc 'echo "$@" > index.html && exec httpd -f' -- "$httpdText")"
+trap "docker rm -vf $httpd > /dev/null" EXIT
+
+testHttpd="$(_curl "$httpd" '/')"
+[ "$testHttpd" = "$httpdText" ]
 
 # Create an instance of the container-under-test
 serverImage="$("$dir/../image-name.sh" librarytest/haproxy-basics "$image")"
@@ -20,33 +43,10 @@ serverImage="$("$dir/../image-name.sh" librarytest/haproxy-basics "$image")"
 FROM $image
 COPY dir/haproxy.cfg /usr/local/etc/haproxy/
 EOD
-cid="$(docker run -d --sysctl net.ipv4.ip_unprivileged_port_start=0 "$serverImage")"
-trap "docker rm -vf $cid > /dev/null" EXIT
+cid="$(docker run -d --link "$httpd":httpd "$serverImage")"
+trap "docker rm -vf $cid $httpd > /dev/null" EXIT
 
-_request() {
-	local method="$1"
-	shift
+#. "$dir/../../retry.sh" '_curl "$cid" / &> /dev/null'
 
-	local proto="$1"
-	shift
-
-	local url="${1#/}"
-	shift
-
-	if [ "$(docker inspect -f '{{.State.Running}}' "$cid" 2>/dev/null)" != 'true' ]; then
-		echo >&2 "$image stopped unexpectedly!"
-		( set -x && docker logs "$cid" ) >&2 || true
-		false
-	fi
-
-	docker run --rm \
-		--link "$cid":haproxy \
-		"$clientImage" \
-		curl -fsSL -X"$method" --connect-to '::haproxy:' "$@" "$proto://example.com/$url"
-}
-
-. "$dir/../../retry.sh" '[ "$(_request GET / --output /dev/null || echo $?)" != 7 ]'
-
-# Check that we can request / (which is proxying example.com)
-_request GET http '/' | grep '<h1>Example Domain</h1>' > /dev/null
-_request GET https '/' | grep '<h1>Example Domain</h1>' > /dev/null
+haproxy="$(_curl "$cid" '/')"
+[ "$haproxy" = "$httpdText" ]

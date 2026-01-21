@@ -5,13 +5,13 @@ dir="$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
 serverImage="$1"
 
-clientImage='buildpack-deps:bookworm-curl'
+clientImage='buildpack-deps:trixie-curl'
 # ensure the clientImage is ready and available
 if ! docker image inspect "$clientImage" &> /dev/null; then
 	docker pull "$clientImage" > /dev/null
 fi
 
-mongoImage='mongo:4.0'
+mongoImage='mongo:8'
 # ensure the mongoImage is ready and available
 if ! docker image inspect "$mongoImage" &> /dev/null; then
 	docker pull "$mongoImage" > /dev/null
