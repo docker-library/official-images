@@ -254,13 +254,13 @@ Below are some examples:
 	    key='A4A9406876FCBD3C456770C88C718D3B5072E1F5'; \
 	    export GNUPGHOME="$(mktemp -d)"; \
 	    gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; \
-	    gpg --batch --armor --export "$key" > /etc/apt/trusted.gpg.d/mysql.gpg.asc; \
+	    gpg --batch --armor --export "$key" > /etc/apt/keyrings/mysql.asc; \
 	    gpgconf --kill all; \
 	    rm -rf "$GNUPGHOME"; \
 	    apt-key list > /dev/null
 
 	RUN set -eux; \
-	    echo "deb http://repo.mysql.com/apt/debian/ bookworm mysql-${MYSQL_MAJOR}" > /etc/apt/sources.list.d/mysql.list; \
+	    echo "deb [ signed-by=/etc/apt/keyrings/mysql.asc ] http://repo.mysql.com/apt/debian/ bookworm mysql-${MYSQL_MAJOR}" > /etc/apt/sources.list.d/mysql.list; \
 	    apt-get update; \
 	    apt-get install -y mysql-community-client="${MYSQL_VERSION}" mysql-community-server-core="${MYSQL_VERSION}"; \
 	    rm -rf /var/lib/apt/lists/*; \
