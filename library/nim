@@ -3,39 +3,33 @@
 Maintainers: Constantine Molchanov <moigagoo@duck.com> (@moigagoo),
              Akito <the@akito.ooo> (@theAkito)
 GitRepo: https://github.com/nim-lang/docker-images.git
-GitCommit: fb0ca6d67b7b512cda7396dd9ff969c1085b5036
+GitCommit: fba3ff923ee8f4d96b1275a4ad4145527e9312c6
 
-Tags: 2.2.6-ubuntu-regular
-SharedTags: 2.2.6-regular, 2.2.6-ubuntu, 2.2.6, latest-regular, latest-ubuntu, latest, 2-regular, 2-ubuntu, 2, 2.2-regular, 2.2-ubuntu, 2.2
+Tags: latest, 2.2.6, 2.2, 2
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.2.6/regular/ubuntu
 
-Tags: 2.2.6-ubuntu-slim
-SharedTags: 2.2.6-slim, latest-slim, 2-slim, 2.2-slim
+Tags: slim, 2.2.6-slim, 2.2-slim, 2-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.2.6/slim/ubuntu
 
-Tags: 2.2.6-alpine-regular
-SharedTags: 2.2.6-alpine, latest-alpine, 2-alpine, 2.2-alpine
+Tags: alpine, 2.2.6-alpine, 2.2-alpine, 2-alpine
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.2.6/regular/alpine
 
-Tags: 2.2.6-alpine-slim
+Tags: alpine-slim, 2.2.6-alpine-slim, 2.2-alpine-slim, 2-alpine-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.2.6/slim/alpine
 
-Tags: 2.2.4-ubuntu-regular
-SharedTags: 2.2.4-regular, 2.2.4-ubuntu, 2.2.4
+Tags: 2.2.4
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.2.4/regular/ubuntu
 
-Tags: 2.2.4-ubuntu-slim
-SharedTags: 2.2.4-slim
+Tags: 2.2.4-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.2.4/slim/ubuntu
 
-Tags: 2.2.4-alpine-regular
-SharedTags: 2.2.4-alpine
+Tags: 2.2.4-alpine
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.2.4/regular/alpine
 
@@ -43,18 +37,15 @@ Tags: 2.2.4-alpine-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.2.4/slim/alpine
 
-Tags: 2.2.2-ubuntu-regular
-SharedTags: 2.2.2-regular, 2.2.2-ubuntu, 2.2.2
+Tags: 2.2.2
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.2.2/regular/ubuntu
 
-Tags: 2.2.2-ubuntu-slim
-SharedTags: 2.2.2-slim
+Tags: 2.2.2-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.2.2/slim/ubuntu
 
-Tags: 2.2.2-alpine-regular
-SharedTags: 2.2.2-alpine
+Tags: 2.2.2-alpine
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.2.2/regular/alpine
 
@@ -62,18 +53,15 @@ Tags: 2.2.2-alpine-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.2.2/slim/alpine
 
-Tags: 2.2.0-ubuntu-regular
-SharedTags: 2.2.0-regular, 2.2.0-ubuntu, 2.2.0
+Tags: 2.2.0
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.2.0/regular/ubuntu
 
-Tags: 2.2.0-ubuntu-slim
-SharedTags: 2.2.0-slim
+Tags: 2.2.0-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.2.0/slim/ubuntu
 
-Tags: 2.2.0-alpine-regular
-SharedTags: 2.2.0-alpine
+Tags: 2.2.0-alpine
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.2.0/regular/alpine
 
@@ -81,37 +69,31 @@ Tags: 2.2.0-alpine-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.2.0/slim/alpine
 
-Tags: 2.0.14-ubuntu-regular
-SharedTags: 2.0.14-regular, 2.0.14-ubuntu, 2.0.14, 2.0-regular, 2.0-ubuntu, 2.0
+Tags: 2.0.14, 2.0
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.0.14/regular/ubuntu
 
-Tags: 2.0.14-ubuntu-slim
-SharedTags: 2.0.14-slim, 2.0-slim
+Tags: 2.0.14-slim, 2.0-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.0.14/slim/ubuntu
 
-Tags: 2.0.14-alpine-regular
-SharedTags: 2.0.14-alpine, 2.0-alpine
+Tags: 2.0.14-alpine, 2.0-alpine
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.0.14/regular/alpine
 
-Tags: 2.0.14-alpine-slim
+Tags: 2.0.14-alpine-slim, 2.0-alpine-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.0.14/slim/alpine
 
-Tags: 2.0.12-ubuntu-regular
-SharedTags: 2.0.12-regular, 2.0.12-ubuntu, 2.0.12
+Tags: 2.0.12
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.0.12/regular/ubuntu
 
-Tags: 2.0.12-ubuntu-slim
-SharedTags: 2.0.12-slim
+Tags: 2.0.12-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.0.12/slim/ubuntu
 
-Tags: 2.0.12-alpine-regular
-SharedTags: 2.0.12-alpine
+Tags: 2.0.12-alpine
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.0.12/regular/alpine
 
@@ -119,18 +101,15 @@ Tags: 2.0.12-alpine-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.0.12/slim/alpine
 
-Tags: 2.0.10-ubuntu-regular
-SharedTags: 2.0.10-regular, 2.0.10-ubuntu, 2.0.10
+Tags: 2.0.10
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.0.10/regular/ubuntu
 
-Tags: 2.0.10-ubuntu-slim
-SharedTags: 2.0.10-slim
+Tags: 2.0.10-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.0.10/slim/ubuntu
 
-Tags: 2.0.10-alpine-regular
-SharedTags: 2.0.10-alpine
+Tags: 2.0.10-alpine
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.0.10/regular/alpine
 
@@ -138,18 +117,15 @@ Tags: 2.0.10-alpine-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.0.10/slim/alpine
 
-Tags: 2.0.8-ubuntu-regular
-SharedTags: 2.0.8-regular, 2.0.8-ubuntu, 2.0.8
+Tags: 2.0.8
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.0.8/regular/ubuntu
 
-Tags: 2.0.8-ubuntu-slim
-SharedTags: 2.0.8-slim
+Tags: 2.0.8-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.0.8/slim/ubuntu
 
-Tags: 2.0.8-alpine-regular
-SharedTags: 2.0.8-alpine
+Tags: 2.0.8-alpine
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.0.8/regular/alpine
 
@@ -157,18 +133,15 @@ Tags: 2.0.8-alpine-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.0.8/slim/alpine
 
-Tags: 2.0.6-ubuntu-regular
-SharedTags: 2.0.6-regular, 2.0.6-ubuntu, 2.0.6
+Tags: 2.0.6
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.0.6/regular/ubuntu
 
-Tags: 2.0.6-ubuntu-slim
-SharedTags: 2.0.6-slim
+Tags: 2.0.6-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.0.6/slim/ubuntu
 
-Tags: 2.0.6-alpine-regular
-SharedTags: 2.0.6-alpine
+Tags: 2.0.6-alpine
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.0.6/regular/alpine
 
@@ -176,18 +149,15 @@ Tags: 2.0.6-alpine-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.0.6/slim/alpine
 
-Tags: 2.0.4-ubuntu-regular
-SharedTags: 2.0.4-regular, 2.0.4-ubuntu, 2.0.4
+Tags: 2.0.4
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.0.4/regular/ubuntu
 
-Tags: 2.0.4-ubuntu-slim
-SharedTags: 2.0.4-slim
+Tags: 2.0.4-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.0.4/slim/ubuntu
 
-Tags: 2.0.4-alpine-regular
-SharedTags: 2.0.4-alpine
+Tags: 2.0.4-alpine
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.0.4/regular/alpine
 
@@ -195,18 +165,15 @@ Tags: 2.0.4-alpine-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.0.4/slim/alpine
 
-Tags: 2.0.2-ubuntu-regular
-SharedTags: 2.0.2-regular, 2.0.2-ubuntu, 2.0.2
+Tags: 2.0.2
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.0.2/regular/ubuntu
 
-Tags: 2.0.2-ubuntu-slim
-SharedTags: 2.0.2-slim
+Tags: 2.0.2-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.0.2/slim/ubuntu
 
-Tags: 2.0.2-alpine-regular
-SharedTags: 2.0.2-alpine
+Tags: 2.0.2-alpine
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.0.2/regular/alpine
 
@@ -214,18 +181,15 @@ Tags: 2.0.2-alpine-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.0.2/slim/alpine
 
-Tags: 2.0.0-ubuntu-regular
-SharedTags: 2.0.0-regular, 2.0.0-ubuntu, 2.0.0
+Tags: 2.0.0
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.0.0/regular/ubuntu
 
-Tags: 2.0.0-ubuntu-slim
-SharedTags: 2.0.0-slim
+Tags: 2.0.0-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.0.0/slim/ubuntu
 
-Tags: 2.0.0-alpine-regular
-SharedTags: 2.0.0-alpine
+Tags: 2.0.0-alpine
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.0.0/regular/alpine
 
@@ -233,37 +197,31 @@ Tags: 2.0.0-alpine-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/2.0.0/slim/alpine
 
-Tags: 1.6.20-ubuntu-regular
-SharedTags: 1.6.20-regular, 1.6.20-ubuntu, 1.6.20, 1-regular, 1-ubuntu, 1, 1.6-regular, 1.6-ubuntu, 1.6
+Tags: 1.6.20, 1, 1.6
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.20/regular/ubuntu
 
-Tags: 1.6.20-ubuntu-slim
-SharedTags: 1.6.20-slim, 1-slim, 1.6-slim
+Tags: 1.6.20-slim, 1-slim, 1.6-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.20/slim/ubuntu
 
-Tags: 1.6.20-alpine-regular
-SharedTags: 1.6.20-alpine, 1-alpine, 1.6-alpine
+Tags: 1.6.20-alpine, 1-alpine, 1.6-alpine
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.20/regular/alpine
 
-Tags: 1.6.20-alpine-slim
+Tags: 1.6.20-alpine-slim, 1-alpine-slim, 1.6-alpine-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.20/slim/alpine
 
-Tags: 1.6.18-ubuntu-regular
-SharedTags: 1.6.18-regular, 1.6.18-ubuntu, 1.6.18
+Tags: 1.6.18
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.18/regular/ubuntu
 
-Tags: 1.6.18-ubuntu-slim
-SharedTags: 1.6.18-slim
+Tags: 1.6.18-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.18/slim/ubuntu
 
-Tags: 1.6.18-alpine-regular
-SharedTags: 1.6.18-alpine
+Tags: 1.6.18-alpine
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.18/regular/alpine
 
@@ -271,18 +229,15 @@ Tags: 1.6.18-alpine-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.18/slim/alpine
 
-Tags: 1.6.16-ubuntu-regular
-SharedTags: 1.6.16-regular, 1.6.16-ubuntu, 1.6.16
+Tags: 1.6.16
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.16/regular/ubuntu
 
-Tags: 1.6.16-ubuntu-slim
-SharedTags: 1.6.16-slim
+Tags: 1.6.16-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.16/slim/ubuntu
 
-Tags: 1.6.16-alpine-regular
-SharedTags: 1.6.16-alpine
+Tags: 1.6.16-alpine
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.16/regular/alpine
 
@@ -290,18 +245,15 @@ Tags: 1.6.16-alpine-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.16/slim/alpine
 
-Tags: 1.6.14-ubuntu-regular
-SharedTags: 1.6.14-regular, 1.6.14-ubuntu, 1.6.14
+Tags: 1.6.14
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.14/regular/ubuntu
 
-Tags: 1.6.14-ubuntu-slim
-SharedTags: 1.6.14-slim
+Tags: 1.6.14-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.14/slim/ubuntu
 
-Tags: 1.6.14-alpine-regular
-SharedTags: 1.6.14-alpine
+Tags: 1.6.14-alpine
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.14/regular/alpine
 
@@ -309,18 +261,15 @@ Tags: 1.6.14-alpine-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.14/slim/alpine
 
-Tags: 1.6.12-ubuntu-regular
-SharedTags: 1.6.12-regular, 1.6.12-ubuntu, 1.6.12
+Tags: 1.6.12
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.12/regular/ubuntu
 
-Tags: 1.6.12-ubuntu-slim
-SharedTags: 1.6.12-slim
+Tags: 1.6.12-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.12/slim/ubuntu
 
-Tags: 1.6.12-alpine-regular
-SharedTags: 1.6.12-alpine
+Tags: 1.6.12-alpine
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.12/regular/alpine
 
@@ -328,18 +277,15 @@ Tags: 1.6.12-alpine-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.12/slim/alpine
 
-Tags: 1.6.10-ubuntu-regular
-SharedTags: 1.6.10-regular, 1.6.10-ubuntu, 1.6.10
+Tags: 1.6.10
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.10/regular/ubuntu
 
-Tags: 1.6.10-ubuntu-slim
-SharedTags: 1.6.10-slim
+Tags: 1.6.10-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.10/slim/ubuntu
 
-Tags: 1.6.10-alpine-regular
-SharedTags: 1.6.10-alpine
+Tags: 1.6.10-alpine
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.10/regular/alpine
 
@@ -347,18 +293,15 @@ Tags: 1.6.10-alpine-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.10/slim/alpine
 
-Tags: 1.6.8-ubuntu-regular
-SharedTags: 1.6.8-regular, 1.6.8-ubuntu, 1.6.8
+Tags: 1.6.8
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.8/regular/ubuntu
 
-Tags: 1.6.8-ubuntu-slim
-SharedTags: 1.6.8-slim
+Tags: 1.6.8-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.8/slim/ubuntu
 
-Tags: 1.6.8-alpine-regular
-SharedTags: 1.6.8-alpine
+Tags: 1.6.8-alpine
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.8/regular/alpine
 
@@ -366,18 +309,15 @@ Tags: 1.6.8-alpine-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.8/slim/alpine
 
-Tags: 1.6.6-ubuntu-regular
-SharedTags: 1.6.6-regular, 1.6.6-ubuntu, 1.6.6
+Tags: 1.6.6
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.6/regular/ubuntu
 
-Tags: 1.6.6-ubuntu-slim
-SharedTags: 1.6.6-slim
+Tags: 1.6.6-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.6/slim/ubuntu
 
-Tags: 1.6.6-alpine-regular
-SharedTags: 1.6.6-alpine
+Tags: 1.6.6-alpine
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.6/regular/alpine
 
@@ -385,18 +325,15 @@ Tags: 1.6.6-alpine-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.6/slim/alpine
 
-Tags: 1.6.4-ubuntu-regular
-SharedTags: 1.6.4-regular, 1.6.4-ubuntu, 1.6.4
+Tags: 1.6.4
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.4/regular/ubuntu
 
-Tags: 1.6.4-ubuntu-slim
-SharedTags: 1.6.4-slim
+Tags: 1.6.4-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.4/slim/ubuntu
 
-Tags: 1.6.4-alpine-regular
-SharedTags: 1.6.4-alpine
+Tags: 1.6.4-alpine
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.4/regular/alpine
 
@@ -404,18 +341,15 @@ Tags: 1.6.4-alpine-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.4/slim/alpine
 
-Tags: 1.6.2-ubuntu-regular
-SharedTags: 1.6.2-regular, 1.6.2-ubuntu, 1.6.2
+Tags: 1.6.2
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.2/regular/ubuntu
 
-Tags: 1.6.2-ubuntu-slim
-SharedTags: 1.6.2-slim
+Tags: 1.6.2-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.2/slim/ubuntu
 
-Tags: 1.6.2-alpine-regular
-SharedTags: 1.6.2-alpine
+Tags: 1.6.2-alpine
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.2/regular/alpine
 
@@ -423,648 +357,18 @@ Tags: 1.6.2-alpine-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.2/slim/alpine
 
-Tags: 1.6.0-ubuntu-regular
-SharedTags: 1.6.0-regular, 1.6.0-ubuntu, 1.6.0
+Tags: 1.6.0
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.0/regular/ubuntu
 
-Tags: 1.6.0-ubuntu-slim
-SharedTags: 1.6.0-slim
+Tags: 1.6.0-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.0/slim/ubuntu
 
-Tags: 1.6.0-alpine-regular
-SharedTags: 1.6.0-alpine
+Tags: 1.6.0-alpine
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.0/regular/alpine
 
 Tags: 1.6.0-alpine-slim
 Architectures: amd64, arm32v7, arm64v8
 Directory: Dockerfiles/1.6.0/slim/alpine
-
-Tags: 1.4.8-ubuntu-regular
-SharedTags: 1.4.8-regular, 1.4.8-ubuntu, 1.4.8, 1.4-regular, 1.4-ubuntu, 1.4
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.4.8/regular/ubuntu
-
-Tags: 1.4.8-ubuntu-slim
-SharedTags: 1.4.8-slim, 1.4-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.4.8/slim/ubuntu
-
-Tags: 1.4.8-alpine-regular
-SharedTags: 1.4.8-alpine, 1.4-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.4.8/regular/alpine
-
-Tags: 1.4.8-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.4.8/slim/alpine
-
-Tags: 1.4.6-ubuntu-regular
-SharedTags: 1.4.6-regular, 1.4.6-ubuntu, 1.4.6
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.4.6/regular/ubuntu
-
-Tags: 1.4.6-ubuntu-slim
-SharedTags: 1.4.6-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.4.6/slim/ubuntu
-
-Tags: 1.4.6-alpine-regular
-SharedTags: 1.4.6-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.4.6/regular/alpine
-
-Tags: 1.4.6-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.4.6/slim/alpine
-
-Tags: 1.4.4-ubuntu-regular
-SharedTags: 1.4.4-regular, 1.4.4-ubuntu, 1.4.4
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.4.4/regular/ubuntu
-
-Tags: 1.4.4-ubuntu-slim
-SharedTags: 1.4.4-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.4.4/slim/ubuntu
-
-Tags: 1.4.4-alpine-regular
-SharedTags: 1.4.4-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.4.4/regular/alpine
-
-Tags: 1.4.4-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.4.4/slim/alpine
-
-Tags: 1.4.2-ubuntu-regular
-SharedTags: 1.4.2-regular, 1.4.2-ubuntu, 1.4.2
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.4.2/regular/ubuntu
-
-Tags: 1.4.2-ubuntu-slim
-SharedTags: 1.4.2-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.4.2/slim/ubuntu
-
-Tags: 1.4.2-alpine-regular
-SharedTags: 1.4.2-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.4.2/regular/alpine
-
-Tags: 1.4.2-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.4.2/slim/alpine
-
-Tags: 1.4.0-ubuntu-regular
-SharedTags: 1.4.0-regular, 1.4.0-ubuntu, 1.4.0
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.4.0/regular/ubuntu
-
-Tags: 1.4.0-ubuntu-slim
-SharedTags: 1.4.0-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.4.0/slim/ubuntu
-
-Tags: 1.4.0-alpine-regular
-SharedTags: 1.4.0-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.4.0/regular/alpine
-
-Tags: 1.4.0-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.4.0/slim/alpine
-
-Tags: 1.2.12-ubuntu-regular
-SharedTags: 1.2.12-regular, 1.2.12-ubuntu, 1.2.12, 1.2-regular, 1.2-ubuntu, 1.2
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.2.12/regular/ubuntu
-
-Tags: 1.2.12-ubuntu-slim
-SharedTags: 1.2.12-slim, 1.2-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.2.12/slim/ubuntu
-
-Tags: 1.2.12-alpine-regular
-SharedTags: 1.2.12-alpine, 1.2-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.2.12/regular/alpine
-
-Tags: 1.2.12-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.2.12/slim/alpine
-
-Tags: 1.2.8-ubuntu-regular
-SharedTags: 1.2.8-regular, 1.2.8-ubuntu, 1.2.8
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.2.8/regular/ubuntu
-
-Tags: 1.2.8-ubuntu-slim
-SharedTags: 1.2.8-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.2.8/slim/ubuntu
-
-Tags: 1.2.8-alpine-regular
-SharedTags: 1.2.8-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.2.8/regular/alpine
-
-Tags: 1.2.8-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.2.8/slim/alpine
-
-Tags: 1.2.6-ubuntu-regular
-SharedTags: 1.2.6-regular, 1.2.6-ubuntu, 1.2.6
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.2.6/regular/ubuntu
-
-Tags: 1.2.6-ubuntu-slim
-SharedTags: 1.2.6-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.2.6/slim/ubuntu
-
-Tags: 1.2.6-alpine-regular
-SharedTags: 1.2.6-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.2.6/regular/alpine
-
-Tags: 1.2.6-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.2.6/slim/alpine
-
-Tags: 1.2.4-ubuntu-regular
-SharedTags: 1.2.4-regular, 1.2.4-ubuntu, 1.2.4
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.2.4/regular/ubuntu
-
-Tags: 1.2.4-ubuntu-slim
-SharedTags: 1.2.4-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.2.4/slim/ubuntu
-
-Tags: 1.2.4-alpine-regular
-SharedTags: 1.2.4-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.2.4/regular/alpine
-
-Tags: 1.2.4-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.2.4/slim/alpine
-
-Tags: 1.2.2-ubuntu-regular
-SharedTags: 1.2.2-regular, 1.2.2-ubuntu, 1.2.2
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.2.2/regular/ubuntu
-
-Tags: 1.2.2-ubuntu-slim
-SharedTags: 1.2.2-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.2.2/slim/ubuntu
-
-Tags: 1.2.2-alpine-regular
-SharedTags: 1.2.2-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.2.2/regular/alpine
-
-Tags: 1.2.2-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.2.2/slim/alpine
-
-Tags: 1.2.0-ubuntu-regular
-SharedTags: 1.2.0-regular, 1.2.0-ubuntu, 1.2.0
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.2.0/regular/ubuntu
-
-Tags: 1.2.0-ubuntu-slim
-SharedTags: 1.2.0-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.2.0/slim/ubuntu
-
-Tags: 1.2.0-alpine-regular
-SharedTags: 1.2.0-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.2.0/regular/alpine
-
-Tags: 1.2.0-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.2.0/slim/alpine
-
-Tags: 1.0.10-ubuntu-regular
-SharedTags: 1.0.10-regular, 1.0.10-ubuntu, 1.0.10, 1.0-regular, 1.0-ubuntu, 1.0
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.0.10/regular/ubuntu
-
-Tags: 1.0.10-ubuntu-slim
-SharedTags: 1.0.10-slim, 1.0-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.0.10/slim/ubuntu
-
-Tags: 1.0.10-alpine-regular
-SharedTags: 1.0.10-alpine, 1.0-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.0.10/regular/alpine
-
-Tags: 1.0.10-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.0.10/slim/alpine
-
-Tags: 1.0.8-ubuntu-regular
-SharedTags: 1.0.8-regular, 1.0.8-ubuntu, 1.0.8
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.0.8/regular/ubuntu
-
-Tags: 1.0.8-ubuntu-slim
-SharedTags: 1.0.8-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.0.8/slim/ubuntu
-
-Tags: 1.0.8-alpine-regular
-SharedTags: 1.0.8-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.0.8/regular/alpine
-
-Tags: 1.0.8-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.0.8/slim/alpine
-
-Tags: 1.0.6-ubuntu-regular
-SharedTags: 1.0.6-regular, 1.0.6-ubuntu, 1.0.6
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.0.6/regular/ubuntu
-
-Tags: 1.0.6-ubuntu-slim
-SharedTags: 1.0.6-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.0.6/slim/ubuntu
-
-Tags: 1.0.6-alpine-regular
-SharedTags: 1.0.6-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.0.6/regular/alpine
-
-Tags: 1.0.6-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.0.6/slim/alpine
-
-Tags: 1.0.4-ubuntu-regular
-SharedTags: 1.0.4-regular, 1.0.4-ubuntu, 1.0.4
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.0.4/regular/ubuntu
-
-Tags: 1.0.4-ubuntu-slim
-SharedTags: 1.0.4-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.0.4/slim/ubuntu
-
-Tags: 1.0.4-alpine-regular
-SharedTags: 1.0.4-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.0.4/regular/alpine
-
-Tags: 1.0.4-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.0.4/slim/alpine
-
-Tags: 1.0.2-ubuntu-regular
-SharedTags: 1.0.2-regular, 1.0.2-ubuntu, 1.0.2
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.0.2/regular/ubuntu
-
-Tags: 1.0.2-ubuntu-slim
-SharedTags: 1.0.2-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.0.2/slim/ubuntu
-
-Tags: 1.0.2-alpine-regular
-SharedTags: 1.0.2-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.0.2/regular/alpine
-
-Tags: 1.0.2-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.0.2/slim/alpine
-
-Tags: 1.0.0-ubuntu-regular
-SharedTags: 1.0.0-regular, 1.0.0-ubuntu, 1.0.0
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.0.0/regular/ubuntu
-
-Tags: 1.0.0-ubuntu-slim
-SharedTags: 1.0.0-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.0.0/slim/ubuntu
-
-Tags: 1.0.0-alpine-regular
-SharedTags: 1.0.0-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.0.0/regular/alpine
-
-Tags: 1.0.0-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.0.0/slim/alpine
-
-Tags: 0.20.2-ubuntu-regular
-SharedTags: 0.20.2-regular, 0.20.2-ubuntu, 0.20.2, 0.20-regular, 0.20-ubuntu, 0.20
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.20.2/regular/ubuntu
-
-Tags: 0.20.2-ubuntu-slim
-SharedTags: 0.20.2-slim, 0.20-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.20.2/slim/ubuntu
-
-Tags: 0.20.2-alpine-regular
-SharedTags: 0.20.2-alpine, 0.20-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.20.2/regular/alpine
-
-Tags: 0.20.2-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.20.2/slim/alpine
-
-Tags: 0.20.0-ubuntu-regular
-SharedTags: 0.20.0-regular, 0.20.0-ubuntu, 0.20.0
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.20.0/regular/ubuntu
-
-Tags: 0.20.0-ubuntu-slim
-SharedTags: 0.20.0-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.20.0/slim/ubuntu
-
-Tags: 0.20.0-alpine-regular
-SharedTags: 0.20.0-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.20.0/regular/alpine
-
-Tags: 0.20.0-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.20.0/slim/alpine
-
-Tags: 0.19.6-ubuntu-regular
-SharedTags: 0.19.6-regular, 0.19.6-ubuntu, 0.19.6, 0.19-regular, 0.19-ubuntu, 0.19
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.19.6/regular/ubuntu
-
-Tags: 0.19.6-ubuntu-slim
-SharedTags: 0.19.6-slim, 0.19-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.19.6/slim/ubuntu
-
-Tags: 0.19.6-alpine-regular
-SharedTags: 0.19.6-alpine, 0.19-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.19.6/regular/alpine
-
-Tags: 0.19.6-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.19.6/slim/alpine
-
-Tags: 0.19.4-ubuntu-regular
-SharedTags: 0.19.4-regular, 0.19.4-ubuntu, 0.19.4
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.19.4/regular/ubuntu
-
-Tags: 0.19.4-ubuntu-slim
-SharedTags: 0.19.4-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.19.4/slim/ubuntu
-
-Tags: 0.19.4-alpine-regular
-SharedTags: 0.19.4-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.19.4/regular/alpine
-
-Tags: 0.19.4-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.19.4/slim/alpine
-
-Tags: 0.19.2-ubuntu-regular
-SharedTags: 0.19.2-regular, 0.19.2-ubuntu, 0.19.2
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.19.2/regular/ubuntu
-
-Tags: 0.19.2-ubuntu-slim
-SharedTags: 0.19.2-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.19.2/slim/ubuntu
-
-Tags: 0.19.2-alpine-regular
-SharedTags: 0.19.2-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.19.2/regular/alpine
-
-Tags: 0.19.2-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.19.2/slim/alpine
-
-Tags: 0.19.0-ubuntu-regular
-SharedTags: 0.19.0-regular, 0.19.0-ubuntu, 0.19.0
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.19.0/regular/ubuntu
-
-Tags: 0.19.0-ubuntu-slim
-SharedTags: 0.19.0-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.19.0/slim/ubuntu
-
-Tags: 0.19.0-alpine-regular
-SharedTags: 0.19.0-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.19.0/regular/alpine
-
-Tags: 0.19.0-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.19.0/slim/alpine
-
-Tags: 0.18.0-ubuntu-regular
-SharedTags: 0.18.0-regular, 0.18.0-ubuntu, 0.18.0, 0.18-regular, 0.18-ubuntu, 0.18
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.18.0/regular/ubuntu
-
-Tags: 0.18.0-ubuntu-slim
-SharedTags: 0.18.0-slim, 0.18-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.18.0/slim/ubuntu
-
-Tags: 0.18.0-alpine-regular
-SharedTags: 0.18.0-alpine, 0.18-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.18.0/regular/alpine
-
-Tags: 0.18.0-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.18.0/slim/alpine
-
-Tags: 0.17.2-ubuntu-regular
-SharedTags: 0.17.2-regular, 0.17.2-ubuntu, 0.17.2, 0.17-regular, 0.17-ubuntu, 0.17
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.17.2/regular/ubuntu
-
-Tags: 0.17.2-ubuntu-slim
-SharedTags: 0.17.2-slim, 0.17-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.17.2/slim/ubuntu
-
-Tags: 0.17.2-alpine-regular
-SharedTags: 0.17.2-alpine, 0.17-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.17.2/regular/alpine
-
-Tags: 0.17.2-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.17.2/slim/alpine
-
-Tags: 0.17.0-ubuntu-regular
-SharedTags: 0.17.0-regular, 0.17.0-ubuntu, 0.17.0
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.17.0/regular/ubuntu
-
-Tags: 0.17.0-ubuntu-slim
-SharedTags: 0.17.0-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.17.0/slim/ubuntu
-
-Tags: 0.17.0-alpine-regular
-SharedTags: 0.17.0-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.17.0/regular/alpine
-
-Tags: 0.17.0-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.17.0/slim/alpine
-
-Tags: 0.16.0-ubuntu-regular
-SharedTags: 0.16.0-regular, 0.16.0-ubuntu, 0.16.0, 0.16-regular, 0.16-ubuntu, 0.16
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.16.0/regular/ubuntu
-
-Tags: 0.16.0-ubuntu-slim
-SharedTags: 0.16.0-slim, 0.16-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.16.0/slim/ubuntu
-
-Tags: 0.16.0-alpine-regular
-SharedTags: 0.16.0-alpine, 0.16-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.16.0/regular/alpine
-
-Tags: 0.16.0-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.16.0/slim/alpine
-
-Tags: 0.15.2-ubuntu-regular
-SharedTags: 0.15.2-regular, 0.15.2-ubuntu, 0.15.2, 0.15-regular, 0.15-ubuntu, 0.15
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.15.2/regular/ubuntu
-
-Tags: 0.15.2-ubuntu-slim
-SharedTags: 0.15.2-slim, 0.15-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.15.2/slim/ubuntu
-
-Tags: 0.15.2-alpine-regular
-SharedTags: 0.15.2-alpine, 0.15-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.15.2/regular/alpine
-
-Tags: 0.15.2-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.15.2/slim/alpine
-
-Tags: 0.15.0-ubuntu-regular
-SharedTags: 0.15.0-regular, 0.15.0-ubuntu, 0.15.0
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.15.0/regular/ubuntu
-
-Tags: 0.15.0-ubuntu-slim
-SharedTags: 0.15.0-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.15.0/slim/ubuntu
-
-Tags: 0.15.0-alpine-regular
-SharedTags: 0.15.0-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.15.0/regular/alpine
-
-Tags: 0.15.0-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.15.0/slim/alpine
-
-Tags: 0.14.3-ubuntu-regular
-SharedTags: 0.14.3-regular, 0.14.3-ubuntu, 0.14.3, 0.14-regular, 0.14-ubuntu, 0.14
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.14.3/regular/ubuntu
-
-Tags: 0.14.3-ubuntu-slim
-SharedTags: 0.14.3-slim, 0.14-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.14.3/slim/ubuntu
-
-Tags: 0.14.3-alpine-regular
-SharedTags: 0.14.3-alpine, 0.14-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.14.3/regular/alpine
-
-Tags: 0.14.3-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.14.3/slim/alpine
-
-Tags: 0.14.2-ubuntu-regular
-SharedTags: 0.14.2-regular, 0.14.2-ubuntu, 0.14.2
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.14.2/regular/ubuntu
-
-Tags: 0.14.2-ubuntu-slim
-SharedTags: 0.14.2-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.14.2/slim/ubuntu
-
-Tags: 0.14.2-alpine-regular
-SharedTags: 0.14.2-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.14.2/regular/alpine
-
-Tags: 0.14.2-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.14.2/slim/alpine
-
-Tags: 0.14.0-ubuntu-regular
-SharedTags: 0.14.0-regular, 0.14.0-ubuntu, 0.14.0
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.14.0/regular/ubuntu
-
-Tags: 0.14.0-ubuntu-slim
-SharedTags: 0.14.0-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.14.0/slim/ubuntu
-
-Tags: 0.14.0-alpine-regular
-SharedTags: 0.14.0-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.14.0/regular/alpine
-
-Tags: 0.14.0-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.14.0/slim/alpine
-
-Tags: 0.13.0-ubuntu-regular
-SharedTags: 0.13.0-regular, 0.13.0-ubuntu, 0.13.0, 0.13-regular, 0.13-ubuntu, 0.13
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.13.0/regular/ubuntu
-
-Tags: 0.13.0-ubuntu-slim
-SharedTags: 0.13.0-slim, 0.13-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.13.0/slim/ubuntu
-
-Tags: 0.13.0-alpine-regular
-SharedTags: 0.13.0-alpine, 0.13-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.13.0/regular/alpine
-
-Tags: 0.13.0-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/0.13.0/slim/alpine
