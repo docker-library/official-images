@@ -37,7 +37,7 @@ jobs:
           git clone https://github.com/fedora-cloud/docker-brew-fedora.git /tmp/docker-brew-fedora
           
           # Loop through Fedora versions 41, 42, 43, and 44
-          for version in 41 42 43 44; do
+          for version in 42 43 44 45; do
             echo "Processing Fedora version $version..."
             cd /tmp/docker-brew-fedora
             git checkout $version
