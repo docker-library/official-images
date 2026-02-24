@@ -1,374 +1,118 @@
-# this file is generated via https://github.com/moigagoo/dhbp.git
-
-Maintainers: Constantine Molchanov <moigagoo@duck.com> (@moigagoo),
-             Akito <the@akito.ooo> (@theAkito)
+Maintainers: Constantine Molchanov (@moigagoo)
 GitRepo: https://github.com/nim-lang/docker-images.git
-GitCommit: fba3ff923ee8f4d96b1275a4ad4145527e9312c6
 
-Tags: latest, 2.2.6, 2.2, 2
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.2.6/regular/ubuntu
+Tags: 2.2.8, 2.2, 2, latest
+GitCommit: c85d786efee1f8c3d579419e9a4aa3e7e168eac6
+Directory: dockerfiles/2.2.8
+Architectures: amd64, arm64v8, arm32v7
 
-Tags: slim, 2.2.6-slim, 2.2-slim, 2-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.2.6/slim/ubuntu
-
-Tags: alpine, 2.2.6-alpine, 2.2-alpine, 2-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.2.6/regular/alpine
-
-Tags: alpine-slim, 2.2.6-alpine-slim, 2.2-alpine-slim, 2-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.2.6/slim/alpine
+Tags: 2.2.6
+GitCommit: c85d786efee1f8c3d579419e9a4aa3e7e168eac6
+Directory: dockerfiles/2.2.6
+Architectures: amd64, arm64v8, arm32v7
 
 Tags: 2.2.4
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.2.4/regular/ubuntu
-
-Tags: 2.2.4-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.2.4/slim/ubuntu
-
-Tags: 2.2.4-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.2.4/regular/alpine
-
-Tags: 2.2.4-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.2.4/slim/alpine
+GitCommit: c85d786efee1f8c3d579419e9a4aa3e7e168eac6
+Directory: dockerfiles/2.2.4
+Architectures: amd64, arm64v8, arm32v7
 
 Tags: 2.2.2
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.2.2/regular/ubuntu
-
-Tags: 2.2.2-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.2.2/slim/ubuntu
-
-Tags: 2.2.2-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.2.2/regular/alpine
-
-Tags: 2.2.2-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.2.2/slim/alpine
+GitCommit: c85d786efee1f8c3d579419e9a4aa3e7e168eac6
+Directory: dockerfiles/2.2.2
+Architectures: amd64, arm64v8, arm32v7
 
 Tags: 2.2.0
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.2.0/regular/ubuntu
-
-Tags: 2.2.0-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.2.0/slim/ubuntu
-
-Tags: 2.2.0-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.2.0/regular/alpine
-
-Tags: 2.2.0-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.2.0/slim/alpine
+GitCommit: c85d786efee1f8c3d579419e9a4aa3e7e168eac6
+Directory: dockerfiles/2.2.0
+Architectures: amd64, arm64v8, arm32v7
 
 Tags: 2.0.14, 2.0
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.0.14/regular/ubuntu
-
-Tags: 2.0.14-slim, 2.0-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.0.14/slim/ubuntu
-
-Tags: 2.0.14-alpine, 2.0-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.0.14/regular/alpine
-
-Tags: 2.0.14-alpine-slim, 2.0-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.0.14/slim/alpine
+GitCommit: c85d786efee1f8c3d579419e9a4aa3e7e168eac6
+Directory: dockerfiles/2.0.14
+Architectures: amd64, arm64v8, arm32v7
 
 Tags: 2.0.12
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.0.12/regular/ubuntu
-
-Tags: 2.0.12-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.0.12/slim/ubuntu
-
-Tags: 2.0.12-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.0.12/regular/alpine
-
-Tags: 2.0.12-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.0.12/slim/alpine
+GitCommit: c85d786efee1f8c3d579419e9a4aa3e7e168eac6
+Directory: dockerfiles/2.0.12
+Architectures: amd64, arm64v8, arm32v7
 
 Tags: 2.0.10
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.0.10/regular/ubuntu
-
-Tags: 2.0.10-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.0.10/slim/ubuntu
-
-Tags: 2.0.10-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.0.10/regular/alpine
-
-Tags: 2.0.10-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.0.10/slim/alpine
+GitCommit: c85d786efee1f8c3d579419e9a4aa3e7e168eac6
+Directory: dockerfiles/2.0.10
+Architectures: amd64, arm64v8, arm32v7
 
 Tags: 2.0.8
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.0.8/regular/ubuntu
-
-Tags: 2.0.8-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.0.8/slim/ubuntu
-
-Tags: 2.0.8-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.0.8/regular/alpine
-
-Tags: 2.0.8-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.0.8/slim/alpine
+GitCommit: c85d786efee1f8c3d579419e9a4aa3e7e168eac6
+Directory: dockerfiles/2.0.8
+Architectures: amd64, arm64v8, arm32v7
 
 Tags: 2.0.6
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.0.6/regular/ubuntu
-
-Tags: 2.0.6-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.0.6/slim/ubuntu
-
-Tags: 2.0.6-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.0.6/regular/alpine
-
-Tags: 2.0.6-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.0.6/slim/alpine
+GitCommit: c85d786efee1f8c3d579419e9a4aa3e7e168eac6
+Directory: dockerfiles/2.0.6
+Architectures: amd64, arm64v8, arm32v7
 
 Tags: 2.0.4
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.0.4/regular/ubuntu
-
-Tags: 2.0.4-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.0.4/slim/ubuntu
-
-Tags: 2.0.4-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.0.4/regular/alpine
-
-Tags: 2.0.4-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.0.4/slim/alpine
+GitCommit: c85d786efee1f8c3d579419e9a4aa3e7e168eac6
+Directory: dockerfiles/2.0.4
+Architectures: amd64, arm64v8, arm32v7
 
 Tags: 2.0.2
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.0.2/regular/ubuntu
-
-Tags: 2.0.2-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.0.2/slim/ubuntu
-
-Tags: 2.0.2-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.0.2/regular/alpine
-
-Tags: 2.0.2-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.0.2/slim/alpine
+GitCommit: c85d786efee1f8c3d579419e9a4aa3e7e168eac6
+Directory: dockerfiles/2.0.2
+Architectures: amd64, arm64v8, arm32v7
 
 Tags: 2.0.0
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.0.0/regular/ubuntu
+GitCommit: c85d786efee1f8c3d579419e9a4aa3e7e168eac6
+Directory: dockerfiles/2.0.0
+Architectures: amd64, arm64v8, arm32v7
 
-Tags: 2.0.0-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.0.0/slim/ubuntu
-
-Tags: 2.0.0-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.0.0/regular/alpine
-
-Tags: 2.0.0-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/2.0.0/slim/alpine
-
-Tags: 1.6.20, 1, 1.6
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.20/regular/ubuntu
-
-Tags: 1.6.20-slim, 1-slim, 1.6-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.20/slim/ubuntu
-
-Tags: 1.6.20-alpine, 1-alpine, 1.6-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.20/regular/alpine
-
-Tags: 1.6.20-alpine-slim, 1-alpine-slim, 1.6-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.20/slim/alpine
-
-Tags: 1.6.18
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.18/regular/ubuntu
-
-Tags: 1.6.18-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.18/slim/ubuntu
-
-Tags: 1.6.18-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.18/regular/alpine
-
-Tags: 1.6.18-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.18/slim/alpine
+Tags: 1.6.18, 1.6, 1
+GitCommit: c85d786efee1f8c3d579419e9a4aa3e7e168eac6
+Directory: dockerfiles/1.6.18
+Architectures: amd64, arm64v8, arm32v7
 
 Tags: 1.6.16
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.16/regular/ubuntu
-
-Tags: 1.6.16-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.16/slim/ubuntu
-
-Tags: 1.6.16-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.16/regular/alpine
-
-Tags: 1.6.16-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.16/slim/alpine
+GitCommit: c85d786efee1f8c3d579419e9a4aa3e7e168eac6
+Directory: dockerfiles/1.6.16
+Architectures: amd64, arm64v8, arm32v7
 
 Tags: 1.6.14
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.14/regular/ubuntu
-
-Tags: 1.6.14-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.14/slim/ubuntu
-
-Tags: 1.6.14-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.14/regular/alpine
-
-Tags: 1.6.14-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.14/slim/alpine
+GitCommit: c85d786efee1f8c3d579419e9a4aa3e7e168eac6
+Directory: dockerfiles/1.6.14
+Architectures: amd64, arm64v8, arm32v7
 
 Tags: 1.6.12
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.12/regular/ubuntu
-
-Tags: 1.6.12-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.12/slim/ubuntu
-
-Tags: 1.6.12-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.12/regular/alpine
-
-Tags: 1.6.12-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.12/slim/alpine
+GitCommit: c85d786efee1f8c3d579419e9a4aa3e7e168eac6
+Directory: dockerfiles/1.6.12
+Architectures: amd64, arm64v8, arm32v7
 
 Tags: 1.6.10
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.10/regular/ubuntu
-
-Tags: 1.6.10-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.10/slim/ubuntu
-
-Tags: 1.6.10-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.10/regular/alpine
-
-Tags: 1.6.10-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.10/slim/alpine
+GitCommit: c85d786efee1f8c3d579419e9a4aa3e7e168eac6
+Directory: dockerfiles/1.6.10
+Architectures: amd64, arm64v8, arm32v7
 
 Tags: 1.6.8
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.8/regular/ubuntu
-
-Tags: 1.6.8-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.8/slim/ubuntu
-
-Tags: 1.6.8-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.8/regular/alpine
-
-Tags: 1.6.8-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.8/slim/alpine
+GitCommit: c85d786efee1f8c3d579419e9a4aa3e7e168eac6
+Directory: dockerfiles/1.6.8
+Architectures: amd64, arm64v8, arm32v7
 
 Tags: 1.6.6
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.6/regular/ubuntu
-
-Tags: 1.6.6-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.6/slim/ubuntu
-
-Tags: 1.6.6-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.6/regular/alpine
-
-Tags: 1.6.6-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.6/slim/alpine
+GitCommit: c85d786efee1f8c3d579419e9a4aa3e7e168eac6
+Directory: dockerfiles/1.6.6
+Architectures: amd64, arm64v8, arm32v7
 
 Tags: 1.6.4
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.4/regular/ubuntu
-
-Tags: 1.6.4-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.4/slim/ubuntu
-
-Tags: 1.6.4-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.4/regular/alpine
-
-Tags: 1.6.4-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.4/slim/alpine
+GitCommit: c85d786efee1f8c3d579419e9a4aa3e7e168eac6
+Directory: dockerfiles/1.6.4
+Architectures: amd64, arm64v8, arm32v7
 
 Tags: 1.6.2
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.2/regular/ubuntu
-
-Tags: 1.6.2-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.2/slim/ubuntu
-
-Tags: 1.6.2-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.2/regular/alpine
-
-Tags: 1.6.2-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.2/slim/alpine
+GitCommit: c85d786efee1f8c3d579419e9a4aa3e7e168eac6
+Directory: dockerfiles/1.6.2
+Architectures: amd64, arm64v8, arm32v7
 
 Tags: 1.6.0
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.0/regular/ubuntu
+GitCommit: c85d786efee1f8c3d579419e9a4aa3e7e168eac6
+Directory: dockerfiles/1.6.0
+Architectures: amd64, arm64v8, arm32v7
 
-Tags: 1.6.0-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.0/slim/ubuntu
-
-Tags: 1.6.0-alpine
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.0/regular/alpine
-
-Tags: 1.6.0-alpine-slim
-Architectures: amd64, arm32v7, arm64v8
-Directory: Dockerfiles/1.6.0/slim/alpine
