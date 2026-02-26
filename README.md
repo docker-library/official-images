@@ -399,11 +399,13 @@ The first entry is the "global" metadata for the image. The only required field 
 	             Anne Smith <asmith@example.com> (@example-asmith)
 	GitRepo: https://github.com/example/docker-example.git
 	GitCommit: deadbeefdeadbeefdeadbeefdeadbeefdeadbeef
+	Builder: classic
 	
 	# this is also a comment, and will also be ignored
 	
 	Tags: 1.2.3, 1.2, 1, latest
 	Directory: 1
+	Builder: oci-import
 	
 	Tags: 2.0-rc1, 2.0-rc, 2-rc, rc
 	GitRepo: https://github.com/example/docker-example-rc.git
@@ -411,6 +413,7 @@ The first entry is the "global" metadata for the image. The only required field 
 	GitCommit: beefdeadbeefdeadbeefdeadbeefdeadbeefdead
 	Directory: 2
 	File: Dockerfile-to-use
+	Builder: buildkit
 
 Bashbrew will fetch code out of the Git repository (`GitRepo`) at the commit specified (`GitCommit`). If the commit referenced is not available by fetching `master` of the associated `GitRepo`, it becomes necessary to supply a value for `GitFetch` in order to tell Bashbrew what ref to fetch in order to get the commit necessary.
 
