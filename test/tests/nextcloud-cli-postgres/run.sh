@@ -16,6 +16,7 @@ dbUsr="test-$RANDOM-db"
 # Create an instance of the container-under-test
 # not setting POSTGRES_DB due to https://github.com/nextcloud/docker/issues/345
 dbCid="$(docker run -d \
+	--tmpfs /var/lib/postgresql \
 	-e POSTGRES_USER="$dbUsr" \
 	-e POSTGRES_PASSWORD="$dbPass" \
 	-e POSTGRES_DB="$dbName" \
@@ -24,6 +25,7 @@ trap "docker rm -vf $dbCid > /dev/null" EXIT
 # NEXTCLOUD_ADMIN_USER has to be set to something that does not require escaping: https://github.com/docker-library/official-images/pull/6252#issuecomment-520095703
 cid="$(docker run -d \
 	--link "$dbCid":db \
+	--tmpfs /var/www/html \
 	-e POSTGRES_HOST='db' \
 	-e POSTGRES_USER="$dbUsr" \
 	-e POSTGRES_PASSWORD="$dbPass" \
