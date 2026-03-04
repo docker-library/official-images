@@ -7,12 +7,22 @@ Maintainers: The Apache Solr Project <dev@solr.apache.org> (@asfbot),
 GitRepo: https://github.com/apache/solr-docker.git
 GitFetch: refs/heads/main
 
-Tags: 9.10.1, 9.10, 9, latest
+Tags: 10.0.0, 10.0, 10, latest
+Architectures: amd64, arm64v8, ppc64le, riscv64, s390x
+GitCommit: 884b2e6692174ea09cdb5183b8dd585760b5e9fb
+Directory: 10.0
+
+Tags: 10.0.0-slim, 10.0-slim, 10-slim, slim
+Architectures: amd64, arm64v8, ppc64le, riscv64, s390x
+GitCommit: 884b2e6692174ea09cdb5183b8dd585760b5e9fb
+Directory: 10.0-slim
+
+Tags: 9.10.1, 9.10, 9
 Architectures: amd64, arm64v8, ppc64le, s390x
 GitCommit: 9c4aa799df40c506a48bc487cc6b4aaed24f9149
 Directory: 9.10
 
-Tags: 9.10.1-slim, 9.10-slim, 9-slim, slim
+Tags: 9.10.1-slim, 9.10-slim, 9-slim
 Architectures: amd64, arm64v8, ppc64le, s390x
 GitCommit: 9c4aa799df40c506a48bc487cc6b4aaed24f9149
 Directory: 9.10-slim
