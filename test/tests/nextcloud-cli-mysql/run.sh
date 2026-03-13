@@ -15,6 +15,7 @@ dbUsr="test-$RANDOM-db"
 
 # Create an instance of the container-under-test
 dbCid="$(docker run -d \
+	--tmpfs /var/lib/mysql \
 	-e MYSQL_RANDOM_ROOT_PASSWORD=yes \
 	-e MYSQL_USER="$dbUsr" \
 	-e MYSQL_PASSWORD="$dbPass" \
@@ -23,6 +24,7 @@ dbCid="$(docker run -d \
 trap "docker rm -vf $dbCid > /dev/null" EXIT
 cid="$(docker run -d \
 	--link "$dbCid":db \
+	--tmpfs /var/www/html \
 	-e MYSQL_HOST="db" \
 	-e MYSQL_USER="$dbUsr" \
 	-e MYSQL_PASSWORD="$dbPass" \
