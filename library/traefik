@@ -1,61 +1,103 @@
 Maintainers: Julien Salleyron <julien@traefik.io> (@juliens), Romain Tribotté <romain.tribotte@traefik.io> (@rtribotte), Michael Matur <michael@traefik.io> (@mmatur), Kevin Pollet <kevin.pollet@traefik.io> (@kevinpollet), Tom Moulard <tom.moulard@traefik.io> (@tommoulard)
 
-Tags: v3.7.0-ea.1-windowsservercore-ltsc2022, 3.7.0-ea.1-windowsservercore-ltsc2022, langres-windowsservercore-ltsc2022
+Tags: v3.7.0-ea.2-windowsservercore-ltsc2025, 3.7.0-ea.2-windowsservercore-ltsc2025, langres-windowsservercore-ltsc2025
 Architectures: windows-amd64
 GitRepo: https://github.com/traefik/traefik-library-image.git
-GitCommit: 01d8d8ba9f04026f77b424ddf13d98ab6ddc5777
+GitCommit: aaf0939d3e00b013fda3e52b191270491af90227
+Directory: v3.7/windows/servercore-ltsc2025
+Constraints: windowsservercore-ltsc2025
+
+Tags: v3.7.0-ea.2-windowsservercore-ltsc2022, 3.7.0-ea.2-windowsservercore-ltsc2022, langres-windowsservercore-ltsc2022
+Architectures: windows-amd64
+GitRepo: https://github.com/traefik/traefik-library-image.git
+GitCommit: aaf0939d3e00b013fda3e52b191270491af90227
 Directory: v3.7/windows/servercore-ltsc2022
 Constraints: windowsservercore-ltsc2022
 
-Tags: v3.7.0-ea.1-nanoserver-ltsc2022, 3.7.0-ea.1-nanoserver-ltsc2022, langres-nanoserver-ltsc2022
+Tags: v3.7.0-ea.2-nanoserver-ltsc2025, 3.7.0-ea.2-nanoserver-ltsc2025, langres-nanoserver-ltsc2025
 Architectures: windows-amd64
 GitRepo: https://github.com/traefik/traefik-library-image.git
-GitCommit: 01d8d8ba9f04026f77b424ddf13d98ab6ddc5777
+GitCommit: aaf0939d3e00b013fda3e52b191270491af90227
+Directory: v3.7/windows/nanoserver-ltsc2025
+Constraints: nanoserver-ltsc2025, windowsservercore-ltsc2025
+
+Tags: v3.7.0-ea.2-nanoserver-ltsc2022, 3.7.0-ea.2-nanoserver-ltsc2022, langres-nanoserver-ltsc2022
+Architectures: windows-amd64
+GitRepo: https://github.com/traefik/traefik-library-image.git
+GitCommit: aaf0939d3e00b013fda3e52b191270491af90227
 Directory: v3.7/windows/nanoserver-ltsc2022
 Constraints: nanoserver-ltsc2022, windowsservercore-ltsc2022
 
-Tags: v3.7.0-ea.1, 3.7.0-ea.1, langres
+Tags: v3.7.0-ea.2, 3.7.0-ea.2, langres
 Architectures: amd64, arm32v6, arm64v8, ppc64le, riscv64, s390x
 GitRepo: https://github.com/traefik/traefik-library-image.git
-GitCommit: 01d8d8ba9f04026f77b424ddf13d98ab6ddc5777
+GitCommit: aaf0939d3e00b013fda3e52b191270491af90227
 Directory: v3.7/alpine
 
-Tags: v3.6.10-windowsservercore-ltsc2022, 3.6.10-windowsservercore-ltsc2022, v3.6-windowsservercore-ltsc2022, 3.6-windowsservercore-ltsc2022, v3-windowsservercore-ltsc2022, 3-windowsservercore-ltsc2022, ramequin-windowsservercore-ltsc2022, windowsservercore-ltsc2022
+Tags: v3.6.11-windowsservercore-ltsc2025, 3.6.11-windowsservercore-ltsc2025, v3.6-windowsservercore-ltsc2025, 3.6-windowsservercore-ltsc2025, v3-windowsservercore-ltsc2025, 3-windowsservercore-ltsc2025, ramequin-windowsservercore-ltsc2025, windowsservercore-ltsc2025
 Architectures: windows-amd64
 GitRepo: https://github.com/traefik/traefik-library-image.git
-GitCommit: a85566765999287df65055c129bf330d40e68d37
+GitCommit: bbef3bce0753e0d86008d47785f707d79dddd970
+Directory: v3.6/windows/servercore-ltsc2025
+Constraints: windowsservercore-ltsc2025
+
+Tags: v3.6.11-windowsservercore-ltsc2022, 3.6.11-windowsservercore-ltsc2022, v3.6-windowsservercore-ltsc2022, 3.6-windowsservercore-ltsc2022, v3-windowsservercore-ltsc2022, 3-windowsservercore-ltsc2022, ramequin-windowsservercore-ltsc2022, windowsservercore-ltsc2022
+Architectures: windows-amd64
+GitRepo: https://github.com/traefik/traefik-library-image.git
+GitCommit: bbef3bce0753e0d86008d47785f707d79dddd970
 Directory: v3.6/windows/servercore-ltsc2022
 Constraints: windowsservercore-ltsc2022
 
-Tags: v3.6.10-nanoserver-ltsc2022, 3.6.10-nanoserver-ltsc2022, v3.6-nanoserver-ltsc2022, 3.6-nanoserver-ltsc2022, v3-nanoserver-ltsc2022, 3-nanoserver-ltsc2022, ramequin-nanoserver-ltsc2022, nanoserver-ltsc2022
+Tags: v3.6.11-nanoserver-ltsc2025, 3.6.11-nanoserver-ltsc2025, v3.6-nanoserver-ltsc2025, 3.6-nanoserver-ltsc2025, v3-nanoserver-ltsc2025, 3-nanoserver-ltsc2025, ramequin-nanoserver-ltsc2025, nanoserver-ltsc2025
 Architectures: windows-amd64
 GitRepo: https://github.com/traefik/traefik-library-image.git
-GitCommit: a85566765999287df65055c129bf330d40e68d37
+GitCommit: bbef3bce0753e0d86008d47785f707d79dddd970
+Directory: v3.6/windows/nanoserver-ltsc2025
+Constraints: nanoserver-ltsc2025, windowsservercore-ltsc2025
+
+Tags: v3.6.11-nanoserver-ltsc2022, 3.6.11-nanoserver-ltsc2022, v3.6-nanoserver-ltsc2022, 3.6-nanoserver-ltsc2022, v3-nanoserver-ltsc2022, 3-nanoserver-ltsc2022, ramequin-nanoserver-ltsc2022, nanoserver-ltsc2022
+Architectures: windows-amd64
+GitRepo: https://github.com/traefik/traefik-library-image.git
+GitCommit: bbef3bce0753e0d86008d47785f707d79dddd970
 Directory: v3.6/windows/nanoserver-ltsc2022
 Constraints: nanoserver-ltsc2022, windowsservercore-ltsc2022
 
-Tags: v3.6.10, 3.6.10, v3.6, 3.6, v3, 3, ramequin, latest
+Tags: v3.6.11, 3.6.11, v3.6, 3.6, v3, 3, ramequin, latest
 Architectures: amd64, arm32v6, arm64v8, ppc64le, riscv64, s390x
 GitRepo: https://github.com/traefik/traefik-library-image.git
-GitCommit: a85566765999287df65055c129bf330d40e68d37
+GitCommit: bbef3bce0753e0d86008d47785f707d79dddd970
 Directory: v3.6/alpine
 
-Tags: v2.11.40-windowsservercore-ltsc2022, 2.11.40-windowsservercore-ltsc2022, v2.11-windowsservercore-ltsc2022, 2.11-windowsservercore-ltsc2022, v2-windowsservercore-ltsc2022, 2-windowsservercore-ltsc2022, mimolette-windowsservercore-ltsc2022
+Tags: v2.11.41-windowsservercore-ltsc2025, 2.11.41-windowsservercore-ltsc2025, v2.11-windowsservercore-ltsc2025, 2.11-windowsservercore-ltsc2025, v2-windowsservercore-ltsc2025, 2-windowsservercore-ltsc2025, mimolette-windowsservercore-ltsc2025
 Architectures: windows-amd64
 GitRepo: https://github.com/traefik/traefik-library-image.git
-GitCommit: 3cad1b7774f9b975ef9f885c8fa8714b06ad0e00
+GitCommit: efa1d70ea03d69d6b40fb5163d55c946b166916d
+Directory: v2.11/windows/servercore-ltsc2025
+Constraints: windowsservercore-ltsc2025
+
+Tags: v2.11.41-windowsservercore-ltsc2022, 2.11.41-windowsservercore-ltsc2022, v2.11-windowsservercore-ltsc2022, 2.11-windowsservercore-ltsc2022, v2-windowsservercore-ltsc2022, 2-windowsservercore-ltsc2022, mimolette-windowsservercore-ltsc2022
+Architectures: windows-amd64
+GitRepo: https://github.com/traefik/traefik-library-image.git
+GitCommit: efa1d70ea03d69d6b40fb5163d55c946b166916d
 Directory: v2.11/windows/servercore-ltsc2022
 Constraints: windowsservercore-ltsc2022
 
-Tags: v2.11.40-nanoserver-ltsc2022, 2.11.40-nanoserver-ltsc2022, v2.11-nanoserver-ltsc2022, 2.11-nanoserver-ltsc2022, v2-nanoserver-ltsc2022, 2-nanoserver-ltsc2022, mimolette-nanoserver-ltsc2022
+Tags: v2.11.41-nanoserver-ltsc2025, 2.11.41-nanoserver-ltsc2025, v2.11-nanoserver-ltsc2025, 2.11-nanoserver-ltsc2025, v2-nanoserver-ltsc2025, 2-nanoserver-ltsc2025, mimolette-nanoserver-ltsc2025
 Architectures: windows-amd64
 GitRepo: https://github.com/traefik/traefik-library-image.git
-GitCommit: 3cad1b7774f9b975ef9f885c8fa8714b06ad0e00
+GitCommit: efa1d70ea03d69d6b40fb5163d55c946b166916d
+Directory: v2.11/windows/nanoserver-ltsc2025
+Constraints: nanoserver-ltsc2025, windowsservercore-ltsc2025
+
+Tags: v2.11.41-nanoserver-ltsc2022, 2.11.41-nanoserver-ltsc2022, v2.11-nanoserver-ltsc2022, 2.11-nanoserver-ltsc2022, v2-nanoserver-ltsc2022, 2-nanoserver-ltsc2022, mimolette-nanoserver-ltsc2022
+Architectures: windows-amd64
+GitRepo: https://github.com/traefik/traefik-library-image.git
+GitCommit: efa1d70ea03d69d6b40fb5163d55c946b166916d
 Directory: v2.11/windows/nanoserver-ltsc2022
 Constraints: nanoserver-ltsc2022, windowsservercore-ltsc2022
 
-Tags: v2.11.40, 2.11.40, v2.11, 2.11, v2, 2, mimolette
+Tags: v2.11.41, 2.11.41, v2.11, 2.11, v2, 2, mimolette
 Architectures: amd64, arm32v6, arm64v8, ppc64le, riscv64, s390x
 GitRepo: https://github.com/traefik/traefik-library-image.git
-GitCommit: 3cad1b7774f9b975ef9f885c8fa8714b06ad0e00
+GitCommit: efa1d70ea03d69d6b40fb5163d55c946b166916d
 Directory: v2.11/alpine
