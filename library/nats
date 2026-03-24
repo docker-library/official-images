@@ -4,68 +4,47 @@ Maintainers: Derek Collison <derek@synadia.com> (@derekcollison),
              Neil Twigg <neil@synadia.com> (@neilalexander),
              Phil Pennock <pdp@synadia.com> (@philpennock)
 GitRepo: https://github.com/nats-io/nats-docker.git
-GitCommit: d2540cc8734b095c223372c5fda2ec4d069a1978
+GitCommit: 245d76e3af48c3bfa912bfc53afecfc7a8b7d3d7
 GitFetch: refs/heads/main
 
-Tags: 2.12.5-alpine3.22, 2.12-alpine3.22, 2-alpine3.22, alpine3.22, 2.12.5-alpine, 2.12-alpine, 2-alpine, alpine
+Tags: 2.12.6-alpine3.22, 2.12-alpine3.22, 2-alpine3.22, alpine3.22, 2.12.6-alpine, 2.12-alpine, 2-alpine, alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, s390x, ppc64le
 Directory: 2.12.x/alpine3.22
 
-Tags: 2.12.5-scratch, 2.12-scratch, 2-scratch, scratch, 2.12.5-linux, 2.12-linux, 2-linux, linux
-SharedTags: 2.12.5, 2.12, 2, latest
+Tags: 2.12.6-scratch, 2.12-scratch, 2-scratch, scratch, 2.12.6-linux, 2.12-linux, 2-linux, linux
+SharedTags: 2.12.6, 2.12, 2, latest
 Architectures: amd64, arm32v6, arm32v7, arm64v8, s390x, ppc64le
 Directory: 2.12.x/scratch
 
-Tags: 2.12.5-windowsservercore-ltsc2022, 2.12-windowsservercore-ltsc2022, 2-windowsservercore-ltsc2022, windowsservercore-ltsc2022
-SharedTags: 2.12.5-windowsservercore, 2.12-windowsservercore, 2-windowsservercore, windowsservercore
+Tags: 2.12.6-windowsservercore-ltsc2022, 2.12-windowsservercore-ltsc2022, 2-windowsservercore-ltsc2022, windowsservercore-ltsc2022
+SharedTags: 2.12.6-windowsservercore, 2.12-windowsservercore, 2-windowsservercore, windowsservercore
 Architectures: windows-amd64
 Directory: 2.12.x/windowsservercore-ltsc2022
 Constraints: windowsservercore-ltsc2022
 
-Tags: 2.12.5-nanoserver-ltsc2022, 2.12-nanoserver-ltsc2022, 2-nanoserver-ltsc2022, nanoserver-ltsc2022
-SharedTags: 2.12.5-nanoserver, 2.12-nanoserver, 2-nanoserver, nanoserver, 2.12.5, 2.12, 2, latest
+Tags: 2.12.6-nanoserver-ltsc2022, 2.12-nanoserver-ltsc2022, 2-nanoserver-ltsc2022, nanoserver-ltsc2022
+SharedTags: 2.12.6-nanoserver, 2.12-nanoserver, 2-nanoserver, nanoserver, 2.12.6, 2.12, 2, latest
 Architectures: windows-amd64
 Directory: 2.12.x/nanoserver-ltsc2022
 Constraints: nanoserver-ltsc2022, windowsservercore-ltsc2022
 
-Tags: 2.11.14-alpine3.22, 2.11-alpine3.22, 2.11.14-alpine, 2.11-alpine
+Tags: 2.11.15-alpine3.22, 2.11-alpine3.22, 2.11.15-alpine, 2.11-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, s390x, ppc64le
 Directory: 2.11.x/alpine3.22
 
-Tags: 2.11.14-scratch, 2.11-scratch, 2.11.14-linux, 2.11-linux
-SharedTags: 2.11.14, 2.11
+Tags: 2.11.15-scratch, 2.11-scratch, 2.11.15-linux, 2.11-linux
+SharedTags: 2.11.15, 2.11
 Architectures: amd64, arm32v6, arm32v7, arm64v8, s390x, ppc64le
 Directory: 2.11.x/scratch
 
-Tags: 2.11.14-windowsservercore-ltsc2022, 2.11-windowsservercore-ltsc2022
-SharedTags: 2.11.14-windowsservercore, 2.11-windowsservercore
+Tags: 2.11.15-windowsservercore-ltsc2022, 2.11-windowsservercore-ltsc2022
+SharedTags: 2.11.15-windowsservercore, 2.11-windowsservercore
 Architectures: windows-amd64
 Directory: 2.11.x/windowsservercore-ltsc2022
 Constraints: windowsservercore-ltsc2022
 
-Tags: 2.11.14-nanoserver-ltsc2022, 2.11-nanoserver-ltsc2022
-SharedTags: 2.11.14-nanoserver, 2.11-nanoserver, 2.11.14, 2.11
+Tags: 2.11.15-nanoserver-ltsc2022, 2.11-nanoserver-ltsc2022
+SharedTags: 2.11.15-nanoserver, 2.11-nanoserver, 2.11.15, 2.11
 Architectures: windows-amd64
 Directory: 2.11.x/nanoserver-ltsc2022
-Constraints: nanoserver-ltsc2022, windowsservercore-ltsc2022
-
-Tags: 2.10.29-alpine3.22, 2.10-alpine3.22, 2.10.29-alpine, 2.10-alpine
-Architectures: amd64, arm32v6, arm32v7, arm64v8, s390x, ppc64le
-Directory: 2.10.x/alpine3.22
-
-Tags: 2.10.29-scratch, 2.10-scratch, 2.10.29-linux, 2.10-linux
-SharedTags: 2.10.29, 2.10
-Architectures: amd64, arm32v6, arm32v7, arm64v8, s390x, ppc64le
-Directory: 2.10.x/scratch
-
-Tags: 2.10.29-windowsservercore-ltsc2022, 2.10-windowsservercore-ltsc2022
-SharedTags: 2.10.29-windowsservercore, 2.10-windowsservercore
-Architectures: windows-amd64
-Directory: 2.10.x/windowsservercore-ltsc2022
-Constraints: windowsservercore-ltsc2022
-
-Tags: 2.10.29-nanoserver-ltsc2022, 2.10-nanoserver-ltsc2022
-SharedTags: 2.10.29-nanoserver, 2.10-nanoserver, 2.10.29, 2.10
-Architectures: windows-amd64
-Directory: 2.10.x/nanoserver-ltsc2022
 Constraints: nanoserver-ltsc2022, windowsservercore-ltsc2022
