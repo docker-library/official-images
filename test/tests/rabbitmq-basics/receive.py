@@ -6,7 +6,10 @@ import pika
 connection = pika.BlockingConnection(pika.ConnectionParameters('rabbitmq'))
 channel = connection.channel()
 
-channel.queue_declare(queue='hello')
+channel.queue_declare(queue='hello',
+                      exclusive=False,
+                      auto_delete=False,
+                      durable=True)
 
 def callback(ch, method, properties, body):
     print(body.decode('utf-8'))
