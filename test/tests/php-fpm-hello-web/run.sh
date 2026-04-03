@@ -7,13 +7,17 @@ image="$1"
 
 # Build a client image with cgi-fcgi for testing
 clientImage='librarytest/php-fpm-hello-web:fcgi-client'
-docker build -t "$clientImage" - > /dev/null <<'EOF'
-FROM debian:trixie-slim
+if ! error="$(docker build -t "$clientImage" - 2>&1 <<-'EOF'
+	FROM debian:trixie-slim
 
-RUN set -x && apt-get update && apt-get install -y --no-install-recommends libfcgi-bin && apt-get dist-clean
+	RUN set -x && apt-get update && apt-get install -y --no-install-recommends libfcgi-bin && apt-get dist-clean
 
-ENTRYPOINT ["cgi-fcgi"]
-EOF
+	ENTRYPOINT ["cgi-fcgi"]
+	EOF
+)"; then
+	echo "$error" >&2
+	exit 1
+fi
 
 serverImage="$("$dir/../image-name.sh" librarytest/php-fpm-hello-web "$image")"
 "$dir/../docker-build.sh" "$dir" "$serverImage" <<EOD

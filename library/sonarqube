@@ -1,70 +1,95 @@
-Maintainers: Carmine Vassallo <carmine.vassallo@sonarsource.com> (@carminevassallo)
+Maintainers: Carmine Vassallo <carmine.vassallo@sonarsource.com> (@carminevassallo),
+	Emma Mansalier <emma.mansalier@sonarsource.com> (@emma44-m),
+	Hatem Amairi <hatem.amairi@sonarsource.com> (@hatem-amairi-sonarsource),
+	Jimil Desai <jimil.desai@sonarsource.com> (@jimil09),
+	Julien Lancelot <julien.lancelot@sonarsource.com> (@julienlancelot),
+	Lukasz Jarocki <lukasz.jarocki@sonarsource.com> (@lukasz-jarocki-sonarsource),
+	Matteo Mara <matteo.mara@sonarsource.com> (@matteo-mara-sonarsource)
 GitRepo: https://github.com/SonarSource/docker-sonarqube.git
 Architectures: amd64, arm64v8
 Builder: buildkit
 
-Tags: 2025.5.0-developer, 2025.5-developer, developer
+Tags: 2026.2.1-developer, 2026.2-developer, developer
 Directory: commercial-editions/developer
-GitCommit: 2d77476619099afc3df0129af7ebbf372fb72336
-GitFetch: refs/heads/master
+GitCommit: 46da64077d8567ace61a27c3e7c178b1f5511d05
+GitFetch: refs/heads/release/2026.2
 
-Tags: 2025.5.0-enterprise, 2025.5-enterprise, enterprise
+Tags: 2026.2.1-enterprise, 2026.2-enterprise, enterprise
 Directory: commercial-editions/enterprise
-GitCommit: 2d77476619099afc3df0129af7ebbf372fb72336
-GitFetch: refs/heads/master
+GitCommit: 46da64077d8567ace61a27c3e7c178b1f5511d05
+GitFetch: refs/heads/release/2026.2
 
-Tags: 2025.5.0-datacenter-app, 2025.5-datacenter-app, datacenter-app
+Tags: 2026.2.1-datacenter-app, 2026.2-datacenter-app, datacenter-app
 Directory: commercial-editions/datacenter/app
-GitCommit: 2d77476619099afc3df0129af7ebbf372fb72336
-GitFetch: refs/heads/master
+GitCommit: 46da64077d8567ace61a27c3e7c178b1f5511d05
+GitFetch: refs/heads/release/2026.2
 
-Tags: 2025.5.0-datacenter-search, 2025.5-datacenter-search, datacenter-search
+Tags: 2026.2.1-datacenter-search, 2026.2-datacenter-search, datacenter-search
 Directory: commercial-editions/datacenter/search
-GitCommit: 2d77476619099afc3df0129af7ebbf372fb72336
-GitFetch: refs/heads/master
+GitCommit: 46da64077d8567ace61a27c3e7c178b1f5511d05
+GitFetch: refs/heads/release/2026.2
 
-Tags: 2025.4.3-developer, 2025.4-developer, 2025.4-lta-developer
+Tags: 2026.1.2-developer, 2026.1-developer, 2026-lta-developer
 Directory: commercial-editions/developer
-GitCommit: ef0050f30ef75089692a0808b6a002359083fb5a
-GitFetch: refs/heads/release/2025.4
+GitCommit: 59e7de50ef26f501eb09471f6d37588025ec9d7c
+GitFetch: refs/heads/release/2026.1
 
-Tags: 2025.4.3-enterprise, 2025.4-enterprise, 2025.4-lta-enterprise
+Tags: 2026.1.2-enterprise, 2026.1-enterprise, 2026-lta-enterprise
 Directory: commercial-editions/enterprise
-GitCommit: ef0050f30ef75089692a0808b6a002359083fb5a
-GitFetch: refs/heads/release/2025.4
+GitCommit: 59e7de50ef26f501eb09471f6d37588025ec9d7c
+GitFetch: refs/heads/release/2026.1
 
-Tags: 2025.4.3-datacenter-app, 2025.4-datacenter-app, 2025.4-lta-datacenter-app
+Tags: 2026.1.2-datacenter-app, 2026.1-datacenter-app, 2026-lta-datacenter-app
 Directory: commercial-editions/datacenter/app
-GitCommit: ef0050f30ef75089692a0808b6a002359083fb5a
-GitFetch: refs/heads/release/2025.4
+GitCommit: 59e7de50ef26f501eb09471f6d37588025ec9d7c
+GitFetch: refs/heads/release/2026.1
 
-Tags: 2025.4.3-datacenter-search, 2025.4-datacenter-search, 2025.4-lta-datacenter-search
+Tags: 2026.1.2-datacenter-search, 2026.1-datacenter-search, 2026-lta-datacenter-search
 Directory: commercial-editions/datacenter/search
-GitCommit: ef0050f30ef75089692a0808b6a002359083fb5a
-GitFetch: refs/heads/release/2025.4
+GitCommit: 59e7de50ef26f501eb09471f6d37588025ec9d7c
+GitFetch: refs/heads/release/2026.1
 
-Tags: 2025.1.4-developer, 2025.1-developer, 2025-lta-developer
+Tags: 2025.4.6-developer, 2025.4-developer, 2025.4-lta-developer
 Directory: commercial-editions/developer
-GitCommit: 5e2621e56095f67b6a28edd3016ef2f10bca2947
-GitFetch: refs/heads/release/2025.1
+GitCommit: e493ac520eba893f488a4980e6edb99128f08abb
+GitFetch: refs/heads/release/2025.4
 
-Tags: 2025.1.4-enterprise, 2025.1-enterprise, 2025-lta-enterprise
+Tags: 2025.4.6-enterprise, 2025.4-enterprise, 2025.4-lta-enterprise
 Directory: commercial-editions/enterprise
-GitCommit: 5e2621e56095f67b6a28edd3016ef2f10bca2947
-GitFetch: refs/heads/release/2025.1
+GitCommit: e493ac520eba893f488a4980e6edb99128f08abb
+GitFetch: refs/heads/release/2025.4
 
-Tags: 2025.1.4-datacenter-app, 2025.1-datacenter-app, 2025-lta-datacenter-app
+Tags: 2025.4.6-datacenter-app, 2025.4-datacenter-app, 2025.4-lta-datacenter-app
 Directory: commercial-editions/datacenter/app
-GitCommit: 5e2621e56095f67b6a28edd3016ef2f10bca2947
-GitFetch: refs/heads/release/2025.1
+GitCommit: e493ac520eba893f488a4980e6edb99128f08abb
+GitFetch: refs/heads/release/2025.4
 
-Tags: 2025.1.4-datacenter-search, 2025.1-datacenter-search, 2025-lta-datacenter-search
+Tags: 2025.4.6-datacenter-search, 2025.4-datacenter-search, 2025.4-lta-datacenter-search
 Directory: commercial-editions/datacenter/search
-GitCommit: 5e2621e56095f67b6a28edd3016ef2f10bca2947
+GitCommit: e493ac520eba893f488a4980e6edb99128f08abb
+GitFetch: refs/heads/release/2025.4
+
+Tags: 2025.1.7-developer, 2025.1-developer, 2025-lta-developer
+Directory: commercial-editions/developer
+GitCommit: 81ba255ef68dcc154df0a5d1cb022419d8cfba77
 GitFetch: refs/heads/release/2025.1
 
-Tags: 25.11.0.114957-community, community, latest
+Tags: 2025.1.7-enterprise, 2025.1-enterprise, 2025-lta-enterprise
+Directory: commercial-editions/enterprise
+GitCommit: 81ba255ef68dcc154df0a5d1cb022419d8cfba77
+GitFetch: refs/heads/release/2025.1
+
+Tags: 2025.1.7-datacenter-app, 2025.1-datacenter-app, 2025-lta-datacenter-app
+Directory: commercial-editions/datacenter/app
+GitCommit: 81ba255ef68dcc154df0a5d1cb022419d8cfba77
+GitFetch: refs/heads/release/2025.1
+
+Tags: 2025.1.7-datacenter-search, 2025.1-datacenter-search, 2025-lta-datacenter-search
+Directory: commercial-editions/datacenter/search
+GitCommit: 81ba255ef68dcc154df0a5d1cb022419d8cfba77
+GitFetch: refs/heads/release/2025.1
+
+Tags: 26.3.0.120487-community, community, latest
 Directory: community-build
-GitCommit: 2d77476619099afc3df0129af7ebbf372fb72336
+GitCommit: fc8bdd43aa412568e16b205af956cde30845b53c
 GitFetch: refs/heads/master
-

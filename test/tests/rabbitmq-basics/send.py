@@ -6,7 +6,10 @@ import pika, sys
 connection = pika.BlockingConnection(pika.ConnectionParameters('rabbitmq'))
 channel = connection.channel()
 
-channel.queue_declare(queue='hello')
+channel.queue_declare(queue='hello',
+                      exclusive=False,
+                      auto_delete=False,
+                      durable=True)
 
 channel.basic_publish(exchange='',
                       routing_key='hello',
