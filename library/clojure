@@ -2,7 +2,7 @@ Maintainers: Paul Lam <paul@quantisan.com> (@Quantisan),
              Wes Morgan <wes@wesmorgan.me> (@cap10morgan)
 Architectures: riscv64, arm64v8, ppc64le, amd64, s390x
 GitRepo: https://github.com/Quantisan/docker-clojure.git
-GitCommit: 14dff87caeb3172b199e26146f4dfeb11e893c5f
+GitCommit: 11f2cfb006fa76a0c786826452a5ceb858f6960a
 
 
 Tags: latest
@@ -334,3 +334,61 @@ Directory: target/debian-trixie-25/tools-deps
 
 Tags: temurin-25-tools-deps-1.12.4.1618-trixie-slim, temurin-25-tools-deps-trixie-slim, temurin-25-trixie-slim, tools-deps-1.12.4.1618-trixie-slim, tools-deps-trixie-slim
 Directory: target/debian-trixie-slim-25/tools-deps
+
+Tags: temurin-26-lein-2.12.0-alpine, temurin-26-lein-alpine
+Architectures: arm64v8, amd64
+Directory: target/eclipse-temurin-26-jdk-alpine/lein
+
+Tags: temurin-26-lein, temurin-26-lein-2.12.0, temurin-26-lein-2.12.0-bookworm, temurin-26-lein-bookworm
+Architectures: arm64v8, ppc64le, amd64, s390x
+Directory: target/debian-bookworm-26/lein
+
+Tags: temurin-26-lein-2.12.0-bookworm-slim, temurin-26-lein-bookworm-slim
+Architectures: arm64v8, ppc64le, amd64, s390x
+Directory: target/debian-bookworm-slim-26/lein
+
+Tags: temurin-26-lein-2.12.0-bullseye, temurin-26-lein-bullseye
+Architectures: arm64v8, amd64
+Directory: target/debian-bullseye-26/lein
+
+Tags: temurin-26-lein-2.12.0-bullseye-slim, temurin-26-lein-bullseye-slim
+Architectures: arm64v8, amd64
+Directory: target/debian-bullseye-slim-26/lein
+
+Tags: temurin-26-lein-2.12.0-noble, temurin-26-lein-noble
+Directory: target/eclipse-temurin-26-jdk-noble/lein
+
+Tags: temurin-26-lein-2.12.0-trixie, temurin-26-lein-trixie
+Directory: target/debian-trixie-26/lein
+
+Tags: temurin-26-lein-2.12.0-trixie-slim, temurin-26-lein-trixie-slim
+Directory: target/debian-trixie-slim-26/lein
+
+Tags: temurin-26-alpine, temurin-26-tools-deps-1.12.4.1618-alpine, temurin-26-tools-deps-alpine
+Architectures: arm64v8, amd64
+Directory: target/eclipse-temurin-26-jdk-alpine/tools-deps
+
+Tags: temurin-26-bookworm, temurin-26-tools-deps, temurin-26-tools-deps-1.12.4.1618, temurin-26-tools-deps-1.12.4.1618-bookworm, temurin-26-tools-deps-bookworm
+Architectures: arm64v8, ppc64le, amd64, s390x
+Directory: target/debian-bookworm-26/tools-deps
+
+Tags: temurin-26-bookworm-slim, temurin-26-tools-deps-1.12.4.1618-bookworm-slim, temurin-26-tools-deps-bookworm-slim
+Architectures: arm64v8, ppc64le, amd64, s390x
+Directory: target/debian-bookworm-slim-26/tools-deps
+
+Tags: temurin-26-bullseye, temurin-26-tools-deps-1.12.4.1618-bullseye, temurin-26-tools-deps-bullseye
+Architectures: arm64v8, amd64
+Directory: target/debian-bullseye-26/tools-deps
+
+Tags: temurin-26-bullseye-slim, temurin-26-tools-deps-1.12.4.1618-bullseye-slim, temurin-26-tools-deps-bullseye-slim
+Architectures: arm64v8, amd64
+Directory: target/debian-bullseye-slim-26/tools-deps
+
+Tags: temurin-26-noble, temurin-26-tools-deps-1.12.4.1618-noble, temurin-26-tools-deps-noble
+Directory: target/eclipse-temurin-26-jdk-noble/tools-deps
+
+Tags: temurin-26-tools-deps-1.12.4.1618-trixie, temurin-26-tools-deps-trixie, temurin-26-trixie
+Directory: target/debian-trixie-26/tools-deps
+
+Tags: temurin-26-tools-deps-1.12.4.1618-trixie-slim, temurin-26-tools-deps-trixie-slim, temurin-26-trixie-slim
+Directory: target/debian-trixie-slim-26/tools-deps
