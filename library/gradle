@@ -131,22 +131,46 @@ GitFetch: refs/heads/master
 GitCommit: f1bff53fdc0c0492140cdf4df5a5973cd86d0427
 Directory: jdk17-jammy-graal
 
-Tags: 9.4.1-jdk-lts-and-current, 9.4-jdk-lts-and-current, 9-jdk-lts-and-current, jdk-lts-and-current, 9.4.1-jdk-lts-and-current-noble, 9.4-jdk-lts-and-current-noble, 9-jdk-lts-and-current-noble, jdk-lts-and-current-noble, 9.4.1-jdk-25-and-25, 9.4-jdk-25-and-25, 9-jdk-25-and-25, jdk-25-and-25, 9.4.1-jdk-25-and-25-noble, 9.4-jdk-25-and-25-noble, 9-jdk-25-and-25-noble, jdk-25-and-25-noble
+Tags: 9.4.1-jdk26, 9.4-jdk26, 9-jdk26, jdk26, 9.4.1-jdk26-noble, 9.4-jdk26-noble, 9-jdk26-noble, jdk26-noble
 Architectures: amd64, arm64v8, ppc64le, riscv64, s390x
 GitFetch: refs/heads/master
-GitCommit: f1bff53fdc0c0492140cdf4df5a5973cd86d0427
+GitCommit: b3608a3f3592969405b126fb6d5ba89bf80f600c
+Directory: jdk26-noble
+
+Tags: 9.4.1-jdk26-alpine, 9.4-jdk26-alpine, 9-jdk26-alpine, jdk26-alpine
+Architectures: amd64, arm64v8
+GitFetch: refs/heads/master
+GitCommit: b3608a3f3592969405b126fb6d5ba89bf80f600c
+Directory: jdk26-alpine
+
+Tags: 9.4.1-jdk26-corretto, 9.4-jdk26-corretto, 9-jdk26-corretto, jdk26-corretto, 9.4.1-jdk26-corretto-al2023, 9.4-jdk26-corretto-al2023, 9-jdk26-corretto-al2023, jdk26-corretto-al2023
+Architectures: amd64, arm64v8
+GitFetch: refs/heads/master
+GitCommit: b3608a3f3592969405b126fb6d5ba89bf80f600c
+Directory: jdk26-corretto
+
+Tags: 9.4.1-jdk26-ubi, 9.4-jdk26-ubi, 9-jdk26-ubi, jdk26-ubi, 9.4.1-jdk26-ubi10, 9.4-jdk26-ubi10, 9-jdk26-ubi10, jdk26-ubi10
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitFetch: refs/heads/master
+GitCommit: b3608a3f3592969405b126fb6d5ba89bf80f600c
+Directory: jdk26-ubi10
+
+Tags: 9.4.1-jdk-lts-and-current, 9.4-jdk-lts-and-current, 9-jdk-lts-and-current, jdk-lts-and-current, 9.4.1-jdk-lts-and-current-noble, 9.4-jdk-lts-and-current-noble, 9-jdk-lts-and-current-noble, jdk-lts-and-current-noble, 9.4.1-jdk-25-and-26, 9.4-jdk-25-and-26, 9-jdk-25-and-26, jdk-25-and-26, 9.4.1-jdk-25-and-26-noble, 9.4-jdk-25-and-26-noble, 9-jdk-25-and-26-noble, jdk-25-and-26-noble
+Architectures: amd64, arm64v8, ppc64le, riscv64, s390x
+GitFetch: refs/heads/master
+GitCommit: b3608a3f3592969405b126fb6d5ba89bf80f600c
 Directory: jdk-lts-and-current
 
-Tags: 9.4.1-jdk-lts-and-current-alpine, 9.4-jdk-lts-and-current-alpine, 9-jdk-lts-and-current-alpine, jdk-lts-and-current-alpine, 9.4.1-jdk-25-and-25-alpine, 9.4-jdk-25-and-25-alpine, 9-jdk-25-and-25-alpine, jdk-25-and-25-alpine
+Tags: 9.4.1-jdk-lts-and-current-alpine, 9.4-jdk-lts-and-current-alpine, 9-jdk-lts-and-current-alpine, jdk-lts-and-current-alpine, 9.4.1-jdk-25-and-26-alpine, 9.4-jdk-25-and-26-alpine, 9-jdk-25-and-26-alpine, jdk-25-and-26-alpine
 Architectures: amd64, arm64v8
 GitFetch: refs/heads/master
-GitCommit: f1bff53fdc0c0492140cdf4df5a5973cd86d0427
+GitCommit: b3608a3f3592969405b126fb6d5ba89bf80f600c
 Directory: jdk-lts-and-current-alpine
 
-Tags: 9.4.1-jdk-lts-and-current-corretto, 9.4-jdk-lts-and-current-corretto, 9-jdk-lts-and-current-corretto, jdk-lts-and-current-corretto, 9.4.1-jdk-lts-and-current-corretto-al2023, 9.4-jdk-lts-and-current-corretto-al2023, 9-jdk-lts-and-current-corretto-al2023, jdk-lts-and-current-corretto-al2023, 9.4.1-jdk-25-and-25-corretto, 9.4-jdk-25-and-25-corretto, 9-jdk-25-and-25-corretto, jdk-25-and-25-corretto, 9.4.1-jdk-25-and-25-corretto-al2023, 9.4-jdk-25-and-25-corretto-al2023, 9-jdk-25-and-25-corretto-al2023, jdk-25-and-25-corretto-al2023
+Tags: 9.4.1-jdk-lts-and-current-corretto, 9.4-jdk-lts-and-current-corretto, 9-jdk-lts-and-current-corretto, jdk-lts-and-current-corretto, 9.4.1-jdk-lts-and-current-corretto-al2023, 9.4-jdk-lts-and-current-corretto-al2023, 9-jdk-lts-and-current-corretto-al2023, jdk-lts-and-current-corretto-al2023, 9.4.1-jdk-25-and-26-corretto, 9.4-jdk-25-and-26-corretto, 9-jdk-25-and-26-corretto, jdk-25-and-26-corretto, 9.4.1-jdk-25-and-26-corretto-al2023, 9.4-jdk-25-and-26-corretto-al2023, 9-jdk-25-and-26-corretto-al2023, jdk-25-and-26-corretto-al2023
 Architectures: amd64, arm64v8
 GitFetch: refs/heads/master
-GitCommit: f1bff53fdc0c0492140cdf4df5a5973cd86d0427
+GitCommit: b3608a3f3592969405b126fb6d5ba89bf80f600c
 Directory: jdk-lts-and-current-corretto
 
 Tags: 9.4.1-jdk-lts-and-current-graal, 9.4-jdk-lts-and-current-graal, 9-jdk-lts-and-current-graal, jdk-lts-and-current-graal, 9.4.1-jdk-lts-and-current-graal-noble, 9.4-jdk-lts-and-current-graal-noble, 9-jdk-lts-and-current-graal-noble, jdk-lts-and-current-graal-noble, 9.4.1-jdk-25-and-25-graal, 9.4-jdk-25-and-25-graal, 9-jdk-25-and-25-graal, jdk-25-and-25-graal, 9.4.1-jdk-25-and-25-graal-noble, 9.4-jdk-25-and-25-graal-noble, 9-jdk-25-and-25-graal-noble, jdk-25-and-25-graal-noble
