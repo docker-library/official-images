@@ -34,4 +34,4 @@ _request() {
 
 # Check that the example "Hello World" servlet works
 helloWorld="$(_request '/convertigo/admin/services/engine.CheckAuthentication')"
-[[ "$helloWorld" == *'TEST_PLATFORM'* ]]
+[[ "$helloWorld" == *'<authenticated>'* ]]

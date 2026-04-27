@@ -7,7 +7,6 @@ gems="$(ruby -e '
 		bundler
 		aws-sdk-core
 		i18n
-		activesupport
 		rack
 		rake
 		concurrent-ruby
@@ -15,11 +14,13 @@ gems="$(ruby -e '
 		tzinfo
 		nokogiri
 		diff-lcs
+		faraday
 	}
 	# last updated 2026-01-12
 	# to try to get a wider coverage of common gems, this list skips the direct deps of aws-sdk-core
 	# (aws-eventstream, aws-partitions, aws-sigv4, jmespath)
 	# skip minitest, it has native deps (needs a compiler for c code, which will not work in jruby images)
+	# skip activesupport because it depends on minitest ^
 
 	require "json"
 	require "open-uri"
