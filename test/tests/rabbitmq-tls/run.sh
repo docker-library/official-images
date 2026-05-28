@@ -17,9 +17,11 @@ RUN set -eux; \
 		-subj '/CN=$cname-CA'; \
 	openssl genrsa -out /certs/private.key 4096; \
 	openssl req -new -key /certs/private.key \
+		-addext "subjectAltName = DNS:$cname" \
 		-out /certs/cert.csr -subj '/CN=$cname'; \
 	openssl x509 -req -in /certs/cert.csr \
 		-CA /certs/ca.crt -CAkey /certs/ca-private.key -CAcreateserial \
+		-copy_extensions copyall \
 		-out /certs/cert.crt -days $(( 365 * 30 )); \
 	openssl verify -CAfile /certs/ca.crt /certs/cert.crt; \
 	cat /certs/cert.crt /certs/private.key > /certs/combined.pem; \
