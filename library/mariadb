@@ -1,4 +1,4 @@
-# this file is generated via https://github.com/MariaDB/mariadb-docker/blob/fb3ac619f14c36ac5111f6eef644268ca47ed2d0/generate-stackbrew-library.sh
+# this file is generated via https://github.com/MariaDB/mariadb-docker/blob/1f78f944c410080279dd29e6b92a114a5e237f4b/generate-stackbrew-library.sh
 
 Maintainers: Daniel Black <daniel@mariadb.org> (@grooverdan),
              Daniel Bartholomew <dbart@mariadb.com> (@dbart),
@@ -6,32 +6,32 @@ Maintainers: Daniel Black <daniel@mariadb.org> (@grooverdan),
 GitRepo: https://github.com/MariaDB/mariadb-docker.git
 Builder: buildkit
 
-Tags: 12.3.1-ubi10-rc, 12.3-ubi10-rc, 12.3.1-ubi-rc, 12.3-ubi-rc
+Tags: 13.0.1-ubi10-rc, 13.0-ubi10-rc, 13.0.1-ubi-rc, 13.0-ubi-rc
 Architectures: amd64, arm64v8, s390x, ppc64le
-GitCommit: 53935c78b82bff912b361357d59db11d7246ea96
+GitCommit: f8552c80b5104868ff1bb88851ca976bd99029ee
+Directory: 13.0-ubi
+
+Tags: 13.0.1-resolute-rc, 13.0-resolute-rc, 13.0.1-rc, 13.0-rc
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: af9b72baa083d6c40b2e0741ec65fd74adacde68
+Directory: 13.0
+
+Tags: 12.3.2-ubi10, 12.3-ubi10, 12-ubi10, lts-ubi10, 12.3.2-ubi, 12.3-ubi, 12-ubi, lts-ubi
+Architectures: amd64, arm64v8, s390x, ppc64le
+GitCommit: f8552c80b5104868ff1bb88851ca976bd99029ee
 Directory: 12.3-ubi
 
-Tags: 12.3.1-noble-rc, 12.3-noble-rc, 12.3.1-rc, 12.3-rc
+Tags: 12.3.2-noble, 12.3-noble, 12-noble, noble, lts-noble, 12.3.2, 12.3, 12, latest, lts
 Architectures: amd64, arm64v8, ppc64le, s390x
-GitCommit: 1b6429ba3544e134715c15f8c56cc6f665f827c9
+GitCommit: af9b72baa083d6c40b2e0741ec65fd74adacde68
 Directory: 12.3
 
-Tags: 12.2.2-ubi10, 12.2-ubi10, 12-ubi10, 12.2.2-ubi, 12.2-ubi, 12-ubi
-Architectures: amd64, arm64v8, s390x, ppc64le
-GitCommit: 1b6429ba3544e134715c15f8c56cc6f665f827c9
-Directory: 12.2-ubi
-
-Tags: 12.2.2-noble, 12.2-noble, 12-noble, noble, 12.2.2, 12.2, 12, latest
-Architectures: amd64, arm64v8, ppc64le, s390x
-GitCommit: 1b6429ba3544e134715c15f8c56cc6f665f827c9
-Directory: 12.2
-
-Tags: 11.8.8-ubi9, 11.8-ubi9, 11-ubi9, lts-ubi9, 11.8.8-ubi, 11.8-ubi, 11-ubi, lts-ubi
+Tags: 11.8.8-ubi9, 11.8-ubi9, 11-ubi9, 11.8.8-ubi, 11.8-ubi, 11-ubi
 Architectures: amd64, arm64v8, s390x, ppc64le
 GitCommit: 53935c78b82bff912b361357d59db11d7246ea96
 Directory: 11.8-ubi
 
-Tags: 11.8.8-noble, 11.8-noble, 11-noble, lts-noble, 11.8.8, 11.8, 11, lts
+Tags: 11.8.8-noble, 11.8-noble, 11-noble, 11.8.8, 11.8, 11
 Architectures: amd64, arm64v8, ppc64le, s390x
 GitCommit: 53935c78b82bff912b361357d59db11d7246ea96
 Directory: 11.8
