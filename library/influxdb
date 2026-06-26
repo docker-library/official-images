@@ -4,7 +4,7 @@ Maintainers: Brandon Pfeifer <bpfeifer@influxdata.com> (@bnpfeife),
              Praveenkumar Hemakumar <pkumar@influxdata.com> (@praveen-influx),
              Trevor Hilton <thilton@influxdata.com> (@hiltontj)
 GitRepo: https://github.com/influxdata/influxdata-docker
-GitCommit: ddd58c7ba3c15041c5909d54efcf11db322d8250
+GitCommit: 3a352072ae7f00a450957611c8f076fe2688b496
 
 Tags: 1.12, 1.12.4
 Architectures: amd64, arm64v8
@@ -62,10 +62,18 @@ Tags: 2-alpine, 2.9-alpine, 2.9.1-alpine, alpine
 Architectures: amd64, arm64v8
 Directory: influxdb/2.9/alpine
 
-Tags: 3-core, 3.10-core, 3.10.0-core, core
+Tags: 3.9-core, 3.9.6-core
+Architectures: amd64, arm64v8
+Directory: influxdb/3.9-core
+
+Tags: 3.9-enterprise, 3.9.6-enterprise
+Architectures: amd64, arm64v8
+Directory: influxdb/3.9-enterprise
+
+Tags: 3-core, 3.10-core, 3.10.1-core, core
 Architectures: amd64, arm64v8
 Directory: influxdb/3.10-core
 
-Tags: 3-enterprise, 3.10-enterprise, 3.10.0-enterprise, enterprise
+Tags: 3-enterprise, 3.10-enterprise, 3.10.1-enterprise, enterprise
 Architectures: amd64, arm64v8
 Directory: influxdb/3.10-enterprise
