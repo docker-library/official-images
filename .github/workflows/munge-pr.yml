@@ -5,7 +5,6 @@ on:
 
 permissions:
   contents: read
-  pull-requests: write
 
 defaults:
   run:
@@ -34,27 +33,26 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          # ideally this would be "github.event.pull_request.merge_commit_sha" but according to https://docs.github.com/en/free-pro-team@latest/rest/reference/pulls#get-a-pull-request if "mergeable" is null (meaning there's a background job in-progress to check mergeability), that value is undefined...
-          ref: ${{ github.event.pull_request.head.sha }}
           fetch-depth: 0
       - id: gather
         name: Affected Images
+        env:
+          PR_COMMIT: ${{ github.event.pull_request.head.sha }}
         run: |
           (set +x; echo "::stop-commands::$(echo -n ${{ github.token }} | sha256sum | head -c 64)")
-          git fetch --quiet https://github.com/docker-library/official-images.git master
-          externalPins="$(git diff --no-renames --name-only FETCH_HEAD...HEAD -- '.external-pins/*/**')"
+          # fetch the PR changes, but don't checkout so that scripts are run from master
+          git fetch --quiet origin "${PR_COMMIT}:"
+
+          externalPins="$(git diff --no-renames --name-only HEAD...FETCH_HEAD -- '.external-pins/*/**')"
           externalPinTags="$(
             if [ -n "$externalPins" ]; then
-              # doing backflips to run "tag.sh" from master instead of from the PR
-              git show FETCH_HEAD:.external-pins/tag.sh > ~/master-external-pins-tag.sh
-              chmod +x ~/master-external-pins-tag.sh
-              ~/master-external-pins-tag.sh $externalPins
+              .external-pins/tag.sh $externalPins
             fi
           )"
-          images="$(git diff --no-renames --name-only FETCH_HEAD...HEAD -- library/)"
+          images="$(git diff --no-renames --name-only HEAD...FETCH_HEAD -- library/)"
           if [ -n "$images" ]; then
-            new="$(git diff --no-renames --name-only --diff-filter=A FETCH_HEAD...HEAD -- $images)"
-            deleted="$(git diff --no-renames --name-only --diff-filter=D FETCH_HEAD...HEAD -- $images)"
+            new="$(git diff --no-renames --name-only --diff-filter=A HEAD...FETCH_HEAD -- $images)"
+            deleted="$(git diff --no-renames --name-only --diff-filter=D HEAD...FETCH_HEAD -- $images)"
           else
             new=
             deleted=
@@ -125,6 +123,9 @@ jobs:
     name: Diff Comment
     runs-on: ubuntu-latest
     needs: gather
+    permissions:
+      contents: read
+      pull-requests: write
     if: fromJSON(needs.gather.outputs.images).imagesAndExternalPinsCount > 0
     steps:
       - uses: actions/checkout@v6
