@@ -20,7 +20,7 @@ WARNING:
 	[the XWiki Community](https://github.com/xwiki-contrib/docker-xwiki)
 
 -	**Where to get help**:  
-	[the XWiki Users Mailing List/Forum](http://dev.xwiki.org/xwiki/bin/view/Community/MailingLists) or [the XWiki IRC channel](http://dev.xwiki.org/xwiki/bin/view/Community/IRC)
+	[the XWiki Forum](https://dev.xwiki.org/xwiki/bin/view/Community/Discuss) or [the XWiki Chat](https://dev.xwiki.org/xwiki/bin/view/Community/Chat)
 
 # Supported tags and respective `Dockerfile` links
 
@@ -51,7 +51,7 @@ WARNING:
 # Quick reference (cont.)
 
 -	**Where to file issues**:  
-	[the XWiki Docker JIRA project](http://jira.xwiki.org/browse/XDOCKER)
+	[the XWiki Docker JIRA project](https://jira.xwiki.org/browse/XDOCKER)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/xwiki/), [`arm64v8`](https://hub.docker.com/r/arm64v8/xwiki/)
@@ -69,23 +69,23 @@ WARNING:
 
 # What is XWiki
 
-[XWiki](http://xwiki.org) is a free wiki software platform written in Java with a design emphasis on extensibility. XWiki is an enterprise wiki. It includes WYSIWYG editing, OpenDocument based document import/export, semantic annotations and tagging, and advanced permissions management.
+[XWiki](https://xwiki.org) is a free wiki software platform written in Java with a design emphasis on extensibility. XWiki is an enterprise wiki. It includes WYSIWYG editing, OpenDocument based document import/export, semantic annotations and tagging, and advanced permissions management.
 
 As an application wiki, XWiki allows for the storing of structured data and the execution of server side script within the wiki interface. Scripting languages including Velocity, Groovy, Python, Ruby and PHP can be written directly into wiki pages using wiki macros. User-created data structures can be defined in wiki documents and instances of those structures can be attached to wiki documents, stored in a database, and queried using either Hibernate query language or XWiki's own query language.
 
-[XWiki.org's extension wiki](http://extensions.xwiki.org) is home to XWiki extensions ranging from [code snippets](http://snippets.xwiki.org) which can be pasted into wiki pages to loadable core modules. Many of XWiki Enterprise's features are provided by extensions which are bundled with it.
+[XWiki.org's extension wiki](https://extensions.xwiki.org) is home to XWiki extensions ranging from [code snippets](https://snippets.xwiki.org) which can be pasted into wiki pages to loadable core modules. Many of XWiki's features are provided by extensions which are bundled with it.
 
 ![logo](https://raw.githubusercontent.com/docker-library/docs/6fb07a8dacbad5cc548b87e4c267823a4aa98660/xwiki/logo.png)
 
 # Usage
 
-Please check the [documentation](https://github.com/xwiki-contrib/docker-xwiki/blob/master/README.md) to learn how to use the XWiki Docker images.
+Please check the [documentation](https://www.xwiki.org/xwiki/bin/view/documentation/xs/admin/installation/methods/install-xwiki-docker/) to learn how to use the XWiki Docker images.
 
 # License
 
-XWiki is licensed under the [LGPL 2.1](https://github.com/xwiki-contrib/docker-xwiki/blob/master/LICENSE).
+XWiki is licensed under the [LGPL 2.1](https://github.com/xwiki/xwiki-docker/blob/master/LICENSE).
 
-The Dockerfile repository is also licensed under the [LGPL 2.1](https://github.com/xwiki-contrib/docker-xwiki/blob/master/LICENSE).
+The Dockerfile repository is also licensed under the [LGPL 2.1](https://github.com/xwiki/xwiki-docker/blob/master/LICENSE).
 
 As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
 
