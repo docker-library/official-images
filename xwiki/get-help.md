@@ -1,1 +1,1 @@
-[the XWiki Users Mailing List/Forum](http://dev.xwiki.org/xwiki/bin/view/Community/MailingLists) or [the XWiki IRC channel](http://dev.xwiki.org/xwiki/bin/view/Community/IRC)
+[the XWiki Forum](https://dev.xwiki.org/xwiki/bin/view/Community/Discuss) or [the XWiki Chat](https://dev.xwiki.org/xwiki/bin/view/Community/Chat)

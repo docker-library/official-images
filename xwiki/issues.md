@@ -1,1 +1,1 @@
-[the XWiki Docker JIRA project](http://jira.xwiki.org/browse/XDOCKER)
+[the XWiki Docker JIRA project](https://jira.xwiki.org/browse/XDOCKER)
