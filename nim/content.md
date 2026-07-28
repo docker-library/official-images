@@ -18,10 +18,22 @@ $ docker run --rm -v "$PWD":/usr/src/app -w /usr/src/app %%IMAGE%% nim c -r main
 
 ## Compile to JavaScript
 
-Nim can compile to JavaScript. This image includes Node.js to serve as the runtime:
+Nim can compile to JavaScript:
 
 ```console
-$ docker run --rm -v "$PWD":/usr/src/app -w /usr/src/app %%IMAGE%% nim js -r main.nim
+$ docker run --rm -v "$PWD":/usr/src/app -w /usr/src/app %%IMAGE%% nim js main.nim
+```
+
+To compile and run, use a multi-stage Dockerfile with Node.js:
+
+```dockerfile
+FROM %%IMAGE%% AS builder
+COPY . .
+RUN nim js -o:app.js src/app.nim
+
+FROM node:latest
+COPY --from=builder /usr/src/app/app.js .
+CMD ["node", "app.js"]
 ```
 
 ## Managing packages with Nimble
