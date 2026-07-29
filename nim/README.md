@@ -24,7 +24,33 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`2.2.10`, `2.2`, `2`, `latest`](https://github.com/nim-lang/docker-images/blob/c8df5e79155477e213137e4e42a7ea422d2a3851/dockerfiles/2.2.10/Dockerfile)
+-	[`2.2.10`, `2.2`, `2`, `latest`](https://github.com/nim-lang/docker-images/blob/91d060a13836bd13fedc527e13ad9061752f235f/dockerfiles/2.2.10/Dockerfile)
+
+-	[`2.2.8`](https://github.com/nim-lang/docker-images/blob/91d060a13836bd13fedc527e13ad9061752f235f/dockerfiles/2.2.8/Dockerfile)
+
+-	[`2.2.6`](https://github.com/nim-lang/docker-images/blob/91d060a13836bd13fedc527e13ad9061752f235f/dockerfiles/2.2.6/Dockerfile)
+
+-	[`2.2.4`](https://github.com/nim-lang/docker-images/blob/91d060a13836bd13fedc527e13ad9061752f235f/dockerfiles/2.2.4/Dockerfile)
+
+-	[`2.2.2`](https://github.com/nim-lang/docker-images/blob/91d060a13836bd13fedc527e13ad9061752f235f/dockerfiles/2.2.2/Dockerfile)
+
+-	[`2.2.0`](https://github.com/nim-lang/docker-images/blob/91d060a13836bd13fedc527e13ad9061752f235f/dockerfiles/2.2.0/Dockerfile)
+
+-	[`2.0.14`, `2.0`](https://github.com/nim-lang/docker-images/blob/91d060a13836bd13fedc527e13ad9061752f235f/dockerfiles/2.0.14/Dockerfile)
+
+-	[`2.0.12`](https://github.com/nim-lang/docker-images/blob/91d060a13836bd13fedc527e13ad9061752f235f/dockerfiles/2.0.12/Dockerfile)
+
+-	[`2.0.10`](https://github.com/nim-lang/docker-images/blob/91d060a13836bd13fedc527e13ad9061752f235f/dockerfiles/2.0.10/Dockerfile)
+
+-	[`2.0.8`](https://github.com/nim-lang/docker-images/blob/91d060a13836bd13fedc527e13ad9061752f235f/dockerfiles/2.0.8/Dockerfile)
+
+-	[`2.0.6`](https://github.com/nim-lang/docker-images/blob/91d060a13836bd13fedc527e13ad9061752f235f/dockerfiles/2.0.6/Dockerfile)
+
+-	[`2.0.4`](https://github.com/nim-lang/docker-images/blob/91d060a13836bd13fedc527e13ad9061752f235f/dockerfiles/2.0.4/Dockerfile)
+
+-	[`2.0.2`](https://github.com/nim-lang/docker-images/blob/91d060a13836bd13fedc527e13ad9061752f235f/dockerfiles/2.0.2/Dockerfile)
+
+-	[`2.0.0`](https://github.com/nim-lang/docker-images/blob/91d060a13836bd13fedc527e13ad9061752f235f/dockerfiles/2.0.0/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -32,7 +58,7 @@ WARNING:
 	[https://github.com/nim-lang/docker-images/issues](https://github.com/nim-lang/docker-images/issues?q=)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/nim/), [`arm64v8`](https://hub.docker.com/r/arm64v8/nim/)
+	[`amd64`](https://hub.docker.com/r/amd64/nim/), [`arm32v7`](https://hub.docker.com/r/arm32v7/nim/), [`arm64v8`](https://hub.docker.com/r/arm64v8/nim/), [`i386`](https://hub.docker.com/r/i386/nim/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/nim/` directory](https://github.com/docker-library/repo-info/blob/master/repos/nim) ([history](https://github.com/docker-library/repo-info/commits/master/repos/nim))  
