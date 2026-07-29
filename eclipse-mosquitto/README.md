@@ -114,21 +114,15 @@ For example, if you use port 1883 and port 8080:
 $ docker run -it -p 1883:1883 -p 8080:8080 -v "$PWD/mosquitto/config:/mosquitto/config" eclipse-mosquitto
 ```
 
-# Image Variants
+# Image tags
 
-The `eclipse-mosquitto` images come in many flavors, each designed for a specific use case.
+The supported-tags list at the top of this page is authoritative. Official `eclipse-mosquitto` images are Alpine-based. Tag naming does **not** follow a generic "plain version" vs "version-alpine" split:
 
-## `eclipse-mosquitto:<version>`
+-	**2.1.x:** tags such as `2.1.2-alpine`, `2.1-alpine`, `alpine`, `2`, and `latest` all refer to the current Alpine 2.1 image. There is no separate non-Alpine `2.1` tag.
+-	**2.0.x (OpenSSL):** tags such as `2.0.22`, `2.0.22-openssl`, `2.0`, `2.0-openssl`, `2-openssl`, and `openssl` refer to the Alpine 2.0 OpenSSL image (TLS-PSK and related OpenSSL features). Prefer an explicit `2.0*` / `*-openssl` tag if you need this line; do not assume `openssl` alone means "latest Mosquitto".
+-	**1.6.x (OpenSSL):** tags such as `1.6.15-openssl` and `1.6-openssl` refer to the Alpine 1.6 OpenSSL image.
 
-This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
-
-## `eclipse-mosquitto:<version>-alpine`
-
-This image is based on the popular [Alpine Linux project](https://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
-
-This variant is useful when final image size being as small as possible is your primary concern. The main caveat to note is that it does use [musl libc](https://musl.libc.org) instead of [glibc and friends](https://www.etalabs.net/compare_libcs.html), so software will often run into issues depending on the depth of their libc requirements/assumptions. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
-
-To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
+If you are unsure which tag to use for current Mosquitto, prefer `latest` or a pinned `2.1*-alpine` tag from the supported-tags list.
 
 # License
 
