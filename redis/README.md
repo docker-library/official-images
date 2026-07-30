@@ -24,9 +24,13 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`8.8.1`, `8.8`, `8`, `8.8.1-trixie`, `8.8-trixie`, `8-trixie`, `latest`, `trixie`](https://github.com/redis/docker-library-redis/blob/b675641c81d9f476e614aee4a6606365548bae41/debian/Dockerfile)
+-	[`8.10.0`, `8.10`, `8`, `8.10.0-trixie`, `8.10-trixie`, `8-trixie`, `latest`, `trixie`](https://github.com/redis/docker-library-redis/blob/0a24b09f88a6cb8feaf130d4eca7bd6b9b4c73a3/debian/Dockerfile)
 
--	[`8.8.1-alpine`, `8.8-alpine`, `8-alpine`, `8.8.1-alpine3.23`, `8.8-alpine3.23`, `8-alpine3.23`, `alpine`, `alpine3.23`](https://github.com/redis/docker-library-redis/blob/b675641c81d9f476e614aee4a6606365548bae41/alpine/Dockerfile)
+-	[`8.10.0-alpine`, `8.10-alpine`, `8-alpine`, `8.10.0-alpine3.23`, `8.10-alpine3.23`, `8-alpine3.23`, `alpine`, `alpine3.23`](https://github.com/redis/docker-library-redis/blob/0a24b09f88a6cb8feaf130d4eca7bd6b9b4c73a3/alpine/Dockerfile)
+
+-	[`8.8.1`, `8.8`, `8.8.1-trixie`, `8.8-trixie`](https://github.com/redis/docker-library-redis/blob/b675641c81d9f476e614aee4a6606365548bae41/debian/Dockerfile)
+
+-	[`8.8.1-alpine`, `8.8-alpine`, `8.8.1-alpine3.23`, `8.8-alpine3.23`](https://github.com/redis/docker-library-redis/blob/b675641c81d9f476e614aee4a6606365548bae41/alpine/Dockerfile)
 
 -	[`8.6.5`, `8.6`, `8.6.5-trixie`, `8.6-trixie`](https://github.com/redis/docker-library-redis/blob/8bf384f30957c89ea17a1fd6e5f34ed31065f84b/debian/Dockerfile)
 
@@ -39,10 +43,6 @@ WARNING:
 -	[`8.2.8`, `8.2`, `8.2.8-bookworm`, `8.2-bookworm`](https://github.com/redis/docker-library-redis/blob/3769a841048d940966635f8f59471f3d350707bf/debian/Dockerfile)
 
 -	[`8.2.8-alpine`, `8.2-alpine`, `8.2.8-alpine3.22`, `8.2-alpine3.22`](https://github.com/redis/docker-library-redis/blob/3769a841048d940966635f8f59471f3d350707bf/alpine/Dockerfile)
-
--	[`8.10-rc2`, `8.10-rc2-trixie`](https://github.com/redis/docker-library-redis/blob/11c8b131eb4c9a36110d70ceffedaa7397fb6cbf/debian/Dockerfile)
-
--	[`8.10-rc2-alpine`, `8.10-rc2-alpine3.23`](https://github.com/redis/docker-library-redis/blob/11c8b131eb4c9a36110d70ceffedaa7397fb6cbf/alpine/Dockerfile)
 
 -	[`7.4.10`, `7.4`, `7`, `7.4.10-bookworm`, `7.4-bookworm`, `7-bookworm`](https://github.com/redis/docker-library-redis/blob/31c68732e7311d95e4c833b8fa50aa561ced577f/debian/Dockerfile)
 
