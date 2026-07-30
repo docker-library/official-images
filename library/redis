@@ -8,13 +8,25 @@ Maintainers: Yossi Gottlieb <yossi@redis.com> (@yossigo),
              Gonen Goshen <gonen.goshen@redis.com> (@gonen-red)
 GitRepo: https://github.com/redis/docker-library-redis.git
 
-Tags: 8.8.1, 8.8, 8, 8.8.1-trixie, 8.8-trixie, 8-trixie, latest, trixie
+Tags: 8.10.0, 8.10, 8, 8.10.0-trixie, 8.10-trixie, 8-trixie, latest, trixie
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, riscv64, ppc64le, s390x
+GitCommit: 0a24b09f88a6cb8feaf130d4eca7bd6b9b4c73a3
+GitFetch: refs/tags/v8.10.0
+Directory: debian
+
+Tags: 8.10.0-alpine, 8.10-alpine, 8-alpine, 8.10.0-alpine3.23, 8.10-alpine3.23, 8-alpine3.23, alpine, alpine3.23
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
+GitCommit: 0a24b09f88a6cb8feaf130d4eca7bd6b9b4c73a3
+GitFetch: refs/tags/v8.10.0
+Directory: alpine
+
+Tags: 8.8.1, 8.8, 8.8.1-trixie, 8.8-trixie
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, riscv64, ppc64le, s390x
 GitCommit: b675641c81d9f476e614aee4a6606365548bae41
 GitFetch: refs/tags/v8.8.1
 Directory: debian
 
-Tags: 8.8.1-alpine, 8.8-alpine, 8-alpine, 8.8.1-alpine3.23, 8.8-alpine3.23, 8-alpine3.23, alpine, alpine3.23
+Tags: 8.8.1-alpine, 8.8-alpine, 8.8.1-alpine3.23, 8.8-alpine3.23
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
 GitCommit: b675641c81d9f476e614aee4a6606365548bae41
 GitFetch: refs/tags/v8.8.1
@@ -54,18 +66,6 @@ Tags: 8.2.8-alpine, 8.2-alpine, 8.2.8-alpine3.22, 8.2-alpine3.22
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
 GitCommit: 3769a841048d940966635f8f59471f3d350707bf
 GitFetch: refs/tags/v8.2.8
-Directory: alpine
-
-Tags: 8.10-rc2, 8.10-rc2-trixie
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, riscv64, ppc64le, s390x
-GitCommit: 11c8b131eb4c9a36110d70ceffedaa7397fb6cbf
-GitFetch: refs/tags/v8.10-rc2
-Directory: debian
-
-Tags: 8.10-rc2-alpine, 8.10-rc2-alpine3.23
-Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: 11c8b131eb4c9a36110d70ceffedaa7397fb6cbf
-GitFetch: refs/tags/v8.10-rc2
 Directory: alpine
 
 Tags: 7.4.10, 7.4, 7, 7.4.10-bookworm, 7.4-bookworm, 7-bookworm
