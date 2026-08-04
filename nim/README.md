@@ -24,33 +24,33 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`2.2.10`, `2.2`, `2`, `latest`](https://github.com/nim-lang/docker-images/blob/91d060a13836bd13fedc527e13ad9061752f235f/dockerfiles/2.2.10/Dockerfile)
+-	[`2.2.10`, `2.2`, `2`, `latest`](https://github.com/nim-lang/docker-images/blob/9b7d458808d9ab20f456f557a389e67a0b20e5dd/dockerfiles/2.2.10/Dockerfile)
 
--	[`2.2.8`](https://github.com/nim-lang/docker-images/blob/91d060a13836bd13fedc527e13ad9061752f235f/dockerfiles/2.2.8/Dockerfile)
+-	[`2.2.8`](https://github.com/nim-lang/docker-images/blob/9b7d458808d9ab20f456f557a389e67a0b20e5dd/dockerfiles/2.2.8/Dockerfile)
 
--	[`2.2.6`](https://github.com/nim-lang/docker-images/blob/91d060a13836bd13fedc527e13ad9061752f235f/dockerfiles/2.2.6/Dockerfile)
+-	[`2.2.6`](https://github.com/nim-lang/docker-images/blob/9b7d458808d9ab20f456f557a389e67a0b20e5dd/dockerfiles/2.2.6/Dockerfile)
 
--	[`2.2.4`](https://github.com/nim-lang/docker-images/blob/91d060a13836bd13fedc527e13ad9061752f235f/dockerfiles/2.2.4/Dockerfile)
+-	[`2.2.4`](https://github.com/nim-lang/docker-images/blob/9b7d458808d9ab20f456f557a389e67a0b20e5dd/dockerfiles/2.2.4/Dockerfile)
 
--	[`2.2.2`](https://github.com/nim-lang/docker-images/blob/91d060a13836bd13fedc527e13ad9061752f235f/dockerfiles/2.2.2/Dockerfile)
+-	[`2.2.2`](https://github.com/nim-lang/docker-images/blob/9b7d458808d9ab20f456f557a389e67a0b20e5dd/dockerfiles/2.2.2/Dockerfile)
 
--	[`2.2.0`](https://github.com/nim-lang/docker-images/blob/91d060a13836bd13fedc527e13ad9061752f235f/dockerfiles/2.2.0/Dockerfile)
+-	[`2.2.0`](https://github.com/nim-lang/docker-images/blob/9b7d458808d9ab20f456f557a389e67a0b20e5dd/dockerfiles/2.2.0/Dockerfile)
 
--	[`2.0.14`, `2.0`](https://github.com/nim-lang/docker-images/blob/91d060a13836bd13fedc527e13ad9061752f235f/dockerfiles/2.0.14/Dockerfile)
+-	[`2.0.14`, `2.0`](https://github.com/nim-lang/docker-images/blob/9b7d458808d9ab20f456f557a389e67a0b20e5dd/dockerfiles/2.0.14/Dockerfile)
 
--	[`2.0.12`](https://github.com/nim-lang/docker-images/blob/91d060a13836bd13fedc527e13ad9061752f235f/dockerfiles/2.0.12/Dockerfile)
+-	[`2.0.12`](https://github.com/nim-lang/docker-images/blob/9b7d458808d9ab20f456f557a389e67a0b20e5dd/dockerfiles/2.0.12/Dockerfile)
 
--	[`2.0.10`](https://github.com/nim-lang/docker-images/blob/91d060a13836bd13fedc527e13ad9061752f235f/dockerfiles/2.0.10/Dockerfile)
+-	[`2.0.10`](https://github.com/nim-lang/docker-images/blob/9b7d458808d9ab20f456f557a389e67a0b20e5dd/dockerfiles/2.0.10/Dockerfile)
 
--	[`2.0.8`](https://github.com/nim-lang/docker-images/blob/91d060a13836bd13fedc527e13ad9061752f235f/dockerfiles/2.0.8/Dockerfile)
+-	[`2.0.8`](https://github.com/nim-lang/docker-images/blob/9b7d458808d9ab20f456f557a389e67a0b20e5dd/dockerfiles/2.0.8/Dockerfile)
 
--	[`2.0.6`](https://github.com/nim-lang/docker-images/blob/91d060a13836bd13fedc527e13ad9061752f235f/dockerfiles/2.0.6/Dockerfile)
+-	[`2.0.6`](https://github.com/nim-lang/docker-images/blob/9b7d458808d9ab20f456f557a389e67a0b20e5dd/dockerfiles/2.0.6/Dockerfile)
 
--	[`2.0.4`](https://github.com/nim-lang/docker-images/blob/91d060a13836bd13fedc527e13ad9061752f235f/dockerfiles/2.0.4/Dockerfile)
+-	[`2.0.4`](https://github.com/nim-lang/docker-images/blob/9b7d458808d9ab20f456f557a389e67a0b20e5dd/dockerfiles/2.0.4/Dockerfile)
 
--	[`2.0.2`](https://github.com/nim-lang/docker-images/blob/91d060a13836bd13fedc527e13ad9061752f235f/dockerfiles/2.0.2/Dockerfile)
+-	[`2.0.2`](https://github.com/nim-lang/docker-images/blob/9b7d458808d9ab20f456f557a389e67a0b20e5dd/dockerfiles/2.0.2/Dockerfile)
 
--	[`2.0.0`](https://github.com/nim-lang/docker-images/blob/91d060a13836bd13fedc527e13ad9061752f235f/dockerfiles/2.0.0/Dockerfile)
+-	[`2.0.0`](https://github.com/nim-lang/docker-images/blob/9b7d458808d9ab20f456f557a389e67a0b20e5dd/dockerfiles/2.0.0/Dockerfile)
 
 # Quick reference (cont.)
 

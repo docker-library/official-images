@@ -28,24 +28,24 @@ WARNING:
 
 ## Simple Tags
 
--	[`linux`](https://github.com/docker-library/hello-world/blob/0b0efba82b82ace81ab2fb42d25116f9488e6cb4/amd64/Dockerfile)
+-	[`linux`](https://github.com/docker-library/hello-world/blob/3981a44a531e7c844d844e12cbbda232d10d5dfb/amd64/Dockerfile)
 
--	[`nanoserver-ltsc2025`](https://github.com/docker-library/hello-world/blob/0b0efba82b82ace81ab2fb42d25116f9488e6cb4/amd64/nanoserver-ltsc2025/Dockerfile)
+-	[`nanoserver-ltsc2025`](https://github.com/docker-library/hello-world/blob/3981a44a531e7c844d844e12cbbda232d10d5dfb/amd64/nanoserver-ltsc2025/Dockerfile)
 
--	[`nanoserver-ltsc2022`](https://github.com/docker-library/hello-world/blob/0b0efba82b82ace81ab2fb42d25116f9488e6cb4/amd64/nanoserver-ltsc2022/Dockerfile)
+-	[`nanoserver-ltsc2022`](https://github.com/docker-library/hello-world/blob/3981a44a531e7c844d844e12cbbda232d10d5dfb/amd64/nanoserver-ltsc2022/Dockerfile)
 
 ## Shared Tags
 
 -	`latest`:
 
-	-	[`linux`](https://github.com/docker-library/hello-world/blob/0b0efba82b82ace81ab2fb42d25116f9488e6cb4/amd64/Dockerfile)
-	-	[`nanoserver-ltsc2025`](https://github.com/docker-library/hello-world/blob/0b0efba82b82ace81ab2fb42d25116f9488e6cb4/amd64/nanoserver-ltsc2025/Dockerfile)
-	-	[`nanoserver-ltsc2022`](https://github.com/docker-library/hello-world/blob/0b0efba82b82ace81ab2fb42d25116f9488e6cb4/amd64/nanoserver-ltsc2022/Dockerfile)
+	-	[`linux`](https://github.com/docker-library/hello-world/blob/3981a44a531e7c844d844e12cbbda232d10d5dfb/amd64/Dockerfile)
+	-	[`nanoserver-ltsc2025`](https://github.com/docker-library/hello-world/blob/3981a44a531e7c844d844e12cbbda232d10d5dfb/amd64/nanoserver-ltsc2025/Dockerfile)
+	-	[`nanoserver-ltsc2022`](https://github.com/docker-library/hello-world/blob/3981a44a531e7c844d844e12cbbda232d10d5dfb/amd64/nanoserver-ltsc2022/Dockerfile)
 
 -	`nanoserver`:
 
-	-	[`nanoserver-ltsc2025`](https://github.com/docker-library/hello-world/blob/0b0efba82b82ace81ab2fb42d25116f9488e6cb4/amd64/nanoserver-ltsc2025/Dockerfile)
-	-	[`nanoserver-ltsc2022`](https://github.com/docker-library/hello-world/blob/0b0efba82b82ace81ab2fb42d25116f9488e6cb4/amd64/nanoserver-ltsc2022/Dockerfile)
+	-	[`nanoserver-ltsc2025`](https://github.com/docker-library/hello-world/blob/3981a44a531e7c844d844e12cbbda232d10d5dfb/amd64/nanoserver-ltsc2025/Dockerfile)
+	-	[`nanoserver-ltsc2022`](https://github.com/docker-library/hello-world/blob/3981a44a531e7c844d844e12cbbda232d10d5dfb/amd64/nanoserver-ltsc2022/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -53,7 +53,7 @@ WARNING:
 	[https://github.com/docker-library/hello-world/issues](https://github.com/docker-library/hello-world/issues?q=)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/hello-world/), [`arm32v5`](https://hub.docker.com/r/arm32v5/hello-world/), [`arm32v6`](https://hub.docker.com/r/arm32v6/hello-world/), [`arm32v7`](https://hub.docker.com/r/arm32v7/hello-world/), [`arm64v8`](https://hub.docker.com/r/arm64v8/hello-world/), [`i386`](https://hub.docker.com/r/i386/hello-world/), [`mips64le`](https://hub.docker.com/r/mips64le/hello-world/), [`ppc64le`](https://hub.docker.com/r/ppc64le/hello-world/), [`riscv64`](https://hub.docker.com/r/riscv64/hello-world/), [`s390x`](https://hub.docker.com/r/s390x/hello-world/), [`windows-amd64`](https://hub.docker.com/r/winamd64/hello-world/)
+	[`amd64`](https://hub.docker.com/r/amd64/hello-world/), [`arm32v5`](https://hub.docker.com/r/arm32v5/hello-world/), [`arm32v6`](https://hub.docker.com/r/arm32v6/hello-world/), [`arm32v7`](https://hub.docker.com/r/arm32v7/hello-world/), [`arm64v8`](https://hub.docker.com/r/arm64v8/hello-world/), [`i386`](https://hub.docker.com/r/i386/hello-world/), [`ppc64le`](https://hub.docker.com/r/ppc64le/hello-world/), [`riscv64`](https://hub.docker.com/r/riscv64/hello-world/), [`s390x`](https://hub.docker.com/r/s390x/hello-world/), [`windows-amd64`](https://hub.docker.com/r/winamd64/hello-world/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/hello-world/` directory](https://github.com/docker-library/repo-info/blob/master/repos/hello-world) ([history](https://github.com/docker-library/repo-info/commits/master/repos/hello-world))  
