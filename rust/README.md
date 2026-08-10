@@ -28,9 +28,9 @@ WARNING:
 
 -	[`1-slim-bullseye`, `1.97-slim-bullseye`, `1.97.1-slim-bullseye`, `slim-bullseye`](https://github.com/rust-lang/docker-rust/blob/40acf7919e2e27dc706918e42758a6f1c21e806b/stable/bullseye/slim/Dockerfile)
 
--	[`1-bookworm`, `1.97-bookworm`, `1.97.1-bookworm`, `bookworm`](https://github.com/rust-lang/docker-rust/blob/40acf7919e2e27dc706918e42758a6f1c21e806b/stable/bookworm/Dockerfile)
+-	[`1-bookworm`, `1.97-bookworm`, `1.97.1-bookworm`, `bookworm`](https://github.com/rust-lang/docker-rust/blob/5ba8fc7544e1880d0fc5f56e9f11081082057dc2/stable/bookworm/Dockerfile)
 
--	[`1-slim-bookworm`, `1.97-slim-bookworm`, `1.97.1-slim-bookworm`, `slim-bookworm`](https://github.com/rust-lang/docker-rust/blob/40acf7919e2e27dc706918e42758a6f1c21e806b/stable/bookworm/slim/Dockerfile)
+-	[`1-slim-bookworm`, `1.97-slim-bookworm`, `1.97.1-slim-bookworm`, `slim-bookworm`](https://github.com/rust-lang/docker-rust/blob/5ba8fc7544e1880d0fc5f56e9f11081082057dc2/stable/bookworm/slim/Dockerfile)
 
 -	[`1-trixie`, `1.97-trixie`, `1.97.1-trixie`, `trixie`, `1`, `1.97`, `1.97.1`, `latest`](https://github.com/rust-lang/docker-rust/blob/40acf7919e2e27dc706918e42758a6f1c21e806b/stable/trixie/Dockerfile)
 
