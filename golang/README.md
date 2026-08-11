@@ -28,9 +28,9 @@ WARNING:
 
 ## Simple Tags
 
--	[`1.27rc2-trixie`, `1.27-rc-trixie`](https://github.com/docker-library/golang/blob/294097713ad2eaf9ee4c5e9dc57e040ac4b402d6/1.27-rc/trixie/Dockerfile)
+-	[`1.27rc2-trixie`, `1.27-rc-trixie`](https://github.com/docker-library/golang/blob/52be962ef5db5cf29eab63957b5bd095d5b97629/1.27-rc/trixie/Dockerfile)
 
--	[`1.27rc2-bookworm`, `1.27-rc-bookworm`](https://github.com/docker-library/golang/blob/294097713ad2eaf9ee4c5e9dc57e040ac4b402d6/1.27-rc/bookworm/Dockerfile)
+-	[`1.27rc2-bookworm`, `1.27-rc-bookworm`](https://github.com/docker-library/golang/blob/52be962ef5db5cf29eab63957b5bd095d5b97629/1.27-rc/bookworm/Dockerfile)
 
 -	[`1.27rc2-alpine3.24`, `1.27-rc-alpine3.24`, `1.27rc2-alpine`, `1.27-rc-alpine`](https://github.com/docker-library/golang/blob/294097713ad2eaf9ee4c5e9dc57e040ac4b402d6/1.27-rc/alpine3.24/Dockerfile)
 
@@ -44,9 +44,9 @@ WARNING:
 
 -	[`1.27rc2-nanoserver-ltsc2022`, `1.27-rc-nanoserver-ltsc2022`](https://github.com/docker-library/golang/blob/294097713ad2eaf9ee4c5e9dc57e040ac4b402d6/1.27-rc/windows/nanoserver-ltsc2022/Dockerfile)
 
--	[`1.26.5-trixie`, `1.26-trixie`, `1-trixie`, `trixie`](https://github.com/docker-library/golang/blob/294097713ad2eaf9ee4c5e9dc57e040ac4b402d6/1.26/trixie/Dockerfile)
+-	[`1.26.5-trixie`, `1.26-trixie`, `1-trixie`, `trixie`](https://github.com/docker-library/golang/blob/52be962ef5db5cf29eab63957b5bd095d5b97629/1.26/trixie/Dockerfile)
 
--	[`1.26.5-bookworm`, `1.26-bookworm`, `1-bookworm`, `bookworm`](https://github.com/docker-library/golang/blob/294097713ad2eaf9ee4c5e9dc57e040ac4b402d6/1.26/bookworm/Dockerfile)
+-	[`1.26.5-bookworm`, `1.26-bookworm`, `1-bookworm`, `bookworm`](https://github.com/docker-library/golang/blob/52be962ef5db5cf29eab63957b5bd095d5b97629/1.26/bookworm/Dockerfile)
 
 -	[`1.26.5-alpine3.24`, `1.26-alpine3.24`, `1-alpine3.24`, `alpine3.24`, `1.26.5-alpine`, `1.26-alpine`, `1-alpine`, `alpine`](https://github.com/docker-library/golang/blob/294097713ad2eaf9ee4c5e9dc57e040ac4b402d6/1.26/alpine3.24/Dockerfile)
 
@@ -60,9 +60,9 @@ WARNING:
 
 -	[`1.26.5-nanoserver-ltsc2022`, `1.26-nanoserver-ltsc2022`, `1-nanoserver-ltsc2022`, `nanoserver-ltsc2022`](https://github.com/docker-library/golang/blob/294097713ad2eaf9ee4c5e9dc57e040ac4b402d6/1.26/windows/nanoserver-ltsc2022/Dockerfile)
 
--	[`1.25.12-trixie`, `1.25-trixie`](https://github.com/docker-library/golang/blob/294097713ad2eaf9ee4c5e9dc57e040ac4b402d6/1.25/trixie/Dockerfile)
+-	[`1.25.12-trixie`, `1.25-trixie`](https://github.com/docker-library/golang/blob/52be962ef5db5cf29eab63957b5bd095d5b97629/1.25/trixie/Dockerfile)
 
--	[`1.25.12-bookworm`, `1.25-bookworm`](https://github.com/docker-library/golang/blob/294097713ad2eaf9ee4c5e9dc57e040ac4b402d6/1.25/bookworm/Dockerfile)
+-	[`1.25.12-bookworm`, `1.25-bookworm`](https://github.com/docker-library/golang/blob/52be962ef5db5cf29eab63957b5bd095d5b97629/1.25/bookworm/Dockerfile)
 
 -	[`1.25.12-alpine3.24`, `1.25-alpine3.24`, `1.25.12-alpine`, `1.25-alpine`](https://github.com/docker-library/golang/blob/294097713ad2eaf9ee4c5e9dc57e040ac4b402d6/1.25/alpine3.24/Dockerfile)
 
@@ -76,19 +76,19 @@ WARNING:
 
 -	[`1.25.12-nanoserver-ltsc2022`, `1.25-nanoserver-ltsc2022`](https://github.com/docker-library/golang/blob/294097713ad2eaf9ee4c5e9dc57e040ac4b402d6/1.25/windows/nanoserver-ltsc2022/Dockerfile)
 
--	[`tip-20260731-trixie`, `tip-trixie`](https://github.com/docker-library/golang/blob/1b2097a1635ff792cc21d7caaa7480ce39f3c75a/tip/trixie/Dockerfile)
+-	[`tip-20260809-trixie`, `tip-trixie`](https://github.com/docker-library/golang/blob/e934922a24fb775bbb5e3c19a1d5163c7a1aafd8/tip/trixie/Dockerfile)
 
--	[`tip-20260731-bookworm`, `tip-bookworm`](https://github.com/docker-library/golang/blob/1b2097a1635ff792cc21d7caaa7480ce39f3c75a/tip/bookworm/Dockerfile)
+-	[`tip-20260809-bookworm`, `tip-bookworm`](https://github.com/docker-library/golang/blob/e934922a24fb775bbb5e3c19a1d5163c7a1aafd8/tip/bookworm/Dockerfile)
 
--	[`tip-20260731-alpine3.24`, `tip-alpine3.24`, `tip-20260731-alpine`, `tip-alpine`](https://github.com/docker-library/golang/blob/1b2097a1635ff792cc21d7caaa7480ce39f3c75a/tip/alpine3.24/Dockerfile)
+-	[`tip-20260809-alpine3.24`, `tip-alpine3.24`, `tip-20260809-alpine`, `tip-alpine`](https://github.com/docker-library/golang/blob/e934922a24fb775bbb5e3c19a1d5163c7a1aafd8/tip/alpine3.24/Dockerfile)
 
--	[`tip-20260731-alpine3.23`, `tip-alpine3.23`](https://github.com/docker-library/golang/blob/1b2097a1635ff792cc21d7caaa7480ce39f3c75a/tip/alpine3.23/Dockerfile)
+-	[`tip-20260809-alpine3.23`, `tip-alpine3.23`](https://github.com/docker-library/golang/blob/e934922a24fb775bbb5e3c19a1d5163c7a1aafd8/tip/alpine3.23/Dockerfile)
 
 ## Shared Tags
 
 -	`1.27rc2`, `1.27-rc`:
 
-	-	[`1.27rc2-trixie`](https://github.com/docker-library/golang/blob/294097713ad2eaf9ee4c5e9dc57e040ac4b402d6/1.27-rc/trixie/Dockerfile)
+	-	[`1.27rc2-trixie`](https://github.com/docker-library/golang/blob/52be962ef5db5cf29eab63957b5bd095d5b97629/1.27-rc/trixie/Dockerfile)
 	-	[`1.27rc2-windowsservercore-ltsc2025`](https://github.com/docker-library/golang/blob/294097713ad2eaf9ee4c5e9dc57e040ac4b402d6/1.27-rc/windows/windowsservercore-ltsc2025/Dockerfile)
 	-	[`1.27rc2-windowsservercore-ltsc2022`](https://github.com/docker-library/golang/blob/294097713ad2eaf9ee4c5e9dc57e040ac4b402d6/1.27-rc/windows/windowsservercore-ltsc2022/Dockerfile)
 
@@ -104,7 +104,7 @@ WARNING:
 
 -	`1.26.5`, `1.26`, `1`, `latest`:
 
-	-	[`1.26.5-trixie`](https://github.com/docker-library/golang/blob/294097713ad2eaf9ee4c5e9dc57e040ac4b402d6/1.26/trixie/Dockerfile)
+	-	[`1.26.5-trixie`](https://github.com/docker-library/golang/blob/52be962ef5db5cf29eab63957b5bd095d5b97629/1.26/trixie/Dockerfile)
 	-	[`1.26.5-windowsservercore-ltsc2025`](https://github.com/docker-library/golang/blob/294097713ad2eaf9ee4c5e9dc57e040ac4b402d6/1.26/windows/windowsservercore-ltsc2025/Dockerfile)
 	-	[`1.26.5-windowsservercore-ltsc2022`](https://github.com/docker-library/golang/blob/294097713ad2eaf9ee4c5e9dc57e040ac4b402d6/1.26/windows/windowsservercore-ltsc2022/Dockerfile)
 
@@ -120,7 +120,7 @@ WARNING:
 
 -	`1.25.12`, `1.25`:
 
-	-	[`1.25.12-trixie`](https://github.com/docker-library/golang/blob/294097713ad2eaf9ee4c5e9dc57e040ac4b402d6/1.25/trixie/Dockerfile)
+	-	[`1.25.12-trixie`](https://github.com/docker-library/golang/blob/52be962ef5db5cf29eab63957b5bd095d5b97629/1.25/trixie/Dockerfile)
 	-	[`1.25.12-windowsservercore-ltsc2025`](https://github.com/docker-library/golang/blob/294097713ad2eaf9ee4c5e9dc57e040ac4b402d6/1.25/windows/windowsservercore-ltsc2025/Dockerfile)
 	-	[`1.25.12-windowsservercore-ltsc2022`](https://github.com/docker-library/golang/blob/294097713ad2eaf9ee4c5e9dc57e040ac4b402d6/1.25/windows/windowsservercore-ltsc2022/Dockerfile)
 
@@ -134,9 +134,9 @@ WARNING:
 	-	[`1.25.12-nanoserver-ltsc2025`](https://github.com/docker-library/golang/blob/294097713ad2eaf9ee4c5e9dc57e040ac4b402d6/1.25/windows/nanoserver-ltsc2025/Dockerfile)
 	-	[`1.25.12-nanoserver-ltsc2022`](https://github.com/docker-library/golang/blob/294097713ad2eaf9ee4c5e9dc57e040ac4b402d6/1.25/windows/nanoserver-ltsc2022/Dockerfile)
 
--	`tip-20260731`, `tip`:
+-	`tip-20260809`, `tip`:
 
-	-	[`tip-20260731-trixie`](https://github.com/docker-library/golang/blob/1b2097a1635ff792cc21d7caaa7480ce39f3c75a/tip/trixie/Dockerfile)
+	-	[`tip-20260809-trixie`](https://github.com/docker-library/golang/blob/e934922a24fb775bbb5e3c19a1d5163c7a1aafd8/tip/trixie/Dockerfile)
 
 # Quick reference (cont.)
 
