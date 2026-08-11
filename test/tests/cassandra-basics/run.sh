@@ -36,7 +36,8 @@ _status() {
 }
 
 # Make sure our container is up
-. "$dir/../../retry.sh" '_status'
+. "$dir/../../retry.sh" --tries 20 '_status'
+# (cassandra takes a long time to start up, even for responding to nodetool)
 
 cqlsh() {
 	docker run -i --rm \
