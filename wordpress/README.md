@@ -24,29 +24,29 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`7.0.2-php8.2-apache`, `7.0-php8.2-apache`, `7-php8.2-apache`, `php8.2-apache`, `7.0.2-php8.2`, `7.0-php8.2`, `7-php8.2`, `php8.2`](https://github.com/docker-library/wordpress/blob/90eed6a6ad2acba838ec5c672dcc4b945e788f98/latest/php8.2/apache/Dockerfile)
+-	[`7.0.3-php8.2-apache`, `7.0-php8.2-apache`, `7-php8.2-apache`, `php8.2-apache`, `7.0.3-php8.2`, `7.0-php8.2`, `7-php8.2`, `php8.2`](https://github.com/docker-library/wordpress/blob/f4cb99ee5e59ae4eccd18502b29d8f987b2455c7/latest/php8.2/apache/Dockerfile)
 
--	[`7.0.2-php8.2-fpm`, `7.0-php8.2-fpm`, `7-php8.2-fpm`, `php8.2-fpm`](https://github.com/docker-library/wordpress/blob/90eed6a6ad2acba838ec5c672dcc4b945e788f98/latest/php8.2/fpm/Dockerfile)
+-	[`7.0.3-php8.2-fpm`, `7.0-php8.2-fpm`, `7-php8.2-fpm`, `php8.2-fpm`](https://github.com/docker-library/wordpress/blob/f4cb99ee5e59ae4eccd18502b29d8f987b2455c7/latest/php8.2/fpm/Dockerfile)
 
--	[`7.0.2-php8.2-fpm-alpine`, `7.0-php8.2-fpm-alpine`, `7-php8.2-fpm-alpine`, `php8.2-fpm-alpine`](https://github.com/docker-library/wordpress/blob/90eed6a6ad2acba838ec5c672dcc4b945e788f98/latest/php8.2/fpm-alpine/Dockerfile)
+-	[`7.0.3-php8.2-fpm-alpine`, `7.0-php8.2-fpm-alpine`, `7-php8.2-fpm-alpine`, `php8.2-fpm-alpine`](https://github.com/docker-library/wordpress/blob/f4cb99ee5e59ae4eccd18502b29d8f987b2455c7/latest/php8.2/fpm-alpine/Dockerfile)
 
--	[`7.0.2-apache`, `7.0-apache`, `7-apache`, `apache`, `7.0.2`, `7.0`, `7`, `latest`, `7.0.2-php8.3-apache`, `7.0-php8.3-apache`, `7-php8.3-apache`, `php8.3-apache`, `7.0.2-php8.3`, `7.0-php8.3`, `7-php8.3`, `php8.3`](https://github.com/docker-library/wordpress/blob/90eed6a6ad2acba838ec5c672dcc4b945e788f98/latest/php8.3/apache/Dockerfile)
+-	[`7.0.3-apache`, `7.0-apache`, `7-apache`, `apache`, `7.0.3`, `7.0`, `7`, `latest`, `7.0.3-php8.3-apache`, `7.0-php8.3-apache`, `7-php8.3-apache`, `php8.3-apache`, `7.0.3-php8.3`, `7.0-php8.3`, `7-php8.3`, `php8.3`](https://github.com/docker-library/wordpress/blob/f4cb99ee5e59ae4eccd18502b29d8f987b2455c7/latest/php8.3/apache/Dockerfile)
 
--	[`7.0.2-fpm`, `7.0-fpm`, `7-fpm`, `fpm`, `7.0.2-php8.3-fpm`, `7.0-php8.3-fpm`, `7-php8.3-fpm`, `php8.3-fpm`](https://github.com/docker-library/wordpress/blob/90eed6a6ad2acba838ec5c672dcc4b945e788f98/latest/php8.3/fpm/Dockerfile)
+-	[`7.0.3-fpm`, `7.0-fpm`, `7-fpm`, `fpm`, `7.0.3-php8.3-fpm`, `7.0-php8.3-fpm`, `7-php8.3-fpm`, `php8.3-fpm`](https://github.com/docker-library/wordpress/blob/f4cb99ee5e59ae4eccd18502b29d8f987b2455c7/latest/php8.3/fpm/Dockerfile)
 
--	[`7.0.2-fpm-alpine`, `7.0-fpm-alpine`, `7-fpm-alpine`, `fpm-alpine`, `7.0.2-php8.3-fpm-alpine`, `7.0-php8.3-fpm-alpine`, `7-php8.3-fpm-alpine`, `php8.3-fpm-alpine`](https://github.com/docker-library/wordpress/blob/90eed6a6ad2acba838ec5c672dcc4b945e788f98/latest/php8.3/fpm-alpine/Dockerfile)
+-	[`7.0.3-fpm-alpine`, `7.0-fpm-alpine`, `7-fpm-alpine`, `fpm-alpine`, `7.0.3-php8.3-fpm-alpine`, `7.0-php8.3-fpm-alpine`, `7-php8.3-fpm-alpine`, `php8.3-fpm-alpine`](https://github.com/docker-library/wordpress/blob/f4cb99ee5e59ae4eccd18502b29d8f987b2455c7/latest/php8.3/fpm-alpine/Dockerfile)
 
--	[`7.0.2-php8.4-apache`, `7.0-php8.4-apache`, `7-php8.4-apache`, `php8.4-apache`, `7.0.2-php8.4`, `7.0-php8.4`, `7-php8.4`, `php8.4`](https://github.com/docker-library/wordpress/blob/90eed6a6ad2acba838ec5c672dcc4b945e788f98/latest/php8.4/apache/Dockerfile)
+-	[`7.0.3-php8.4-apache`, `7.0-php8.4-apache`, `7-php8.4-apache`, `php8.4-apache`, `7.0.3-php8.4`, `7.0-php8.4`, `7-php8.4`, `php8.4`](https://github.com/docker-library/wordpress/blob/f4cb99ee5e59ae4eccd18502b29d8f987b2455c7/latest/php8.4/apache/Dockerfile)
 
--	[`7.0.2-php8.4-fpm`, `7.0-php8.4-fpm`, `7-php8.4-fpm`, `php8.4-fpm`](https://github.com/docker-library/wordpress/blob/90eed6a6ad2acba838ec5c672dcc4b945e788f98/latest/php8.4/fpm/Dockerfile)
+-	[`7.0.3-php8.4-fpm`, `7.0-php8.4-fpm`, `7-php8.4-fpm`, `php8.4-fpm`](https://github.com/docker-library/wordpress/blob/f4cb99ee5e59ae4eccd18502b29d8f987b2455c7/latest/php8.4/fpm/Dockerfile)
 
--	[`7.0.2-php8.4-fpm-alpine`, `7.0-php8.4-fpm-alpine`, `7-php8.4-fpm-alpine`, `php8.4-fpm-alpine`](https://github.com/docker-library/wordpress/blob/90eed6a6ad2acba838ec5c672dcc4b945e788f98/latest/php8.4/fpm-alpine/Dockerfile)
+-	[`7.0.3-php8.4-fpm-alpine`, `7.0-php8.4-fpm-alpine`, `7-php8.4-fpm-alpine`, `php8.4-fpm-alpine`](https://github.com/docker-library/wordpress/blob/f4cb99ee5e59ae4eccd18502b29d8f987b2455c7/latest/php8.4/fpm-alpine/Dockerfile)
 
--	[`7.0.2-php8.5-apache`, `7.0-php8.5-apache`, `7-php8.5-apache`, `php8.5-apache`, `7.0.2-php8.5`, `7.0-php8.5`, `7-php8.5`, `php8.5`](https://github.com/docker-library/wordpress/blob/90eed6a6ad2acba838ec5c672dcc4b945e788f98/latest/php8.5/apache/Dockerfile)
+-	[`7.0.3-php8.5-apache`, `7.0-php8.5-apache`, `7-php8.5-apache`, `php8.5-apache`, `7.0.3-php8.5`, `7.0-php8.5`, `7-php8.5`, `php8.5`](https://github.com/docker-library/wordpress/blob/f4cb99ee5e59ae4eccd18502b29d8f987b2455c7/latest/php8.5/apache/Dockerfile)
 
--	[`7.0.2-php8.5-fpm`, `7.0-php8.5-fpm`, `7-php8.5-fpm`, `php8.5-fpm`](https://github.com/docker-library/wordpress/blob/90eed6a6ad2acba838ec5c672dcc4b945e788f98/latest/php8.5/fpm/Dockerfile)
+-	[`7.0.3-php8.5-fpm`, `7.0-php8.5-fpm`, `7-php8.5-fpm`, `php8.5-fpm`](https://github.com/docker-library/wordpress/blob/f4cb99ee5e59ae4eccd18502b29d8f987b2455c7/latest/php8.5/fpm/Dockerfile)
 
--	[`7.0.2-php8.5-fpm-alpine`, `7.0-php8.5-fpm-alpine`, `7-php8.5-fpm-alpine`, `php8.5-fpm-alpine`](https://github.com/docker-library/wordpress/blob/90eed6a6ad2acba838ec5c672dcc4b945e788f98/latest/php8.5/fpm-alpine/Dockerfile)
+-	[`7.0.3-php8.5-fpm-alpine`, `7.0-php8.5-fpm-alpine`, `7-php8.5-fpm-alpine`, `php8.5-fpm-alpine`](https://github.com/docker-library/wordpress/blob/f4cb99ee5e59ae4eccd18502b29d8f987b2455c7/latest/php8.5/fpm-alpine/Dockerfile)
 
 -	[`cli-2.12.0-php8.2`, `cli-2.12-php8.2`, `cli-2-php8.2`, `cli-php8.2`](https://github.com/docker-library/wordpress/blob/b962e97ba0d6cfd8784a521fb9d05fc89aa180a9/cli/php8.2/alpine/Dockerfile)
 
@@ -56,29 +56,29 @@ WARNING:
 
 -	[`cli-2.12.0-php8.5`, `cli-2.12-php8.5`, `cli-2-php8.5`, `cli-php8.5`](https://github.com/docker-library/wordpress/blob/b962e97ba0d6cfd8784a521fb9d05fc89aa180a9/cli/php8.5/alpine/Dockerfile)
 
--	[`beta-7.1-RC1-php8.2-apache`, `beta-7.1-php8.2-apache`, `beta-7-php8.2-apache`, `beta-php8.2-apache`, `beta-7.1-RC1-php8.2`, `beta-7.1-php8.2`, `beta-7-php8.2`, `beta-php8.2`](https://github.com/docker-library/wordpress/blob/03d209cfc628a1c915e1f53a1b2a8b6541cfe48f/beta/php8.2/apache/Dockerfile)
+-	[`beta-7.1-RC2-php8.2-apache`, `beta-7.1-php8.2-apache`, `beta-7-php8.2-apache`, `beta-php8.2-apache`, `beta-7.1-RC2-php8.2`, `beta-7.1-php8.2`, `beta-7-php8.2`, `beta-php8.2`](https://github.com/docker-library/wordpress/blob/fea35ca9fe01e657ea0a22f350cabaf229aa99d8/beta/php8.2/apache/Dockerfile)
 
--	[`beta-7.1-RC1-php8.2-fpm`, `beta-7.1-php8.2-fpm`, `beta-7-php8.2-fpm`, `beta-php8.2-fpm`](https://github.com/docker-library/wordpress/blob/03d209cfc628a1c915e1f53a1b2a8b6541cfe48f/beta/php8.2/fpm/Dockerfile)
+-	[`beta-7.1-RC2-php8.2-fpm`, `beta-7.1-php8.2-fpm`, `beta-7-php8.2-fpm`, `beta-php8.2-fpm`](https://github.com/docker-library/wordpress/blob/fea35ca9fe01e657ea0a22f350cabaf229aa99d8/beta/php8.2/fpm/Dockerfile)
 
--	[`beta-7.1-RC1-php8.2-fpm-alpine`, `beta-7.1-php8.2-fpm-alpine`, `beta-7-php8.2-fpm-alpine`, `beta-php8.2-fpm-alpine`](https://github.com/docker-library/wordpress/blob/03d209cfc628a1c915e1f53a1b2a8b6541cfe48f/beta/php8.2/fpm-alpine/Dockerfile)
+-	[`beta-7.1-RC2-php8.2-fpm-alpine`, `beta-7.1-php8.2-fpm-alpine`, `beta-7-php8.2-fpm-alpine`, `beta-php8.2-fpm-alpine`](https://github.com/docker-library/wordpress/blob/fea35ca9fe01e657ea0a22f350cabaf229aa99d8/beta/php8.2/fpm-alpine/Dockerfile)
 
--	[`beta-7.1-RC1-apache`, `beta-7.1-apache`, `beta-7-apache`, `beta-apache`, `beta-7.1-RC1`, `beta-7.1`, `beta-7`, `beta`, `beta-7.1-RC1-php8.3-apache`, `beta-7.1-php8.3-apache`, `beta-7-php8.3-apache`, `beta-php8.3-apache`, `beta-7.1-RC1-php8.3`, `beta-7.1-php8.3`, `beta-7-php8.3`, `beta-php8.3`](https://github.com/docker-library/wordpress/blob/03d209cfc628a1c915e1f53a1b2a8b6541cfe48f/beta/php8.3/apache/Dockerfile)
+-	[`beta-7.1-RC2-apache`, `beta-7.1-apache`, `beta-7-apache`, `beta-apache`, `beta-7.1-RC2`, `beta-7.1`, `beta-7`, `beta`, `beta-7.1-RC2-php8.3-apache`, `beta-7.1-php8.3-apache`, `beta-7-php8.3-apache`, `beta-php8.3-apache`, `beta-7.1-RC2-php8.3`, `beta-7.1-php8.3`, `beta-7-php8.3`, `beta-php8.3`](https://github.com/docker-library/wordpress/blob/fea35ca9fe01e657ea0a22f350cabaf229aa99d8/beta/php8.3/apache/Dockerfile)
 
--	[`beta-7.1-RC1-fpm`, `beta-7.1-fpm`, `beta-7-fpm`, `beta-fpm`, `beta-7.1-RC1-php8.3-fpm`, `beta-7.1-php8.3-fpm`, `beta-7-php8.3-fpm`, `beta-php8.3-fpm`](https://github.com/docker-library/wordpress/blob/03d209cfc628a1c915e1f53a1b2a8b6541cfe48f/beta/php8.3/fpm/Dockerfile)
+-	[`beta-7.1-RC2-fpm`, `beta-7.1-fpm`, `beta-7-fpm`, `beta-fpm`, `beta-7.1-RC2-php8.3-fpm`, `beta-7.1-php8.3-fpm`, `beta-7-php8.3-fpm`, `beta-php8.3-fpm`](https://github.com/docker-library/wordpress/blob/fea35ca9fe01e657ea0a22f350cabaf229aa99d8/beta/php8.3/fpm/Dockerfile)
 
--	[`beta-7.1-RC1-fpm-alpine`, `beta-7.1-fpm-alpine`, `beta-7-fpm-alpine`, `beta-fpm-alpine`, `beta-7.1-RC1-php8.3-fpm-alpine`, `beta-7.1-php8.3-fpm-alpine`, `beta-7-php8.3-fpm-alpine`, `beta-php8.3-fpm-alpine`](https://github.com/docker-library/wordpress/blob/03d209cfc628a1c915e1f53a1b2a8b6541cfe48f/beta/php8.3/fpm-alpine/Dockerfile)
+-	[`beta-7.1-RC2-fpm-alpine`, `beta-7.1-fpm-alpine`, `beta-7-fpm-alpine`, `beta-fpm-alpine`, `beta-7.1-RC2-php8.3-fpm-alpine`, `beta-7.1-php8.3-fpm-alpine`, `beta-7-php8.3-fpm-alpine`, `beta-php8.3-fpm-alpine`](https://github.com/docker-library/wordpress/blob/fea35ca9fe01e657ea0a22f350cabaf229aa99d8/beta/php8.3/fpm-alpine/Dockerfile)
 
--	[`beta-7.1-RC1-php8.4-apache`, `beta-7.1-php8.4-apache`, `beta-7-php8.4-apache`, `beta-php8.4-apache`, `beta-7.1-RC1-php8.4`, `beta-7.1-php8.4`, `beta-7-php8.4`, `beta-php8.4`](https://github.com/docker-library/wordpress/blob/03d209cfc628a1c915e1f53a1b2a8b6541cfe48f/beta/php8.4/apache/Dockerfile)
+-	[`beta-7.1-RC2-php8.4-apache`, `beta-7.1-php8.4-apache`, `beta-7-php8.4-apache`, `beta-php8.4-apache`, `beta-7.1-RC2-php8.4`, `beta-7.1-php8.4`, `beta-7-php8.4`, `beta-php8.4`](https://github.com/docker-library/wordpress/blob/fea35ca9fe01e657ea0a22f350cabaf229aa99d8/beta/php8.4/apache/Dockerfile)
 
--	[`beta-7.1-RC1-php8.4-fpm`, `beta-7.1-php8.4-fpm`, `beta-7-php8.4-fpm`, `beta-php8.4-fpm`](https://github.com/docker-library/wordpress/blob/03d209cfc628a1c915e1f53a1b2a8b6541cfe48f/beta/php8.4/fpm/Dockerfile)
+-	[`beta-7.1-RC2-php8.4-fpm`, `beta-7.1-php8.4-fpm`, `beta-7-php8.4-fpm`, `beta-php8.4-fpm`](https://github.com/docker-library/wordpress/blob/fea35ca9fe01e657ea0a22f350cabaf229aa99d8/beta/php8.4/fpm/Dockerfile)
 
--	[`beta-7.1-RC1-php8.4-fpm-alpine`, `beta-7.1-php8.4-fpm-alpine`, `beta-7-php8.4-fpm-alpine`, `beta-php8.4-fpm-alpine`](https://github.com/docker-library/wordpress/blob/03d209cfc628a1c915e1f53a1b2a8b6541cfe48f/beta/php8.4/fpm-alpine/Dockerfile)
+-	[`beta-7.1-RC2-php8.4-fpm-alpine`, `beta-7.1-php8.4-fpm-alpine`, `beta-7-php8.4-fpm-alpine`, `beta-php8.4-fpm-alpine`](https://github.com/docker-library/wordpress/blob/fea35ca9fe01e657ea0a22f350cabaf229aa99d8/beta/php8.4/fpm-alpine/Dockerfile)
 
--	[`beta-7.1-RC1-php8.5-apache`, `beta-7.1-php8.5-apache`, `beta-7-php8.5-apache`, `beta-php8.5-apache`, `beta-7.1-RC1-php8.5`, `beta-7.1-php8.5`, `beta-7-php8.5`, `beta-php8.5`](https://github.com/docker-library/wordpress/blob/03d209cfc628a1c915e1f53a1b2a8b6541cfe48f/beta/php8.5/apache/Dockerfile)
+-	[`beta-7.1-RC2-php8.5-apache`, `beta-7.1-php8.5-apache`, `beta-7-php8.5-apache`, `beta-php8.5-apache`, `beta-7.1-RC2-php8.5`, `beta-7.1-php8.5`, `beta-7-php8.5`, `beta-php8.5`](https://github.com/docker-library/wordpress/blob/fea35ca9fe01e657ea0a22f350cabaf229aa99d8/beta/php8.5/apache/Dockerfile)
 
--	[`beta-7.1-RC1-php8.5-fpm`, `beta-7.1-php8.5-fpm`, `beta-7-php8.5-fpm`, `beta-php8.5-fpm`](https://github.com/docker-library/wordpress/blob/03d209cfc628a1c915e1f53a1b2a8b6541cfe48f/beta/php8.5/fpm/Dockerfile)
+-	[`beta-7.1-RC2-php8.5-fpm`, `beta-7.1-php8.5-fpm`, `beta-7-php8.5-fpm`, `beta-php8.5-fpm`](https://github.com/docker-library/wordpress/blob/fea35ca9fe01e657ea0a22f350cabaf229aa99d8/beta/php8.5/fpm/Dockerfile)
 
--	[`beta-7.1-RC1-php8.5-fpm-alpine`, `beta-7.1-php8.5-fpm-alpine`, `beta-7-php8.5-fpm-alpine`, `beta-php8.5-fpm-alpine`](https://github.com/docker-library/wordpress/blob/03d209cfc628a1c915e1f53a1b2a8b6541cfe48f/beta/php8.5/fpm-alpine/Dockerfile)
+-	[`beta-7.1-RC2-php8.5-fpm-alpine`, `beta-7.1-php8.5-fpm-alpine`, `beta-7-php8.5-fpm-alpine`, `beta-php8.5-fpm-alpine`](https://github.com/docker-library/wordpress/blob/fea35ca9fe01e657ea0a22f350cabaf229aa99d8/beta/php8.5/fpm-alpine/Dockerfile)
 
 # Quick reference (cont.)
 

@@ -24,7 +24,7 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`16.1.0`, `16.1`, `16`, `latest`, `16.1.0-trixie`, `16.1-trixie`, `16-trixie`, `trixie`](https://github.com/docker-library/gcc/blob/24fb071be01a0e6241fbbabd59a3dd07d31b80f5/16/Dockerfile)
+-	[`16.2.0`, `16.2`, `16`, `latest`, `16.2.0-trixie`, `16.2-trixie`, `16-trixie`, `trixie`](https://github.com/docker-library/gcc/blob/ec9b92635140e2869eb3aad9b7a921b47ec54e50/16/Dockerfile)
 
 -	[`15.3.0`, `15.3`, `15`, `15.3.0-trixie`, `15.3-trixie`, `15-trixie`](https://github.com/docker-library/gcc/blob/3b87fe3e286f7aa21ed5d69fd5c39e1b4fb02057/15/Dockerfile)
 
