@@ -24,7 +24,7 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`fresh`, `latest`, `9.0.3-3`, `9.0.3`, `9.0`, `9`](https://github.com/varnish/docker-varnish/blob/5ba9f9ce6a65fc569f0fbfc6f06b57c66b620875/fresh/debian/Dockerfile)
+-	[`fresh`, `latest`, `9.0.3-4`, `9.0.3`, `9.0`, `9`](https://github.com/varnish/docker-varnish/blob/842b01df2dac66c086071cb238f4eac5c319cc36/fresh/debian/Dockerfile)
 
 -	[`old`, `8.0.2-1`, `8.0.2`, `8.0`, `8`](https://github.com/varnish/docker-varnish/blob/40cfe05d7eba91c1d6588f9bb40ed64ee84312fe/old/debian/Dockerfile)
 
