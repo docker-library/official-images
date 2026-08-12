@@ -24,7 +24,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`5.0.9`, `5.0`, `5`, `latest`, `5.0.9-bookworm`, `5.0-bookworm`, `5-bookworm`, `bookworm`](https://github.com/docker-library/cassandra/blob/49d4e7c3e500bab33230230d2dc5a286c0dfae4a/5.0/Dockerfile)
+-	[`6.0-alpha2`, `6.0`, `6.0-alpha2-trixie`, `6.0-trixie`](https://github.com/docker-library/cassandra/blob/929d3a1ab0aa656873dacdd915d8a86b85547776/6.0/Dockerfile)
+
+-	[`5.0.9`, `5.0`, `5`, `latest`, `5.0.9-trixie`, `5.0-trixie`, `5-trixie`, `trixie`](https://github.com/docker-library/cassandra/blob/929d3a1ab0aa656873dacdd915d8a86b85547776/5.0/Dockerfile)
 
 -	[`4.1.12`, `4.1`, `4`, `4.1.12-bookworm`, `4.1-bookworm`, `4-bookworm`](https://github.com/docker-library/cassandra/blob/50bacaca78e08e488aebc7a9d11b4fd1f188770a/4.1/Dockerfile)
 
@@ -36,7 +38,7 @@ WARNING:
 	[https://github.com/docker-library/cassandra/issues](https://github.com/docker-library/cassandra/issues?q=)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/cassandra/), [`arm32v7`](https://hub.docker.com/r/arm32v7/cassandra/), [`arm64v8`](https://hub.docker.com/r/arm64v8/cassandra/), [`ppc64le`](https://hub.docker.com/r/ppc64le/cassandra/)
+	[`amd64`](https://hub.docker.com/r/amd64/cassandra/), [`arm32v7`](https://hub.docker.com/r/arm32v7/cassandra/), [`arm64v8`](https://hub.docker.com/r/arm64v8/cassandra/), [`ppc64le`](https://hub.docker.com/r/ppc64le/cassandra/), [`s390x`](https://hub.docker.com/r/s390x/cassandra/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/cassandra/` directory](https://github.com/docker-library/repo-info/blob/master/repos/cassandra) ([history](https://github.com/docker-library/repo-info/commits/master/repos/cassandra))  
