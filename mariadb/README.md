@@ -46,9 +46,9 @@ Also see the ["Getting Help with MariaDB" article on the MariaDB Knowledge Base]
 
 -	[`10.11.18-jammy`, `10.11-jammy`, `10-jammy`, `10.11.18`, `10.11`, `10`](https://github.com/MariaDB/mariadb-docker/blob/53935c78b82bff912b361357d59db11d7246ea96/10.11/Dockerfile)
 
--	[`10.6.27-ubi9`, `10.6-ubi9`, `10.6.27-ubi`, `10.6-ubi`](https://github.com/MariaDB/mariadb-docker/blob/53935c78b82bff912b361357d59db11d7246ea96/10.6-ubi/Dockerfile)
+-	[`10.6.28-ubi9`, `10.6-ubi9`, `10.6.28-ubi`, `10.6-ubi`](https://github.com/MariaDB/mariadb-docker/blob/7252cf37a0c4357b6de41d52e90fcd4bf7374249/10.6-ubi/Dockerfile)
 
--	[`10.6.27-jammy`, `10.6-jammy`, `10.6.27`, `10.6`](https://github.com/MariaDB/mariadb-docker/blob/53935c78b82bff912b361357d59db11d7246ea96/10.6/Dockerfile)
+-	[`10.6.28-jammy`, `10.6-jammy`, `10.6.28`, `10.6`](https://github.com/MariaDB/mariadb-docker/blob/7252cf37a0c4357b6de41d52e90fcd4bf7374249/10.6/Dockerfile)
 
 # Quick reference (cont.)
 
