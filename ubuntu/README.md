@@ -24,7 +24,7 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`22.04`, `jammy-20260731.1`, `jammy`](https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/oci/index.json?h=refs/tags/dist-jammy-amd64-20260731.1-2e5c6a66&id=2e5c6a661195ce58b90a7e560374bc297194c0db)
+-	[`22.04`, `jammy-20260810`, `jammy`](https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/oci/index.json?h=refs/tags/dist-jammy-amd64-20260810-de4064a9&id=de4064a9284ec1e37b7c260b5e19f0c53e0b7aef)
 
 -	[`24.04`, `noble-20260730.1`, `noble`](https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/oci/index.json?h=refs/tags/dist-noble-amd64-20260730.1-4f7091af&id=4f7091afc2eb936e7a67aa826d1d46279a6262ad)
 
