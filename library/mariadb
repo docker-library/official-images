@@ -1,4 +1,4 @@
-# this file is generated via https://github.com/MariaDB/mariadb-docker/blob/fb3ac619f14c36ac5111f6eef644268ca47ed2d0/generate-stackbrew-library.sh
+# this file is generated via https://github.com/MariaDB/mariadb-docker/blob/1f78f944c410080279dd29e6b92a114a5e237f4b/generate-stackbrew-library.sh
 
 Maintainers: Daniel Black <daniel@mariadb.org> (@grooverdan),
              Daniel Bartholomew <dbart@mariadb.com> (@dbart),
@@ -6,62 +6,62 @@ Maintainers: Daniel Black <daniel@mariadb.org> (@grooverdan),
 GitRepo: https://github.com/MariaDB/mariadb-docker.git
 Builder: buildkit
 
-Tags: 12.3.1-ubi10-rc, 12.3-ubi10-rc, 12.3.1-ubi-rc, 12.3-ubi-rc
+Tags: 13.0.1-ubi10-rc, 13.0-ubi10-rc, 13.0.1-ubi-rc, 13.0-ubi-rc
 Architectures: amd64, arm64v8, s390x, ppc64le
-GitCommit: 769f60ce827e3465281d184080727f3f13f3f61e
+GitCommit: 063eb10da092170beea08d2c629b6eb79d28cceb
+Directory: 13.0-ubi
+
+Tags: 13.0.1-resolute-rc, 13.0-resolute-rc, 13.0.1-rc, 13.0-rc
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: af9b72baa083d6c40b2e0741ec65fd74adacde68
+Directory: 13.0
+
+Tags: 12.3.3-ubi10, 12.3-ubi10, 12-ubi10, lts-ubi10, 12.3.3-ubi, 12.3-ubi, 12-ubi, lts-ubi
+Architectures: amd64, arm64v8, s390x, ppc64le
+GitCommit: bdfe641466a5312bb97d06a1a4e1fb411c49e6b6
 Directory: 12.3-ubi
 
-Tags: 12.3.1-noble-rc, 12.3-noble-rc, 12.3.1-rc, 12.3-rc
+Tags: 12.3.3-noble, 12.3-noble, 12-noble, noble, lts-noble, 12.3.3, 12.3, 12, latest, lts
 Architectures: amd64, arm64v8, ppc64le, s390x
-GitCommit: a681c62cf8d84fc614e648776992733cdca60983
+GitCommit: bdfe641466a5312bb97d06a1a4e1fb411c49e6b6
 Directory: 12.3
 
-Tags: 12.2.2-ubi10, 12.2-ubi10, 12-ubi10, 12.2.2-ubi, 12.2-ubi, 12-ubi
+Tags: 11.8.9-ubi9, 11.8-ubi9, 11-ubi9, 11.8.9-ubi, 11.8-ubi, 11-ubi
 Architectures: amd64, arm64v8, s390x, ppc64le
-GitCommit: 604617ddd4d241538390b0bb97bf4cd92e5f4c6f
-Directory: 12.2-ubi
-
-Tags: 12.2.2-noble, 12.2-noble, 12-noble, noble, 12.2.2, 12.2, 12, latest
-Architectures: amd64, arm64v8, ppc64le, s390x
-GitCommit: 604617ddd4d241538390b0bb97bf4cd92e5f4c6f
-Directory: 12.2
-
-Tags: 11.8.7-ubi9, 11.8-ubi9, 11-ubi9, lts-ubi9, 11.8.7-ubi, 11.8-ubi, 11-ubi, lts-ubi
-Architectures: amd64, arm64v8, s390x, ppc64le
-GitCommit: cfc6a068e6d6418b22e3f0e498c243c2279a118a
+GitCommit: bdfe641466a5312bb97d06a1a4e1fb411c49e6b6
 Directory: 11.8-ubi
 
-Tags: 11.8.7-noble, 11.8-noble, 11-noble, lts-noble, 11.8.7, 11.8, 11, lts
+Tags: 11.8.9-noble, 11.8-noble, 11-noble, 11.8.9, 11.8, 11
 Architectures: amd64, arm64v8, ppc64le, s390x
-GitCommit: cfc6a068e6d6418b22e3f0e498c243c2279a118a
+GitCommit: bdfe641466a5312bb97d06a1a4e1fb411c49e6b6
 Directory: 11.8
 
-Tags: 11.4.11-ubi9, 11.4-ubi9, 11.4.11-ubi, 11.4-ubi
+Tags: 11.4.13-ubi9, 11.4-ubi9, 11.4.13-ubi, 11.4-ubi
 Architectures: amd64, arm64v8, s390x, ppc64le
-GitCommit: cfc6a068e6d6418b22e3f0e498c243c2279a118a
+GitCommit: bdfe641466a5312bb97d06a1a4e1fb411c49e6b6
 Directory: 11.4-ubi
 
-Tags: 11.4.11-noble, 11.4-noble, 11.4.11, 11.4
+Tags: 11.4.13-noble, 11.4-noble, 11.4.13, 11.4
 Architectures: amd64, arm64v8, ppc64le, s390x
-GitCommit: cfc6a068e6d6418b22e3f0e498c243c2279a118a
+GitCommit: bdfe641466a5312bb97d06a1a4e1fb411c49e6b6
 Directory: 11.4
 
-Tags: 10.11.17-ubi9, 10.11-ubi9, 10-ubi9, 10.11.17-ubi, 10.11-ubi, 10-ubi
+Tags: 10.11.19-ubi9, 10.11-ubi9, 10-ubi9, 10.11.19-ubi, 10.11-ubi, 10-ubi
 Architectures: amd64, arm64v8, s390x, ppc64le
-GitCommit: cfc6a068e6d6418b22e3f0e498c243c2279a118a
+GitCommit: bdfe641466a5312bb97d06a1a4e1fb411c49e6b6
 Directory: 10.11-ubi
 
-Tags: 10.11.17-jammy, 10.11-jammy, 10-jammy, 10.11.17, 10.11, 10
+Tags: 10.11.19-jammy, 10.11-jammy, 10-jammy, 10.11.19, 10.11, 10
 Architectures: amd64, arm64v8, ppc64le, s390x
-GitCommit: cfc6a068e6d6418b22e3f0e498c243c2279a118a
+GitCommit: bdfe641466a5312bb97d06a1a4e1fb411c49e6b6
 Directory: 10.11
 
-Tags: 10.6.26-ubi9, 10.6-ubi9, 10.6.26-ubi, 10.6-ubi
+Tags: 10.6.28-ubi9, 10.6-ubi9, 10.6.28-ubi, 10.6-ubi
 Architectures: amd64, arm64v8, s390x, ppc64le
-GitCommit: cfc6a068e6d6418b22e3f0e498c243c2279a118a
+GitCommit: 7252cf37a0c4357b6de41d52e90fcd4bf7374249
 Directory: 10.6-ubi
 
-Tags: 10.6.26-jammy, 10.6-jammy, 10.6.26, 10.6
+Tags: 10.6.28-jammy, 10.6-jammy, 10.6.28, 10.6
 Architectures: amd64, arm64v8, ppc64le, s390x
-GitCommit: cfc6a068e6d6418b22e3f0e498c243c2279a118a
+GitCommit: 7252cf37a0c4357b6de41d52e90fcd4bf7374249
 Directory: 10.6

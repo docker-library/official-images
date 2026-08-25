@@ -2,8 +2,13 @@ Maintainers: Andy Li <andy@onthewings.net> (@andyli),
              Rudy Ges <k@klabz.org> (@kLabz)
 GitRepo: https://github.com/HaxeFoundation/docker-library-haxe.git
 
-Tags: 4.3.7-bookworm, 4.3-bookworm
+Tags: 4.3.7-trixie, 4.3-trixie
 SharedTags: 4.3.7, 4.3, latest
+Architectures: amd64, arm32v7, arm64v8
+GitCommit: 2d4b15f59eb23f1f2232b1d247b1d4400f13db1f
+Directory: 4.3/trixie
+
+Tags: 4.3.7-bookworm, 4.3-bookworm
 Architectures: amd64, arm32v7, arm64v8
 GitCommit: 2636eee6b67d0c99730e4ab1d0d752d66809e3fa
 Directory: 4.3/bookworm
@@ -27,7 +32,12 @@ GitCommit: 2636eee6b67d0c99730e4ab1d0d752d66809e3fa
 Directory: 4.3/windowsservercore-ltsc2022
 Constraints: windowsservercore-ltsc2022
 
-Tags: 4.3.7-alpine3.23, 4.3-alpine3.23, 4.3.7-alpine, 4.3-alpine
+Tags: 4.3.7-alpine3.24, 4.3-alpine3.24, 4.3.7-alpine, 4.3-alpine
+Architectures: amd64, arm64v8
+GitCommit: a6da5fc1fdee9a0fe1a35ab0a85f370071849112
+Directory: 4.3/alpine3.24
+
+Tags: 4.3.7-alpine3.23, 4.3-alpine3.23
 Architectures: amd64, arm64v8
 GitCommit: b235f810bf048b25bc8fc70ef20915452a5a76f9
 Directory: 4.3/alpine3.23
@@ -42,13 +52,13 @@ Architectures: amd64, arm64v8
 GitCommit: 29c1c10f60a3d5d96c92c23ed8d07f5393c962b5
 Directory: 4.3/alpine3.21
 
-Tags: 4.3.7-alpine3.20, 4.3-alpine3.20
-Architectures: amd64, arm64v8
-GitCommit: 2636eee6b67d0c99730e4ab1d0d752d66809e3fa
-Directory: 4.3/alpine3.20
+Tags: 5.0.0-preview.1-trixie, 5.0.0-trixie, 5.0-trixie
+SharedTags: 5.0.0-preview.1, 5.0.0, 5.0
+Architectures: amd64, arm32v7, arm64v8
+GitCommit: 2d4b15f59eb23f1f2232b1d247b1d4400f13db1f
+Directory: 5.0/trixie
 
 Tags: 5.0.0-preview.1-bookworm, 5.0.0-bookworm, 5.0-bookworm
-SharedTags: 5.0.0-preview.1, 5.0.0, 5.0
 Architectures: amd64, arm32v7, arm64v8
 GitCommit: 2636eee6b67d0c99730e4ab1d0d752d66809e3fa
 Directory: 5.0/bookworm
@@ -72,7 +82,12 @@ GitCommit: 2636eee6b67d0c99730e4ab1d0d752d66809e3fa
 Directory: 5.0/windowsservercore-ltsc2022
 Constraints: windowsservercore-ltsc2022
 
-Tags: 5.0.0-preview.1-alpine3.23, 5.0.0-preview.1-alpine, 5.0.0-alpine3.23, 5.0-alpine3.23, 5.0.0-alpine, 5.0-alpine
+Tags: 5.0.0-preview.1-alpine3.24, 5.0.0-preview.1-alpine, 5.0.0-alpine3.24, 5.0-alpine3.24, 5.0.0-alpine, 5.0-alpine
+Architectures: amd64, arm64v8
+GitCommit: a6da5fc1fdee9a0fe1a35ab0a85f370071849112
+Directory: 5.0/alpine3.24
+
+Tags: 5.0.0-preview.1-alpine3.23, 5.0.0-alpine3.23, 5.0-alpine3.23
 Architectures: amd64, arm64v8
 GitCommit: b235f810bf048b25bc8fc70ef20915452a5a76f9
 Directory: 5.0/alpine3.23
@@ -86,11 +101,6 @@ Tags: 5.0.0-preview.1-alpine3.21, 5.0.0-alpine3.21, 5.0-alpine3.21
 Architectures: amd64, arm64v8
 GitCommit: 29c1c10f60a3d5d96c92c23ed8d07f5393c962b5
 Directory: 5.0/alpine3.21
-
-Tags: 5.0.0-preview.1-alpine3.20, 5.0.0-alpine3.20, 5.0-alpine3.20
-Architectures: amd64, arm64v8
-GitCommit: 2636eee6b67d0c99730e4ab1d0d752d66809e3fa
-Directory: 5.0/alpine3.20
 
 Tags: 4.2.5-bookworm, 4.2-bookworm
 SharedTags: 4.2.5, 4.2
@@ -117,11 +127,6 @@ GitCommit: c0367972017a7b87845bf33477e29b1fe64ccc4a
 Directory: 4.2/windowsservercore-ltsc2022
 Constraints: windowsservercore-ltsc2022
 
-Tags: 4.2.5-alpine3.20, 4.2-alpine3.20, 4.2.5-alpine, 4.2-alpine
-Architectures: amd64, arm64v8
-GitCommit: 2636eee6b67d0c99730e4ab1d0d752d66809e3fa
-Directory: 4.2/alpine3.20
-
 Tags: 4.1.5-bullseye, 4.1-bullseye
 SharedTags: 4.1.5, 4.1
 Architectures: amd64, arm32v7, arm64v8
@@ -142,11 +147,6 @@ GitCommit: c0367972017a7b87845bf33477e29b1fe64ccc4a
 Directory: 4.1/windowsservercore-ltsc2022
 Constraints: windowsservercore-ltsc2022
 
-Tags: 4.1.5-alpine3.20, 4.1-alpine3.20, 4.1.5-alpine, 4.1-alpine
-Architectures: amd64, arm64v8
-GitCommit: 2636eee6b67d0c99730e4ab1d0d752d66809e3fa
-Directory: 4.1/alpine3.20
-
 Tags: 4.0.5-bullseye, 4.0-bullseye
 SharedTags: 4.0.5, 4.0
 Architectures: amd64, arm32v7, arm64v8
@@ -166,9 +166,4 @@ Architectures: windows-amd64
 GitCommit: c0367972017a7b87845bf33477e29b1fe64ccc4a
 Directory: 4.0/windowsservercore-ltsc2022
 Constraints: windowsservercore-ltsc2022
-
-Tags: 4.0.5-alpine3.20, 4.0-alpine3.20, 4.0.5-alpine, 4.0-alpine
-Architectures: amd64, arm64v8
-GitCommit: 2636eee6b67d0c99730e4ab1d0d752d66809e3fa
-Directory: 4.0/alpine3.20
 

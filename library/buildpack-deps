@@ -5,17 +5,17 @@ Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
 GitRepo: https://github.com/docker-library/buildpack-deps.git
 
 Tags: bookworm-curl, oldstable-curl
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le
 GitCommit: 3e18c3af1f5dce6a48abf036857f9097b6bd79cc
 Directory: debian/bookworm/curl
 
 Tags: bookworm-scm, oldstable-scm
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le
 GitCommit: d0ecd4b7313e9bc6b00d9a4fe62ad5787bc197ae
 Directory: debian/bookworm/scm
 
 Tags: bookworm, oldstable
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le
 GitCommit: d0ecd4b7313e9bc6b00d9a4fe62ad5787bc197ae
 Directory: debian/bookworm
 
@@ -109,21 +109,6 @@ Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
 GitCommit: 60dc5f9555c521de086b2f5770514faf69ee2cc4
 Directory: ubuntu/noble
 
-Tags: questing-curl, 25.10-curl
-Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 99e7dc24c50c0a7be371ea9e6aed6134ce4cbfeb
-Directory: ubuntu/questing/curl
-
-Tags: questing-scm, 25.10-scm
-Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 99e7dc24c50c0a7be371ea9e6aed6134ce4cbfeb
-Directory: ubuntu/questing/scm
-
-Tags: questing, 25.10
-Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 99e7dc24c50c0a7be371ea9e6aed6134ce4cbfeb
-Directory: ubuntu/questing
-
 Tags: resolute-curl, 26.04-curl
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
 GitCommit: 8330ca1d2319b779c8b7a8aa64bb40dbe568e1e2
@@ -138,3 +123,18 @@ Tags: resolute, 26.04
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
 GitCommit: 8330ca1d2319b779c8b7a8aa64bb40dbe568e1e2
 Directory: ubuntu/resolute
+
+Tags: stonking-curl, 26.10-curl
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 5ae2506d6a74c9814762adc724c8a84564a0b2ca
+Directory: ubuntu/stonking/curl
+
+Tags: stonking-scm, 26.10-scm
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 5ae2506d6a74c9814762adc724c8a84564a0b2ca
+Directory: ubuntu/stonking/scm
+
+Tags: stonking, 26.10
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 5ae2506d6a74c9814762adc724c8a84564a0b2ca
+Directory: ubuntu/stonking

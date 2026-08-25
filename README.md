@@ -70,7 +70,6 @@ Some images have been ported for other architectures, and many of these are offi
 	-	ARMv5 32-bit (`arm32v5`): https://hub.docker.com/u/arm32v5/
 	-	IBM POWER8 (`ppc64le`): https://hub.docker.com/u/ppc64le/
 	-	IBM z Systems (`s390x`): https://hub.docker.com/u/s390x/
-	-	MIPS64 LE (`mips64le`): https://hub.docker.com/u/mips64le/
 	-	RISC-V 64-bit (`riscv64`): https://hub.docker.com/u/riscv64/
 	-	x86/i686 (`i386`): https://hub.docker.com/u/i386/
 
@@ -315,7 +314,6 @@ Each repo can specify multiple architectures for any and all tags. If no archite
 -	`arm32v7`
 -	`arm64v8`
 -	`i386`
--	`mips64le`
 -	`ppc64le`
 -	`riscv64`
 -	`s390x`
