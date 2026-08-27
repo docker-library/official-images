@@ -2,7 +2,7 @@
 
 Maintainers: Austin Burdine <austin@ghost.org> (@acburdine)
 GitRepo: https://github.com/TryGhost/docker-library-ghost.git
-GitCommit: 820b574a83ddbf062f6ad1d5e77eb455a954ebc7
+GitCommit: 56d19a954c21ff611956fe9927535a3267801d19
 
 Tags: 6.61.0-bookworm, 6.61.0, 6.61-bookworm, 6.61, 6-bookworm, 6, bookworm, latest
 Directory: 6/bookworm
@@ -11,3 +11,13 @@ Architectures: amd64, arm32v7, arm64v8
 Tags: 6.61.0-alpine3.23, 6.61.0-alpine, 6.61-alpine3.23, 6.61-alpine, 6-alpine3.23, 6-alpine, alpine3.23, alpine
 Directory: 6/alpine3.23
 Architectures: amd64, arm64v8
+
+Tags: 6.61.0-next-bookworm, 6.61.0-next, 6.61-next-bookworm, 6.61-next, 6-next-bookworm, 6-next, next-bookworm, next
+Directory: 6-next/bookworm
+Architectures: amd64, arm32v7, arm64v8
+Builder: buildkit
+
+Tags: 6.61.0-next-alpine3.23, 6.61.0-next-alpine, 6.61-next-alpine3.23, 6.61-next-alpine, 6-next-alpine3.23, 6-next-alpine, next-alpine3.23, next-alpine
+Directory: 6-next/alpine3.23
+Architectures: amd64, arm64v8
+Builder: buildkit
