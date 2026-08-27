@@ -143,14 +143,27 @@ jobs:
       - name: Gather Maintainers
         env:
           IMAGES: ${{ needs.gather.outputs.images }}
+          PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
+          # the "oisupport/bashbrew:diff-pr" image only has the *base* branch's copy of "library/*" baked in (see "Prepare Environment", above), so to also see Maintainers as of the PR, we bind-mount the PR HEAD's copy of each file into its own path and pass that full path to "bashbrew cat" directly (which it supports natively) for a second pass
+          git fetch --quiet origin "$PR_HEAD_SHA:"
           files="$(jq <<<"$IMAGES" -r '.images | map(@sh) | join(" ")')"
           eval "set -- $files"
+          format='{{ range .Manifest.Global.Maintainers }}@{{ .Handle }}{{ "\n" }}{{ end }}'
+          newFile="$RUNNER_TEMP/pr-head-maintainers"
           for f; do
+            repoName="$(basename "$f")"
+            old=
             if [ -s "$f" ]; then
-              docker run --rm --read-only --tmpfs /tmp oisupport/bashbrew:diff-pr \
-                bashbrew cat --format '  - `{{ $.RepoName }}`:{{ range .Manifest.Global.Maintainers }} @{{ .Handle }}{{ end }}' "$f"
+              old="$(docker run --rm --read-only --tmpfs /tmp oisupport/bashbrew:diff-pr bashbrew cat --format "$format" "$f")"
             fi
+            new=
+            if git show "$PR_HEAD_SHA:$f" > "$newFile" 2>/dev/null; then
+              newPath="/pr-head/$repoName"
+              new="$(docker run --rm --read-only --tmpfs /tmp -v "$newFile:$newPath:ro" oisupport/bashbrew:diff-pr bashbrew cat --format "$format" "$newPath")"
+            fi
+            maint="$(sort -u <<<"$old"$'\n'"$new")"
+            echo "  - \`$repoName\`:" $maint
           done | tee "$GITHUB_WORKSPACE/oi-pr.maint"
       - name: Generate Diff
         env:
