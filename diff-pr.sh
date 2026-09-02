@@ -38,6 +38,8 @@ uninterestingTarballContent=(
 	'var/lib/dnf/yumdb/'
 
 	# "b42ff584.0"
+	'etc/pki/ca-trust/extracted/'
+	'etc/pki/tls/certs/'
 	'etc/pki/tls/rootcerts/'
 
 	# "09/401f736622f2c9258d14388ebd47900bbab126"
