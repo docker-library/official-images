@@ -1,14 +1,14 @@
 Maintainers: Peter Martini <PeterCMartini@GMail.com> (@PeterMartini),
              Zak B. Elep <zakame@cpan.org> (@zakame)
 GitRepo: https://github.com/perl/docker-perl.git
-GitCommit: 185239138206d34b6fa0ee5d0333a570aac61a93
+GitCommit: 7d6ae326349c27ef7dd09a1271ced45bc474546f
 Architectures: amd64, arm32v5, arm32v7, arm64v8, ppc64le, riscv64, s390x
 
 Tags: 5.44.0, 5.44, 5, latest, stable, 5.44.0-trixie, 5.44-trixie, 5-trixie, trixie, stable-trixie
 Directory: 5.044.000-main-trixie
 
 Tags: 5.44.0-bookworm, 5.44-bookworm, 5-bookworm, bookworm, stable-bookworm
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le
 Directory: 5.044.000-main-bookworm
 
 Tags: 5.44.0-bullseye, 5.44-bullseye, 5-bullseye, bullseye, stable-bullseye
@@ -19,7 +19,7 @@ Tags: 5.44.0-slim, 5.44-slim, 5-slim, slim, stable-slim, 5.44.0-slim-trixie, 5.4
 Directory: 5.044.000-slim-trixie
 
 Tags: 5.44.0-slim-bookworm, 5.44-slim-bookworm, 5-slim-bookworm, slim-bookworm, stable-slim-bookworm
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le
 Directory: 5.044.000-slim-bookworm
 
 Tags: 5.44.0-slim-bullseye, 5.44-slim-bullseye, 5-slim-bullseye, slim-bullseye, stable-slim-bullseye
@@ -30,7 +30,7 @@ Tags: 5.44.0-threaded, 5.44-threaded, 5-threaded, threaded, stable-threaded, 5.4
 Directory: 5.044.000-main,threaded-trixie
 
 Tags: 5.44.0-threaded-bookworm, 5.44-threaded-bookworm, 5-threaded-bookworm, threaded-bookworm, stable-threaded-bookworm
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le
 Directory: 5.044.000-main,threaded-bookworm
 
 Tags: 5.44.0-threaded-bullseye, 5.44-threaded-bullseye, 5-threaded-bullseye, threaded-bullseye, stable-threaded-bullseye
@@ -41,141 +41,141 @@ Tags: 5.44.0-slim-threaded, 5.44-slim-threaded, 5-slim-threaded, slim-threaded, 
 Directory: 5.044.000-slim,threaded-trixie
 
 Tags: 5.44.0-slim-threaded-bookworm, 5.44-slim-threaded-bookworm, 5-slim-threaded-bookworm, slim-threaded-bookworm, stable-slim-threaded-bookworm
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le
 Directory: 5.044.000-slim,threaded-bookworm
 
 Tags: 5.44.0-slim-threaded-bullseye, 5.44-slim-threaded-bullseye, 5-slim-threaded-bullseye, slim-threaded-bullseye, stable-slim-threaded-bullseye
 Architectures: amd64, arm32v7, arm64v8, i386
 Directory: 5.044.000-slim,threaded-bullseye
 
-Tags: 5.42.2, 5.42, 5.42.2-trixie, 5.42-trixie
-Directory: 5.042.002-main-trixie
+Tags: 5.42.3, 5.42, 5.42.3-trixie, 5.42-trixie
+Directory: 5.042.003-main-trixie
 
-Tags: 5.42.2-bookworm, 5.42-bookworm
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-Directory: 5.042.002-main-bookworm
+Tags: 5.42.3-bookworm, 5.42-bookworm
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le
+Directory: 5.042.003-main-bookworm
 
-Tags: 5.42.2-bullseye, 5.42-bullseye
+Tags: 5.42.3-bullseye, 5.42-bullseye
 Architectures: amd64, arm32v7, arm64v8, i386
-Directory: 5.042.002-main-bullseye
+Directory: 5.042.003-main-bullseye
 
-Tags: 5.42.2-slim, 5.42-slim, 5.42.2-slim-trixie, 5.42-slim-trixie
-Directory: 5.042.002-slim-trixie
+Tags: 5.42.3-slim, 5.42-slim, 5.42.3-slim-trixie, 5.42-slim-trixie
+Directory: 5.042.003-slim-trixie
 
-Tags: 5.42.2-slim-bookworm, 5.42-slim-bookworm
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-Directory: 5.042.002-slim-bookworm
+Tags: 5.42.3-slim-bookworm, 5.42-slim-bookworm
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le
+Directory: 5.042.003-slim-bookworm
 
-Tags: 5.42.2-slim-bullseye, 5.42-slim-bullseye
+Tags: 5.42.3-slim-bullseye, 5.42-slim-bullseye
 Architectures: amd64, arm32v7, arm64v8, i386
-Directory: 5.042.002-slim-bullseye
+Directory: 5.042.003-slim-bullseye
 
-Tags: 5.42.2-threaded, 5.42-threaded, 5.42.2-threaded-trixie, 5.42-threaded-trixie
-Directory: 5.042.002-main,threaded-trixie
+Tags: 5.42.3-threaded, 5.42-threaded, 5.42.3-threaded-trixie, 5.42-threaded-trixie
+Directory: 5.042.003-main,threaded-trixie
 
-Tags: 5.42.2-threaded-bookworm, 5.42-threaded-bookworm
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-Directory: 5.042.002-main,threaded-bookworm
+Tags: 5.42.3-threaded-bookworm, 5.42-threaded-bookworm
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le
+Directory: 5.042.003-main,threaded-bookworm
 
-Tags: 5.42.2-threaded-bullseye, 5.42-threaded-bullseye
+Tags: 5.42.3-threaded-bullseye, 5.42-threaded-bullseye
 Architectures: amd64, arm32v7, arm64v8, i386
-Directory: 5.042.002-main,threaded-bullseye
+Directory: 5.042.003-main,threaded-bullseye
 
-Tags: 5.42.2-slim-threaded, 5.42-slim-threaded, 5.42.2-slim-threaded-trixie, 5.42-slim-threaded-trixie
-Directory: 5.042.002-slim,threaded-trixie
+Tags: 5.42.3-slim-threaded, 5.42-slim-threaded, 5.42.3-slim-threaded-trixie, 5.42-slim-threaded-trixie
+Directory: 5.042.003-slim,threaded-trixie
 
-Tags: 5.42.2-slim-threaded-bookworm, 5.42-slim-threaded-bookworm
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-Directory: 5.042.002-slim,threaded-bookworm
+Tags: 5.42.3-slim-threaded-bookworm, 5.42-slim-threaded-bookworm
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le
+Directory: 5.042.003-slim,threaded-bookworm
 
-Tags: 5.42.2-slim-threaded-bullseye, 5.42-slim-threaded-bullseye
+Tags: 5.42.3-slim-threaded-bullseye, 5.42-slim-threaded-bullseye
 Architectures: amd64, arm32v7, arm64v8, i386
-Directory: 5.042.002-slim,threaded-bullseye
+Directory: 5.042.003-slim,threaded-bullseye
 
-Tags: 5.40.4, 5.40, 5.40.4-trixie, 5.40-trixie
-Directory: 5.040.004-main-trixie
+Tags: 5.40.5, 5.40, 5.40.5-trixie, 5.40-trixie
+Directory: 5.040.005-main-trixie
 
-Tags: 5.40.4-bookworm, 5.40-bookworm
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-Directory: 5.040.004-main-bookworm
+Tags: 5.40.5-bookworm, 5.40-bookworm
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le
+Directory: 5.040.005-main-bookworm
 
-Tags: 5.40.4-bullseye, 5.40-bullseye
+Tags: 5.40.5-bullseye, 5.40-bullseye
 Architectures: amd64, arm32v7, arm64v8, i386
-Directory: 5.040.004-main-bullseye
+Directory: 5.040.005-main-bullseye
 
-Tags: 5.40.4-slim, 5.40-slim, 5.40.4-slim-trixie, 5.40-slim-trixie
-Directory: 5.040.004-slim-trixie
+Tags: 5.40.5-slim, 5.40-slim, 5.40.5-slim-trixie, 5.40-slim-trixie
+Directory: 5.040.005-slim-trixie
 
-Tags: 5.40.4-slim-bookworm, 5.40-slim-bookworm
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-Directory: 5.040.004-slim-bookworm
+Tags: 5.40.5-slim-bookworm, 5.40-slim-bookworm
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le
+Directory: 5.040.005-slim-bookworm
 
-Tags: 5.40.4-slim-bullseye, 5.40-slim-bullseye
+Tags: 5.40.5-slim-bullseye, 5.40-slim-bullseye
 Architectures: amd64, arm32v7, arm64v8, i386
-Directory: 5.040.004-slim-bullseye
+Directory: 5.040.005-slim-bullseye
 
-Tags: 5.40.4-threaded, 5.40-threaded, 5.40.4-threaded-trixie, 5.40-threaded-trixie
-Directory: 5.040.004-main,threaded-trixie
+Tags: 5.40.5-threaded, 5.40-threaded, 5.40.5-threaded-trixie, 5.40-threaded-trixie
+Directory: 5.040.005-main,threaded-trixie
 
-Tags: 5.40.4-threaded-bookworm, 5.40-threaded-bookworm
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-Directory: 5.040.004-main,threaded-bookworm
+Tags: 5.40.5-threaded-bookworm, 5.40-threaded-bookworm
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le
+Directory: 5.040.005-main,threaded-bookworm
 
-Tags: 5.40.4-threaded-bullseye, 5.40-threaded-bullseye
+Tags: 5.40.5-threaded-bullseye, 5.40-threaded-bullseye
 Architectures: amd64, arm32v7, arm64v8, i386
-Directory: 5.040.004-main,threaded-bullseye
+Directory: 5.040.005-main,threaded-bullseye
 
-Tags: 5.40.4-slim-threaded, 5.40-slim-threaded, 5.40.4-slim-threaded-trixie, 5.40-slim-threaded-trixie
-Directory: 5.040.004-slim,threaded-trixie
+Tags: 5.40.5-slim-threaded, 5.40-slim-threaded, 5.40.5-slim-threaded-trixie, 5.40-slim-threaded-trixie
+Directory: 5.040.005-slim,threaded-trixie
 
-Tags: 5.40.4-slim-threaded-bookworm, 5.40-slim-threaded-bookworm
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-Directory: 5.040.004-slim,threaded-bookworm
+Tags: 5.40.5-slim-threaded-bookworm, 5.40-slim-threaded-bookworm
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le
+Directory: 5.040.005-slim,threaded-bookworm
 
-Tags: 5.40.4-slim-threaded-bullseye, 5.40-slim-threaded-bullseye
+Tags: 5.40.5-slim-threaded-bullseye, 5.40-slim-threaded-bullseye
 Architectures: amd64, arm32v7, arm64v8, i386
-Directory: 5.040.004-slim,threaded-bullseye
+Directory: 5.040.005-slim,threaded-bullseye
 
-Tags: 5.45.1, 5.45, devel, 5.45.1-trixie, 5.45-trixie, devel-trixie
-Directory: 5.045.001-main-trixie
+Tags: 5.45.2, 5.45, devel, 5.45.2-trixie, 5.45-trixie, devel-trixie
+Directory: 5.045.002-main-trixie
 
-Tags: 5.45.1-bookworm, 5.45-bookworm, devel-bookworm
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-Directory: 5.045.001-main-bookworm
+Tags: 5.45.2-bookworm, 5.45-bookworm, devel-bookworm
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le
+Directory: 5.045.002-main-bookworm
 
-Tags: 5.45.1-bullseye, 5.45-bullseye, devel-bullseye
+Tags: 5.45.2-bullseye, 5.45-bullseye, devel-bullseye
 Architectures: amd64, arm32v7, arm64v8, i386
-Directory: 5.045.001-main-bullseye
+Directory: 5.045.002-main-bullseye
 
-Tags: 5.45.1-slim, 5.45-slim, devel-slim, 5.45.1-slim-trixie, 5.45-slim-trixie, devel-slim-trixie
-Directory: 5.045.001-slim-trixie
+Tags: 5.45.2-slim, 5.45-slim, devel-slim, 5.45.2-slim-trixie, 5.45-slim-trixie, devel-slim-trixie
+Directory: 5.045.002-slim-trixie
 
-Tags: 5.45.1-slim-bookworm, 5.45-slim-bookworm, devel-slim-bookworm
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-Directory: 5.045.001-slim-bookworm
+Tags: 5.45.2-slim-bookworm, 5.45-slim-bookworm, devel-slim-bookworm
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le
+Directory: 5.045.002-slim-bookworm
 
-Tags: 5.45.1-slim-bullseye, 5.45-slim-bullseye, devel-slim-bullseye
+Tags: 5.45.2-slim-bullseye, 5.45-slim-bullseye, devel-slim-bullseye
 Architectures: amd64, arm32v7, arm64v8, i386
-Directory: 5.045.001-slim-bullseye
+Directory: 5.045.002-slim-bullseye
 
-Tags: 5.45.1-threaded, 5.45-threaded, devel-threaded, 5.45.1-threaded-trixie, 5.45-threaded-trixie, devel-threaded-trixie
-Directory: 5.045.001-main,threaded-trixie
+Tags: 5.45.2-threaded, 5.45-threaded, devel-threaded, 5.45.2-threaded-trixie, 5.45-threaded-trixie, devel-threaded-trixie
+Directory: 5.045.002-main,threaded-trixie
 
-Tags: 5.45.1-threaded-bookworm, 5.45-threaded-bookworm, devel-threaded-bookworm
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-Directory: 5.045.001-main,threaded-bookworm
+Tags: 5.45.2-threaded-bookworm, 5.45-threaded-bookworm, devel-threaded-bookworm
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le
+Directory: 5.045.002-main,threaded-bookworm
 
-Tags: 5.45.1-threaded-bullseye, 5.45-threaded-bullseye, devel-threaded-bullseye
+Tags: 5.45.2-threaded-bullseye, 5.45-threaded-bullseye, devel-threaded-bullseye
 Architectures: amd64, arm32v7, arm64v8, i386
-Directory: 5.045.001-main,threaded-bullseye
+Directory: 5.045.002-main,threaded-bullseye
 
-Tags: 5.45.1-slim-threaded, 5.45-slim-threaded, devel-slim-threaded, 5.45.1-slim-threaded-trixie, 5.45-slim-threaded-trixie, devel-slim-threaded-trixie
-Directory: 5.045.001-slim,threaded-trixie
+Tags: 5.45.2-slim-threaded, 5.45-slim-threaded, devel-slim-threaded, 5.45.2-slim-threaded-trixie, 5.45-slim-threaded-trixie, devel-slim-threaded-trixie
+Directory: 5.045.002-slim,threaded-trixie
 
-Tags: 5.45.1-slim-threaded-bookworm, 5.45-slim-threaded-bookworm, devel-slim-threaded-bookworm
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
-Directory: 5.045.001-slim,threaded-bookworm
+Tags: 5.45.2-slim-threaded-bookworm, 5.45-slim-threaded-bookworm, devel-slim-threaded-bookworm
+Architectures: amd64, arm32v7, arm64v8, i386, ppc64le
+Directory: 5.045.002-slim,threaded-bookworm
 
-Tags: 5.45.1-slim-threaded-bullseye, 5.45-slim-threaded-bullseye, devel-slim-threaded-bullseye
+Tags: 5.45.2-slim-threaded-bullseye, 5.45-slim-threaded-bullseye, devel-slim-threaded-bullseye
 Architectures: amd64, arm32v7, arm64v8, i386
-Directory: 5.045.001-slim,threaded-bullseye
+Directory: 5.045.002-slim,threaded-bullseye
