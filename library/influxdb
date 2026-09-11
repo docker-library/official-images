@@ -4,18 +4,26 @@ Maintainers: Brandon Pfeifer <bpfeifer@influxdata.com> (@bnpfeife),
              Praveenkumar Hemakumar <pkumar@influxdata.com> (@praveen-influx),
              Trevor Hilton <thilton@influxdata.com> (@hiltontj)
 GitRepo: https://github.com/influxdata/influxdata-docker
-GitCommit: c4978d4a9ebb34f1b8aebfabd1846d294b0f3852
+GitCommit: d57185392eb04c44d606ef628bf58b1737123ede
 
-Tags: 1.13-data, 1.13.0-data
+Tags: 1.13, 1.13.1
+Architectures: amd64, arm64v8
+Directory: influxdb/1.13
+
+Tags: 1.13-alpine, 1.13.1-alpine
+Architectures: amd64, arm64v8
+Directory: influxdb/1.13/alpine
+
+Tags: 1.13-data, 1.13.1-data
 Directory: influxdb/1.13/data
 
-Tags: 1.13-data-alpine, 1.13.0-data-alpine
+Tags: 1.13-data-alpine, 1.13.1-data-alpine
 Directory: influxdb/1.13/data/alpine
 
-Tags: 1.13-meta, 1.13.0-meta
+Tags: 1.13-meta, 1.13.1-meta
 Directory: influxdb/1.13/meta
 
-Tags: 1.13-meta-alpine, 1.13.0-meta-alpine
+Tags: 1.13-meta-alpine, 1.13.1-meta-alpine
 Directory: influxdb/1.13/meta/alpine
 
 Tags: 1.12, 1.12.4
