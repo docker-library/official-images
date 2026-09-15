@@ -98,32 +98,6 @@ export BASHBREW_LIBRARY="$PWD/oi/library"
 : "${BASHBREW_ARCH:=amd64}" # TODO something smarter with arches
 export BASHBREW_ARCH
 
-# TODO something less hacky than "git archive" hackery, like a "bashbrew archive" or "bashbrew context" or something
-template='
-	tempDir="$(mktemp -d)"
-	{{- "\n" -}}
-	{{- range $.Entries -}}
-		{{- $arch := .HasArchitecture arch | ternary arch (.Architectures | first) -}}
-		{{- /* cannot replace ArchDockerFroms with bashbrew fetch or the arch selector logic has to be duplicated 🥹*/ -}}
-		{{- $froms := $.ArchDockerFroms $arch . -}}
-		{{- $outDir := join "_" $.RepoName (.Tags | last) -}}
-		git -C "{{ gitCache }}" archive --format=tar
-		{{- " " -}}
-		{{- "--prefix=" -}}
-		{{- $outDir -}}
-		{{- "/" -}}
-		{{- " " -}}
-		{{- .ArchGitCommit $arch -}}
-		{{- ":" -}}
-		{{- $dir := .ArchDirectory $arch -}}
-		{{- (eq $dir ".") | ternary "" $dir -}}
-		{{- "\n" -}}
-		mkdir -p "$tempDir/{{- $outDir -}}" && echo "{{- .ArchBuilder $arch -}}" > "$tempDir/{{- $outDir -}}/.bashbrew-builder" && echo "{{- .ArchFile $arch -}}" > "$tempDir/{{- $outDir -}}/.bashbrew-file"
-		{{- "\n" -}}
-	{{- end -}}
-	tar -cC "$tempDir" . && rm -rf "$tempDir"
-'
-
 _tar-t() {
 	tar -t "$@" \
 		| grep -vE "$uninterestingTarballGrep" \
@@ -361,7 +335,49 @@ _metadata-files() {
 		# oci images can't be fetched with ArchDockerFroms
 		# todo: use each first arch instead of current arch
 		bashbrew fetch --arch-filter "$@"
-		script="$(bashbrew cat --format "$template" "$@")"
+
+		gitCache="$(bashbrew cat --format '{{ gitCache }}' <(echo 'Maintainers: empty hack (@example)'))"
+
+		# TODO something less hacky than "git archive" hackery, like a "bashbrew archive" or "bashbrew context" or something
+		# bashbrew doesn't have something like jq's "@sh" so let's just output JSON and let jq parse it instead
+		# one JSON array of entries per repo (bashbrew re-executes this whole template per repo in "$@")
+		json="$(bashbrew cat --format '
+			[
+				{{- range $i, $e := $.Entries -}}
+					{{- if $i -}} , {{- end -}}
+					{{- $arch := $e.HasArchitecture arch | ternary arch ($e.Architectures | first) -}}
+					{{- /* cannot replace ArchDockerFroms with bashbrew fetch or the arch selector logic has to be duplicated 🥹*/ -}}
+					{{- $froms := $.ArchDockerFroms $arch $e -}}
+					{{- $outDir := join "_" $.RepoName ($e.Tags | last) -}}
+					{{- $dir := $e.ArchDirectory $arch -}}
+					{
+						"outDir": {{ $outDir | json }},
+						"gitCommit": {{ $e.ArchGitCommit $arch | json }},
+						"dir": {{ (eq $dir ".") | ternary "" $dir | json }},
+						"builder": {{ $e.ArchBuilder $arch | json }},
+						"file": {{ $e.ArchFile $arch | json }}
+					}
+				{{- end -}}
+			]
+		' "$@")"
+
+		script="$(
+			jq <<<"$json" --raw-output '
+				"tempDir=\"$(mktemp -d)\"",
+				(
+					.[]
+					| @sh "git -C \"$gitCache\" archive --format=tar --prefix=\(.outDir + "/") \(.gitCommit + ":" + .dir)",
+						@sh "mkdir -p \"$tempDir\"/\(.outDir)",
+						@sh "echo \(.builder) > \"$tempDir\"/\(.outDir)/.bashbrew-builder",
+						@sh "echo \(.file) > \"$tempDir\"/\(.outDir)/.bashbrew-file",
+						empty
+				),
+				"tar -cC \"$tempDir\" .",
+				"rm -rf \"$tempDir\"",
+				empty
+			'
+		)"
+
 		mkdir tar
 		( eval "$script" | tar -xiC tar )
 		copy-tar tar temp
