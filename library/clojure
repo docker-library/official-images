@@ -2,7 +2,7 @@ Maintainers: Paul Lam <paul@quantisan.com> (@Quantisan),
              Wes Morgan <wes@wesmorgan.me> (@cap10morgan)
 Architectures: arm64v8, ppc64le, amd64
 GitRepo: https://github.com/Quantisan/docker-clojure.git
-GitCommit: 90ff8968da43eddac9b77cbeb10f25a66295dc69
+GitCommit: 6237e09d13930012af7116206fcd2113d45e2124
 
 
 Tags: latest
@@ -13,14 +13,6 @@ Directory: target/debian-bookworm-8/tools-deps
 
 Tags: temurin-8-bookworm-slim, temurin-8-tools-deps-1.12.6.1673-bookworm-slim, temurin-8-tools-deps-bookworm-slim
 Directory: target/debian-bookworm-slim-8/tools-deps
-
-Tags: temurin-8-bullseye, temurin-8-tools-deps-1.12.6.1673-bullseye, temurin-8-tools-deps-bullseye
-Architectures: arm64v8, amd64
-Directory: target/debian-bullseye-8/tools-deps
-
-Tags: temurin-8-bullseye-slim, temurin-8-tools-deps-1.12.6.1673-bullseye-slim, temurin-8-tools-deps-bullseye-slim
-Architectures: arm64v8, amd64
-Directory: target/debian-bullseye-slim-8/tools-deps
 
 Tags: temurin-8-jammy, temurin-8-tools-deps-1.12.6.1673-jammy, temurin-8-tools-deps-jammy
 Directory: target/eclipse-temurin-8-jdk-jammy/tools-deps
@@ -44,14 +36,6 @@ Directory: target/debian-bookworm-11/lein
 Tags: temurin-11-lein-2.13.0-bookworm-slim, temurin-11-lein-bookworm-slim
 Directory: target/debian-bookworm-slim-11/lein
 
-Tags: temurin-11-lein-2.13.0-bullseye, temurin-11-lein-bullseye
-Architectures: arm64v8, amd64
-Directory: target/debian-bullseye-11/lein
-
-Tags: temurin-11-lein-2.13.0-bullseye-slim, temurin-11-lein-bullseye-slim
-Architectures: arm64v8, amd64
-Directory: target/debian-bullseye-slim-11/lein
-
 Tags: temurin-11-lein-2.13.0-jammy, temurin-11-lein-jammy
 Directory: target/eclipse-temurin-11-jdk-jammy/lein
 
@@ -73,14 +57,6 @@ Directory: target/debian-bookworm-11/tools-deps
 
 Tags: temurin-11-bookworm-slim, temurin-11-tools-deps-1.12.6.1673-bookworm-slim, temurin-11-tools-deps-bookworm-slim
 Directory: target/debian-bookworm-slim-11/tools-deps
-
-Tags: temurin-11-bullseye, temurin-11-tools-deps-1.12.6.1673-bullseye, temurin-11-tools-deps-bullseye
-Architectures: arm64v8, amd64
-Directory: target/debian-bullseye-11/tools-deps
-
-Tags: temurin-11-bullseye-slim, temurin-11-tools-deps-1.12.6.1673-bullseye-slim, temurin-11-tools-deps-bullseye-slim
-Architectures: arm64v8, amd64
-Directory: target/debian-bullseye-slim-11/tools-deps
 
 Tags: temurin-11-jammy, temurin-11-tools-deps-1.12.6.1673-jammy, temurin-11-tools-deps-jammy
 Directory: target/eclipse-temurin-11-jdk-jammy/tools-deps
@@ -104,14 +80,6 @@ Directory: target/debian-bookworm-17/lein
 Tags: temurin-17-lein-2.13.0-bookworm-slim, temurin-17-lein-bookworm-slim
 Directory: target/debian-bookworm-slim-17/lein
 
-Tags: temurin-17-lein-2.13.0-bullseye, temurin-17-lein-bullseye
-Architectures: arm64v8, amd64
-Directory: target/debian-bullseye-17/lein
-
-Tags: temurin-17-lein-2.13.0-bullseye-slim, temurin-17-lein-bullseye-slim
-Architectures: arm64v8, amd64
-Directory: target/debian-bullseye-slim-17/lein
-
 Tags: temurin-17-lein-2.13.0-jammy, temurin-17-lein-jammy
 Directory: target/eclipse-temurin-17-jdk-jammy/lein
 
@@ -133,14 +101,6 @@ Directory: target/debian-bookworm-17/tools-deps
 
 Tags: temurin-17-bookworm-slim, temurin-17-tools-deps-1.12.6.1673-bookworm-slim, temurin-17-tools-deps-bookworm-slim
 Directory: target/debian-bookworm-slim-17/tools-deps
-
-Tags: temurin-17-bullseye, temurin-17-tools-deps-1.12.6.1673-bullseye, temurin-17-tools-deps-bullseye
-Architectures: arm64v8, amd64
-Directory: target/debian-bullseye-17/tools-deps
-
-Tags: temurin-17-bullseye-slim, temurin-17-tools-deps-1.12.6.1673-bullseye-slim, temurin-17-tools-deps-bullseye-slim
-Architectures: arm64v8, amd64
-Directory: target/debian-bullseye-slim-17/tools-deps
 
 Tags: temurin-17-jammy, temurin-17-tools-deps-1.12.6.1673-jammy, temurin-17-tools-deps-jammy
 Directory: target/eclipse-temurin-17-jdk-jammy/tools-deps
@@ -164,14 +124,6 @@ Directory: target/debian-bookworm-21/lein
 Tags: temurin-21-lein-2.13.0-bookworm-slim, temurin-21-lein-bookworm-slim
 Directory: target/debian-bookworm-slim-21/lein
 
-Tags: temurin-21-lein-2.13.0-bullseye, temurin-21-lein-bullseye
-Architectures: arm64v8, amd64
-Directory: target/debian-bullseye-21/lein
-
-Tags: temurin-21-lein-2.13.0-bullseye-slim, temurin-21-lein-bullseye-slim
-Architectures: arm64v8, amd64
-Directory: target/debian-bullseye-slim-21/lein
-
 Tags: temurin-21-lein-2.13.0-jammy, temurin-21-lein-jammy
 Directory: target/eclipse-temurin-21-jdk-jammy/lein
 
@@ -193,14 +145,6 @@ Directory: target/debian-bookworm-21/tools-deps
 
 Tags: temurin-21-bookworm-slim, temurin-21-tools-deps-1.12.6.1673-bookworm-slim, temurin-21-tools-deps-bookworm-slim
 Directory: target/debian-bookworm-slim-21/tools-deps
-
-Tags: temurin-21-bullseye, temurin-21-tools-deps-1.12.6.1673-bullseye, temurin-21-tools-deps-bullseye
-Architectures: arm64v8, amd64
-Directory: target/debian-bullseye-21/tools-deps
-
-Tags: temurin-21-bullseye-slim, temurin-21-tools-deps-1.12.6.1673-bullseye-slim, temurin-21-tools-deps-bullseye-slim
-Architectures: arm64v8, amd64
-Directory: target/debian-bullseye-slim-21/tools-deps
 
 Tags: temurin-21-jammy, temurin-21-tools-deps-1.12.6.1673-jammy, temurin-21-tools-deps-jammy
 Directory: target/eclipse-temurin-21-jdk-jammy/tools-deps
@@ -224,14 +168,6 @@ Directory: target/debian-bookworm-25/lein
 Tags: lein-2.13.0-bookworm-slim, lein-bookworm-slim, temurin-25-lein-2.13.0-bookworm-slim, temurin-25-lein-bookworm-slim
 Directory: target/debian-bookworm-slim-25/lein
 
-Tags: lein-2.13.0-bullseye, lein-bullseye, temurin-25-lein-2.13.0-bullseye, temurin-25-lein-bullseye
-Architectures: arm64v8, amd64
-Directory: target/debian-bullseye-25/lein
-
-Tags: lein-2.13.0-bullseye-slim, lein-bullseye-slim, temurin-25-lein-2.13.0-bullseye-slim, temurin-25-lein-bullseye-slim
-Architectures: arm64v8, amd64
-Directory: target/debian-bullseye-slim-25/lein
-
 Tags: temurin-25-lein-2.13.0-noble, temurin-25-lein-noble
 Directory: target/eclipse-temurin-25-jdk-noble/lein
 
@@ -250,14 +186,6 @@ Directory: target/debian-bookworm-25/tools-deps
 
 Tags: temurin-25-bookworm-slim, temurin-25-tools-deps-1.12.6.1673-bookworm-slim, temurin-25-tools-deps-bookworm-slim, tools-deps-1.12.6.1673-bookworm-slim, tools-deps-bookworm-slim
 Directory: target/debian-bookworm-slim-25/tools-deps
-
-Tags: temurin-25-bullseye, temurin-25-tools-deps-1.12.6.1673-bullseye, temurin-25-tools-deps-bullseye, tools-deps-1.12.6.1673-bullseye, tools-deps-bullseye
-Architectures: arm64v8, amd64
-Directory: target/debian-bullseye-25/tools-deps
-
-Tags: temurin-25-bullseye-slim, temurin-25-tools-deps-1.12.6.1673-bullseye-slim, temurin-25-tools-deps-bullseye-slim, tools-deps-1.12.6.1673-bullseye-slim, tools-deps-bullseye-slim
-Architectures: arm64v8, amd64
-Directory: target/debian-bullseye-slim-25/tools-deps
 
 Tags: temurin-25-noble, temurin-25-tools-deps-1.12.6.1673-noble, temurin-25-tools-deps-noble
 Directory: target/eclipse-temurin-25-jdk-noble/tools-deps
@@ -278,14 +206,6 @@ Directory: target/debian-bookworm-26/lein
 Tags: temurin-26-lein-2.13.0-bookworm-slim, temurin-26-lein-bookworm-slim
 Directory: target/debian-bookworm-slim-26/lein
 
-Tags: temurin-26-lein-2.13.0-bullseye, temurin-26-lein-bullseye
-Architectures: arm64v8, amd64
-Directory: target/debian-bullseye-26/lein
-
-Tags: temurin-26-lein-2.13.0-bullseye-slim, temurin-26-lein-bullseye-slim
-Architectures: arm64v8, amd64
-Directory: target/debian-bullseye-slim-26/lein
-
 Tags: temurin-26-lein-2.13.0-noble, temurin-26-lein-noble
 Directory: target/eclipse-temurin-26-jdk-noble/lein
 
@@ -304,14 +224,6 @@ Directory: target/debian-bookworm-26/tools-deps
 
 Tags: temurin-26-bookworm-slim, temurin-26-tools-deps-1.12.6.1673-bookworm-slim, temurin-26-tools-deps-bookworm-slim
 Directory: target/debian-bookworm-slim-26/tools-deps
-
-Tags: temurin-26-bullseye, temurin-26-tools-deps-1.12.6.1673-bullseye, temurin-26-tools-deps-bullseye
-Architectures: arm64v8, amd64
-Directory: target/debian-bullseye-26/tools-deps
-
-Tags: temurin-26-bullseye-slim, temurin-26-tools-deps-1.12.6.1673-bullseye-slim, temurin-26-tools-deps-bullseye-slim
-Architectures: arm64v8, amd64
-Directory: target/debian-bullseye-slim-26/tools-deps
 
 Tags: temurin-26-noble, temurin-26-tools-deps-1.12.6.1673-noble, temurin-26-tools-deps-noble
 Directory: target/eclipse-temurin-26-jdk-noble/tools-deps
