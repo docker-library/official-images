@@ -138,6 +138,8 @@ for dockerImage in "$@"; do
 			# all servercore variants are windows
 			variant='windowsservercore'
 			;;
+		*distroless*)
+			variant='distroless'
 	esac
 	
 	testRepo="$repo"

@@ -341,4 +341,9 @@ globalExcludeTests+=(
 	[mongo:windowsservercore_mongo-auth-basics]=1
 	[mongo:windowsservercore_mongo-tls-basics]=1
 	[mongo:windowsservercore_mongo-tls-auth]=1
+
+	# Skip all tests requiring a distribution on distroless images
+	[:distroless_utc]=1
+	[:distroless_no-hard-coded-passwords]=1
+	[:distroless_override-cmd]=1
 )
