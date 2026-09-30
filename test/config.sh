@@ -288,6 +288,8 @@ globalExcludeTests+=(
 	[nats_utc]=1
 	[traefik_no-hard-coded-passwords]=1
 	[traefik_utc]=1
+	[telegraf:scratch_utc]=1
+	[telegraf:scratch_no-hard-coded-passwords]=1
 
 	# clearlinux has no /etc/passwd
 	# https://github.com/docker-library/official-images/pull/1721#issuecomment-234128477
