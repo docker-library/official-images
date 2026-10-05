@@ -4,34 +4,49 @@ GitRepo: https://github.com/carlossg/docker-maven.git
 GitFetch: refs/heads/main
 
 Tags: 3.10.0-eclipse-temurin-11-alpine, 3.10-eclipse-temurin-11-alpine, 3-eclipse-temurin-11-alpine
-Architectures: amd64
+Architectures: amd64, arm64v8
 GitCommit: 6b179e3a37bb4aa699e11d9dbb2431fcc55030fd
 Directory: eclipse-temurin-11-alpine
 
-Tags: 3.10.0-eclipse-temurin-11-noble, 3.10.0-eclipse-temurin-11, 3.10-eclipse-temurin-11-noble, 3.10-eclipse-temurin-11, 3-eclipse-temurin-11-noble, 3-eclipse-temurin-11
+Tags: 3.10.0-eclipse-temurin-11-noble, 3.10-eclipse-temurin-11-noble, 3-eclipse-temurin-11-noble
 Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
-GitCommit: 6b179e3a37bb4aa699e11d9dbb2431fcc55030fd
+GitCommit: 4bcc1dea6507fba8ec40c602bf1bfdb963e21288
 Directory: eclipse-temurin-11-noble
 
+Tags: 3.10.0-eclipse-temurin-11-resolute, 3.10.0-eclipse-temurin-11, 3.10-eclipse-temurin-11-resolute, 3.10-eclipse-temurin-11, 3-eclipse-temurin-11-resolute, 3-eclipse-temurin-11
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 4bcc1dea6507fba8ec40c602bf1bfdb963e21288
+Directory: eclipse-temurin-11-resolute
+
 Tags: 3.10.0-eclipse-temurin-17-alpine, 3.10-eclipse-temurin-17-alpine, 3-eclipse-temurin-17-alpine
-Architectures: amd64
+Architectures: amd64, arm64v8
 GitCommit: 6b179e3a37bb4aa699e11d9dbb2431fcc55030fd
 Directory: eclipse-temurin-17-alpine
 
 Tags: 4.0.0-rc-7-eclipse-temurin-17-alpine
-Architectures: amd64
+Architectures: amd64, arm64v8
 GitCommit: 1a4d2d539bac81f9b137e3fa115cb4642b500087
 Directory: eclipse-temurin-17-alpine-maven-4
 
-Tags: 3.10.0-eclipse-temurin-17-noble, 3.10.0-eclipse-temurin-17, 3.10-eclipse-temurin-17-noble, 3.10-eclipse-temurin-17, 3-eclipse-temurin-17-noble, 3-eclipse-temurin-17
+Tags: 3.10.0-eclipse-temurin-17-noble, 3.10-eclipse-temurin-17-noble, 3-eclipse-temurin-17-noble
 Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
-GitCommit: 6b179e3a37bb4aa699e11d9dbb2431fcc55030fd
+GitCommit: 8ef234bed02d88f4edcc1907880f567db1362a76
 Directory: eclipse-temurin-17-noble
 
-Tags: 4.0.0-rc-7-eclipse-temurin-17-noble, 4.0.0-rc-7-eclipse-temurin-17
+Tags: 4.0.0-rc-7-eclipse-temurin-17-noble
 Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
-GitCommit: 1a4d2d539bac81f9b137e3fa115cb4642b500087
+GitCommit: 8ef234bed02d88f4edcc1907880f567db1362a76
 Directory: eclipse-temurin-17-noble-maven-4
+
+Tags: 3.10.0-eclipse-temurin-17-resolute, 3.10.0-eclipse-temurin-17, 3.10-eclipse-temurin-17-resolute, 3.10-eclipse-temurin-17, 3-eclipse-temurin-17-resolute, 3-eclipse-temurin-17
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 8ef234bed02d88f4edcc1907880f567db1362a76
+Directory: eclipse-temurin-17-resolute
+
+Tags: 4.0.0-rc-7-eclipse-temurin-17-resolute, 4.0.0-rc-7-eclipse-temurin-17
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 8ef234bed02d88f4edcc1907880f567db1362a76
+Directory: eclipse-temurin-17-resolute-maven-4
 
 Tags: 3.10.0-eclipse-temurin-21-alpine, 3.10-eclipse-temurin-21-alpine, 3-eclipse-temurin-21-alpine
 Architectures: amd64, arm64v8
@@ -43,15 +58,25 @@ Architectures: amd64, arm64v8
 GitCommit: 1a4d2d539bac81f9b137e3fa115cb4642b500087
 Directory: eclipse-temurin-21-alpine-maven-4
 
-Tags: 3.10.0-eclipse-temurin-21-noble, 3.10.0-eclipse-temurin-21, 3.10-eclipse-temurin-21-noble, 3.10-eclipse-temurin-21, 3-eclipse-temurin-21-noble, 3-eclipse-temurin-21
+Tags: 3.10.0-eclipse-temurin-21-noble, 3.10-eclipse-temurin-21-noble, 3-eclipse-temurin-21-noble
 Architectures: amd64, arm64v8, ppc64le, riscv64, s390x
-GitCommit: 6b179e3a37bb4aa699e11d9dbb2431fcc55030fd
+GitCommit: 4bcc1dea6507fba8ec40c602bf1bfdb963e21288
 Directory: eclipse-temurin-21-noble
 
-Tags: 4.0.0-rc-7-eclipse-temurin-21-noble, 4.0.0-rc-7-eclipse-temurin-21
+Tags: 4.0.0-rc-7-eclipse-temurin-21-noble
 Architectures: amd64, arm64v8, ppc64le, riscv64, s390x
-GitCommit: 1a4d2d539bac81f9b137e3fa115cb4642b500087
+GitCommit: 4bcc1dea6507fba8ec40c602bf1bfdb963e21288
 Directory: eclipse-temurin-21-noble-maven-4
+
+Tags: 3.10.0-eclipse-temurin-21-resolute, 3.10.0-eclipse-temurin-21, 3.10-eclipse-temurin-21-resolute, 3.10-eclipse-temurin-21, 3-eclipse-temurin-21-resolute, 3-eclipse-temurin-21
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: 4bcc1dea6507fba8ec40c602bf1bfdb963e21288
+Directory: eclipse-temurin-21-resolute
+
+Tags: 4.0.0-rc-7-eclipse-temurin-21-resolute, 4.0.0-rc-7-eclipse-temurin-21
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: 4bcc1dea6507fba8ec40c602bf1bfdb963e21288
+Directory: eclipse-temurin-21-resolute-maven-4
 
 Tags: 3.10.0-eclipse-temurin-25-alpine, 3.10-eclipse-temurin-25-alpine, 3-eclipse-temurin-25-alpine
 Architectures: amd64, arm64v8
@@ -63,45 +88,60 @@ Architectures: amd64, arm64v8
 GitCommit: 1a4d2d539bac81f9b137e3fa115cb4642b500087
 Directory: eclipse-temurin-25-alpine-maven-4
 
-Tags: 3.10.0-eclipse-temurin-25-noble, 3.10.0-eclipse-temurin-25, 3.10-eclipse-temurin-25-noble, 3.10-eclipse-temurin-25, 3-eclipse-temurin-25-noble, 3-eclipse-temurin-25
+Tags: 3.10.0-eclipse-temurin-25-noble, 3.10-eclipse-temurin-25-noble, 3-eclipse-temurin-25-noble
 Architectures: amd64, arm64v8, ppc64le, riscv64, s390x
-GitCommit: 6b179e3a37bb4aa699e11d9dbb2431fcc55030fd
+GitCommit: 4bcc1dea6507fba8ec40c602bf1bfdb963e21288
 Directory: eclipse-temurin-25-noble
 
-Tags: 4.0.0-rc-7-eclipse-temurin-25-noble, 4.0.0-rc-7-eclipse-temurin-25
+Tags: 4.0.0-rc-7-eclipse-temurin-25-noble
 Architectures: amd64, arm64v8, ppc64le, riscv64, s390x
-GitCommit: 1a4d2d539bac81f9b137e3fa115cb4642b500087
+GitCommit: 4bcc1dea6507fba8ec40c602bf1bfdb963e21288
 Directory: eclipse-temurin-25-noble-maven-4
 
-Tags: 3.10.0-eclipse-temurin-26-alpine, 3.10-eclipse-temurin-26-alpine, 3-eclipse-temurin-26-alpine
+Tags: 3.10.0-eclipse-temurin-25-resolute, 3.10.0-eclipse-temurin-25, 3.10-eclipse-temurin-25-resolute, 3.10-eclipse-temurin-25, 3-eclipse-temurin-25-resolute, 3-eclipse-temurin-25
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: 4bcc1dea6507fba8ec40c602bf1bfdb963e21288
+Directory: eclipse-temurin-25-resolute
+
+Tags: 4.0.0-rc-7-eclipse-temurin-25-resolute, 4.0.0-rc-7-eclipse-temurin-25
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: 4bcc1dea6507fba8ec40c602bf1bfdb963e21288
+Directory: eclipse-temurin-25-resolute-maven-4
+
+Tags: 3.10.0-eclipse-temurin-27-alpine, 3.10-eclipse-temurin-27-alpine, 3-eclipse-temurin-27-alpine
 Architectures: amd64, arm64v8
-GitCommit: 6b179e3a37bb4aa699e11d9dbb2431fcc55030fd
-Directory: eclipse-temurin-26-alpine
+GitCommit: e24ced7068df551af172a630f329595db574b6e4
+Directory: eclipse-temurin-27-alpine
 
-Tags: 4.0.0-rc-7-eclipse-temurin-26-alpine
+Tags: 4.0.0-rc-7-eclipse-temurin-27-alpine
 Architectures: amd64, arm64v8
-GitCommit: 1a4d2d539bac81f9b137e3fa115cb4642b500087
-Directory: eclipse-temurin-26-alpine-maven-4
+GitCommit: e24ced7068df551af172a630f329595db574b6e4
+Directory: eclipse-temurin-27-alpine-maven-4
 
-Tags: 3.10.0-eclipse-temurin-26-noble, 3.10.0, 3.10.0-eclipse-temurin, 3.10.0-eclipse-temurin-26, 3.10-eclipse-temurin-26-noble, 3.10, 3.10-eclipse-temurin, 3.10-eclipse-temurin-26, 3-eclipse-temurin-26-noble, 3, latest, 3-eclipse-temurin, eclipse-temurin, 3-eclipse-temurin-26
-Architectures: amd64, arm64v8, ppc64le, riscv64, s390x
-GitCommit: 6b179e3a37bb4aa699e11d9dbb2431fcc55030fd
-Directory: eclipse-temurin-26-noble
+Tags: 3.10.0-eclipse-temurin-27-resolute, 3.10.0, 3.10.0-eclipse-temurin, 3.10.0-eclipse-temurin-27, 3.10-eclipse-temurin-27-resolute, 3.10, 3.10-eclipse-temurin, 3.10-eclipse-temurin-27, 3-eclipse-temurin-27-resolute, 3, latest, 3-eclipse-temurin, eclipse-temurin, 3-eclipse-temurin-27
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: e24ced7068df551af172a630f329595db574b6e4
+Directory: eclipse-temurin-27-resolute
 
-Tags: 4.0.0-rc-7-eclipse-temurin-26-noble, 4.0.0-rc-7, 4.0.0-rc-7-eclipse-temurin, 4.0.0-rc-7-eclipse-temurin-26
-Architectures: amd64, arm64v8, ppc64le, riscv64, s390x
-GitCommit: 1a4d2d539bac81f9b137e3fa115cb4642b500087
-Directory: eclipse-temurin-26-noble-maven-4
+Tags: 4.0.0-rc-7-eclipse-temurin-27-resolute, 4.0.0-rc-7, 4.0.0-rc-7-eclipse-temurin, 4.0.0-rc-7-eclipse-temurin-27
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: e24ced7068df551af172a630f329595db574b6e4
+Directory: eclipse-temurin-27-resolute-maven-4
 
 Tags: 3.10.0-eclipse-temurin-8-alpine, 3.10-eclipse-temurin-8-alpine, 3-eclipse-temurin-8-alpine
-Architectures: amd64
+Architectures: amd64, arm64v8
 GitCommit: 6b179e3a37bb4aa699e11d9dbb2431fcc55030fd
 Directory: eclipse-temurin-8-alpine
 
-Tags: 3.10.0-eclipse-temurin-8-noble, 3.10.0-eclipse-temurin-8, 3.10-eclipse-temurin-8-noble, 3.10-eclipse-temurin-8, 3-eclipse-temurin-8-noble, 3-eclipse-temurin-8
-Architectures: amd64, arm64v8, ppc64le
-GitCommit: 6b179e3a37bb4aa699e11d9dbb2431fcc55030fd
+Tags: 3.10.0-eclipse-temurin-8-noble, 3.10-eclipse-temurin-8-noble, 3-eclipse-temurin-8-noble
+Architectures: amd64, arm32v7, arm64v8, ppc64le
+GitCommit: 4bcc1dea6507fba8ec40c602bf1bfdb963e21288
 Directory: eclipse-temurin-8-noble
+
+Tags: 3.10.0-eclipse-temurin-8-resolute, 3.10.0-eclipse-temurin-8, 3.10-eclipse-temurin-8-resolute, 3.10-eclipse-temurin-8, 3-eclipse-temurin-8-resolute, 3-eclipse-temurin-8
+Architectures: amd64, arm32v7, arm64v8, ppc64le
+GitCommit: 4bcc1dea6507fba8ec40c602bf1bfdb963e21288
+Directory: eclipse-temurin-8-resolute
 
 Tags: 3.10.0-ibmjava-8, 3.10.0-ibmjava, 3.10-ibmjava-8, 3.10-ibmjava, 3-ibmjava-8, 3-ibmjava, ibmjava
 Architectures: amd64, ppc64le, s390x
