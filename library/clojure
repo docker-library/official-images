@@ -2,7 +2,7 @@ Maintainers: Paul Lam <paul@quantisan.com> (@Quantisan),
              Wes Morgan <wes@wesmorgan.me> (@cap10morgan)
 Architectures: arm64v8, ppc64le, amd64
 GitRepo: https://github.com/Quantisan/docker-clojure.git
-GitCommit: 6237e09d13930012af7116206fcd2113d45e2124
+GitCommit: 62cd6a765ddf1fad550f00442503a6a58a70a380
 
 
 Tags: latest
@@ -209,6 +209,9 @@ Directory: target/debian-bookworm-slim-26/lein
 Tags: temurin-26-lein-2.13.0-noble, temurin-26-lein-noble
 Directory: target/eclipse-temurin-26-jdk-noble/lein
 
+Tags: temurin-26-lein-2.13.0-resolute, temurin-26-lein-resolute
+Directory: target/eclipse-temurin-26-jdk-resolute/lein
+
 Tags: temurin-26-lein-2.13.0-trixie, temurin-26-lein-trixie
 Directory: target/debian-trixie-26/lein
 
@@ -228,8 +231,49 @@ Directory: target/debian-bookworm-slim-26/tools-deps
 Tags: temurin-26-noble, temurin-26-tools-deps-1.12.6.1673-noble, temurin-26-tools-deps-noble
 Directory: target/eclipse-temurin-26-jdk-noble/tools-deps
 
+Tags: temurin-26-resolute, temurin-26-tools-deps-1.12.6.1673-resolute, temurin-26-tools-deps-resolute
+Directory: target/eclipse-temurin-26-jdk-resolute/tools-deps
+
 Tags: temurin-26-tools-deps-1.12.6.1673-trixie, temurin-26-tools-deps-trixie, temurin-26-trixie
 Directory: target/debian-trixie-26/tools-deps
 
 Tags: temurin-26-tools-deps-1.12.6.1673-trixie-slim, temurin-26-tools-deps-trixie-slim, temurin-26-trixie-slim
 Directory: target/debian-trixie-slim-26/tools-deps
+
+Tags: temurin-27-lein-2.13.0-alpine, temurin-27-lein-alpine
+Architectures: arm64v8, amd64
+Directory: target/eclipse-temurin-27-jdk-alpine/lein
+
+Tags: temurin-27-lein, temurin-27-lein-2.13.0, temurin-27-lein-2.13.0-bookworm, temurin-27-lein-bookworm
+Directory: target/debian-bookworm-27/lein
+
+Tags: temurin-27-lein-2.13.0-bookworm-slim, temurin-27-lein-bookworm-slim
+Directory: target/debian-bookworm-slim-27/lein
+
+Tags: temurin-27-lein-2.13.0-resolute, temurin-27-lein-resolute
+Directory: target/eclipse-temurin-27-jdk-resolute/lein
+
+Tags: temurin-27-lein-2.13.0-trixie, temurin-27-lein-trixie
+Directory: target/debian-trixie-27/lein
+
+Tags: temurin-27-lein-2.13.0-trixie-slim, temurin-27-lein-trixie-slim
+Directory: target/debian-trixie-slim-27/lein
+
+Tags: temurin-27-alpine, temurin-27-tools-deps-1.12.6.1673-alpine, temurin-27-tools-deps-alpine
+Architectures: arm64v8, amd64
+Directory: target/eclipse-temurin-27-jdk-alpine/tools-deps
+
+Tags: temurin-27-bookworm, temurin-27-tools-deps, temurin-27-tools-deps-1.12.6.1673, temurin-27-tools-deps-1.12.6.1673-bookworm, temurin-27-tools-deps-bookworm
+Directory: target/debian-bookworm-27/tools-deps
+
+Tags: temurin-27-bookworm-slim, temurin-27-tools-deps-1.12.6.1673-bookworm-slim, temurin-27-tools-deps-bookworm-slim
+Directory: target/debian-bookworm-slim-27/tools-deps
+
+Tags: temurin-27-resolute, temurin-27-tools-deps-1.12.6.1673-resolute, temurin-27-tools-deps-resolute
+Directory: target/eclipse-temurin-27-jdk-resolute/tools-deps
+
+Tags: temurin-27-tools-deps-1.12.6.1673-trixie, temurin-27-tools-deps-trixie, temurin-27-trixie
+Directory: target/debian-trixie-27/tools-deps
+
+Tags: temurin-27-tools-deps-1.12.6.1673-trixie-slim, temurin-27-tools-deps-trixie-slim, temurin-27-trixie-slim
+Directory: target/debian-trixie-slim-27/tools-deps
