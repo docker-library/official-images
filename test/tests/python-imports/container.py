@@ -36,3 +36,10 @@ if not isCaveman:
     hasWheel = importlib.util.find_spec('wheel') is not None
     assert(hasSetuptools == shouldHaveSetuptoolsAndWheel)
     assert(hasWheel == shouldHaveSetuptoolsAndWheel)
+
+if isNotPypy:
+    # https://github.com/docker-library/python/issues/1136
+    # https://github.com/python/cpython/issues/115119
+    # (need _decimal for fast Decimal arithmetic)
+    import _decimal
+    # unfortunately, (currently, 2026-10-14, pypy 8.0.1) no _decimal fast-path for pypy
