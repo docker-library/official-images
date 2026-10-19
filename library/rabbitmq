@@ -1,26 +1,46 @@
-# this file is generated via https://github.com/docker-library/rabbitmq/blob/423cdaa94f7e3dc15462ae62487fa216e65d7c6a/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/rabbitmq/blob/4ad287295317ea1d9a577396fa28466a1bbf3430/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/rabbitmq.git
 Builder: buildkit
 
-Tags: 4.3.6, 4.3, 4, latest
+Tags: 4.4.0, 4.4, 4, latest
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 4ad287295317ea1d9a577396fa28466a1bbf3430
+Directory: 4.4/ubuntu
+
+Tags: 4.4.0-management, 4.4-management, 4-management, management
+Architectures: amd64, arm32v7, arm64v8, ppc64le, s390x
+GitCommit: 4ad287295317ea1d9a577396fa28466a1bbf3430
+Directory: 4.4/ubuntu/management
+
+Tags: 4.4.0-alpine, 4.4-alpine, 4-alpine, alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
+GitCommit: 4ad287295317ea1d9a577396fa28466a1bbf3430
+Directory: 4.4/alpine
+
+Tags: 4.4.0-management-alpine, 4.4-management-alpine, 4-management-alpine, management-alpine
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
+GitCommit: 4ad287295317ea1d9a577396fa28466a1bbf3430
+Directory: 4.4/alpine/management
+
+Tags: 4.3.6, 4.3
 Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
 GitCommit: d484e226edcc4a9ba5b88b4a91b549f9fd25edc4
 Directory: 4.3/ubuntu
 
-Tags: 4.3.6-management, 4.3-management, 4-management, management
+Tags: 4.3.6-management, 4.3-management
 Architectures: amd64, arm32v7, arm64v8, ppc64le, riscv64, s390x
 GitCommit: a2d49841fbcf81713cf0e1c279facbce545e2292
 Directory: 4.3/ubuntu/management
 
-Tags: 4.3.6-alpine, 4.3-alpine, 4-alpine, alpine
+Tags: 4.3.6-alpine, 4.3-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
 GitCommit: d484e226edcc4a9ba5b88b4a91b549f9fd25edc4
 Directory: 4.3/alpine
 
-Tags: 4.3.6-management-alpine, 4.3-management-alpine, 4-management-alpine, management-alpine
+Tags: 4.3.6-management-alpine, 4.3-management-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
 GitCommit: a2d49841fbcf81713cf0e1c279facbce545e2292
 Directory: 4.3/alpine/management
