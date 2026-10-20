@@ -3,7 +3,7 @@
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/julia.git
-GitCommit: 670fa838c89ef40b10e57f392f867221863d8f10
+GitCommit: 84aeff4029a8c553dc6c08134f0ea821d4eba140
 
 Tags: 1.13.2-trixie, 1.13-trixie, 1-trixie, trixie
 SharedTags: 1.13.2, 1.13, 1, latest
@@ -65,5 +65,26 @@ Constraints: windowsservercore-ltsc2025
 Tags: 1.11.9-windowsservercore-ltsc2022, 1.11-windowsservercore-ltsc2022
 SharedTags: 1.11.9-windowsservercore, 1.11-windowsservercore, 1.11.9, 1.11
 Directory: 1.11/windows/servercore-ltsc2022
+Architectures: windows-amd64
+Constraints: windowsservercore-ltsc2022
+
+Tags: 1.14.0-alpha1-trixie, 1.14-rc-trixie, rc-trixie
+SharedTags: 1.14.0-alpha1, 1.14-rc, rc
+Directory: rc/trixie
+Architectures: amd64, i386, arm64v8
+
+Tags: 1.14.0-alpha1-bookworm, 1.14-rc-bookworm, rc-bookworm
+Directory: rc/bookworm
+Architectures: amd64, i386, arm64v8
+
+Tags: 1.14.0-alpha1-windowsservercore-ltsc2025, 1.14-rc-windowsservercore-ltsc2025, rc-windowsservercore-ltsc2025
+SharedTags: 1.14.0-alpha1-windowsservercore, 1.14-rc-windowsservercore, rc-windowsservercore, 1.14.0-alpha1, 1.14-rc, rc
+Directory: rc/windows/servercore-ltsc2025
+Architectures: windows-amd64
+Constraints: windowsservercore-ltsc2025
+
+Tags: 1.14.0-alpha1-windowsservercore-ltsc2022, 1.14-rc-windowsservercore-ltsc2022, rc-windowsservercore-ltsc2022
+SharedTags: 1.14.0-alpha1-windowsservercore, 1.14-rc-windowsservercore, rc-windowsservercore, 1.14.0-alpha1, 1.14-rc, rc
+Directory: rc/windows/servercore-ltsc2022
 Architectures: windows-amd64
 Constraints: windowsservercore-ltsc2022
