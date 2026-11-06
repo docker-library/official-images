@@ -28,7 +28,7 @@ jobs:
       - uses: actions/checkout@v6
         with:
           fetch-depth: 0
-      - uses: ./.github/workflows/.bashbrew
+      - uses: $/.github/workflows/.bashbrew
       - name: Check for Common Issues
         run: .github/workflows/naughty.sh
 
@@ -42,7 +42,7 @@ jobs:
       - uses: actions/checkout@v6
         with:
           fetch-depth: 0
-      - uses: ./.github/workflows/.bashbrew
+      - uses: $/.github/workflows/.bashbrew
       - id: generate-jobs
         name: Generate Jobs
         run: |
@@ -68,7 +68,7 @@ jobs:
           # https://github.com/docker-library/bashbrew/blob/a40a54d4d81b9fd2e39b4d7ba3fe203e8b022a67/scripts/github-actions/generate.sh#L146-L149
         if: runner.os == 'Windows'
       - uses: actions/checkout@v6
-      - uses: ./.github/workflows/.bashbrew
+      - uses: $/.github/workflows/.bashbrew
       - name: Prepare Environment
         run: ${{ matrix.runs.prepare }}
       - name: Pull Dependencies
