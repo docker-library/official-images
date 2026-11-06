@@ -8,6 +8,18 @@ Maintainers: Yossi Gottlieb <yossi@redis.com> (@yossigo),
              Martin Bardarov <martin.bardarov@redis.com> (@Bardarov)
 GitRepo: https://github.com/redis/docker-library-redis.git
 
+Tags: 8.12-rc2, 8.12-rc2-trixie
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, riscv64, ppc64le, s390x
+GitCommit: 958dbeaca4436773438aa2c72f3e89cb8c5bece5
+GitFetch: refs/tags/v8.12-rc2
+Directory: debian
+
+Tags: 8.12-rc2-alpine, 8.12-rc2-alpine3.23
+Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
+GitCommit: 958dbeaca4436773438aa2c72f3e89cb8c5bece5
+GitFetch: refs/tags/v8.12-rc2
+Directory: alpine
+
 Tags: 8.10.3, 8.10, 8, 8.10.3-trixie, 8.10-trixie, 8-trixie, latest, trixie
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, riscv64, ppc64le, s390x
 GitCommit: 8fd1238a62e5a6090d826e6d5fc53de6ce5f8a82
@@ -70,36 +82,36 @@ Directory: alpine
 
 Tags: 7.4.12, 7.4, 7, 7.4.12-bookworm, 7.4-bookworm, 7-bookworm
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le
-GitCommit: 786872f8c248c1f0990f93244cbcb3949329016d
+GitCommit: 346d38e447b5f2266de15081b60f952448c93594
 GitFetch: refs/tags/v7.4.12
 Directory: debian
 
-Tags: 7.4.12-alpine, 7.4-alpine, 7-alpine, 7.4.12-alpine3.21, 7.4-alpine3.21, 7-alpine3.21
+Tags: 7.4.12-alpine, 7.4-alpine, 7-alpine, 7.4.12-alpine3.22, 7.4-alpine3.22, 7-alpine3.22
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: 786872f8c248c1f0990f93244cbcb3949329016d
+GitCommit: 346d38e447b5f2266de15081b60f952448c93594
 GitFetch: refs/tags/v7.4.12
 Directory: alpine
 
 Tags: 7.2.17, 7.2, 7.2.17-bookworm, 7.2-bookworm
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le
-GitCommit: 41bd5f7bdf101142b029865bf727a97810ca8e02
+GitCommit: f40d1b25dbd4ab13868e764644d5e7298b3440c8
 GitFetch: refs/tags/v7.2.17
 Directory: debian
 
-Tags: 7.2.17-alpine, 7.2-alpine, 7.2.17-alpine3.21, 7.2-alpine3.21
+Tags: 7.2.17-alpine, 7.2-alpine, 7.2.17-alpine3.22, 7.2-alpine3.22
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: 41bd5f7bdf101142b029865bf727a97810ca8e02
+GitCommit: f40d1b25dbd4ab13868e764644d5e7298b3440c8
 GitFetch: refs/tags/v7.2.17
 Directory: alpine
 
 Tags: 6.2.24, 6.2, 6, 6.2.24-bookworm, 6.2-bookworm, 6-bookworm
 Architectures: amd64, arm32v7, arm64v8, i386, ppc64le
-GitCommit: d452a755b3fa51c0a8d26e254f29a25bf2272e3c
+GitCommit: d7e6fa4aed5f32798da5fbb59fc5028bdeaec137
 GitFetch: refs/tags/v6.2.24
 Directory: debian
 
-Tags: 6.2.24-alpine, 6.2-alpine, 6-alpine, 6.2.24-alpine3.21, 6.2-alpine3.21, 6-alpine3.21
+Tags: 6.2.24-alpine, 6.2-alpine, 6-alpine, 6.2.24-alpine3.22, 6.2-alpine3.22, 6-alpine3.22
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
-GitCommit: d452a755b3fa51c0a8d26e254f29a25bf2272e3c
+GitCommit: d7e6fa4aed5f32798da5fbb59fc5028bdeaec137
 GitFetch: refs/tags/v6.2.24
 Directory: alpine
