@@ -735,99 +735,100 @@ Directory: 25/jre/windows/nanoserver-ltsc2025
 Builder: classic
 Constraints: nanoserver-ltsc2025, windowsservercore-ltsc2025
 
+
 #------------------------------v27 images---------------------------------
-Tags: 27_35-jdk-alpine-3.24, 27-jdk-alpine-3.24, 27-alpine-3.24, 27_35-jdk-alpine, 27-jdk-alpine, 27-alpine
+Tags: 27.0.1.0-jdk-alpine-3.24, 27-jdk-alpine-3.24, 27-alpine-3.24, 27.0.1.0-jdk-alpine, 27-jdk-alpine, 27-alpine
 Architectures: amd64, arm64v8
-GitCommit: cfc1406fdee2ea6b7bb74c5f45035b97b38f0fcf
+GitCommit: fd1adb73ae3c303fcf7c00d8d62c0d2c3df08298
 Directory: 27/jdk/alpine/3.24
 
-Tags: 27_35-jdk-resolute, 27-jdk-resolute, 27-resolute
-SharedTags: 27_35-jdk, 27-jdk, 27
+Tags: 27.0.1.0-jdk-resolute, 27-jdk-resolute, 27-resolute
+SharedTags: 27.0.1.0-jdk, 27-jdk, 27
 Architectures: amd64, arm64v8, ppc64le, s390x
-GitCommit: cfc1406fdee2ea6b7bb74c5f45035b97b38f0fcf
+GitCommit: fd1adb73ae3c303fcf7c00d8d62c0d2c3df08298
 Directory: 27/jdk/ubuntu/resolute
 
-Tags: 27_35-jdk-ubi10-minimal, 27-jdk-ubi10-minimal, 27-ubi10-minimal
+Tags: 27.0.1.0-jdk-ubi10-minimal, 27-jdk-ubi10-minimal, 27-ubi10-minimal
 Architectures: amd64, arm64v8, ppc64le, s390x
-GitCommit: cfc1406fdee2ea6b7bb74c5f45035b97b38f0fcf
+GitCommit: fd1adb73ae3c303fcf7c00d8d62c0d2c3df08298
 Directory: 27/jdk/ubi/ubi10-minimal
 
-Tags: 27_35-jdk-windowsservercore-ltsc2022, 27-jdk-windowsservercore-ltsc2022, 27-windowsservercore-ltsc2022
-SharedTags: 27_35-jdk-windowsservercore, 27-jdk-windowsservercore, 27-windowsservercore, 27_35-jdk, 27-jdk, 27
+Tags: 27.0.1.0-jdk-windowsservercore-ltsc2022, 27-jdk-windowsservercore-ltsc2022, 27-windowsservercore-ltsc2022
+SharedTags: 27.0.1.0-jdk-windowsservercore, 27-jdk-windowsservercore, 27-windowsservercore, 27.0.1.0-jdk, 27-jdk, 27
 Architectures: windows-amd64
-GitCommit: cfc1406fdee2ea6b7bb74c5f45035b97b38f0fcf
+GitCommit: fd1adb73ae3c303fcf7c00d8d62c0d2c3df08298
 Directory: 27/jdk/windows/windowsservercore-ltsc2022
 Builder: classic
 Constraints: windowsservercore-ltsc2022
 
-Tags: 27_35-jdk-nanoserver-ltsc2022, 27-jdk-nanoserver-ltsc2022, 27-nanoserver-ltsc2022
-SharedTags: 27_35-jdk-nanoserver, 27-jdk-nanoserver, 27-nanoserver
+Tags: 27.0.1.0-jdk-nanoserver-ltsc2022, 27-jdk-nanoserver-ltsc2022, 27-nanoserver-ltsc2022
+SharedTags: 27.0.1.0-jdk-nanoserver, 27-jdk-nanoserver, 27-nanoserver
 Architectures: windows-amd64
-GitCommit: cfc1406fdee2ea6b7bb74c5f45035b97b38f0fcf
+GitCommit: fd1adb73ae3c303fcf7c00d8d62c0d2c3df08298
 Directory: 27/jdk/windows/nanoserver-ltsc2022
 Builder: classic
 Constraints: nanoserver-ltsc2022, windowsservercore-ltsc2022
 
-Tags: 27_35-jdk-windowsservercore-ltsc2025, 27-jdk-windowsservercore-ltsc2025, 27-windowsservercore-ltsc2025
-SharedTags: 27_35-jdk-windowsservercore, 27-jdk-windowsservercore, 27-windowsservercore, 27_35-jdk, 27-jdk, 27
+Tags: 27.0.1.0-jdk-windowsservercore-ltsc2025, 27-jdk-windowsservercore-ltsc2025, 27-windowsservercore-ltsc2025
+SharedTags: 27.0.1.0-jdk-windowsservercore, 27-jdk-windowsservercore, 27-windowsservercore, 27.0.1.0-jdk, 27-jdk, 27
 Architectures: windows-amd64
-GitCommit: cfc1406fdee2ea6b7bb74c5f45035b97b38f0fcf
+GitCommit: fd1adb73ae3c303fcf7c00d8d62c0d2c3df08298
 Directory: 27/jdk/windows/windowsservercore-ltsc2025
 Builder: classic
 Constraints: windowsservercore-ltsc2025
 
-Tags: 27_35-jdk-nanoserver-ltsc2025, 27-jdk-nanoserver-ltsc2025, 27-nanoserver-ltsc2025
-SharedTags: 27_35-jdk-nanoserver, 27-jdk-nanoserver, 27-nanoserver
+Tags: 27.0.1.0-jdk-nanoserver-ltsc2025, 27-jdk-nanoserver-ltsc2025, 27-nanoserver-ltsc2025
+SharedTags: 27.0.1.0-jdk-nanoserver, 27-jdk-nanoserver, 27-nanoserver
 Architectures: windows-amd64
-GitCommit: cfc1406fdee2ea6b7bb74c5f45035b97b38f0fcf
+GitCommit: fd1adb73ae3c303fcf7c00d8d62c0d2c3df08298
 Directory: 27/jdk/windows/nanoserver-ltsc2025
 Builder: classic
 Constraints: nanoserver-ltsc2025, windowsservercore-ltsc2025
 
-Tags: 27_35-jre-alpine-3.24, 27-jre-alpine-3.24, 27_35-jre-alpine, 27-jre-alpine
+Tags: 27.0.1.0-jre-alpine-3.24, 27-jre-alpine-3.24, 27.0.1.0-jre-alpine, 27-jre-alpine
 Architectures: amd64, arm64v8
-GitCommit: cfc1406fdee2ea6b7bb74c5f45035b97b38f0fcf
+GitCommit: fd1adb73ae3c303fcf7c00d8d62c0d2c3df08298
 Directory: 27/jre/alpine/3.24
 
-Tags: 27_35-jre-resolute, 27-jre-resolute
-SharedTags: 27_35-jre, 27-jre
+Tags: 27.0.1.0-jre-resolute, 27-jre-resolute
+SharedTags: 27.0.1.0-jre, 27-jre
 Architectures: amd64, arm64v8, ppc64le, s390x
-GitCommit: cfc1406fdee2ea6b7bb74c5f45035b97b38f0fcf
+GitCommit: fd1adb73ae3c303fcf7c00d8d62c0d2c3df08298
 Directory: 27/jre/ubuntu/resolute
 
-Tags: 27_35-jre-ubi10-minimal, 27-jre-ubi10-minimal
+Tags: 27.0.1.0-jre-ubi10-minimal, 27-jre-ubi10-minimal
 Architectures: amd64, arm64v8, ppc64le, s390x
-GitCommit: cfc1406fdee2ea6b7bb74c5f45035b97b38f0fcf
+GitCommit: fd1adb73ae3c303fcf7c00d8d62c0d2c3df08298
 Directory: 27/jre/ubi/ubi10-minimal
 
-Tags: 27_35-jre-windowsservercore-ltsc2022, 27-jre-windowsservercore-ltsc2022
-SharedTags: 27_35-jre-windowsservercore, 27-jre-windowsservercore, 27_35-jre, 27-jre
+Tags: 27.0.1.0-jre-windowsservercore-ltsc2022, 27-jre-windowsservercore-ltsc2022
+SharedTags: 27.0.1.0-jre-windowsservercore, 27-jre-windowsservercore, 27.0.1.0-jre, 27-jre
 Architectures: windows-amd64
-GitCommit: cfc1406fdee2ea6b7bb74c5f45035b97b38f0fcf
+GitCommit: fd1adb73ae3c303fcf7c00d8d62c0d2c3df08298
 Directory: 27/jre/windows/windowsservercore-ltsc2022
 Builder: classic
 Constraints: windowsservercore-ltsc2022
 
-Tags: 27_35-jre-nanoserver-ltsc2022, 27-jre-nanoserver-ltsc2022
-SharedTags: 27_35-jre-nanoserver, 27-jre-nanoserver
+Tags: 27.0.1.0-jre-nanoserver-ltsc2022, 27-jre-nanoserver-ltsc2022
+SharedTags: 27.0.1.0-jre-nanoserver, 27-jre-nanoserver
 Architectures: windows-amd64
-GitCommit: cfc1406fdee2ea6b7bb74c5f45035b97b38f0fcf
+GitCommit: fd1adb73ae3c303fcf7c00d8d62c0d2c3df08298
 Directory: 27/jre/windows/nanoserver-ltsc2022
 Builder: classic
 Constraints: nanoserver-ltsc2022, windowsservercore-ltsc2022
 
-Tags: 27_35-jre-windowsservercore-ltsc2025, 27-jre-windowsservercore-ltsc2025
-SharedTags: 27_35-jre-windowsservercore, 27-jre-windowsservercore, 27_35-jre, 27-jre
+Tags: 27.0.1.0-jre-windowsservercore-ltsc2025, 27-jre-windowsservercore-ltsc2025
+SharedTags: 27.0.1.0-jre-windowsservercore, 27-jre-windowsservercore, 27.0.1.0-jre, 27-jre
 Architectures: windows-amd64
-GitCommit: cfc1406fdee2ea6b7bb74c5f45035b97b38f0fcf
+GitCommit: fd1adb73ae3c303fcf7c00d8d62c0d2c3df08298
 Directory: 27/jre/windows/windowsservercore-ltsc2025
 Builder: classic
 Constraints: windowsservercore-ltsc2025
 
-Tags: 27_35-jre-nanoserver-ltsc2025, 27-jre-nanoserver-ltsc2025
-SharedTags: 27_35-jre-nanoserver, 27-jre-nanoserver
+Tags: 27.0.1.0-jre-nanoserver-ltsc2025, 27-jre-nanoserver-ltsc2025
+SharedTags: 27.0.1.0-jre-nanoserver, 27-jre-nanoserver
 Architectures: windows-amd64
-GitCommit: cfc1406fdee2ea6b7bb74c5f45035b97b38f0fcf
+GitCommit: fd1adb73ae3c303fcf7c00d8d62c0d2c3df08298
 Directory: 27/jre/windows/nanoserver-ltsc2025
 Builder: classic
 Constraints: nanoserver-ltsc2025, windowsservercore-ltsc2025
