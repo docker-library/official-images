@@ -35,10 +35,10 @@ testImage="$("$dir/../image-name.sh" librarytest/rabbitmq-tls-test "$1")"
 "$dir/../docker-build.sh" "$dir" "$testImage" <<'EOD'
 FROM alpine:3.22
 RUN apk add --no-cache bash coreutils drill openssl procps
-# https://github.com/drwetter/testssl.sh/releases
+# https://github.com/testssl/testssl.sh/releases
 ENV TESTSSL_VERSION 3.0.10
 RUN set -eux; \
-	wget -O testssl.tgz "https://github.com/drwetter/testssl.sh/archive/v${TESTSSL_VERSION}.tar.gz"; \
+	wget -O testssl.tgz "https://github.com/testssl/testssl.sh/archive/v${TESTSSL_VERSION}.tar.gz"; \
 	tar -xvf testssl.tgz -C /opt; \
 	rm testssl.tgz; \
 	ln -sv "/opt/testssl.sh-$TESTSSL_VERSION/testssl.sh" /usr/local/bin/; \
