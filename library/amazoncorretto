@@ -15,7 +15,7 @@ Maintainers: Amazon Corretto Team <corretto-team@amazon.com> (@corretto),
              Satyen Subramaniam <satyenme@amazon.com> (@satyenme)
 GitRepo: https://github.com/corretto/corretto-docker.git
 GitFetch: refs/heads/main
-GitCommit: caa8bb41ccfed132a4836a08a3db024f5d79fb73
+GitCommit: 1c77d89e989bbbfef281423795fb57b68eaab8a8
 
 Tags: 8-al2, 8u512-al2, 8-al2-full, 8-al2-jdk, 8-al2-generic, 8u512-al2-generic, 8-al2-generic-jdk
 Architectures: amd64, arm64v8
@@ -28,6 +28,14 @@ Directory: 8/jdk/al2023
 Tags: 8-al2023-jre, 8u512-al2023-jre, 8-jre
 Architectures: amd64, arm64v8
 Directory: 8/jre/al2023
+
+Tags: 8-al2027, 8u512-al2027, 8-al2027-jdk
+Architectures: amd64, arm64v8
+Directory: 8/jdk/al2027
+
+Tags: 8-al2027-jre, 8u512-al2027-jre
+Architectures: amd64, arm64v8
+Directory: 8/jre/al2027
 
 Tags: 8-al2-native-jre, 8u512-al2-native-jre
 Architectures: amd64, arm64v8
@@ -85,6 +93,18 @@ Tags: 11-al2023-headful, 11.0.33-al2023-headful, 11-headful
 Architectures: amd64, arm64v8
 Directory: 11/headful/al2023
 
+Tags: 11-al2027, 11.0.33-al2027, 11-al2027-jdk
+Architectures: amd64, arm64v8
+Directory: 11/jdk/al2027
+
+Tags: 11-al2027-headless, 11.0.33-al2027-headless
+Architectures: amd64, arm64v8
+Directory: 11/headless/al2027
+
+Tags: 11-al2027-headful, 11.0.33-al2027-headful
+Architectures: amd64, arm64v8
+Directory: 11/headful/al2027
+
 Tags: 11-al2-native-headless, 11.0.33-al2-native-headless
 Architectures: amd64, arm64v8
 Directory: 11/headless/al2
@@ -125,6 +145,18 @@ Tags: 17-al2023-headful, 17.0.21-al2023-headful, 17-headful
 Architectures: amd64, arm64v8
 Directory: 17/headful/al2023
 
+Tags: 17-al2027, 17.0.21-al2027, 17-al2027-jdk
+Architectures: amd64, arm64v8
+Directory: 17/jdk/al2027
+
+Tags: 17-al2027-headless, 17.0.21-al2027-headless
+Architectures: amd64, arm64v8
+Directory: 17/headless/al2027
+
+Tags: 17-al2027-headful, 17.0.21-al2027-headful
+Architectures: amd64, arm64v8
+Directory: 17/headful/al2027
+
 Tags: 17-al2-native-headless, 17.0.21-al2-native-headless
 Architectures: amd64, arm64v8
 Directory: 17/headless/al2
@@ -153,6 +185,10 @@ Tags: 17-alpine3.24, 17.0.21-alpine3.24, 17-alpine3.24-full, 17-alpine3.24-jdk, 
 Architectures: amd64, arm64v8
 Directory: 17/jdk/alpine/3.24
 
+Tags: 17-alpine-slim, 17.0.21-alpine-slim, 17-alpine3.24-slim, 17.0.21-alpine3.24-slim
+Architectures: amd64, arm64v8
+Directory: 17/slim/alpine
+
 Tags: 21-al2, 21.0.13-al2, 21-al2-full, 21-al2-jdk, 21-al2-generic, 21.0.13-al2-generic, 21-al2-generic-jdk
 Architectures: amd64, arm64v8
 Directory: 21/jdk/al2-generic
@@ -168,6 +204,18 @@ Directory: 21/headless/al2023
 Tags: 21-al2023-headful, 21.0.13-al2023-headful, 21-headful
 Architectures: amd64, arm64v8
 Directory: 21/headful/al2023
+
+Tags: 21-al2027, 21.0.13-al2027, 21-al2027-jdk
+Architectures: amd64, arm64v8
+Directory: 21/jdk/al2027
+
+Tags: 21-al2027-headless, 21.0.13-al2027-headless
+Architectures: amd64, arm64v8
+Directory: 21/headless/al2027
+
+Tags: 21-al2027-headful, 21.0.13-al2027-headful
+Architectures: amd64, arm64v8
+Directory: 21/headful/al2027
 
 Tags: 21-alpine3.21, 21.0.13-alpine3.21, 21-alpine3.21-full, 21-alpine3.21-jdk
 Architectures: amd64, arm64v8
@@ -185,6 +233,10 @@ Tags: 21-alpine3.24, 21.0.13-alpine3.24, 21-alpine3.24-full, 21-alpine3.24-jdk, 
 Architectures: amd64, arm64v8
 Directory: 21/jdk/alpine/3.24
 
+Tags: 21-alpine-slim, 21.0.13-alpine-slim, 21-alpine3.24-slim, 21.0.13-alpine3.24-slim
+Architectures: amd64, arm64v8
+Directory: 21/slim/alpine
+
 Tags: 25-al2023, 25.0.5-al2023, 25-al2023-jdk, 25, 25-jdk, 25.0.5
 Architectures: amd64, arm64v8
 Directory: 25/jdk/al2023
@@ -196,6 +248,18 @@ Directory: 25/headless/al2023
 Tags: 25-al2023-headful, 25.0.5-al2023-headful, 25-headful
 Architectures: amd64, arm64v8
 Directory: 25/headful/al2023
+
+Tags: 25-al2027, 25.0.5-al2027, 25-al2027-jdk
+Architectures: amd64, arm64v8
+Directory: 25/jdk/al2027
+
+Tags: 25-al2027-headless, 25.0.5-al2027-headless
+Architectures: amd64, arm64v8
+Directory: 25/headless/al2027
+
+Tags: 25-al2027-headful, 25.0.5-al2027-headful
+Architectures: amd64, arm64v8
+Directory: 25/headful/al2027
 
 Tags: 25-alpine3.21, 25.0.5-alpine3.21, 25-alpine3.21-full, 25-alpine3.21-jdk
 Architectures: amd64, arm64v8
@@ -213,6 +277,10 @@ Tags: 25-alpine3.24, 25.0.5-alpine3.24, 25-alpine3.24-full, 25-alpine3.24-jdk, 2
 Architectures: amd64, arm64v8
 Directory: 25/jdk/alpine/3.24
 
+Tags: 25-alpine-slim, 25.0.5-alpine-slim, 25-alpine3.24-slim, 25.0.5-alpine3.24-slim
+Architectures: amd64, arm64v8
+Directory: 25/slim/alpine
+
 Tags: 27-al2023, 27.0.1-al2023, 27-al2023-jdk, 27, 27-jdk, 27.0.1
 Architectures: amd64, arm64v8
 Directory: 27/jdk/al2023
@@ -224,6 +292,18 @@ Directory: 27/headless/al2023
 Tags: 27-al2023-headful, 27.0.1-al2023-headful, 27-headful
 Architectures: amd64, arm64v8
 Directory: 27/headful/al2023
+
+Tags: 27-al2027, 27.0.1-al2027, 27-al2027-jdk
+Architectures: amd64, arm64v8
+Directory: 27/jdk/al2027
+
+Tags: 27-al2027-headless, 27.0.1-al2027-headless
+Architectures: amd64, arm64v8
+Directory: 27/headless/al2027
+
+Tags: 27-al2027-headful, 27.0.1-al2027-headful
+Architectures: amd64, arm64v8
+Directory: 27/headful/al2027
 
 Tags: 27-alpine3.21, 27.0.1-alpine3.21, 27-alpine3.21-full, 27-alpine3.21-jdk
 Architectures: amd64, arm64v8
@@ -240,3 +320,7 @@ Directory: 27/jdk/alpine/3.23
 Tags: 27-alpine3.24, 27.0.1-alpine3.24, 27-alpine3.24-full, 27-alpine3.24-jdk, 27-alpine, 27.0.1-alpine, 27-alpine-full, 27-alpine-jdk
 Architectures: amd64, arm64v8
 Directory: 27/jdk/alpine/3.24
+
+Tags: 27-alpine-slim, 27.0.1-alpine-slim, 27-alpine3.24-slim, 27.0.1-alpine3.24-slim
+Architectures: amd64, arm64v8
+Directory: 27/slim/alpine
