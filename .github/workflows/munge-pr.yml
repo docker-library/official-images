@@ -133,7 +133,7 @@ jobs:
           # again, this would ideally be "github.event.pull_request.merge_commit_sha" but we might not have that yet when this runs, so we compromise by checkout out the latest code from the target branch (so we get the latest "diff-pr.sh" script to run)
           ref: ${{ github.event.pull_request.base.ref }}
           fetch-depth: 0
-      - uses: ./.github/workflows/.bashbrew
+      - uses: $/.github/workflows/.bashbrew
         with:
           build: 'docker'
       - name: Prepare Environment
