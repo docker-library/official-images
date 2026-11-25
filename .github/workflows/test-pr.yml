@@ -67,6 +67,11 @@ jobs:
           echo 'MSYS=winsymlinks:nativestrict' >> "$GITHUB_ENV"
           # https://github.com/docker-library/bashbrew/blob/a40a54d4d81b9fd2e39b4d7ba3fe203e8b022a67/scripts/github-actions/generate.sh#L146-L149
         if: runner.os == 'Windows'
+      - name: actions/runner-images#13729
+        # https://github.com/actions/runner-images/issues/13729
+        run: net start docker || :; until docker version; do sleep 1; done
+        timeout-minutes: 1
+        if: runner.os == 'Windows'
       - uses: actions/checkout@v6
       - uses: ./.github/workflows/.bashbrew
       - name: Prepare Environment
