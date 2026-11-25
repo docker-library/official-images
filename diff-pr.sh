@@ -315,7 +315,31 @@ templateLastTags='
 
 _metadata-files() {
 	if [ "$#" -gt 0 ]; then
-		bashbrew list "$@" 2>>temp/_bashbrew.err | sort -uV > temp/_bashbrew-list || :
+		# a "bashbrew list" where each shared tag also lists every architecture it ends up with (duplicates intentionally kept), so a shared tag that quietly loses images (Linux moves to a new version but Windows does not, for example) shows up as a change to the tag itself instead of only in stanzas that are not part of the diff
+		sharedTagArches="$(
+			bashbrew cat --format '
+				{{- range $e := .Manifest.Entries -}}
+					{{- range $t := $e.SharedTags -}}
+						[
+							{{- join ":" $.RepoName $t | json -}} ,
+							{{- /* the first tag of the stanza is ignored by the "jq" below, but has to stay in the output so "sort -u" can drop the copies bashbrew prints per argument naming the same repo without also dropping two stanzas that otherwise look identical (two Windows versions under one shared tag, for example) */ -}}
+							{{- $e.Tags | first | json -}} ,
+							{{- $e.Architectures | json -}}
+						]
+						{{- "\n" -}}
+					{{- end -}}
+				{{- end -}}
+			' "$@" 2>>temp/_bashbrew.err \
+				| sort -u \
+				| jq --null-input 'reduce inputs as [ $tag, $_, $arches ] ({}; .[$tag] += $arches)'
+		)" || :
+		bashbrew list "$@" 2>>temp/_bashbrew.err \
+			| sort -uV \
+			| jq --raw-input --raw-output --argjson sharedTagArches "$sharedTagArches" '
+				. as $tag
+				| $sharedTagArches[$tag]
+				| if . then "\($tag) -- \(sort | join(", "))" else $tag end
+			' > temp/_bashbrew-list || :
 
 		bashbrew cat --format '{{ range .Entries }}{{ range .Architectures }}{{ . }}{{ "\n" }}{{ end }}{{ end }}' "$@" 2>>temp/_bashbrew.err | sort -u > temp/_bashbrew-arches || :
 
