@@ -753,6 +753,13 @@ Architectures: amd64, arm64v8, ppc64le, s390x
 GitCommit: 717fd25f8e0008b474f813353a9608ff01ad64ea
 Directory: 27/jdk/ubi/ubi10-minimal
 
+# backfill: keep the previous Linux 27.0.1.0 around so "27.0.1.0-jdk" does not end up Windows-only while the Windows images are still on 27.0.1.0
+Tags: 27.0.1.0-jdk-resolute
+SharedTags: 27.0.1.0-jdk
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: fd1adb73ae3c303fcf7c00d8d62c0d2c3df08298
+Directory: 27/jdk/ubuntu/resolute
+
 Tags: 27.0.1.0-jdk-windowsservercore-ltsc2022, 27-jdk-windowsservercore-ltsc2022, 27-windowsservercore-ltsc2022
 SharedTags: 27.0.1.0-jdk-windowsservercore, 27-jdk-windowsservercore, 27-windowsservercore, 27.0.1.0-jdk, 27-jdk, 27
 Architectures: windows-amd64
@@ -800,6 +807,13 @@ Tags: 27.0.1.1_4-jre-ubi10-minimal, 27-jre-ubi10-minimal
 Architectures: amd64, arm64v8, ppc64le, s390x
 GitCommit: 717fd25f8e0008b474f813353a9608ff01ad64ea
 Directory: 27/jre/ubi/ubi10-minimal
+
+# backfill: keep the previous Linux 27.0.1.0 around so "27.0.1.0-jre" does not end up Windows-only while the Windows images are still on 27.0.1.0
+Tags: 27.0.1.0-jre-resolute
+SharedTags: 27.0.1.0-jre
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitCommit: fd1adb73ae3c303fcf7c00d8d62c0d2c3df08298
+Directory: 27/jre/ubuntu/resolute
 
 Tags: 27.0.1.0-jre-windowsservercore-ltsc2022, 27-jre-windowsservercore-ltsc2022
 SharedTags: 27.0.1.0-jre-windowsservercore, 27-jre-windowsservercore, 27.0.1.0-jre, 27-jre
